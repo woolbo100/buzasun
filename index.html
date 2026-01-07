@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- SEO 최적화 메타 태그 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="백도화 매력학당 - 신비롭고 우아한 매력의 세계로 여러분을 초대합니다">
+    <meta name="keywords" content="백도화, 매력학당, 아름다움, 우아함">
+    <meta name="author" content="백도화 매력학당">
+    <title>백도화 매력학당 | 신비로운 매력의 세계</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 커스텀 폰트 및 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #1a0d2e 0%, #2d1b4e 25%, #1a0d2e 50%, #0f0a1a 75%, #1a0d2e 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+            color: #e8e8e8;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 20, 147, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .font-elegant {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* 꽃잎 애니메이션을 위한 Canvas 스타일 */
+        #petalCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        /* 스크롤 애니메이션을 위한 클래스 */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 카드 호버 효과 */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 20, 147, 0.4), 0 0 30px rgba(138, 43, 226, 0.2);
+            border-color: rgba(255, 20, 147, 0.5);
+        }
+        
+        /* 모달 애니메이션 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s;
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%);
+            padding: 2rem;
+            border-radius: 1rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 20, 147, 0.3);
+            box-shadow: 0 20px 60px rgba(138, 43, 226, 0.3), 0 0 40px rgba(255, 20, 147, 0.2);
+            animation: slideUp 0.3s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        /* 스무스 스크롤 */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* 네비게이션 스타일 */
+        nav {
+            backdrop-filter: blur(15px);
+            background: rgba(26, 13, 46, 0.7);
+            border-bottom: 1px solid rgba(255, 20, 147, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 그라데이션 텍스트 - 핑크-퍼플 고급스러운 효과 */
+        .gradient-text {
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 25%, #c71585 50%, #8a2be2 75%, #ff1493 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: gradientText 3s ease infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.3));
+        }
+        
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        /* 입력 필드 스타일 */
+        input, textarea {
+            background: rgba(45, 27, 78, 0.4);
+            border: 1px solid rgba(255, 20, 147, 0.3);
+            color: #e8e8e8;
+            backdrop-filter: blur(10px);
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ff69b4;
+            box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.2), 0 0 20px rgba(138, 43, 226, 0.2);
+            background: rgba(45, 27, 78, 0.6);
+        }
+        
+        /* 버튼 스타일 */
+        .btn-primary {
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 50%, #c71585 100%);
+            color: #ffffff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3), 0 0 20px rgba(138, 43, 226, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.5), 0 0 30px rgba(138, 43, 226, 0.3);
+            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ff1493 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-elegant font-bold gradient-text">
+                백도화 매력학당
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">홈</a>
+                <a href="#about" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">소개</a>
+                <a href="#projects" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">프로젝트</a>
+                <a href="#contact" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">문의</a>
+                <button onclick="openAdminModal()" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">관리자</button>
+            </div>
+            <!-- 모바일 메뉴 버튼 -->
+            <button id="mobileMenuBtn" class="md:hidden" style="color: #ff69b4;">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- 모바일 메뉴 -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">홈</a>
+                <a href="#about" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">소개</a>
+                <a href="#projects" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">프로젝트</a>
+                <a href="#contact" class="hover:text-pink-400 transition-colors" style="color: #ff69b4;">문의</a>
+                <button onclick="openAdminModal()" class="hover:text-pink-400 transition-colors text-left" style="color: #ff69b4;">관리자</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 메인 히어로 섹션 -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden" style="position: relative; z-index: 1;">
+        <!-- 꽃잎 애니메이션 Canvas -->
+        <canvas id="petalCanvas"></canvas>
+        
+        <!-- 조명 효과 -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2;">
+            <div style="position: absolute; top: 20%; left: 20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255, 20, 147, 0.15) 0%, transparent 70%); filter: blur(60px);"></div>
+            <div style="position: absolute; bottom: 20%; right: 20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(138, 43, 226, 0.12) 0%, transparent 70%); filter: blur(80px);"></div>
+        </div>
+        
+        <!-- 히어로 콘텐츠 -->
+        <div class="relative z-10 text-center px-6 fade-in-up" style="z-index: 3;">
+            <h1 class="text-5xl md:text-7xl font-elegant font-bold mb-6 gradient-text" style="text-shadow: 0 0 40px rgba(255, 20, 147, 0.3);">
+                백도화 매력학당
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto" style="color: #ffb3d9; text-shadow: 0 0 20px rgba(255, 20, 147, 0.2);">
+                신비롭고 우아한 매력의 세계로 여러분을 초대합니다
+            </p>
+            <a href="#about" class="btn-primary px-8 py-3 rounded-full font-semibold inline-block">
+                시작하기
+            </a>
+        </div>
+    </section>
+
+    <!-- 소개 섹션 -->
+    <section id="about" class="py-20 px-6" style="position: relative; z-index: 1;">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 gradient-text fade-in-up">
+                우리에 대해
+            </h2>
+            <div class="space-y-8 fade-in-up">
+                <p class="text-lg leading-relaxed text-gray-300">
+                    백도화 매력학당은 아름다움과 우아함의 본질을 탐구하는 공간입니다. 
+                    우리는 단순한 외적 아름다움을 넘어, 내면에서 우러나오는 진정한 매력을 발견하고 
+                    키워나가는 여정을 함께합니다.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-300">
+                    신비로운 백도화의 정신을 바탕으로, 각자의 고유한 매력을 발견하고 
+                    표현할 수 있도록 돕는 것이 우리의 사명입니다. 전문적인 지식과 
+                    세심한 관심으로 여러분의 변화를 지원합니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 프로젝트/게시글 섹션 -->
+    <section id="projects" class="py-20 px-6" style="background: rgba(26, 13, 46, 0.4); position: relative; z-index: 1;">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 gradient-text fade-in-up">
+                프로젝트
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 프로젝트 카드 1 -->
+                <div class="card-hover p-6 rounded-lg fade-in-up" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%); border: 1px solid rgba(255, 20, 147, 0.3); backdrop-filter: blur(10px);">
+                    <div class="text-3xl mb-4" style="color: #ff1493;">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #ff1493;">매력 발견 프로그램</h3>
+                    <p class="text-gray-400 mb-4">
+                        자신만의 고유한 매력을 발견하고 개발하는 맞춤형 프로그램입니다.
+                    </p>
+                    <a href="#" class="transition-colors" style="color: #ff69b4;">
+                        자세히 보기 →
+                    </a>
+                </div>
+                
+                <!-- 프로젝트 카드 2 -->
+                <div class="card-hover p-6 rounded-lg fade-in-up" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%); border: 1px solid rgba(255, 20, 147, 0.3); backdrop-filter: blur(10px);">
+                    <div class="text-3xl mb-4" style="color: #ff1493;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #ff1493;">우아함 워크샵</h3>
+                    <p class="text-gray-400 mb-4">
+                        일상 속에서 우아함을 표현하는 방법을 배우는 실전 워크샵입니다.
+                    </p>
+                    <a href="#" class="transition-colors" style="color: #ff69b4;">
+                        자세히 보기 →
+                    </a>
+                </div>
+                
+                <!-- 프로젝트 카드 3 -->
+                <div class="card-hover p-6 rounded-lg fade-in-up" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%); border: 1px solid rgba(255, 20, 147, 0.3); backdrop-filter: blur(10px);">
+                    <div class="text-3xl mb-4" style="color: #ff1493;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #ff1493;">신비로운 여정</h3>
+                    <p class="text-gray-400 mb-4">
+                        내면의 아름다움을 탐구하는 깊이 있는 자기계발 여정입니다.
+                    </p>
+                    <a href="#" class="transition-colors" style="color: #ff69b4;">
+                        자세히 보기 →
+                    </a>
+                </div>
+                
+                <!-- 프로젝트 카드 4 -->
+                <div class="card-hover p-6 rounded-lg fade-in-up" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%); border: 1px solid rgba(255, 20, 147, 0.3); backdrop-filter: blur(10px);">
+                    <div class="text-3xl mb-4" style="color: #ff1493;">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #ff1493;">프리미엄 컨설팅</h3>
+                    <p class="text-gray-400 mb-4">
+                        1:1 맞춤형 컨설팅으로 개인의 매력을 극대화합니다.
+                    </p>
+                    <a href="#" class="transition-colors" style="color: #ff69b4;">
+                        자세히 보기 →
+                    </a>
+                </div>
+                
+                <!-- 프로젝트 카드 5 -->
+                <div class="card-hover p-6 rounded-lg fade-in-up" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%); border: 1px solid rgba(255, 20, 147, 0.3); backdrop-filter: blur(10px);">
+                    <div class="text-3xl mb-4" style="color: #ff1493;">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #ff1493;">야간 특별 프로그램</h3>
+                    <p class="text-gray-400 mb-4">
+                        신비로운 분위기 속에서 진행되는 특별한 야간 프로그램입니다.
+                    </p>
+                    <a href="#" class="transition-colors" style="color: #ff69b4;">
+                        자세히 보기 →
+                    </a>
+                </div>
+                
+                <!-- 프로젝트 카드 6 -->
+                <div class="card-hover p-6 rounded-lg fade-in-up" style="background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%); border: 1px solid rgba(255, 20, 147, 0.3); backdrop-filter: blur(10px);">
+                    <div class="text-3xl mb-4" style="color: #ff1493;">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #ff1493;">우아한 글쓰기</h3>
+                    <p class="text-gray-400 mb-4">
+                        우아하고 세련된 글쓰기로 자신의 생각을 표현하는 방법을 배웁니다.
+                    </p>
+                    <a href="#" class="transition-colors" style="color: #ff69b4;">
+                        자세히 보기 →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 문의 섹션 -->
+    <section id="contact" class="py-20 px-6" style="position: relative; z-index: 1;">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 gradient-text fade-in-up">
+                문의하기
+            </h2>
+            <form id="contactForm" class="space-y-6 fade-in-up">
+                <div>
+                    <label for="name" class="block mb-2" style="color: #ff69b4;">이름</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="w-full px-4 py-3 rounded-lg"
+                        placeholder="이름을 입력해주세요"
+                        required
+                    >
+                </div>
+                <div>
+                    <label for="email" class="block mb-2" style="color: #ff69b4;">이메일</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="w-full px-4 py-3 rounded-lg"
+                        placeholder="이메일을 입력해주세요"
+                        required
+                    >
+                </div>
+                <div>
+                    <label for="message" class="block mb-2" style="color: #ff69b4;">문의 내용</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="6" 
+                        class="w-full px-4 py-3 rounded-lg"
+                        placeholder="문의 내용을 입력해주세요"
+                        required
+                    ></textarea>
+                </div>
+                <button 
+                    type="submit" 
+                    class="btn-primary w-full py-3 rounded-lg font-semibold"
+                >
+                    보내기
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 관리자 대시보드 모달 -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-3xl font-elegant font-bold gradient-text">관리자 대시보드</h2>
+                <button onclick="closeAdminModal()" class="text-gray-400 hover:text-white text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="space-y-6">
+                <div>
+                    <label for="adminTitle" class="block mb-2" style="color: #ff69b4;">제목</label>
+                    <input 
+                        type="text" 
+                        id="adminTitle" 
+                        class="w-full px-4 py-3 rounded-lg"
+                        placeholder="글 제목을 입력해주세요"
+                    >
+                </div>
+                <div>
+                    <label for="adminContent" class="block mb-2" style="color: #ff69b4;">내용</label>
+                    <textarea 
+                        id="adminContent" 
+                        rows="10" 
+                        class="w-full px-4 py-3 rounded-lg"
+                        placeholder="글 내용을 입력해주세요"
+                    ></textarea>
+                </div>
+                <div class="flex space-x-4">
+                    <button 
+                        onclick="saveAdminPost()" 
+                        class="btn-primary flex-1 py-3 rounded-lg font-semibold"
+                    >
+                        저장하기
+                    </button>
+                    <button 
+                        onclick="closeAdminModal()" 
+                        class="flex-1 py-3 rounded-lg font-semibold transition-colors"
+                        style="border: 1px solid rgba(255, 20, 147, 0.3);"
+                    >
+                        취소
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="py-12 px-6" style="background: rgba(26, 13, 46, 0.6); position: relative; z-index: 1; border-top: 1px solid rgba(255, 20, 147, 0.1);">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-elegant font-bold gradient-text mb-2">
+                        백도화 매력학당
+                    </h3>
+                    <p class="text-gray-400">
+                        신비로운 매력의 세계로 여러분을 초대합니다
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://youtube.com" target="_blank" class="text-3xl transition-colors" style="color: #ff69b4;">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-3xl transition-colors" style="color: #ff69b4;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="text-3xl transition-colors" style="color: #ff69b4;">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-3xl transition-colors" style="color: #ff69b4;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 text-center text-gray-400" style="border-top: 1px solid rgba(255, 20, 147, 0.2);">
+                <p>&copy; 2024 백도화 매력학당. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================
+        // 꽃잎 애니메이션 (Canvas)
+        // ============================================
+        const canvas = document.getElementById('petalCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Canvas 크기 설정
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        // 꽃잎 클래스
+        class Petal {
+            constructor() {
+                this.reset();
+                this.y = Math.random() * canvas.height;
+                // 바람 효과를 위한 추가 변수
+                this.windOffset = Math.random() * Math.PI * 2;
+                this.windAmplitude = Math.random() * 0.3 + 0.1;
+                this.windSpeed = Math.random() * 0.02 + 0.01;
+            }
+            
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = -20;
+                this.size = Math.random() * 6 + 4;
+                this.speedX = Math.random() * 0.3 - 0.15;
+                this.speedY = Math.random() * 0.8 + 0.3;
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = Math.random() * 1.5 - 0.75;
+                this.opacity = Math.random() * 0.4 + 0.2;
+                // 바람 효과 재설정
+                this.windOffset = Math.random() * Math.PI * 2;
+                this.windAmplitude = Math.random() * 0.3 + 0.1;
+            }
+            
+            update() {
+                // 바람 효과로 좌우로 부드럽게 흔들림
+                const wind = Math.sin(this.windOffset) * this.windAmplitude;
+                this.x += this.speedX + wind;
+                this.y += this.speedY;
+                this.rotation += this.rotationSpeed;
+                this.windOffset += this.windSpeed;
+                
+                // 약간의 곡선 경로 추가 (자연스러운 낙하)
+                this.speedX += Math.sin(this.y * 0.01) * 0.01;
+                
+                if (this.y > canvas.height + 20) {
+                    this.reset();
+                }
+            }
+            
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.opacity;
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                
+                // 꽃잎 그리기 (타원형) - 아주 연한 핑크색
+                ctx.beginPath();
+                ctx.fillStyle = '#ffd6e8';
+                ctx.ellipse(0, 0, this.size, this.size * 1.5, 0, 0, Math.PI * 2);
+                ctx.fill();
+                
+                ctx.restore();
+            }
+        }
+        
+        // 꽃잎 배열 생성
+        const petals = [];
+        const petalCount = 40;
+        
+        for (let i = 0; i < petalCount; i++) {
+            petals.push(new Petal());
+        }
+        
+        // 애니메이션 루프
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            petals.forEach(petal => {
+                petal.update();
+                petal.draw();
+            });
+            
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // ============================================
+        // Intersection Observer (스크롤 애니메이션)
+        // ============================================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // 모든 fade-in-up 요소 관찰
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ============================================
+        // 모바일 메뉴 토글
+        // ============================================
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // ============================================
+        // 문의 양식 유효성 검사
+        // ============================================
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // 빈칸 확인
+            if (!name || !email || !message) {
+                alert('모든 필드를 입력해주세요.');
+                return;
+            }
+            
+            // 이메일 형식 확인
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('올바른 이메일 형식을 입력해주세요.');
+                return;
+            }
+            
+            // 성공 메시지 (실제로는 서버로 전송)
+            alert('문의가 성공적으로 전송되었습니다!');
+            contactForm.reset();
+        });
+
+        // ============================================
+        // 관리자 모달 함수
+        // ============================================
+        function openAdminModal() {
+            const modal = document.getElementById('adminModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeAdminModal() {
+            const modal = document.getElementById('adminModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function saveAdminPost() {
+            const title = document.getElementById('adminTitle').value.trim();
+            const content = document.getElementById('adminContent').value.trim();
+            
+            if (!title || !content) {
+                alert('제목과 내용을 모두 입력해주세요.');
+                return;
+            }
+            
+            // 실제로는 서버로 저장하지만, 여기서는 UI만 구현
+            alert('글이 저장되었습니다! (UI Mockup)');
+            document.getElementById('adminTitle').value = '';
+            document.getElementById('adminContent').value = '';
+            closeAdminModal();
+        }
+        
+        // 모달 외부 클릭 시 닫기
+        document.getElementById('adminModal').addEventListener('click', (e) => {
+            if (e.target.id === 'adminModal') {
+                closeAdminModal();
+            }
+        });
+
+        // ============================================
+        // 네비게이션 스크롤 시 배경 투명도 조절
+        // ============================================
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(26, 13, 46, 0.95)';
+                nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+            } else {
+                nav.style.background = 'rgba(26, 13, 46, 0.7)';
+                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+            }
+        });
+    </script>
+</body>
+</html>
