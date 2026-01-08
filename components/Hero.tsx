@@ -13,7 +13,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 px-4 md:px-6 overflow-hidden" style={{ background: 'transparent' }}>
+    <section className="relative min-h-fit flex items-center justify-center pt-16 pb-12 px-4 md:px-6 overflow-hidden" style={{ background: 'transparent' }}>
       <PetalsCanvas color="#fce7f3" density={28} />
       
       {/* 중앙 글로우 오라 레이어 */}
@@ -101,7 +101,7 @@ export default function Hero() {
 
         {/* CTA 버튼 */}
         <Reveal delayMs={300}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20 sm:mb-24">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <div className="flex flex-col items-center">
               <Link
                 href="/report"
