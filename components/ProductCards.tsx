@@ -39,9 +39,9 @@ export default function ProductCards() {
                   padding: '3rem 2.5rem',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(236, 72, 153, 0.8)'
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 60px rgba(255, 20, 147, 0.5), 0 0 80px rgba(236, 72, 153, 0.3)'
-                  e.currentTarget.style.transform = 'translateY(-4px)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.4)'
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 20, 147, 0.2), 0 0 40px rgba(255, 182, 193, 0.15)'
+                  e.currentTarget.style.transform = 'translateY(-2px)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'
