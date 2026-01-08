@@ -125,9 +125,6 @@ export default function Hero() {
                 />
                 <span className="relative z-10">맞춤 리포트 받기</span>
               </Link>
-              <p className="mt-2 text-xs text-bd-gray opacity-60 whitespace-nowrap">
-                당신만의 코드를 발견하세요
-              </p>
             </div>
             
             <div className="flex flex-col items-center">
@@ -153,38 +150,11 @@ export default function Hero() {
               >
                 <span className="relative z-10">전자책 둘러보기</span>
               </Link>
-              <p className="mt-2 text-xs text-bd-gray opacity-60 whitespace-nowrap">
-                깊이 있는 지식으로
-              </p>
             </div>
           </div>
         </Reveal>
       </div>
 
-      {/* 스크롤 유도 요소 - Hero 섹션 하단 중앙 고정 */}
-      <Reveal delayMs={500}>
-        <button
-          onClick={scrollToContent}
-          className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-bd-gray hover:text-bd-ivory transition-all duration-300 opacity-60 hover:opacity-100 group z-10"
-          style={{
-            animation: 'float 3s ease-in-out infinite',
-          }}
-          aria-label="아래로 스크롤"
-        >
-          <span className="text-xs sm:text-sm font-medium tracking-wider" style={{ letterSpacing: '0.1em' }}>
-            백도화의 세계로 들어가기
-          </span>
-          <div className="flex flex-col items-center gap-1">
-            <i className="fas fa-chevron-down text-xs animate-bounce"></i>
-            <div 
-              className="h-6 sm:h-8 w-px bg-gradient-to-b from-pink-200/50 to-transparent transition-all duration-300 group-hover:from-pink-200"
-              style={{
-                boxShadow: '0 0 8px rgba(255, 182, 193, 0.3)',
-              }}
-            />
-          </div>
-        </button>
-      </Reveal>
     </section>
   )
 }

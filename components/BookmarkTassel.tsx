@@ -290,9 +290,9 @@ export default function BookmarkTassel() {
                 <path
                   d="M 0 -70 C 20 -70, 38 -48, 34 -28 C 30 -10, 14 8, 0 18 C -14 8, -30 -10, -34 -28 C -38 -48, -20 -70, 0 -70 Z"
                   fill="none"
-                  stroke="#ff1493"
+                  stroke="#c71585"
                   strokeWidth="1.8"
-                  opacity="0.75"
+                  opacity="0.85"
                   filter="url(#edgeGlowTassel)"
                 />
               </g>
