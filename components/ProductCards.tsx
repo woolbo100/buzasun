@@ -74,43 +74,158 @@ export default function ProductCards() {
                   
                   {/* 설명 문구 */}
                   <p 
-                    className="text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed"
+                    className="text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed"
                     style={{
-                      color: 'rgba(255, 255, 255, 0.85)',
-                      lineHeight: 1.7,
+                      color: 'rgba(245, 239, 255, 0.9)',
+                      lineHeight: 1.8,
                       wordBreak: 'keep-all',
+                      fontWeight: 400,
                     }}
                   >
-                    당신이 반복하는 연애 패턴과 끌어당기는 사랑의 방향을<br />
-                    선천코드 분석을 통해 정밀하게 해독합니다.
+                    당신이 반복하는 연애의 이유는 감정이 아니라 구조입니다.<br />
+                    선천코드 분석으로 연애 성향, 인연의 흐름, 타이밍을 명확히 정리합니다.
                   </p>
                   
+                  {/* 핵심 내용 리스트 */}
+                  <div className="mb-10 max-w-xl mx-auto">
+                    <ul className="space-y-3 text-left">
+                      <li className="flex items-start gap-3">
+                        <span 
+                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                          style={{
+                            background: 'rgba(255, 182, 193, 0.6)',
+                            marginTop: '0.5rem',
+                          }}
+                        />
+                        <span 
+                          className="text-sm md:text-base leading-relaxed"
+                          style={{
+                            color: 'rgba(255, 255, 255, 0.85)',
+                            lineHeight: 1.7,
+                            wordBreak: 'keep-all',
+                          }}
+                        >
+                          타고난 연애 성향 & 숨겨진 남자복
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span 
+                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                          style={{
+                            background: 'rgba(255, 182, 193, 0.6)',
+                            marginTop: '0.5rem',
+                          }}
+                        />
+                        <span 
+                          className="text-sm md:text-base leading-relaxed"
+                          style={{
+                            color: 'rgba(255, 255, 255, 0.85)',
+                            lineHeight: 1.7,
+                            wordBreak: 'keep-all',
+                          }}
+                        >
+                          맞는 인연 vs 피해야 할 이상형
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span 
+                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                          style={{
+                            background: 'rgba(255, 182, 193, 0.6)',
+                            marginTop: '0.5rem',
+                          }}
+                        />
+                        <span 
+                          className="text-sm md:text-base leading-relaxed"
+                          style={{
+                            color: 'rgba(255, 255, 255, 0.85)',
+                            lineHeight: 1.7,
+                            wordBreak: 'keep-all',
+                          }}
+                        >
+                          반복되는 연애 패턴의 원인
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span 
+                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                          style={{
+                            background: 'rgba(255, 182, 193, 0.6)',
+                            marginTop: '0.5rem',
+                          }}
+                        />
+                        <span 
+                          className="text-sm md:text-base leading-relaxed"
+                          style={{
+                            color: 'rgba(255, 255, 255, 0.85)',
+                            lineHeight: 1.7,
+                            wordBreak: 'keep-all',
+                          }}
+                        >
+                          결정적인 연애 타이밍
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span 
+                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
+                          style={{
+                            background: 'rgba(255, 182, 193, 0.6)',
+                            marginTop: '0.5rem',
+                          }}
+                        />
+                        <span 
+                          className="text-sm md:text-base leading-relaxed"
+                          style={{
+                            color: 'rgba(255, 255, 255, 0.85)',
+                            lineHeight: 1.7,
+                            wordBreak: 'keep-all',
+                          }}
+                        >
+                          관계를 바꾸는 실전 조언
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  
                   {/* CTA 버튼 */}
-                  <div className="inline-block px-12 py-5 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn"
+                  <div className="mb-3">
+                    <div className="inline-block px-14 py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn"
+                      style={{
+                        background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
+                        boxShadow: '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)',
+                        fontSize: '1.15rem',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.6), 0 0 70px rgba(255, 20, 147, 0.3)'
+                        e.currentTarget.style.transform = 'translateY(-2px)'
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)'
+                        e.currentTarget.style.transform = 'translateY(0)'
+                      }}
+                    >
+                      {/* 빛이 흐르는 효과 */}
+                      <span 
+                        className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700"
+                        style={{
+                          background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)',
+                          animation: 'shimmer 2s infinite',
+                        }}
+                      />
+                      <span className="relative z-10">내 연애 코드 지금 확인하기</span>
+                    </div>
+                  </div>
+                  
+                  {/* CTA 버튼 하단 보조 문구 */}
+                  <p 
+                    className="text-xs md:text-sm"
                     style={{
-                      background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
-                      boxShadow: '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)',
-                      fontSize: '1.1rem',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.6), 0 0 70px rgba(255, 20, 147, 0.3)'
-                      e.currentTarget.style.transform = 'translateY(-2px)'
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)'
-                      e.currentTarget.style.transform = 'translateY(0)'
+                      color: 'rgba(245, 239, 255, 0.6)',
+                      letterSpacing: '0.02em',
                     }}
                   >
-                    {/* 빛이 흐르는 효과 */}
-                    <span 
-                      className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700"
-                      style={{
-                        background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)',
-                        animation: 'shimmer 2s infinite',
-                      }}
-                    />
-                    <span className="relative z-10">맞춤 리포트 받기</span>
-                  </div>
+                    상담이 아닌, 구조를 해석하는 분석 리포트입니다.
+                  </p>
                 </div>
               </Link>
             </div>

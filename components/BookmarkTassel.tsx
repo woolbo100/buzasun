@@ -65,9 +65,10 @@ export default function BookmarkTassel() {
       <div className="fixed top-0 right-6 md:right-20 z-50 relative">
         {/* 줄: 화면 최상단부터 시작, 고정 높이 */}
         <div 
-          className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
+          className="absolute pointer-events-none"
           style={{
             top: '0',
+            right: '0',
             width: '2px',
             height: '100px',
             background: 'linear-gradient(180deg, rgba(255, 192, 203, 0.85) 0%, rgba(255, 182, 193, 0.8) 30%, rgba(255, 175, 185, 0.75) 60%, rgba(255, 182, 193, 0.8) 100%)',
@@ -86,8 +87,7 @@ export default function BookmarkTassel() {
           aria-label="즐겨찾기"
           style={{
             top: '95px',
-            left: '50%',
-            transform: 'translateX(-50%)',
+            right: '0',
             filter: isClicked
               ? 'drop-shadow(0 0 20px rgba(255, 20, 147, 0.6)) brightness(1.15)'
               : isHovered 
