@@ -79,13 +79,13 @@ export default function BookmarkTassel() {
           transition: 'filter 0.3s ease-out',
         }}
       >
-        {/* 상단 고정점과 줄(끈) - 샴페인 로즈골드 */}
+        {/* 상단 고정점과 줄(끈) - 로즈핑크 */}
         <div 
           className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
           style={{
             height: '40px',
-            background: 'linear-gradient(180deg, rgba(232, 200, 180, 0.85) 0%, rgba(220, 185, 170, 0.8) 30%, rgba(210, 175, 160, 0.75) 60%, rgba(220, 185, 170, 0.8) 100%)',
-            boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 3px rgba(232, 200, 180, 0.3)',
+            background: 'linear-gradient(180deg, rgba(255, 192, 203, 0.85) 0%, rgba(255, 182, 193, 0.8) 30%, rgba(255, 175, 185, 0.75) 60%, rgba(255, 182, 193, 0.8) 100%)',
+            boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 3px rgba(255, 192, 203, 0.3)',
           }}
         />
 
@@ -102,40 +102,40 @@ export default function BookmarkTassel() {
         >
           {/* 그라데이션 정의 - 줄과 술용 */}
           <defs>
-            {/* 실크 끈 그라데이션 - 샴페인 로즈골드 */}
+            {/* 실크 끈 그라데이션 - 로즈핑크 */}
             <linearGradient id="cordGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#e8c8b4" />
-              <stop offset="30%" stopColor="#dcb9aa" />
-              <stop offset="60%" stopColor="#d2afa0" />
-              <stop offset="100%" stopColor="#dcb9aa" />
+              <stop offset="0%" stopColor="#ffc0cb" />
+              <stop offset="30%" stopColor="#ffb6c1" />
+              <stop offset="60%" stopColor="#ffafb9" />
+              <stop offset="100%" stopColor="#ffb6c1" />
             </linearGradient>
             
-            {/* 노리개 캡 그라데이션 - 샴페인 로즈골드 */}
+            {/* 노리개 캡 그라데이션 - 로즈핑크 */}
             <linearGradient id="capGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#dcb9aa" />
-              <stop offset="50%" stopColor="#e8c8b4" />
-              <stop offset="100%" stopColor="#dcb9aa" />
+              <stop offset="0%" stopColor="#ffb6c1" />
+              <stop offset="50%" stopColor="#ffc0cb" />
+              <stop offset="100%" stopColor="#ffb6c1" />
             </linearGradient>
             
-            {/* 노리개 실 그라데이션 1 - 샴페인 로즈골드 */}
+            {/* 노리개 실 그라데이션 1 - 로즈핑크 */}
             <linearGradient id="threadGradient0" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#dcb9aa" />
-              <stop offset="50%" stopColor="#e8c8b4" />
-              <stop offset="100%" stopColor="#f0d4c4" />
+              <stop offset="0%" stopColor="#ffb6c1" />
+              <stop offset="50%" stopColor="#ffc0cb" />
+              <stop offset="100%" stopColor="#ffd0d5" />
             </linearGradient>
             
-            {/* 노리개 실 그라데이션 2 - 따뜻한 로즈골드 */}
+            {/* 노리개 실 그라데이션 2 - 밝은 로즈핑크 */}
             <linearGradient id="threadGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#d4a5a0" />
-              <stop offset="50%" stopColor="#dcb9aa" />
-              <stop offset="100%" stopColor="#e8c8b4" />
+              <stop offset="0%" stopColor="#ffa8b5" />
+              <stop offset="50%" stopColor="#ffb6c1" />
+              <stop offset="100%" stopColor="#ffc0cb" />
             </linearGradient>
             
-            {/* 노리개 실 그라데이션 3 - 부드러운 샴페인 로즈골드 */}
+            {/* 노리개 실 그라데이션 3 - 부드러운 로즈핑크 */}
             <linearGradient id="threadGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#c9a08a" />
-              <stop offset="50%" stopColor="#d2afa0" />
-              <stop offset="100%" stopColor="#dcb9aa" />
+              <stop offset="0%" stopColor="#ff9fad" />
+              <stop offset="50%" stopColor="#ffafb9" />
+              <stop offset="100%" stopColor="#ffb6c1" />
             </linearGradient>
           </defs>
           
@@ -146,11 +146,11 @@ export default function BookmarkTassel() {
             r="2.5"
             fill="url(#cordGradient)"
             style={{
-              filter: 'drop-shadow(0 0 3px rgba(232, 200, 180, 0.4))',
+              filter: 'drop-shadow(0 0 3px rgba(255, 192, 203, 0.4))',
             }}
           />
           
-          {/* 상단 코드 - 샴페인 로즈골드 */}
+          {/* 상단 코드 - 로즈핑크 */}
           <line
             x1="30"
             y1="5"
@@ -160,7 +160,7 @@ export default function BookmarkTassel() {
             strokeWidth="2"
             fill="none"
             style={{
-              filter: 'drop-shadow(0 0 3px rgba(232, 200, 180, 0.35))',
+              filter: 'drop-shadow(0 0 3px rgba(255, 192, 203, 0.35))',
             }}
           />
           
@@ -182,7 +182,7 @@ export default function BookmarkTassel() {
             strokeWidth="1.5"
             fill="none"
             style={{
-              filter: 'drop-shadow(0 0 2px rgba(232, 200, 180, 0.35))',
+              filter: 'drop-shadow(0 0 2px rgba(255, 192, 203, 0.35))',
             }}
           />
           
@@ -331,7 +331,7 @@ export default function BookmarkTassel() {
             fill="url(#capGradient)"
             rx="1.5"
             style={{
-              filter: 'drop-shadow(0 0 3px rgba(232, 200, 180, 0.4))',
+              filter: 'drop-shadow(0 0 3px rgba(255, 192, 203, 0.4))',
             }}
           />
           <rect
@@ -339,12 +339,12 @@ export default function BookmarkTassel() {
             y="52"
             width="10"
             height="3"
-            fill="#c9a08a"
+            fill="#ff9fad"
             rx="0.5"
             opacity="0.55"
           />
           
-          {/* 노리개 실들 - 샴페인 로즈골드 (부드러운 새틴 광택) */}
+          {/* 노리개 실들 - 로즈핑크 (부드러운 새틴 광택) */}
           <g opacity="0.8">
             {Array.from({ length: 24 }).map((_, i) => {
               const baseX = 26 + (i % 6) * 1.2
@@ -360,7 +360,7 @@ export default function BookmarkTassel() {
                   strokeWidth="1.25"
                   opacity="0.85"
                   style={{
-                    filter: 'drop-shadow(0 0 1.5px rgba(232, 200, 180, 0.3))',
+                    filter: 'drop-shadow(0 0 1.5px rgba(255, 192, 203, 0.3))',
                   }}
                 />
               )
