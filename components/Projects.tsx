@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
 const projects = [
   {
     icon: 'fas fa-sparkles',
@@ -36,16 +34,6 @@ const projects = [
 ]
 
 export default function Projects() {
-  const [clickedIndex, setClickedIndex] = useState<number | null>(null)
-
-  const handleCardClick = (index: number) => {
-    setClickedIndex(index)
-    // 1초 후 효과 제거
-    setTimeout(() => {
-      setClickedIndex(null)
-    }, 1000)
-  }
-
   return (
     <section 
       id="projects" 
@@ -60,13 +48,17 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div 
               key={index}
-              onClick={() => handleCardClick(index)}
-              className="card-hover p-6 rounded-lg fade-in-up bg-white/5 backdrop-blur-xl border cursor-pointer transition-all duration-300"
+              className="card-hover p-6 rounded-lg fade-in-up bg-white/5 backdrop-blur-xl border border-white/10 cursor-pointer transition-all duration-300 group"
               style={{ 
-                borderColor: clickedIndex === index ? '#ff1493' : 'rgba(255, 255, 255, 0.1)',
-                boxShadow: clickedIndex === index
-                  ? '0 0 20px rgba(255, 20, 147, 0.8), 0 0 40px rgba(255, 20, 147, 0.6), 0 0 60px rgba(255, 20, 147, 0.4), 0 8px 32px rgba(20, 6, 31, 0.3)'
-                  : '0 8px 32px rgba(20, 6, 31, 0.3), 0 0 40px rgba(27, 7, 38, 0.15)',
+                boxShadow: '0 8px 32px rgba(20, 6, 31, 0.3), 0 0 40px rgba(27, 7, 38, 0.15)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#ff1493'
+                e.currentTarget.style.boxShadow = '0 0 12px rgba(255, 20, 147, 0.4), 0 0 24px rgba(255, 20, 147, 0.2), 0 8px 32px rgba(20, 6, 31, 0.3)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(20, 6, 31, 0.3), 0 0 40px rgba(27, 7, 38, 0.15)'
               }}
             >
               <div className="text-3xl mb-4" style={{ color: '#ff1493' }}>
