@@ -20,7 +20,19 @@ export default function Home() {
       <ProductCards />
       
       {/* 통배경 래퍼 - About/Projects/Contact 공유 */}
-      <div className="relative overflow-hidden" style={{ background: '#14061f' }}>
+      <div 
+        className="relative overflow-hidden"
+        style={{ 
+          background: 'linear-gradient(180deg, #1a0626 0%, #14061f 30%, #120014 60%, #14061f 100%)',
+        }}
+      >
+        {/* 입체감을 위한 추가 그라데이션 레이어 */}
+        <div 
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(27, 7, 38, 0.4) 0%, transparent 60%)',
+          }}
+        />
         {/* 신비로운 오라 오버레이 - 아주 약하게만 */}
         <div 
           className="absolute top-0 left-0 right-0 h-[600px] pointer-events-none z-0"
