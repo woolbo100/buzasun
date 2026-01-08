@@ -38,7 +38,7 @@ export default function Hero() {
                 boxShadow: '0 4px 20px rgba(252, 231, 243, 0.1)',
               }}
             >
-              ✨ 선천코드 분석 맞춤 리포트
+              선천코드 분석 맞춤 리포트
             </span>
           </div>
         </Reveal>
