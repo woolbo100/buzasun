@@ -27,7 +27,7 @@ export default function ProductCards() {
       <div className="relative z-10">
         {/* 리포트 섹션 - 카드형 구조 */}
         <Reveal delayMs={0}>
-          <div className="w-full pt-12 pb-20 md:pt-16 md:py-28 px-6 md:px-8">
+          <div className="w-full pt-20 pb-20 md:pt-24 md:py-28 px-6 md:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="w-full rounded-3xl"
                 style={{
