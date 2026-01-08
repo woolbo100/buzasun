@@ -32,7 +32,7 @@ export default function BookmarkTassel() {
       onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="fixed top-20 right-6 md:right-8 z-50 cursor-pointer transition-all duration-300 group"
+      className="fixed top-12 right-12 md:top-16 md:right-16 z-50 cursor-pointer transition-all duration-300 group"
       aria-label="즐겨찾기"
       style={{
         filter: isHovered 
@@ -42,13 +42,13 @@ export default function BookmarkTassel() {
     >
       {/* 노리개 SVG */}
       <svg
-        width="60"
-        height="120"
+        width="80"
+        height="160"
         viewBox="0 0 60 120"
         className="transition-all duration-300"
         style={{
           animation: 'swing 3s ease-in-out infinite',
-          transformOrigin: '30px 0',
+          transformOrigin: '40px 0',
         }}
       >
         {/* 상단 코드 */}
