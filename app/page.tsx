@@ -18,8 +18,17 @@ export default function Home() {
     <main>
       <Navigation />
       <BookmarkTassel />
-      <Hero />
-      <ProductCards />
+      
+      {/* Hero ~ 리포트 ~ 전자책 통배경 래퍼 */}
+      <div 
+        className="relative overflow-hidden"
+        style={{ 
+          background: 'linear-gradient(180deg, #0d0010 0%, #15051a 20%, #25081a 40%, #1a0626 60%, #14061f 80%, #120014 100%)',
+        }}
+      >
+        <Hero />
+        <ProductCards />
+      </div>
       
       {/* 통배경 래퍼 - About/Projects/Contact 공유 */}
       <div 

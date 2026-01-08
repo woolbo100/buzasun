@@ -23,88 +23,95 @@ const ebooks = [
 
 export default function ProductCards() {
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* 배경 그라데이션 - 히어로와 자연스럽게 이어짐 */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'linear-gradient(180deg, #0d0010 0%, #15051a 30%, #25081a 60%, #15051a 100%)',
-        }}
-      />
-      
+    <section className="relative w-full overflow-hidden" style={{ background: 'transparent' }}>
       <div className="relative z-10">
-        {/* 리포트 섹션 - 풀 너비 메인 블록 */}
+        {/* 리포트 섹션 - 풀 너비 왕 카드 */}
         <Reveal delayMs={0}>
-          <div 
-            className="w-full py-20 md:py-28 px-6 md:px-8"
-            style={{
-              background: 'linear-gradient(180deg, rgba(13, 0, 16, 0.95) 0%, rgba(21, 5, 26, 0.9) 50%, rgba(37, 8, 26, 0.95) 100%)',
-            }}
-          >
-            <div className="max-w-5xl mx-auto text-center">
-              {/* 소제목 */}
-              <p 
-                className="text-sm md:text-base mb-4 opacity-70"
-                style={{
-                  color: '#cfc7dc',
-                  letterSpacing: '0.1em',
-                }}
-              >
-                가장 많은 선택을 받은 리포트
-              </p>
-              
-              {/* 메인 타이틀 */}
-              <h2 
-                className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-6"
-                style={{
-                  color: '#f7f1ff',
-                  letterSpacing: '0.02em',
-                  textShadow: '0 0 20px rgba(255, 20, 147, 0.2), 0 4px 30px rgba(0, 0, 0, 0.4)',
-                }}
-              >
-                선천코드 맞춤 연애 상담 리포트
-              </h2>
-              
-              {/* 설명 문구 */}
-              <p 
-                className="text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed"
-                style={{
-                  color: 'rgba(255, 255, 255, 0.85)',
-                  lineHeight: 1.7,
-                  wordBreak: 'keep-all',
-                }}
-              >
-                당신이 반복하는 연애 패턴과 끌어당기는 사랑의 방향을<br />
-                선천코드 분석을 통해 정밀하게 해독합니다.
-              </p>
-              
-              {/* CTA 버튼 */}
+          <div className="w-full py-20 md:py-28 px-6 md:px-8">
+            <div className="max-w-6xl mx-auto">
               <Link
                 href="/report"
-                className="inline-block px-12 py-5 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group"
+                className="group block w-full rounded-3xl transition-all duration-500 hover:-translate-y-2"
                 style={{
-                  background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
-                  boxShadow: '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)',
-                  fontSize: '1.1rem',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 20, 147, 0.2)',
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)',
+                  padding: '3rem 2.5rem',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.6), 0 0 70px rgba(255, 20, 147, 0.3)'
-                  e.currentTarget.style.transform = 'translateY(-2px)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.4)'
+                  e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.4), 0 0 60px rgba(255, 20, 147, 0.2)'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)'
-                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)'
                 }}
               >
-                {/* 빛이 흐르는 효과 */}
-                <span 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                  style={{
-                    background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)',
-                    animation: 'shimmer 2s infinite',
-                  }}
-                />
-                <span className="relative z-10">맞춤 리포트 받기</span>
+                <div className="text-center">
+                  {/* 소제목 */}
+                  <p 
+                    className="text-sm md:text-base mb-4 opacity-70"
+                    style={{
+                      color: '#cfc7dc',
+                      letterSpacing: '0.1em',
+                    }}
+                  >
+                    가장 많은 선택을 받은 리포트
+                  </p>
+                  
+                  {/* 메인 타이틀 */}
+                  <h2 
+                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-6"
+                    style={{
+                      color: '#f7f1ff',
+                      letterSpacing: '0.02em',
+                      textShadow: '0 0 20px rgba(255, 20, 147, 0.2), 0 4px 30px rgba(0, 0, 0, 0.4)',
+                    }}
+                  >
+                    선천코드 맞춤 연애 상담 리포트
+                  </h2>
+                  
+                  {/* 설명 문구 */}
+                  <p 
+                    className="text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed"
+                    style={{
+                      color: 'rgba(255, 255, 255, 0.85)',
+                      lineHeight: 1.7,
+                      wordBreak: 'keep-all',
+                    }}
+                  >
+                    당신이 반복하는 연애 패턴과 끌어당기는 사랑의 방향을<br />
+                    선천코드 분석을 통해 정밀하게 해독합니다.
+                  </p>
+                  
+                  {/* CTA 버튼 */}
+                  <div className="inline-block px-12 py-5 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn"
+                    style={{
+                      background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
+                      boxShadow: '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)',
+                      fontSize: '1.1rem',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.6), 0 0 70px rgba(255, 20, 147, 0.3)'
+                      e.currentTarget.style.transform = 'translateY(-2px)'
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)'
+                      e.currentTarget.style.transform = 'translateY(0)'
+                    }}
+                  >
+                    {/* 빛이 흐르는 효과 */}
+                    <span 
+                      className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700"
+                      style={{
+                        background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)',
+                        animation: 'shimmer 2s infinite',
+                      }}
+                    />
+                    <span className="relative z-10">맞춤 리포트 받기</span>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
@@ -112,9 +119,9 @@ export default function ProductCards() {
 
         {/* 전자책 섹션 - 3개 가로 배치 */}
         <Reveal delayMs={200}>
-          <div className="w-full py-16 md:py-20 px-6 md:px-8">
+          <div className="w-full py-16 md:py-20 px-6 md:px-8" style={{ background: 'transparent' }}>
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {ebooks.map((ebook, index) => (
                   <Reveal key={ebook.title} delayMs={300 + index * 100}>
                     <Link 

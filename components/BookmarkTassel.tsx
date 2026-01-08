@@ -77,13 +77,14 @@ export default function BookmarkTassel() {
             ? 'drop-shadow(0 0 6px rgba(255, 20, 147, 0.25))'
             : 'drop-shadow(0 0 4px rgba(138, 43, 226, 0.15))',
           transition: 'filter 0.3s ease-out',
+          paddingTop: '8px',
         }}
       >
         {/* 화면 최상단부터 이어지는 줄 - 로즈핑크 */}
         <div 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
+          className="absolute -top-8 left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
           style={{
-            height: 'calc(100% + 8px)',
+            height: '44px',
             background: 'linear-gradient(180deg, rgba(255, 192, 203, 0.85) 0%, rgba(255, 182, 193, 0.8) 30%, rgba(255, 175, 185, 0.75) 60%, rgba(255, 182, 193, 0.8) 100%)',
             boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 3px rgba(255, 192, 203, 0.3)',
           }}
@@ -94,6 +95,7 @@ export default function BookmarkTassel() {
           className="w-[70px] h-[180px] md:w-[90px] md:h-[220px] transition-all duration-300 relative z-10"
           viewBox="0 0 60 120"
           style={{
+            marginTop: '44px',
             animation: hasAnimated 
               ? 'swingGentle 4s ease-in-out infinite' 
               : 'swingInitial 1.5s ease-in-out',
