@@ -39,8 +39,8 @@ export default function ProductCards() {
                   padding: '3rem 2.5rem',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.25)'
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 20, 147, 0.12), 0 0 35px rgba(255, 182, 193, 0.08)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.3)'
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 20, 147, 0.18), 0 0 40px rgba(255, 182, 193, 0.12)'
                   e.currentTarget.style.transform = 'translateY(-2px)'
                 }}
                 onMouseLeave={(e) => {
@@ -219,9 +219,9 @@ export default function ProductCards() {
                           padding: '1.5rem',
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.25)'
+                          e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.3)'
                           e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'
-                          e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 20, 147, 0.12), 0 0 30px rgba(255, 182, 193, 0.08)'
+                          e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.2), 0 0 25px rgba(255, 20, 147, 0.18), 0 0 35px rgba(255, 182, 193, 0.12)'
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'

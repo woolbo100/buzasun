@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section 
       id="about" 
-      className="pt-32 pb-20 px-6 relative"
+      className="pt-40 pb-20 px-6 relative"
       style={{ background: 'transparent' }}
     >
       <div className="container mx-auto max-w-4xl">
