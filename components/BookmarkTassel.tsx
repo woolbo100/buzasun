@@ -6,6 +6,7 @@ import Toast from './Toast'
 export default function BookmarkTassel() {
   const [isBookmarked, setIsBookmarked] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
+  const [isClicked, setIsClicked] = useState(false)
   const [showToast, setShowToast] = useState(false)
   const [toastMessage, setToastMessage] = useState('')
   const [hasAnimated, setHasAnimated] = useState(false)
@@ -30,18 +31,25 @@ export default function BookmarkTassel() {
     setIsBookmarked(newState)
     localStorage.setItem('bookmarked', String(newState))
     
-    // Ripple 효과
+    // Click 시 밝아졌다가 원래대로 효과
+    setIsClicked(true)
+    setTimeout(() => {
+      setIsClicked(false)
+    }, 500)
+    
+    // 핑크 빛 파동(ripple) 효과
     if (containerRef.current) {
       const ripple = document.createElement('div')
       ripple.className = 'absolute inset-0 rounded-full pointer-events-none'
-      ripple.style.background = 'radial-gradient(circle, rgba(255, 20, 147, 0.4) 0%, transparent 70%)'
-      ripple.style.animation = 'ripple 0.6s ease-out'
+      ripple.style.background = 'radial-gradient(circle, rgba(255, 20, 147, 0.5) 0%, rgba(255, 105, 180, 0.3) 30%, transparent 70%)'
+      ripple.style.animation = 'ripple 0.5s ease-out'
       ripple.style.transformOrigin = 'center'
+      ripple.style.zIndex = '10'
       containerRef.current.appendChild(ripple)
       
       setTimeout(() => {
         ripple.remove()
-      }, 600)
+      }, 500)
     }
 
     // Toast 메시지
@@ -61,11 +69,14 @@ export default function BookmarkTassel() {
         className="fixed top-8 right-6 md:top-12 md:right-20 z-50 cursor-pointer transition-all duration-300 group"
         aria-label="즐겨찾기"
         style={{
-          filter: isHovered 
-            ? 'drop-shadow(0 0 16px rgba(255, 182, 193, 0.4)) brightness(1.05)' 
+          filter: isClicked
+            ? 'drop-shadow(0 0 20px rgba(255, 20, 147, 0.6)) brightness(1.15)'
+            : isHovered 
+            ? 'drop-shadow(0 0 12px rgba(255, 182, 193, 0.3)) brightness(1.05)' 
             : isBookmarked
-            ? 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.3))'
-            : 'drop-shadow(0 0 6px rgba(138, 43, 226, 0.2))',
+            ? 'drop-shadow(0 0 6px rgba(255, 20, 147, 0.25))'
+            : 'drop-shadow(0 0 4px rgba(138, 43, 226, 0.15))',
+          transition: 'filter 0.3s ease-out',
         }}
       >
         {/* 상단 고정점과 줄(끈) - 샴페인 로즈골드 */}
@@ -175,16 +186,16 @@ export default function BookmarkTassel() {
             }}
           />
           
-          {/* 자개 꽃 - hover 시 형광등처럼 밝아지는 효과 */}
+          {/* 자개 꽃 - hover 시 은은한 펄(glow) 효과 */}
           <g
-            className="transition-all duration-500"
+            className="transition-all duration-300"
             style={{
               filter: isHovered 
-                ? 'drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.4)) brightness(1.3)' 
+                ? 'drop-shadow(0 0 16px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 24px rgba(255, 182, 193, 0.3)) drop-shadow(0 0 32px rgba(255, 20, 147, 0.2))' 
                 : isBookmarked
-                ? 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.3))'
+                ? 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.25)) drop-shadow(0 0 12px rgba(255, 182, 193, 0.15))'
                 : 'drop-shadow(0 0 4px rgba(255, 182, 193, 0.2))',
-              opacity: isHovered ? 1 : 0.95,
+              opacity: isHovered ? 1 : isBookmarked ? 0.98 : 0.95,
             }}
             transform="translate(30 40) scale(0.28) translate(-100 -100)"
           >
@@ -357,56 +368,16 @@ export default function BookmarkTassel() {
           </g>
         </svg>
         
-        {/* Hover 시 금색 알갱이가 흩날리는 효과 */}
+        {/* Hover 시 약한 핑크 블룸 효과 */}
         {isHovered && (
-          <>
-            {/* 실을 따라 흐르는 금색 알갱이들 */}
-            {Array.from({ length: 6 }).map((_, i) => {
-              const baseX = 26 + (i % 6) * 1.2
-              const delay = i * 0.4
-              return (
-                <div
-                  key={`flow-${i}`}
-                  className="absolute pointer-events-none -z-10"
-                  style={{
-                    left: `${(baseX / 60) * 100}%`,
-                    top: '59px',
-                    width: '2px',
-                    height: '61px',
-                    background: 'linear-gradient(180deg, transparent 0%, rgba(255, 215, 0, 0.8) 25%, rgba(255, 223, 0, 0.6) 50%, rgba(255, 215, 0, 0.8) 75%, transparent 100%)',
-                    filter: 'blur(0.5px)',
-                    animation: `moonlightFlow ${2.5 + i * 0.25}s ease-in-out infinite`,
-                    animationDelay: `${delay}s`,
-                    transformOrigin: 'top center',
-                  }}
-                />
-              )
-            })}
-            
-            {/* 바람에 실려 휘날리는 금색 알갱이들 */}
-            {Array.from({ length: 8 }).map((_, i) => {
-              const randomX = 20 + (i * 5) + Math.sin(i * 1.2) * 5
-              const randomY = 70 + (i * 5) + Math.cos(i * 1.2) * 5
-              const delay = i * 0.3
-              return (
-                <div
-                  key={`drift-${i}`}
-                  className="absolute pointer-events-none -z-10"
-                  style={{
-                    left: `${(randomX / 60) * 100}%`,
-                    top: `${(randomY / 120) * 100}%`,
-                    width: '3px',
-                    height: '3px',
-                    background: 'radial-gradient(circle, rgba(255, 215, 0, 0.95) 0%, rgba(255, 223, 0, 0.7) 50%, transparent 100%)',
-                    borderRadius: '50%',
-                    filter: 'blur(0.3px) drop-shadow(0 0 2px rgba(255, 215, 0, 0.6))',
-                    animation: `moonlightDrift ${3 + i * 0.3}s ease-in-out infinite`,
-                    animationDelay: `${delay}s`,
-                  }}
-                />
-              )
-            })}
-          </>
+          <div
+            className="absolute inset-0 pointer-events-none rounded-full -z-10 transition-opacity duration-300"
+            style={{
+              background: 'radial-gradient(circle, rgba(255, 20, 147, 0.15) 0%, rgba(255, 105, 180, 0.1) 30%, transparent 70%)',
+              filter: 'blur(25px)',
+              transform: 'scale(1.5)',
+            }}
+          />
         )}
       </button>
 
