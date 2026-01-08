@@ -17,7 +17,7 @@
 
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    background: linear-gradient(135deg, #120014 0%, #1a0626 30%, #2d0a20 60%, #1a0626 100%);
+    background: linear-gradient(135deg, #0d0010 0%, #15051a 30%, #25081a 60%, #15051a 100%);
     background-size: 200% 200%;
     animation: gradientShift 20s ease infinite;
     color: #f7f1ff;

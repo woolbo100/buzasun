@@ -20,8 +20,8 @@ export default function Hero() {
       <div 
         className="absolute inset-0 flex items-center justify-center pointer-events-none z-5"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(252, 231, 243, 0.15) 0%, rgba(255, 182, 193, 0.08) 40%, transparent 70%)',
-          filter: 'blur(60px)',
+          background: 'radial-gradient(ellipse at center, rgba(252, 231, 243, 0.08) 0%, rgba(255, 182, 193, 0.04) 40%, transparent 60%)',
+          filter: 'blur(40px)',
         }}
       />
       
@@ -50,16 +50,28 @@ export default function Hero() {
             style={{
               fontSize: 'clamp(2.5rem, 8vw, 5rem)',
               letterSpacing: '0.02em',
-              background: 'linear-gradient(to right, #ffffff 0%, #fff5f8 20%, #ffe0f0 40%, #ffb6d9 60%, #ff69b4 80%, #ff1493 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              textShadow: '0 0 30px rgba(255, 20, 147, 0.3), 0 0 60px rgba(255, 105, 180, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
             }}
           >
-            당신의 연애는
-            <br />
-            <span className="block mt-2" style={{ letterSpacing: '0.03em' }}>
+            <span 
+              className="block"
+              style={{
+                color: '#ffffff',
+                textShadow: '0 0 8px rgba(255, 255, 255, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
+              }}
+            >
+              당신의 연애는
+            </span>
+            <span 
+              className="block mt-2"
+              style={{
+                letterSpacing: '0.03em',
+                background: 'linear-gradient(to right, #fff5f8 0%, #ffe0f0 20%, #ffb6d9 40%, #ff69b4 60%, #ff1493 80%, #ff1493 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                textShadow: '0 0 12px rgba(255, 20, 147, 0.25), 0 0 24px rgba(255, 105, 180, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3)',
+              }}
+            >
               타고난 코드부터 다르다
             </span>
           </h1>
