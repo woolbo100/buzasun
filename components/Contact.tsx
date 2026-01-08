@@ -30,9 +30,16 @@ export default function Contact() {
   return (
     <section 
       id="contact" 
-      className="py-20 px-6 relative z-10 bg-gradient-to-b from-[#2a083d] via-[#1b0726] to-[#0f0518]"
+      className="py-20 px-6 relative z-10 bg-gradient-to-b from-[#1b0726] to-[#14061f]"
     >
-      <div className="container mx-auto max-w-2xl">
+      {/* 상단 그라데이션 오버레이 - 자연스럽게 어두워지는 효과 */}
+      <div 
+        className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(20, 6, 31, 0.5) 50%, rgba(20, 6, 31, 1) 100%)',
+        }}
+      />
+      <div className="container mx-auto max-w-2xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 text-bd-ivory fade-in-up">
           문의하기
         </h2>
@@ -42,7 +49,7 @@ export default function Contact() {
           id="contactForm" 
           className="space-y-6 fade-in-up p-8 md:p-10 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10"
           style={{
-            boxShadow: '0 8px 32px rgba(255, 77, 166, 0.15), 0 0 60px rgba(42, 8, 61, 0.3)',
+            boxShadow: '0 8px 32px rgba(20, 6, 31, 0.4), 0 0 60px rgba(27, 7, 38, 0.2)',
           }}
           onSubmit={handleSubmit}
         >

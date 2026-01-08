@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="py-12 px-6" style={{ background: 'rgba(26, 6, 38, 0.6)', position: 'relative', zIndex: 1, borderTop: '1px solid rgba(255, 20, 147, 0.1)' }}>
+    <footer className="py-12 px-6" style={{ background: '#14061f', position: 'relative', zIndex: 1, borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -26,7 +26,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="mt-8 pt-8 text-center text-gray-400" style={{ borderTop: '1px solid rgba(255, 20, 147, 0.2)' }}>
+        <div className="mt-8 pt-8 text-center text-gray-400" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
           <p>&copy; 2024 백도화 매력학당. All rights reserved.</p>
         </div>
       </div>

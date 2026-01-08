@@ -46,8 +46,8 @@ export default function Projects() {
               key={index}
               className="card-hover p-6 rounded-lg fade-in-up" 
               style={{ 
-                background: 'linear-gradient(135deg, #2d0a20 0%, #1a0626 50%, #120014 100%)', 
-                border: '1px solid rgba(255, 20, 147, 0.3)', 
+                background: 'linear-gradient(135deg, #1b0726 0%, #14061f 100%)', 
+                border: '1px solid rgba(255, 255, 255, 0.1)', 
                 backdropFilter: 'blur(10px)' 
               }}
             >
