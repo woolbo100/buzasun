@@ -37,7 +37,8 @@ export default function Projects() {
   return (
     <section 
       id="projects" 
-      className="py-20 px-6 relative bg-transparent"
+      className="py-20 px-6 relative"
+      style={{ background: 'transparent' }}
     >
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 text-bd-ivory fade-in-up">

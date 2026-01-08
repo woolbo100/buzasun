@@ -4,7 +4,8 @@ export default function About() {
   return (
     <section 
       id="about" 
-      className="py-20 px-6 relative bg-transparent"
+      className="py-20 px-6 relative"
+      style={{ background: 'transparent' }}
     >
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 text-bd-ivory fade-in-up">

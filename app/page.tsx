@@ -20,22 +20,16 @@ export default function Home() {
       <ProductCards />
       
       {/* 통배경 래퍼 - About/Projects/Contact 공유 */}
-      <div className="relative bg-gradient-to-b from-[#1b0726] to-[#14061f] overflow-hidden">
-        {/* 신비로운 오라 오버레이 레이어들 */}
+      <div className="relative overflow-hidden" style={{ background: '#14061f' }}>
+        {/* 신비로운 오라 오버레이 - 아주 약하게만 */}
         <div 
-          className="absolute top-0 left-0 right-0 h-96 pointer-events-none z-0"
+          className="absolute top-0 left-0 right-0 h-[600px] pointer-events-none z-0"
           style={{
-            background: 'radial-gradient(ellipse at center top, rgba(138, 43, 226, 0.1) 0%, rgba(255, 20, 147, 0.05) 25%, transparent 60%)',
-          }}
-        />
-        <div 
-          className="absolute top-0 left-0 right-0 bottom-0 pointer-events-none z-0"
-          style={{
-            background: 'linear-gradient(to bottom, transparent 0%, rgba(20, 6, 31, 0.3) 50%, rgba(20, 6, 31, 0.6) 100%)',
+            background: 'radial-gradient(ellipse at center top, rgba(138, 43, 226, 0.06) 0%, rgba(255, 20, 147, 0.03) 20%, transparent 50%)',
           }}
         />
         
-        {/* 섹션들 */}
+        {/* 섹션들 - 경계 없이 자연스럽게 연결 */}
         <div className="relative z-10">
           <About />
           <Projects />
