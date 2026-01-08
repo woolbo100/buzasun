@@ -86,10 +86,48 @@ export default function Navigation() {
               e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.3))'
             }}
           >
-            <i 
-              className="fas fa-spa text-xl md:text-2xl transition-all duration-300"
-              style={{ color: '#ff1493' }}
-            />
+            {/* 핫핑크 꽃모양 심볼 */}
+            <svg 
+              className="w-6 h-6 md:w-7 md:h-7 transition-all duration-300 group-hover/logo:scale-110"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{
+                filter: 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.6))',
+              }}
+            >
+              {/* 꽃잎들 */}
+              <path 
+                d="M12 2C12 2 8 6 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 6 12 2 12 2Z" 
+                fill="#ff1493"
+                opacity="0.9"
+              />
+              <path 
+                d="M12 22C12 22 8 18 8 14C8 11.7909 9.79086 10 12 10C14.2091 10 16 11.7909 16 14C16 18 12 22 12 22Z" 
+                fill="#ff1493"
+                opacity="0.9"
+              />
+              <path 
+                d="M2 12C2 12 6 8 10 8C12.2091 8 14 9.79086 14 12C14 14.2091 12.2091 16 10 16C6 16 2 12 2 12Z" 
+                fill="#ff1493"
+                opacity="0.9"
+              />
+              <path 
+                d="M22 12C22 12 18 8 14 8C11.7909 8 10 9.79086 10 12C10 14.2091 11.7909 16 14 16C18 16 22 12 22 12Z" 
+                fill="#ff1493"
+                opacity="0.9"
+              />
+              {/* 중앙 원 */}
+              <circle 
+                cx="12" 
+                cy="12" 
+                r="3" 
+                fill="#ff69b4"
+                style={{
+                  filter: 'drop-shadow(0 0 4px rgba(255, 20, 147, 0.8))',
+                }}
+              />
+            </svg>
             <span 
               className="text-lg md:text-xl font-elegant font-bold transition-all duration-300"
               style={{ 

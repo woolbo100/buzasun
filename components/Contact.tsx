@@ -28,48 +28,88 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 px-6" style={{ position: 'relative', zIndex: 1 }}>
+    <section 
+      id="contact" 
+      className="py-20 px-6 relative z-10 bg-gradient-to-b from-[#2a083d] via-[#1b0726] to-[#0f0518]"
+    >
       <div className="container mx-auto max-w-2xl">
-        <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 gradient-text fade-in-up">
+        <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 text-bd-ivory fade-in-up">
           문의하기
         </h2>
-        <form id="contactForm" className="space-y-6 fade-in-up" onSubmit={handleSubmit}>
+        
+        {/* 폼 컨테이너 - 반투명 유리 느낌 */}
+        <form 
+          id="contactForm" 
+          className="space-y-6 fade-in-up p-8 md:p-10 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10"
+          style={{
+            boxShadow: '0 8px 32px rgba(255, 77, 166, 0.15), 0 0 60px rgba(42, 8, 61, 0.3)',
+          }}
+          onSubmit={handleSubmit}
+        >
           <div>
-            <label htmlFor="name" className="block mb-2" style={{ color: '#ff69b4' }}>이름</label>
+            <label 
+              htmlFor="name" 
+              className="block mb-3 text-sm font-medium text-bd-gray"
+            >
+              이름
+            </label>
             <input 
               type="text" 
               id="name" 
               name="name" 
-              className="w-full px-4 py-3 rounded-lg"
+              className="w-full px-4 py-3 rounded-lg bg-transparent border border-white/20 text-bd-ivory placeholder:text-bd-muted focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300"
               placeholder="이름을 입력해주세요"
               required
             />
           </div>
+          
           <div>
-            <label htmlFor="email" className="block mb-2" style={{ color: '#ff69b4' }}>이메일</label>
+            <label 
+              htmlFor="email" 
+              className="block mb-3 text-sm font-medium text-bd-gray"
+            >
+              이메일
+            </label>
             <input 
               type="email" 
               id="email" 
               name="email" 
-              className="w-full px-4 py-3 rounded-lg"
+              className="w-full px-4 py-3 rounded-lg bg-transparent border border-white/20 text-bd-ivory placeholder:text-bd-muted focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300"
               placeholder="이메일을 입력해주세요"
               required
             />
           </div>
+          
           <div>
-            <label htmlFor="message" className="block mb-2" style={{ color: '#ff69b4' }}>문의 내용</label>
+            <label 
+              htmlFor="message" 
+              className="block mb-3 text-sm font-medium text-bd-gray"
+            >
+              문의 내용
+            </label>
             <textarea 
               id="message" 
               name="message" 
               rows={6} 
-              className="w-full px-4 py-3 rounded-lg"
+              className="w-full px-4 py-3 rounded-lg bg-transparent border border-white/20 text-bd-ivory placeholder:text-bd-muted focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/30 transition-all duration-300 resize-none"
               placeholder="문의 내용을 입력해주세요"
               required
             ></textarea>
           </div>
+          
           <button 
             type="submit" 
-            className="btn-primary w-full py-3 rounded-lg font-semibold"
+            className="w-full py-4 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            style={{
+              background: 'linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ff1493 100%)',
+              boxShadow: '0 8px 24px rgba(255, 20, 147, 0.4), 0 0 40px rgba(255, 105, 180, 0.2)',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = '0 12px 32px rgba(255, 20, 147, 0.5), 0 0 60px rgba(255, 105, 180, 0.3)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = '0 8px 24px rgba(255, 20, 147, 0.4), 0 0 40px rgba(255, 105, 180, 0.2)'
+            }}
           >
             보내기
           </button>
