@@ -80,20 +80,19 @@ export default function Hero() {
         {/* 서브 카피 */}
         <Reveal delayMs={200}>
           <p 
-            className="text-bd-gray mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="mb-12 max-w-2xl mx-auto"
             style={{
               fontSize: 'clamp(1rem, 2vw, 1.25rem)',
               letterSpacing: '0.01em',
-              opacity: 0.9,
+              color: 'rgba(255, 255, 255, 0.9)',
+              fontWeight: 400,
+              lineHeight: 1.7,
+              wordBreak: 'keep-all',
             }}
           >
-            선천코드 분석을 통해
+            선천코드 분석을 통해 당신이 반복하는 연애 패턴과
             <br />
-            당신이 반복하는 연애 패턴과
-            <br />
-            끌어당기는 사랑의 방향을
-            <br />
-            정밀하게 해독합니다.
+            끌어당기는 사랑의 방향을 정밀하게 해독합니다.
           </p>
         </Reveal>
 
