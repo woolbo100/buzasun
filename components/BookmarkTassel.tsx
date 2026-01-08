@@ -68,13 +68,13 @@ export default function BookmarkTassel() {
             : 'drop-shadow(0 0 6px rgba(138, 43, 226, 0.2))',
         }}
       >
-        {/* 상단 고정점과 줄(끈) */}
+        {/* 상단 고정점과 줄(끈) - 실크 끈 느낌 */}
         <div 
           className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
           style={{
             height: '40px',
-            background: 'linear-gradient(180deg, rgba(138, 43, 226, 0.8) 0%, rgba(147, 51, 234, 0.7) 50%, rgba(139, 92, 246, 0.6) 100%)',
-            boxShadow: '0 0 8px rgba(138, 43, 226, 0.4), 0 0 12px rgba(147, 51, 234, 0.3)',
+            background: 'linear-gradient(180deg, rgba(45, 10, 32, 0.9) 0%, rgba(60, 15, 40, 0.85) 30%, rgba(70, 20, 45, 0.8) 60%, rgba(65, 18, 42, 0.85) 100%)',
+            boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 0 4px rgba(45, 10, 32, 0.3)',
           }}
         />
 
@@ -89,28 +89,67 @@ export default function BookmarkTassel() {
             transformOrigin: 'center top',
           }}
         >
+          {/* 그라데이션 정의 - 줄과 술용 */}
+          <defs>
+            {/* 실크 끈 그라데이션 */}
+            <linearGradient id="cordGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#3d0f28" />
+              <stop offset="30%" stopColor="#4a152f" />
+              <stop offset="60%" stopColor="#501833" />
+              <stop offset="100%" stopColor="#471530" />
+            </linearGradient>
+            
+            {/* 노리개 캡 그라데이션 */}
+            <linearGradient id="capGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#3d0f28" />
+              <stop offset="50%" stopColor="#4a152f" />
+              <stop offset="100%" stopColor="#3d0f28" />
+            </linearGradient>
+            
+            {/* 노리개 실 그라데이션 1 - 딥 플럼 */}
+            <linearGradient id="threadGradient0" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#2d0a20" />
+              <stop offset="50%" stopColor="#3d0f28" />
+              <stop offset="100%" stopColor="#45152d" />
+            </linearGradient>
+            
+            {/* 노리개 실 그라데이션 2 - 와인 퍼플 */}
+            <linearGradient id="threadGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#2f0b22" />
+              <stop offset="50%" stopColor="#401230" />
+              <stop offset="100%" stopColor="#471530" />
+            </linearGradient>
+            
+            {/* 노리개 실 그라데이션 3 - 먹보라 */}
+            <linearGradient id="threadGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#2a081d" />
+              <stop offset="50%" stopColor="#3a0e26" />
+              <stop offset="100%" stopColor="#42132a" />
+            </linearGradient>
+          </defs>
+          
           {/* 상단 고정 고리 */}
           <circle
             cx="30"
             cy="5"
             r="2.5"
-            fill="#9333ea"
+            fill="url(#cordGradient)"
             style={{
-              filter: 'drop-shadow(0 0 4px rgba(147, 51, 234, 0.6))',
+              filter: 'drop-shadow(0 0 3px rgba(45, 10, 32, 0.4))',
             }}
           />
           
-          {/* 상단 코드 */}
+          {/* 상단 코드 - 실크 끈 느낌 */}
           <line
             x1="30"
             y1="5"
             x2="30"
             y2="15"
-            stroke="#9333ea"
+            stroke="url(#cordGradient)"
             strokeWidth="2"
             fill="none"
             style={{
-              filter: 'drop-shadow(0 0 4px rgba(147, 51, 234, 0.6))',
+              filter: 'drop-shadow(0 0 3px rgba(45, 10, 32, 0.3))',
             }}
           />
           
@@ -128,11 +167,11 @@ export default function BookmarkTassel() {
           {/* 매듭 */}
           <path
             d="M 25 25 Q 30 28 35 25 Q 30 30 25 25"
-            stroke="#9333ea"
+            stroke="url(#cordGradient)"
             strokeWidth="1.5"
             fill="none"
             style={{
-              filter: 'drop-shadow(0 0 3px rgba(147, 51, 234, 0.5))',
+              filter: 'drop-shadow(0 0 2px rgba(45, 10, 32, 0.3))',
             }}
           />
           
@@ -278,10 +317,10 @@ export default function BookmarkTassel() {
             y="50"
             width="12"
             height="7"
-            fill="#9333ea"
+            fill="url(#capGradient)"
             rx="1.5"
             style={{
-              filter: 'drop-shadow(0 0 4px rgba(147, 51, 234, 0.5))',
+              filter: 'drop-shadow(0 0 3px rgba(45, 10, 32, 0.4))',
             }}
           />
           <rect
@@ -289,16 +328,18 @@ export default function BookmarkTassel() {
             y="52"
             width="10"
             height="3"
-            fill="#ffd700"
+            fill="#c9a961"
             rx="0.5"
+            opacity="0.7"
           />
           
-          {/* 노리개 실들 */}
-          <g opacity="0.85">
+          {/* 노리개 실들 - 고급 한복 노리개 느낌 */}
+          <g opacity="0.7">
             {Array.from({ length: 24 }).map((_, i) => {
               const baseX = 26 + (i % 6) * 1.2
               const randomOffset = (i * 0.3) % 2 - 1
-              const purpleShades = ['#9333ea', '#8b5cf6', '#a855f7', '#7c3aed']
+              const length = 120 - 59
+              const yProgress = (y: number) => (y - 59) / length
               return (
                 <line
                   key={i}
@@ -306,17 +347,16 @@ export default function BookmarkTassel() {
                   y1="59"
                   x2={baseX + randomOffset}
                   y2="120"
-                  stroke={purpleShades[i % purpleShades.length]}
+                  stroke={`url(#threadGradient${i % 3})`}
                   strokeWidth="1.2"
-                  opacity="0.75"
+                  opacity="0.8"
                   style={{
-                    filter: 'drop-shadow(0 0 2px rgba(147, 51, 234, 0.3))',
+                    filter: 'drop-shadow(0 0 1px rgba(45, 10, 32, 0.2))',
                   }}
                 />
               )
             })}
           </g>
-          
         </svg>
         
         {/* Hover 시 핑크 블룸 */}

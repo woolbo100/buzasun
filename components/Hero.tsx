@@ -46,7 +46,7 @@ export default function Hero() {
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <h1 
-            className="font-elegant font-bold mb-8 leading-[1.1] animate-[pulse_6s_ease-in-out_infinite]"
+            className="font-elegant font-bold mb-8 leading-[1.1]"
             style={{
               fontSize: 'clamp(2.5rem, 8vw, 5rem)',
               letterSpacing: '0.02em',
