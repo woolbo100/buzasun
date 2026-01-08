@@ -23,7 +23,7 @@ export default function Home() {
       <div 
         className="relative overflow-hidden"
         style={{ 
-          background: 'linear-gradient(180deg, #0d0010 0%, #14061f 15%, #1a0726 30%, #2d0a20 45%, #2a091c 60%, #1a0626 75%, #14061f 90%, #120014 100%)',
+          background: 'linear-gradient(180deg, #0d0010 0%, #14061f 15%, #1a0726 30%, #1d082e 45%, #1a0726 60%, #1a0626 75%, #14061f 90%, #120014 100%)',
         }}
       >
         <Hero />
