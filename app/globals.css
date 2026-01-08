@@ -60,6 +60,15 @@
       transform: translateX(-50%) translateY(-8px);
     }
   }
+
+  @keyframes swing {
+    0%, 100% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+  }
 }
 
 @layer components {
