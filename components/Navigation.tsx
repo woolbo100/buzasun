@@ -130,12 +130,19 @@ export default function Navigation() {
             </svg>
             <span 
               className="text-lg md:text-xl font-elegant font-bold transition-all duration-300"
-              style={{ 
+            >
+              <span style={{ 
+                color: '#ffffff',
+                textShadow: '0 0 20px rgba(255, 255, 255, 0.3)',
+              }}>
+                백도화
+              </span>
+              <span style={{ 
                 color: '#ff1493',
                 textShadow: '0 0 20px rgba(255, 20, 147, 0.4)',
-              }}
-            >
-              백도화 매력학당
+              }}>
+                {' '}매력학당
+              </span>
             </span>
           </Link>
 

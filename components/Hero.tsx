@@ -50,11 +50,11 @@ export default function Hero() {
             style={{
               fontSize: 'clamp(2.5rem, 8vw, 5rem)',
               letterSpacing: '0.02em',
-              background: 'linear-gradient(135deg, #ffffff 0%, #f3e8ff 40%, #e9d5ff 70%, #ddd6fe 100%)',
+              background: 'linear-gradient(to right, #ffffff 0%, #fff5f8 20%, #ffe0f0 40%, #ffb6d9 60%, #ff69b4 80%, #ff1493 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              textShadow: '0 0 30px rgba(221, 214, 254, 0.4), 0 0 60px rgba(233, 213, 255, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
+              textShadow: '0 0 30px rgba(255, 20, 147, 0.3), 0 0 60px rgba(255, 105, 180, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
             }}
           >
             당신의 연애는

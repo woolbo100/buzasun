@@ -144,58 +144,68 @@ export default function BookmarkTassel() {
             transform="translate(30 40) scale(0.28) translate(-100 -100)"
           >
             <defs>
-              {/* 핫핑크→연핑크 그라데이션 */}
-              <radialGradient id="petalGradTassel" cx="50%" cy="40%" r="70%">
-                <stop offset="0%" stopColor="#ffd1ea" />
-                <stop offset="40%" stopColor="#ff64b6" />
-                <stop offset="75%" stopColor="#ff1e9a" />
-                <stop offset="100%" stopColor="#b8006b" />
+              {/* 자개(진주) 느낌의 은은한 펄 그라데이션 - 내부 채우기 */}
+              <radialGradient id="pearlFillTassel" cx="50%" cy="50%" r="80%">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.95" />
+                <stop offset="30%" stopColor="#fefefe" stopOpacity="0.9" />
+                <stop offset="60%" stopColor="#f8f5ff" stopOpacity="0.85" />
+                <stop offset="100%" stopColor="#f0ebff" stopOpacity="0.75" />
               </radialGradient>
 
               {/* 자개(나전) 느낌의 은은한 무지개 하이라이트 */}
               <linearGradient id="najeonTassel" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="rgba(255,255,255,0.65)" />
-                <stop offset="25%" stopColor="rgba(255,216,250,0.45)" />
-                <stop offset="55%" stopColor="rgba(193,238,255,0.32)" />
-                <stop offset="80%" stopColor="rgba(255,234,196,0.30)" />
-                <stop offset="100%" stopColor="rgba(255,255,255,0.55)" />
+                <stop offset="0%" stopColor="rgba(255,255,255,0.85)" />
+                <stop offset="25%" stopColor="rgba(248,245,255,0.7)" />
+                <stop offset="55%" stopColor="rgba(240,235,255,0.6)" />
+                <stop offset="80%" stopColor="rgba(255,250,252,0.65)" />
+                <stop offset="100%" stopColor="rgba(255,255,255,0.8)" />
               </linearGradient>
 
-              {/* 은은한 광택 */}
-              <filter id="softGlowTassel" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="3" result="blur" />
+              {/* 가장자리 핑크 라인 글로우 */}
+              <filter id="edgeGlowTassel" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2" result="blur" />
                 <feColorMatrix
                   in="blur"
                   type="matrix"
-                  values="1 0 0 0 0 0 0.25 0 0 0 0 0 0.6 0 0 0 0 0 0.9 0"
-                  result="pinkBlur"
+                  values="1 0 0 0 0 0 0.2 0 0 0 0 0 0.4 0 0 0 0 0 0.6 0"
+                  result="pinkEdge"
                 />
                 <feMerge>
-                  <feMergeNode in="pinkBlur" />
+                  <feMergeNode in="pinkEdge" />
                   <feMergeNode in="SourceGraphic" />
                 </feMerge>
               </filter>
 
               {/* 살짝 반짝이는 점(미세) */}
               <filter id="sparkleTassel" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="0.8" />
+                <feGaussianBlur stdDeviation="0.6" />
               </filter>
             </defs>
 
             {/* 꽃잎 5장: 하나의 꽃잎 모양을 회전 복제 */}
-            <g transform="translate(100 100)" filter="url(#softGlowTassel)">
+            <g transform="translate(100 100)">
               {/* 꽃잎 하나 */}
               <g id="petalTassel">
+                {/* 꽃잎 내부 - 자개/진주 톤 */}
                 <path
                   d="M 0 -70 C 20 -70, 38 -48, 34 -28 C 30 -10, 14 8, 0 18 C -14 8, -30 -10, -34 -28 C -38 -48, -20 -70, 0 -70 Z"
-                  fill="url(#petalGradTassel)"
-                  opacity="0.98"
+                  fill="url(#pearlFillTassel)"
+                  opacity="0.95"
                 />
                 {/* 자개 하이라이트 오버레이 */}
                 <path
                   d="M 0 -64 C 16 -62, 28 -45, 25 -28 C 22 -12, 12 2, 0 10 C -12 2, -22 -12, -25 -28 C -28 -45, -16 -62, 0 -64 Z"
                   fill="url(#najeonTassel)"
-                  opacity="0.42"
+                  opacity="0.5"
+                />
+                {/* 가장자리 핑크 라인 - 소프트 글로우 */}
+                <path
+                  d="M 0 -70 C 20 -70, 38 -48, 34 -28 C 30 -10, 14 8, 0 18 C -14 8, -30 -10, -34 -28 C -38 -48, -20 -70, 0 -70 Z"
+                  fill="none"
+                  stroke="#ff1493"
+                  strokeWidth="1.5"
+                  opacity="0.7"
+                  filter="url(#edgeGlowTassel)"
                 />
               </g>
 
@@ -206,18 +216,18 @@ export default function BookmarkTassel() {
               <use href="#petalTassel" transform="rotate(216)" />
               <use href="#petalTassel" transform="rotate(288)" />
 
-              {/* 중앙 보석(자개+핑크) */}
-              <circle r="18" fill="rgba(255,255,255,0.10)" />
-              <circle r="14" fill="url(#najeonTassel)" opacity="0.8" />
-              <circle r="9" fill="#ff2aa1" opacity="0.9" />
-              <circle r="4" fill="#fff" opacity="0.9" />
+              {/* 중앙 보석 - 자개/진주 느낌 */}
+              <circle r="18" fill="rgba(255,255,255,0.15)" />
+              <circle r="14" fill="url(#najeonTassel)" opacity="0.85" />
+              <circle r="9" fill="rgba(255,255,255,0.9)" opacity="0.9" />
+              <circle r="4" fill="#ffffff" opacity="0.95" />
 
-              {/* 미세 스파클 */}
-              <g opacity="0.55" filter="url(#sparkleTassel)">
-                <circle cx="-38" cy="-10" r="2" fill="rgba(255,255,255,0.9)" />
-                <circle cx="42" cy="-6" r="1.8" fill="rgba(255,210,240,0.85)" />
-                <circle cx="10" cy="44" r="1.6" fill="rgba(255,255,255,0.75)" />
-                <circle cx="-14" cy="-48" r="1.4" fill="rgba(255,255,255,0.65)" />
+              {/* 미세 스파클 - 절제된 고급 톤 */}
+              <g opacity="0.4" filter="url(#sparkleTassel)">
+                <circle cx="-38" cy="-10" r="1.5" fill="rgba(255,255,255,0.8)" />
+                <circle cx="42" cy="-6" r="1.3" fill="rgba(255,255,255,0.7)" />
+                <circle cx="10" cy="44" r="1.2" fill="rgba(255,255,255,0.65)" />
+                <circle cx="-14" cy="-48" r="1.1" fill="rgba(255,255,255,0.6)" />
               </g>
             </g>
           </g>
