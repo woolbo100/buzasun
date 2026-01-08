@@ -42,11 +42,12 @@ export default function ProductCards() {
                 <div className="text-center mb-12">
                   {/* 상단 배지 */}
                   <p 
-                    className="text-xs md:text-sm mb-6"
+                    className="mb-6"
                     style={{
                       color: '#cfc7dc',
-                      letterSpacing: '0.15em',
+                      letterSpacing: '0.2em',
                       opacity: 0.6,
+                      fontSize: '0.7rem',
                     }}
                   >
                     가장 많은 선택을 받은 리포트
@@ -58,7 +59,7 @@ export default function ProductCards() {
                     style={{
                       color: '#f7f1ff',
                       letterSpacing: '0.02em',
-                      lineHeight: 1.3,
+                      lineHeight: 1.4,
                     }}
                   >
                     선천코드 맞춤 연애 상담 리포트
@@ -70,7 +71,7 @@ export default function ProductCards() {
                   {/* 좌측: 핵심 메시지 */}
                   <div className="text-left">
                     <p 
-                      className="text-xl md:text-2xl font-semibold mb-4 leading-relaxed"
+                      className="text-xl md:text-2xl font-semibold mb-6 leading-relaxed"
                       style={{
                         color: 'rgba(245, 239, 255, 0.95)',
                         lineHeight: 1.6,
@@ -93,7 +94,7 @@ export default function ProductCards() {
                   </div>
 
                   {/* 우측: 카드형 핵심 포인트 */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                     {[
                       '타고난 연애 성향 & 숨겨진 남자복',
                       '맞는 인연 vs 피해야 할 이상형',
@@ -105,7 +106,7 @@ export default function ProductCards() {
                         key={index}
                         className="group rounded-xl p-4 transition-all duration-300 cursor-pointer"
                         style={{
-                          background: 'rgba(40, 15, 55, 0.6)',
+                          background: 'rgba(50, 20, 65, 0.7)',
                           border: '1px solid rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(10px)',
                         }}
@@ -142,7 +143,7 @@ export default function ProductCards() {
                     <div className="inline-block px-14 py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn mb-3"
                       style={{
                         background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
-                        boxShadow: '0 8px 32px rgba(255, 20, 147, 0.3), 0 0 40px rgba(255, 20, 147, 0.15)',
+                        boxShadow: '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)',
                         fontSize: '1.15rem',
                       }}
                       onMouseEnter={(e) => {
@@ -150,7 +151,7 @@ export default function ProductCards() {
                         e.currentTarget.style.transform = 'translateY(-2px)'
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.3), 0 0 40px rgba(255, 20, 147, 0.15)'
+                        e.currentTarget.style.boxShadow = '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)'
                         e.currentTarget.style.transform = 'translateY(0)'
                       }}
                     >

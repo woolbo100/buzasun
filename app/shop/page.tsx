@@ -10,9 +10,29 @@ export default function ShopPage() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen pt-16 px-4 md:px-6 py-20 md:py-32">
-        <div className="container mx-auto max-w-4xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold mb-12"
+      <main 
+        className="min-h-screen pt-16 px-4 md:px-6 py-24 md:py-40 relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(180deg, #1a0626 0%, #14061f 30%, #120014 60%, #14061f 100%)',
+        }}
+      >
+        {/* 입체감을 위한 추가 그라데이션 레이어 */}
+        <div 
+          className="absolute inset-0 pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(27, 7, 38, 0.4) 0%, transparent 60%)',
+          }}
+        />
+        {/* 신비로운 오라 오버레이 - 아주 약하게만 */}
+        <div 
+          className="absolute top-0 left-0 right-0 h-[600px] pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(ellipse at center top, rgba(138, 43, 226, 0.06) 0%, rgba(255, 20, 147, 0.03) 20%, transparent 50%)',
+          }}
+        />
+        
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold mb-16"
             style={{
               color: '#f7f1ff',
               letterSpacing: '0.02em',
@@ -20,12 +40,12 @@ export default function ShopPage() {
           >
             백도화 비밀상점
           </h1>
-          <div className="mb-16 space-y-6">
+          <div className="mb-20 space-y-8">
             <p 
               className="text-lg md:text-xl leading-relaxed"
               style={{
                 color: 'rgba(245, 239, 255, 0.9)',
-                lineHeight: 1.8,
+                lineHeight: 1.9,
                 wordBreak: 'keep-all',
               }}
             >
@@ -36,7 +56,7 @@ export default function ShopPage() {
               className="text-lg md:text-xl leading-relaxed"
               style={{
                 color: 'rgba(245, 239, 255, 0.85)',
-                lineHeight: 1.8,
+                lineHeight: 1.9,
                 wordBreak: 'keep-all',
               }}
             >
