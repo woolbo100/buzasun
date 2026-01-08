@@ -29,13 +29,24 @@ export default function ProductCards() {
         <Reveal delayMs={0}>
           <div className="w-full pt-20 pb-20 md:pt-24 md:py-28 px-6 md:px-8">
             <div className="max-w-6xl mx-auto">
-              <div className="w-full rounded-3xl"
+              <div 
+                className="w-full rounded-3xl transition-all duration-300 ease-in-out cursor-pointer"
                 style={{
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 20, 147, 0.2)',
                   backdropFilter: 'blur(20px)',
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)',
                   padding: '3rem 2.5rem',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(236, 72, 153, 0.8)'
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 60px rgba(255, 20, 147, 0.5), 0 0 80px rgba(236, 72, 153, 0.3)'
+                  e.currentTarget.style.transform = 'translateY(-4px)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)'
+                  e.currentTarget.style.transform = 'translateY(0)'
                 }}
               >
                 {/* 상단: 배지 + 메인 타이틀 */}

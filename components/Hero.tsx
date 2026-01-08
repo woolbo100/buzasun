@@ -101,7 +101,7 @@ export default function Hero() {
 
         {/* CTA 버튼 */}
         <Reveal delayMs={300}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
             <div className="flex flex-col items-center">
               <Link
                 href="/report"
