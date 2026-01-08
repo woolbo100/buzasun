@@ -39,8 +39,8 @@ export default function ProductCards() {
                   padding: '3rem 2.5rem',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.4)'
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 20, 147, 0.2), 0 0 40px rgba(255, 182, 193, 0.15)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.25)'
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 20, 147, 0.12), 0 0 35px rgba(255, 182, 193, 0.08)'
                   e.currentTarget.style.transform = 'translateY(-2px)'
                 }}
                 onMouseLeave={(e) => {
@@ -213,18 +213,18 @@ export default function ProductCards() {
                           focus-visible:outline-none focus-visible:ring-2
                         "
                         style={{
-                          borderColor: 'rgba(255, 255, 255, 0.1)',
+                          borderColor: 'rgba(255, 20, 147, 0.2)',
                           background: 'rgba(26, 6, 38, 0.5)',
                           backdropFilter: 'blur(10px)',
                           padding: '1.5rem',
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.4)'
+                          e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.25)'
                           e.currentTarget.style.background = 'rgba(26, 6, 38, 0.7)'
-                          e.currentTarget.style.boxShadow = '0 12px 40px rgba(255, 20, 147, 0.2), 0 0 30px rgba(255, 182, 193, 0.1)'
+                          e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 20, 147, 0.12), 0 0 30px rgba(255, 182, 193, 0.08)'
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+                          e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'
                           e.currentTarget.style.background = 'rgba(26, 6, 38, 0.5)'
                           e.currentTarget.style.boxShadow = 'none'
                         }}
