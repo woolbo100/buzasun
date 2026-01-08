@@ -140,7 +140,7 @@ export default function Navigation() {
           </Link>
 
           {/* 데스크탑 메뉴 */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8 ml-auto mr-8">
             <Link href="/about" className={menuLinkClass} style={menuLinkStyle}>
               백도화 소개
               <span 

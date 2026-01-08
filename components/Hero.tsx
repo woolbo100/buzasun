@@ -46,11 +46,15 @@ export default function Hero() {
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <h1 
-            className="font-elegant font-bold mb-8 text-bd-ivory leading-[1.1]"
+            className="font-elegant font-bold mb-8 leading-[1.1]"
             style={{
               fontSize: 'clamp(2.5rem, 8vw, 5rem)',
               letterSpacing: '0.02em',
-              textShadow: '0 0 40px rgba(252, 231, 243, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
+              background: 'linear-gradient(135deg, #fce7f3 0%, #ffb6c1 25%, #ff69b4 50%, #ff1493 75%, #c71585 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              textShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
             }}
           >
             당신의 연애는
