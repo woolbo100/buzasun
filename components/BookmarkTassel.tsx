@@ -84,7 +84,7 @@ export default function BookmarkTassel() {
           className="absolute left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
           style={{
             top: '0',
-            height: '52px',
+            height: '68px',
             background: 'linear-gradient(180deg, rgba(255, 192, 203, 0.85) 0%, rgba(255, 182, 193, 0.8) 30%, rgba(255, 175, 185, 0.75) 60%, rgba(255, 182, 193, 0.8) 100%)',
             boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 3px rgba(255, 192, 203, 0.3)',
           }}
@@ -95,7 +95,7 @@ export default function BookmarkTassel() {
           className="w-[70px] h-[180px] md:w-[90px] md:h-[220px] transition-all duration-300 relative z-10"
           viewBox="0 0 60 120"
           style={{
-            marginTop: '52px',
+            marginTop: '68px',
             animation: hasAnimated 
               ? 'swingGentle 4s ease-in-out infinite' 
               : 'swingInitial 1.5s ease-in-out',
