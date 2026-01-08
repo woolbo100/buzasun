@@ -214,18 +214,18 @@ export default function ProductCards() {
                         "
                         style={{
                           borderColor: 'rgba(255, 20, 147, 0.2)',
-                          background: 'rgba(26, 6, 38, 0.5)',
+                          background: 'rgba(255, 255, 255, 0.05)',
                           backdropFilter: 'blur(10px)',
                           padding: '1.5rem',
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.25)'
-                          e.currentTarget.style.background = 'rgba(26, 6, 38, 0.7)'
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'
                           e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 20, 147, 0.12), 0 0 30px rgba(255, 182, 193, 0.08)'
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'
-                          e.currentTarget.style.background = 'rgba(26, 6, 38, 0.5)'
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'
                           e.currentTarget.style.boxShadow = 'none'
                         }}
                       >
