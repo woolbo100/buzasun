@@ -14,7 +14,6 @@ export default function Navigation() {
       setScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
-    // 초기 상태 확인
     handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -40,36 +39,66 @@ export default function Navigation() {
   }
 
   // 메뉴 링크 공통 스타일 (hover 애니메이션 포함)
-  const menuLinkClass = "relative text-bd-gray hover:text-bd-ivory transition-colors group"
+  const menuLinkClass = "relative text-bd-gray hover:text-bd-ivory transition-all duration-300 group"
   const menuLinkStyle = {
-    fontSize: '0.95rem',
-    letterSpacing: '0.05em',
+    fontSize: '1rem',
+    letterSpacing: '0.08em',
+    fontWeight: '500',
   }
   
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ease-out ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
         scrolled 
-          ? 'bg-bd-bg2/80 backdrop-blur-xl shadow-lg shadow-black/20' 
-          : 'bg-transparent backdrop-blur-0'
+          ? 'bg-[rgba(18,0,20,0.85)] backdrop-blur-xl' 
+          : 'bg-[rgba(18,0,20,0.3)] backdrop-blur-sm'
       }`}
+      style={{
+        boxShadow: scrolled 
+          ? '0 8px 32px rgba(255, 20, 147, 0.15), 0 0 60px rgba(138, 43, 226, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+          : 'none',
+      }}
     >
-      {/* 글로우 라인 - 스크롤 시만 표시 */}
+      {/* 글로우 라인 - 스크롤 시만 강하게 표시 */}
       {scrolled && (
         <div 
-          className="absolute bottom-0 left-0 right-0 h-px opacity-100 transition-opacity duration-300"
+          className="absolute bottom-0 left-0 right-0 h-[2px] opacity-100 transition-opacity duration-500"
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(252, 231, 243, 0.6) 20%, rgba(255, 105, 180, 0.8) 50%, rgba(252, 231, 243, 0.6) 80%, transparent 100%)',
-            boxShadow: '0 1px 8px rgba(252, 231, 243, 0.4), 0 0 16px rgba(255, 105, 180, 0.3)',
+            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 20, 147, 0.8) 20%, rgba(255, 105, 180, 1) 50%, rgba(255, 20, 147, 0.8) 80%, transparent 100%)',
+            boxShadow: '0 0 20px rgba(255, 20, 147, 0.6), 0 0 40px rgba(255, 105, 180, 0.4), 0 0 60px rgba(255, 20, 147, 0.2)',
           }}
         />
       )}
       
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center h-16">
-          {/* 로고 */}
-          <Link href="/" className="text-xl font-elegant font-bold text-bd-ivory transition-opacity hover:opacity-90">
-            백도화 매력학당
+        <div className="flex justify-between items-center h-16 md:h-18">
+          {/* 로고 - 핫핑크 + 꽃 아이콘 */}
+          <Link 
+            href="/" 
+            className="flex items-center gap-2.5 group/logo transition-all duration-300"
+            style={{
+              filter: 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.3))',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.filter = 'drop-shadow(0 0 16px rgba(255, 20, 147, 0.6)) brightness(1.1)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.3))'
+            }}
+          >
+            <i 
+              className="fas fa-spa text-xl md:text-2xl transition-all duration-300"
+              style={{ color: '#ff1493' }}
+            />
+            <span 
+              className="text-lg md:text-xl font-elegant font-bold transition-all duration-300"
+              style={{ 
+                color: '#ff1493',
+                textShadow: '0 0 20px rgba(255, 20, 147, 0.4)',
+              }}
+            >
+              백도화 매력학당
+            </span>
           </Link>
 
           {/* 데스크탑 메뉴 */}
@@ -77,9 +106,9 @@ export default function Navigation() {
             <Link href="/about" className={menuLinkClass} style={menuLinkStyle}>
               백도화 소개
               <span 
-                className="absolute bottom-0 left-1/2 h-0.5 w-0 bg-gradient-to-r from-transparent via-pink-200/80 to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
-                  boxShadow: '0 0 12px rgba(255, 182, 193, 0.6), 0 0 24px rgba(255, 182, 193, 0.3)',
+                  boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
                 }}
               />
             </Link>
@@ -87,9 +116,9 @@ export default function Navigation() {
             <Link href="/report" className={menuLinkClass} style={menuLinkStyle}>
               선천코드 리포트
               <span 
-                className="absolute bottom-0 left-1/2 h-0.5 w-0 bg-gradient-to-r from-transparent via-pink-200/80 to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
-                  boxShadow: '0 0 12px rgba(255, 182, 193, 0.6), 0 0 24px rgba(255, 182, 193, 0.3)',
+                  boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
                 }}
               />
             </Link>
@@ -104,9 +133,9 @@ export default function Navigation() {
                 전자책
                 <i className={`fas fa-chevron-down ml-1.5 text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
                 <span 
-                  className="absolute bottom-0 left-1/2 h-0.5 w-0 bg-gradient-to-r from-transparent via-pink-200/80 to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                  className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                   style={{
-                    boxShadow: '0 0 12px rgba(255, 182, 193, 0.6), 0 0 24px rgba(255, 182, 193, 0.3)',
+                    boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
                   }}
                 />
               </button>
@@ -114,8 +143,9 @@ export default function Navigation() {
                 <div 
                   className="absolute top-full left-0 mt-2 w-40 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2"
                   style={{
-                    background: 'rgba(26, 10, 46, 0.95)',
-                    borderColor: 'rgba(255, 20, 147, 0.2)',
+                    background: 'rgba(26, 6, 38, 0.95)',
+                    borderColor: 'rgba(255, 20, 147, 0.3)',
+                    boxShadow: '0 8px 32px rgba(255, 20, 147, 0.2), 0 0 40px rgba(138, 43, 226, 0.1)',
                   }}
                 >
                   <Link 
@@ -146,9 +176,9 @@ export default function Navigation() {
             <Link href="/shop" className={menuLinkClass} style={menuLinkStyle}>
               아이템샵
               <span 
-                className="absolute bottom-0 left-1/2 h-0.5 w-0 bg-gradient-to-r from-transparent via-pink-200/80 to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
-                  boxShadow: '0 0 12px rgba(255, 182, 193, 0.6), 0 0 24px rgba(255, 182, 193, 0.3)',
+                  boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
                 }}
               />
             </Link>
@@ -156,9 +186,9 @@ export default function Navigation() {
             <Link href="/counseling" className={menuLinkClass} style={menuLinkStyle}>
               상담
               <span 
-                className="absolute bottom-0 left-1/2 h-0.5 w-0 bg-gradient-to-r from-transparent via-pink-200/80 to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
-                  boxShadow: '0 0 12px rgba(255, 182, 193, 0.6), 0 0 24px rgba(255, 182, 193, 0.3)',
+                  boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
                 }}
               />
             </Link>
@@ -167,13 +197,13 @@ export default function Navigation() {
           {/* 오른쪽 아이콘들 */}
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4">
-              <Link href="/cart" className="text-bd-gray hover:text-bd-ivory transition-colors relative group">
+              <Link href="/cart" className="text-bd-gray hover:text-bd-ivory transition-all duration-300 relative group">
                 <i className="fas fa-shopping-cart text-lg"></i>
-                <span className="absolute bottom-0 left-1/2 h-px w-0 bg-pink-200 transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" />
+                <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[#ff1493] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px rgba(255, 20, 147, 0.6)' }} />
               </Link>
-              <Link href="/mypage" className="text-bd-gray hover:text-bd-ivory transition-colors relative group">
+              <Link href="/mypage" className="text-bd-gray hover:text-bd-ivory transition-all duration-300 relative group">
                 <i className="fas fa-user text-lg"></i>
-                <span className="absolute bottom-0 left-1/2 h-px w-0 bg-pink-200 transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" />
+                <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[#ff1493] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px rgba(255, 20, 147, 0.6)' }} />
               </Link>
             </div>
 

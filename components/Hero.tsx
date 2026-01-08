@@ -32,7 +32,7 @@ export default function Hero() {
             <span 
               className="inline-block px-5 py-2.5 rounded-full text-sm font-medium backdrop-blur-sm"
               style={{
-                background: 'rgba(26, 10, 46, 0.6)',
+                background: 'rgba(26, 6, 38, 0.6)',
                 border: '1px solid rgba(255, 20, 147, 0.2)',
                 color: '#f7f1ff',
                 boxShadow: '0 4px 20px rgba(252, 231, 243, 0.1)',

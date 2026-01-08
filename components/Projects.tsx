@@ -35,7 +35,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-6" style={{ background: 'rgba(26, 13, 46, 0.4)', position: 'relative', zIndex: 1 }}>
+    <section id="projects" className="py-20 px-6" style={{ background: 'rgba(26, 6, 38, 0.4)', position: 'relative', zIndex: 1 }}>
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 gradient-text fade-in-up">
           프로젝트
@@ -46,7 +46,7 @@ export default function Projects() {
               key={index}
               className="card-hover p-6 rounded-lg fade-in-up" 
               style={{ 
-                background: 'linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%)', 
+                background: 'linear-gradient(135deg, #2d0a20 0%, #1a0626 50%, #120014 100%)', 
                 border: '1px solid rgba(255, 20, 147, 0.3)', 
                 backdropFilter: 'blur(10px)' 
               }}

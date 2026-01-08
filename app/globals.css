@@ -17,7 +17,9 @@
 
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    background: #0a0015;
+    background: linear-gradient(135deg, #120014 0%, #1a0626 30%, #2d0a20 60%, #1a0626 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 20s ease infinite;
     color: #f7f1ff;
     overflow-x: hidden;
     position: relative;
@@ -30,8 +32,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 20, 147, 0.08) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 20, 147, 0.06) 0%, transparent 50%);
     pointer-events: none;
     z-index: 0;
   }
@@ -129,7 +131,7 @@
   }
 
   .modal-content {
-    background: linear-gradient(135deg, #2d1b4e 0%, #1a0d2e 50%, #0f0a1a 100%);
+    background: linear-gradient(135deg, #2d0a20 0%, #1a0626 50%, #120014 100%);
     padding: 2rem;
     border-radius: 1rem;
     max-width: 600px;
@@ -158,7 +160,7 @@
   }
 
   input, textarea {
-    background: rgba(45, 27, 78, 0.4);
+    background: rgba(26, 6, 38, 0.4);
     border: 1px solid rgba(255, 20, 147, 0.3);
     color: #e8e8e8;
     backdrop-filter: blur(10px);
@@ -168,6 +170,6 @@
     outline: none;
     border-color: #ff69b4;
     box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.2), 0 0 20px rgba(138, 43, 226, 0.2);
-    background: rgba(45, 27, 78, 0.6);
+    background: rgba(26, 6, 38, 0.6);
   }
 }

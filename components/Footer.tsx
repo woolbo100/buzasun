@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="py-12 px-6" style={{ background: 'rgba(26, 13, 46, 0.6)', position: 'relative', zIndex: 1, borderTop: '1px solid rgba(255, 20, 147, 0.1)' }}>
+    <footer className="py-12 px-6" style={{ background: 'rgba(26, 6, 38, 0.6)', position: 'relative', zIndex: 1, borderTop: '1px solid rgba(255, 20, 147, 0.1)' }}>
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">

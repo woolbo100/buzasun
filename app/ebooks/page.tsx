@@ -45,7 +45,7 @@ export default function EbooksPage() {
                 key={index}
                 className="p-6 rounded-lg"
                 style={{
-                  background: '#1a0a2e',
+                  background: '#1a0626',
                   border: '1px solid rgba(255, 20, 147, 0.2)',
                 }}
               >

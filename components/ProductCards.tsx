@@ -73,16 +73,16 @@ export default function ProductCards() {
                 "
                 style={{
                   borderColor: 'rgba(255, 255, 255, 0.1)',
-                  background: 'rgba(26, 10, 46, 0.6)',
+                  background: 'rgba(26, 6, 38, 0.6)',
                   backdropFilter: 'blur(10px)',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(255, 182, 193, 0.3)'
-                  e.currentTarget.style.background = 'rgba(26, 10, 46, 0.8)'
+                  e.currentTarget.style.background = 'rgba(26, 6, 38, 0.8)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
-                  e.currentTarget.style.background = 'rgba(26, 10, 46, 0.6)'
+                  e.currentTarget.style.background = 'rgba(26, 6, 38, 0.6)'
                 }}
               >
                 {/* 은은한 빛 번짐 레이어 */}

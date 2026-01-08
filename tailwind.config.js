@@ -13,9 +13,9 @@ module.exports = {
       },
       colors: {
         bd: {
-          bg: '#0a0015',
-          bg2: '#1a0a2e',
-          bg3: '#0f0820',
+          bg: '#120014',      // 블랙 퍼플
+          bg2: '#1a0626',     // 딥 플럼 퍼플
+          bg3: '#2d0a20',     // 와인 퍼플
           pink: '#ff1493',
           pink2: '#ff69b4',
           ivory: '#f7f1ff',
