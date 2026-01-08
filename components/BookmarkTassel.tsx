@@ -61,47 +61,54 @@ export default function BookmarkTassel() {
 
   return (
     <>
-      <button
-        ref={containerRef}
-        onClick={handleClick}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className="fixed top-0 right-6 md:right-20 z-50 cursor-pointer transition-all duration-300 group"
-        aria-label="즐겨찾기"
-        style={{
-          filter: isClicked
-            ? 'drop-shadow(0 0 20px rgba(255, 20, 147, 0.6)) brightness(1.15)'
-            : isHovered 
-            ? 'drop-shadow(0 0 12px rgba(255, 182, 193, 0.3)) brightness(1.05)' 
-            : isBookmarked
-            ? 'drop-shadow(0 0 6px rgba(255, 20, 147, 0.25))'
-            : 'drop-shadow(0 0 4px rgba(138, 43, 226, 0.15))',
-          transition: 'filter 0.3s ease-out',
-        }}
-      >
-        {/* 화면 최상단부터 이어지는 줄 - 로즈핑크 */}
+      {/* 컨테이너: 노리개 전체를 감싸는 div */}
+      <div className="fixed top-0 right-6 md:right-20 z-50 relative">
+        {/* 줄: 화면 최상단부터 시작, 고정 높이 */}
         <div 
-          className="absolute left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
+          className="absolute left-1/2 -translate-x-1/2 pointer-events-none"
           style={{
             top: '0',
-            height: '68px',
+            width: '2px',
+            height: '100px',
             background: 'linear-gradient(180deg, rgba(255, 192, 203, 0.85) 0%, rgba(255, 182, 193, 0.8) 30%, rgba(255, 175, 185, 0.75) 60%, rgba(255, 182, 193, 0.8) 100%)',
             boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 3px rgba(255, 192, 203, 0.3)',
+            zIndex: 0,
           }}
         />
 
-        {/* 노리개 SVG */}
-        <svg
-          className="w-[70px] h-[180px] md:w-[90px] md:h-[220px] transition-all duration-300 relative z-10"
-          viewBox="0 0 60 120"
+        {/* 노리개 SVG: 줄 끝 지점에 배치, 줄을 살짝 덮음 */}
+        <button
+          ref={containerRef}
+          onClick={handleClick}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="absolute cursor-pointer transition-all duration-300 group"
+          aria-label="즐겨찾기"
           style={{
-            marginTop: '68px',
-            animation: hasAnimated 
-              ? 'swingGentle 4s ease-in-out infinite' 
-              : 'swingInitial 1.5s ease-in-out',
-            transformOrigin: 'center top',
+            top: '95px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            filter: isClicked
+              ? 'drop-shadow(0 0 20px rgba(255, 20, 147, 0.6)) brightness(1.15)'
+              : isHovered 
+              ? 'drop-shadow(0 0 12px rgba(255, 182, 193, 0.3)) brightness(1.05)' 
+              : isBookmarked
+              ? 'drop-shadow(0 0 6px rgba(255, 20, 147, 0.25))'
+              : 'drop-shadow(0 0 4px rgba(138, 43, 226, 0.15))',
+            transition: 'filter 0.3s ease-out',
+            zIndex: 10,
           }}
         >
+          <svg
+            className="w-[70px] h-[180px] md:w-[90px] md:h-[220px] transition-all duration-300"
+            viewBox="0 0 60 120"
+            style={{
+              animation: hasAnimated 
+                ? 'swingGentle 4s ease-in-out infinite' 
+                : 'swingInitial 1.5s ease-in-out',
+              transformOrigin: 'center top',
+            }}
+          >
           {/* 그라데이션 정의 - 줄과 술용 */}
           <defs>
             {/* 실크 끈 그라데이션 - 로즈핑크 */}
@@ -140,31 +147,6 @@ export default function BookmarkTassel() {
               <stop offset="100%" stopColor="#ffb6c1" />
             </linearGradient>
           </defs>
-          
-          {/* 상단 고정 고리 */}
-          <circle
-            cx="30"
-            cy="5"
-            r="2.5"
-            fill="url(#cordGradient)"
-            style={{
-              filter: 'drop-shadow(0 0 3px rgba(255, 192, 203, 0.4))',
-            }}
-          />
-          
-          {/* 상단 코드 - 로즈핑크 */}
-          <line
-            x1="30"
-            y1="5"
-            x2="30"
-            y2="15"
-            stroke="url(#cordGradient)"
-            strokeWidth="2"
-            fill="none"
-            style={{
-              filter: 'drop-shadow(0 0 3px rgba(255, 192, 203, 0.35))',
-            }}
-          />
           
           {/* 진주 구슬 */}
           <circle
@@ -384,6 +366,7 @@ export default function BookmarkTassel() {
           />
         )}
       </button>
+      </div>
 
       <Toast
         message={toastMessage}
