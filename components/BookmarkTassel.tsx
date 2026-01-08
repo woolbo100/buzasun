@@ -77,11 +77,11 @@ export default function BookmarkTassel() {
           }}
         />
 
-        {/* 보석 구슬: 줄과 노리개 사이 연결 장식 */}
+        {/* 보석 구슬: 노리개 위 장식 */}
         <div 
           className="absolute pointer-events-none rounded-full"
           style={{
-            top: '97px',
+            top: '98px',
             right: '0',
             width: '10px',
             height: '10px',
@@ -92,7 +92,7 @@ export default function BookmarkTassel() {
           }}
         />
 
-        {/* 노리개 SVG: 줄 끝 지점에 배치, 줄을 살짝 덮음 */}
+        {/* 노리개 SVG: 줄 끝 지점에 배치, 줄과 만남 */}
         <button
           ref={containerRef}
           onClick={handleClick}
@@ -101,7 +101,7 @@ export default function BookmarkTassel() {
           className="absolute cursor-pointer transition-all duration-300 group"
           aria-label="즐겨찾기"
           style={{
-            top: '95px',
+            top: '100px',
             right: '0',
             filter: isClicked
               ? 'drop-shadow(0 0 20px rgba(255, 20, 147, 0.6)) brightness(1.15)'
@@ -161,7 +161,25 @@ export default function BookmarkTassel() {
               <stop offset="50%" stopColor="#ffafb9" />
               <stop offset="100%" stopColor="#ffb6c1" />
             </linearGradient>
+            
+            {/* 노리개 위 보석 장식 그라데이션 */}
+            <radialGradient id="topBeadGradient" cx="50%" cy="30%" r="70%">
+              <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+              <stop offset="50%" stopColor="#fff0f5" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="#ffc0cb" stopOpacity="0.85" />
+            </radialGradient>
           </defs>
+          
+          {/* 노리개 위 보석 장식 */}
+          <circle
+            cx="30"
+            cy="3"
+            r="3.5"
+            fill="url(#topBeadGradient)"
+            style={{
+              filter: 'drop-shadow(0 0 6px rgba(255, 192, 203, 0.7)) drop-shadow(0 0 10px rgba(255, 182, 193, 0.5)) drop-shadow(0 0 14px rgba(255, 20, 147, 0.3))',
+            }}
+          />
           
           {/* 진주 구슬 */}
           <circle

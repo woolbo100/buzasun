@@ -25,13 +25,11 @@ export default function ProductCards() {
   return (
     <section className="relative w-full overflow-hidden" style={{ background: 'transparent' }}>
       <div className="relative z-10">
-        {/* 리포트 섹션 - 풀 너비 왕 카드 */}
+        {/* 리포트 섹션 - 카드형 구조 */}
         <Reveal delayMs={0}>
           <div className="w-full py-20 md:py-28 px-6 md:px-8">
             <div className="max-w-6xl mx-auto">
-              <Link
-                href="/report"
-                className="group block w-full rounded-3xl transition-all duration-500 hover:-translate-y-2"
+              <div className="w-full rounded-3xl"
                 style={{
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 20, 147, 0.2)',
@@ -39,22 +37,16 @@ export default function ProductCards() {
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)',
                   padding: '3rem 2.5rem',
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.4)'
-                  e.currentTarget.style.boxShadow = '0 12px 48px rgba(0, 0, 0, 0.4), 0 0 60px rgba(255, 20, 147, 0.2)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)'
-                }}
               >
-                <div className="text-center">
-                  {/* 소제목 */}
+                {/* 상단: 배지 + 메인 타이틀 */}
+                <div className="text-center mb-12">
+                  {/* 상단 배지 */}
                   <p 
-                    className="text-sm md:text-base mb-4 opacity-70"
+                    className="text-xs md:text-sm mb-6"
                     style={{
                       color: '#cfc7dc',
-                      letterSpacing: '0.1em',
+                      letterSpacing: '0.15em',
+                      opacity: 0.6,
                     }}
                   >
                     가장 많은 선택을 받은 리포트
@@ -62,145 +54,103 @@ export default function ProductCards() {
                   
                   {/* 메인 타이틀 */}
                   <h2 
-                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-6"
+                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold"
                     style={{
                       color: '#f7f1ff',
                       letterSpacing: '0.02em',
-                      textShadow: '0 0 20px rgba(255, 20, 147, 0.2), 0 4px 30px rgba(0, 0, 0, 0.4)',
+                      lineHeight: 1.3,
                     }}
                   >
                     선천코드 맞춤 연애 상담 리포트
                   </h2>
-                  
-                  {/* 설명 문구 */}
-                  <p 
-                    className="text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed"
-                    style={{
-                      color: 'rgba(245, 239, 255, 0.9)',
-                      lineHeight: 1.8,
-                      wordBreak: 'keep-all',
-                      fontWeight: 400,
-                    }}
-                  >
-                    당신이 반복하는 연애의 이유는 감정이 아니라 구조입니다.<br />
-                    선천코드 분석으로 연애 성향, 인연의 흐름, 타이밍을 명확히 정리합니다.
-                  </p>
-                  
-                  {/* 핵심 내용 리스트 */}
-                  <div className="mb-10 max-w-xl mx-auto">
-                    <ul className="space-y-3 text-left">
-                      <li className="flex items-start gap-3">
-                        <span 
-                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
-                          style={{
-                            background: 'rgba(255, 182, 193, 0.6)',
-                            marginTop: '0.5rem',
-                          }}
-                        />
-                        <span 
-                          className="text-sm md:text-base leading-relaxed"
-                          style={{
-                            color: 'rgba(255, 255, 255, 0.85)',
-                            lineHeight: 1.7,
-                            wordBreak: 'keep-all',
-                          }}
-                        >
-                          타고난 연애 성향 & 숨겨진 남자복
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span 
-                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
-                          style={{
-                            background: 'rgba(255, 182, 193, 0.6)',
-                            marginTop: '0.5rem',
-                          }}
-                        />
-                        <span 
-                          className="text-sm md:text-base leading-relaxed"
-                          style={{
-                            color: 'rgba(255, 255, 255, 0.85)',
-                            lineHeight: 1.7,
-                            wordBreak: 'keep-all',
-                          }}
-                        >
-                          맞는 인연 vs 피해야 할 이상형
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span 
-                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
-                          style={{
-                            background: 'rgba(255, 182, 193, 0.6)',
-                            marginTop: '0.5rem',
-                          }}
-                        />
-                        <span 
-                          className="text-sm md:text-base leading-relaxed"
-                          style={{
-                            color: 'rgba(255, 255, 255, 0.85)',
-                            lineHeight: 1.7,
-                            wordBreak: 'keep-all',
-                          }}
-                        >
-                          반복되는 연애 패턴의 원인
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span 
-                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
-                          style={{
-                            background: 'rgba(255, 182, 193, 0.6)',
-                            marginTop: '0.5rem',
-                          }}
-                        />
-                        <span 
-                          className="text-sm md:text-base leading-relaxed"
-                          style={{
-                            color: 'rgba(255, 255, 255, 0.85)',
-                            lineHeight: 1.7,
-                            wordBreak: 'keep-all',
-                          }}
-                        >
-                          결정적인 연애 타이밍
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span 
-                          className="flex-shrink-0 w-1.5 h-1.5 rounded-full"
-                          style={{
-                            background: 'rgba(255, 182, 193, 0.6)',
-                            marginTop: '0.5rem',
-                          }}
-                        />
-                        <span 
-                          className="text-sm md:text-base leading-relaxed"
-                          style={{
-                            color: 'rgba(255, 255, 255, 0.85)',
-                            lineHeight: 1.7,
-                            wordBreak: 'keep-all',
-                          }}
-                        >
-                          관계를 바꾸는 실전 조언
-                        </span>
-                      </li>
-                    </ul>
+                </div>
+
+                {/* 중간: 좌측 메시지 + 우측 카드 그리드 */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+                  {/* 좌측: 핵심 메시지 */}
+                  <div className="text-left">
+                    <p 
+                      className="text-xl md:text-2xl font-semibold mb-4 leading-relaxed"
+                      style={{
+                        color: 'rgba(245, 239, 255, 0.95)',
+                        lineHeight: 1.6,
+                        wordBreak: 'keep-all',
+                      }}
+                    >
+                      당신이 반복하는 연애의 이유는<br />
+                      감정이 아니라 구조입니다.
+                    </p>
+                    <p 
+                      className="text-base md:text-lg leading-relaxed"
+                      style={{
+                        color: 'rgba(245, 239, 255, 0.8)',
+                        lineHeight: 1.7,
+                        wordBreak: 'keep-all',
+                      }}
+                    >
+                      선천코드 분석으로 연애 성향, 인연의 흐름, 타이밍을 명확히 정리합니다.
+                    </p>
                   </div>
-                  
+
+                  {/* 우측: 카드형 핵심 포인트 */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                      '타고난 연애 성향 & 숨겨진 남자복',
+                      '맞는 인연 vs 피해야 할 이상형',
+                      '반복되는 연애 패턴의 원인',
+                      '결정적인 연애 타이밍',
+                      '관계를 바꾸는 실전 조언',
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        className="group rounded-xl p-4 transition-all duration-300 cursor-pointer"
+                        style={{
+                          background: 'rgba(40, 15, 55, 0.6)',
+                          border: '1px solid rgba(255, 255, 255, 0.1)',
+                          backdropFilter: 'blur(10px)',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = 'translateY(-4px)'
+                          e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.4)'
+                          e.currentTarget.style.boxShadow = '0 8px 24px rgba(255, 20, 147, 0.2), 0 0 20px rgba(255, 182, 193, 0.15)'
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = 'translateY(0)'
+                          e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+                          e.currentTarget.style.boxShadow = 'none'
+                        }}
+                      >
+                        <p 
+                          className="text-sm md:text-base leading-relaxed"
+                          style={{
+                            color: 'rgba(255, 255, 255, 0.9)',
+                            lineHeight: 1.6,
+                            wordBreak: 'keep-all',
+                          }}
+                        >
+                          {item}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* 하단: CTA 버튼 + 신뢰 문구 */}
+                <div className="text-center">
                   {/* CTA 버튼 */}
-                  <div className="mb-3">
-                    <div className="inline-block px-14 py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn"
+                  <Link href="/report">
+                    <div className="inline-block px-14 py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn mb-3"
                       style={{
                         background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
-                        boxShadow: '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)',
+                        boxShadow: '0 8px 32px rgba(255, 20, 147, 0.3), 0 0 40px rgba(255, 20, 147, 0.15)',
                         fontSize: '1.15rem',
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.6), 0 0 70px rgba(255, 20, 147, 0.3)'
+                        e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.5), 0 0 60px rgba(255, 20, 147, 0.3)'
                         e.currentTarget.style.transform = 'translateY(-2px)'
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.4), 0 0 50px rgba(255, 20, 147, 0.2)'
+                        e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.3), 0 0 40px rgba(255, 20, 147, 0.15)'
                         e.currentTarget.style.transform = 'translateY(0)'
                       }}
                     >
@@ -214,20 +164,20 @@ export default function ProductCards() {
                       />
                       <span className="relative z-10">내 연애 코드 지금 확인하기</span>
                     </div>
-                  </div>
+                  </Link>
                   
-                  {/* CTA 버튼 하단 보조 문구 */}
+                  {/* 신뢰 문구 */}
                   <p 
                     className="text-xs md:text-sm"
                     style={{
-                      color: 'rgba(245, 239, 255, 0.6)',
+                      color: 'rgba(245, 239, 255, 0.5)',
                       letterSpacing: '0.02em',
                     }}
                   >
                     상담이 아닌, 구조를 해석하는 분석 리포트입니다.
                   </p>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
         </Reveal>
