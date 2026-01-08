@@ -32,11 +32,11 @@ export default function Contact() {
       id="contact" 
       className="py-20 px-6 relative z-10 bg-gradient-to-b from-[#1b0726] to-[#14061f]"
     >
-      {/* 상단 그라데이션 오버레이 - 자연스럽게 어두워지는 효과 */}
+      {/* 신비로운 오라 오버레이 - 상단에 은은한 퍼플/핑크 */}
       <div 
-        className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
+        className="absolute top-0 left-0 right-0 h-40 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(20, 6, 31, 0.5) 50%, rgba(20, 6, 31, 1) 100%)',
+          background: 'radial-gradient(ellipse at center top, rgba(138, 43, 226, 0.08) 0%, rgba(255, 20, 147, 0.04) 30%, transparent 70%)',
         }}
       />
       <div className="container mx-auto max-w-2xl relative z-10">

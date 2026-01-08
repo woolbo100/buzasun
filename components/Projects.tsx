@@ -35,30 +35,48 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-6" style={{ background: 'rgba(26, 6, 38, 0.4)', position: 'relative', zIndex: 1 }}>
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 gradient-text fade-in-up">
+    <section 
+      id="projects" 
+      className="py-20 px-6 relative z-10 bg-gradient-to-b from-[#1b0726] to-[#14061f]"
+    >
+      {/* 신비로운 오라 오버레이 - 상단에 은은한 퍼플/핑크 */}
+      <div 
+        className="absolute top-0 left-0 right-0 h-40 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at center top, rgba(138, 43, 226, 0.08) 0%, rgba(255, 20, 147, 0.04) 30%, transparent 70%)',
+        }}
+      />
+      
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 text-bd-ivory fade-in-up">
           프로젝트
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="card-hover p-6 rounded-lg fade-in-up" 
+              className="card-hover p-6 rounded-lg fade-in-up bg-white/5 backdrop-blur-xl border border-white/10"
               style={{ 
-                background: 'linear-gradient(135deg, #1b0726 0%, #14061f 100%)', 
-                border: '1px solid rgba(255, 255, 255, 0.1)', 
-                backdropFilter: 'blur(10px)' 
+                boxShadow: '0 8px 32px rgba(20, 6, 31, 0.3), 0 0 40px rgba(27, 7, 38, 0.15)',
               }}
             >
               <div className="text-3xl mb-4" style={{ color: '#ff1493' }}>
                 <i className={project.icon}></i>
               </div>
-              <h3 className="text-2xl font-bold mb-3" style={{ color: '#ff1493' }}>{project.title}</h3>
-              <p className="text-gray-400 mb-4">
+              <h3 className="text-2xl font-bold mb-3 text-bd-ivory">{project.title}</h3>
+              <p className="text-bd-gray mb-4">
                 {project.description}
               </p>
-              <a href="#" className="transition-colors" style={{ color: '#ff69b4' }}>
+              <a 
+                href="#" 
+                className="transition-colors text-bd-pink hover:text-bd-pink2"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.textShadow = '0 0 8px rgba(255, 20, 147, 0.5)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.textShadow = 'none'
+                }}
+              >
                 자세히 보기 →
               </a>
             </div>
