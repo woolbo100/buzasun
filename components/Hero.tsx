@@ -13,7 +13,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-fit flex items-center justify-center pt-16 pb-12 px-4 md:px-6 overflow-hidden" style={{ background: 'transparent' }}>
+    <section className="relative min-h-fit flex items-center justify-center pt-32 md:pt-40 pb-12 px-4 md:px-6 overflow-hidden" style={{ background: 'transparent' }}>
       <PetalsCanvas color="#fce7f3" density={28} />
       
       {/* 중앙 글로우 오라 레이어 */}
