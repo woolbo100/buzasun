@@ -141,7 +141,7 @@ export default function BookmarkTassel() {
                 : 'drop-shadow(0 0 4px rgba(255, 182, 193, 0.2))',
               opacity: isHovered ? 1 : 0.95,
             }}
-            transform="translate(30 40) scale(0.14)"
+            transform="translate(30 40) scale(0.28) translate(-100 -100)"
           >
             <defs>
               {/* 핫핑크→연핑크 그라데이션 */}
