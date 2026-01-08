@@ -88,6 +88,29 @@ export default function BookmarkTassel() {
             boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 3px rgba(255, 192, 203, 0.3)',
           }}
         />
+        
+        {/* 즐겨찾기 세로 텍스트 - 줄과 노리개 사이 */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2 pointer-events-none transition-colors duration-300"
+          style={{
+            top: '-15px',
+            writingMode: 'vertical-rl',
+            textOrientation: 'upright',
+            fontSize: '8px',
+            letterSpacing: '0.5em',
+            color: isHovered ? 'rgba(255, 20, 147, 0.7)' : 'rgba(245, 239, 255, 0.6)',
+            fontFamily: 'inherit',
+            fontWeight: 300,
+            zIndex: 5,
+            transition: 'color 0.3s ease-out',
+            animation: hasAnimated 
+              ? 'swingGentle 4s ease-in-out infinite' 
+              : 'swingInitial 1.5s ease-in-out',
+            transformOrigin: 'center top',
+          }}
+        >
+          즐겨찾기
+        </div>
 
         {/* 노리개 SVG */}
         <svg
@@ -190,12 +213,14 @@ export default function BookmarkTassel() {
           <g
             className="transition-all duration-300"
             style={{
-              filter: isHovered 
+              filter: isClicked
+                ? 'drop-shadow(0 0 24px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 36px rgba(255, 182, 193, 0.5)) drop-shadow(0 0 48px rgba(255, 20, 147, 0.4))'
+                : isHovered 
                 ? 'drop-shadow(0 0 16px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 24px rgba(255, 182, 193, 0.3)) drop-shadow(0 0 32px rgba(255, 20, 147, 0.2))' 
                 : isBookmarked
                 ? 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.25)) drop-shadow(0 0 12px rgba(255, 182, 193, 0.15))'
                 : 'drop-shadow(0 0 4px rgba(255, 182, 193, 0.2))',
-              opacity: isHovered ? 1 : isBookmarked ? 0.98 : 0.95,
+              opacity: isClicked ? 1.1 : isHovered ? 1 : isBookmarked ? 0.98 : 0.95,
             }}
             transform="translate(30 40) scale(0.28) translate(-100 -100)"
           >
