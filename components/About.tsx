@@ -4,17 +4,9 @@ export default function About() {
   return (
     <section 
       id="about" 
-      className="py-20 px-6 relative z-10 bg-gradient-to-b from-[#1b0726] to-[#14061f]"
+      className="py-20 px-6 relative bg-transparent"
     >
-      {/* 신비로운 오라 오버레이 - 상단에 은은한 퍼플/핑크 */}
-      <div 
-        className="absolute top-0 left-0 right-0 h-40 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at center top, rgba(138, 43, 226, 0.08) 0%, rgba(255, 20, 147, 0.04) 30%, transparent 70%)',
-        }}
-      />
-      
-      <div className="container mx-auto max-w-4xl relative z-10">
+      <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 text-bd-ivory fade-in-up">
           우리에 대해
         </h2>
