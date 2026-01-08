@@ -88,33 +88,6 @@ export default function BookmarkTassel() {
             boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 3px rgba(255, 192, 203, 0.3)',
           }}
         />
-        
-        {/* 즐겨찾기 세로 텍스트 - 줄과 노리개 사이 */}
-        <div
-          className="absolute pointer-events-none transition-colors duration-300"
-          style={{
-            left: '50%',
-            top: '-15px',
-            transform: 'translateX(-50%)',
-            writingMode: 'vertical-rl',
-            textOrientation: 'upright',
-            fontSize: '8px',
-            letterSpacing: '0.5em',
-            color: isHovered ? 'rgba(255, 20, 147, 0.7)' : 'rgba(245, 239, 255, 0.6)',
-            fontFamily: 'inherit',
-            fontWeight: 300,
-            zIndex: 5,
-            transition: 'color 0.3s ease-out',
-            animation: hasAnimated 
-              ? 'swingGentle 4s ease-in-out infinite' 
-              : 'swingInitial 1.5s ease-in-out',
-            transformOrigin: 'center top',
-            textAlign: 'center',
-            whiteSpace: 'nowrap',
-          }}
-        >
-          즐겨찾기
-        </div>
 
         {/* 노리개 SVG */}
         <svg
