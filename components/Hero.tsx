@@ -48,8 +48,9 @@ export default function Hero() {
           <h1 
             className="font-elegant font-bold mb-8 leading-[1.1]"
             style={{
-              fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+              fontSize: 'clamp(1.875rem, 6vw, 5rem)',
               letterSpacing: '0.02em',
+              wordBreak: 'keep-all',
             }}
           >
             <span 
@@ -57,6 +58,7 @@ export default function Hero() {
               style={{
                 color: '#ffffff',
                 textShadow: '0 0 8px rgba(255, 255, 255, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
+                wordBreak: 'keep-all',
               }}
             >
               당신의 연애는
@@ -70,6 +72,7 @@ export default function Hero() {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 textShadow: '0 0 12px rgba(255, 20, 147, 0.25), 0 0 24px rgba(255, 105, 180, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3)',
+                wordBreak: 'keep-all',
               }}
             >
               타고난 코드부터 다르다
