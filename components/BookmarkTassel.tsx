@@ -91,9 +91,11 @@ export default function BookmarkTassel() {
         
         {/* 즐겨찾기 세로 텍스트 - 줄과 노리개 사이 */}
         <div
-          className="absolute left-1/2 -translate-x-1/2 pointer-events-none transition-colors duration-300"
+          className="absolute pointer-events-none transition-colors duration-300"
           style={{
+            left: '50%',
             top: '-15px',
+            transform: 'translateX(-50%)',
             writingMode: 'vertical-rl',
             textOrientation: 'upright',
             fontSize: '8px',
@@ -107,6 +109,8 @@ export default function BookmarkTassel() {
               ? 'swingGentle 4s ease-in-out infinite' 
               : 'swingInitial 1.5s ease-in-out',
             transformOrigin: 'center top',
+            textAlign: 'center',
+            whiteSpace: 'nowrap',
           }}
         >
           즐겨찾기
