@@ -77,6 +77,21 @@ export default function BookmarkTassel() {
           }}
         />
 
+        {/* 보석 구슬: 줄과 노리개 사이 연결 장식 */}
+        <div 
+          className="absolute pointer-events-none rounded-full"
+          style={{
+            top: '97px',
+            right: '0',
+            width: '10px',
+            height: '10px',
+            background: 'radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 245, 0.9) 50%, rgba(255, 192, 203, 0.8) 100%)',
+            transform: 'translateX(50%)',
+            boxShadow: '0 0 8px rgba(255, 192, 203, 0.6), 0 0 12px rgba(255, 182, 193, 0.4), 0 0 16px rgba(255, 20, 147, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.8)',
+            zIndex: 5,
+          }}
+        />
+
         {/* 노리개 SVG: 줄 끝 지점에 배치, 줄을 살짝 덮음 */}
         <button
           ref={containerRef}
