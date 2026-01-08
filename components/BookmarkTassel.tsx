@@ -66,7 +66,7 @@ export default function BookmarkTassel() {
         onClick={handleClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="fixed top-8 right-6 md:top-12 md:right-20 z-50 cursor-pointer transition-all duration-300 group"
+        className="fixed top-0 right-6 md:right-20 z-50 cursor-pointer transition-all duration-300 group"
         aria-label="즐겨찾기"
         style={{
           filter: isClicked
@@ -79,11 +79,11 @@ export default function BookmarkTassel() {
           transition: 'filter 0.3s ease-out',
         }}
       >
-        {/* 상단 고정점과 줄(끈) - 로즈핑크 */}
+        {/* 화면 최상단부터 이어지는 줄 - 로즈핑크 */}
         <div 
-          className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
           style={{
-            height: '40px',
+            height: 'calc(100% + 8px)',
             background: 'linear-gradient(180deg, rgba(255, 192, 203, 0.85) 0%, rgba(255, 182, 193, 0.8) 30%, rgba(255, 175, 185, 0.75) 60%, rgba(255, 182, 193, 0.8) 100%)',
             boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.15), 0 0 3px rgba(255, 192, 203, 0.3)',
           }}
