@@ -49,6 +49,15 @@
       transform: translateX(100%);
     }
   }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-8px);
+    }
+  }
 }
 
 @layer components {

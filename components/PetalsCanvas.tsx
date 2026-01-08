@@ -65,19 +65,34 @@ export default function PetalsCanvas({
         drift: rand(-0.25, 0.35),
         wobble: rand(0, Math.PI * 2),
         wobbleSpd: rand(0.006, 0.02),
-        alpha: rand(0.35, 0.7),
+        alpha: rand(0.15, 0.35), // 투명도 증가 (더 투명하게)
       }));
     };
 
     const drawPetal = (p: Petal) => {
-      // 간단한 꽃잎 모양(베지어)
       ctx.save();
       ctx.translate(p.x, p.y);
       ctx.rotate(p.rot);
 
-      ctx.globalAlpha = p.alpha;
-      ctx.fillStyle = color;
+      // 외곽선을 부드럽게 하기 위한 shadow blur (더 강하게)
+      ctx.shadowBlur = 15;
+      ctx.shadowColor = color;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
 
+      // 더 연한 투명도로 그라데이션 적용
+      const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, p.r * 2);
+      // 색상을 rgba로 변환하여 투명도 조절
+      const baseAlpha = p.alpha * 0.6; // 전체적으로 더 투명하게
+      gradient.addColorStop(0, `rgba(252, 231, 243, ${baseAlpha})`);
+      gradient.addColorStop(0.3, `rgba(252, 231, 243, ${baseAlpha * 0.6})`);
+      gradient.addColorStop(0.6, `rgba(252, 231, 243, ${baseAlpha * 0.3})`);
+      gradient.addColorStop(1, 'rgba(252, 231, 243, 0)');
+
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = gradient;
+
+      // 부드러운 꽃잎 모양
       ctx.beginPath();
       ctx.moveTo(0, -p.r);
       ctx.bezierCurveTo(p.r * 0.9, -p.r * 0.3, p.r * 0.9, p.r * 0.6, 0, p.r);
@@ -85,15 +100,19 @@ export default function PetalsCanvas({
       ctx.closePath();
       ctx.fill();
 
-      // 아주 은은한 하이라이트
-      ctx.globalAlpha = p.alpha * 0.25;
-      ctx.fillStyle = "#ffffff";
+      // 추가 부드러움을 위한 오버레이 (더 자연스러운 블렌딩)
+      ctx.globalCompositeOperation = 'screen';
+      ctx.globalAlpha = p.alpha * 0.15;
+      ctx.shadowBlur = 8;
+      ctx.fillStyle = 'rgba(255, 182, 193, 0.3)';
       ctx.beginPath();
-      ctx.ellipse(0, -p.r * 0.25, p.r * 0.25, p.r * 0.55, 0, 0, Math.PI * 2);
+      ctx.ellipse(0, 0, p.r * 0.6, p.r * 1.0, 0, 0, Math.PI * 2);
       ctx.fill();
 
+      ctx.globalCompositeOperation = 'source-over';
       ctx.restore();
       ctx.globalAlpha = 1;
+      ctx.shadowBlur = 0;
     };
 
     const tick = () => {
