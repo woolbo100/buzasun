@@ -68,13 +68,13 @@ export default function BookmarkTassel() {
             : 'drop-shadow(0 0 6px rgba(138, 43, 226, 0.2))',
         }}
       >
-        {/* 상단 고정점과 줄(끈) - 실크 끈 느낌 */}
+        {/* 상단 고정점과 줄(끈) - 웜 아이보리/샴페인 골드 톤 */}
         <div 
           className="absolute -top-10 md:-top-16 left-1/2 -translate-x-1/2 w-0.5 pointer-events-none"
           style={{
             height: '40px',
-            background: 'linear-gradient(180deg, rgba(45, 10, 32, 0.9) 0%, rgba(60, 15, 40, 0.85) 30%, rgba(70, 20, 45, 0.8) 60%, rgba(65, 18, 42, 0.85) 100%)',
-            boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 0 4px rgba(45, 10, 32, 0.3)',
+            background: 'linear-gradient(180deg, rgba(250, 245, 235, 0.85) 0%, rgba(248, 242, 230, 0.8) 30%, rgba(245, 238, 225, 0.75) 60%, rgba(242, 235, 220, 0.8) 100%)',
+            boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 0 4px rgba(250, 245, 235, 0.4)',
           }}
         />
 
@@ -91,40 +91,40 @@ export default function BookmarkTassel() {
         >
           {/* 그라데이션 정의 - 줄과 술용 */}
           <defs>
-            {/* 실크 끈 그라데이션 */}
+            {/* 실크 끈 그라데이션 - 웜 아이보리/샴페인 골드 */}
             <linearGradient id="cordGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#3d0f28" />
-              <stop offset="30%" stopColor="#4a152f" />
-              <stop offset="60%" stopColor="#501833" />
-              <stop offset="100%" stopColor="#471530" />
+              <stop offset="0%" stopColor="#faf5eb" />
+              <stop offset="30%" stopColor="#f8f2e6" />
+              <stop offset="60%" stopColor="#f5eee1" />
+              <stop offset="100%" stopColor="#f2ebdc" />
             </linearGradient>
             
-            {/* 노리개 캡 그라데이션 */}
+            {/* 노리개 캡 그라데이션 - 웜 아이보리 */}
             <linearGradient id="capGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#3d0f28" />
-              <stop offset="50%" stopColor="#4a152f" />
-              <stop offset="100%" stopColor="#3d0f28" />
+              <stop offset="0%" stopColor="#f5eee1" />
+              <stop offset="50%" stopColor="#f8f2e6" />
+              <stop offset="100%" stopColor="#f5eee1" />
             </linearGradient>
             
-            {/* 노리개 실 그라데이션 1 - 딥 플럼 */}
+            {/* 노리개 실 그라데이션 1 - 웜 아이보리 */}
             <linearGradient id="threadGradient0" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#2d0a20" />
-              <stop offset="50%" stopColor="#3d0f28" />
-              <stop offset="100%" stopColor="#45152d" />
+              <stop offset="0%" stopColor="#f5eee1" />
+              <stop offset="50%" stopColor="#f8f2e6" />
+              <stop offset="100%" stopColor="#faf5eb" />
             </linearGradient>
             
-            {/* 노리개 실 그라데이션 2 - 와인 퍼플 */}
+            {/* 노리개 실 그라데이션 2 - 샴페인 골드 */}
             <linearGradient id="threadGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#2f0b22" />
-              <stop offset="50%" stopColor="#401230" />
-              <stop offset="100%" stopColor="#471530" />
+              <stop offset="0%" stopColor="#f2ebdc" />
+              <stop offset="50%" stopColor="#f5eee1" />
+              <stop offset="100%" stopColor="#f8f2e6" />
             </linearGradient>
             
-            {/* 노리개 실 그라데이션 3 - 먹보라 */}
+            {/* 노리개 실 그라데이션 3 - 연한 웜 아이보리 */}
             <linearGradient id="threadGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#2a081d" />
-              <stop offset="50%" stopColor="#3a0e26" />
-              <stop offset="100%" stopColor="#42132a" />
+              <stop offset="0%" stopColor="#f0e9d8" />
+              <stop offset="50%" stopColor="#f3ecd9" />
+              <stop offset="100%" stopColor="#f5eee1" />
             </linearGradient>
           </defs>
           
@@ -135,11 +135,11 @@ export default function BookmarkTassel() {
             r="2.5"
             fill="url(#cordGradient)"
             style={{
-              filter: 'drop-shadow(0 0 3px rgba(45, 10, 32, 0.4))',
+              filter: 'drop-shadow(0 0 4px rgba(250, 245, 235, 0.5))',
             }}
           />
           
-          {/* 상단 코드 - 실크 끈 느낌 */}
+          {/* 상단 코드 - 웜 아이보리/샴페인 골드 */}
           <line
             x1="30"
             y1="5"
@@ -149,7 +149,7 @@ export default function BookmarkTassel() {
             strokeWidth="2"
             fill="none"
             style={{
-              filter: 'drop-shadow(0 0 3px rgba(45, 10, 32, 0.3))',
+              filter: 'drop-shadow(0 0 4px rgba(250, 245, 235, 0.4))',
             }}
           />
           
@@ -171,7 +171,7 @@ export default function BookmarkTassel() {
             strokeWidth="1.5"
             fill="none"
             style={{
-              filter: 'drop-shadow(0 0 2px rgba(45, 10, 32, 0.3))',
+              filter: 'drop-shadow(0 0 3px rgba(250, 245, 235, 0.4))',
             }}
           />
           
@@ -320,7 +320,7 @@ export default function BookmarkTassel() {
             fill="url(#capGradient)"
             rx="1.5"
             style={{
-              filter: 'drop-shadow(0 0 3px rgba(45, 10, 32, 0.4))',
+              filter: 'drop-shadow(0 0 4px rgba(250, 245, 235, 0.5))',
             }}
           />
           <rect
@@ -328,18 +328,16 @@ export default function BookmarkTassel() {
             y="52"
             width="10"
             height="3"
-            fill="#c9a961"
+            fill="#d4af7a"
             rx="0.5"
-            opacity="0.7"
+            opacity="0.6"
           />
           
-          {/* 노리개 실들 - 고급 한복 노리개 느낌 */}
-          <g opacity="0.7">
+          {/* 노리개 실들 - 웜 아이보리/샴페인 골드 톤 */}
+          <g opacity="0.85">
             {Array.from({ length: 24 }).map((_, i) => {
               const baseX = 26 + (i % 6) * 1.2
               const randomOffset = (i * 0.3) % 2 - 1
-              const length = 120 - 59
-              const yProgress = (y: number) => (y - 59) / length
               return (
                 <line
                   key={i}
@@ -348,10 +346,10 @@ export default function BookmarkTassel() {
                   x2={baseX + randomOffset}
                   y2="120"
                   stroke={`url(#threadGradient${i % 3})`}
-                  strokeWidth="1.2"
-                  opacity="0.8"
+                  strokeWidth="1.3"
+                  opacity="0.9"
                   style={{
-                    filter: 'drop-shadow(0 0 1px rgba(45, 10, 32, 0.2))',
+                    filter: 'drop-shadow(0 0 2px rgba(250, 245, 235, 0.4))',
                   }}
                 />
               )
