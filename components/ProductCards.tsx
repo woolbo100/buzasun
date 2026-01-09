@@ -81,22 +81,22 @@ export default function ProductCards() {
                     style={{
                       color: '#f7f1ff',
                       letterSpacing: '0.02em',
-                      lineHeight: 1.25,
-                      marginBottom: '28px',
+                      lineHeight: window.innerWidth < 640 ? 1.15 : 1.25,
+                      marginBottom: window.innerWidth < 640 ? '20px' : '28px',
                     }}
                   >
                     선천코드 분석 맞춤형 연애 리포트
                   </h2>
 
                   {/* 서브 타이틀 - 중앙 정렬 */}
-                  <div className="max-w-3xl mx-auto mb-16">
+                  <div className="max-w-3xl mx-auto mb-8 md:mb-16">
                     <p 
                       className="text-xl md:text-2xl font-semibold leading-relaxed"
                       style={{
                         color: 'rgba(245, 239, 255, 0.95)',
-                        lineHeight: 1.45,
+                        lineHeight: window.innerWidth < 640 ? 1.3 : 1.45,
                         wordBreak: 'keep-all',
-                        marginBottom: '10px',
+                        marginBottom: window.innerWidth < 640 ? '8px' : '10px',
                       }}
                     >
                       당신이 반복하는 연애의 이유는 감정이 아니라 구조입니다.
@@ -105,7 +105,7 @@ export default function ProductCards() {
                       className="text-base md:text-lg leading-relaxed"
                       style={{
                         color: 'rgba(245, 239, 255, 0.8)',
-                        lineHeight: 1.7,
+                        lineHeight: window.innerWidth < 640 ? 1.5 : 1.7,
                         wordBreak: 'keep-all',
                         opacity: 0.8,
                       }}
@@ -115,21 +115,18 @@ export default function ProductCards() {
                   </div>
                 </div>
 
-                {/* 핵심 카드 그리드 - 3열 × 2행 (6개) */}
+                {/* 핵심 카드 그리드 - 모바일 2열, 데스크톱 3열 */}
                 <div 
                   className="mx-auto mb-16"
                   style={{
                     maxWidth: '950px',
                     marginTop: '48px',
-                    paddingLeft: '32px',
-                    paddingRight: '32px',
+                    paddingLeft: window.innerWidth < 640 ? '16px' : '32px',
+                    paddingRight: window.innerWidth < 640 ? '16px' : '32px',
                   }}
                 >
                   <div 
-                    className="grid grid-cols-1 md:grid-cols-3"
-                    style={{
-                      gap: '20px 24px',
-                    }}
+                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
                   >
                     {([
                       {
@@ -239,7 +236,7 @@ export default function ProductCards() {
                   
                   {/* 신뢰 문구 */}
                   <p 
-                    className="text-xs md:text-sm"
+                    className="text-sm md:text-base"
                     style={{
                       color: 'rgba(245, 239, 255, 0.5)',
                       letterSpacing: '0.02em',
