@@ -23,21 +23,20 @@ const ebooks = [
 
 export default function Ebooks() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ background: 'transparent' }}>
+    <section className="relative w-full overflow-hidden py-20" style={{ background: 'transparent' }}>
       {/* 전자책 섹션 - 3개 가로 배치 */}
       <Reveal delayMs={200}>
-        <div className="w-full py-16 md:py-20 px-6 md:px-8" style={{ background: 'transparent' }}>
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {ebooks.map((ebook, index) => (
                 <Reveal key={ebook.title} delayMs={300 + index * 100}>
                   <Link 
                     href={ebook.href}
-                    className="group block h-full"
+                    className="group block h-full w-full"
                   >
                     <div
                       className="
-                        relative h-full overflow-hidden rounded-2xl
+                        w-full relative h-full overflow-hidden rounded-2xl
                         border transition-all duration-300 ease-out
                         hover:-translate-y-2
                         focus-visible:outline-none focus-visible:ring-2
@@ -111,7 +110,6 @@ export default function Ebooks() {
                   </Link>
                 </Reveal>
               ))}
-            </div>
           </div>
         </div>
       </Reveal>
