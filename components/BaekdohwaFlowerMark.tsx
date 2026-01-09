@@ -8,9 +8,11 @@ type Props = {
   style?: React.CSSProperties;
   /** 밝은 흰색 느낌의 그라데이션 사용 */
   bright?: boolean;
+  /** 배경 워터마크용 대각선 그라데이션 (흰색→핫핑크) */
+  watermark?: boolean;
 };
 
-export default function BaekdohwaFlowerMark({ className = "", size = 44, style, bright = false }: Props) {
+export default function BaekdohwaFlowerMark({ className = "", size = 44, style, bright = false, watermark = false }: Props) {
   return (
     <svg
       width={size}
@@ -39,6 +41,13 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
           <stop offset="75%" stopColor="#ffb6d9" />
           <stop offset="100%" stopColor="#ff69b4" />
         </radialGradient>
+        
+        {/* 배경 워터마크용 대각선 그라데이션 (왼쪽 상단→오른쪽 하단, 흰색→핫핑크) */}
+        <linearGradient id="watermarkGrad" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="50%" stopColor="#ffb6d9" />
+          <stop offset="100%" stopColor="#ec4899" />
+        </linearGradient>
 
         {/* 자개(나전) 느낌의 은은한 무지개 하이라이트 */}
         <linearGradient id="najeon" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -86,7 +95,7 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
               C -14 8, -30 -10, -34 -28
               C -38 -48, -20 -70, 0 -70
               Z"
-            fill={bright ? "url(#petalGradBright)" : "url(#petalGrad)"}
+            fill={watermark ? "url(#watermarkGrad)" : (bright ? "url(#petalGradBright)" : "url(#petalGrad)")}
             opacity="0.98"
           />
           {/* 자개 하이라이트 오버레이 */}
@@ -111,10 +120,10 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
         <use href="#petal" transform="rotate(288)" />
 
         {/* 중앙 보석(자개+핑크) */}
-        <circle r="18" fill="rgba(255,255,255,0.10)" />
-        <circle r="14" fill="url(#najeon)" opacity="0.8" />
-        <circle r="9" fill="#ff2aa1" opacity="0.9" />
-        <circle r="4" fill="#fff" opacity="0.9" />
+        <circle r="18" fill={watermark ? "url(#watermarkGrad)" : "rgba(255,255,255,0.10)"} opacity={watermark ? "0.15" : "1"} />
+        <circle r="14" fill={watermark ? "url(#watermarkGrad)" : "url(#najeon)"} opacity={watermark ? "0.6" : "0.8"} />
+        <circle r="9" fill={watermark ? "url(#watermarkGrad)" : "#ff2aa1"} opacity={watermark ? "0.7" : "0.9"} />
+        <circle r="4" fill={watermark ? "#ffffff" : "#fff"} opacity="0.9" />
 
         {/* 미세 스파클 */}
         <g opacity="0.55" filter="url(#sparkle)">

@@ -11,7 +11,26 @@ export default function About() {
       className="pt-40 pb-20 px-6 relative overflow-hidden"
       style={{ background: 'transparent' }}
     >
-      <div className="container mx-auto max-w-5xl">
+      {/* 배경 워터마크 - 흰색→핫핑크 그라데이션 */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none"
+        style={{
+          width: '600px',
+          height: '600px',
+          opacity: 0.06,
+        }}
+      >
+        <BaekdohwaFlowerMark
+          size={600}
+          watermark={true}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
+        />
+      </div>
+      
+      <div className="container mx-auto max-w-5xl relative z-10">
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-4 md:gap-8 mb-16">
