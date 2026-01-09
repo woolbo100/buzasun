@@ -52,7 +52,7 @@ export default function ProductCards() {
                           background: 'rgba(50, 20, 65, 0.6)',
                         }}
                       >
-                        가장 많은 선택을 받은 리포트
+                        심리학 + 자기계발 + 동양 철학 + 에너지 차원
                       </p>
                     </div>
                   </div>
