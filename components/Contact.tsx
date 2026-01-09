@@ -36,44 +36,52 @@ export default function Contact() {
         <div className="container mx-auto max-w-6xl">
           <Reveal delayMs={100}>
             <div 
-              className="max-w-4xl mx-auto py-10 md:py-12 px-6 md:px-10 rounded-2xl text-center"
+              className="max-w-4xl mx-auto py-20 px-6 md:px-10 text-center relative"
               style={{
-                background: 'rgba(26, 6, 38, 0.5)',
-                border: '1px solid rgba(255, 20, 147, 0.3)',
-                backdropFilter: 'blur(10px)',
+                position: 'relative',
               }}
             >
-              {/* 상단 문장 (명령형 2줄) */}
-              <div className="mb-6 md:mb-8">
-                <p 
-                  className="text-lg md:text-xl lg:text-2xl font-elegant font-normal leading-relaxed"
-                  style={{
-                    color: '#ffffff',
-                    letterSpacing: '0.02em',
-                    lineHeight: '1.8',
-                    wordBreak: 'keep-all',
-                  }}
-                >
-                  더 애쓰지 마세요.<br />
-                  더 증명하지 마세요.
-                </p>
-              </div>
+              {/* 은은한 빛의 안개 효과 - Radial Gradient */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(168, 85, 247, 0.15) 0%, rgba(236, 72, 153, 0.1) 30%, transparent 70%)',
+                  borderRadius: '50%',
+                }}
+              />
+              
+              {/* 텍스트 컨텐츠 */}
+              <div className="relative z-10">
+                {/* 상단 문장 (명령형 2줄) - 차분한 회색 */}
+                <div className="mb-8 md:mb-10">
+                  <p 
+                    className="text-lg md:text-xl lg:text-2xl font-elegant font-normal leading-loose"
+                    style={{
+                      color: '#9ca3af',
+                      letterSpacing: '0.02em',
+                      wordBreak: 'keep-all',
+                    }}
+                  >
+                    더 애쓰지 마세요.<br />
+                    더 증명하지 마세요.
+                  </p>
+                </div>
 
-              {/* 하단 문장 (전환·설명 파트) */}
-              <div>
-                <p 
-                  className="text-base md:text-lg lg:text-xl font-elegant font-normal leading-relaxed"
-                  style={{
-                    color: '#f7f1ff',
-                    letterSpacing: '0.02em',
-                    lineHeight: '1.8',
-                    wordBreak: 'keep-all',
-                  }}
-                >
-                  <span style={{ color: '#ff7ac8' }}>선천코드</span>를 이해하면<br />
-                  반복되던 연애는 멈추고,<br />
-                  <span style={{ color: '#ff7ac8', fontWeight: 500 }}>만나는 사람이 달라집니다.</span>
-                </p>
+                {/* 하단 문장 (전환·설명 파트) - 밝은 흰색 */}
+                <div>
+                  <p 
+                    className="text-base md:text-lg lg:text-xl font-elegant font-normal leading-loose"
+                    style={{
+                      color: '#f3f4f6',
+                      letterSpacing: '0.02em',
+                      wordBreak: 'keep-all',
+                    }}
+                  >
+                    <span style={{ color: '#f3f4f6', fontWeight: 500 }}>선천코드를 이해하면</span><br />
+                    반복되던 연애는 멈추고,<br />
+                    <span style={{ color: '#f3f4f6', fontWeight: 500 }}>만나는 사람이 달라집니다.</span>
+                  </p>
+                </div>
               </div>
             </div>
           </Reveal>
