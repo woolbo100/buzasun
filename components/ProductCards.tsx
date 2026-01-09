@@ -51,7 +51,7 @@ export default function ProductCards() {
                           background: 'rgba(50, 20, 65, 0.6)',
                         }}
                       >
-                        [당신이 몰랐던 타고난 사랑의 알고리즘]
+                        심리학 + 자기계발 + 동양 철학 + 에너지 차원
                       </p>
                     </div>
                   </div>
