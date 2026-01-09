@@ -14,10 +14,11 @@ export default function About() {
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center mb-16"
+            className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-center mb-16"
             style={{
               color: '#f7f1ff',
               letterSpacing: '0.02em',
+              lineHeight: 'clamp(1.15, 1.25, 1.25)',
             }}
           >
             백도화 선언
