@@ -104,7 +104,7 @@ export default function ProductCards() {
                 {/* 핵심 카드 그리드 - 2열 × 3행 (6개) */}
                 <div className="max-w-5xl mx-auto mb-16">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    {[
+                    {([
                       {
                         title: '타고난 연애 성향 & 이상형',
                       },
@@ -123,7 +123,7 @@ export default function ProductCards() {
                       {
                         title: '관계를 바꾸는 실전 연애 조언',
                       },
-                    ].map((item, index) => (
+                    ] as Array<{ title: string; subtitle?: string }>).map((item, index) => (
                       <div
                         key={index}
                         className="group rounded-xl p-5 transition-all duration-300 cursor-pointer"
