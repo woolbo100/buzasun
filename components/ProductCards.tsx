@@ -77,11 +77,12 @@ export default function ProductCards() {
                   
                   {/* 메인 타이틀 */}
                   <h2 
-                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-12"
+                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold"
                     style={{
                       color: '#f7f1ff',
                       letterSpacing: '0.02em',
-                      lineHeight: 1.4,
+                      lineHeight: 1.25,
+                      marginBottom: '28px',
                     }}
                   >
                     선천코드 분석 맞춤형 연애 리포트
@@ -90,11 +91,12 @@ export default function ProductCards() {
                   {/* 서브 타이틀 - 중앙 정렬 */}
                   <div className="max-w-3xl mx-auto mb-16">
                     <p 
-                      className="text-xl md:text-2xl font-semibold mb-6 leading-relaxed"
+                      className="text-xl md:text-2xl font-semibold leading-relaxed"
                       style={{
                         color: 'rgba(245, 239, 255, 0.95)',
-                        lineHeight: 1.6,
+                        lineHeight: 1.45,
                         wordBreak: 'keep-all',
+                        marginBottom: '10px',
                       }}
                     >
                       당신이 반복하는 연애의 이유는 감정이 아니라 구조입니다.
@@ -105,6 +107,7 @@ export default function ProductCards() {
                         color: 'rgba(245, 239, 255, 0.8)',
                         lineHeight: 1.7,
                         wordBreak: 'keep-all',
+                        opacity: 0.8,
                       }}
                     >
                       선천코드 분석으로 연애 성향, 인연의 흐름, 타이밍을 명확히 정리합니다.
