@@ -6,9 +6,11 @@ type Props = {
   /** svg size (px) */
   size?: number;
   style?: React.CSSProperties;
+  /** 밝은 흰색 느낌의 그라데이션 사용 */
+  bright?: boolean;
 };
 
-export default function BaekdohwaFlowerMark({ className = "", size = 44, style }: Props) {
+export default function BaekdohwaFlowerMark({ className = "", size = 44, style, bright = false }: Props) {
   return (
     <svg
       width={size}
@@ -20,12 +22,22 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style }
       role="img"
     >
       <defs>
-        {/* 핫핑크→연핑크 그라데이션 */}
+        {/* 핫핑크→연핑크 그라데이션 (밝은 흰색 느낌) */}
         <radialGradient id="petalGrad" cx="50%" cy="40%" r="70%">
-          <stop offset="0%" stopColor="#ffd1ea" />
-          <stop offset="40%" stopColor="#ff64b6" />
-          <stop offset="75%" stopColor="#ff1e9a" />
-          <stop offset="100%" stopColor="#b8006b" />
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="30%" stopColor="#ffe0f0" />
+          <stop offset="60%" stopColor="#ffb6d9" />
+          <stop offset="85%" stopColor="#ff69b4" />
+          <stop offset="100%" stopColor="#ff1493" />
+        </radialGradient>
+        
+        {/* About 섹션용 밝은 그라데이션 */}
+        <radialGradient id="petalGradBright" cx="50%" cy="40%" r="70%">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="25%" stopColor="#fff5f8" />
+          <stop offset="50%" stopColor="#ffe0f0" />
+          <stop offset="75%" stopColor="#ffb6d9" />
+          <stop offset="100%" stopColor="#ff69b4" />
         </radialGradient>
 
         {/* 자개(나전) 느낌의 은은한 무지개 하이라이트 */}
@@ -74,7 +86,7 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style }
               C -14 8, -30 -10, -34 -28
               C -38 -48, -20 -70, 0 -70
               Z"
-            fill="url(#petalGrad)"
+            fill={bright ? "url(#petalGradBright)" : "url(#petalGrad)"}
             opacity="0.98"
           />
           {/* 자개 하이라이트 오버레이 */}

@@ -14,21 +14,30 @@ export default function About() {
       <div className="container mx-auto max-w-5xl">
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
-          <div className="flex items-center justify-center gap-4 md:gap-6 mb-16">
+          <div className="flex items-center justify-center gap-4 md:gap-8 mb-16">
             {/* 왼쪽 꽃 아이콘 */}
             <div 
               className="flex-shrink-0"
               style={{
-                opacity: 0.3,
+                opacity: 0.6,
+                filter: 'brightness(1.3) contrast(0.9)',
               }}
             >
               <BaekdohwaFlowerMark 
-                size={40}
+                size={80}
                 className="hidden md:block"
+                bright={true}
+                style={{
+                  filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))',
+                }}
               />
               <BaekdohwaFlowerMark 
-                size={28}
+                size={56}
                 className="block md:hidden"
+                bright={true}
+                style={{
+                  filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.3))',
+                }}
               />
             </div>
             
@@ -47,16 +56,25 @@ export default function About() {
             <div 
               className="flex-shrink-0"
               style={{
-                opacity: 0.3,
+                opacity: 0.6,
+                filter: 'brightness(1.3) contrast(0.9)',
               }}
             >
               <BaekdohwaFlowerMark 
-                size={40}
+                size={80}
                 className="hidden md:block"
+                bright={true}
+                style={{
+                  filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))',
+                }}
               />
               <BaekdohwaFlowerMark 
-                size={28}
+                size={56}
                 className="block md:hidden"
+                bright={true}
+                style={{
+                  filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.3))',
+                }}
               />
             </div>
           </div>
