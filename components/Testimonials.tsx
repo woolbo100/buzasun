@@ -130,24 +130,24 @@ export default function Testimonials() {
                 >
                   {/* 별점 */}
                   <div className="mb-4">
-                    <span 
-                      className="text-sm"
-                      style={{
-                        color: '#ff2aa6',
-                        letterSpacing: '0.1em',
-                        filter: 'drop-shadow(0 0 4px rgba(255, 42, 166, 0.4))',
-                      }}
-                    >
-                      {testimonial.rating}
-                    </span>
+                    <div className="flex items-center gap-1">
+                      <span 
+                        className="text-xl tracking-wide"
+                        style={{
+                          color: '#ff2aa6',
+                          filter: 'drop-shadow(0 0 4px rgba(255, 42, 166, 0.4))',
+                        }}
+                      >
+                        {testimonial.rating}
+                      </span>
+                    </div>
                   </div>
 
                   {/* 후기 내용 */}
                   <p 
-                    className="mb-4 flex-grow leading-relaxed"
+                    className="text-base mb-4 flex-grow leading-relaxed"
                     style={{
                       color: 'rgba(255, 255, 255, 0.9)',
-                      fontSize: '15px',
                       lineHeight: '1.7',
                       wordBreak: 'keep-all',
                     }}
