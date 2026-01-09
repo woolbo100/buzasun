@@ -161,9 +161,9 @@ export default function Ebooks() {
                       }}
                     >
                       {/* 카테고리 태그 */}
-                      <div className="flex items-center gap-2 mb-4 flex-wrap">
+                      <div className="flex items-center gap-2 mb-4 flex-wrap justify-center">
                         <div 
-                          className="inline-flex items-center rounded-full border px-3 py-1 text-xs"
+                          className="inline-flex items-center justify-center rounded-full border h-7 min-w-[104px] px-4 text-xs leading-none"
                           style={{
                             borderColor: 'rgba(255, 255, 255, 0.15)',
                             background: 'rgba(255, 255, 255, 0.05)',
@@ -174,7 +174,7 @@ export default function Ebooks() {
                         </div>
                         {ebook.subLabel && (
                           <div 
-                            className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-[10px]"
+                            className="inline-flex items-center justify-center rounded-full border h-7 min-w-[104px] px-4 text-xs leading-none"
                             style={{
                               borderColor: 'rgba(255, 105, 180, 0.25)',
                               background: 'rgba(255, 42, 166, 0.08)',
