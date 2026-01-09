@@ -84,7 +84,7 @@ export default function ProductCards() {
                       lineHeight: 1.4,
                     }}
                   >
-                    선천코드 맞춤 연애 상담 리포트
+                    선천코드 분석 맞춤형 연애 리포트
                   </h2>
 
                   {/* 서브 타이틀 - 중앙 정렬 */}
