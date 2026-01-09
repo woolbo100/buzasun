@@ -137,10 +137,12 @@ export default function About() {
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
                 e.currentTarget.style.background = 'rgba(26, 6, 38, 0.5)'
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(236, 72, 153, 0.15), 0 0 40px rgba(236, 72, 153, 0.08)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
                 e.currentTarget.style.background = 'rgba(26, 6, 38, 0.4)'
+                e.currentTarget.style.boxShadow = 'none'
               }}
             >
               <div className="text-center mb-6">
@@ -198,10 +200,12 @@ export default function About() {
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
                 e.currentTarget.style.background = 'rgba(26, 6, 38, 0.5)'
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(236, 72, 153, 0.15), 0 0 40px rgba(236, 72, 153, 0.08)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
                 e.currentTarget.style.background = 'rgba(26, 6, 38, 0.4)'
+                e.currentTarget.style.boxShadow = 'none'
               }}
             >
               <div className="text-center mb-6">
@@ -258,10 +262,12 @@ export default function About() {
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
                 e.currentTarget.style.background = 'rgba(26, 6, 38, 0.5)'
+                e.currentTarget.style.boxShadow = '0 0 20px rgba(236, 72, 153, 0.15), 0 0 40px rgba(236, 72, 153, 0.08)'
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
                 e.currentTarget.style.background = 'rgba(26, 6, 38, 0.4)'
+                e.currentTarget.style.boxShadow = 'none'
               }}
             >
               <div className="text-center mb-6">
