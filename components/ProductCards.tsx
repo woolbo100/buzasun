@@ -101,12 +101,13 @@ export default function ProductCards() {
                   </div>
                 </div>
 
-                {/* 핵심 카드 그리드 - 2열 × 3행 (6개) */}
-                <div className="max-w-5xl mx-auto mb-16">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {/* 핵심 카드 그리드 - 3열 × 2행 (6개) */}
+                <div className="max-w-6xl mx-auto mb-16">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {([
                       {
                         title: '타고난 연애 성향 & 이상형',
+                        subtitle: '내 코드에 숨겨진 남자복',
                       },
                       {
                         title: '맞는 인연 vs 피해야 할 인연',
@@ -115,26 +116,28 @@ export default function ProductCards() {
                         title: '반복되는 연애 패턴의 원인',
                       },
                       {
-                        title: '내 코드에 숨겨진 남자복',
-                      },
-                      {
-                        title: '타고난 코드가 만드는 연애의 흐름',
+                        title: '결정적인 연애 타이밍',
                       },
                       {
                         title: '관계를 바꾸는 실전 연애 조언',
                       },
+                      {
+                        title: '타고난 코드가 만드는 연애의 흐름',
+                      },
                     ] as Array<{ title: string; subtitle?: string }>).map((item, index) => (
                       <div
                         key={index}
-                        className="group rounded-xl p-5 transition-all duration-300 cursor-pointer"
+                        className="group rounded-xl p-4 transition-all duration-300 cursor-pointer"
                         style={{
                           background: 'rgba(50, 20, 65, 0.7)',
                           border: '1px solid rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(10px)',
-                          minHeight: '120px',
+                          minHeight: '100px',
                           display: 'flex',
                           flexDirection: 'column',
                           justifyContent: 'center',
+                          alignItems: 'center',
+                          textAlign: 'center',
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.transform = 'translateY(-4px)'
@@ -153,6 +156,7 @@ export default function ProductCards() {
                             color: 'rgba(255, 255, 255, 0.95)',
                             lineHeight: 1.6,
                             wordBreak: 'keep-all',
+                            textAlign: 'center',
                           }}
                         >
                           {item.title}
@@ -164,6 +168,7 @@ export default function ProductCards() {
                               color: 'rgba(255, 255, 255, 0.7)',
                               lineHeight: 1.5,
                               wordBreak: 'keep-all',
+                              textAlign: 'center',
                             }}
                           >
                             {item.subtitle}
