@@ -1,5 +1,7 @@
 'use client'
 
+import Reveal from './Reveal'
+
 export default function About() {
   return (
     <section 
@@ -8,20 +10,187 @@ export default function About() {
       style={{ background: 'transparent' }}
     >
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-elegant font-bold text-center mb-12 text-bd-ivory fade-in-up">
-          우리에 대해
-        </h2>
-        <div className="space-y-8 fade-in-up">
-          <p className="text-lg leading-relaxed text-bd-gray">
-            백도화 매력학당은 선천코드 분석을 기반으로 한 연애·풍요 솔루션을 제공하는 공간입니다. 
-            각자의 고유한 에너지 패턴을 분석하여 매력 주파수를 발견하고, 
-            이를 통해 진정한 관계와 풍요로운 삶을 만들어가는 여정을 함께합니다.
+        {/* 메인 타이틀 */}
+        <Reveal delayMs={100}>
+          <h2 
+            className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center mb-12"
+            style={{
+              color: '#f7f1ff',
+              letterSpacing: '0.02em',
+            }}
+          >
+            백도화 선언
+          </h2>
+        </Reveal>
+
+        {/* 메인 선언문 */}
+        <Reveal delayMs={200}>
+          <p 
+            className="text-lg md:text-xl leading-relaxed text-center mb-10"
+            style={{
+              color: '#f7f1ff',
+              lineHeight: '1.8',
+              wordBreak: 'keep-all',
+            }}
+          >
+            백도화의 모든 분석과 설계는<br />
+            심리·무의식·선천 코드·관계 패턴 분석 분야에서<br />
+            공식적으로 검증된 다수의 전문 자격과<br />
+            실제 상담·분석 데이터를 기반으로 합니다.
           </p>
-          <p className="text-lg leading-relaxed text-bd-gray">
-            청초하고 고급스러운 한국적 미학을 바탕으로, 과학적 접근과 세심한 분석을 통해 
-            여러분의 선천코드를 해석합니다. 이를 통해 개인의 고유한 매력을 극대화하고, 
-            더 나은 관계와 풍요로운 삶을 실현할 수 있도록 돕는 것이 우리의 사명입니다.
+        </Reveal>
+
+        {/* 강조 문구 (골드) */}
+        <Reveal delayMs={300}>
+          <div 
+            className="text-center mb-10 py-6 px-4"
+            style={{
+              borderTop: '1px solid rgba(212, 175, 55, 0.2)',
+              borderBottom: '1px solid rgba(212, 175, 55, 0.2)',
+            }}
+          >
+            <p 
+              className="text-xl md:text-2xl font-elegant font-semibold"
+              style={{
+                color: '#D4AF37',
+                letterSpacing: '0.15em',
+                lineHeight: '1.6',
+                wordBreak: 'keep-all',
+              }}
+            >
+              감이 아닌 이론,<br />
+              직관이 아닌 구조,<br />
+              위로가 아닌 설계.
+            </p>
+          </div>
+        </Reveal>
+
+        {/* 자격증 신뢰 보증 문장 */}
+        <Reveal delayMs={400}>
+          <p 
+            className="text-sm md:text-base text-center mb-16"
+            style={{
+              color: 'rgba(255, 255, 255, 0.7)',
+              lineHeight: '1.7',
+              wordBreak: 'keep-all',
+            }}
+          >
+            심리상담 · 연애심리 · 명리심리 · NLP · 최면 · 무의식 설계 ·<br />
+            콘텐츠 구조 분석 분야의 전문 자격과 연구를 바탕으로<br />
+            리포트는 설계됩니다.
           </p>
+        </Reveal>
+
+        {/* 자격증 그룹핑 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          {/* SECTION 1: 마음 해킹 */}
+          <Reveal delayMs={500}>
+            <div className="text-center">
+              <h3 
+                className="text-xl md:text-2xl font-elegant font-semibold mb-4"
+                style={{
+                  color: '#f7f1ff',
+                  letterSpacing: '0.05em',
+                }}
+              >
+                마음 해킹
+              </h3>
+              <p 
+                className="text-sm mb-3"
+                style={{
+                  color: '#D4AF37',
+                  letterSpacing: '0.1em',
+                  fontSize: '0.75rem',
+                }}
+              >
+                Mind Hacking
+              </p>
+              <div 
+                className="space-y-2 text-sm"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  lineHeight: '1.6',
+                }}
+              >
+                <p>심리상담</p>
+                <p>연애심리</p>
+                <p>NLP</p>
+                <p>최면</p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* SECTION 2: 운명 분석 */}
+          <Reveal delayMs={600}>
+            <div className="text-center">
+              <h3 
+                className="text-xl md:text-2xl font-elegant font-semibold mb-4"
+                style={{
+                  color: '#f7f1ff',
+                  letterSpacing: '0.05em',
+                }}
+              >
+                운명 분석
+              </h3>
+              <p 
+                className="text-sm mb-3"
+                style={{
+                  color: '#D4AF37',
+                  letterSpacing: '0.1em',
+                  fontSize: '0.75rem',
+                }}
+              >
+                Code Analyzing
+              </p>
+              <div 
+                className="space-y-2 text-sm"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  lineHeight: '1.6',
+                }}
+              >
+                <p>명리심리</p>
+                <p>타로심리</p>
+                <p>풍수 기반 분석</p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* SECTION 3: 미래 설계 */}
+          <Reveal delayMs={700}>
+            <div className="text-center">
+              <h3 
+                className="text-xl md:text-2xl font-elegant font-semibold mb-4"
+                style={{
+                  color: '#f7f1ff',
+                  letterSpacing: '0.05em',
+                }}
+              >
+                미래 설계
+              </h3>
+              <p 
+                className="text-sm mb-3"
+                style={{
+                  color: '#D4AF37',
+                  letterSpacing: '0.1em',
+                  fontSize: '0.75rem',
+                }}
+              >
+                Future Architect
+              </p>
+              <div 
+                className="space-y-2 text-sm"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  lineHeight: '1.6',
+                }}
+              >
+                <p>AI 콘텐츠 제작</p>
+                <p>퍼스널 브랜딩</p>
+                <p>디지털 자아 설계</p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
