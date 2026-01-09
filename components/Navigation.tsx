@@ -169,21 +169,45 @@ export default function Navigation() {
             </Link>
             
             {/* 시크릿 비법서 드롭다운 */}
-            <div className="relative" ref={ebookMenuRef}>
-              <button
-                onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
-                className={`${menuLinkClass} flex items-center`}
-                style={menuLinkStyle}
-              >
-                시크릿 비법서
-                <i className={`fas fa-chevron-down ml-1.5 text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
-                <span 
-                  className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
-                  style={{
-                    boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
+            <div 
+              className="relative" 
+              ref={ebookMenuRef}
+              onMouseEnter={() => setEbookMenuOpen(true)}
+              onMouseLeave={() => setEbookMenuOpen(false)}
+            >
+              <div className="flex items-center">
+                <Link
+                  href="/#secret-archive"
+                  className={`${menuLinkClass} flex items-center`}
+                  style={menuLinkStyle}
+                  onClick={(e) => {
+                    // 같은 페이지면 부드럽게 스크롤
+                    if (window.location.pathname === '/') {
+                      e.preventDefault()
+                      const element = document.getElementById('secret-archive')
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      }
+                    }
                   }}
-                />
-              </button>
+                >
+                  시크릿 비법서
+                  <span 
+                    className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                    style={{
+                      boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
+                    }}
+                  />
+                </Link>
+                <button
+                  onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
+                  className="ml-1.5 text-bd-gray hover:text-bd-ivory transition-colors"
+                  style={menuLinkStyle}
+                  aria-label="드롭다운 메뉴"
+                >
+                  <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
+                </button>
+              </div>
               {ebookMenuOpen && (
                 <div 
                   className="absolute top-full left-0 mt-2 w-40 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2"
@@ -287,13 +311,32 @@ export default function Navigation() {
               
               {/* 모바일 시크릿 비법서 메뉴 */}
               <div className="px-4 py-2">
-                <button
-                  onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
-                  className="w-full flex justify-between items-center text-bd-gray hover:text-bd-ivory transition-colors rounded-lg px-2 py-2"
-                >
-                  <span>시크릿 비법서</span>
-                  <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
-                </button>
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/#secret-archive"
+                    className="flex-1 text-bd-gray hover:text-bd-ivory transition-colors rounded-lg px-2 py-2"
+                    onClick={(e) => {
+                      // 같은 페이지면 부드럽게 스크롤
+                      if (window.location.pathname === '/') {
+                        e.preventDefault()
+                        const element = document.getElementById('secret-archive')
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        }
+                      }
+                      closeMobileMenu()
+                    }}
+                  >
+                    시크릿 비법서
+                  </Link>
+                  <button
+                    onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
+                    className="text-bd-gray hover:text-bd-ivory transition-colors px-2 py-2"
+                    aria-label="드롭다운 메뉴"
+                  >
+                    <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
+                  </button>
+                </div>
                 {ebookMenuOpen && (
                   <div className="mt-2 ml-4 space-y-1">
                     <Link 
