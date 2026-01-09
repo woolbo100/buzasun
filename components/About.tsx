@@ -11,37 +11,55 @@ export default function About() {
       className="pt-40 pb-20 px-6 relative overflow-hidden"
       style={{ background: 'transparent' }}
     >
-      {/* 워터마크 - 꽃 로고 배경 */}
-      <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none"
-        style={{
-          width: '600px',
-          height: '600px',
-          opacity: 0.06,
-        }}
-      >
-        <BaekdohwaFlowerMark 
-          size={600}
-          style={{
-            width: '100%',
-            height: '100%',
-          }}
-        />
-      </div>
-
-      <div className="container mx-auto max-w-5xl relative z-10">
+      <div className="container mx-auto max-w-5xl">
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
-          <h2 
-            className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-center mb-16"
-            style={{
-              color: '#f7f1ff',
-              letterSpacing: '0.02em',
-              lineHeight: 'clamp(1.15, 1.25, 1.25)',
-            }}
-          >
-            백도화 선언
-          </h2>
+          <div className="flex items-center justify-center gap-4 md:gap-6 mb-16">
+            {/* 왼쪽 꽃 아이콘 */}
+            <div 
+              className="flex-shrink-0"
+              style={{
+                opacity: 0.3,
+              }}
+            >
+              <BaekdohwaFlowerMark 
+                size={40}
+                className="hidden md:block"
+              />
+              <BaekdohwaFlowerMark 
+                size={28}
+                className="block md:hidden"
+              />
+            </div>
+            
+            <h2 
+              className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-center"
+              style={{
+                color: '#f7f1ff',
+                letterSpacing: '0.02em',
+                lineHeight: 'clamp(1.15, 1.25, 1.25)',
+              }}
+            >
+              백도화 선언
+            </h2>
+            
+            {/* 오른쪽 꽃 아이콘 */}
+            <div 
+              className="flex-shrink-0"
+              style={{
+                opacity: 0.3,
+              }}
+            >
+              <BaekdohwaFlowerMark 
+                size={40}
+                className="hidden md:block"
+              />
+              <BaekdohwaFlowerMark 
+                size={28}
+                className="block md:hidden"
+              />
+            </div>
+          </div>
         </Reveal>
 
         {/* 메인 선언문 */}
