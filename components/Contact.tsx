@@ -29,6 +29,47 @@ const faqs = [
 export default function Contact() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
+  return (
+    <>
+      {/* 문의 전 배너 - 문장 C */}
+      <section className="py-12 px-6 relative" style={{ background: 'transparent' }}>
+        <div className="container mx-auto max-w-6xl">
+          <Reveal delayMs={100}>
+            <div 
+              className="max-w-5xl mx-auto py-8 px-6 md:px-12 rounded-2xl text-center"
+              style={{
+                background: 'rgba(26, 6, 38, 0.4)',
+                border: '1px solid rgba(255, 20, 147, 0.15)',
+                backdropFilter: 'blur(10px)',
+              }}
+            >
+              <p 
+                className="text-lg md:text-xl lg:text-2xl font-elegant font-medium leading-relaxed"
+                style={{
+                  color: '#f7f1ff',
+                  letterSpacing: '0.02em',
+                  lineHeight: '1.7',
+                  wordBreak: 'keep-all',
+                }}
+              >
+                더 <span style={{ color: '#ff7ac8' }}>애쓰지</span> 마세요.<br />
+                더 <span style={{ color: '#ff7ac8' }}>증명하지</span> 마세요.<br />
+                <span style={{ color: '#ff7ac8' }}>상태</span>를 바꾸면, 만나는 사람이 바뀝니다.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 문의하기 섹션 */}
+      <ContactForm />
+    </>
+  )
+}
+
+function ContactForm() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     
