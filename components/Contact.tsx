@@ -41,18 +41,9 @@ export default function Contact() {
                 position: 'relative',
               }}
             >
-              {/* 밝은 빛의 아우라 효과 - Radial Gradient */}
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: 'radial-gradient(ellipse 120% 90% at 50% 50%, rgba(236, 72, 153, 0.3) 0%, rgba(168, 85, 247, 0.25) 25%, rgba(236, 72, 153, 0.15) 50%, transparent 75%)',
-                  borderRadius: '50%',
-                }}
-              />
-              
               {/* 텍스트 컨텐츠 */}
               <div className="relative z-10">
-                {/* 상단 문장 (명령형 2줄) - 밝은 회색 */}
+                {/* 상단 문장 (명령형 2줄) - 아우라 효과 */}
                 <div className="mb-10 md:mb-12">
                   <p 
                     className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal leading-relaxed"
@@ -60,7 +51,14 @@ export default function Contact() {
                       color: '#e5e7eb',
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
-                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1)',
+                      textShadow: `
+                        0 0 8px rgba(255, 255, 255, 0.4),
+                        0 0 16px rgba(255, 255, 255, 0.25),
+                        0 0 24px rgba(255, 182, 193, 0.2),
+                        0 0 32px rgba(255, 192, 203, 0.15),
+                        0 0 40px rgba(255, 200, 210, 0.1),
+                        0 2px 4px rgba(0, 0, 0, 0.2)
+                      `,
                     }}
                   >
                     더 애쓰지 마세요.<br />
@@ -68,7 +66,7 @@ export default function Contact() {
                   </p>
                 </div>
 
-                {/* 하단 문장 (전환·설명 파트) - 큰 주인공 텍스트 */}
+                {/* 하단 문장 (전환·설명 파트) - 큰 주인공 텍스트 아우라 효과 */}
                 <div>
                   <p 
                     className="text-2xl md:text-3xl lg:text-4xl font-elegant font-semibold leading-relaxed"
@@ -76,7 +74,15 @@ export default function Contact() {
                       color: '#f3f4f6',
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
-                      textShadow: '0 4px 12px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 255, 255, 0.15)',
+                      textShadow: `
+                        0 0 10px rgba(255, 255, 255, 0.5),
+                        0 0 20px rgba(255, 255, 255, 0.3),
+                        0 0 30px rgba(255, 182, 193, 0.25),
+                        0 0 40px rgba(255, 192, 203, 0.2),
+                        0 0 50px rgba(255, 200, 210, 0.15),
+                        0 0 60px rgba(255, 210, 220, 0.1),
+                        0 4px 8px rgba(0, 0, 0, 0.25)
+                      `,
                     }}
                   >
                     <span style={{ color: '#f3f4f6', fontWeight: 600 }}>선천코드를 이해하면</span><br />
