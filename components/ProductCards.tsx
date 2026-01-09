@@ -77,12 +77,11 @@ export default function ProductCards() {
                   
                   {/* 메인 타이틀 */}
                   <h2 
-                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold"
+                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-5 md:mb-7"
                     style={{
                       color: '#f7f1ff',
                       letterSpacing: '0.02em',
-                      lineHeight: window.innerWidth < 640 ? 1.15 : 1.25,
-                      marginBottom: window.innerWidth < 640 ? '20px' : '28px',
+                      lineHeight: 'clamp(1.15, 1.25, 1.25)',
                     }}
                   >
                     선천코드 분석 맞춤형 연애 리포트
@@ -91,21 +90,20 @@ export default function ProductCards() {
                   {/* 서브 타이틀 - 중앙 정렬 */}
                   <div className="max-w-3xl mx-auto mb-8 md:mb-16">
                     <p 
-                      className="text-xl md:text-2xl font-semibold leading-relaxed"
+                      className="text-xl md:text-2xl font-semibold mb-2 md:mb-2.5"
                       style={{
                         color: 'rgba(245, 239, 255, 0.95)',
-                        lineHeight: window.innerWidth < 640 ? 1.3 : 1.45,
+                        lineHeight: 'clamp(1.3, 1.45, 1.45)',
                         wordBreak: 'keep-all',
-                        marginBottom: window.innerWidth < 640 ? '8px' : '10px',
                       }}
                     >
                       당신이 반복하는 연애의 이유는 감정이 아니라 구조입니다.
                     </p>
                     <p 
-                      className="text-base md:text-lg leading-relaxed"
+                      className="text-base md:text-lg"
                       style={{
                         color: 'rgba(245, 239, 255, 0.8)',
-                        lineHeight: window.innerWidth < 640 ? 1.5 : 1.7,
+                        lineHeight: 'clamp(1.5, 1.7, 1.7)',
                         wordBreak: 'keep-all',
                         opacity: 0.8,
                       }}
@@ -117,16 +115,14 @@ export default function ProductCards() {
 
                 {/* 핵심 카드 그리드 - 모바일 2열, 데스크톱 3열 */}
                 <div 
-                  className="mx-auto mb-16"
+                  className="mx-auto mb-16 px-4 md:px-8"
                   style={{
                     maxWidth: '950px',
                     marginTop: '48px',
-                    paddingLeft: window.innerWidth < 640 ? '16px' : '32px',
-                    paddingRight: window.innerWidth < 640 ? '16px' : '32px',
                   }}
                 >
                   <div 
-                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
+                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7"
                   >
                     {([
                       {
@@ -150,18 +146,18 @@ export default function ProductCards() {
                     ] as Array<{ title: string; subtitle?: string }>).map((item, index) => (
                       <div
                         key={index}
-                        className="group rounded-xl transition-all duration-300 cursor-pointer"
+                        className="group rounded-xl transition-all duration-300 cursor-pointer p-4 md:p-5"
                         style={{
                           background: 'rgba(50, 20, 65, 0.7)',
                           border: '1px solid rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(10px)',
-                          minHeight: '100px',
+                          minHeight: 'auto',
+                          height: 'auto',
                           display: 'flex',
                           flexDirection: 'column',
                           justifyContent: 'center',
                           alignItems: 'center',
                           textAlign: 'center',
-                          padding: '20px 24px',
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.transform = 'translateY(-4px)'
@@ -175,12 +171,11 @@ export default function ProductCards() {
                         }}
                       >
                         <p 
-                          className="text-sm md:text-base font-semibold mb-2 leading-relaxed"
+                          className="text-xs sm:text-sm md:text-base font-semibold mb-2 text-center"
                           style={{
                             color: 'rgba(255, 255, 255, 0.95)',
-                            lineHeight: 1.6,
+                            lineHeight: 'clamp(1.4, 1.6, 1.6)',
                             wordBreak: 'keep-all',
-                            textAlign: 'center',
                           }}
                         >
                           {item.title}
@@ -207,11 +202,10 @@ export default function ProductCards() {
                 <div className="text-center">
                   {/* CTA 버튼 */}
                   <Link href="/report">
-                    <div className="inline-block px-14 py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn mb-3"
+                    <div className="inline-block px-8 md:px-14 py-4 md:py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn mb-3 w-[90%] sm:w-auto text-base md:text-lg"
                       style={{
                         background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
                         boxShadow: '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)',
-                        fontSize: '1.15rem',
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.5), 0 0 60px rgba(255, 20, 147, 0.3)'
