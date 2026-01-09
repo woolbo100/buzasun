@@ -218,21 +218,21 @@ export default function Navigation() {
                   }}
                 >
                   <Link 
-                    href="/ebooks/love" 
+                    href="/coming-soon?title=연애비급&desc=관계의 흐름을 바꾸는 심리·프레임·대화 설계 비법서" 
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-t-lg"
                     onClick={() => setEbookMenuOpen(false)}
                   >
                     연애비급
                   </Link>
                   <Link 
-                    href="/ebooks/prosperity" 
+                    href="/coming-soon?title=풍요비책&desc=상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드" 
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm"
                     onClick={() => setEbookMenuOpen(false)}
                   >
                     풍요비책
                   </Link>
                   <Link 
-                    href="/ebooks/reunion" 
+                    href="/coming-soon?title=재회비방&desc=감정선 복구부터 메시지 설계까지. 재회 기준 만들기" 
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-b-lg"
                     onClick={() => setEbookMenuOpen(false)}
                   >
@@ -340,21 +340,21 @@ export default function Navigation() {
                 {ebookMenuOpen && (
                   <div className="mt-2 ml-4 space-y-1">
                     <Link 
-                      href="/ebooks/love" 
+                      href="/coming-soon?title=연애비급&desc=관계의 흐름을 바꾸는 심리·프레임·대화 설계 비법서" 
                       className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
                       onClick={closeMobileMenu}
                     >
                       연애비급
                     </Link>
                     <Link 
-                      href="/ebooks/prosperity" 
+                      href="/coming-soon?title=풍요비책&desc=상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드" 
                       className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
                       onClick={closeMobileMenu}
                     >
                       풍요비책
                     </Link>
                     <Link 
-                      href="/ebooks/reunion" 
+                      href="/coming-soon?title=재회비방&desc=감정선 복구부터 메시지 설계까지. 재회 기준 만들기" 
                       className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
                       onClick={closeMobileMenu}
                     >

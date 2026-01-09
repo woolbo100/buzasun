@@ -7,19 +7,19 @@ const ebooks = [
   {
     title: "연애비급",
     desc: "관계의 흐름을 바꾸는 심리·프레임·대화 설계",
-    href: "/ebooks/love",
+    href: "/coming-soon?title=연애비급&desc=관계의 흐름을 바꾸는 심리·프레임·대화 설계 비법서",
     subLabel: "관계 설계 비법서",
   },
   {
     title: "풍요비책",
     desc: "상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
-    href: "/ebooks/abundance",
+    href: "/coming-soon?title=풍요비책&desc=상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
     subLabel: "상태·주파수 비법서",
   },
   {
     title: "재회비방",
     desc: "감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
-    href: "/ebooks/reunion",
+    href: "/coming-soon?title=재회비방&desc=감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
     subLabel: "메시지·기준 비법서",
   },
 ]
