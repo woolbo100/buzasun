@@ -6,7 +6,6 @@ import ProductCards from '@/components/ProductCards'
 import Testimonials from '@/components/Testimonials'
 import Ebooks from '@/components/Ebooks'
 import About from '@/components/About'
-import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import AdminModal from '@/components/AdminModal'
@@ -59,7 +58,6 @@ export default function Home() {
         {/* 섹션들 - 경계 없이 자연스럽게 연결 */}
         <div className="relative z-10">
           <About />
-          <Projects />
           <Contact />
         </div>
       </div>
