@@ -272,7 +272,7 @@ export default function BookmarkTassel() {
                   : 'drop-shadow(0 0 4px rgba(255, 182, 193, 0.2))',
                 opacity: isClicked ? 1.1 : isHovered ? 1 : isBookmarked ? 0.98 : 0.95,
               }}
-              transform="translate(30 80) scale(0.28) translate(-100 -100)"
+              transform="translate(30 90) scale(0.28) translate(-100 -100)"
             >
               {/* 꽃잎 5장: 백도화 형태 */}
               <g transform="translate(100 100)" filter="url(#depthShadowTassel)">
@@ -326,7 +326,7 @@ export default function BookmarkTassel() {
             {/* 노리개 캡 */}
             <rect
               x="24"
-              y="110"
+              y="102"
               width="12"
               height="7"
               fill="url(#capGradient)"
@@ -337,7 +337,7 @@ export default function BookmarkTassel() {
             />
             <rect
               x="25"
-              y="112"
+              y="104"
               width="10"
               height="3"
               fill="#4a152b"
@@ -354,7 +354,7 @@ export default function BookmarkTassel() {
                   <line
                     key={i}
                     x1={baseX}
-                    y1="119"
+                    y1="111"
                     x2={baseX + randomOffset}
                     y2="200"
                     stroke={`url(#threadGradient${i % 3})`}
