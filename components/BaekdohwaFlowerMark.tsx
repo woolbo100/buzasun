@@ -50,6 +50,15 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
           <stop offset="50%" stopColor="#ffb6d9" />
           <stop offset="100%" stopColor="#ec4899" />
         </linearGradient>
+        
+        {/* outlinePink용: 안쪽에서 외곽으로 핑크가 진해지는 그라데이션 */}
+        <radialGradient id="pinkGradInward" cx="50%" cy="50%" r="70%">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="40%" stopColor="#ffe0f0" />
+          <stop offset="70%" stopColor="#ffb6d9" />
+          <stop offset="90%" stopColor="#ff69b4" />
+          <stop offset="100%" stopColor="#ec4899" />
+        </radialGradient>
 
         {/* 자개(나전) 느낌의 은은한 무지개 하이라이트 */}
         <linearGradient id="najeon" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -84,9 +93,10 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
           <feGaussianBlur stdDeviation="0.8" />
         </filter>
         
-        {/* 핫핑크 외곽선 글로우 효과 */}
-        <filter id="pinkGlow" x="-150%" y="-150%" width="400%" height="400%">
-          <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+        {/* 핫핑크 외곽선 글로우 효과 - 은은한 빛나는 효과 */}
+        <filter id="pinkGlow" x="-200%" y="-200%" width="500%" height="500%">
+          {/* 외곽 글로우 레이어 1 - 넓고 부드러운 */}
+          <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
           <feColorMatrix
             in="coloredBlur"
             type="matrix"
@@ -94,10 +104,11 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
               0 0 0 0 0.925
               0 0 0 0 0.282
               0 0 0 0 0.6
-              0 0 0 0.8 0"
+              0 0 0 0.5 0"
             result="pinkBlur"
           />
-          <feGaussianBlur stdDeviation="3" result="coloredBlur2"/>
+          {/* 외곽 글로우 레이어 2 - 중간 */}
+          <feGaussianBlur stdDeviation="5" result="coloredBlur2"/>
           <feColorMatrix
             in="coloredBlur2"
             type="matrix"
@@ -105,12 +116,25 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
               0 0 0 0 0.925
               0 0 0 0 0.282
               0 0 0 0 0.6
-              0 0 0 0.6 0"
+              0 0 0 0.7 0"
             result="pinkBlur2"
+          />
+          {/* 외곽 글로우 레이어 3 - 가까운 */}
+          <feGaussianBlur stdDeviation="3" result="coloredBlur3"/>
+          <feColorMatrix
+            in="coloredBlur3"
+            type="matrix"
+            values="
+              0 0 0 0 0.925
+              0 0 0 0 0.282
+              0 0 0 0 0.6
+              0 0 0 0.85 0"
+            result="pinkBlur3"
           />
           <feMerge>
             <feMergeNode in="pinkBlur"/>
             <feMergeNode in="pinkBlur2"/>
+            <feMergeNode in="pinkBlur3"/>
             <feMergeNode in="SourceGraphic"/>
           </feMerge>
         </filter>
@@ -128,9 +152,9 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
               C -14 8, -30 -10, -34 -28
               C -38 -48, -20 -70, 0 -70
               Z"
-            fill={outlinePink ? "#ffffff" : (watermark ? "url(#watermarkGrad)" : (bright ? "url(#petalGradBright)" : "url(#petalGrad)"))}
+            fill={outlinePink ? "url(#pinkGradInward)" : (watermark ? "url(#watermarkGrad)" : (bright ? "url(#petalGradBright)" : "url(#petalGrad)"))}
             stroke={outlinePink ? "#ec4899" : "none"}
-            strokeWidth={outlinePink ? "2" : "0"}
+            strokeWidth={outlinePink ? "2.5" : "0"}
             strokeLinejoin="round"
             opacity="0.98"
           />
@@ -160,9 +184,9 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
         {/* 중앙 보석(자개+핑크) */}
         {outlinePink ? (
           <>
-            <circle r="18" fill="#ffffff" opacity="0.3" stroke="#ec4899" strokeWidth="1.5" />
-            <circle r="14" fill="#ffffff" opacity="0.5" stroke="#ec4899" strokeWidth="1.5" />
-            <circle r="9" fill="#ffffff" opacity="0.8" stroke="#ec4899" strokeWidth="1.5" />
+            <circle r="18" fill="url(#pinkGradInward)" opacity="0.4" stroke="#ec4899" strokeWidth="1.5" />
+            <circle r="14" fill="url(#pinkGradInward)" opacity="0.6" stroke="#ec4899" strokeWidth="1.5" />
+            <circle r="9" fill="url(#pinkGradInward)" opacity="0.85" stroke="#ec4899" strokeWidth="1.5" />
             <circle r="4" fill="#ffffff" opacity="1" />
           </>
         ) : (
