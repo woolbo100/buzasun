@@ -161,7 +161,7 @@ export default function Ebooks() {
                       }}
                     >
                       {/* 카테고리 태그 */}
-                      <div className="flex items-center gap-2 mb-4 flex-wrap justify-center">
+                      <div className="flex items-center gap-2 mb-4 flex-wrap justify-start">
                         <div 
                           className="inline-flex items-center justify-center rounded-full border h-7 min-w-[104px] px-4 text-xs leading-none"
                           style={{
