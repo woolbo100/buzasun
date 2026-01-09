@@ -1,6 +1,7 @@
 'use client'
 
 import Reveal from './Reveal'
+import { Brain, Compass, Building2 } from 'lucide-react'
 
 export default function About() {
   return (
@@ -9,11 +10,11 @@ export default function About() {
       className="pt-40 pb-20 px-6 relative"
       style={{ background: 'transparent' }}
     >
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-5xl">
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center mb-12"
+            className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center mb-16"
             style={{
               color: '#f7f1ff',
               letterSpacing: '0.02em',
@@ -26,7 +27,7 @@ export default function About() {
         {/* 메인 선언문 */}
         <Reveal delayMs={200}>
           <p 
-            className="text-lg md:text-xl leading-relaxed text-center mb-10"
+            className="text-lg md:text-xl leading-relaxed text-center mb-16"
             style={{
               color: '#f7f1ff',
               lineHeight: '1.8',
@@ -40,22 +41,23 @@ export default function About() {
           </p>
         </Reveal>
 
-        {/* 강조 문구 (골드) */}
+        {/* 강조 문구 (골드) - 섹션 핵심 */}
         <Reveal delayMs={300}>
           <div 
-            className="text-center mb-10 py-6 px-4"
+            className="text-center mb-16 py-10 px-6"
             style={{
-              borderTop: '1px solid rgba(212, 175, 55, 0.2)',
-              borderBottom: '1px solid rgba(212, 175, 55, 0.2)',
+              borderTop: '1px solid rgba(212, 175, 55, 0.25)',
+              borderBottom: '1px solid rgba(212, 175, 55, 0.25)',
             }}
           >
             <p 
-              className="text-xl md:text-2xl font-elegant font-semibold"
+              className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold"
               style={{
                 color: '#D4AF37',
-                letterSpacing: '0.15em',
-                lineHeight: '1.6',
+                letterSpacing: '0.12em',
+                lineHeight: '1.5',
                 wordBreak: 'keep-all',
+                textShadow: '0 0 20px rgba(212, 175, 55, 0.3)',
               }}
             >
               감이 아닌 이론,<br />
@@ -68,7 +70,7 @@ export default function About() {
         {/* 자격증 신뢰 보증 문장 */}
         <Reveal delayMs={400}>
           <p 
-            className="text-sm md:text-base text-center mb-16"
+            className="text-sm md:text-base text-center mb-20"
             style={{
               color: 'rgba(255, 255, 255, 0.7)',
               lineHeight: '1.7',
@@ -81,13 +83,38 @@ export default function About() {
           </p>
         </Reveal>
 
-        {/* 자격증 그룹핑 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        {/* 자격증 그룹핑 - 카드 레이아웃 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* SECTION 1: 마음 해킹 */}
           <Reveal delayMs={500}>
-            <div className="text-center">
+            <div 
+              className="rounded-2xl p-8 h-full transition-all duration-300"
+              style={{
+                background: 'rgba(26, 6, 38, 0.4)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
+                e.currentTarget.style.background = 'rgba(26, 6, 38, 0.5)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+                e.currentTarget.style.background = 'rgba(26, 6, 38, 0.4)'
+              }}
+            >
+              <div className="text-center mb-6">
+                <Brain 
+                  size={48} 
+                  className="mx-auto mb-4"
+                  style={{
+                    color: '#D4AF37',
+                    opacity: 0.9,
+                  }}
+                />
+              </div>
               <h3 
-                className="text-xl md:text-2xl font-elegant font-semibold mb-4"
+                className="text-xl md:text-2xl font-elegant font-semibold mb-3 text-center"
                 style={{
                   color: '#f7f1ff',
                   letterSpacing: '0.05em',
@@ -96,7 +123,7 @@ export default function About() {
                 마음 해킹
               </h3>
               <p 
-                className="text-sm mb-3"
+                className="text-sm mb-6 text-center"
                 style={{
                   color: '#D4AF37',
                   letterSpacing: '0.1em',
@@ -106,7 +133,7 @@ export default function About() {
                 Mind Hacking
               </p>
               <div 
-                className="space-y-2 text-sm"
+                className="space-y-3 text-sm text-center"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   lineHeight: '1.6',
@@ -122,9 +149,34 @@ export default function About() {
 
           {/* SECTION 2: 운명 분석 */}
           <Reveal delayMs={600}>
-            <div className="text-center">
+            <div 
+              className="rounded-2xl p-8 h-full transition-all duration-300"
+              style={{
+                background: 'rgba(26, 6, 38, 0.4)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
+                e.currentTarget.style.background = 'rgba(26, 6, 38, 0.5)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+                e.currentTarget.style.background = 'rgba(26, 6, 38, 0.4)'
+              }}
+            >
+              <div className="text-center mb-6">
+                <Compass 
+                  size={48} 
+                  className="mx-auto mb-4"
+                  style={{
+                    color: '#D4AF37',
+                    opacity: 0.9,
+                  }}
+                />
+              </div>
               <h3 
-                className="text-xl md:text-2xl font-elegant font-semibold mb-4"
+                className="text-xl md:text-2xl font-elegant font-semibold mb-3 text-center"
                 style={{
                   color: '#f7f1ff',
                   letterSpacing: '0.05em',
@@ -133,7 +185,7 @@ export default function About() {
                 운명 분석
               </h3>
               <p 
-                className="text-sm mb-3"
+                className="text-sm mb-6 text-center"
                 style={{
                   color: '#D4AF37',
                   letterSpacing: '0.1em',
@@ -143,7 +195,7 @@ export default function About() {
                 Code Analyzing
               </p>
               <div 
-                className="space-y-2 text-sm"
+                className="space-y-3 text-sm text-center"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   lineHeight: '1.6',
@@ -158,9 +210,34 @@ export default function About() {
 
           {/* SECTION 3: 미래 설계 */}
           <Reveal delayMs={700}>
-            <div className="text-center">
+            <div 
+              className="rounded-2xl p-8 h-full transition-all duration-300"
+              style={{
+                background: 'rgba(26, 6, 38, 0.4)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
+                e.currentTarget.style.background = 'rgba(26, 6, 38, 0.5)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+                e.currentTarget.style.background = 'rgba(26, 6, 38, 0.4)'
+              }}
+            >
+              <div className="text-center mb-6">
+                <Building2 
+                  size={48} 
+                  className="mx-auto mb-4"
+                  style={{
+                    color: '#D4AF37',
+                    opacity: 0.9,
+                  }}
+                />
+              </div>
               <h3 
-                className="text-xl md:text-2xl font-elegant font-semibold mb-4"
+                className="text-xl md:text-2xl font-elegant font-semibold mb-3 text-center"
                 style={{
                   color: '#f7f1ff',
                   letterSpacing: '0.05em',
@@ -169,7 +246,7 @@ export default function About() {
                 미래 설계
               </h3>
               <p 
-                className="text-sm mb-3"
+                className="text-sm mb-6 text-center"
                 style={{
                   color: '#D4AF37',
                   letterSpacing: '0.1em',
@@ -179,7 +256,7 @@ export default function About() {
                 Future Architect
               </p>
               <div 
-                className="space-y-2 text-sm"
+                className="space-y-3 text-sm text-center"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   lineHeight: '1.6',
