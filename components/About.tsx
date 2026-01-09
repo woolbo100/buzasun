@@ -62,23 +62,25 @@ export default function About() {
 
         {/* 메인 선언문 */}
         <Reveal delayMs={200}>
-          <p 
-            className="text-lg md:text-xl leading-relaxed text-center mb-16"
-            style={{
-              color: '#f7f1ff',
-              lineHeight: '1.8',
-              wordBreak: 'keep-all',
-            }}
-          >
-            백도화의 모든 분석과 설계는 심리·무의식·선천 코드·관계 패턴 분석 분야에서<br />
-            공식적으로 검증된 다수의 전문 자격과 실제 상담·분석 데이터를 기반으로 합니다.
-          </p>
+          <div className="max-w-3xl mx-auto">
+            <p 
+              className="text-lg md:text-xl leading-loose text-center mb-32"
+              style={{
+                color: 'rgba(255, 255, 255, 0.7)',
+                lineHeight: '2',
+                wordBreak: 'keep-all',
+              }}
+            >
+              백도화의 모든 분석과 설계는 심리·무의식·선천 코드·관계 패턴 분석 분야에서<br />
+              공식적으로 검증된 다수의 전문 자격과 실제 상담·분석 데이터를 기반으로 합니다.
+            </p>
+          </div>
         </Reveal>
 
         {/* 강조 문구 (핫핑크) - 섹션 핵심 */}
         <Reveal delayMs={300}>
           <div 
-            className="text-center mb-16 py-10 px-6"
+            className="text-center mb-32 py-10 px-6 max-w-3xl mx-auto"
             style={{
               borderTop: '1px solid rgba(236, 72, 153, 0.25)',
               borderBottom: '1px solid rgba(236, 72, 153, 0.25)',
@@ -103,18 +105,20 @@ export default function About() {
 
         {/* 자격증 신뢰 보증 문장 */}
         <Reveal delayMs={400}>
-          <p 
-            className="text-sm md:text-base text-center mb-20"
-            style={{
-              color: 'rgba(255, 255, 255, 0.7)',
-              lineHeight: '1.7',
-              wordBreak: 'keep-all',
-            }}
-          >
-            심리상담 · 연애심리 · 명리심리 · NLP · 최면 · 무의식 설계 ·<br />
-            콘텐츠 구조 분석 분야의 전문 자격과 연구를 바탕으로<br />
-            리포트는 설계됩니다.
-          </p>
+          <div className="max-w-3xl mx-auto">
+            <p 
+              className="text-sm md:text-base leading-loose text-center mb-20"
+              style={{
+                color: 'rgba(255, 255, 255, 0.7)',
+                lineHeight: '2',
+                wordBreak: 'keep-all',
+              }}
+            >
+              심리상담 · 연애심리 · 명리심리 · NLP · 최면 · 무의식 설계 ·<br />
+              콘텐츠 구조 분석 분야의 전문 자격과 연구를 바탕으로<br />
+              리포트는 설계됩니다.
+            </p>
+          </div>
         </Reveal>
 
         {/* 자격증 그룹핑 - 카드 레이아웃 */}
