@@ -37,26 +37,16 @@ export default function About() {
             {/* 왼쪽 꽃 아이콘 */}
             <div 
               className="flex-shrink-0"
-              style={{
-                opacity: 0.6,
-                filter: 'brightness(1.3) contrast(0.9)',
-              }}
             >
               <BaekdohwaFlowerMark 
                 size={80}
                 className="hidden md:block"
-                bright={true}
-                style={{
-                  filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))',
-                }}
+                outlinePink={true}
               />
               <BaekdohwaFlowerMark 
                 size={56}
                 className="block md:hidden"
-                bright={true}
-                style={{
-                  filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.3))',
-                }}
+                outlinePink={true}
               />
             </div>
             
@@ -74,26 +64,16 @@ export default function About() {
             {/* 오른쪽 꽃 아이콘 */}
             <div 
               className="flex-shrink-0"
-              style={{
-                opacity: 0.6,
-                filter: 'brightness(1.3) contrast(0.9)',
-              }}
             >
               <BaekdohwaFlowerMark 
                 size={80}
                 className="hidden md:block"
-                bright={true}
-                style={{
-                  filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.3))',
-                }}
+                outlinePink={true}
               />
               <BaekdohwaFlowerMark 
                 size={56}
                 className="block md:hidden"
-                bright={true}
-                style={{
-                  filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.3))',
-                }}
+                outlinePink={true}
               />
             </div>
           </div>

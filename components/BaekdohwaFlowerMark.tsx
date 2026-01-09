@@ -10,9 +10,11 @@ type Props = {
   bright?: boolean;
   /** 배경 워터마크용 대각선 그라데이션 (흰색→핫핑크) */
   watermark?: boolean;
+  /** 외곽선 핫핑크, 안쪽 화이트, 외곽선 글로우 효과 */
+  outlinePink?: boolean;
 };
 
-export default function BaekdohwaFlowerMark({ className = "", size = 44, style, bright = false, watermark = false }: Props) {
+export default function BaekdohwaFlowerMark({ className = "", size = 44, style, bright = false, watermark = false, outlinePink = false }: Props) {
   return (
     <svg
       width={size}
@@ -81,10 +83,41 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
         <filter id="sparkle" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="0.8" />
         </filter>
+        
+        {/* 핫핑크 외곽선 글로우 효과 */}
+        <filter id="pinkGlow" x="-150%" y="-150%" width="400%" height="400%">
+          <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+          <feColorMatrix
+            in="coloredBlur"
+            type="matrix"
+            values="
+              0 0 0 0 0.925
+              0 0 0 0 0.282
+              0 0 0 0 0.6
+              0 0 0 0.8 0"
+            result="pinkBlur"
+          />
+          <feGaussianBlur stdDeviation="3" result="coloredBlur2"/>
+          <feColorMatrix
+            in="coloredBlur2"
+            type="matrix"
+            values="
+              0 0 0 0 0.925
+              0 0 0 0 0.282
+              0 0 0 0 0.6
+              0 0 0 0.6 0"
+            result="pinkBlur2"
+          />
+          <feMerge>
+            <feMergeNode in="pinkBlur"/>
+            <feMergeNode in="pinkBlur2"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
       </defs>
 
       {/* 꽃잎 5장: 하나의 꽃잎 모양을 회전 복제 */}
-      <g transform="translate(100 100)" filter="url(#softGlow)">
+      <g transform="translate(100 100)" filter={outlinePink ? "url(#pinkGlow)" : "url(#softGlow)"}>
         {/* 꽃잎 하나 */}
         <g id="petal">
           <path
@@ -95,21 +128,26 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
               C -14 8, -30 -10, -34 -28
               C -38 -48, -20 -70, 0 -70
               Z"
-            fill={watermark ? "url(#watermarkGrad)" : (bright ? "url(#petalGradBright)" : "url(#petalGrad)")}
+            fill={outlinePink ? "#ffffff" : (watermark ? "url(#watermarkGrad)" : (bright ? "url(#petalGradBright)" : "url(#petalGrad)"))}
+            stroke={outlinePink ? "#ec4899" : "none"}
+            strokeWidth={outlinePink ? "2" : "0"}
+            strokeLinejoin="round"
             opacity="0.98"
           />
-          {/* 자개 하이라이트 오버레이 */}
-          <path
-            d="
-              M 0 -64
-              C 16 -62, 28 -45, 25 -28
-              C 22 -12, 12 2, 0 10
-              C -12 2, -22 -12, -25 -28
-              C -28 -45, -16 -62, 0 -64
-              Z"
-            fill="url(#najeon)"
-            opacity="0.42"
-          />
+          {/* 자개 하이라이트 오버레이 - outlinePink일 때는 제거 */}
+          {!outlinePink && (
+            <path
+              d="
+                M 0 -64
+                C 16 -62, 28 -45, 25 -28
+                C 22 -12, 12 2, 0 10
+                C -12 2, -22 -12, -25 -28
+                C -28 -45, -16 -62, 0 -64
+                Z"
+              fill="url(#najeon)"
+              opacity="0.42"
+            />
+          )}
         </g>
 
         {/* 5장 회전 */}
@@ -120,10 +158,21 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
         <use href="#petal" transform="rotate(288)" />
 
         {/* 중앙 보석(자개+핑크) */}
-        <circle r="18" fill={watermark ? "url(#watermarkGrad)" : "rgba(255,255,255,0.10)"} opacity={watermark ? "0.15" : "1"} />
-        <circle r="14" fill={watermark ? "url(#watermarkGrad)" : "url(#najeon)"} opacity={watermark ? "0.6" : "0.8"} />
-        <circle r="9" fill={watermark ? "url(#watermarkGrad)" : "#ff2aa1"} opacity={watermark ? "0.7" : "0.9"} />
-        <circle r="4" fill={watermark ? "#ffffff" : "#fff"} opacity="0.9" />
+        {outlinePink ? (
+          <>
+            <circle r="18" fill="#ffffff" opacity="0.3" stroke="#ec4899" strokeWidth="1.5" />
+            <circle r="14" fill="#ffffff" opacity="0.5" stroke="#ec4899" strokeWidth="1.5" />
+            <circle r="9" fill="#ffffff" opacity="0.8" stroke="#ec4899" strokeWidth="1.5" />
+            <circle r="4" fill="#ffffff" opacity="1" />
+          </>
+        ) : (
+          <>
+            <circle r="18" fill={watermark ? "url(#watermarkGrad)" : "rgba(255,255,255,0.10)"} opacity={watermark ? "0.15" : "1"} />
+            <circle r="14" fill={watermark ? "url(#watermarkGrad)" : "url(#najeon)"} opacity={watermark ? "0.6" : "0.8"} />
+            <circle r="9" fill={watermark ? "url(#watermarkGrad)" : "#ff2aa1"} opacity={watermark ? "0.7" : "0.9"} />
+            <circle r="4" fill={watermark ? "#ffffff" : "#fff"} opacity="0.9" />
+          </>
+        )}
 
         {/* 미세 스파클 */}
         <g opacity="0.55" filter="url(#sparkle)">
