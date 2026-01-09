@@ -7,19 +7,19 @@ const ebooks = [
   {
     title: "연애비급",
     desc: "관계의 흐름을 바꾸는 심리·프레임·대화 설계",
-    href: "/coming-soon?title=연애비급&desc=관계의 흐름을 바꾸는 심리·프레임·대화 설계 비법서",
+    href: "/ebooks/love-secret-coming-soon",
     subLabel: "관계 설계 비법서",
   },
   {
     title: "풍요비책",
     desc: "상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
-    href: "/coming-soon?title=풍요비책&desc=상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
+    href: "/ebooks/abundance-secret-coming-soon",
     subLabel: "상태·주파수 비법서",
   },
   {
     title: "재회비방",
     desc: "감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
-    href: "/coming-soon?title=재회비방&desc=감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
+    href: "/ebooks/reunion-secret-coming-soon",
     subLabel: "메시지·기준 비법서",
   },
 ]
@@ -28,7 +28,7 @@ export default function Ebooks() {
   return (
     <section id="secret-archive" className="relative w-full overflow-hidden pt-0 pb-20 scroll-mt-28" style={{ background: 'transparent' }}>
       {/* 섹션 분리선 */}
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-24 md:mt-32 mb-20 md:mb-24">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-20 md:mt-28 mb-20 md:mb-24">
         <div 
           className="h-px"
           style={{
