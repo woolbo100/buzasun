@@ -36,7 +36,7 @@ export default function ProductCards() {
                   border: '1px solid rgba(255, 20, 147, 0.2)',
                   backdropFilter: 'blur(20px)',
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)',
-                  padding: '3rem 2.5rem',
+                  padding: '3rem 72px',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.3)'
@@ -52,17 +52,28 @@ export default function ProductCards() {
                 {/* 상단: 배지 + 메인 타이틀 */}
                 <div className="text-center mb-16">
                   {/* 상단 배지 */}
-                  <p 
-                    className="mb-6"
-                    style={{
-                      color: '#cfc7dc',
-                      letterSpacing: '0.2em',
-                      opacity: 0.6,
-                      fontSize: '0.7rem',
-                    }}
-                  >
-                    가장 많은 선택을 받은 리포트
-                  </p>
+                  <div className="mb-6 inline-block">
+                    <div
+                      className="rounded-full p-[1px]"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(255, 20, 147, 0.5), rgba(138, 43, 226, 0.5))',
+                        boxShadow: '0 2px 12px rgba(255, 20, 147, 0.15), 0 0 20px rgba(255, 182, 193, 0.1)',
+                      }}
+                    >
+                      <p 
+                        className="px-6 py-2 rounded-full"
+                        style={{
+                          color: '#f3eefe',
+                          letterSpacing: '0.2em',
+                          fontSize: '0.8rem',
+                          fontWeight: 500,
+                          background: 'rgba(50, 20, 65, 0.6)',
+                        }}
+                      >
+                        가장 많은 선택을 받은 리포트
+                      </p>
+                    </div>
+                  </div>
                   
                   {/* 메인 타이틀 */}
                   <h2 
@@ -102,8 +113,21 @@ export default function ProductCards() {
                 </div>
 
                 {/* 핵심 카드 그리드 - 3열 × 2행 (6개) */}
-                <div className="max-w-6xl mx-auto mb-16">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div 
+                  className="mx-auto mb-16"
+                  style={{
+                    maxWidth: '950px',
+                    marginTop: '48px',
+                    paddingLeft: '32px',
+                    paddingRight: '32px',
+                  }}
+                >
+                  <div 
+                    className="grid grid-cols-1 md:grid-cols-3"
+                    style={{
+                      gap: '20px 24px',
+                    }}
+                  >
                     {([
                       {
                         title: '타고난 연애 성향 & 이상형',
@@ -127,7 +151,7 @@ export default function ProductCards() {
                     ] as Array<{ title: string; subtitle?: string }>).map((item, index) => (
                       <div
                         key={index}
-                        className="group rounded-xl p-4 transition-all duration-300 cursor-pointer"
+                        className="group rounded-xl transition-all duration-300 cursor-pointer"
                         style={{
                           background: 'rgba(50, 20, 65, 0.7)',
                           border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -138,6 +162,7 @@ export default function ProductCards() {
                           justifyContent: 'center',
                           alignItems: 'center',
                           textAlign: 'center',
+                          padding: '20px 24px',
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.transform = 'translateY(-4px)'
