@@ -26,7 +26,7 @@ const ebooks = [
 
 export default function Ebooks() {
   return (
-    <section id="secret-archive" className="relative w-full overflow-hidden pt-0 pb-20 scroll-mt-28" style={{ background: 'transparent' }}>
+    <section id="secret-archive" className="relative w-full overflow-hidden pt-0 pb-32 md:pb-48 scroll-mt-28" style={{ background: 'transparent' }}>
       {/* 섹션 분리선 */}
       <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-16 md:mt-24 mb-20 md:mb-24">
         <div 
