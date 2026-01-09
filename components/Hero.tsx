@@ -38,7 +38,7 @@ export default function Hero() {
                 boxShadow: '0 4px 20px rgba(252, 231, 243, 0.1)',
               }}
             >
-              심리학 + 자기계발 + 동양 철학 + 에너지 차원
+              [당신이 몰랐던 타고난 사랑의 알고리즘]
             </span>
           </div>
         </Reveal>
