@@ -168,14 +168,14 @@ export default function Navigation() {
               />
             </Link>
             
-            {/* 전자책 드롭다운 */}
+            {/* 시크릿 비법서 드롭다운 */}
             <div className="relative" ref={ebookMenuRef}>
               <button
                 onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
                 className={`${menuLinkClass} flex items-center`}
                 style={menuLinkStyle}
               >
-                전자책
+                시크릿 비법서
                 <i className={`fas fa-chevron-down ml-1.5 text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
                 <span 
                   className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
@@ -285,13 +285,13 @@ export default function Navigation() {
                 선천코드 리포트
               </Link>
               
-              {/* 모바일 전자책 메뉴 */}
+              {/* 모바일 시크릿 비법서 메뉴 */}
               <div className="px-4 py-2">
                 <button
                   onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
                   className="w-full flex justify-between items-center text-bd-gray hover:text-bd-ivory transition-colors rounded-lg px-2 py-2"
                 >
-                  <span>전자책</span>
+                  <span>시크릿 비법서</span>
                   <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
                 </button>
                 {ebookMenuOpen && (

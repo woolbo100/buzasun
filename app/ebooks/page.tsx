@@ -3,15 +3,15 @@ import Footer from '@/components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: '전자책 | 백도화 매력학당',
-  description: '연애와 풍요에 관한 전자책을 만나보세요',
+  title: '시크릿 비법서 | 백도화 매력학당',
+  description: '연애와 풍요에 관한 시크릿 비법서를 만나보세요',
 }
 
 export default function EbooksPage() {
   const ebooks = [
     {
       title: '연애비급',
-      description: '연애의 핵심 비법을 담은 전자책',
+      description: '연애의 핵심 비법을 담은 시크릿 비법서',
       href: '/ebooks/love',
     },
     {
@@ -32,10 +32,10 @@ export default function EbooksPage() {
       <main className="min-h-screen pt-16 px-4 md:px-6 py-16 md:py-24">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-elegant font-bold text-bd-ivory mb-6">
-            전자책
+            시크릿 비법서
           </h1>
           <p className="text-lg md:text-xl text-bd-gray mb-10 leading-relaxed">
-            연애와 풍요에 관한 깊이 있는 지식을 담은 전자책을 만나보세요.
+            연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비법서를 만나보세요.
             선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와 풍요로운 삶을 만들어가세요.
           </p>
           
@@ -68,7 +68,7 @@ export default function EbooksPage() {
               background: '#ff1493',
             }}
           >
-            전자책 구매하기
+            시크릿 비법서 구매하기
           </a>
 
           <div 
@@ -81,7 +81,7 @@ export default function EbooksPage() {
             <p className="text-bd-gray leading-relaxed">
               <strong className="text-bd-ivory">결제 완료 후 안내</strong>
               <br />
-              결제가 완료되면 이메일로 전자책 다운로드 링크가 발송됩니다.
+              결제가 완료되면 이메일로 시크릿 비법서 다운로드 링크가 발송됩니다.
               <br />
               다운로드 링크는 구매 후 7일간 유효합니다.
             </p>

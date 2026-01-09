@@ -8,19 +8,19 @@ const ebooks = [
     title: "연애비급",
     desc: "관계의 흐름을 바꾸는 심리·프레임·대화 설계",
     href: "/ebooks/love",
-    subLabel: "관계 설계",
+    subLabel: "관계 설계 비법서",
   },
   {
     title: "풍요비책",
     desc: "상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
     href: "/ebooks/abundance",
-    subLabel: "상태/주파수",
+    subLabel: "상태·주파수 비법서",
   },
   {
     title: "재회비방",
     desc: "감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
     href: "/ebooks/reunion",
-    subLabel: "메시지/기준",
+    subLabel: "메시지·기준 비법서",
   },
 ]
 
@@ -39,7 +39,7 @@ export default function Ebooks() {
         />
       </div>
 
-      {/* 전자책 섹션 - 3개 가로 배치 */}
+      {/* 시크릿 비법서 섹션 - 3개 가로 배치 */}
       <Reveal delayMs={200}>
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           {/* 섹션 헤더 */}
@@ -64,7 +64,7 @@ export default function Ebooks() {
                       background: 'rgba(50, 20, 65, 0.5)',
                     }}
                   >
-                    전자책 3종
+                    시크릿 비법서 3종
                   </p>
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function Ebooks() {
                     lineHeight: 'clamp(1.15, 1.25, 1.25)',
                   }}
                 >
-                  백도화 시크릿 아카이브
+                  백도화 시크릿 비법서 아카이브
                 </h2>
                 {/* 전체 보기 링크 */}
                 <Link 
@@ -123,7 +123,8 @@ export default function Ebooks() {
                   opacity: 0.8,
                 }}
               >
-                연애·풍요·재회의 '기준'을 만드는 3권. 지금 필요한 흐름부터 선택하세요.
+                연애·풍요·재회의 '기준'을 만드는 3권의 시크릿 비법서.<br />
+                지금 당신에게 필요한 흐름부터 선택하세요.
               </p>
             </Reveal>
           </div>
@@ -169,7 +170,7 @@ export default function Ebooks() {
                             color: '#cfc7dc',
                           }}
                         >
-                          전자책
+                          시크릿 비법서
                         </div>
                         {ebook.subLabel && (
                           <div 

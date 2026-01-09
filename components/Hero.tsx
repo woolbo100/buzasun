@@ -150,7 +150,7 @@ export default function Hero() {
                   e.currentTarget.style.boxShadow = '0 4px 20px rgba(255, 20, 147, 0.1)'
                 }}
               >
-                <span className="relative z-10">전자책 둘러보기</span>
+                <span className="relative z-10">시크릿 비법서 둘러보기</span>
               </Link>
             </div>
           </div>

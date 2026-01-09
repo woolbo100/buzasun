@@ -21,7 +21,7 @@ export default function Home() {
       <Navigation />
       <BookmarkTassel />
       
-      {/* Hero ~ 리포트 ~ 후기 ~ 전자책 통배경 래퍼 */}
+      {/* Hero ~ 리포트 ~ 후기 ~ 시크릿 비법서 통배경 래퍼 */}
       <div 
         className="relative overflow-hidden"
         style={{ 
