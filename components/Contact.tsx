@@ -41,16 +41,29 @@ export default function Contact() {
                 position: 'relative',
               }}
             >
+              {/* 텍스트 주변 둥근 오라 효과 */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: 'radial-gradient(ellipse 100% 80% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 182, 193, 0.15) 20%, rgba(255, 192, 203, 0.1) 40%, rgba(255, 200, 210, 0.05) 60%, transparent 80%)',
+                  filter: 'blur(30px)',
+                  opacity: 0.2,
+                  mixBlendMode: 'screen',
+                  zIndex: 0,
+                }}
+              />
+              
               {/* 텍스트 컨텐츠 */}
               <div className="relative z-10">
                 {/* 상단 문장 (명령형 2줄) - 아우라 효과 */}
-                <div className="mb-10 md:mb-12">
+                <div style={{ marginBottom: '24px' }}>
                   <p 
-                    className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal leading-relaxed"
+                    className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
                     style={{
                       color: '#e5e7eb',
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
+                      lineHeight: '1.55',
                       textShadow: `
                         0 0 8px rgba(255, 255, 255, 0.4),
                         0 0 16px rgba(255, 255, 255, 0.25),
@@ -69,11 +82,12 @@ export default function Contact() {
                 {/* 하단 문장 (전환·설명 파트) - 큰 주인공 텍스트 아우라 효과 */}
                 <div>
                   <p 
-                    className="text-2xl md:text-3xl lg:text-4xl font-elegant font-semibold leading-relaxed"
+                    className="text-2xl md:text-3xl lg:text-4xl font-elegant font-semibold"
                     style={{
                       color: '#f3f4f6',
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
+                      lineHeight: '1.32',
                       textShadow: `
                         0 0 10px rgba(255, 255, 255, 0.5),
                         0 0 20px rgba(255, 255, 255, 0.3),
