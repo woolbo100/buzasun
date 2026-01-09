@@ -22,7 +22,7 @@ const ebooks = [
     href: "/ebooks/reunion-secret-coming-soon",
     subLabel: "메시지·기준 비법서",
   },
-]
+] as const
 
 export default function Ebooks() {
   return (
