@@ -44,215 +44,192 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full overflow-hidden" style={{ background: 'transparent' }}>
-      <Reveal delayMs={0}>
-        <div className="w-full pt-20 pb-20 md:pt-24 md:py-28 px-6 md:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div 
-              className="w-full rounded-3xl transition-all duration-300 ease-in-out px-6 md:px-16 lg:px-20 py-8 md:py-12"
+    <section className="relative w-full overflow-hidden py-16 md:py-24" style={{ background: 'transparent' }}>
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        {/* 상단: 배지 + 타이틀 */}
+        <div className="text-center">
+          {/* 상단 배지 */}
+          <Reveal delayMs={100}>
+            <div className="mb-6 inline-block">
+              <div
+                className="rounded-full p-[1px]"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(255, 20, 147, 0.5), rgba(138, 43, 226, 0.5))',
+                  boxShadow: '0 2px 12px rgba(255, 20, 147, 0.15), 0 0 20px rgba(255, 182, 193, 0.1)',
+                }}
+              >
+                <p 
+                  className="px-6 py-2 rounded-full"
+                  style={{
+                    color: '#f3eefe',
+                    letterSpacing: '0.2em',
+                    fontSize: '0.8rem',
+                    fontWeight: 500,
+                    background: 'rgba(50, 20, 65, 0.6)',
+                  }}
+                >
+                  실제 구매자 후기
+                </p>
+              </div>
+            </div>
+          </Reveal>
+          
+          {/* 메인 타이틀 */}
+          <Reveal delayMs={200}>
+            <h2 
+              className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mt-4"
               style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 20, 147, 0.2)',
-                backdropFilter: 'blur(20px)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)',
+                color: '#f7f1ff',
+                letterSpacing: '0.02em',
+                lineHeight: 'clamp(1.15, 1.25, 1.25)',
+              }}
+            >
+              후기로 증명된 '구조 해석' 리포트
+            </h2>
+          </Reveal>
+
+          {/* 서브 타이틀 */}
+          <Reveal delayMs={300}>
+            <p 
+              className="text-base md:text-lg max-w-3xl mx-auto mt-10"
+              style={{
+                color: 'rgba(245, 239, 255, 0.8)',
+                lineHeight: 'clamp(1.5, 1.7, 1.7)',
+                wordBreak: 'keep-all',
+                opacity: 0.8,
+              }}
+            >
+              감정 위로가 아니라, 관계의 패턴을 '명확히' 정리해준다는 평가가 많아요.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* 후기 카드 그리드 */}
+        <div className="mt-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7">
+            {testimonials.map((testimonial, index) => (
+              <Reveal key={index} delayMs={400 + index * 100}>
+                <div
+                  className="rounded-2xl p-5 md:p-6 transition-all duration-300 cursor-pointer h-full"
+                  style={{
+                    background: 'rgba(20, 6, 35, 0.55)',
+                    border: '1px solid rgba(255, 105, 180, 0.18)',
+                    backdropFilter: 'blur(10px)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)'
+                    e.currentTarget.style.borderColor = 'rgba(255, 105, 180, 0.35)'
+                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.25), 0 0 20px rgba(255, 105, 180, 0.15), 0 0 30px rgba(255, 182, 193, 0.1)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.borderColor = 'rgba(255, 105, 180, 0.18)'
+                    e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.2)'
+                  }}
+                >
+                  {/* 별점 */}
+                  <div className="mb-3">
+                    <span 
+                      className="text-sm"
+                      style={{
+                        color: '#ffd700',
+                        letterSpacing: '0.1em',
+                      }}
+                    >
+                      {testimonial.rating}
+                    </span>
+                  </div>
+
+                  {/* 후기 내용 */}
+                  <p 
+                    className="text-sm md:text-base mb-4 flex-grow"
+                    style={{
+                      color: 'rgba(255, 255, 255, 0.9)',
+                      lineHeight: 'clamp(1.5, 1.6, 1.6)',
+                      wordBreak: 'keep-all',
+                    }}
+                  >
+                    {testimonial.content}
+                  </p>
+
+                  {/* 태그 */}
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {testimonial.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-3 py-1 rounded-full text-xs"
+                        style={{
+                          background: 'rgba(255, 20, 147, 0.15)',
+                          border: '1px solid rgba(255, 20, 147, 0.3)',
+                          color: 'rgba(255, 182, 193, 0.9)',
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* 작성자 */}
+                  <p 
+                    className="text-xs"
+                    style={{
+                      color: 'rgba(255, 255, 255, 0.6)',
+                    }}
+                  >
+                    {testimonial.author}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        {/* 하단: CTA 버튼 + 신뢰 문구 */}
+        <div className="text-center mt-14">
+          {/* 신뢰 문구 */}
+          <p 
+            className="text-sm md:text-base mb-4"
+            style={{
+              color: 'rgba(245, 239, 255, 0.5)',
+              letterSpacing: '0.02em',
+            }}
+          >
+            상담이 아닌, 구조를 해석하는 분석 리포트입니다.
+          </p>
+
+          {/* CTA 버튼 */}
+          <Link href="/report">
+            <div className="inline-block px-8 md:px-14 py-4 md:py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn text-base md:text-lg"
+              style={{
+                background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
+                boxShadow: '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.3)'
-                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 20, 147, 0.18), 0 0 40px rgba(255, 182, 193, 0.12)'
+                e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.5), 0 0 60px rgba(255, 20, 147, 0.3)'
                 e.currentTarget.style.transform = 'translateY(-2px)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'
-                e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)'
+                e.currentTarget.style.boxShadow = '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)'
                 e.currentTarget.style.transform = 'translateY(0)'
               }}
             >
-              {/* 상단: 배지 + 타이틀 */}
-              <div className="text-center mb-12">
-                {/* 상단 배지 */}
-                <Reveal delayMs={100}>
-                  <div className="mb-6 inline-block">
-                    <div
-                      className="rounded-full p-[1px]"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(255, 20, 147, 0.5), rgba(138, 43, 226, 0.5))',
-                        boxShadow: '0 2px 12px rgba(255, 20, 147, 0.15), 0 0 20px rgba(255, 182, 193, 0.1)',
-                      }}
-                    >
-                      <p 
-                        className="px-6 py-2 rounded-full"
-                        style={{
-                          color: '#f3eefe',
-                          letterSpacing: '0.2em',
-                          fontSize: '0.8rem',
-                          fontWeight: 500,
-                          background: 'rgba(50, 20, 65, 0.6)',
-                        }}
-                      >
-                        실제 구매자 후기
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-                
-                {/* 메인 타이틀 */}
-                <Reveal delayMs={200}>
-                  <h2 
-                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-5 md:mb-7"
-                    style={{
-                      color: '#f7f1ff',
-                      letterSpacing: '0.02em',
-                      lineHeight: 'clamp(1.15, 1.25, 1.25)',
-                    }}
-                  >
-                    후기로 증명된 '구조 해석' 리포트
-                  </h2>
-                </Reveal>
-
-                {/* 서브 타이틀 */}
-                <Reveal delayMs={300}>
-                  <p 
-                    className="text-base md:text-lg max-w-3xl mx-auto"
-                    style={{
-                      color: 'rgba(245, 239, 255, 0.8)',
-                      lineHeight: 'clamp(1.5, 1.7, 1.7)',
-                      wordBreak: 'keep-all',
-                      opacity: 0.8,
-                    }}
-                  >
-                    감정 위로가 아니라, 관계의 패턴을 '명확히' 정리해준다는 평가가 많아요.
-                  </p>
-                </Reveal>
-              </div>
-
-              {/* 후기 카드 그리드 */}
-              <div className="max-w-6xl mx-auto mb-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                  {testimonials.map((testimonial, index) => (
-                    <Reveal key={index} delayMs={400 + index * 100}>
-                      <div
-                        className="rounded-xl p-4 md:p-5 transition-all duration-300 cursor-pointer h-full"
-                        style={{
-                          background: 'rgba(50, 20, 65, 0.6)',
-                          border: '1px solid rgba(255, 255, 255, 0.1)',
-                          backdropFilter: 'blur(10px)',
-                          display: 'flex',
-                          flexDirection: 'column',
-                          justifyContent: 'space-between',
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = 'translateY(-4px)'
-                          e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.4)'
-                          e.currentTarget.style.boxShadow = '0 8px 24px rgba(255, 20, 147, 0.2), 0 0 20px rgba(255, 182, 193, 0.15)'
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.transform = 'translateY(0)'
-                          e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
-                          e.currentTarget.style.boxShadow = 'none'
-                        }}
-                      >
-                        {/* 별점 */}
-                        <div className="mb-3">
-                          <span 
-                            className="text-sm"
-                            style={{
-                              color: '#ffd700',
-                              letterSpacing: '0.1em',
-                            }}
-                          >
-                            {testimonial.rating}
-                          </span>
-                        </div>
-
-                        {/* 후기 내용 */}
-                        <p 
-                          className="text-sm md:text-base mb-4 flex-grow"
-                          style={{
-                            color: 'rgba(255, 255, 255, 0.9)',
-                            lineHeight: 'clamp(1.5, 1.6, 1.6)',
-                            wordBreak: 'keep-all',
-                          }}
-                        >
-                          {testimonial.content}
-                        </p>
-
-                        {/* 태그 */}
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {testimonial.tags.map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="px-3 py-1 rounded-full text-xs"
-                              style={{
-                                background: 'rgba(255, 20, 147, 0.15)',
-                                border: '1px solid rgba(255, 20, 147, 0.3)',
-                                color: 'rgba(255, 182, 193, 0.9)',
-                              }}
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-
-                        {/* 작성자 */}
-                        <p 
-                          className="text-xs"
-                          style={{
-                            color: 'rgba(255, 255, 255, 0.6)',
-                          }}
-                        >
-                          {testimonial.author}
-                        </p>
-                      </div>
-                    </Reveal>
-                  ))}
-                </div>
-              </div>
-
-              {/* 하단: CTA 버튼 + 신뢰 문구 */}
-              <div className="text-center">
-                {/* 신뢰 문구 */}
-                <p 
-                  className="text-sm md:text-base mb-4"
-                  style={{
-                    color: 'rgba(245, 239, 255, 0.5)',
-                    letterSpacing: '0.02em',
-                  }}
-                >
-                  상담이 아닌, 구조를 해석하는 분석 리포트입니다.
-                </p>
-
-                {/* CTA 버튼 */}
-                <Link href="/report">
-                  <div className="inline-block px-8 md:px-14 py-4 md:py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn text-base md:text-lg"
-                    style={{
-                      background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
-                      boxShadow: '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)',
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.5), 0 0 60px rgba(255, 20, 147, 0.3)'
-                      e.currentTarget.style.transform = 'translateY(-2px)'
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.boxShadow = '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)'
-                      e.currentTarget.style.transform = 'translateY(0)'
-                    }}
-                  >
-                    {/* 빛이 흐르는 효과 */}
-                    <span 
-                      className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700"
-                      style={{
-                        background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)',
-                        animation: 'shimmer 2s infinite',
-                      }}
-                    />
-                    <span className="relative z-10">내 연애 코드 지금 확인하기</span>
-                  </div>
-                </Link>
-              </div>
+              {/* 빛이 흐르는 효과 */}
+              <span 
+                className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700"
+                style={{
+                  background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)',
+                  animation: 'shimmer 2s infinite',
+                }}
+              />
+              <span className="relative z-10">내 연애 코드 지금 확인하기</span>
             </div>
-          </div>
+          </Link>
         </div>
-      </Reveal>
+      </div>
     </section>
   )
 }
