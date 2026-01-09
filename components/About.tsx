@@ -82,10 +82,10 @@ export default function About() {
         {/* 강조 문구 (핫핑크) - 섹션 핵심 */}
         <Reveal delayMs={300}>
           <div 
-            className="text-center mb-32 py-10 px-6 max-w-3xl mx-auto"
+            className="text-center mb-32 py-8 px-6 max-w-3xl mx-auto rounded-sm"
             style={{
-              borderTop: '1px solid rgba(236, 72, 153, 0.25)',
-              borderBottom: '1px solid rgba(236, 72, 153, 0.25)',
+              border: '1px solid rgba(255, 0, 150, 0.25)',
+              borderRadius: '4px',
             }}
           >
             <p 
@@ -93,7 +93,7 @@ export default function About() {
               style={{
                 color: '#ec4899',
                 letterSpacing: '0.12em',
-                lineHeight: '1.5',
+                lineHeight: '1.35',
                 wordBreak: 'keep-all',
                 textShadow: '0 0 20px rgba(236, 72, 153, 0.3)',
               }}
@@ -109,9 +109,9 @@ export default function About() {
         <Reveal delayMs={400}>
           <div className="max-w-3xl mx-auto">
             <p 
-              className="text-sm md:text-base leading-loose text-center mb-20"
+              className="text-base md:text-lg leading-loose text-center mb-20"
               style={{
-                color: 'rgba(255, 255, 255, 0.7)',
+                color: 'rgba(255, 255, 255, 0.78)',
                 lineHeight: '2',
                 wordBreak: 'keep-all',
               }}
