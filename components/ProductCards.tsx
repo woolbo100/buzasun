@@ -43,16 +43,15 @@ export default function ProductCards() {
                       }}
                     >
                       <p 
-                        className="px-6 py-2 rounded-full"
+                        className="px-6 py-2 rounded-full text-xs md:text-sm"
                         style={{
                           color: '#f3eefe',
                           letterSpacing: '0.2em',
-                          fontSize: '0.8rem',
                           fontWeight: 500,
                           background: 'rgba(50, 20, 65, 0.6)',
                         }}
                       >
-                        심리학 + 자기계발 + 동양 철학 + 에너지 차원
+                        [당신이 몰랐던 타고난 사랑의 알고리즘]
                       </p>
                     </div>
                   </div>
