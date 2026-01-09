@@ -17,7 +17,7 @@ function ComingSoonContent() {
       }}
     >
       <div 
-        className="w-full max-w-3xl rounded-3xl border backdrop-blur-xl p-10"
+        className="jade-hover w-full max-w-3xl rounded-3xl border backdrop-blur-xl p-10"
         style={{
           borderColor: 'rgba(255, 20, 147, 0.3)',
           background: 'rgba(26, 6, 38, 0.6)',

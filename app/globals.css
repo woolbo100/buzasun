@@ -289,4 +289,90 @@
     box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.2), 0 0 20px rgba(138, 43, 226, 0.2);
     background: rgba(26, 6, 38, 0.6);
   }
+
+  /* 자개 텍스처 hover 효과 - Coming Soon 페이지 메인 박스 전용 */
+  .jade-hover {
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .jade-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.03) 20%,
+      rgba(255, 182, 193, 0.05) 40%,
+      rgba(255, 105, 180, 0.04) 50%,
+      rgba(255, 182, 193, 0.05) 60%,
+      rgba(255, 255, 255, 0.03) 80%,
+      transparent 100%
+    );
+    transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .jade-hover:hover::before {
+    left: 100%;
+  }
+
+  .jade-hover:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(26, 6, 38, 0.65) 0%,
+      rgba(30, 8, 42, 0.7) 25%,
+      rgba(26, 6, 38, 0.68) 50%,
+      rgba(32, 10, 45, 0.7) 75%,
+      rgba(26, 6, 38, 0.65) 100%
+    );
+    box-shadow: 
+      0 20px 60px rgba(138, 43, 226, 0.3), 
+      0 0 40px rgba(255, 20, 147, 0.2),
+      0 0 60px rgba(255, 182, 193, 0.08),
+      0 0 80px rgba(255, 105, 180, 0.05),
+      inset 0 0 30px rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 20, 147, 0.4);
+  }
+
+  .jade-hover:hover::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 182, 193, 0.06) 0%,
+      rgba(255, 105, 180, 0.04) 30%,
+      transparent 70%
+    );
+    animation: jadeShimmer 3s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes jadeShimmer {
+    0%, 100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(180deg);
+      opacity: 0.5;
+    }
+  }
+
+  /* 자개 효과가 콘텐츠 위에 오지 않도록 */
+  .jade-hover > * {
+    position: relative;
+    z-index: 2;
+  }
 }
