@@ -64,15 +64,17 @@ export default function About() {
         <Reveal delayMs={200}>
           <div className="max-w-3xl mx-auto">
             <p 
-              className="text-lg md:text-xl leading-loose text-center mb-32"
+              className="text-xl md:text-2xl leading-loose text-center mb-32"
               style={{
                 color: 'rgba(255, 255, 255, 0.7)',
                 lineHeight: '2',
                 wordBreak: 'keep-all',
               }}
             >
-              백도화의 모든 분석과 설계는 심리·무의식·선천 코드·관계 패턴 분석 분야에서<br />
-              공식적으로 검증된 다수의 전문 자격과 실제 상담·분석 데이터를 기반으로 합니다.
+              백도화의 모든 분석과 설계는<br />
+              심리·무의식·선천 코드·관계 패턴 분석 분야에서<br />
+              공식적으로 검증된 다수의 전문 자격과<br />
+              실제 상담·분석 데이터를 기반으로 합니다.
             </p>
           </div>
         </Reveal>
