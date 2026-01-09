@@ -43,7 +43,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full overflow-hidden py-20" style={{ background: 'transparent' }}>
+    <section className="relative w-full overflow-hidden pt-20 pb-32 md:pb-40" style={{ background: 'transparent' }}>
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         {/* 상단: 배지 + 타이틀 */}
         <div className="text-center">

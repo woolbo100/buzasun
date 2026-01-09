@@ -28,7 +28,7 @@ export default function Ebooks() {
   return (
     <section id="secret-archive" className="relative w-full overflow-hidden pt-0 pb-20 scroll-mt-28" style={{ background: 'transparent' }}>
       {/* 섹션 분리선 */}
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-16 mb-16">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-24 md:mt-32 mb-20 md:mb-24">
         <div 
           className="h-px"
           style={{
