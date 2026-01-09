@@ -31,31 +31,50 @@ export default function Contact() {
 
   return (
     <>
-      {/* 문의 전 배너 - 문장 C */}
-      <section className="py-12 px-6 relative" style={{ background: 'transparent' }}>
+      {/* 문의 전 배너 - 브랜드 철학 & 리포트 필요성 설명 */}
+      <section className="py-16 md:py-20 px-6 relative" style={{ background: 'transparent' }}>
         <div className="container mx-auto max-w-6xl">
           <Reveal delayMs={100}>
             <div 
-              className="max-w-5xl mx-auto py-8 px-6 md:px-12 rounded-2xl text-center"
+              className="max-w-4xl mx-auto py-10 md:py-12 px-6 md:px-10 rounded-2xl text-center"
               style={{
-                background: 'rgba(26, 6, 38, 0.4)',
-                border: '1px solid rgba(255, 20, 147, 0.15)',
+                background: 'rgba(26, 6, 38, 0.5)',
+                border: '1px solid rgba(255, 20, 147, 0.3)',
                 backdropFilter: 'blur(10px)',
               }}
             >
-              <p 
-                className="text-lg md:text-xl lg:text-2xl font-elegant font-medium leading-relaxed"
-                style={{
-                  color: '#f7f1ff',
-                  letterSpacing: '0.02em',
-                  lineHeight: '1.7',
-                  wordBreak: 'keep-all',
-                }}
-              >
-                더 <span style={{ color: '#ff7ac8' }}>애쓰지</span> 마세요.<br />
-                더 <span style={{ color: '#ff7ac8' }}>증명하지</span> 마세요.<br />
-                <span style={{ color: '#ff7ac8' }}>상태</span>를 바꾸면, 만나는 사람이 바뀝니다.
-              </p>
+              {/* 상단 문장 (명령형 2줄) */}
+              <div className="mb-6 md:mb-8">
+                <p 
+                  className="text-lg md:text-xl lg:text-2xl font-elegant font-normal leading-relaxed"
+                  style={{
+                    color: '#ffffff',
+                    letterSpacing: '0.02em',
+                    lineHeight: '1.8',
+                    wordBreak: 'keep-all',
+                  }}
+                >
+                  더 애쓰지 마세요.<br />
+                  더 증명하지 마세요.
+                </p>
+              </div>
+
+              {/* 하단 문장 (전환·설명 파트) */}
+              <div>
+                <p 
+                  className="text-base md:text-lg lg:text-xl font-elegant font-normal leading-relaxed"
+                  style={{
+                    color: '#f7f1ff',
+                    letterSpacing: '0.02em',
+                    lineHeight: '1.8',
+                    wordBreak: 'keep-all',
+                  }}
+                >
+                  <span style={{ color: '#ff7ac8' }}>선천코드</span>를 이해하면<br />
+                  반복되던 연애는 멈추고,<br />
+                  <span style={{ color: '#ff7ac8', fontWeight: 500 }}>만나는 사람이 달라집니다.</span>
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
