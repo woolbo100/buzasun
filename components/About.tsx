@@ -157,17 +157,16 @@ export default function About() {
                 마음 해킹
               </h3>
               <p 
-                className="text-sm mb-6 text-center"
+                className="text-base md:text-lg mb-6 text-center"
                 style={{
                   color: '#ec4899',
                   letterSpacing: '0.1em',
-                  fontSize: '0.75rem',
                 }}
               >
                 Mind Hacking
               </p>
               <div 
-                className="space-y-3 text-sm text-center"
+                className="space-y-3 text-base text-center"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   lineHeight: '1.6',
@@ -219,17 +218,16 @@ export default function About() {
                 운명 분석
               </h3>
               <p 
-                className="text-sm mb-6 text-center"
+                className="text-base md:text-lg mb-6 text-center"
                 style={{
                   color: '#ec4899',
                   letterSpacing: '0.1em',
-                  fontSize: '0.75rem',
                 }}
               >
                 Code Analyzing
               </p>
               <div 
-                className="space-y-3 text-sm text-center"
+                className="space-y-3 text-base text-center"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   lineHeight: '1.6',
@@ -280,17 +278,16 @@ export default function About() {
                 미래 설계
               </h3>
               <p 
-                className="text-sm mb-6 text-center"
+                className="text-base md:text-lg mb-6 text-center"
                 style={{
                   color: '#ec4899',
                   letterSpacing: '0.1em',
-                  fontSize: '0.75rem',
                 }}
               >
                 Future Architect
               </p>
               <div 
-                className="space-y-3 text-sm text-center"
+                className="space-y-3 text-base text-center"
                 style={{
                   color: 'rgba(255, 255, 255, 0.8)',
                   lineHeight: '1.6',
