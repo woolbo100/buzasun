@@ -131,7 +131,6 @@ export default function ProductCards() {
                     {([
                       {
                         title: '타고난 연애 성향 & 이상형',
-                        subtitle: '내 코드에 숨겨진 남자복',
                       },
                       {
                         title: '맞는 인연 vs 피해야 할 인연',
@@ -140,13 +139,13 @@ export default function ProductCards() {
                         title: '반복되는 연애 패턴의 원인',
                       },
                       {
-                        title: '결정적인 연애 타이밍',
-                      },
-                      {
-                        title: '관계를 바꾸는 실전 연애 조언',
+                        title: '내 코드에 숨겨진 남자복',
                       },
                       {
                         title: '타고난 코드가 만드는 연애의 흐름',
+                      },
+                      {
+                        title: '관계를 바꾸는 실전 연애 조언',
                       },
                     ] as Array<{ title: string; subtitle?: string }>).map((item, index) => (
                       <div
