@@ -119,12 +119,12 @@ function ContactForm() {
         </Reveal>
 
         {/* 좌우 2컬럼 레이아웃 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* 왼쪽: FAQ */}
           <Reveal delayMs={200}>
-            <div>
+            <div className="h-full flex flex-col">
               <h3 
-                className="text-2xl md:text-3xl font-elegant font-semibold mb-8"
+                className="text-2xl md:text-3xl font-elegant font-semibold mb-8 mt-0 pt-0"
                 style={{
                   color: '#f7f1ff',
                   letterSpacing: '0.02em',
@@ -132,7 +132,7 @@ function ContactForm() {
               >
                 자주 묻는 질문
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-4 flex-grow">
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
@@ -184,24 +184,26 @@ function ContactForm() {
 
           {/* 오른쪽: 문의 폼 */}
           <Reveal delayMs={300}>
-            <div>
-              <h3 
-                className="text-2xl md:text-3xl font-elegant font-semibold mb-3"
-                style={{
-                  color: '#f7f1ff',
-                  letterSpacing: '0.02em',
-                }}
-              >
-                문의하기
-              </h3>
-              <p 
-                className="text-sm mb-8"
-                style={{
-                  color: 'rgba(255, 255, 255, 0.6)',
-                }}
-              >
-                연애 상담이 아닌, 분석 리포트 문의입니다.
-              </p>
+            <div className="h-full flex flex-col">
+              <div className="mb-8 mt-0 pt-0">
+                <h3 
+                  className="text-2xl md:text-3xl font-elegant font-semibold mb-3"
+                  style={{
+                    color: '#f7f1ff',
+                    letterSpacing: '0.02em',
+                  }}
+                >
+                  문의하기
+                </h3>
+                <p 
+                  className="text-sm"
+                  style={{
+                    color: 'rgba(255, 255, 255, 0.6)',
+                  }}
+                >
+                  연애 상담이 아닌, 분석 리포트 문의입니다.
+                </p>
+              </div>
               
               {/* 폼 컨테이너 */}
               <form 
