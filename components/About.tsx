@@ -11,7 +11,7 @@ export default function About() {
       className="pt-40 pb-20 px-6 relative overflow-hidden"
       style={{ background: 'transparent' }}
     >
-      <div className="container mx-auto max-w-5xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10">
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-4 md:gap-8 mb-16">
@@ -148,7 +148,7 @@ export default function About() {
                 />
               </div>
               <h3 
-                className="text-xl md:text-2xl font-elegant font-semibold mb-3 text-center"
+                className="text-2xl md:text-3xl font-elegant font-semibold mb-3 text-center"
                 style={{
                   color: '#f7f1ff',
                   letterSpacing: '0.05em',
@@ -209,7 +209,7 @@ export default function About() {
                 />
               </div>
               <h3 
-                className="text-xl md:text-2xl font-elegant font-semibold mb-3 text-center"
+                className="text-2xl md:text-3xl font-elegant font-semibold mb-3 text-center"
                 style={{
                   color: '#f7f1ff',
                   letterSpacing: '0.05em',
@@ -269,7 +269,7 @@ export default function About() {
                 />
               </div>
               <h3 
-                className="text-xl md:text-2xl font-elegant font-semibold mb-3 text-center"
+                className="text-2xl md:text-3xl font-elegant font-semibold mb-3 text-center"
                 style={{
                   color: '#f7f1ff',
                   letterSpacing: '0.05em',
