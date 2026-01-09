@@ -50,7 +50,7 @@ export default function ProductCards() {
                 }}
               >
                 {/* 상단: 배지 + 메인 타이틀 */}
-                <div className="text-center mb-12">
+                <div className="text-center mb-16">
                   {/* 상단 배지 */}
                   <p 
                     className="mb-6"
@@ -66,7 +66,7 @@ export default function ProductCards() {
                   
                   {/* 메인 타이틀 */}
                   <h2 
-                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold"
+                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-12"
                     style={{
                       color: '#f7f1ff',
                       letterSpacing: '0.02em',
@@ -75,12 +75,9 @@ export default function ProductCards() {
                   >
                     선천코드 맞춤 연애 상담 리포트
                   </h2>
-                </div>
 
-                {/* 중간: 좌측 메시지 + 우측 카드 그리드 */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
-                  {/* 좌측: 핵심 메시지 */}
-                  <div className="text-left">
+                  {/* 서브 타이틀 - 중앙 정렬 */}
+                  <div className="max-w-3xl mx-auto mb-16">
                     <p 
                       className="text-xl md:text-2xl font-semibold mb-6 leading-relaxed"
                       style={{
@@ -89,8 +86,7 @@ export default function ProductCards() {
                         wordBreak: 'keep-all',
                       }}
                     >
-                      당신이 반복하는 연애의 이유는<br />
-                      감정이 아니라 구조입니다.
+                      당신이 반복하는 연애의 이유는 감정이 아니라 구조입니다.
                     </p>
                     <p 
                       className="text-base md:text-lg leading-relaxed"
@@ -103,23 +99,43 @@ export default function ProductCards() {
                       선천코드 분석으로 연애 성향, 인연의 흐름, 타이밍을 명확히 정리합니다.
                     </p>
                   </div>
+                </div>
 
-                  {/* 우측: 카드형 핵심 포인트 */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                {/* 핵심 카드 그리드 - 2열 × 3행 (6개) */}
+                <div className="max-w-5xl mx-auto mb-16">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {[
-                      '타고난 연애 성향 & 숨겨진 남자복',
-                      '맞는 인연 vs 피해야 할 이상형',
-                      '반복되는 연애 패턴의 원인',
-                      '결정적인 연애 타이밍',
-                      '관계를 바꾸는 실전 조언',
+                      {
+                        title: '타고난 연애 성향 & 이상형',
+                        subtitle: '내 코드에 숨겨진 남자복',
+                      },
+                      {
+                        title: '맞는 인연 vs 피해야 할 인연',
+                      },
+                      {
+                        title: '반복되는 연애 패턴의 원인',
+                      },
+                      {
+                        title: '결정적인 연애 타이밍',
+                      },
+                      {
+                        title: '관계를 바꾸는 실전 연애 조언',
+                      },
+                      {
+                        title: '타고난 코드가 만드는 연애의 흐름',
+                      },
                     ].map((item, index) => (
                       <div
                         key={index}
-                        className="group rounded-xl p-4 transition-all duration-300 cursor-pointer"
+                        className="group rounded-xl p-5 transition-all duration-300 cursor-pointer"
                         style={{
                           background: 'rgba(50, 20, 65, 0.7)',
                           border: '1px solid rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(10px)',
+                          minHeight: '120px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
                         }}
                         onMouseEnter={(e) => {
                           e.currentTarget.style.transform = 'translateY(-4px)'
@@ -133,15 +149,27 @@ export default function ProductCards() {
                         }}
                       >
                         <p 
-                          className="text-sm md:text-base leading-relaxed"
+                          className="text-sm md:text-base font-semibold mb-2 leading-relaxed"
                           style={{
-                            color: 'rgba(255, 255, 255, 0.9)',
+                            color: 'rgba(255, 255, 255, 0.95)',
                             lineHeight: 1.6,
                             wordBreak: 'keep-all',
                           }}
                         >
-                          {item}
+                          {item.title}
                         </p>
+                        {item.subtitle && (
+                          <p 
+                            className="text-xs md:text-sm leading-relaxed"
+                            style={{
+                              color: 'rgba(255, 255, 255, 0.7)',
+                              lineHeight: 1.5,
+                              wordBreak: 'keep-all',
+                            }}
+                          >
+                            {item.subtitle}
+                          </p>
+                        )}
                       </div>
                     ))}
                   </div>
