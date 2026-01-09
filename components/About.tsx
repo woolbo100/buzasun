@@ -75,23 +75,23 @@ export default function About() {
           </p>
         </Reveal>
 
-        {/* 강조 문구 (골드) - 섹션 핵심 */}
+        {/* 강조 문구 (핫핑크) - 섹션 핵심 */}
         <Reveal delayMs={300}>
           <div 
             className="text-center mb-16 py-10 px-6"
             style={{
-              borderTop: '1px solid rgba(212, 175, 55, 0.25)',
-              borderBottom: '1px solid rgba(212, 175, 55, 0.25)',
+              borderTop: '1px solid rgba(236, 72, 153, 0.25)',
+              borderBottom: '1px solid rgba(236, 72, 153, 0.25)',
             }}
           >
             <p 
               className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold"
               style={{
-                color: '#D4AF37',
+                color: '#ec4899',
                 letterSpacing: '0.12em',
                 lineHeight: '1.5',
                 wordBreak: 'keep-all',
-                textShadow: '0 0 20px rgba(212, 175, 55, 0.3)',
+                textShadow: '0 0 20px rgba(236, 72, 153, 0.3)',
               }}
             >
               감이 아닌 이론,<br />
@@ -142,7 +142,7 @@ export default function About() {
                   size={48} 
                   className="mx-auto mb-4"
                   style={{
-                    color: '#D4AF37',
+                    color: '#ec4899',
                     opacity: 0.9,
                   }}
                 />
@@ -159,7 +159,7 @@ export default function About() {
               <p 
                 className="text-sm mb-6 text-center"
                 style={{
-                  color: '#D4AF37',
+                  color: '#ec4899',
                   letterSpacing: '0.1em',
                   fontSize: '0.75rem',
                 }}
@@ -204,7 +204,7 @@ export default function About() {
                   size={48} 
                   className="mx-auto mb-4"
                   style={{
-                    color: '#D4AF37',
+                    color: '#ec4899',
                     opacity: 0.9,
                   }}
                 />
@@ -221,7 +221,7 @@ export default function About() {
               <p 
                 className="text-sm mb-6 text-center"
                 style={{
-                  color: '#D4AF37',
+                  color: '#ec4899',
                   letterSpacing: '0.1em',
                   fontSize: '0.75rem',
                 }}
@@ -265,7 +265,7 @@ export default function About() {
                   size={48} 
                   className="mx-auto mb-4"
                   style={{
-                    color: '#D4AF37',
+                    color: '#ec4899',
                     opacity: 0.9,
                   }}
                 />
@@ -282,7 +282,7 @@ export default function About() {
               <p 
                 className="text-sm mb-6 text-center"
                 style={{
-                  color: '#D4AF37',
+                  color: '#ec4899',
                   letterSpacing: '0.1em',
                   fontSize: '0.75rem',
                 }}
