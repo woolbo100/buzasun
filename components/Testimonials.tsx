@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import Reveal from './Reveal'
 
 const testimonials = [
@@ -44,8 +43,8 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full overflow-hidden py-16 md:py-24" style={{ background: 'transparent' }}>
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+    <section className="relative w-full overflow-hidden py-20 md:py-24" style={{ background: 'transparent' }}>
+      <div className="max-w-6xl mx-auto px-6 md:px-8">
         {/* 상단: 배지 + 타이틀 */}
         <div className="text-center">
           {/* 상단 배지 */}
@@ -106,38 +105,38 @@ export default function Testimonials() {
 
         {/* 후기 카드 그리드 */}
         <div className="mt-14">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <Reveal key={index} delayMs={400 + index * 100}>
                 <div
-                  className="rounded-2xl p-5 md:p-6 transition-all duration-300 cursor-pointer h-full"
+                  className="rounded-2xl p-8 transition-all duration-300 cursor-pointer h-full min-h-[240px] backdrop-blur-md"
                   style={{
-                    background: 'rgba(20, 6, 35, 0.55)',
-                    border: '1px solid rgba(255, 105, 180, 0.18)',
-                    backdropFilter: 'blur(10px)',
+                    background: 'rgba(43, 16, 53, 0.65)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 10px 50px rgba(0, 0, 0, 0.35)',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
-                    boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)',
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'translateY(-2px)'
-                    e.currentTarget.style.borderColor = 'rgba(255, 105, 180, 0.35)'
-                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.25), 0 0 20px rgba(255, 105, 180, 0.15), 0 0 30px rgba(255, 182, 193, 0.1)'
+                    e.currentTarget.style.borderColor = 'rgba(255, 42, 166, 0.35)'
+                    e.currentTarget.style.boxShadow = '0 10px 50px rgba(0, 0, 0, 0.35), 0 0 30px rgba(255, 42, 166, 0.18)'
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = 'translateY(0)'
-                    e.currentTarget.style.borderColor = 'rgba(255, 105, 180, 0.18)'
-                    e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.2)'
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
+                    e.currentTarget.style.boxShadow = '0 10px 50px rgba(0, 0, 0, 0.35)'
                   }}
                 >
                   {/* 별점 */}
-                  <div className="mb-3">
+                  <div className="mb-4">
                     <span 
                       className="text-sm"
                       style={{
-                        color: '#ffd700',
+                        color: '#ff2aa6',
                         letterSpacing: '0.1em',
+                        filter: 'drop-shadow(0 0 4px rgba(255, 42, 166, 0.4))',
                       }}
                     >
                       {testimonial.rating}
@@ -146,10 +145,11 @@ export default function Testimonials() {
 
                   {/* 후기 내용 */}
                   <p 
-                    className="text-sm md:text-base mb-4 flex-grow"
+                    className="mb-4 flex-grow leading-relaxed"
                     style={{
                       color: 'rgba(255, 255, 255, 0.9)',
-                      lineHeight: 'clamp(1.5, 1.6, 1.6)',
+                      fontSize: '15px',
+                      lineHeight: '1.7',
                       wordBreak: 'keep-all',
                     }}
                   >
@@ -161,11 +161,11 @@ export default function Testimonials() {
                     {testimonial.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 rounded-full text-xs"
+                        className="px-3 py-1 rounded-full text-xs border"
                         style={{
-                          background: 'rgba(255, 20, 147, 0.15)',
-                          border: '1px solid rgba(255, 20, 147, 0.3)',
-                          color: 'rgba(255, 182, 193, 0.9)',
+                          background: 'rgba(255, 42, 166, 0.1)',
+                          borderColor: 'rgba(255, 42, 166, 0.2)',
+                          color: '#ff7ac8',
                         }}
                       >
                         {tag}
@@ -175,7 +175,7 @@ export default function Testimonials() {
 
                   {/* 작성자 */}
                   <p 
-                    className="text-xs"
+                    className="text-xs mt-auto"
                     style={{
                       color: 'rgba(255, 255, 255, 0.6)',
                     }}
@@ -186,48 +186,6 @@ export default function Testimonials() {
               </Reveal>
             ))}
           </div>
-        </div>
-
-        {/* 하단: CTA 버튼 + 신뢰 문구 */}
-        <div className="text-center mt-14">
-          {/* 신뢰 문구 */}
-          <p 
-            className="text-sm md:text-base mb-4"
-            style={{
-              color: 'rgba(245, 239, 255, 0.5)',
-              letterSpacing: '0.02em',
-            }}
-          >
-            상담이 아닌, 구조를 해석하는 분석 리포트입니다.
-          </p>
-
-          {/* CTA 버튼 */}
-          <Link href="/report">
-            <div className="inline-block px-8 md:px-14 py-4 md:py-6 rounded-lg font-semibold text-white transition-all duration-500 relative overflow-hidden group/btn text-base md:text-lg"
-              style={{
-                background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
-                boxShadow: '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.5), 0 0 60px rgba(255, 20, 147, 0.3)'
-                e.currentTarget.style.transform = 'translateY(-2px)'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(255, 20, 147, 0.25), 0 0 30px rgba(255, 20, 147, 0.1)'
-                e.currentTarget.style.transform = 'translateY(0)'
-              }}
-            >
-              {/* 빛이 흐르는 효과 */}
-              <span 
-                className="absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-700"
-                style={{
-                  background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)',
-                  animation: 'shimmer 2s infinite',
-                }}
-              />
-              <span className="relative z-10">내 연애 코드 지금 확인하기</span>
-            </div>
-          </Link>
         </div>
       </div>
     </section>
