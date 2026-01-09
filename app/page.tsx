@@ -3,6 +3,7 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import ProductCards from '@/components/ProductCards'
+import Testimonials from '@/components/Testimonials'
 import About from '@/components/About'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
@@ -19,7 +20,7 @@ export default function Home() {
       <Navigation />
       <BookmarkTassel />
       
-      {/* Hero ~ 리포트 ~ 전자책 통배경 래퍼 */}
+      {/* Hero ~ 리포트 ~ 전자책 ~ 후기 통배경 래퍼 */}
       <div 
         className="relative overflow-hidden"
         style={{ 
@@ -28,6 +29,7 @@ export default function Home() {
       >
         <Hero />
         <ProductCards />
+        <Testimonials />
       </div>
       
       {/* 통배경 래퍼 - About/Projects/Contact 공유 */}
