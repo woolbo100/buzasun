@@ -36,42 +36,41 @@ export default function Contact() {
         <div className="container mx-auto max-w-6xl">
           <Reveal delayMs={100}>
             <div 
-              className="max-w-4xl mx-auto py-20 px-6 md:px-10 text-center relative"
-              style={{
-                position: 'relative',
-              }}
+              className="max-w-4xl mx-auto py-20 px-6 md:px-10 text-center"
             >
-              {/* 텍스트 주변 둥근 오라 효과 */}
-              <div
-                className="absolute inset-0 pointer-events-none"
+              {/* 텍스트 컨텐츠 - heroCopy 스타일 */}
+              <div 
+                className="relative inline-block"
                 style={{
-                  background: 'radial-gradient(ellipse 100% 80% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 182, 193, 0.15) 20%, rgba(255, 192, 203, 0.1) 40%, rgba(255, 200, 210, 0.05) 60%, transparent 80%)',
-                  filter: 'blur(30px)',
-                  opacity: 0.2,
-                  mixBlendMode: 'screen',
-                  zIndex: 0,
+                  padding: '28px 44px',
                 }}
-              />
-              
-              {/* 텍스트 컨텐츠 */}
-              <div className="relative z-10">
-                {/* 상단 문장 (명령형 2줄) - 아우라 효과 */}
-                <div style={{ marginBottom: '24px' }}>
+              >
+                {/* 오라 효과 - ::before 대신 div 사용 */}
+                <div
+                  className="absolute pointer-events-none"
+                  style={{
+                    inset: '-40px',
+                    background: 'radial-gradient(circle at 50% 55%, rgba(255,255,255,0.22) 0%, rgba(255,190,210,0.16) 35%, rgba(255,190,210,0.08) 55%, rgba(0,0,0,0) 75%)',
+                    filter: 'blur(28px)',
+                    opacity: 1,
+                    zIndex: -1,
+                  }}
+                />
+                
+                {/* 상단 문장 (명령형 2줄) - top 스타일 */}
+                <div 
+                  className="top"
+                  style={{ 
+                    marginBottom: '22px',
+                    lineHeight: '1.55',
+                  }}
+                >
                   <p 
                     className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
                     style={{
                       color: '#e5e7eb',
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
-                      lineHeight: '1.55',
-                      textShadow: `
-                        0 0 8px rgba(255, 255, 255, 0.4),
-                        0 0 16px rgba(255, 255, 255, 0.25),
-                        0 0 24px rgba(255, 182, 193, 0.2),
-                        0 0 32px rgba(255, 192, 203, 0.15),
-                        0 0 40px rgba(255, 200, 210, 0.1),
-                        0 2px 4px rgba(0, 0, 0, 0.2)
-                      `,
                     }}
                   >
                     더 애쓰지 마세요.<br />
@@ -79,8 +78,8 @@ export default function Contact() {
                   </p>
                 </div>
 
-                {/* 하단 문장 (전환·설명 파트) - 큰 주인공 텍스트 아우라 효과 */}
-                <div>
+                {/* 하단 문장 (전환·설명 파트) - main 스타일 */}
+                <div className="main">
                   <p 
                     className="text-2xl md:text-3xl lg:text-4xl font-elegant font-semibold"
                     style={{
@@ -89,13 +88,9 @@ export default function Contact() {
                       wordBreak: 'keep-all',
                       lineHeight: '1.32',
                       textShadow: `
-                        0 0 10px rgba(255, 255, 255, 0.5),
-                        0 0 20px rgba(255, 255, 255, 0.3),
-                        0 0 30px rgba(255, 182, 193, 0.25),
-                        0 0 40px rgba(255, 192, 203, 0.2),
-                        0 0 50px rgba(255, 200, 210, 0.15),
-                        0 0 60px rgba(255, 210, 220, 0.1),
-                        0 4px 8px rgba(0, 0, 0, 0.25)
+                        0 0 6px rgba(255,255,255,0.22),
+                        0 0 16px rgba(255,190,210,0.18),
+                        0 0 34px rgba(255,190,210,0.12)
                       `,
                     }}
                   >
