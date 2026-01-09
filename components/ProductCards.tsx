@@ -180,33 +180,6 @@ export default function ProductCards() {
                   </div>
                 </div>
 
-                {/* 인용 배너 - 브랜드 세계관 선언 */}
-                <Reveal delayMs={400}>
-                  <div 
-                    className="max-w-4xl mx-auto mb-16 py-8 px-6 md:px-10 rounded-2xl text-center"
-                    style={{
-                      background: 'rgba(26, 6, 38, 0.4)',
-                      border: '1px solid rgba(255, 20, 147, 0.15)',
-                      backdropFilter: 'blur(10px)',
-                    }}
-                  >
-                    <p 
-                      className="text-xl md:text-2xl lg:text-3xl font-elegant font-semibold leading-relaxed"
-                      style={{
-                        color: '#f7f1ff',
-                        letterSpacing: '0.02em',
-                        lineHeight: '1.6',
-                        wordBreak: 'keep-all',
-                      }}
-                    >
-                      <span className="text-2xl md:text-3xl lg:text-4xl" style={{ color: 'rgba(255, 255, 255, 0.4)' }}>"</span>
-                      사람은 같은 <span style={{ color: '#ff7ac8' }}>주파수</span>의 사람을 만난다.<br />
-                      연애는 끌어당김이 아니라 <span style={{ color: '#ff7ac8' }}>공명</span>이다.
-                      <span className="text-2xl md:text-3xl lg:text-4xl" style={{ color: 'rgba(255, 255, 255, 0.4)' }}>"</span>
-                    </p>
-                  </div>
-                </Reveal>
-
                 {/* 하단: CTA 버튼 + 신뢰 문구 */}
                 <div className="text-center">
                   {/* CTA 버튼 */}
