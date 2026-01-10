@@ -43,44 +43,38 @@ export default function Contact() {
             >
               {/* 텍스트 컨텐츠 */}
               <div>
-                {/* 첫 번째 줄 - 전체 흰색 */}
-                <p 
-                  className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal mb-6"
-                  style={{
-                    color: '#ffffff',
-                    letterSpacing: '0.02em',
-                    wordBreak: 'keep-all',
-                    lineHeight: '1.6',
-                  }}
-                >
-                  더 애쓰지 마세요.
-                </p>
+                {/* 상단 문장 (2줄) - 흰색 */}
+                <div style={{ marginBottom: '32px' }}>
+                  <p 
+                    className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
+                    style={{
+                      color: '#ffffff',
+                      letterSpacing: '0.02em',
+                      wordBreak: 'keep-all',
+                      lineHeight: '1.6',
+                    }}
+                  >
+                    더 애쓰지 마세요.<br />
+                    더 증명하지 마세요.
+                  </p>
+                </div>
 
-                {/* 두 번째 줄 - "증명하" 부분만 핫핑크 */}
-                <p 
-                  className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal mb-6"
-                  style={{
-                    color: '#ffffff',
-                    letterSpacing: '0.02em',
-                    wordBreak: 'keep-all',
-                    lineHeight: '1.6',
-                  }}
-                >
-                  더 <span style={{ color: '#ec4899' }}>증명하</span>지 마세요.
-                </p>
-
-                {/* 세 번째 줄 - 전체 핫핑크 */}
-                <p 
-                  className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
-                  style={{
-                    color: '#ec4899',
-                    letterSpacing: '0.02em',
-                    wordBreak: 'keep-all',
-                    lineHeight: '1.6',
-                  }}
-                >
-                  상태를 바꾸면, 만나는 사람이 바뀝니다.
-                </p>
+                {/* 하단 문장 (3줄) - 핫핑크 */}
+                <div>
+                  <p 
+                    className="text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] font-elegant font-semibold"
+                    style={{
+                      color: '#ec4899',
+                      letterSpacing: '0.01em',
+                      wordBreak: 'keep-all',
+                      lineHeight: '1.4',
+                    }}
+                  >
+                    선천코드를 이해하면<br />
+                    반복되던 연애는 멈추고<br />
+                    만나는 사람이 달라집니다
+                  </p>
+                </div>
               </div>
             </div>
           </Reveal>
