@@ -35,16 +35,14 @@ export default function Contact() {
       <section className="py-16 md:py-24 px-6 relative" style={{ background: 'transparent' }}>
         <div className="container mx-auto max-w-6xl">
           <Reveal delayMs={100}>
-            <div 
-              className="mx-auto py-16 md:py-20 text-center"
-              style={{
-                maxWidth: '540px',
-              }}
-            >
-              {/* 상단 구분선 */}
+            <div className="mx-auto py-16 md:py-20 text-center relative">
+              {/* 상단 구분선 - 가로 길이 확장 */}
               <div 
                 className="h-px mb-12 md:mb-16"
                 style={{
+                  width: 'calc(100% + 120px)',
+                  marginLeft: '-60px',
+                  marginRight: '-60px',
                   background: 'linear-gradient(90deg, transparent 0%, rgba(255, 42, 166, 0.3) 20%, rgba(255, 105, 180, 0.4) 50%, rgba(255, 42, 166, 0.3) 80%, transparent 100%)',
                   filter: 'blur(1px)',
                   boxShadow: '0 0 8px rgba(255, 42, 166, 0.2)',
@@ -52,7 +50,7 @@ export default function Contact() {
               />
               
               {/* 텍스트 컨텐츠 */}
-              <div>
+              <div style={{ maxWidth: '540px', margin: '0 auto' }}>
                 {/* 상단 문장 (2줄) - 흰색 */}
                 <div style={{ marginBottom: '32px' }}>
                   <p 
@@ -87,10 +85,13 @@ export default function Contact() {
                 </div>
               </div>
               
-              {/* 하단 구분선 */}
+              {/* 하단 구분선 - 가로 길이 확장 */}
               <div 
                 className="h-px mt-12 md:mt-16"
                 style={{
+                  width: 'calc(100% + 120px)',
+                  marginLeft: '-60px',
+                  marginRight: '-60px',
                   background: 'linear-gradient(90deg, transparent 0%, rgba(255, 42, 166, 0.3) 20%, rgba(255, 105, 180, 0.4) 50%, rgba(255, 42, 166, 0.3) 80%, transparent 100%)',
                   filter: 'blur(1px)',
                   boxShadow: '0 0 8px rgba(255, 42, 166, 0.2)',
