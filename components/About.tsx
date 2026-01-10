@@ -158,7 +158,7 @@ export default function About() {
                 wordBreak: 'keep-all',
               }}
             >
-              심리상담 · 연애심리 · 명리심리 · NLP · 최면 · 무의식 설계 · 콘텐츠 구조 분석 분야의<br />
+              심리상담 · 연애심리 · 명리심리 · NLP기법 · 최면심리 · 무의식 설계 · 콘텐츠 구조 분석 분야의<br />
               전문 자격과 연구를 바탕으로 리포트는 설계됩니다.
             </p>
           </div>
@@ -223,8 +223,8 @@ export default function About() {
               >
                 <p>심리상담</p>
                 <p>연애심리</p>
-                <p>NLP</p>
-                <p>최면</p>
+                <p>NLP기법</p>
+                <p>최면심리</p>
               </div>
             </div>
           </Reveal>
@@ -286,7 +286,8 @@ export default function About() {
               >
                 <p>명리심리</p>
                 <p>타로심리</p>
-                <p>풍수, 성명학</p>
+                <p>풍수학, 성명학</p>
+                <p>동양철학</p>
               </div>
             </div>
           </Reveal>
