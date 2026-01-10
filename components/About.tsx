@@ -105,25 +105,25 @@ export default function About() {
         {/* 강조 문구 (핫핑크) - 섹션 핵심 */}
         <Reveal delayMs={300}>
           <div 
-            className="text-center mb-32 py-8 px-6 max-w-3xl mx-auto rounded-sm relative overflow-hidden"
+            className="text-center mb-32 py-8 px-6 max-w-3xl mx-auto relative overflow-hidden"
             style={{
               border: `1px solid ${isHovered ? 'rgba(255, 0, 150, 0.28)' : 'rgba(255, 0, 150, 0.25)'}`,
-              borderRadius: '4px',
+              borderRadius: '16px',
               background: 'transparent',
-              transition: 'border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+              transition: 'border-color 0.35s ease-in-out',
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            {/* 프레임 안쪽 그라데이션 광 효과 - 기본 상태에서 상시 적용 */}
+            {/* 프레임 안쪽 그라데이션 광 효과 - 기본 상태에서 상시 적용, 중앙에서 가장 밝고 가장자리로 흐려짐 */}
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
                 background: isHovered
-                  ? 'linear-gradient(135deg, rgba(138, 43, 226, 0.07) 0%, rgba(236, 72, 153, 0.09) 100%)'
-                  : 'linear-gradient(135deg, rgba(138, 43, 226, 0.06) 0%, rgba(236, 72, 153, 0.08) 100%)',
-                borderRadius: '4px',
-                transition: 'background 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+                  ? 'radial-gradient(ellipse at center, rgba(236, 72, 153, 0.11) 0%, rgba(138, 43, 226, 0.08) 40%, rgba(236, 72, 153, 0.05) 70%, transparent 100%)'
+                  : 'radial-gradient(ellipse at center, rgba(236, 72, 153, 0.10) 0%, rgba(138, 43, 226, 0.07) 40%, rgba(236, 72, 153, 0.04) 70%, transparent 100%)',
+                borderRadius: '16px',
+                transition: 'background 0.35s ease-in-out',
               }}
             />
             <p 
@@ -135,11 +135,11 @@ export default function About() {
                 wordBreak: 'keep-all',
               }}
             >
-              감이 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.18), 0 0 8px rgba(236, 72, 153, 0.12)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }}>이론</span>
+              감이 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.20), 0 0 8px rgba(236, 72, 153, 0.13)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.35s ease-in-out' }}>이론</span>
               <br />
-              직관이 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.18), 0 0 8px rgba(236, 72, 153, 0.12)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }}>구조</span>
+              직관이 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.20), 0 0 8px rgba(236, 72, 153, 0.13)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.35s ease-in-out' }}>구조</span>
               <br />
-              위로가 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.18), 0 0 8px rgba(236, 72, 153, 0.12)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1)' }}>설계</span>
+              위로가 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.20), 0 0 8px rgba(236, 72, 153, 0.13)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.35s ease-in-out' }}>설계</span>
             </p>
           </div>
         </Reveal>
