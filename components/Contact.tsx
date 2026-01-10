@@ -54,25 +54,25 @@ export default function Contact() {
                       lineHeight: '1.6',
                     }}
                   >
-                    더 애쓰지 마세요.<br />
-                    더 증명하지 마세요.
+                    더 애쓰지 마세요<br />
+                    더 증명하지 마세요
                   </p>
                 </div>
 
-                {/* 하단 문장 (3줄) - 핫핑크 */}
+                {/* 하단 문장 (3줄) - 기본 흰색, 특정 단어만 핫핑크 */}
                 <div>
                   <p 
-                    className="text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] font-elegant font-semibold"
+                    className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
                     style={{
-                      color: '#ec4899',
-                      letterSpacing: '0.01em',
+                      color: '#ffffff',
+                      letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
-                      lineHeight: '1.4',
+                      lineHeight: '1.6',
                     }}
                   >
-                    선천코드를 이해하면<br />
-                    반복되던 연애는 멈추고<br />
-                    만나는 사람이 달라집니다
+                    <span style={{ color: '#ec4899' }}>선천코드</span>를 이해하면<br />
+                    <span style={{ color: '#ec4899' }}>반복되던 연애</span>는 멈추고<br />
+                    <span style={{ color: '#ec4899' }}>만나는 사람</span>이 달라집니다
                   </p>
                 </div>
               </div>
