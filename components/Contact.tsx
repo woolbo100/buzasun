@@ -43,20 +43,48 @@ export default function Contact() {
             >
               {/* 텍스트 컨텐츠 */}
               <div className="relative">
-                {/* 둥근 글로우 아우라 배경 - 핑크/퍼플/흰색 그라데이션 */}
+                {/* 둥근 글로우 아우라 배경 - 자연스러운 빛이 퍼져나가는 느낌 */}
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{
-                    inset: '-60px',
-                    background: 'radial-gradient(ellipse 120% 100% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 182, 193, 0.12) 25%, rgba(236, 72, 153, 0.10) 40%, rgba(138, 43, 226, 0.08) 55%, rgba(255, 182, 193, 0.05) 70%, transparent 85%)',
-                    filter: 'blur(35px)',
+                    inset: '-80px',
+                    background: `
+                      radial-gradient(ellipse 130% 110% at 50% 50%, 
+                        rgba(255, 255, 255, 0.28) 0%, 
+                        rgba(255, 200, 220, 0.22) 20%, 
+                        rgba(255, 182, 193, 0.18) 35%, 
+                        rgba(236, 72, 153, 0.15) 50%, 
+                        rgba(138, 43, 226, 0.12) 65%, 
+                        rgba(255, 182, 193, 0.08) 80%, 
+                        transparent 95%)
+                    `,
+                    filter: 'blur(40px)',
                     opacity: 1,
                     zIndex: -1,
                   }}
                 />
                 
-                {/* 상단 문장 (2줄) - 흰색 + 글로우 */}
-                <div style={{ marginBottom: '32px', position: 'relative', zIndex: 1 }}>
+                {/* 추가 아우라 레이어 - 더 부드러운 퍼짐 */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    inset: '-100px',
+                    background: `
+                      radial-gradient(circle 90% at 50% 50%, 
+                        rgba(255, 255, 255, 0.15) 0%, 
+                        rgba(255, 182, 193, 0.12) 30%, 
+                        rgba(236, 72, 153, 0.08) 55%, 
+                        rgba(138, 43, 226, 0.05) 75%, 
+                        transparent 90%)
+                    `,
+                    filter: 'blur(50px)',
+                    opacity: 1,
+                    zIndex: -2,
+                  }}
+                />
+                
+                {/* 상단 문장 (2줄) - 흰색, 글자 선명하게 유지 */}
+                <div style={{ marginBottom: '32px', position: 'relative', zIndex: 10 }}>
                   <p 
                     className="text-2xl md:text-3xl lg:text-4xl font-elegant font-normal"
                     style={{
@@ -64,13 +92,8 @@ export default function Contact() {
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
                       lineHeight: '1.6',
-                      textShadow: `
-                        0 0 8px rgba(255, 255, 255, 0.3),
-                        0 0 16px rgba(255, 182, 193, 0.25),
-                        0 0 24px rgba(236, 72, 153, 0.2),
-                        0 0 32px rgba(138, 43, 226, 0.15),
-                        0 0 40px rgba(255, 182, 193, 0.1)
-                      `,
+                      textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+                      filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.2))',
                     }}
                   >
                     더 애쓰지 마세요<br />
@@ -78,8 +101,8 @@ export default function Contact() {
                   </p>
                 </div>
 
-                {/* 하단 문장 (3줄) - 기본 흰색, 특정 단어만 핫핑크 + 글로우 */}
-                <div style={{ position: 'relative', zIndex: 1 }}>
+                {/* 하단 문장 (3줄) - 기본 흰색, 특정 단어만 핫핑크, 글자 선명하게 유지 */}
+                <div style={{ position: 'relative', zIndex: 10 }}>
                   <p 
                     className="text-2xl md:text-3xl lg:text-4xl font-elegant font-normal"
                     style={{
@@ -87,18 +110,13 @@ export default function Contact() {
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
                       lineHeight: '1.6',
-                      textShadow: `
-                        0 0 8px rgba(255, 255, 255, 0.3),
-                        0 0 16px rgba(255, 182, 193, 0.25),
-                        0 0 24px rgba(236, 72, 153, 0.2),
-                        0 0 32px rgba(138, 43, 226, 0.15),
-                        0 0 40px rgba(255, 182, 193, 0.1)
-                      `,
+                      textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+                      filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.2))',
                     }}
                   >
-                    <span style={{ color: '#ec4899' }}>선천코드</span>를 이해하면<br />
-                    <span style={{ color: '#ec4899' }}>반복되던 연애</span>는 멈추고<br />
-                    <span style={{ color: '#ec4899' }}>만나는 사람</span>이 달라집니다
+                    <span style={{ color: '#ec4899', fontWeight: 500 }}>선천코드</span>를 이해하면<br />
+                    <span style={{ color: '#ec4899', fontWeight: 500 }}>반복되던 연애</span>는 멈추고<br />
+                    <span style={{ color: '#ec4899', fontWeight: 500 }}>만나는 사람</span>이 달라집니다
                   </p>
                 </div>
               </div>
