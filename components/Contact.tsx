@@ -27,76 +27,99 @@ const faqs = [
 ]
 
 export default function Contact() {
+  const [isHovered, setIsHovered] = useState(false)
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <>
       {/* 문의 전 배너 - 브랜드 철학 & 리포트 필요성 설명 */}
-      <section className="py-16 md:py-20 px-6 relative" style={{ background: 'transparent' }}>
+      <section className="py-16 md:py-24 px-6 relative" style={{ background: 'transparent' }}>
         <div className="container mx-auto max-w-6xl">
           <Reveal delayMs={100}>
             <div 
-              className="max-w-4xl mx-auto py-20 px-6 md:px-10 text-center"
+              className="mx-auto py-16 md:py-20 text-center"
+              style={{
+                maxWidth: '540px',
+              }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
-              {/* 텍스트 컨텐츠 - heroCopy 스타일 */}
-              <div 
-                className="relative inline-block"
-                style={{
-                  padding: '28px 44px',
-                }}
-              >
-                {/* 오라 효과 - ::before 대신 div 사용 */}
+              {/* 텍스트 컨텐츠 */}
+              <div className="relative overflow-hidden">
+                {/* 오라 효과 - 기본 상태에서 은은한 핫핑크 글로우 */}
                 <div
                   className="absolute pointer-events-none"
                   style={{
                     inset: '-40px',
-                    background: 'radial-gradient(circle at 50% 55%, rgba(255,255,255,0.22) 0%, rgba(255,190,210,0.16) 35%, rgba(255,190,210,0.08) 55%, rgba(0,0,0,0) 75%)',
+                    background: isHovered
+                      ? 'radial-gradient(circle at 50% 55%, rgba(255,255,255,0.25) 0%, rgba(255,190,210,0.19) 35%, rgba(255,190,210,0.10) 55%, rgba(0,0,0,0) 75%)'
+                      : 'radial-gradient(circle at 50% 55%, rgba(255,255,255,0.22) 0%, rgba(255,190,210,0.16) 35%, rgba(255,190,210,0.08) 55%, rgba(0,0,0,0) 75%)',
                     filter: 'blur(28px)',
                     opacity: 1,
                     zIndex: -1,
+                    transition: 'background 0.35s ease-in-out',
                   }}
                 />
                 
-                {/* 상단 문장 (명령형 2줄) - top 스타일 */}
+                {/* 자개 텍스처 라이트 효과 - hover 시 아주 미세하게 */}
+                {isHovered && (
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.012) 0%, rgba(255, 182, 193, 0.018) 30%, rgba(255, 105, 180, 0.015) 50%, rgba(255, 182, 193, 0.018) 70%, rgba(255, 255, 255, 0.012) 100%)',
+                      opacity: 1,
+                      zIndex: -1,
+                      transition: 'opacity 0.35s ease-in-out',
+                    }}
+                  />
+                )}
+                
+                {/* 상단 문장 (2줄) - 연한 화이트, 기본 크기 */}
                 <div 
-                  className="top"
                   style={{ 
-                    marginBottom: '22px',
-                    lineHeight: '1.55',
+                    marginBottom: '32px',
+                    lineHeight: '1.6',
                   }}
                 >
                   <p 
                     className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
                     style={{
-                      color: '#e5e7eb',
+                      color: 'rgba(255, 255, 255, 0.85)',
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
                     }}
                   >
-                    더 애쓰지 마세요.<br />
-                    더 증명하지 마세요.
+                    더 애쓰지 마세요<br />
+                    더 증명하지 마세요
                   </p>
                 </div>
 
-                {/* 하단 문장 (전환·설명 파트) - main 스타일 */}
-                <div className="main">
+                {/* 하단 문장 (3줄) - 핫핑크, 크기 +10~15%, 자간 축소 */}
+                <div>
                   <p 
-                    className="text-2xl md:text-3xl lg:text-4xl font-elegant font-semibold"
+                    className="text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] font-elegant font-semibold"
                     style={{
-                      color: '#f3f4f6',
-                      letterSpacing: '0.02em',
+                      color: '#ec4899',
+                      letterSpacing: '0.01em',
                       wordBreak: 'keep-all',
-                      lineHeight: '1.32',
-                      textShadow: `
-                        0 0 6px rgba(255,255,255,0.22),
-                        0 0 16px rgba(255,190,210,0.18),
-                        0 0 34px rgba(255,190,210,0.12)
-                      `,
+                      lineHeight: '1.4',
+                      textShadow: isHovered
+                        ? `
+                          0 0 7px rgba(236, 72, 153, 0.25),
+                          0 0 18px rgba(236, 72, 153, 0.20),
+                          0 0 38px rgba(236, 72, 153, 0.14)
+                        `
+                        : `
+                          0 0 6px rgba(236, 72, 153, 0.22),
+                          0 0 16px rgba(236, 72, 153, 0.18),
+                          0 0 34px rgba(236, 72, 153, 0.12)
+                        `,
+                      transition: 'text-shadow 0.35s ease-in-out',
                     }}
                   >
-                    <span style={{ color: '#f3f4f6', fontWeight: 600 }}>선천코드를 이해하면</span><br />
-                    반복되던 연애는 멈추고,<br />
-                    <span style={{ color: '#f3f4f6', fontWeight: 600 }}>만나는 사람이 달라집니다.</span>
+                    선천코드를 이해하면<br />
+                    반복되던 연애는 멈추고<br />
+                    만나는 사람이 달라집니다
                   </p>
                 </div>
               </div>
