@@ -55,7 +55,7 @@ export default function Contact() {
                     }}
                   >
                     더 애쓰지 마세요<br />
-                    더 증명하지 마세요
+                    더 증명하려 하지 마세요
                   </p>
                 </div>
 
