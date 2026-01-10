@@ -229,7 +229,7 @@ export default function About() {
             </div>
           </Reveal>
 
-          {/* SECTION 2: 운명 분석 */}
+          {/* SECTION 2: 선천코드 분석 */}
           <Reveal delayMs={600}>
             <div 
               className="rounded-2xl p-8 h-full transition-all duration-300"
@@ -266,7 +266,7 @@ export default function About() {
                   letterSpacing: '0.05em',
                 }}
               >
-                운명 분석
+                선천코드 분석
               </h3>
               <p 
                 className="text-base md:text-lg mb-6 text-center"
