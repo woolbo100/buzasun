@@ -349,6 +349,7 @@ export default function About() {
                 <p>AI 콘텐츠 제작</p>
                 <p>퍼스널 브랜딩</p>
                 <p>디지털 자아 설계</p>
+                <p>뇌과학 기반 설계</p>
               </div>
             </div>
           </Reveal>
