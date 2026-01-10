@@ -42,9 +42,21 @@ export default function Contact() {
               }}
             >
               {/* 텍스트 컨텐츠 */}
-              <div>
-                {/* 상단 문장 (2줄) - 흰색 */}
-                <div style={{ marginBottom: '32px' }}>
+              <div className="relative">
+                {/* 둥근 글로우 아우라 배경 - 핑크/퍼플/흰색 그라데이션 */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    inset: '-60px',
+                    background: 'radial-gradient(ellipse 120% 100% at 50% 50%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 182, 193, 0.12) 25%, rgba(236, 72, 153, 0.10) 40%, rgba(138, 43, 226, 0.08) 55%, rgba(255, 182, 193, 0.05) 70%, transparent 85%)',
+                    filter: 'blur(35px)',
+                    opacity: 1,
+                    zIndex: -1,
+                  }}
+                />
+                
+                {/* 상단 문장 (2줄) - 흰색 + 글로우 */}
+                <div style={{ marginBottom: '32px', position: 'relative', zIndex: 1 }}>
                   <p 
                     className="text-2xl md:text-3xl lg:text-4xl font-elegant font-normal"
                     style={{
@@ -52,6 +64,13 @@ export default function Contact() {
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
                       lineHeight: '1.6',
+                      textShadow: `
+                        0 0 8px rgba(255, 255, 255, 0.3),
+                        0 0 16px rgba(255, 182, 193, 0.25),
+                        0 0 24px rgba(236, 72, 153, 0.2),
+                        0 0 32px rgba(138, 43, 226, 0.15),
+                        0 0 40px rgba(255, 182, 193, 0.1)
+                      `,
                     }}
                   >
                     더 애쓰지 마세요<br />
@@ -59,8 +78,8 @@ export default function Contact() {
                   </p>
                 </div>
 
-                {/* 하단 문장 (3줄) - 기본 흰색, 특정 단어만 핫핑크 */}
-                <div>
+                {/* 하단 문장 (3줄) - 기본 흰색, 특정 단어만 핫핑크 + 글로우 */}
+                <div style={{ position: 'relative', zIndex: 1 }}>
                   <p 
                     className="text-2xl md:text-3xl lg:text-4xl font-elegant font-normal"
                     style={{
@@ -68,6 +87,13 @@ export default function Contact() {
                       letterSpacing: '0.02em',
                       wordBreak: 'keep-all',
                       lineHeight: '1.6',
+                      textShadow: `
+                        0 0 8px rgba(255, 255, 255, 0.3),
+                        0 0 16px rgba(255, 182, 193, 0.25),
+                        0 0 24px rgba(236, 72, 153, 0.2),
+                        0 0 32px rgba(138, 43, 226, 0.15),
+                        0 0 40px rgba(255, 182, 193, 0.1)
+                      `,
                     }}
                   >
                     <span style={{ color: '#ec4899' }}>선천코드</span>를 이해하면<br />
