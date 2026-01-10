@@ -38,7 +38,7 @@ export default function Hero() {
                 boxShadow: '0 4px 20px rgba(252, 231, 243, 0.1)',
               }}
             >
-              [당신이 몰랐던 타고난 사랑의 알고리즘]
+              당신이 몰랐던 타고난 사랑의 알고리즘
             </span>
           </div>
         </Reveal>
