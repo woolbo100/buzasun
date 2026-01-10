@@ -27,7 +27,6 @@ const faqs = [
 ]
 
 export default function Contact() {
-  const [isHovered, setIsHovered] = useState(false)
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
@@ -41,87 +40,47 @@ export default function Contact() {
               style={{
                 maxWidth: '540px',
               }}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
             >
               {/* 텍스트 컨텐츠 */}
-              <div className="relative overflow-hidden">
-                {/* 오라 효과 - 기본 상태에서 은은한 핫핑크 글로우 */}
-                <div
-                  className="absolute pointer-events-none"
+              <div>
+                {/* 첫 번째 줄 - 전체 흰색 */}
+                <p 
+                  className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal mb-6"
                   style={{
-                    inset: '-40px',
-                    background: isHovered
-                      ? 'radial-gradient(circle at 50% 55%, rgba(255,255,255,0.25) 0%, rgba(255,190,210,0.19) 35%, rgba(255,190,210,0.10) 55%, rgba(0,0,0,0) 75%)'
-                      : 'radial-gradient(circle at 50% 55%, rgba(255,255,255,0.22) 0%, rgba(255,190,210,0.16) 35%, rgba(255,190,210,0.08) 55%, rgba(0,0,0,0) 75%)',
-                    filter: 'blur(28px)',
-                    opacity: 1,
-                    zIndex: -1,
-                    transition: 'background 0.35s ease-in-out',
-                  }}
-                />
-                
-                {/* 자개 텍스처 라이트 효과 - hover 시 아주 미세하게 */}
-                {isHovered && (
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.012) 0%, rgba(255, 182, 193, 0.018) 30%, rgba(255, 105, 180, 0.015) 50%, rgba(255, 182, 193, 0.018) 70%, rgba(255, 255, 255, 0.012) 100%)',
-                      opacity: 1,
-                      zIndex: -1,
-                      transition: 'opacity 0.35s ease-in-out',
-                    }}
-                  />
-                )}
-                
-                {/* 상단 문장 (2줄) - 연한 화이트, 기본 크기 */}
-                <div 
-                  style={{ 
-                    marginBottom: '32px',
+                    color: '#ffffff',
+                    letterSpacing: '0.02em',
+                    wordBreak: 'keep-all',
                     lineHeight: '1.6',
                   }}
                 >
-                  <p 
-                    className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.85)',
-                      letterSpacing: '0.02em',
-                      wordBreak: 'keep-all',
-                    }}
-                  >
-                    더 애쓰지 마세요<br />
-                    더 증명하지 마세요
-                  </p>
-                </div>
+                  더 애쓰지 마세요.
+                </p>
 
-                {/* 하단 문장 (3줄) - 핫핑크, 크기 +10~15%, 자간 축소 */}
-                <div>
-                  <p 
-                    className="text-2xl md:text-3xl lg:text-4xl xl:text-[2.75rem] font-elegant font-semibold"
-                    style={{
-                      color: '#ec4899',
-                      letterSpacing: '0.01em',
-                      wordBreak: 'keep-all',
-                      lineHeight: '1.4',
-                      textShadow: isHovered
-                        ? `
-                          0 0 7px rgba(236, 72, 153, 0.25),
-                          0 0 18px rgba(236, 72, 153, 0.20),
-                          0 0 38px rgba(236, 72, 153, 0.14)
-                        `
-                        : `
-                          0 0 6px rgba(236, 72, 153, 0.22),
-                          0 0 16px rgba(236, 72, 153, 0.18),
-                          0 0 34px rgba(236, 72, 153, 0.12)
-                        `,
-                      transition: 'text-shadow 0.35s ease-in-out',
-                    }}
-                  >
-                    선천코드를 이해하면<br />
-                    반복되던 연애는 멈추고<br />
-                    만나는 사람이 달라집니다
-                  </p>
-                </div>
+                {/* 두 번째 줄 - "증명하" 부분만 핫핑크 */}
+                <p 
+                  className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal mb-6"
+                  style={{
+                    color: '#ffffff',
+                    letterSpacing: '0.02em',
+                    wordBreak: 'keep-all',
+                    lineHeight: '1.6',
+                  }}
+                >
+                  더 <span style={{ color: '#ec4899' }}>증명하</span>지 마세요.
+                </p>
+
+                {/* 세 번째 줄 - 전체 핫핑크 */}
+                <p 
+                  className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
+                  style={{
+                    color: '#ec4899',
+                    letterSpacing: '0.02em',
+                    wordBreak: 'keep-all',
+                    lineHeight: '1.6',
+                  }}
+                >
+                  상태를 바꾸면, 만나는 사람이 바뀝니다.
+                </p>
               </div>
             </div>
           </Reveal>
