@@ -107,7 +107,7 @@ export default function About() {
           <div 
             className="text-center mb-32 py-8 px-6 max-w-3xl mx-auto relative overflow-hidden"
             style={{
-              border: `1px solid ${isHovered ? 'rgba(255, 0, 150, 0.28)' : 'rgba(255, 0, 150, 0.25)'}`,
+              border: `1px solid ${isHovered ? 'rgba(255, 0, 150, 0.33)' : 'rgba(255, 0, 150, 0.30)'}`,
               borderRadius: '16px',
               background: 'transparent',
               transition: 'border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out',
