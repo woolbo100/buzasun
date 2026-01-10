@@ -17,7 +17,17 @@ export default function About() {
           <div className="flex items-center justify-center gap-4 md:gap-8 mb-16">
             {/* 왼쪽 꽃 아이콘 */}
             <div 
-              className="flex-shrink-0"
+              className="flex-shrink-0 cursor-pointer"
+              style={{
+                transition: 'filter 0.3s ease-out',
+                filter: 'drop-shadow(0 0 6px rgba(236, 72, 153, 0.25))',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.filter = 'drop-shadow(0 0 12px rgba(255, 182, 193, 0.4)) brightness(1.15)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.filter = 'drop-shadow(0 0 6px rgba(236, 72, 153, 0.25))'
+              }}
             >
               <BaekdohwaFlowerMark 
                 size={80}
@@ -44,7 +54,17 @@ export default function About() {
             
             {/* 오른쪽 꽃 아이콘 */}
             <div 
-              className="flex-shrink-0"
+              className="flex-shrink-0 cursor-pointer"
+              style={{
+                transition: 'filter 0.3s ease-out',
+                filter: 'drop-shadow(0 0 6px rgba(236, 72, 153, 0.25))',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.filter = 'drop-shadow(0 0 12px rgba(255, 182, 193, 0.4)) brightness(1.15)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.filter = 'drop-shadow(0 0 6px rgba(236, 72, 153, 0.25))'
+              }}
             >
               <BaekdohwaFlowerMark 
                 size={80}
