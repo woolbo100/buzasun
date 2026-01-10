@@ -129,7 +129,7 @@ export default function About() {
         <Reveal delayMs={400}>
           <div className="max-w-3xl mx-auto">
             <p 
-              className="text-xl md:text-2xl leading-loose text-center mb-20"
+              className="text-xl md:text-xl leading-loose text-center mb-20"
               style={{
                 color: 'rgba(255, 255, 255, 0.78)',
                 lineHeight: '2',
