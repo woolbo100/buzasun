@@ -158,8 +158,7 @@ export default function About() {
                 wordBreak: 'keep-all',
               }}
             >
-              심리상담 · 연애심리 · 명리심리 · NLP기법 · 최면심리 · 무의식 설계 · 콘텐츠 구조 분석<br />
-              분야의<br />
+              심리상담 · 연애심리 · 명리심리 · NLP기법 · 최면심리 · 무의식 설계 · 콘텐츠 구조 분석 분야의<br />
               전문 자격과 연구를 바탕으로 리포트는 설계됩니다.
             </p>
           </div>
@@ -167,7 +166,7 @@ export default function About() {
 
         {/* 자격증 그룹핑 - 카드 레이아웃 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {/* SECTION 1: 무의식 설계 */}
+          {/* SECTION 1: 내면 설계 */}
           <Reveal delayMs={500}>
             <div 
               className="rounded-2xl p-8 h-full transition-all duration-300"
@@ -204,7 +203,7 @@ export default function About() {
                   letterSpacing: '0.05em',
                 }}
               >
-                무의식 설계
+                내면 설계
               </h3>
               <p 
                 className="text-base md:text-lg mb-6 text-center"
@@ -213,7 +212,7 @@ export default function About() {
                   letterSpacing: '0.1em',
                 }}
               >
-                Unconscious Design
+                Inner Design
               </p>
               <div 
                 className="space-y-3 text-base text-center"
