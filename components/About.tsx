@@ -110,7 +110,10 @@ export default function About() {
               border: `1px solid ${isHovered ? 'rgba(255, 0, 150, 0.28)' : 'rgba(255, 0, 150, 0.25)'}`,
               borderRadius: '16px',
               background: 'transparent',
-              transition: 'border-color 0.35s ease-in-out',
+              transition: 'border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out',
+              boxShadow: isHovered 
+                ? '0 0 12px rgba(236, 72, 153, 0.15), 0 0 20px rgba(236, 72, 153, 0.08)'
+                : 'none',
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
