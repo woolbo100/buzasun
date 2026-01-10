@@ -46,7 +46,7 @@ export default function Contact() {
                 {/* 상단 문장 (2줄) - 흰색 */}
                 <div style={{ marginBottom: '32px' }}>
                   <p 
-                    className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
+                    className="text-2xl md:text-3xl lg:text-4xl font-elegant font-normal"
                     style={{
                       color: '#ffffff',
                       letterSpacing: '0.02em',
@@ -62,7 +62,7 @@ export default function Contact() {
                 {/* 하단 문장 (3줄) - 기본 흰색, 특정 단어만 핫핑크 */}
                 <div>
                   <p 
-                    className="text-xl md:text-2xl lg:text-3xl font-elegant font-normal"
+                    className="text-2xl md:text-3xl lg:text-4xl font-elegant font-normal"
                     style={{
                       color: '#ffffff',
                       letterSpacing: '0.02em',
