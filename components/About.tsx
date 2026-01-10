@@ -286,7 +286,7 @@ export default function About() {
               >
                 <p>명리심리</p>
                 <p>타로심리</p>
-                <p>풍수 기반 분석</p>
+                <p>풍수, 성명학</p>
               </div>
             </div>
           </Reveal>

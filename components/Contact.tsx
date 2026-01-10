@@ -41,6 +41,16 @@ export default function Contact() {
                 maxWidth: '540px',
               }}
             >
+              {/* 상단 구분선 */}
+              <div 
+                className="h-px mb-12 md:mb-16"
+                style={{
+                  background: 'linear-gradient(90deg, transparent 0%, rgba(255, 42, 166, 0.3) 20%, rgba(255, 105, 180, 0.4) 50%, rgba(255, 42, 166, 0.3) 80%, transparent 100%)',
+                  filter: 'blur(1px)',
+                  boxShadow: '0 0 8px rgba(255, 42, 166, 0.2)',
+                }}
+              />
+              
               {/* 텍스트 컨텐츠 */}
               <div>
                 {/* 상단 문장 (2줄) - 흰색 */}
@@ -76,6 +86,16 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
+              
+              {/* 하단 구분선 */}
+              <div 
+                className="h-px mt-12 md:mt-16"
+                style={{
+                  background: 'linear-gradient(90deg, transparent 0%, rgba(255, 42, 166, 0.3) 20%, rgba(255, 105, 180, 0.4) 50%, rgba(255, 42, 166, 0.3) 80%, transparent 100%)',
+                  filter: 'blur(1px)',
+                  boxShadow: '0 0 8px rgba(255, 42, 166, 0.2)',
+                }}
+              />
             </div>
           </Reveal>
         </div>
