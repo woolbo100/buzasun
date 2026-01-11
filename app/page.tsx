@@ -60,20 +60,22 @@ export default function Home() {
             height: '560px',
             transform: 'translateY(140px)',
             background: `
-              linear-gradient(to bottom,
-                rgba(10, 0, 14, 0.00) 0%,
-                rgba(10, 0, 14, 0.55) 25%,
-                rgba(10, 0, 14, 0.85) 55%,
-                rgba(10, 0, 14, 0.00) 100%
+              radial-gradient(ellipse 180% 95% at 50% 15%,
+                rgba(80, 30, 140, 0.35) 0%,
+                rgba(60, 20, 120, 0.28) 30%,
+                rgba(40, 12, 90, 0.20) 50%,
+                rgba(26, 7, 38, 0.12) 70%,
+                rgba(18, 0, 20, 0.00) 85%
               ),
-              radial-gradient(ellipse 170% 90% at 50% 18%,
-                rgba(60, 15, 110, 0.20) 0%,
-                rgba(35, 8, 70, 0.18) 35%,
-                rgba(18, 0, 20, 0.00) 75%
+              linear-gradient(to bottom,
+                rgba(26, 7, 38, 0.00) 0%,
+                rgba(26, 7, 38, 0.25) 40%,
+                rgba(20, 6, 31, 0.18) 65%,
+                rgba(13, 0, 16, 0.00) 100%
               )
             `,
             filter: 'blur(34px)',
-            opacity: 0.95,
+            opacity: 0.9,
             mixBlendMode: 'normal',
           }}
         />
