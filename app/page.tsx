@@ -27,25 +27,26 @@ export default function Home() {
           background: 'linear-gradient(180deg, #0d0010 0%, #14061f 15%, #1a0726 30%, #1d082e 45%, #1a0726 60%, #14061f 90%, #120014 100%)',
         }}
       >
-        {/* 궁궐 이미지 레이어 */}
+        {/* 궁궐 이미지 레이어 (디버그: 무조건 보이게) */}
         <div 
           className="absolute inset-0 pointer-events-none z-0"
           style={{
             backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
-            backgroundPosition: 'center 58%',
-            backgroundSize: '170% auto',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            opacity: 0.30,
-            filter: 'brightness(0.22) contrast(1.08) saturate(0.9)',
-            mixBlendMode: 'soft-light',
+            opacity: 1,
+            filter: 'none',
+            mixBlendMode: 'normal',
           }}
         />
         
-        {/* 단일 오버레이 (경계선 제거) */}
+        {/* 단일 오버레이 (경계선 제거) - 디버그: 일단 숨김 */}
         <div 
           className="absolute inset-0 pointer-events-none z-0"
           style={{
             background: 'linear-gradient(180deg, rgba(18,0,20,0.92) 0%, rgba(26,7,38,0.78) 35%, rgba(26,7,38,0.78) 65%, rgba(18,0,20,0.92) 100%)',
+            opacity: 0,
           }}
         />
         
