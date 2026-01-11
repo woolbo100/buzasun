@@ -61,22 +61,22 @@ export default function Home() {
             transform: 'translateY(0px)',
             background: `
               radial-gradient(ellipse 200% 100% at 50% 10%,
-                rgba(100, 50, 160, 0.40) 0%,
-                rgba(80, 35, 140, 0.32) 25%,
-                rgba(60, 20, 120, 0.24) 45%,
-                rgba(40, 12, 90, 0.16) 65%,
-                rgba(26, 7, 38, 0.08) 80%,
-                rgba(18, 0, 20, 0.00) 95%
+                rgba(50, 15, 90, 0.28) 0%,
+                rgba(40, 12, 75, 0.22) 25%,
+                rgba(30, 8, 60, 0.16) 45%,
+                rgba(22, 5, 45, 0.12) 65%,
+                rgba(18, 4, 35, 0.06) 80%,
+                rgba(13, 0, 16, 0.00) 95%
               ),
               linear-gradient(to bottom,
                 rgba(26, 7, 38, 0.00) 0%,
-                rgba(26, 7, 38, 0.30) 35%,
-                rgba(20, 6, 31, 0.22) 55%,
+                rgba(26, 7, 38, 0.20) 35%,
+                rgba(20, 6, 31, 0.15) 55%,
                 rgba(13, 0, 16, 0.00) 100%
               )
             `,
             filter: 'blur(36px)',
-            opacity: 0.85,
+            opacity: 0.65,
             mixBlendMode: 'normal',
           }}
         />
