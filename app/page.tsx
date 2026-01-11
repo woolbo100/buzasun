@@ -53,15 +53,15 @@ export default function Home() {
           
           {/* 하단 페더링 레이어 (경계선 제거) */}
           <div 
-            className="absolute left-0 right-0 bottom-[-40px] pointer-events-none"
+            className="absolute left-0 right-0 bottom-[-140px] pointer-events-none"
             style={{
-              height: '300px',
+              height: '560px',
               background: `
-                radial-gradient(ellipse 120% 100% at 50% 0%, rgba(138,43,226,0.4) 0%, rgba(255,20,147,0.3) 30%, rgba(26,7,38,0.5) 60%, transparent 100%),
-                linear-gradient(to bottom, rgba(26,7,38,0.6) 0%, rgba(13,0,16,0.4) 50%, transparent 100%)
+                radial-gradient(ellipse 160% 100% at 50% 0%, rgba(26,7,38,0.7) 0%, rgba(20,6,31,0.6) 25%, rgba(13,0,16,0.5) 50%, rgba(13,0,16,0.3) 75%, transparent 100%),
+                linear-gradient(to bottom, rgba(26,7,38,0.65) 0%, rgba(20,6,31,0.5) 40%, rgba(13,0,16,0.35) 70%, transparent 100%)
               `,
-              filter: 'blur(24px)',
-              opacity: 0.7,
+              filter: 'blur(32px)',
+              opacity: 0.85,
               mixBlendMode: 'normal',
             }}
           />
