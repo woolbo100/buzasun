@@ -24,7 +24,7 @@ export default function Home() {
       <div 
         className="relative overflow-hidden"
         style={{ 
-          background: 'linear-gradient(180deg, #0d0010 0%, #12051a 8%, #1a0825 18%, #1f0a2e 28%, #240b35 38%, #1f0a2e 48%, #1a0825 58%, #180724 68%, #150620 78%, #12051a 88%, #0f0316 95%, #0d0010 100%)',
+          background: 'linear-gradient(180deg, #0d0010 0%, #12051a 10%, #1a0825 22%, #1f0a2e 35%, #220b32 45%, #1f0a2e 55%, #1a0825 65%, #180724 75%, #160722 85%, #140620 92%, #12051a 100%)',
         }}
       >
         {/* 상단 Hero 영역 전용 배경 레이어 */}
