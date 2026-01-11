@@ -64,6 +64,8 @@ export default function Home() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background: 'radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(15, 0, 25, 0.4) 60%, rgba(15, 0, 25, 0.9) 100%)',
+              maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
             }}
           />
         </div>
