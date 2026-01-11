@@ -28,7 +28,13 @@ export default function Home() {
         }}
       >
         {/* 상단 Hero 영역 전용 배경 레이어 */}
-        <div className="absolute inset-x-0 top-0 h-[820px] lg:h-[900px] pointer-events-none z-0">
+        <div 
+          className="absolute inset-x-0 top-0 h-[820px] lg:h-[900px] pointer-events-none z-0"
+          style={{
+            maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+          }}
+        >
           {/* 궁궐 이미지 */}
           <div 
             className="absolute inset-0"
