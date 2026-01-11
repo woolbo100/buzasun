@@ -21,40 +21,17 @@ export default function Home() {
       <BookmarkTassel />
       
       {/* Hero ~ 리포트 ~ 후기 ~ 시크릿 비법서 통배경 래퍼 */}
-     {/* Hero ~ 리포트 ~ 후기 ~ 시크릿 비법서 통배경 래퍼 */}
-<div
-  className="relative overflow-hidden"
-  style={{
-    background:
-      'linear-gradient(180deg, #0d0010 0%, #14061f 15%, #1a0726 30%, #1d082e 45%, #1a0726 60%, #1a0626 75%, #14061f 90%, #120014 100%)',
-  }}
->
-  {/* 궁궐 배경(보조 레이어) */}
-  <div
-  className="absolute inset-0 pointer-events-none z-0"
-  style={{
-    backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center 58%',
-    backgroundSize: '150% auto',        // 🔥 너무 키우지 말고 형태 살리기
-    filter: 'brightness(0.35) contrast(1.15) saturate(1.05)', // 🔥 선명도 복구
-    opacity: 0.75,                      // 🔥 확실히 보이게
-    mixBlendMode: 'normal',             // 🔥 overlay/soft-light 제거
-  }}
-/>
-
-
-
-  
-
-  {/* 콘텐츠 */}
-  <div className="relative z-10">
-    <Hero />
-    <ProductCards />
-    <Testimonials />
-    <Ebooks />
-  </div>
-</div>
+      <div 
+        className="relative overflow-hidden"
+        style={{ 
+          background: 'linear-gradient(180deg, #0d0010 0%, #14061f 15%, #1a0726 30%, #1d082e 45%, #1a0726 60%, #1a0626 75%, #14061f 90%, #120014 100%)',
+        }}
+      >
+        <Hero />
+        <ProductCards />
+        <Testimonials />
+        <Ebooks />
+      </div>
 
       
       {/* 통배경 래퍼 - About/Projects/Contact 공유 */}

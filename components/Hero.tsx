@@ -19,12 +19,20 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none z-0"
         style={{
           backgroundImage: 'url(/image/baekdohwa-palace-bg.png)',
-          backgroundSize: '160%',
-          backgroundPosition: 'center 60%',
+          backgroundSize: '150% auto',
+          backgroundPosition: 'center 58%',
           backgroundRepeat: 'no-repeat',
-          filter: 'brightness(0.18) contrast(1.05) saturate(0.8)',
-          opacity: 0.23,
-          mixBlendMode: 'overlay',
+          filter: 'brightness(0.35) contrast(1.15) saturate(1.05)',
+          opacity: 0.75,
+          mixBlendMode: 'normal',
+        }}
+      />
+      
+      {/* 텍스트 보호 오버레이 */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-1"
+        style={{
+          background: 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.55) 100%)',
         }}
       />
       
