@@ -40,17 +40,16 @@ export default function Home() {
               opacity: 0.45,
               filter: 'brightness(0.32) contrast(1.12) saturate(1.0)',
               mixBlendMode: 'normal',
+              maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
             }}
           />
           
-          {/* 상단 오버레이 */}
+          {/* 보라색 톤 오버레이 */}
           <div 
             className="absolute inset-0"
             style={{
-              background: `
-                linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(26,7,38,0.55) 70%, rgba(13,0,16,0) 85%),
-                linear-gradient(to bottom, rgba(13,0,16,0) 70%, rgba(13,0,16,0.3) 85%, rgba(13,0,16,0.7) 95%, rgba(13,0,16,1) 100%)
-              `,
+              background: 'linear-gradient(to bottom, rgba(30, 0, 30, 0.4) 0%, rgba(30, 0, 30, 0.35) 40%, rgba(26, 7, 38, 0.4) 70%, rgba(30, 0, 30, 0.2) 100%)',
             }}
           />
         </div>
