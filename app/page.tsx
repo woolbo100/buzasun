@@ -35,8 +35,8 @@ export default function Home() {
             backgroundPosition: 'center 58%',
             backgroundSize: '170% auto',
             backgroundRepeat: 'no-repeat',
-            opacity: 0.23,
-            filter: 'brightness(0.22) contrast(1.08) saturate(0.9) blur(2px)',
+            opacity: 0.30,
+            filter: 'brightness(0.22) contrast(1.08) saturate(0.9)',
             mixBlendMode: 'soft-light',
           }}
         />
