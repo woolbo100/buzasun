@@ -35,13 +35,14 @@ export default function Home() {
   style={{
     backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center 65%',
-    backgroundSize: '260% auto',                 // 더 크게 확대해서 지붕 형태 깨기
-    filter: 'brightness(0.22) contrast(1.12) saturate(0.95) blur(6px)', // ✅ blur로 형태 제거
-    opacity: 0.55,                                // ✅ 기운은 느껴지게
-    mixBlendMode: 'soft-light',                   // overlay보다 자연스럽게 묻음
+    backgroundPosition: 'center 58%',
+    backgroundSize: '150% auto',        // 🔥 너무 키우지 말고 형태 살리기
+    filter: 'brightness(0.35) contrast(1.15) saturate(1.05)', // 🔥 선명도 복구
+    opacity: 0.75,                      // 🔥 확실히 보이게
+    mixBlendMode: 'normal',             // 🔥 overlay/soft-light 제거
   }}
 />
+
 
 
   
