@@ -136,7 +136,6 @@ export default function About() {
                 letterSpacing: '0.12em',
                 lineHeight: '1.20',
                 wordBreak: 'keep-all',
-                textShadow: '0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.4)',
               }}
             >
               감이 아닌 이론
