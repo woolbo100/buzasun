@@ -52,17 +52,28 @@ export default function Home() {
           />
         </div>
         
-        {/* 하단 페더링 레이어 (경계선 제거) - 상단 레이어 밖으로 이동 */}
-        <div 
-          className="absolute left-0 right-0 top-[700px] lg:top-[780px] pointer-events-none z-0"
+        {/* SEAM 블렌딩 레이어 (경계선 제거) */}
+        <div
+          className="absolute left-[-15%] right-[-15%] pointer-events-none z-[1]"
           style={{
-            height: '1200px',
+            top: '740px',
+            height: '520px',
+            transform: 'translateY(120px)',
             background: `
-              radial-gradient(ellipse 240% 100% at 50% 0%, rgba(26,7,38,0.6) 0%, rgba(20,6,31,0.5) 30%, rgba(13,0,16,0.4) 60%, rgba(13,0,16,0.2) 85%, transparent 100%),
-              linear-gradient(to bottom, rgba(26,7,38,0.5) 0%, rgba(20,6,31,0.4) 30%, rgba(13,0,16,0.3) 60%, transparent 100%)
+              radial-gradient(ellipse 160% 85% at 50% 0%,
+                rgba(170, 70, 255, 0.28) 0%,
+                rgba(120, 45, 230, 0.18) 35%,
+                rgba(60, 20, 120, 0.10) 55%,
+                rgba(18, 0, 20, 0.00) 78%
+              ),
+              linear-gradient(to bottom,
+                rgba(26, 7, 38, 0.00) 0%,
+                rgba(26, 7, 38, 0.40) 52%,
+                rgba(18, 0, 20, 0.00) 100%
+              )
             `,
-            filter: 'blur(44px)',
-            opacity: 0.95,
+            filter: 'blur(34px)',
+            opacity: 0.9,
             mixBlendMode: 'normal',
           }}
         />
