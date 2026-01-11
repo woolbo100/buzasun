@@ -23,7 +23,7 @@ export default function Hero() {
           backgroundPosition: 'center 58%',
           backgroundRepeat: 'no-repeat',
           filter: 'brightness(0.35) contrast(1.15) saturate(1.05)',
-          opacity: 0.75,
+          opacity: 0.65,
           mixBlendMode: 'normal',
         }}
       />
@@ -44,6 +44,14 @@ export default function Hero() {
         style={{
           background: 'radial-gradient(ellipse at center, rgba(252, 231, 243, 0.08) 0%, rgba(255, 182, 193, 0.04) 40%, transparent 60%)',
           filter: 'blur(40px)',
+        }}
+      />
+      
+      {/* 하단 페이드 연결 레이어 */}
+      <div 
+        className="absolute left-0 right-0 bottom-0 pointer-events-none z-4 h-[260px] md:h-[220px]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(13, 0, 16, 0) 0%, rgba(13, 0, 16, 0.65) 45%, rgba(13, 0, 16, 0.95) 75%, rgba(13, 0, 16, 1) 100%)',
         }}
       />
       
