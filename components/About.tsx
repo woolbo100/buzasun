@@ -136,13 +136,14 @@ export default function About() {
                 letterSpacing: '0.12em',
                 lineHeight: '1.20',
                 wordBreak: 'keep-all',
+                textShadow: '0 0 10px rgba(236, 72, 153, 0.7), 0 0 20px rgba(236, 72, 153, 0.4)',
               }}
             >
-              감이 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.20), 0 0 8px rgba(236, 72, 153, 0.13)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.35s ease-in-out' }}>이론</span>
+              감이 아닌 이론
               <br />
-              직관이 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.20), 0 0 8px rgba(236, 72, 153, 0.13)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.35s ease-in-out' }}>구조</span>
+              직관이 아닌 구조
               <br />
-              위로가 아닌 <span style={{ textShadow: isHovered ? '0 0 5px rgba(236, 72, 153, 0.20), 0 0 8px rgba(236, 72, 153, 0.13)' : '0 0 5px rgba(236, 72, 153, 0.15), 0 0 8px rgba(236, 72, 153, 0.1)', transition: 'text-shadow 0.35s ease-in-out' }}>설계</span>
+              위로가 아닌 설계
             </p>
           </div>
         </Reveal>
