@@ -52,6 +52,14 @@ export default function Home() {
               background: 'linear-gradient(to bottom, rgba(30, 0, 30, 0.4) 0%, rgba(30, 0, 30, 0.35) 40%, rgba(26, 7, 38, 0.4) 70%, rgba(30, 0, 30, 0.2) 100%)',
             }}
           />
+          
+          {/* 비네팅 효과 (양쪽 가장자리 어둡게) */}
+          <div 
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(15, 0, 25, 0.4) 60%, rgba(15, 0, 25, 0.9) 100%)',
+            }}
+          />
         </div>
         
         {/* SEAM 블렌딩 레이어 (경계선 제거) */}
