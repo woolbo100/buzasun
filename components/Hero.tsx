@@ -20,8 +20,8 @@ export default function Hero() {
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 120% 80% at 50% 25%, rgba(255, 255, 255, 0.15) 0%, rgba(240, 230, 255, 0.08) 30%, rgba(200, 180, 255, 0.04) 50%, transparent 70%)',
-          filter: 'blur(80px)',
+          background: 'radial-gradient(ellipse 120% 80% at 50% 25%, rgba(200, 190, 210, 0.05) 0%, rgba(180, 170, 200, 0.03) 30%, rgba(160, 150, 185, 0.015) 50%, transparent 70%)',
+          filter: 'blur(120px)',
           mixBlendMode: 'screen',
         }}
       />
