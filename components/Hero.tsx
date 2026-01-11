@@ -16,6 +16,16 @@ export default function Hero() {
     <section className="relative min-h-fit flex items-center justify-center pt-52 md:pt-60 pb-20 px-4 md:px-6 overflow-hidden" style={{ background: 'transparent' }}>
       <PetalsCanvas color="#fce7f3" density={28} />
       
+      {/* 달빛 효과 (안개 속에 숨은 달빛) */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 120% 80% at 50% 25%, rgba(255, 255, 255, 0.15) 0%, rgba(240, 230, 255, 0.08) 30%, rgba(200, 180, 255, 0.04) 50%, transparent 70%)',
+          filter: 'blur(80px)',
+          mixBlendMode: 'screen',
+        }}
+      />
+      
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         {/* 상단 배지 */}
         <Reveal delayMs={0}>
