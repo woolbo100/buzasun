@@ -14,6 +14,20 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-fit flex items-center justify-center pt-52 md:pt-60 pb-20 px-4 md:px-6 overflow-hidden" style={{ background: 'transparent' }}>
+      {/* 궁궐 배경 레이어 */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: 'url(/image/baekdohwa-palace-bg.png)',
+          backgroundSize: '160%',
+          backgroundPosition: 'center 60%',
+          backgroundRepeat: 'no-repeat',
+          filter: 'brightness(0.18) contrast(1.05) saturate(0.8)',
+          opacity: 0.23,
+          mixBlendMode: 'overlay',
+        }}
+      />
+      
       <PetalsCanvas color="#fce7f3" density={28} />
       
       {/* 중앙 글로우 오라 레이어 */}
