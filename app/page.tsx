@@ -33,9 +33,13 @@ export default function Home() {
           <div 
             className="absolute inset-0"
             style={{
-              backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
-              backgroundPosition: 'center 58%',
-              backgroundSize: '150% auto',
+              background: `
+                linear-gradient(to bottom, rgba(0,0,0,0) 70%, #0d0010 100%),
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('/image/baekdohwa-palace-bg.png')
+              `,
+              backgroundPosition: 'center 58%, center, center 58%',
+              backgroundSize: '150% auto, 150% auto, 150% auto',
               backgroundRepeat: 'no-repeat',
               opacity: 0.45,
               filter: 'brightness(0.32) contrast(1.12) saturate(1.0)',
