@@ -68,9 +68,8 @@ export default function Hero() {
               className="block relative z-10"
               style={{
                 color: '#ffffff',
-                textShadow: '0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 12px rgba(255, 255, 255, 0.15)',
+                textShadow: '0 0 8px rgba(255, 255, 255, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
                 wordBreak: 'keep-all',
-                fontWeight: 700,
               }}
             >
               당신의 연애는
@@ -83,9 +82,8 @@ export default function Hero() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                textShadow: '0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 16px rgba(255, 20, 147, 0.3), 0 0 32px rgba(255, 105, 180, 0.2)',
+                textShadow: '0 0 12px rgba(255, 20, 147, 0.25), 0 0 24px rgba(255, 105, 180, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3)',
                 wordBreak: 'keep-all',
-                fontWeight: 700,
               }}
             >
               타고난 코드부터 다르다
