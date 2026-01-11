@@ -54,26 +54,28 @@ export default function Home() {
         
         {/* SEAM 블렌딩 레이어 (경계선 제거) */}
         <div
-          className="absolute left-[-15%] right-[-15%] pointer-events-none z-[1]"
+          className="absolute left-[-25%] right-[-25%] pointer-events-none z-[1]"
           style={{
-            top: '740px',
-            height: '520px',
-            transform: 'translateY(120px)',
+            top: '700px',
+            height: '680px',
+            transform: 'translateY(160px)',
             background: `
-              radial-gradient(ellipse 160% 85% at 50% 0%,
-                rgba(170, 70, 255, 0.28) 0%,
-                rgba(120, 45, 230, 0.18) 35%,
-                rgba(60, 20, 120, 0.10) 55%,
-                rgba(18, 0, 20, 0.00) 78%
+              radial-gradient(ellipse 200% 100% at 50% 0%,
+                rgba(170, 70, 255, 0.32) 0%,
+                rgba(120, 45, 230, 0.22) 30%,
+                rgba(60, 20, 120, 0.15) 50%,
+                rgba(26, 7, 38, 0.08) 70%,
+                rgba(18, 0, 20, 0.00) 85%
               ),
               linear-gradient(to bottom,
                 rgba(26, 7, 38, 0.00) 0%,
-                rgba(26, 7, 38, 0.40) 52%,
+                rgba(26, 7, 38, 0.45) 45%,
+                rgba(20, 6, 31, 0.35) 65%,
                 rgba(18, 0, 20, 0.00) 100%
               )
             `,
-            filter: 'blur(34px)',
-            opacity: 0.9,
+            filter: 'blur(38px)',
+            opacity: 0.95,
             mixBlendMode: 'normal',
           }}
         />
