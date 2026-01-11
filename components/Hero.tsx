@@ -47,15 +47,25 @@ export default function Hero() {
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <h1 
-            className="font-elegant font-bold mb-8 leading-[1.1]"
+            className="font-elegant font-bold mb-8 leading-[1.1] relative"
             style={{
               fontSize: 'clamp(1.875rem, 6vw, 5rem)',
               letterSpacing: '0.02em',
               wordBreak: 'keep-all',
             }}
           >
+            {/* 은은한 아우라 글로우 배경 */}
+            <div 
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: 'radial-gradient(ellipse 100% 60% at 50% 50%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 200, 220, 0.08) 30%, rgba(255, 150, 200, 0.05) 50%, rgba(255, 100, 180, 0.03) 70%, transparent 100%)',
+                filter: 'blur(60px)',
+                transform: 'translateY(-10%)',
+                zIndex: -1,
+              }}
+            />
             <span 
-              className="block"
+              className="block relative z-10"
               style={{
                 color: '#ffffff',
                 textShadow: '0 0 8px rgba(255, 255, 255, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
@@ -65,7 +75,7 @@ export default function Hero() {
               당신의 연애는
             </span>
             <span 
-              className="block mt-2"
+              className="block mt-2 relative z-10"
               style={{
                 letterSpacing: '0.03em',
                 background: 'linear-gradient(to right, #fff5f8 0%, #ffe0f0 20%, #ffb6d9 40%, #ff69b4 60%, #ff1493 80%, #ff1493 100%)',
