@@ -27,28 +27,30 @@ export default function Home() {
           background: 'linear-gradient(180deg, #0d0010 0%, #14061f 15%, #1a0726 30%, #1d082e 45%, #1a0726 60%, #14061f 90%, #120014 100%)',
         }}
       >
-        {/* 궁궐 이미지 레이어 (디버그: 무조건 보이게) */}
-        <div 
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            opacity: 1,
-            filter: 'none',
-            mixBlendMode: 'normal',
-          }}
-        />
-        
-        {/* 단일 오버레이 (경계선 제거) - 디버그: 일단 숨김 */}
-        <div 
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: 'linear-gradient(180deg, rgba(18,0,20,0.92) 0%, rgba(26,7,38,0.78) 35%, rgba(26,7,38,0.78) 65%, rgba(18,0,20,0.92) 100%)',
-            opacity: 0,
-          }}
-        />
+        {/* 상단 Hero 영역 전용 배경 레이어 */}
+        <div className="absolute inset-x-0 top-0 h-[820px] lg:h-[900px] pointer-events-none z-0">
+          {/* 궁궐 이미지 */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
+              backgroundPosition: 'center 58%',
+              backgroundSize: '150% auto',
+              backgroundRepeat: 'no-repeat',
+              opacity: 0.45,
+              filter: 'brightness(0.32) contrast(1.12) saturate(1.0)',
+              mixBlendMode: 'normal',
+            }}
+          />
+          
+          {/* 상단 오버레이 */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(26,7,38,0.55) 70%, rgba(13,0,16,0) 100%)',
+            }}
+          />
+        </div>
         
         {/* 콘텐츠 */}
         <div className="relative z-10">
