@@ -24,7 +24,7 @@ export default function Home() {
       <div 
         className="relative overflow-hidden"
         style={{ 
-          background: 'linear-gradient(180deg, #0d0010 0%, #14061f 15%, #1a0726 30%, #1d082e 45%, #1a0726 60%, #14061f 90%, #120014 100%)',
+          background: 'linear-gradient(180deg, #0d0010 0%, #12051a 8%, #1a0825 18%, #1f0a2e 28%, #240b35 38%, #1f0a2e 48%, #1a0825 58%, #180724 68%, #150620 78%, #12051a 88%, #0f0316 95%, #0d0010 100%)',
         }}
       >
         {/* 상단 Hero 영역 전용 배경 레이어 */}
@@ -55,7 +55,7 @@ export default function Home() {
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(30, 0, 30, 0.4) 0%, rgba(30, 0, 30, 0.35) 40%, rgba(26, 7, 38, 0.4) 70%, rgba(30, 0, 30, 0.2) 100%)',
+              background: 'linear-gradient(to bottom, rgba(35, 5, 45, 0.45) 0%, rgba(32, 8, 50, 0.38) 25%, rgba(28, 10, 55, 0.35) 45%, rgba(26, 7, 38, 0.42) 65%, rgba(30, 5, 42, 0.28) 85%, rgba(25, 3, 35, 0.15) 100%)',
             }}
           />
           
