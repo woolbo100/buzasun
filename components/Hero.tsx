@@ -58,7 +58,7 @@ export default function Hero() {
             <div 
               className="absolute inset-0 pointer-events-none"
               style={{
-                background: 'radial-gradient(ellipse 100% 60% at 50% 50%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 200, 220, 0.08) 30%, rgba(255, 150, 200, 0.05) 50%, rgba(255, 100, 180, 0.03) 70%, transparent 100%)',
+                background: 'radial-gradient(ellipse 100% 60% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 200, 220, 0.11) 30%, rgba(255, 150, 200, 0.07) 50%, rgba(255, 100, 180, 0.04) 70%, transparent 100%)',
                 filter: 'blur(60px)',
                 transform: 'translateY(-10%)',
                 zIndex: -1,
