@@ -28,11 +28,11 @@ export default function Hero() {
         }}
       />
       
-      {/* 텍스트 보호 오버레이 */}
+      {/* 텍스트 보호 + 하단 페이드 통합 오버레이 */}
       <div 
         className="absolute inset-0 pointer-events-none z-0"
         style={{
-          background: 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.45) 100%)',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(26,7,38,0.45) 65%, rgba(13,0,16,0.75) 85%, rgba(13,0,16,0.5) 100%)',
         }}
       />
       
@@ -44,15 +44,6 @@ export default function Hero() {
         style={{
           background: 'radial-gradient(ellipse at center, rgba(252, 231, 243, 0.08) 0%, rgba(255, 182, 193, 0.04) 40%, transparent 60%)',
           filter: 'blur(40px)',
-        }}
-      />
-      
-      {/* 하단 보라톤 브릿지 레이어 */}
-      <div 
-        className="absolute left-0 right-0 bottom-0 pointer-events-none z-5 h-[280px] md:h-[240px]"
-        style={{
-          background: 'linear-gradient(to bottom, rgba(80, 20, 120, 0) 0%, rgba(80, 20, 120, 0.28) 40%, rgba(26, 7, 38, 0.55) 70%, rgba(13, 0, 16, 0.95) 100%)',
-          filter: 'blur(1.5px)',
         }}
       />
       
