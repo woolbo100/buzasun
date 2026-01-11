@@ -59,7 +59,7 @@ export default function Home() {
         <div
           className="absolute left-[-25%] right-[-25%] pointer-events-none z-[1]"
           style={{
-            top: '680px',
+            top: '800px',
             height: '480px',
             transform: 'translateY(0px)',
             background: `
