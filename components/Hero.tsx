@@ -30,9 +30,9 @@ export default function Hero() {
       
       {/* 텍스트 보호 오버레이 */}
       <div 
-        className="absolute inset-0 pointer-events-none z-1"
+        className="absolute inset-0 pointer-events-none z-0"
         style={{
-          background: 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(13,0,16,0.4) 70%, rgba(13,0,16,0.7) 90%, rgba(13,0,16,1) 100%)',
+          background: 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.45) 100%)',
         }}
       />
       
@@ -47,15 +47,12 @@ export default function Hero() {
         }}
       />
       
-      {/* 하단 페이드 연결 레이어 */}
+      {/* 하단 보라톤 브릿지 레이어 */}
       <div 
-        className="absolute left-0 right-0 bottom-0 pointer-events-none z-4 h-[320px] md:h-[280px]"
+        className="absolute left-0 right-0 bottom-0 pointer-events-none z-5 h-[280px] md:h-[240px]"
         style={{
-          background: `
-            radial-gradient(ellipse 150% 100% at 50% 100%, rgba(13, 0, 16, 0.6) 0%, rgba(13, 0, 16, 0.2) 40%, rgba(13, 0, 16, 0) 70%),
-            linear-gradient(to bottom, rgba(13, 0, 16, 0) 0%, rgba(13, 0, 16, 0.4) 35%, rgba(13, 0, 16, 0.75) 60%, rgba(13, 0, 16, 0.95) 80%, rgba(13, 0, 16, 1) 100%)
-          `,
-          filter: 'blur(3px)',
+          background: 'linear-gradient(to bottom, rgba(80, 20, 120, 0) 0%, rgba(80, 20, 120, 0.28) 40%, rgba(26, 7, 38, 0.55) 70%, rgba(13, 0, 16, 0.95) 100%)',
+          filter: 'blur(1.5px)',
         }}
       />
       
