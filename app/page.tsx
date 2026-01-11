@@ -50,22 +50,22 @@ export default function Home() {
               background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(26,7,38,0.55) 70%, rgba(13,0,16,0) 100%)',
             }}
           />
-          
-          {/* 하단 페더링 레이어 (경계선 제거) */}
-          <div 
-            className="absolute left-0 right-0 bottom-[-400px] pointer-events-none"
-            style={{
-              height: '1000px',
-              background: `
-                radial-gradient(ellipse 200% 100% at 50% 20%, rgba(26,7,38,0.6) 0%, rgba(20,6,31,0.5) 30%, rgba(13,0,16,0.4) 60%, rgba(13,0,16,0.2) 85%, transparent 100%),
-                linear-gradient(to bottom, rgba(26,7,38,0.5) 0%, rgba(20,6,31,0.4) 30%, rgba(13,0,16,0.3) 60%, transparent 100%)
-              `,
-              filter: 'blur(40px)',
-              opacity: 0.95,
-              mixBlendMode: 'normal',
-            }}
-          />
         </div>
+        
+        {/* 하단 페더링 레이어 (경계선 제거) - 상단 레이어 밖으로 이동 */}
+        <div 
+          className="absolute left-0 right-0 top-[740px] lg:top-[820px] pointer-events-none z-0"
+          style={{
+            height: '1000px',
+            background: `
+              radial-gradient(ellipse 200% 100% at 50% 0%, rgba(26,7,38,0.6) 0%, rgba(20,6,31,0.5) 30%, rgba(13,0,16,0.4) 60%, rgba(13,0,16,0.2) 85%, transparent 100%),
+              linear-gradient(to bottom, rgba(26,7,38,0.5) 0%, rgba(20,6,31,0.4) 30%, rgba(13,0,16,0.3) 60%, transparent 100%)
+            `,
+            filter: 'blur(40px)',
+            opacity: 0.95,
+            mixBlendMode: 'normal',
+          }}
+        />
         
         {/* 콘텐츠 */}
         <div className="relative z-10">
