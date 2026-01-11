@@ -31,18 +31,19 @@ export default function Home() {
 >
   {/* 궁궐 배경(보조 레이어) */}
   <div
-    className="absolute inset-0 pointer-events-none z-0"
-    style={{
-      backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center 60%',
-      backgroundSize: '160% auto',
-      filter: 'brightness(0.28) contrast(1.1) saturate(0.9)',
-opacity: 0.35,
-mixBlendMode: 'overlay',
+  className="absolute inset-0 pointer-events-none z-0"
+  style={{
+    backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center 62%',
+    backgroundSize: '220% auto',
+    filter: 'brightness(0.24) contrast(1.12) saturate(0.95)',
+    opacity: 0.42,
+    mixBlendMode: 'soft-light',
+  }}
+/>
 
-    }}
-  />
+  
 
   {/* 콘텐츠 */}
   <div className="relative z-10">
