@@ -32,7 +32,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 pointer-events-none z-1"
         style={{
-          background: 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.55) 100%)',
+          background: 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(13,0,16,0.4) 70%, rgba(13,0,16,0.7) 90%, rgba(13,0,16,1) 100%)',
         }}
       />
       
@@ -49,9 +49,13 @@ export default function Hero() {
       
       {/* 하단 페이드 연결 레이어 */}
       <div 
-        className="absolute left-0 right-0 bottom-0 pointer-events-none z-4 h-[260px] md:h-[220px]"
+        className="absolute left-0 right-0 bottom-0 pointer-events-none z-4 h-[320px] md:h-[280px]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(13, 0, 16, 0) 0%, rgba(13, 0, 16, 0.65) 45%, rgba(13, 0, 16, 0.95) 75%, rgba(13, 0, 16, 1) 100%)',
+          background: `
+            radial-gradient(ellipse 150% 100% at 50% 100%, rgba(13, 0, 16, 0.6) 0%, rgba(13, 0, 16, 0.2) 40%, rgba(13, 0, 16, 0) 70%),
+            linear-gradient(to bottom, rgba(13, 0, 16, 0) 0%, rgba(13, 0, 16, 0.4) 35%, rgba(13, 0, 16, 0.75) 60%, rgba(13, 0, 16, 0.95) 80%, rgba(13, 0, 16, 1) 100%)
+          `,
+          filter: 'blur(3px)',
         }}
       />
       
