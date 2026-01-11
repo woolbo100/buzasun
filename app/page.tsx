@@ -47,7 +47,10 @@ export default function Home() {
           <div 
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(26,7,38,0.55) 70%, rgba(13,0,16,0) 100%)',
+              background: `
+                linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 40%, rgba(26,7,38,0.55) 70%, rgba(13,0,16,0) 85%),
+                linear-gradient(to bottom, rgba(13,0,16,0) 70%, rgba(13,0,16,0.3) 85%, rgba(13,0,16,0.7) 95%, rgba(13,0,16,1) 100%)
+              `,
             }}
           />
         </div>
