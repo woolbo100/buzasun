@@ -16,15 +16,6 @@ export default function Hero() {
     <section className="relative min-h-fit flex items-center justify-center pt-52 md:pt-60 pb-20 px-4 md:px-6 overflow-hidden" style={{ background: 'transparent' }}>
       <PetalsCanvas color="#fce7f3" density={28} />
       
-      {/* 중앙 글로우 오라 레이어 */}
-      <div 
-        className="absolute inset-0 flex items-center justify-center pointer-events-none z-5"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(252, 231, 243, 0.08) 0%, rgba(255, 182, 193, 0.04) 40%, transparent 60%)',
-          filter: 'blur(40px)',
-        }}
-      />
-      
       <div className="container mx-auto max-w-4xl text-center relative z-10">
         {/* 상단 배지 */}
         <Reveal delayMs={0}>
