@@ -33,7 +33,7 @@ export default function GlobalBackground({
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* 1. 기본 이미지 레이어 */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
             backgroundImage: `url('${src}')`,
             opacity: 0.5,
