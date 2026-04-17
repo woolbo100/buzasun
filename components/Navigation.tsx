@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import NorigaeElement from './NorigaeElement'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -250,7 +251,7 @@ export default function Navigation() {
 
           {/* 오른쪽 아이콘들 */}
           <div className="flex items-center space-x-4">
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-4 relative">
               <Link href="/cart" className="text-bd-gray hover:text-bd-ivory transition-all duration-300 relative group">
                 <i className="fas fa-shopping-cart text-lg"></i>
                 <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px var(--accent-gold-soft)' }} />
@@ -259,6 +260,11 @@ export default function Navigation() {
                 <i className="fas fa-user text-lg"></i>
                 <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px var(--accent-gold-soft)' }} />
               </Link>
+
+              {/* 오른쪽 헤더 바로 밑 노리개 장식 */}
+              <div className="absolute right-0 top-full pt-2 mr-4 hidden md:block pointer-events-none">
+                <NorigaeElement src="/image/nlg.png" size={80} className="drop-shadow-2xl" />
+              </div>
             </div>
 
             {/* 모바일 햄버거 메뉴 버튼 */}

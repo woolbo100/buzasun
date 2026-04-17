@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Reveal from './Reveal'
-import NorigaeElement from './NorigaeElement'
+import Reveal from './Reveal'
 
 export default function Hero() {
   const scrollToContent = () => {
@@ -16,8 +16,6 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-4 md:px-6 overflow-hidden">
       {/* 텍스트 가독성을 위한 메인 카드 */}
       <div className="gungjung-glass container mx-auto max-w-5xl py-16 md:py-24 px-8 md:px-16 text-center relative z-10">
-        {/* 장식용 노리개 */}
-        <NorigaeElement className="absolute -top-10 -right-4 hidden md:block" size={100} />
 
         {/* 상단 배지 */}
         <Reveal delayMs={0}>
