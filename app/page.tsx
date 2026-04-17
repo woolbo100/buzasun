@@ -10,6 +10,7 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import AdminModal from '@/components/AdminModal'
 import BookmarkTassel from '@/components/BookmarkTassel'
+import NorigaeElement from '@/components/NorigaeElement'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import PetalsCanvas from '@/components/PetalsCanvas'
 
@@ -19,8 +20,18 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
       <Navigation />
-      
-      {/* 전체 통합 궁궐 배경 및 오버레이 */}
+
+      {/* 헤더 바로 오른쪽 아래 배치되는 고정 노리개 (nlg) */}
+      <div 
+        className="fixed top-0 right-4 md:right-12 z-[60] pointer-events-none hidden sm:block"
+        style={{ 
+          animation: 'swingGentle 4s ease-in-out infinite',
+          transformOrigin: 'top center',
+          filter: 'drop-shadow(0 0 20px rgba(184, 150, 74, 0.4))'
+        }}
+      >
+        <NorigaeElement src="/image/nlg.png" size={130} />
+      </div>
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* 궁궐 통배경 이미지 */}
         <div 
