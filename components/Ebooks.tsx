@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Reveal from './Reveal'
-import NorigaeElement from './NorigaeElement'
+import Reveal from './Reveal'
 
 const ebooks = [
   {
@@ -106,8 +106,6 @@ export default function Ebooks() {
                     className="group block h-full w-full"
                   >
                     <div className="gungjung-glass h-full p-8 flex flex-col relative overflow-hidden">
-                      {/* 노리개 장식 포인트 */}
-                      <NorigaeElement className="absolute -top-4 -right-4 opacity-30 group-hover:opacity-60 transition-opacity" size={60} />
                       
                       {/* 카테고리 태그 */}
                       <div className="flex items-center gap-2 mb-6 flex-wrap">
