@@ -28,7 +28,7 @@ export default function Home() {
           style={{ 
             animation: 'swingGentle 4s ease-in-out infinite',
             transformOrigin: 'top center',
-            filter: 'drop-shadow(0 0 20px rgba(216, 191, 163, 0.4))'
+            filter: 'drop-shadow(0 0 20px rgba(212, 178, 167, 0.4))'
           }}
         >
           <NorigaeElement src="/image/nlg.png" size={180} />

@@ -20,7 +20,7 @@ export default function NorigaeElement({
         width: size,
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.filter = 'brightness(1.2) drop-shadow(0 0 25px rgba(212, 175, 55, 0.6))'
+        e.currentTarget.style.filter = 'brightness(1.15) drop-shadow(0 0 30px rgba(212, 178, 167, 0.65))'
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.filter = ''
