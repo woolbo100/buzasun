@@ -18,14 +18,14 @@ export default function Hero() {
       <div className="gungjung-glass container mx-auto max-w-5xl py-16 md:py-24 px-8 md:px-16 text-center relative z-10">
         {/* 원래 위치에 새로운 노리개(nlg) 배치 - 상시 흔들림 효과 포함 */}
         <div 
-          className="absolute -top-12 -right-6 hidden md:block pointer-events-none"
+          className="absolute -top-12 -right-8 hidden md:block pointer-events-none"
           style={{ 
             animation: 'swingGentle 4s ease-in-out infinite',
             transformOrigin: 'top center',
-            filter: 'drop-shadow(0 0 15px rgba(184, 150, 74, 0.3))'
+            filter: 'drop-shadow(0 0 15px rgba(184, 150, 74, 0.4))'
           }}
         >
-          <NorigaeElement src="/image/nlg.png" size={110} />
+          <NorigaeElement src="/image/nlg.png" size={90} />
         </div>
 
         {/* 상단 배지 */}

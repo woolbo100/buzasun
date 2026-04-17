@@ -19,7 +19,6 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
       <Navigation />
-      <BookmarkTassel />
       
       {/* 전체 통합 궁궐 배경 및 오버레이 */}
       <div className="fixed inset-0 z-0 pointer-events-none">
