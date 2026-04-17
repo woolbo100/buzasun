@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import Reveal from './Reveal'
-import Reveal from './Reveal'
 
 const ebooks = [
   {
