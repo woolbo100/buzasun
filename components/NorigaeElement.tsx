@@ -14,7 +14,18 @@ export default function NorigaeElement({
   src = "/image/nlg.png" 
 }: NorigaeElementProps) {
   return (
-    <div className={`pointer-events-auto norigae-hover ${className}`} style={{ width: size }}>
+    <div 
+      className={`pointer-events-auto norigae-hover transition-all duration-500 cursor-pointer ${className}`} 
+      style={{ 
+        width: size,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.filter = 'brightness(1.2) drop-shadow(0 0 25px rgba(212, 175, 55, 0.6))'
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.filter = ''
+      }}
+    >
       <Image
         src={src}
         alt="노리개 장식"

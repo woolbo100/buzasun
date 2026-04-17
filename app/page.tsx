@@ -30,7 +30,7 @@ export default function Home() {
           filter: 'drop-shadow(0 0 20px rgba(184, 150, 74, 0.4))'
         }}
       >
-        <NorigaeElement src="/image/nlg.png" size={130} />
+        <NorigaeElement src="/image/nlg.png" size={180} />
       </div>
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* 궁궐 통배경 이미지 */}
