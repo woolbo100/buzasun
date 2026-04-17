@@ -10,9 +10,9 @@ export default function CounselingPage() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen pt-16 px-4 md:px-6 py-16 md:py-24">
+      <main className="min-h-screen pt-32 px-4 md:px-6 py-16 md:py-24 bg-[var(--primary-purple)]">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-elegant font-bold text-bd-ivory mb-6">
+          <h1 className="text-4xl md:text-5xl font-elegant font-bold mb-6 gradient-text">
             상담 안내
           </h1>
           <p className="text-lg md:text-xl text-bd-gray mb-8 leading-relaxed">
@@ -28,10 +28,7 @@ export default function CounselingPage() {
             href="https://forms.gle/your-form-link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 rounded-lg font-semibold text-white transition-colors hover:bg-bd-pink2"
-            style={{
-              background: '#ff1493',
-            }}
+            className="btn-primary inline-flex items-center justify-center px-10 py-4 rounded-xl font-elegant font-bold text-lg transition-all"
           >
             상담 예약하기
           </a>

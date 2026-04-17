@@ -44,63 +44,21 @@ export default function Projects() {
     >
       <div className="container mx-auto max-w-6xl">
         <Reveal delayMs={100}>
-          <h2 
-            className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-center mb-16"
-            style={{
-              color: '#f7f1ff',
-              letterSpacing: '0.02em',
-              lineHeight: 'clamp(1.15, 1.25, 1.25)',
-            }}
-          >
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-center mb-16 gradient-text">
             우리가 설계하는 영역
           </h2>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <Reveal key={index} delayMs={200 + index * 100}>
-              <div 
-                className="p-6 rounded-lg transition-all duration-300"
-                style={{ 
-                  background: 'rgba(26, 6, 38, 0.3)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  backdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
-                  e.currentTarget.style.background = 'rgba(26, 6, 38, 0.4)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)'
-                  e.currentTarget.style.background = 'rgba(26, 6, 38, 0.3)'
-                }}
-              >
-                <div 
-                  className="text-3xl mb-4" 
-                  style={{ 
-                    color: 'rgba(255, 255, 255, 0.7)',
-                  }}
-                >
+              <div className="gungjung-glass p-8 h-full transition-all duration-500 group">
+                <div className="text-3xl mb-6 text-[var(--accent-gold)] opacity-80 group-hover:opacity-100 transition-opacity">
                   <i className={project.icon}></i>
                 </div>
-                <h3 
-                  className="text-xl md:text-2xl font-semibold mb-4"
-                  style={{
-                    color: '#f7f1ff',
-                    letterSpacing: '0.02em',
-                  }}
-                >
+                <h3 className="text-xl md:text-2xl font-elegant font-bold mb-4 text-bd-ivory group-hover:text-[var(--accent-gold)] transition-colors">
                   {project.title}
                 </h3>
-                <p 
-                  className="text-sm md:text-base leading-relaxed"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.7)',
-                    lineHeight: '1.7',
-                    wordBreak: 'keep-all',
-                    whiteSpace: 'pre-line',
-                  }}
-                >
+                <p className="text-sm md:text-base leading-relaxed text-bd-gray group-hover:text-bd-ivory transition-colors whitespace-pre-line">
                   {project.description}
                 </p>
               </div>
