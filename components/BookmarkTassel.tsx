@@ -77,7 +77,7 @@ export default function BookmarkTassel() {
               ? 'drop-shadow(0 0 12px var(--accent-gold-soft)) brightness(1.05)' 
               : isBookmarked
               ? 'drop-shadow(0 0 6px var(--accent-gold-soft))'
-              : 'drop-shadow(0 0 4px rgba(212, 175, 55, 0.15))',
+              : 'drop-shadow(0 0 4px rgba(212, 178, 167, 0.15))',
             transition: 'filter 0.3s ease-out',
             transformOrigin: 'center top',
             animation: hasAnimated 
@@ -170,7 +170,7 @@ export default function BookmarkTassel() {
                 <feColorMatrix
                   in="blur"
                   type="matrix"
-                  values="0.72 0 0 0 0 0 0.59 0 0 0 0 0 0.29 0 0 0 0 0 0.6 0"
+                  values="0.831 0 0 0 0 0 0.698 0 0 0 0 0 0.655 0 0 0 0 0 0.6 0"
                   result="goldEdge"
                 />
                 <feMerge>
@@ -201,7 +201,7 @@ export default function BookmarkTassel() {
                 <feColorMatrix
                   in="blur"
                   type="matrix"
-                  values="0.72 0 0 0 0 0 0.59 0 0 0 0 0 0.29 0 0 0 0 0 0.7 0"
+                  values="0.831 0 0 0 0 0 0.698 0 0 0 0 0 0.655 0 0 0 0 0 0.7 0"
                   result="softGlow"
                 />
                 <feMerge>
@@ -269,7 +269,7 @@ export default function BookmarkTassel() {
                   ? 'drop-shadow(0 0 16px rgba(245, 230, 218, 0.4)) drop-shadow(0 0 24px var(--accent-gold-soft))' 
                   : isBookmarked
                   ? 'drop-shadow(0 0 10px var(--accent-gold-soft))'
-                  : 'drop-shadow(0 0 4px rgba(184, 150, 74, 0.15))',
+                  : 'drop-shadow(0 0 4px rgba(212, 178, 167, 0.15))',
                 opacity: isClicked ? 1.1 : isHovered ? 1 : isBookmarked ? 0.98 : 0.92,
               }}
               transform="translate(30 90) scale(0.28) translate(-100 -100)"
@@ -297,9 +297,15 @@ export default function BookmarkTassel() {
                   />
                   {/* 가장자리 핑크 라인 - 소프트 글로우 */}
                   <path
-                    d="M 0 -70 C 20 -70, 38 -48, 34 -28 C 30 -10, 14 8, 0 18 C -14 8, -30 -10, -34 -28 C -38 -48, -20 -70, 0 -70 Z"
+                    d="
+                      M 0 -70
+                      C 20 -70, 38 -48, 34 -28
+                      C 30 -10, 14 8, 0 18
+                      C -14 8, -30 -10, -34 -28
+                      C -38 -48, -20 -70, 0 -70
+                      Z"
                     fill="none"
-                    stroke="var(--accent-gold)"
+                    stroke="#D4B2A7"
                     strokeWidth="1.8"
                     opacity="0.85"
                     filter="url(#edgeGlowTassel)"

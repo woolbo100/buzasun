@@ -56,7 +56,7 @@ export default function Navigation() {
       }`}
       style={{
         boxShadow: scrolled 
-          ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(184, 150, 74, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+          ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(216, 191, 163, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           : 'none',
       }}
     >
@@ -78,13 +78,13 @@ export default function Navigation() {
             href="/" 
             className="flex items-center gap-2.5 group/logo transition-all duration-300"
             style={{
-              filter: 'drop-shadow(0 0 8px rgba(212, 175, 55, 0.2))',
+              filter: 'drop-shadow(0 0 8px rgba(216, 191, 163, 0.2))',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.filter = 'drop-shadow(0 0 16px rgba(212, 175, 55, 0.4)) brightness(1.1)'
+              e.currentTarget.style.filter = 'drop-shadow(0 0 16px rgba(216, 191, 163, 0.4)) brightness(1.1)'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(212, 175, 55, 0.2))'
+              e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(216, 191, 163, 0.2))'
             }}
           >
             {/* 핫핑크 꽃모양 심볼 */}
@@ -94,7 +94,7 @@ export default function Navigation() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               style={{
-                filter: 'drop-shadow(0 0 8px rgba(212, 175, 55, 0.4))',
+                filter: 'drop-shadow(0 0 8px rgba(216, 191, 163, 0.4))',
               }}
             >
               <path 
@@ -135,7 +135,7 @@ export default function Navigation() {
               </span>
               <span style={{ 
                 color: 'var(--accent-gold)',
-                textShadow: '0 0 20px rgba(212, 175, 55, 0.4)',
+                textShadow: '0 0 20px rgba(216, 191, 163, 0.4)',
               }}>
                 {' '}매력학당
               </span>
@@ -277,7 +277,7 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div 
             className="lg:hidden border-t transition-all duration-300"
-            style={{ borderColor: scrolled ? 'rgba(184, 150, 74, 0.2)' : 'rgba(184, 150, 74, 0.1)' }}
+            style={{ borderColor: scrolled ? 'rgba(216, 191, 163, 0.2)' : 'rgba(216, 191, 163, 0.1)' }}
           >
             <div className="py-4 space-y-1">
               <Link 
@@ -357,7 +357,7 @@ export default function Navigation() {
               
               <div 
                 className="flex items-center space-x-4 px-4 py-2 border-t mx-2 mt-2" 
-                style={{ borderColor: scrolled ? 'rgba(184, 150, 74, 0.2)' : 'rgba(184, 150, 74, 0.1)' }}
+                style={{ borderColor: scrolled ? 'rgba(216, 191, 163, 0.2)' : 'rgba(216, 191, 163, 0.1)' }}
               >
                 <Link 
                   href="/cart" 

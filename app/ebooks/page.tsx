@@ -1,6 +1,6 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import Link from 'next/link'
+import GlobalBackground from '@/components/GlobalBackground'
 
 export const metadata = {
   title: '시크릿 비법서 | 백도화 매력학당',
@@ -27,55 +27,62 @@ export default function EbooksPage() {
   ]
 
   return (
-    <>
-      <Navigation />
-      <main className="min-h-screen pt-32 px-4 md:px-6 py-16 md:py-24 bg-[var(--primary-purple)]">
-        <div className="container mx-auto max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-elegant font-bold mb-6 gradient-text">
-            시크릿 비법서
-          </h1>
-          <p className="text-lg md:text-xl text-bd-gray mb-10 leading-relaxed">
-            연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비법서를 만나보세요.
-            선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와 풍요로운 삶을 만들어가세요.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {ebooks.map((ebook, index) => (
-              <div
-                key={index}
-                className="gungjung-glass p-8 flex flex-col group transition-all duration-500 hover:-translate-y-1"
+    <main className="relative min-h-screen">
+      <GlobalBackground src="/image/main3.png">
+        <Navigation />
+        
+        <div className="pt-32 px-4 md:px-6 py-16 md:py-24">
+          <div className="container mx-auto max-w-4xl relative z-10">
+            {/* Rule 5: 가독성과 고급감을 위한 궁중유리 카드 적용 */}
+            <div className="gungjung-glass p-8 md:p-12 mb-12">
+              <h1 className="text-4xl md:text-5xl font-elegant font-bold mb-8 gradient-text">
+                시크릿 비법서
+              </h1>
+              <p className="text-lg md:text-xl text-[#EDE6DA] leading-relaxed opacity-90">
+                연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비법서를 만나보세요.<br />
+                선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와 풍요로운 삶을 만들어가세요.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {ebooks.map((ebook, index) => (
+                <div
+                  key={index}
+                  className="gungjung-glass p-8 flex flex-col group transition-all duration-500 hover:-translate-y-1"
+                >
+                  <h2 className="text-2xl font-elegant font-bold text-[#EDE6DA] mb-4 group-hover:text-[var(--accent-gold)] transition-colors">
+                    {ebook.title}
+                  </h2>
+                  <p className="text-[#EDE6DA] opacity-60 text-base leading-relaxed group-hover:opacity-100 transition-opacity">
+                    {ebook.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mb-16">
+              <a
+                href="https://payment-link.com/ebooks"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center justify-center px-12 py-5 rounded-xl font-elegant font-bold text-lg transition-all"
               >
-                <h2 className="text-2xl font-elegant font-bold text-bd-ivory mb-4 group-hover:text-[var(--accent-gold)] transition-colors">
-                  {ebook.title}
-                </h2>
-                <p className="text-bd-gray text-base leading-relaxed group-hover:text-bd-white transition-colors">
-                  {ebook.description}
-                </p>
+                시크릿 비법서 구매하기
+              </a>
+            </div>
+
+            <div className="gungjung-glass p-8 opacity-90 border-dashed border-opacity-30">
+              <h3 className="text-bd-white font-elegant font-bold mb-4">결제 완료 후 안내</h3>
+              <div className="space-y-2 text-[#EDE6DA] opacity-70">
+                <p>• 결제가 완료되면 이메일로 시크릿 비법서 다운로드 링크가 발송됩니다.</p>
+                <p>• 다운로드 링크는 구매 후 7일간 유효합니다.</p>
               </div>
-            ))}
-          </div>
-
-          <a
-            href="https://payment-link.com/ebooks"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary inline-flex items-center justify-center px-10 py-5 rounded-xl font-elegant font-bold text-lg transition-all mb-10"
-          >
-            시크릿 비법서 구매하기
-          </a>
-
-          <div className="gungjung-glass p-8 opacity-90">
-            <p className="text-bd-gray leading-relaxed">
-              <strong className="text-bd-ivory font-elegant">결제 완료 후 안내</strong>
-              <br />
-              결제가 완료되면 이메일로 시크릿 비법서 다운로드 링크가 발송됩니다.
-              <br />
-              다운로드 링크는 구매 후 7일간 유효합니다.
-            </p>
+            </div>
           </div>
         </div>
-      </main>
-      <Footer />
-    </>
+
+        <Footer />
+      </GlobalBackground>
+    </main>
   )
 }

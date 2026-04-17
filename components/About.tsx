@@ -54,7 +54,7 @@ export default function About() {
               outlineGold={true}
             />
             
-            <p className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-[#B8964A] leading-tight tracking-wider">
+            <p className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-[var(--accent-gold)] leading-tight tracking-wider">
               감이 아닌 이론<br />
               직관이 아닌 구조<br />
               위로가 아닌 설계
@@ -66,19 +66,19 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              icon: <Brain size={40} className="text-[#B8964A] mb-6" />,
+              icon: <Brain size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
               title: '내면 설계',
               subtitle: 'Inner Design',
               items: ['심리상담', '연애관계심리', 'NLP기법', '최면심리']
             },
             {
-              icon: <Compass size={40} className="text-[#B8964A] mb-6" />,
+              icon: <Compass size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
               title: '선천코드 분석',
               subtitle: 'Code Analyzing',
               items: ['명리심리', '타로심리', '풍수학, 성명학', '동양철학']
             },
             {
-              icon: <Building2 size={40} className="text-[#B8964A] mb-6" />,
+              icon: <Building2 size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
               title: '미래 설계',
               subtitle: 'Future Architect',
               items: ['AI 콘텐츠 제작', '퍼스널 브래딩', '디지털 자아 설계', '뇌과학 기반 설계']
@@ -88,7 +88,7 @@ export default function About() {
               <div 
                 className="p-10 h-full text-center flex flex-col items-center"
                 style={{
-                  border: `1px solid ${isHovered ? 'var(--accent-gold)' : 'rgba(184, 150, 74, 0.2)'}`,
+                  border: `1px solid ${isHovered ? 'var(--accent-gold)' : 'rgba(216, 191, 163, 0.2)'}`,
                   borderRadius: '16px',
                   background: 'transparent',
                   transition: 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)',
@@ -103,7 +103,7 @@ export default function About() {
                 <h3 className="text-2xl font-elegant font-bold mb-2 text-[#F5F5F5]">
                   {section.title}
                 </h3>
-                <p className="text-xs tracking-widest text-[#B8964A] mb-8 opacity-70 uppercase">
+                <p className="text-xs tracking-widest text-[var(--accent-gold)] mb-8 opacity-70 uppercase">
                   {section.subtitle}
                 </p>
                 <div className="space-y-3 text-sm text-[#EDE6DA] opacity-80">

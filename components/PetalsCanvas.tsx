@@ -90,8 +90,8 @@ export default function PetalsCanvas({
       const baseAlpha = p.alpha * 0.6; // 전체적으로 더 투명하게
       gradient.addColorStop(0, `rgba(237, 230, 218, ${baseAlpha})`); // 아이보리
       gradient.addColorStop(0.3, `rgba(197, 139, 160, ${baseAlpha * 0.7})`); // 더스티 로즈
-      gradient.addColorStop(0.7, `rgba(184, 150, 74, ${baseAlpha * 0.4})`); // 앤틱 골드
-      gradient.addColorStop(1, 'rgba(184, 150, 74, 0)');
+      gradient.addColorStop(0.7, `rgba(212, 178, 167, ${baseAlpha * 0.4})`); // 로즈 샴페인 골드
+      gradient.addColorStop(1, 'rgba(212, 178, 167, 0)');
 
       ctx.globalAlpha = 1;
       ctx.fillStyle = gradient;

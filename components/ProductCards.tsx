@@ -24,8 +24,8 @@ export default function ProductCards() {
                     <div
                       className="rounded-full p-[1px]"
                       style={{
-                        background: 'linear-gradient(135deg, var(--accent-gold), #8A6D3B)',
-                        boxShadow: '0 2px 12px rgba(184, 150, 74, 0.15)',
+                        background: 'linear-gradient(135deg, var(--accent-gold), #D4B2A7)',
+                        boxShadow: '0 2px 12px rgba(212, 178, 167, 0.15)',
                       }}
                     >
                       <p 

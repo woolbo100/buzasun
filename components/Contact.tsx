@@ -50,9 +50,9 @@ export default function Contact() {
                 <div className="gold-divider mb-8 max-w-[100px] mx-auto" />
 
                 <p className="text-xl md:text-2xl font-elegant text-[#EDE6DA] leading-relaxed">
-                  <span className="text-[#B8964A] font-bold">선천코드</span>를 이해하면<br />
-                  <span className="text-[#B8964A] font-bold">반복되던 연애</span>는 멈추고<br />
-                  <span className="text-[#B8964A] font-bold">만나는 사람</span>이 달라집니다
+                  <span className="text-[var(--accent-gold)] font-bold">선천코드</span>를 이해하면<br />
+                  <span className="text-[var(--accent-gold)] font-bold">반복되던 연애</span>는 멈추고<br />
+                  <span className="text-[var(--accent-gold)] font-bold">만나는 사람</span>이 달라집니다
                 </p>
               </div>
             </div>
@@ -106,15 +106,15 @@ function ContactForm() {
                       onClick={() => toggleFAQ(index)}
                       className="w-full px-6 py-5 text-left flex items-center justify-between group"
                     >
-                      <span className="font-medium text-[#EDE6DA] group-hover:text-[#B8964A] transition-colors">
+                      <span className="font-medium text-[#EDE6DA] group-hover:text-[var(--accent-gold)] transition-colors">
                         {faq.question}
                       </span>
-                      <span className={`transform transition-transform duration-300 text-[#B8964A] ${openIndex === index ? 'rotate-180' : ''}`}>
+                      <span className={`transform transition-transform duration-300 text-[var(--accent-gold)] ${openIndex === index ? 'rotate-180' : ''}`}>
                         ▼
                       </span>
                     </button>
                     {openIndex === index && (
-                      <div className="px-6 pb-6 text-sm md:text-base text-[#EDE6DA] opacity-70 leading-relaxed border-t border-[rgba(184,150,74,0.15)] pt-4">
+                      <div className="px-6 pb-6 text-sm md:text-base text-[#EDE6DA] opacity-70 leading-relaxed border-t border-[rgba(216,191,163,0.15)] pt-4">
                         {faq.answer}
                       </div>
                     )}
@@ -128,14 +128,14 @@ function ContactForm() {
           <Reveal delayMs={300}>
             <div className="gungjung-glass p-8 md:p-12">
               <h3 className="text-2xl font-elegant font-bold mb-2 text-[#F5F5F5]">문의 메일</h3>
-              <p className="text-sm text-[#B8964A] opacity-60 mb-10">연애 상담이 아닌, 분석 리포트 관련 문의입니다.</p>
+              <p className="text-sm text-[var(--accent-gold)] opacity-60 mb-10">연애 상담이 아닌, 분석 리포트 관련 문의입니다.</p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-xs uppercase tracking-widest text-[#EDE6DA] opacity-50 mb-2">성함</label>
                   <input 
                     type="text" 
-                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(184,150,74,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[#B8964A] transition-colors placeholder:text-white/20"
+                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(216,191,163,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[var(--accent-gold)] transition-colors placeholder:text-white/20"
                     placeholder="성함을 입력해주세요"
                     required
                   />
@@ -144,7 +144,7 @@ function ContactForm() {
                   <label className="block text-xs uppercase tracking-widest text-[#EDE6DA] opacity-50 mb-2">이메일</label>
                   <input 
                     type="email" 
-                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(184,150,74,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[#B8964A] transition-colors placeholder:text-white/20"
+                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(216,191,163,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[var(--accent-gold)] transition-colors placeholder:text-white/20"
                     placeholder="이메일을 입력해주세요"
                     required
                   />
@@ -153,14 +153,14 @@ function ContactForm() {
                   <label className="block text-xs uppercase tracking-widest text-[#EDE6DA] opacity-50 mb-2">내용</label>
                   <textarea 
                     rows={5}
-                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(184,150,74,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[#B8964A] transition-colors resize-none placeholder:text-white/20"
+                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(216,191,163,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[var(--accent-gold)] transition-colors resize-none placeholder:text-white/20"
                     placeholder="문의하실 내용을 입력해주세요"
                     required
                   ></textarea>
                 </div>
                 <button 
                   type="submit"
-                  className="w-full py-4 bg-[#3B0F1B] border border-[#B8964A] text-[#B8964A] font-bold tracking-widest hover:bg-[#B8964A] hover:text-[#1A0F2E] transition-all duration-300"
+                  className="w-full py-4 bg-[#3B0F1B] border border-[var(--accent-gold)] text-[var(--accent-gold)] font-bold tracking-widest hover:bg-[var(--accent-gold)] hover:text-[#1A0F2E] transition-all duration-300"
                 >
                   보내기
                 </button>

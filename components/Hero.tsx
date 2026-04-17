@@ -24,7 +24,7 @@ export default function Hero() {
               className="inline-block px-6 py-2 rounded-full text-sm font-medium"
               style={{
                 background: 'rgba(59, 15, 27, 0.5)', /* 버건디 */
-                border: '1px solid rgba(184, 150, 74, 0.3)',
+                border: '1px solid rgba(216, 191, 163, 0.3)',
                 color: 'var(--text-ivory)',
                 letterSpacing: '0.1em',
               }}
@@ -49,7 +49,7 @@ export default function Hero() {
             <span 
               style={{
                 color: 'var(--accent-gold)',
-                textShadow: '0 0 15px rgba(184, 150, 74, 0.2)',
+                textShadow: '0 0 15px rgba(216, 191, 163, 0.2)',
               }}
             >
               타고난 코드부터 다르다
@@ -84,7 +84,7 @@ export default function Hero() {
               className="group relative px-12 py-5 rounded-lg font-semibold text-white overflow-hidden transition-all duration-500"
               style={{
                 background: 'linear-gradient(135deg, var(--primary-burgundy) 0%, #2A0A14 100%)',
-                border: '1px solid rgba(184, 150, 74, 0.4)',
+                border: '1px solid rgba(216, 191, 163, 0.4)',
                 boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
               }}
             >
@@ -97,7 +97,7 @@ export default function Hero() {
               className="group relative px-12 py-5 rounded-lg font-semibold transition-all duration-500"
               style={{
                 background: 'rgba(255, 255, 255, 0.04)',
-                border: '1px solid rgba(184, 150, 74, 0.2)',
+                border: '1px solid rgba(216, 191, 163, 0.2)',
                 color: 'var(--text-ivory)',
               }}
             >

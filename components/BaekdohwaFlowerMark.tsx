@@ -59,12 +59,12 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
           <stop offset="100%" stopColor="#B06C85" />
         </radialGradient>
 
-        {/* 앤틱 골드 외곽선용 */}
+        {/* 앤틱 로즈 골드 외곽선용 */}
         <radialGradient id="goldGradInward" cx="50%" cy="50%" r="70%">
           <stop offset="0%" stopColor="#F5F5F5" />
-          <stop offset="50%" stopColor="#EDE6DA" />
-          <stop offset="80%" stopColor="#B8964A" />
-          <stop offset="100%" stopColor="#8A6D3B" />
+          <stop offset="50%" stopColor="#EBD5CD" />
+          <stop offset="80%" stopColor="#D4B2A7" />
+          <stop offset="100%" stopColor="#BA8D7E" />
         </radialGradient>
 
         {/* 자개(나전) 느낌의 은은한 무지개 하이라이트 */}
@@ -100,12 +100,12 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
           <feGaussianBlur stdDeviation="0.8" />
         </filter>
         
-        {/* 골드 외곽선 글로우 효과 */}
+        {/* 골드 외곽선 글로우 효과 (로즈 샴페인 골드 톤으로 조정) */}
         <filter id="goldGlow" x="-200%" y="-200%" width="500%" height="500%">
           <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-          <feColorMatrix in="coloredBlur" type="matrix" values="0 0 0 0 0.831 0 0 0 0 0.686 0 0 0 0 0.216 0 0 0 0.4 0" result="goldBlur" />
+          <feColorMatrix in="coloredBlur" type="matrix" values="0 0 0 0 0.831 0 0 0 0 0.698 0 0 0 0 0.655 0 0 0 0.4 0" result="goldBlur" />
           <feGaussianBlur stdDeviation="3" result="coloredBlur3"/>
-          <feColorMatrix in="coloredBlur3" type="matrix" values="0 0 0 0 0.72 0 0 0 0 0.59 0 0 0 0 0.29 0 0 0 0.6 0" result="goldBlur3" />
+          <feColorMatrix in="coloredBlur3" type="matrix" values="0 0 0 0 0.831 0 0 0 0 0.698 0 0 0 0 0.655 0 0 0 0.6 0" result="goldBlur3" />
           <feMerge>
             <feMergeNode in="goldBlur"/>
             <feMergeNode in="goldBlur3"/>
@@ -127,7 +127,7 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
               C -38 -48, -20 -70, 0 -70
               Z"
             fill={outlineGold ? "url(#goldGradInward)" : (outlinePink ? "url(#pinkGradInward)" : (watermark ? "url(#watermarkGrad)" : (bright ? "url(#petalGradBright)" : "url(#petalGrad)")))}
-            stroke={outlineGold ? "#B8964A" : (outlinePink ? "#C58BA0" : "none")}
+            stroke={outlineGold ? "#D4B2A7" : (outlinePink ? "#C58BA0" : "none")}
             strokeWidth={(outlinePink || outlineGold) ? "2.5" : "0"}
             strokeLinejoin="round"
             opacity="0.98"
@@ -158,9 +158,9 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
         {/* 중앙 보석 */}
         {(outlinePink || outlineGold) ? (
           <>
-            <circle r="18" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.3" stroke={outlineGold ? "#B8964A" : "#C58BA0"} strokeWidth="1" />
-            <circle r="14" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.5" stroke={outlineGold ? "#B8964A" : "#C58BA0"} strokeWidth="1" />
-            <circle r="9" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.75" stroke={outlineGold ? "#B8964A" : "#C58BA0"} strokeWidth="1" />
+            <circle r="18" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.3" stroke={outlineGold ? "#D4B2A7" : "#C58BA0"} strokeWidth="1" />
+            <circle r="14" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.5" stroke={outlineGold ? "#D4B2A7" : "#C58BA0"} strokeWidth="1" />
+            <circle r="9" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.75" stroke={outlineGold ? "#D4B2A7" : "#C58BA0"} strokeWidth="1" />
             <circle r="4" fill="#ffffff" opacity="1" />
           </>
         ) : (

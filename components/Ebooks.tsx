@@ -36,8 +36,8 @@ export default function Ebooks() {
                 <div
                   className="rounded-full p-[1px]"
                   style={{
-                    background: 'linear-gradient(135deg, var(--accent-gold), #8A6D3B)',
-                    boxShadow: '0 2px 8px rgba(184, 150, 74, 0.12)',
+                    background: 'linear-gradient(135deg, var(--accent-gold), #D4B2A7)',
+                    boxShadow: '0 2px 8px rgba(212, 178, 167, 0.12)',
                   }}
                 >
                   <p 
@@ -111,7 +111,7 @@ export default function Ebooks() {
                         <div 
                           className="px-3 py-1 rounded-full border text-[10px] md:text-xs tracking-wider"
                           style={{
-                            borderColor: 'rgba(184, 150, 74, 0.3)',
+                            borderColor: 'rgba(216, 191, 163, 0.3)',
                             background: 'rgba(59, 15, 27, 0.4)',
                             color: 'var(--text-ivory)',
                           }}
@@ -129,7 +129,7 @@ export default function Ebooks() {
                       </p>
 
                       <div className="mt-auto">
-                        <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#B8964A] group-hover:translate-x-1 transition-transform">
+                        <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--accent-gold)] group-hover:translate-x-1 transition-transform">
                           자세히 보기 <span style={{ color: 'var(--accent-pink)' }}>→</span>
                         </div>
                       </div>
