@@ -52,7 +52,7 @@ function ComingSoonContent() {
 export default function ComingSoonPage() {
   return (
     <main className="relative min-h-screen">
-      <GlobalBackground src="/image/main3.png">
+      <GlobalBackground src="/image/main4.png">
         <Navigation />
         
         <Suspense fallback={

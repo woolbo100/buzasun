@@ -10,7 +10,7 @@ export const metadata = {
 export default function CounselingPage() {
   return (
     <main className="relative min-h-screen">
-      <GlobalBackground src="/image/main3.png">
+      <GlobalBackground src="/image/main4.png">
         <Navigation />
         
         <div className="pt-32 px-4 md:px-6 py-16 md:py-24">
