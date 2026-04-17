@@ -260,20 +260,6 @@ export default function Navigation() {
                 <i className="fas fa-user text-lg"></i>
                 <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px var(--accent-gold-soft)' }} />
               </Link>
-
-              {/* 오른쪽 헤더 바로 밑 노리개 장식 - 상시 흔들림 및 글로우 효과 적용 */}
-              <div className="absolute right-0 top-full pt-1 mr-4 hidden md:block pointer-events-none">
-                <div 
-                  className="animate-swing"
-                  style={{ 
-                    animation: 'swingGentle 3s ease-in-out infinite',
-                    transformOrigin: 'top center',
-                    filter: 'drop-shadow(0 0 12px rgba(184, 150, 74, 0.4))'
-                  }}
-                >
-                  <NorigaeElement src="/image/nlg.png" size={85} />
-                </div>
-              </div>
             </div>
 
             {/* 모바일 햄버거 메뉴 버튼 */}

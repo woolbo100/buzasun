@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Reveal from './Reveal'
+import NorigaeElement from './NorigaeElement'
 
 export default function Hero() {
   const scrollToContent = () => {
@@ -15,6 +16,17 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-4 md:px-6 overflow-hidden">
       {/* 텍스트 가독성을 위한 메인 카드 */}
       <div className="gungjung-glass container mx-auto max-w-5xl py-16 md:py-24 px-8 md:px-16 text-center relative z-10">
+        {/* 원래 위치에 새로운 노리개(nlg) 배치 - 상시 흔들림 효과 포함 */}
+        <div 
+          className="absolute -top-12 -right-6 hidden md:block pointer-events-none"
+          style={{ 
+            animation: 'swingGentle 4s ease-in-out infinite',
+            transformOrigin: 'top center',
+            filter: 'drop-shadow(0 0 15px rgba(184, 150, 74, 0.3))'
+          }}
+        >
+          <NorigaeElement src="/image/nlg.png" size={110} />
+        </div>
 
         {/* 상단 배지 */}
         <Reveal delayMs={0}>
