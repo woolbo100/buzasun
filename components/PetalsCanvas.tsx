@@ -18,7 +18,7 @@ type Petal = {
 };
 
 export default function PetalsCanvas({
-  color = "#fce7f3",
+  color = "#EDE6DA",
   density = 28,
 }: {
   color?: string;
@@ -88,10 +88,10 @@ export default function PetalsCanvas({
       const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, p.r * 2);
       // 색상을 rgba로 변환하여 투명도 조절
       const baseAlpha = p.alpha * 0.6; // 전체적으로 더 투명하게
-      gradient.addColorStop(0, `rgba(252, 231, 243, ${baseAlpha})`);
-      gradient.addColorStop(0.3, `rgba(252, 231, 243, ${baseAlpha * 0.6})`);
-      gradient.addColorStop(0.6, `rgba(252, 231, 243, ${baseAlpha * 0.3})`);
-      gradient.addColorStop(1, 'rgba(252, 231, 243, 0)');
+      gradient.addColorStop(0, `rgba(237, 230, 218, ${baseAlpha})`); // 아이보리
+      gradient.addColorStop(0.3, `rgba(197, 139, 160, ${baseAlpha * 0.7})`); // 더스티 로즈
+      gradient.addColorStop(0.7, `rgba(184, 150, 74, ${baseAlpha * 0.4})`); // 앤틱 골드
+      gradient.addColorStop(1, 'rgba(184, 150, 74, 0)');
 
       ctx.globalAlpha = 1;
       ctx.fillStyle = gradient;
@@ -108,7 +108,7 @@ export default function PetalsCanvas({
       ctx.globalCompositeOperation = 'screen';
       ctx.globalAlpha = p.alpha * 0.15;
       ctx.shadowBlur = 8;
-      ctx.fillStyle = 'rgba(255, 182, 193, 0.3)';
+      ctx.fillStyle = 'rgba(197, 139, 160, 0.12)';
       ctx.beginPath();
       ctx.ellipse(0, 0, p.r * 0.6, p.r * 1.0, 0, 0, Math.PI * 2);
       ctx.fill();

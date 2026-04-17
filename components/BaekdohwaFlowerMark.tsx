@@ -12,9 +12,11 @@ type Props = {
   watermark?: boolean;
   /** 외곽선 핫핑크, 안쪽 화이트, 외곽선 글로우 효과 */
   outlinePink?: boolean;
+  /** 외곽선 골드, 안쪽 화이트, 골드 글로우 효과 */
+  outlineGold?: boolean;
 };
 
-export default function BaekdohwaFlowerMark({ className = "", size = 44, style, bright = false, watermark = false, outlinePink = false }: Props) {
+export default function BaekdohwaFlowerMark({ className = "", size = 44, style, bright = false, watermark = false, outlinePink = false, outlineGold = false }: Props) {
   return (
     <svg
       width={size}
@@ -26,38 +28,43 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
       role="img"
     >
       <defs>
-        {/* 핫핑크→연핑크 그라데이션 (밝은 흰색 느낌) */}
+        {/* 더스티 핑크→딥 로즈 그라데이션 */}
         <radialGradient id="petalGrad" cx="50%" cy="40%" r="70%">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="30%" stopColor="#ffe0f0" />
-          <stop offset="60%" stopColor="#ffb6d9" />
-          <stop offset="85%" stopColor="#ff69b4" />
-          <stop offset="100%" stopColor="#ff1493" />
+          <stop offset="0%" stopColor="#EDE6DA" />
+          <stop offset="40%" stopColor="#D1A3A4" />
+          <stop offset="75%" stopColor="#C58BA0" />
+          <stop offset="100%" stopColor="#B06C85" />
         </radialGradient>
         
-        {/* About 섹션용 밝은 그라데이션 */}
+        {/* 은은한 피치 핑크 그라데이션 */}
         <radialGradient id="petalGradBright" cx="50%" cy="40%" r="70%">
           <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="25%" stopColor="#fff5f8" />
-          <stop offset="50%" stopColor="#ffe0f0" />
-          <stop offset="75%" stopColor="#ffb6d9" />
-          <stop offset="100%" stopColor="#ff69b4" />
+          <stop offset="40%" stopColor="#EDE6DA" />
+          <stop offset="80%" stopColor="#D1A3A4" />
+          <stop offset="100%" stopColor="#C58BA0" />
         </radialGradient>
         
-        {/* 배경 워터마크용 대각선 그라데이션 (왼쪽 상단→오른쪽 하단, 흰색→핫핑크) */}
+        {/* 배경 워터마크용 저채도 그라데이션 */}
         <linearGradient id="watermarkGrad" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="50%" stopColor="#ffb6d9" />
-          <stop offset="100%" stopColor="#ec4899" />
+          <stop offset="0%" stopColor="#EDE6DA" />
+          <stop offset="50%" stopColor="#D1A3A4" />
+          <stop offset="100%" stopColor="#C58BA0" />
         </linearGradient>
         
-        {/* outlinePink용: 안쪽에서 외곽으로 핑크가 진해지는 그라데이션 */}
+        {/* 더스티 핑크 외곽선용 */}
         <radialGradient id="pinkGradInward" cx="50%" cy="50%" r="70%">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="40%" stopColor="#ffe0f0" />
-          <stop offset="70%" stopColor="#ffb6d9" />
-          <stop offset="90%" stopColor="#ff69b4" />
-          <stop offset="100%" stopColor="#ec4899" />
+          <stop offset="0%" stopColor="#F5F5F5" />
+          <stop offset="50%" stopColor="#D1A3A4" />
+          <stop offset="85%" stopColor="#C58BA0" />
+          <stop offset="100%" stopColor="#B06C85" />
+        </radialGradient>
+
+        {/* 앤틱 골드 외곽선용 */}
+        <radialGradient id="goldGradInward" cx="50%" cy="50%" r="70%">
+          <stop offset="0%" stopColor="#F5F5F5" />
+          <stop offset="50%" stopColor="#EDE6DA" />
+          <stop offset="80%" stopColor="#B8964A" />
+          <stop offset="100%" stopColor="#8A6D3B" />
         </radialGradient>
 
         {/* 자개(나전) 느낌의 은은한 무지개 하이라이트 */}
@@ -93,55 +100,22 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
           <feGaussianBlur stdDeviation="0.8" />
         </filter>
         
-        {/* 핫핑크 외곽선 글로우 효과 - 은은한 빛나는 효과 */}
-        <filter id="pinkGlow" x="-200%" y="-200%" width="500%" height="500%">
-          {/* 외곽 글로우 레이어 1 - 넓고 부드러운 */}
+        {/* 골드 외곽선 글로우 효과 */}
+        <filter id="goldGlow" x="-200%" y="-200%" width="500%" height="500%">
           <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-          <feColorMatrix
-            in="coloredBlur"
-            type="matrix"
-            values="
-              0 0 0 0 0.925
-              0 0 0 0 0.282
-              0 0 0 0 0.6
-              0 0 0 0.5 0"
-            result="pinkBlur"
-          />
-          {/* 외곽 글로우 레이어 2 - 중간 */}
-          <feGaussianBlur stdDeviation="5" result="coloredBlur2"/>
-          <feColorMatrix
-            in="coloredBlur2"
-            type="matrix"
-            values="
-              0 0 0 0 0.925
-              0 0 0 0 0.282
-              0 0 0 0 0.6
-              0 0 0 0.7 0"
-            result="pinkBlur2"
-          />
-          {/* 외곽 글로우 레이어 3 - 가까운 */}
+          <feColorMatrix in="coloredBlur" type="matrix" values="0 0 0 0 0.831 0 0 0 0 0.686 0 0 0 0 0.216 0 0 0 0.4 0" result="goldBlur" />
           <feGaussianBlur stdDeviation="3" result="coloredBlur3"/>
-          <feColorMatrix
-            in="coloredBlur3"
-            type="matrix"
-            values="
-              0 0 0 0 0.925
-              0 0 0 0 0.282
-              0 0 0 0 0.6
-              0 0 0 0.85 0"
-            result="pinkBlur3"
-          />
+          <feColorMatrix in="coloredBlur3" type="matrix" values="0 0 0 0 0.72 0 0 0 0 0.59 0 0 0 0 0.29 0 0 0 0.6 0" result="goldBlur3" />
           <feMerge>
-            <feMergeNode in="pinkBlur"/>
-            <feMergeNode in="pinkBlur2"/>
-            <feMergeNode in="pinkBlur3"/>
+            <feMergeNode in="goldBlur"/>
+            <feMergeNode in="goldBlur3"/>
             <feMergeNode in="SourceGraphic"/>
           </feMerge>
         </filter>
       </defs>
 
       {/* 꽃잎 5장: 하나의 꽃잎 모양을 회전 복제 */}
-      <g transform="translate(100 100)" filter={outlinePink ? "url(#pinkGlow)" : "url(#softGlow)"}>
+      <g transform="translate(100 100)" filter={outlineGold ? "url(#goldGlow)" : (outlinePink ? "url(#pinkGlow)" : "url(#softGlow)")}>
         {/* 꽃잎 하나 */}
         <g id="petal">
           <path
@@ -152,14 +126,14 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
               C -14 8, -30 -10, -34 -28
               C -38 -48, -20 -70, 0 -70
               Z"
-            fill={outlinePink ? "url(#pinkGradInward)" : (watermark ? "url(#watermarkGrad)" : (bright ? "url(#petalGradBright)" : "url(#petalGrad)"))}
-            stroke={outlinePink ? "#ec4899" : "none"}
-            strokeWidth={outlinePink ? "2.5" : "0"}
+            fill={outlineGold ? "url(#goldGradInward)" : (outlinePink ? "url(#pinkGradInward)" : (watermark ? "url(#watermarkGrad)" : (bright ? "url(#petalGradBright)" : "url(#petalGrad)")))}
+            stroke={outlineGold ? "#B8964A" : (outlinePink ? "#C58BA0" : "none")}
+            strokeWidth={(outlinePink || outlineGold) ? "2.5" : "0"}
             strokeLinejoin="round"
             opacity="0.98"
           />
-          {/* 자개 하이라이트 오버레이 - outlinePink일 때는 제거 */}
-          {!outlinePink && (
+          {/* 자개 하이라이트 오버레이 - outline일 때는 제거 */}
+          {!(outlinePink || outlineGold) && (
             <path
               d="
                 M 0 -64
@@ -181,19 +155,19 @@ export default function BaekdohwaFlowerMark({ className = "", size = 44, style, 
         <use href="#petal" transform="rotate(216)" />
         <use href="#petal" transform="rotate(288)" />
 
-        {/* 중앙 보석(자개+핑크) */}
-        {outlinePink ? (
+        {/* 중앙 보석 */}
+        {(outlinePink || outlineGold) ? (
           <>
-            <circle r="18" fill="url(#pinkGradInward)" opacity="0.4" stroke="#ec4899" strokeWidth="1.5" />
-            <circle r="14" fill="url(#pinkGradInward)" opacity="0.6" stroke="#ec4899" strokeWidth="1.5" />
-            <circle r="9" fill="url(#pinkGradInward)" opacity="0.85" stroke="#ec4899" strokeWidth="1.5" />
+            <circle r="18" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.3" stroke={outlineGold ? "#B8964A" : "#C58BA0"} strokeWidth="1" />
+            <circle r="14" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.5" stroke={outlineGold ? "#B8964A" : "#C58BA0"} strokeWidth="1" />
+            <circle r="9" fill={outlineGold ? "url(#goldGradInward)" : "url(#pinkGradInward)"} opacity="0.75" stroke={outlineGold ? "#B8964A" : "#C58BA0"} strokeWidth="1" />
             <circle r="4" fill="#ffffff" opacity="1" />
           </>
         ) : (
           <>
             <circle r="18" fill={watermark ? "url(#watermarkGrad)" : "rgba(255,255,255,0.10)"} opacity={watermark ? "0.15" : "1"} />
             <circle r="14" fill={watermark ? "url(#watermarkGrad)" : "url(#najeon)"} opacity={watermark ? "0.6" : "0.8"} />
-            <circle r="9" fill={watermark ? "url(#watermarkGrad)" : "#ff2aa1"} opacity={watermark ? "0.7" : "0.9"} />
+            <circle r="9" fill={watermark ? "url(#watermarkGrad)" : "#B06C85"} opacity={watermark ? "0.7" : "0.9"} />
             <circle r="4" fill={watermark ? "#ffffff" : "#fff"} opacity="0.9" />
           </>
         )}

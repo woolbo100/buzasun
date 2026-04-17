@@ -55,17 +55,17 @@ export default function Navigation() {
       }`}
       style={{
         boxShadow: scrolled 
-          ? '0 8px 32px rgba(255, 20, 147, 0.15), 0 0 60px rgba(138, 43, 226, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
+          ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(184, 150, 74, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           : 'none',
       }}
     >
       {/* 글로우 라인 - 스크롤 시만 강하게 표시 */}
       {scrolled && (
         <div 
-          className="absolute bottom-0 left-0 right-0 h-[2px] opacity-100 transition-opacity duration-500"
+          className="absolute bottom-0 left-0 right-0 h-[1.5px] opacity-100 transition-opacity duration-500"
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 20, 147, 0.8) 20%, rgba(255, 105, 180, 1) 50%, rgba(255, 20, 147, 0.8) 80%, transparent 100%)',
-            boxShadow: '0 0 20px rgba(255, 20, 147, 0.6), 0 0 40px rgba(255, 105, 180, 0.4), 0 0 60px rgba(255, 20, 147, 0.2)',
+            background: 'linear-gradient(90deg, transparent 0%, var(--accent-gold) 50%, transparent 100%)',
+            boxShadow: '0 0 15px var(--accent-gold-soft)',
           }}
         />
       )}
@@ -77,13 +77,13 @@ export default function Navigation() {
             href="/" 
             className="flex items-center gap-2.5 group/logo transition-all duration-300"
             style={{
-              filter: 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.3))',
+              filter: 'drop-shadow(0 0 8px rgba(212, 175, 55, 0.2))',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.filter = 'drop-shadow(0 0 16px rgba(255, 20, 147, 0.6)) brightness(1.1)'
+              e.currentTarget.style.filter = 'drop-shadow(0 0 16px rgba(212, 175, 55, 0.4)) brightness(1.1)'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.3))'
+              e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(212, 175, 55, 0.2))'
             }}
           >
             {/* 핫핑크 꽃모양 심볼 */}
@@ -93,39 +93,34 @@ export default function Navigation() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               style={{
-                filter: 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.6))',
+                filter: 'drop-shadow(0 0 8px rgba(212, 175, 55, 0.4))',
               }}
             >
-              {/* 꽃잎들 */}
               <path 
                 d="M12 2C12 2 8 6 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 6 12 2 12 2Z" 
-                fill="#ff1493"
+                fill="var(--accent-gold)"
                 opacity="0.9"
               />
               <path 
                 d="M12 22C12 22 8 18 8 14C8 11.7909 9.79086 10 12 10C14.2091 10 16 11.7909 16 14C16 18 12 22 12 22Z" 
-                fill="#ff1493"
+                fill="var(--accent-gold)"
                 opacity="0.9"
               />
               <path 
                 d="M2 12C2 12 6 8 10 8C12.2091 8 14 9.79086 14 12C14 14.2091 12.2091 16 10 16C6 16 2 12 2 12Z" 
-                fill="#ff1493"
+                fill="var(--accent-gold)"
                 opacity="0.9"
               />
               <path 
                 d="M22 12C22 12 18 8 14 8C11.7909 8 10 9.79086 10 12C10 14.2091 11.7909 16 14 16C18 16 22 12 22 12Z" 
-                fill="#ff1493"
+                fill="var(--accent-gold)"
                 opacity="0.9"
               />
-              {/* 중앙 원 */}
               <circle 
                 cx="12" 
                 cy="12" 
                 r="3" 
-                fill="#ff69b4"
-                style={{
-                  filter: 'drop-shadow(0 0 4px rgba(255, 20, 147, 0.8))',
-                }}
+                fill="#F5F5F5"
               />
             </svg>
             <span 
@@ -138,8 +133,8 @@ export default function Navigation() {
                 백도화
               </span>
               <span style={{ 
-                color: '#ff1493',
-                textShadow: '0 0 20px rgba(255, 20, 147, 0.4)',
+                color: 'var(--accent-gold)',
+                textShadow: '0 0 20px rgba(212, 175, 55, 0.4)',
               }}>
                 {' '}매력학당
               </span>
@@ -151,9 +146,9 @@ export default function Navigation() {
             <Link href="/about" className={menuLinkClass} style={menuLinkStyle}>
               백도화 소개
               <span 
-                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
-                  boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
+                  boxShadow: '0 0 10px var(--accent-gold-soft)',
                 }}
               />
             </Link>
@@ -161,9 +156,9 @@ export default function Navigation() {
             <Link href="/report" className={menuLinkClass} style={menuLinkStyle}>
               선천코드 리포트
               <span 
-                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
-                  boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
+                  boxShadow: '0 0 8px var(--accent-pink-soft)',
                 }}
               />
             </Link>
@@ -183,9 +178,9 @@ export default function Navigation() {
                 >
                   시크릿 비법서
                   <span 
-                    className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                    className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                     style={{
-                      boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
+                      boxShadow: '0 0 8px var(--accent-pink-soft)',
                     }}
                   />
                 </Link>
@@ -203,8 +198,8 @@ export default function Navigation() {
                   className="absolute top-full left-0 mt-2 w-40 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2"
                   style={{
                     background: 'rgba(26, 6, 38, 0.95)',
-                    borderColor: 'rgba(255, 20, 147, 0.3)',
-                    boxShadow: '0 8px 32px rgba(255, 20, 147, 0.2), 0 0 40px rgba(138, 43, 226, 0.1)',
+                    borderColor: 'var(--accent-gold-soft)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-gold-soft)',
                   }}
                 >
                   <Link 
@@ -235,9 +230,9 @@ export default function Navigation() {
             <Link href="/shop" className={menuLinkClass} style={menuLinkStyle}>
               비밀상점
               <span 
-                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
-                  boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
+                  boxShadow: '0 0 8px var(--accent-pink-soft)',
                 }}
               />
             </Link>
@@ -245,9 +240,9 @@ export default function Navigation() {
             <Link href="/counseling" className={menuLinkClass} style={menuLinkStyle}>
               상담
               <span 
-                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[#ff1493] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
-                  boxShadow: '0 0 8px rgba(255, 20, 147, 0.8), 0 0 16px rgba(255, 105, 180, 0.5)',
+                  boxShadow: '0 0 8px var(--accent-pink-soft)',
                 }}
               />
             </Link>
@@ -258,11 +253,11 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center space-x-4">
               <Link href="/cart" className="text-bd-gray hover:text-bd-ivory transition-all duration-300 relative group">
                 <i className="fas fa-shopping-cart text-lg"></i>
-                <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[#ff1493] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px rgba(255, 20, 147, 0.6)' }} />
+                <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px var(--accent-gold-soft)' }} />
               </Link>
               <Link href="/mypage" className="text-bd-gray hover:text-bd-ivory transition-all duration-300 relative group">
                 <i className="fas fa-user text-lg"></i>
-                <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[#ff1493] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px rgba(255, 20, 147, 0.6)' }} />
+                <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px var(--accent-gold-soft)' }} />
               </Link>
             </div>
 
@@ -281,7 +276,7 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div 
             className="lg:hidden border-t transition-all duration-300"
-            style={{ borderColor: scrolled ? 'rgba(255, 20, 147, 0.3)' : 'rgba(255, 20, 147, 0.1)' }}
+            style={{ borderColor: scrolled ? 'rgba(184, 150, 74, 0.2)' : 'rgba(184, 150, 74, 0.1)' }}
           >
             <div className="py-4 space-y-1">
               <Link 
@@ -361,7 +356,7 @@ export default function Navigation() {
               
               <div 
                 className="flex items-center space-x-4 px-4 py-2 border-t mx-2 mt-2" 
-                style={{ borderColor: scrolled ? 'rgba(255, 20, 147, 0.3)' : 'rgba(255, 20, 147, 0.1)' }}
+                style={{ borderColor: scrolled ? 'rgba(184, 150, 74, 0.2)' : 'rgba(184, 150, 74, 0.1)' }}
               >
                 <Link 
                   href="/cart" 

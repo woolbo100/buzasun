@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react'
 import Reveal from './Reveal'
+import BaekdohwaFlowerMark from './BaekdohwaFlowerMark'
 
 const faqs = [
   {
@@ -27,76 +28,33 @@ const faqs = [
 ]
 
 export default function Contact() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
   return (
     <>
       {/* 문의 전 배너 - 브랜드 철학 & 리포트 필요성 설명 */}
-      <section className="py-16 md:py-24 px-6 relative" style={{ background: 'transparent' }}>
+      <section className="py-20 md:py-32 px-6 relative" style={{ background: 'transparent' }}>
         <div className="container mx-auto max-w-6xl">
           <Reveal delayMs={100}>
-            <div className="mx-auto py-16 md:py-20 text-center relative">
-              {/* 상단 구분선 - 가로 길이 확장 */}
-              <div 
-                className="h-px mb-12 md:mb-16"
-                style={{
-                  width: 'calc(100% + 120px)',
-                  marginLeft: '-60px',
-                  marginRight: '-60px',
-                  background: 'linear-gradient(90deg, transparent 0%, rgba(255, 42, 166, 0.3) 20%, rgba(255, 105, 180, 0.4) 50%, rgba(255, 42, 166, 0.3) 80%, transparent 100%)',
-                  filter: 'blur(1px)',
-                  boxShadow: '0 0 8px rgba(255, 42, 166, 0.2)',
-                }}
-              />
-              
-              {/* 텍스트 컨텐츠 */}
-              <div style={{ maxWidth: '540px', margin: '0 auto' }}>
-                {/* 상단 문장 (2줄) - 흰색 */}
-                <div style={{ marginBottom: '32px' }}>
-                  <p 
-                    className="text-2xl md:text-3xl lg:text-4xl font-elegant font-normal"
-                    style={{
-                      color: '#ffffff',
-                      letterSpacing: '0.02em',
-                      wordBreak: 'keep-all',
-                      lineHeight: '1.6',
-                    }}
-                  >
-                    더 애쓰지 마세요<br />
-                    더 증명하려 하지 마세요
-                  </p>
-                </div>
-
-                {/* 하단 문장 (3줄) - 기본 흰색, 특정 단어만 핫핑크 */}
-                <div>
-                  <p 
-                    className="text-2xl md:text-3xl lg:text-4xl font-elegant font-normal"
-                    style={{
-                      color: '#ffffff',
-                      letterSpacing: '0.02em',
-                      wordBreak: 'keep-all',
-                      lineHeight: '1.6',
-                    }}
-                  >
-                    <span style={{ color: '#ec4899', fontWeight: 500 }}>선천코드</span>를 이해하면<br />
-                    <span style={{ color: '#ec4899', fontWeight: 500 }}>반복되던 연애</span>는 멈추고<br />
-                    <span style={{ color: '#ec4899', fontWeight: 500 }}>만나는 사람</span>이 달라집니다
-                  </p>
-                </div>
+            <div className="gungjung-glass mx-auto py-16 md:py-24 text-center relative overflow-hidden">
+              {/* 배경 장식 */}
+              <div className="absolute top-0 right-0 p-8 opacity-20">
+                <BaekdohwaFlowerMark size={120} outlineGold={true} />
               </div>
               
-              {/* 하단 구분선 - 가로 길이 확장 */}
-              <div 
-                className="h-px mt-12 md:mt-16"
-                style={{
-                  width: 'calc(100% + 120px)',
-                  marginLeft: '-60px',
-                  marginRight: '-60px',
-                  background: 'linear-gradient(90deg, transparent 0%, rgba(255, 42, 166, 0.3) 20%, rgba(255, 105, 180, 0.4) 50%, rgba(255, 42, 166, 0.3) 80%, transparent 100%)',
-                  filter: 'blur(1px)',
-                  boxShadow: '0 0 8px rgba(255, 42, 166, 0.2)',
-                }}
-              />
+              {/* 텍스트 컨텐츠 */}
+              <div className="max-w-2xl mx-auto relative z-10 px-6">
+                <p className="text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-[#F5F5F5] mb-8 leading-tight">
+                  더 애쓰지 마세요<br />
+                  더 증명하려 하지 마세요
+                </p>
+
+                <div className="gold-divider mb-8 max-w-[100px] mx-auto" />
+
+                <p className="text-xl md:text-2xl font-elegant text-[#EDE6DA] leading-relaxed">
+                  <span className="text-[#B8964A] font-bold">선천코드</span>를 이해하면<br />
+                  <span className="text-[#B8964A] font-bold">반복되던 연애</span>는 멈추고<br />
+                  <span className="text-[#B8964A] font-bold">만나는 사람</span>이 달라집니다
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -113,26 +71,7 @@ function ContactForm() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    
-    const form = e.currentTarget
-    const formData = new FormData(form)
-    const name = formData.get('name')?.toString().trim()
-    const email = formData.get('email')?.toString().trim()
-    const message = formData.get('message')?.toString().trim()
-    
-    if (!name || !email || !message) {
-      alert('모든 필드를 입력해주세요.')
-      return
-    }
-    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(email)) {
-      alert('올바른 이메일 형식을 입력해주세요.')
-      return
-    }
-    
     alert('문의가 성공적으로 전송되었습니다!')
-    form.reset()
   }
 
   const toggleFAQ = (index: number) => {
@@ -142,78 +81,40 @@ function ContactForm() {
   return (
     <section 
       id="contact" 
-      className="py-20 px-6 relative"
+      className="py-20 md:py-32 px-6 relative"
       style={{ background: 'transparent' }}
     >
       <div className="container mx-auto max-w-6xl">
         <Reveal delayMs={100}>
-          <h2 
-            className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-center mb-16"
-            style={{
-              color: '#f7f1ff',
-              letterSpacing: '0.02em',
-              lineHeight: 'clamp(1.15, 1.25, 1.25)',
-            }}
-          >
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-center mb-20 text-[#F5F5F5]">
             문의하기
           </h2>
         </Reveal>
 
-        {/* 좌우 2컬럼 레이아웃 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* 왼쪽: FAQ */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* FAQ */}
           <Reveal delayMs={200}>
-            <div className="h-full flex flex-col">
-              <h3 
-                className="text-2xl md:text-3xl font-elegant font-semibold mb-8 mt-0 pt-0"
-                style={{
-                  color: '#f7f1ff',
-                  letterSpacing: '0.02em',
-                }}
-              >
-                자주 묻는 질문
-              </h3>
-              <div className="space-y-4 flex-grow">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-elegant font-bold mb-8 text-[#F5F5F5]">자주 묻는 질문</h3>
+              <div className="space-y-4">
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
-                    className="rounded-lg transition-all duration-300"
-                    style={{
-                      background: 'rgba(26, 6, 38, 0.4)',
-                      border: '1px solid rgba(255, 255, 255, 0.1)',
-                      backdropFilter: 'blur(10px)',
-                    }}
+                    className="gungjung-glass overflow-hidden"
                   >
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between transition-colors duration-300"
-                      style={{
-                        color: '#f7f1ff',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = '#ff7ac8'
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = '#f7f1ff'
-                      }}
+                      className="w-full px-6 py-5 text-left flex items-center justify-between group"
                     >
-                      <span className="font-medium text-sm md:text-base pr-4">{faq.question}</span>
-                      <i 
-                        className={`fas fa-chevron-${openIndex === index ? 'up' : 'down'} text-xs transition-transform duration-300`}
-                        style={{
-                          color: openIndex === index ? '#ff7ac8' : 'rgba(255, 255, 255, 0.6)',
-                        }}
-                      />
+                      <span className="font-medium text-[#EDE6DA] group-hover:text-[#B8964A] transition-colors">
+                        {faq.question}
+                      </span>
+                      <span className={`transform transition-transform duration-300 text-[#B8964A] ${openIndex === index ? 'rotate-180' : ''}`}>
+                        ▼
+                      </span>
                     </button>
                     {openIndex === index && (
-                      <div 
-                        className="px-6 pb-4 text-sm md:text-base leading-relaxed"
-                        style={{
-                          color: 'rgba(255, 255, 255, 0.8)',
-                          lineHeight: '1.7',
-                          wordBreak: 'keep-all',
-                        }}
-                      >
+                      <div className="px-6 pb-6 text-sm md:text-base text-[#EDE6DA] opacity-70 leading-relaxed border-t border-[rgba(184,150,74,0.15)] pt-4">
                         {faq.answer}
                       </div>
                     )}
@@ -223,150 +124,43 @@ function ContactForm() {
             </div>
           </Reveal>
 
-          {/* 오른쪽: 문의 폼 */}
+          {/* Contact Form */}
           <Reveal delayMs={300}>
-            <div className="h-full flex flex-col">
-              <div className="mb-8 mt-0 pt-0">
-                <h3 
-                  className="text-2xl md:text-3xl font-elegant font-semibold mb-3"
-                  style={{
-                    color: '#f7f1ff',
-                    letterSpacing: '0.02em',
-                  }}
-                >
-                  문의하기
-                </h3>
-                <p 
-                  className="text-sm"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.6)',
-                  }}
-                >
-                  연애 상담이 아닌, 분석 리포트 문의입니다.
-                </p>
-              </div>
+            <div className="gungjung-glass p-8 md:p-12">
+              <h3 className="text-2xl font-elegant font-bold mb-2 text-[#F5F5F5]">문의 메일</h3>
+              <p className="text-sm text-[#B8964A] opacity-60 mb-10">연애 상담이 아닌, 분석 리포트 관련 문의입니다.</p>
               
-              {/* 폼 컨테이너 */}
-              <form 
-                id="contactForm" 
-                className="space-y-6 p-8 md:p-10 rounded-2xl"
-                style={{
-                  background: 'rgba(26, 6, 38, 0.4)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(10px)',
-                  boxShadow: '0 8px 32px rgba(20, 6, 31, 0.4), 0 0 60px rgba(27, 7, 38, 0.2)',
-                }}
-                onSubmit={handleSubmit}
-              >
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label 
-                    htmlFor="name" 
-                    className="block mb-3 text-sm font-medium"
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.8)',
-                    }}
-                  >
-                    이름
-                  </label>
+                  <label className="block text-xs uppercase tracking-widest text-[#EDE6DA] opacity-50 mb-2">성함</label>
                   <input 
                     type="text" 
-                    id="name" 
-                    name="name" 
-                    className="w-full px-4 py-3 rounded-lg bg-transparent border transition-all duration-300"
-                    style={{
-                      borderColor: 'rgba(255, 255, 255, 0.2)',
-                      color: '#f7f1ff',
-                    }}
-                    placeholder="이름을 입력해주세요"
+                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(184,150,74,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[#B8964A] transition-colors placeholder:text-white/20"
+                    placeholder="성함을 입력해주세요"
                     required
-                    onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#ff1493'
-                      e.currentTarget.style.boxShadow = '0 0 0 3px rgba(255, 20, 147, 0.2)'
-                    }}
-                    onBlur={(e) => {
-                      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
-                      e.currentTarget.style.boxShadow = 'none'
-                    }}
                   />
                 </div>
-                
                 <div>
-                  <label 
-                    htmlFor="email" 
-                    className="block mb-3 text-sm font-medium"
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.8)',
-                    }}
-                  >
-                    이메일
-                  </label>
+                  <label className="block text-xs uppercase tracking-widest text-[#EDE6DA] opacity-50 mb-2">이메일</label>
                   <input 
                     type="email" 
-                    id="email" 
-                    name="email" 
-                    className="w-full px-4 py-3 rounded-lg bg-transparent border transition-all duration-300"
-                    style={{
-                      borderColor: 'rgba(255, 255, 255, 0.2)',
-                      color: '#f7f1ff',
-                    }}
+                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(184,150,74,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[#B8964A] transition-colors placeholder:text-white/20"
                     placeholder="이메일을 입력해주세요"
                     required
-                    onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#ff1493'
-                      e.currentTarget.style.boxShadow = '0 0 0 3px rgba(255, 20, 147, 0.2)'
-                    }}
-                    onBlur={(e) => {
-                      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
-                      e.currentTarget.style.boxShadow = 'none'
-                    }}
                   />
                 </div>
-                
                 <div>
-                  <label 
-                    htmlFor="message" 
-                    className="block mb-3 text-sm font-medium"
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.8)',
-                    }}
-                  >
-                    문의 내용
-                  </label>
+                  <label className="block text-xs uppercase tracking-widest text-[#EDE6DA] opacity-50 mb-2">내용</label>
                   <textarea 
-                    id="message" 
-                    name="message" 
-                    rows={6} 
-                    className="w-full px-4 py-3 rounded-lg bg-transparent border transition-all duration-300 resize-none"
-                    style={{
-                      borderColor: 'rgba(255, 255, 255, 0.2)',
-                      color: '#f7f1ff',
-                    }}
-                    placeholder="문의 내용을 입력해주세요"
+                    rows={5}
+                    className="w-full bg-[rgba(59,15,27,0.2)] border border-[rgba(184,150,74,0.15)] rounded px-4 py-3 text-[#F5F5F5] focus:outline-none focus:border-[#B8964A] transition-colors resize-none placeholder:text-white/20"
+                    placeholder="문의하실 내용을 입력해주세요"
                     required
-                    onFocus={(e) => {
-                      e.currentTarget.style.borderColor = '#ff1493'
-                      e.currentTarget.style.boxShadow = '0 0 0 3px rgba(255, 20, 147, 0.2)'
-                    }}
-                    onBlur={(e) => {
-                      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
-                      e.currentTarget.style.boxShadow = 'none'
-                    }}
                   ></textarea>
                 </div>
-                
                 <button 
-                  type="submit" 
-                  className="w-full py-4 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-                  style={{
-                    background: 'linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ff1493 100%)',
-                    boxShadow: '0 8px 24px rgba(255, 20, 147, 0.4), 0 0 40px rgba(255, 105, 180, 0.2)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = '0 12px 32px rgba(255, 20, 147, 0.5), 0 0 60px rgba(255, 105, 180, 0.3)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(255, 20, 147, 0.4), 0 0 40px rgba(255, 105, 180, 0.2)'
-                  }}
+                  type="submit"
+                  className="w-full py-4 bg-[#3B0F1B] border border-[#B8964A] text-[#B8964A] font-bold tracking-widest hover:bg-[#B8964A] hover:text-[#1A0F2E] transition-all duration-300"
                 >
                   보내기
                 </button>

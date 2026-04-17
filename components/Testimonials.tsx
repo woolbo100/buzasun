@@ -43,18 +43,17 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full overflow-hidden pt-20 pb-32 md:pb-40" style={{ background: 'transparent' }}>
+    <section className="relative w-full overflow-hidden py-20 md:py-32" style={{ background: 'transparent' }}>
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         {/* 상단: 배지 + 타이틀 */}
         <div className="text-center">
-          {/* 상단 배지 */}
           <Reveal delayMs={100}>
             <div className="mb-6 inline-block">
               <div
                 className="rounded-full p-[1px]"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(255, 20, 147, 0.5), rgba(138, 43, 226, 0.5))',
-                  boxShadow: '0 2px 12px rgba(255, 20, 147, 0.15), 0 0 20px rgba(255, 182, 193, 0.1)',
+                  background: 'linear-gradient(135deg, var(--accent-gold), #8A6D3B)',
+                  boxShadow: '0 2px 12px rgba(184, 150, 74, 0.15)',
                 }}
               >
                 <p 
@@ -64,7 +63,7 @@ export default function Testimonials() {
                     letterSpacing: '0.2em',
                     fontSize: '0.8rem',
                     fontWeight: 500,
-                    background: 'rgba(50, 20, 65, 0.6)',
+                    background: 'rgba(59, 15, 27, 0.6)',
                   }}
                 >
                   실제 구매자 후기
@@ -73,114 +72,67 @@ export default function Testimonials() {
             </div>
           </Reveal>
           
-          {/* 메인 타이틀 */}
           <Reveal delayMs={200}>
-            <h2 
-              className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mt-4"
-              style={{
-                color: '#f7f1ff',
-                letterSpacing: '0.02em',
-                lineHeight: 'clamp(1.15, 1.25, 1.25)',
-              }}
-            >
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mt-4 text-[#F5F5F5]">
               후기로 증명된 '구조 해석' 리포트
             </h2>
           </Reveal>
 
-          {/* 서브 타이틀 */}
           <Reveal delayMs={300}>
-            <p 
-              className="text-base md:text-lg max-w-3xl mx-auto mt-10"
-              style={{
-                color: 'rgba(245, 239, 255, 0.8)',
-                lineHeight: 'clamp(1.5, 1.7, 1.7)',
-                wordBreak: 'keep-all',
-                opacity: 0.8,
-              }}
-            >
+            <p className="text-base md:text-lg max-w-3xl mx-auto mt-10 text-[#EDE6DA] opacity-80 leading-relaxed">
               감정 위로가 아니라, 관계의 패턴을 '명확히' 정리해준다는 평가가 많아요.
             </p>
           </Reveal>
         </div>
 
         {/* 후기 카드 그리드 */}
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, index) => (
               <Reveal key={index} delayMs={400 + index * 100}>
-                <div
-                  className="w-full rounded-2xl p-8 transition-all duration-300 cursor-pointer h-full min-h-[240px] backdrop-blur-md"
-                  style={{
-                    background: 'rgba(43, 16, 53, 0.65)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    boxShadow: '0 10px 50px rgba(0, 0, 0, 0.35)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)'
-                    e.currentTarget.style.borderColor = 'rgba(255, 42, 166, 0.35)'
-                    e.currentTarget.style.boxShadow = '0 10px 50px rgba(0, 0, 0, 0.35), 0 0 30px rgba(255, 42, 166, 0.18)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)'
-                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'
-                    e.currentTarget.style.boxShadow = '0 10px 50px rgba(0, 0, 0, 0.35)'
-                  }}
-                >
-                  {/* 별점 */}
-                  <div className="mb-4">
-                    <div className="flex items-center gap-1">
-                      <span 
-                        className="text-xl tracking-wide"
-                        style={{
-                          color: '#ff2aa6',
-                          filter: 'drop-shadow(0 0 4px rgba(255, 42, 166, 0.4))',
-                        }}
-                      >
-                        {testimonial.rating}
-                      </span>
+                <div className="gungjung-glass w-full p-8 h-full flex flex-col justify-between">
+                  <div>
+                    {/* 별점 - 골드 */}
+                    <div className="mb-4">
+                      <div className="flex items-center gap-1">
+                        <span 
+                          className="text-xl tracking-wide"
+                          style={{
+                            color: 'var(--accent-gold)',
+                            filter: 'drop-shadow(0 0 4px var(--accent-gold-soft))',
+                          }}
+                        >
+                          {testimonial.rating}
+                        </span>
+                      </div>
                     </div>
+
+                    <p className="text-base md:text-lg mb-8 leading-relaxed text-[#F5F5F5] font-light italic">
+                      "{testimonial.content}"
+                    </p>
                   </div>
 
-                  {/* 후기 내용 */}
-                  <p 
-                    className="text-base mb-4 flex-grow leading-relaxed"
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.9)',
-                      lineHeight: '1.7',
-                      wordBreak: 'keep-all',
-                    }}
-                  >
-                    {testimonial.content}
-                  </p>
+                  <div>
+                    {/* 태그 - 차분한 버건디 톤 */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {testimonial.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 rounded-full text-xs border"
+                          style={{
+                            background: 'rgba(184, 150, 74, 0.05)',
+                            borderColor: 'rgba(184, 150, 74, 0.15)',
+                            color: 'var(--accent-gold)',
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
 
-                  {/* 태그 */}
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {testimonial.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-3 py-1 rounded-full text-xs border"
-                        style={{
-                          background: 'rgba(255, 42, 166, 0.1)',
-                          borderColor: 'rgba(255, 42, 166, 0.2)',
-                          color: '#ff7ac8',
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    <p className="text-xs text-[#EDE6DA] opacity-50">
+                      {testimonial.author}
+                    </p>
                   </div>
-
-                  {/* 작성자 */}
-                  <p 
-                    className="text-xs mt-auto"
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.6)',
-                    }}
-                  >
-                    {testimonial.author}
-                  </p>
                 </div>
               </Reveal>
             ))}

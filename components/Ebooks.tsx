@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Reveal from './Reveal'
+import NorigaeElement from './NorigaeElement'
 
 const ebooks = [
   {
@@ -26,32 +27,18 @@ const ebooks = [
 
 export default function Ebooks() {
   return (
-    <section id="secret-archive" className="relative w-full overflow-hidden pt-0 pb-32 md:pb-48 scroll-mt-28" style={{ background: 'transparent' }}>
-      {/* 섹션 분리선 */}
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 mt-16 md:mt-24 mb-20 md:mb-24">
-        <div 
-          className="h-px"
-          style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 42, 166, 0.3) 20%, rgba(255, 105, 180, 0.4) 50%, rgba(255, 42, 166, 0.3) 80%, transparent 100%)',
-            filter: 'blur(1px)',
-            boxShadow: '0 0 8px rgba(255, 42, 166, 0.2)',
-          }}
-        />
-      </div>
-
-      {/* 시크릿 비법서 섹션 - 3개 가로 배치 */}
+    <section id="secret-archive" className="relative w-full overflow-hidden py-20 md:py-32 scroll-mt-28" style={{ background: 'transparent' }}>
       <Reveal delayMs={200}>
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           {/* 섹션 헤더 */}
-          <div className="text-center mb-12">
-            {/* 상단 배지 */}
+          <div className="text-center mb-16">
             <Reveal delayMs={100}>
               <div className="mb-6 inline-block">
                 <div
                   className="rounded-full p-[1px]"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(255, 20, 147, 0.4), rgba(138, 43, 226, 0.4))',
-                    boxShadow: '0 2px 8px rgba(255, 20, 147, 0.12), 0 0 15px rgba(255, 182, 193, 0.08)',
+                    background: 'linear-gradient(135deg, var(--accent-gold), #8A6D3B)',
+                    boxShadow: '0 2px 8px rgba(184, 150, 74, 0.12)',
                   }}
                 >
                   <p 
@@ -61,7 +48,7 @@ export default function Ebooks() {
                       letterSpacing: '0.2em',
                       fontSize: '0.8rem',
                       fontWeight: 500,
-                      background: 'rgba(50, 20, 65, 0.5)',
+                      background: 'rgba(59, 15, 27, 0.5)',
                     }}
                   >
                     시크릿 비법서 3종
@@ -70,28 +57,19 @@ export default function Ebooks() {
               </div>
             </Reveal>
             
-            {/* 메인 타이틀 */}
             <Reveal delayMs={200}>
-              <div className="flex items-center justify-center gap-4 mb-6">
-                <h2 
-                  className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold"
-                  style={{
-                    color: '#f7f1ff',
-                    letterSpacing: '0.02em',
-                    lineHeight: 'clamp(1.15, 1.25, 1.25)',
-                  }}
-                >
+              <div className="flex flex-col items-center justify-center gap-4 mb-8">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-[#F5F5F5]">
                   백도화 시크릿 비법서 아카이브
                 </h2>
-                {/* 전체 보기 링크 */}
                 <Link 
                   href="/ebooks"
                   className="hidden md:inline-flex items-center gap-2 text-base md:text-lg font-medium transition-all duration-300 ml-4 relative group/link"
                   style={{
-                    color: '#ff7ac8',
+                    color: 'var(--accent-gold)',
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.filter = 'drop-shadow(0 0 8px rgba(255, 42, 166, 0.5))'
+                    e.currentTarget.style.filter = 'drop-shadow(0 0 8px var(--accent-gold-soft))'
                     e.currentTarget.style.transform = 'translateX(2px)'
                   }}
                   onMouseLeave={(e) => {
@@ -104,135 +82,58 @@ export default function Ebooks() {
                   <span 
                     className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover/link:w-full"
                     style={{
-                      background: 'linear-gradient(90deg, rgba(255, 42, 166, 0.6), rgba(255, 105, 180, 0.8))',
-                      boxShadow: '0 0 6px rgba(255, 42, 166, 0.5)',
+                      background: 'var(--accent-gold)',
+                      boxShadow: '0 0 6px var(--accent-gold-soft)',
                     }}
                   />
                 </Link>
               </div>
             </Reveal>
 
-            {/* 서브 타이틀 */}
             <Reveal delayMs={300}>
-              <p 
-                className="text-base md:text-lg max-w-3xl mx-auto"
-                style={{
-                  color: 'rgba(245, 239, 255, 0.8)',
-                  lineHeight: 'clamp(1.5, 1.7, 1.7)',
-                  wordBreak: 'keep-all',
-                  opacity: 0.8,
-                }}
-              >
+              <p className="text-base md:text-lg max-w-3xl mx-auto text-[#EDE6DA] opacity-80 leading-relaxed">
                 연애·풍요·재회의 '기준'을 만드는 3권의 시크릿 비법서.<br />
                 지금 당신에게 필요한 흐름부터 선택하세요.
               </p>
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {ebooks.map((ebook, index) => (
                 <Reveal key={ebook.title} delayMs={300 + index * 100}>
                   <Link 
                     href={ebook.href}
                     className="group block h-full w-full"
                   >
-                    <div
-                      className="
-                        w-full relative h-full overflow-hidden rounded-2xl
-                        border transition-all duration-300 ease-out
-                        hover:-translate-y-2
-                        focus-visible:outline-none focus-visible:ring-2
-                      "
-                      style={{
-                        borderColor: 'rgba(255, 20, 147, 0.2)',
-                        background: 'rgba(50, 20, 65, 0.6)',
-                        backdropFilter: 'blur(10px)',
-                        padding: '1.75rem',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.35)'
-                        e.currentTarget.style.background = 'rgba(50, 20, 65, 0.75)'
-                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 20, 147, 0.2), 0 0 35px rgba(255, 182, 193, 0.15)'
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.2)'
-                        e.currentTarget.style.background = 'rgba(50, 20, 65, 0.6)'
-                        e.currentTarget.style.boxShadow = 'none'
-                      }}
-                    >
+                    <div className="gungjung-glass h-full p-8 flex flex-col relative overflow-hidden">
+                      {/* 노리개 장식 포인트 */}
+                      <NorigaeElement className="absolute -top-4 -right-4 opacity-30 group-hover:opacity-60 transition-opacity" size={60} />
+                      
                       {/* 카테고리 태그 */}
-                      <div className="flex items-center gap-2 mb-4 flex-wrap justify-start">
+                      <div className="flex items-center gap-2 mb-6 flex-wrap">
                         <div 
-                          className="inline-flex items-center justify-center rounded-full border h-7 min-w-[104px] px-4 text-xs leading-none"
+                          className="px-3 py-1 rounded-full border text-[10px] md:text-xs tracking-wider"
                           style={{
-                            borderColor: 'rgba(255, 255, 255, 0.15)',
-                            background: 'rgba(255, 255, 255, 0.05)',
-                            color: '#cfc7dc',
+                            borderColor: 'rgba(184, 150, 74, 0.3)',
+                            background: 'rgba(59, 15, 27, 0.4)',
+                            color: 'var(--text-ivory)',
                           }}
                         >
-                          시크릿 비법서
+                          {ebook.subLabel}
                         </div>
-                        {ebook.subLabel && (
-                          <div 
-                            className="inline-flex items-center justify-center rounded-full border h-7 min-w-[104px] px-4 text-xs leading-none"
-                            style={{
-                              borderColor: 'rgba(255, 105, 180, 0.25)',
-                              background: 'rgba(255, 42, 166, 0.08)',
-                              color: '#ff7ac8',
-                            }}
-                          >
-                            {ebook.subLabel}
-                          </div>
-                        )}
                       </div>
 
-                      {/* 제목 */}
-                      <h3 
-                        className="text-2xl md:text-3xl font-elegant font-semibold mb-4"
-                        style={{
-                          color: '#f7f1ff',
-                          letterSpacing: '0.01em',
-                        }}
-                      >
+                      <h3 className="text-2xl md:text-3xl font-elegant font-bold mb-4 text-[#F5F5F5]">
                         {ebook.title}
                       </h3>
 
-                      {/* 한 줄 설명 */}
-                      <p 
-                        className="text-base md:text-lg mb-6 leading-relaxed"
-                        style={{
-                          color: 'rgba(255, 255, 255, 0.8)',
-                          lineHeight: 1.7,
-                          wordBreak: 'keep-all',
-                        }}
-                      >
+                      <p className="text-sm md:text-base mb-8 leading-relaxed text-[#EDE6DA] opacity-70">
                         {ebook.desc}
                       </p>
 
-                      {/* CTA 버튼 */}
                       <div className="mt-auto">
-                        <div 
-                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 border"
-                          style={{
-                            borderColor: 'rgba(255, 42, 166, 0.3)',
-                            background: 'rgba(255, 42, 166, 0.08)',
-                            color: '#ff7ac8',
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.borderColor = 'rgba(255, 42, 166, 0.5)'
-                            e.currentTarget.style.background = 'rgba(255, 42, 166, 0.15)'
-                            e.currentTarget.style.boxShadow = '0 0 12px rgba(255, 42, 166, 0.3)'
-                            e.currentTarget.style.transform = 'translateX(2px)'
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.borderColor = 'rgba(255, 42, 166, 0.3)'
-                            e.currentTarget.style.background = 'rgba(255, 42, 166, 0.08)'
-                            e.currentTarget.style.boxShadow = 'none'
-                            e.currentTarget.style.transform = 'translateX(0)'
-                          }}
-                        >
-                          자세히 보기
-                          <span className="transition-transform duration-300">→</span>
+                        <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#B8964A] group-hover:translate-x-1 transition-transform">
+                          자세히 보기 <span style={{ color: 'var(--accent-pink)' }}>→</span>
                         </div>
                       </div>
                     </div>

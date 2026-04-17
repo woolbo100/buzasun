@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import PetalsCanvas from './PetalsCanvas'
 import Reveal from './Reveal'
+import NorigaeElement from './NorigaeElement'
 
 export default function Hero() {
   const scrollToContent = () => {
@@ -13,30 +13,22 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-fit flex items-center justify-center pt-52 md:pt-60 pb-20 px-4 md:px-6 overflow-hidden" style={{ background: 'transparent' }}>
-      <PetalsCanvas color="#fce7f3" density={28} />
-      
-      {/* 달빛 효과 (안개 속에 숨은 달빛) */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 120% 80% at 50% 25%, rgba(200, 190, 210, 0.05) 0%, rgba(180, 170, 200, 0.03) 30%, rgba(160, 150, 185, 0.015) 50%, transparent 70%)',
-          filter: 'blur(120px)',
-          mixBlendMode: 'screen',
-        }}
-      />
-      
-      <div className="container mx-auto max-w-4xl text-center relative z-10">
+    <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-4 md:px-6 overflow-hidden">
+      {/* 텍스트 가독성을 위한 메인 카드 */}
+      <div className="gungjung-glass container mx-auto max-w-5xl py-16 md:py-24 px-8 md:px-16 text-center relative z-10">
+        {/* 장식용 노리개 */}
+        <NorigaeElement className="absolute -top-10 -right-4 hidden md:block" size={100} />
+
         {/* 상단 배지 */}
         <Reveal delayMs={0}>
-          <div className="mb-8">
+          <div className="mb-10">
             <span 
-              className="inline-block px-5 py-2.5 rounded-full text-sm font-medium backdrop-blur-sm"
+              className="inline-block px-6 py-2 rounded-full text-sm font-medium"
               style={{
-                background: 'rgba(26, 6, 38, 0.6)',
-                border: '1px solid rgba(255, 20, 147, 0.2)',
-                color: '#f7f1ff',
-                boxShadow: '0 4px 20px rgba(252, 231, 243, 0.1)',
+                background: 'rgba(59, 15, 27, 0.5)', /* 버건디 */
+                border: '1px solid rgba(184, 150, 74, 0.3)',
+                color: 'var(--text-ivory)',
+                letterSpacing: '0.1em',
               }}
             >
               당신이 몰랐던 타고난 사랑의 알고리즘
@@ -47,43 +39,19 @@ export default function Hero() {
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <h1 
-            className="font-elegant font-bold mb-8 leading-[1.1] relative"
+            className="font-elegant font-bold mb-10 leading-[1.3] relative"
             style={{
-              fontSize: 'clamp(1.875rem, 6vw, 5rem)',
-              letterSpacing: '0.02em',
+              fontSize: 'clamp(2rem, 5vw, 4.5rem)',
+              letterSpacing: '0.05em',
               wordBreak: 'keep-all',
+              color: 'var(--text-white)',
             }}
           >
-            {/* 은은한 아우라 글로우 배경 */}
-            <div 
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: 'radial-gradient(ellipse 85% 60% at 50% 50%, rgba(255, 230, 240, 0.16) 0%, rgba(255, 180, 210, 0.12) 30%, rgba(255, 130, 190, 0.08) 50%, rgba(255, 90, 170, 0.05) 70%, transparent 100%)',
-                filter: 'blur(60px)',
-                transform: 'translateY(-10%)',
-                zIndex: -1,
-              }}
-            />
+            당신의 연애는<br />
             <span 
-              className="block relative z-10"
               style={{
-                color: '#ffffff',
-                textShadow: '0 0 8px rgba(255, 255, 255, 0.2), 0 4px 20px rgba(0, 0, 0, 0.3)',
-                wordBreak: 'keep-all',
-              }}
-            >
-              당신의 연애는
-            </span>
-            <span 
-              className="block mt-2 relative z-10"
-              style={{
-                letterSpacing: '0.03em',
-                background: 'linear-gradient(to right, #fff5f8 0%, #ffe0f0 20%, #ffb6d9 40%, #ff69b4 60%, #ff1493 80%, #ff1493 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 12px rgba(255, 20, 147, 0.25), 0 0 24px rgba(255, 105, 180, 0.15), 0 4px 20px rgba(0, 0, 0, 0.3)',
-                wordBreak: 'keep-all',
+                color: 'var(--accent-gold)',
+                textShadow: '0 0 15px rgba(184, 150, 74, 0.2)',
               }}
             >
               타고난 코드부터 다르다
@@ -94,80 +62,52 @@ export default function Hero() {
         {/* 서브 카피 */}
         <Reveal delayMs={200}>
           <p 
-            className="mb-12 max-w-2xl mx-auto"
+            className="mb-14 max-w-2xl mx-auto"
             style={{
-              fontSize: 'clamp(1rem, 2vw, 1.25rem)',
-              letterSpacing: '0.01em',
-              color: 'rgba(255, 255, 255, 0.9)',
-              fontWeight: 400,
-              lineHeight: 1.7,
+              fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
+              letterSpacing: '0.02em',
+              color: 'var(--text-ivory)',
+              fontWeight: 300,
+              lineHeight: 1.8,
               wordBreak: 'keep-all',
             }}
           >
             선천코드 분석을 통해 당신이 반복하는 연애 패턴과
-            <br />
+            <br className="hidden md:block" />
             나의 에너지에 공명하는 사랑의 지도를 정밀하게 해독합니다.
           </p>
         </Reveal>
 
         {/* CTA 버튼 */}
         <Reveal delayMs={300}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
-            <div className="flex flex-col items-center">
-              <Link
-                href="/report"
-                className="group relative px-10 py-4 rounded-lg font-semibold text-white overflow-hidden transition-all duration-500"
-                style={{
-                  background: 'linear-gradient(135deg, #ff1493 0%, #c71585 100%)',
-                  boxShadow: '0 8px 32px rgba(255, 20, 147, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 12px 48px rgba(255, 20, 147, 0.5), 0 0 60px rgba(255, 20, 147, 0.2)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.3), 0 0 40px rgba(255, 20, 147, 0.1)'
-                }}
-              >
-                {/* 빛이 흐르는 효과 */}
-                <span 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-                  style={{
-                    background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%)',
-                    animation: 'shimmer 2s infinite',
-                  }}
-                />
-                <span className="relative z-10">맞춤 리포트 받기</span>
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Link
+              href="/report"
+              className="group relative px-12 py-5 rounded-lg font-semibold text-white overflow-hidden transition-all duration-500"
+              style={{
+                background: 'linear-gradient(135deg, var(--primary-burgundy) 0%, #2A0A14 100%)',
+                border: '1px solid rgba(184, 150, 74, 0.4)',
+                boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
+              }}
+            >
+              <span className="relative z-10">나의 선천코드 맞춤 리포트 받기</span>
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
+            </Link>
             
-            <div className="flex flex-col items-center">
-              <Link
-                href="/ebooks"
-                className="group relative px-10 py-4 rounded-lg font-semibold transition-all duration-500 backdrop-blur-sm"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 20, 147, 0.5)',
-                  color: '#f7f1ff',
-                  boxShadow: '0 4px 20px rgba(255, 20, 147, 0.1)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 20, 147, 0.15)'
-                  e.currentTarget.style.borderColor = '#ff69b4'
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(255, 20, 147, 0.3)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'
-                  e.currentTarget.style.borderColor = 'rgba(255, 20, 147, 0.5)'
-                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(255, 20, 147, 0.1)'
-                }}
-              >
-                <span className="relative z-10">시크릿 비법서 둘러보기</span>
-              </Link>
-            </div>
+            <Link
+              href="/ebooks"
+              className="group relative px-12 py-5 rounded-lg font-semibold transition-all duration-500"
+              style={{
+                background: 'rgba(255, 255, 255, 0.04)',
+                border: '1px solid rgba(184, 150, 74, 0.2)',
+                color: 'var(--text-ivory)',
+              }}
+            >
+              <span className="relative z-10">시크릿 비법서 둘러보기</span>
+            </Link>
           </div>
         </Reveal>
       </div>
-
     </section>
   )
 }

@@ -4,6 +4,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
+:root {
+  --primary-purple: #1A0F2E;
+  --primary-burgundy: #3B0F1B;
+  --accent-gold: #B8964A; /* 앤틱 골드 */
+  --accent-gold-soft: rgba(184, 150, 74, 0.25);
+  --accent-pink: #C58BA0; /* 더스티 로즈 */
+  --accent-pink-soft: rgba(197, 139, 160, 0.3);
+  --text-white: #F5F5F5;
+  --text-ivory: #EDE6DA;
+  --glass-bg: rgba(255, 255, 255, 0.04); 
+  --glass-border: rgba(184, 150, 74, 0.15); /* 앤틱 골드 얇은 테두리 */
+}
+
 @layer base {
   * {
     margin: 0;
@@ -17,25 +30,17 @@
 
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    background: linear-gradient(135deg, #0d0010 0%, #15051a 30%, #25081a 60%, #15051a 100%);
-    background-size: 200% 200%;
-    animation: gradientShift 20s ease infinite;
-    color: #f7f1ff;
+    background-color: #0c0816; /* 딥 퍼플보다 더 어두운 기본 배경 */
+    color: var(--text-white);
     overflow-x: hidden;
     position: relative;
+    line-height: 1.7; /* 줄간격 확보 */
   }
 
+
+  /* 기존 body::before 핑크 그라데이션 제거 */
   body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 20, 147, 0.06) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 0;
+    display: none;
   }
 
   @keyframes gradientShift {
@@ -181,13 +186,13 @@
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 25%, #c71585 50%, #8a2be2 75%, #ff1493 100%);
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--text-ivory) 50%, var(--accent-gold) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     background-size: 200% 200%;
-    animation: gradientText 3s ease infinite;
-    filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.3));
+    animation: gradientText 4s ease infinite;
+    filter: drop-shadow(0 0 10px rgba(184, 150, 74, 0.2));
   }
 
   @keyframes gradientText {
@@ -195,27 +200,55 @@
     50% { background-position: 100% 50%; }
   }
 
-  .card-hover {
-    transition: all 0.3s ease;
+  /* 궁중유리(Gungjung Glass) 공통 스타일 */
+  .gungjung-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .card-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(255, 20, 147, 0.4), 0 0 30px rgba(138, 43, 226, 0.2);
-    border-color: rgba(255, 20, 147, 0.5);
+  .gungjung-glass:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    border-color: rgba(184, 150, 74, 0.35);
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-4px);
+  }
+
+  /* 노리개 장식용 흔들림 애니메이션 */
+  @keyframes norigaeShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+  }
+
+  .norigae-hover:hover {
+    animation: norigaeShake 1.5s ease-in-out infinite;
+    transform-origin: top center;
+  }
+
+  /* 얇은 골드 라인 구분자 */
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(184, 150, 74, 0.5), transparent);
+    opacity: 0.25;
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 50%, #c71585 100%);
-    color: #ffffff;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3), 0 0 20px rgba(138, 43, 226, 0.2);
+    background: linear-gradient(135deg, var(--primary-burgundy) 0%, #2A0A14 100%);
+    color: var(--text-white);
+    border: 1px solid rgba(184, 150, 74, 0.4);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(184, 150, 74, 0.1);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 20, 147, 0.5), 0 0 30px rgba(138, 43, 226, 0.3);
-    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ff1493 100%);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.25);
+    filter: brightness(1.1);
   }
 
   .fade-in-up {
@@ -248,15 +281,15 @@
   }
 
   .modal-content {
-    background: linear-gradient(135deg, #2d0a20 0%, #1a0626 50%, #120014 100%);
-    padding: 2rem;
-    border-radius: 1rem;
+    background: linear-gradient(135deg, #1A0F2E 0%, #2A0A14 100%);
+    padding: 2.5rem;
+    border-radius: 1.25rem;
     max-width: 600px;
     width: 90%;
     max-height: 90vh;
     overflow-y: auto;
-    border: 1px solid rgba(255, 20, 147, 0.3);
-    box-shadow: 0 20px 60px rgba(138, 43, 226, 0.3), 0 0 40px rgba(255, 20, 147, 0.2);
+    border: 1px solid rgba(184, 150, 74, 0.3);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), 0 0 40px rgba(184, 150, 74, 0.1);
     animation: slideUp 0.3s;
   }
 
@@ -278,15 +311,16 @@
 
   input, textarea {
     background: rgba(26, 6, 38, 0.4);
-    border: 1px solid rgba(255, 20, 147, 0.3);
+    border: 1px solid rgba(184, 150, 74, 0.2);
     color: #e8e8e8;
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
   }
 
   input:focus, textarea:focus {
     outline: none;
-    border-color: #ff69b4;
-    box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.2), 0 0 20px rgba(138, 43, 226, 0.2);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(184, 150, 74, 0.1), 0 0 20px rgba(184, 150, 74, 0.1);
     background: rgba(26, 6, 38, 0.6);
   }
 

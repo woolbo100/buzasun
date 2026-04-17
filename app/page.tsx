@@ -11,135 +11,65 @@ import Footer from '@/components/Footer'
 import AdminModal from '@/components/AdminModal'
 import BookmarkTassel from '@/components/BookmarkTassel'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import PetalsCanvas from '@/components/PetalsCanvas'
 
 export default function Home() {
   useScrollAnimation()
 
   return (
-    <main>
+    <main className="relative min-h-screen bg-[#0a0514]">
       <Navigation />
       <BookmarkTassel />
       
-      {/* Hero ~ 리포트 ~ 후기 ~ 시크릿 비법서 통배경 래퍼 */}
-      <div 
-        className="relative overflow-hidden"
-        style={{ 
-          background: 'linear-gradient(180deg, #0d0010 0%, #12051a 10%, #1a0825 22%, #1f0a2e 35%, #220b32 45%, #1f0a2e 55%, #1a0825 65%, #180724 75%, #160722 85%, #140620 92%, #12051a 100%)',
-        }}
-      >
-        {/* 상단 Hero 영역 전용 배경 레이어 */}
+      {/* 전체 통합 궁궐 배경 및 오버레이 */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        {/* 궁궐 통배경 이미지 */}
         <div 
-          className="absolute inset-x-0 top-0 h-[820px] lg:h-[900px] pointer-events-none z-0"
-          style={{
-            maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
-          }}
-        >
-          {/* 궁궐 이미지 */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('/image/baekdohwa-palace-bg.png')",
-              backgroundPosition: 'center 58%',
-              backgroundSize: '150% auto',
-              backgroundRepeat: 'no-repeat',
-              opacity: 0.45,
-              filter: 'brightness(0.32) contrast(1.12) saturate(1.0)',
-              mixBlendMode: 'normal',
-              maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
-            }}
-          />
-          
-          {/* 보라색 톤 오버레이 */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(to bottom, rgba(35, 5, 45, 0.45) 0%, rgba(32, 8, 50, 0.38) 25%, rgba(28, 10, 55, 0.35) 45%, rgba(26, 7, 38, 0.42) 65%, rgba(30, 5, 42, 0.28) 85%, rgba(25, 3, 35, 0.15) 100%)',
-            }}
-          />
-          
-          {/* 비네팅 효과 (양쪽 가장자리 어둡게) */}
-          <div 
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: 'radial-gradient(ellipse at center, transparent 0%, transparent 30%, rgba(28, 6, 45, 0.4) 60%, rgba(32, 10, 55, 0.85) 100%)',
-              maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-            }}
-          />
-        </div>
-        
-        {/* SEAM 블렌딩 레이어 (경계선 제거) */}
-        <div
-          className="absolute left-[-25%] right-[-25%] pointer-events-none z-[1]"
-          style={{
-            top: '800px',
-            height: '480px',
-            transform: 'translateY(0px)',
-            background: `
-              radial-gradient(ellipse 200% 100% at 50% 10%,
-                rgba(50, 15, 90, 0.28) 0%,
-                rgba(40, 12, 75, 0.22) 25%,
-                rgba(30, 8, 60, 0.16) 45%,
-                rgba(22, 5, 45, 0.12) 65%,
-                rgba(18, 4, 35, 0.06) 80%,
-                rgba(13, 0, 16, 0.00) 95%
-              ),
-              linear-gradient(to bottom,
-                rgba(26, 7, 38, 0.00) 0%,
-                rgba(26, 7, 38, 0.20) 35%,
-                rgba(20, 6, 31, 0.15) 55%,
-                rgba(13, 0, 16, 0.00) 100%
-              )
-            `,
-            filter: 'blur(36px)',
-            opacity: 0.65,
-            mixBlendMode: 'normal',
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: "url('/image/main.png')",
+            opacity: 0.5, /* 배경 이미지 자체의 투명도 조절 */
           }}
         />
         
-        {/* 콘텐츠 */}
-        <div className="relative z-10">
-          <Hero />
-          <ProductCards />
-          <Testimonials />
-          <Ebooks />
-        </div>
+        {/* 요청된 다크 오버레이 그라데이션 */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(10, 5, 20, 0.6) 0%, rgba(0, 0, 0, 0.85) 100%)',
+          }}
+        />
+
+        {/* 페이지 전체 꽃잎 파티클 */}
+        <PetalsCanvas color="#EDE6DA" density={35} />
       </div>
 
-      
-      {/* 통배경 래퍼 - About/Projects/Contact 공유 */}
-      <div 
-        className="relative overflow-hidden"
-        style={{ 
-          background: 'linear-gradient(180deg, #1a0626 0%, #14061f 30%, #120014 60%, #14061f 100%)',
-        }}
-      >
-        {/* 입체감을 위한 추가 그라데이션 레이어 */}
-        <div 
-          className="absolute inset-0 pointer-events-none z-0"
-          style={{
-            background: 'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(27, 7, 38, 0.4) 0%, transparent 60%)',
-          }}
-        />
-        {/* 신비로운 오라 오버레이 - 아주 약하게만 */}
-        <div 
-          className="absolute top-0 left-0 right-0 h-[600px] pointer-events-none z-0"
-          style={{
-            background: 'radial-gradient(ellipse at center top, rgba(138, 43, 226, 0.06) 0%, rgba(255, 20, 147, 0.03) 20%, transparent 50%)',
-          }}
-        />
+      {/* 실질적 콘텐츠 영역 */}
+      <div className="relative z-10">
+        <Hero />
         
-        {/* 섹션들 - 경계 없이 자연스럽게 연결 */}
-        <div className="relative z-10">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="gold-divider my-10" />
+          <ProductCards />
+          
+          <div className="gold-divider my-10" />
+          <Testimonials />
+          
+          <div className="gold-divider my-10" />
+          <Ebooks />
+          
+          <div className="gold-divider my-10" />
           <About />
+          
+          <div className="gold-divider my-10" />
           <Contact />
         </div>
+        
+        <Footer />
       </div>
-      
-      <Footer />
+
       <AdminModal />
     </main>
   )
 }
+

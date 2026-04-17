@@ -41,7 +41,7 @@ export default function BookmarkTassel() {
     if (containerRef.current) {
       const ripple = document.createElement('div')
       ripple.className = 'absolute inset-0 rounded-full pointer-events-none'
-      ripple.style.background = 'radial-gradient(circle, rgba(255, 20, 147, 0.5) 0%, rgba(255, 105, 180, 0.3) 30%, transparent 70%)'
+      ripple.style.background = 'radial-gradient(circle, var(--accent-gold) 0%, var(--accent-gold-soft) 30%, transparent 70%)'
       ripple.style.animation = 'ripple 0.5s ease-out'
       ripple.style.transformOrigin = 'center'
       ripple.style.zIndex = '10'
@@ -72,12 +72,12 @@ export default function BookmarkTassel() {
           aria-label="즐겨찾기"
           style={{
             filter: isClicked
-              ? 'drop-shadow(0 0 20px rgba(255, 20, 147, 0.6)) brightness(1.15)'
+              ? 'drop-shadow(0 0 20px var(--accent-gold-soft)) brightness(1.15)'
               : isHovered 
-              ? 'drop-shadow(0 0 12px rgba(255, 182, 193, 0.3)) brightness(1.05)' 
+              ? 'drop-shadow(0 0 12px var(--accent-gold-soft)) brightness(1.05)' 
               : isBookmarked
-              ? 'drop-shadow(0 0 6px rgba(255, 20, 147, 0.25))'
-              : 'drop-shadow(0 0 4px rgba(138, 43, 226, 0.15))',
+              ? 'drop-shadow(0 0 6px var(--accent-gold-soft))'
+              : 'drop-shadow(0 0 4px rgba(212, 175, 55, 0.15))',
             transition: 'filter 0.3s ease-out',
             transformOrigin: 'center top',
             animation: hasAnimated 
@@ -164,17 +164,17 @@ export default function BookmarkTassel() {
                 <stop offset="100%" stopColor="rgba(240,235,230,0.3)" />
               </linearGradient>
 
-              {/* 가장자리 핑크 라인 글로우 */}
+              {/* 가장자리 골드 라인 글로우 */}
               <filter id="edgeGlowTassel" x="-50%" y="-50%" width="200%" height="200%">
                 <feGaussianBlur stdDeviation="2.5" result="blur" />
                 <feColorMatrix
                   in="blur"
                   type="matrix"
-                  values="1 0 0 0 0 0 0.2 0 0 0 0 0 0.4 0 0 0 0 0 0.7 0"
-                  result="pinkEdge"
+                  values="0.72 0 0 0 0 0 0.59 0 0 0 0 0 0.29 0 0 0 0 0 0.6 0"
+                  result="goldEdge"
                 />
                 <feMerge>
-                  <feMergeNode in="pinkEdge" />
+                  <feMergeNode in="goldEdge" />
                   <feMergeNode in="SourceGraphic" />
                 </feMerge>
               </filter>
@@ -201,7 +201,7 @@ export default function BookmarkTassel() {
                 <feColorMatrix
                   in="blur"
                   type="matrix"
-                  values="1 0 0 0 0 0 0.3 0 0 0 0 0 0.5 0 0 0 0 0 0.8 0"
+                  values="0.72 0 0 0 0 0 0.59 0 0 0 0 0 0.29 0 0 0 0 0 0.7 0"
                   result="softGlow"
                 />
                 <feMerge>
@@ -264,13 +264,13 @@ export default function BookmarkTassel() {
               className="transition-all duration-300"
               style={{
                 filter: isClicked
-                  ? 'drop-shadow(0 0 24px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 36px rgba(255, 182, 193, 0.5)) drop-shadow(0 0 48px rgba(255, 20, 147, 0.4))'
+                  ? 'drop-shadow(0 0 24px rgba(245, 230, 218, 0.6)) drop-shadow(0 0 36px var(--accent-gold-soft))'
                   : isHovered 
-                  ? 'drop-shadow(0 0 16px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 24px rgba(255, 182, 193, 0.3)) drop-shadow(0 0 32px rgba(255, 20, 147, 0.2))' 
+                  ? 'drop-shadow(0 0 16px rgba(245, 230, 218, 0.4)) drop-shadow(0 0 24px var(--accent-gold-soft))' 
                   : isBookmarked
-                  ? 'drop-shadow(0 0 8px rgba(255, 20, 147, 0.25)) drop-shadow(0 0 12px rgba(255, 182, 193, 0.15))'
-                  : 'drop-shadow(0 0 4px rgba(255, 182, 193, 0.2))',
-                opacity: isClicked ? 1.1 : isHovered ? 1 : isBookmarked ? 0.98 : 0.95,
+                  ? 'drop-shadow(0 0 10px var(--accent-gold-soft))'
+                  : 'drop-shadow(0 0 4px rgba(184, 150, 74, 0.15))',
+                opacity: isClicked ? 1.1 : isHovered ? 1 : isBookmarked ? 0.98 : 0.92,
               }}
               transform="translate(30 90) scale(0.28) translate(-100 -100)"
             >
@@ -299,7 +299,7 @@ export default function BookmarkTassel() {
                   <path
                     d="M 0 -70 C 20 -70, 38 -48, 34 -28 C 30 -10, 14 8, 0 18 C -14 8, -30 -10, -34 -28 C -38 -48, -20 -70, 0 -70 Z"
                     fill="none"
-                    stroke="#c71585"
+                    stroke="var(--accent-gold)"
                     strokeWidth="1.8"
                     opacity="0.85"
                     filter="url(#edgeGlowTassel)"
@@ -374,7 +374,7 @@ export default function BookmarkTassel() {
             <div
               className="absolute pointer-events-none rounded-full -z-10 transition-opacity duration-300"
               style={{
-                background: 'radial-gradient(circle, rgba(255, 20, 147, 0.15) 0%, rgba(255, 105, 180, 0.1) 30%, transparent 70%)',
+                background: 'radial-gradient(circle, var(--accent-gold-soft) 0%, transparent 70%)',
                 filter: 'blur(25px)',
                 top: '50%',
                 left: '50%',
