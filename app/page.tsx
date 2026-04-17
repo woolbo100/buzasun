@@ -42,13 +42,13 @@ export default function Home() {
           }}
         />
         
-        {/* 요청된 다크 오버레이 및 비네팅 효과 */}
+        {/* 요청된 다크 오버레이 및 비네팅 효과 (깊이감 강화 버전) */}
         <div 
           className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(circle at center, transparent 20%, rgba(12, 8, 22, 0) 40%, rgba(59, 15, 27, 0.25) 85%, rgba(26, 15, 46, 0.5) 100%),
-              linear-gradient(to bottom, rgba(10, 5, 20, 0.5) 0%, rgba(0, 0, 0, 0.85) 100%)
+              radial-gradient(circle at center, transparent 10%, rgba(10, 5, 20, 0) 40%, rgba(15, 8, 25, 0.4) 75%, rgba(8, 4, 15, 0.85) 100%),
+              linear-gradient(to bottom, rgba(10, 5, 20, 0.5) 0%, rgba(0, 0, 0, 0.95) 100%)
             `,
           }}
         />
