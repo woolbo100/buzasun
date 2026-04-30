@@ -76,7 +76,7 @@ export default function AdminLoginPage() {
                style={{ background: 'linear-gradient(135deg, #2A103D 0%, #160B24 100%)', border: '1px solid rgba(229, 195, 178, 0.35)' }}>
             <Lock className="w-7 h-7 text-[#E5C3B2]" />
           </div>
-          <h1 className="text-3xl font-bold text-white mb-3 tracking-tight font-serif italic">Admin Portal</h1>
+          <h1 className="text-3xl font-bold text-white mb-3 tracking-tight font-serif italic">비밀공간 입장하기</h1>
           <p className="text-[#E5C3B2]/70 text-sm text-center font-light tracking-wide">
             백도화 매력학당의 비밀스러운 관리 공간입니다.
           </p>
