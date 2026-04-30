@@ -5,6 +5,9 @@ import { useRouter, usePathname } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
 
+// 허용된 관리자 이메일 목록
+const ADMIN_EMAILS = ['buzasun@gmail.com'];
+
 export default function AdminLayout({
   children,
 }: {
@@ -16,7 +19,7 @@ export default function AdminLayout({
   const pathname = usePathname();
 
   useEffect(() => {
-    // 로그인 페이지는 인증 체크를 하지 않습니다.
+    // 로그인 페이지는 체크 제외
     if (pathname === '/admin/login') {
       setLoading(false);
       return;
@@ -25,9 +28,11 @@ export default function AdminLayout({
     const checkUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       
-      if (!user) {
-        // 로그인하지 않은 경우 로그인 페이지로 이동
-        router.push('/admin/login');
+      // 1. 로그인이 안 되어 있거나 2. 허용되지 않은 이메일인 경우
+      if (!user || !ADMIN_EMAILS.includes(user.email || '')) {
+        // 이미 로그인된 상태라면 로그아웃 시킴 (권한 없는 계정 보호)
+        if (user) await supabase.auth.signOut();
+        router.push('/admin/login?error=unauthorized');
       } else {
         setAuthenticated(true);
       }
@@ -37,7 +42,6 @@ export default function AdminLayout({
     checkUser();
   }, [pathname, router]);
 
-  // 로딩 중일 때 보여줄 화면
   if (loading) {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
@@ -46,7 +50,6 @@ export default function AdminLayout({
     );
   }
 
-  // 로그인 페이지거나 인증된 경우에만 콘텐츠를 보여줍니다.
   if (pathname === '/admin/login' || authenticated) {
     return <>{children}</>;
   }
