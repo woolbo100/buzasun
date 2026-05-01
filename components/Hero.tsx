@@ -98,7 +98,7 @@ export default function Hero() {
         <Reveal delayMs={300}>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
-              href={mainProduct ? `/reports/${mainProduct.slug}` : "/reports/love-code-report"}
+              href={mainProduct ? `/reports/${mainProduct.slug}` : "/report"}
               className="group relative px-12 py-5 rounded-lg font-semibold text-white overflow-hidden transition-all duration-500"
               style={{
                 background: 'linear-gradient(135deg, var(--primary-burgundy) 0%, #2A0A14 100%)',
@@ -107,7 +107,7 @@ export default function Hero() {
               }}
             >
               <span className="relative z-10">
-                {mainProduct?.main_cta_label || "내 연애 코드 지금 확인하기"}
+                {mainProduct?.main_cta_label || "나의 선천코드 맞춤 리포트 받기"}
               </span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
             </Link>
