@@ -1,74 +1,97 @@
-'use client';
-
-import { supabase } from '@/lib/supabase';
-import { useRouter } from 'next/navigation';
-import { LogOut, LayoutDashboard, Users, FileText, Settings } from 'lucide-react';
-
 export default function AdminDashboardPage() {
-  const router = useRouter();
+  const stats = [
+    { title: "오늘 주문", value: "12건", desc: "신규 주문 확인" },
+    { title: "결제 완료", value: "8건", desc: "결제 확인 필요" },
+    { title: "리포트 대기", value: "5건", desc: "작성 및 발송 예정" },
+    { title: "신규 고객", value: "3명", desc: "오늘 가입 기준" },
+  ];
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push('/admin/login');
-    router.refresh();
-  };
+  const recentOrders = [
+    { name: "김도화", product: "연애 선천코드 리포트", status: "접수완료" },
+    { name: "이수연", product: "재회 가능성 리포트", status: "작성중" },
+    { name: "박하늘", product: "궁합 리포트", status: "발송완료" },
+  ];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* 사이드바 및 네비게이션 */}
-      <nav className="border-b border-white/10 bg-[#141414] px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <LayoutDashboard className="text-rose-500 w-6 h-6" />
-            <span className="text-xl font-bold font-serif italic">Admin Panel</span>
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#2A103D,_#160B24,_#0B0612)] text-white p-6 md:p-10">
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* Header */}
+        <section className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <p className="text-sm tracking-[0.25em] text-yellow-200/70 uppercase">
+              Baekdohwa Admin
+            </p>
+            <h1 className="text-3xl md:text-5xl font-semibold mt-2">
+              백도화 관리자 대시보드
+            </h1>
+            <p className="text-white/70 mt-3">
+              주문, 고객, 리포트 흐름을 한눈에 관리하는 비밀 공간입니다.
+            </p>
           </div>
-          <button
-            onClick={handleLogout}
-            className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-          >
-            <LogOut className="w-5 h-5" />
-            <span>로그아웃</span>
+
+          <button className="rounded-2xl border border-yellow-200/30 bg-white/5 backdrop-blur-md px-6 py-3 hover:bg-white/10 transition-all shadow-lg">
+            오늘 업무 시작하기
           </button>
-        </div>
-      </nav>
+        </section>
 
-      <main className="p-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">관리자 대시보드</h1>
-          <p className="text-gray-400">백도화 매력학당의 데이터를 관리하는 공간입니다.</p>
-        </div>
+        {/* Stats */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {stats.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-3xl border border-yellow-200/20 bg-white/5 backdrop-blur-xl p-6 shadow-xl"
+            >
+              <p className="text-sm text-white/60">{item.title}</p>
+              <h2 className="text-3xl font-bold mt-2">{item.value}</h2>
+              <p className="text-sm text-white/50 mt-3">{item.desc}</p>
+            </div>
+          ))}
+        </section>
 
-        {/* 퀵 액션 카드들 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <AdminCard 
-            icon={<Users className="w-6 h-6" />}
-            title="사용자 관리"
-            description="가입된 사용자 목록을 확인하고 관리합니다."
-          />
-          <AdminCard 
-            icon={<FileText className="w-6 h-6" />}
-            title="컨텐츠 관리"
-            description="블로그 및 강의 자료를 업데이트합니다."
-          />
-          <AdminCard 
-            icon={<Settings className="w-6 h-6" />}
-            title="시스템 설정"
-            description="웹사이트의 전역 설정을 변경합니다."
-          />
-        </div>
-      </main>
-    </div>
-  );
-}
+        {/* Quick Actions */}
+        <section className="grid md:grid-cols-3 gap-5">
+          {[
+            "상품 관리",
+            "주문 관리",
+            "리포트 발송",
+          ].map((action) => (
+            <button
+              key={action}
+              className="rounded-3xl border border-yellow-200/20 bg-white/5 backdrop-blur-xl p-6 text-left hover:bg-white/10 transition-all"
+            >
+              <p className="text-lg font-medium">{action}</p>
+              <p className="text-sm text-white/60 mt-2">
+                바로 이동하여 업무를 처리하세요
+              </p>
+            </button>
+          ))}
+        </section>
 
-function AdminCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
-  return (
-    <div className="bg-[#1a1a1a] border border-white/10 p-6 rounded-2xl hover:border-rose-500/30 transition-all cursor-pointer group">
-      <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-4 group-hover:bg-rose-500/10 group-hover:text-rose-500 transition-colors">
-        {icon}
+        {/* Recent Orders */}
+        <section className="rounded-3xl border border-yellow-200/20 bg-white/5 backdrop-blur-xl p-6 shadow-xl">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="text-xl font-semibold">최근 주문</h3>
+            <span className="text-sm text-white/60">최근 3건</span>
+          </div>
+
+          <div className="space-y-4">
+            {recentOrders.map((order, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border border-white/10 bg-black/10 p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3"
+              >
+                <div>
+                  <p className="font-medium">{order.name}</p>
+                  <p className="text-sm text-white/60">{order.product}</p>
+                </div>
+                <span className="text-sm rounded-full px-4 py-2 border border-yellow-200/20 bg-white/5">
+                  {order.status}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-400 text-sm">{description}</p>
-    </div>
+    </main>
   );
 }
