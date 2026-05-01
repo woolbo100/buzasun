@@ -30,6 +30,12 @@ module.exports = {
         'purple-custom': {
           500: '#8a2be2',
         },
+        'accent-gold': {
+          DEFAULT: '#D4B2A7',
+          light: '#EBD5CD',
+          deep: '#BA8D7E',
+          soft: 'rgba(212, 178, 167, 0.25)',
+        },
         'dark-custom': {
           900: '#0f0a1a',
           800: '#1a0d2e',

@@ -89,7 +89,7 @@ export default function AdminProductsPage() {
       <section className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl font-semibold flex items-center gap-3">
-            <Package className="text-yellow-200" /> 상품 관리
+            <Package className="text-accent-gold" /> 상품 관리
           </h1>
           <p className="text-white/70 mt-2">
             판매 중인 상품 리스트와 메인 페이지 노출 정보를 관리합니다.
@@ -97,7 +97,7 @@ export default function AdminProductsPage() {
         </div>
         <button 
           onClick={() => setIsFormOpen(true)}
-          className="rounded-2xl border border-yellow-200/30 bg-yellow-200/10 px-6 py-3 text-yellow-200 hover:bg-yellow-200/20 transition-all shadow-lg font-medium flex items-center gap-2"
+          className="rounded-2xl border border-accent-gold/30 bg-accent-gold/10 px-6 py-3 text-accent-gold hover:bg-accent-gold/20 transition-all shadow-lg font-medium flex items-center gap-2"
         >
           <Plus className="w-5 h-5" /> 상품 신규 등록
         </button>
@@ -106,7 +106,7 @@ export default function AdminProductsPage() {
       {/* Product List */}
       {loading ? (
         <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
-          <p className="text-yellow-200 animate-pulse">상품 목록을 불러오는 중...</p>
+          <p className="text-accent-gold animate-pulse">상품 목록을 불러오는 중...</p>
         </div>
       ) : products.length === 0 ? (
         <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
@@ -117,12 +117,12 @@ export default function AdminProductsPage() {
           {products.map((product) => (
             <div 
               key={product.id}
-              className="rounded-3xl border border-yellow-200/10 bg-white/5 backdrop-blur-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group hover:bg-white/10 transition-all"
+              className="rounded-3xl border border-accent-gold/10 bg-white/5 backdrop-blur-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group hover:bg-white/10 transition-all"
             >
               <div className="space-y-1 flex-1">
                 <div className="flex items-center gap-3">
-                  <span className="text-xs font-mono text-yellow-200/50 uppercase tracking-widest">{product.slug}</span>
-                  {product.is_featured && <span className="bg-yellow-200/20 text-yellow-200 text-[10px] px-2 py-0.5 rounded border border-yellow-200/30">FEATURED</span>}
+                  <span className="text-xs font-mono text-accent-gold/50 uppercase tracking-widest">{product.slug}</span>
+                  {product.is_featured && <span className="bg-accent-gold/20 text-accent-gold text-[10px] px-2 py-0.5 rounded border border-accent-gold/30">FEATURED</span>}
                 </div>
                 <h3 className="text-xl font-semibold">{product.name}</h3>
                 <p className="text-sm text-white/50 line-clamp-1">{product.description}</p>
@@ -131,7 +131,7 @@ export default function AdminProductsPage() {
               <div className="flex items-center gap-8 pr-4">
                 <div className="text-right">
                   <p className="text-xs text-white/40 uppercase tracking-tighter">Price</p>
-                  <p className="text-lg font-bold text-yellow-200">{product.price?.toLocaleString()}원</p>
+                  <p className="text-lg font-bold text-accent-gold">{product.price?.toLocaleString()}원</p>
                 </div>
                 
                 <div className="flex gap-4 border-l border-white/10 pl-8">
@@ -141,7 +141,7 @@ export default function AdminProductsPage() {
                   </div>
                   <div className="flex flex-col items-center gap-1">
                     <span className="text-[10px] text-white/40">메인노출</span>
-                    {product.show_on_main ? <CheckCircle2 className="w-5 h-5 text-yellow-200" /> : <XCircle className="w-5 h-5 text-white/20" />}
+                    {product.show_on_main ? <CheckCircle2 className="w-5 h-5 text-accent-gold" /> : <XCircle className="w-5 h-5 text-white/20" />}
                   </div>
                 </div>
               </div>
@@ -153,9 +153,9 @@ export default function AdminProductsPage() {
       {/* 등록 모달 */}
       {isFormOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-          <div className="w-full max-w-2xl rounded-3xl border border-yellow-200/30 bg-[#1A0B2E] p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
+          <div className="w-full max-w-2xl rounded-3xl border border-accent-gold/30 bg-[#1A0B2E] p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
             <h2 className="text-2xl font-semibold mb-8 text-white flex items-center gap-2">
-              <Plus className="text-yellow-200" /> 새로운 상품 등록
+              <Plus className="text-accent-gold" /> 새로운 상품 등록
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -164,7 +164,7 @@ export default function AdminProductsPage() {
                   <label className="text-sm text-white/60">상품 고유 슬러그 (URL용) *</label>
                   <input 
                     type="text" required placeholder="예: love-code-report"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-200/50"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50"
                     value={formData.slug}
                     onChange={(e) => setFormData({...formData, slug: e.target.value})}
                   />
@@ -173,7 +173,7 @@ export default function AdminProductsPage() {
                   <label className="text-sm text-white/60">상품명 *</label>
                   <input 
                     type="text" required
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-200/50"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                   />
@@ -184,7 +184,7 @@ export default function AdminProductsPage() {
                 <label className="text-sm text-white/60">상품 설명</label>
                 <textarea 
                   rows={3}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-200/50 resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50 resize-none"
                   value={formData.description}
                   onChange={(e) => setFormData({...formData, description: e.target.value})}
                 ></textarea>
@@ -195,18 +195,18 @@ export default function AdminProductsPage() {
                   <label className="text-sm text-white/60">가격 (원) *</label>
                   <input 
                     type="number" required
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-200/50"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50"
                     value={formData.price}
-                    onChange={(e) => setFormData({...formData, price: parseInt(e.target.value)})}
+                    onChange={(e) => setFormData({...formData, price: parseInt(e.target.value) || 0})}
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm text-white/60">메인 노출 순서 (낮을수록 먼저)</label>
                   <input 
                     type="number"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-200/50"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50"
                     value={formData.main_sort_order}
-                    onChange={(e) => setFormData({...formData, main_sort_order: parseInt(e.target.value)})}
+                    onChange={(e) => setFormData({...formData, main_sort_order: parseInt(e.target.value) || 0})}
                   />
                 </div>
               </div>
@@ -216,7 +216,7 @@ export default function AdminProductsPage() {
                   <label className="text-sm text-white/60">상품 카드 버튼 문구</label>
                   <input 
                     type="text"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-200/50"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50"
                     value={formData.button_label}
                     onChange={(e) => setFormData({...formData, button_label: e.target.value})}
                   />
@@ -225,7 +225,7 @@ export default function AdminProductsPage() {
                   <label className="text-sm text-white/60">메인 CTA 버튼 문구</label>
                   <input 
                     type="text"
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-200/50"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50"
                     value={formData.main_cta_label}
                     onChange={(e) => setFormData({...formData, main_cta_label: e.target.value})}
                   />
@@ -234,19 +234,19 @@ export default function AdminProductsPage() {
 
               <div className="flex flex-wrap gap-6 py-2">
                 <label className="flex items-center gap-2 cursor-pointer group">
-                  <input type="checkbox" className="w-5 h-5 rounded border-white/10 bg-white/5 checked:bg-yellow-200"
+                  <input type="checkbox" className="w-5 h-5 rounded border-white/10 bg-white/5 checked:bg-accent-gold"
                     checked={formData.show_on_main}
                     onChange={(e) => setFormData({...formData, show_on_main: e.target.checked})} />
                   <span className="text-sm text-white/80">메인페이지 노출</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer group">
-                  <input type="checkbox" className="w-5 h-5 rounded border-white/10 bg-white/5 checked:bg-yellow-200"
+                  <input type="checkbox" className="w-5 h-5 rounded border-white/10 bg-white/5 checked:bg-accent-gold"
                     checked={formData.is_featured}
                     onChange={(e) => setFormData({...formData, is_featured: e.target.checked})} />
                   <span className="text-sm text-white/80">추천 상품 설정</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer group">
-                  <input type="checkbox" className="w-5 h-5 rounded border-white/10 bg-white/5 checked:bg-yellow-200"
+                  <input type="checkbox" className="w-5 h-5 rounded border-white/10 bg-white/5 checked:bg-accent-gold"
                     checked={formData.is_active}
                     onChange={(e) => setFormData({...formData, is_active: e.target.checked})} />
                   <span className="text-sm text-white/80">현재 판매 중</span>
@@ -259,7 +259,7 @@ export default function AdminProductsPage() {
                   취소
                 </button>
                 <button type="submit" disabled={isSubmitting}
-                  className="flex-1 rounded-2xl bg-yellow-200 text-purple-900 py-4 font-bold hover:bg-yellow-300 transition-all disabled:opacity-50">
+                  className="flex-1 rounded-2xl bg-accent-gold text-purple-900 py-4 font-bold hover:bg-accent-gold-deep transition-all disabled:opacity-50">
                   {isSubmitting ? "저장 중..." : "상품 정보 저장하기"}
                 </button>
               </div>

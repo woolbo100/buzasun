@@ -90,7 +90,7 @@ export default function AdminReportsPage() {
       case '완료': return base + "border-green-500/30 bg-green-500/10 text-green-400";
       case '검토중': return base + "border-blue-500/30 bg-blue-500/10 text-blue-400";
       case '작성중': return base + "border-purple-500/30 bg-purple-500/10 text-purple-400";
-      case '작성대기': return base + "border-yellow-500/30 bg-yellow-500/10 text-yellow-400";
+      case '작성대기': return base + "border-accent-gold/30 bg-accent-gold/10 text-accent-gold";
       case '접수완료': return base + "border-white/20 bg-white/5 text-white/60";
       default: return base + "border-white/10 bg-white/5 text-white/40";
     }
@@ -111,7 +111,7 @@ export default function AdminReportsPage() {
       {/* Header */}
       <section>
         <h1 className="text-3xl md:text-4xl font-semibold flex items-center gap-3 text-white">
-          <FileText className="text-yellow-200" /> 리포트 관리
+          <FileText className="text-accent-gold" /> 리포트 관리
         </h1>
         <p className="text-white/70 mt-2">
           실시간 Supabase 연동을 통해 리포트 상태를 관리합니다.
@@ -119,7 +119,7 @@ export default function AdminReportsPage() {
       </section>
 
       {/* Reports List */}
-      <section className="rounded-3xl border border-yellow-200/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-xl">
+      <section className="rounded-3xl border border-accent-gold/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-xl">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
@@ -135,8 +135,8 @@ export default function AdminReportsPage() {
               {loading ? (
                 <tr>
                   <td colSpan={5} className="p-20 text-center">
-                    <Loader2 className="w-8 h-8 text-yellow-200 animate-spin mx-auto mb-4" />
-                    <p className="text-yellow-200/60">리포트를 불러오는 중...</p>
+                    <Loader2 className="w-8 h-8 text-accent-gold animate-spin mx-auto mb-4" />
+                    <p className="text-accent-gold/60">리포트를 불러오는 중...</p>
                   </td>
                 </tr>
               ) : error ? (
@@ -164,7 +164,7 @@ export default function AdminReportsPage() {
                     <td className="p-5 text-center">
                       {editingId === report.id ? (
                         <select 
-                          className="bg-[#2A1B3D] border border-white/20 rounded-lg px-2 py-1 text-xs text-white focus:outline-none focus:border-yellow-200/50"
+                          className="bg-[#2A1B3D] border border-white/20 rounded-lg px-2 py-1 text-xs text-white focus:outline-none focus:border-accent-gold/50"
                           value={editForm.report_status}
                           onChange={(e) => setEditForm({...editForm, report_status: e.target.value})}
                         >
@@ -182,7 +182,7 @@ export default function AdminReportsPage() {
                     <td className="p-5 text-center">
                       {editingId === report.id ? (
                         <select 
-                          className="bg-[#2A1B3D] border border-white/20 rounded-lg px-2 py-1 text-xs text-white focus:outline-none focus:border-yellow-200/50"
+                          className="bg-[#2A1B3D] border border-white/20 rounded-lg px-2 py-1 text-xs text-white focus:outline-none focus:border-accent-gold/50"
                           value={editForm.delivery_status}
                           onChange={(e) => setEditForm({...editForm, delivery_status: e.target.value})}
                         >
@@ -201,7 +201,7 @@ export default function AdminReportsPage() {
                       {editingId === report.id ? (
                         <input 
                           type="text"
-                          className="w-full bg-white/5 border border-white/20 rounded-lg px-3 py-1 text-xs focus:outline-none focus:border-yellow-200/50"
+                          className="w-full bg-white/5 border border-white/20 rounded-lg px-3 py-1 text-xs focus:outline-none focus:border-accent-gold/50"
                           value={editForm.admin_memo}
                           onChange={(e) => setEditForm({...editForm, admin_memo: e.target.value})}
                         />
@@ -217,7 +217,7 @@ export default function AdminReportsPage() {
                         <div className="flex justify-end gap-2">
                           <button 
                             onClick={() => handleUpdate(report.id)}
-                            className="p-2 rounded-lg bg-yellow-200/20 text-yellow-200 hover:bg-yellow-200 transition-all hover:text-purple-900"
+                            className="p-2 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold transition-all hover:text-purple-900"
                             title="저장"
                           >
                             <Save className="w-4 h-4" />
@@ -232,7 +232,7 @@ export default function AdminReportsPage() {
                       ) : (
                         <button 
                           onClick={() => startEditing(report)}
-                          className="px-4 py-2 rounded-xl bg-white/5 hover:bg-yellow-200/20 text-white/40 hover:text-yellow-200 transition-all text-xs"
+                          className="px-4 py-2 rounded-xl bg-white/5 hover:bg-accent-gold/20 text-white/40 hover:text-accent-gold transition-all text-xs"
                         >
                           상세 관리
                         </button>

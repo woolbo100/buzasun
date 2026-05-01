@@ -45,7 +45,7 @@ export default function DashboardLayout({
     <div className="min-h-screen bg-[#0B0612] flex flex-col md:flex-row">
       {/* Mobile Header */}
       <div className="md:hidden flex items-center justify-between p-4 bg-white/5 border-b border-white/10 backdrop-blur-md sticky top-0 z-50">
-        <span className="text-yellow-200 font-semibold tracking-wider">BAEKDOHWA ADMIN</span>
+        <span className="text-accent-gold font-semibold tracking-wider">BAEKDOHWA ADMIN</span>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? <X className="text-white" /> : <Menu className="text-white" />}
         </button>
@@ -62,13 +62,13 @@ export default function DashboardLayout({
       {/* Sidebar */}
       <aside className={`
         fixed md:static inset-y-0 left-0 z-50 w-64 
-        bg-[#1A0B2E]/80 backdrop-blur-xl border-r border-yellow-200/10
+        bg-[#1A0B2E]/80 backdrop-blur-xl border-r border-accent-gold/10
         transform ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"} 
         md:translate-x-0 transition-transform duration-300 ease-in-out
         flex flex-col
       `}>
         <div className="p-8">
-          <p className="text-xs tracking-[0.3em] text-yellow-200/50 uppercase mb-2">Management</p>
+          <p className="text-xs tracking-[0.3em] text-accent-gold/50 uppercase mb-2">Management</p>
           <h1 className="text-xl font-bold text-white tracking-tight">백도화 관리자</h1>
         </div>
 
@@ -83,11 +83,11 @@ export default function DashboardLayout({
                 className={`
                   flex items-center gap-3 px-4 py-3 rounded-2xl transition-all group
                   ${isActive 
-                    ? "bg-yellow-200/10 text-yellow-200 border border-yellow-200/20" 
+                    ? "bg-accent-gold/10 text-accent-gold border border-accent-gold/20" 
                     : "text-white/50 hover:bg-white/5 hover:text-white"}
                 `}
               >
-                <item.icon className={`w-5 h-5 ${isActive ? "text-yellow-200" : "text-white/40 group-hover:text-white"}`} />
+                <item.icon className={`w-5 h-5 ${isActive ? "text-accent-gold" : "text-white/40 group-hover:text-white"}`} />
                 <span className="font-medium">{item.title}</span>
               </Link>
             );

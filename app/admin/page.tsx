@@ -27,7 +27,7 @@ export default function AdminDashboardPage() {
         {/* Header */}
         <section className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <p className="text-sm tracking-[0.25em] text-yellow-200/70 uppercase">
+            <p className="text-sm tracking-[0.25em] text-accent-gold/70 uppercase">
               Baekdohwa Admin
             </p>
             <h1 className="text-3xl md:text-5xl font-semibold mt-2">
@@ -38,7 +38,7 @@ export default function AdminDashboardPage() {
             </p>
           </div>
 
-          <button className="rounded-2xl border border-yellow-200/30 bg-white/5 backdrop-blur-md px-6 py-3 hover:bg-white/10 transition-all shadow-lg">
+          <button className="rounded-2xl border border-accent-gold/30 bg-white/5 backdrop-blur-md px-6 py-3 hover:bg-white/10 transition-all shadow-lg">
             오늘 업무 시작하기
           </button>
         </section>
@@ -48,7 +48,7 @@ export default function AdminDashboardPage() {
           {stats.map((item) => (
             <div
               key={item.title}
-              className="rounded-3xl border border-yellow-200/20 bg-white/5 backdrop-blur-xl p-6 shadow-xl"
+              className="rounded-3xl border border-accent-gold/20 bg-white/5 backdrop-blur-xl p-6 shadow-xl"
             >
               <p className="text-sm text-white/60">{item.title}</p>
               <h2 className="text-3xl font-bold mt-2">{item.value}</h2>
@@ -63,9 +63,9 @@ export default function AdminDashboardPage() {
             <Link
               key={action.href}
               href={action.href}
-              className="rounded-3xl border border-yellow-200/20 bg-white/5 backdrop-blur-xl p-6 text-left hover:bg-white/10 transition-all group"
+              className="rounded-3xl border border-accent-gold/20 bg-white/5 backdrop-blur-xl p-6 text-left hover:bg-white/10 transition-all group"
             >
-              <p className="text-lg font-medium group-hover:text-yellow-200 transition-colors">
+              <p className="text-lg font-medium group-hover:text-accent-gold transition-colors">
                 {action.title}
               </p>
               <p className="text-sm text-white/60 mt-2">
@@ -76,7 +76,7 @@ export default function AdminDashboardPage() {
         </section>
 
         {/* Recent Orders */}
-        <section className="rounded-3xl border border-yellow-200/20 bg-white/5 backdrop-blur-xl p-6 shadow-xl">
+        <section className="rounded-3xl border border-accent-gold/20 bg-white/5 backdrop-blur-xl p-6 shadow-xl">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-xl font-semibold">최근 주문</h3>
             <span className="text-sm text-white/60">최근 3건</span>
@@ -92,7 +92,7 @@ export default function AdminDashboardPage() {
                   <p className="font-medium">{order.name}</p>
                   <p className="text-sm text-white/60">{order.product}</p>
                 </div>
-                <span className="text-sm rounded-full px-4 py-2 border border-yellow-200/20 bg-white/5">
+                <span className="text-sm rounded-full px-4 py-2 border border-accent-gold/20 bg-white/5">
                   {order.status}
                 </span>
               </div>

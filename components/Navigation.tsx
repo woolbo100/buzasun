@@ -39,6 +39,27 @@ export default function Navigation() {
     setMobileMenuOpen(false)
   }
 
+  const [mainReportSlug, setMainReportSlug] = useState('love-code-report')
+
+  useEffect(() => {
+    async function fetchMainReport() {
+      try {
+        const { data } = await supabase
+          .from('products')
+          .select('slug')
+          .eq('is_active', true)
+          .order('main_sort_order', { ascending: true })
+          .limit(1)
+          .single()
+        
+        if (data?.slug) setMainReportSlug(data.slug)
+      } catch (err) {
+        // ignore
+      }
+    }
+    fetchMainReport()
+  }, [])
+
   // 메뉴 링크 공통 스타일 (hover 애니메이션 포함)
   const menuLinkClass = "relative text-bd-gray hover:text-bd-ivory transition-all duration-300 group"
   const menuLinkStyle = {
@@ -154,7 +175,7 @@ export default function Navigation() {
               />
             </Link>
             
-            <Link href="/report" className={menuLinkClass} style={menuLinkStyle}>
+            <Link href={`/reports/${mainReportSlug}`} className={menuLinkClass} style={menuLinkStyle}>
               선천코드 리포트
               <span 
                 className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
@@ -288,7 +309,7 @@ export default function Navigation() {
                 백도화 소개
               </Link>
               <Link 
-                href="/report" 
+                href={`/reports/${mainReportSlug}`} 
                 className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
                 onClick={closeMobileMenu}
               >
