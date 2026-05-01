@@ -1,16 +1,34 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Reveal from './Reveal'
-import NorigaeElement from './NorigaeElement'
+import { supabase } from '@/lib/supabase'
 
 export default function Hero() {
-  const scrollToContent = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth'
-    })
-  }
+  const [mainProduct, setMainProduct] = useState<any>(null);
+
+  useEffect(() => {
+    async function fetchMainProduct() {
+      try {
+        const { data, error } = await supabase
+          .from('products')
+          .select('slug, main_cta_label')
+          .eq('is_active', true)
+          .eq('show_on_main', true)
+          .order('main_sort_order', { ascending: true })
+          .limit(1)
+          .single();
+
+        if (!error && data) {
+          setMainProduct(data);
+        }
+      } catch (err) {
+        console.error("Hero: Failed to fetch main product", err);
+      }
+    }
+    fetchMainProduct();
+  }, []);
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-4 md:px-6 overflow-hidden">
@@ -80,7 +98,7 @@ export default function Hero() {
         <Reveal delayMs={300}>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
-              href="/report"
+              href={mainProduct ? `/products/${mainProduct.slug}` : "/report"}
               className="group relative px-12 py-5 rounded-lg font-semibold text-white overflow-hidden transition-all duration-500"
               style={{
                 background: 'linear-gradient(135deg, var(--primary-burgundy) 0%, #2A0A14 100%)',
@@ -88,7 +106,9 @@ export default function Hero() {
                 boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
               }}
             >
-              <span className="relative z-10">나의 선천코드 맞춤 리포트 받기</span>
+              <span className="relative z-10">
+                {mainProduct?.main_cta_label || "나의 선천코드 맞춤 리포트 받기"}
+              </span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
             </Link>
             

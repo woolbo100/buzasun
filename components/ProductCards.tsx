@@ -1,159 +1,128 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Reveal from './Reveal'
+import { supabase } from '@/lib/supabase'
 
 export default function ProductCards() {
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        setLoading(true);
+        const { data, error } = await supabase
+          .from('products')
+          .select('*')
+          .eq('is_active', true)
+          .eq('show_on_main', true)
+          .order('main_sort_order', { ascending: true });
+
+        if (!error && data) {
+          setProducts(data);
+        }
+      } catch (err) {
+        console.error("ProductCards: Failed to fetch products", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProducts();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="py-20 text-center text-white/50">
+        데이터를 불러오는 중입니다...
+      </div>
+    );
+  }
+
   return (
     <section className="relative w-full overflow-hidden" style={{ background: 'transparent' }}>
       <div className="relative z-10">
-        {/* 리포트 섹션 - 카드형 구조 */}
         <Reveal delayMs={0}>
           <div className="w-full pt-20 pb-20 md:pt-24 md:py-28 px-6 md:px-8">
             <div className="max-w-6xl mx-auto">
-              <div 
-                className="gungjung-glass w-full rounded-3xl"
-                style={{
-                  padding: '3rem 72px',
-                }}
-              >
-                {/* 상단: 배지 + 메인 타이틀 */}
-                <div className="text-center mb-16">
-                  {/* 상단 배지 */}
-                  <div className="mb-6 inline-block">
-                    <div
-                      className="rounded-full p-[1px]"
-                      style={{
-                        background: 'linear-gradient(135deg, var(--accent-gold), #D4B2A7)',
-                        boxShadow: '0 2px 12px rgba(212, 178, 167, 0.15)',
-                      }}
-                    >
-                      <p 
-                        className="px-6 py-2 rounded-full text-xs md:text-sm"
-                        style={{
-                          color: '#f3eefe',
-                          letterSpacing: '0.2em',
-                          fontWeight: 500,
-                          background: 'rgba(59, 15, 27, 0.7)',
-                        }}
-                      >
-                        심리학 + 자기계발 + 동양 철학 + 에너지 차원
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* 메인 타이틀 */}
-                  <h2 
-                    className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-5 md:mb-7"
+              
+              {/* 섹션 헤더 */}
+              <div className="text-center mb-16">
+                <div className="mb-6 inline-block">
+                  <div
+                    className="rounded-full p-[1px]"
                     style={{
-                      color: '#f7f1ff',
-                      letterSpacing: '0.02em',
-                      lineHeight: 'clamp(1.15, 1.25, 1.25)',
+                      background: 'linear-gradient(135deg, var(--accent-gold), #D4B2A7)',
+                      boxShadow: '0 2px 12px rgba(212, 178, 167, 0.15)',
                     }}
                   >
-                    선천코드 분석 맞춤형 연애 리포트
-                  </h2>
-
-                  {/* 서브 타이틀 - 중앙 정렬 */}
-                  <div className="max-w-3xl mx-auto mb-8 md:mb-16">
                     <p 
-                      className="text-xl md:text-2xl font-semibold mb-2 md:mb-2.5"
+                      className="px-6 py-2 rounded-full text-xs md:text-sm"
                       style={{
-                        color: 'rgba(237, 230, 218, 0.95)',
-                        lineHeight: 'clamp(1.3, 1.45, 1.45)',
-                        wordBreak: 'keep-all',
+                        color: '#f3eefe',
+                        letterSpacing: '0.2em',
+                        fontWeight: 500,
+                        background: 'rgba(59, 15, 27, 0.7)',
                       }}
                     >
-                      당신이 반복하는 연애의 이유는 감정이 아니라 구조입니다.
-                    </p>
-                    <p 
-                      className="text-base md:text-lg"
-                      style={{
-                        color: 'rgba(237, 230, 218, 0.8)',
-                        lineHeight: 'clamp(1.5, 1.7, 1.7)',
-                        wordBreak: 'keep-all',
-                        opacity: 0.8,
-                      }}
-                    >
-                      전통적 동양 철학과 현대 심리 분석을 결합해<br className="hidden md:block" /> 여자의 상태·에너지·관계 패턴을 구조적으로 해석합니다.
+                      심리학 + 자기계발 + 동양 철학 + 에너지 차원
                     </p>
                   </div>
                 </div>
-
-                {/* 핵심 카드 그리드 - 모바일 2열, 데스크톱 3열 */}
-                <div 
-                  className="mx-auto mb-16 px-4 md:px-8"
-                  style={{
-                    maxWidth: '950px',
-                    marginTop: '48px',
-                  }}
+                
+                <h2 
+                  className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-5 md:mb-7 text-[#f7f1ff]"
+                  style={{ letterSpacing: '0.02em' }}
                 >
-                  <div 
-                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-7"
-                  >
-                    {[
-                      {
-                        title: '타고난 연애 성향 & 이상형',
-                      },
-                      {
-                        title: '맞는 인연 vs 피해야 할 인연',
-                      },
-                      {
-                        title: '반복되는 연애 패턴의 원인',
-                      },
-                      {
-                        title: '내 코드에 숨겨진 남자복',
-                      },
-                      {
-                        title: '타고난 코드가 만드는 연애의 흐름',
-                      },
-                      {
-                        title: '관계를 바꾸는 실전 연애 조언',
-                      },
-                    ].map((item, index) => (
-                      <div
-                        key={index}
-                        className="gungjung-glass rounded-xl p-4 md:p-5 flex flex-col justify-center items-center text-center"
-                        style={{
-                          background: 'rgba(26, 6, 38, 0.6)',
-                          minHeight: '120px',
-                        }}
-                      >
-                        <p 
-                          className="text-xs sm:text-sm md:text-base font-semibold text-[#EDE6DA] leading-relaxed"
-                          style={{
-                            wordBreak: 'keep-all',
-                          }}
-                        >
-                          {item.title}
+                  백도화 분석 맞춤형 리포트
+                </h2>
+                <p className="text-[#EDE6DA] opacity-80 max-w-2xl mx-auto text-base md:text-lg">
+                  관리자에서 엄선된 리포트와 비법서를 확인하고 신청하세요.
+                </p>
+              </div>
+
+              {/* 상품 카드 그리드 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {products.map((product, index) => (
+                  <Reveal key={product.id} delayMs={index * 100}>
+                    <div className="gungjung-glass rounded-3xl p-8 flex flex-col h-full hover:scale-[1.02] transition-transform duration-500">
+                      <div className="mb-6">
+                        <div className="flex justify-between items-start mb-4">
+                          <span className="text-[10px] text-yellow-200/50 tracking-widest uppercase">{product.slug}</span>
+                          {product.is_featured && (
+                            <span className="bg-yellow-200/20 text-yellow-200 text-[10px] px-2 py-0.5 rounded border border-yellow-200/30">FEATURED</span>
+                          )}
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-3">{product.name}</h3>
+                        <p className="text-sm text-[#EDE6DA] opacity-60 leading-relaxed line-clamp-3 min-h-[4.5rem]">
+                          {product.description}
                         </p>
                       </div>
-                    ))}
-                  </div>
-                </div>
 
-                {/* 하단: CTA 버튼 + 신뢰 문구 */}
-                <div className="text-center">
-                  {/* CTA 버튼 */}
-                  <Link href="/report">
-                    <div className="btn-primary inline-block px-8 md:px-14 py-4 md:py-6 rounded-lg font-semibold transition-all duration-500 relative overflow-hidden group/btn mb-3 w-[90%] sm:w-auto text-base md:text-lg">
-                      <span className="relative z-10">내 연애 코드 지금 확인하기</span>
-                      <div className="absolute inset-0 bg-white/5 opacity-0 group-hover/btn:opacity-10 transition-opacity" />
+                      <div className="mt-auto pt-6 border-t border-white/5 space-y-6">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-white/40">신청 금액</span>
+                          <span className="text-xl font-bold text-yellow-200">{product.price?.toLocaleString()}원</span>
+                        </div>
+
+                        <Link href={`/products/${product.slug}`}>
+                          <div className="w-full py-4 rounded-xl bg-yellow-200/10 border border-yellow-200/30 text-yellow-200 text-center font-bold text-sm hover:bg-yellow-200 hover:text-purple-950 transition-all duration-300">
+                            {product.button_label || "자세히 보기"}
+                          </div>
+                        </Link>
+                      </div>
                     </div>
-                  </Link>
-                  
-                  {/* 신뢰 문구 */}
-                  <p 
-                    className="text-sm md:text-base"
-                    style={{
-                      color: 'rgba(237, 230, 218, 0.4)',
-                      letterSpacing: '0.02em',
-                    }}
-                  >
-                    상담이 아닌, 구조를 해석하는 분석 리포트입니다.
-                  </p>
-                </div>
+                  </Reveal>
+                ))}
               </div>
+
+              {products.length === 0 && (
+                <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
+                  <p className="text-white/40">현재 등록된 상품이 없습니다.</p>
+                </div>
+              )}
+
             </div>
           </div>
         </Reveal>
