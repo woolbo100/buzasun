@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
-import { Package, Plus, ExternalLink, CheckCircle2, XCircle } from "lucide-react";
+import { Package, Plus, ExternalLink, CheckCircle2, XCircle, Trash2 } from "lucide-react";
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<any[]>([]);
@@ -83,6 +83,24 @@ export default function AdminProductsPage() {
     }
   };
 
+  const handleDelete = async (id: string, name: string) => {
+    if (!confirm(`'${name}' 상품을 정말 삭제하시겠습니까?\n이 작업은 되돌릴 수 없습니다.`)) return;
+
+    try {
+      const { error } = await supabase
+        .from('products')
+        .delete()
+        .eq('id', id);
+
+      if (error) throw error;
+
+      alert("상품이 삭제되었습니다.");
+      fetchProducts();
+    } catch (err: any) {
+      alert("삭제 실패: " + err.message);
+    }
+  };
+
   return (
     <main className="p-6 md:p-10 space-y-8">
       {/* Header */}
@@ -143,6 +161,14 @@ export default function AdminProductsPage() {
                     <span className="text-[10px] text-white/40">메인노출</span>
                     {product.show_on_main ? <CheckCircle2 className="w-5 h-5 text-accent-gold" /> : <XCircle className="w-5 h-5 text-white/20" />}
                   </div>
+                  <button 
+                    onClick={() => handleDelete(product.id, product.name)}
+                    className="flex flex-col items-center gap-1 hover:text-red-400 transition-colors ml-4 text-white/20"
+                    title="상품 삭제"
+                  >
+                    <span className="text-[10px]">삭제</span>
+                    <Trash2 className="w-5 h-5" />
+                  </button>
                 </div>
               </div>
             </div>
