@@ -13,7 +13,7 @@ const ebooks = [
   {
     title: "풍요비책",
     desc: "상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
-    href: "/ebooks/abundance-secret-coming-soon",
+    href: "/reports/abundance-secret-guide",
     subLabel: "상태·주파수 비법서",
   },
   {
