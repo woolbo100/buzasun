@@ -146,11 +146,3 @@ export default function ProductCards() {
     </section>
   )
 }
-
-            </div>
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  )
-}

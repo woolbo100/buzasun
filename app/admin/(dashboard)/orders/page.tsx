@@ -36,7 +36,7 @@ export default function AdminOrdersPage() {
     if (type === 'payment') {
       switch (status) {
         case '결제완료': return baseClasses + "border-green-500/30 bg-green-500/10 text-green-400";
-        case '결제대기': return baseClasses + "border-yellow-500/30 bg-yellow-500/10 text-yellow-400";
+        case '결제대기': return baseClasses + "border-accent-gold/30 bg-accent-gold/10 text-accent-gold";
         case '환불완료': return baseClasses + "border-red-500/30 bg-red-500/10 text-red-400";
         default: return baseClasses + "border-white/20 bg-white/5 text-white/60";
       }
@@ -44,7 +44,7 @@ export default function AdminOrdersPage() {
       switch (status) {
         case '발송완료': return baseClasses + "border-blue-500/30 bg-blue-500/10 text-blue-400";
         case '작성중': return baseClasses + "border-purple-500/30 bg-purple-500/10 text-purple-400";
-        case '접수완료': return baseClasses + "border-yellow-200/30 bg-yellow-200/10 text-yellow-200";
+        case '접수완료': return baseClasses + "border-accent-gold/30 bg-accent-gold/10 text-accent-gold";
         default: return baseClasses + "border-white/20 bg-white/5 text-white/60";
       }
     }
@@ -56,7 +56,7 @@ export default function AdminOrdersPage() {
         {/* Header */}
         <section className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <Link href="/admin" className="text-sm text-yellow-200/60 hover:text-yellow-200 transition-colors flex items-center gap-2 mb-2">
+            <Link href="/admin" className="text-sm text-accent-gold/60 hover:text-accent-gold transition-colors flex items-center gap-2 mb-2">
               ← 대시보드로 돌아가기
             </Link>
             <h1 className="text-3xl md:text-4xl font-semibold">주문 관리</h1>
@@ -72,7 +72,7 @@ export default function AdminOrdersPage() {
             <input 
               type="text" 
               placeholder="고객명, 이메일 검색..." 
-              className="w-full bg-white/5 border border-yellow-200/20 rounded-2xl px-5 py-3 focus:outline-none focus:border-yellow-200/50 transition-all"
+              className="w-full bg-white/5 border border-accent-gold/20 rounded-2xl px-5 py-3 focus:outline-none focus:border-accent-gold/50 transition-all"
             />
           </div>
         </section>
@@ -80,7 +80,7 @@ export default function AdminOrdersPage() {
         {/* Status Handling */}
         {loading ? (
           <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
-            <p className="text-yellow-200 animate-pulse">데이터를 불러오는 중...</p>
+            <p className="text-accent-gold animate-pulse">데이터를 불러오는 중...</p>
           </div>
         ) : error ? (
           <div className="text-center py-20 bg-red-500/10 rounded-3xl border border-red-500/20">
@@ -92,7 +92,7 @@ export default function AdminOrdersPage() {
           </div>
         ) : (
           /* Orders Table */
-          <section className="rounded-3xl border border-yellow-200/20 bg-white/5 backdrop-blur-xl overflow-hidden shadow-xl">
+          <section className="rounded-3xl border border-accent-gold/20 bg-white/5 backdrop-blur-xl overflow-hidden shadow-xl">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
@@ -126,7 +126,7 @@ export default function AdminOrdersPage() {
                           {order.report_status}
                         </span>
                       </td>
-                      <td className="p-5 text-right font-medium text-yellow-200/90">
+                      <td className="p-5 text-right font-medium text-accent-gold/90">
                         {order.amount?.toLocaleString()}원
                       </td>
                     </tr>
