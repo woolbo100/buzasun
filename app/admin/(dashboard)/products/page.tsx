@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
-import { Package, Plus, ExternalLink, CheckCircle2, XCircle, Trash2 } from "lucide-react";
+import { Package, Plus, ExternalLink, CheckCircle2, XCircle, Trash2, Pencil } from "lucide-react";
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // 상품 등록 폼 상태
@@ -55,14 +56,26 @@ export default function AdminProductsPage() {
 
     try {
       setIsSubmitting(true);
-      const { error } = await supabase
-        .from('products')
-        .insert([formData]);
+      
+      if (editingId) {
+        // 수정 모드
+        const { error } = await supabase
+          .from('products')
+          .update(formData)
+          .eq('id', editingId);
+        if (error) throw error;
+        alert("상품 정보가 수정되었습니다.");
+      } else {
+        // 신규 등록 모드
+        const { error } = await supabase
+          .from('products')
+          .insert([formData]);
+        if (error) throw error;
+        alert("상품이 등록되었습니다.");
+      }
 
-      if (error) throw error;
-
-      alert("상품이 등록되었습니다.");
       setIsFormOpen(false);
+      setEditingId(null);
       setFormData({
         slug: "",
         name: "",
@@ -77,10 +90,27 @@ export default function AdminProductsPage() {
       });
       fetchProducts();
     } catch (err: any) {
-      alert("저장 실패 (슬러그 중복 여부를 확인하세요): " + err.message);
+      alert("저장 실패: " + err.message);
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const openEditForm = (product: any) => {
+    setFormData({
+      slug: product.slug,
+      name: product.name,
+      description: product.description || "",
+      price: product.price,
+      button_label: product.button_label || "자세히 보기",
+      main_cta_label: product.main_cta_label || "지금 바로 신청하기",
+      show_on_main: product.show_on_main,
+      is_featured: product.is_featured,
+      is_active: product.is_active,
+      main_sort_order: product.main_sort_order
+    });
+    setEditingId(product.id);
+    setIsFormOpen(true);
   };
 
   const handleDelete = async (id: string, name: string) => {
@@ -162,8 +192,16 @@ export default function AdminProductsPage() {
                     {product.show_on_main ? <CheckCircle2 className="w-5 h-5 text-accent-gold" /> : <XCircle className="w-5 h-5 text-white/20" />}
                   </div>
                   <button 
+                    onClick={() => openEditForm(product)}
+                    className="flex flex-col items-center gap-1 hover:text-accent-gold transition-colors text-white/20"
+                    title="상품 수정"
+                  >
+                    <span className="text-[10px]">수정</span>
+                    <Pencil className="w-5 h-5" />
+                  </button>
+                  <button 
                     onClick={() => handleDelete(product.id, product.name)}
-                    className="flex flex-col items-center gap-1 hover:text-red-400 transition-colors ml-4 text-white/20"
+                    className="flex flex-col items-center gap-1 hover:text-red-400 transition-colors text-white/20"
                     title="상품 삭제"
                   >
                     <span className="text-[10px]">삭제</span>
@@ -181,7 +219,8 @@ export default function AdminProductsPage() {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
           <div className="w-full max-w-2xl rounded-3xl border border-accent-gold/30 bg-[#1A0B2E] p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto custom-scrollbar">
             <h2 className="text-2xl font-semibold mb-8 text-white flex items-center gap-2">
-              <Plus className="text-accent-gold" /> 새로운 상품 등록
+              {editingId ? <Pencil className="text-accent-gold" /> : <Plus className="text-accent-gold" />}
+              {editingId ? "상품 정보 수정" : "새로운 상품 등록"}
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -280,13 +319,13 @@ export default function AdminProductsPage() {
               </div>
 
               <div className="flex gap-4 pt-6 border-t border-white/5">
-                <button type="button" onClick={() => setIsFormOpen(false)}
+                <button type="button" onClick={() => { setIsFormOpen(false); setEditingId(null); }}
                   className="flex-1 rounded-2xl border border-white/10 bg-white/5 py-4 hover:bg-white/10 transition-all font-medium">
                   취소
                 </button>
                 <button type="submit" disabled={isSubmitting}
                   className="flex-1 rounded-2xl bg-accent-gold text-purple-900 py-4 font-bold hover:bg-accent-gold-deep transition-all disabled:opacity-50">
-                  {isSubmitting ? "저장 중..." : "상품 정보 저장하기"}
+                  {isSubmitting ? "저장 중..." : (editingId ? "정보 수정 완료" : "상품 정보 저장하기")}
                 </button>
               </div>
             </form>
