@@ -19,7 +19,7 @@ const ebooks = [
   {
     title: "재회비방",
     desc: "감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
-    href: "/ebooks/reunion-secret-coming-soon",
+    href: "/reports/reunion-secret-method",
     subLabel: "메시지·기준 비법서",
   },
 ] as const

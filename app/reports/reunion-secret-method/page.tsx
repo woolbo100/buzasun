@@ -1,0 +1,232 @@
+'use client'
+
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
+import Reveal from '@/components/Reveal'
+import GlobalBackground from '@/components/GlobalBackground'
+import Link from 'next/link'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+
+export default function ReunionSecretPage() {
+  useScrollAnimation()
+
+  const reviews = [
+    { id: 1, author: '임하늘님', content: '헤어지고 매달리기만 하다가 이 책을 보고 제 행동이 얼마나 잘못됐는지 알게 됐어요. 마음을 가다듬는 데 큰 도움이 됐습니다.', rating: 5 },
+    { id: 2, author: '윤지후님', content: '상대방의 심리를 구조적으로 설명해 주셔서 연락할 때 어떤 태도를 가져야 할지 기준이 생겼어요. 예시 문구들도 정말 유용합니다.', rating: 5 },
+    { id: 3, author: '최유진님', content: '무작정 재회를 권하는 게 아니라 저 자신을 먼저 돌보게 해주는 내용이라 더 좋았습니다. 디자인도 예뻐서 읽는 내내 기분이 묘했어요.', rating: 5 },
+  ]
+
+  const faqs = [
+    { 
+      q: '재회를 보장하나요?', 
+      a: '재회를 보장하는 상품은 아닙니다. 감정적 매달림을 줄이고 관계의 흐름을 더 차분하게 정리하도록 돕는 PDF 가이드입니다.' 
+    },
+    { 
+      q: '상대에게 보낼 문구가 포함되나요?', 
+      a: '상황별 메시지 설계 방향과 예시 문구들이 포함되어 있어 실무적인 도움을 드립니다.' 
+    },
+    { 
+      q: '상담이 포함되나요?', 
+      a: '상담은 포함되지 않으며 PDF 전자책 형태로 제공되는 지식 콘텐츠입니다.' 
+    },
+    { 
+      q: '언제 받을 수 있나요?', 
+      a: '결제 및 정보 확인 후 신청하신 이메일이나 카카오톡으로 전달됩니다.' 
+    },
+  ]
+
+  return (
+    <main className="relative min-h-screen bg-[#0a0514]">
+      <GlobalBackground src="/image/main.png">
+        <Navigation />
+
+        <div className="relative z-10 pt-32 pb-20">
+          <div className="max-w-4xl mx-auto px-4">
+            
+            {/* 1. 히어로 섹션 */}
+            <section className="text-center mb-20">
+              <Reveal delayMs={100}>
+                <span className="inline-block px-4 py-1 rounded-full text-xs font-medium mb-6"
+                  style={{
+                    background: 'rgba(59, 15, 27, 0.5)',
+                    border: '1px solid rgba(216, 191, 163, 0.3)',
+                    color: 'var(--accent-gold-light)',
+                    letterSpacing: '0.1em'
+                  }}>
+                  BAEKDOHWA REUNION STRATEGY
+                </span>
+                <h1 className="text-4xl md:text-6xl font-elegant font-bold mb-8 text-white">
+                  재회비방 <span style={{ color: 'var(--accent-gold)' }}>전략서</span>
+                </h1>
+                <p className="text-lg md:text-xl text-bd-ivory leading-relaxed mb-10 max-w-2xl mx-auto break-keep">
+                  감정으로 붙잡는 재회가 아니라, <br/> 관계의 기준과 메시지를 다시 설계하는 백도화의 재회 전략서
+                </p>
+                <Link 
+                  href="/order/reunion-secret-method"
+                  className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg"
+                >
+                  재회비방 받아보기
+                </Link>
+              </Reveal>
+            </section>
+
+            {/* 2. 상품 요약 카드 */}
+            <Reveal delayMs={300}>
+              <div className="gungjung-glass p-8 md:p-12 mb-20">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h2 className="text-2xl font-bold mb-6 text-white border-l-4 border-[var(--accent-gold)] pl-4">상품 정보</h2>
+                    <ul className="space-y-4 text-bd-ivory">
+                      <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
+                        <span>가격</span>
+                        <span className="text-[var(--accent-gold)] font-bold">29,000원</span>
+                      </li>
+                      <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
+                        <span>제공 형식</span>
+                        <span>PDF 전자책</span>
+                      </li>
+                      <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
+                        <span>분량</span>
+                        <span>약 40~60p 예정</span>
+                      </li>
+                      <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
+                        <span>제공 방식</span>
+                        <span>결제 후 이메일 발송</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="bg-[rgba(255,255,255,0.02)] p-6 rounded-xl border border-[var(--glass-border)]">
+                    <h3 className="text-lg font-bold mb-4 text-[var(--accent-gold-light)]">추천 대상</h3>
+                    <ul className="space-y-2 text-sm text-bd-gray">
+                      {[
+                        "이별 후 연락 타이밍이 고민되는 분",
+                        "재회를 원하지만 어떻게 할지 모르는 분",
+                        "감정적으로 매달리는 패턴을 멈추고픈 분",
+                        "다시 만나도 같은 문제를 반복하고 싶지 않은 분"
+                      ].map((text, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-[var(--accent-gold)]">•</span>
+                          <span>{text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* 3. 전자책에 담긴 내용 */}
+            <section className="mb-20">
+              <Reveal>
+                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">
+                  전자책에 <span style={{ color: 'var(--accent-gold)' }}>담긴 내용</span>
+                </h2>
+                <div className="grid gap-6">
+                  {[
+                    '재회를 어렵게 만드는 감정 패턴',
+                    '연락 전 반드시 점검해야 할 기준',
+                    '상대의 방어심을 낮추는 메시지 흐름',
+                    '붙잡는 말과 다시 생각나게 하는 말의 차이',
+                    '재회 가능성을 낮추는 행동들',
+                    '재회 후 관계를 다시 무너뜨리지 않는 방법',
+                    '나를 잃지 않는 재회의 기준',
+                  ].map((title, idx) => (
+                    <div key={idx} className="gungjung-glass p-6 flex items-start gap-5 group">
+                      <div className="w-10 h-10 rounded-full bg-[var(--primary-burgundy)] border border-[var(--accent-gold-soft)] flex items-center justify-center text-[var(--accent-gold)] font-bold shrink-0 group-hover:scale-110 transition-transform">
+                        {idx + 1}
+                      </div>
+                      <div className="flex items-center">
+                        <h3 className="text-lg md:text-xl font-bold text-white">{title}</h3>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 4. 이런 분께 추천합니다 */}
+            <section className="mb-20">
+              <Reveal>
+                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">이런 분께 추천합니다</h2>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    "연락하고 싶지만 두려운 분",
+                    "차단/읽씹 이후 어떻게 해야 할지 모르는 분",
+                    "재회 가능성을 현실적으로 보고 싶은 분",
+                    "다시 만나도 같은 이별을 반복하고 싶지 않은 분"
+                  ].map((text, i) => (
+                    <div key={i} className="gungjung-glass p-6 text-center flex items-center justify-center min-h-[120px] hover:border-accent-gold/40 transition-all group">
+                      <p className="text-bd-ivory group-hover:text-white break-keep">{text}</p>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </section>
+
+            <div className="gold-divider mb-20" />
+
+            {/* 5. 후기 섹션 */}
+            <section className="mb-20">
+              <Reveal>
+                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">진실된 재회 후기</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {reviews.map((review) => (
+                    <div key={review.id} className="gungjung-glass p-6 flex flex-col h-full">
+                      <div className="flex gap-1 mb-4 text-[var(--accent-gold)]">
+                        {[...Array(5)].map((_, i) => (
+                          <i key={i} className="fas fa-star text-xs"></i>
+                        ))}
+                      </div>
+                      <p className="text-bd-gray text-sm leading-relaxed mb-6 flex-grow italic">"{review.content}"</p>
+                      <div className="text-right">
+                        <span className="text-xs text-[var(--accent-gold-deep)] font-medium">{review.author}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 6. FAQ 섹션 */}
+            <section className="mb-20">
+              <Reveal>
+                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">자주 묻는 질문</h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, idx) => (
+                    <details key={idx} className="gungjung-glass group overflow-hidden">
+                      <summary className="p-6 cursor-pointer list-none flex justify-between items-center text-white font-medium focus:outline-none">
+                        <span>Q. {faq.q}</span>
+                        <i className="fas fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+                      </summary>
+                      <div className="px-6 pb-6 text-bd-gray leading-relaxed">
+                        A. {faq.a}
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 7. 하단 CTA */}
+            <section className="text-center py-20 bg-[rgba(59,15,27,0.2)] rounded-3xl border border-[var(--glass-border)]">
+              <Reveal>
+                <h2 className="text-2xl md:text-3xl font-elegant font-bold mb-8 text-white break-keep">
+                  붙잡는 재회가 아니라, <br/> 다시 떠오르는 관계를 설계하세요
+                </h2>
+                <Link 
+                  href="/order/reunion-secret-method"
+                  className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
+                >
+                  재회비방 받아보기
+                </Link>
+              </Reveal>
+            </section>
+
+          </div>
+        </div>
+
+        <Footer />
+      </GlobalBackground>
+    </main>
+  )
+}
