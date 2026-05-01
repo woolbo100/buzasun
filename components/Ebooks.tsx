@@ -7,7 +7,7 @@ const ebooks = [
   {
     title: "연애비급",
     desc: "관계의 흐름을 바꾸는 심리·프레임·대화 설계",
-    href: "/ebooks/love-secret-coming-soon",
+    href: "/reports/love-secret-ebook",
     subLabel: "관계 설계 비법서",
   },
   {
