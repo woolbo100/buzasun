@@ -113,7 +113,7 @@ export default function Hero() {
             </Link>
             
             <Link
-              href="/ebooks"
+              href="/reports/love-secret-ebook"
               className="group relative px-12 py-5 rounded-lg font-semibold transition-all duration-500"
               style={{
                 background: 'rgba(255, 255, 255, 0.04)',
