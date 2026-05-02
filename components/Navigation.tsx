@@ -227,21 +227,21 @@ export default function Navigation() {
                   }}
                 >
                   <Link 
-                    href="/ebooks" 
+                    href="/reports/love-secret-ebook" 
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-t-lg"
                     onClick={() => setEbookMenuOpen(false)}
                   >
                     연애비급
                   </Link>
                   <Link 
-                    href="/ebooks" 
+                    href="/reports/abundance-secret-guide" 
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm"
                     onClick={() => setEbookMenuOpen(false)}
                   >
                     풍요비책
                   </Link>
                   <Link 
-                    href="/ebooks" 
+                    href="/reports/reunion-secret-method" 
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-b-lg"
                     onClick={() => setEbookMenuOpen(false)}
                   >
@@ -339,21 +339,21 @@ export default function Navigation() {
                 {ebookMenuOpen && (
                   <div className="mt-2 ml-4 space-y-1">
                     <Link 
-                      href="/ebooks" 
+                      href="/reports/love-secret-ebook" 
                       className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
                       onClick={closeMobileMenu}
                     >
                       연애비급
                     </Link>
                     <Link 
-                      href="/ebooks" 
+                      href="/reports/abundance-secret-guide" 
                       className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
                       onClick={closeMobileMenu}
                     >
                       풍요비책
                     </Link>
                     <Link 
-                      href="/ebooks" 
+                      href="/reports/reunion-secret-method" 
                       className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
                       onClick={closeMobileMenu}
                     >
