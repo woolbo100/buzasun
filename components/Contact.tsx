@@ -34,14 +34,14 @@ export default function Contact() {
       <section className="py-20 md:py-32 relative" style={{ background: 'transparent' }}>
         <div className="container-premium">
           <Reveal delayMs={100}>
-            <div className="gungjung-glass mx-auto py-16 md:py-24 text-center relative overflow-hidden">
+            <div className="gungjung-glass max-w-4xl mx-auto py-16 md:py-24 text-center relative overflow-hidden">
               {/* 배경 장식 */}
               <div className="absolute top-0 right-0 p-8 opacity-20">
                 <BaekdohwaFlowerMark size={120} outlineGold={true} />
               </div>
               
               {/* 텍스트 컨텐츠 */}
-              <div className="max-w-2xl mx-auto relative z-10 px-6">
+              <div className="max-w-3xl mx-auto relative z-10 px-6">
                 <p className="text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-[#F5F5F5] mb-8 leading-tight">
                   더 애쓰지 마세요<br />
                   더 증명하려 하지 마세요
