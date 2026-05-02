@@ -105,7 +105,7 @@ export default function DynamicReportPage() {
                   {displayData.description}
                 </p>
                 <Link 
-                  href={`/apply/${displayData.slug}`}
+                  href={`/checkout?productId=${displayData.slug}`}
                   className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg"
                 >
                   리포트 신청하기
@@ -299,7 +299,7 @@ export default function DynamicReportPage() {
                   {displayData.name}, 지금 확인해보세요
                 </h2>
                 <Link 
-                  href={`/apply/${displayData.slug}`}
+                  href={`/checkout?productId=${displayData.slug}`}
                   className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
                   리포트 신청하기

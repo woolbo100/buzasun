@@ -10,19 +10,7 @@ export default function CompatibilityBanner() {
       <div className="container-premium relative z-10">
         <Reveal>
           <div className="gungjung-glass overflow-hidden rounded-3xl border border-[rgba(216,191,163,0.15)] bg-gradient-to-br from-[#1a0f2e]/80 to-[#0a0514]/90 group">
-            {/* 전체 배경 이미지 */}
-            <div className="absolute inset-0 z-0">
-              <Image 
-                src="/image/love2.png" 
-                alt="Premium Compatibility"
-                fill
-                className="object-cover opacity-60 transition-transform duration-[5000ms] group-hover:scale-105"
-              />
-              {/* 텍스트 가독성을 위한 그라데이션 오버레이 */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#1a0f2e] via-[#1a0f2e]/80 to-transparent z-10" />
-            </div>
-
-            <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[400px] md:min-h-[500px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] md:min-h-[500px]">
               {/* Left Content */}
               <div className="p-8 md:p-16 lg:p-20 flex flex-col justify-center text-left">
                 <span className="text-[10px] md:text-xs tracking-[0.4em] text-[var(--accent-gold)] opacity-70 mb-4 block font-bold uppercase">
@@ -33,27 +21,30 @@ export default function CompatibilityBanner() {
                   프리미엄 궁합 리포트
                 </h2>
                 
-                <p className="text-base md:text-lg text-[var(--accent-gold-light)] opacity-90 mb-6 font-elegant italic tracking-wide">
-                  두 사람의 사랑은 어디에서 만나고,<br className="hidden sm:block" /> 어디에서 흔들릴까요?
-                </p>
-                
-                <p className="text-[#EDE6DA] opacity-60 text-base md:text-lg leading-relaxed mb-10 break-keep font-light">
-                  끌리는 이유, 반복되는 갈등, 그리고 관계가 깊어질 수 있는 방향까지<br className="hidden md:block" />
-                  백도화식 선천코드로 두 사람의 흐름을 읽어드립니다.
+                <p className="text-base md:text-lg text-[#EDE6DA] opacity-60 leading-relaxed mb-10 break-keep font-light">
+                  두 사람이 서로에게 끌리는 이유, 반복해서 부딪히는 지점, 관계가 깊어질 수 있는 방향을 함께 읽어드립니다.
                 </p>
                 
                 <div>
                   <Link
-                    href="/reports/premium-compatibility"
-                    className="inline-flex items-center px-10 py-4 rounded-xl border border-[var(--accent-gold-soft)] text-[var(--accent-gold)] hover:bg-[var(--accent-gold-soft)] hover:scale-105 transition-all duration-500 text-sm font-bold tracking-widest shadow-[0_0_20px_rgba(212,178,167,0.1)] hover:shadow-[0_0_30px_rgba(212,178,167,0.2)]"
+                    href="/checkout?productId=premium-compatibility-report"
+                    className="inline-flex items-center px-10 py-4 rounded-xl border border-[var(--accent-gold-soft)] text-[var(--accent-gold)] bg-[var(--accent-gold-soft)]/20 hover:bg-[var(--accent-gold-soft)] hover:scale-105 transition-all duration-500 text-sm font-bold tracking-widest shadow-[0_0_20px_rgba(212,178,167,0.1)] hover:shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                   >
-                    자세히 보기
+                    궁합 리포트 자세히 보기
                   </Link>
                 </div>
               </div>
               
-              {/* Right Side (Empty space to let background show through) */}
-              <div className="hidden lg:block" />
+              {/* Right Image */}
+              <div className="relative overflow-hidden min-h-[350px] md:min-h-full border-t md:border-t-0 md:border-l border-white/5">
+                <Image 
+                  src="/image/love2.png" 
+                  alt="Premium Compatibility"
+                  fill
+                  className="object-cover transition-transform duration-[5000ms] group-hover:scale-110 opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent via-transparent to-[#1a0f2e]/80" />
+              </div>
             </div>
           </div>
         </Reveal>

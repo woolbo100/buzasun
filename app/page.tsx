@@ -42,7 +42,6 @@ export default function Home() {
           <div className="gold-divider my-10" />
           <ProductCards />
           
-          <div className="gold-divider my-16" />
           {/* 프리미엄 궁합 리포트 배너 - 연애 리포트(ProductCards) 아래로 이동 */}
           <CompatibilityBanner />
           

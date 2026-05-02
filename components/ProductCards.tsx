@@ -42,18 +42,6 @@ export default function ProductCards() {
         <Reveal delayMs={0}>
           <div className="gungjung-glass w-full rounded-[40px] overflow-hidden border border-white/[0.08] bg-white/[0.02] shadow-[0_20px_80px_rgba(0,0,0,0.4)] group">
             {/* [상단] Premium Hero Section */}
-            {/* 전체 배경 이미지 */}
-            <div className="absolute inset-0 z-0">
-              <Image 
-                src="/image/love1.png" 
-                alt="선천코드 연애 리포트" 
-                fill
-                className="object-cover opacity-60 transition-transform duration-[5000ms] group-hover:scale-105"
-              />
-              {/* 텍스트 가독성을 위한 그라데이션 오버레이 */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#1a0626] via-[#1a0626]/80 to-transparent z-10" />
-            </div>
-
             <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] md:min-h-[600px]">
               {/* Left: Text Content */}
               <div className="p-8 md:p-16 lg:p-20 flex flex-col justify-center text-left">
@@ -97,13 +85,27 @@ export default function ProductCards() {
                     href="/reports/love-code"
                     className="btn-primary inline-flex items-center px-10 py-5 rounded-xl font-bold tracking-widest text-lg transition-all duration-500 shadow-[0_10px_30px_rgba(212,178,167,0.2)] hover:scale-105"
                   >
-                    내 연애 코드 지금 확인하기
+                    연애 리포트 자세히 보기
                   </Link>
                 </div>
               </div>
 
-              {/* Right Side (Empty space to let background show through) */}
-              <div className="hidden lg:block" />
+              {/* Right: Emotional Image */}
+              <div className="relative h-[400px] lg:h-auto border-t lg:border-t-0 lg:border-l border-white/10 group overflow-hidden">
+                <div className="absolute inset-0 z-10 bg-gradient-to-t lg:bg-gradient-to-l from-transparent via-transparent to-[#1a0626]/80" />
+                <Image 
+                  src="/image/love1.png" 
+                  alt="선천코드 연애 리포트" 
+                  fill
+                  className="object-cover transition-transform duration-[5000ms] group-hover:scale-110 opacity-90"
+                />
+                
+                {/* Subtle Overlays */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-[var(--accent-gold)]/10 blur-[60px] rounded-full animate-pulse-slow" />
+                  <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-[var(--accent-gold)]/10 blur-[80px] rounded-full animate-pulse-slow" style={{ animationDelay: '2s' }} />
+                </div>
+              </div>
             </div>
 
             {/* [하단] 6개 분석 카드 섹션 */}
