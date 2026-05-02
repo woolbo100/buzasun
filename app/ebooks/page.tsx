@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
+import Reveal from '@/components/Reveal'
 
 export const metadata = {
   title: '시크릿 비법서 | 백도화 매력학당',
@@ -41,17 +42,20 @@ export default function EbooksPage() {
       <GlobalBackground src="/image/main4.png">
         <Navigation />
         
-        <div className="pt-56 pb-24">
-          <div className="container-premium relative z-10">
-            {/* Rule 5: 가독성과 고급감을 위한 궁중유리 카드 적용 */}
-            <div className="gungjung-glass p-8 md:p-12 mb-12">
-              <h1 className="text-4xl md:text-5xl font-elegant font-bold mb-8 gradient-text">
-                시크릿 비법서
-              </h1>
-              <p className="text-lg md:text-xl text-[#EDE6DA] leading-relaxed opacity-90">
-                연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비법서를 만나보세요.<br />
-                선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와 풍요로운 삶을 만들어가세요.
-              </p>
+        <div className="relative z-10 pt-44 pb-24">
+          <div className="container-premium">
+            
+            {/* Header Section - Unified with Reports Hub */}
+            <div className="text-center mb-20">
+              <Reveal>
+                <h1 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-8 tracking-widest">
+                  시크릿 <span className="text-[var(--accent-gold)]">비법서</span>
+                </h1>
+                <p className="text-[#EDE6DA] opacity-80 text-lg md:text-xl font-elegant leading-relaxed max-w-2xl mx-auto break-keep">
+                  연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비법서를 만나보세요.<br className="md:hidden" />
+                  <span className="text-[var(--accent-gold-light)]">선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와 풍요로운 삶을 만들어가세요.</span>
+                </p>
+              </Reveal>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
