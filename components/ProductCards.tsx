@@ -71,7 +71,7 @@ export default function ProductCards() {
                   선천코드 연애 리포트
                 </h2>
                 
-                <p className="text-xl md:text-2xl font-semibold mb-6" style={{ color: 'var(--accent-gold-light)', wordBreak: 'keep-all' }}>
+                <p className="text-base md:text-lg text-[var(--accent-gold-light)] opacity-90 mb-6 font-elegant italic tracking-wide">
                   선천코드 분석을 통해 당신의 연애 패턴, 이성복, 재회 가능성을 정밀하게 해독합니다.
                 </p>
                 
