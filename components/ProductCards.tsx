@@ -42,8 +42,19 @@ export default function ProductCards() {
         <Reveal delayMs={0}>
           <div className="gungjung-glass w-full rounded-[40px] overflow-hidden border border-white/[0.08] bg-white/[0.02] shadow-[0_20px_80px_rgba(0,0,0,0.4)] group">
             {/* [상단] Premium Hero Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] md:min-h-[600px]">
-              
+            {/* 전체 배경 이미지 */}
+            <div className="absolute inset-0 z-0">
+              <Image 
+                src="/image/love1.png" 
+                alt="선천코드 연애 리포트" 
+                fill
+                className="object-cover opacity-60 transition-transform duration-[5000ms] group-hover:scale-105"
+              />
+              {/* 텍스트 가독성을 위한 그라데이션 오버레이 */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#1a0626] via-[#1a0626]/80 to-transparent z-10" />
+            </div>
+
+            <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] md:min-h-[600px]">
               {/* Left: Text Content */}
               <div className="p-8 md:p-16 lg:p-20 flex flex-col justify-center text-left">
                 {/* 상단 라벨 */}
@@ -76,8 +87,9 @@ export default function ProductCards() {
                 </p>
                 
                 <p className="text-base md:text-lg leading-relaxed mb-10 break-keep font-light text-[#EDE6DA] opacity-60">
-                  타고난 코드부터 다른 당신만의 연애 특성을 발견하고, 더 나은 관계를 만들어가는 길을 제시합니다.<br className="hidden md:block" />
-                  에너지 패턴과 매력 주파수를 분석하여 당신이 반복하는 연애 패턴과 끌어당기는 사랑의 방향을 정밀하게 해독합니다.
+                  연애는 우연이 아니라 타고난 흐름입니다.<br />
+                  당신이 반복하는 사랑의 패턴과<br />
+                  관계를 바꾸는 방향을 읽어드립니다.
                 </p>
 
                 <div className="hidden lg:block">
@@ -90,32 +102,18 @@ export default function ProductCards() {
                 </div>
               </div>
 
-              {/* Right: Emotional Image */}
-              <div className="relative h-[400px] lg:h-auto border-t lg:border-t-0 lg:border-l border-white/10 group overflow-hidden">
-                <div className="absolute inset-0 z-10 bg-gradient-to-t lg:bg-gradient-to-l from-transparent via-transparent to-[#1a0626]/80" />
-                <Image 
-                  src="/image/love1.png" 
-                  alt="선천코드 연애 리포트" 
-                  fill
-                  className="object-cover transition-transform duration-[5000ms] group-hover:scale-110 opacity-80"
-                />
-                
-                {/* Subtle Overlays */}
-                <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-[var(--accent-gold)]/10 blur-[60px] rounded-full animate-pulse-slow" />
-                  <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-[var(--accent-gold)]/10 blur-[80px] rounded-full animate-pulse-slow" style={{ animationDelay: '2s' }} />
-                </div>
-              </div>
+              {/* Right Side (Empty space to let background show through) */}
+              <div className="hidden lg:block" />
             </div>
 
             {/* [하단] 6개 분석 카드 섹션 */}
-            <div className="relative z-20 px-6 md:px-16 lg:px-20 pb-20 pt-10 border-t border-white/[0.05] bg-white/[0.01]">
+            <div className="relative z-20 px-6 md:px-16 lg:px-20 pb-12 pt-10 border-t border-white/[0.05] bg-white/[0.01]">
               <div className="max-w-5xl mx-auto">
-                <h3 className="text-center text-[#EDE6DA] opacity-40 text-sm md:text-base tracking-[0.3em] mb-12 font-elegant uppercase">
+                <h3 className="text-center text-[#EDE6DA] opacity-30 text-xs md:text-sm tracking-[0.4em] mb-10 font-elegant uppercase">
                   Analysis Components
                 </h3>
                 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
                   {[
                     { title: '타고난 연애 성향 & 이상형' },
                     { title: '맞는 인연 vs 피해야 할 인연' },
@@ -126,14 +124,13 @@ export default function ProductCards() {
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="gungjung-glass rounded-2xl p-5 md:p-8 flex flex-col justify-center items-center text-center transition-all duration-500 hover:bg-white/5 border border-white/5 group/card"
+                      className="gungjung-glass rounded-xl p-4 md:p-6 flex flex-col justify-center items-center text-center transition-all duration-500 hover:bg-white/5 border border-white/5 group/card"
                       style={{
-                        background: 'rgba(255, 255, 255, 0.02)',
-                        minHeight: '140px',
+                        background: 'rgba(255, 255, 255, 0.01)',
+                        minHeight: '100px',
                       }}
                     >
-                      <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] mb-4 opacity-30 group-hover/card:scale-150 group-hover/card:opacity-100 transition-all duration-500" />
-                      <p className="text-sm md:text-lg font-medium text-[#EDE6DA] leading-relaxed break-keep group-hover/card:text-[var(--accent-gold-light)] transition-colors duration-500">
+                      <p className="text-sm md:text-base lg:text-lg font-medium text-[#EDE6DA] leading-relaxed break-keep group-hover/card:text-[var(--accent-gold-light)] transition-colors duration-500">
                         {item.title}
                       </p>
                     </div>
@@ -141,7 +138,7 @@ export default function ProductCards() {
                 </div>
 
                 {/* Mobile/Tablet CTA Button (Visible on smaller screens) */}
-                <div className="mt-16 text-center lg:hidden">
+                <div className="mt-10 text-center lg:hidden">
                   <Link
                     href="/reports/love-code"
                     className="btn-primary inline-flex items-center px-8 py-5 rounded-xl font-bold tracking-widest text-base w-full sm:w-auto justify-center"
