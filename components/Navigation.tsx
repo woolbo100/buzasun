@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import NorigaeElement from './NorigaeElement'
+import { ShoppingCart, User, Menu, X, ChevronDown } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 
 export default function Navigation() {
@@ -213,7 +214,7 @@ export default function Navigation() {
                   style={menuLinkStyle}
                   aria-label="드롭다운 메뉴"
                 >
-                  <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
               </div>
               {ebookMenuOpen && (
@@ -274,23 +275,23 @@ export default function Navigation() {
           {/* 오른쪽 아이콘들 */}
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4 relative">
-              <Link href="/cart" className="text-bd-gray hover:text-bd-ivory transition-all duration-300 relative group">
-                <i className="fas fa-shopping-cart text-lg"></i>
-                <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px var(--accent-gold-soft)' }} />
+              <Link href="/cart" className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300 relative group flex items-center justify-center">
+                <ShoppingCart className="w-5 h-5" />
+                <span className="absolute -bottom-1.5 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 12px var(--accent-gold)' }} />
               </Link>
-              <Link href="/mypage" className="text-bd-gray hover:text-bd-ivory transition-all duration-300 relative group">
-                <i className="fas fa-user text-lg"></i>
-                <span className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 8px var(--accent-gold-soft)' }} />
+              <Link href="/mypage" className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300 relative group flex items-center justify-center">
+                <User className="w-5 h-5" />
+                <span className="absolute -bottom-1.5 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 12px var(--accent-gold)' }} />
               </Link>
             </div>
 
             {/* 모바일 햄버거 메뉴 버튼 */}
             <button
               onClick={toggleMobileMenu}
-              className="lg:hidden text-bd-gray hover:text-bd-ivory transition-colors"
+              className="lg:hidden text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300"
               aria-label="메뉴 토글"
             >
-              <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl transition-transform duration-200`}></i>
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -329,10 +330,10 @@ export default function Navigation() {
                   </Link>
                   <button
                     onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
-                    className="text-bd-gray hover:text-bd-ivory transition-colors px-2 py-2"
+                    className="text-bd-ivory/60 hover:text-[var(--accent-gold)] transition-colors px-2 py-2"
                     aria-label="드롭다운 메뉴"
                   >
-                    <i className={`fas fa-chevron-down text-xs transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`}></i>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`} />
                   </button>
                 </div>
                 {ebookMenuOpen && (
@@ -378,22 +379,24 @@ export default function Navigation() {
               </Link>
               
               <div 
-                className="flex items-center space-x-4 px-4 py-2 border-t mx-2 mt-2" 
+                className="flex items-center space-x-6 px-4 py-3 border-t mx-2 mt-4" 
                 style={{ borderColor: scrolled ? 'rgba(216, 191, 163, 0.2)' : 'rgba(216, 191, 163, 0.1)' }}
               >
                 <Link 
                   href="/cart" 
-                  className="text-bd-gray hover:text-bd-ivory transition-colors"
+                  className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-colors flex items-center space-x-2"
                   onClick={closeMobileMenu}
                 >
-                  <i className="fas fa-shopping-cart text-lg"></i>
+                  <ShoppingCart className="w-5 h-5" />
+                  <span className="text-sm">장바구니</span>
                 </Link>
                 <Link 
                   href="/mypage" 
-                  className="text-bd-gray hover:text-bd-ivory transition-colors"
+                  className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-colors flex items-center space-x-2"
                   onClick={closeMobileMenu}
                 >
-                  <i className="fas fa-user text-lg"></i>
+                  <User className="w-5 h-5" />
+                  <span className="text-sm">마이페이지</span>
                 </Link>
               </div>
             </div>
