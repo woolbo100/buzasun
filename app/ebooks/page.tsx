@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import GlobalBackground from '@/components/GlobalBackground'
+import Link from 'next/link'
 
 export const metadata = {
   title: '시크릿 비법서 | 백도화 매력학당',
@@ -12,17 +13,20 @@ export default function EbooksPage() {
     {
       title: '연애비급',
       description: '연애의 핵심 비법을 담은 시크릿 비법서',
-      href: '/ebooks/love',
+      href: '/reports/love-secret-ebook',
+      cta: '연애비급 자세히 보기'
     },
     {
       title: '풍요비책',
       description: '풍요로운 삶을 위한 가이드북',
-      href: '/ebooks/prosperity',
+      href: '/reports/abundance-secret-guide',
+      cta: '풍요비책 자세히 보기'
     },
     {
       title: '재회비방',
       description: '재회를 위한 실전 전략서',
-      href: '/ebooks/reunion',
+      href: '/reports/reunion-secret-method',
+      cta: '재회비방 자세히 보기'
     },
   ]
 
@@ -53,23 +57,25 @@ export default function EbooksPage() {
                   <h2 className="text-2xl font-elegant font-bold text-[#EDE6DA] mb-4 group-hover:text-[var(--accent-gold)] transition-colors">
                     {ebook.title}
                   </h2>
-                  <p className="text-[#EDE6DA] opacity-60 text-base leading-relaxed group-hover:opacity-100 transition-opacity">
+                  <p className="text-[#EDE6DA] opacity-60 text-base leading-relaxed mb-10 group-hover:opacity-100 transition-opacity flex-grow">
                     {ebook.description}
                   </p>
+                  <Link
+                    href={ebook.href}
+                    className="mt-auto py-3 px-4 rounded-lg text-sm font-bold text-center border transition-all duration-300 hover:shadow-[0_0_15px_rgba(212,178,167,0.3)] hover:border-[var(--accent-gold)]"
+                    style={{
+                      background: 'rgba(59, 15, 27, 0.4)',
+                      borderColor: 'rgba(216, 191, 163, 0.3)',
+                      color: 'var(--accent-gold-light)',
+                    }}
+                  >
+                    {ebook.cta}
+                  </Link>
                 </div>
               ))}
             </div>
 
-            <div className="text-center mb-16">
-              <a
-                href="https://payment-link.com/ebooks"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center justify-center px-12 py-5 rounded-xl font-elegant font-bold text-lg transition-all"
-              >
-                시크릿 비법서 구매하기
-              </a>
-            </div>
+            <div className="mb-16" />
 
             <div className="gungjung-glass p-8 opacity-90 border-dashed border-opacity-30">
               <h3 className="text-bd-white font-elegant font-bold mb-4">결제 완료 후 안내</h3>
