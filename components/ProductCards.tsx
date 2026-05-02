@@ -72,12 +72,12 @@ export default function ProductCards() {
                 </h2>
                 
                 <p className="text-xl md:text-2xl font-semibold mb-6" style={{ color: 'var(--accent-gold-light)', wordBreak: 'keep-all' }}>
-                  당신의 연애는 타고난 코드부터 다릅니다.
+                  선천코드 분석을 통해 당신의 연애 패턴, 이성복, 재회 가능성을 정밀하게 해독합니다.
                 </p>
                 
                 <p className="text-base md:text-lg leading-relaxed mb-10 break-keep font-light" style={{ color: 'rgba(237, 230, 218, 0.8)' }}>
-                  선천코드 분석을 통해 당신이 반복하는 연애 패턴과<br className="hidden md:block" />
-                  나의 에너지에 공명하는 사랑의 지도를 정밀하게 해독합니다.
+                  타고난 코드부터 다른 당신만의 연애 특성을 발견하고, 더 나은 관계를 만들어가는 길을 제시합니다.<br className="hidden md:block" />
+                  에너지 패턴과 매력 주파수를 분석하여 당신이 반복하는 연애 패턴과 끌어당기는 사랑의 방향을 정밀하게 해독합니다.
                 </p>
 
                 <div className="hidden lg:block">
