@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
-import { Package, Plus, ExternalLink, CheckCircle2, XCircle, Trash2, Pencil } from "lucide-react";
+import { Package, Plus, ExternalLink, CheckCircle2, XCircle, Trash2, Pencil, Upload, Image as ImageIcon, Loader2 } from "lucide-react";
+import Image from "next/image";
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<any[]>([]);
@@ -11,6 +12,7 @@ export default function AdminProductsPage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
 
   // 상품 등록 폼 상태
   const [formData, setFormData] = useState({
@@ -100,6 +102,35 @@ export default function AdminProductsPage() {
     }
   };
 
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      setIsUploading(true);
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`;
+      const filePath = `products/${fileName}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from('product-images')
+        .upload(filePath, file);
+
+      if (uploadError) throw uploadError;
+
+      const { data: { publicUrl } } = supabase.storage
+        .from('product-images')
+        .getPublicUrl(filePath);
+
+      setFormData({ ...formData, image_url: publicUrl });
+      alert("이미지가 성공적으로 업로드되었습니다.");
+    } catch (err: any) {
+      alert("업로드 실패: " + err.message);
+    } finally {
+      setIsUploading(false);
+    }
+  };
+
   const openEditForm = (product: any) => {
     setFormData({
       slug: product.slug,
@@ -173,17 +204,28 @@ export default function AdminProductsPage() {
               key={product.id}
               className="rounded-3xl border border-accent-gold/10 bg-white/5 backdrop-blur-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 group hover:bg-white/10 transition-all"
             >
-              <div className="space-y-1 flex-1">
-                <div className="flex items-center gap-3">
-                  <span className="text-xs font-mono text-accent-gold/50 uppercase tracking-widest">{product.slug}</span>
-                  {product.is_featured && <span className="bg-accent-gold/20 text-accent-gold text-[10px] px-2 py-0.5 rounded border border-accent-gold/30">FEATURED</span>}
+              <div className="flex items-center gap-6 flex-1">
+                <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-white/10 bg-black/20 shrink-0">
+                  {product.image_url ? (
+                    <Image src={product.image_url} alt={product.name} fill className="object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-white/10">
+                      <ImageIcon className="w-8 h-8" />
+                    </div>
+                  )}
                 </div>
-                <h3 className="text-xl font-semibold">{product.name}</h3>
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] bg-white/10 px-2 py-0.5 rounded text-white/60 font-bold tracking-tighter">
-                    {product.category === 'private_reading' ? 'PREMIUM REPORT' : (product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY')}
-                  </span>
-                  <p className="text-sm text-white/50 line-clamp-1">{product.description}</p>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-3">
+                    <span className="text-xs font-mono text-accent-gold/50 uppercase tracking-widest">{product.slug}</span>
+                    {product.is_featured && <span className="bg-accent-gold/20 text-accent-gold text-[10px] px-2 py-0.5 rounded border border-accent-gold/30">FEATURED</span>}
+                  </div>
+                  <h3 className="text-xl font-semibold">{product.name}</h3>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] bg-white/10 px-2 py-0.5 rounded text-white/60 font-bold tracking-tighter">
+                      {product.category === 'private_reading' ? 'PREMIUM REPORT' : (product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY')}
+                    </span>
+                    <p className="text-sm text-white/50 line-clamp-1">{product.description}</p>
+                  </div>
                 </div>
               </div>
 
@@ -256,14 +298,63 @@ export default function AdminProductsPage() {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm text-white/60">상품 이미지 경로 (예: /image/product-love-report.png)</label>
-                <input 
-                  type="text"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50"
-                  value={formData.image_url}
-                  onChange={(e) => setFormData({...formData, image_url: e.target.value})}
-                />
+              <div className="space-y-4">
+                <label className="text-sm text-white/60 block">상품 이미지 등록 *</label>
+                <div className="flex flex-col md:flex-row items-start gap-6">
+                  <div className="relative w-40 h-52 rounded-2xl overflow-hidden border-2 border-dashed border-white/10 bg-white/5 flex items-center justify-center group/img shrink-0">
+                    {formData.image_url ? (
+                      <>
+                        <Image src={formData.image_url} alt="Preview" fill className="object-cover" />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                          <p className="text-[10px] text-white font-bold">교체하려면 아래 버튼 클릭</p>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="text-center p-4">
+                        <ImageIcon className="w-8 h-8 text-white/20 mx-auto mb-2" />
+                        <p className="text-[10px] text-white/30">이미지를<br />업로드해주세요</p>
+                      </div>
+                    )}
+                    {isUploading && (
+                      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center">
+                        <Loader2 className="w-6 h-6 text-accent-gold animate-spin" />
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="flex-1 space-y-4 w-full">
+                    <div className="relative">
+                      <input 
+                        type="file" 
+                        accept="image/*"
+                        onChange={handleFileUpload}
+                        className="hidden" 
+                        id="image-upload"
+                        disabled={isUploading}
+                      />
+                      <label 
+                        htmlFor="image-upload"
+                        className="flex items-center justify-center gap-2 w-full py-4 rounded-xl border border-accent-gold/30 bg-accent-gold/10 text-accent-gold cursor-pointer hover:bg-accent-gold/20 transition-all font-bold text-sm"
+                      >
+                        <Upload className="w-4 h-4" /> 
+                        {isUploading ? "업로드 중..." : "이미지 파일 선택하기"}
+                      </label>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-[11px] text-white/40 leading-relaxed italic">
+                        * 권장 사이즈: 600x800 (3:4 비율)<br />
+                        * 직접 URL 입력도 가능합니다 (아래 필드 이용)
+                      </p>
+                      <input 
+                        type="text"
+                        placeholder="또는 이미지 주소를 직접 입력하세요"
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-accent-gold/50"
+                        value={formData.image_url}
+                        onChange={(e) => setFormData({...formData, image_url: e.target.value})}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div className="space-y-2">
