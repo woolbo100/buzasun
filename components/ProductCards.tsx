@@ -40,7 +40,7 @@ export default function ProductCards() {
     <section className="relative w-full overflow-hidden py-16 md:py-32" style={{ background: 'transparent' }}>
       <div className="container-premium relative z-10">
         <Reveal delayMs={0}>
-          <div className="gungjung-glass w-full rounded-[40px] overflow-hidden border border-[rgba(216,191,163,0.15)] bg-gradient-to-br from-[#1a0626]/95 via-[#2d0b40]/90 to-[#12041a]/95 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+          <div className="gungjung-glass w-full rounded-[40px] overflow-hidden border border-white/[0.08] bg-white/[0.02] shadow-[0_20px_80px_rgba(0,0,0,0.4)]">
             {/* [상단] Premium Hero Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] md:min-h-[600px]">
               
@@ -109,7 +109,7 @@ export default function ProductCards() {
             </div>
 
             {/* [하단] 6개 분석 카드 섹션 */}
-            <div className="px-6 md:px-16 lg:px-20 pb-20 pt-10 border-t border-white/5 bg-[#12041a]/40">
+            <div className="px-6 md:px-16 lg:px-20 pb-20 pt-10 border-t border-white/[0.05] bg-white/[0.01]">
               <div className="max-w-5xl mx-auto">
                 <h3 className="text-center text-[#EDE6DA] opacity-40 text-sm md:text-base tracking-[0.3em] mb-12 font-elegant uppercase">
                   Analysis Components
