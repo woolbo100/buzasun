@@ -29,13 +29,13 @@ export default function ShopPage() {
 
   // 카테고리 정의 (DB 값 -> UI 레이블 매핑)
   const categoryMap: { [key: string]: string } = {
-    'private_reading': 'PRIVATE READING',
+    'private_reading': 'PREMIUM REPORT',
     'secret_method': 'SECRET METHOD',
     'energy_care': 'ENERGY CARE',
     'private_object': 'PRIVATE OBJECT'
   }
 
-  const categories = ['ALL', 'PRIVATE READING', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
+  const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
   
   useEffect(() => {
     async function fetchProducts() {

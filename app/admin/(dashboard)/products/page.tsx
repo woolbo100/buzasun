@@ -24,7 +24,8 @@ export default function AdminProductsPage() {
     is_featured: false,
     is_active: true,
     main_sort_order: 0,
-    category: "private_reading"
+    category: "private_reading",
+    image_url: ""
   });
 
   const fetchProducts = async () => {
@@ -88,7 +89,8 @@ export default function AdminProductsPage() {
         is_featured: false,
         is_active: true,
         main_sort_order: 0,
-        category: "private_reading"
+        category: "private_reading",
+        image_url: ""
       });
       fetchProducts();
     } catch (err: any) {
@@ -110,7 +112,8 @@ export default function AdminProductsPage() {
       is_featured: product.is_featured,
       is_active: product.is_active,
       main_sort_order: product.main_sort_order,
-      category: product.category || "private_reading"
+      category: product.category || "private_reading",
+      image_url: product.image_url || ""
     });
     setEditingId(product.id);
     setIsFormOpen(true);
@@ -178,7 +181,7 @@ export default function AdminProductsPage() {
                 <h3 className="text-xl font-semibold">{product.name}</h3>
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] bg-white/10 px-2 py-0.5 rounded text-white/60 font-bold tracking-tighter">
-                    {product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY'}
+                    {product.category === 'private_reading' ? 'PREMIUM REPORT' : (product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY')}
                   </span>
                   <p className="text-sm text-white/50 line-clamp-1">{product.description}</p>
                 </div>
@@ -254,6 +257,16 @@ export default function AdminProductsPage() {
               </div>
 
               <div className="space-y-2">
+                <label className="text-sm text-white/60">상품 이미지 경로 (예: /image/product-love-report.png)</label>
+                <input 
+                  type="text"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-accent-gold/50"
+                  value={formData.image_url}
+                  onChange={(e) => setFormData({...formData, image_url: e.target.value})}
+                />
+              </div>
+
+              <div className="space-y-2">
                 <label className="text-sm text-white/60">카테고리 *</label>
                 <select 
                   required
@@ -261,7 +274,7 @@ export default function AdminProductsPage() {
                   value={formData.category}
                   onChange={(e) => setFormData({...formData, category: e.target.value})}
                 >
-                  <option value="private_reading" className="bg-[#1A0B2E]">PRIVATE READING</option>
+                  <option value="private_reading" className="bg-[#1A0B2E]">PREMIUM REPORT</option>
                   <option value="secret_method" className="bg-[#1A0B2E]">SECRET METHOD</option>
                   <option value="energy_care" className="bg-[#1A0B2E]">ENERGY CARE</option>
                   <option value="private_object" className="bg-[#1A0B2E]">PRIVATE OBJECT</option>
