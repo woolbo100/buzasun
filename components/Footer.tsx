@@ -53,13 +53,13 @@ export default function Footer() {
                 <Link href="/faq" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">FAQ</Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">고객센터</Link>
+                <Link href="/support" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">고객센터</Link>
               </li>
               <li>
-                <a href="mailto:buzasun@naver.com" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">문의하기 (이메일)</a>
+                <Link href="/contact" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">문의하기 (이메일)</Link>
               </li>
               <li>
-                <a href="https://pf.kakao.com/_xxxx" target="_blank" rel="noopener noreferrer" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">카카오톡 채널</a>
+                <a href="https://pf.kakao.com/_CxdfxgG" target="_blank" rel="noopener noreferrer" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">카카오톡 채널</a>
               </li>
             </ul>
           </div>
