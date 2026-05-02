@@ -39,18 +39,15 @@ export default function CompatibilityBanner() {
                 </div>
               </div>
               
-              {/* Right Image - Absolute positioning to ensure edge-to-edge on desktop */}
+              {/* Right Image - Absolute positioning and object-right to ensure no right gap */}
               <div className="relative md:absolute md:right-0 md:top-0 md:bottom-0 md:w-1/2 overflow-hidden min-h-[350px] md:min-h-full z-0">
                 <Image 
                   src="/image/love2.png" 
                   alt="Premium Compatibility"
                   fill
-                  className="object-cover object-center transition-transform duration-[5000ms] group-hover:scale-110"
+                  className="object-cover object-right transition-transform duration-[5000ms] group-hover:scale-110"
                   priority
                 />
-                {/* 텍스트 가독성을 위한 그라데이션 (왼쪽에서 이미지로 흐르는) */}
-                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-[#1a0f2e] via-transparent to-transparent opacity-80 md:opacity-100" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1a0f2e] via-transparent to-transparent hidden md:block" />
               </div>
             </div>
           </div>
