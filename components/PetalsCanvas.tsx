@@ -60,16 +60,16 @@ export default function PetalsCanvas({
       petalsRef.current = Array.from({ length: density }, () => ({
         x: rand(0, w),
         y: rand(-h, h),
-        r: rand(10, 24), // 크기 대폭 확대 (기존 6~14)
+        r: rand(4, 10), // 작고 섬세한 사이즈로 복구
         rot: rand(0, Math.PI * 2),
-        rotSpd: rand(-0.015, 0.015), // 회전 속도 증가
-        spd: rand(0.6, 1.8), // 낙하 속도 증가 (기존 0.05~0.2)
-        drift: rand(-0.4, 0.6), // 우측으로 더 날리는 드리프트 효과
+        rotSpd: rand(-0.02, 0.02),
+        spd: rand(0.4, 0.9), // 자연스럽게 하늘거리는 속도
+        drift: rand(-0.2, 0.3),
         wobble: rand(0, Math.PI * 2),
-        wobbleSpd: rand(0.02, 0.05), // 좌우 흔들림 속도 증가
+        wobbleSpd: rand(0.01, 0.03),
         verticalWobble: rand(0, Math.PI * 2),
-        verticalWobbleSpd: rand(0.01, 0.025),
-        alpha: rand(0.4, 0.8), // 투명도 강화 (더 선명하게)
+        verticalWobbleSpd: rand(0.005, 0.015),
+        alpha: rand(0.3, 0.6), // 은은한 투명도
       }));
     };
 
@@ -78,45 +78,35 @@ export default function PetalsCanvas({
       ctx.translate(p.x, p.y);
       ctx.rotate(p.rot);
 
-      // 외곽선을 부드럽게 하기 위한 shadow blur (더 강하게)
-      ctx.shadowBlur = 15;
-      ctx.shadowColor = color;
-      ctx.shadowOffsetX = 0;
-      ctx.shadowOffsetY = 0;
+      // 훨씬 부드러운 외곽선 효과
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = 'rgba(255, 230, 230, 0.3)';
+      
+      // 꽃잎 그라데이션 (백도화 느낌의 은은한 핑크-화이트)
+      const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, p.r);
+      const baseAlpha = p.alpha;
+      gradient.addColorStop(0, `rgba(255, 255, 255, ${baseAlpha})`); // 중심부 화이트
+      gradient.addColorStop(0.5, `rgba(255, 240, 245, ${baseAlpha * 0.8})`); // 연한 핑크
+      gradient.addColorStop(1, `rgba(255, 220, 230, 0)`); // 끝부분 소멸
 
-      // 더 연한 투명도로 그라데이션 적용
-      const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, p.r * 2);
-      // 색상을 rgba로 변환하여 투명도 조절
-      const baseAlpha = p.alpha * 0.6; // 전체적으로 더 투명하게
-      gradient.addColorStop(0, `rgba(237, 230, 218, ${baseAlpha})`); // 아이보리
-      gradient.addColorStop(0.3, `rgba(197, 139, 160, ${baseAlpha * 0.7})`); // 더스티 로즈
-      gradient.addColorStop(0.7, `rgba(212, 178, 167, ${baseAlpha * 0.4})`); // 로즈 샴페인 골드
-      gradient.addColorStop(1, 'rgba(212, 178, 167, 0)');
-
-      ctx.globalAlpha = 1;
       ctx.fillStyle = gradient;
 
-      // 부드러운 꽃잎 모양
+      // 하트 모양에 가까운 자연스러운 꽃잎 형태 렌더링
       ctx.beginPath();
-      ctx.moveTo(0, -p.r);
-      ctx.bezierCurveTo(p.r * 0.9, -p.r * 0.3, p.r * 0.9, p.r * 0.6, 0, p.r);
-      ctx.bezierCurveTo(-p.r * 0.9, p.r * 0.6, -p.r * 0.9, -p.r * 0.3, 0, -p.r);
+      ctx.moveTo(0, 0);
+      ctx.bezierCurveTo(-p.r * 1.5, -p.r * 1.5, -p.r * 2, p.r * 0.5, 0, p.r * 1.5);
+      ctx.bezierCurveTo(p.r * 2, p.r * 0.5, p.r * 1.5, -p.r * 1.5, 0, 0);
       ctx.closePath();
       ctx.fill();
 
-      // 추가 부드러움을 위한 오버레이 (더 자연스러운 블렌딩)
-      ctx.globalCompositeOperation = 'screen';
-      ctx.globalAlpha = p.alpha * 0.15;
-      ctx.shadowBlur = 8;
-      ctx.fillStyle = 'rgba(197, 139, 160, 0.12)';
+      // 꽃잎의 얇은 질감을 위한 하이라이트 추가
+      ctx.globalCompositeOperation = 'overlay';
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
       ctx.beginPath();
-      ctx.ellipse(0, 0, p.r * 0.6, p.r * 1.0, 0, 0, Math.PI * 2);
+      ctx.ellipse(-p.r * 0.3, 0, p.r * 0.2, p.r * 0.8, 0.2, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.globalCompositeOperation = 'source-over';
       ctx.restore();
-      ctx.globalAlpha = 1;
-      ctx.shadowBlur = 0;
     };
 
     const tick = () => {
@@ -127,27 +117,20 @@ export default function PetalsCanvas({
       ctx.clearRect(0, 0, w, h);
 
       for (const p of petalsRef.current) {
-        // 좌우 흔들림 (더 강하게)
         p.wobble += p.wobbleSpd;
-        // 수직 흔들림 (부유 느낌)
         p.verticalWobble += p.verticalWobbleSpd;
-        // 회전
         p.rot += p.rotSpd;
         
-        // 좌우 이동: 기본 드리프트 + 사인파 흔들림 (더 큰 진폭)
-        p.x += p.drift + Math.sin(p.wobble) * 1.5;
-        
-        // 수직 이동: 하강 속도 + 사인파 흔들림
-        p.y += p.spd + Math.sin(p.verticalWobble) * 0.6;
+        // 바람에 날리는 듯한 불규칙한 이동
+        p.x += p.drift + Math.sin(p.wobble) * 1.2;
+        p.y += p.spd + Math.cos(p.verticalWobble) * 0.5;
 
         drawPetal(p);
 
-        // 아래로 넘어가면 위로 재생성
         if (p.y > h + 30) {
           p.y = -30;
           p.x = rand(0, w);
         }
-        // 좌우 넘어가면 반대쪽으로
         if (p.x < -30) p.x = w + 30;
         if (p.x > w + 30) p.x = -30;
       }
