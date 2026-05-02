@@ -29,13 +29,13 @@ export default function ShopPage() {
 
   // 카테고리 정의 (DB 값 -> UI 레이블 매핑)
   const categoryMap: { [key: string]: string } = {
-    'private_reading': '프리미엄 리포트',
+    'private_reading': 'PREMIUM REPORT',
     'secret_method': 'SECRET METHOD',
     'energy_care': 'ENERGY CARE',
     'private_object': 'PRIVATE OBJECT'
   }
 
-  const categories = ['ALL', '프리미엄 리포트', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
+  const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
   
   useEffect(() => {
     async function fetchProducts() {
@@ -172,7 +172,7 @@ export default function ShopPage() {
                           <div className="p-8 space-y-4 relative">
                             <div className="flex justify-between items-start">
                               <span className="text-[10px] tracking-[0.3em] text-[var(--accent-gold)] opacity-70 uppercase font-bold">
-                                {categoryMap[product.category] || 'PRIVATE READING'}
+                                {product.category === 'private_reading' ? 'PREMIUM REPORT' : (product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY')}
                               </span>
                               <div className="w-1 h-1 rounded-full bg-[var(--accent-gold)] shadow-[0_0_8px_var(--accent-gold)]"></div>
                             </div>
