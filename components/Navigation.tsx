@@ -11,8 +11,10 @@ export default function Navigation() {
   const consultMenuLabel = '프리미엄 1:1 상담'
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [ebookMenuOpen, setEbookMenuOpen] = useState(false)
+  const [reportMenuOpen, setReportMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const ebookMenuRef = useRef<HTMLDivElement>(null)
+  const reportMenuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,12 +30,15 @@ export default function Navigation() {
       if (ebookMenuRef.current && !ebookMenuRef.current.contains(e.target as Node)) {
         setEbookMenuOpen(false)
       }
+      if (reportMenuRef.current && !reportMenuRef.current.contains(e.target as Node)) {
+        setReportMenuOpen(false)
+      }
     }
-    if (ebookMenuOpen) {
+    if (ebookMenuOpen || reportMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside)
     }
     return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [ebookMenuOpen])
+  }, [ebookMenuOpen, reportMenuOpen])
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -172,15 +177,57 @@ export default function Navigation() {
               />
             </Link>
 
-            <Link href="/reports" className={menuLinkClass} style={menuLinkStyle}>
-              선천코드 리포트
-              <span
-                className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
-                style={{
-                  boxShadow: '0 0 8px var(--accent-pink-soft)',
-                }}
-              />
-            </Link>
+            <div
+              className="relative"
+              ref={reportMenuRef}
+              onMouseEnter={() => setReportMenuOpen(true)}
+              onMouseLeave={() => setReportMenuOpen(false)}
+            >
+              <div className="flex items-center">
+                <Link href="/reports" className={`${menuLinkClass} flex items-center`} style={menuLinkStyle}>
+                  선천코드 리포트
+                  <span
+                    className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                    style={{
+                      boxShadow: '0 0 8px var(--accent-pink-soft)',
+                    }}
+                  />
+                </Link>
+                <button
+                  onClick={() => setReportMenuOpen(!reportMenuOpen)}
+                  className="ml-1.5 text-bd-gray hover:text-bd-ivory transition-colors"
+                  style={menuLinkStyle}
+                  aria-label="리포트 드롭다운"
+                >
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${reportMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
+              {reportMenuOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-48 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2"
+                  style={{
+                    background: 'rgba(26, 6, 38, 0.95)',
+                    borderColor: 'var(--accent-gold-soft)',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-gold-soft)',
+                  }}
+                >
+                  <Link
+                    href="/reports/love-code-report"
+                    className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-t-lg"
+                    onClick={() => setReportMenuOpen(false)}
+                  >
+                    선천코드 연애 리포트
+                  </Link>
+                  <Link
+                    href="/reports/premium-compatibility"
+                    className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-b-lg"
+                    onClick={() => setReportMenuOpen(false)}
+                  >
+                    프리미엄 궁합 리포트
+                  </Link>
+                </div>
+              )}
+            </div>
 
             <div
               className="relative"
@@ -299,13 +346,42 @@ export default function Navigation() {
               >
                 백도화 소개
               </Link>
-              <Link
-                href="/reports"
-                className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
-                onClick={closeMobileMenu}
-              >
-                선천코드 리포트
-              </Link>
+              <div className="px-4 py-2">
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/reports"
+                    className="flex-1 text-bd-gray hover:text-bd-ivory transition-colors rounded-lg px-2 py-2"
+                    onClick={closeMobileMenu}
+                  >
+                    선천코드 리포트
+                  </Link>
+                  <button
+                    onClick={() => setReportMenuOpen(!reportMenuOpen)}
+                    className="text-bd-ivory/60 hover:text-[var(--accent-gold)] transition-colors px-2 py-2"
+                    aria-label="리포트 드롭다운"
+                  >
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${reportMenuOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                </div>
+                {reportMenuOpen && (
+                  <div className="mt-2 ml-4 space-y-1">
+                    <Link
+                      href="/reports/love-code-report"
+                      className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
+                      onClick={closeMobileMenu}
+                    >
+                      선천코드 연애 리포트
+                    </Link>
+                    <Link
+                      href="/reports/premium-compatibility"
+                      className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
+                      onClick={closeMobileMenu}
+                    >
+                      프리미엄 궁합 리포트
+                    </Link>
+                  </div>
+                )}
+              </div>
 
               <div className="px-4 py-2">
                 <div className="flex items-center justify-between">
