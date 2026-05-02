@@ -46,7 +46,7 @@ export default function ProductCards() {
                 <div className="mb-8 flex">
                   <div className="rounded-full p-[1px]" style={{ background: 'linear-gradient(135deg, var(--accent-gold), #D4B2A7)' }}>
                     <p className="px-6 py-1.5 rounded-full text-[10px] md:text-xs tracking-[0.2em] font-bold uppercase text-[#f3eefe] bg-[rgba(26,6,38,0.8)]">
-                      ORIGINAL CODE ANALYSIS
+                      심리학 + 자기계발 + 동양 철학 + 에너지 차원
                     </p>
                   </div>
                 </div>
@@ -56,21 +56,21 @@ export default function ProductCards() {
                 </h2>
                 
                 <p className="text-base md:text-lg text-[var(--accent-gold-light)] opacity-90 mb-6 font-elegant italic tracking-wide">
-                  타고난 기질과 연애 에너지를 심층 분석하여,<br className="hidden sm:block" /> 
-                  당신만이 가진 고유한 사랑의 언어를 찾아드립니다.
+                  선천코드 분석을 통해 당신의 연애 패턴, 이성복, 재회 가능성을 정밀하게 해독합니다.
                 </p>
                 
                 <p className="text-base md:text-lg leading-relaxed mb-10 break-keep font-light text-[#EDE6DA] opacity-60">
-                  연애는 우연이 아니라 타고난 흐름입니다.<br className="hidden sm:block" />
-                  당신이 반복하는 사랑의 패턴과 관계를 바꾸는 방향을 읽어드립니다.
+                  연애는 우연이 아니라 타고난 흐름입니다.<br />
+                  당신이 반복하는 사랑의 패턴과<br />
+                  관계를 바꾸는 방향을 읽어드립니다.
                 </p>
 
                 <div className="hidden lg:block">
                   <Link
-                    href="/checkout?productId=original-code-love-report"
+                    href="/reports/love-code"
                     className="inline-flex items-center px-10 py-4 rounded-xl border border-[var(--accent-gold-soft)] text-[var(--accent-gold)] bg-[var(--accent-gold-soft)]/20 hover:bg-[var(--accent-gold-soft)] hover:scale-105 transition-all duration-500 text-sm font-bold tracking-widest shadow-[0_0_20px_rgba(212,178,167,0.1)] hover:shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                   >
-                    리포트 신청하기
+                    연애 리포트 자세히 보기
                   </Link>
                 </div>
               </div>
@@ -121,10 +121,10 @@ export default function ProductCards() {
                 {/* Mobile/Tablet CTA Button */}
                 <div className="mt-10 text-center lg:hidden">
                   <Link
-                    href="/checkout?productId=original-code-love-report"
+                    href="/reports/love-code"
                     className="btn-primary inline-flex items-center px-8 py-5 rounded-xl font-bold tracking-widest text-base w-full sm:w-auto justify-center"
                   >
-                    리포트 신청하기
+                    내 연애 코드 지금 확인하기
                   </Link>
                 </div>
               </div>
