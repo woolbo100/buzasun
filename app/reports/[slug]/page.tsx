@@ -80,7 +80,7 @@ export default function DynamicReportPage() {
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
-      <GlobalBackground src="/image/main.png">
+      <GlobalBackground src={(slug === 'love-code' || slug === 'love-code-report') ? "/image/love-code-bg.png" : "/image/main.png"}>
         <Navigation />
 
         <div className="relative z-10 pt-32 pb-20">
