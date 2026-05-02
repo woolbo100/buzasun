@@ -33,7 +33,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-4 md:px-6 overflow-hidden">
         {/* 텍스트 가독성을 위한 메인 카드 */}
-        <div className="gungjung-glass container mx-auto max-w-5xl py-16 md:py-24 px-8 md:px-16 text-center relative z-10">
+        <div className="gungjung-glass-hero container mx-auto max-w-5xl py-16 md:py-24 px-8 md:px-16 text-center relative z-10">
 
         {/* 상단 배지 */}
         <Reveal delayMs={0}>
@@ -67,7 +67,7 @@ export default function Hero() {
             <span 
               style={{
                 color: 'var(--accent-gold)',
-                textShadow: '0 0 15px rgba(216, 191, 163, 0.2)',
+                textShadow: '0 0 30px rgba(212, 178, 167, 0.4), 0 0 10px rgba(0,0,0,0.3)',
               }}
             >
               타고난 코드부터 다르다
