@@ -11,7 +11,7 @@ export default function About() {
   return (
     <section 
       id="about" 
-      className="py-20 md:py-32 px-6 relative overflow-hidden"
+      className="py-20 md:py-32 relative overflow-hidden"
       style={{ background: 'transparent' }}
     >
       <div className="container-premium relative z-10">

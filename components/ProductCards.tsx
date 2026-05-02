@@ -40,8 +40,7 @@ export default function ProductCards() {
       <div className="relative z-10">
         {/* 리포트 섹션 - 카드형 구조 */}
         <Reveal delayMs={0}>
-          <div className="w-full pt-20 pb-20 md:pt-24 md:py-28 px-6 md:px-8">
-            <div className="container-premium px-0">
+          <div className="container-premium py-20 md:py-28">
               <div 
                 className="gungjung-glass w-full rounded-3xl"
                 style={{

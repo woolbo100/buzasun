@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <>
       {/* 문의 전 배너 - 브랜드 철학 & 리포트 필요성 설명 */}
-      <section className="py-20 md:py-32 px-6 relative" style={{ background: 'transparent' }}>
+      <section className="py-20 md:py-32 relative" style={{ background: 'transparent' }}>
         <div className="container-premium">
           <Reveal delayMs={100}>
             <div className="gungjung-glass mx-auto py-16 md:py-24 text-center relative overflow-hidden">
@@ -81,7 +81,7 @@ function ContactForm() {
   return (
     <section 
       id="contact" 
-      className="py-20 md:py-32 px-6 relative"
+      className="py-20 md:py-32 relative"
       style={{ background: 'transparent' }}
     >
       <div className="container-premium">

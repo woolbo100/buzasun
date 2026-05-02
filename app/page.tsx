@@ -39,26 +39,24 @@ export default function Home() {
         <div className="relative z-10">
           <Hero />
           
-          <div className="container-premium">
-            <div className="gold-divider my-10" />
-            <ProductCards />
-            
-            <div className="gold-divider my-16" />
-            {/* 프리미엄 궁합 리포트 배너 - 연애 리포트(ProductCards) 아래로 이동 */}
-            <CompatibilityBanner />
-            
-            <div className="gold-divider my-16" />
-            <Testimonials />
-            
-            <div className="gold-divider my-10" />
-            <Ebooks />
-            
-            <div className="gold-divider my-10" />
-            <About />
-            
-            <div className="gold-divider my-10" />
-            <Contact />
-          </div>
+          <div className="gold-divider my-10" />
+          <ProductCards />
+          
+          <div className="gold-divider my-16" />
+          {/* 프리미엄 궁합 리포트 배너 - 연애 리포트(ProductCards) 아래로 이동 */}
+          <CompatibilityBanner />
+          
+          <div className="gold-divider my-16" />
+          <Testimonials />
+          
+          <div className="gold-divider my-10" />
+          <Ebooks />
+          
+          <div className="gold-divider my-10" />
+          <About />
+          
+          <div className="gold-divider my-10" />
+          <Contact />
           
           <Footer />
         </div>

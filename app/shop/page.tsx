@@ -148,7 +148,7 @@ export default function ShopPage() {
         </section>
 
         {/* 2. Product Grid Section */}
-        <section ref={productSectionRef} className="py-32 px-6 bg-[#0c0816]/50">
+        <section ref={productSectionRef} className="py-32 bg-[#0c0816]/50">
           <div className="container-premium">
             {loading ? (
               <div className="py-40 text-center">
@@ -218,8 +218,8 @@ export default function ShopPage() {
         </section>
 
         {/* 4. Trust Section */}
-        <section className="py-32 px-6">
-          <div className="container mx-auto max-w-5xl">
+        <section className="py-32">
+          <div className="container-premium">
             <Reveal>
               <div className="gungjung-glass p-12 md:p-24 text-center border-[var(--accent-gold)]/10 relative overflow-hidden group">
                 <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-[#8a2be2]/10 blur-[120px] rounded-full pointer-events-none"></div>

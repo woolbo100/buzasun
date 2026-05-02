@@ -41,8 +41,8 @@ export default function EbooksPage() {
       <GlobalBackground src="/image/main4.png">
         <Navigation />
         
-        <div className="pt-56 pb-24 px-4 md:px-6">
-          <div className="container mx-auto max-w-4xl relative z-10">
+        <div className="pt-56 pb-24">
+          <div className="container-premium relative z-10">
             {/* Rule 5: 가독성과 고급감을 위한 궁중유리 카드 적용 */}
             <div className="gungjung-glass p-8 md:p-12 mb-12">
               <h1 className="text-4xl md:text-5xl font-elegant font-bold mb-8 gradient-text">

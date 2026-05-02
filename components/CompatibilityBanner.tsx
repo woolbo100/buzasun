@@ -6,7 +6,7 @@ import Reveal from './Reveal'
 
 export default function CompatibilityBanner() {
   return (
-    <section className="relative py-16 md:py-24 px-4 md:px-6 overflow-hidden">
+    <section className="relative py-16 md:py-24 overflow-hidden">
       <div className="container-premium relative z-10">
         <Reveal>
           <div className="gungjung-glass overflow-hidden rounded-3xl border border-[rgba(216,191,163,0.15)] bg-gradient-to-br from-[#1a0f2e]/80 to-[#0a0514]/90 group">
