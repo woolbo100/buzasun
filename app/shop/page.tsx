@@ -163,7 +163,7 @@ export default function ShopPage() {
                         <div className="gungjung-glass overflow-hidden rounded-3xl border border-white/5 group-hover:border-[var(--accent-gold)]/40 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(212,178,167,0.15)] bg-gradient-to-b from-white/[0.03] to-transparent">
                           <div className="relative aspect-[3/4] overflow-hidden">
                             <Image 
-                              src={product.image_url || defaultImageMap[product.slug] || '/image/product-love-report.png'} 
+                              src={product.image || defaultImageMap[product.slug] || '/image/product-love-report.png'} 
                               alt={product.name}
                               fill
                               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
