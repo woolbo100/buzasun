@@ -40,7 +40,7 @@ export default function ProductCards() {
     <section className="relative w-full overflow-hidden py-16 md:py-32" style={{ background: 'transparent' }}>
       <div className="container-premium relative z-10">
         <Reveal delayMs={0}>
-          <div className="gungjung-glass w-full rounded-[40px] overflow-hidden border border-white/[0.08] bg-white/[0.02] shadow-[0_20px_80px_rgba(0,0,0,0.4)]">
+          <div className="gungjung-glass w-full rounded-[40px] overflow-hidden border border-white/[0.08] bg-white/[0.02] shadow-[0_20px_80px_rgba(0,0,0,0.4)] group">
             {/* [상단] Premium Hero Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] md:min-h-[600px]">
               
@@ -67,7 +67,7 @@ export default function ProductCards() {
                   </div>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-white mb-6 leading-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-white mb-6 leading-tight group-hover:text-[var(--accent-gold-light)] transition-colors duration-500">
                   선천코드 연애 리포트
                 </h2>
                 
