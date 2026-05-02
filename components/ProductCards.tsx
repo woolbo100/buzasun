@@ -75,8 +75,8 @@ export default function ProductCards() {
                 </div>
               </div>
 
-              {/* Right Image Area - Absolutely positioned to fill the right half perfectly */}
-              <div className="relative md:absolute md:top-0 md:right-0 md:bottom-0 w-full md:w-1/2 min-h-[350px] md:min-h-full overflow-hidden z-0">
+              {/* Right Image Area - Expanded beyond border to hide internal image gaps */}
+              <div className="relative md:absolute md:-top-[1.5px] md:-right-[60px] md:-bottom-[1.5px] w-full md:w-[calc(50%+60px)] min-h-[350px] md:min-h-full overflow-hidden z-0">
                 <Image 
                   src="/image/love1.png" 
                   alt="Love Code Analysis"
