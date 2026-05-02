@@ -77,7 +77,7 @@ export default function AdminProductsPage() {
             is_active: formData.is_active,
             main_sort_order: formData.main_sort_order,
             category: formData.category,
-            image_url: formData.image_url
+            image: formData.image_url
           })
           .eq('id', editingId);
         
@@ -102,7 +102,7 @@ export default function AdminProductsPage() {
             is_active: formData.is_active,
             main_sort_order: formData.main_sort_order,
             category: formData.category,
-            image_url: formData.image_url
+            image: formData.image_url
           }]);
           
         if (error) {
@@ -178,7 +178,7 @@ export default function AdminProductsPage() {
       is_active: product.is_active,
       main_sort_order: product.main_sort_order,
       category: product.category || "PREMIUM REPORT",
-      image_url: product.image_url || ""
+      image_url: product.image || product.image_url || ""
     });
     setEditingId(product.id);
     setIsFormOpen(true);
@@ -240,8 +240,8 @@ export default function AdminProductsPage() {
             >
               <div className="flex items-center gap-6 flex-1">
                 <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-white/10 bg-black/20 shrink-0">
-                  {product.image_url ? (
-                    <Image src={product.image_url} alt={product.name} fill className="object-cover" />
+                  {product.image || product.image_url ? (
+                    <Image src={product.image || product.image_url} alt={product.name} fill className="object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-white/10">
                       <ImageIcon className="w-8 h-8" />
