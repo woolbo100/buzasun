@@ -10,11 +10,9 @@ export default function Navigation() {
   const showConsultMenu = false
   const consultMenuLabel = '프리미엄 1:1 상담'
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [ebookMenuOpen, setEbookMenuOpen] = useState(false)
-  const [reportMenuOpen, setReportMenuOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<'reports' | 'ebooks' | null>(null)
   const [scrolled, setScrolled] = useState(false)
-  const ebookMenuRef = useRef<HTMLDivElement>(null)
-  const reportMenuRef = useRef<HTMLDivElement>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,18 +25,19 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (ebookMenuRef.current && !ebookMenuRef.current.contains(e.target as Node)) {
-        setEbookMenuOpen(false)
-      }
-      if (reportMenuRef.current && !reportMenuRef.current.contains(e.target as Node)) {
-        setReportMenuOpen(false)
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setActiveDropdown(null)
       }
     }
-    if (ebookMenuOpen || reportMenuOpen) {
+    if (activeDropdown) {
       document.addEventListener('mousedown', handleClickOutside)
     }
     return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [ebookMenuOpen, reportMenuOpen])
+  }, [activeDropdown])
+
+  const toggleDropdown = (type: 'reports' | 'ebooks') => {
+    setActiveDropdown(activeDropdown === type ? null : type)
+  }
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
@@ -46,6 +45,7 @@ export default function Navigation() {
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false)
+    setActiveDropdown(null)
   }
 
   const [mainReportSlug, setMainReportSlug] = useState('love-code-report')
@@ -166,7 +166,7 @@ export default function Navigation() {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center space-x-8 ml-auto mr-8">
+          <div className="hidden lg:flex items-center space-x-8 ml-auto mr-8" ref={dropdownRef}>
             <Link href="/about" className={menuLinkClass} style={menuLinkStyle}>
               백도화 소개
               <span
@@ -178,10 +178,9 @@ export default function Navigation() {
             </Link>
 
             <div
-              className="relative"
-              ref={reportMenuRef}
-              onMouseEnter={() => setReportMenuOpen(true)}
-              onMouseLeave={() => setReportMenuOpen(false)}
+              className="relative py-4"
+              onMouseEnter={() => setActiveDropdown('reports')}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
               <div className="flex items-center">
                 <Link href="/reports" className={`${menuLinkClass} flex items-center`} style={menuLinkStyle}>
@@ -194,17 +193,24 @@ export default function Navigation() {
                   />
                 </Link>
                 <button
-                  onClick={() => setReportMenuOpen(!reportMenuOpen)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleDropdown('reports');
+                  }}
                   className="ml-1.5 text-bd-gray hover:text-bd-ivory transition-colors"
                   style={menuLinkStyle}
                   aria-label="리포트 드롭다운"
                 >
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${reportMenuOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'reports' ? 'rotate-180' : ''}`} />
                 </button>
               </div>
-              {reportMenuOpen && (
+              
+              {/* Invisible bridge */}
+              <div className="absolute top-full left-0 w-full h-4" />
+
+              {activeDropdown === 'reports' && (
                 <div
-                  className="absolute top-full left-0 mt-2 w-48 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2"
+                  className="absolute top-full left-0 mt-0 w-48 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2 z-[100]"
                   style={{
                     background: 'rgba(26, 6, 38, 0.95)',
                     borderColor: 'var(--accent-gold-soft)',
@@ -214,14 +220,14 @@ export default function Navigation() {
                   <Link
                     href="/reports/love-code-report"
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-t-lg"
-                    onClick={() => setReportMenuOpen(false)}
+                    onClick={() => setActiveDropdown(null)}
                   >
                     선천코드 연애 리포트
                   </Link>
                   <Link
                     href="/reports/premium-compatibility"
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-b-lg"
-                    onClick={() => setReportMenuOpen(false)}
+                    onClick={() => setActiveDropdown(null)}
                   >
                     프리미엄 궁합 리포트
                   </Link>
@@ -230,10 +236,9 @@ export default function Navigation() {
             </div>
 
             <div
-              className="relative"
-              ref={ebookMenuRef}
-              onMouseEnter={() => setEbookMenuOpen(true)}
-              onMouseLeave={() => setEbookMenuOpen(false)}
+              className="relative py-4"
+              onMouseEnter={() => setActiveDropdown('ebooks')}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
               <div className="flex items-center">
                 <Link href="/ebooks" className={`${menuLinkClass} flex items-center`} style={menuLinkStyle}>
@@ -246,17 +251,24 @@ export default function Navigation() {
                   />
                 </Link>
                 <button
-                  onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleDropdown('ebooks');
+                  }}
                   className="ml-1.5 text-bd-gray hover:text-bd-ivory transition-colors"
                   style={menuLinkStyle}
                   aria-label="드롭다운 메뉴"
                 >
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'ebooks' ? 'rotate-180' : ''}`} />
                 </button>
               </div>
-              {ebookMenuOpen && (
+
+              {/* Invisible bridge */}
+              <div className="absolute top-full left-0 w-full h-4" />
+
+              {activeDropdown === 'ebooks' && (
                 <div
-                  className="absolute top-full left-0 mt-2 w-40 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2"
+                  className="absolute top-full left-0 mt-0 w-40 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2 z-[100]"
                   style={{
                     background: 'rgba(26, 6, 38, 0.95)',
                     borderColor: 'var(--accent-gold-soft)',
@@ -266,21 +278,21 @@ export default function Navigation() {
                   <Link
                     href="/reports/love-secret-ebook"
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-t-lg"
-                    onClick={() => setEbookMenuOpen(false)}
+                    onClick={() => setActiveDropdown(null)}
                   >
                     연애비급
                   </Link>
                   <Link
                     href="/reports/abundance-secret-guide"
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm"
-                    onClick={() => setEbookMenuOpen(false)}
+                    onClick={() => setActiveDropdown(null)}
                   >
                     풍요비책
                   </Link>
                   <Link
                     href="/reports/reunion-secret-method"
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-b-lg"
-                    onClick={() => setEbookMenuOpen(false)}
+                    onClick={() => setActiveDropdown(null)}
                   >
                     재회비법
                   </Link>
@@ -356,14 +368,14 @@ export default function Navigation() {
                     선천코드 리포트
                   </Link>
                   <button
-                    onClick={() => setReportMenuOpen(!reportMenuOpen)}
+                    onClick={() => toggleDropdown('reports')}
                     className="text-bd-ivory/60 hover:text-[var(--accent-gold)] transition-colors px-2 py-2"
                     aria-label="리포트 드롭다운"
                   >
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${reportMenuOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'reports' ? 'rotate-180' : ''}`} />
                   </button>
                 </div>
-                {reportMenuOpen && (
+                {activeDropdown === 'reports' && (
                   <div className="mt-2 ml-4 space-y-1">
                     <Link
                       href="/reports/love-code-report"
@@ -393,14 +405,14 @@ export default function Navigation() {
                     시크릿 비법서
                   </Link>
                   <button
-                    onClick={() => setEbookMenuOpen(!ebookMenuOpen)}
+                    onClick={() => toggleDropdown('ebooks')}
                     className="text-bd-ivory/60 hover:text-[var(--accent-gold)] transition-colors px-2 py-2"
                     aria-label="드롭다운 메뉴"
                   >
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${ebookMenuOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'ebooks' ? 'rotate-180' : ''}`} />
                   </button>
                 </div>
-                {ebookMenuOpen && (
+                {activeDropdown === 'ebooks' && (
                   <div className="mt-2 ml-4 space-y-1">
                     <Link
                       href="/reports/love-secret-ebook"
