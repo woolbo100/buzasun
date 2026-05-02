@@ -18,7 +18,7 @@ export default function ReportsHubPage() {
       desc: '나의 타고난 연애 에너지, 반복되는 사랑의 패턴, 끌리는 사람의 유형과 관계의 흐름을 분석합니다.',
       label: 'PRIVATE LOVE READING',
       btnText: '연애 리포트 자세히 보기',
-      link: '/reports/love-code',
+      link: '/reports/love-code-report',
       image: '/image/love-code-bg.png', // Reusing existing image if available
       premium: false
     },
