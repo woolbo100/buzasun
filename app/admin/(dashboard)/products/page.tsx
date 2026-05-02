@@ -62,19 +62,53 @@ export default function AdminProductsPage() {
       setIsSubmitting(true);
       
       if (editingId) {
-        // 수정 모드
+        // 수정 모드 - 모든 필드를 명시적으로 지정
         const { error } = await supabase
           .from('products')
-          .update(formData)
+          .update({
+            slug: formData.slug,
+            name: formData.name,
+            description: formData.description,
+            price: formData.price,
+            button_label: formData.button_label,
+            main_cta_label: formData.main_cta_label,
+            show_on_main: formData.show_on_main,
+            is_featured: formData.is_featured,
+            is_active: formData.is_active,
+            main_sort_order: formData.main_sort_order,
+            category: formData.category,
+            image_url: formData.image_url
+          })
           .eq('id', editingId);
-        if (error) throw error;
+        
+        if (error) {
+          console.error("상품 수정 상세 에러:", error.message, error.details, error.hint);
+          throw error;
+        }
         alert("상품 정보가 수정되었습니다.");
       } else {
         // 신규 등록 모드
         const { error } = await supabase
           .from('products')
-          .insert([formData]);
-        if (error) throw error;
+          .insert([{
+            slug: formData.slug,
+            name: formData.name,
+            description: formData.description,
+            price: formData.price,
+            button_label: formData.button_label,
+            main_cta_label: formData.main_cta_label,
+            show_on_main: formData.show_on_main,
+            is_featured: formData.is_featured,
+            is_active: formData.is_active,
+            main_sort_order: formData.main_sort_order,
+            category: formData.category,
+            image_url: formData.image_url
+          }]);
+          
+        if (error) {
+          console.error("상품 등록 상세 에러:", error.message, error.details, error.hint);
+          throw error;
+        }
         alert("상품이 등록되었습니다.");
       }
 
