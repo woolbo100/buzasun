@@ -26,7 +26,7 @@ const products = [
     name: '선천코드 리포트 (연애/관계)',
     category: 'PREMIUM REPORT',
     price: 49000,
-    image: '/product-love-report.png',
+    image: '/image/product-love-report.png',
     link: '/reports/love-code-report',
     description: '당신의 타고난 연애 에너지와 관계의 패턴을 분석합니다.'
   },
@@ -35,7 +35,7 @@ const products = [
     name: '재회 시크릿 솔루션',
     category: 'SECRET METHOD',
     price: 35000,
-    image: '/product-reunion-reading.png',
+    image: '/image/product-reunion-reading.png',
     link: '/reports/reunion-secret-method',
     description: '어긋난 인연을 다시 잇는 가장 은밀하고 확실한 방법.'
   },
@@ -44,7 +44,7 @@ const products = [
     name: '풍요의 비밀 가이드',
     category: 'ENERGY GUIDE',
     price: 42000,
-    image: '/product-abundance.png',
+    image: '/image/product-abundance.png',
     link: '/reports/abundance-secret-guide',
     description: '당신에게 흘러들어오는 풍요의 물길을 트는 에너지 활용법.'
   },
@@ -53,7 +53,7 @@ const products = [
     name: '매력 시그널 리포트',
     category: 'AURA ANALYSIS',
     price: 29000,
-    image: '/product-charm-signal.png',
+    image: '/image/product-charm-signal.png',
     link: '/reports/love-secret-ebook',
     description: '상대방의 무의식을 자극하는 당신만의 고유한 아우라 분석.'
   }
@@ -75,7 +75,7 @@ export default function ShopPage() {
 
   return (
     <main className="relative min-h-screen bg-[#0c0816] text-white selection:bg-[var(--accent-gold)] selection:text-black">
-      <GlobalBackground src="/shop-hero.png" brightCenter={false}>
+      <GlobalBackground src="/image/shop-hero.png" brightCenter={false}>
         <Navigation />
         
         {/* 1. Hero Section: Premium Boutique Atmosphere */}
