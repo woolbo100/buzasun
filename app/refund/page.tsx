@@ -27,24 +27,26 @@ export default function RefundPage() {
         <Navigation />
         
         <div className="container-premium py-32 md:py-44">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <Reveal>
-              <h1 className="text-3xl md:text-4xl font-elegant font-bold text-white mb-4 text-center">환불 및 교환 정책</h1>
-              <p className="text-[var(--accent-gold)] text-sm text-center mb-16 opacity-60 tracking-widest">시행일 : 2026.05.02</p>
-            </Reveal>
+              <div className="gungjung-glass p-8 md:p-16 lg:p-20 border-white/10">
+                <h1 className="text-3xl md:text-4xl font-elegant font-bold text-white mb-4 text-center">환불 및 교환 정책</h1>
+                <p className="text-[var(--accent-gold)] text-sm text-center mb-16 opacity-60 tracking-widest">시행일 : 2026.05.02</p>
 
-            <div className="space-y-8">
-              {refundContent.map((item, index) => (
-                <Reveal key={index} delayMs={index * 50}>
-                  <div className="gungjung-glass p-8 md:p-10 border-white/5 hover:border-[var(--accent-gold)]/20 transition-colors">
-                    <h2 className="text-xl font-bold text-white mb-6 border-l-4 border-[var(--accent-gold)] pl-4">{item.title}</h2>
-                    <div className="text-bd-ivory opacity-70 leading-relaxed whitespace-pre-line text-sm md:text-base font-light break-keep">
-                      {item.content}
+                <div className="space-y-12">
+                  {refundContent.map((item, index) => (
+                    <div key={index} className="space-y-6">
+                      <h2 className="text-xl md:text-2xl font-bold text-white border-l-2 border-[var(--accent-gold)] pl-4">
+                        {item.title}
+                      </h2>
+                      <div className="text-bd-ivory opacity-70 leading-relaxed whitespace-pre-line text-sm md:text-base font-light break-keep pl-4">
+                        {item.content}
+                      </div>
                     </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
 
             <Reveal delayMs={500}>
               <div className="mt-20 text-center text-white/30 text-xs">
