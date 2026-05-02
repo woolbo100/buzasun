@@ -35,6 +35,15 @@ export default function ShopPage() {
     'private_object': 'PRIVATE OBJECT'
   }
 
+  // 슬러그 기반 기본 이미지 매핑 (DB에 이미지가 없을 경우 대비)
+  const defaultImageMap: { [key: string]: string } = {
+    'love-code-report': '/image/product-love-report.png',
+    'premium-compatibility': '/image/premium_compatibility_bg.png',
+    'reunion-secret-method': '/image/product-reunion-reading.png',
+    'abundance-secret-guide': '/image/product-abundance.png',
+    'love-secret-ebook': '/image/product-charm-signal.png'
+  }
+
   const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
   
   useEffect(() => {
@@ -161,7 +170,7 @@ export default function ShopPage() {
                         <div className="gungjung-glass overflow-hidden rounded-3xl border border-white/5 group-hover:border-[var(--accent-gold)]/40 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(212,178,167,0.15)] bg-gradient-to-b from-white/[0.03] to-transparent">
                           <div className="relative aspect-[3/4] overflow-hidden">
                             <Image 
-                              src={product.image_url || '/image/product-placeholder.png'} 
+                              src={product.image_url || defaultImageMap[product.slug] || '/image/product-love-report.png'} 
                               alt={product.name}
                               fill
                               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
