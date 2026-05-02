@@ -36,7 +36,7 @@ export default function AbundanceSecretPage() {
       <GlobalBackground src="/image/love-code-bg.png">
         <Navigation />
 
-        <div className="relative z-10 pt-44 pb-20">
+        <div className="relative z-10 pt-56 pb-20">
           <div className="max-w-4xl mx-auto px-4">
             
             {/* 1. 히어로 섹션 */}
