@@ -83,8 +83,49 @@ export default function Footer() {
 
         {/* Brand Message Section */}
         <div className="border-t border-[rgba(212,175,55,0.05)] pt-12 pb-8 text-center">
-          <p className="text-[var(--accent-gold)] text-sm md:text-base font-elegant tracking-[0.3em] mb-8 animate-pulse-slow" 
-             style={{ textShadow: '0 0 10px rgba(212, 178, 167, 0.3)' }}>
+          {/* Footer Logo 추가 */}
+          <div className="flex flex-col items-center mb-8 opacity-80">
+            <div className="flex items-center gap-2 mb-2 scale-90">
+              <svg 
+                className="w-5 h-5 md:w-6 md:h-6"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{
+                  filter: 'drop-shadow(0 0 5px rgba(216, 191, 163, 0.2))',
+                }}
+              >
+                <path 
+                  d="M12 2C12 2 8 6 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 6 12 2 12 2Z" 
+                  fill="var(--accent-gold-light)"
+                  opacity="0.8"
+                />
+                <path 
+                  d="M12 22C12 22 8 18 8 14C8 11.7909 9.79086 10 12 10C14.2091 10 16 11.7909 16 14C16 18 12 22 12 22Z" 
+                  fill="var(--accent-gold-light)"
+                  opacity="0.8"
+                />
+                <path 
+                  d="M2 12C2 12 6 8 10 8C12.2091 8 14 9.79086 14 12C14 14.2091 12.2091 16 10 16C6 16 2 12 2 12Z" 
+                  fill="var(--accent-gold-light)"
+                  opacity="0.8"
+                />
+                <path 
+                  d="M22 12C22 12 18 8 14 8C11.7909 8 10 9.79086 10 12C10 14.2091 11.7909 16 14 16C18 16 22 12 22 12Z" 
+                  fill="var(--accent-gold-light)"
+                  opacity="0.8"
+                />
+                <circle cx="12" cy="12" r="2.5" fill="#F5F5F5" />
+              </svg>
+              <div className="text-sm md:text-base font-elegant font-bold tracking-wider">
+                <span className="text-[#F5F5F5] opacity-90">백도화</span>
+                <span className="text-[var(--accent-gold-light)] opacity-80"> 매력학당</span>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-[var(--accent-gold-light)] text-sm md:text-base font-elegant tracking-[0.3em] mb-8 opacity-70" 
+             style={{ textShadow: '0 0 10px rgba(212, 178, 167, 0.15)' }}>
             “반복되는 사랑의 패턴을 읽어드립니다”
           </p>
           
