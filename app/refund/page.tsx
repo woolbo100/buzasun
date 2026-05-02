@@ -7,7 +7,7 @@ import GlobalBackground from '@/components/GlobalBackground'
 export default function RefundPolicy() {
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
-      <GlobalBackground>
+      <GlobalBackground src="/image/main.png">
         <Navigation />
         
         <div className="relative z-10 pt-32 pb-20 px-6">
