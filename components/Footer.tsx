@@ -11,11 +11,11 @@ export default function Footer() {
       {/* Hanji texture overlay (optional/subtle) */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/natural-paper.png")' }}></div>
 
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div className="mx-auto w-full max-w-[1280px] relative z-10">
+        <div className="grid grid-cols-1 gap-y-12 gap-x-10 md:grid-cols-2 md:gap-x-12 lg:grid-cols-[1.2fr_1fr_1fr_1.4fr] lg:gap-x-[84px] xl:gap-x-24 mb-16">
           
           {/* 1. ABOUT */}
-          <div className="space-y-4">
+          <div className="space-y-4 max-w-[280px]">
             <Link href="/about">
               <h3 className="text-sm font-elegant font-bold text-[var(--accent-gold)] tracking-[0.2em] mb-6 hover:brightness-125 transition-all cursor-pointer">ABOUT</h3>
             </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           {/* 2. POLICY */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:pl-4">
             <h3 className="text-sm font-elegant font-bold text-[var(--accent-gold)] tracking-[0.2em] mb-6">POLICY</h3>
             <ul className="space-y-3">
               <li>
@@ -53,10 +53,10 @@ export default function Footer() {
                 <Link href="/faq" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">FAQ</Link>
               </li>
               <li>
-                <Link href="/support" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">고객센터</Link>
+                <Link href="/connect" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">Connect</Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">문의하기 (이메일)</Link>
+                <Link href="/support" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">고객센터</Link>
               </li>
               <li>
                 <a href="https://pf.kakao.com/_CxdfxgG" target="_blank" rel="noopener noreferrer" className="text-[#EDE6DA] opacity-60 hover:opacity-100 hover:text-[var(--accent-gold)] transition-all text-sm">카카오톡 채널</a>
@@ -65,7 +65,7 @@ export default function Footer() {
           </div>
 
           {/* 4. BUSINESS INFO */}
-          <div className="space-y-4 lg:col-span-1">
+          <div className="space-y-4 max-w-[320px] lg:justify-self-start">
             <h3 className="text-sm font-elegant font-bold text-[var(--accent-gold)] tracking-[0.2em] mb-6">BUSINESS INFO</h3>
             <div className="text-[#EDE6DA] opacity-60 text-[11px] leading-loose">
               <p>상호명 : 이끌림</p>
