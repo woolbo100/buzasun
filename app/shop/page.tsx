@@ -92,8 +92,8 @@ export default function ShopPage() {
               </Reveal>
               
               <Reveal delayMs={200}>
-                <h1 className="text-5xl md:text-8xl font-elegant font-bold mb-12 tracking-tight leading-tight">
-                  <span className="gradient-text italic">비밀상점</span>
+                <h1 className="text-5xl md:text-8xl font-elegant font-bold mb-12 leading-tight">
+                  <span className="gradient-text italic px-4">비밀상점</span>
                 </h1>
               </Reveal>
               
