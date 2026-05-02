@@ -13,13 +13,13 @@ export default function RefundPolicy() {
         <div className="relative z-10 pt-32 pb-20 px-6">
           <div className="container mx-auto max-w-4xl">
             <div className="bg-[#1a0f2e]/60 backdrop-blur-md border border-[rgba(212,175,55,0.15)] p-8 md:p-16 rounded-2xl shadow-2xl">
-              <h1 className="text-3xl md:text-4xl font-elegant font-bold text-[#D4AF37] mb-12 tracking-wider text-center">
+              <h1 className="text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] mb-12 tracking-wider text-center">
                 환불 및 교환 정책
               </h1>
               
               <div className="space-y-10 text-[#EDE6DA] leading-relaxed opacity-90">
                 <section>
-                  <h2 className="text-xl font-bold text-[#D4AF37] mb-4">디지털 리포트 상품</h2>
+                  <h2 className="text-xl font-bold text-[var(--accent-gold)] mb-4">디지털 리포트 상품</h2>
                   <p className="mb-4">
                     백도화의 리포트 상품은 개인 맞춤 제작되는 디지털 콘텐츠입니다. 따라서 아래 기준에 따라 환불이 진행됩니다.
                   </p>
@@ -48,7 +48,7 @@ export default function RefundPolicy() {
                 </section>
 
                 <section>
-                  <h2 className="text-xl font-bold text-[#D4AF37] mb-4">실물 상품 교환 및 반품</h2>
+                  <h2 className="text-xl font-bold text-[var(--accent-gold)] mb-4">실물 상품 교환 및 반품</h2>
                   <p>
                     실물 상품의 경우 상품 수령 후 7일 이내 교환 및 반품 신청이 가능합니다.
                   </p>
@@ -61,7 +61,7 @@ export default function RefundPolicy() {
                 </section>
 
                 <section className="pt-10 border-t border-[rgba(212,175,55,0.1)]">
-                  <h2 className="text-xl font-bold text-[#D4AF37] mb-4">고객센터</h2>
+                  <h2 className="text-xl font-bold text-[var(--accent-gold)] mb-4">고객센터</h2>
                   <p className="mb-4">환불 및 교환 문의는 고객센터를 통해 접수해주시기 바랍니다.</p>
                   <div className="p-6 bg-[#0a0514]/40 border border-[rgba(212,175,55,0.1)] rounded-lg text-sm">
                     <p className="opacity-80">Email : buzasun@naver.com</p>
