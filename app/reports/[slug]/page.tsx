@@ -227,7 +227,72 @@ export default function DynamicReportPage() {
               </Reveal>
             </section>
 
-            {/* 6. 하단 CTA */}
+            {/* 6. 구매 전 확인사항 */}
+            <section className="mb-20">
+              <Reveal>
+                <div className="gungjung-glass p-8 md:p-12 border-[rgba(212,175,55,0.2)]">
+                  <h2 className="text-2xl font-elegant font-bold text-center mb-10 text-[var(--accent-gold)]">
+                    구매 전 꼭 확인해주세요
+                  </h2>
+                  
+                  <div className="space-y-10 text-sm md:text-base leading-relaxed">
+                    <div className="text-center text-bd-ivory opacity-90 max-w-2xl mx-auto break-keep">
+                      <p>백도화의 리포트는 개인 맞춤형으로 제작되는 디지털 콘텐츠입니다.</p>
+                      <p className="mt-2">생년월일, 관계 정보, 상담 내용을 바탕으로 개별 해석 및 분석이 진행되므로 일반 상품과 달리 단순 교환 및 환불이 어렵습니다. 신중한 신청 부탁드립니다.</p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-[rgba(212,175,55,0.1)]">
+                      <div>
+                        <h3 className="text-lg font-bold text-green-400/80 mb-4 flex items-center gap-2">
+                          <i className="fas fa-check-circle"></i> 환불 가능 안내
+                        </h3>
+                        <ul className="space-y-2 text-bd-gray text-sm">
+                          <li>• 결제 후 작업이 시작되기 전</li>
+                          <li>• 중복 결제가 발생한 경우</li>
+                          <li>• 시스템 오류로 인해 정상적인 결제가 이루어지지 않은 경우</li>
+                        </ul>
+                        <p className="mt-4 text-xs text-green-400/60">위 경우 확인 후 전액 환불이 가능합니다.</p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-lg font-bold text-red-400/80 mb-4 flex items-center gap-2">
+                          <i className="fas fa-times-circle"></i> 환불이 어려운 경우
+                        </h3>
+                        <ul className="space-y-2 text-bd-gray text-sm">
+                          <li>• 리포트 제작이 이미 시작된 경우</li>
+                          <li>• 리포트 발송이 완료된 경우</li>
+                          <li>• 고객의 단순 변심</li>
+                          <li>• 개인 맞춤형 제작이 완료된 경우</li>
+                        </ul>
+                        <p className="mt-4 text-xs text-red-400/60">디지털 콘텐츠 및 맞춤 제작 상품의 특성상 작업이 시작된 이후에는 환불이 제한됩니다.</p>
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-[rgba(212,175,55,0.1)]">
+                      <div>
+                        <h3 className="text-lg font-bold text-[var(--accent-gold-light)] mb-4 flex items-center gap-2">
+                          <i className="fas fa-clock"></i> 제작 기간 안내
+                        </h3>
+                        <p className="text-bd-gray text-sm break-keep">
+                          리포트는 결제 완료 후 평균 2~3일 이내 순차적으로 제작됩니다. 상황에 따라 일정이 조금 달라질 수 있으며 별도 안내드릴 수 있습니다.
+                        </p>
+                      </div>
+
+                      <div>
+                        <h3 className="text-lg font-bold text-[var(--accent-gold-light)] mb-4 flex items-center gap-2">
+                          <i className="fas fa-info-circle"></i> 문의 안내
+                        </h3>
+                        <p className="text-bd-gray text-sm break-keep">
+                          궁금한 사항은 고객센터 또는 문의하기를 통해 편하게 연락 부탁드립니다. 당신의 이야기를 조심스럽고 깊이 있게 읽어드리겠습니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 7. 하단 CTA */}
             <section className="text-center py-20 bg-[rgba(59,15,27,0.2)] rounded-3xl border border-[var(--glass-border)]">
               <Reveal>
                 <h2 className="text-2xl md:text-3xl font-elegant font-bold mb-8 text-white">

@@ -191,6 +191,11 @@
     }
   }
 
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.8; text-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
+    50% { opacity: 1; text-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     * {
       animation-duration: 0.01ms !important;
@@ -424,5 +429,9 @@
   .jade-hover > * {
     position: relative;
     z-index: 2;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
