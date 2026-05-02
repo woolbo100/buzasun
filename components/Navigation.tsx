@@ -242,7 +242,7 @@ export default function Navigation() {
             </div>
 
             <Link href="/shop" className={menuLinkClass} style={menuLinkStyle}>
-              비법 상점
+              비밀상점
               <span
                 className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
@@ -356,7 +356,7 @@ export default function Navigation() {
                 className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
                 onClick={closeMobileMenu}
               >
-                비법 상점
+                비밀상점
               </Link>
               {showConsultMenu && (
                 <Link

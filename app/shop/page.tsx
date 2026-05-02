@@ -42,7 +42,7 @@ const products = [
   {
     id: 'abundance-secret',
     name: '풍요의 비밀 가이드',
-    category: 'ENERGY GUIDE',
+    category: 'ENERGY CARE',
     price: 42000,
     image: '/image/product-abundance.png',
     link: '/reports/abundance-secret-guide',
@@ -63,7 +63,7 @@ export default function ShopPage() {
   const [activeCategory, setActiveCategory] = useState('ALL')
   const productSectionRef = useRef<HTMLElement>(null)
 
-  const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY GUIDE']
+  const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
   
   const filteredProducts = activeCategory === 'ALL' 
     ? products 
