@@ -155,7 +155,7 @@ export default function AdminProductsPage() {
       const { data: { publicUrl } } = supabase.storage
         .from('product-images')
         .getPublicUrl(filePath);
-Base64
+
       setFormData({ ...formData, image: publicUrl });
       alert("이미지가 성공적으로 업로드되었습니다.");
     } catch (err: any) {
