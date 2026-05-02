@@ -32,8 +32,8 @@ export default function SupportPage() {
                     </svg>
                   </div>
                   <h2 className="text-xl font-bold text-[var(--accent-gold-light)] mb-3">카카오톡 채널</h2>
-                  <p className="text-sm text-[#EDE6DA] opacity-60 mb-8 leading-relaxed break-keep">
-                    가장 빠른 응대가 필요하시다면 카카오톡 실시간 상담을 이용해보세요.
+                  <p className="text-sm text-[#EDE6DA] opacity-60 mb-8 leading-relaxed">
+                    가장 빠른 응대가 필요하시다면<br />카카오톡 실시간 상담을<br />이용해보세요.
                   </p>
                   <a 
                     href="https://pf.kakao.com/_CxdfxgG" 

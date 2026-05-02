@@ -109,7 +109,7 @@ export default function ProductCards() {
             </div>
 
             {/* [하단] 6개 분석 카드 섹션 */}
-            <div className="relative z-20 px-6 md:px-16 lg:px-20 pb-4 pt-10 border-t border-white/[0.05] bg-white/[0.01]">
+            <div className="relative z-20 px-6 md:px-16 lg:px-20 pb-20 pt-10 border-t border-white/[0.05] bg-white/[0.01]">
               <div className="max-w-5xl mx-auto">
                 <h3 className="text-center text-[#EDE6DA] opacity-30 text-xs md:text-sm tracking-[0.4em] mb-10 font-elegant uppercase">
                   Analysis Components

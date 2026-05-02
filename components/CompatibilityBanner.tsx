@@ -9,7 +9,7 @@ export default function CompatibilityBanner() {
     <section className="relative pt-4 pb-16 md:pt-6 md:pb-24 overflow-hidden">
       <div className="container-premium relative z-10">
         <Reveal>
-          <div className="gungjung-glass overflow-hidden rounded-3xl border border-[rgba(216,191,163,0.15)] bg-gradient-to-br from-[#1a0f2e]/80 to-[#0a0514]/90 group">
+          <div className="gungjung-glass overflow-hidden rounded-3xl border border-[rgba(216,191,163,0.15)] bg-gradient-to-br from-[#1a0f2e]/80 to-[#0a0514]/90 group relative">
             <div className="grid grid-cols-1 md:grid-cols-2 items-stretch min-h-[400px] md:min-h-[500px]">
               {/* Left Content */}
               <div className="p-8 md:p-16 lg:p-20 flex flex-col justify-center text-left relative z-10">
@@ -39,16 +39,18 @@ export default function CompatibilityBanner() {
                 </div>
               </div>
               
-              {/* Right Image */}
-              <div className="relative overflow-hidden min-h-[350px] md:min-h-full">
+              {/* Right Image - Absolute positioning to ensure edge-to-edge on desktop */}
+              <div className="relative md:absolute md:right-0 md:top-0 md:bottom-0 md:w-1/2 overflow-hidden min-h-[350px] md:min-h-full z-0">
                 <Image 
                   src="/image/love2.png" 
                   alt="Premium Compatibility"
                   fill
-                  className="object-cover transition-transform duration-[5000ms] group-hover:scale-110"
+                  className="object-cover object-center transition-transform duration-[5000ms] group-hover:scale-110"
+                  priority
                 />
                 {/* 텍스트 가독성을 위한 그라데이션 (왼쪽에서 이미지로 흐르는) */}
-                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent via-transparent to-[#1a0f2e]" />
+                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-[#1a0f2e] via-transparent to-transparent opacity-80 md:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1a0f2e] via-transparent to-transparent hidden md:block" />
               </div>
             </div>
           </div>
