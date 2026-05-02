@@ -27,7 +27,7 @@ export default function AdminProductsPage() {
     is_active: true,
     main_sort_order: 0,
     category: "PREMIUM REPORT",
-    image: ""
+    image_url: ""
   });
 
   const fetchProducts = async () => {
@@ -77,7 +77,7 @@ export default function AdminProductsPage() {
             is_active: formData.is_active,
             main_sort_order: formData.main_sort_order,
             category: formData.category,
-            image: formData.image
+            image_url: formData.image_url
           })
           .eq('id', editingId);
         
@@ -102,7 +102,7 @@ export default function AdminProductsPage() {
             is_active: formData.is_active,
             main_sort_order: formData.main_sort_order,
             category: formData.category,
-            image: formData.image
+            image_url: formData.image_url
           }]);
           
         if (error) {
@@ -126,7 +126,7 @@ export default function AdminProductsPage() {
         is_active: true,
         main_sort_order: 0,
         category: "PREMIUM REPORT",
-        image: ""
+        image_url: ""
       });
       fetchProducts();
     } catch (err: any) {
@@ -156,7 +156,7 @@ export default function AdminProductsPage() {
         .from('product-images')
         .getPublicUrl(filePath);
 
-      setFormData({ ...formData, image: publicUrl });
+      setFormData({ ...formData, image_url: publicUrl });
       alert("이미지가 성공적으로 업로드되었습니다.");
     } catch (err: any) {
       alert("업로드 실패: " + err.message);
@@ -178,7 +178,7 @@ export default function AdminProductsPage() {
       is_active: product.is_active,
       main_sort_order: product.main_sort_order,
       category: product.category || "PREMIUM REPORT",
-      image: product.image || ""
+      image_url: product.image_url || ""
     });
     setEditingId(product.id);
     setIsFormOpen(true);
@@ -240,8 +240,8 @@ export default function AdminProductsPage() {
             >
               <div className="flex items-center gap-6 flex-1">
                 <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-white/10 bg-black/20 shrink-0">
-                  {product.image ? (
-                    <Image src={product.image} alt={product.name} fill className="object-cover" />
+                  {product.image_url ? (
+                    <Image src={product.image_url} alt={product.name} fill className="object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-white/10">
                       <ImageIcon className="w-8 h-8" />
@@ -336,9 +336,9 @@ export default function AdminProductsPage() {
                 <label className="text-sm text-white/60 block">상품 이미지 등록 *</label>
                 <div className="flex flex-col md:flex-row items-start gap-6">
                   <div className="relative w-40 h-52 rounded-2xl overflow-hidden border-2 border-dashed border-white/10 bg-white/5 flex items-center justify-center group/img shrink-0">
-                    {formData.image ? (
+                    {formData.image_url ? (
                       <>
-                        <Image src={formData.image} alt="Preview" fill className="object-cover" />
+                        <Image src={formData.image_url} alt="Preview" fill className="object-cover" />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
                           <p className="text-[10px] text-white font-bold">교체하려면 아래 버튼 클릭</p>
                         </div>
