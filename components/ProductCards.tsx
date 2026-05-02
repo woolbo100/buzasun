@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Reveal from './Reveal'
 import { supabase } from '@/lib/supabase'
 
@@ -92,10 +93,11 @@ export default function ProductCards() {
               {/* Right: Emotional Image */}
               <div className="relative h-[400px] lg:h-auto border-t lg:border-t-0 lg:border-l border-white/10 group">
                 <div className="absolute inset-0 z-10 bg-gradient-to-t lg:bg-gradient-to-l from-transparent via-transparent to-[#1a0626]/80" />
-                <img 
+                <Image 
                   src="/image/love_report_hero.png" 
                   alt="선천코드 연애 리포트" 
-                  className="w-full h-full object-cover transition-transform duration-[5000ms] group-hover:scale-110 opacity-80"
+                  fill
+                  className="object-cover transition-transform duration-[5000ms] group-hover:scale-110 opacity-80"
                 />
                 
                 {/* Subtle Overlays */}
