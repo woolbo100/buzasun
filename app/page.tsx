@@ -2,6 +2,7 @@
 
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
+import CompatibilityBanner from '@/components/CompatibilityBanner'
 import ProductCards from '@/components/ProductCards'
 import Testimonials from '@/components/Testimonials'
 import Ebooks from '@/components/Ebooks'
@@ -37,6 +38,7 @@ export default function Home() {
         {/* 실질적 콘텐츠 영역 */}
         <div className="relative z-10">
           <Hero />
+          <CompatibilityBanner />
           
           <div className="max-w-6xl mx-auto px-4">
             <div className="gold-divider my-10" />
