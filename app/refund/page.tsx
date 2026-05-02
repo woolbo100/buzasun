@@ -10,7 +10,7 @@ export default function RefundPolicy() {
       <GlobalBackground src="/image/main.png">
         <Navigation />
         
-        <div className="relative z-10 pt-32 pb-20 px-6">
+        <div className="relative z-10 pt-44 pb-20 px-6">
           <div className="container mx-auto max-w-4xl">
             <div className="bg-[#1a0f2e]/60 backdrop-blur-md border border-[rgba(212,175,55,0.15)] p-8 md:p-16 rounded-2xl shadow-2xl">
               <h1 className="text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] mb-12 tracking-wider text-center">
@@ -24,25 +24,69 @@ export default function RefundPolicy() {
                     백도화의 리포트 상품은 개인 맞춤 제작되는 디지털 콘텐츠입니다. 따라서 아래 기준에 따라 환불이 진행됩니다.
                   </p>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                    <div className="p-6 bg-green-900/10 border border-green-500/20 rounded-xl">
-                      <h3 className="text-lg font-bold text-green-400 mb-3">환불 가능</h3>
-                      <ul className="list-disc list-inside space-y-1 opacity-80 text-sm">
-                        <li>결제 후 작업 시작 전</li>
-                        <li>결제 오류 및 중복 결제 발생 시</li>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 items-stretch">
+                    <div className="p-8 md:p-10 rounded-2xl flex flex-col transition-all duration-500 hover:bg-white/[0.05]"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.03)',
+                        backdropFilter: 'blur(20px)',
+                        border: '1px solid rgba(216, 191, 163, 0.2)',
+                        boxShadow: '0 12px 32px rgba(0, 0, 0, 0.2)'
+                      }}>
+                      <h3 className="text-xl font-elegant font-bold text-[var(--accent-gold-light)] mb-6 flex items-center">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] mr-3 opacity-60"></span>
+                        환불 가능
+                      </h3>
+                      <ul className="space-y-4 text-[#cfc7dc] text-sm md:text-base leading-relaxed flex-grow">
+                        <li className="flex items-start">
+                          <span className="mr-2 opacity-40">•</span>
+                          결제 후 작업 시작 전
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2 opacity-40">•</span>
+                          결제 오류 및 중복 결제 발생 시
+                        </li>
                       </ul>
-                      <p className="mt-4 text-xs text-green-400/60">→ 전액 환불 가능합니다.</p>
+                      <div className="mt-8 pt-6 border-t border-[rgba(216,191,163,0.1)]">
+                        <p className="text-sm font-medium text-[var(--accent-gold)] opacity-80 italic">
+                          → 전액 환불 가능합니다.
+                        </p>
+                      </div>
                     </div>
                     
-                    <div className="p-6 bg-red-900/10 border border-red-500/20 rounded-xl">
-                      <h3 className="text-lg font-bold text-red-400 mb-3">환불 불가</h3>
-                      <ul className="list-disc list-inside space-y-1 opacity-80 text-sm">
-                        <li>리포트 제작이 시작된 경우</li>
-                        <li>리포트 발송 완료 후</li>
-                        <li>고객의 단순 변심</li>
-                        <li>개인 맞춤형 제작이 완료된 경우</li>
+                    <div className="p-8 md:p-10 rounded-2xl flex flex-col transition-all duration-500 hover:bg-white/[0.05]"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.03)',
+                        backdropFilter: 'blur(20px)',
+                        border: '1px solid rgba(197, 139, 160, 0.2)',
+                        boxShadow: '0 12px 32px rgba(0, 0, 0, 0.2)'
+                      }}>
+                      <h3 className="text-xl font-elegant font-bold text-[#C58BA0] mb-6 flex items-center">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#C58BA0] mr-3 opacity-60"></span>
+                        환불 불가
+                      </h3>
+                      <ul className="space-y-4 text-[#cfc7dc] text-sm md:text-base leading-relaxed flex-grow">
+                        <li className="flex items-start">
+                          <span className="mr-2 opacity-40">•</span>
+                          리포트 제작이 시작된 경우
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2 opacity-40">•</span>
+                          리포트 발송 완료 후
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2 opacity-40">•</span>
+                          고객의 단순 변심
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2 opacity-40">•</span>
+                          개인 맞춤형 제작이 완료된 경우
+                        </li>
                       </ul>
-                      <p className="mt-4 text-xs text-red-400/60">※ 디지털 콘텐츠 특성상 발송 후 환불이 어렵습니다.</p>
+                      <div className="mt-8 pt-6 border-t border-[rgba(197,139,160,0.1)]">
+                        <p className="text-sm font-medium text-[#C58BA0] opacity-80 italic">
+                          ※ 디지털 콘텐츠 특성상 발송 후 환불이 어렵습니다.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </section>
