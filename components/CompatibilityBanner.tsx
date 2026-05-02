@@ -31,7 +31,7 @@ export default function CompatibilityBanner() {
               <div>
                 <Link
                   href="/checkout?productId=premium-compatibility-report"
-                  className="inline-flex items-center px-10 py-4 rounded-xl border border-[var(--accent-gold-soft)] text-[var(--accent-gold)] bg-[var(--accent-gold-soft)]/20 hover:bg-[var(--accent-gold-soft)] hover:scale-105 transition-all duration-500 text-sm font-bold tracking-widest shadow-[0_0_20px_rgba(212,178,167,0.1)] hover:shadow-[0_0_30px_rgba(212,178,167,0.2)]"
+                  className="btn-primary inline-flex items-center px-10 py-5 rounded-xl font-bold tracking-widest text-lg transition-all duration-500 shadow-[0_10px_30px_rgba(212,178,167,0.2)] hover:scale-105"
                 >
                   궁합 리포트 자세히 보기
                 </Link>
