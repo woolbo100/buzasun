@@ -38,8 +38,6 @@ export default function ShopPage() {
     'abundance-secret-guide': '/image/product-abundance.png',
     'love-secret-ebook': '/image/product-charm-signal.png'
   }
-
-  const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
   
   useEffect(() => {
     async function fetchProducts() {

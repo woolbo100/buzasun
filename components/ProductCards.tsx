@@ -175,7 +175,6 @@ export default function ProductCards() {
                 </div>
               </div>
             </div>
-          </div>
         </Reveal>
       </div>
     </section>
