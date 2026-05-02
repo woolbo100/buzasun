@@ -26,7 +26,7 @@ export default function AdminProductsPage() {
     is_featured: false,
     is_active: true,
     main_sort_order: 0,
-    category: "private_reading",
+    category: "PREMIUM REPORT",
     image_url: ""
   });
 
@@ -177,7 +177,7 @@ export default function AdminProductsPage() {
       is_featured: product.is_featured,
       is_active: product.is_active,
       main_sort_order: product.main_sort_order,
-      category: product.category || "private_reading",
+      category: product.category || "PREMIUM REPORT",
       image_url: product.image_url || ""
     });
     setEditingId(product.id);
@@ -256,7 +256,7 @@ export default function AdminProductsPage() {
                   <h3 className="text-xl font-semibold">{product.name}</h3>
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] bg-white/10 px-2 py-0.5 rounded text-white/60 font-bold tracking-tighter">
-                      {product.category === 'private_reading' ? 'PREMIUM REPORT' : (product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY')}
+                      {product.category || 'NO CATEGORY'}
                     </span>
                     <p className="text-sm text-white/50 line-clamp-1">{product.description}</p>
                   </div>
@@ -399,10 +399,10 @@ export default function AdminProductsPage() {
                   value={formData.category}
                   onChange={(e) => setFormData({...formData, category: e.target.value})}
                 >
-                  <option value="private_reading" className="bg-[#1A0B2E]">PREMIUM REPORT</option>
-                  <option value="secret_method" className="bg-[#1A0B2E]">SECRET METHOD</option>
-                  <option value="energy_care" className="bg-[#1A0B2E]">ENERGY CARE</option>
-                  <option value="private_object" className="bg-[#1A0B2E]">PRIVATE OBJECT</option>
+                  <option value="PREMIUM REPORT" className="bg-[#1A0B2E]">PREMIUM REPORT</option>
+                  <option value="SECRET METHOD" className="bg-[#1A0B2E]">SECRET METHOD</option>
+                  <option value="ENERGY CARE" className="bg-[#1A0B2E]">ENERGY CARE</option>
+                  <option value="PRIVATE OBJECT" className="bg-[#1A0B2E]">PRIVATE OBJECT</option>
                 </select>
               </div>
 

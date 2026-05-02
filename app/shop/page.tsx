@@ -27,13 +27,8 @@ export default function ShopPage() {
   const [activeCategory, setActiveCategory] = useState('ALL')
   const productSectionRef = useRef<HTMLElement>(null)
 
-  // 카테고리 정의 (DB 값 -> UI 레이블 매핑)
-  const categoryMap: { [key: string]: string } = {
-    'private_reading': 'PREMIUM REPORT',
-    'secret_method': 'SECRET METHOD',
-    'energy_care': 'ENERGY CARE',
-    'private_object': 'PRIVATE OBJECT'
-  }
+  // 카테고리 정의 (DB에 저장된 대문자 레이블 직접 사용)
+  const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
 
   // 슬러그 기반 기본 이미지 매핑 (DB에 이미지가 없을 경우 대비)
   const defaultImageMap: { [key: string]: string } = {
@@ -70,7 +65,7 @@ export default function ShopPage() {
 
   const filteredProducts = activeCategory === 'ALL' 
     ? products 
-    : products.filter(p => categoryMap[p.category] === activeCategory || p.category === activeCategory)
+    : products.filter(p => p.category === activeCategory)
 
   const scrollToProducts = () => {
     productSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -181,7 +176,7 @@ export default function ShopPage() {
                           <div className="p-8 space-y-4 relative">
                             <div className="flex justify-between items-start">
                               <span className="text-[10px] tracking-[0.3em] text-[var(--accent-gold)] opacity-70 uppercase font-bold">
-                                {product.category === 'private_reading' ? 'PREMIUM REPORT' : (product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY')}
+                                {product.category || 'NO CATEGORY'}
                               </span>
                               <div className="w-1 h-1 rounded-full bg-[var(--accent-gold)] shadow-[0_0_8px_var(--accent-gold)]"></div>
                             </div>
