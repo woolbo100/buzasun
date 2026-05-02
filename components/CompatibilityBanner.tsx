@@ -26,14 +26,10 @@ export default function CompatibilityBanner() {
                   두 사람의 사랑은 어디에서 만나고,<br className="hidden sm:block" /> 어디에서 흔들릴까요?
                 </p>
                 
-                <div className="space-y-4 text-[#EDE6DA] opacity-60 text-sm md:text-base leading-relaxed mb-10 break-keep font-light">
-                  <p>
-                    끌리는 이유, 반복되는 갈등, 그리고 관계가 깊어질 수 있는 방향까지
-                  </p>
-                  <p>
-                    백도화식 선천코드로 두 사람의 흐름을 읽어드립니다.
-                  </p>
-                </div>
+                <p className="text-[#EDE6DA] opacity-60 text-base md:text-lg leading-relaxed mb-10 break-keep font-light">
+                  끌리는 이유, 반복되는 갈등, 그리고 관계가 깊어질 수 있는 방향까지<br className="hidden md:block" />
+                  백도화식 선천코드로 두 사람의 흐름을 읽어드립니다.
+                </p>
                 
                 <div>
                   <Link
@@ -48,7 +44,7 @@ export default function CompatibilityBanner() {
               {/* Right Image */}
               <div className="relative overflow-hidden h-[300px] md:h-auto border-t md:border-t-0 md:border-l border-white/5">
                 <Image 
-                  src="/image/premium_compatibility_bg.png" 
+                  src="/image/love2.png" 
                   alt="Premium Compatibility"
                   fill
                   className="object-cover transition-transform duration-[3000ms] group-hover:scale-110 opacity-70"
@@ -67,7 +63,7 @@ export default function CompatibilityBanner() {
       </div>
       
       {/* Background Glow */}
-      <div className="absolute -bottom-1/2 -right-1/4 w-[600px] h-[600px] bg-[#8a2be2]/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute -bottom-1/2 -right-1/4 w-[600px] h-[600px] bg-[var(--accent-gold)]/5 blur-[120px] rounded-full pointer-events-none"></div>
     </section>
   )
 }

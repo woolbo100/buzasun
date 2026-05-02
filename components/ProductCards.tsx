@@ -75,7 +75,7 @@ export default function ProductCards() {
                   선천코드 분석을 통해 당신의 연애 패턴, 이성복, 재회 가능성을 정밀하게 해독합니다.
                 </p>
                 
-                <p className="text-base md:text-lg leading-relaxed mb-10 break-keep font-light" style={{ color: 'rgba(237, 230, 218, 0.8)' }}>
+                <p className="text-base md:text-lg leading-relaxed mb-10 break-keep font-light text-[#EDE6DA] opacity-60">
                   타고난 코드부터 다른 당신만의 연애 특성을 발견하고, 더 나은 관계를 만들어가는 길을 제시합니다.<br className="hidden md:block" />
                   에너지 패턴과 매력 주파수를 분석하여 당신이 반복하는 연애 패턴과 끌어당기는 사랑의 방향을 정밀하게 해독합니다.
                 </p>
@@ -83,7 +83,7 @@ export default function ProductCards() {
                 <div className="hidden lg:block">
                   <Link
                     href="/reports/love-code"
-                    className="btn-primary inline-flex items-center px-10 py-5 rounded-xl font-bold tracking-widest text-lg transition-all duration-500 shadow-[0_10px_30px_rgba(138,43,226,0.3)] hover:scale-105"
+                    className="btn-primary inline-flex items-center px-10 py-5 rounded-xl font-bold tracking-widest text-lg transition-all duration-500 shadow-[0_10px_30px_rgba(212,178,167,0.2)] hover:scale-105"
                   >
                     내 연애 코드 지금 확인하기
                   </Link>
@@ -94,7 +94,7 @@ export default function ProductCards() {
               <div className="relative h-[400px] lg:h-auto border-t lg:border-t-0 lg:border-l border-white/10 group overflow-hidden">
                 <div className="absolute inset-0 z-10 bg-gradient-to-t lg:bg-gradient-to-l from-transparent via-transparent to-[#1a0626]/80" />
                 <Image 
-                  src="/image/love_report_hero.png" 
+                  src="/image/love1.png" 
                   alt="선천코드 연애 리포트" 
                   fill
                   className="object-cover transition-transform duration-[5000ms] group-hover:scale-110 opacity-80"
@@ -103,7 +103,7 @@ export default function ProductCards() {
                 {/* Subtle Overlays */}
                 <div className="absolute inset-0 pointer-events-none">
                   <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-[var(--accent-gold)]/10 blur-[60px] rounded-full animate-pulse-slow" />
-                  <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-[#8a2be2]/20 blur-[80px] rounded-full animate-pulse-slow" style={{ animationDelay: '2s' }} />
+                  <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-[var(--accent-gold)]/10 blur-[80px] rounded-full animate-pulse-slow" style={{ animationDelay: '2s' }} />
                 </div>
               </div>
             </div>
@@ -156,8 +156,8 @@ export default function ProductCards() {
       </div>
 
       {/* Decorative Glows */}
-      <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-[#3a0b5a]/20 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-[#1a0626]/30 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-[var(--accent-gold)]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-[var(--accent-gold-soft)]/10 blur-[120px] rounded-full pointer-events-none" />
     </section>
   )
 }

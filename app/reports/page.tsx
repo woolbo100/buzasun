@@ -29,7 +29,7 @@ export default function ReportsHubPage() {
       label: 'PREMIUM COMPATIBILITY READING',
       btnText: '궁합 리포트 자세히 보기',
       link: '/reports/premium-compatibility',
-      image: '/image/premium_compatibility_hub.png', // New mother-of-pearl artwork
+      image: '/image/premium_compatibility_bg.png', 
       premium: true
     }
   ]
