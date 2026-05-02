@@ -38,13 +38,13 @@ export default function CompatibilityBanner() {
               </div>
             </div>
             
-            {/* Right Image Area - Expanded beyond border to eliminate all gaps */}
-            <div className="relative md:absolute md:-top-[1.5px] md:-right-[1.5px] md:-bottom-[1.5px] w-full md:w-[calc(50%+1.5px)] min-h-[350px] md:min-h-full overflow-hidden z-0">
+            {/* Right Image Area - Restored to standard layout */}
+            <div className="relative md:absolute md:top-0 md:right-0 md:bottom-0 w-full md:w-1/2 min-h-[350px] md:min-h-full overflow-hidden z-0">
               <Image 
                 src="/image/love2.png" 
                 alt="Premium Compatibility"
                 fill
-                className="object-cover object-right transition-transform duration-[5000ms] group-hover:scale-110"
+                className="object-cover transition-transform duration-[5000ms] group-hover:scale-110"
                 priority
               />
             </div>
