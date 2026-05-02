@@ -47,7 +47,7 @@ export default function PremiumCompatibilityPage() {
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
-      <GlobalBackground src="/image/main.png">
+      <GlobalBackground src="/image/love-code-bg.png">
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
