@@ -11,7 +11,7 @@ export default function AboutPage() {
         <Navigation />
         
         {/* 백도화 히어로 소개 */}
-        <section className="pt-80 pb-20 px-6 relative">
+        <section className="pt-44 pb-20 px-6 relative">
           <div className="container mx-auto max-w-4xl relative z-10">
             {/* Rule 5: 텍스트 및 UI 레이어 보호를 위한 궁중유리 카드 */}
             <div className="gungjung-glass p-8 md:p-16">

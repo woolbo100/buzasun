@@ -83,7 +83,7 @@ export default function DynamicReportPage() {
       <GlobalBackground src={(slug === 'love-code' || slug === 'love-code-report') ? "/image/love-code-bg.png" : "/image/main.png"}>
         <Navigation />
 
-        <div className="relative z-10 pt-56 pb-20">
+        <div className="relative z-10 pt-44 pb-20">
           <div className="max-w-4xl mx-auto px-4">
             
             {/* 1. 히어로 섹션 */}
