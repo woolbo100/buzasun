@@ -60,16 +60,16 @@ export default function PetalsCanvas({
       petalsRef.current = Array.from({ length: density }, () => ({
         x: rand(0, w),
         y: rand(-h, h),
-        r: rand(6, 14),
+        r: rand(10, 24), // 크기 대폭 확대 (기존 6~14)
         rot: rand(0, Math.PI * 2),
-        rotSpd: rand(-0.008, 0.008),
-        spd: rand(0.05, 0.2), // 매우 느린 수직 이동 (부유 느낌)
-        drift: rand(-0.15, 0.15), // 좌우 기본 드리프트
+        rotSpd: rand(-0.015, 0.015), // 회전 속도 증가
+        spd: rand(0.6, 1.8), // 낙하 속도 증가 (기존 0.05~0.2)
+        drift: rand(-0.4, 0.6), // 우측으로 더 날리는 드리프트 효과
         wobble: rand(0, Math.PI * 2),
-        wobbleSpd: rand(0.01, 0.03), // 좌우 흔들림 속도 증가
-        verticalWobble: rand(0, Math.PI * 2), // 수직 흔들림 추가
-        verticalWobbleSpd: rand(0.008, 0.018), // 수직 흔들림 속도
-        alpha: rand(0.15, 0.35),
+        wobbleSpd: rand(0.02, 0.05), // 좌우 흔들림 속도 증가
+        verticalWobble: rand(0, Math.PI * 2),
+        verticalWobbleSpd: rand(0.01, 0.025),
+        alpha: rand(0.4, 0.8), // 투명도 강화 (더 선명하게)
       }));
     };
 
@@ -135,10 +135,10 @@ export default function PetalsCanvas({
         p.rot += p.rotSpd;
         
         // 좌우 이동: 기본 드리프트 + 사인파 흔들림 (더 큰 진폭)
-        p.x += p.drift + Math.sin(p.wobble) * 0.8;
+        p.x += p.drift + Math.sin(p.wobble) * 1.5;
         
-        // 수직 이동: 매우 느린 하강 + 사인파 흔들림 (부유 느낌)
-        p.y += p.spd + Math.sin(p.verticalWobble) * 0.4;
+        // 수직 이동: 하강 속도 + 사인파 흔들림
+        p.y += p.spd + Math.sin(p.verticalWobble) * 0.6;
 
         drawPetal(p);
 

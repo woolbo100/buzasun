@@ -56,8 +56,8 @@ export default function GlobalBackground({
           }}
         />
 
-        {/* 4. 선택적 꽃잎 파티클 효과 */}
-        {showPetals && <PetalsCanvas color="#EDE6DA" density={30} />}
+        {/* 4. 선택적 꽃잎 파티클 효과 (수량 대폭 증가) */}
+        {showPetals && <PetalsCanvas color="#EDE6DA" density={80} />}
       </div>
 
       {/* 실질적 콘텐츠 영역 */}
