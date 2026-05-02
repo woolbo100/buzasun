@@ -84,8 +84,6 @@ export default function ProductCards() {
                   className="object-cover transition-transform duration-[5000ms] group-hover:scale-110"
                   priority
                 />
-                {/* Subtle transition gradient for better blending */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1a0f2e] via-transparent to-transparent hidden md:block opacity-40" />
               </div>
             </div>
 
