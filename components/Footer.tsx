@@ -21,10 +21,10 @@ export default function Footer() {
             </Link>
             <div className="text-[#EDE6DA] opacity-80 text-sm leading-relaxed space-y-2">
               <p>
-                백도화는 반복되는 사랑의 패턴을 읽고 관계의 흐름을 해석하는 프리미엄 감정 리포트 브랜드입니다.
+                백도화는 반복되는 사랑의 패턴을 읽고 관계의 흐름을 해석하는 프리미엄 브랜드입니다.
               </p>
               <p>
-                운세가 아닌 당신만의 관계 코드를 조용히 읽어드립니다.
+                운세가 아닌 당신만의 관계 코드를 맞춤형으로 읽어드립니다.
               </p>
             </div>
           </div>
