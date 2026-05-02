@@ -248,12 +248,17 @@ function CheckoutContent() {
                 <div className="space-y-3 mb-8">
                   <label className="flex items-start gap-3 cursor-pointer group">
                     <input type="checkbox" className="mt-1 accent-[var(--accent-gold)]" />
-                    <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">이용 약관 및 개인정보 수집 이용 동의 (필수)</span>
+                    <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
+                      <a href="/terms" target="_blank" className="underline hover:text-[var(--accent-gold)]">이용 약관</a> 및 <a href="/privacy" target="_blank" className="underline hover:text-[var(--accent-gold)]">개인정보 수집 이용</a> 동의 (필수)
+                    </span>
                   </label>
                   <label className="flex items-start gap-3 cursor-pointer group">
                     <input type="checkbox" className="mt-1 accent-[var(--accent-gold)]" />
                     <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
-                      {productType === 'physical' ? '교환/반품/배송 정책 동의 (필수)' : '디지털 콘텐츠 환불 정책 동의 (필수)'}
+                      {productType === 'physical' ? 
+                        <a href="/refund" target="_blank" className="underline hover:text-[var(--accent-gold)]">교환/반품/배송 정책</a> : 
+                        <a href="/refund" target="_blank" className="underline hover:text-[var(--accent-gold)]">디지털 콘텐츠 환불 정책</a>
+                      } 동의 (필수)
                     </span>
                   </label>
                 </div>
