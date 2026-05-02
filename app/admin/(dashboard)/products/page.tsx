@@ -27,7 +27,7 @@ export default function AdminProductsPage() {
     is_active: true,
     main_sort_order: 0,
     category: "PREMIUM REPORT",
-    image_url: ""
+    image: ""
   });
 
   const fetchProducts = async () => {
@@ -77,7 +77,7 @@ export default function AdminProductsPage() {
             is_active: formData.is_active,
             main_sort_order: formData.main_sort_order,
             category: formData.category,
-            image: formData.image_url
+            image: formData.image
           })
           .eq('id', editingId);
         
@@ -102,7 +102,7 @@ export default function AdminProductsPage() {
             is_active: formData.is_active,
             main_sort_order: formData.main_sort_order,
             category: formData.category,
-            image: formData.image_url
+            image: formData.image
           }]);
           
         if (error) {
@@ -125,8 +125,8 @@ export default function AdminProductsPage() {
         is_featured: false,
         is_active: true,
         main_sort_order: 0,
-        category: "private_reading",
-        image_url: ""
+        category: "PREMIUM REPORT",
+        image: ""
       });
       fetchProducts();
     } catch (err: any) {
@@ -155,8 +155,8 @@ export default function AdminProductsPage() {
       const { data: { publicUrl } } = supabase.storage
         .from('product-images')
         .getPublicUrl(filePath);
-
-      setFormData({ ...formData, image_url: publicUrl });
+Base64
+      setFormData({ ...formData, image: publicUrl });
       alert("이미지가 성공적으로 업로드되었습니다.");
     } catch (err: any) {
       alert("업로드 실패: " + err.message);
@@ -178,7 +178,7 @@ export default function AdminProductsPage() {
       is_active: product.is_active,
       main_sort_order: product.main_sort_order,
       category: product.category || "PREMIUM REPORT",
-      image_url: product.image || product.image_url || ""
+      image: product.image || ""
     });
     setEditingId(product.id);
     setIsFormOpen(true);
@@ -240,8 +240,8 @@ export default function AdminProductsPage() {
             >
               <div className="flex items-center gap-6 flex-1">
                 <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-white/10 bg-black/20 shrink-0">
-                  {product.image || product.image_url ? (
-                    <Image src={product.image || product.image_url} alt={product.name} fill className="object-cover" />
+                  {product.image ? (
+                    <Image src={product.image} alt={product.name} fill className="object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-white/10">
                       <ImageIcon className="w-8 h-8" />
@@ -336,9 +336,9 @@ export default function AdminProductsPage() {
                 <label className="text-sm text-white/60 block">상품 이미지 등록 *</label>
                 <div className="flex flex-col md:flex-row items-start gap-6">
                   <div className="relative w-40 h-52 rounded-2xl overflow-hidden border-2 border-dashed border-white/10 bg-white/5 flex items-center justify-center group/img shrink-0">
-                    {formData.image_url ? (
+                    {formData.image ? (
                       <>
-                        <Image src={formData.image_url} alt="Preview" fill className="object-cover" />
+                        <Image src={formData.image} alt="Preview" fill className="object-cover" />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
                           <p className="text-[10px] text-white font-bold">교체하려면 아래 버튼 클릭</p>
                         </div>
@@ -376,16 +376,8 @@ export default function AdminProductsPage() {
                     </div>
                     <div className="space-y-2">
                       <p className="text-[11px] text-white/40 leading-relaxed italic">
-                        * 권장 사이즈: 600x800 (3:4 비율)<br />
-                        * 직접 URL 입력도 가능합니다 (아래 필드 이용)
+                        * 권장 사이즈: 600x800 (3:4 비율)
                       </p>
-                      <input 
-                        type="text"
-                        placeholder="또는 이미지 주소를 직접 입력하세요"
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-accent-gold/50"
-                        value={formData.image_url}
-                        onChange={(e) => setFormData({...formData, image_url: e.target.value})}
-                      />
                     </div>
                   </div>
                 </div>
