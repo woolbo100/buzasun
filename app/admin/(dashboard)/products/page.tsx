@@ -181,7 +181,7 @@ export default function AdminProductsPage() {
                 <h3 className="text-xl font-semibold">{product.name}</h3>
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] bg-white/10 px-2 py-0.5 rounded text-white/60 font-bold tracking-tighter">
-                    {product.category === 'private_reading' ? 'PREMIUM REPORT' : (product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY')}
+                    {product.category === 'private_reading' ? '프리미엄 리포트' : (product.category?.replace('_', ' ').toUpperCase() || 'NO CATEGORY')}
                   </span>
                   <p className="text-sm text-white/50 line-clamp-1">{product.description}</p>
                 </div>
@@ -274,7 +274,7 @@ export default function AdminProductsPage() {
                   value={formData.category}
                   onChange={(e) => setFormData({...formData, category: e.target.value})}
                 >
-                  <option value="private_reading" className="bg-[#1A0B2E]">PREMIUM REPORT</option>
+                  <option value="private_reading" className="bg-[#1A0B2E]">프리미엄 리포트</option>
                   <option value="secret_method" className="bg-[#1A0B2E]">SECRET METHOD</option>
                   <option value="energy_care" className="bg-[#1A0B2E]">ENERGY CARE</option>
                   <option value="private_object" className="bg-[#1A0B2E]">PRIVATE OBJECT</option>
