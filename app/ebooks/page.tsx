@@ -11,22 +11,28 @@ export const metadata = {
 export default function EbooksPage() {
   const ebooks = [
     {
-      title: '연애비급',
-      description: '연애의 핵심 비법을 담은 시크릿 비법서',
+      title: '연애비급 (매력 시그널)',
+      description: '상대방의 무의식을 자극하는 당신만의 고유한 아우라 분석.',
       href: '/reports/love-secret-ebook',
-      cta: '연애비급 자세히 보기'
+      cta: '연애비급 자세히 보기',
+      image: '/image/product-charm-signal.png',
+      category: 'AURA ANALYSIS'
     },
     {
-      title: '풍요비책',
-      description: '풍요로운 삶을 위한 가이드북',
+      title: '풍요비책 (에너지 가이드)',
+      description: '당신에게 흘러들어오는 풍요의 물길을 트는 에너지 활용법.',
       href: '/reports/abundance-secret-guide',
-      cta: '풍요비책 자세히 보기'
+      cta: '풍요비책 자세히 보기',
+      image: '/image/product-abundance.png',
+      category: 'ENERGY GUIDE'
     },
     {
-      title: '재회비방',
-      description: '재회를 위한 실전 전략서',
+      title: '재회비방 (시크릿 솔루션)',
+      description: '어긋난 인연을 다시 잇는 가장 은밀하고 확실한 방법.',
       href: '/reports/reunion-secret-method',
-      cta: '재회비방 자세히 보기'
+      cta: '재회비방 자세히 보기',
+      image: '/image/product-reunion-reading.png',
+      category: 'SECRET METHOD'
     },
   ]
 
@@ -52,25 +58,43 @@ export default function EbooksPage() {
               {ebooks.map((ebook, index) => (
                 <div
                   key={index}
-                  className="gungjung-glass p-8 flex flex-col group transition-all duration-500 hover:-translate-y-1"
+                  className="gungjung-glass group transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col"
                 >
-                  <h2 className="text-2xl font-elegant font-bold text-[#EDE6DA] mb-4 group-hover:text-[var(--accent-gold)] transition-colors">
-                    {ebook.title}
-                  </h2>
-                  <p className="text-[#EDE6DA] opacity-60 text-base leading-relaxed mb-10 group-hover:opacity-100 transition-opacity flex-grow">
-                    {ebook.description}
-                  </p>
-                  <Link
-                    href={ebook.href}
-                    className="mt-auto py-3 px-4 rounded-lg text-sm font-bold text-center border transition-all duration-300 hover:shadow-[0_0_15px_rgba(212,178,167,0.3)] hover:border-[var(--accent-gold)]"
-                    style={{
-                      background: 'rgba(59, 15, 27, 0.4)',
-                      borderColor: 'rgba(216, 191, 163, 0.3)',
-                      color: 'var(--accent-gold-light)',
-                    }}
-                  >
-                    {ebook.cta}
-                  </Link>
+                  {/* 상품 이미지 영역 */}
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <img 
+                      src={ebook.image} 
+                      alt={ebook.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A0F2E] via-transparent to-transparent opacity-60" />
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium bg-[#3B0F1B]/80 text-[var(--accent-gold-light)] border border-[var(--accent-gold-soft)]">
+                        {ebook.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* 상품 정보 영역 */}
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h2 className="text-xl font-elegant font-bold text-[#EDE6DA] mb-3 group-hover:text-[var(--accent-gold)] transition-colors">
+                      {ebook.title}
+                    </h2>
+                    <p className="text-[#EDE6DA] opacity-60 text-sm leading-relaxed mb-8 group-hover:opacity-100 transition-opacity flex-grow">
+                      {ebook.description}
+                    </p>
+                    <Link
+                      href={ebook.href}
+                      className="py-3 px-4 rounded-lg text-xs font-bold text-center border transition-all duration-300 hover:shadow-[0_0_15px_rgba(212,178,167,0.3)] hover:border-[var(--accent-gold)]"
+                      style={{
+                        background: 'rgba(59, 15, 27, 0.6)',
+                        borderColor: 'rgba(216, 191, 163, 0.3)',
+                        color: 'var(--accent-gold-light)',
+                      }}
+                    >
+                      {ebook.cta}
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>
