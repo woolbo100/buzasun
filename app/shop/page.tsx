@@ -149,7 +149,7 @@ export default function ShopPage() {
 
         {/* 2. Product Grid Section */}
         <section ref={productSectionRef} className="py-32 px-6 bg-[#0c0816]/50">
-          <div className="container mx-auto max-w-7xl">
+          <div className="container-premium">
             {loading ? (
               <div className="py-40 text-center">
                 <p className="text-accent-gold animate-pulse tracking-[0.3em]">비밀 진열대를 정리하는 중...</p>

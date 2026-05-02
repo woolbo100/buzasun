@@ -39,7 +39,7 @@ export default function Home() {
         <div className="relative z-10">
           <Hero />
           
-          <div className="max-w-6xl mx-auto px-4">
+          <div className="container-premium">
             <div className="gold-divider my-10" />
             <ProductCards />
             

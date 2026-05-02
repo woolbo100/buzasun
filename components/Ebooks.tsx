@@ -28,7 +28,7 @@ export default function Ebooks() {
   return (
     <section id="secret-archive" className="relative w-full overflow-hidden py-20 md:py-32 scroll-mt-28" style={{ background: 'transparent' }}>
       <Reveal delayMs={200}>
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="container-premium">
           {/* 섹션 헤더 */}
           <div className="text-center mb-16">
             <Reveal delayMs={100}>
@@ -97,7 +97,7 @@ export default function Ebooks() {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
               {ebooks.map((ebook, index) => (
                 <Reveal key={ebook.title} delayMs={300 + index * 100}>
                   <Link 

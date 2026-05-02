@@ -84,7 +84,7 @@ export default function DynamicReportPage() {
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="container-premium">
             
             {/* 1. 히어로 섹션 */}
             <section className="text-center mb-20">

@@ -11,7 +11,7 @@ export default function Footer() {
       {/* Hanji texture overlay (optional/subtle) */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/natural-paper.png")' }}></div>
 
-      <div className="mx-auto w-full max-w-[1280px] relative z-10">
+      <div className="container-premium relative z-10">
         <div className="grid grid-cols-1 gap-y-12 gap-x-10 md:grid-cols-2 md:gap-x-12 lg:grid-cols-[1.2fr_1fr_1fr_1.4fr] lg:gap-x-[84px] xl:gap-x-24 mb-16">
           
           {/* 1. ABOUT */}

@@ -14,7 +14,7 @@ export default function About() {
       className="py-20 md:py-32 px-6 relative overflow-hidden"
       style={{ background: 'transparent' }}
     >
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container-premium relative z-10">
         {/* 메인 타이틀 */}
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-4 md:gap-8 mb-20">

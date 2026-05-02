@@ -41,11 +41,11 @@ export default function ProductCards() {
         {/* 리포트 섹션 - 카드형 구조 */}
         <Reveal delayMs={0}>
           <div className="w-full pt-20 pb-20 md:pt-24 md:py-28 px-6 md:px-8">
-            <div className="max-w-6xl mx-auto">
+            <div className="container-premium px-0">
               <div 
                 className="gungjung-glass w-full rounded-3xl"
                 style={{
-                  padding: '3rem 72px',
+                  padding: '4rem 8%',
                 }}
               >
                 {/* 상단: 배지 + 메인 타이틀 */}

@@ -51,7 +51,7 @@ export default function PremiumCompatibilityPage() {
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="container-premium">
             
             {/* 1. Hero Section */}
             <section className="text-center mb-24">

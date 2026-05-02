@@ -40,7 +40,7 @@ export default function ReportsHubPage() {
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-24">
-          <div className="container mx-auto max-w-6xl px-6">
+          <div className="container-premium">
             
             {/* Header Section */}
             <div className="text-center mb-20">

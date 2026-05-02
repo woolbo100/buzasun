@@ -32,7 +32,7 @@ export default function Contact() {
     <>
       {/* 문의 전 배너 - 브랜드 철학 & 리포트 필요성 설명 */}
       <section className="py-20 md:py-32 px-6 relative" style={{ background: 'transparent' }}>
-        <div className="container mx-auto max-w-6xl">
+        <div className="container-premium">
           <Reveal delayMs={100}>
             <div className="gungjung-glass mx-auto py-16 md:py-24 text-center relative overflow-hidden">
               {/* 배경 장식 */}
@@ -84,7 +84,7 @@ function ContactForm() {
       className="py-20 md:py-32 px-6 relative"
       style={{ background: 'transparent' }}
     >
-      <div className="container mx-auto max-w-6xl">
+      <div className="container-premium">
         <Reveal delayMs={100}>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-center mb-20 text-[#F5F5F5]">
             문의하기

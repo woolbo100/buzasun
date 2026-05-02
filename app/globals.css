@@ -203,6 +203,27 @@
       transition-duration: 0.01ms !important;
     }
   }
+
+  /* 프리미엄 와이드 컨테이너 시스템 */
+  .container-premium {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-premium {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  .max-w-premium {
+    max-width: 1440px;
+  }
 }
 
 @layer components {

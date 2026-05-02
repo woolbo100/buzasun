@@ -44,7 +44,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="relative w-full overflow-hidden py-20 md:py-32" style={{ background: 'transparent' }}>
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+      <div className="container-premium">
         {/* 상단: 배지 + 타이틀 */}
         <div className="text-center">
           <Reveal delayMs={100}>
@@ -86,7 +86,7 @@ export default function Testimonials() {
         </div>
 
         {/* 후기 카드 그리드 */}
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, index) => (
               <Reveal key={index} delayMs={400 + index * 100}>
                 <div className="gungjung-glass w-full p-8 h-full flex flex-col justify-between">
