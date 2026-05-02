@@ -53,7 +53,7 @@ export default function EbooksPage() {
                 </h1>
                 <p className="text-[#EDE6DA] opacity-80 text-lg md:text-xl font-elegant leading-relaxed max-w-2xl mx-auto break-keep">
                   연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비법서를 만나보세요.<br className="md:hidden" />
-                  <span className="text-[var(--accent-gold-light)]">선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와 풍요로운 삶을 만들어가세요.</span>
+                  <span className="text-[var(--accent-gold-light)]">선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와<br />풍요로운 삶을 만들어가세요.</span>
                 </p>
               </Reveal>
             </div>
