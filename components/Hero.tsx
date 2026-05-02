@@ -32,8 +32,8 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-32 pb-20 px-4 md:px-6 overflow-hidden">
-        {/* 텍스트 가독성을 위한 메인 카드 */}
-        <div className="gungjung-glass-hero container-premium py-12 md:py-20 px-8 md:px-16 text-center relative z-10">
+        {/* 메인 컨텐츠 영역 (상자 제거) */}
+        <div className="container-premium py-12 md:py-20 px-8 md:px-16 text-center relative z-10">
 
         {/* 상단 배지 */}
         <Reveal delayMs={0}>
