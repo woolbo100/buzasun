@@ -55,7 +55,9 @@ export default function ShopPage() {
           let mappedData = data.map(p => ({
             ...p,
             category: p.category === 'PREMIUM REPORT' ? 'PRIVATE READING' : p.category,
-            image: p.slug === 'premium-compatibility' ? '/image/premium_compatibility_report.png' : p.image
+            image: (p.name.includes('궁합') || p.slug.includes('compatibility')) 
+              ? '/image/premium_compatibility_final.png?v=3' 
+              : p.image
           }))
 
           // 미스하이랜더 플러스가 DB에 없을 경우 수동 추가
