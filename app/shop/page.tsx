@@ -27,16 +27,17 @@ export default function ShopPage() {
   const [activeCategory, setActiveCategory] = useState('ALL')
   const productSectionRef = useRef<HTMLElement>(null)
 
-  // 카테고리 정의 (DB에 저장된 대문자 레이블 직접 사용)
-  const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
+  // 카테고리 정의
+  const categories = ['ALL', 'PRIVATE READING', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
 
-  // 슬러그 기반 기본 이미지 매핑 (DB에 이미지가 없을 경우 대비)
+  // 슬러그 기반 기본 이미지 매핑
   const defaultImageMap: { [key: string]: string } = {
     'love-code-report': '/image/product-love-report.png',
     'premium-compatibility': '/image/premium_compatibility_bg.png',
     'reunion-secret-method': '/image/product-reunion-reading.png',
     'abundance-secret-guide': '/image/product-abundance.png',
-    'love-secret-ebook': '/image/product-charm-signal.png'
+    'love-secret-ebook': '/image/product-charm-signal.png',
+    'miss-highlander': '/image/miss/m1.webp'
   }
   
   useEffect(() => {
@@ -50,7 +51,29 @@ export default function ShopPage() {
           .order('main_sort_order', { ascending: true })
 
         if (!error && data) {
-          setProducts(data)
+          // "PRIVATE READING" 카테고리 매핑 (DB의 PREMIUM REPORT -> PRIVATE READING으로 표시)
+          let mappedData = data.map(p => ({
+            ...p,
+            category: p.category === 'PREMIUM REPORT' ? 'PRIVATE READING' : p.category
+          }))
+
+          // 미스하이랜더 플러스가 DB에 없을 경우 수동 추가
+          const hasMissHighlander = mappedData.some(p => p.slug === 'miss-highlander')
+          if (!hasMissHighlander) {
+            mappedData.push({
+              id: 'manual-miss-highlander',
+              name: '미스하이랜더 플러스',
+              slug: 'miss-highlander',
+              category: 'ENERGY CARE',
+              description: '프리미엄 이너뷰티 루틴을 위한 럭셔리 뷰티 케어 셀렉션',
+              price: 69000,
+              image: '/image/miss/m1.webp',
+              is_active: true,
+              type: 'physical'
+            })
+          }
+
+          setProducts(mappedData)
         }
       } catch (err) {
         console.error("Shop: Failed to fetch products", err)
@@ -159,7 +182,10 @@ export default function ShopPage() {
                       exit={{ opacity: 0, scale: 0.9 }}
                       transition={{ duration: 0.6, delay: idx * 0.1 }}
                     >
-                      <Link href={`/reports/${product.slug}`} className="group block">
+                      <Link 
+                        href={product.slug === 'miss-highlander' ? `/shop/${product.slug}` : `/reports/${product.slug}`} 
+                        className="group block"
+                      >
                         <div className="gungjung-glass overflow-hidden rounded-3xl border border-white/5 group-hover:border-[var(--accent-gold)]/40 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(212,178,167,0.15)] bg-gradient-to-b from-white/[0.03] to-transparent">
                           <div className="relative aspect-[3/4] overflow-hidden">
                             <Image 
