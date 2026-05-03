@@ -20,6 +20,7 @@ export default function MissHighlanderPage() {
     '이너뷰티 루틴을 시작하고 싶은 분',
     '매일 간편한 셀프케어를 원하는 분',
     '선물하기 좋은 프리미엄 제품을 찾는 분',
+    '생기 있고 맑은 인상을 관리하고 싶은 분',
   ]
 
   const ingredients = [
@@ -129,25 +130,41 @@ export default function MissHighlanderPage() {
               </Reveal>
             </section>
 
-            {/* 3. Recommended For Section */}
+            {/* 3. Recommended For Section (Redesigned with m4 Image) */}
             <section className="mb-32">
               <Reveal>
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl font-elegant font-bold text-white tracking-widest">
-                    이런 분께 <span style={{ color: '#FFB6C1' }}>추천합니다</span>
-                  </h2>
-                </div>
-                <div className="grid md:grid-cols-5 gap-4">
-                  {recommendedFor.map((item, idx) => (
-                    <div key={idx} className="gungjung-glass p-8 text-center border-white/[0.05] hover:border-[#FFB6C1]/30 transition-all group">
-                      <div className="mb-6 text-[#FFB6C1]/50 group-hover:scale-110 transition-transform">
-                        <i className="fas fa-check-circle text-2xl"></i>
-                      </div>
-                      <p className="text-[#EDE6DA] opacity-80 text-sm leading-relaxed break-keep font-light">
-                        {item}
-                      </p>
+                <div className="grid md:grid-cols-2 gap-16 items-center">
+                  <div className="space-y-12">
+                    <div>
+                      <h2 className="text-3xl font-elegant font-bold text-white tracking-widest mb-4">
+                        이런 분께 <span style={{ color: '#FFB6C1' }}>추천합니다</span>
+                      </h2>
+                      <div className="h-1 w-20 bg-gradient-to-r from-[#FFB6C1] to-transparent rounded-full"></div>
                     </div>
-                  ))}
+                    
+                    <div className="grid grid-cols-1 gap-4">
+                      {recommendedFor.map((item, idx) => (
+                        <div key={idx} className="gungjung-glass p-6 border-white/[0.03] hover:border-[#FFB6C1]/20 transition-all flex items-center gap-6 group">
+                          <div className="w-10 h-10 rounded-full bg-white/[0.03] flex items-center justify-center text-[#FFB6C1]/50 group-hover:text-[#FFB6C1] transition-colors shrink-0">
+                            <i className="fas fa-check text-sm"></i>
+                          </div>
+                          <p className="text-[#EDE6DA] opacity-70 text-base font-light break-keep group-hover:opacity-100 transition-opacity">
+                            {item}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="relative aspect-[3/4] rounded-[40px] overflow-hidden border border-white/10 shadow-2xl">
+                    <Image 
+                      src="/image/miss/m4.webp" 
+                      alt="Recommended For You"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 to-transparent"></div>
+                  </div>
                 </div>
               </Reveal>
             </section>
@@ -155,13 +172,10 @@ export default function MissHighlanderPage() {
             {/* 4. Ingredient Section */}
             <section className="mb-32">
               <Reveal>
-                {/* 상단 이미지 배치 (m3, m4) */}
-                <div className="grid grid-cols-2 gap-8 mb-12">
-                  <div className="relative aspect-[4/5] rounded-[30px] overflow-hidden border border-white/10 shadow-xl">
-                    <Image src="/image/miss/m3.webp" alt="Formula Detail 1" fill className="object-cover" />
-                  </div>
-                  <div className="relative aspect-[4/5] rounded-[30px] overflow-hidden border border-white/10 shadow-xl">
-                    <Image src="/image/miss/m4.webp" alt="Formula Detail 2" fill className="object-cover" />
+                {/* 상단 이미지 배치 (m3) */}
+                <div className="max-w-4xl mx-auto mb-12">
+                  <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl">
+                    <Image src="/image/miss/m3.webp" alt="Formula Detail" fill className="object-cover" />
                   </div>
                 </div>
 
