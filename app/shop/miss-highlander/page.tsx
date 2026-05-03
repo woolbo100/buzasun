@@ -56,8 +56,8 @@ export default function MissHighlanderPage() {
                   미스하이랜더 <span style={{ color: '#E6BE8A' }}>플러스</span>
                 </h1>
                 
-                {/* 메인 이미지 추가 (3:4 비율 적용) */}
-                <div className="relative max-w-xl mx-auto aspect-[3/4] mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                {/* 메인 이미지 추가 (16:9 비율 적용) */}
+                <div className="relative max-w-4xl mx-auto aspect-video mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
                     src="/image/miss/m7.webp" 
                     alt="Miss Highlander Plus Main"
