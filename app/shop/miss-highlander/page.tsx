@@ -26,7 +26,7 @@ export default function MissHighlanderPage() {
       '생기 있고 맑은 인상을 관리하고 싶은 분',
     ],
     ingredients: [
-      { title: '콜라겐', desc: '피부 탄력 케어에 도움', icon: 'fa-sparkles' },
+      { title: '콜라겐', desc: '피부 탄력 케어에 도움', icon: 'fa-gem' },
       { title: '글루타치온', desc: '맑은 피부 컨디션 관리', icon: 'fa-sun' },
       { title: '히알루론산', desc: '촉촉한 보습 케어', icon: 'fa-tint' },
       { title: '비타민 C', desc: '활력 있는 뷰티 루틴', icon: 'fa-bolt' },
@@ -35,8 +35,25 @@ export default function MissHighlanderPage() {
     ],
     giftTitle: '선물하고 싶은 프리미엄 케어',
     giftDesc: `나를 위한 루틴으로도,
-소중한 사람을 위한 선물로도 좋은
-우아한 이너뷰티 셀렉션입니다.`,
+
+사랑하는 사람을 위한 선물로도 좋은
+백도화의 우아한 이너뷰티 셀렉션입니다.
+
+아름다움은
+하루아침에 만들어지지 않습니다.
+
+매일의 작은 선택이
+피부를 바꾸고,
+
+시간이 지나도
+빛나는 분위기를 만듭니다.
+
+피부의 탄력, 생기, 그리고 자신감까지—
+
+당신의 일상을
+조금 더 아름답게 만드는
+프리미엄 루틴을 시작해보세요.`,
+    formulaTitle: '미스하이랜더 프리미엄 성분',
   }
 
   return <PhysicalProductDetail {...productData} />

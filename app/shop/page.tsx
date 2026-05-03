@@ -28,7 +28,7 @@ export default function ShopPage() {
   const productSectionRef = useRef<HTMLElement>(null)
 
   // 카테고리 정의
-  const categories = ['ALL', 'PRIVATE READING', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
+  const categories = ['ALL', 'PREMIUM REPORT', 'SECRET METHOD', 'ENERGY CARE', 'PRIVATE OBJECT']
 
   // 슬러그 기반 기본 이미지 매핑
   const defaultImageMap: { [key: string]: string } = {
@@ -51,13 +51,13 @@ export default function ShopPage() {
           .order('sort_order', { ascending: true })
 
         if (!error && data) {
-          // "PRIVATE READING" 카테고리 매핑 (DB의 PREMIUM REPORT -> PRIVATE READING으로 표시)
+          // 카테고리 매핑 로직 제거 (DB 값 그대로 사용)
           let mappedData = data.map(p => {
             const isCompatibility = (p.name?.includes('궁합') || p.slug?.includes('compatibility'));
+            const isMissHighlander = p.slug === 'miss-highlander';
             return {
               ...p,
-              category: p.category === 'PREMIUM REPORT' ? 'PRIVATE READING' : p.category,
-              main_image: isCompatibility ? '/image/premium_compatibility_v3.png?v=4' : p.main_image
+              main_image: isMissHighlander ? '/image/miss/m1.webp' : (isCompatibility ? '/image/premium_compatibility_v3.png?v=4' : p.main_image)
             };
           })
 
@@ -71,7 +71,7 @@ export default function ShopPage() {
               category: 'ENERGY CARE',
               description: '프리미엄 이너뷰티 루틴을 위한 럭셔리 뷰티 케어 셀렉션',
               price: 69000,
-              image: '/image/miss/m1.webp',
+              main_image: '/image/miss/m1.webp',
               is_active: true,
               type: 'physical'
             })

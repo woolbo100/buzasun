@@ -422,7 +422,7 @@ export default function AdminProductsPage() {
                       <label className="text-[11px] text-white/40 uppercase font-bold tracking-tighter">카테고리 (Category) *</label>
                       <select value={formData.category} onChange={e => setFormData({...formData, category: e.target.value})}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-accent-gold/50 outline-none appearance-none">
-                        <option value="PRIVATE READING">PRIVATE READING</option>
+                        <option value="PREMIUM REPORT">PREMIUM REPORT</option>
                         <option value="SECRET METHOD">SECRET METHOD</option>
                         <option value="ENERGY CARE">ENERGY CARE</option>
                         <option value="PRIVATE OBJECT">PRIVATE OBJECT</option>

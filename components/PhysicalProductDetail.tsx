@@ -30,6 +30,7 @@ interface PhysicalProductDetailProps {
   ingredients: Ingredient[];
   giftTitle: string;
   giftDesc: string;
+  formulaTitle?: string;
 }
 
 export default function PhysicalProductDetail({
@@ -47,7 +48,8 @@ export default function PhysicalProductDetail({
   recommendedPoints,
   ingredients,
   giftTitle,
-  giftDesc
+  giftDesc,
+  formulaTitle
 }: PhysicalProductDetailProps) {
   useScrollAnimation()
   const checkoutUrl = `/checkout?productId=${productId}`
@@ -153,10 +155,21 @@ export default function PhysicalProductDetail({
             </section>
 
             {/* 4. Formula/Detail */}
-            <section className="mb-32">
+            <section className="mb-32 text-center">
               <Reveal>
+                {formulaTitle && (
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-[0.2em] mb-12">
+                    {formulaTitle.includes('프리미엄') ? (
+                      <>
+                        {formulaTitle.split('프리미엄')[0]}
+                        <span className="text-[#FFB6C1]">프리미엄</span>
+                        {formulaTitle.split('프리미엄')[1]}
+                      </>
+                    ) : formulaTitle}
+                  </h2>
+                )}
                 <div className="max-w-4xl mx-auto mb-12">
-                  <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl">
+                  <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl group">
                     <Image src={formulaImage} alt="Detail" fill className="object-cover" />
                   </div>
                 </div>
@@ -186,7 +199,7 @@ export default function PhysicalProductDetail({
                     <h2 className="text-3xl md:text-4xl font-elegant font-bold text-white leading-tight">
                       {giftTitle}
                     </h2>
-                    <p className="text-lg text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light">
+                    <p className="text-lg text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       {giftDesc}
                     </p>
                   </div>
