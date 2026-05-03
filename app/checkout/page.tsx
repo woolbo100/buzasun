@@ -63,11 +63,9 @@ function CheckoutContent() {
 
         if (!error && data) {
           setProduct(data)
-        } else {
+        } else if (productId && productMap[productId]) {
           // 2. DB에 없으면 로컬 맵에서 시도
-          if (productMap[productId]) {
-            setProduct(productMap[productId])
-          }
+          setProduct(productMap[productId])
         }
       } catch (err) {
         console.error("Checkout: Failed to fetch product", err)
