@@ -90,18 +90,10 @@ function CheckoutContent() {
       try {
         setLoading(true)
         // 1. DB에서 먼저 시도
-        // 신규 ID를 DB 슬러그로 보정
-        let dbId = productId;
-        if (dbId === 'baekdohwa-report') dbId = 'love-code-report';
-        if (dbId === 'premium-compatibility-report') dbId = 'premium-compatibility';
-        if (dbId === 'reunion-secret') dbId = 'reunion-secret-method';
-        if (dbId === 'abundance-secret') dbId = 'abundance-secret-guide';
-        if (dbId === 'love-secret') dbId = 'love-secret-ebook';
-
         const { data, error } = await supabase
           .from('products')
           .select('*')
-          .or(`slug.eq."${dbId}",id.eq."${dbId}"`)
+          .or(`slug.eq."${productId}",id.eq."${productId}"`)
           .single()
 
         if (!error && data) {

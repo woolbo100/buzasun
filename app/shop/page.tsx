@@ -226,7 +226,11 @@ export default function ShopPage() {
                       <Link 
                         href={
                           (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream'].includes(product.slug)) ? `/shop/${product.slug}` : 
-                          (product.category === 'SECRET METHOD' || ['love-secret', 'abundance-secret', 'reunion-secret'].includes(product.slug)) ? `/checkout?productId=${product.slug}` :
+                          product.slug === 'baekdohwa-report' ? `/reports/baekdohwa-report` :
+                          product.slug === 'premium-compatibility-report' ? `/reports/premium-compatibility-report` :
+                          product.slug === 'love-secret' ? `/reports/love-secret-ebook` :
+                          product.slug === 'abundance-secret' ? `/reports/abundance-secret-guide` :
+                          product.slug === 'reunion-secret' ? `/reports/reunion-secret-method` :
                           `/reports/${product.slug}`
                         } 
                         className="group block"

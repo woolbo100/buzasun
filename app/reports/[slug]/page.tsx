@@ -22,18 +22,10 @@ export default function DynamicReportPage() {
     async function fetchProduct() {
       try {
         setLoading(true)
-        // 신규 ID를 DB 슬러그로 역매핑
-        let dbSlug = slug;
-        if (dbSlug === 'baekdohwa-report') dbSlug = 'love-code-report';
-        if (dbSlug === 'premium-compatibility-report') dbSlug = 'premium-compatibility';
-        if (dbSlug === 'reunion-secret') dbSlug = 'reunion-secret-method';
-        if (dbSlug === 'abundance-secret') dbSlug = 'abundance-secret-guide';
-        if (dbSlug === 'love-secret') dbSlug = 'love-secret-ebook';
-
         const { data, error } = await supabase
           .from('products')
           .select('*')
-          .eq('slug', dbSlug)
+          .eq('slug', slug)
           .eq('is_active', true)
           .single()
 
