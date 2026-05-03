@@ -86,7 +86,7 @@ export default function ShopPage() {
           if (!hasWangbitna) {
             mappedData.push({
               id: 'manual-wangbitna-cream',
-              name: '왕빛나 크림',
+              name: '어디서나 왕빛나 크림',
               slug: 'wangbitna-cream',
               category: 'ENERGY CARE',
               description: '여성의 우아한 자신감과 탄력 있는 피부를 위한 프리미엄 바디 케어 리추얼',
