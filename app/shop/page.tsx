@@ -66,34 +66,15 @@ export default function ShopPage() {
             if (currentSlug === 'abundance-secret-guide') currentSlug = 'abundance-secret';
             if (currentSlug === 'love-secret-ebook') currentSlug = 'love-secret';
 
-            // 이름 및 가격 오버라이드 (지침 반영)
+            // 상품명 보정 (필요한 경우에만)
             let currentName = p.name;
-            let currentPrice = p.price;
-
-            if (currentSlug === 'baekdohwa-report') {
-              currentName = '선천코드 연애 리포트';
-              currentPrice = 59000;
-            } else if (currentSlug === 'premium-compatibility-report') {
-              currentName = '프리미엄 궁합 리포트';
-              currentPrice = 89000;
-            } else if (currentSlug === 'love-secret') {
-              currentName = '연애비급';
-              currentPrice = 39000;
-            } else if (currentSlug === 'abundance-secret') {
-              currentName = '풍요비책';
-              currentPrice = 49000;
-            } else if (currentSlug === 'reunion-secret') {
-              currentName = '재회비방';
-              currentPrice = 99000;
-            } else if (currentSlug === 'wangbitna-cream') {
+            if (currentSlug === 'wangbitna-cream' && !p.name?.includes('어디서나')) {
               currentName = '어디서나 왕빛나 크림';
-              currentPrice = 59000;
             }
 
             return {
               ...p,
               name: currentName,
-              price: currentPrice,
               slug: currentSlug,
               main_image: isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :

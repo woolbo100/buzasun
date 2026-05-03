@@ -6,9 +6,24 @@ import Reveal from '@/components/Reveal'
 import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { supabase } from '@/lib/supabase'
+import { useState, useEffect } from 'react'
 
 export default function PremiumCompatibilityPage() {
   useScrollAnimation()
+  const [dbPrice, setDbPrice] = useState<number | null>(null)
+
+  useEffect(() => {
+    async function fetchPrice() {
+      const { data } = await supabase
+        .from('products')
+        .select('price')
+        .eq('slug', 'premium-compatibility')
+        .single()
+      if (data?.price) setDbPrice(data.price)
+    }
+    fetchPrice()
+  }, [])
 
   const recommendations = [
     '상대와의 관계 흐름을 더 깊이 알고 싶은 분',
@@ -81,7 +96,7 @@ export default function PremiumCompatibilityPage() {
                   프리미엄 궁합 리포트 신청하기
                 </Link>
                 <p className="mt-6 text-[var(--accent-gold)] font-bold tracking-widest text-xl font-elegant">
-                  ₩{productPrice.toLocaleString()}
+                  ₩{(dbPrice || 129000).toLocaleString()}
                 </p>
               </Reveal>
             </section>

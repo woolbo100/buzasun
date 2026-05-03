@@ -75,7 +75,7 @@ export default function LoveSecretEbookPage() {
                     <ul className="space-y-4 text-bd-ivory">
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>가격</span>
-                        <span className="text-[var(--accent-gold)] font-bold">39,000원</span>
+                        <span className="text-[var(--accent-gold)] font-bold">19,000원</span>
                       </li>
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>제공 형식</span>

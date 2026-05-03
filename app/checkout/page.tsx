@@ -46,7 +46,7 @@ function CheckoutContent() {
     "baekdohwa-report": {
       name: "선천코드 연애 리포트",
       type: "digital_report",
-      price: 59000,
+      price: 39000,
       category: "PREMIUM REPORT",
       image: "/image/product-love-report.png"
     },
@@ -60,21 +60,21 @@ function CheckoutContent() {
     "love-secret": {
       name: "연애비급",
       type: "digital_ebook",
-      price: 39000,
+      price: 19000,
       category: "SECRET METHOD",
       image: "/image/product-charm-signal.png"
     },
     "abundance-secret": {
       name: "풍요비책",
       type: "digital_ebook",
-      price: 49000,
+      price: 19000,
       category: "SECRET METHOD",
       image: "/image/product-abundance.png"
     },
     "reunion-secret": {
       name: "재회비방",
       type: "digital_ebook",
-      price: 99000,
+      price: 19000,
       category: "SECRET METHOD",
       image: "/image/product-reunion-reading.png"
     }
@@ -105,30 +105,8 @@ function CheckoutContent() {
           .single()
 
         if (!error && data) {
-          // 이름 및 가격 오버라이드 (지침 반영)
-          let finalData = { ...data, slug: productId }; // URL의 productId를 slug로 유지
-          
-          if (productId === 'baekdohwa-report') {
-            finalData.name = '선천코드 연애 리포트';
-            finalData.price = 59000;
-          } else if (productId === 'premium-compatibility-report') {
-            finalData.name = '프리미엄 궁합 리포트';
-            finalData.price = 89000;
-          } else if (productId === 'love-secret') {
-            finalData.name = '연애비급';
-            finalData.price = 39000;
-          } else if (productId === 'abundance-secret') {
-            finalData.name = '풍요비책';
-            finalData.price = 49000;
-          } else if (productId === 'reunion-secret') {
-            finalData.name = '재회비방';
-            finalData.price = 99000;
-          } else if (productId === 'wangbitna-cream') {
-            finalData.name = '어디서나 왕빛나 크림';
-            finalData.price = 59000;
-          }
-          
-          setProduct(finalData)
+          // 신규 ID를 slug로 유지하여 매칭성 유지
+          setProduct({ ...data, slug: productId })
         } else if (productId && productMap[productId]) {
           // 2. DB에 없으면 로컬 맵에서 시도
           setProduct({ ...productMap[productId], slug: productId })
