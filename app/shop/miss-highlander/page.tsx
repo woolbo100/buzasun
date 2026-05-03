@@ -33,7 +33,7 @@ export default function MissHighlanderPage() {
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
-      <GlobalBackground src="/image/miss/m1.webp" brightCenter={false}>
+      <GlobalBackground src="/image/shop-hero.png" brightCenter={false}>
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
@@ -55,6 +55,19 @@ export default function MissHighlanderPage() {
                 <h1 className="text-4xl md:text-7xl font-elegant font-bold mb-10 text-white leading-tight">
                   미스하이랜더 <span style={{ color: '#E6BE8A' }}>플러스</span>
                 </h1>
+                
+                {/* 메인 이미지 추가 */}
+                <div className="relative max-w-4xl mx-auto aspect-[16/9] mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                  <Image 
+                    src="/image/miss/m1.webp" 
+                    alt="Miss Highlander Plus Main"
+                    fill
+                    className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
+                </div>
+
                 <p className="text-xl md:text-2xl text-[#EDE6DA] opacity-80 leading-relaxed mb-12 max-w-2xl mx-auto break-keep font-elegant italic">
                   아름다움은 매일의 습관에서 시작됩니다
                 </p>
