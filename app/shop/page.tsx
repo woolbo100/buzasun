@@ -48,7 +48,7 @@ export default function ShopPage() {
           .from('products')
           .select('*')
           .eq('is_active', true)
-          .order('main_sort_order', { ascending: true })
+          .order('sort_order', { ascending: true })
 
         if (!error && data) {
           // "PRIVATE READING" 카테고리 매핑 (DB의 PREMIUM REPORT -> PRIVATE READING으로 표시)
@@ -57,7 +57,7 @@ export default function ShopPage() {
             category: p.category === 'PREMIUM REPORT' ? 'PRIVATE READING' : p.category,
             image: (p.name.includes('궁합') || p.slug.includes('compatibility')) 
               ? '/image/premium_compatibility_v3.png?v=4' 
-              : p.image
+              : p.main_image
           }))
 
           // 미스하이랜더 플러스가 DB에 없을 경우 수동 추가
@@ -192,7 +192,7 @@ export default function ShopPage() {
                         <div className="gungjung-glass overflow-hidden rounded-3xl border border-white/5 group-hover:border-[var(--accent-gold)]/40 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(212,178,167,0.15)] bg-gradient-to-b from-white/[0.03] to-transparent">
                           <div className="relative aspect-[3/4] overflow-hidden">
                             <Image 
-                              src={product.image || defaultImageMap[product.slug] || '/image/product-love-report.png'} 
+                              src={product.main_image || defaultImageMap[product.slug] || '/image/product-love-report.png'} 
                               alt={product.name}
                               fill
                               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"

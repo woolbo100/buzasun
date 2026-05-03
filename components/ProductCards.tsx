@@ -19,7 +19,7 @@ export default function ProductCards() {
           .select('*')
           .eq('is_active', true)
           .eq('show_on_main', true)
-          .order('main_sort_order', { ascending: true });
+          .order('sort_order', { ascending: true });
 
         if (!error && data) {
           setProducts(data);
