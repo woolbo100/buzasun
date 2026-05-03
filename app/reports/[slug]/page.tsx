@@ -243,7 +243,7 @@ export default function DynamicReportPage() {
 
                     <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-[rgba(212,175,55,0.1)]">
                       <div>
-                        <h3 className="text-lg font-bold text-green-400/80 mb-4 flex items-center gap-2">
+                        <h3 className="text-lg font-bold text-[var(--accent-gold)] mb-4 flex items-center gap-2">
                           <i className="fas fa-check-circle"></i> 환불 가능 안내
                         </h3>
                         <ul className="space-y-2 text-bd-gray text-sm">
@@ -251,11 +251,11 @@ export default function DynamicReportPage() {
                           <li>• 중복 결제가 발생한 경우</li>
                           <li>• 시스템 오류로 인해 정상적인 결제가 이루어지지 않은 경우</li>
                         </ul>
-                        <p className="mt-4 text-xs text-green-400/60">위 경우 확인 후 전액 환불이 가능합니다.</p>
+                        <p className="mt-4 text-xs text-[var(--accent-gold-soft)]">위 경우 확인 후 전액 환불이 가능합니다.</p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-bold text-red-400/80 mb-4 flex items-center gap-2">
+                        <h3 className="text-lg font-bold text-[#BA8D7E] mb-4 flex items-center gap-2">
                           <i className="fas fa-times-circle"></i> 환불이 어려운 경우
                         </h3>
                         <ul className="space-y-2 text-bd-gray text-sm">
@@ -264,7 +264,7 @@ export default function DynamicReportPage() {
                           <li>• 고객의 단순 변심</li>
                           <li>• 개인 맞춤형 제작이 완료된 경우</li>
                         </ul>
-                        <p className="mt-4 text-xs text-red-400/60">디지털 콘텐츠 및 맞춤 제작 상품의 특성상 작업이 시작된 이후에는 환불이 제한됩니다.</p>
+                        <p className="mt-4 text-xs text-[#BA8D7E]/60">디지털 콘텐츠 및 맞춤 제작 상품의 특성상 작업이 시작된 이후에는 환불이 제한됩니다.</p>
                       </div>
                     </div>
 

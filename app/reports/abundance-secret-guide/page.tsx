@@ -219,7 +219,7 @@ export default function AbundanceSecretPage() {
 
                     <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-[rgba(212,175,55,0.1)]">
                       <div>
-                        <h3 className="text-lg font-bold text-green-400/80 mb-4 flex items-center gap-2">
+                        <h3 className="text-lg font-bold text-[var(--accent-gold)] mb-4 flex items-center gap-2">
                           <i className="fas fa-check-circle"></i> 환불 가능 안내
                         </h3>
                         <ul className="space-y-2 text-bd-gray text-sm">
@@ -227,11 +227,11 @@ export default function AbundanceSecretPage() {
                           <li>• 시스템 오류로 인해 정상적인 결제가 이루어지지 않은 경우</li>
                           <li>• 파일 손상 또는 다운로드 불가 등 정상적인 이용이 불가능한 경우</li>
                         </ul>
-                        <p className="mt-4 text-xs text-green-400/60">확인 후 전액 환불 또는 재발송이 가능합니다.</p>
+                        <p className="mt-4 text-xs text-[var(--accent-gold-soft)]">확인 후 전액 환불 또는 재발송이 가능합니다.</p>
                       </div>
 
                       <div>
-                        <h3 className="text-lg font-bold text-red-400/80 mb-4 flex items-center gap-2">
+                        <h3 className="text-lg font-bold text-[#BA8D7E] mb-4 flex items-center gap-2">
                           <i className="fas fa-times-circle"></i> 환불이 어려운 경우
                         </h3>
                         <ul className="space-y-2 text-bd-gray text-sm">
@@ -240,7 +240,7 @@ export default function AbundanceSecretPage() {
                           <li>• 구매 후 개인적인 기대와 차이에 의한 경우</li>
                           <li>• 디지털 콘텐츠 특성상 이미 이용이 가능한 상태인 경우</li>
                         </ul>
-                        <p className="mt-4 text-xs text-red-400/60">복제가 가능한 디지털 상품의 특성상 다운로드 이후 환불이 제한됩니다.</p>
+                        <p className="mt-4 text-xs text-[#BA8D7E]/60">복제가 가능한 디지털 상품의 특성상 다운로드 이후 환불이 제한됩니다.</p>
                       </div>
                     </div>
 
