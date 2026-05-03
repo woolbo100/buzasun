@@ -90,7 +90,7 @@ export default function ShopPage() {
               slug: 'wangbitna-cream',
               category: 'ENERGY CARE',
               description: '여성의 우아한 자신감과 탄력 있는 피부를 위한 프리미엄 바디 케어 리추얼',
-              price: 79000,
+              price: 59000,
               main_image: '/image/wangbitna/w7.webp',
               is_active: true,
               type: 'physical'

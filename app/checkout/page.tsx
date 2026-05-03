@@ -39,7 +39,7 @@ function CheckoutContent() {
     "wangbitna-cream": {
       name: "왕빛나 크림",
       type: "physical",
-      price: 79000,
+      price: 59000,
       category: "ENERGY CARE",
       image: "/image/wangbitna/w7.webp"
     }
