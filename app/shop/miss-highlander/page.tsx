@@ -172,10 +172,10 @@ export default function MissHighlanderPage() {
             {/* 4. Ingredient Section */}
             <section className="mb-32">
               <Reveal>
-                {/* 상단 이미지 배치 (m3) */}
+                {/* 상단 이미지 배치 (m5) */}
                 <div className="max-w-4xl mx-auto mb-12">
                   <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl">
-                    <Image src="/image/miss/m3.webp" alt="Formula Detail" fill className="object-cover" />
+                    <Image src="/image/miss/m5.webp" alt="Formula Detail" fill className="object-cover" />
                   </div>
                 </div>
 
@@ -209,11 +209,11 @@ export default function MissHighlanderPage() {
               </Reveal>
             </section>
 
-            {/* 5. Gift Section */}
+            {/* 5. Gift Section (Modified with m3 Image) */}
             <section className="mb-32">
               <Reveal>
-                <div className="grid md:grid-cols-2 gap-16 items-center flex-row-reverse">
-                   <div className="order-2 md:order-1 space-y-8">
+                <div className="grid md:grid-cols-2 gap-16 items-center">
+                   <div className="space-y-8">
                     <h2 className="text-3xl md:text-4xl font-elegant font-bold text-white leading-tight">
                       선물하고 싶은<br /> 
                       <span style={{ color: '#E6BE8A' }}>프리미엄 케어</span>
@@ -224,9 +224,9 @@ export default function MissHighlanderPage() {
                       우아한 이너뷰티 셀렉션입니다.
                     </p>
                   </div>
-                  <div className="order-1 md:order-2 relative aspect-[16/10] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
                     <Image 
-                      src="/image/miss/m5.webp" 
+                      src="/image/miss/m3.webp" 
                       alt="Premium Gift"
                       fill
                       className="object-cover"
