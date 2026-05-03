@@ -37,7 +37,8 @@ export default function ShopPage() {
     'reunion-secret-method': '/image/product-reunion-reading.png',
     'abundance-secret-guide': '/image/product-abundance.png',
     'love-secret-ebook': '/image/product-charm-signal.png',
-    'miss-highlander': '/image/miss/m1.webp'
+    'miss-highlander': '/image/miss/m1.webp',
+    'wangbitna-cream': '/image/wangbitna/w7.webp'
   }
   
   useEffect(() => {
@@ -55,9 +56,12 @@ export default function ShopPage() {
           let mappedData = data.map(p => {
             const isCompatibility = (p.name?.includes('궁합') || p.slug?.includes('compatibility'));
             const isMissHighlander = p.slug === 'miss-highlander';
+            const isWangbitna = p.slug === 'wangbitna-cream';
             return {
               ...p,
-              main_image: isMissHighlander ? '/image/miss/m1.webp' : (isCompatibility ? '/image/premium_compatibility_v3.png?v=4' : p.main_image)
+              main_image: isMissHighlander ? '/image/miss/m1.webp' : 
+                          isWangbitna ? '/image/wangbitna/w7.webp' :
+                          (isCompatibility ? '/image/premium_compatibility_v3.png?v=4' : p.main_image)
             };
           })
 
@@ -72,6 +76,22 @@ export default function ShopPage() {
               description: '프리미엄 이너뷰티 루틴을 위한 럭셔리 뷰티 케어 셀렉션',
               price: 69000,
               main_image: '/image/miss/m1.webp',
+              is_active: true,
+              type: 'physical'
+            })
+          }
+
+          // 왕빛나 크림 수동 추가
+          const hasWangbitna = mappedData.some(p => p.slug === 'wangbitna-cream')
+          if (!hasWangbitna) {
+            mappedData.push({
+              id: 'manual-wangbitna-cream',
+              name: '왕빛나 크림 (Secret Body Bloom Cream)',
+              slug: 'wangbitna-cream',
+              category: 'ENERGY CARE',
+              description: '여성의 우아한 자신감과 탄력 있는 피부를 위한 프리미엄 바디 케어 리추얼',
+              price: 79000,
+              main_image: '/image/wangbitna/w7.webp',
               is_active: true,
               type: 'physical'
             })
@@ -187,7 +207,7 @@ export default function ShopPage() {
                       transition={{ duration: 0.6, delay: idx * 0.1 }}
                     >
                       <Link 
-                        href={product.slug === 'miss-highlander' ? `/shop/${product.slug}` : `/reports/${product.slug}`} 
+                        href={(product.type === 'physical' || ['miss-highlander', 'wangbitna-cream'].includes(product.slug)) ? `/shop/${product.slug}` : `/reports/${product.slug}`} 
                         className="group block"
                       >
                         <div className="gungjung-glass overflow-hidden rounded-3xl border border-white/5 group-hover:border-[var(--accent-gold)]/40 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(212,178,167,0.15)] bg-gradient-to-b from-white/[0.03] to-transparent">

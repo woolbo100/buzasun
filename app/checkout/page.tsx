@@ -27,6 +27,24 @@ function CheckoutContent() {
     orderNote: '',
   })
 
+  // DB에 없을 경우를 위한 Fallback 상품 정보
+  const productMap: { [key: string]: any } = {
+    "miss-highlander": {
+      name: "미스하이랜더 플러스",
+      type: "physical",
+      price: 69000,
+      category: "ENERGY CARE",
+      image: "/image/miss/m1.webp"
+    },
+    "wangbitna-cream": {
+      name: "Secret Body Bloom Cream",
+      type: "physical",
+      price: 79000,
+      category: "ENERGY CARE",
+      image: "/image/wangbitna/w7.webp"
+    }
+  }
+
   useEffect(() => {
     if (!productId) {
       setLoading(false)
@@ -36,7 +54,7 @@ function CheckoutContent() {
     async function fetchProduct() {
       try {
         setLoading(true)
-        // slug 또는 id로 검색
+        // 1. DB에서 먼저 시도
         const { data, error } = await supabase
           .from('products')
           .select('*')
@@ -45,9 +63,18 @@ function CheckoutContent() {
 
         if (!error && data) {
           setProduct(data)
+        } else {
+          // 2. DB에 없으면 로컬 맵에서 시도
+          if (productMap[productId]) {
+            setProduct(productMap[productId])
+          }
         }
       } catch (err) {
         console.error("Checkout: Failed to fetch product", err)
+        // 에러 시에도 로컬 맵 확인
+        if (productId && productMap[productId]) {
+          setProduct(productMap[productId])
+        }
       } finally {
         setLoading(false)
       }

@@ -31,6 +31,8 @@ interface PhysicalProductDetailProps {
   giftTitle: string;
   giftDesc: string;
   formulaTitle?: string;
+  howToUse?: string;
+  warningText?: string;
 }
 
 export default function PhysicalProductDetail({
@@ -49,7 +51,9 @@ export default function PhysicalProductDetail({
   ingredients,
   giftTitle,
   giftDesc,
-  formulaTitle
+  formulaTitle,
+  howToUse,
+  warningText
 }: PhysicalProductDetailProps) {
   useScrollAnimation()
   const checkoutUrl = `/checkout?productId=${productId}`
@@ -209,6 +213,30 @@ export default function PhysicalProductDetail({
                 </div>
               </Reveal>
             </section>
+
+            {/* 5-1. How To Use */}
+            {howToUse && (
+              <section className="mb-32">
+                <Reveal>
+                  <div className="gungjung-glass p-10 border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent">
+                    <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#FFB6C1]/50 pl-6">사용 방법</h2>
+                    <div className="space-y-6">
+                      <p className="text-lg text-[#EDE6DA] opacity-80 leading-relaxed break-keep whitespace-pre-wrap">
+                        {howToUse}
+                      </p>
+                      {warningText && (
+                        <div className="mt-8 pt-8 border-t border-white/5">
+                          <p className="text-xs text-[#EDE6DA] opacity-40 leading-relaxed break-keep">
+                            <i className="fas fa-exclamation-circle mr-2 opacity-50"></i>
+                            {warningText}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </Reveal>
+              </section>
+            )}
 
             {/* 6. Notices */}
             <section className="mb-32">
