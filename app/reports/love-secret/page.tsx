@@ -7,27 +7,23 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
-export default function ReunionSecretPage() {
+export default function LoveSecretEbookPage() {
   useScrollAnimation()
 
   const reviews = [
-    { id: 1, author: '임하늘님', content: '헤어지고 매달리기만 하다가 이 책을 보고 제 행동이 얼마나 잘못됐는지 알게 됐어요. 마음을 가다듬는 데 큰 도움이 됐습니다.', rating: 5 },
-    { id: 2, author: '윤지후님', content: '상대방의 심리를 구조적으로 설명해 주셔서 연락할 때 어떤 태도를 가져야 할지 기준이 생겼어요. 예시 문구들도 정말 유용합니다.', rating: 5 },
-    { id: 3, author: '최유진님', content: '무작정 재회를 권하는 게 아니라 저 자신을 먼저 돌보게 해주는 내용이라 더 좋았습니다. 디자인도 예뻐서 읽는 내내 기분이 묘했어요.', rating: 5 },
+    { id: 1, author: '이지은님', content: '연애할 때마다 제가 왜 그렇게 불안했는지 이제야 이해가 가요. 심리 상담을 받는 것처럼 마음이 차분해지는 책입니다.', rating: 5 },
+    { id: 2, author: '박민수님', content: '남자인 제가 봐도 공감되는 내용이 많네요. 관계의 기술보다는 본질적인 마음가짐을 배우게 되어 유익했습니다.', rating: 5 },
+    { id: 3, author: '최서윤님', content: '디자인이 너무 예뻐서 소장 가치도 충분해요. 전자책이지만 한 페이지 한 페이지 아껴서 읽게 되는 내용입니다.', rating: 5 },
   ]
 
   const faqs = [
     { 
-      q: '재회를 보장하나요?', 
-      a: '재회를 보장하는 상품은 아닙니다. 감정적 매달림을 줄이고 관계의 흐름을 더 차분하게 정리하도록 돕는 PDF 가이드입니다.' 
-    },
-    { 
-      q: '상대에게 보낼 문구가 포함되나요?', 
-      a: '상황별 메시지 설계 방향과 예시 문구들이 포함되어 있어 실무적인 도움을 드립니다.' 
+      q: '사주 리포트인가요?', 
+      a: '사주 풀이가 아니라 연애 패턴과 관계 심리를 쉽게 정리한 전자책(PDF)입니다.' 
     },
     { 
       q: '상담이 포함되나요?', 
-      a: '상담은 포함되지 않으며 PDF 전자책 형태로 제공되는 지식 콘텐츠입니다.' 
+      a: '상담은 포함되지 않으며, PDF 전자책 형태로 제공되는 지식 콘텐츠입니다.' 
     },
     { 
       q: '언제 받을 수 있나요?', 
@@ -53,19 +49,19 @@ export default function ReunionSecretPage() {
                     color: 'var(--accent-gold-light)',
                     letterSpacing: '0.1em'
                   }}>
-                  BAEKDOHWA REUNION STRATEGY
+                  BAEKDOHWA SECRET E-BOOK
                 </span>
                 <h1 className="text-4xl md:text-6xl font-elegant font-bold mb-8 text-white">
-                  재회비방 <span style={{ color: 'var(--accent-gold)' }}>전략서</span>
+                  연애비급 <span style={{ color: 'var(--accent-gold)' }}>전자책</span>
                 </h1>
                 <p className="text-lg md:text-xl text-bd-ivory leading-relaxed mb-10 max-w-2xl mx-auto break-keep">
-                  감정으로 붙잡는 재회가 아니라, <br/> 관계의 기준과 메시지를 다시 설계하는 백도화의 재회 전략서
+                  반복되는 연애 패턴을 이해하고, 관계의 흐름을 다르게 바라보는 백도화의 연애 해석서
                 </p>
                 <Link 
-                  href="/checkout?productId=reunion-secret"
-                  className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg"
+                  href="/checkout?productId=love-secret-ebook"
+                  className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
-                  재회비방 받아보기
+                  연애비급 받아보기
                 </Link>
               </Reveal>
             </section>
@@ -79,7 +75,7 @@ export default function ReunionSecretPage() {
                     <ul className="space-y-4 text-bd-ivory">
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>가격</span>
-                        <span className="text-[var(--accent-gold)] font-bold">29,000원</span>
+                        <span className="text-[var(--accent-gold)] font-bold">19,000원</span>
                       </li>
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>제공 형식</span>
@@ -99,10 +95,10 @@ export default function ReunionSecretPage() {
                     <h3 className="text-lg font-bold mb-4 text-[var(--accent-gold-light)]">추천 대상</h3>
                     <ul className="space-y-2 text-sm text-bd-gray">
                       {[
-                        "이별 후 연락 타이밍이 고민되는 분",
-                        "재회를 원하지만 어떻게 할지 모르는 분",
-                        "감정적으로 매달리는 패턴을 멈추고픈 분",
-                        "다시 만나도 같은 문제를 반복하고 싶지 않은 분"
+                        "늘 비슷한 연애 패턴이 반복되는 분",
+                        "상대의 말과 행동에 쉽게 흔들리는 분",
+                        "재회보다 먼저 관계 흐름을 정리하고픈 분",
+                        "연애를 감정이 아닌 구조로 보고 싶은 분"
                       ].map((text, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <span className="text-[var(--accent-gold)]">•</span>
@@ -123,13 +119,13 @@ export default function ReunionSecretPage() {
                 </h2>
                 <div className="grid gap-6">
                   {[
-                    '재회를 어렵게 만드는 감정 패턴',
-                    '연락 전 반드시 점검해야 할 기준',
-                    '상대의 방어심을 낮추는 메시지 흐름',
-                    '붙잡는 말과 다시 생각나게 하는 말의 차이',
-                    '재회 가능성을 낮추는 행동들',
-                    '재회 후 관계를 다시 무너뜨리지 않는 방법',
-                    '나를 잃지 않는 재회의 기준',
+                    '왜 나는 비슷한 사람에게 끌리는가',
+                    '관계 초반에 놓치기 쉬운 신호',
+                    '불안형 연애 패턴 이해하기',
+                    '밀당보다 중요한 관계의 균형',
+                    '오래 가는 관계를 만드는 말의 온도',
+                    '사랑에서 나를 잃지 않는 법',
+                    '반복되는 이별 패턴을 멈추는 질문들',
                   ].map((title, idx) => (
                     <div key={idx} className="gungjung-glass p-6 flex items-start gap-5 group">
                       <div className="w-10 h-10 rounded-full bg-[var(--primary-burgundy)] border border-[var(--accent-gold-soft)] flex items-center justify-center text-[var(--accent-gold)] font-bold shrink-0 group-hover:scale-110 transition-transform">
@@ -144,16 +140,16 @@ export default function ReunionSecretPage() {
               </Reveal>
             </section>
 
-            {/* 4. 이런 분께 추천합니다 */}
+            {/* 4. 이런 분께 추천합니다 (카드 4개) */}
             <section className="mb-20">
               <Reveal>
                 <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">이런 분께 추천합니다</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    "연락하고 싶지만 두려운 분",
-                    "차단/읽씹 이후 어떻게 해야 할지 모르는 분",
-                    "재회 가능성을 현실적으로 보고 싶은 분",
-                    "다시 만나도 같은 이별을 반복하고 싶지 않은 분"
+                    "상대의 마음을 몰라 불안한 분",
+                    "연애가 시작되면 나를 잃는 분",
+                    "재회와 미련 사이에서 흔들리는 분",
+                    "사랑을 더 성숙하게 배우고 싶은 분"
                   ].map((text, i) => (
                     <div key={i} className="gungjung-glass p-6 text-center flex items-center justify-center min-h-[120px] hover:border-accent-gold/40 transition-all group">
                       <p className="text-bd-ivory group-hover:text-white break-keep">{text}</p>
@@ -168,7 +164,7 @@ export default function ReunionSecretPage() {
             {/* 5. 후기 섹션 */}
             <section className="mb-20">
               <Reveal>
-                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">진실된 재회 후기</h2>
+                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">생생한 구매 후기</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                   {reviews.map((review) => (
                     <div key={review.id} className="gungjung-glass p-6 flex flex-col h-full">
@@ -275,14 +271,14 @@ export default function ReunionSecretPage() {
             {/* 7. 하단 CTA */}
             <section className="text-center py-20 bg-[rgba(59,15,27,0.2)] rounded-3xl border border-[var(--glass-border)]">
               <Reveal>
-                <h2 className="text-2xl md:text-3xl font-elegant font-bold mb-8 text-white break-keep">
-                  붙잡는 재회가 아니라, <br/> 다시 떠오르는 관계를 설계하세요
+                <h2 className="text-2xl md:text-3xl font-elegant font-bold mb-8 text-white">
+                  내 연애 패턴을 다르게 읽어보고 싶다면
                 </h2>
                 <Link 
-                  href="/checkout?productId=reunion-secret"
+                  href="/checkout?productId=love-secret"
                   className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
-                  재회비방 받아보기
+                  연애비급 받아보기
                 </Link>
               </Reveal>
             </section>

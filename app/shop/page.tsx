@@ -58,17 +58,12 @@ export default function ShopPage() {
             const isMissHighlander = p.slug === 'miss-highlander';
             const isWangbitna = p.slug === 'wangbitna-cream';
             
-            // 신규 ID 체계로 slug 보정 (DB 데이터와 매칭)
+            // 슬러그 보정 (사용자 지침 반영: 공백 및 표준 ID 유지)
             let currentSlug = p.slug;
-            if (currentSlug === 'love-code-report') currentSlug = 'baekdohwa-report';
-            if (currentSlug === 'premium-compatibility') currentSlug = 'premium-compatibility-report';
-            if (currentSlug === 'reunion-secret-method') currentSlug = 'reunion-secret';
-            if (currentSlug === 'abundance-secret-guide') currentSlug = 'abundance-secret';
-            if (currentSlug === 'love-secret-ebook') currentSlug = 'love-secret';
-
+            
             // 상품명 보정 (필요한 경우에만)
-            let currentName = p.name;
-            if (currentSlug === 'wangbitna-cream' && !p.name?.includes('어디서나')) {
+            let currentName = p.name?.trim();
+            if (currentSlug.includes('wangbitna-cream') && !currentName?.includes('어디서나')) {
               currentName = '어디서나 왕빛나 크림';
             }
 
@@ -225,13 +220,16 @@ export default function ShopPage() {
                     >
                       <Link 
                         href={
-                          (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream'].includes(product.slug)) ? `/shop/${product.slug}` : 
-                          product.slug === 'baekdohwa-report' ? `/reports/baekdohwa-report` :
-                          product.slug === 'premium-compatibility-report' ? `/reports/premium-compatibility-report` :
-                          product.slug === 'love-secret' ? `/reports/love-secret-ebook` :
-                          product.slug === 'abundance-secret' ? `/reports/abundance-secret-guide` :
-                          product.slug === 'reunion-secret' ? `/reports/reunion-secret-method` :
-                          `/reports/${product.slug}`
+                          (() => {
+                            const s = product.slug.trim();
+                            if (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream'].includes(s)) return `/shop/${s}`;
+                            if (s === 'baekdohwa-report') return `/reports/baekdohwa-report`;
+                            if (s === 'premium-compatibility-report') return `/reports/premium-compatibility-report`;
+                            if (s === 'love-secret-ebook') return `/reports/love-secret`;
+                            if (s === 'abundance-secret-guide') return `/reports/abundance-secret`;
+                            if (s === 'reunion-secret-method') return `/reports/reunion-secret`;
+                            return `/reports/${s}`;
+                          })()
                         } 
                         className="group block"
                       >

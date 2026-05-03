@@ -18,7 +18,7 @@ export default function PremiumCompatibilityPage() {
       const { data } = await supabase
         .from('products')
         .select('price')
-        .eq('slug', 'premium-compatibility')
+        .eq('slug', 'premium-compatibility-report')
         .single()
       if (data?.price) setDbPrice(data.price)
     }
@@ -96,7 +96,7 @@ export default function PremiumCompatibilityPage() {
                   프리미엄 궁합 리포트 신청하기
                 </Link>
                 <p className="mt-6 text-[var(--accent-gold)] font-bold tracking-widest text-xl font-elegant">
-                  ₩{(dbPrice || 129000).toLocaleString()}
+                  ₩{(dbPrice || 89000).toLocaleString()}
                 </p>
               </Reveal>
             </section>

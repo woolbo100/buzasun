@@ -57,21 +57,21 @@ function CheckoutContent() {
       category: "PREMIUM REPORT",
       image: "/image/premium_compatibility_report.png"
     },
-    "love-secret": {
+    "love-secret-ebook": {
       name: "연애비급",
       type: "digital_ebook",
       price: 19000,
       category: "SECRET METHOD",
       image: "/image/product-charm-signal.png"
     },
-    "abundance-secret": {
+    " abundance-secret-guide": {
       name: "풍요비책",
       type: "digital_ebook",
       price: 19000,
       category: "SECRET METHOD",
       image: "/image/product-abundance.png"
     },
-    "reunion-secret": {
+    "reunion-secret-method": {
       name: "재회비방",
       type: "digital_ebook",
       price: 19000,
