@@ -33,7 +33,7 @@ export default function ShopPage() {
   // 슬러그 기반 기본 이미지 매핑
   const defaultImageMap: { [key: string]: string } = {
     'love-code-report': '/image/product-love-report.png',
-    'premium-compatibility': '/image/premium_compatibility_bg.png',
+    'premium-compatibility': '/image/premium_compatibility_report.png',
     'reunion-secret-method': '/image/product-reunion-reading.png',
     'abundance-secret-guide': '/image/product-abundance.png',
     'love-secret-ebook': '/image/product-charm-signal.png',
