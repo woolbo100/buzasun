@@ -83,7 +83,7 @@ export default function PhysicalProductDetail({
                   {title}
                 </h1>
                 
-                <div className="relative max-w-4xl mx-auto aspect-video mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
                     src={heroImage} 
                     alt={title}
@@ -172,7 +172,7 @@ export default function PhysicalProductDetail({
                     ) : formulaTitle}
                   </h2>
                 )}
-                <div className="max-w-4xl mx-auto mb-12">
+                <div className="max-w-6xl mx-auto mb-12">
                   <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl group">
                     <Image src={formulaImage} alt="Detail" fill className="object-cover" />
                   </div>
