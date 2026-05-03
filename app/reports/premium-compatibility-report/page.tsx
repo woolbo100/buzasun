@@ -58,7 +58,7 @@ export default function PremiumCompatibilityPage() {
     { q: '두 사람 모두의 정보가 필요한가요?', a: '정확한 분석을 위해 두 사람의 생년월일 정보가 필요합니다.' },
   ]
 
-  const productPrice = 89000
+  const productPrice = 59000
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
@@ -96,7 +96,7 @@ export default function PremiumCompatibilityPage() {
                   프리미엄 궁합 리포트 신청하기
                 </Link>
                 <p className="mt-6 text-[var(--accent-gold)] font-bold tracking-widest text-xl font-elegant">
-                  ₩{(dbPrice || 89000).toLocaleString()}
+                  ₩{(dbPrice || 59000).toLocaleString()}
                 </p>
               </Reveal>
             </section>

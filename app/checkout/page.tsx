@@ -53,7 +53,7 @@ function CheckoutContent() {
     "premium-compatibility-report": {
       name: "프리미엄 궁합 리포트",
       type: "digital_report",
-      price: 89000,
+      price: 59000,
       category: "PREMIUM REPORT",
       image: "/image/premium_compatibility_report.png"
     },
