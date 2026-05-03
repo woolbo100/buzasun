@@ -22,15 +22,24 @@ export default function DynamicReportPage() {
     async function fetchProduct() {
       try {
         setLoading(true)
+        // 신규 ID를 DB 슬러그로 역매핑
+        let dbSlug = slug;
+        if (dbSlug === 'baekdohwa-report') dbSlug = 'love-code-report';
+        if (dbSlug === 'premium-compatibility-report') dbSlug = 'premium-compatibility';
+        if (dbSlug === 'reunion-secret') dbSlug = 'reunion-secret-method';
+        if (dbSlug === 'abundance-secret') dbSlug = 'abundance-secret-guide';
+        if (dbSlug === 'love-secret') dbSlug = 'love-secret-ebook';
+
         const { data, error } = await supabase
           .from('products')
           .select('*')
-          .eq('slug', slug)
+          .eq('slug', dbSlug)
           .eq('is_active', true)
           .single()
 
         if (!error && data) {
-          setProduct(data)
+          // 데이터의 slug를 신규 ID로 유지 (checkout 매칭용)
+          setProduct({ ...data, slug: slug })
         }
       } catch (err) {
         console.error("DynamicReportPage: Failed to fetch product", err)

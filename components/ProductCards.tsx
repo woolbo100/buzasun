@@ -67,7 +67,7 @@ export default function ProductCards() {
 
                 <div className="hidden lg:block">
                   <Link
-                    href="/reports/love-code"
+                    href="/reports/baekdohwa-report"
                     className="btn-primary inline-flex items-center px-10 py-5 rounded-xl font-bold tracking-widest text-lg transition-all duration-500 shadow-[0_10px_30px_rgba(212,178,167,0.2)] hover:scale-105"
                   >
                     연애 리포트 자세히 보기
@@ -121,7 +121,7 @@ export default function ProductCards() {
                 {/* Mobile/Tablet CTA Button */}
                 <div className="mt-10 text-center lg:hidden">
                   <Link
-                    href="/reports/love-code"
+                    href="/reports/baekdohwa-report"
                     className="btn-primary inline-flex items-center px-8 py-5 rounded-xl font-bold tracking-widest text-base w-full sm:w-auto justify-center"
                   >
                     내 연애 코드 지금 확인하기

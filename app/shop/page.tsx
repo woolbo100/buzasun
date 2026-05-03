@@ -32,11 +32,11 @@ export default function ShopPage() {
 
   // 슬러그 기반 기본 이미지 매핑
   const defaultImageMap: { [key: string]: string } = {
-    'love-code-report': '/image/product-love-report.png',
-    'premium-compatibility': '/image/premium_compatibility_report.png',
-    'reunion-secret-method': '/image/product-reunion-reading.png',
-    'abundance-secret-guide': '/image/product-abundance.png',
-    'love-secret-ebook': '/image/product-charm-signal.png',
+    'baekdohwa-report': '/image/product-love-report.png',
+    'premium-compatibility-report': '/image/premium_compatibility_report.png',
+    'reunion-secret': '/image/product-reunion-reading.png',
+    'abundance-secret': '/image/product-abundance.png',
+    'love-secret': '/image/product-charm-signal.png',
     'miss-highlander': '/image/miss/m1.webp',
     'wangbitna-cream': '/image/wangbitna/w7.webp'
   }
@@ -57,8 +57,18 @@ export default function ShopPage() {
             const isCompatibility = (p.name?.includes('궁합') || p.slug?.includes('compatibility'));
             const isMissHighlander = p.slug === 'miss-highlander';
             const isWangbitna = p.slug === 'wangbitna-cream';
+            
+            // 신규 ID 체계로 slug 보정 (DB 데이터와 매칭)
+            let currentSlug = p.slug;
+            if (currentSlug === 'love-code-report') currentSlug = 'baekdohwa-report';
+            if (currentSlug === 'premium-compatibility') currentSlug = 'premium-compatibility-report';
+            if (currentSlug === 'reunion-secret-method') currentSlug = 'reunion-secret';
+            if (currentSlug === 'abundance-secret-guide') currentSlug = 'abundance-secret';
+            if (currentSlug === 'love-secret-ebook') currentSlug = 'love-secret';
+
             return {
               ...p,
+              slug: currentSlug,
               main_image: isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :
                           (isCompatibility ? '/image/premium_compatibility_v3.png?v=4' : p.main_image)
@@ -207,7 +217,11 @@ export default function ShopPage() {
                       transition={{ duration: 0.6, delay: idx * 0.1 }}
                     >
                       <Link 
-                        href={(product.type === 'physical' || ['miss-highlander', 'wangbitna-cream'].includes(product.slug)) ? `/shop/${product.slug}` : `/reports/${product.slug}`} 
+                        href={
+                          (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream'].includes(product.slug)) ? `/shop/${product.slug}` : 
+                          (product.category === 'SECRET METHOD' || ['love-secret', 'abundance-secret', 'reunion-secret'].includes(product.slug)) ? `/checkout?productId=${product.slug}` :
+                          `/reports/${product.slug}`
+                        } 
                         className="group block"
                       >
                         <div className="gungjung-glass overflow-hidden rounded-3xl border border-white/5 group-hover:border-[var(--accent-gold)]/40 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.7),0_0_30px_rgba(212,178,167,0.15)] bg-gradient-to-b from-white/[0.03] to-transparent">

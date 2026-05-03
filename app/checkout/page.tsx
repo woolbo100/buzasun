@@ -42,6 +42,41 @@ function CheckoutContent() {
       price: 59000,
       category: "ENERGY CARE",
       image: "/image/wangbitna/w7.webp"
+    },
+    "baekdohwa-report": {
+      name: "선천코드 연애 리포트",
+      type: "digital_report",
+      price: 59000,
+      category: "PREMIUM REPORT",
+      image: "/image/product-love-report.png"
+    },
+    "premium-compatibility-report": {
+      name: "프리미엄 궁합 리포트",
+      type: "digital_report",
+      price: 89000,
+      category: "PREMIUM REPORT",
+      image: "/image/premium_compatibility_report.png"
+    },
+    "love-secret": {
+      name: "연애비급",
+      type: "digital_ebook",
+      price: 39000,
+      category: "SECRET METHOD",
+      image: "/image/product-charm-signal.png"
+    },
+    "abundance-secret": {
+      name: "풍요비책",
+      type: "digital_ebook",
+      price: 49000,
+      category: "SECRET METHOD",
+      image: "/image/product-abundance.png"
+    },
+    "reunion-secret": {
+      name: "재회비방",
+      type: "digital_ebook",
+      price: 99000,
+      category: "SECRET METHOD",
+      image: "/image/product-reunion-reading.png"
     }
   }
 
