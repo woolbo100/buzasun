@@ -59,7 +59,7 @@ export default function MissHighlanderPage() {
                 {/* 메인 이미지 추가 (3:4 비율 적용) */}
                 <div className="relative max-w-xl mx-auto aspect-[3/4] mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
-                    src="/image/miss/m1.webp" 
+                    src="/image/miss/m7.webp" 
                     alt="Miss Highlander Plus Main"
                     fill
                     className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
