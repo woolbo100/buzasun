@@ -54,7 +54,8 @@ export default function ShopPage() {
           // "PRIVATE READING" 카테고리 매핑 (DB의 PREMIUM REPORT -> PRIVATE READING으로 표시)
           let mappedData = data.map(p => ({
             ...p,
-            category: p.category === 'PREMIUM REPORT' ? 'PRIVATE READING' : p.category
+            category: p.category === 'PREMIUM REPORT' ? 'PRIVATE READING' : p.category,
+            image: p.slug === 'premium-compatibility' ? '/image/premium_compatibility_report.png' : p.image
           }))
 
           // 미스하이랜더 플러스가 DB에 없을 경우 수동 추가
