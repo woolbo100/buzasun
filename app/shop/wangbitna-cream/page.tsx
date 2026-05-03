@@ -12,8 +12,8 @@ export default function WangbitnaCreamPage() {
 관리하고 싶은 분들을 위한 프리미엄 바디 케어 제품입니다.`,
     heroImage: '/image/wangbitna/w1.webp',
     overviewImage: '/image/wangbitna/w2.webp',
-    recommendedImage: '/image/wangbitna/w4.webp',
-    formulaImage: '/image/wangbitna/w3.webp',
+    recommendedImage: '/image/wangbitna/w3.webp',
+    formulaImage: '/image/wangbitna/w4.webp',
     giftImage: '/image/wangbitna/w5.webp',
     ctaImage: '/image/wangbitna/w6.webp',
     price: '79,000', // 가격은 명시되어 있지 않아 임의로 설정하거나 확인 필요, 미스하이랜더(6.9만)보다 조금 높게 설정
