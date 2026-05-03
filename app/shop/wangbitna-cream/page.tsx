@@ -5,7 +5,7 @@ import PhysicalProductDetail from '@/components/PhysicalProductDetail'
 export default function WangbitnaCreamPage() {
   const productData = {
     productId: 'wangbitna-cream',
-    title: 'Secret Body Bloom Cream',
+    title: '왕빛나 크림',
     subtitle: '당신의 분위기는 작은 루틴에서 완성됩니다',
     description: `왕빛나 크림은 바쁜 일상 속에서도 간편하게
 피부의 탄력과 보습, 매끄러운 바디 컨디션을

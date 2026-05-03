@@ -37,7 +37,7 @@ function CheckoutContent() {
       image: "/image/miss/m1.webp"
     },
     "wangbitna-cream": {
-      name: "Secret Body Bloom Cream",
+      name: "왕빛나 크림",
       type: "physical",
       price: 79000,
       category: "ENERGY CARE",
