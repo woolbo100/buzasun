@@ -58,7 +58,7 @@ export default function AbundanceSecretPage() {
                   상태를 바꾸면 현실이 따라옵니다. <br/> 풍요 마인드와 에너지 흐름을 정리하는 실전 가이드
                 </p>
                 <Link 
-                  href="/order/abundance-secret-guide"
+                  href="/checkout?productId=abundance-secret"
                   className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg"
                 >
                   풍요비책 받아보기
@@ -75,7 +75,7 @@ export default function AbundanceSecretPage() {
                     <ul className="space-y-4 text-bd-ivory">
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>가격</span>
-                        <span className="text-[var(--accent-gold)] font-bold">29,000원</span>
+                        <span className="text-[var(--accent-gold)] font-bold">49,000원</span>
                       </li>
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>제공 형식</span>
@@ -275,7 +275,7 @@ export default function AbundanceSecretPage() {
                   풍요는 기다리는 것이 아니라 만드는 것입니다
                 </h2>
                 <Link 
-                  href="/order/abundance-secret-guide"
+                  href="/checkout?productId=abundance-secret"
                   className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
                   풍요비책 받아보기

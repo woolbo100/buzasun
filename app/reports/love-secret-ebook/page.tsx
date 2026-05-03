@@ -58,7 +58,7 @@ export default function LoveSecretEbookPage() {
                   반복되는 연애 패턴을 이해하고, 관계의 흐름을 다르게 바라보는 백도화의 연애 해석서
                 </p>
                 <Link 
-                  href="/order/love-secret-ebook"
+                  href="/checkout?productId=love-secret"
                   className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg"
                 >
                   연애비급 받아보기
@@ -75,7 +75,7 @@ export default function LoveSecretEbookPage() {
                     <ul className="space-y-4 text-bd-ivory">
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>가격</span>
-                        <span className="text-[var(--accent-gold)] font-bold">19,000원</span>
+                        <span className="text-[var(--accent-gold)] font-bold">39,000원</span>
                       </li>
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>제공 형식</span>
@@ -275,7 +275,7 @@ export default function LoveSecretEbookPage() {
                   내 연애 패턴을 다르게 읽어보고 싶다면
                 </h2>
                 <Link 
-                  href="/order/love-secret-ebook"
+                  href="/checkout?productId=love-secret"
                   className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
                   연애비급 받아보기

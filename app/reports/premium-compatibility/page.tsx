@@ -43,7 +43,7 @@ export default function PremiumCompatibilityPage() {
     { q: '두 사람 모두의 정보가 필요한가요?', a: '정확한 분석을 위해 두 사람의 생년월일 정보가 필요합니다.' },
   ]
 
-  const productPrice = 129000
+  const productPrice = 89000
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">

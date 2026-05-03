@@ -90,17 +90,48 @@ function CheckoutContent() {
       try {
         setLoading(true)
         // 1. DB에서 먼저 시도
+        // 신규 ID를 DB 슬러그로 보정
+        let dbId = productId;
+        if (dbId === 'baekdohwa-report') dbId = 'love-code-report';
+        if (dbId === 'premium-compatibility-report') dbId = 'premium-compatibility';
+        if (dbId === 'reunion-secret') dbId = 'reunion-secret-method';
+        if (dbId === 'abundance-secret') dbId = 'abundance-secret-guide';
+        if (dbId === 'love-secret') dbId = 'love-secret-ebook';
+
         const { data, error } = await supabase
           .from('products')
           .select('*')
-          .or(`slug.eq."${productId}",id.eq."${productId}"`)
+          .or(`slug.eq."${dbId}",id.eq."${dbId}"`)
           .single()
 
         if (!error && data) {
-          setProduct(data)
+          // 이름 및 가격 오버라이드 (지침 반영)
+          let finalData = { ...data, slug: productId }; // URL의 productId를 slug로 유지
+          
+          if (productId === 'baekdohwa-report') {
+            finalData.name = '선천코드 연애 리포트';
+            finalData.price = 59000;
+          } else if (productId === 'premium-compatibility-report') {
+            finalData.name = '프리미엄 궁합 리포트';
+            finalData.price = 89000;
+          } else if (productId === 'love-secret') {
+            finalData.name = '연애비급';
+            finalData.price = 39000;
+          } else if (productId === 'abundance-secret') {
+            finalData.name = '풍요비책';
+            finalData.price = 49000;
+          } else if (productId === 'reunion-secret') {
+            finalData.name = '재회비방';
+            finalData.price = 99000;
+          } else if (productId === 'wangbitna-cream') {
+            finalData.name = '어디서나 왕빛나 크림';
+            finalData.price = 59000;
+          }
+          
+          setProduct(finalData)
         } else if (productId && productMap[productId]) {
           // 2. DB에 없으면 로컬 맵에서 시도
-          setProduct(productMap[productId])
+          setProduct({ ...productMap[productId], slug: productId })
         }
       } catch (err) {
         console.error("Checkout: Failed to fetch product", err)

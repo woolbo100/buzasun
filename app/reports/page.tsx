@@ -18,7 +18,7 @@ export default function ReportsHubPage() {
       desc: '나의 타고난 연애 에너지, 반복되는 사랑의 패턴, 끌리는 사람의 유형과 관계의 흐름을 분석합니다.',
       label: 'PREMIUM REPORT',
       btnText: '연애 리포트 자세히 보기',
-      link: '/reports/love-code',
+      link: '/reports/baekdohwa-report',
       image: '/image/love-code-bg.png', // Reusing existing image if available
       premium: false
     },
@@ -28,7 +28,7 @@ export default function ReportsHubPage() {
       desc: '두 사람이 서로에게 끌리는 이유, 반복해서 부딪히는 지점, 관계가 깊어질 수 있는 방향을 함께 읽어드립니다.',
       label: 'PREMIUM COMPATIBILITY READING',
       btnText: '궁합 리포트 자세히 보기',
-      link: '/reports/premium-compatibility',
+      link: '/reports/premium-compatibility-report',
       image: '/image/premium_compatibility_bg.png', 
       premium: true
     }

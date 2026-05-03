@@ -62,7 +62,7 @@ export default function ReunionSecretPage() {
                   감정으로 붙잡는 재회가 아니라, <br/> 관계의 기준과 메시지를 다시 설계하는 백도화의 재회 전략서
                 </p>
                 <Link 
-                  href="/checkout?productId=reunion-secret-method"
+                  href="/checkout?productId=reunion-secret"
                   className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg"
                 >
                   재회비방 받아보기
@@ -79,7 +79,7 @@ export default function ReunionSecretPage() {
                     <ul className="space-y-4 text-bd-ivory">
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>가격</span>
-                        <span className="text-[var(--accent-gold)] font-bold">29,000원</span>
+                        <span className="text-[var(--accent-gold)] font-bold">99,000원</span>
                       </li>
                       <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
                         <span>제공 형식</span>
@@ -279,7 +279,7 @@ export default function ReunionSecretPage() {
                   붙잡는 재회가 아니라, <br/> 다시 떠오르는 관계를 설계하세요
                 </h2>
                 <Link 
-                  href="/checkout?productId=reunion-secret-method"
+                  href="/checkout?productId=reunion-secret"
                   className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
                   재회비방 받아보기
