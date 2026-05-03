@@ -56,7 +56,7 @@ export default function ShopPage() {
             ...p,
             category: p.category === 'PREMIUM REPORT' ? 'PRIVATE READING' : p.category,
             image: (p.name.includes('궁합') || p.slug.includes('compatibility')) 
-              ? '/image/premium_compatibility_final.png?v=3' 
+              ? '/image/premium_compatibility_v3.png?v=4' 
               : p.image
           }))
 
