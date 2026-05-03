@@ -155,16 +155,17 @@ export default function MissHighlanderPage() {
             {/* 4. Ingredient Section */}
             <section className="mb-32">
               <Reveal>
-                <div className="gungjung-glass p-12 md:p-20 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
-                    <Image 
-                      src="/image/miss/m4.webp" 
-                      alt="Ingredients Background"
-                      fill
-                      className="object-cover"
-                    />
+                {/* 상단 이미지 배치 (m3, m4) */}
+                <div className="grid grid-cols-2 gap-8 mb-12">
+                  <div className="relative aspect-[4/5] rounded-[30px] overflow-hidden border border-white/10 shadow-xl">
+                    <Image src="/image/miss/m3.webp" alt="Formula Detail 1" fill className="object-cover" />
                   </div>
-                  
+                  <div className="relative aspect-[4/5] rounded-[30px] overflow-hidden border border-white/10 shadow-xl">
+                    <Image src="/image/miss/m4.webp" alt="Formula Detail 2" fill className="object-cover" />
+                  </div>
+                </div>
+
+                <div className="gungjung-glass p-12 md:p-20 relative overflow-hidden">
                   <div className="relative z-10">
                     <div className="max-w-2xl">
                       <h2 className="text-3xl md:text-5xl font-elegant font-bold mb-8 text-white">
@@ -265,7 +266,7 @@ export default function MissHighlanderPage() {
             </section>
 
             {/* 8. Final CTA Section */}
-            <section className="relative overflow-hidden rounded-[40px] mb-20 group">
+            <section className="relative aspect-video overflow-hidden rounded-[40px] mb-20 group">
               <div className="absolute inset-0 z-0">
                 <Image 
                   src="/image/miss/m6.webp" 
@@ -276,7 +277,7 @@ export default function MissHighlanderPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/40 to-transparent"></div>
               </div>
               
-              <div className="relative z-10 py-32 px-10 text-center">
+              <div className="relative z-10 h-full flex flex-col items-center justify-center px-10 text-center">
                 <Reveal>
                   <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-12 leading-tight">
                     오늘부터 시작하는<br /> 나만의 이너뷰티 루틴
