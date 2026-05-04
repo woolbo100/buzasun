@@ -113,7 +113,7 @@ export default function Hero() {
             </Link>
             
             <Link
-              href="/ebooks"
+              href="/shop"
               className="group relative px-12 py-5 rounded-lg font-semibold transition-all duration-500"
               style={{
                 background: 'rgba(255, 255, 255, 0.04)',
@@ -121,7 +121,7 @@ export default function Hero() {
                 color: 'var(--text-ivory)',
               }}
             >
-              <span className="relative z-10">시크릿 비법서 둘러보기</span>
+              <span className="relative z-10">비밀상점 둘러보기</span>
             </Link>
           </div>
         </Reveal>

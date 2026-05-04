@@ -8,6 +8,8 @@ import { supabase } from '@/lib/supabase'
 
 export default function Navigation() {
   const showConsultMenu = false
+  const showEbooksMenu = false
+  const showAboutMenu = false
   const consultMenuLabel = '프리미엄 1:1 상담'
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<'reports' | 'ebooks' | null>(null)
@@ -167,15 +169,17 @@ export default function Navigation() {
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8 ml-auto mr-8" ref={dropdownRef}>
-            <Link href="/about" className={menuLinkClass} style={menuLinkStyle}>
-              백도화 소개
-              <span
-                className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
-                style={{
-                  boxShadow: '0 0 10px var(--accent-gold-soft)',
-                }}
-              />
-            </Link>
+            {showAboutMenu && (
+              <Link href="/about" className={menuLinkClass} style={menuLinkStyle}>
+                백도화 소개
+                <span
+                  className="absolute bottom-0 left-1/2 h-[1.5px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                  style={{
+                    boxShadow: '0 0 10px var(--accent-gold-soft)',
+                  }}
+                />
+              </Link>
+            )}
 
             <div
               className="relative py-4"
@@ -235,70 +239,72 @@ export default function Navigation() {
               )}
             </div>
 
-            <div
-              className="relative py-4"
-              onMouseEnter={() => setActiveDropdown('ebooks')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <div className="flex items-center">
-                <Link href="/ebooks" className={`${menuLinkClass} flex items-center`} style={menuLinkStyle}>
-                  시크릿 비법서
-                  <span
-                    className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
-                    style={{
-                      boxShadow: '0 0 8px var(--accent-pink-soft)',
+            {showEbooksMenu && (
+              <div
+                className="relative py-4"
+                onMouseEnter={() => setActiveDropdown('ebooks')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <div className="flex items-center">
+                  <Link href="/ebooks" className={`${menuLinkClass} flex items-center`} style={menuLinkStyle}>
+                    시크릿 비법서
+                    <span
+                      className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                      style={{
+                        boxShadow: '0 0 8px var(--accent-pink-soft)',
+                      }}
+                    />
+                  </Link>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toggleDropdown('ebooks');
                     }}
-                  />
-                </Link>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    toggleDropdown('ebooks');
-                  }}
-                  className="ml-1.5 text-bd-gray hover:text-bd-ivory transition-colors"
-                  style={menuLinkStyle}
-                  aria-label="드롭다운 메뉴"
-                >
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'ebooks' ? 'rotate-180' : ''}`} />
-                </button>
-              </div>
-
-              {/* Invisible bridge */}
-              <div className="absolute top-full left-0 w-full h-4" />
-
-              {activeDropdown === 'ebooks' && (
-                <div
-                  className="absolute top-full left-0 mt-0 w-40 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2 z-[100]"
-                  style={{
-                    background: 'rgba(26, 6, 38, 0.95)',
-                    borderColor: 'var(--accent-gold-soft)',
-                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-gold-soft)',
-                  }}
-                >
-                  <Link
-                    href="/reports/love-secret-ebook"
-                    className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-t-lg"
-                    onClick={() => setActiveDropdown(null)}
+                    className="ml-1.5 text-bd-gray hover:text-bd-ivory transition-colors"
+                    style={menuLinkStyle}
+                    aria-label="드롭다운 메뉴"
                   >
-                    연애비급
-                  </Link>
-                  <Link
-                    href="/reports/abundance-secret-guide"
-                    className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm"
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    풍요비책
-                  </Link>
-                  <Link
-                    href="/reports/reunion-secret-method"
-                    className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-b-lg"
-                    onClick={() => setActiveDropdown(null)}
-                  >
-                    재회비법
-                  </Link>
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'ebooks' ? 'rotate-180' : ''}`} />
+                  </button>
                 </div>
-              )}
-            </div>
+
+                {/* Invisible bridge */}
+                <div className="absolute top-full left-0 w-full h-4" />
+
+                {activeDropdown === 'ebooks' && (
+                  <div
+                    className="absolute top-full left-0 mt-0 w-40 rounded-lg shadow-lg backdrop-blur-xl border transition-all duration-200 animate-in fade-in slide-in-from-top-2 z-[100]"
+                    style={{
+                      background: 'rgba(26, 6, 38, 0.95)',
+                      borderColor: 'var(--accent-gold-soft)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-gold-soft)',
+                    }}
+                  >
+                    <Link
+                      href="/reports/love-secret-ebook"
+                      className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-t-lg"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      연애비급
+                    </Link>
+                    <Link
+                      href="/reports/abundance-secret-guide"
+                      className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      풍요비책
+                    </Link>
+                    <Link
+                      href="/reports/reunion-secret-method"
+                      className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-b-lg"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      재회비법
+                    </Link>
+                  </div>
+                )}
+              </div>
+            )}
 
             <Link href="/shop" className={menuLinkClass} style={menuLinkStyle}>
               비밀상점
@@ -306,6 +312,16 @@ export default function Navigation() {
                 className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
                   boxShadow: '0 0 8px var(--accent-pink-soft)',
+                }}
+              />
+            </Link>
+
+            <Link href="/contact" className={menuLinkClass} style={menuLinkStyle}>
+              문의하기
+              <span
+                className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                style={{
+                  boxShadow: '0 0 10px var(--accent-gold-soft)',
                 }}
               />
             </Link>
@@ -351,22 +367,24 @@ export default function Navigation() {
             style={{ borderColor: scrolled ? 'rgba(216, 191, 163, 0.2)' : 'rgba(216, 191, 163, 0.1)' }}
           >
             <div className="py-4 space-y-1">
-              <Link
-                href="/about"
-                className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
-                onClick={closeMobileMenu}
-              >
-                백도화 소개
-              </Link>
+              {showAboutMenu && (
+                <Link
+                  href="/about"
+                  className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
+                  onClick={closeMobileMenu}
+                >
+                  백도화 소개
+                </Link>
+              )}
               <div className="px-4 py-2">
                 <div className="flex items-center justify-between">
-                  <Link
-                    href="/reports"
-                    className="flex-1 text-bd-gray hover:text-bd-ivory transition-colors rounded-lg px-2 py-2"
-                    onClick={closeMobileMenu}
-                  >
-                    선천코드 리포트
-                  </Link>
+                    <Link
+                      href="/reports"
+                      className="flex-1 text-bd-gray hover:text-bd-ivory transition-colors rounded-lg px-2 py-2"
+                      onClick={closeMobileMenu}
+                    >
+                      선천코드 리포트
+                    </Link>
                   <button
                     onClick={() => toggleDropdown('reports')}
                     className="text-bd-ivory/60 hover:text-[var(--accent-gold)] transition-colors px-2 py-2"
@@ -395,49 +413,51 @@ export default function Navigation() {
                 )}
               </div>
 
-              <div className="px-4 py-2">
-                <div className="flex items-center justify-between">
-                  <Link
-                    href="/ebooks"
-                    className="flex-1 text-bd-gray hover:text-bd-ivory transition-colors rounded-lg px-2 py-2"
-                    onClick={closeMobileMenu}
-                  >
-                    시크릿 비법서
-                  </Link>
-                  <button
-                    onClick={() => toggleDropdown('ebooks')}
-                    className="text-bd-ivory/60 hover:text-[var(--accent-gold)] transition-colors px-2 py-2"
-                    aria-label="드롭다운 메뉴"
-                  >
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'ebooks' ? 'rotate-180' : ''}`} />
-                  </button>
-                </div>
-                {activeDropdown === 'ebooks' && (
-                  <div className="mt-2 ml-4 space-y-1">
-                    <Link
-                      href="/reports/love-secret-ebook"
-                      className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
-                      onClick={closeMobileMenu}
-                    >
-                      연애비급
-                    </Link>
-                    <Link
-                      href="/reports/abundance-secret-guide"
-                      className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
-                      onClick={closeMobileMenu}
-                    >
-                      풍요비책
-                    </Link>
-                    <Link
-                      href="/reports/reunion-secret-method"
-                      className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
-                      onClick={closeMobileMenu}
-                    >
-                      재회비법
-                    </Link>
+                {showEbooksMenu && (
+                  <div className="px-4 py-2">
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href="/ebooks"
+                        className="flex-1 text-bd-gray hover:text-bd-ivory transition-colors rounded-lg px-2 py-2"
+                        onClick={closeMobileMenu}
+                      >
+                        시크릿 비법서
+                      </Link>
+                      <button
+                        onClick={() => toggleDropdown('ebooks')}
+                        className="text-bd-ivory/60 hover:text-[var(--accent-gold)] transition-colors px-2 py-2"
+                        aria-label="드롭다운 메뉴"
+                      >
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'ebooks' ? 'rotate-180' : ''}`} />
+                      </button>
+                    </div>
+                    {activeDropdown === 'ebooks' && (
+                      <div className="mt-2 ml-4 space-y-1">
+                        <Link
+                          href="/reports/love-secret-ebook"
+                          className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
+                          onClick={closeMobileMenu}
+                        >
+                          연애비급
+                        </Link>
+                        <Link
+                          href="/reports/abundance-secret-guide"
+                          className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
+                          onClick={closeMobileMenu}
+                        >
+                          풍요비책
+                        </Link>
+                        <Link
+                          href="/reports/reunion-secret-method"
+                          className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
+                          onClick={closeMobileMenu}
+                        >
+                          재회비법
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 )}
-              </div>
 
               <Link
                 href="/shop"
@@ -445,6 +465,13 @@ export default function Navigation() {
                 onClick={closeMobileMenu}
               >
                 비밀상점
+              </Link>
+              <Link
+                href="/contact"
+                className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
+                onClick={closeMobileMenu}
+              >
+                문의하기
               </Link>
               {showConsultMenu && (
                 <Link

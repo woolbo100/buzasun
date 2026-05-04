@@ -6,6 +6,7 @@ import CompatibilityBanner from '@/components/CompatibilityBanner'
 import ProductCards from '@/components/ProductCards'
 import Testimonials from '@/components/Testimonials'
 import Ebooks from '@/components/Ebooks'
+import FeaturedProducts from '@/components/FeaturedProducts'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -17,6 +18,8 @@ import GlobalBackground from '@/components/GlobalBackground'
 
 export default function Home() {
   useScrollAnimation()
+
+  const showSecretArchive = false;
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
@@ -49,7 +52,11 @@ export default function Home() {
           <Testimonials />
           
           <div className="gold-divider my-10" />
-          <Ebooks />
+          {showSecretArchive ? (
+            <Ebooks />
+          ) : (
+            <FeaturedProducts />
+          )}
           
           <div className="gold-divider my-10" />
           <About />
