@@ -133,8 +133,12 @@ export default function PhysicalProductDetail({
                     PREMIUM PHYSICAL CARE
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-7xl font-elegant font-bold mb-10 text-white leading-tight">
-                  {title}
+                <h1 className="text-3xl md:text-5xl font-elegant font-bold mb-10 text-white leading-tight">
+                  {title.includes(' ') ? (
+                    <>
+                      {title.split(' ')[0]} <span style={{ color: accentColor }}>{title.split(' ').slice(1).join(' ')}</span>
+                    </>
+                  ) : title}
                 </h1>
                 
                 <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">

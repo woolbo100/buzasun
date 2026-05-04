@@ -5,7 +5,7 @@ import PhysicalProductDetail from '@/components/PhysicalProductDetail'
 export default function PremiumBookmarkPage() {
   const productData = {
     productId: 'premium-bookmark',
-    title: 'Premium Flower Bookmark Set',
+    title: '프리미엄 플라워 북마크 세트',
     subtitle: '소중한 순간을 오래 기억하게 해주는 선물',
     description: `Premium Flower Bookmark Set는 책 속 한 페이지를 기억하게 해주는 프리미엄 메탈 북마크입니다.
 
@@ -19,7 +19,7 @@ export default function PremiumBookmarkPage() {
     giftImage: '/image/pre/p5.webp',
     ctaImage: '/image/pre/p6.webp',
     price: '9,900',
-    accentColor: '#BA8D7E', // 샴페인 골드/로즈골드 톤
+    accentColor: '#FFC0CB', // 베이비 핑크
     recommendedPoints: [
       '책을 사랑하는 사람에게 특별한 선물을 하고 싶은 분',
       '의미 있는 기념일 선물을 찾고 있는 분',
@@ -57,7 +57,7 @@ export default function PremiumBookmarkPage() {
 - 포장 : 프리미엄 기프트 패키지 포함`,
     warningText: '제품 특성상 미세한 제작 차이가 있을 수 있으며, 이는 불량 사유에 해당하지 않습니다.',
     ctaTitle: '기억되는 선물은 오래 남습니다',
-    ctaButtonText: 'Premium Flower Bookmark Set 구매하기',
+    ctaButtonText: '프리미엄 플라워 북마크 세트 구매하기',
     options: [
       {
         name: "색상",

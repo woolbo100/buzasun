@@ -88,7 +88,7 @@ function CheckoutContent() {
     },
     "premium-bookmark": {
       name: "프리미엄 플라워 북마크 세트",
-      display_title: "Premium Flower Bookmark Set",
+      display_title: "프리미엄 플라워 북마크 세트",
       type: "physical",
       price: 9900,
       category: "PRIVATE OBJECT",
