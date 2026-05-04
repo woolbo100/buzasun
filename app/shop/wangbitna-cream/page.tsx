@@ -14,7 +14,7 @@ export default function WangbitnaCreamPage() {
     overviewImage: '/image/wangbitna/w2.webp',
     recommendedImage: '/image/wangbitna/w3.webp',
     formulaImage: '/image/wangbitna/w4.webp',
-    giftImage: '/image/wangbitna/w5.webp',
+    giftImage: '/image/wangbitna/w5.png',
     ctaImage: '/image/wangbitna/w6.webp',
     price: '59,000', // 가격은 명시되어 있지 않아 임의로 설정하거나 확인 필요, 미스하이랜더(6.9만)보다 조금 높게 설정
     recommendedPoints: [

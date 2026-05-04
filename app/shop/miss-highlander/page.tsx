@@ -14,7 +14,7 @@ export default function MissHighlanderPage() {
     overviewImage: '/image/miss/m2.webp',
     recommendedImage: '/image/miss/m4.webp',
     formulaImage: '/image/miss/m5.webp',
-    giftImage: '/image/miss/m3.webp',
+    giftImage: '/image/miss/m3.png',
     ctaImage: '/image/miss/m6.webp',
     price: '69,000',
     recommendedPoints: [
