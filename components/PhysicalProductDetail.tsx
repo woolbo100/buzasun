@@ -33,6 +33,7 @@ interface PhysicalProductDetailProps {
   formulaTitle?: string;
   howToUse?: string;
   warningText?: string;
+  accentColor?: string;
 }
 
 export default function PhysicalProductDetail({
@@ -53,13 +54,14 @@ export default function PhysicalProductDetail({
   giftDesc,
   formulaTitle,
   howToUse,
-  warningText
+  warningText,
+  accentColor = '#FFB6C1'
 }: PhysicalProductDetailProps) {
   useScrollAnimation()
   const checkoutUrl = `/checkout?productId=${productId}`
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514]">
+    <main className="relative min-h-screen bg-[#0a0514]" style={{ '--accent-shadow': `${accentColor}26` } as any}>
       <GlobalBackground src="/image/shop-hero.png" brightCenter={false}>
         <Navigation />
 
@@ -73,8 +75,8 @@ export default function PhysicalProductDetail({
                   <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase"
                     style={{
                       background: 'rgba(216, 191, 163, 0.1)',
-                      border: '1px solid rgba(255, 182, 193, 0.3)',
-                      color: '#FFB6C1',
+                      border: `1px solid ${accentColor}4D`,
+                      color: accentColor,
                     }}>
                     PREMIUM PHYSICAL CARE
                   </span>
@@ -100,11 +102,12 @@ export default function PhysicalProductDetail({
                 <div className="flex flex-col items-center gap-6">
                   <Link 
                     href={checkoutUrl}
-                    className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl shadow-[0_0_40px_rgba(255,182,193,0.15)] hover:scale-105 transition-all duration-500"
+                    className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-500"
                     style={{
                       background: 'linear-gradient(135deg, #2D0A1E 0%, #1A0514 100%)',
                       border: '1px solid rgba(230, 190, 138, 0.4)',
-                      color: '#E6BE8A'
+                      color: '#E6BE8A',
+                      boxShadow: `0 0 40px ${accentColor}26`
                     }}
                   >
                     구매하기 ({price}원)
@@ -122,7 +125,7 @@ export default function PhysicalProductDetail({
                   </div>
                   <div className="space-y-10">
                     <h2 className="text-3xl md:text-4xl font-elegant font-bold text-white leading-tight">
-                      {title}의<br /> <span style={{ color: '#FFB6C1' }}>특별한 가치</span>
+                      {title}의<br /> <span style={{ color: accentColor }}>특별한 가치</span>
                     </h2>
                     <p className="text-lg text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       {description}
@@ -138,12 +141,12 @@ export default function PhysicalProductDetail({
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                   <div className="space-y-12">
                     <h2 className="text-3xl font-elegant font-bold text-white tracking-widest mb-4">
-                      이런 분께 <span style={{ color: '#FFB6C1' }}>추천합니다</span>
+                      이런 분께 <span style={{ color: accentColor }}>추천합니다</span>
                     </h2>
                     <div className="grid grid-cols-1 gap-4">
                       {recommendedPoints.map((item, idx) => (
                         <div key={idx} className="gungjung-glass p-6 border-white/[0.03] flex items-center gap-6 group">
-                          <div className="w-10 h-10 rounded-full bg-white/[0.03] flex items-center justify-center text-[#FFB6C1]/50 shrink-0">
+                          <div className="w-10 h-10 rounded-full bg-white/[0.03] flex items-center justify-center shrink-0" style={{ color: `${accentColor}80` }}>
                             <i className="fas fa-check text-sm"></i>
                           </div>
                           <p className="text-[#EDE6DA] opacity-70 text-base font-light break-keep">{item}</p>
@@ -166,7 +169,7 @@ export default function PhysicalProductDetail({
                     {formulaTitle.includes('프리미엄') ? (
                       <>
                         {formulaTitle.split('프리미엄')[0]}
-                        <span className="text-[#FFB6C1]">프리미엄</span>
+                        <span style={{ color: accentColor }}>프리미엄</span>
                         {formulaTitle.split('프리미엄')[1]}
                       </>
                     ) : formulaTitle}
@@ -181,7 +184,7 @@ export default function PhysicalProductDetail({
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {ingredients.map((ing, idx) => (
                       <div key={idx} className="flex gap-6 items-start p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] transition-all group">
-                        <div className="w-12 h-12 rounded-xl bg-[#2D0A1E] border border-[#FFB6C1]/20 flex items-center justify-center text-[#FFB6C1] shrink-0">
+                        <div className="w-12 h-12 rounded-xl bg-[#2D0A1E] flex items-center justify-center shrink-0" style={{ borderColor: `${accentColor}33`, color: accentColor, border: '1px solid' }}>
                           <i className={`fas ${ing.icon} text-lg`}></i>
                         </div>
                         <div>
@@ -219,7 +222,7 @@ export default function PhysicalProductDetail({
               <section className="mb-32">
                 <Reveal>
                   <div className="gungjung-glass p-10 border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent">
-                    <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#FFB6C1]/50 pl-6">사용 방법</h2>
+                    <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 pl-6" style={{ borderColor: `${accentColor}80` }}>사용 방법</h2>
                     <div className="space-y-6">
                       <p className="text-lg text-[#EDE6DA] opacity-80 leading-relaxed break-keep whitespace-pre-wrap">
                         {howToUse}
@@ -266,7 +269,7 @@ export default function PhysicalProductDetail({
                   <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-12 leading-tight">
                     {title}와 함께하는<br />아름다운 변화
                   </h2>
-                  <Link href={checkoutUrl} className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl shadow-[0_0_40px_rgba(255,182,193,0.15)] hover:scale-105 transition-all duration-500" style={{ background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)', color: '#2D0A1E' }}>
+                  <Link href={checkoutUrl} className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-500" style={{ background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)', color: '#2D0A1E', boxShadow: `0 0 40px ${accentColor}26` }}>
                     지금 바로 구매하기
                   </Link>
                 </Reveal>

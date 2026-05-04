@@ -18,7 +18,7 @@ export default function GoldenForeverLadyPage() {
     formulaImage: '/image/golden/m4.webp',
     giftImage: '/image/golden/m5.webp',
     ctaImage: '/image/golden/m6.webp',
-    price: '139,000',
+    price: '89,000',
     recommendedPoints: [
       '갱년기 전후 여성 건강 관리가 필요한 분',
       '얼굴 열감, 컨디션 변화 등으로 일상 밸런스가 신경 쓰이는 분',

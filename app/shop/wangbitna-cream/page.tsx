@@ -47,6 +47,7 @@ export default function WangbitnaCreamPage() {
 피부 상태에 따라 사용량과 사용 횟수는 조절할 수 있습니다.`,
     warningText: `화장품은 질병의 예방 또는 치료를 위한 의약품이 아닙니다.
 사용 중 이상이 있을 경우 사용을 중지하고 전문가와 상담해주세요.`,
+    accentColor: '#FBC1A7',
   }
 
   return <PhysicalProductDetail {...productData} />
