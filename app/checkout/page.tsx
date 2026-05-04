@@ -43,6 +43,13 @@ function CheckoutContent() {
       category: "ENERGY CARE",
       image: "/image/wangbitna/w7.webp"
     },
+    "golden-forever-lady": {
+      name: "Golden Forever Lady",
+      type: "physical",
+      price: 139000,
+      category: "ENERGY CARE",
+      image: "/image/golden/m1.webp"
+    },
     "baekdohwa-report": {
       name: "선천코드 연애 리포트",
       type: "digital_report",

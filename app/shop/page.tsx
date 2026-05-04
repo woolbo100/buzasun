@@ -41,7 +41,8 @@ export default function ShopPage() {
     'love-secret': '/image/love-secret-thumb.png',
     'love-secret-ebook': '/image/love-secret-thumb.png',
     'miss-highlander': '/image/miss/m1.webp',
-    'wangbitna-cream': '/image/wangbitna/w7.webp'
+    'wangbitna-cream': '/image/wangbitna/w7.webp',
+    'golden-forever-lady': '/image/golden/m1.webp'
   }
   
   useEffect(() => {
@@ -60,6 +61,7 @@ export default function ShopPage() {
             const isCompatibility = (p.name?.includes('궁합') || p.slug?.includes('compatibility'));
             const isMissHighlander = p.slug === 'miss-highlander';
             const isWangbitna = p.slug === 'wangbitna-cream';
+            const isGoldenForever = p.slug === 'golden-forever-lady';
             const isLoveSecret = p.slug?.includes('love-secret') || p.name?.includes('연애비급');
             const isAbundanceSecret = p.slug?.includes('abundance-secret') || p.name?.includes('풍요비책');
             const isReunionSecret = p.slug?.includes('reunion-secret') || p.name?.includes('재회비방');
@@ -79,6 +81,7 @@ export default function ShopPage() {
               slug: currentSlug,
               main_image: isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :
+                          isGoldenForever ? '/image/golden/m1.webp' :
                           isLoveSecret ? '/image/love-secret-thumb.png' :
                           isAbundanceSecret ? '/image/abundance-secret-thumb.png' :
                           isReunionSecret ? '/image/reunion-secret-thumb.png' :
@@ -113,6 +116,22 @@ export default function ShopPage() {
               description: '여성의 우아한 자신감과 탄력 있는 피부를 위한 프리미엄 바디 케어 리추얼',
               price: 59000,
               main_image: '/image/wangbitna/w7.webp',
+              is_active: true,
+              type: 'physical'
+            })
+          }
+
+          // 골든 포에버 레이디 수동 추가
+          const hasGoldenForever = mappedData.some(p => p.slug === 'golden-forever-lady')
+          if (!hasGoldenForever) {
+            mappedData.push({
+              id: 'manual-golden-forever-lady',
+              name: 'Golden Forever Lady',
+              slug: 'golden-forever-lady',
+              category: 'ENERGY CARE',
+              description: '갱년기 여성 건강의 균형을 위한 프리미엄 여성 건강기능식품',
+              price: 139000,
+              main_image: '/image/golden/m1.webp',
               is_active: true,
               type: 'physical'
             })
