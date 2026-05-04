@@ -92,7 +92,7 @@ function CheckoutContent() {
       type: "physical",
       price: 9900,
       category: "PRIVATE OBJECT",
-      image: "/image/bookmark/p7.webp",
+      image: "/image/pre/p7.webp",
       options: [
         {
           name: "색상",

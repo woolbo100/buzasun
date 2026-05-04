@@ -43,7 +43,7 @@ export default function ShopPage() {
     'miss-highlander': '/image/miss/m1.webp',
     'wangbitna-cream': '/image/wangbitna/w7.webp',
     'golden-forever-lady': '/image/golden/m7.webp',
-    'premium-bookmark': '/image/bookmark/p7.webp'
+    'premium-bookmark': '/image/pre/p7.webp'
   }
   
   useEffect(() => {
@@ -88,7 +88,7 @@ export default function ShopPage() {
                           isLoveSecret ? '/image/love-secret-thumb.png' :
                           isAbundanceSecret ? '/image/abundance-secret-thumb.png' :
                           isReunionSecret ? '/image/reunion-secret-thumb.png' :
-                          isPremiumBookmark ? '/image/bookmark/p7.webp' :
+                          isPremiumBookmark ? '/image/pre/p7.webp' :
                           (isCompatibility ? '/image/premium_compatibility_v3.png?v=4' : p.main_image)
             };
           })
@@ -150,7 +150,7 @@ export default function ShopPage() {
               category: 'PRIVATE OBJECT',
               description: '섬세한 금속 디테일과 우아한 태슬 장식이 더해진 프리미엄 플라워 북마크 세트입니다.',
               price: 9900,
-              main_image: '/image/bookmark/p7.webp',
+              main_image: '/image/pre/p7.webp',
               is_active: true,
               type: 'physical',
               featured: true,

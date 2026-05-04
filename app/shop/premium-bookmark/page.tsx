@@ -12,12 +12,12 @@ export default function PremiumBookmarkPage() {
 섬세한 플라워 패턴과 우아한 나비 디테일, 고급스러운 태슬 장식이 더해져 단순한 독서용품이 아니라 의미를 담은 선물로 완성됩니다.
 
 나를 위한 작은 사치로도, 소중한 사람을 위한 특별한 선물로도 잘 어울리는 프리미엄 기프트입니다.`,
-    heroImage: '/image/bookmark/p1.webp',
-    overviewImage: '/image/bookmark/p2.webp',
-    recommendedImage: '/image/bookmark/p3.webp',
-    formulaImage: '/image/bookmark/p4.webp',
-    giftImage: '/image/bookmark/p5.webp',
-    ctaImage: '/image/bookmark/p6.webp',
+    heroImage: '/image/pre/p1.webp',
+    overviewImage: '/image/pre/p2.webp',
+    recommendedImage: '/image/pre/p3.webp',
+    formulaImage: '/image/pre/p4.webp',
+    giftImage: '/image/pre/p5.webp',
+    ctaImage: '/image/pre/p6.webp',
     price: '9,900',
     accentColor: '#BA8D7E', // 샴페인 골드/로즈골드 톤
     recommendedPoints: [
