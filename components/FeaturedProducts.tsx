@@ -40,7 +40,19 @@ export default function FeaturedProducts() {
           .limit(3)
 
         if (!error && data && data.length > 0) {
-          setProducts(data as any)
+          const mappedData = data.map(p => {
+            const slug = p.slug?.trim().toLowerCase();
+            let main_image = p.main_image;
+            
+            // 비밀상점(Shop)과 동일한 이미지 매핑 적용
+            if (slug === 'miss-highlander') main_image = '/image/miss/m1.webp';
+            else if (slug === 'wangbitna-cream') main_image = '/image/wangbitna/w7.webp';
+            else if (slug === 'golden-forever-lady') main_image = '/image/golden/m7.webp';
+            else if (slug === 'premium-bookmark') main_image = '/image/pre/p7.webp';
+            
+            return { ...p, main_image };
+          });
+          setProducts(mappedData as any)
         } else {
           // 데이터가 없을 경우 기본값(Fallback) 사용
           setProducts([
@@ -66,7 +78,7 @@ export default function FeaturedProducts() {
             },
             {
               id: 'f3',
-              name: '플라워 북마크 세트',
+              name: '프리미엄 플라워 북마크 세트',
               slug: 'premium-bookmark',
               category: 'PRIVATE OBJECT',
               description: '소중한 사람에게 선물하기 좋은 프리미엄 감성 오브제',
