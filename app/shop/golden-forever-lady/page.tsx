@@ -5,13 +5,14 @@ import PhysicalProductDetail from '@/components/PhysicalProductDetail'
 export default function GoldenForeverLadyPage() {
   const productData = {
     productId: 'golden-forever-lady',
-    title: 'Golden Forever Lady',
+    title: '골든 포에버 레이디',
     subtitle: '여전히 빛나는 당신을 위한 골든 밸런스',
-    description: `Golden Forever Lady는 갱년기 여성 건강의 균형을 위한 프리미엄 여성 건강기능식품입니다. 
-
-변화의 시기를 더 편안하고 우아하게 지나갈 수 있도록, 매일의 건강 루틴에 골든 포에버 레이디를 더해보세요. 
-
-여성의 몸과 마음이 변화하는 시기에 보다 건강한 일상과 활력 있는 컨디션을 관리하고 싶은 분들을 위한 백도화의 프리미엄 여성 밸런스 루틴입니다.`,
+    description: `골든 포에버 레이디는 갱년기 여성 건강의 균형을 위한 프리미엄 여성 건강기능식품입니다. 
+    
+    변화의 시기를 더 편안하고 우아하게 지나갈 수 있도록, 매일의 건강 루틴에 골든 포에버 레이디를 더해보세요. 
+    
+    여성의 몸과 마음이 변화하는 시기에 보다 건강한 일상과 활력 있는 컨디션을 관리하고 싶은 분들을 위한 백도화의 프리미엄 여성 밸런스 루틴입니다.`,
+    accentColor: '#E6BE8A',
     heroImage: '/image/golden/m1.webp',
     overviewImage: '/image/golden/m2.webp',
     recommendedImage: '/image/golden/m3.webp',
