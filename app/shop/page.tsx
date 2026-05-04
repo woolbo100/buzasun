@@ -34,9 +34,12 @@ export default function ShopPage() {
   const defaultImageMap: { [key: string]: string } = {
     'baekdohwa-report': '/image/product-love-report.png',
     'premium-compatibility-report': '/image/premium_compatibility_report.png',
-    'reunion-secret': '/image/product-reunion-reading.png',
-    'abundance-secret': '/image/product-abundance.png',
-    'love-secret': '/image/product-charm-signal.png',
+    'reunion-secret': '/image/reunion-secret-thumb.png',
+    'reunion-secret-method': '/image/reunion-secret-thumb.png',
+    'abundance-secret': '/image/abundance-secret-thumb.png',
+    'abundance-secret-guide': '/image/abundance-secret-thumb.png',
+    'love-secret': '/image/love-secret-thumb.png',
+    'love-secret-ebook': '/image/love-secret-thumb.png',
     'miss-highlander': '/image/miss/m1.webp',
     'wangbitna-cream': '/image/wangbitna/w7.webp'
   }
@@ -57,6 +60,9 @@ export default function ShopPage() {
             const isCompatibility = (p.name?.includes('궁합') || p.slug?.includes('compatibility'));
             const isMissHighlander = p.slug === 'miss-highlander';
             const isWangbitna = p.slug === 'wangbitna-cream';
+            const isLoveSecret = p.slug?.includes('love-secret') || p.name?.includes('연애비급');
+            const isAbundanceSecret = p.slug?.includes('abundance-secret') || p.name?.includes('풍요비책');
+            const isReunionSecret = p.slug?.includes('reunion-secret') || p.name?.includes('재회비방');
             
             // 슬러그 보정 (사용자 지침 반영: 공백 및 표준 ID 유지)
             let currentSlug = p.slug;
@@ -73,6 +79,9 @@ export default function ShopPage() {
               slug: currentSlug,
               main_image: isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :
+                          isLoveSecret ? '/image/love-secret-thumb.png' :
+                          isAbundanceSecret ? '/image/abundance-secret-thumb.png' :
+                          isReunionSecret ? '/image/reunion-secret-thumb.png' :
                           (isCompatibility ? '/image/premium_compatibility_v3.png?v=4' : p.main_image)
             };
           })

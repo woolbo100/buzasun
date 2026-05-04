@@ -62,21 +62,21 @@ function CheckoutContent() {
       type: "digital_ebook",
       price: 19000,
       category: "SECRET METHOD",
-      image: "/image/product-charm-signal.png"
+      image: "/image/love-secret-thumb.png"
     },
-    " abundance-secret-guide": {
+    "abundance-secret-guide": {
       name: "풍요비책",
       type: "digital_ebook",
       price: 19000,
       category: "SECRET METHOD",
-      image: "/image/product-abundance.png"
+      image: "/image/abundance-secret-thumb.png"
     },
     "reunion-secret-method": {
       name: "재회비방",
       type: "digital_ebook",
       price: 19000,
       category: "SECRET METHOD",
-      image: "/image/product-reunion-reading.png"
+      image: "/image/reunion-secret-thumb.png"
     }
   }
 

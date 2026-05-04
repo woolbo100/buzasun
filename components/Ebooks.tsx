@@ -9,18 +9,21 @@ const ebooks = [
     desc: "관계의 흐름을 바꾸는 심리·프레임·대화 설계",
     href: "/checkout?productId=love-secret",
     subLabel: "관계 설계 비법서",
+    image: "/image/love-secret-thumb.png"
   },
   {
     title: "풍요비책",
     desc: "상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
     href: "/checkout?productId=abundance-secret",
     subLabel: "상태·주파수 비법서",
+    image: "/image/abundance-secret-thumb.png"
   },
   {
     title: "재회비방",
     desc: "감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
     href: "/checkout?productId=reunion-secret",
     subLabel: "메시지·기준 비법서",
+    image: "/image/reunion-secret-thumb.png"
   },
 ] as const
 
@@ -104,33 +107,45 @@ export default function Ebooks() {
                     href={ebook.href}
                     className="group block h-full w-full"
                   >
-                    <div className="gungjung-glass h-full p-8 flex flex-col relative overflow-hidden">
+                    <div className="gungjung-glass h-full flex flex-col relative overflow-hidden transition-all duration-500 hover:-translate-y-2">
                       
-                      {/* 카테고리 태그 */}
-                      <div className="flex items-center gap-2 mb-6 flex-wrap">
-                        <div 
-                          className="px-3 py-1 rounded-full border text-[10px] md:text-xs tracking-wider"
-                          style={{
-                            borderColor: 'rgba(216, 191, 163, 0.3)',
-                            background: 'rgba(59, 15, 27, 0.4)',
-                            color: 'var(--text-ivory)',
-                          }}
-                        >
-                          {ebook.subLabel}
-                        </div>
+                      {/* 상품 이미지 영역 */}
+                      <div className="relative aspect-[3/4] overflow-hidden">
+                        <img 
+                          src={ebook.image} 
+                          alt={ebook.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#1A0F2E] via-transparent to-transparent opacity-60" />
                       </div>
 
-                      <h3 className="text-2xl md:text-3xl font-elegant font-bold mb-4 text-[#F5F5F5]">
-                        {ebook.title}
-                      </h3>
+                      <div className="p-8 flex flex-col flex-grow">
+                        {/* 카테고리 태그 */}
+                        <div className="flex items-center gap-2 mb-4 flex-wrap">
+                          <div 
+                            className="px-3 py-1 rounded-full border text-[10px] md:text-xs tracking-wider"
+                            style={{
+                              borderColor: 'rgba(216, 191, 163, 0.3)',
+                              background: 'rgba(59, 15, 27, 0.4)',
+                              color: 'var(--text-ivory)',
+                            }}
+                          >
+                            {ebook.subLabel}
+                          </div>
+                        </div>
 
-                      <p className="text-sm md:text-base mb-8 leading-relaxed text-[#EDE6DA] opacity-70">
-                        {ebook.desc}
-                      </p>
+                        <h3 className="text-2xl md:text-3xl font-elegant font-bold mb-4 text-[#F5F5F5] group-hover:text-[var(--accent-gold)] transition-colors">
+                          {ebook.title}
+                        </h3>
 
-                      <div className="mt-auto">
-                        <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--accent-gold)] group-hover:translate-x-1 transition-transform">
-                          자세히 보기 <span style={{ color: 'var(--accent-pink)' }}>→</span>
+                        <p className="text-sm md:text-base mb-8 leading-relaxed text-[#EDE6DA] opacity-70 group-hover:opacity-100 transition-opacity">
+                          {ebook.desc}
+                        </p>
+
+                        <div className="mt-auto">
+                          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--accent-gold)]">
+                            자세히 보기 <span style={{ color: 'var(--accent-pink)' }}>→</span>
+                          </div>
                         </div>
                       </div>
                     </div>

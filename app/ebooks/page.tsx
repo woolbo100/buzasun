@@ -16,7 +16,7 @@ export default function EbooksPage() {
       description: '상대방의 무의식을 자극하는 당신만의 고유한 아우라 분석.',
       href: '/reports/love-secret-ebook',
       cta: '연애비급 자세히 보기',
-      image: '/image/product-charm-signal.png',
+      image: '/image/love-secret-thumb.png',
       category: 'AURA ANALYSIS'
     },
     {
@@ -24,7 +24,7 @@ export default function EbooksPage() {
       description: '당신에게 흘러들어오는 풍요의 물길을 트는 에너지 활용법.',
       href: '/reports/abundance-secret-guide',
       cta: '풍요비책 자세히 보기',
-      image: '/image/product-abundance.png',
+      image: '/image/abundance-secret-thumb.png',
       category: 'ENERGY GUIDE'
     },
     {
@@ -32,7 +32,7 @@ export default function EbooksPage() {
       description: '어긋난 인연을 다시 잇는 가장 은밀하고 확실한 방법.',
       href: '/reports/reunion-secret-method',
       cta: '재회비방 자세히 보기',
-      image: '/image/product-reunion-reading.png',
+      image: '/image/reunion-secret-thumb.png',
       category: 'SECRET METHOD'
     },
   ]
@@ -65,7 +65,7 @@ export default function EbooksPage() {
                   className="gungjung-glass group transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col"
                 >
                   {/* 상품 이미지 영역 */}
-                  <div className="relative aspect-[4/5] overflow-hidden">
+                  <div className="relative aspect-[3/4] overflow-hidden">
                     <img 
                       src={ebook.image} 
                       alt={ebook.title}
