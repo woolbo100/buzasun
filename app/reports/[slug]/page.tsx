@@ -24,6 +24,13 @@ export default function DynamicReportPage() {
   useScrollAnimation()
 
   useEffect(() => {
+    // [Hiding Logic] 시크릿 비법서/리포트 관련 슬러그 숨김 처리
+    const hiddenSlugs = ['love-secret-ebook', 'abundance-secret-guide', 'reunion-secret-method', 'love-secret'];
+    if (hiddenSlugs.includes(slug)) {
+      router.replace('/');
+      return;
+    }
+
     async function fetchProduct() {
       try {
         setLoading(true)

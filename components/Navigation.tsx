@@ -9,7 +9,7 @@ import { supabase } from '@/lib/supabase'
 export default function Navigation() {
   const showConsultMenu = false
   const showEbooksMenu = false
-  const showAboutMenu = false
+  const showAboutMenu = true
   const consultMenuLabel = '프리미엄 1:1 상담'
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<'reports' | 'ebooks' | null>(null)

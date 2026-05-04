@@ -1,5 +1,6 @@
 'use client'
 
+import { redirect } from 'next/navigation'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
@@ -8,6 +9,9 @@ import Link from 'next/link'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function LoveSecretEbookPage() {
+  redirect('/')
+  return null
+  
   useScrollAnimation()
 
   const reviews = [

@@ -37,6 +37,12 @@ export default function EbooksPage() {
     },
   ]
 
+  // [Hiding Logic] 시크릿 비법서 전체 숨김 처리
+  if (typeof window !== 'undefined') {
+    window.location.href = '/';
+  }
+  return null;
+
   return (
     <main className="relative min-h-screen">
       <GlobalBackground src="/image/main4.png">

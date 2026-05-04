@@ -158,7 +158,11 @@ export default function ShopPage() {
             })
           }
 
-          setProducts(mappedData)
+          // [Hiding Logic] 전자책 3종 숨김 처리 (데이터는 유지하되 외부 노출만 차단)
+          const hiddenSlugs = ['love-secret-ebook', 'abundance-secret-guide', 'reunion-secret-method', 'love-secret', 'abundance-secret', 'reunion-secret'];
+          const finalData = mappedData.filter(p => !hiddenSlugs.includes(p.slug?.trim().toLowerCase()));
+
+          setProducts(finalData)
         }
       } catch (err) {
         console.error("Shop: Failed to fetch products", err)
@@ -168,6 +172,9 @@ export default function ShopPage() {
     }
     fetchProducts()
   }, [])
+
+  // [Hiding Logic] 숨겨진 상품이 포함된 카테고리 필터링
+  const visibleCategories = categories.filter(cat => cat !== 'SECRET METHOD');
 
   const filteredProducts = activeCategory === 'ALL' 
     ? products 
@@ -225,7 +232,7 @@ export default function ShopPage() {
         <section id="product-list" className="sticky top-16 z-40 py-8 bg-[#0c0816]/80 backdrop-blur-md border-y border-white/5">
           <div className="container mx-auto px-6">
             <div className="flex justify-center items-center gap-8 md:gap-16 overflow-x-auto no-scrollbar py-2">
-              {categories.map((cat) => (
+              {visibleCategories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
