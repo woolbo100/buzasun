@@ -7,6 +7,10 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { supabase } from '@/lib/supabase'
+import { useState, useEffect } from 'react'
+import { ChevronDown, CheckCircle2, AlertCircle } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 interface Ingredient {
   title: string;
@@ -34,6 +38,9 @@ interface PhysicalProductDetailProps {
   howToUse?: string;
   warningText?: string;
   accentColor?: string;
+  options?: any[];
+  ctaTitle?: string;
+  ctaButtonText?: string;
 }
 
 export default function PhysicalProductDetail({
@@ -55,10 +62,55 @@ export default function PhysicalProductDetail({
   formulaTitle,
   howToUse,
   warningText,
-  accentColor = '#FFB6C1'
+  accentColor = '#FFB6C1',
+  options: initialOptions,
+  ctaTitle,
+  ctaButtonText
 }: PhysicalProductDetailProps) {
   useScrollAnimation()
-  const checkoutUrl = `/checkout?productId=${productId}`
+  const router = useRouter()
+  const [dbOptions, setDbOptions] = useState<any[]>(initialOptions || [])
+  const [selectedOption, setSelectedOption] = useState<string>("")
+  const [showError, setShowError] = useState(false)
+
+  useEffect(() => {
+    async function fetchOptions() {
+      if (initialOptions) return;
+      
+      try {
+        const { data, error } = await supabase
+          .from('products')
+          .select('options')
+          .eq('slug', productId)
+          .single()
+
+        if (!error && data?.options) {
+          setDbOptions(data.options)
+        }
+      } catch (err) {
+        console.error("Failed to fetch options:", err)
+      }
+    }
+    fetchOptions()
+  }, [productId, initialOptions])
+
+  const handlePurchase = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (dbOptions.length > 0 && !selectedOption) {
+      setShowError(true)
+      // 스무스하게 드롭다운 위치로 이동하면 좋지만 일단 알럿
+      alert("옵션을 선택해주세요.")
+      return
+    }
+    
+    let url = `/checkout?productId=${productId}`
+    if (selectedOption) {
+      url += `&option=${encodeURIComponent(selectedOption)}`
+    }
+    router.push(url)
+  }
+
+  const activeOptions = dbOptions[0]; // 현재는 단일 옵션 1개만 지원
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]" style={{ '--accent-shadow': `${accentColor}26` } as any}>
@@ -99,9 +151,43 @@ export default function PhysicalProductDetail({
                 <p className="text-xl md:text-2xl text-[#EDE6DA] opacity-80 leading-relaxed mb-12 max-w-2xl mx-auto break-keep font-elegant italic">
                   {subtitle}
                 </p>
-                <div className="flex flex-col items-center gap-6">
-                  <Link 
-                    href={checkoutUrl}
+                <div className="flex flex-col items-center gap-8">
+                  {/* 옵션 선택 영역 */}
+                  {activeOptions && activeOptions.values && activeOptions.values.length > 0 && (
+                    <div className="w-full max-w-md space-y-4">
+                      <div className="flex items-center justify-between px-2">
+                        <label className="text-xs font-bold tracking-widest text-white/40 uppercase">
+                          {activeOptions.name} 선택
+                        </label>
+                        {showError && !selectedOption && (
+                          <span className="text-[10px] text-red-400 flex items-center gap-1 animate-pulse">
+                            <AlertCircle className="w-3 h-3" /> 필수 선택입니다
+                          </span>
+                        )}
+                      </div>
+                      <div className="relative group">
+                        <select 
+                          value={selectedOption}
+                          onChange={(e) => {
+                            setSelectedOption(e.target.value)
+                            setShowError(false)
+                          }}
+                          className={`w-full bg-white/[0.03] border ${showError && !selectedOption ? 'border-red-500/50' : 'border-white/10'} rounded-2xl px-6 py-4 text-white appearance-none outline-none focus:border-[var(--accent-gold)] transition-all cursor-pointer font-elegant`}
+                        >
+                          <option value="" className="bg-[#0a0514]">옵션을 선택하세요</option>
+                          {activeOptions.values.map((val: string) => (
+                            <option key={val} value={val} className="bg-[#0a0514]">{val}</option>
+                          ))}
+                        </select>
+                        <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-white/20 group-hover:text-[var(--accent-gold)] transition-colors">
+                          <ChevronDown className="w-5 h-5" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <button 
+                    onClick={handlePurchase}
                     className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-500"
                     style={{
                       background: 'linear-gradient(135deg, #2D0A1E 0%, #1A0514 100%)',
@@ -111,7 +197,7 @@ export default function PhysicalProductDetail({
                     }}
                   >
                     구매하기 ({price}원)
-                  </Link>
+                  </button>
                 </div>
               </Reveal>
             </section>
@@ -267,13 +353,32 @@ export default function PhysicalProductDetail({
               <div className="relative z-10 h-full flex flex-col items-center justify-center px-10 text-center">
                 <Reveal>
                   <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-12 leading-tight">
-                    {title}와 함께하는<br />아름다운 변화
+                    {ctaTitle || `${title}와 함께하는\n아름다운 변화`}
                   </h2>
-                  <Link href={checkoutUrl} className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-500" style={{ background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)', color: '#2D0A1E', boxShadow: `0 0 40px ${accentColor}26` }}>
-                    지금 바로 구매하기
-                  </Link>
+                  <button 
+                    onClick={handlePurchase}
+                    className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-500" 
+                    style={{ 
+                      background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)', 
+                      color: '#2D0A1E', 
+                      boxShadow: `0 0 40px ${accentColor}26` 
+                    }}
+                  >
+                    {ctaButtonText || "지금 바로 구매하기"}
+                  </button>
                 </Reveal>
               </div>
+            </section>
+
+            {/* Policy Links */}
+            <section className="pb-20 text-center">
+              <Reveal>
+                <div className="flex justify-center gap-8 text-[10px] tracking-[0.2em] uppercase text-white/30">
+                  <Link href="/terms" className="hover:text-[var(--accent-gold)] transition-colors">이용약관</Link>
+                  <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>
+                  <Link href="/refund" className="hover:text-[var(--accent-gold)] transition-colors">배송 및 환불정책</Link>
+                </div>
+              </Reveal>
             </section>
 
           </div>

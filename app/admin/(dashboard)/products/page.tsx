@@ -38,7 +38,10 @@ export default function AdminProductsPage() {
     in_stock: true,
     sort_order: 0,
     detail_path: "",
-    checkout_path: ""
+    checkout_path: "",
+    use_options: false,
+    option_name: "",
+    option_values: ""
   });
 
   const fetchProducts = async () => {
@@ -101,7 +104,13 @@ export default function AdminProductsPage() {
         in_stock: formData.in_stock,
         sort_order: formData.sort_order,
         detail_path: formData.detail_path,
-        checkout_path: formData.checkout_path
+        checkout_path: formData.checkout_path,
+        options: formData.use_options ? [
+          {
+            name: formData.option_name,
+            values: formData.option_values.split(',').map(v => v.trim()).filter(v => v !== "")
+          }
+        ] : []
       };
 
       if (editingId) {
@@ -150,7 +159,10 @@ export default function AdminProductsPage() {
       in_stock: true,
       sort_order: 0,
       detail_path: "",
-      checkout_path: ""
+      checkout_path: "",
+      use_options: false,
+      option_name: "",
+      option_values: ""
     });
   };
 
@@ -223,7 +235,10 @@ export default function AdminProductsPage() {
       in_stock: product.in_stock ?? true,
       sort_order: product.sort_order || 0,
       detail_path: product.detail_path || `/shop/${product.slug}`,
-      checkout_path: product.checkout_path || `/checkout?productId=${product.slug}`
+      checkout_path: product.checkout_path || `/checkout?productId=${product.slug}`,
+      use_options: Array.isArray(product.options) && product.options.length > 0,
+      option_name: product.options?.[0]?.name || "",
+      option_values: product.options?.[0]?.values?.join(", ") || ""
     });
     setEditingId(product.id);
     setIsFormOpen(true);
@@ -433,6 +448,57 @@ export default function AdminProductsPage() {
                       <input type="number" required value={formData.price} onChange={e => setFormData({...formData, price: parseInt(e.target.value) || 0})}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-accent-gold/50 outline-none text-accent-gold font-bold" />
                     </div>
+                  </div>
+                </div>
+
+                {/* [옵션 설정] */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-2 text-accent-gold border-l-2 border-accent-gold pl-4">
+                    <Layers className="w-5 h-5" />
+                    <span className="font-bold tracking-widest text-sm">심플 옵션 설정</span>
+                  </div>
+                  <div className="gungjung-glass p-6 border-white/5 space-y-6 bg-white/[0.02]">
+                    <div className="flex items-center justify-between">
+                      <div className="space-y-1">
+                        <p className="text-sm font-bold">옵션 사용 여부</p>
+                        <p className="text-[10px] text-white/30">상품에 선택 옵션(예: 색상, 사이즈)을 추가합니다.</p>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <span className="text-[10px] text-white/40 uppercase font-mono">{formData.use_options ? "ON" : "OFF"}</span>
+                        <input 
+                          type="checkbox" 
+                          className="w-6 h-6 rounded-lg accent-accent-gold cursor-pointer" 
+                          checked={formData.use_options} 
+                          onChange={e => setFormData({...formData, use_options: e.target.checked})} 
+                        />
+                      </div>
+                    </div>
+
+                    {formData.use_options && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-white/5 animate-in fade-in slide-in-from-top-2 duration-500">
+                        <div className="space-y-2">
+                          <label className="text-[11px] text-white/40 uppercase font-bold tracking-tighter">옵션명</label>
+                          <input 
+                            type="text" 
+                            value={formData.option_name} 
+                            onChange={e => setFormData({...formData, option_name: e.target.value})}
+                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-accent-gold/50 outline-none" 
+                            placeholder="예) 색상" 
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-[11px] text-white/40 uppercase font-bold tracking-tighter">옵션값 (콤마로 구분)</label>
+                          <input 
+                            type="text" 
+                            value={formData.option_values} 
+                            onChange={e => setFormData({...formData, option_values: e.target.value})}
+                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-accent-gold/50 outline-none" 
+                            placeholder="예) Pink, Purple" 
+                          />
+                          <p className="text-[9px] text-white/20 mt-1">※ 여러 값을 입력할 때는 콤마(,)를 사용하세요. (Pink, Purple)</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 

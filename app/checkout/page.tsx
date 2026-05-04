@@ -13,6 +13,7 @@ function CheckoutContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const productId = searchParams.get('productId')
+  const selectedOption = searchParams.get('option')
   const [product, setProduct] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [formData, setFormData] = useState({
@@ -84,6 +85,13 @@ function CheckoutContent() {
       price: 19000,
       category: "SECRET METHOD",
       image: "/image/reunion-secret-thumb.png"
+    },
+    "premium-bookmark": {
+      name: "Premium Flower Bookmark Set",
+      type: "physical",
+      price: 39000,
+      category: "PRIVATE OBJECT",
+      image: "/image/bookmark/p1.webp"
     }
   }
 
@@ -105,10 +113,10 @@ function CheckoutContent() {
 
         if (!error && data) {
           // 신규 ID를 slug로 유지하여 매칭성 유지
-          setProduct({ ...data, slug: productId })
+          setProduct({ ...data, slug: productId, selectedOption: selectedOption })
         } else if (productId && productMap[productId]) {
           // 2. DB에 없으면 로컬 맵에서 시도
-          setProduct({ ...productMap[productId], slug: productId })
+          setProduct({ ...productMap[productId], slug: productId, selectedOption: selectedOption })
         }
       } catch (err) {
         console.error("Checkout: Failed to fetch product", err)
@@ -184,7 +192,17 @@ function CheckoutContent() {
                     {product.category}
                   </span>
                   <h2 className="text-xl font-bold text-white mb-1">{product.name}</h2>
-                  <p className="text-[var(--accent-gold)] font-bold">₩{product.price?.toLocaleString()}</p>
+                  <div className="flex items-center gap-3">
+                    <p className="text-[var(--accent-gold)] font-bold">₩{product.price?.toLocaleString()}</p>
+                    {product.selectedOption && (
+                      <>
+                        <span className="w-[1px] h-3 bg-white/10"></span>
+                        <span className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded border border-white/10">
+                          옵션: {product.selectedOption}
+                        </span>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             </Reveal>

@@ -9,12 +9,17 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { supabase } from '@/lib/supabase'
+import { useRouter } from 'next/navigation'
+import { ChevronDown, AlertCircle } from 'lucide-react'
 
 export default function DynamicReportPage() {
   const params = useParams()
   const slug = params.slug as string
+  const router = useRouter()
   const [product, setProduct] = useState<any>(null)
   const [loading, setLoading] = useState(true)
+  const [selectedOption, setSelectedOption] = useState<string>("")
+  const [showError, setShowError] = useState(false)
 
   useScrollAnimation()
 
@@ -76,8 +81,26 @@ export default function DynamicReportPage() {
     name: "선천코드 리포트",
     description: "선천코드 분석을 통해 반복되는 연애 패턴, 관계 성향, 끌리는 인연의 흐름을 정리해드립니다.",
     price: 49000,
-    slug: "love-code-report"
+    slug: "love-code-report",
+    options: []
   }
+
+  const handlePurchase = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (displayData.options && displayData.options.length > 0 && !selectedOption) {
+      setShowError(true)
+      alert("옵션을 선택해주세요.")
+      return
+    }
+    
+    let url = `/checkout?productId=${displayData.slug}`
+    if (selectedOption) {
+      url += `&option=${encodeURIComponent(selectedOption)}`
+    }
+    router.push(url)
+  }
+
+  const activeOptions = displayData.options?.[0]
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
@@ -105,12 +128,47 @@ export default function DynamicReportPage() {
                 <p className="text-lg md:text-xl text-bd-ivory leading-relaxed mb-10 max-w-2xl mx-auto break-keep">
                   {displayData.description}
                 </p>
-                <Link 
-                  href={`/checkout?productId=${displayData.slug}`}
-                  className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg"
-                >
-                  리포트 신청하기
-                </Link>
+                <div className="flex flex-col items-center gap-8">
+                  {activeOptions && activeOptions.values && activeOptions.values.length > 0 && (
+                    <div className="w-full max-w-sm space-y-3">
+                      <div className="flex items-center justify-between px-1">
+                        <label className="text-[10px] font-bold tracking-widest text-white/30 uppercase">
+                          {activeOptions.name} 선택
+                        </label>
+                        {showError && !selectedOption && (
+                          <span className="text-[9px] text-red-400 flex items-center gap-1 animate-pulse">
+                            <AlertCircle className="w-3 h-3" /> 필수 선택
+                          </span>
+                        )}
+                      </div>
+                      <div className="relative group">
+                        <select 
+                          value={selectedOption}
+                          onChange={(e) => {
+                            setSelectedOption(e.target.value)
+                            setShowError(false)
+                          }}
+                          className={`w-full bg-white/[0.03] border ${showError && !selectedOption ? 'border-red-500/50' : 'border-white/10'} rounded-xl px-5 py-3 text-white appearance-none outline-none focus:border-[var(--accent-gold)] transition-all cursor-pointer text-sm`}
+                        >
+                          <option value="" className="bg-[#0a0514]">옵션을 선택하세요</option>
+                          {activeOptions.values.map((val: string) => (
+                            <option key={val} value={val} className="bg-[#0a0514]">{val}</option>
+                          ))}
+                        </select>
+                        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/20 group-hover:text-[var(--accent-gold)] transition-colors">
+                          <ChevronDown className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <button 
+                    onClick={handlePurchase}
+                    className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg shadow-[0_0_30px_rgba(212,178,167,0.2)] hover:scale-105 transition-all duration-500"
+                  >
+                    리포트 신청하기
+                  </button>
+                </div>
               </Reveal>
             </section>
 
@@ -299,12 +357,12 @@ export default function DynamicReportPage() {
                 <h2 className="text-2xl md:text-3xl font-elegant font-bold mb-8 text-white">
                   {displayData.name}, 지금 확인해보세요
                 </h2>
-                <Link 
-                  href={`/checkout?productId=${displayData.slug}`}
-                  className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
+                <button 
+                  onClick={handlePurchase}
+                  className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)] hover:scale-105 transition-all duration-500"
                 >
                   리포트 신청하기
-                </Link>
+                </button>
               </Reveal>
             </section>
 
