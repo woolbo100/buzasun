@@ -87,11 +87,18 @@ function CheckoutContent() {
       image: "/image/reunion-secret-thumb.png"
     },
     "premium-bookmark": {
-      name: "Premium Flower Bookmark Set",
+      name: "프리미엄 플라워 북마크 세트",
+      display_title: "Premium Flower Bookmark Set",
       type: "physical",
-      price: 39000,
+      price: 9900,
       category: "PRIVATE OBJECT",
-      image: "/image/bookmark/p1.webp"
+      image: "/image/bookmark/p7.webp",
+      options: [
+        {
+          name: "색상",
+          values: ["Pink Edition", "Purple Edition"]
+        }
+      ]
     }
   }
 
@@ -131,6 +138,10 @@ function CheckoutContent() {
     fetchProduct()
   }, [productId])
 
+  const [checkoutOption, setCheckoutOption] = useState<string>(selectedOption || "")
+  const [agreements, setAgreements] = useState({ terms: false, refund: false })
+  const [showOptionError, setShowOptionError] = useState(false)
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -159,6 +170,7 @@ function CheckoutContent() {
                       product.category?.includes('METHOD') ? 'digital_ebook' : 'physical')
 
   const getButtonText = () => {
+    if (productId === 'premium-bookmark') return '프리미엄 플라워 북마크 세트 결제하기'
     if (productType === 'digital_ebook') return '전자책 결제하기'
     if (productType === 'digital_report') return '리포트 신청 및 결제하기'
     return '상품 결제하기'
@@ -194,18 +206,52 @@ function CheckoutContent() {
                   <h2 className="text-xl font-bold text-white mb-1">{product.name}</h2>
                   <div className="flex items-center gap-3">
                     <p className="text-[var(--accent-gold)] font-bold">₩{product.price?.toLocaleString()}</p>
-                    {product.selectedOption && (
+                    {(checkoutOption || (product.options && product.options.length > 0)) && (
                       <>
                         <span className="w-[1px] h-3 bg-white/10"></span>
-                        <span className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded border border-white/10">
-                          옵션: {product.selectedOption}
-                        </span>
+                        {checkoutOption ? (
+                          <span className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded border border-white/10">
+                            옵션: {checkoutOption}
+                          </span>
+                        ) : (
+                          <span className="text-[10px] text-red-400 animate-pulse">옵션 선택 필요</span>
+                        )}
                       </>
                     )}
                   </div>
                 </div>
               </div>
             </Reveal>
+
+            {/* 1.5 옵션 재선택 (옵션이 없거나 변경하고 싶을 때) */}
+            {product.options && product.options.length > 0 && (
+              <Reveal delayMs={150}>
+                <div className={`gungjung-glass p-8 space-y-4 border ${showOptionError ? 'border-red-500/50' : 'border-white/5'}`}>
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">옵션 선택</h3>
+                    {showOptionError && <span className="text-xs text-red-400">색상을 선택해주세요.</span>}
+                  </div>
+                  <div className="relative group">
+                    <select 
+                      value={checkoutOption}
+                      onChange={(e) => {
+                        setCheckoutOption(e.target.value)
+                        setShowOptionError(false)
+                      }}
+                      className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 text-white appearance-none outline-none focus:border-[var(--accent-gold)] transition-all cursor-pointer text-sm"
+                    >
+                      <option value="" className="bg-[#0a0514]">색상을 선택해주세요</option>
+                      {product.options[0].values.map((val: string) => (
+                        <option key={val} value={val} className="bg-[#0a0514]">{val}</option>
+                      ))}
+                    </select>
+                    <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/20">
+                      <i className="fas fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            )}
 
             {/* 2. 주문자 정보 */}
             <Reveal delayMs={200}>
@@ -333,16 +379,26 @@ function CheckoutContent() {
 
                 <div className="space-y-3 mb-8">
                   <label className="flex items-start gap-3 cursor-pointer group">
-                    <input type="checkbox" className="mt-1 accent-[var(--accent-gold)]" />
+                    <input 
+                      type="checkbox" 
+                      checked={agreements.terms}
+                      onChange={(e) => setAgreements(prev => ({ ...prev, terms: e.target.checked }))}
+                      className="mt-1 accent-[var(--accent-gold)]" 
+                    />
                     <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
                       <a href="/terms" target="_blank" className="underline hover:text-[var(--accent-gold)]">이용 약관</a> 및 <a href="/privacy" target="_blank" className="underline hover:text-[var(--accent-gold)]">개인정보 수집 이용</a> 동의 (필수)
                     </span>
                   </label>
                   <label className="flex items-start gap-3 cursor-pointer group">
-                    <input type="checkbox" className="mt-1 accent-[var(--accent-gold)]" />
+                    <input 
+                      type="checkbox" 
+                      checked={agreements.refund}
+                      onChange={(e) => setAgreements(prev => ({ ...prev, refund: e.target.checked }))}
+                      className="mt-1 accent-[var(--accent-gold)]" 
+                    />
                     <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
                       {productType === 'physical' ? 
-                        <a href="/refund" target="_blank" className="underline hover:text-[var(--accent-gold)]">교환/반품/배송 정책</a> : 
+                        <a href="/refund" target="_blank" className="underline hover:text-[var(--accent-gold)]">배송 및 교환/반품 정책</a> : 
                         <a href="/refund" target="_blank" className="underline hover:text-[var(--accent-gold)]">디지털 콘텐츠 환불 정책</a>
                       } 동의 (필수)
                     </span>
@@ -350,7 +406,20 @@ function CheckoutContent() {
                 </div>
 
                 <button 
-                  className="w-full btn-primary py-4 rounded-xl font-bold tracking-widest shadow-[0_10px_30px_rgba(212,178,167,0.2)] hover:scale-[1.02] active:scale-95 transition-all"
+                  disabled={!agreements.terms || !agreements.refund || (product.options && product.options.length > 0 && !checkoutOption)}
+                  onClick={() => {
+                    if (product.options && product.options.length > 0 && !checkoutOption) {
+                      setShowOptionError(true)
+                      alert("색상을 선택해주세요.")
+                      return
+                    }
+                    alert("결제 시스템을 준비 중입니다.")
+                  }}
+                  className={`w-full py-4 rounded-xl font-bold tracking-widest transition-all ${
+                    (!agreements.terms || !agreements.refund || (product.options && product.options.length > 0 && !checkoutOption))
+                    ? 'bg-white/5 text-white/20 cursor-not-allowed'
+                    : 'btn-primary shadow-[0_10px_30px_rgba(212,178,167,0.2)] hover:scale-[1.02] active:scale-95'
+                  }`}
                 >
                   {getButtonText()}
                 </button>

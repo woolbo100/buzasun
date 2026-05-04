@@ -42,7 +42,8 @@ export default function ShopPage() {
     'love-secret-ebook': '/image/love-secret-thumb.png',
     'miss-highlander': '/image/miss/m1.webp',
     'wangbitna-cream': '/image/wangbitna/w7.webp',
-    'golden-forever-lady': '/image/golden/m7.webp'
+    'golden-forever-lady': '/image/golden/m7.webp',
+    'premium-bookmark': '/image/bookmark/p7.webp'
   }
   
   useEffect(() => {
@@ -66,6 +67,7 @@ export default function ShopPage() {
             const isLoveSecret = p.slug?.includes('love-secret') || p.name?.includes('연애비급');
             const isAbundanceSecret = p.slug?.includes('abundance-secret') || p.name?.includes('풍요비책');
             const isReunionSecret = p.slug?.includes('reunion-secret') || p.name?.includes('재회비방');
+            const isPremiumBookmark = slug === 'premium-bookmark';
             
             // 슬러그 보정 (사용자 지침 반영: 공백 및 표준 ID 유지)
             let currentSlug = p.slug;
@@ -86,6 +88,7 @@ export default function ShopPage() {
                           isLoveSecret ? '/image/love-secret-thumb.png' :
                           isAbundanceSecret ? '/image/abundance-secret-thumb.png' :
                           isReunionSecret ? '/image/reunion-secret-thumb.png' :
+                          isPremiumBookmark ? '/image/bookmark/p7.webp' :
                           (isCompatibility ? '/image/premium_compatibility_v3.png?v=4' : p.main_image)
             };
           })
@@ -135,6 +138,23 @@ export default function ShopPage() {
               main_image: '/image/golden/m7.webp',
               is_active: true,
               type: 'physical'
+            })
+          }
+          // 프리미엄 북마크 수동 추가
+          const hasPremiumBookmark = mappedData.some(p => p.slug === 'premium-bookmark')
+          if (!hasPremiumBookmark) {
+            mappedData.push({
+              id: 'manual-premium-bookmark',
+              name: '프리미엄 플라워 북마크 세트',
+              slug: 'premium-bookmark',
+              category: 'PRIVATE OBJECT',
+              description: '섬세한 금속 디테일과 우아한 태슬 장식이 더해진 프리미엄 플라워 북마크 세트입니다.',
+              price: 9900,
+              main_image: '/image/bookmark/p7.webp',
+              is_active: true,
+              type: 'physical',
+              featured: true,
+              sort_order: 10
             })
           }
 
@@ -251,7 +271,7 @@ export default function ShopPage() {
                         href={
                           (() => {
                             const s = product.slug.trim();
-                            if (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream'].includes(s)) return `/shop/${s}`;
+                            if (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream', 'premium-bookmark'].includes(s)) return `/shop/${s}`;
                             if (s === 'baekdohwa-report') return `/reports/baekdohwa-report`;
                             if (s === 'premium-compatibility-report') return `/reports/premium-compatibility-report`;
                             if (s === 'love-secret-ebook') return `/reports/love-secret`;

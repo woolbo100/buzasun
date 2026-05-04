@@ -18,7 +18,7 @@ export default function PremiumBookmarkPage() {
     formulaImage: '/image/bookmark/p4.webp',
     giftImage: '/image/bookmark/p5.webp',
     ctaImage: '/image/bookmark/p6.webp',
-    price: '39,000',
+    price: '9,900',
     accentColor: '#BA8D7E', // 샴페인 골드/로즈골드 톤
     recommendedPoints: [
       '책을 사랑하는 사람에게 특별한 선물을 하고 싶은 분',
@@ -60,7 +60,7 @@ export default function PremiumBookmarkPage() {
     ctaButtonText: 'Premium Flower Bookmark Set 구매하기',
     options: [
       {
-        name: "에디션",
+        name: "색상",
         values: ["Pink Edition", "Purple Edition"]
       }
     ]
