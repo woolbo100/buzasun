@@ -99,7 +99,7 @@ function LoginContent() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-[#D4AF37] to-[#B8860B] hover:from-[#E5C158] hover:to-[#C9971C] text-[#1A0626] font-bold py-4 rounded-2xl transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5 active:translate-y-0 mt-4"
+              className="w-full h-[56px] bg-[#2A163A] text-[#F5E6C8] border border-[rgba(212,175,55,0.4)] font-bold rounded-2xl transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.15)] hover:border-[rgba(212,175,55,0.7)] disabled:opacity-50 disabled:cursor-not-allowed transform hover:-translate-y-0.5 active:translate-y-0 mt-4"
             >
               {loading ? '로그인 중...' : '로그인'}
             </button>

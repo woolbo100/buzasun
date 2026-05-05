@@ -61,7 +61,7 @@ export default function SignupPage() {
               이메일로 전송된 인증 링크를 클릭하여<br />
               회원가입을 완료해 주세요.
             </p>
-            <Link href="/login" className="inline-block bg-accent-gold hover:bg-white text-[#1A0626] font-bold py-3 px-8 rounded-xl transition-all">
+            <Link href="/login" className="inline-block bg-[#2A163A] text-[#F5E6C8] border border-[rgba(212,175,55,0.4)] font-bold py-3 px-8 rounded-xl transition-all hover:border-[rgba(212,175,55,0.7)] shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.15)]">
               로그인 화면으로 이동
             </Link>
           </div>
@@ -143,7 +143,7 @@ export default function SignupPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-[#D4AF37] to-[#B8860B] hover:from-[#E5C158] hover:to-[#C9971C] text-[#1A0626] font-bold py-4 rounded-2xl transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.2)] transform hover:-translate-y-0.5 mt-4"
+                className="w-full h-[56px] bg-[#2A163A] text-[#F5E6C8] border border-[rgba(212,175,55,0.4)] font-bold rounded-2xl transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.15)] hover:border-[rgba(212,175,55,0.7)] disabled:opacity-50 transform hover:-translate-y-0.5 mt-4"
               >
                 {loading ? '가입 중...' : '회원가입'}
               </button>
