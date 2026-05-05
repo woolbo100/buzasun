@@ -16,13 +16,30 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
+  const [user, setUser] = useState<any>(null)
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
     window.addEventListener('scroll', handleScroll)
     handleScroll()
-    return () => window.removeEventListener('scroll', handleScroll)
+
+    // Auth state check
+    const checkUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser()
+      setUser(user)
+    }
+    checkUser()
+
+    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      setUser(session?.user || null)
+    })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      authListener.subscription.unsubscribe()
+    }
   }, [])
 
   useEffect(() => {
@@ -337,6 +354,28 @@ export default function Navigation() {
                 />
               </Link>
             )}
+
+            {user ? (
+              <Link href="/mypage" className={menuLinkClass} style={menuLinkStyle}>
+                마이페이지
+                <span
+                  className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                  style={{
+                    boxShadow: '0 0 10px var(--accent-gold-soft)',
+                  }}
+                />
+              </Link>
+            ) : (
+              <Link href="/login" className={menuLinkClass} style={menuLinkStyle}>
+                로그인
+                <span
+                  className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                  style={{
+                    boxShadow: '0 0 10px var(--accent-gold-soft)',
+                  }}
+                />
+              </Link>
+            )}
           </div>
 
           <div className="flex items-center space-x-4">
@@ -480,6 +519,24 @@ export default function Navigation() {
                   onClick={closeMobileMenu}
                 >
                   {consultMenuLabel}
+                </Link>
+              )}
+
+              {user ? (
+                <Link
+                  href="/mypage"
+                  className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
+                  onClick={closeMobileMenu}
+                >
+                  마이페이지
+                </Link>
+              ) : (
+                <Link
+                  href="/login"
+                  className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
+                  onClick={closeMobileMenu}
+                >
+                  로그인
                 </Link>
               )}
 

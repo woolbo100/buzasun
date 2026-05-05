@@ -48,7 +48,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-6">
                     <a 
-                      href="http://pf.kakao.com/_xeexhVG" 
+                      href="https://pf.kakao.com/_CxdfxgG" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-4 p-4 rounded-xl bg-[#FEE500] text-[#191919] font-bold hover:scale-[1.02] transition-all"
