@@ -12,7 +12,6 @@ export default function MyPage() {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('orders');
   const [orders, setOrders] = useState<any[]>([]);
-  const [reports, setReports] = useState<any[]>([]);
 
   useEffect(() => {
     const checkUser = async () => {
@@ -22,37 +21,45 @@ export default function MyPage() {
         return;
       }
       setUser(user);
-      fetchData(user.id);
+      fetchData(user.email);
       setLoading(false);
     };
 
     checkUser();
   }, [router]);
 
-  const fetchData = async (userId: string) => {
-    // 주문 내역 조회
+  const fetchData = async (email: string | undefined) => {
+    if (!email) return;
+    // 주문 내역 조회 (리포트 포함)
     const { data: ordersData } = await supabase
       .from('orders')
       .select('*')
-      .eq('user_id', userId)
+      .eq('customer_email', email)
       .order('created_at', { ascending: false });
     
     if (ordersData) setOrders(ordersData);
-
-    // 리포트 신청 내역 조회 (테이블명이 report_requests라고 가정)
-    const { data: reportsData } = await supabase
-      .from('report_requests')
-      .select('*')
-      .eq('user_id', userId)
-      .order('created_at', { ascending: false });
-
-    if (reportsData) setReports(reportsData);
   };
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
     router.push('/');
     router.refresh();
+  };
+
+  const handleDownload = async (path: string) => {
+    try {
+      const { data, error } = await supabase.storage
+        .from('reports')
+        .createSignedUrl(path, 60);
+
+      if (error) throw error;
+      if (data?.signedUrl) {
+        window.open(data.signedUrl, '_blank');
+      }
+    } catch (err) {
+      console.error("Failed to generate signed URL:", err);
+      alert("파일을 불러오는 데 실패했습니다.");
+    }
   };
 
   if (loading) {
@@ -64,8 +71,7 @@ export default function MyPage() {
   }
 
   const tabs = [
-    { id: 'orders', label: '주문내역', icon: Package },
-    { id: 'reports', label: '리포트 신청내역', icon: FileText },
+    { id: 'orders', label: '주문/리포트 내역', icon: Package },
     { id: 'address', label: '배송지 관리', icon: MapPin },
     { id: 'profile', label: '회원정보', icon: User },
   ];
@@ -132,7 +138,7 @@ export default function MyPage() {
               </h2>
 
               {activeTab === 'orders' && (
-                <div className="space-y-4">
+                <div className="space-y-6">
                   {orders.length === 0 ? (
                     <div className="text-center py-20 bg-white/5 rounded-3xl border border-dashed border-white/10">
                       <ShoppingBag className="w-12 h-12 text-white/10 mx-auto mb-4" />
@@ -142,85 +148,58 @@ export default function MyPage() {
                       </Link>
                     </div>
                   ) : (
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-left">
-                        <thead className="border-b border-white/10 text-xs text-white/40 uppercase tracking-widest">
-                          <tr>
-                            <th className="pb-4 font-medium">주문정보</th>
-                            <th className="pb-4 font-medium">결제금액</th>
-                            <th className="pb-4 font-medium text-center">상태</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-white/5">
-                          {orders.map((order) => (
-                            <tr key={order.id} className="group">
-                              <td className="py-5">
-                                <p className="text-sm font-bold group-hover:text-accent-gold transition-colors">{order.product_title || '상품명 없음'}</p>
-                                <p className="text-xs text-white/40 mt-1">{new Date(order.created_at).toLocaleDateString()}</p>
-                              </td>
-                              <td className="py-5 text-sm font-medium">
-                                {order.amount?.toLocaleString()}원
-                              </td>
-                              <td className="py-5 text-center">
-                                <span className={`text-[10px] px-2 py-1 rounded-full border ${
-                                  order.payment_status === '결제완료' 
-                                    ? 'border-green-500/30 bg-green-500/10 text-green-400' 
-                                    : 'border-accent-gold/30 bg-accent-gold/10 text-accent-gold'
-                                }`}>
-                                  {order.payment_status || '확인중'}
-                                </span>
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {activeTab === 'reports' && (
-                <div className="space-y-4">
-                  {reports.length === 0 ? (
-                    <div className="text-center py-20 bg-white/5 rounded-3xl border border-dashed border-white/10">
-                      <FileText className="w-12 h-12 text-white/10 mx-auto mb-4" />
-                      <p className="text-white/60 mb-6">아직 신청한 리포트가 없습니다.</p>
-                      <Link href="/reports" className="inline-block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl transition-all text-sm font-medium">
-                        나의 선천코드 리포트 신청하기
-                      </Link>
-                    </div>
-                  ) : (
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-left">
-                        <thead className="border-b border-white/10 text-xs text-white/40 uppercase tracking-widest">
-                          <tr>
-                            <th className="pb-4 font-medium">리포트 종류</th>
-                            <th className="pb-4 font-medium">신청일</th>
-                            <th className="pb-4 font-medium text-center">진행상태</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-white/5">
-                          {reports.map((report) => (
-                            <tr key={report.id}>
-                              <td className="py-5">
-                                <p className="text-sm font-bold">{report.report_type}</p>
-                              </td>
-                              <td className="py-5 text-sm text-white/60">
-                                {new Date(report.created_at).toLocaleDateString()}
-                              </td>
-                              <td className="py-5 text-center">
-                                <span className={`text-[10px] px-2 py-1 rounded-full border ${
-                                  report.status === '발송완료' 
-                                    ? 'border-blue-500/30 bg-blue-500/10 text-blue-400' 
-                                    : 'border-accent-gold/30 bg-accent-gold/10 text-accent-gold'
-                                }`}>
-                                  {report.status || '대기중'}
-                                </span>
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
+                    <div className="space-y-4">
+                      {orders.map((order) => {
+                        const getStatusText = (status: string) => {
+                          switch (status) {
+                            case 'pending': return '리포트 신청이 접수되었습니다.';
+                            case 'writing': return '리포트를 제작 중입니다.';
+                            case 'ready': return '리포트가 준비되었습니다. 다운로드 가능합니다.';
+                            case 'sent': return '리포트 전달이 완료되었습니다.';
+                            default: return '상태 확인 중';
+                          }
+                        };
+                        
+                        return (
+                          <div key={order.id} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-accent-gold/20 transition-all">
+                            <div className="flex flex-col md:flex-row justify-between gap-4">
+                              <div className="space-y-2">
+                                <div className="flex items-center gap-2 mb-1">
+                                  <span className="text-[10px] text-white/40 uppercase tracking-widest">{new Date(order.created_at).toLocaleDateString()}</span>
+                                  <span className={`text-[9px] px-2 py-0.5 rounded-full border ${
+                                    (order.payment_status === 'paid' || order.payment_status === 'test_paid') 
+                                      ? 'border-green-500/30 bg-green-500/10 text-green-400' 
+                                      : 'border-white/10 bg-white/5 text-white/30'
+                                  }`}>
+                                    {order.payment_status === 'paid' || order.payment_status === 'test_paid' ? '결제완료' : '대기중'}
+                                  </span>
+                                </div>
+                                <h3 className="text-base font-bold">{order.product_name}</h3>
+                                <p className="text-xs text-accent-gold/80 font-medium">{getStatusText(order.report_status || 'pending')}</p>
+                              </div>
+                              
+                              <div className="flex items-center md:items-end justify-between md:flex-col gap-3">
+                                <p className="text-sm font-elegant text-white/60">{order.amount?.toLocaleString()}원</p>
+                                {order.report_file_url ? (
+                                  <button 
+                                    onClick={() => handleDownload(order.report_file_path)}
+                                    className="flex items-center gap-2 bg-accent-gold text-[#1A0626] px-4 py-2 rounded-xl text-[10px] font-bold hover:brightness-110 transition-all shadow-lg shadow-accent-gold/20"
+                                  >
+                                    <Download className="w-3 h-3" /> 리포트 다운로드
+                                  </button>
+                                ) : (
+                                  <Link 
+                                    href={`/mypage/orders`}
+                                    className="text-[10px] text-white/40 hover:text-white underline underline-offset-4"
+                                  >
+                                    상세보기
+                                  </Link>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
                 </div>

@@ -170,6 +170,7 @@ function CheckoutContent() {
                       product.category?.includes('METHOD') ? 'digital_ebook' : 'physical')
 
   const getButtonText = () => {
+    if (process.env.NODE_ENV !== 'development') return '결제시스템 준비중입니다'
     if (productId === 'premium-bookmark') return '프리미엄 플라워 북마크 세트 결제하기'
     if (productType === 'digital_ebook') return '전자책 결제하기'
     if (productType === 'digital_report') return '리포트 신청 및 결제하기'
@@ -180,10 +181,80 @@ function CheckoutContent() {
     <div className="container-premium py-20">
       <div className="max-w-4xl mx-auto">
         <Reveal>
-          <h1 className="text-3xl md:text-4xl font-elegant font-bold text-center mb-12 text-white">
-            주문 / <span className="text-[var(--accent-gold)]">결제</span>
-          </h1>
-        </Reveal>
+            <h1 className="text-3xl md:text-4xl font-elegant font-bold text-center mb-12 text-white">
+              주문 / <span className="text-[var(--accent-gold)]">결제</span>
+            </h1>
+
+            {/* 개발 환경 전용 테스트 버튼 */}
+            {process.env.NODE_ENV === 'development' && (
+              <div className="mb-8 p-4 bg-blue-500/10 border border-blue-500/20 rounded-2xl flex flex-wrap gap-4 items-center justify-center">
+                <span className="text-xs text-blue-400 font-bold uppercase tracking-widest">Dev Only Test:</span>
+                <button 
+                  onClick={() => {
+                    setFormData({
+                      name: '홍길동(테스트)',
+                      email: 'test@example.com',
+                      phone: '010-1234-5678',
+                      receiverName: '홍길동',
+                      zipcode: '12345',
+                      address: '서울시 강남구 테헤란로 123',
+                      detailAddress: '4층',
+                      deliveryNote: '부재 시 문 앞에 두세요',
+                      orderNote: '테스트 주문입니다.',
+                    })
+                    setAgreements({ terms: true, refund: true })
+                    if (product.options && product.options.length > 0) {
+                      setCheckoutOption(product.options[0].values[0])
+                    }
+                  }}
+                  className="px-4 py-2 bg-blue-500/20 text-blue-400 border border-blue-500/30 rounded-lg text-xs font-bold hover:bg-blue-500/30 transition-all"
+                >
+                  데이터 자동 채우기
+                </button>
+                <button 
+                  onClick={() => {
+                    // 테스트 데이터 강제 주입 및 즉시 이동
+                    const testFormData = {
+                      name: '홍길동(테스트)',
+                      email: 'test@example.com',
+                      phone: '010-1234-5678',
+                      receiverName: '홍길동',
+                      zipcode: '12345',
+                      address: '서울시 강남구 테헤란로 123',
+                      detailAddress: '4층',
+                      deliveryNote: '부재 시 문 앞에 두세요',
+                      orderNote: '테스트 주문입니다.',
+                    }
+                    
+                    const params = new URLSearchParams({
+                      productId: productId || '',
+                      product_name: product.name,
+                      product_type: productType,
+                      amount: product.price.toString(),
+                      name: testFormData.name,
+                      email: testFormData.email,
+                      phone: testFormData.phone,
+                      option: checkoutOption || '기본',
+                      receiverName: testFormData.receiverName,
+                      zipcode: testFormData.zipcode,
+                      address: testFormData.address,
+                      detailAddress: testFormData.detailAddress,
+                      deliveryNote: testFormData.deliveryNote,
+                      orderNote: testFormData.orderNote,
+                      payment_status: 'test_paid', // 테스트용 상태값
+                      payment_id: `test_${Date.now()}`,
+                    })
+                    
+                    setLoading(true)
+                    router.push(`/checkout/success?${params.toString()}`)
+                  }}
+                  className="px-4 py-2 bg-[var(--accent-gold)] text-[#1a0f2e] rounded-lg text-xs font-bold hover:brightness-110 transition-all shadow-lg"
+                >
+                  테스트 주문 생성 (즉시 결제완료 처리)
+                </button>
+              </div>
+            )}
+          </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left: Order Form */}
@@ -404,24 +475,51 @@ function CheckoutContent() {
                     </span>
                   </label>
                 </div>
-
                 <button 
-                  disabled={!agreements.terms || !agreements.refund || (product.options && product.options.length > 0 && !checkoutOption)}
+                  disabled={loading || !agreements.terms || !agreements.refund || (product.options && product.options.length > 0 && !checkoutOption)}
                   onClick={() => {
+                    if (process.env.NODE_ENV !== 'development') {
+                      alert("결제 시스템 준비 중입니다. 잠시만 기다려주세요.")
+                      return
+                    }
+
                     if (product.options && product.options.length > 0 && !checkoutOption) {
                       setShowOptionError(true)
                       alert("색상을 선택해주세요.")
                       return
                     }
-                    alert("결제 시스템을 준비 중입니다.")
+                    
+                    // 가상 결제 시뮬레이션
+                    const params = new URLSearchParams({
+                      productId: productId || '',
+                      product_name: product.name,
+                      product_type: productType,
+                      amount: product.price.toString(),
+                      name: formData.name,
+                      email: formData.email,
+                      phone: formData.phone,
+                      option: checkoutOption,
+                      // 추가 정보 전달
+                      receiverName: formData.receiverName,
+                      zipcode: formData.zipcode,
+                      address: formData.address,
+                      detailAddress: formData.detailAddress,
+                      deliveryNote: formData.deliveryNote,
+                      orderNote: formData.orderNote,
+                    })
+                    
+                    setLoading(true)
+                    setTimeout(() => {
+                      router.push(`/checkout/success?${params.toString()}`)
+                    }, 1500)
                   }}
                   className={`w-full py-4 rounded-xl font-bold tracking-widest transition-all ${
-                    (!agreements.terms || !agreements.refund || (product.options && product.options.length > 0 && !checkoutOption))
+                    loading || (!agreements.terms || !agreements.refund || (product.options && product.options.length > 0 && !checkoutOption))
                     ? 'bg-white/5 text-white/20 cursor-not-allowed'
                     : 'btn-primary shadow-[0_10px_30px_rgba(212,178,167,0.2)] hover:scale-[1.02] active:scale-95'
                   }`}
                 >
-                  {getButtonText()}
+                  {loading ? '처리 중...' : getButtonText()}
                 </button>
 
                 <p className="mt-6 text-[10px] text-center text-white/30 leading-relaxed">

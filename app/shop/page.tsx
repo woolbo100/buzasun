@@ -277,7 +277,7 @@ export default function ShopPage() {
                       <Link 
                         href={
                           (() => {
-                            const s = product.slug.trim();
+                            const s = product.slug?.trim() || '';
                             if (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream', 'premium-bookmark'].includes(s)) return `/shop/${s}`;
                             if (s === 'baekdohwa-report') return `/reports/baekdohwa-report`;
                             if (s === 'premium-compatibility-report') return `/reports/premium-compatibility-report`;
@@ -297,17 +297,6 @@ export default function ShopPage() {
                               fill
                               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
                             />
-                            {product.slug === 'baekdohwa-report' && (
-                              <div className="absolute top-0 right-0 w-28 md:w-32 z-20 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] transform transition-transform duration-700 group-hover:scale-110 origin-top">
-                                <Image 
-                                  src="/image/pick.png" 
-                                  alt="Expert Pick" 
-                                  width={160} 
-                                  height={240} 
-                                  className="object-contain"
-                                />
-                              </div>
-                            )}
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0c0816] via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
                           </div>
 

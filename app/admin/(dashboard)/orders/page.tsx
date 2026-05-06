@@ -3,20 +3,39 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import { Search, Filter, ChevronRight, Loader2 } from "lucide-react";
 
 export default function AdminOrdersPage() {
   const [orders, setOrders] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [filter, setFilter] = useState('ALL');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filters = [
+    { id: 'ALL', label: '전체' },
+    { id: 'new', label: '신규', field: 'order_status' },
+    { id: 'paid', label: '결제완료', field: 'payment_status' },
+    { id: 'pending', label: '리포트 대기', field: 'report_status' },
+    { id: 'writing', label: '제작중', field: 'report_status' },
+    { id: 'sent', label: '발송완료', field: 'report_status' },
+  ];
 
   useEffect(() => {
     async function fetchOrders() {
       try {
         setLoading(true);
-        const { data, error } = await supabase
+        let query = supabase
           .from('orders')
           .select('*')
           .order('created_at', { ascending: false });
+
+        const activeFilter = filters.find(f => f.id === filter);
+        if (activeFilter && activeFilter.field) {
+          query = query.eq(activeFilter.field, activeFilter.id);
+        }
+
+        const { data, error } = await query;
 
         if (error) throw error;
         setOrders(data || []);
@@ -28,115 +47,177 @@ export default function AdminOrdersPage() {
     }
 
     fetchOrders();
-  }, []);
+  }, [filter]);
 
-  const getStatusBadge = (status: string, type: 'payment' | 'report') => {
-    const baseClasses = "text-xs px-3 py-1 rounded-full border ";
+  const filteredOrders = orders.filter(order => 
+    order.customer_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    order.customer_email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    order.product_name?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const getStatusBadge = (status: string, type: 'payment' | 'order' | 'report') => {
+    const baseClasses = "text-[10px] px-2 py-0.5 rounded-full border font-bold uppercase tracking-tighter ";
     
     if (type === 'payment') {
       switch (status) {
-        case '결제완료': return baseClasses + "border-green-500/30 bg-green-500/10 text-green-400";
-        case '결제대기': return baseClasses + "border-accent-gold/30 bg-accent-gold/10 text-accent-gold";
-        case '환불완료': return baseClasses + "border-red-500/30 bg-red-500/10 text-red-400";
+        case 'paid': return baseClasses + "border-green-500/30 bg-green-500/10 text-green-400";
+        case 'test_paid': return baseClasses + "border-blue-500/30 bg-blue-500/10 text-blue-400";
+        case 'pending': return baseClasses + "border-amber-500/30 bg-amber-500/10 text-amber-400";
+        case 'cancelled': return baseClasses + "border-red-500/30 bg-red-500/10 text-red-400";
+        default: return baseClasses + "border-white/20 bg-white/5 text-white/60";
+      }
+    } else if (type === 'order') {
+      switch (status) {
+        case 'new': return baseClasses + "border-blue-500/30 bg-blue-500/10 text-blue-400";
+        case 'ready': return baseClasses + "border-purple-500/30 bg-purple-500/10 text-purple-400";
+        case 'sent': return baseClasses + "border-green-500/30 bg-green-500/10 text-green-400";
+        case 'completed': return baseClasses + "border-green-500/30 bg-green-500/10 text-green-400";
         default: return baseClasses + "border-white/20 bg-white/5 text-white/60";
       }
     } else {
       switch (status) {
-        case '발송완료': return baseClasses + "border-blue-500/30 bg-blue-500/10 text-blue-400";
-        case '작성중': return baseClasses + "border-purple-500/30 bg-purple-500/10 text-purple-400";
-        case '접수완료': return baseClasses + "border-accent-gold/30 bg-accent-gold/10 text-accent-gold";
+        case 'sent': return baseClasses + "border-indigo-500/30 bg-indigo-500/10 text-indigo-400";
+        case 'writing': return baseClasses + "border-purple-500/30 bg-purple-500/10 text-purple-400";
+        case 'pending': return baseClasses + "border-amber-500/30 bg-amber-500/10 text-amber-400";
         default: return baseClasses + "border-white/20 bg-white/5 text-white/60";
       }
     }
   };
 
-  return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#2A103D,_#160B24,_#0B0612)] text-white p-6 md:p-10">
-      <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header */}
-        <section className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div>
-            <Link href="/admin" className="text-sm text-accent-gold/60 hover:text-accent-gold transition-colors flex items-center gap-2 mb-2">
-              ← 대시보드로 돌아가기
-            </Link>
-            <h1 className="text-3xl md:text-4xl font-semibold">주문 관리</h1>
-            <p className="text-white/70 mt-2">
-              백도화 리포트 주문 현황을 확인하고 리포트 상태를 관리합니다.
-            </p>
-          </div>
-        </section>
+  const translateStatus = (status: string) => {
+    const map: any = {
+      'new': '신규', 'paid': '결제완료', 'test_paid': '테스트결제', 'pending': '대기중', 'writing': '제작중', 'ready': '다운로드 가능', 'sent': '발송완료',
+      'completed': '완료', 'cancelled': '취소됨', 'confirmed': '확인됨', 'processing': '처리중'
+    };
+    return map[status] || status;
+  };
 
-        {/* Filters (UI only) */}
-        <section className="flex flex-col md:flex-row gap-4 items-center justify-between">
-          <div className="relative w-full md:w-96">
+  return (
+    <div className="space-y-8 animate-in fade-in duration-700">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+          <h1 className="text-3xl font-elegant font-bold text-white mb-2">주문 내역 관리</h1>
+          <p className="text-white/40 text-sm">백도화의 모든 주문 건을 관리하고 리포트 상태를 업데이트합니다.</p>
+        </div>
+        
+        <div className="flex items-center gap-3">
+          <div className="relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
             <input 
               type="text" 
-              placeholder="고객명, 이메일 검색..." 
-              className="w-full bg-white/5 border border-accent-gold/20 rounded-2xl px-5 py-3 focus:outline-none focus:border-accent-gold/50 transition-all"
+              placeholder="고객명, 상품명 검색..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-11 pr-6 py-3 bg-white/5 border border-white/10 rounded-xl text-sm text-white focus:outline-none focus:border-[var(--accent-gold)] transition-all w-64"
             />
           </div>
-        </section>
-
-        {/* Status Handling */}
-        {loading ? (
-          <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
-            <p className="text-accent-gold animate-pulse">데이터를 불러오는 중...</p>
-          </div>
-        ) : error ? (
-          <div className="text-center py-20 bg-red-500/10 rounded-3xl border border-red-500/20">
-            <p className="text-red-400">오류가 발생했습니다: {error}</p>
-          </div>
-        ) : orders.length === 0 ? (
-          <div className="text-center py-20 bg-white/5 rounded-3xl border border-white/10">
-            <p className="text-white/40">아직 등록된 주문 데이터가 없습니다.</p>
-          </div>
-        ) : (
-          /* Orders Table */
-          <section className="rounded-3xl border border-accent-gold/20 bg-white/5 backdrop-blur-xl overflow-hidden shadow-xl">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-white/10 bg-white/5 text-sm text-white/60">
-                    <th className="p-5 font-medium">주문일</th>
-                    <th className="p-5 font-medium">고객명 / 이메일</th>
-                    <th className="p-5 font-medium">상품명</th>
-                    <th className="p-5 font-medium text-center">결제상태</th>
-                    <th className="p-5 font-medium text-center">리포트상태</th>
-                    <th className="p-5 font-medium text-right">금액</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-white/5">
-                  {orders.map((order) => (
-                    <tr key={order.id} className="hover:bg-white/5 transition-colors group">
-                      <td className="p-5 text-sm text-white/70">
-                        {new Date(order.created_at).toLocaleDateString()}
-                      </td>
-                      <td className="p-5">
-                        <p className="font-medium">{order.customer_name}</p>
-                        <p className="text-xs text-white/40">{order.customer_email}</p>
-                      </td>
-                      <td className="p-5 text-sm">{order.product_name}</td>
-                      <td className="p-5 text-center">
-                        <span className={getStatusBadge(order.payment_status, 'payment')}>
-                          {order.payment_status}
-                        </span>
-                      </td>
-                      <td className="p-5 text-center">
-                        <span className={getStatusBadge(order.report_status, 'report')}>
-                          {order.report_status}
-                        </span>
-                      </td>
-                      <td className="p-5 text-right font-medium text-accent-gold/90">
-                        {order.amount?.toLocaleString()}원
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        )}
+        </div>
       </div>
-    </main>
+
+      {/* Filter Tabs */}
+      <div className="flex flex-wrap gap-2 p-1 bg-white/5 rounded-xl w-fit">
+        {filters.map((f) => (
+          <button
+            key={f.id}
+            onClick={() => setFilter(f.id)}
+            className={`px-5 py-2 rounded-lg text-xs font-bold transition-all ${
+              filter === f.id 
+              ? 'bg-[var(--accent-gold)] text-[#1a0f2e] shadow-lg' 
+              : 'text-white/40 hover:text-white/70'
+            }`}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Table Section */}
+      <div className="gungjung-glass overflow-hidden border border-white/5 shadow-2xl">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="bg-white/5 text-[10px] uppercase tracking-widest text-white/30 border-b border-white/10">
+                <th className="px-6 py-5 font-bold">주문 일시</th>
+                <th className="px-6 py-5 font-bold">고객 정보</th>
+                <th className="px-6 py-5 font-bold">상품 정보</th>
+                <th className="px-6 py-5 font-bold text-center">주문 상태</th>
+                <th className="px-6 py-5 font-bold text-center">결제 상태</th>
+                <th className="px-6 py-5 font-bold text-center">리포트</th>
+                <th className="px-6 py-5 font-bold text-right">결제 금액</th>
+                <th className="px-6 py-5"></th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5">
+              {loading ? (
+                <tr>
+                  <td colSpan={8} className="py-20 text-center">
+                    <Loader2 className="w-8 h-8 text-[var(--accent-gold)] animate-spin mx-auto mb-4" />
+                    <p className="text-white/40 text-sm">주문 데이터를 불러오는 중...</p>
+                  </td>
+                </tr>
+              ) : filteredOrders.length === 0 ? (
+                <tr>
+                  <td colSpan={8} className="py-20 text-center">
+                    <p className="text-white/20">조회된 주문 내역이 없습니다.</p>
+                  </td>
+                </tr>
+              ) : (
+                filteredOrders.map((order) => (
+                  <tr key={order.id} className="hover:bg-white/[0.02] transition-colors group">
+                    <td className="px-6 py-6 text-xs text-white/40 whitespace-nowrap">
+                      {new Date(order.created_at).toLocaleDateString('ko-KR', {
+                        year: 'numeric', month: '2-digit', day: '2-digit',
+                        hour: '2-digit', minute: '2-digit'
+                      })}
+                    </td>
+                    <td className="px-6 py-6">
+                      <div className="space-y-1">
+                        <p className="text-sm font-bold text-white">{order.customer_name}</p>
+                        <p className="text-[10px] text-white/30">{order.customer_email}</p>
+                        <p className="text-[10px] text-white/30">{order.customer_phone}</p>
+                      </div>
+                    </td>
+                    <td className="px-6 py-6">
+                      <div className="space-y-1">
+                        <p className="text-sm text-[#EDE6DA] font-medium">{order.product_name}</p>
+                        <p className="text-[10px] text-white/20 uppercase tracking-tighter">{order.product_type}</p>
+                      </div>
+                    </td>
+                    <td className="px-6 py-6 text-center">
+                      <span className={getStatusBadge(order.order_status, 'order')}>
+                        {translateStatus(order.order_status)}
+                      </span>
+                    </td>
+                    <td className="px-6 py-6 text-center">
+                      <span className={getStatusBadge(order.payment_status, 'payment')}>
+                        {translateStatus(order.payment_status)}
+                      </span>
+                    </td>
+                    <td className="px-6 py-6 text-center">
+                      <span className={getStatusBadge(order.report_status, 'report')}>
+                        {translateStatus(order.report_status)}
+                      </span>
+                    </td>
+                    <td className="px-6 py-6 text-right">
+                      <p className="text-sm font-bold text-[var(--accent-gold)] font-elegant">
+                        ₩{order.amount?.toLocaleString()}
+                      </p>
+                    </td>
+                    <td className="px-6 py-6 text-right">
+                      <Link 
+                        href={`/admin/orders/${order.id}`}
+                        className="inline-flex items-center gap-2 text-[10px] font-bold text-white/40 hover:text-[var(--accent-gold)] transition-colors"
+                      >
+                        상세보기 <ChevronRight className="w-3 h-3" />
+                      </Link>
+                    </td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   );
 }
