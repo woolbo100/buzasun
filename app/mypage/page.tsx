@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
-import { Package, FileText, MapPin, User, LogOut, ChevronRight, ShoppingBag } from 'lucide-react';
+import { Package, FileText, MapPin, User, LogOut, ChevronRight, ShoppingBag, Download, Loader2 } from 'lucide-react';
 
 export default function MyPage() {
   const router = useRouter();
