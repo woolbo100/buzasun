@@ -186,6 +186,14 @@ function CheckoutContent() {
   };
 
   const handlePayment = async () => {
+    // 결제 시스템 오픈 여부 확인 (환경변수 제어)
+    const isPaymentEnabled = process.env.NEXT_PUBLIC_PAYMENT_ENABLED === 'true';
+    
+    if (!isPaymentEnabled && process.env.NODE_ENV !== 'development') {
+      alert("현재 결제 시스템 심사 중입니다.\n카드결제는 곧 오픈될 예정입니다.");
+      return;
+    }
+
     // 필수 정보 유효성 검사
     if (!formData.name || !formData.email || !formData.phone) {
       alert("주문자 정보를 모두 입력해주세요.");
