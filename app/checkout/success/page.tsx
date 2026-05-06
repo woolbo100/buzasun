@@ -121,7 +121,7 @@ function SuccessContent() {
           <div className="gungjung-glass p-8 mb-12 text-left space-y-4">
             <div className="flex justify-between border-b border-white/5 pb-4 mb-4">
               <span className="text-white/40">주문 번호</span>
-              <span className="text-white font-medium">{order?.merchant_uid || '-'}</span>
+              <span className="text-white font-medium">{order?.merchant_uid || order?.payment_id || '-'}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-white/40">상품명</span>

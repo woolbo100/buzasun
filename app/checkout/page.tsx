@@ -8,6 +8,14 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Reveal from '@/components/Reveal'
 import { supabase } from '@/lib/supabase'
 import Image from 'next/image'
+import Script from 'next/script'
+
+// TypeScript를 위한 전역 객체 선언
+declare global {
+  interface Window {
+    IMP: any;
+  }
+}
 
 function CheckoutContent() {
   const searchParams = useSearchParams()
@@ -169,8 +177,110 @@ function CheckoutContent() {
                      (product.category?.includes('REPORT') ? 'digital_report' : 
                       product.category?.includes('METHOD') ? 'digital_ebook' : 'physical')
 
+  // 포트원 결제를 위한 주문번호 생성
+  const generateMerchantUid = () => {
+    const now = new Date();
+    const dateStr = now.toISOString().slice(0, 10).replace(/-/g, '');
+    const randomStr = Math.random().toString(36).slice(2, 8).toUpperCase();
+    return `BDH-${dateStr}-${randomStr}`;
+  };
+
+  const handlePayment = async () => {
+    // 필수 정보 유효성 검사
+    if (!formData.name || !formData.email || !formData.phone) {
+      alert("주문자 정보를 모두 입력해주세요.");
+      return;
+    }
+
+    if (productType === 'physical' && (!formData.receiverName || !formData.address)) {
+      alert("배송지 정보를 모두 입력해주세요.");
+      return;
+    }
+
+    if (product.options && product.options.length > 0 && !checkoutOption) {
+      setShowOptionError(true);
+      alert("색상을 선택해주세요.");
+      return;
+    }
+
+    if (!window.IMP) {
+      alert("결제 모듈을 불러오는 중입니다. 잠시 후 다시 시도해주세요.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // 1. 가맹점 식별코드 초기화 (심사용)
+      // TODO: 실제 가맹점 식별코드로 교체 필요
+      const storeCode = process.env.NEXT_PUBLIC_PORTONE_STORE_CODE || 'imp_your_store_id';
+      window.IMP.init(storeCode);
+
+      // 2. 주문번호 생성
+      const merchantUid = generateMerchantUid();
+
+      // 3. 포트원 전달 데이터 구성
+      const paymentData = {
+        pg: "kakaopay", // 심사용 기본 설정 (이후 변경 가능)
+        pay_method: "card",
+        merchant_uid: merchantUid,
+        name: product.name,
+        amount: product.price,
+        buyer_email: formData.email,
+        buyer_name: formData.name,
+        buyer_tel: formData.phone,
+        buyer_addr: formData.address,
+        buyer_postcode: formData.zipcode,
+        m_redirect_url: `${window.location.origin}/checkout/success`, // 모바일 리다이렉트 주소
+        custom_data: {
+          productId: productId,
+          productType: productType,
+          option: checkoutOption,
+          orderNote: formData.orderNote,
+          deliveryNote: formData.deliveryNote
+        }
+      };
+
+      // 4. 결제창 호출
+      window.IMP.request_pay(paymentData, async (rsp: any) => {
+        if (rsp.success) {
+          // 결제 성공 시
+          const params = new URLSearchParams({
+            productId: productId || '',
+            product_name: product.name,
+            product_type: productType,
+            amount: product.price.toString(),
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            option: checkoutOption || '',
+            merchant_uid: merchantUid,
+            payment_id: rsp.imp_uid,
+            payment_status: 'paid',
+            receiverName: formData.receiverName,
+            zipcode: formData.zipcode,
+            address: formData.address,
+            detailAddress: formData.detailAddress,
+            deliveryNote: formData.deliveryNote,
+            orderNote: formData.orderNote,
+          });
+          
+          router.push(`/checkout/success?${params.toString()}`);
+        } else {
+          // 결제 실패 시
+          router.push(`/checkout/fail?error_msg=${encodeURIComponent(rsp.error_msg)}&error_code=${rsp.error_code}`);
+        }
+        setLoading(false);
+      });
+
+    } catch (err) {
+      console.error("Payment Process Error:", err);
+      alert("결제 처리 중 오류가 발생했습니다.");
+      setLoading(false);
+    }
+  };
+
   const getButtonText = () => {
-    if (process.env.NODE_ENV !== 'development') return '결제시스템 준비중입니다'
     if (productId === 'premium-bookmark') return '프리미엄 플라워 북마크 세트 결제하기'
     if (productType === 'digital_ebook') return '전자책 결제하기'
     if (productType === 'digital_report') return '리포트 신청 및 결제하기'
@@ -179,6 +289,8 @@ function CheckoutContent() {
 
   return (
     <div className="container-premium py-20">
+      {/* 포트원 SDK 스크립트 */}
+      <Script src="https://cdn.iamport.kr/v1/iamport.js" strategy="afterInteractive" />
       <div className="max-w-4xl mx-auto">
         <Reveal>
             <h1 className="text-3xl md:text-4xl font-elegant font-bold text-center mb-12 text-white">
@@ -477,42 +589,7 @@ function CheckoutContent() {
                 </div>
                 <button 
                   disabled={loading || !agreements.terms || !agreements.refund || (product.options && product.options.length > 0 && !checkoutOption)}
-                  onClick={() => {
-                    if (process.env.NODE_ENV !== 'development') {
-                      alert("결제 시스템 준비 중입니다. 잠시만 기다려주세요.")
-                      return
-                    }
-
-                    if (product.options && product.options.length > 0 && !checkoutOption) {
-                      setShowOptionError(true)
-                      alert("색상을 선택해주세요.")
-                      return
-                    }
-                    
-                    // 가상 결제 시뮬레이션
-                    const params = new URLSearchParams({
-                      productId: productId || '',
-                      product_name: product.name,
-                      product_type: productType,
-                      amount: product.price.toString(),
-                      name: formData.name,
-                      email: formData.email,
-                      phone: formData.phone,
-                      option: checkoutOption,
-                      // 추가 정보 전달
-                      receiverName: formData.receiverName,
-                      zipcode: formData.zipcode,
-                      address: formData.address,
-                      detailAddress: formData.detailAddress,
-                      deliveryNote: formData.deliveryNote,
-                      orderNote: formData.orderNote,
-                    })
-                    
-                    setLoading(true)
-                    setTimeout(() => {
-                      router.push(`/checkout/success?${params.toString()}`)
-                    }, 1500)
-                  }}
+                  onClick={handlePayment}
                   className={`w-full py-4 rounded-xl font-bold tracking-widest transition-all ${
                     loading || (!agreements.terms || !agreements.refund || (product.options && product.options.length > 0 && !checkoutOption))
                     ? 'bg-white/5 text-white/20 cursor-not-allowed'
