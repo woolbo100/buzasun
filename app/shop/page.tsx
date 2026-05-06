@@ -297,6 +297,17 @@ export default function ShopPage() {
                               fill
                               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
                             />
+                            {product.slug === 'baekdohwa-report' && (
+                              <div className="absolute top-0 right-4 w-20 md:w-24 z-20 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] transform transition-transform duration-700 group-hover:scale-110 origin-top">
+                                <Image 
+                                  src="/image/expert-pick-ribbon.png" 
+                                  alt="Expert Pick" 
+                                  width={100} 
+                                  height={180} 
+                                  className="object-contain"
+                                />
+                              </div>
+                            )}
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0c0816] via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
                           </div>
 
