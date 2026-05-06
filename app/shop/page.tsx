@@ -298,9 +298,9 @@ export default function ShopPage() {
                               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
                             />
                             {product.slug === 'baekdohwa-report' && (
-                              <div className="absolute top-0 right-4 w-20 md:w-24 z-20 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] transform transition-transform duration-700 group-hover:scale-110 origin-top">
+                              <div className="absolute top-0 right-1 w-20 md:w-24 z-20 drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] transform transition-transform duration-700 group-hover:scale-110 origin-top">
                                 <Image 
-                                  src="/image/expert-pick-ribbon.png" 
+                                  src="/image/pick.png" 
                                   alt="Expert Pick" 
                                   width={100} 
                                   height={180} 
