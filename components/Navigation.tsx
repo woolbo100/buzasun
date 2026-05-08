@@ -67,7 +67,7 @@ export default function Navigation() {
     setActiveDropdown(null)
   }
 
-  const [mainReportSlug, setMainReportSlug] = useState('love-code-report')
+  const [mainReportSlug, setMainReportSlug] = useState('baekdohwa-report')
 
   useEffect(() => {
     async function fetchMainReport() {
@@ -239,7 +239,7 @@ export default function Navigation() {
                   }}
                 >
                   <Link
-                    href="/reports/love-code-report"
+                    href="/reports/baekdohwa-report"
                     className="block px-4 py-3 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors text-sm rounded-t-lg"
                     onClick={() => setActiveDropdown(null)}
                   >
@@ -435,7 +435,7 @@ export default function Navigation() {
                 {activeDropdown === 'reports' && (
                   <div className="mt-2 ml-4 space-y-1">
                     <Link
-                      href="/reports/love-code-report"
+                      href="/reports/baekdohwa-report"
                       className="block py-2 text-bd-muted hover:text-bd-ivory transition-colors text-sm rounded-lg px-2"
                       onClick={closeMobileMenu}
                     >

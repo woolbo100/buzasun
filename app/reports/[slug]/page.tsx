@@ -31,6 +31,11 @@ export default function DynamicReportPage() {
       return;
     }
 
+    if (slug === 'love-code-report') {
+      router.replace('/reports/baekdohwa-report');
+      return;
+    }
+
     async function fetchProduct() {
       try {
         setLoading(true)
