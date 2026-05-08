@@ -34,11 +34,15 @@ function CheckoutContent() {
     name: '',
     email: '',
     phone: '',
-    // 리포트 전용
+    // 리포트 전용 (본인)
     birthDate: '',
     birthTime: '',
     gender: 'female',
-    partnerInfo: '',
+    // 리포트 전용 (상대방 - 궁합용)
+    partnerName: '',
+    partnerBirthDate: '',
+    partnerBirthTime: '',
+    partnerGender: 'male',
     // 배송 전용
     receiverName: '',
     zipcode: '',
@@ -78,19 +82,12 @@ function CheckoutContent() {
       category: "PREMIUM REPORT",
       image: "/image/love-code-bg.png"
     },
-    "baekdohwa-report": {
-      name: "선천코드 연애 리포트",
-      type: "digital_report",
-      price: 49000,
-      category: "PREMIUM REPORT",
-      image: "/image/love-code-bg.png"
-    },
-    "premium-compatibility-report": {
+    "compatibility-report": {
       name: "프리미엄 궁합 리포트",
       type: "digital_report",
       price: 59000,
       category: "PREMIUM REPORT",
-      image: "/image/premium_compatibility_report.png"
+      image: "/image/premium_compatibility_bg.png"
     },
     "love-secret-ebook": {
       name: "연애비급",
@@ -340,7 +337,10 @@ function CheckoutContent() {
           birthDate: formData.birthDate,
           birthTime: formData.birthTime,
           gender: formData.gender,
-          partnerInfo: formData.partnerInfo
+          partnerName: formData.partnerName,
+          partnerBirthDate: formData.partnerBirthDate,
+          partnerBirthTime: formData.partnerBirthTime,
+          partnerGender: formData.partnerGender
         }
       };
 
@@ -373,7 +373,10 @@ function CheckoutContent() {
             birth_date: formData.birthDate,
             birth_time: formData.birthTime,
             gender: formData.gender,
-            partner_info: formData.partnerInfo,
+            partner_name: formData.partnerName,
+            partner_birth_date: formData.partnerBirthDate,
+            partner_birth_time: formData.partnerBirthTime,
+            partner_gender: formData.partnerGender,
             shipping_memo: formData.deliveryNote,
           });
           
@@ -450,7 +453,10 @@ function CheckoutContent() {
                       birthDate: '19900101',
                       birthTime: '오후 2시',
                       gender: 'female',
-                      partnerInfo: '테스트용 정보입니다.',
+                      partnerName: '상대방(테스트)',
+                      partnerBirthDate: '19920202',
+                      partnerBirthTime: '오전 11시',
+                      partnerGender: 'male',
                       receiverName: '홍길동',
                       zipcode: '12345',
                       address: '서울시 강남구 테헤란로 123',
@@ -477,7 +483,10 @@ function CheckoutContent() {
                       birthDate: '19900101',
                       birthTime: '오전 10시',
                       gender: 'female',
-                      partnerInfo: '테스트용 정보입니다.',
+                      partnerName: '상대방(테스트)',
+                      partnerBirthDate: '19920202',
+                      partnerBirthTime: '오전 11시',
+                      partnerGender: 'male',
                       receiverName: '홍길동',
                       zipcode: '12345',
                       address: '서울시 강남구 테헤란로 123',
@@ -506,10 +515,13 @@ function CheckoutContent() {
                       product_title: product.display_title || product.name,
                       payment_name: product.payment_name || product.display_title || product.name,
                       buyer_type: buyerType,
-                      birth_date: formData.birthDate,
-                      birth_time: formData.birthTime,
-                      gender: formData.gender,
-                      partner_info: formData.partnerInfo,
+                      birth_date: testFormData.birthDate,
+                      birth_time: testFormData.birthTime,
+                      gender: testFormData.gender,
+                      partner_name: testFormData.partnerName,
+                      partner_birth_date: testFormData.partnerBirthDate,
+                      partner_birth_time: testFormData.partnerBirthTime,
+                      partner_gender: testFormData.partnerGender,
                     })
                     
                     setLoading(true)
@@ -643,10 +655,10 @@ function CheckoutContent() {
               <div className="gungjung-glass p-8 space-y-6">
                 {productType === 'digital_report' ? (
                   <>
-                    <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">사주 정보 (리포트 제작용)</h3>
+                    <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">신청자 정보 (사주 기반 리포트 제작용)</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label className="text-xs text-white/40 ml-1">생년월일</label>
+                        <label className="text-xs text-white/40 ml-1">본인 생년월일</label>
                         <input 
                           type="text" name="birthDate" value={formData.birthDate} onChange={handleInputChange}
                           placeholder="예: 19900101 (8자리)"
@@ -654,7 +666,7 @@ function CheckoutContent() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-xs text-white/40 ml-1">태어난 시간</label>
+                        <label className="text-xs text-white/40 ml-1">본인 태어난 시간</label>
                         <input 
                           type="text" name="birthTime" value={formData.birthTime} onChange={handleInputChange}
                           placeholder="예: 오후 2시 30분 (모르면 미입력)"
@@ -663,11 +675,12 @@ function CheckoutContent() {
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs text-white/40 ml-1">성별</label>
+                      <label className="text-xs text-white/40 ml-1">본인 성별</label>
                       <div className="flex gap-4">
                         {['female', 'male'].map((g) => (
                           <button 
                             key={g}
+                            type="button"
                             onClick={() => setFormData({...formData, gender: g})}
                             className={`flex-1 py-3 rounded-xl border text-sm font-bold transition-all ${formData.gender === g ? 'bg-[var(--accent-gold)]/20 border-[var(--accent-gold)] text-[var(--accent-gold)]' : 'bg-white/5 border-white/10 text-white/40'}`}
                           >
@@ -676,14 +689,54 @@ function CheckoutContent() {
                         ))}
                       </div>
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-xs text-white/40 ml-1">상대방 정보 (해당 시)</label>
-                      <input 
-                        type="text" name="partnerInfo" value={formData.partnerInfo} onChange={handleInputChange}
-                        placeholder="상대방의 생년월일 또는 알고 싶은 내용을 적어주세요."
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all"
-                      />
-                    </div>
+
+                    {/* 궁합 리포트일 경우 상대방 정보 추가 */}
+                    {productId === 'compatibility-report' && (
+                      <div className="mt-12 pt-12 border-t border-white/5 space-y-6">
+                        <h3 className="text-lg font-bold text-white border-l-4 border-[#BA8D7E] pl-4">상대방 정보</h3>
+                        <div className="space-y-2">
+                          <label className="text-xs text-white/40 ml-1">상대방 이름</label>
+                          <input 
+                            type="text" name="partnerName" value={formData.partnerName} onChange={handleInputChange}
+                            placeholder="상대방의 성함을 입력해주세요"
+                            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all"
+                          />
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="space-y-2">
+                            <label className="text-xs text-white/40 ml-1">상대방 생년월일</label>
+                            <input 
+                              type="text" name="partnerBirthDate" value={formData.partnerBirthDate} onChange={handleInputChange}
+                              placeholder="예: 19900101 (8자리)"
+                              className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all"
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <label className="text-xs text-white/40 ml-1">상대방 태어난 시간</label>
+                            <input 
+                              type="text" name="partnerBirthTime" value={formData.partnerBirthTime} onChange={handleInputChange}
+                              placeholder="예: 오후 2시 (모르면 미입력)"
+                              className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all"
+                            />
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <label className="text-xs text-white/40 ml-1">상대방 성별</label>
+                          <div className="flex gap-4">
+                            {['female', 'male'].map((g) => (
+                              <button 
+                                key={g}
+                                type="button"
+                                onClick={() => setFormData({...formData, partnerGender: g})}
+                                className={`flex-1 py-3 rounded-xl border text-sm font-bold transition-all ${formData.partnerGender === g ? 'bg-[#BA8D7E]/20 border-[#BA8D7E] text-[#BA8D7E]' : 'bg-white/5 border-white/10 text-white/40'}`}
+                              >
+                                {g === 'female' ? '여성' : '남성'}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </>
                 ) : productType === 'physical' ? (
                   <>

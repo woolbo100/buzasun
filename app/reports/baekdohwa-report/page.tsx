@@ -46,10 +46,10 @@ export default function BaekdohwaReportPage() {
                 </p>
                 
                 <Link 
-                  href="/checkout?productId=baekdohwa-report"
+                  href="/checkout?productId=love-report"
                   className="btn-primary inline-flex items-center px-16 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all duration-500 shadow-[0_0_60px_rgba(212,178,167,0.2)]"
                 >
-                  리포트 신청하기 (49,000원)
+                  선천코드 연애 리포트 신청하기
                 </Link>
               </Reveal>
             </section>
@@ -235,11 +235,11 @@ export default function BaekdohwaReportPage() {
                     사랑의 흐름을 <br /> <span className="text-[var(--accent-gold)]">바꾸는 시작</span>
                   </h2>
                   <Link 
-                    href="/checkout?productId=baekdohwa-report"
+                    href="/checkout?productId=love-report"
                     className="btn-primary inline-flex items-center px-20 py-8 rounded-2xl font-bold text-2xl hover:scale-105 transition-all duration-500 shadow-[0_0_80px_rgba(212,178,167,0.3)]"
                     style={{ background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)', color: '#1A0514' }}
                   >
-                    지금 리포트 신청하기
+                    선천코드 연애 리포트 신청하기
                   </Link>
                 </Reveal>
               </div>

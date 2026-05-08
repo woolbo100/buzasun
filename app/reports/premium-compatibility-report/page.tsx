@@ -46,10 +46,10 @@ export default function PremiumCompatibilityReportPage() {
                 </p>
                 
                 <Link 
-                  href="/checkout?productId=premium-compatibility-report"
+                  href="/checkout?productId=compatibility-report"
                   className="btn-primary inline-flex items-center px-16 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all duration-500 shadow-[0_0_60px_rgba(212,178,167,0.2)]"
                 >
-                  궁합 리포트 신청 및 결제하기
+                  프리미엄 궁합 리포트 신청하기
                 </Link>
               </Reveal>
             </section>
@@ -252,7 +252,7 @@ export default function PremiumCompatibilityReportPage() {
                     반복되는 관계에는 이유가 있습니다. 그리고 그 이유를 아는 순간, 당신의 사랑은 더 좋은 방향으로 흘러갈 수 있습니다.
                   </p>
                   <Link 
-                    href="/checkout?productId=premium-compatibility-report"
+                    href="/checkout?productId=compatibility-report"
                     className="btn-primary inline-flex items-center px-20 py-8 rounded-2xl font-bold text-2xl hover:scale-105 transition-all duration-500 shadow-[0_0_80px_rgba(212,178,167,0.3)]"
                     style={{ background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)', color: '#1A0514' }}
                   >

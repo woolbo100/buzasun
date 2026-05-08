@@ -88,7 +88,12 @@ function SuccessContent() {
             birth_date: searchParams.get('birth_date'),
             birth_time: searchParams.get('birth_time'),
             gender: searchParams.get('gender'),
-            partner_info: searchParams.get('partner_info'),
+            partner_info: searchParams.get('partner_info') || [
+              searchParams.get('partner_name') ? `이름: ${searchParams.get('partner_name')}` : '',
+              searchParams.get('partner_birth_date') ? `생일: ${searchParams.get('partner_birth_date')}` : '',
+              searchParams.get('partner_birth_time') ? `시간: ${searchParams.get('partner_birth_time')}` : '',
+              searchParams.get('partner_gender') ? `성별: ${searchParams.get('partner_gender') === 'female' ? '여성' : '남성'}` : ''
+            ].filter(Boolean).join(' | '),
             product_title: searchParams.get('product_title') || product_name,
             payment_name: searchParams.get('payment_name') || product_name,
           }])
@@ -127,7 +132,7 @@ function SuccessContent() {
           </h1>
           <p className="text-lg text-[#EDE6DA] opacity-80 mb-12 break-keep">
             백도화를 믿고 선택해주셔서 감사합니다.<br />
-            주문 내역은 입력하신 이메일로도 발송되었습니다.
+            리포트는 정성껏 분석하여 입력하신 이메일로 영업일 기준 2~5일 내에 발송해 드립니다.
           </p>
 
           <div className="gungjung-glass p-8 mb-12 text-left space-y-4">
