@@ -266,33 +266,47 @@ function CheckoutContent() {
     setLoading(true);
 
     try {
-      // 1. 가맹점 식별코드 초기화
-      const storeCode = process.env.NEXT_PUBLIC_PORTONE_STORE_CODE || 'imp_your_store_id';
+      // 1. 환경변수 로드 및 검증
+      const storeCode = process.env.NEXT_PUBLIC_PORTONE_STORE_CODE;
+      const envPgId = process.env.NEXT_PUBLIC_PORTONE_PG_ID;
+      const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
+      const paymentEnabled = process.env.NEXT_PUBLIC_PAYMENT_ENABLED === 'true';
+
+      // 가맹점 식별코드(imp...) 체크
+      if (!storeCode || storeCode === 'imp_your_store_id' || storeCode.includes('undefined')) {
+        alert("결제 설정 오류: NEXT_PUBLIC_PORTONE_STORE_CODE(가맹점 식별코드)가 올바르지 않습니다. Vercel 환경변수를 확인해주세요.");
+        setLoading(false);
+        return;
+      }
+
+      // PG사 식별코드 체크
+      // 테스트 모드일 때는 kakaopay.TC0ONETIME을 기본으로 사용, 실결제일 때는 환경변수 사용
+      const pgProvider = isTestMode ? "kakaopay.TC0ONETIME" : envPgId;
+
+      if (!pgProvider || pgProvider.includes('undefined')) {
+        alert("결제 설정 오류: NEXT_PUBLIC_PORTONE_PG_ID(PG사 식별코드)가 설정되지 않았습니다.");
+        setLoading(false);
+        return;
+      }
+
+      // 2. 가맹점 식별코드 초기화
       window.IMP.init(storeCode);
 
-      // 2. 주문번호 생성
+      // 3. 주문번호 및 결제명 설정
       const merchantUid = generateMerchantUid();
-
-      // 3. 결제용 상품명 설정
       const paymentName = product.payment_name || product.display_title || product.name;
 
-      // 4. PG사 및 채널 설정
-      const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
-      const pgProvider = isTestMode ? "kakaopay.TC0ONETIME" : (process.env.NEXT_PUBLIC_PORTONE_PG_ID || "tosspayments");
-      const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY; // V2용 채널키
-
-      // [디버깅 로그 추가]
-      console.log("--- [백도화 결제 디버깅] ---");
-      console.log("가맹점 코드(storeCode):", storeCode);
+      // [백도화 결제 디버깅 로그]
+      console.log("--- [백도화 PortOne V1 점검] ---");
+      console.log("가맹점 식별코드(storeCode):", storeCode);
       console.log("PG사 식별코드(pg):", pgProvider);
-      console.log("채널키(channelKey):", channelKey);
-      console.log("테스트 모드:", isTestMode);
-      console.log("상품명:", paymentName);
-      console.log("결제 금액:", product.price);
+      console.log("테스트 모드(testMode):", isTestMode);
+      console.log("활성화 상태(enabled):", paymentEnabled);
+      console.log("최종 결제금액(amount):", product.price);
       console.log("주문 번호(merchant_uid):", merchantUid);
-      console.log("-------------------------");
+      console.log("-------------------------------");
 
-      // 5. 포트원 전달 데이터 구성
+      // 4. 포트원 전달 데이터 구성 (V1 방식)
       const paymentData: any = {
         pg: pgProvider,
         pay_method: "card",
@@ -323,12 +337,7 @@ function CheckoutContent() {
         }
       };
 
-      // V2 채널키가 있다면 추가 (V2 방식 대응)
-      if (channelKey) {
-        paymentData.channelKey = channelKey;
-      }
-
-      // 6. 결제창 호출
+      // 5. 결제창 호출
       window.IMP.request_pay(paymentData, async (rsp: any) => {
         if (rsp.success) {
           // 결제 성공 시
