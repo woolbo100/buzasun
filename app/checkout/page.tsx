@@ -185,6 +185,7 @@ function CheckoutContent() {
     return `BDH-${dateStr}-${randomStr}`;
   };
 
+  const handlePayment = async () => {
     const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
 
     // 필수 정보 유효성 검사
