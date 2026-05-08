@@ -54,6 +54,12 @@
   }
 
 
+  /* 텍스트 선택(드래그) 색상 변경 - 피치핑크 파스텔 */
+  ::selection {
+    background-color: rgba(251, 212, 212, 0.85);
+    color: #1A0F2E;
+  }
+
   /* 기존 body::before 핑크 그라데이션 제거 */
   body::before {
     display: none;
