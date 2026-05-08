@@ -354,23 +354,47 @@ export default function ShopPage() {
                 <h2 className="text-4xl md:text-5xl font-elegant font-bold mb-12 text-white relative z-10">
                   왜 백도화는 다를까요
                 </h2>
-                <div className="space-y-10 text-[#EDE6DA] opacity-80 leading-relaxed mb-16 max-w-2xl mx-auto break-keep text-base md:text-lg relative z-10 font-light">
-                  <p>우리는 단순한 상품을 판매하지 않습니다.</p>
-                  <p>당신의 흐름을 읽고, 당신의 선택이 더 선명해질 수 있도록 돕습니다.</p>
+                <div className="space-y-8 text-[#EDE6DA] opacity-80 leading-relaxed mb-16 max-w-2xl mx-auto break-keep text-base md:text-lg relative z-10 font-light">
+                  <p className="font-bold text-white opacity-100">우리는 단순한 상품을 판매하지 않습니다.</p>
+                  
+                  <div className="space-y-4 py-2 border-y border-white/5">
+                    <p>누군가는 왜 같은 사랑을 반복하는지,</p>
+                    <p>누군가는 왜 늘 비슷한 사람에게 상처받는지,</p>
+                    <p>누군가는 왜 마음은 있는데 관계는 멀어지는지.</p>
+                  </div>
+                  
+                  <p><span className="text-[var(--accent-gold)] font-medium">백도화는 그 이유를 함께 읽어드립니다.</span></p>
+                  
+                  <p>
+                    당신의 흐름을 이해하고, 더 좋은 선택을 할 수 있도록.<br />
+                    단순한 소비가 아닌, 당신만을 위한 하나의 해답을 전합니다.
+                  </p>
                 </div>
                 
                 <div className="grid md:grid-cols-3 gap-12 relative z-10">
                   {[
-                    { icon: 'fa-magic', title: '1:1 프리미엄 제작', desc: '모든 리포트는 한 분만을 위해 정성껏 제작됩니다.' },
-                    { icon: 'fa-brain', title: '직접 해석 + AI 리딩', desc: '전문적인 통찰과 정밀한 분석이 만났습니다.' },
-                    { icon: 'fa-heart', title: '높은 재구매율', desc: '경험해보신 분들이 다시 찾는 개인 맞춤형 리포트입니다.' }
+                    { 
+                      icon: 'fa-magic', 
+                      title: '1:1 프리미엄 제작', 
+                      desc: '오직 한 사람만을 위한 개인 맞춤 리포트. 당신의 흐름과 관계를 바탕으로 정성스럽게 제작됩니다.' 
+                    },
+                    { 
+                      icon: 'fa-brain', 
+                      title: '직접 해석 + AI 리딩', 
+                      desc: '전문 해석과 AI 분석이 만나는 정교한 리포트. 단순한 운세가 아닌 깊이 있는 자기이해를 제공합니다.' 
+                    },
+                    { 
+                      icon: 'fa-heart', 
+                      title: '다시 찾게 되는 이유', 
+                      desc: '한 번의 결과가 아니라 오래 남는 통찰. 경험한 분들이 다시 찾는 이유는 읽고 끝나지 않기 때문입니다.' 
+                    }
                   ].map((item, i) => (
                     <div key={i} className="space-y-4 group/item">
-                      <div className="w-12 h-12 mx-auto rounded-full bg-[rgba(212,178,167,0.1)] border border-[var(--accent-gold)]/20 flex items-center justify-center text-[var(--accent-gold)] group-hover/item:bg-[var(--accent-gold)]/20 transition-all duration-500">
+                      <div className="w-12 h-12 mx-auto rounded-full bg-[rgba(212,178,167,0.1)] border border-[var(--accent-gold)]/20 flex items-center justify-center text-[var(--accent-gold)] group-hover/item:bg-[var(--accent-gold)]/20 transition-all duration-500 shadow-[0_0_15px_rgba(212,178,167,0.1)]">
                         <i className={`fas ${item.icon}`}></i>
                       </div>
                       <div className="text-[var(--accent-gold)] font-bold text-lg tracking-wider">{item.title}</div>
-                      <p className="text-xs opacity-50 leading-relaxed break-keep font-light">{item.desc}</p>
+                      <p className="text-xs md:text-sm opacity-50 leading-relaxed break-keep font-light px-4">{item.desc}</p>
                     </div>
                   ))}
                 </div>
