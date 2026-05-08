@@ -283,7 +283,7 @@ export default function ShopPage() {
                           (() => {
                             const s = product.slug?.trim() || '';
                             if (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream', 'premium-bookmark'].includes(s)) return `/shop/${s}`;
-                            if (s === 'baekdohwa-report' || s === 'love-report') return `/reports/love-report`;
+                            if (s === 'baekdohwa-report' || s === 'love-report') return `/reports/baekdohwa-report`;
                             if (s === 'premium-compatibility-report') return `/reports/premium-compatibility-report`;
                             if (s === 'love-secret-ebook') return `/reports/love-secret`;
                             if (s === 'abundance-secret-guide') return `/reports/abundance-secret`;
