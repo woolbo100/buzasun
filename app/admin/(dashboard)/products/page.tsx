@@ -335,6 +335,9 @@ export default function AdminProductsPage() {
                             {product.featured && <span className="bg-accent-gold/20 text-accent-gold text-[8px] px-1.5 py-0.5 rounded border border-accent-gold/30 uppercase">Featured</span>}
                           </div>
                           <h3 className="text-base font-bold text-white leading-none">{product.name}</h3>
+                          {product.payment_name && (
+                            <p className="text-[10px] text-accent-gold/60 mt-1 font-medium">결제명: {product.payment_name}</p>
+                          )}
                           <p className="text-[11px] text-white/30 mt-1 line-clamp-1">{product.short_description}</p>
                         </div>
                       </div>
