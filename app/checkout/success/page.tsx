@@ -49,10 +49,11 @@ function SuccessContent() {
 
         // 주문 저장
         const incomingStatus = searchParams.get('payment_status') || 'paid';
+        const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
         
-        // 보안: 프로덕션 환경에서는 test_paid 상태를 허용하지 않음
-        if (incomingStatus === 'test_paid' && process.env.NODE_ENV !== 'development') {
-          console.error("Test payment not allowed in production");
+        // 보안: 테스트 모드가 아닐 때 프로덕션 환경에서 test_paid 상태를 허용하지 않음
+        if (incomingStatus === 'test_paid' && process.env.NODE_ENV !== 'development' && !isTestMode) {
+          console.error("Test payment not allowed in production without test mode enabled");
           setLoading(false);
           return;
         }

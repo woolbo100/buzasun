@@ -185,14 +185,7 @@ function CheckoutContent() {
     return `BDH-${dateStr}-${randomStr}`;
   };
 
-  const handlePayment = async () => {
-    // 결제 시스템 오픈 여부 확인 (환경변수 제어)
-    const isPaymentEnabled = process.env.NEXT_PUBLIC_PAYMENT_ENABLED === 'true';
-    
-    if (!isPaymentEnabled && process.env.NODE_ENV !== 'development') {
-      alert("현재 결제 시스템 심사 중입니다.\n카드결제는 곧 오픈될 예정입니다.");
-      return;
-    }
+    const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
 
     // 필수 정보 유효성 검사
     if (!formData.name || !formData.email || !formData.phone) {
@@ -230,9 +223,13 @@ function CheckoutContent() {
       // 3. 결제용 상품명 설정 (STEP 2 Fallback 적용)
       const paymentName = product.payment_name || product.display_title || product.name;
 
-      // 4. 포트원 전달 데이터 구성
+      // 4. PG사 설정 (테스트 모드 여부에 따라 분기)
+      // 테스트 모드일 때는 카카오페이 가상 테스트 상점(TC0ONETIME)을 기본으로 사용합니다.
+      const pgProvider = isTestMode ? "kakaopay.TC0ONETIME" : (process.env.NEXT_PUBLIC_PORTONE_PG_ID || "tosspayments");
+
+      // 5. 포트원 전달 데이터 구성
       const paymentData = {
-        pg: "kakaopay", // 심사용 기본 설정 (이후 변경 가능)
+        pg: pgProvider,
         pay_method: "card",
         merchant_uid: merchantUid,
         name: paymentName,
@@ -250,7 +247,8 @@ function CheckoutContent() {
           orderNote: formData.orderNote,
           deliveryNote: formData.deliveryNote,
           productTitle: product.display_title || product.name,
-          paymentName: paymentName
+          paymentName: paymentName,
+          isTest: isTestMode
         }
       };
 
@@ -269,7 +267,7 @@ function CheckoutContent() {
             option: checkoutOption || '',
             merchant_uid: merchantUid,
             payment_id: rsp.imp_uid,
-            payment_status: 'paid',
+            payment_status: isTestMode ? 'test_paid' : 'paid',
             receiverName: formData.receiverName,
             zipcode: formData.zipcode,
             address: formData.address,
