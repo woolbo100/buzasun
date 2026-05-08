@@ -79,6 +79,8 @@ function SuccessContent() {
             zipcode: searchParams.get('zipcode'),
             delivery_note: searchParams.get('deliveryNote'),
             request_note: searchParams.get('orderNote'),
+            product_title: searchParams.get('product_title') || product_name,
+            payment_name: searchParams.get('payment_name') || product_name,
           }])
           .select()
           .single()

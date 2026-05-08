@@ -227,12 +227,15 @@ function CheckoutContent() {
       // 2. 주문번호 생성
       const merchantUid = generateMerchantUid();
 
-      // 3. 포트원 전달 데이터 구성
+      // 3. 결제용 상품명 설정 (STEP 2 Fallback 적용)
+      const paymentName = product.payment_name || product.display_title || product.name;
+
+      // 4. 포트원 전달 데이터 구성
       const paymentData = {
         pg: "kakaopay", // 심사용 기본 설정 (이후 변경 가능)
         pay_method: "card",
         merchant_uid: merchantUid,
-        name: product.name,
+        name: paymentName,
         amount: product.price,
         buyer_email: formData.email,
         buyer_name: formData.name,
@@ -245,7 +248,9 @@ function CheckoutContent() {
           productType: productType,
           option: checkoutOption,
           orderNote: formData.orderNote,
-          deliveryNote: formData.deliveryNote
+          deliveryNote: formData.deliveryNote,
+          productTitle: product.display_title || product.name,
+          paymentName: paymentName
         }
       };
 
@@ -271,6 +276,8 @@ function CheckoutContent() {
             detailAddress: formData.detailAddress,
             deliveryNote: formData.deliveryNote,
             orderNote: formData.orderNote,
+            product_title: product.display_title || product.name,
+            payment_name: paymentName,
           });
           
           router.push(`/checkout/success?${params.toString()}`);
@@ -363,6 +370,8 @@ function CheckoutContent() {
                       orderNote: testFormData.orderNote,
                       payment_status: 'test_paid', // 테스트용 상태값
                       payment_id: `test_${Date.now()}`,
+                      product_title: product.display_title || product.name,
+                      payment_name: product.payment_name || product.display_title || product.name,
                     })
                     
                     setLoading(true)

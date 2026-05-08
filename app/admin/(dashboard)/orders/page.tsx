@@ -179,7 +179,8 @@ export default function AdminOrdersPage() {
                     </td>
                     <td className="px-6 py-6">
                       <div className="space-y-1">
-                        <p className="text-sm text-[#EDE6DA] font-medium">{order.product_name}</p>
+                        <p className="text-sm text-[#EDE6DA] font-bold">{order.product_title || order.product_name}</p>
+                        <p className="text-[10px] text-accent-gold/60 font-medium">결제명: {order.payment_name || '-'}</p>
                         <p className="text-[10px] text-white/20 uppercase tracking-tighter">{order.product_type}</p>
                       </div>
                     </td>

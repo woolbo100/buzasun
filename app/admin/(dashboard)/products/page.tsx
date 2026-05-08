@@ -41,7 +41,8 @@ export default function AdminProductsPage() {
     checkout_path: "",
     use_options: false,
     option_name: "",
-    option_values: ""
+    option_values: "",
+    payment_name: ""
   });
 
   const fetchProducts = async () => {
@@ -110,7 +111,8 @@ export default function AdminProductsPage() {
             name: formData.option_name,
             values: formData.option_values.split(',').map(v => v.trim()).filter(v => v !== "")
           }
-        ] : []
+        ] : [],
+        payment_name: formData.payment_name
       };
 
       if (editingId) {
@@ -162,7 +164,8 @@ export default function AdminProductsPage() {
       checkout_path: "",
       use_options: false,
       option_name: "",
-      option_values: ""
+      option_values: "",
+      payment_name: ""
     });
   };
 
@@ -238,7 +241,8 @@ export default function AdminProductsPage() {
       checkout_path: product.checkout_path || `/checkout?productId=${product.slug}`,
       use_options: Array.isArray(product.options) && product.options.length > 0,
       option_name: product.options?.[0]?.name || "",
-      option_values: product.options?.[0]?.values?.join(", ") || ""
+      option_values: product.options?.[0]?.values?.join(", ") || "",
+      payment_name: product.payment_name || ""
     });
     setEditingId(product.id);
     setIsFormOpen(true);
@@ -447,6 +451,12 @@ export default function AdminProductsPage() {
                       <label className="text-[11px] text-white/40 uppercase font-bold tracking-tighter">가격 (Price) *</label>
                       <input type="number" required value={formData.price} onChange={e => setFormData({...formData, price: parseInt(e.target.value) || 0})}
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:border-accent-gold/50 outline-none text-accent-gold font-bold" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[11px] text-white/40 uppercase font-bold tracking-tighter text-accent-gold">결제용 상품명 (Payment Name)</label>
+                      <input type="text" value={formData.payment_name} onChange={e => setFormData({...formData, payment_name: e.target.value})}
+                        className="w-full bg-white/5 border border-accent-gold/20 rounded-xl px-4 py-3 focus:border-accent-gold outline-none" placeholder="카드 결제창에 표시될 이름 (예: 프리미엄 관계회복 가이드북)" />
+                      <p className="text-[9px] text-accent-gold/40 mt-1">※ 카드사/PG사 결제창에 표시되는 이름입니다. 브랜드 감성과 승인 안정성을 고려해 작성하세요.</p>
                     </div>
                   </div>
                 </div>
