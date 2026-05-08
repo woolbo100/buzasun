@@ -98,7 +98,7 @@ export default function Hero() {
         <Reveal delayMs={300}>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
-              href={mainProduct ? `/reports/${mainProduct.slug}` : "/report"}
+              href="/reports"
               className="group relative px-12 py-5 rounded-lg font-semibold text-white overflow-hidden transition-all duration-500"
               style={{
                 background: 'linear-gradient(135deg, var(--primary-burgundy) 0%, #2A0A14 100%)',
