@@ -19,7 +19,7 @@ export default function ReportsHubPage() {
       label: 'PREMIUM REPORT',
       btnText: '연애 리포트 자세히 보기',
       link: '/reports/baekdohwa-report',
-      image: '/image/lovereport/p7.webp',
+      image: '/image/love-code-bg.png',
       premium: false
     },
     {

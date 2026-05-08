@@ -76,14 +76,14 @@ function CheckoutContent() {
       type: "digital_report",
       price: 49000,
       category: "PREMIUM REPORT",
-      image: "/image/lovereport/p7.webp"
+      image: "/image/love-code-bg.png"
     },
     "baekdohwa-report": {
       name: "선천코드 연애 리포트",
       type: "digital_report",
       price: 49000,
       category: "PREMIUM REPORT",
-      image: "/image/lovereport/p7.webp"
+      image: "/image/love-code-bg.png"
     },
     "premium-compatibility-report": {
       name: "프리미엄 궁합 리포트",

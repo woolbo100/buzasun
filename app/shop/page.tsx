@@ -32,8 +32,8 @@ export default function ShopPage() {
 
   // 슬러그 기반 기본 이미지 매핑
   const defaultImageMap: { [key: string]: string } = {
-    'baekdohwa-report': '/image/lovereport/p7.webp',
-    'love-report': '/image/lovereport/p7.webp',
+    'baekdohwa-report': '/image/love-code-bg.png',
+    'love-report': '/image/love-code-bg.png',
     'premium-compatibility-report': '/image/premium_compatibility_report.png',
     'reunion-secret': '/image/reunion-secret-thumb.png',
     'reunion-secret-method': '/image/reunion-secret-thumb.png',
@@ -85,7 +85,7 @@ export default function ShopPage() {
               ...p,
               name: currentName,
               slug: currentSlug,
-              main_image: isLoveReport ? '/image/lovereport/p7.webp' : 
+              main_image: isLoveReport ? '/image/love-code-bg.png' : 
                           isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :
                           isGoldenForever ? '/image/golden/m7.webp' :
