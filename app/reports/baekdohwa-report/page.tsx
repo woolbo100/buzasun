@@ -19,269 +19,243 @@ export default function BaekdohwaReportPage() {
         <div className="relative z-10 pt-40 pb-20">
           <div className="container-premium">
             
-            {/* 1. Hero Section */}
-            <section className="relative overflow-hidden rounded-[40px] mb-24 min-h-[750px] flex items-center">
-              <div className="absolute inset-0">
-                <img 
-                  src="/image/lovereport/p1.webp" 
-                  alt="Hero" 
-                  className="w-full h-full object-cover opacity-60"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0a0514] via-[#0a0514]/40 to-transparent"></div>
-              </div>
-              
-              <div className="relative z-10 pl-10 md:pl-24 max-w-4xl">
-                <Reveal delayMs={100}>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold mb-8 tracking-[0.3em] border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)] bg-[var(--accent-gold)]/10 uppercase">
-                    BAEKDOHWA LOVE CODE REPORT
+            {/* 1. Hero Section - 미스 하이랜더 스타일로 확장 */}
+            <section className="text-center mb-32">
+              <Reveal delayMs={100}>
+                <div className="mb-8">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)]">
+                    PREMIUM LOVE CODE REPORT
                   </span>
-                  <h1 className="text-5xl md:text-8xl font-elegant font-bold mb-8 text-white leading-tight">
-                    선천코드 <br/> <span className="text-[var(--accent-gold)]">연애 리포트</span>
-                  </h1>
-                  <p className="text-2xl md:text-3xl text-white/90 font-light mb-10 leading-relaxed break-keep">
-                    나를 아는 것에서부터,<br/>
-                    <span className="text-[var(--accent-gold-light)] font-medium">당신의 진짜 연애는 시작됩니다.</span>
-                  </p>
-                  <p className="text-lg md:text-xl text-white/60 mb-14 leading-relaxed max-w-xl break-keep italic font-light">
-                    당신의 타고난 기질과 연애 무의식을 분석하여,<br/>
-                    반복되는 연애 문제의 근본적인 원인과 관계의 흐름을 읽어드립니다.
-                  </p>
+                </div>
+                <h1 className="text-4xl md:text-7xl font-elegant font-bold mb-10 text-white leading-tight">
+                  선천코드 <span className="text-[var(--accent-gold)]">연애 리포트</span>
+                </h1>
+                
+                {/* 메인 히어로 이미지 - 상자 없이 와이드하게 배치 (원본 비율 유지) */}
+                <div className="relative max-w-6xl mx-auto mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                  <img 
+                    src="/image/lovereport/p1.webp" 
+                    alt="Hero"
+                    className="w-full h-auto transition-transform duration-[10000ms] group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 to-transparent"></div>
+                </div>
+
+                <p className="text-xl md:text-3xl text-[#EDE6DA] opacity-90 leading-relaxed mb-12 max-w-3xl mx-auto break-keep font-elegant italic">
+                  나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
+                </p>
+                
+                <Link 
+                  href="/checkout?productId=baekdohwa-report"
+                  className="btn-primary inline-flex items-center px-16 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all duration-500 shadow-[0_0_60px_rgba(212,178,167,0.2)]"
+                >
+                  리포트 신청하기 (49,000원)
+                </Link>
+              </Reveal>
+            </section>
+
+            {/* 2. Overview Section - 좌우 배치 구조 */}
+            <section className="mb-40">
+              <Reveal>
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
+                  <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
+                    <img src="/image/lovereport/p2.webp" alt="Overview" className="w-full h-auto object-cover" />
+                  </div>
+                  <div className="space-y-10">
+                    <h2 className="text-4xl md:text-5xl font-elegant font-bold text-white leading-tight">
+                      당신의 사랑은 <br /> <span className="text-[var(--accent-gold)]">우연이 아닙니다</span>
+                    </h2>
+                    <p className="text-xl text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                      선천코드 연애 리포트는 단순한 연애운 풀이가 아니라, 당신이 어떤 사람에게 끌리고, 왜 비슷한 관계 패턴을 반복하는지, 그리고 어떤 방식으로 사랑을 회복하고 성장시킬 수 있는지를 섬세하게 해석하는 프리미엄 연애 리포트입니다.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {["타고난 연애 기질", "무의식적 끌림 패턴", "관계 유지 전략", "매력 에너지 활용법"].map((item, idx) => (
+                        <div key={idx} className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/5">
+                          <div className="w-2 h-2 rounded-full bg-[var(--accent-gold)] shadow-[0_0_10px_var(--accent-gold)]"></div>
+                          <span className="text-white/80">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 3. Recommended For - 세로형 이미지 본연의 비율 강조 */}
+            <section className="mb-40">
+              <Reveal>
+                <div className="grid lg:grid-cols-2 gap-24 items-center">
+                  <div className="space-y-12">
+                    <h2 className="text-4xl font-elegant font-bold text-white tracking-widest">
+                      이런 분께 <span className="text-[var(--accent-gold)]">추천합니다</span>
+                    </h2>
+                    <div className="grid grid-cols-1 gap-6">
+                      {[
+                        '늘 비슷한 연애 패턴을 반복하는 분',
+                        '상대에게 끌리는 이유를 알고 싶은 분',
+                        '내 연애의 강점과 약점을 알고 싶은 분',
+                        '관계에서 자꾸 불안하거나 흔들리는 분',
+                        '앞으로의 연애 전략을 세우고 싶은 분',
+                      ].map((item, idx) => (
+                        <div key={idx} className="gungjung-glass p-8 border-white/[0.03] flex items-center gap-6 group hover:border-[var(--accent-gold)]/30">
+                          <div className="w-12 h-12 rounded-full bg-white/[0.03] flex items-center justify-center shrink-0 text-[var(--accent-gold)]">
+                            <i className="fas fa-check text-sm"></i>
+                          </div>
+                          <p className="text-[#EDE6DA] opacity-80 text-lg font-light break-keep">{item}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  {/* 세로형 이미지 그대로 노출 (상자 탈출) */}
+                  <div className="relative group">
+                    <div className="absolute -inset-4 bg-[var(--accent-gold)]/10 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img 
+                      src="/image/lovereport/p3.webp" 
+                      alt="Recommended" 
+                      className="relative z-10 w-full h-auto rounded-[50px] shadow-3xl border border-white/10 transition-transform duration-1000 group-hover:scale-[1.02]" 
+                    />
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 4. Analysis Content - 와이드 배치 */}
+            <section className="mb-40 text-center">
+              <Reveal>
+                <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-[0.2em] mb-16">
+                  리포트 <span className="text-[var(--accent-gold)]">주요 분석</span> 내용
+                </h2>
+                <div className="max-w-7xl mx-auto mb-20">
+                  <img 
+                    src="/image/lovereport/p4.webp" 
+                    alt="Analysis Detail" 
+                    className="w-full h-auto rounded-[50px] shadow-2xl border border-white/10" 
+                  />
+                </div>
+                <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {[
+                      { t: "선천적 연애 기질", d: "당신이 타고난 사랑의 에너지 분석", i: "fa-heart" },
+                      { t: "무의식적 끌림", d: "반복적으로 끌리는 이성 유형 해독", i: "fa-bolt" },
+                      { t: "관계 방어기제", d: "연애를 방해하는 무의식적 장벽 탐색", i: "fa-shield-halved" },
+                      { t: "최적의 파트너", d: "에너지를 보충해줄 파트너 유형 제안", i: "fa-user-group" },
+                      { t: "매력 에너지", d: "가장 나다운 모습으로 사랑받는 법", i: "fa-wand-magic-sparkles" },
+                      { t: "이별 솔루션", d: "갈등의 고리를 끊어낼 실질적 변화", i: "fa-key" }
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex flex-col items-center gap-6 p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] transition-all group">
+                        <div className="w-16 h-16 rounded-2xl bg-[#2D0A1E] flex items-center justify-center border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] shadow-lg group-hover:scale-110 transition-transform">
+                          <i className={`fas ${item.i} text-2xl`}></i>
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white mb-3">{item.t}</h3>
+                          <p className="text-sm text-[#EDE6DA] opacity-50 font-light break-keep">{item.d}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 5. Premium Section - 미스 하이랜더의 감성 구조 */}
+            <section className="mb-40">
+              <Reveal>
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
+                  <div className="space-y-10 order-2 lg:order-1">
+                    <h2 className="text-4xl md:text-6xl font-elegant font-bold text-white leading-tight">
+                      소장하고 싶은 <br /> <span className="text-[var(--accent-gold)]">프리미엄 리포트</span>
+                    </h2>
+                    <p className="text-xl text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                      선천코드 연애 리포트는 한 번 읽고 끝나는 결과지가 아니라, 당신의 사랑을 다시 바라보게 하는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
+                      백도화만의 깊이 있는 해석과 우아한 문체로 당신의 사랑 이야기를 새롭게 정의해 드립니다.
+                    </p>
+                  </div>
+                  <div className="order-1 lg:order-2 relative group">
+                    <div className="absolute -inset-10 bg-[var(--accent-gold)]/5 blur-[120px] rounded-full"></div>
+                    <img 
+                      src="/image/lovereport/p5.webp" 
+                      alt="Premium Design" 
+                      className="relative z-10 w-full h-auto rounded-[60px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.03]" 
+                    />
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 6. Notices */}
+            <section className="mb-40">
+              <Reveal>
+                <div className="gungjung-glass p-12 md:p-20 border-white/5">
+                  <h2 className="text-2xl font-elegant font-bold mb-12 text-white border-l-4 border-[var(--accent-gold)] pl-8">리포트 신청 전 안내</h2>
+                  <div className="grid md:grid-cols-2 gap-12">
+                    <ul className="space-y-6">
+                      {[
+                        "본 상품은 디지털 리포트(PDF) 상품입니다.",
+                        "입력하신 사주 정보를 바탕으로 개인별 맞춤 제작됩니다.",
+                        "제작 기간은 영업일 기준 2~5일 정도 소요됩니다.",
+                        "제작 시작 이후에는 단순 변심 환불이 어렵습니다."
+                      ].map((text, idx) => (
+                        <li key={idx} className="flex items-start gap-4 text-[#EDE6DA] opacity-60 text-base font-light">
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] shrink-0"></span>
+                          {text}
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="space-y-6">
+                      {[
+                        "정확한 생년월일시 입력이 가장 중요합니다.",
+                        "의학적·법률적 조언이 아닌 자기이해를 위한 가이드입니다.",
+                        "타인에게 무단 전재 및 상업적 재배포를 금지합니다.",
+                        "문의사항은 고객센터 채널톡을 이용해주세요."
+                      ].map((text, idx) => (
+                        <li key={idx} className="flex items-start gap-4 text-[#EDE6DA] opacity-60 text-base font-light">
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] shrink-0"></span>
+                          {text}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 7. CTA - 웅장한 마무리 */}
+            <section className="relative min-h-[600px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group">
+              <div className="absolute inset-0 z-0">
+                <img 
+                  src="/image/lovereport/p6.webp" 
+                  alt="Final CTA" 
+                  className="w-full h-full object-cover transition-transform duration-[15000ms] group-hover:scale-125" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/60 to-transparent"></div>
+              </div>
+              <div className="relative z-10 text-center px-10">
+                <Reveal>
+                  <h2 className="text-4xl md:text-7xl font-elegant font-bold text-white mb-12 leading-tight">
+                    사랑의 흐름을 <br /> <span className="text-[var(--accent-gold)]">바꾸는 시작</span>
+                  </h2>
                   <Link 
                     href="/checkout?productId=baekdohwa-report"
-                    className="btn-primary inline-flex items-center justify-center px-16 py-6 rounded-2xl font-bold text-xl shadow-[0_0_60px_rgba(212,178,167,0.3)] hover:scale-105 transition-transform"
+                    className="btn-primary inline-flex items-center px-20 py-8 rounded-2xl font-bold text-2xl hover:scale-105 transition-all duration-500 shadow-[0_0_80px_rgba(212,178,167,0.3)]"
+                    style={{ background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)', color: '#1A0514' }}
                   >
-                    리포트 신청 및 결제하기
+                    지금 리포트 신청하기
                   </Link>
                 </Reveal>
               </div>
             </section>
 
-            {/* 2. Product Overview Section */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="gungjung-glass p-12 md:p-24 rounded-[50px] overflow-hidden relative">
-                  <div className="grid lg:grid-cols-2 gap-20 items-center">
-                    <div className="order-2 lg:order-1">
-                      <h2 className="text-4xl md:text-5xl font-elegant font-bold mb-10 text-white leading-tight">
-                        당신의 사랑은 <br/> <span className="text-[var(--accent-gold)]">우연이 아닙니다</span>
-                      </h2>
-                      <p className="text-xl text-white/70 leading-relaxed mb-14 break-keep font-light">
-                        선천코드 연애 리포트는 단순한 연애운 풀이가 아니라, 당신이 어떤 사람에게 끌리고, 왜 비슷한 관계 패턴을 반복하는지, 그리고 어떤 방식으로 사랑을 회복하고 성장시킬 수 있는지를 섬세하게 해석하는 <span className="text-white font-bold">프리미엄 연애 리포트</span>입니다.
-                      </p>
-                      
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {[
-                          "타고난 연애 기질 분석",
-                          "반복되는 연애 패턴 해석",
-                          "무의식적 끌림의 원인",
-                          "관계 유지에 필요한 감정 전략",
-                          "이상형과 맞는 파트너 유형",
-                          "나만의 매력 무기 발견"
-                        ].map((item, idx) => (
-                          <div key={idx} className="flex items-center gap-4 p-5 bg-white/5 rounded-2xl border border-white/5 group hover:border-[var(--accent-gold)]/30 transition-all">
-                            <div className="w-2 h-2 rounded-full bg-[var(--accent-gold)] shadow-[0_0_10px_var(--accent-gold)]"></div>
-                            <span className="text-base text-white/80 group-hover:text-white">{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="order-1 lg:order-2">
-                      <div className="relative group">
-                        <div className="absolute inset-0 bg-[var(--accent-gold)]/20 blur-[120px] rounded-full group-hover:bg-[var(--accent-gold)]/30 transition-all"></div>
-                        <img 
-                          src="/image/lovereport/p2.webp" 
-                          alt="Overview" 
-                          className="relative z-10 w-full rounded-3xl shadow-2xl border border-white/10 group-hover:scale-[1.03] transition-transform duration-1000"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 3. Recommended For Section */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="text-center mb-20">
-                  <h2 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-8">이런 분께 추천합니다</h2>
-                  <div className="w-24 h-1 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent mx-auto"></div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-                  {[
-                    "늘 비슷한 연애 패턴을 반복하는 분",
-                    "상대에게 끌리는 이유를 알고 싶은 분",
-                    "내 연애의 강점과 약점을 알고 싶은 분",
-                    "나에게 맞는 파트너 유형이 궁금한 분",
-                    "관계에서 자꾸 불안하거나 흔들리는 분",
-                    "앞으로의 연애 전략을 세우고 싶은 분"
-                  ].map((text, i) => (
-                    <div key={i} className="gungjung-glass p-10 text-center group hover:bg-white/[0.08] transition-all border-white/5 hover:border-[var(--accent-gold)]/30">
-                      <div className="w-14 h-14 rounded-full bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 flex items-center justify-center mx-auto mb-8 text-[var(--accent-gold)] group-hover:scale-110 group-hover:bg-[var(--accent-gold)] group-hover:text-black transition-all duration-500">
-                        <i className={`fas ${i % 2 === 0 ? 'fa-heart' : 'fa-star'} text-lg`}></i>
-                      </div>
-                      <p className="text-lg text-white/80 group-hover:text-white leading-relaxed break-keep font-medium">
-                        {text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="relative rounded-[50px] h-[550px] overflow-hidden border border-white/10">
-                  <img src="/image/lovereport/p3.webp" alt="Recommendation Background" className="w-full h-full object-cover opacity-60" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0514]/20 to-[#0a0514]/80"></div>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 4. Report Analysis Section */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="gungjung-glass p-12 md:p-24 rounded-[50px] border-[var(--accent-gold)]/20 bg-gradient-to-br from-white/[0.05] to-transparent">
-                  <div className="text-center max-w-4xl mx-auto mb-24">
-                    <h2 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-10">리포트 주요 분석 내용</h2>
-                    <p className="text-xl text-white/60 leading-relaxed break-keep font-light">
-                      선천코드 연애 리포트는 당신의 타고난 기질, 감정의 흐름, 무의식적 관계 패턴을 바탕으로 <br className="hidden md:block" /> 사랑이 반복되는 이유와 앞으로의 연애 방향을 정밀하게 분석합니다.
-                    </p>
-                  </div>
-
-                  <div className="grid lg:grid-cols-2 gap-24 items-center mb-20">
-                    <div className="relative group">
-                       <div className="absolute -inset-4 bg-[var(--accent-gold)]/10 blur-[50px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                       <img src="/image/lovereport/p4.webp" alt="Analysis" className="relative z-10 rounded-[30px] border border-white/10 shadow-3xl" />
-                    </div>
-                    <div className="space-y-8">
-                      {[
-                        { t: "선천적 연애 기질 분석", d: "당신이 타고난 사랑의 에너지와 소통 방식을 정의합니다." },
-                        { t: "무의식적 끌림의 패턴 해독", d: "왜 특정 유형에게 반복적으로 끌리는지 그 근원을 분석합니다." },
-                        { t: "관계 유지 방어기제", d: "연애를 방해하는 당신만의 무의식적 장벽을 찾아냅니다." },
-                        { t: "최적의 파트너 유형", d: "당신의 결핍을 채워주고 에너지를 보충해줄 파트너를 제안합니다." },
-                        { t: "매력 에너지 활용법", d: "가장 나다운 모습으로 사랑받는 매력 전략을 수립합니다." },
-                        { t: "이별을 멈추는 솔루션", d: "반복되는 갈등의 고리를 끊어낼 실질적인 변화를 제안합니다." }
-                      ].map((item, idx) => (
-                        <div key={idx} className="flex gap-6 group">
-                          <div className="w-8 h-8 rounded-full border-2 border-[var(--accent-gold)] flex items-center justify-center text-xs text-[var(--accent-gold)] font-bold shrink-0 mt-1 group-hover:bg-[var(--accent-gold)] group-hover:text-black transition-all duration-500">
-                            {idx + 1}
-                          </div>
-                          <div>
-                            <h3 className="text-xl text-white font-bold mb-2 group-hover:text-[var(--accent-gold)] transition-colors">{item.t}</h3>
-                            <p className="text-base text-white/50 leading-relaxed font-light">{item.d}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="bg-white/5 p-12 rounded-3xl border border-white/5 text-center">
-                    <p className="text-white/70 italic text-lg md:text-xl break-keep font-light">
-                      "이 리포트는 단순한 운세 풀이가 아니라, 당신의 관계 흐름을 이해하고 <br className="hidden md:block" /> 더 건강한 사랑을 선택하기 위한 <span className="text-[var(--accent-gold)] font-medium">프리미엄 자기이해 리포트</span>입니다."
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 5. Premium Report Section */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="grid lg:grid-cols-2 gap-24 items-center">
-                  <div className="relative group">
-                    <img src="/image/lovereport/p5.webp" alt="Premium" className="rounded-[40px] shadow-[0_0_80px_rgba(0,0,0,0.6)] group-hover:scale-[1.02] transition-transform duration-1000" />
-                    <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-[var(--accent-gold)]/10 blur-[100px] rounded-full"></div>
-                  </div>
-                  <div>
-                    <h2 className="text-4xl md:text-7xl font-elegant font-bold text-white mb-10 leading-tight">
-                      소장하고 싶은 <br/>
-                      <span className="text-[var(--accent-gold)]">프리미엄 리포트</span>
-                    </h2>
-                    <div className="space-y-8 text-xl text-white/70 leading-relaxed break-keep font-light">
-                      <p>
-                        선천코드 연애 리포트는 한 번 읽고 끝나는 결과지가 아니라, <span className="text-white font-medium">당신의 사랑을 다시 바라보게 하는 개인 맞춤형 감성 리포트</span>입니다.
-                      </p>
-                      <p>
-                        당신의 연애 성향, 반복되는 관계 패턴, 끌림과 불안의 이유, 그리고 더 나은 사랑을 위한 방향성을 백도화만의 언어로 정성스럽게 정리해드립니다.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 6. Report Notice Section */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="gungjung-glass p-12 md:p-20 border-white/5">
-                  <h2 className="text-3xl font-bold text-white mb-12 flex items-center gap-4">
-                    <i className="fas fa-info-circle text-[var(--accent-gold)]"></i>
-                    리포트 신청 전 안내
-                  </h2>
-                  <div className="grid md:grid-cols-2 gap-16">
-                    <ul className="space-y-6">
-                      {[
-                        "본 상품은 디지털 리포트(PDF) 상품입니다.",
-                        "결제 완료 후 입력하신 사주 정보를 바탕으로 제작됩니다.",
-                        "제작 기간은 영업일 기준 2~5일 정도 소요됩니다.",
-                        "제작 시작 이후에는 단순 변심 환불이 제한됩니다."
-                      ].map((txt, i) => (
-                        <li key={i} className="flex items-start gap-4 text-white/60 text-base md:text-lg font-light">
-                          <span className="text-[var(--accent-gold)] mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] shrink-0"></span>
-                          <span>{txt}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <ul className="space-y-6">
-                      {[
-                        "입력 정보가 부정확할 경우 해석에 차이가 있을 수 있습니다.",
-                        "의학적·법률적·투자적 판단을 대신하지 않습니다.",
-                        "개인의 자기이해와 관계 성찰을 위해 활용해주세요.",
-                        "타인에게 무단 전재 및 배포를 금합니다."
-                      ].map((txt, i) => (
-                        <li key={i} className="flex items-start gap-4 text-white/60 text-base md:text-lg font-light">
-                          <span className="text-[var(--accent-gold)] mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] shrink-0"></span>
-                          <span>{txt}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 7. Final CTA Section */}
-            <section className="relative overflow-hidden rounded-[50px] py-32 text-center mb-20">
-              <div className="absolute inset-0">
-                <img src="/image/lovereport/p6.webp" alt="CTA BG" className="w-full h-full object-cover opacity-30" />
-                <div className="absolute inset-0 bg-[#0a0514]/85"></div>
+            {/* Policy Links */}
+            <section className="pb-20 text-center">
+              <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
+                <Link href="/terms" className="hover:text-[var(--accent-gold)] transition-colors">이용약관</Link>
+                <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>
+                <Link href="/refund" className="hover:text-[var(--accent-gold)] transition-colors">환불정책</Link>
               </div>
-              <Reveal>
-                <div className="relative z-10 px-10">
-                  <h2 className="text-5xl md:text-8xl font-elegant font-bold text-white mb-10 leading-tight">
-                    사랑의 흐름을 <br className="md:hidden" /> <span className="text-[var(--accent-gold)]">바꾸는 시작</span>
-                  </h2>
-                  <p className="text-2xl text-white/70 max-w-3xl mx-auto mb-16 leading-relaxed break-keep font-light">
-                    반복되는 사랑에는 이유가 있습니다. 그리고 그 이유를 아는 순간, <br className="hidden md:block" /> 당신의 연애는 비로소 달라질 수 있습니다.<br/><br/>
-                    <span className="text-white font-medium">나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.</span>
-                  </p>
-                  <Link 
-                    href="/checkout?productId=baekdohwa-report"
-                    className="btn-primary inline-flex items-center justify-center px-20 py-8 rounded-2xl font-bold text-2xl shadow-[0_0_80px_rgba(212,178,167,0.4)] hover:scale-105 transition-transform"
-                  >
-                    선천코드 연애 리포트 신청하기
-                  </Link>
-                </div>
-              </Reveal>
             </section>
-
-            {/* Footer Policies */}
-            <div className="mt-20 flex justify-center gap-10 text-xs uppercase tracking-[0.3em] text-white/30">
-              <Link href="/privacy" className="hover:text-white transition-colors">개인정보처리방침</Link>
-              <Link href="/terms" className="hover:text-white transition-colors">이용약관 및 환불정책</Link>
-            </div>
 
           </div>
         </div>
-
         <Footer />
       </GlobalBackground>
     </main>
