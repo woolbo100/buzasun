@@ -24,10 +24,22 @@ function CheckoutContent() {
   const selectedOption = searchParams.get('option')
   const [product, setProduct] = useState<any>(null)
   const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState<any>(null)
+  const [profile, setProfile] = useState<any>(null)
+  const [buyerType, setBuyerType] = useState<'member' | 'guest'>('guest')
+  const [sameAsMember, setSameAsMember] = useState(false)
+  const [sameAsOrderer, setSameAsOrderer] = useState(false)
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
+    // 리포트 전용
+    birthDate: '',
+    birthTime: '',
+    gender: 'female',
+    partnerInfo: '',
+    // 배송 전용
     receiverName: '',
     zipcode: '',
     address: '',
@@ -110,16 +122,37 @@ function CheckoutContent() {
     }
   }
 
-  useEffect(() => {
-    if (!productId) {
-      setLoading(false)
-      return
-    }
-
-    async function fetchProduct() {
+    async function checkUserAndFetchProduct() {
       try {
         setLoading(true)
-        // 1. DB에서 먼저 시도
+        
+        // 1. 유저 정보 확인
+        const { data: { user } } = await supabase.auth.getUser()
+        if (user) {
+          setUser(user)
+          setBuyerType('member')
+          
+          const { data: profileData } = await supabase
+            .from('profiles')
+            .select('*')
+            .eq('id', user.id)
+            .single()
+            
+          if (profileData) {
+            setProfile(profileData)
+            // 회원인 경우 초기값 세팅
+            setFormData(prev => ({
+              ...prev,
+              name: profileData.name || '',
+              email: user.email || '',
+              phone: profileData.phone || ''
+            }))
+          }
+        }
+
+        // 2. 상품 정보 확인
+        if (!productId) return
+
         const { data, error } = await supabase
           .from('products')
           .select('*')
@@ -127,24 +160,43 @@ function CheckoutContent() {
           .single()
 
         if (!error && data) {
-          // 신규 ID를 slug로 유지하여 매칭성 유지
           setProduct({ ...data, slug: productId, selectedOption: selectedOption })
         } else if (productId && productMap[productId]) {
-          // 2. DB에 없으면 로컬 맵에서 시도
           setProduct({ ...productMap[productId], slug: productId, selectedOption: selectedOption })
         }
       } catch (err) {
-        console.error("Checkout: Failed to fetch product", err)
-        // 에러 시에도 로컬 맵 확인
-        if (productId && productMap[productId]) {
-          setProduct(productMap[productId])
-        }
+        console.error("Checkout: Failed to fetch data", err)
       } finally {
         setLoading(false)
       }
     }
-    fetchProduct()
+    checkUserAndFetchProduct()
   }, [productId])
+
+  // "회원정보와 동일" 체크 로직
+  useEffect(() => {
+    if (sameAsMember && profile) {
+      setFormData(prev => ({
+        ...prev,
+        name: profile.name || '',
+        email: user?.email || '',
+        phone: profile.phone || ''
+      }))
+    }
+  }, [sameAsMember, profile, user])
+
+  // "주문자 정보와 배송지 동일" 체크 로직
+  useEffect(() => {
+    if (sameAsOrderer) {
+      setFormData(prev => ({
+        ...prev,
+        receiverName: formData.name,
+        zipcode: profile?.zipcode || '',
+        address: profile?.address || '',
+        detailAddress: profile?.detail_address || '',
+      }))
+    }
+  }, [sameAsOrderer, formData.name, profile])
 
   const [checkoutOption, setCheckoutOption] = useState<string>(selectedOption || "")
   const [agreements, setAgreements] = useState({ terms: false, refund: false })
@@ -249,7 +301,14 @@ function CheckoutContent() {
           deliveryNote: formData.deliveryNote,
           productTitle: product.display_title || product.name,
           paymentName: paymentName,
-          isTest: isTestMode
+          isTest: isTestMode,
+          // 추가 필드 전송
+          buyerType: buyerType,
+          userId: user?.id,
+          birthDate: formData.birthDate,
+          birthTime: formData.birthTime,
+          gender: formData.gender,
+          partnerInfo: formData.partnerInfo
         }
       };
 
@@ -277,6 +336,13 @@ function CheckoutContent() {
             orderNote: formData.orderNote,
             product_title: product.display_title || product.name,
             payment_name: paymentName,
+            // 추가 정보들
+            buyer_type: buyerType,
+            birth_date: formData.birthDate,
+            birth_time: formData.birthTime,
+            gender: formData.gender,
+            partner_info: formData.partnerInfo,
+            shipping_memo: formData.deliveryNote,
           });
           
           router.push(`/checkout/success?${params.toString()}`);
@@ -310,6 +376,34 @@ function CheckoutContent() {
             <h1 className="text-3xl md:text-4xl font-elegant font-bold text-center mb-12 text-white">
               주문 / <span className="text-[var(--accent-gold)]">결제</span>
             </h1>
+
+            {/* [구매 방식 선택] */}
+            <div className="max-w-md mx-auto mb-12">
+              <div className="flex p-1 bg-white/5 rounded-2xl border border-white/10">
+                <button 
+                  onClick={() => setBuyerType('member')}
+                  className={`flex-1 py-3 text-sm font-bold rounded-xl transition-all ${buyerType === 'member' ? 'bg-[var(--accent-gold)] text-[#1a0f2e]' : 'text-white/40 hover:text-white'}`}
+                >
+                  회원 구매
+                </button>
+                <button 
+                  onClick={() => setBuyerType('guest')}
+                  className={`flex-1 py-3 text-sm font-bold rounded-xl transition-all ${buyerType === 'guest' ? 'bg-[var(--accent-gold)] text-[#1a0f2e]' : 'text-white/40 hover:text-white'}`}
+                >
+                  비회원 구매
+                </button>
+              </div>
+              
+              {buyerType === 'member' && !user && (
+                <div className="mt-4 p-4 rounded-xl bg-accent-gold/10 border border-accent-gold/20 text-center">
+                  <p className="text-xs text-[var(--accent-gold)] mb-3">로그인하시면 더 편리하게 주문이 가능합니다.</p>
+                  <div className="flex gap-2">
+                    <button onClick={() => router.push('/login')} className="flex-1 py-2 text-[10px] font-bold bg-[var(--accent-gold)] text-[#1a0f2e] rounded-lg">로그인하기</button>
+                    <button onClick={() => router.push('/signup')} className="flex-1 py-2 text-[10px] font-bold bg-white/5 text-white/60 border border-white/10 rounded-lg">회원가입</button>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* 개발 환경 전용 테스트 버튼 */}
             {process.env.NODE_ENV === 'development' && (
@@ -371,6 +465,11 @@ function CheckoutContent() {
                       payment_id: `test_${Date.now()}`,
                       product_title: product.display_title || product.name,
                       payment_name: product.payment_name || product.display_title || product.name,
+                      buyer_type: buyerType,
+                      birth_date: formData.birthDate,
+                      birth_time: formData.birthTime,
+                      gender: formData.gender,
+                      partner_info: formData.partnerInfo,
                     })
                     
                     setLoading(true)
@@ -455,7 +554,21 @@ function CheckoutContent() {
             {/* 2. 주문자 정보 */}
             <Reveal delayMs={200}>
               <div className="gungjung-glass p-8 space-y-6">
-                <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">주문자 정보</h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">주문자 정보</h3>
+                  {buyerType === 'member' && user && (
+                    <label className="flex items-center gap-2 cursor-pointer group">
+                      <input 
+                        type="checkbox" 
+                        checked={sameAsMember}
+                        onChange={(e) => setSameAsMember(e.target.checked)}
+                        className="w-4 h-4 accent-[var(--accent-gold)]" 
+                      />
+                      <span className="text-xs text-white/40 group-hover:text-white/60 transition-colors">회원정보와 동일</span>
+                    </label>
+                  )}
+                </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-xs text-white/40 ml-1">이름</label>
@@ -488,9 +601,64 @@ function CheckoutContent() {
             {/* 3. 상품 타입별 추가 폼 */}
             <Reveal delayMs={300}>
               <div className="gungjung-glass p-8 space-y-6">
-                {productType === 'physical' ? (
+                {productType === 'digital_report' ? (
                   <>
-                    <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">배송지 정보</h3>
+                    <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">사주 정보 (리포트 제작용)</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <label className="text-xs text-white/40 ml-1">생년월일</label>
+                        <input 
+                          type="text" name="birthDate" value={formData.birthDate} onChange={handleInputChange}
+                          placeholder="예: 19900101 (8자리)"
+                          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs text-white/40 ml-1">태어난 시간</label>
+                        <input 
+                          type="text" name="birthTime" value={formData.birthTime} onChange={handleInputChange}
+                          placeholder="예: 오후 2시 30분 (모르면 미입력)"
+                          className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all"
+                        />
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs text-white/40 ml-1">성별</label>
+                      <div className="flex gap-4">
+                        {['female', 'male'].map((g) => (
+                          <button 
+                            key={g}
+                            onClick={() => setFormData({...formData, gender: g})}
+                            className={`flex-1 py-3 rounded-xl border text-sm font-bold transition-all ${formData.gender === g ? 'bg-[var(--accent-gold)]/20 border-[var(--accent-gold)] text-[var(--accent-gold)]' : 'bg-white/5 border-white/10 text-white/40'}`}
+                          >
+                            {g === 'female' ? '여성' : '남성'}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs text-white/40 ml-1">상대방 정보 (해당 시)</label>
+                      <input 
+                        type="text" name="partnerInfo" value={formData.partnerInfo} onChange={handleInputChange}
+                        placeholder="상대방의 생년월일 또는 알고 싶은 내용을 적어주세요."
+                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all"
+                      />
+                    </div>
+                  </>
+                ) : productType === 'physical' ? (
+                  <>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">배송지 정보</h3>
+                      <label className="flex items-center gap-2 cursor-pointer group">
+                        <input 
+                          type="checkbox" 
+                          checked={sameAsOrderer}
+                          onChange={(e) => setSameAsOrderer(e.target.checked)}
+                          className="w-4 h-4 accent-[var(--accent-gold)]" 
+                        />
+                        <span className="text-xs text-white/40 group-hover:text-white/60 transition-colors">주문자 정보와 동일</span>
+                      </label>
+                    </div>
                     <div className="space-y-4">
                       <div className="space-y-2">
                         <label className="text-xs text-white/40 ml-1">수령인 이름</label>
@@ -534,23 +702,26 @@ function CheckoutContent() {
                   </>
                 ) : (
                   <>
-                    <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">추가 요청사항</h3>
-                    <div className="space-y-2">
-                      <label className="text-xs text-white/40 ml-1">주문 메모</label>
-                      <textarea 
-                        name="orderNote" value={formData.orderNote} onChange={handleInputChange}
-                        placeholder={productType === 'digital_report' ? "리포트 제작 시 참고할 특이사항이 있다면 적어주세요." : "요청사항이 있다면 입력해주세요."}
-                        rows={3}
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all resize-none"
-                      />
+                    <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">안내 사항</h3>
+                    <div className="p-4 rounded-xl bg-accent-gold/10 border border-accent-gold/20">
+                      <p className="text-[11px] text-[var(--accent-gold)] leading-relaxed">
+                        ※ 전자책은 결제 완료 후 입력하신 이메일 또는 마이페이지에서 바로 다운로드 가능합니다.
+                        별도의 배송지 정보가 필요하지 않습니다.
+                      </p>
                     </div>
-                    {productType === 'digital_report' && (
-                      <div className="p-4 rounded-lg bg-[var(--accent-gold-soft)]/10 border border-[var(--accent-gold-soft)]/20 text-xs text-[var(--accent-gold-light)] leading-relaxed">
-                        <p>※ 리포트 제작에 필요한 상세 정보(생년월일 등)는 결제 완료 후 별도의 입력 폼을 통해 작성하시게 됩니다.</p>
-                      </div>
-                    )}
                   </>
                 )}
+                
+                {/* 주문 메모 (공통) */}
+                <div className="space-y-2 pt-6 border-t border-white/5">
+                  <label className="text-xs text-white/40 ml-1">기타 요청사항</label>
+                  <textarea 
+                    name="orderNote" value={formData.orderNote} onChange={handleInputChange}
+                    placeholder="요청사항이 있다면 입력해주세요."
+                    rows={2}
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-white focus:border-[var(--accent-gold)] outline-none transition-all resize-none"
+                  />
+                </div>
               </div>
             </Reveal>
           </div>

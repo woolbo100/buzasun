@@ -58,6 +58,8 @@ function SuccessContent() {
           return;
         }
 
+        const { data: { user } } = await supabase.auth.getUser();
+
         const { data, error } = await supabase
           .from('orders')
           .insert([{
@@ -74,12 +76,19 @@ function SuccessContent() {
             order_status: 'new',
             report_status: 'pending',
             // 추가 정보들
+            buyer_type: searchParams.get('buyer_type') || 'guest',
+            user_id: user?.id || null,
             receiver_name: searchParams.get('receiverName'),
             address: searchParams.get('address'),
             detail_address: searchParams.get('detailAddress'),
             zipcode: searchParams.get('zipcode'),
             delivery_note: searchParams.get('deliveryNote'),
+            shipping_memo: searchParams.get('shipping_memo'),
             request_note: searchParams.get('orderNote'),
+            birth_date: searchParams.get('birth_date'),
+            birth_time: searchParams.get('birth_time'),
+            gender: searchParams.get('gender'),
+            partner_info: searchParams.get('partner_info'),
             product_title: searchParams.get('product_title') || product_name,
             payment_name: searchParams.get('payment_name') || product_name,
           }])

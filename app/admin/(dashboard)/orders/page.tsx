@@ -172,16 +172,30 @@ export default function AdminOrdersPage() {
                     </td>
                     <td className="px-6 py-6">
                       <div className="space-y-1">
-                        <p className="text-sm font-bold text-white">{order.customer_name}</p>
+                        <div className="flex items-center gap-2">
+                          <p className="text-sm font-bold text-white">{order.customer_name}</p>
+                          <span className={`text-[8px] px-1.5 py-0.5 rounded-md font-bold uppercase tracking-tighter ${order.buyer_type === 'member' ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30' : 'bg-white/10 text-white/40 border border-white/10'}`}>
+                            {order.buyer_type === 'member' ? '회원' : '비회원'}
+                          </span>
+                        </div>
                         <p className="text-[10px] text-white/30">{order.customer_email}</p>
                         <p className="text-[10px] text-white/30">{order.customer_phone}</p>
+                        {order.birth_date && (
+                          <div className="pt-1 flex flex-wrap gap-1">
+                            <span className="text-[9px] bg-accent-gold/10 text-accent-gold/60 px-1.5 py-0.5 rounded">🎂 {order.birth_date}</span>
+                            <span className="text-[9px] bg-accent-gold/10 text-accent-gold/60 px-1.5 py-0.5 rounded">{order.gender === 'female' ? '여성' : '남성'}</span>
+                          </div>
+                        )}
                       </div>
                     </td>
                     <td className="px-6 py-6">
                       <div className="space-y-1">
                         <p className="text-sm text-[#EDE6DA] font-bold">{order.product_title || order.product_name}</p>
                         <p className="text-[10px] text-accent-gold/60 font-medium">결제명: {order.payment_name || '-'}</p>
-                        <p className="text-[10px] text-white/20 uppercase tracking-tighter">{order.product_type}</p>
+                        <div className="flex items-center gap-2 pt-1">
+                          <span className="text-[9px] text-white/20 uppercase tracking-tighter border border-white/10 px-1.5 py-0.5 rounded">{order.product_type}</span>
+                          {order.shipping_memo && <span className="text-[9px] text-blue-400 font-bold">🚚 메모있음</span>}
+                        </div>
                       </div>
                     </td>
                     <td className="px-6 py-6 text-center">
