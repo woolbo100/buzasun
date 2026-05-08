@@ -71,13 +71,6 @@ function CheckoutContent() {
       category: "ENERGY CARE",
       image: "/image/golden/m7.webp"
     },
-    "baekdohwa-report": {
-      name: "선천코드 연애 리포트",
-      type: "digital_report",
-      price: 39000,
-      category: "PREMIUM REPORT",
-      image: "/image/product-love-report.png"
-    },
     "love-report": {
       name: "선천코드 연애 리포트",
       type: "digital_report",
