@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
 import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function PremiumCompatibilityReportPage() {
@@ -33,9 +34,12 @@ export default function PremiumCompatibilityReportPage() {
                 
                 {/* 메인 히어로 이미지 - 상자 없이 원본 비율 유지 */}
                 <div className="relative max-w-6xl mx-auto mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
-                  <img 
+                  <Image 
                     src="/image/compatibility/p1.webp" 
                     alt="Hero"
+                    width={1440}
+                    height={810}
+                    priority
                     className="w-full h-auto transition-transform duration-[10000ms] group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 to-transparent"></div>
@@ -59,7 +63,13 @@ export default function PremiumCompatibilityReportPage() {
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
-                    <img src="/image/compatibility/p2.webp" alt="Overview" className="w-full h-auto object-cover" />
+                    <Image 
+                      src="/image/compatibility/p2.webp" 
+                      alt="Overview" 
+                      width={800}
+                      height={600}
+                      className="w-full h-auto object-cover" 
+                    />
                   </div>
                   <div className="space-y-10">
                     <h2 className="text-4xl md:text-5xl font-elegant font-bold text-white leading-tight">
@@ -117,10 +127,12 @@ export default function PremiumCompatibilityReportPage() {
                   </div>
                   {/* 세로형 이미지 원본 비율 그대로 노출 */}
                   <div className="relative group">
-                    <div className="absolute -inset-4 bg-[var(--accent-gold)]/10 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <img 
+                    <div className="absolute -inset-4 bg-[var(--accent-gold)]/10 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <Image 
                       src="/image/compatibility/p3.webp" 
                       alt="Recommended" 
+                      width={600}
+                      height={900}
                       className="relative z-10 w-full h-auto rounded-[50px] shadow-3xl border border-white/10 transition-transform duration-1000 group-hover:scale-[1.02]" 
                     />
                   </div>
@@ -135,9 +147,11 @@ export default function PremiumCompatibilityReportPage() {
                   리포트 <span className="text-[var(--accent-gold)]">주요 분석</span> 내용
                 </h2>
                 <div className="max-w-7xl mx-auto mb-20">
-                  <img 
+                  <Image 
                     src="/image/compatibility/p4.webp" 
                     alt="Analysis Detail" 
+                    width={1200}
+                    height={800}
                     className="w-full h-auto rounded-[50px] shadow-2xl border border-white/10" 
                   />
                 </div>
@@ -185,10 +199,12 @@ export default function PremiumCompatibilityReportPage() {
                     </p>
                   </div>
                   <div className="order-1 lg:order-2 relative group">
-                    <div className="absolute -inset-10 bg-[var(--accent-gold)]/5 blur-[120px] rounded-full"></div>
-                    <img 
+                    <div className="absolute -inset-10 bg-[var(--accent-gold)]/5 blur-[60px] rounded-full"></div>
+                    <Image 
                       src="/image/compatibility/p5.webp" 
                       alt="Premium Design" 
+                      width={800}
+                      height={600}
                       className="relative z-10 w-full h-auto rounded-[60px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.03]" 
                     />
                   </div>
@@ -236,10 +252,11 @@ export default function PremiumCompatibilityReportPage() {
             {/* 7. Final CTA Section */}
             <section className="relative min-h-[600px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group">
               <div className="absolute inset-0 z-0">
-                <img 
+                <Image 
                   src="/image/compatibility/p6.webp" 
                   alt="Final CTA" 
-                  className="w-full h-full object-cover transition-transform duration-[15000ms] group-hover:scale-125" 
+                  fill
+                  className="object-cover transition-transform duration-[15000ms] group-hover:scale-125" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/60 to-transparent"></div>
               </div>

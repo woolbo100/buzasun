@@ -45,7 +45,6 @@ export default function CompatibilityBanner() {
                 alt="Premium Compatibility"
                 fill
                 className="object-cover transition-transform duration-[5000ms] group-hover:scale-110"
-                priority
               />
             </div>
           </div>
@@ -53,7 +52,7 @@ export default function CompatibilityBanner() {
       </div>
       
       {/* Background Glow */}
-      <div className="absolute -bottom-1/2 -right-1/4 w-[600px] h-[600px] bg-[var(--accent-gold)]/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute -bottom-1/2 -right-1/4 w-[600px] h-[600px] bg-[var(--accent-gold)]/5 blur-[60px] rounded-full pointer-events-none"></div>
     </section>
   )
 }

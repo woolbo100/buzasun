@@ -72,6 +72,7 @@ export default function ReportsHubPage() {
                           src={report.image} 
                           alt={report.title}
                           fill
+                          priority={idx === 0}
                           className="object-cover transition-transform duration-[3000ms] group-hover:scale-110 opacity-60 group-hover:opacity-80"
                         />
                         <div className={`absolute inset-0 bg-gradient-to-t md:bg-gradient-to-${idx % 2 === 1 ? 'l' : 'r'} from-[#0a0514] via-transparent to-transparent`}></div>

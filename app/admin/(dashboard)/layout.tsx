@@ -30,7 +30,7 @@ export default function DashboardLayout({
     { title: "주문 관리", href: "/admin/orders", icon: ShoppingBag },
     { title: "후기 관리", href: "/admin/reviews", icon: MessageSquare },
     { title: "상품 관리", href: "/admin/products", icon: Package },
-    { title: "리포트 관리", href: "/admin/reports", icon: FileText },
+    { title: "리포트 제작소", href: "/admin/reports", icon: FileText },
     { title: "설정", href: "/admin/settings", icon: Settings },
   ];
 

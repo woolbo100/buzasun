@@ -134,8 +134,8 @@ export default function ProductCards() {
       </div>
 
       {/* Decorative Glows */}
-      <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-[var(--accent-gold)]/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-[var(--accent-gold-soft)]/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-[var(--accent-gold)]/5 blur-[60px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-[var(--accent-gold-soft)]/10 blur-[60px] rounded-full pointer-events-none" />
     </section>
   )
 }

@@ -31,14 +31,16 @@ export default function GlobalBackground({
     <div className="relative min-h-screen">
       {/* 배경 레이어 시스템 (Fixed로 고정하여 스크롤 시에도 유지) */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        {/* 1. 기본 이미지 레이어 */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('${src}')`,
-            opacity: 0.5,
-          }}
-        />
+        {/* 1. 기본 이미지 레이어 (Next.js Image로 최적화) */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={src}
+            alt=""
+            className="w-full h-full object-cover opacity-50"
+            style={{ objectPosition: 'center' }}
+            loading="eager"
+          />
+        </div>
 
         {/* 2. 퍼플 그라데이션 오버레이 (브랜드 톤 유지) */}
         <div

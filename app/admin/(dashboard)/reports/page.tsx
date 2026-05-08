@@ -1,45 +1,51 @@
 'use client';
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { 
-  FileText, 
+  ClipboardList, 
   Search, 
   Clock, 
   Edit3, 
-  Eye, 
   CheckCircle2,
-  Save,
   Loader2,
+  ChevronRight,
+  User,
+  Calendar,
   AlertCircle
 } from "lucide-react";
 
 export default function AdminReportsPage() {
+  const [activeTab, setActiveTab] = useState('pending'); // pending, writing, sent
   const [reports, setReports] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [editForm, setEditForm] = useState({
-    report_status: "",
-    delivery_status: "",
-    admin_memo: ""
-  });
+  const [searchTerm, setSearchTerm] = useState("");
 
-  // 데이터 불러오기
+  const tabs = [
+    { id: 'pending', label: '신규 신청', icon: Clock },
+    { id: 'writing', label: '제작중', icon: Edit3 },
+    { id: 'sent', label: '완료', icon: CheckCircle2 },
+  ];
+
+  // 리포트 데이터 불러오기
   const fetchReports = async () => {
     try {
       setLoading(true);
-      setError(null);
-      const { data, error } = await supabase
-        .from('reports')
+      
+      let query = supabase
+        .from('orders')
         .select('*')
+        .eq('product_type', 'report') // 리포트 상품만 필터링
+        .eq('report_status', activeTab) // 현재 탭 상태 필터링
         .order('created_at', { ascending: false });
+
+      const { data, error } = await query;
 
       if (error) throw error;
       setReports(data || []);
     } catch (err: any) {
-      console.error(err.message);
-      setError("데이터를 불러오는 중 오류가 발생했습니다.");
+      console.error("데이터 로드 실패:", err.message);
     } finally {
       setLoading(false);
     }
@@ -47,203 +53,133 @@ export default function AdminReportsPage() {
 
   useEffect(() => {
     fetchReports();
-  }, []);
+  }, [activeTab]);
 
-  // 수정 모드 진입
-  const startEditing = (report: any) => {
-    setEditingId(report.id);
-    setEditForm({
-      report_status: report.report_status,
-      delivery_status: report.delivery_status,
-      admin_memo: report.admin_memo || ""
-    });
-  };
-
-  // 수정 내용 저장
-  const handleUpdate = async (id: string) => {
-    try {
-      const { error } = await supabase
-        .from('reports')
-        .update({
-          report_status: editForm.report_status,
-          delivery_status: editForm.delivery_status,
-          admin_memo: editForm.admin_memo,
-          updated_at: new Date().toISOString(),
-          // '완료'와 '발송완료'가 되면 발송일 자동 기록
-          sent_at: editForm.delivery_status === '발송완료' ? new Date().toISOString() : null
-        })
-        .eq('id', id);
-
-      if (error) throw error;
-
-      alert("리포트 정보가 수정되었습니다.");
-      setEditingId(null);
-      fetchReports();
-    } catch (err: any) {
-      alert("수정 실패: " + err.message);
-    }
-  };
-
-  const getReportStatusBadge = (status: string) => {
-    const base = "text-[11px] px-2.5 py-1 rounded-full border inline-block ";
-    switch (status) {
-      case '완료': return base + "border-green-500/30 bg-green-500/10 text-green-400";
-      case '검토중': return base + "border-blue-500/30 bg-blue-500/10 text-blue-400";
-      case '작성중': return base + "border-purple-500/30 bg-purple-500/10 text-purple-400";
-      case '작성대기': return base + "border-accent-gold/30 bg-accent-gold/10 text-accent-gold";
-      case '접수완료': return base + "border-white/20 bg-white/5 text-white/60";
-      default: return base + "border-white/10 bg-white/5 text-white/40";
-    }
-  };
-
-  const getSendStatusBadge = (status: string) => {
-    const base = "text-[11px] px-2.5 py-1 rounded-full border inline-block ";
-    switch (status) {
-      case '발송완료': return base + "border-green-500/30 bg-green-500/10 text-green-400";
-      case '재발송': return base + "border-red-500/30 bg-red-500/10 text-red-400";
-      case '미발송': return base + "border-white/20 bg-white/5 text-white/60";
-      default: return base + "border-white/10 bg-white/5 text-white/40";
-    }
-  };
+  // 검색 필터링
+  const filteredReports = reports.filter(r => 
+    r.customer_name?.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    r.customer_email?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
-    <main className="p-6 md:p-10 space-y-8">
-      {/* Header */}
-      <section>
-        <h1 className="text-3xl md:text-4xl font-semibold flex items-center gap-3 text-white">
-          <FileText className="text-accent-gold" /> 리포트 관리
-        </h1>
-        <p className="text-white/70 mt-2">
-          실시간 Supabase 연동을 통해 리포트 상태를 관리합니다.
-        </p>
+    <main className="p-6 md:p-10 space-y-8 animate-in fade-in duration-700">
+      {/* 상단 헤더 */}
+      <section className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+          <h1 className="text-3xl font-elegant font-bold text-white flex items-center gap-3">
+            <ClipboardList className="text-accent-gold" /> 리포트 제작소
+          </h1>
+          <p className="text-white/40 mt-2 text-sm">
+            고객님의 소중한 신청 정보를 바탕으로 특별한 리포트를 제작합니다.
+          </p>
+        </div>
+        
+        {/* 검색창 */}
+        <div className="relative">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20" />
+          <input 
+            type="text" 
+            placeholder="고객명 또는 이메일 검색..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="pl-11 pr-6 py-3 bg-white/5 border border-white/10 rounded-2xl text-sm text-white focus:outline-none focus:border-accent-gold transition-all w-full md:w-72"
+          />
+        </div>
       </section>
 
-      {/* Reports List */}
-      <section className="rounded-3xl border border-accent-gold/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-xl">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b border-white/10 bg-white/5 text-[13px] text-white/50">
-                <th className="p-5 font-medium">고객/상품</th>
-                <th className="p-5 font-medium text-center">리포트 상태</th>
-                <th className="p-5 font-medium text-center">발송 상태</th>
-                <th className="p-5 font-medium">관리자 메모</th>
-                <th className="p-5 font-medium text-right">관리</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-white/5">
-              {loading ? (
-                <tr>
-                  <td colSpan={5} className="p-20 text-center">
-                    <Loader2 className="w-8 h-8 text-accent-gold animate-spin mx-auto mb-4" />
-                    <p className="text-accent-gold/60">리포트를 불러오는 중...</p>
-                  </td>
-                </tr>
-              ) : error ? (
-                <tr>
-                  <td colSpan={5} className="p-20 text-center">
-                    <AlertCircle className="w-8 h-8 text-red-400 mx-auto mb-4" />
-                    <p className="text-red-400">{error}</p>
-                  </td>
-                </tr>
-              ) : reports.length === 0 ? (
-                <tr>
-                  <td colSpan={5} className="p-20 text-center">
-                    <p className="text-white/40">등록된 리포트가 없습니다.</p>
-                  </td>
-                </tr>
-              ) : (
-                reports.map((report) => (
-                  <tr key={report.id} className="hover:bg-white/5 transition-colors group">
-                    <td className="p-5">
-                      <p className="font-medium text-sm text-white">{report.customer_name}</p>
-                      <p className="text-[11px] text-white/30 truncate max-w-[150px]">{report.product_name}</p>
-                      <p className="text-[10px] text-white/20">{new Date(report.created_at).toLocaleDateString()}</p>
-                    </td>
-                    
-                    <td className="p-5 text-center">
-                      {editingId === report.id ? (
-                        <select 
-                          className="bg-[#2A1B3D] border border-white/20 rounded-lg px-2 py-1 text-xs text-white focus:outline-none focus:border-accent-gold/50"
-                          value={editForm.report_status}
-                          onChange={(e) => setEditForm({...editForm, report_status: e.target.value})}
-                        >
-                          {['접수완료', '작성대기', '작성중', '검토중', '완료'].map(s => (
-                            <option key={s} value={s}>{s}</option>
-                          ))}
-                        </select>
-                      ) : (
-                        <span className={getReportStatusBadge(report.report_status)}>
-                          {report.report_status}
-                        </span>
-                      )}
-                    </td>
+      {/* 상태 탭 메뉴 */}
+      <div className="flex gap-2 p-1 bg-white/5 rounded-2xl w-fit">
+        {tabs.map((tab) => {
+          const Icon = tab.icon;
+          const isActive = activeTab === tab.id;
+          return (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`
+                px-6 py-3 rounded-xl text-sm font-bold transition-all flex items-center gap-2
+                ${isActive 
+                  ? 'bg-accent-gold text-[#1a0f2e] shadow-lg' 
+                  : 'text-white/40 hover:text-white/70'}
+              `}
+            >
+              <Icon className="w-4 h-4" />
+              {tab.label}
+            </button>
+          );
+        })}
+      </div>
 
-                    <td className="p-5 text-center">
-                      {editingId === report.id ? (
-                        <select 
-                          className="bg-[#2A1B3D] border border-white/20 rounded-lg px-2 py-1 text-xs text-white focus:outline-none focus:border-accent-gold/50"
-                          value={editForm.delivery_status}
-                          onChange={(e) => setEditForm({...editForm, delivery_status: e.target.value})}
-                        >
-                          {['미발송', '발송완료', '재발송'].map(s => (
-                            <option key={s} value={s}>{s}</option>
-                          ))}
-                        </select>
-                      ) : (
-                        <span className={getSendStatusBadge(report.delivery_status)}>
-                          {report.delivery_status}
-                        </span>
-                      )}
-                    </td>
+      {/* 리스트 영역 */}
+      <section className="grid grid-cols-1 gap-4">
+        {loading ? (
+          <div className="py-32 text-center gungjung-glass rounded-3xl border border-white/5">
+            <Loader2 className="w-10 h-10 text-accent-gold animate-spin mx-auto mb-4" />
+            <p className="text-white/40 text-sm">리포트 목록을 불러오는 중입니다...</p>
+          </div>
+        ) : filteredReports.length === 0 ? (
+          <div className="py-32 text-center gungjung-glass rounded-3xl border border-white/5">
+            <AlertCircle className="w-10 h-10 text-white/10 mx-auto mb-4" />
+            <p className="text-white/20">조회된 리포트 신청 내역이 없습니다.</p>
+          </div>
+        ) : (
+          filteredReports.map((report) => (
+            <Link 
+              key={report.id} 
+              href={`/admin/reports/${report.id}`}
+              className="group"
+            >
+              <div className="gungjung-glass p-6 md:p-8 border border-white/5 rounded-[2rem] hover:border-accent-gold/30 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl hover:shadow-accent-gold/5">
+                <div className="flex items-center gap-6">
+                  {/* 프로필 아이콘 또는 첫글자 */}
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent-gold/20 to-purple-500/20 flex items-center justify-center border border-white/10 group-hover:border-accent-gold/50 transition-all">
+                    <User className="w-6 h-6 text-accent-gold" />
+                  </div>
+                  
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-lg font-bold text-white">{report.customer_name}</h3>
+                      <span className="text-[10px] bg-white/10 text-white/40 px-2 py-0.5 rounded-md font-mono">
+                        #{report.id.split('-')[0].toUpperCase()}
+                      </span>
+                    </div>
+                    <p className="text-sm text-accent-gold/60 font-medium">{report.product_name}</p>
+                    <div className="flex items-center gap-4 text-[11px] text-white/30 pt-1">
+                      <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {new Date(report.created_at).toLocaleDateString()}</span>
+                      <span>{report.customer_email}</span>
+                    </div>
+                  </div>
+                </div>
 
-                    <td className="p-5 text-sm text-white/60">
-                      {editingId === report.id ? (
-                        <input 
-                          type="text"
-                          className="w-full bg-white/5 border border-white/20 rounded-lg px-3 py-1 text-xs focus:outline-none focus:border-accent-gold/50"
-                          value={editForm.admin_memo}
-                          onChange={(e) => setEditForm({...editForm, admin_memo: e.target.value})}
-                        />
-                      ) : (
-                        <span className="truncate block max-w-[200px]" title={report.admin_memo}>
-                          {report.admin_memo || "-"}
-                        </span>
-                      )}
-                    </td>
+                <div className="flex items-center gap-8 w-full md:w-auto border-t md:border-t-0 border-white/5 pt-4 md:pt-0">
+                  {/* 입력 데이터 요약 */}
+                  <div className="flex gap-2">
+                    <div className="bg-white/5 px-4 py-2 rounded-xl border border-white/5 text-center">
+                      <p className="text-[9px] text-white/20 font-bold uppercase mb-1">성별</p>
+                      <p className="text-xs font-bold text-white/60">{report.gender === 'female' ? '여성' : '남성'}</p>
+                    </div>
+                    <div className="bg-white/5 px-4 py-2 rounded-xl border border-white/5 text-center">
+                      <p className="text-[9px] text-white/20 font-bold uppercase mb-1">생년월일</p>
+                      <p className="text-xs font-bold text-white/60">{report.birth_date || '-'}</p>
+                    </div>
+                  </div>
 
-                    <td className="p-5 text-right">
-                      {editingId === report.id ? (
-                        <div className="flex justify-end gap-2">
-                          <button 
-                            onClick={() => handleUpdate(report.id)}
-                            className="p-2 rounded-lg bg-accent-gold/20 text-accent-gold hover:bg-accent-gold transition-all hover:text-purple-900"
-                            title="저장"
-                          >
-                            <Save className="w-4 h-4" />
-                          </button>
-                          <button 
-                            onClick={() => setEditingId(null)}
-                            className="p-2 rounded-lg bg-white/5 text-white/40 hover:bg-white/10"
-                          >
-                            취소
-                          </button>
-                        </div>
-                      ) : (
-                        <button 
-                          onClick={() => startEditing(report)}
-                          className="px-4 py-2 rounded-xl bg-white/5 hover:bg-accent-gold/20 text-white/40 hover:text-accent-gold transition-all text-xs"
-                        >
-                          상세 관리
-                        </button>
-                      )}
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
+                  <div className="ml-auto flex items-center gap-4">
+                    <div className="text-right hidden md:block">
+                      <p className="text-[10px] text-white/20 font-bold uppercase">현재 상태</p>
+                      <p className="text-xs font-bold text-accent-gold">
+                        {activeTab === 'pending' ? '제작 대기' : activeTab === 'writing' ? '제작 중' : '발송 완료'}
+                      </p>
+                    </div>
+                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-accent-gold group-hover:text-[#1a0f2e] transition-all">
+                      <ChevronRight className="w-5 h-5" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))
+        )}
       </section>
     </main>
   );

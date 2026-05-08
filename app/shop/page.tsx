@@ -299,6 +299,7 @@ export default function ShopPage() {
                               src={product.main_image || defaultImageMap[product.slug] || '/image/product-love-report.png'} 
                               alt={product.name}
                               fill
+                              priority={idx < 4}
                               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0c0816] via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
@@ -348,7 +349,7 @@ export default function ShopPage() {
           <div className="container-premium">
             <Reveal>
               <div className="gungjung-glass p-12 md:p-24 text-center border-[var(--accent-gold)]/10 relative overflow-hidden group">
-                <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-[#8a2be2]/10 blur-[120px] rounded-full pointer-events-none"></div>
+                <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-[#8a2be2]/10 blur-[60px] rounded-full pointer-events-none"></div>
                 
                 <h2 className="text-4xl md:text-5xl font-elegant font-bold mb-12 text-white relative z-10">
                   왜 백도화는 다를까요

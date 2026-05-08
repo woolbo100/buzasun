@@ -245,8 +245,8 @@
   /* 궁중유리(Gungjung Glass) 공통 스타일 */
   .gungjung-glass {
     background: var(--glass-bg);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
@@ -256,8 +256,8 @@
   /* 더 은은하고 투명한 히어로 섹션 전용 유리 효과 */
   .gungjung-glass-hero {
     background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(216, 191, 163, 0.08);
     border-radius: 40px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
