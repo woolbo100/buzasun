@@ -75,14 +75,14 @@ function CheckoutContent() {
       category: "ENERGY CARE",
       image: "/image/golden/m7.webp"
     },
-    "love-report": {
+    "baekdohwa-report": {
       name: "선천코드 연애 리포트",
       type: "digital_report",
       price: 49000,
       category: "PREMIUM REPORT",
       image: "/image/love-code-bg.png"
     },
-    "compatibility-report": {
+    "premium-compatibility-report": {
       name: "프리미엄 궁합 리포트",
       type: "digital_report",
       price: 59000,
@@ -691,7 +691,7 @@ function CheckoutContent() {
                     </div>
 
                     {/* 궁합 리포트일 경우 상대방 정보 추가 */}
-                    {productId === 'compatibility-report' && (
+                    {productId === 'premium-compatibility-report' && (
                       <div className="mt-12 pt-12 border-t border-white/5 space-y-6">
                         <h3 className="text-lg font-bold text-white border-l-4 border-[#BA8D7E] pl-4">상대방 정보</h3>
                         <div className="space-y-2">
