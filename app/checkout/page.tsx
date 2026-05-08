@@ -266,23 +266,34 @@ function CheckoutContent() {
     setLoading(true);
 
     try {
-      // 1. 가맹점 식별코드 초기화 (심사용)
-      // TODO: 실제 가맹점 식별코드로 교체 필요
+      // 1. 가맹점 식별코드 초기화
       const storeCode = process.env.NEXT_PUBLIC_PORTONE_STORE_CODE || 'imp_your_store_id';
       window.IMP.init(storeCode);
 
       // 2. 주문번호 생성
       const merchantUid = generateMerchantUid();
 
-      // 3. 결제용 상품명 설정 (STEP 2 Fallback 적용)
+      // 3. 결제용 상품명 설정
       const paymentName = product.payment_name || product.display_title || product.name;
 
-      // 4. PG사 설정 (테스트 모드 여부에 따라 분기)
-      // 테스트 모드일 때는 카카오페이 가상 테스트 상점(TC0ONETIME)을 기본으로 사용합니다.
+      // 4. PG사 및 채널 설정
+      const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
       const pgProvider = isTestMode ? "kakaopay.TC0ONETIME" : (process.env.NEXT_PUBLIC_PORTONE_PG_ID || "tosspayments");
+      const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY; // V2용 채널키
+
+      // [디버깅 로그 추가]
+      console.log("--- [백도화 결제 디버깅] ---");
+      console.log("가맹점 코드(storeCode):", storeCode);
+      console.log("PG사 식별코드(pg):", pgProvider);
+      console.log("채널키(channelKey):", channelKey);
+      console.log("테스트 모드:", isTestMode);
+      console.log("상품명:", paymentName);
+      console.log("결제 금액:", product.price);
+      console.log("주문 번호(merchant_uid):", merchantUid);
+      console.log("-------------------------");
 
       // 5. 포트원 전달 데이터 구성
-      const paymentData = {
+      const paymentData: any = {
         pg: pgProvider,
         pay_method: "card",
         merchant_uid: merchantUid,
@@ -293,7 +304,7 @@ function CheckoutContent() {
         buyer_tel: formData.phone,
         buyer_addr: formData.address,
         buyer_postcode: formData.zipcode,
-        m_redirect_url: `${window.location.origin}/checkout/success`, // 모바일 리다이렉트 주소
+        m_redirect_url: `${window.location.origin}/checkout/success`,
         custom_data: {
           productId: productId,
           productType: productType,
@@ -303,7 +314,6 @@ function CheckoutContent() {
           productTitle: product.display_title || product.name,
           paymentName: paymentName,
           isTest: isTestMode,
-          // 추가 필드 전송
           buyerType: buyerType,
           userId: user?.id,
           birthDate: formData.birthDate,
@@ -313,7 +323,12 @@ function CheckoutContent() {
         }
       };
 
-      // 4. 결제창 호출
+      // V2 채널키가 있다면 추가 (V2 방식 대응)
+      if (channelKey) {
+        paymentData.channelKey = channelKey;
+      }
+
+      // 6. 결제창 호출
       window.IMP.request_pay(paymentData, async (rsp: any) => {
         if (rsp.success) {
           // 결제 성공 시
