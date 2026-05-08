@@ -32,7 +32,8 @@ export default function ShopPage() {
 
   // 슬러그 기반 기본 이미지 매핑
   const defaultImageMap: { [key: string]: string } = {
-    'baekdohwa-report': '/image/product-love-report.png',
+    'baekdohwa-report': '/image/lovereport/p7.webp',
+    'love-report': '/image/lovereport/p7.webp',
     'premium-compatibility-report': '/image/premium_compatibility_report.png',
     'reunion-secret': '/image/reunion-secret-thumb.png',
     'reunion-secret-method': '/image/reunion-secret-thumb.png',
@@ -64,6 +65,7 @@ export default function ShopPage() {
             const isMissHighlander = slug === 'miss-highlander';
             const isWangbitna = slug === 'wangbitna-cream';
             const isGoldenForever = slug === 'golden-forever-lady';
+            const isLoveReport = slug === 'baekdohwa-report' || slug === 'love-report';
             const isLoveSecret = p.slug?.includes('love-secret') || p.name?.includes('연애비급');
             const isAbundanceSecret = p.slug?.includes('abundance-secret') || p.name?.includes('풍요비책');
             const isReunionSecret = p.slug?.includes('reunion-secret') || p.name?.includes('재회비방');
@@ -74,6 +76,7 @@ export default function ShopPage() {
             
             // 상품명 보정 (필요한 경우에만)
             let currentName = p.name?.trim();
+            if (isLoveReport) currentName = '선천코드 연애 리포트';
             if (currentSlug.includes('wangbitna-cream') && !currentName?.includes('어디서나')) {
               currentName = '어디서나 왕빛나 크림';
             }
@@ -82,7 +85,8 @@ export default function ShopPage() {
               ...p,
               name: currentName,
               slug: currentSlug,
-              main_image: isMissHighlander ? '/image/miss/m1.webp' : 
+              main_image: isLoveReport ? '/image/lovereport/p7.webp' : 
+                          isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :
                           isGoldenForever ? '/image/golden/m7.webp' :
                           isLoveSecret ? '/image/love-secret-thumb.png' :
@@ -279,7 +283,7 @@ export default function ShopPage() {
                           (() => {
                             const s = product.slug?.trim() || '';
                             if (product.type === 'physical' || ['miss-highlander', 'wangbitna-cream', 'premium-bookmark'].includes(s)) return `/shop/${s}`;
-                            if (s === 'baekdohwa-report') return `/reports/baekdohwa-report`;
+                            if (s === 'baekdohwa-report' || s === 'love-report') return `/reports/love-report`;
                             if (s === 'premium-compatibility-report') return `/reports/premium-compatibility-report`;
                             if (s === 'love-secret-ebook') return `/reports/love-secret`;
                             if (s === 'abundance-secret-guide') return `/reports/abundance-secret`;
