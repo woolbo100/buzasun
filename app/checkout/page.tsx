@@ -122,6 +122,7 @@ function CheckoutContent() {
     }
   }
 
+  useEffect(() => {
     async function checkUserAndFetchProduct() {
       try {
         setLoading(true)
@@ -415,6 +416,10 @@ function CheckoutContent() {
                       name: '홍길동(테스트)',
                       email: 'test@example.com',
                       phone: '010-1234-5678',
+                      birthDate: '19900101',
+                      birthTime: '오후 2시',
+                      gender: 'female',
+                      partnerInfo: '테스트용 정보입니다.',
                       receiverName: '홍길동',
                       zipcode: '12345',
                       address: '서울시 강남구 테헤란로 123',
@@ -438,6 +443,10 @@ function CheckoutContent() {
                       name: '홍길동(테스트)',
                       email: 'test@example.com',
                       phone: '010-1234-5678',
+                      birthDate: '19900101',
+                      birthTime: '오전 10시',
+                      gender: 'female',
+                      partnerInfo: '테스트용 정보입니다.',
                       receiverName: '홍길동',
                       zipcode: '12345',
                       address: '서울시 강남구 테헤란로 123',
