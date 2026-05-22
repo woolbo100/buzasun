@@ -45,7 +45,7 @@ export default function ShopPage() {
     'wangbitna-cream': '/image/wangbitna/w7.webp',
     'golden-forever-lady': '/image/golden/m7.webp',
     'premium-bookmark': '/image/pre/p7.webp',
-    'pink-lady': '/image/pinklady/p1.webp'
+    'pink-lady': '/image/pinklady/p7.webp'
   }
   
   useEffect(() => {
@@ -94,7 +94,7 @@ export default function ShopPage() {
                           isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :
                           isGoldenForever ? '/image/golden/m7.webp' :
-                          isPinkLady ? '/image/pinklady/p1.webp' :
+                          isPinkLady ? '/image/pinklady/p7.webp' :
                           isLoveSecret ? '/image/love-secret-thumb.png' :
                           isAbundanceSecret ? '/image/abundance-secret-thumb.png' :
                           isReunionSecret ? '/image/reunion-secret-thumb.png' :

@@ -107,8 +107,8 @@ export default function PinkLadyDetailPage() {
                   보이지 않는 곳까지 우아하게 관리하는 여성의 루틴
                 </p>
 
-                {/* 메인 비주얼 - 자개 테두리 효과와 럭셔리 섀도우 */}
-                <div className="relative max-w-4xl mx-auto aspect-video mb-12 rounded-[32px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(230,190,138,0.1)] group">
+                {/* 메인 비주얼 - 자개 테두리 효과와 럭셔리 섀도우 (p1 이미지 선명도 확보를 위한 bg-white 추가) */}
+                <div className="relative max-w-4xl mx-auto aspect-video mb-12 rounded-[32px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(230,190,138,0.1)] group bg-white">
                   {/* 자개빛 레인보우 그라데이션 테두리 */}
                   <div className="absolute inset-0 p-[1px] rounded-[32px] bg-gradient-to-tr from-[#C58BA0] via-[#E6BE8A] to-[#87CEFA] pointer-events-none z-10 opacity-70">
                     <div className="w-full h-full rounded-[31px] bg-transparent"></div>
