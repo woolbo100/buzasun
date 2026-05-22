@@ -297,34 +297,35 @@ function CheckoutContent() {
       const paymentEnabled = process.env.NEXT_PUBLIC_PAYMENT_ENABLED === 'true';
 
       // 가맹점 식별코드(imp...) 체크
-      if (!storeCode || storeCode === 'imp_your_store_id' || storeCode.includes('undefined')) {
-        alert("결제 설정 오류: NEXT_PUBLIC_PORTONE_STORE_CODE(가맹점 식별코드)가 올바르지 않습니다. Vercel 환경변수를 확인해주세요.");
+      if (!storeCode || storeCode === 'imp_your_store_id' || storeCode === 'imp00000000' || storeCode.includes('undefined')) {
+        alert("결제 설정 오류: NEXT_PUBLIC_PORTONE_STORE_CODE(가맹점 식별코드)가 올바르지 않거나 테스트용 코드입니다. Vercel 환경변수를 확인해주세요.");
         setLoading(false);
         return;
       }
 
       // PG사 식별코드 체크
-      // 테스트 모드일 때는 kakaopay.TC0ONETIME을 기본으로 사용, 실결제일 때는 환경변수 사용
-      const pgProvider = isTestMode ? "kakaopay.TC0ONETIME" : envPgId;
+      // 실결제 모드 전환을 위해 테스트 PG 자동 전환 로직을 제거하고 실제 등록된 PG사 ID를 사용합니다.
+      const pgProvider = envPgId;
 
-      if (!pgProvider || pgProvider.includes('undefined')) {
-        alert("결제 설정 오류: NEXT_PUBLIC_PORTONE_PG_ID(PG사 식별코드)가 설정되지 않았습니다.");
+      if (!pgProvider || pgProvider === 'kakaopay.TC0ONETIME' || pgProvider === 'html5_inicis.INIpayTest' || pgProvider.includes('undefined')) {
+        alert("결제 설정 오류: NEXT_PUBLIC_PORTONE_PG_ID(PG사 식별코드)가 설정되지 않았거나 테스트용 코드입니다. 실제 운영 PG 코드를 Vercel 환경변수에 설정해주세요.");
         setLoading(false);
         return;
       }
 
       // 2. 가맹점 식별코드 초기화
-      // 테스트 모드일 때는 포트원 공용 테스트 가맹점 코드(imp00000000)를 사용해 결제창을 안전하게 활성화합니다.
-      const finalStoreCode = isTestMode ? "imp00000000" : storeCode;
-      window.IMP.init(finalStoreCode);
+      // 실제 가맹점 식별코드를 사용하여 포트원 SDK를 초기화합니다.
+      window.IMP.init(storeCode);
 
       // 3. 주문번호 및 결제명 설정
       const merchantUid = generateMerchantUid();
       const paymentName = product.payment_name || product.display_title || product.name;
 
       // [백도화 결제 디버깅 로그]
+      console.log("IMP STORE CODE:", process.env.NEXT_PUBLIC_PORTONE_STORE_CODE);
+      console.log("PG ID:", process.env.NEXT_PUBLIC_PORTONE_PG_ID);
       console.log("--- [백도화 PortOne V1 점검] ---");
-      console.log("가맹점 식별코드(storeCode):", finalStoreCode);
+      console.log("가맹점 식별코드(storeCode):", storeCode);
       console.log("PG사 식별코드(pg):", pgProvider);
       console.log("테스트 모드(testMode):", isTestMode);
       console.log("활성화 상태(enabled):", paymentEnabled);
