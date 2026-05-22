@@ -16,7 +16,7 @@ export default function Hero() {
           .select('slug, main_cta_label')
           .eq('is_active', true)
           .eq('show_on_main', true)
-          .order('main_sort_order', { ascending: true })
+          .order('sort_order', { ascending: true })
           .limit(1)
           .single();
 

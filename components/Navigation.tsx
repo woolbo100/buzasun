@@ -76,7 +76,7 @@ export default function Navigation() {
           .from('products')
           .select('slug')
           .eq('is_active', true)
-          .order('main_sort_order', { ascending: true })
+          .order('sort_order', { ascending: true })
           .limit(1)
           .single()
 
