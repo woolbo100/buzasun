@@ -314,7 +314,9 @@ function CheckoutContent() {
       }
 
       // 2. 가맹점 식별코드 초기화
-      window.IMP.init(storeCode);
+      // 테스트 모드일 때는 포트원 공용 테스트 가맹점 코드(imp00000000)를 사용해 결제창을 안전하게 활성화합니다.
+      const finalStoreCode = isTestMode ? "imp00000000" : storeCode;
+      window.IMP.init(finalStoreCode);
 
       // 3. 주문번호 및 결제명 설정
       const merchantUid = generateMerchantUid();
@@ -322,7 +324,7 @@ function CheckoutContent() {
 
       // [백도화 결제 디버깅 로그]
       console.log("--- [백도화 PortOne V1 점검] ---");
-      console.log("가맹점 식별코드(storeCode):", storeCode);
+      console.log("가맹점 식별코드(storeCode):", finalStoreCode);
       console.log("PG사 식별코드(pg):", pgProvider);
       console.log("테스트 모드(testMode):", isTestMode);
       console.log("활성화 상태(enabled):", paymentEnabled);
