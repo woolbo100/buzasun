@@ -72,26 +72,30 @@ export default function PhysicalProductDetail({
   const [dbOptions, setDbOptions] = useState<any[]>(initialOptions || [])
   const [selectedOption, setSelectedOption] = useState<string>("")
   const [showError, setShowError] = useState(false)
+  const [dbPrice, setDbPrice] = useState<string | number>(price)
 
   useEffect(() => {
-    async function fetchOptions() {
-      if (initialOptions) return;
-      
+    async function fetchProductData() {
       try {
         const { data, error } = await supabase
           .from('products')
-          .select('options')
+          .select('price, options')
           .eq('slug', productId)
           .single()
 
-        if (!error && data?.options) {
-          setDbOptions(data.options)
+        if (!error && data) {
+          if (data.price !== undefined && data.price !== null) {
+            setDbPrice(data.price)
+          }
+          if (data.options && !initialOptions) {
+            setDbOptions(data.options)
+          }
         }
       } catch (err) {
-        console.error("Failed to fetch options:", err)
+        console.error("Failed to fetch product data:", err)
       }
     }
-    fetchOptions()
+    fetchProductData()
   }, [productId, initialOptions])
 
   const handlePurchase = (e: React.MouseEvent) => {
@@ -200,7 +204,7 @@ export default function PhysicalProductDetail({
                       boxShadow: `0 0 40px ${accentColor}26`
                     }}
                   >
-                    구매하기 ({price}원)
+                    구매하기 ({typeof dbPrice === 'number' ? dbPrice.toLocaleString() : dbPrice}원)
                   </button>
                 </div>
               </Reveal>

@@ -122,7 +122,7 @@ function CheckoutContent() {
       name: "프리미엄 플라워 북마크 세트",
       display_title: "프리미엄 플라워 북마크 세트",
       type: "physical",
-      price: 9900,
+      price: 1900,
       category: "PRIVATE OBJECT",
       image: "/image/pre/p7.webp",
       options: [

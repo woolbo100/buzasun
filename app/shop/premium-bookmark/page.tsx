@@ -18,7 +18,7 @@ export default function PremiumBookmarkPage() {
     formulaImage: '/image/pre/p4.webp',
     giftImage: '/image/pre/p5.webp',
     ctaImage: '/image/pre/p6.webp',
-    price: '9,900',
+    price: '1,900',
     accentColor: '#FFC0CB', // 베이비 핑크
     recommendedPoints: [
       '책을 사랑하는 사람에게 특별한 선물을 하고 싶은 분',
