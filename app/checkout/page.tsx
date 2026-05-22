@@ -55,7 +55,7 @@ function CheckoutContent() {
   // DB에 없을 경우를 위한 Fallback 상품 정보
   const productMap: { [key: string]: any } = {
     "pink-lady": {
-      name: "핑크레이디 시크릿 리추얼",
+      name: "핑크레이디",
       display_title: "Pink Lady Secret Ritual",
       type: "physical",
       price: 89000,
@@ -177,7 +177,7 @@ function CheckoutContent() {
           if (productId === 'pink-lady' || data.slug === 'pink-lady' || data.product_id === 'pink-lady') {
             resolvedProduct = {
               ...resolvedProduct,
-              name: '핑크레이디 시크릿 리추얼',
+              name: '핑크레이디',
               display_title: 'Pink Lady Secret Ritual',
               type: 'physical',
               price: 89000,

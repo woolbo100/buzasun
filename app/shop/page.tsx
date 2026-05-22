@@ -83,7 +83,10 @@ export default function ShopPage() {
               currentName = '어디서나 왕빛나 크림';
             }
             if (isPinkLady) {
-              currentName = '핑크레이디 시크릿 리추얼';
+              currentName = '핑크레이디';
+            }
+            if (isPremiumBookmark) {
+              currentName = '플라워 북마크 세트';
             }
 
             return {
@@ -155,7 +158,7 @@ export default function ShopPage() {
           if (!hasPremiumBookmark) {
             mappedData.push({
               id: 'manual-premium-bookmark',
-              name: '프리미엄 플라워 북마크 세트',
+              name: '플라워 북마크 세트',
               slug: 'premium-bookmark',
               category: 'PRIVATE OBJECT',
               description: '섬세한 금속 디테일과 우아한 태슬 장식이 더해진 프리미엄 플라워 북마크 세트입니다.',
