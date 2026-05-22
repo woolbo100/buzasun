@@ -9,9 +9,6 @@ import Link from 'next/link'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function AbundanceSecretPage() {
-  // [Hiding Logic] 시크릿 비법서 숨김 처리
-  redirect('/')
-  return null;
   useScrollAnimation()
 
   const reviews = [
@@ -62,7 +59,7 @@ export default function AbundanceSecretPage() {
                   상태를 바꾸면 현실이 따라옵니다. <br/> 풍요 마인드와 에너지 흐름을 정리하는 실전 가이드
                 </p>
                 <Link 
-                  href="/checkout?productId= abundance-secret-guide"
+                  href="/checkout?productId=abundance-secret-guide"
                   className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
                   풍요비책 받아보기
@@ -279,7 +276,7 @@ export default function AbundanceSecretPage() {
                   풍요는 기다리는 것이 아니라 만드는 것입니다
                 </h2>
                 <Link 
-                  href="/checkout?productId=abundance-secret"
+                  href="/checkout?productId=abundance-secret-guide"
                   className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
                   풍요비책 받아보기

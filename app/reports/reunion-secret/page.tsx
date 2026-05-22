@@ -9,10 +9,6 @@ import Link from 'next/link'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function ReunionSecretPage() {
-  // [Hiding Logic] 시크릿 비법서 숨김 처리
-  redirect('/')
-  return null;
-  
   useScrollAnimation()
 
   const reviews = [

@@ -7,21 +7,21 @@ const ebooks = [
   {
     title: "연애비급",
     desc: "관계의 흐름을 바꾸는 심리·프레임·대화 설계",
-    href: "/checkout?productId=love-secret",
+    href: "/checkout?productId=love-secret-ebook",
     subLabel: "관계 설계 비법서",
     image: "/image/love-secret-thumb.png"
   },
   {
     title: "풍요비책",
     desc: "상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
-    href: "/checkout?productId=abundance-secret",
+    href: "/checkout?productId=abundance-secret-guide",
     subLabel: "상태·주파수 비법서",
     image: "/image/abundance-secret-thumb.png"
   },
   {
     title: "재회비방",
     desc: "감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
-    href: "/checkout?productId=reunion-secret",
+    href: "/checkout?productId=reunion-secret-method",
     subLabel: "메시지·기준 비법서",
     image: "/image/reunion-secret-thumb.png"
   },

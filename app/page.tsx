@@ -19,7 +19,7 @@ import GlobalBackground from '@/components/GlobalBackground'
 export default function Home() {
   useScrollAnimation()
 
-  const showSecretArchive = false;
+  const showSecretArchive = true;
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">

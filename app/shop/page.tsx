@@ -162,11 +162,8 @@ export default function ShopPage() {
             })
           }
 
-          // [Hiding Logic] 전자책 3종 숨김 처리 (데이터는 유지하되 외부 노출만 차단)
-          const hiddenSlugs = ['love-secret-ebook', 'abundance-secret-guide', 'reunion-secret-method', 'love-secret', 'abundance-secret', 'reunion-secret'];
-          const finalData = mappedData.filter(p => !hiddenSlugs.includes(p.slug?.trim().toLowerCase()));
-
-          setProducts(finalData)
+          // [Hiding Logic] 전자책 3종 숨김 처리 해제 (노출 복구)
+          setProducts(mappedData)
         }
       } catch (err) {
         console.error("Shop: Failed to fetch products", err)
@@ -177,8 +174,8 @@ export default function ShopPage() {
     fetchProducts()
   }, [])
 
-  // [Hiding Logic] 숨겨진 상품이 포함된 카테고리 필터링
-  const visibleCategories = categories.filter(cat => cat !== 'SECRET METHOD');
+  // [Hiding Logic] 숨겨진 상품이 포함된 카테고리 필터링 해제
+  const visibleCategories = categories;
 
   const filteredProducts = activeCategory === 'ALL' 
     ? products 

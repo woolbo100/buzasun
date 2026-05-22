@@ -9,9 +9,6 @@ import Link from 'next/link'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function LoveSecretEbookPage() {
-  redirect('/')
-  return null
-  
   useScrollAnimation()
 
   const reviews = [
@@ -279,7 +276,7 @@ export default function LoveSecretEbookPage() {
                   내 연애 패턴을 다르게 읽어보고 싶다면
                 </h2>
                 <Link 
-                  href="/checkout?productId=love-secret"
+                  href="/checkout?productId=love-secret-ebook"
                   className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
                 >
                   연애비급 받아보기

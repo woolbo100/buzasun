@@ -14,7 +14,7 @@ export default function EbooksPage() {
     {
       title: '연애비급 (매력 시그널)',
       description: '상대방의 무의식을 자극하는 당신만의 고유한 아우라 분석.',
-      href: '/reports/love-secret-ebook',
+      href: '/reports/love-secret',
       cta: '연애비급 자세히 보기',
       image: '/image/love-secret-thumb.png',
       category: 'AURA ANALYSIS'
@@ -22,7 +22,7 @@ export default function EbooksPage() {
     {
       title: '풍요비책 (에너지 가이드)',
       description: '당신에게 흘러들어오는 풍요의 물길을 트는 에너지 활용법.',
-      href: '/reports/abundance-secret-guide',
+      href: '/reports/abundance-secret',
       cta: '풍요비책 자세히 보기',
       image: '/image/abundance-secret-thumb.png',
       category: 'ENERGY GUIDE'
@@ -30,18 +30,12 @@ export default function EbooksPage() {
     {
       title: '재회비방 (시크릿 솔루션)',
       description: '어긋난 인연을 다시 잇는 가장 은밀하고 확실한 방법.',
-      href: '/reports/reunion-secret-method',
+      href: '/reports/reunion-secret',
       cta: '재회비방 자세히 보기',
       image: '/image/reunion-secret-thumb.png',
       category: 'SECRET METHOD'
     },
   ]
-
-  // [Hiding Logic] 시크릿 비법서 전체 숨김 처리
-  if (typeof window !== 'undefined') {
-    window.location.href = '/';
-  }
-  return null;
 
   return (
     <main className="relative min-h-screen">
