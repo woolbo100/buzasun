@@ -367,6 +367,10 @@ function CheckoutContent() {
         }
       };
 
+      // 5. 결제창 호출 직전 payload 콘솔 출력
+      console.log("결제 요청 Payload PG:", paymentData.pg);
+      console.log("결제 요청 Payload 전체:", paymentData);
+
       // 5. 결제창 호출
       window.IMP.request_pay(paymentData, async (rsp: any) => {
         if (rsp.success) {
