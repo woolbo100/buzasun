@@ -54,6 +54,14 @@ function CheckoutContent() {
 
   // DB에 없을 경우를 위한 Fallback 상품 정보
   const productMap: { [key: string]: any } = {
+    "pink-lady": {
+      name: "핑크레이디 시크릿 리추얼",
+      display_title: "Pink Lady Secret Ritual",
+      type: "physical",
+      price: 89000,
+      category: "women-balance-care",
+      image: "/image/pinklady/p7.webp"
+    },
     "miss-highlander": {
       name: "미스하이랜더 플러스",
       type: "physical",
@@ -165,7 +173,19 @@ function CheckoutContent() {
           .single()
 
         if (!error && data) {
-          setProduct({ ...data, slug: productId, selectedOption: selectedOption })
+          let resolvedProduct = { ...data };
+          if (productId === 'pink-lady' || data.slug === 'pink-lady' || data.product_id === 'pink-lady') {
+            resolvedProduct = {
+              ...resolvedProduct,
+              name: '핑크레이디 시크릿 리추얼',
+              display_title: 'Pink Lady Secret Ritual',
+              type: 'physical',
+              price: 89000,
+              category: 'women-balance-care',
+              image: '/image/pinklady/p7.webp'
+            };
+          }
+          setProduct({ ...resolvedProduct, slug: productId, selectedOption: selectedOption })
         } else if (productId && productMap[productId]) {
           setProduct({ ...productMap[productId], slug: productId, selectedOption: selectedOption })
         }
@@ -322,7 +342,7 @@ function CheckoutContent() {
         buyer_tel: formData.phone,
         buyer_addr: formData.address,
         buyer_postcode: formData.zipcode,
-        m_redirect_url: `${window.location.origin}/checkout/success`,
+        m_redirect_url: `${window.location.origin}/order-success`,
         custom_data: {
           productId: productId,
           productType: productType,
@@ -380,7 +400,7 @@ function CheckoutContent() {
             shipping_memo: formData.deliveryNote,
           });
           
-          router.push(`/checkout/success?${params.toString()}`);
+          router.push(`/order-success?${params.toString()}`);
         } else {
           // 결제 실패 시
           router.push(`/checkout/fail?error_msg=${encodeURIComponent(rsp.error_msg)}&error_code=${rsp.error_code}`);
@@ -525,7 +545,7 @@ function CheckoutContent() {
                     })
                     
                     setLoading(true)
-                    router.push(`/checkout/success?${params.toString()}`)
+                    router.push(`/order-success?${params.toString()}`)
                   }}
                   className="px-4 py-2 bg-[var(--accent-gold)] text-[#1a0f2e] rounded-lg text-xs font-bold hover:brightness-110 transition-all shadow-lg"
                 >
