@@ -44,7 +44,8 @@ export default function ShopPage() {
     'miss-highlander': '/image/miss/m1.webp',
     'wangbitna-cream': '/image/wangbitna/w7.webp',
     'golden-forever-lady': '/image/golden/m7.webp',
-    'premium-bookmark': '/image/pre/p7.webp'
+    'premium-bookmark': '/image/pre/p7.webp',
+    'pink-lady': '/image/pinklady/p1.webp'
   }
   
   useEffect(() => {
@@ -65,6 +66,7 @@ export default function ShopPage() {
             const isMissHighlander = slug === 'miss-highlander';
             const isWangbitna = slug === 'wangbitna-cream';
             const isGoldenForever = slug === 'golden-forever-lady';
+            const isPinkLady = slug === 'pink-lady' || slug === 'pink-lady-secret-ritual';
             const isLoveReport = slug === 'baekdohwa-report' || slug === 'love-report';
             const isLoveSecret = p.slug?.includes('love-secret') || p.name?.includes('연애비급');
             const isAbundanceSecret = p.slug?.includes('abundance-secret') || p.name?.includes('풍요비책');
@@ -80,6 +82,9 @@ export default function ShopPage() {
             if (currentSlug.includes('wangbitna-cream') && !currentName?.includes('어디서나')) {
               currentName = '어디서나 왕빛나 크림';
             }
+            if (isPinkLady) {
+              currentName = '핑크레이디 시크릿 리추얼';
+            }
 
             return {
               ...p,
@@ -89,6 +94,7 @@ export default function ShopPage() {
                           isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :
                           isGoldenForever ? '/image/golden/m7.webp' :
+                          isPinkLady ? '/image/pinklady/p1.webp' :
                           isLoveSecret ? '/image/love-secret-thumb.png' :
                           isAbundanceSecret ? '/image/abundance-secret-thumb.png' :
                           isReunionSecret ? '/image/reunion-secret-thumb.png' :
