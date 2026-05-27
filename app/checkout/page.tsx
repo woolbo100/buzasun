@@ -29,6 +29,7 @@ function CheckoutContent() {
   const [buyerType, setBuyerType] = useState<'member' | 'guest'>('guest')
   const [sameAsMember, setSameAsMember] = useState(false)
   const [sameAsOrderer, setSameAsOrderer] = useState(false)
+  const [paymentMethod, setPaymentMethod] = useState<'card' | 'bank_transfer_manual'>('card')
 
   const [formData, setFormData] = useState({
     name: '',
@@ -279,6 +280,55 @@ function CheckoutContent() {
     if (product.options && product.options.length > 0 && !checkoutOption) {
       setShowOptionError(true);
       alert("색상을 선택해주세요.");
+      return;
+    }
+
+    // 무통장입금 처리 분기
+    if (paymentMethod === 'bank_transfer_manual') {
+      setLoading(true);
+      try {
+        const merchantUid = generateMerchantUid();
+        const paymentName = product.payment_name || product.display_title || product.name;
+        
+        const params = new URLSearchParams({
+          productId: productId || '',
+          product_name: product.name,
+          product_type: productType,
+          amount: product.price.toString(),
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          option: checkoutOption || '',
+          merchant_uid: merchantUid,
+          payment_method: 'bank_transfer_manual',
+          payment_status: 'pending_bank_transfer',
+          order_status: '입금대기',
+          receiverName: formData.receiverName,
+          zipcode: formData.zipcode,
+          address: formData.address,
+          detailAddress: formData.detailAddress,
+          deliveryNote: formData.deliveryNote,
+          orderNote: formData.orderNote,
+          product_title: product.display_title || product.name,
+          payment_name: paymentName,
+          buyer_type: buyerType,
+          birth_date: formData.birthDate,
+          birth_time: formData.birthTime,
+          gender: formData.gender,
+          partner_name: formData.partnerName,
+          partner_birth_date: formData.partnerBirthDate,
+          partner_birth_time: formData.partnerBirthTime,
+          partner_gender: formData.partnerGender,
+          shipping_memo: formData.deliveryNote,
+        });
+
+        router.push(`/order-success?${params.toString()}`);
+      } catch (err) {
+        console.error("Manual payment routing error:", err);
+        alert("주문 접수 중 오류가 발생했습니다.");
+      } finally {
+        setLoading(false);
+      }
       return;
     }
 
@@ -864,6 +914,37 @@ function CheckoutContent() {
                   <div className="pt-4 border-t border-white/10 flex justify-between items-center">
                     <span className="text-white font-bold">최종 결제 금액</span>
                     <span className="text-2xl font-bold text-[var(--accent-gold)]">₩{product.price?.toLocaleString()}</span>
+                  </div>
+                </div>
+
+                {/* 결제수단 선택 UI */}
+                <div className="mb-8 space-y-3">
+                  <label className="text-xs text-white/40 ml-1 block font-bold">결제수단 선택</label>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setPaymentMethod('card')}
+                      className={`py-3.5 rounded-xl border text-xs font-bold transition-all flex flex-col items-center justify-center gap-2 ${
+                        paymentMethod === 'card'
+                          ? 'bg-[var(--accent-gold)]/10 border-[var(--accent-gold)] text-[var(--accent-gold)] shadow-[0_0_15px_rgba(230,190,138,0.15)]'
+                          : 'bg-white/5 border-white/10 text-white/40 hover:text-white/60 hover:bg-white/[0.07]'
+                      }`}
+                    >
+                      <i className="far fa-credit-card text-base"></i>
+                      <span>카드결제</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setPaymentMethod('bank_transfer_manual')}
+                      className={`py-3.5 rounded-xl border text-xs font-bold transition-all flex flex-col items-center justify-center gap-2 ${
+                        paymentMethod === 'bank_transfer_manual'
+                          ? 'bg-[var(--accent-gold)]/10 border-[var(--accent-gold)] text-[var(--accent-gold)] shadow-[0_0_15px_rgba(230,190,138,0.15)]'
+                          : 'bg-white/5 border-white/10 text-white/40 hover:text-white/60 hover:bg-white/[0.07]'
+                      }`}
+                    >
+                      <i className="fas fa-university text-base"></i>
+                      <span>무통장입금</span>
+                    </button>
                   </div>
                 </div>
 

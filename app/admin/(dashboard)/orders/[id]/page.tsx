@@ -14,6 +14,7 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
   const [memo, setMemo] = useState('');
   const [orderStatus, setOrderStatus] = useState('');
   const [reportStatus, setReportStatus] = useState('');
+  const [paymentStatus, setPaymentStatus] = useState('');
 
   useEffect(() => {
     async function fetchOrder() {
@@ -30,6 +31,7 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
         setMemo(data.order_memo || '');
         setOrderStatus(data.order_status);
         setReportStatus(data.report_status);
+        setPaymentStatus(data.payment_status);
       } catch (err: any) {
         console.error("Failed to fetch order:", err);
       } finally {
@@ -48,6 +50,7 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
         .update({
           order_memo: memo,
           order_status: orderStatus,
+          payment_status: paymentStatus,
           report_status: reportStatus,
           updated_at: new Date().toISOString()
         })
@@ -99,7 +102,7 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
   const translateStatus = (status: string) => {
     const map: any = {
       'new': '신규', 'paid': '결제완료', 'test_paid': '테스트결제', 'pending': '대기중', 'writing': '제작중', 'ready': '다운로드 가능', 'sent': '발송완료',
-      'completed': '완료', 'cancelled': '취소됨', 'confirmed': '확인됨', 'processing': '처리중'
+      'completed': '완료', 'cancelled': '취소됨', 'confirmed': '확인됨', 'processing': '처리중', 'pending_bank_transfer': '입금대기'
     };
     return map[status] || status;
   };
@@ -119,12 +122,21 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
         </div>
         
         <div className="flex items-center gap-3">
-          <Link 
-            href={`/admin/reports/create?orderId=${order.id}`}
-            className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-white hover:bg-white/10 transition-all"
-          >
-            <ExternalLink className="w-3 h-3" /> 리포트 제작실로 이동
-          </Link>
+          {(paymentStatus === 'paid' || paymentStatus === 'test_paid') ? (
+            <Link 
+              href={`/admin/reports/create?orderId=${order.id}`}
+              className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-white hover:bg-white/10 transition-all"
+            >
+              <ExternalLink className="w-3 h-3" /> 리포트 제작실로 이동
+            </Link>
+          ) : (
+            <div 
+              title="입금 확인 전에는 리포트를 제작할 수 없습니다."
+              className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/5 rounded-xl text-xs font-bold text-white/20 cursor-not-allowed"
+            >
+              <ExternalLink className="w-3 h-3" /> 리포트 제작실로 이동 (입금대기)
+            </div>
+          )}
           <button
             onClick={handleSave}
             disabled={saving}
@@ -313,9 +325,31 @@ export default function OrderDetailPage({ params }: { params: { id: string } }) 
               </div>
 
               <div className="space-y-2">
+                <label className="text-[10px] text-white/30 block font-bold tracking-widest">결제 상태</label>
+                <select 
+                  value={paymentStatus}
+                  onChange={(e) => setPaymentStatus(e.target.value)}
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[var(--accent-gold)] transition-all"
+                >
+                  <option value="pending_bank_transfer">입금대기 (Pending Bank Transfer)</option>
+                  <option value="paid">결제완료 (Paid)</option>
+                  <option value="test_paid">테스트결제 (Test Paid)</option>
+                  <option value="cancelled">결제취소/환불 (Cancelled)</option>
+                </select>
+              </div>
+
+              <div className="space-y-2">
                 <label className="text-[10px] text-white/30 block font-bold tracking-widest">PDF 리포트 업로드</label>
                 <div className="space-y-4">
-                  {order.report_file_url ? (
+                  {!(paymentStatus === 'paid' || paymentStatus === 'test_paid') ? (
+                    <div className="p-8 border border-amber-500/20 bg-amber-500/5 rounded-2xl text-center space-y-2">
+                      <p className="text-sm text-amber-400 font-bold">⚠️ 입금 확인 대기 중</p>
+                      <p className="text-[11px] text-white/40 leading-relaxed">
+                        입금이 완료되지 않은 주문입니다.<br />
+                        상단의 결제 상태를 <strong>'결제완료'</strong>로 변경 후 저장하시면 PDF 리포트 업로드 기능이 활성화됩니다.
+                      </p>
+                    </div>
+                  ) : order.report_file_url ? (
                     <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <FileText className="w-5 h-5 text-green-400" />

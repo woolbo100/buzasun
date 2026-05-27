@@ -63,6 +63,7 @@ export default function AdminOrdersPage() {
         case 'paid': return baseClasses + "border-green-500/30 bg-green-500/10 text-green-400";
         case 'test_paid': return baseClasses + "border-blue-500/30 bg-blue-500/10 text-blue-400";
         case 'pending': return baseClasses + "border-amber-500/30 bg-amber-500/10 text-amber-400";
+        case 'pending_bank_transfer': return baseClasses + "border-amber-500/30 bg-amber-500/10 text-amber-400";
         case 'cancelled': return baseClasses + "border-red-500/30 bg-red-500/10 text-red-400";
         default: return baseClasses + "border-white/20 bg-white/5 text-white/60";
       }
@@ -87,7 +88,7 @@ export default function AdminOrdersPage() {
   const translateStatus = (status: string) => {
     const map: any = {
       'new': '신규', 'paid': '결제완료', 'test_paid': '테스트결제', 'pending': '대기중', 'writing': '제작중', 'ready': '다운로드 가능', 'sent': '발송완료',
-      'completed': '완료', 'cancelled': '취소됨', 'confirmed': '확인됨', 'processing': '처리중'
+      'completed': '완료', 'cancelled': '취소됨', 'confirmed': '확인됨', 'processing': '처리중', 'pending_bank_transfer': '입금대기'
     };
     return map[status] || status;
   };
@@ -199,9 +200,15 @@ export default function AdminOrdersPage() {
                       </div>
                     </td>
                     <td className="px-6 py-6 text-center">
-                      <span className={getStatusBadge(order.order_status, 'order')}>
-                        {translateStatus(order.order_status)}
-                      </span>
+                      {order.payment_status === 'pending_bank_transfer' ? (
+                        <span className={getStatusBadge('pending_bank_transfer', 'payment')}>
+                          입금대기
+                        </span>
+                      ) : (
+                        <span className={getStatusBadge(order.order_status, 'order')}>
+                          {translateStatus(order.order_status)}
+                        </span>
+                      )}
                     </td>
                     <td className="px-6 py-6 text-center">
                       <span className={getStatusBadge(order.payment_status, 'payment')}>

@@ -9,17 +9,34 @@ import Footer from '@/components/Footer'
 import GlobalBackground from '@/components/GlobalBackground'
 import Reveal from '@/components/Reveal'
 import { supabase } from '@/lib/supabase'
-import { Check, ShieldCheck, Mail, Truck, Home, ShoppingBag } from 'lucide-react'
+import { Check, ShieldCheck, Mail, Truck, Home, ShoppingBag, Copy, CheckCircle } from 'lucide-react'
+
+// 무통장입금 계좌 정보 설정
+const BANK_TRANSFER_INFO = {
+  bankName: "국민은행",
+  accountNumber: "104302-04-250415",
+  accountHolder: "이끌림"
+}
 
 function SuccessContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [loading, setLoading] = useState(true)
   const [order, setOrder] = useState<any>(null)
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    if (typeof window !== 'undefined' && navigator.clipboard) {
+      navigator.clipboard.writeText(BANK_TRANSFER_INFO.accountNumber)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }
 
   useEffect(() => {
     async function saveOrder() {
-      const paymentId = searchParams.get('payment_id') || `manual_${Date.now()}`
+      const isManual = searchParams.get('payment_method') === 'bank_transfer_manual'
+      const paymentId = searchParams.get('payment_id') || (isManual ? `manual_${Date.now()}` : `manual_err_${Date.now()}`)
       const merchantUid = searchParams.get('merchant_uid') || `order_${Date.now()}`
       const productId = searchParams.get('productId')
       const name = searchParams.get('name')
@@ -56,7 +73,7 @@ function SuccessContent() {
         }
 
         // 2. 주문 저장 데이터 구성 (데이터베이스에 실제로 존재하는 컬럼만 포함!)
-        const incomingStatus = searchParams.get('payment_status') || 'paid';
+        const incomingStatus = isManual ? 'pending_bank_transfer' : (searchParams.get('payment_status') || 'paid');
         const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
         
         // 보안: 테스트 모드가 아닐 때 프로덕션 환경에서 test_paid 상태를 허용하지 않음
@@ -85,6 +102,8 @@ function SuccessContent() {
         if (product_type === 'physical' || productId === 'pink-lady' || productId === 'premium-bookmark') {
           formattedShippingMemo = [
             `[실물 상품 배송 정보]`,
+            isManual ? `- 결제수단: 무통장입금(bank_transfer_manual)` : '',
+            isManual ? `- 주문상태: 입금대기` : '',
             `- 받는 분: ${receiverName || name || ''}`,
             `- 연락처: ${phone || ''}`,
             `- 우편번호: ${zipcode || ''}`,
@@ -92,16 +111,18 @@ function SuccessContent() {
             `- 배송 요청사항: ${deliveryNote || '없음'}`,
             `- 주문 요청사항: ${orderNote || '없음'}`,
             `- 주문번호: ${merchantUid}`,
-            `- 결제식별코드: ${paymentId}`
+            `- 결제식별코드: ${isManual ? 'N/A' : paymentId}`
           ].filter(Boolean).join('\n');
         } else {
           formattedShippingMemo = [
             `[디지털 상품 주문 메모]`,
+            isManual ? `- 결제수단: 무통장입금(bank_transfer_manual)` : '',
+            isManual ? `- 주문상태: 입금대기` : '',
             `- 신청자: ${name || ''}`,
             `- 연락처: ${phone || ''}`,
             `- 주문 요청사항: ${orderNote || '없음'}`,
             `- 주문번호: ${merchantUid}`,
-            `- 결제식별코드: ${paymentId}`
+            `- 결제식별코드: ${isManual ? 'N/A' : paymentId}`
           ].filter(Boolean).join('\n');
         }
 
@@ -184,6 +205,122 @@ function SuccessContent() {
   const productImageSrc = searchParams.get('productId') === 'pink-lady' 
     ? '/image/pinklady/p7.webp' 
     : (searchParams.get('productId') === 'premium-bookmark' ? '/image/pre/p7.webp' : '/image/product-love-report.png');
+
+  const isManual = searchParams.get('payment_method') === 'bank_transfer_manual'
+  const amount = parseInt(searchParams.get('amount') || '0')
+  const name = searchParams.get('name') || ''
+
+  if (isManual) {
+    return (
+      <div className="container-premium py-28 md:py-36">
+        <div className="max-w-2xl mx-auto text-center">
+          <Reveal>
+            {/* 완벽 완료 배지 */}
+            <div className="w-24 h-24 bg-gradient-to-tr from-[#2D0A1E] to-[#1A0514] rounded-full flex items-center justify-center mx-auto mb-10 border border-[#E6BE8A]/40 shadow-[0_0_40px_rgba(230,190,138,0.2)]">
+              <ShoppingBag className="w-10 h-10 text-[#E6BE8A]" />
+            </div>
+
+            <h1 className="text-4xl md:text-5xl font-elegant font-bold mb-6 text-white leading-tight tracking-wide">
+              무통장입금 <span className="text-[#E6BE8A]">안내</span>
+            </h1>
+            
+            <p className="text-base md:text-lg text-[#EDE6DA] opacity-80 mb-12 max-w-lg mx-auto break-keep leading-relaxed font-light">
+              주문이 접수되었습니다.<br />
+              아래 계좌로 입금해주시면 입금 확인 후 리포트 제작 또는 상품 준비가 시작됩니다.
+            </p>
+
+            {/* 계좌 안내 카드 */}
+            <div className="gungjung-glass p-8 md:p-10 mb-8 text-left border border-white/5 relative overflow-hidden rounded-[24px] bg-gradient-to-br from-white/[0.02] to-[#2D0A1E]/10">
+              <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-[#E6BE8A]/5 blur-3xl rounded-full pointer-events-none" />
+              
+              <h3 className="text-xs tracking-[0.25em] text-[#E6BE8A] font-bold uppercase mb-6 pb-3 border-b border-white/10 flex items-center justify-between">
+                <span>BANK ACCOUNT INFO</span>
+                <span className="text-[10px] text-white/40 normal-case">클릭 시 계좌번호 복사</span>
+              </h3>
+
+              <div className="space-y-6">
+                <div>
+                  <label className="text-[10px] uppercase tracking-widest text-white/30 block mb-1">은행명</label>
+                  <p className="text-xl font-bold text-white">{BANK_TRANSFER_INFO.bankName}</p>
+                </div>
+                
+                <div>
+                  <label className="text-[10px] uppercase tracking-widest text-white/30 block mb-1">계좌번호</label>
+                  <div 
+                    onClick={handleCopy}
+                    className="flex items-center justify-between bg-white/5 border border-white/10 rounded-xl px-5 py-4 cursor-pointer hover:bg-white/[0.08] active:scale-[0.99] transition-all group"
+                  >
+                    <span className="text-lg md:text-xl font-mono font-bold text-[#E6BE8A] tracking-wider">
+                      {BANK_TRANSFER_INFO.accountNumber}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-xs text-white/40 group-hover:text-[var(--accent-gold)] transition-colors">
+                      {copied ? (
+                        <>
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          <span className="text-green-400 font-bold">복사 완료</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-4 h-4" />
+                          <span>복사</span>
+                        </>
+                      )}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-center pt-2">
+                  <div>
+                    <label className="text-[10px] uppercase tracking-widest text-white/30 block mb-0.5">예금주</label>
+                    <p className="text-base font-bold text-white">{BANK_TRANSFER_INFO.accountHolder}</p>
+                  </div>
+                  <div className="text-right">
+                    <label className="text-[10px] uppercase tracking-widest text-white/30 block mb-0.5">입금 금액</label>
+                    <p className="text-2xl font-serif font-bold text-[#E6BE8A]">₩{(order?.amount || amount).toLocaleString()}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 안내문구 리스트 */}
+            <div className="gungjung-glass p-8 mb-12 text-left border border-white/5 rounded-[24px]">
+              <h4 className="text-[#E6BE8A] font-bold text-base flex items-center gap-2 mb-4">
+                <ShieldCheck className="w-5 h-5 text-[#E6BE8A]" /> 입금 유의사항 및 안내
+              </h4>
+              <ul className="text-xs md:text-sm text-[#EDE6DA]/70 leading-relaxed font-light space-y-3 break-keep list-disc pl-5">
+                <li>입금자명은 주문자명(<strong className="text-white font-bold">{order?.customer_name || name}</strong>)과 동일하게 입금해주세요.</li>
+                <li className="text-white font-medium pl-1 border-l-2 border-[#E6BE8A] py-0.5 list-none">
+                  입금 확인 후 리포트 제작이 시작됩니다.
+                </li>
+                <li>입금 확인은 영업일 기준 24시간 이내 처리됩니다.</li>
+                <li className="text-red-400/80">입금 전에는 리포트 제작 및 PDF 다운로드가 진행되지 않습니다.</li>
+              </ul>
+            </div>
+
+            {/* 하단 이동 버튼 */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/" 
+                className="inline-flex items-center justify-center gap-2 px-10 py-4.5 rounded-xl font-bold tracking-widest text-sm hover:scale-[1.03] transition-all duration-300"
+                style={{
+                  background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)',
+                  color: '#2D0A1E'
+                }}
+              >
+                <Home className="w-4 h-4" /> 홈으로 이동
+              </Link>
+              <Link 
+                href="/mypage" 
+                className="inline-flex items-center justify-center gap-2 px-10 py-4.5 rounded-xl border border-white/10 text-white/60 hover:text-white hover:bg-white/5 transition-all duration-300 text-sm"
+              >
+                마이페이지 주문조회
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="container-premium py-28 md:py-36">
