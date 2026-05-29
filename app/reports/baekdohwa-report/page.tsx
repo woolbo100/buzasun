@@ -8,6 +8,7 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import ReportCommonInfo from '@/components/ReportCommonInfo'
 
 export default function BaekdohwaReportPage() {
   useScrollAnimation()
@@ -198,41 +199,9 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* 6. Notices */}
+            {/* 6. Common Report Info (오행 카드 및 제작/수령 안내) */}
             <section className="mb-40">
-              <Reveal>
-                <div className="gungjung-glass p-12 md:p-20 border-white/5">
-                  <h2 className="text-2xl font-elegant font-bold mb-12 text-white border-l-4 border-[var(--accent-gold)] pl-8">리포트 신청 전 안내</h2>
-                  <div className="grid md:grid-cols-2 gap-12">
-                    <ul className="space-y-6">
-                      {[
-                        "본 상품은 디지털 리포트(PDF) 상품입니다.",
-                        "입력하신 사주 정보를 바탕으로 개인별 맞춤 제작됩니다.",
-                        "제작 기간은 영업일 기준 2~5일 정도 소요됩니다.",
-                        "제작 시작 이후에는 단순 변심 환불이 어렵습니다."
-                      ].map((text, idx) => (
-                        <li key={idx} className="flex items-start gap-4 text-[#EDE6DA] opacity-60 text-base font-light">
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] shrink-0"></span>
-                          {text}
-                        </li>
-                      ))}
-                    </ul>
-                    <ul className="space-y-6">
-                      {[
-                        "정확한 생년월일시 입력이 가장 중요합니다.",
-                        "의학적·법률적 조언이 아닌 자기이해를 위한 가이드입니다.",
-                        "타인에게 무단 전재 및 상업적 재배포를 금지합니다.",
-                        "문의사항은 고객센터 채널톡을 이용해주세요."
-                      ].map((text, idx) => (
-                        <li key={idx} className="flex items-start gap-4 text-[#EDE6DA] opacity-60 text-base font-light">
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] shrink-0"></span>
-                          {text}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Reveal>
+              <ReportCommonInfo isCompatibility={false} />
             </section>
 
             {/* 7. CTA - 웅장한 마무리 */}

@@ -8,6 +8,7 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import ReportCommonInfo from '@/components/ReportCommonInfo'
 
 export default function PremiumCompatibilityReportPage() {
   useScrollAnimation()
@@ -212,41 +213,9 @@ export default function PremiumCompatibilityReportPage() {
               </Reveal>
             </section>
 
-            {/* 6. Report Notice Section */}
+            {/* 6. Common Report Info (오행 카드 및 제작/수령 안내) */}
             <section className="mb-40">
-              <Reveal>
-                <div className="gungjung-glass p-12 md:p-20 border-white/5">
-                  <h2 className="text-2xl font-elegant font-bold mb-12 text-white border-l-4 border-[var(--accent-gold)] pl-8">리포트 신청 전 안내</h2>
-                  <div className="grid md:grid-cols-2 gap-12">
-                    <ul className="space-y-6">
-                      {[
-                        "본 상품은 디지털 리포트 상품입니다.",
-                        "입력하신 정보를 바탕으로 리포트 제작이 진행됩니다.",
-                        "상대방 정보(이름, 생년월일 등)가 정확할수록 완성도가 높아집니다.",
-                        "영업일 기준 2~5일 정도 제작 기간이 소요됩니다."
-                      ].map((text, idx) => (
-                        <li key={idx} className="flex items-start gap-4 text-[#EDE6DA] opacity-60 text-base font-light">
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] shrink-0"></span>
-                          {text}
-                        </li>
-                      ))}
-                    </ul>
-                    <ul className="space-y-6">
-                      {[
-                        "리포트 제작 시작 이후에는 단순 변심 환불이 제한됩니다.",
-                        "입력 정보 부정확 시 해석에 차이가 있을 수 있습니다.",
-                        "의학적·법률적·투자적 판단을 대신하지 않습니다.",
-                        "자기이해와 관계 성찰을 위한 참고 자료로 활용해주세요."
-                      ].map((text, idx) => (
-                        <li key={idx} className="flex items-start gap-4 text-[#EDE6DA] opacity-60 text-base font-light">
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)] shrink-0"></span>
-                          {text}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Reveal>
+              <ReportCommonInfo isCompatibility={true} />
             </section>
 
             {/* 7. Final CTA Section */}
