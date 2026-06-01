@@ -117,7 +117,7 @@ function CheckoutContent() {
       type: "digital_ebook",
       price: 19000,
       category: "SECRET METHOD",
-      image: "/image/reunion-secret/r1.webp"
+      image: "/image/reunion-secret-thumb.png"
     },
     "premium-bookmark": {
       name: "프리미엄 플라워 북마크 세트",
