@@ -63,7 +63,7 @@ export default function ReunionSecretPage() {
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
-          <div className="container-premium max-w-5xl mx-auto px-6 md:px-8">
+          <div className="container-premium">
             
             {/* 1. Hero Section (다른 제품처럼 중앙 정렬, 큰 이미지, 그 아래 글귀와 버튼 배치) */}
             <section className="text-center mb-28">
@@ -85,7 +85,7 @@ export default function ReunionSecretPage() {
                 </h1>
 
                 {/* 큰 이미지 배치 (r1.webp, 16:9 비율) */}
-                <div className="relative max-w-4xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
                     src="/image/reunion-secret/r1.webp" 
                     alt="재회비방"
@@ -97,7 +97,7 @@ export default function ReunionSecretPage() {
                 </div>
 
                 {/* 하단 서브카피, 설명 및 구매 버튼 */}
-                <div className="max-w-2xl mx-auto space-y-6">
+                <div className="max-w-3xl mx-auto space-y-6">
                   <p className="text-xl md:text-2xl font-elegant font-semibold text-[#BA8D7E] leading-snug break-keep">
                     끊어진 인연 앞에서 무너진 나를 다시 세우는 재회 비방서
                   </p>
@@ -233,7 +233,7 @@ export default function ReunionSecretPage() {
             {/* 4. Formula / Content Section */}
             <section className="mb-28 text-center">
               <Reveal>
-                <div className="max-w-3xl mx-auto space-y-4 mb-10">
+                <div className="max-w-4xl mx-auto space-y-4 mb-10">
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">5-Step Strategy</span>
                   <h2 className="text-3xl md:text-4xl font-elegant font-bold text-white tracking-widest">
                     재회비방 5단계 흐름
@@ -244,7 +244,7 @@ export default function ReunionSecretPage() {
                 </div>
 
                 {/* 중앙 16:9 배경/인포그래픽 이미지 (r4.webp) */}
-                <div className="max-w-4xl mx-auto mb-12">
+                <div className="max-w-6xl mx-auto mb-12">
                   <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl group">
                     <Image 
                       src="/image/reunion-secret/r4.webp" 
@@ -256,7 +256,7 @@ export default function ReunionSecretPage() {
                 </div>
 
                 {/* 5단계 상세 설명 카드 */}
-                <div className="grid md:grid-cols-5 gap-4 text-left max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-5 gap-4 text-left max-w-6xl mx-auto">
                   {[
                     {
                       num: "1",
@@ -373,7 +373,7 @@ export default function ReunionSecretPage() {
             {/* 6. How To Use Section */}
             <section className="mb-28">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left max-w-4xl mx-auto break-keep">
+                <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left max-w-6xl mx-auto break-keep">
                   <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#E6BE8A] pl-6">
                     이렇게 활용해보세요
                   </h2>
@@ -420,7 +420,7 @@ export default function ReunionSecretPage() {
             {/* 7. Notice Section */}
             <section className="mb-28">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left max-w-4xl mx-auto break-keep">
+                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left max-w-6xl mx-auto break-keep">
                   <h2 className="text-2xl font-elegant font-bold mb-10 text-white border-l-4 border-[#E6BE8A] pl-6">
                     구매 전 안내
                   </h2>
@@ -461,7 +461,7 @@ export default function ReunionSecretPage() {
               </div>
 
               {/* 중앙 정보 및 CTA 3 버튼 */}
-              <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-3xl mx-auto space-y-6 md:space-y-8 break-keep">
+              <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8 break-keep">
                 <Reveal>
                   <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-tight">
                     지금 필요한 것은<br/>
