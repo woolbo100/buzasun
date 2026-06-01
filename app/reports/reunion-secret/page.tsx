@@ -126,21 +126,19 @@ export default function ReunionSecretPage() {
             {/* 2. Product Overview Section */}
             <section className="mb-28">
               <Reveal>
-                <div className="grid md:grid-cols-12 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
                   {/* 왼쪽 실제 전자책 목업 (r2.webp, 1:1) */}
-                  <div className="md:col-span-5 flex justify-center">
-                    <div className="relative w-full max-w-sm aspect-square overflow-hidden rounded-[30px] border border-[#C5A059]/30 shadow-2xl">
-                      <Image 
-                        src="/image/reunion-secret/r2.webp" 
-                        alt="전자책 목업" 
-                        fill 
-                        className="object-cover" 
-                      />
-                    </div>
+                  <div className="relative w-full aspect-square overflow-hidden rounded-[40px] border border-[#C5A059]/30 shadow-2xl">
+                    <Image 
+                      src="/image/reunion-secret/r2.webp" 
+                      alt="전자책 목업" 
+                      fill 
+                      className="object-cover" 
+                    />
                   </div>
 
                   {/* 오른쪽 핵심 가치 및 6개 포인트 카드 */}
-                  <div className="md:col-span-7 space-y-6 text-left break-keep">
+                  <div className="space-y-6 text-left break-keep">
                     <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white leading-snug">
                       붙잡는 법이 아니라,<br/>
                       <span className="text-[#E6BE8A]">다시 선택받을 수 있는 상태</span>로 돌아오는 법
@@ -182,9 +180,9 @@ export default function ReunionSecretPage() {
             {/* 3. Recommended For Section */}
             <section className="mb-28">
               <Reveal>
-                <div className="grid md:grid-cols-12 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
                   {/* 왼쪽 추천 리스트 (아이보리 한지 톤 카드, 버건디 체크) */}
-                  <div className="md:col-span-7 space-y-8 text-left break-keep">
+                  <div className="space-y-8 text-left break-keep">
                     <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white tracking-wide">
                       이런 분께 <span className="text-[#E6BE8A]">추천합니다</span>
                     </h2>
@@ -214,15 +212,13 @@ export default function ReunionSecretPage() {
                   </div>
 
                   {/* 오른쪽 세로 이미지 (r3.webp, 3:4) */}
-                  <div className="md:col-span-5 flex justify-center">
-                    <div className="relative w-full max-w-sm aspect-[3/4] overflow-hidden rounded-[30px] border border-white/10 shadow-2xl">
-                      <Image 
-                        src="/image/reunion-secret/r3.webp" 
-                        alt="Recommended" 
-                        fill 
-                        className="object-cover" 
-                      />
-                    </div>
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
+                    <Image 
+                      src="/image/reunion-secret/r3.webp" 
+                      alt="Recommended" 
+                      fill 
+                      className="object-cover" 
+                    />
                   </div>
                 </div>
               </Reveal>
@@ -308,21 +304,19 @@ export default function ReunionSecretPage() {
             {/* 5. Premium Product Section */}
             <section className="mb-28">
               <Reveal>
-                <div className="grid md:grid-cols-12 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
                   {/* 왼쪽 이미지 (r5.webp, 4:5) */}
-                  <div className="md:col-span-5 flex justify-center">
-                    <div className="relative w-full max-w-sm aspect-[4/5] overflow-hidden rounded-[30px] border border-white/10 shadow-2xl">
-                      <Image 
-                        src="/image/reunion-secret/r5.webp" 
-                        alt="실전 재회 노트 번들" 
-                        fill 
-                        className="object-cover" 
-                      />
-                    </div>
+                  <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
+                    <Image 
+                      src="/image/reunion-secret/r5.webp" 
+                      alt="실전 재회 노트 번들" 
+                      fill 
+                      className="object-cover" 
+                    />
                   </div>
 
                   {/* 오른쪽 부록 리스트 (골드 경계선, 버건디 체크) */}
-                  <div className="md:col-span-7 space-y-6 text-left break-keep">
+                  <div className="space-y-6 text-left break-keep">
                     <div>
                       <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">Workbook Included</span>
                       <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white mt-1 leading-snug">
