@@ -117,7 +117,7 @@ function CheckoutContent() {
       type: "digital_ebook",
       price: 19000,
       category: "SECRET METHOD",
-      image: "/image/reunion-secret-thumb.png"
+      image: "/image/reunion-secret/r1.webp"
     },
     "premium-bookmark": {
       name: "프리미엄 플라워 북마크 세트",
@@ -873,10 +873,14 @@ function CheckoutContent() {
                 ) : (
                   <>
                     <h3 className="text-lg font-bold text-white border-l-4 border-[var(--accent-gold)] pl-4">안내 사항</h3>
-                    <div className="p-4 rounded-xl bg-accent-gold/10 border border-accent-gold/20">
+                    <div className="p-4 rounded-xl bg-accent-gold/10 border border-accent-gold/20 space-y-2">
                       <p className="text-[11px] text-[var(--accent-gold)] leading-relaxed">
                         ※ 전자책은 결제 완료 후 입력하신 이메일 또는 마이페이지에서 바로 다운로드 가능합니다.
                         별도의 배송지 정보가 필요하지 않습니다.
+                      </p>
+                      <p className="text-[11px] text-[var(--accent-gold)] opacity-85 leading-relaxed">
+                        ※ 본 상품은 PDF 형태로 제공되는 디지털 전자책입니다.
+                        디지털 콘텐츠 특성상 다운로드 또는 열람 후에는 단순 변심에 의한 환불이 제한될 수 있습니다.
                       </p>
                     </div>
                   </>

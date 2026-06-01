@@ -17,6 +17,21 @@ import {
   ChevronRight
 } from 'lucide-react'
 
+const productData = {
+  productId: 'reunion-secret-method',
+  slug: 'reunion-secret-method',
+  title: '재회비방',
+  type: 'digital_ebook',
+  checkoutUrl: '/checkout?productId=reunion-secret-method',
+
+  heroImage: '/image/reunion-secret/r1.webp',
+  overviewImage: '/image/reunion-secret/r2.webp',
+  recommendedImage: '/image/reunion-secret/r3.webp',
+  formulaImage: '/image/reunion-secret/r4.webp',
+  premiumImage: '/image/reunion-secret/r5.webp',
+  ctaImage: '/image/reunion-secret/r6.webp',
+}
+
 export default function ReunionSecretPage() {
   useScrollAnimation()
 
@@ -39,7 +54,7 @@ export default function ReunionSecretPage() {
   const CTAButton = ({ text }: { text: string }) => (
     <div className="text-center my-6">
       <Link
-        href="/checkout?productId=reunion-secret"
+        href={productData.checkoutUrl}
         className="btn-primary inline-flex items-center px-12 py-5 rounded-xl font-elegant font-bold text-lg md:text-xl hover:scale-105 transition-all duration-500 group"
         style={{
           background: 'linear-gradient(135deg, #4A0E17 0%, #2A0A14 100%)',
@@ -87,7 +102,7 @@ export default function ReunionSecretPage() {
                 {/* 큰 이미지 배치 (r1.webp, 16:9 비율) */}
                 <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
-                    src="/image/reunion-secret/r1.webp" 
+                    src={productData.heroImage} 
                     alt="재회비방"
                     fill
                     className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
@@ -131,7 +146,7 @@ export default function ReunionSecretPage() {
                   {/* 왼쪽 실제 전자책 목업 (r2.webp, 1:1) */}
                   <div className="relative w-full aspect-square overflow-hidden rounded-[40px] border border-[#C5A059]/30 shadow-2xl">
                     <Image 
-                      src="/image/reunion-secret/r2.webp" 
+                      src={productData.overviewImage} 
                       alt="전자책 목업" 
                       fill 
                       className="object-cover" 
@@ -215,7 +230,7 @@ export default function ReunionSecretPage() {
                   {/* 오른쪽 세로 이미지 (r3.webp, 3:4) */}
                   <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
                     <Image 
-                      src="/image/reunion-secret/r3.webp" 
+                      src={productData.recommendedImage} 
                       alt="Recommended" 
                       fill 
                       className="object-cover" 
@@ -244,7 +259,7 @@ export default function ReunionSecretPage() {
                 <div className="max-w-6xl mx-auto mb-12">
                   <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl group">
                     <Image 
-                      src="/image/reunion-secret/r4.webp" 
+                      src={productData.formulaImage} 
                       alt="재회비방 5단계 인포그래픽" 
                       fill 
                       className="object-cover" 
@@ -309,7 +324,7 @@ export default function ReunionSecretPage() {
                   {/* 왼쪽 이미지 (r5.webp, 4:5) */}
                   <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
                     <Image 
-                      src="/image/reunion-secret/r5.webp" 
+                      src={productData.premiumImage} 
                       alt="실전 재회 노트 번들" 
                       fill 
                       className="object-cover" 
@@ -445,7 +460,7 @@ export default function ReunionSecretPage() {
               {/* r6.webp 배경 */}
               <div className="absolute inset-0 z-0">
                 <Image 
-                  src="/image/reunion-secret/r6.webp" 
+                  src={productData.ctaImage} 
                   alt="Final CTA Background" 
                   fill 
                   className="object-cover transition-transform duration-[10000ms] group-hover:scale-110" 
