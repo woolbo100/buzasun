@@ -14,11 +14,7 @@ import {
   FileText, 
   Smartphone, 
   AlertCircle,
-  ChevronRight,
-  HelpCircle,
-  Sparkles,
-  ShieldCheck,
-  Zap
+  ChevronRight
 } from 'lucide-react'
 
 export default function ReunionSecretPage() {
@@ -69,63 +65,57 @@ export default function ReunionSecretPage() {
         <div className="relative z-10 pt-44 pb-20">
           <div className="container-premium max-w-5xl mx-auto px-6 md:px-8">
             
-            {/* 1. Hero Section */}
-            <section className="mb-28">
+            {/* 1. Hero Section (다른 제품처럼 중앙 정렬, 큰 이미지, 그 아래 글귀와 버튼 배치) */}
+            <section className="text-center mb-28">
               <Reveal delayMs={100}>
-                <div className="grid md:grid-cols-12 gap-12 items-center">
-                  {/* 왼쪽 텍스트 정보 */}
-                  <div className="md:col-span-7 space-y-6 text-left">
-                    <div>
-                      <span className="inline-block px-4 py-1 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#E6BE8A]"
-                        style={{
-                          background: 'rgba(74, 14, 23, 0.4)',
-                          border: '1px solid rgba(230, 190, 138, 0.3)',
-                        }}>
-                        PREMIUM REUNION STRATEGY EBOOK
-                      </span>
-                    </div>
+                {/* 상단 라벨 */}
+                <div className="mb-8">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#E6BE8A] uppercase"
+                    style={{
+                      background: 'rgba(74, 14, 23, 0.4)',
+                      border: '1px solid rgba(230, 190, 138, 0.3)',
+                    }}>
+                    PREMIUM REUNION STRATEGY EBOOK
+                  </span>
+                </div>
 
-                    <h1 className="text-4xl md:text-6xl font-elegant font-bold leading-tight text-white tracking-wide">
-                      再會秘方<br/>
-                      <span className="text-[#E6BE8A]">재회비방</span>
-                    </h1>
+                {/* 대제목 */}
+                <h1 className="text-3xl md:text-5xl font-elegant font-bold mb-10 text-white leading-tight">
+                  再會秘方 <span className="text-[#E6BE8A]">재회비방</span>
+                </h1>
 
-                    <div className="space-y-2">
-                      <p className="text-lg md:text-2xl font-elegant font-semibold text-[#BA8D7E] leading-snug">
-                        끊어진 인연 앞에서<br/>
-                        무너진 나를 다시 세우는 재회 비방서
-                      </p>
-                    </div>
+                {/* 큰 이미지 배치 (r1.webp, 16:9 비율) */}
+                <div className="relative max-w-4xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                  <Image 
+                    src="/image/reunion-secret/r1.webp" 
+                    alt="재회비방"
+                    fill
+                    className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
+                </div>
 
-                    <div className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed space-y-3 pt-4 border-t border-white/5 break-keep">
-                      <p>
-                        재회비방은 헤어진 상대에게 무작정 연락하는 방법을 알려주는 책이 아닙니다.
-                      </p>
-                      <p>
-                        이별 후 무너진 감정, 흐트러진 프레임, 반복되는 집착의 패턴을 정리하고 다시 나의 중심을 회복하기 위한 실전 재회 전략 전자책입니다.
-                      </p>
-                      <p className="font-semibold text-white mt-4">
-                        재회는 감정만으로 이루어지지 않습니다. 상태가 바뀌어야 흐름이 바뀝니다.
-                      </p>
-                    </div>
+                {/* 하단 서브카피, 설명 및 구매 버튼 */}
+                <div className="max-w-2xl mx-auto space-y-6">
+                  <p className="text-xl md:text-2xl font-elegant font-semibold text-[#BA8D7E] leading-snug break-keep">
+                    끊어진 인연 앞에서 무너진 나를 다시 세우는 재회 비방서
+                  </p>
 
-                    <div className="pt-4">
-                      <CTAButton text="재회비방 구매하기" />
-                    </div>
+                  <div className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed space-y-3 pt-6 border-t border-white/5 break-keep">
+                    <p>
+                      재회비방은 헤어진 상대에게 무작정 연락하는 방법을 알려주는 책이 아닙니다.
+                    </p>
+                    <p>
+                      이별 후 무너진 감정, 흐트러진 프레임, 반복되는 집착의 패턴을 정리하고 다시 나의 중심을 회복하기 위한 실전 재회 전략 전자책입니다.
+                    </p>
+                    <p className="font-semibold text-white">
+                      재회는 감정만으로 이루어지지 않습니다. 상태가 바뀌어야 흐름이 바뀝니다.
+                    </p>
                   </div>
 
-                  {/* 오른쪽 히어로 비주얼 (r1.webp, 16:9) */}
-                  <div className="md:col-span-5 flex justify-center">
-                    <div className="relative w-full aspect-[16/9] md:aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-2xl group">
-                      <Image 
-                        src="/image/reunion-secret/r1.webp" 
-                        alt="재회비방"
-                        fill
-                        className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
-                    </div>
+                  <div className="pt-4">
+                    <CTAButton text="재회비방 구매하기" />
                   </div>
                 </div>
               </Reveal>
@@ -265,7 +255,7 @@ export default function ReunionSecretPage() {
                   </div>
                 </div>
 
-                {/* 5단계 상세 설명 카드 (가로/세로 반응형, 골드 라인, 버건디 라벨) */}
+                {/* 5단계 상세 설명 카드 */}
                 <div className="grid md:grid-cols-5 gap-4 text-left max-w-5xl mx-auto">
                   {[
                     {
