@@ -1,186 +1,311 @@
 'use client'
 
-import { redirect } from 'next/navigation'
+import React from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
 import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { 
+  Check, 
+  BookOpen, 
+  FileText, 
+  Smartphone, 
+  AlertCircle,
+  ChevronRight,
+  HelpCircle,
+  Sparkles,
+  ShieldCheck,
+  Zap
+} from 'lucide-react'
 
 export default function ReunionSecretPage() {
   useScrollAnimation()
 
-  const reviews = [
-    { id: 1, author: '임하늘님', content: '헤어지고 매달리기만 하다가 이 책을 보고 제 행동이 얼마나 잘못됐는지 알게 됐어요. 마음을 가다듬는 데 큰 도움이 됐습니다.', rating: 5 },
-    { id: 2, author: '윤지후님', content: '상대방의 심리를 구조적으로 설명해 주셔서 연락할 때 어떤 태도를 가져야 할지 기준이 생겼어요. 예시 문구들도 정말 유용합니다.', rating: 5 },
-    { id: 3, author: '최유진님', content: '무작정 재회를 권하는 게 아니라 저 자신을 먼저 돌보게 해주는 내용이라 더 좋았습니다. 디자인도 예뻐서 읽는 내내 기분이 묘했어요.', rating: 5 },
-  ]
+  // 붉은 실 장식 구분선
+  const RedThreadDivider = () => (
+    <div className="flex items-center justify-center my-20 opacity-60">
+      <div className="h-[1px] w-16 md:w-28 bg-gradient-to-r from-transparent to-[#8C1D24]" />
+      <div className="mx-4 flex items-center justify-center">
+        <svg className="w-5 h-5 text-[#8C1D24] animate-pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C9.5 2 7.5 4 7.5 6.5C7.5 9 10 11 12 13C14 11 16.5 9 16.5 6.5C16.5 4 14.5 2 12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M12 13V22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <circle cx="12" cy="6.5" r="2" fill="currentColor" />
+        </svg>
+      </div>
+      <div className="h-[1px] w-16 md:w-28 bg-gradient-to-l from-transparent to-[#8C1D24]" />
+    </div>
+  )
 
-  const faqs = [
-    { 
-      q: '재회를 보장하나요?', 
-      a: '재회를 보장하는 상품은 아닙니다. 감정적 매달림을 줄이고 관계의 흐름을 더 차분하게 정리하도록 돕는 PDF 가이드입니다.' 
-    },
-    { 
-      q: '상대에게 보낼 문구가 포함되나요?', 
-      a: '상황별 메시지 설계 방향과 예시 문구들이 포함되어 있어 실무적인 도움을 드립니다.' 
-    },
-    { 
-      q: '상담이 포함되나요?', 
-      a: '상담은 포함되지 않으며 PDF 전자책 형태로 제공되는 지식 콘텐츠입니다.' 
-    },
-    { 
-      q: '언제 받을 수 있나요?', 
-      a: '결제 및 정보 확인 후 신청하신 이메일이나 카카오톡으로 전달됩니다.' 
-    },
-  ]
+  // 공통 CTA 버튼
+  const CTAButton = ({ text }: { text: string }) => (
+    <div className="text-center my-6">
+      <Link
+        href="/checkout?productId=reunion-secret"
+        className="btn-primary inline-flex items-center px-12 py-5 rounded-xl font-elegant font-bold text-lg md:text-xl hover:scale-105 transition-all duration-500 group"
+        style={{
+          background: 'linear-gradient(135deg, #4A0E17 0%, #2A0A14 100%)',
+          border: '1px solid rgba(230, 190, 138, 0.5)',
+          color: '#E6BE8A',
+          boxShadow: '0 0 35px rgba(74, 14, 23, 0.35)'
+        }}
+      >
+        <span className="relative z-10 flex items-center gap-2">
+          {text}
+          <ChevronRight className="w-5 h-5 text-[#E6BE8A] group-hover:translate-x-1 transition-transform" />
+        </span>
+      </Link>
+    </div>
+  )
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514]">
-      <GlobalBackground src="/image/love-code-bg.png">
+    <main className="relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#4A0E17] selection:text-[#FAF7F2]">
+      {/* 기존 백도화 템플릿의 다크 배경(GlobalBackground) 유지 */}
+      <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
         <Navigation />
 
-        <div className="relative z-10 pt-56 pb-20">
-          <div className="max-w-4xl mx-auto px-4">
+        <div className="relative z-10 pt-44 pb-20">
+          <div className="container-premium max-w-5xl mx-auto px-6 md:px-8">
             
-            {/* 1. 히어로 섹션 */}
-            <section className="text-center mb-20">
+            {/* 1. Hero Section */}
+            <section className="mb-28">
               <Reveal delayMs={100}>
-                <span className="inline-block px-4 py-1 rounded-full text-xs font-medium mb-6"
-                  style={{
-                    background: 'rgba(59, 15, 27, 0.5)',
-                    border: '1px solid rgba(216, 191, 163, 0.3)',
-                    color: 'var(--accent-gold-light)',
-                    letterSpacing: '0.1em'
-                  }}>
-                  BAEKDOHWA REUNION STRATEGY
-                </span>
-                <h1 className="text-4xl md:text-6xl font-elegant font-bold mb-8 text-white">
-                  재회비방 <span style={{ color: 'var(--accent-gold)' }}>전략서</span>
-                </h1>
-                <p className="text-lg md:text-xl text-bd-ivory leading-relaxed mb-10 max-w-2xl mx-auto break-keep">
-                  감정으로 붙잡는 재회가 아니라, <br/> 관계의 기준과 메시지를 다시 설계하는 백도화의 재회 전략서
-                </p>
-                <Link 
-                  href="/checkout?productId=reunion-secret-method"
-                  className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg"
-                >
-                  재회비방 받아보기
-                </Link>
+                <div className="grid md:grid-cols-12 gap-12 items-center">
+                  {/* 왼쪽 텍스트 정보 */}
+                  <div className="md:col-span-7 space-y-6 text-left">
+                    <div>
+                      <span className="inline-block px-4 py-1 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#E6BE8A]"
+                        style={{
+                          background: 'rgba(74, 14, 23, 0.4)',
+                          border: '1px solid rgba(230, 190, 138, 0.3)',
+                        }}>
+                        PREMIUM REUNION STRATEGY EBOOK
+                      </span>
+                    </div>
+
+                    <h1 className="text-4xl md:text-6xl font-elegant font-bold leading-tight text-white tracking-wide">
+                      再會秘方<br/>
+                      <span className="text-[#E6BE8A]">재회비방</span>
+                    </h1>
+
+                    <div className="space-y-2">
+                      <p className="text-lg md:text-2xl font-elegant font-semibold text-[#BA8D7E] leading-snug">
+                        끊어진 인연 앞에서<br/>
+                        무너진 나를 다시 세우는 재회 비방서
+                      </p>
+                    </div>
+
+                    <div className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed space-y-3 pt-4 border-t border-white/5 break-keep">
+                      <p>
+                        재회비방은 헤어진 상대에게 무작정 연락하는 방법을 알려주는 책이 아닙니다.
+                      </p>
+                      <p>
+                        이별 후 무너진 감정, 흐트러진 프레임, 반복되는 집착의 패턴을 정리하고 다시 나의 중심을 회복하기 위한 실전 재회 전략 전자책입니다.
+                      </p>
+                      <p className="font-semibold text-white mt-4">
+                        재회는 감정만으로 이루어지지 않습니다. 상태가 바뀌어야 흐름이 바뀝니다.
+                      </p>
+                    </div>
+
+                    <div className="pt-4">
+                      <CTAButton text="재회비방 구매하기" />
+                    </div>
+                  </div>
+
+                  {/* 오른쪽 히어로 비주얼 (r1.webp, 16:9) */}
+                  <div className="md:col-span-5 flex justify-center">
+                    <div className="relative w-full aspect-[16/9] md:aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-2xl group">
+                      <Image 
+                        src="/image/reunion-secret/r1.webp" 
+                        alt="재회비방"
+                        fill
+                        className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
+                    </div>
+                  </div>
+                </div>
               </Reveal>
             </section>
 
-            {/* 2. 상품 요약 카드 */}
-            <Reveal delayMs={300}>
-              <div className="gungjung-glass p-8 md:p-12 mb-20">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h2 className="text-2xl font-bold mb-6 text-white border-l-4 border-[var(--accent-gold)] pl-4">상품 정보</h2>
-                    <ul className="space-y-4 text-bd-ivory">
-                      <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
-                        <span>가격</span>
-                        <span className="text-[var(--accent-gold)] font-bold">19,000원</span>
-                      </li>
-                      <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
-                        <span>제공 형식</span>
-                        <span>PDF 전자책</span>
-                      </li>
-                      <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
-                        <span>분량</span>
-                        <span>약 40~60p 예정</span>
-                      </li>
-                      <li className="flex justify-between border-b border-[var(--glass-border)] pb-2">
-                        <span>제공 방식</span>
-                        <span>결제 후 이메일 발송</span>
-                      </li>
-                    </ul>
+            <RedThreadDivider />
+
+            {/* 2. Product Overview Section */}
+            <section className="mb-28">
+              <Reveal>
+                <div className="grid md:grid-cols-12 gap-12 items-center">
+                  {/* 왼쪽 실제 전자책 목업 (r2.webp, 1:1) */}
+                  <div className="md:col-span-5 flex justify-center">
+                    <div className="relative w-full max-w-sm aspect-square overflow-hidden rounded-[30px] border border-[#C5A059]/30 shadow-2xl">
+                      <Image 
+                        src="/image/reunion-secret/r2.webp" 
+                        alt="전자책 목업" 
+                        fill 
+                        className="object-cover" 
+                      />
+                    </div>
                   </div>
-                  <div className="bg-[rgba(255,255,255,0.02)] p-6 rounded-xl border border-[var(--glass-border)]">
-                    <h3 className="text-lg font-bold mb-4 text-[var(--accent-gold-light)]">추천 대상</h3>
-                    <ul className="space-y-2 text-sm text-bd-gray">
+
+                  {/* 오른쪽 핵심 가치 및 6개 포인트 카드 */}
+                  <div className="md:col-span-7 space-y-6 text-left break-keep">
+                    <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white leading-snug">
+                      붙잡는 법이 아니라,<br/>
+                      <span className="text-[#E6BE8A]">다시 선택받을 수 있는 상태</span>로 돌아오는 법
+                    </h2>
+                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed font-light">
+                      재회비방은 이별 후 가장 불안한 시기에 무엇을 멈추고, 무엇을 정리하고, 어떤 순서로 다시 움직여야 하는지를 알려주는 프리미엄 재회 전략 전자책입니다. 상대를 억지로 붙잡기 전에 먼저 나의 감정, 프레임, 연락 패턴, 공백기 전략을 차분하게 점검하도록 구성되어 있습니다.
+                    </p>
+
+                    {/* 포인트 카드 6개 (glass card 형태, 골드 라인, 버건디 아이콘) */}
+                    <div className="grid grid-cols-2 gap-4 pt-4">
                       {[
-                        "이별 후 연락 타이밍이 고민되는 분",
-                        "재회를 원하지만 어떻게 할지 모르는 분",
-                        "감정적으로 매달리는 패턴을 멈추고픈 분",
-                        "다시 만나도 같은 문제를 반복하고 싶지 않은 분"
-                      ].map((text, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-[var(--accent-gold)]">•</span>
-                          <span>{text}</span>
-                        </li>
+                        "이별 원인 진단",
+                        "공백기 전략 정리",
+                        "연락 타이밍 점검",
+                        "집착 패턴 정리",
+                        "재회 가능성 흐름 파악",
+                        "재회 이후 관계 재설계"
+                      ].map((item, idx) => (
+                        <div 
+                          key={idx}
+                          className="gungjung-glass p-4 border-[#C5A059]/20 flex items-center gap-3 hover:border-[#C5A059]/50 transition-all"
+                        >
+                          <div className="w-6 h-6 rounded-full bg-[#4A0E17]/60 flex items-center justify-center shrink-0 border border-[#C5A059]/30">
+                            <Check className="w-3.5 h-3.5 text-[#E6BE8A]" />
+                          </div>
+                          <span className="text-xs md:text-sm text-white/90 font-medium">
+                            {item}
+                          </span>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+            </section>
 
-            {/* 3. 전자책에 담긴 내용 */}
-            <section className="mb-20">
+            <RedThreadDivider />
+
+            {/* 3. Recommended For Section */}
+            <section className="mb-28">
               <Reveal>
-                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">
-                  전자책에 <span style={{ color: 'var(--accent-gold)' }}>담긴 내용</span>
-                </h2>
-                <div className="grid gap-6">
+                <div className="grid md:grid-cols-12 gap-12 items-center">
+                  {/* 왼쪽 추천 리스트 (아이보리 한지 톤 카드, 버건디 체크) */}
+                  <div className="md:col-span-7 space-y-8 text-left break-keep">
+                    <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white tracking-wide">
+                      이런 분께 <span className="text-[#E6BE8A]">추천합니다</span>
+                    </h2>
+
+                    <div className="space-y-4">
+                      {[
+                        "이별 후 상대에게 연락하고 싶지만 어떤 말을 해야 할지 몰라 불안한 분",
+                        "상대가 차단했거나 읽씹, 안읽씹을 반복해 어떻게 해야 할지 막막한 분",
+                        "지금 연락해야 하는지, 더 기다려야 하는지 판단이 어려운 분",
+                        "권태기, 반복 다툼, 집착, 신뢰 상실, 환승 의심 등 이별 원인을 제대로 진단하고 싶은 분",
+                        "재회를 원하지만 예전처럼 매달리는 내가 되고 싶지는 않은 분",
+                        "상대를 되찾기 전에 먼저 무너진 나의 중심을 되찾고 싶은 분"
+                      ].map((text, idx) => (
+                        <div 
+                          key={idx}
+                          className="p-5 rounded-2xl bg-[#FAF7F2] border border-[#C5A059]/30 shadow-md flex items-start gap-4 hover:scale-[1.01] transition-transform"
+                        >
+                          <div className="w-5.5 h-5.5 rounded-full bg-[#4A0E17]/10 flex items-center justify-center shrink-0 mt-0.5 border border-[#8C1D24]/30">
+                            <Check className="w-3.5 h-3.5 text-[#8C1D24]" />
+                          </div>
+                          <p className="text-sm md:text-base text-[#3D3530] font-medium leading-relaxed">
+                            {text}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 오른쪽 세로 이미지 (r3.webp, 3:4) */}
+                  <div className="md:col-span-5 flex justify-center">
+                    <div className="relative w-full max-w-sm aspect-[3/4] overflow-hidden rounded-[30px] border border-white/10 shadow-2xl">
+                      <Image 
+                        src="/image/reunion-secret/r3.webp" 
+                        alt="Recommended" 
+                        fill 
+                        className="object-cover" 
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <RedThreadDivider />
+
+            {/* 4. Formula / Content Section */}
+            <section className="mb-28 text-center">
+              <Reveal>
+                <div className="max-w-3xl mx-auto space-y-4 mb-10">
+                  <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">5-Step Strategy</span>
+                  <h2 className="text-3xl md:text-4xl font-elegant font-bold text-white tracking-widest">
+                    재회비방 5단계 흐름
+                  </h2>
+                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed break-keep font-light max-w-2xl mx-auto">
+                    재회비방은 감정적으로 흔들리는 상태에서 무작정 연락을 시도하지 않도록, 이별 후 필요한 과정을 5단계 흐름으로 정리합니다. 상대의 마음을 단정하거나 조종하려는 방식이 아니라, 나의 상태를 회복하고 관계의 구조를 다시 바라보는 방식으로 구성되어 있습니다.
+                  </p>
+                </div>
+
+                {/* 중앙 16:9 배경/인포그래픽 이미지 (r4.webp) */}
+                <div className="max-w-4xl mx-auto mb-12">
+                  <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl group">
+                    <Image 
+                      src="/image/reunion-secret/r4.webp" 
+                      alt="재회비방 5단계 인포그래픽" 
+                      fill 
+                      className="object-cover" 
+                    />
+                  </div>
+                </div>
+
+                {/* 5단계 상세 설명 카드 (가로/세로 반응형, 골드 라인, 버건디 라벨) */}
+                <div className="grid md:grid-cols-5 gap-4 text-left max-w-5xl mx-auto">
                   {[
-                    '재회를 어렵게 만드는 감정 패턴',
-                    '연락 전 반드시 점검해야 할 기준',
-                    '상대의 방어심을 낮추는 메시지 흐름',
-                    '붙잡는 말과 다시 생각나게 하는 말의 차이',
-                    '재회 가능성을 낮추는 행동들',
-                    '재회 후 관계를 다시 무너뜨리지 않는 방법',
-                    '나를 잃지 않는 재회의 기준',
-                  ].map((title, idx) => (
-                    <div key={idx} className="gungjung-glass p-6 flex items-start gap-5 group">
-                      <div className="w-10 h-10 rounded-full bg-[var(--primary-burgundy)] border border-[var(--accent-gold-soft)] flex items-center justify-center text-[var(--accent-gold)] font-bold shrink-0 group-hover:scale-110 transition-transform">
-                        {idx + 1}
-                      </div>
-                      <div className="flex items-center">
-                        <h3 className="text-lg md:text-xl font-bold text-white">{title}</h3>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 4. 이런 분께 추천합니다 */}
-            <section className="mb-20">
-              <Reveal>
-                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">이런 분께 추천합니다</h2>
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    "연락하고 싶지만 두려운 분",
-                    "차단/읽씹 이후 어떻게 해야 할지 모르는 분",
-                    "재회 가능성을 현실적으로 보고 싶은 분",
-                    "다시 만나도 같은 이별을 반복하고 싶지 않은 분"
-                  ].map((text, i) => (
-                    <div key={i} className="gungjung-glass p-6 text-center flex items-center justify-center min-h-[120px] hover:border-accent-gold/40 transition-all group">
-                      <p className="text-bd-ivory group-hover:text-white break-keep">{text}</p>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            </section>
-
-            <div className="gold-divider mb-20" />
-
-            {/* 5. 후기 섹션 */}
-            <section className="mb-20">
-              <Reveal>
-                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">진실된 재회 후기</h2>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {reviews.map((review) => (
-                    <div key={review.id} className="gungjung-glass p-6 flex flex-col h-full">
-                      <div className="flex gap-1 mb-4 text-[var(--accent-gold)]">
-                        {[...Array(5)].map((_, i) => (
-                          <i key={i} className="fas fa-star text-xs"></i>
-                        ))}
-                      </div>
-                      <p className="text-bd-gray text-sm leading-relaxed mb-6 flex-grow italic">"{review.content}"</p>
-                      <div className="text-right">
-                        <span className="text-xs text-[var(--accent-gold-deep)] font-medium">{review.author}</span>
+                    {
+                      num: "1",
+                      title: "파동의 진단",
+                      desc: "왜 이별이 일어났는지 진단합니다. 권태기, 신뢰 상실, 집착, 현실적 문제 등 원인에 따라 재회 전략은 달라집니다."
+                    },
+                    {
+                      num: "2",
+                      title: "비방의 준비",
+                      desc: "가장 어려운 공백기와 침묵을 다룹니다. 아무것도 하지 않는 것이 아니라, 다시 나의 프레임을 온전히 세우는 시간입니다."
+                    },
+                    {
+                      num: "3",
+                      title: "실전 재회술",
+                      desc: "언제, 어떤 방식으로, 어떤 메시지를 보내야 하는지 정리합니다. 상대에게 부담이 아닌 여운을 남기는 접근법입니다."
+                    },
+                    {
+                      num: "4",
+                      title: "재회의 완성",
+                      desc: "다시 만났을 때 무너지지 않는 태도, 첫 대면의 기류, 상대가 던지는 무의식적 테스트를 슬기롭게 통과하는 법을 정리합니다."
+                    },
+                    {
+                      num: "5",
+                      title: "완성된 나",
+                      desc: "재회 이후에도 같은 문제를 반복하지 않기 위해, 나의 내면 감정과 관계 패턴을 단단하게 재설계합니다."
+                    }
+                  ].map((item, idx) => (
+                    <div 
+                      key={idx} 
+                      className="gungjung-glass p-5 border-[#C5A059]/20 flex flex-col justify-between hover:border-[#C5A059]/50 transition-all"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between mb-4">
+                          <span className="font-serif text-xs font-bold bg-[#4A0E17] text-[#FAF7F2] px-2.5 py-0.5 rounded border border-[#C5A059]/30">
+                            {item.num}단계
+                          </span>
+                        </div>
+                        <h3 className="text-base md:text-lg font-elegant font-bold text-white mb-2">{item.title}</h3>
+                        <p className="text-xs md:text-sm text-[#EDE6DA]/60 leading-relaxed font-light break-keep">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -188,103 +313,190 @@ export default function ReunionSecretPage() {
               </Reveal>
             </section>
 
-            {/* 6. FAQ 섹션 */}
-            <section className="mb-20">
+            <RedThreadDivider />
+
+            {/* 5. Premium Product Section */}
+            <section className="mb-28">
               <Reveal>
-                <h2 className="text-3xl font-elegant font-bold text-center mb-12 text-white">자주 묻는 질문</h2>
-                <div className="space-y-4">
-                  {faqs.map((faq, idx) => (
-                    <details key={idx} className="gungjung-glass group overflow-hidden">
-                      <summary className="p-6 cursor-pointer list-none flex justify-between items-center text-white font-medium focus:outline-none">
-                        <span>Q. {faq.q}</span>
-                        <i className="fas fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
-                      </summary>
-                      <div className="px-6 pb-6 text-bd-gray leading-relaxed">
-                        A. {faq.a}
-                      </div>
-                    </details>
-                  ))}
+                <div className="grid md:grid-cols-12 gap-12 items-center">
+                  {/* 왼쪽 이미지 (r5.webp, 4:5) */}
+                  <div className="md:col-span-5 flex justify-center">
+                    <div className="relative w-full max-w-sm aspect-[4/5] overflow-hidden rounded-[30px] border border-white/10 shadow-2xl">
+                      <Image 
+                        src="/image/reunion-secret/r5.webp" 
+                        alt="실전 재회 노트 번들" 
+                        fill 
+                        className="object-cover" 
+                      />
+                    </div>
+                  </div>
+
+                  {/* 오른쪽 부록 리스트 (골드 경계선, 버건디 체크) */}
+                  <div className="md:col-span-7 space-y-6 text-left break-keep">
+                    <div>
+                      <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">Workbook Included</span>
+                      <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white mt-1 leading-snug">
+                        읽고 끝나는 책이 아니라,<br/>
+                        <span className="text-[#E6BE8A]">점검하고 적용하는 실전 재회 노트</span>
+                      </h2>
+                    </div>
+                    
+                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed font-light">
+                      재회비방은 단순한 연애 조언 모음이 아닙니다. 이별 유형, 공백기, 문자 흐름, 돌발 상황, 재회 이후 관계 선언까지 직접 진단하고 내 상황에 바로 적용할 수 있는 실전 도구를 담았습니다.
+                    </p>
+
+                    {/* 부록 9종 리스트 (한지 톤 카드) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                      {[
+                        "이별 유형별 골든 타이밍",
+                        "재회 전략 전체 흐름도",
+                        "재회를 부르는 멘탈 관리 확언",
+                        "돌발 상황 대처 매뉴얼",
+                        "상황별 문자 스크립트 완전판",
+                        "공백기 골든 타이밍표",
+                        "30일 황금기 실전 체크리스트",
+                        "재회 가능성 자가진단표",
+                        "재회 후 관계 선언문"
+                      ].map((item, idx) => (
+                        <div 
+                          key={idx} 
+                          className="flex items-center gap-3 p-3 bg-[#FAF7F2] rounded-xl border border-[#C5A059]/25 hover:border-[#8C1D24]/40 transition-colors"
+                        >
+                          <Check className="w-4 h-4 text-[#8C1D24] shrink-0" />
+                          <span className="text-xs md:text-sm text-[#3D3530] font-semibold">
+                            {item}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-4">
+                      <CTAButton text="실전 부록과 함께 받기" />
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>
 
-            {/* 6-1. 구매 전 확인사항 */}
-            <section className="mb-20">
+            <RedThreadDivider />
+
+            {/* 6. How To Use Section */}
+            <section className="mb-28">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-[rgba(212,175,55,0.2)]">
-                  <h2 className="text-2xl font-elegant font-bold text-center mb-10 text-[var(--accent-gold)]">
-                    구매 전 꼭 확인해주세요
+                <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left max-w-4xl mx-auto break-keep">
+                  <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#E6BE8A] pl-6">
+                    이렇게 활용해보세요
                   </h2>
                   
-                  <div className="space-y-10 text-sm md:text-base leading-relaxed">
-                    <div className="text-center text-bd-ivory opacity-90 max-w-2xl mx-auto break-keep">
-                      <p>백도화의 전자책은 디지털 다운로드 상품으로 제공됩니다.</p>
-                      <p className="mt-2">결제 완료 후 즉시 또는 순차적으로 다운로드가 가능하며, 디지털 콘텐츠의 특성상 단순 변심에 의한 환불은 어렵습니다. 신중한 구매 부탁드립니다.</p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-[rgba(212,175,55,0.1)]">
-                      <div>
-                        <h3 className="text-lg font-bold text-[var(--accent-gold)] mb-4 flex items-center gap-2">
-                          <i className="fas fa-check-circle"></i> 환불 가능 안내
-                        </h3>
-                        <ul className="space-y-2 text-bd-gray text-sm">
-                          <li>• 중복 결제가 발생한 경우</li>
-                          <li>• 시스템 오류로 인해 정상적인 결제가 이루어지지 않은 경우</li>
-                          <li>• 파일 손상 또는 다운로드 불가 등 정상적인 이용이 불가능한 경우</li>
-                        </ul>
-                        <p className="mt-4 text-xs text-[var(--accent-gold-soft)]">확인 후 전액 환불 또는 재발송이 가능합니다.</p>
+                  <div className="grid md:grid-cols-2 gap-8 text-sm md:text-base leading-relaxed text-[#EDE6DA]/85">
+                    {[
+                      {
+                        title: "1. 내 이별 원인을 진단하세요.",
+                        desc: "권태기, 신뢰 상실, 집착, 현실 문제 등 원인에 따라 접근 방식과 메시지 방향이 완전히 달라집니다."
+                      },
+                      {
+                        title: "2. 공백기와 연락 타이밍을 점검하세요.",
+                        desc: "불안해서 보내는 연락과 전략적으로 준비된 연락은 관계에 전혀 다른 파급 효과를 가져옵니다."
+                      },
+                      {
+                        title: "3. 감정이 올라올 때마다 체크리스트를 확인하세요.",
+                        desc: "지금의 행동이 관계 회복에 도움이 되는 일인지, 단지 불안을 해소하려는 충동적 행동인지 구분해야 합니다."
+                      },
+                      {
+                        title: "4. 재회 이후까지 함께 설계하세요.",
+                        desc: "다시 만나는 과정만큼 중요한 것은, 재회 이후에 동일한 문제를 답습하지 않고 새로운 관계의 기둥을 세우는 일입니다."
+                      }
+                    ].map((item, idx) => (
+                      <div key={idx} className="space-y-2">
+                        <h3 className="font-semibold text-[#E6BE8A]">{item.title}</h3>
+                        <p className="text-xs md:text-sm text-[#EDE6DA]/65 font-light leading-relaxed">{item.desc}</p>
                       </div>
+                    ))}
+                  </div>
 
-                      <div>
-                        <h3 className="text-lg font-bold text-[#BA8D7E] mb-4 flex items-center gap-2">
-                          <i className="fas fa-times-circle"></i> 환불이 어려운 경우
-                        </h3>
-                        <ul className="space-y-2 text-bd-gray text-sm">
-                          <li>• 다운로드가 완료된 경우</li>
-                          <li>• 고객의 단순 변심</li>
-                          <li>• 구매 후 개인적인 기대와 차이에 의한 경우</li>
-                          <li>• 디지털 콘텐츠 특성상 이미 이용이 가능한 상태인 경우</li>
-                        </ul>
-                        <p className="mt-4 text-xs text-[#BA8D7E]/60">복제가 가능한 디지털 상품의 특성상 다운로드 이후 환불이 제한됩니다.</p>
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-[rgba(212,175,55,0.1)]">
-                      <div>
-                        <h3 className="text-lg font-bold text-[var(--accent-gold-light)] mb-4 flex items-center gap-2">
-                          <i className="fas fa-book-open"></i> 이용 안내
-                        </h3>
-                        <p className="text-bd-gray text-sm break-keep">
-                          구매 후 등록된 이메일 또는 다운로드 페이지를 통해 전자책을 확인하실 수 있습니다. 수신이 확인되지 않는 경우 스팸함 또는 프로모션함도 함께 확인 부탁드립니다.
-                        </p>
-                      </div>
-
-                      <div>
-                        <h3 className="text-lg font-bold text-[var(--accent-gold-light)] mb-4 flex items-center gap-2">
-                          <i className="fas fa-info-circle"></i> 문의 안내
-                        </h3>
-                        <p className="text-bd-gray text-sm break-keep">
-                          다운로드 오류 또는 이용 관련 문의는 고객센터를 통해 안내드립니다. 당신의 시작이 조금 더 가볍고 선명해질 수 있도록 정성껏 준비했습니다.
-                        </p>
-                      </div>
-                    </div>
+                  {/* 주의 문구 */}
+                  <div className="mt-8 pt-8 border-t border-white/5">
+                    <p className="text-xs text-[#EDE6DA]/40 leading-relaxed font-light">
+                      <AlertCircle className="w-3.5 h-3.5 inline mr-1.5 opacity-50" />
+                      이 전자책은 특정 결과(재회)를 보장하지 않습니다. 관계의 회복 가능성은 이별 원인, 현재 상황, 상대의 상태, 나의 변화 정도에 따라 달라질 수 있습니다.
+                    </p>
                   </div>
                 </div>
               </Reveal>
             </section>
 
-            {/* 7. 하단 CTA */}
-            <section className="text-center py-20 bg-[rgba(59,15,27,0.2)] rounded-3xl border border-[var(--glass-border)]">
+            <RedThreadDivider />
+
+            {/* 7. Notice Section */}
+            <section className="mb-28">
               <Reveal>
-                <h2 className="text-2xl md:text-3xl font-elegant font-bold mb-8 text-white break-keep">
-                  붙잡는 재회가 아니라, <br/> 다시 떠오르는 관계를 설계하세요
-                </h2>
-                <Link 
-                  href="/checkout?productId=reunion-secret-method"
-                  className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
-                >
-                  재회비방 받아보기
-                </Link>
+                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left max-w-4xl mx-auto break-keep">
+                  <h2 className="text-2xl font-elegant font-bold mb-10 text-white border-l-4 border-[#E6BE8A] pl-6">
+                    구매 전 안내
+                  </h2>
+                  <ul className="space-y-4 text-xs md:text-sm text-[#EDE6DA]/60 font-light">
+                    {[
+                      "본 상품은 PDF 형태로 제공되는 디지털 전자책입니다.",
+                      "결제 완료 후 안내된 이메일 또는 마이페이지를 통해 파일을 확인하실 수 있습니다.",
+                      "모바일, 태블릿, PC 등 PDF 지원 디바이스에서 언제든 편하게 열람 가능합니다.",
+                      "디지털 콘텐츠 특성상 메일 발송 또는 파일 다운로드 후에는 단순 변심에 의한 환불이 제한될 수 있습니다.",
+                      "본 전자책은 특정 결과나 재회를 무조건 보장하는 상품이 아닙니다.",
+                      "모든 관계에는 각자의 상황과 수많은 변수가 존재하며, 결과는 개인의 상태와 상황에 따라 달라질 수 있습니다.",
+                      "상대방의 의사와 심리적 경계를 존중하는 건강한 범위 안에서 전략을 활용해 주세요.",
+                      "자세한 사항은 웹사이트 하단의 이용약관 및 환불정책을 참고해 주세요."
+                    ].map((text, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <span className="mt-2 w-1 h-1 rounded-full bg-[#E6BE8A] shrink-0"></span>
+                        <span>{text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 8. Final CTA Section */}
+            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#C5A059]/40 shadow-2xl">
+              {/* r6.webp 배경 */}
+              <div className="absolute inset-0 z-0">
+                <Image 
+                  src="/image/reunion-secret/r6.webp" 
+                  alt="Final CTA Background" 
+                  fill 
+                  className="object-cover transition-transform duration-[10000ms] group-hover:scale-110" 
+                />
+                {/* 텍스트 가독성을 위한 버건디 반투명 오버레이 필터 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#4A0E17]/70 to-black/80 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-[#0a0514]/30" />
+              </div>
+
+              {/* 중앙 정보 및 CTA 3 버튼 */}
+              <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-3xl mx-auto space-y-6 md:space-y-8 break-keep">
+                <Reveal>
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-tight">
+                    지금 필요한 것은<br/>
+                    한 번 더 매달리는 연락이 아닐 수 있습니다
+                  </h2>
+                  <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light max-w-xl mx-auto">
+                    먼저 나의 상태를 바꾸고, 관계의 흐름을 다시 읽어야 합니다.<br/>
+                    끊어진 인연 앞에서 무너지고 있다면, 이제 감정이 아니라 전략으로 다시 나를 세워보세요.
+                  </p>
+                  
+                  <div className="pt-4">
+                    <CTAButton text="재회비방 구매하기" />
+                  </div>
+                </Reveal>
+              </div>
+            </section>
+
+            {/* Policy Links */}
+            <section className="pb-10 text-center">
+              <Reveal>
+                <div className="flex justify-center gap-8 text-[10px] tracking-[0.2em] uppercase text-white/30">
+                  <Link href="/terms" className="hover:text-[var(--accent-gold)] transition-colors">이용약관</Link>
+                  <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>
+                  <Link href="/refund" className="hover:text-[var(--accent-gold)] transition-colors">배송 및 환불정책</Link>
+                </div>
               </Reveal>
             </section>
 
