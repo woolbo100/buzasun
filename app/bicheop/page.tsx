@@ -32,7 +32,7 @@ export default function BicheopListPage() {
         <Navigation />
 
         <div className="relative z-10 pt-40 pb-24">
-          <div className="container-premium max-w-5xl mx-auto px-6">
+          <div className="container-premium max-w-7xl mx-auto px-6">
             
             {/* 상단 타이틀 영역 */}
             <section className="text-center mb-16">
@@ -81,7 +81,7 @@ export default function BicheopListPage() {
                 </div>
               </Reveal>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post, idx) => (
                   <Reveal key={post.slug} delayMs={idx * 80}>
                     <article className="gungjung-glass rounded-[24px] border border-white/5 bg-gradient-to-b from-white/[0.03] to-[#2D0A1E]/5 overflow-hidden hover:border-[#BA8D7E]/30 hover:shadow-[0_15px_30px_rgba(186,141,126,0.08)] transition-all duration-500 flex flex-col h-full group">
