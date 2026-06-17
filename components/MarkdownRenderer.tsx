@@ -29,7 +29,7 @@ export default function MarkdownRenderer({ content, isLight = false }: MarkdownR
           key={match.index}
           className={
             isLight
-              ? "text-[#9E6D5B] font-extrabold"
+              ? "text-[#800C2C] font-extrabold"
               : "text-[#E6BE8A] font-bold text-shadow-gold"
           }
         >
