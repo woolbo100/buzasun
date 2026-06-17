@@ -8,6 +8,8 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { useRouter } from 'next/navigation'
+import { addToCart } from '@/hooks/useCart'
 import { 
   Check, 
   BookOpen, 
@@ -34,6 +36,26 @@ const productData = {
 
 export default function ReunionSecretPage() {
   useScrollAnimation()
+  const router = useRouter()
+
+  const handlePurchase = (e: React.MouseEvent) => {
+    e.preventDefault()
+    router.push(productData.checkoutUrl)
+  }
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    addToCart({
+      id: productData.productId,
+      slug: productData.slug,
+      name: productData.title + ' 전자책',
+      price: 19000,
+      image: productData.heroImage,
+      type: productData.type,
+      category: 'SECRET METHOD'
+    }, 1)
+    alert("장바구니에 담았습니다.")
+  }
 
   // 붉은 실 장식 구분선
   const RedThreadDivider = () => (
@@ -50,24 +72,27 @@ export default function ReunionSecretPage() {
     </div>
   )
 
-  // 공통 CTA 버튼
+  // 공통 CTA 버튼 -> 장바구니 / 바로구매 분리
   const CTAButton = ({ text }: { text: string }) => (
-    <div className="text-center my-6">
-      <Link
-        href={productData.checkoutUrl}
-        className="btn-primary inline-flex items-center px-12 py-5 rounded-xl font-elegant font-bold text-lg md:text-xl hover:scale-105 transition-all duration-500 group"
+    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center my-6 max-w-md mx-auto">
+      <button
+        onClick={handleAddToCart}
+        className="flex-1 py-4.5 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-transparent w-full"
+      >
+        장바구니 담기
+      </button>
+      <button
+        onClick={handlePurchase}
+        className="flex-grow-[1.5] py-4.5 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF7F2] w-full animate-pulse"
         style={{
           background: 'linear-gradient(135deg, #4A0E17 0%, #2A0A14 100%)',
           border: '1px solid rgba(230, 190, 138, 0.5)',
-          color: '#E6BE8A',
           boxShadow: '0 0 35px rgba(74, 14, 23, 0.35)'
         }}
       >
-        <span className="relative z-10 flex items-center gap-2">
-          {text}
-          <ChevronRight className="w-5 h-5 text-[#E6BE8A] group-hover:translate-x-1 transition-transform" />
-        </span>
-      </Link>
+        {text}
+        <ChevronRight className="w-5 h-5 text-[#FAF7F2]" />
+      </button>
     </div>
   )
 

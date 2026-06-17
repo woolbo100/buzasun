@@ -1,15 +1,36 @@
 'use client'
 
-import { redirect } from 'next/navigation'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
 import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { useRouter } from 'next/navigation'
+import { addToCart } from '@/hooks/useCart'
 
 export default function LoveSecretEbookPage() {
   useScrollAnimation()
+  const router = useRouter()
+
+  const handlePurchase = (e: React.MouseEvent) => {
+    e.preventDefault()
+    router.push('/checkout?productId=love-secret-ebook')
+  }
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    addToCart({
+      id: 'love-secret-ebook',
+      slug: 'love-secret-ebook',
+      name: '연애비급 전자책',
+      price: 19000,
+      image: '/image/love-secret-thumb.png',
+      type: 'digital_ebook',
+      category: 'SECRET METHOD'
+    }, 1)
+    alert("장바구니에 담았습니다.")
+  }
 
   const reviews = [
     { id: 1, author: '이지은님', content: '연애할 때마다 제가 왜 그렇게 불안했는지 이제야 이해가 가요. 심리 상담을 받는 것처럼 마음이 차분해지는 책입니다.', rating: 5 },
@@ -58,12 +79,24 @@ export default function LoveSecretEbookPage() {
                 <p className="text-lg md:text-xl text-bd-ivory leading-relaxed mb-10 max-w-2xl mx-auto break-keep">
                   반복되는 연애 패턴을 이해하고, 관계의 흐름을 다르게 바라보는 백도화의 연애 해석서
                 </p>
-                <Link 
-                  href="/checkout?productId=love-secret-ebook"
-                  className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
-                >
-                  연애비급 받아보기
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm mx-auto justify-center">
+                  <button 
+                    onClick={handleAddToCart}
+                    className="flex-1 py-4 rounded-lg font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 bg-transparent"
+                  >
+                    장바구니 담기
+                  </button>
+                  <button 
+                    onClick={handlePurchase}
+                    className="flex-grow-[1.5] py-4 rounded-lg font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#2D0A1E]"
+                    style={{
+                      background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)',
+                      boxShadow: '0 0 30px rgba(212, 178, 167, 0.2)'
+                    }}
+                  >
+                    바로 받아보기
+                  </button>
+                </div>
               </Reveal>
             </section>
 
@@ -275,12 +308,24 @@ export default function LoveSecretEbookPage() {
                 <h2 className="text-2xl md:text-3xl font-elegant font-bold mb-8 text-white">
                   내 연애 패턴을 다르게 읽어보고 싶다면
                 </h2>
-                <Link 
-                  href="/checkout?productId=love-secret-ebook"
-                  className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)]"
-                >
-                  연애비급 받아보기
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto relative z-10 justify-center">
+                  <button 
+                    onClick={handleAddToCart}
+                    className="flex-1 py-4.5 rounded-lg font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-transparent"
+                  >
+                    장바구니 담기
+                  </button>
+                  <button 
+                    onClick={handlePurchase}
+                    className="flex-grow-[1.5] py-4.5 rounded-lg font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#2D0A1E]"
+                    style={{
+                      background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)',
+                      boxShadow: '0 0 30px rgba(212, 178, 167, 0.2)'
+                    }}
+                  >
+                    바로 받아보기
+                  </button>
+                </div>
               </Reveal>
             </section>
 

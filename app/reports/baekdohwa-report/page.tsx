@@ -9,9 +9,31 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import ReportCommonInfo from '@/components/ReportCommonInfo'
+import { useRouter } from 'next/navigation'
+import { addToCart } from '@/hooks/useCart'
 
 export default function BaekdohwaReportPage() {
   useScrollAnimation()
+  const router = useRouter()
+
+  const handlePurchase = (e: React.MouseEvent) => {
+    e.preventDefault()
+    router.push('/checkout?productId=baekdohwa-report')
+  }
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    addToCart({
+      id: 'baekdohwa-report',
+      slug: 'baekdohwa-report',
+      name: '선천코드 연애 리포트',
+      price: 49000,
+      image: '/image/love-code-bg.png',
+      type: 'digital_report',
+      category: 'PREMIUM REPORT'
+    }, 1)
+    alert("장바구니에 담았습니다.")
+  }
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
@@ -50,12 +72,24 @@ export default function BaekdohwaReportPage() {
                   나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
                 </p>
                 
-                <Link 
-                  href="/checkout?productId=baekdohwa-report"
-                  className="btn-primary inline-flex items-center px-16 py-6 rounded-2xl font-bold text-xl hover:scale-105 transition-all duration-500 shadow-[0_0_60px_rgba(212,178,167,0.2)]"
-                >
-                  선천코드 연애 리포트 신청하기
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center">
+                  <button 
+                    onClick={handleAddToCart}
+                    className="flex-1 py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 bg-transparent"
+                  >
+                    장바구니 담기
+                  </button>
+                  <button 
+                    onClick={handlePurchase}
+                    className="flex-grow-[1.5] py-5 rounded-2xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
+                    style={{
+                      background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)',
+                      boxShadow: '0 0 40px rgba(212, 178, 167, 0.3)'
+                    }}
+                  >
+                    바로 신청하기
+                  </button>
+                </div>
               </Reveal>
             </section>
 
@@ -220,13 +254,24 @@ export default function BaekdohwaReportPage() {
                   <h2 className="text-4xl md:text-7xl font-elegant font-bold text-white mb-12 leading-tight">
                     사랑의 흐름을 <br /> <span className="text-[var(--accent-gold)]">바꾸는 시작</span>
                   </h2>
-                  <Link 
-                    href="/checkout?productId=baekdohwa-report"
-                    className="btn-primary inline-flex items-center px-20 py-8 rounded-2xl font-bold text-2xl hover:scale-105 transition-all duration-500 shadow-[0_0_80px_rgba(212,178,167,0.3)]"
-                    style={{ background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)', color: '#1A0514' }}
-                  >
-                    선천코드 연애 리포트 신청하기
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto relative z-10 justify-center">
+                    <button 
+                      onClick={handleAddToCart}
+                      className="flex-1 py-6 rounded-2xl font-bold text-xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 bg-transparent"
+                    >
+                      장바구니 담기
+                    </button>
+                    <button 
+                      onClick={handlePurchase}
+                      className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
+                      style={{
+                        background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)',
+                        boxShadow: '0 0 50px rgba(212, 178, 167, 0.4)'
+                      }}
+                    >
+                      바로 신청하기
+                    </button>
+                  </div>
                 </Reveal>
               </div>
             </section>

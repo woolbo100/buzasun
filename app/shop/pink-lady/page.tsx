@@ -11,6 +11,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Check, ArrowRight, ShieldCheck, HelpCircle } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { addToCart } from '@/hooks/useCart'
 
 export default function PinkLadyDetailPage() {
   useScrollAnimation()
@@ -19,6 +20,20 @@ export default function PinkLadyDetailPage() {
   const handlePurchase = (e: React.MouseEvent) => {
     e.preventDefault()
     router.push('/checkout?productId=pink-lady')
+  }
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    addToCart({
+      id: 'pink-lady',
+      slug: 'pink-lady',
+      name: '핑크레이디',
+      price: 89000,
+      image: '/image/pinklady/p7.webp',
+      type: 'physical',
+      category: 'women-balance-care'
+    }, 1)
+    alert("장바구니에 담았습니다.")
   }
 
   // 2. Product Overview - 포인트 카드 리스트 (6개)
@@ -133,19 +148,27 @@ export default function PinkLadyDetailPage() {
                   </p>
                 </div>
 
-                <div className="flex flex-col items-center gap-4">
-                  <button 
-                    onClick={handlePurchase}
-                    className="btn-primary inline-flex items-center gap-3 px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all duration-500 hover:shadow-[0_0_35px_rgba(230,190,138,0.3)]"
-                    style={{
-                      background: 'linear-gradient(135deg, #2D0A1E 0%, #1A0514 100%)',
-                      border: '1px solid rgba(230, 190, 138, 0.4)',
-                      color: '#E6BE8A',
-                    }}
-                  >
-                    시크릿 리추얼 시작하기
-                    <ArrowRight className="w-5 h-5 text-[#E6BE8A]" />
-                  </button>
+                <div className="flex flex-col items-center gap-6">
+                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+                    <button 
+                      onClick={handleAddToCart}
+                      className="flex-1 py-4.5 rounded-full font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-transparent"
+                    >
+                      장바구니 담기
+                    </button>
+                    <button 
+                      onClick={handlePurchase}
+                      className="flex-grow-[1.5] py-4.5 rounded-full font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 hover:shadow-[0_0_35px_rgba(230,190,138,0.3)] flex items-center justify-center gap-2"
+                      style={{
+                        background: 'linear-gradient(135deg, #2D0A1E 0%, #1A0514 100%)',
+                        border: '1px solid rgba(230, 190, 138, 0.4)',
+                        color: '#E6BE8A',
+                      }}
+                    >
+                      바로 구매하기
+                      <ArrowRight className="w-4 h-4 text-[#E6BE8A]" />
+                    </button>
+                  </div>
                   <span className="text-xs text-[#EDE6DA]/40">89,000원 | 무료 배송</span>
                 </div>
               </Reveal>
@@ -453,17 +476,25 @@ export default function PinkLadyDetailPage() {
                     오늘부터 핑크레이디 시크릿 리추얼로 당신의 첫 프리미엄 케어를 시작하세요.
                   </p>
                   
-                  <button 
-                    onClick={handlePurchase}
-                    className="btn-primary inline-flex items-center gap-3 px-12 py-5 rounded-full font-bold text-lg hover:scale-105 transition-all duration-500 hover:shadow-[0_0_35px_rgba(230,190,138,0.35)]" 
-                    style={{ 
-                      background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)', 
-                      color: '#2D0A1E', 
-                    }}
-                  >
-                    지금 시작하기
-                    <ArrowRight className="w-5 h-5 text-[#2D0A1E]" />
-                  </button>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md relative z-10">
+                    <button 
+                      onClick={handleAddToCart}
+                      className="flex-1 py-4.5 rounded-full font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-transparent"
+                    >
+                      장바구니 담기
+                    </button>
+                    <button 
+                      onClick={handlePurchase}
+                      className="flex-grow-[1.5] py-4.5 rounded-full font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 hover:shadow-[0_0_35px_rgba(230,190,138,0.35)] flex items-center justify-center gap-2" 
+                      style={{ 
+                        background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)', 
+                        color: '#2D0A1E', 
+                      }}
+                    >
+                      바로 구매하기
+                      <ArrowRight className="w-4 h-4 text-[#2D0A1E]" />
+                    </button>
+                  </div>
                 </Reveal>
               </div>
             </section>

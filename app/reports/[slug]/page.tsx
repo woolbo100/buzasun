@@ -11,6 +11,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { supabase } from '@/lib/supabase'
 import { useRouter } from 'next/navigation'
 import { ChevronDown, AlertCircle } from 'lucide-react'
+import { addToCart } from '@/hooks/useCart'
 
 export default function DynamicReportPage() {
   const params = useParams()
@@ -22,6 +23,28 @@ export default function DynamicReportPage() {
   const [showError, setShowError] = useState(false)
 
   useScrollAnimation()
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (displayData.options && displayData.options.length > 0 && !selectedOption) {
+      setShowError(true)
+      alert("옵션을 선택해주세요.")
+      return
+    }
+
+    addToCart({
+      id: displayData.slug || slug,
+      slug: displayData.slug || slug,
+      name: displayData.name,
+      price: Number(displayData.price),
+      option: selectedOption || undefined,
+      image: (slug === 'love-code' || slug === 'love-code-report') ? "/image/love-code-bg.png" : "/image/main.png",
+      type: slug.includes('secret') ? 'digital_ebook' : 'digital_report',
+      category: slug.includes('secret') ? 'SECRET METHOD' : 'PREMIUM REPORT'
+    }, 1)
+
+    alert("장바구니에 담았습니다.")
+  }
 
   useEffect(() => {
     // [Hiding Logic] 시크릿 비법서/리포트 관련 슬러그 숨김 처리
@@ -174,12 +197,24 @@ export default function DynamicReportPage() {
                     </div>
                   )}
 
-                  <button 
-                    onClick={handlePurchase}
-                    className="btn-primary inline-block px-10 py-4 rounded-lg font-bold text-lg shadow-[0_0_30px_rgba(212,178,167,0.2)] hover:scale-105 transition-all duration-500"
-                  >
-                    리포트 신청하기
-                  </button>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm justify-center">
+                    <button 
+                      onClick={handleAddToCart}
+                      className="flex-1 py-4 rounded-lg font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 bg-transparent"
+                    >
+                      장바구니 담기
+                    </button>
+                    <button 
+                      onClick={handlePurchase}
+                      className="flex-grow-[1.5] py-4 rounded-lg font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#2D0A1E]"
+                      style={{
+                        background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)',
+                        boxShadow: '0 0 30px rgba(212, 178, 167, 0.2)'
+                      }}
+                    >
+                      바로 신청하기
+                    </button>
+                  </div>
                 </div>
               </Reveal>
             </section>
@@ -369,12 +404,24 @@ export default function DynamicReportPage() {
                 <h2 className="text-2xl md:text-3xl font-elegant font-bold mb-8 text-white">
                   {displayData.name}, 지금 확인해보세요
                 </h2>
-                <button 
-                  onClick={handlePurchase}
-                  className="btn-primary inline-block px-12 py-5 rounded-lg font-bold text-xl shadow-[0_0_30px_rgba(212,178,167,0.2)] hover:scale-105 transition-all duration-500"
-                >
-                  리포트 신청하기
-                </button>
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto relative z-10 justify-center">
+                  <button 
+                    onClick={handleAddToCart}
+                    className="flex-1 py-4.5 rounded-lg font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-transparent"
+                  >
+                    장바구니 담기
+                  </button>
+                  <button 
+                    onClick={handlePurchase}
+                    className="flex-grow-[1.5] py-4.5 rounded-lg font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#2D0A1E]"
+                    style={{
+                      background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)',
+                      boxShadow: '0 0 30px rgba(212, 178, 167, 0.2)'
+                    }}
+                  >
+                    바로 신청하기
+                  </button>
+                </div>
               </Reveal>
             </section>
 

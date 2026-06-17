@@ -5,6 +5,7 @@ import Link from 'next/link'
 import NorigaeElement from './NorigaeElement'
 import { ShoppingCart, User, Menu, X, ChevronDown } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
+import { useCart } from '@/hooks/useCart'
 
 export default function Navigation() {
   const showConsultMenu = false
@@ -12,11 +13,13 @@ export default function Navigation() {
   const showAboutMenu = true
   const consultMenuLabel = '프리미엄 1:1 상담'
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileBicheopOpen, setMobileBicheopOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<'reports' | 'ebooks' | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const [user, setUser] = useState<any>(null)
+  const { totalCount } = useCart()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,6 +68,7 @@ export default function Navigation() {
   const closeMobileMenu = () => {
     setMobileMenuOpen(false)
     setActiveDropdown(null)
+    setMobileBicheopOpen(false)
   }
 
   const [mainReportSlug, setMainReportSlug] = useState('baekdohwa-report')
@@ -228,6 +232,33 @@ export default function Navigation() {
               />
             </Link>
 
+            {/* 비첩 데스크톱 드롭다운 메뉴 */}
+            <div 
+              className="relative group flex items-center"
+              onMouseEnter={() => setActiveDropdown('bicheop' as any)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+              <Link href="/bicheop" className={menuLinkClass} style={menuLinkStyle}>
+                비첩
+                <span
+                  className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                  style={{
+                    boxShadow: '0 0 8px var(--accent-pink-soft)',
+                  }}
+                />
+              </Link>
+              
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-2 w-32 bg-[#1A0B2E]/95 border border-accent-gold/10 rounded-xl py-2 px-1 shadow-[0_10px_30px_rgba(0,0,0,0.6)] transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible backdrop-blur-md">
+                <div className="space-y-0.5">
+                  <Link href="/bicheop/love" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">연애비첩</Link>
+                  <Link href="/bicheop/reunion" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">재회비첩</Link>
+                  <Link href="/bicheop/abundance" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">풍요비첩</Link>
+                  <Link href="/bicheop/charm" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">매력비첩</Link>
+                  <Link href="/bicheop/mind" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">마음비첩</Link>
+                </div>
+              </div>
+            </div>
+
             <Link href="/contact" className={menuLinkClass} style={menuLinkStyle}>
               문의하기
               <span
@@ -249,37 +280,30 @@ export default function Navigation() {
                 />
               </Link>
             )}
-
-            {user ? (
-              <Link href="/mypage" className={menuLinkClass} style={menuLinkStyle}>
-                마이페이지
-                <span
-                  className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
-                  style={{
-                    boxShadow: '0 0 10px var(--accent-gold-soft)',
-                  }}
-                />
-              </Link>
-            ) : (
-              <Link href="/login" className={menuLinkClass} style={menuLinkStyle}>
-                로그인
-                <span
-                  className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-gold)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
-                  style={{
-                    boxShadow: '0 0 10px var(--accent-gold-soft)',
-                  }}
-                />
-              </Link>
-            )}
           </div>
 
           <div className="flex items-center space-x-4">
             <div className="hidden lg:flex items-center space-x-4 relative">
-              <Link href="/cart" className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300 relative group flex items-center justify-center">
+              <Link
+                href="/cart"
+                className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300 relative group flex items-center justify-center"
+                title="장바구니"
+                aria-label="장바구니"
+              >
                 <ShoppingCart className="w-5 h-5" />
+                {totalCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-[var(--accent-gold)] text-[#1a0f2e] text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-[0_0_8px_rgba(230,190,138,0.5)]">
+                    {totalCount}
+                  </span>
+                )}
                 <span className="absolute -bottom-1.5 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 12px var(--accent-gold)' }} />
               </Link>
-              <Link href="/mypage" className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300 relative group flex items-center justify-center">
+              <Link
+                href={user ? "/mypage" : "/login"}
+                className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300 relative group flex items-center justify-center"
+                title="마이페이지"
+                aria-label="마이페이지"
+              >
                 <User className="w-5 h-5" />
                 <span className="absolute -bottom-1.5 left-1/2 h-[1px] w-0 bg-[var(--accent-gold)] transition-all duration-300 ease-out -translate-x-1/2 group-hover:w-full" style={{ boxShadow: '0 0 12px var(--accent-gold)' }} />
               </Link>
@@ -333,6 +357,64 @@ export default function Navigation() {
               >
                 비밀상점
               </Link>
+
+              {/* 모바일 비첩 아코디언 */}
+              <div className="mx-2">
+                <button
+                  onClick={() => setMobileBicheopOpen(!mobileBicheopOpen)}
+                  className="w-full flex justify-between items-center px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg text-left"
+                >
+                  <span className="text-base font-medium" style={{ fontSize: '1rem', letterSpacing: '0.08em' }}>비첩</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileBicheopOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileBicheopOpen && (
+                  <div className="pl-4 py-1 space-y-1 bg-white/[0.01] rounded-lg mt-1 border-l border-white/5 mx-2">
+                    <Link
+                      href="/bicheop"
+                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
+                      onClick={closeMobileMenu}
+                    >
+                      전체 비첩 보기
+                    </Link>
+                    <Link
+                      href="/bicheop/love"
+                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
+                      onClick={closeMobileMenu}
+                    >
+                      연애비첩
+                    </Link>
+                    <Link
+                      href="/bicheop/reunion"
+                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
+                      onClick={closeMobileMenu}
+                    >
+                      재회비첩
+                    </Link>
+                    <Link
+                      href="/bicheop/abundance"
+                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
+                      onClick={closeMobileMenu}
+                    >
+                      풍요비첩
+                    </Link>
+                    <Link
+                      href="/bicheop/charm"
+                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
+                      onClick={closeMobileMenu}
+                    >
+                      매력비첩
+                    </Link>
+                    <Link
+                      href="/bicheop/mind"
+                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
+                      onClick={closeMobileMenu}
+                    >
+                      마음비첩
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               <Link
                 href="/contact"
                 className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
@@ -350,43 +432,34 @@ export default function Navigation() {
                 </Link>
               )}
 
-              {user ? (
-                <Link
-                  href="/mypage"
-                  className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
-                  onClick={closeMobileMenu}
-                >
-                  마이페이지
-                </Link>
-              ) : (
-                <Link
-                  href="/login"
-                  className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
-                  onClick={closeMobileMenu}
-                >
-                  로그인
-                </Link>
-              )}
-
               <div
                 className="flex items-center space-x-6 px-4 py-3 border-t mx-2 mt-4"
                 style={{ borderColor: scrolled ? 'rgba(216, 191, 163, 0.2)' : 'rgba(216, 191, 163, 0.1)' }}
               >
                 <Link
                   href="/cart"
-                  className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-colors flex items-center space-x-2"
+                  className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-colors flex items-center space-x-2 relative"
                   onClick={closeMobileMenu}
                 >
-                  <ShoppingCart className="w-5 h-5" />
+                  <div className="relative">
+                    <ShoppingCart className="w-5 h-5" />
+                    {totalCount > 0 && (
+                      <span className="absolute -top-1.5 -right-1.5 bg-[var(--accent-gold)] text-[#1a0f2e] text-[8px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">
+                        {totalCount}
+                      </span>
+                    )}
+                  </div>
                   <span className="text-sm">장바구니</span>
                 </Link>
                 <Link
-                  href="/mypage"
+                  href={user ? "/mypage" : "/login"}
                   className="text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-colors flex items-center space-x-2"
                   onClick={closeMobileMenu}
+                  title="마이페이지"
+                  aria-label="마이페이지"
                 >
                   <User className="w-5 h-5" />
-                  <span className="text-sm">마이페이지</span>
+                  <span className="text-sm">{user ? '마이페이지' : '로그인'}</span>
                 </Link>
               </div>
             </div>
@@ -396,3 +469,4 @@ export default function Navigation() {
     </nav>
   )
 }
+

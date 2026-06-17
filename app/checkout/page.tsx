@@ -4,11 +4,12 @@ import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import GlobalBackground from '@/components/GlobalBackground'
 import Reveal from '@/components/Reveal'
+import GlobalBackground from '@/components/GlobalBackground'
 import { supabase } from '@/lib/supabase'
 import Image from 'next/image'
 import Script from 'next/script'
+import { getCartItems } from '@/hooks/useCart'
 
 // TypeScript를 위한 전역 객체 선언
 declare global {
@@ -30,6 +31,9 @@ function CheckoutContent() {
   const [sameAsMember, setSameAsMember] = useState(false)
   const [sameAsOrderer, setSameAsOrderer] = useState(false)
   const [paymentMethod, setPaymentMethod] = useState<'card' | 'bank_transfer_manual'>('card')
+  const [cartItems, setCartItems] = useState<any[]>([])
+  const [isCart, setIsCart] = useState(false)
+  const [shippingFee, setShippingFee] = useState(0)
 
   const [formData, setFormData] = useState({
     name: '',
@@ -165,7 +169,32 @@ function CheckoutContent() {
         }
 
         // 2. 상품 정보 확인
-        if (!productId) return
+        if (!productId) {
+          const cart = getCartItems()
+          if (cart.length === 0) {
+            alert("장바구니가 비어 있습니다.")
+            router.push('/shop')
+            return
+          }
+          setCartItems(cart)
+          setIsCart(true)
+
+          const hasPhysical = cart.some((i: any) => i.type === 'physical')
+          const totalCartPrice = cart.reduce((sum: number, item: any) => sum + item.price * item.quantity, 0)
+          const fee = (hasPhysical && totalCartPrice < 50000) ? 3000 : 0
+          setShippingFee(fee)
+
+          setProduct({
+            name: cart.length === 1 ? cart[0].name : `${cart[0].name} 외 ${cart.length - 1}건`,
+            display_title: cart.length === 1 ? cart[0].name : `${cart[0].name} 외 ${cart.length - 1}건`,
+            type: hasPhysical ? 'physical' : 'digital_report',
+            price: totalCartPrice + fee,
+            category: 'SECRET SHOP ORDER',
+            image: cart[0].image || '/image/product-love-report.png'
+          })
+          setLoading(false)
+          return
+        }
 
         const { data, error } = await supabase
           .from('products')
@@ -322,6 +351,10 @@ function CheckoutContent() {
           shipping_memo: formData.deliveryNote,
         });
 
+        if (isCart) {
+          params.append('is_cart', 'true');
+        }
+
         router.push(`/order-success?${params.toString()}`);
       } catch (err) {
         console.error("Manual payment routing error:", err);
@@ -395,7 +428,7 @@ function CheckoutContent() {
         buyer_tel: formData.phone,
         buyer_addr: formData.address,
         buyer_postcode: formData.zipcode,
-        m_redirect_url: `${window.location.origin}/order-success`,
+        m_redirect_url: `${window.location.origin}/order-success${isCart ? '?is_cart=true' : ''}`,
         custom_data: {
           productId: productId,
           productType: productType,
@@ -413,7 +446,8 @@ function CheckoutContent() {
           partnerName: formData.partnerName,
           partnerBirthDate: formData.partnerBirthDate,
           partnerBirthTime: formData.partnerBirthTime,
-          partnerGender: formData.partnerGender
+          partnerGender: formData.partnerGender,
+          isCart: isCart
         }
       };
 
@@ -456,6 +490,10 @@ function CheckoutContent() {
             partner_gender: formData.partnerGender,
             shipping_memo: formData.deliveryNote,
           });
+          
+          if (isCart) {
+            params.append('is_cart', 'true');
+          }
           
           router.push(`/order-success?${params.toString()}`);
         } else {
@@ -617,41 +655,67 @@ function CheckoutContent() {
           <div className="lg:col-span-2 space-y-8">
             {/* 1. 상품 요약 */}
             <Reveal delayMs={100}>
-              <div className="gungjung-glass p-6 flex items-center gap-6">
-                <div className="relative w-20 h-24 rounded-lg overflow-hidden shrink-0 border border-white/10">
-                  <Image 
-                    src={product.image || '/image/product-love-report.png'} 
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                  />
+              {isCart ? (
+                <div className="gungjung-glass p-6 space-y-4">
+                  <h3 className="text-sm font-bold tracking-widest text-white/40 uppercase border-b border-white/10 pb-2 mb-2">
+                    주문 상품 목록 ({cartItems.length}개)
+                  </h3>
+                  {cartItems.map((item, idx) => (
+                    <div key={`${item.slug}-${item.option || 'none'}`} className="flex items-center gap-4 py-2 border-b border-white/5 last:border-b-0">
+                      <div className="relative w-12 h-14 rounded overflow-hidden shrink-0 border border-white/10 bg-[#0a0514]">
+                        <Image 
+                          src={item.image || '/image/product-love-report.png'} 
+                          alt={item.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="flex-grow min-w-0">
+                        <h4 className="text-sm font-bold text-white truncate">{item.name}</h4>
+                        {item.option && <p className="text-[10px] text-white/40">옵션: {item.option}</p>}
+                        <p className="text-[10px] text-white/40">수량: {item.quantity}개</p>
+                      </div>
+                      <p className="text-sm font-bold text-[var(--accent-gold)] shrink-0">₩{(item.price * item.quantity).toLocaleString()}</p>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <span className="text-[10px] tracking-widest text-[var(--accent-gold)] opacity-60 uppercase mb-1 block">
-                    {product.category}
-                  </span>
-                  <h2 className="text-xl font-bold text-white mb-1">{product.name}</h2>
-                  <div className="flex items-center gap-3">
-                    <p className="text-[var(--accent-gold)] font-bold">₩{product.price?.toLocaleString()}</p>
-                    {(checkoutOption || (product.options && product.options.length > 0)) && (
-                      <>
-                        <span className="w-[1px] h-3 bg-white/10"></span>
-                        {checkoutOption ? (
-                          <span className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded border border-white/10">
-                            옵션: {checkoutOption}
-                          </span>
-                        ) : (
-                          <span className="text-[10px] text-red-400 animate-pulse">옵션 선택 필요</span>
-                        )}
-                      </>
-                    )}
+              ) : (
+                <div className="gungjung-glass p-6 flex items-center gap-6">
+                  <div className="relative w-20 h-24 rounded-lg overflow-hidden shrink-0 border border-white/10">
+                    <Image 
+                      src={product.image || '/image/product-love-report.png'} 
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <span className="text-[10px] tracking-widest text-[var(--accent-gold)] opacity-60 uppercase mb-1 block">
+                      {product.category}
+                    </span>
+                    <h2 className="text-xl font-bold text-white mb-1">{product.name}</h2>
+                    <div className="flex items-center gap-3">
+                      <p className="text-[var(--accent-gold)] font-bold">₩{product.price?.toLocaleString()}</p>
+                      {(checkoutOption || (product.options && product.options.length > 0)) && (
+                        <>
+                          <span className="w-[1px] h-3 bg-white/10"></span>
+                          {checkoutOption ? (
+                            <span className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded border border-white/10">
+                              옵션: {checkoutOption}
+                            </span>
+                          ) : (
+                            <span className="text-[10px] text-red-400 animate-pulse">옵션 선택 필요</span>
+                          )}
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </Reveal>
 
             {/* 1.5 옵션 재선택 (옵션이 없거나 변경하고 싶을 때) */}
-            {product.options && product.options.length > 0 && (
+            {!isCart && product.options && product.options.length > 0 && (
               <Reveal delayMs={150}>
                 <div className={`gungjung-glass p-8 space-y-4 border ${showOptionError ? 'border-red-500/50' : 'border-white/5'}`}>
                   <div className="flex justify-between items-center">
@@ -909,11 +973,16 @@ function CheckoutContent() {
                 <div className="space-y-4 mb-8">
                   <div className="flex justify-between text-sm">
                     <span className="text-white/40">주문 금액</span>
-                    <span className="text-white">₩{product.price?.toLocaleString()}</span>
+                    <span className="text-white">
+                      ₩{isCart 
+                        ? (product.price - shippingFee).toLocaleString() 
+                        : product.price?.toLocaleString()
+                      }
+                    </span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-white/40">배송비</span>
-                    <span className="text-white">₩0</span>
+                    <span className="text-white">₩{shippingFee.toLocaleString()}</span>
                   </div>
                   <div className="pt-4 border-t border-white/10 flex justify-between items-center">
                     <span className="text-white font-bold">최종 결제 금액</span>

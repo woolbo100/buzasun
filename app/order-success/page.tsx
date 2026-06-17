@@ -10,6 +10,7 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Reveal from '@/components/Reveal'
 import { supabase } from '@/lib/supabase'
 import { Check, ShieldCheck, Mail, Truck, Home, ShoppingBag, Copy, CheckCircle } from 'lucide-react'
+import { getCartItems, clearCart } from '@/hooks/useCart'
 
 // 무통장입금 계좌 정보 설정
 const BANK_TRANSFER_INFO = {
@@ -35,6 +36,7 @@ function SuccessContent() {
 
   useEffect(() => {
     async function saveOrder() {
+      const isCart = searchParams.get('is_cart') === 'true'
       const isManual = searchParams.get('payment_method') === 'bank_transfer_manual'
       const paymentId = searchParams.get('payment_id') || (isManual ? `manual_${Date.now()}` : `manual_err_${Date.now()}`)
       const merchantUid = searchParams.get('merchant_uid') || `order_${Date.now()}`
@@ -46,14 +48,13 @@ function SuccessContent() {
       const product_name = searchParams.get('product_name')
       const product_type = searchParams.get('product_type')
       
-      if (!productId || !email) {
+      if ((!productId && !isCart) || !email) {
         setLoading(false)
         return
       }
 
       try {
         // 1. 중복 체크
-        // RLS로 인해 select가 차단될 수도 있지만, anon role select가 열려있는 한에서 시도합니다.
         const { data: existingOrder } = await supabase
           .from('orders')
           .select('*')
@@ -61,7 +62,6 @@ function SuccessContent() {
           .order('created_at', { ascending: false })
           .limit(1)
 
-        // 이미 생성된 주문과 merchant_uid가 겹치거나, amount와 이름이 일치하는 최근 주문이 1분 내에 있는지 간단 확인
         if (existingOrder && existingOrder.length > 0) {
           const recent = existingOrder[0]
           const isTooRecent = (Date.now() - new Date(recent.created_at).getTime()) < 60000 // 1분 이내
@@ -72,11 +72,10 @@ function SuccessContent() {
           }
         }
 
-        // 2. 주문 저장 데이터 구성 (데이터베이스에 실제로 존재하는 컬럼만 포함!)
+        // 2. 주문 저장 데이터 구성
         const incomingStatus = isManual ? 'pending_bank_transfer' : (searchParams.get('payment_status') || 'paid');
         const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
         
-        // 보안: 테스트 모드가 아닐 때 프로덕션 환경에서 test_paid 상태를 허용하지 않음
         if (incomingStatus === 'test_paid' && process.env.NODE_ENV !== 'development' && !isTestMode) {
           console.error("Test payment not allowed in production without test mode enabled");
           setLoading(false);
@@ -85,12 +84,10 @@ function SuccessContent() {
 
         const { data: { user } } = await supabase.auth.getUser();
 
-        // 핑크레이디 상품의 고유식별자(UUID) 정합성 매핑
-        const realProductUuid = productId === 'pink-lady' 
-          ? '6472fa45-4657-4c71-a79f-6979ffad1dac' 
-          : productId;
+        let realProductUuid = '';
+        let resolvedProductName = '';
+        let formattedShippingMemo = '';
 
-        // 배송지 주소 정보를 하나의 정돈된 텍스트로 합치기 (DB address 컬럼 부재 우회)
         const receiverName = searchParams.get('receiverName') || '';
         const zipcode = searchParams.get('zipcode') || '';
         const address = searchParams.get('address') || '';
@@ -98,38 +95,69 @@ function SuccessContent() {
         const deliveryNote = searchParams.get('deliveryNote') || '';
         const orderNote = searchParams.get('orderNote') || '';
 
-        let formattedShippingMemo = '';
-        if (product_type === 'physical' || productId === 'pink-lady' || productId === 'premium-bookmark') {
+        if (isCart) {
+          const cart = getCartItems()
+          const hasPhysical = cart.some((i: any) => i.type === 'physical')
+
+          const cartListText = cart.map((item: any, i: number) => 
+            `${i + 1}. ${item.name} (수량: ${item.quantity}개, 옵션: ${item.option || '없음'}) - ₩${(item.price * item.quantity).toLocaleString()}`
+          ).join('\n')
+
           formattedShippingMemo = [
-            `[실물 상품 배송 정보]`,
+            hasPhysical ? `[실물 상품 배송 정보]` : `[디지털 상품 주문 메모]`,
             isManual ? `- 결제수단: 무통장입금(bank_transfer_manual)` : '',
             isManual ? `- 주문상태: 입금대기` : '',
-            `- 받는 분: ${receiverName || name || ''}`,
+            hasPhysical ? `- 받는 분: ${receiverName || name || ''}` : `- 신청자: ${name || ''}`,
             `- 연락처: ${phone || ''}`,
-            `- 우편번호: ${zipcode || ''}`,
-            `- 주소: ${address || ''} ${detailAddress || ''}`,
-            `- 배송 요청사항: ${deliveryNote || '없음'}`,
+            hasPhysical ? `- 우편번호: ${zipcode || ''}` : '',
+            hasPhysical ? `- 주소: ${address || ''} ${detailAddress || ''}` : '',
+            hasPhysical ? `- 배송 요청사항: ${deliveryNote || '없음'}` : '',
             `- 주문 요청사항: ${orderNote || '없음'}`,
             `- 주문번호: ${merchantUid}`,
-            `- 결제식별코드: ${isManual ? 'N/A' : paymentId}`
-          ].filter(Boolean).join('\n');
+            `- 결제식별코드: ${isManual ? 'N/A' : paymentId}`,
+            `\n[주문 상품 목록]`,
+            cartListText
+          ].filter(Boolean).join('\n')
+
+          realProductUuid = cart.length > 0 ? (cart[0].id === 'pink-lady' ? '6472fa45-4657-4c71-a79f-6979ffad1dac' : cart[0].id) : 'da936fa5-4657-4c71-a79f-6979ffad1dac'
+          resolvedProductName = product_name || (cart.length === 1 ? cart[0].name : `${cart[0].name} 외 ${cart.length - 1}건`)
         } else {
-          formattedShippingMemo = [
-            `[디지털 상품 주문 메모]`,
-            isManual ? `- 결제수단: 무통장입금(bank_transfer_manual)` : '',
-            isManual ? `- 주문상태: 입금대기` : '',
-            `- 신청자: ${name || ''}`,
-            `- 연락처: ${phone || ''}`,
-            `- 주문 요청사항: ${orderNote || '없음'}`,
-            `- 주문번호: ${merchantUid}`,
-            `- 결제식별코드: ${isManual ? 'N/A' : paymentId}`
-          ].filter(Boolean).join('\n');
+          realProductUuid = productId === 'pink-lady' 
+            ? '6472fa45-4657-4c71-a79f-6979ffad1dac' 
+            : productId || '';
+          resolvedProductName = product_name || '백도화 상품';
+
+          if (product_type === 'physical' || productId === 'pink-lady' || productId === 'premium-bookmark') {
+            formattedShippingMemo = [
+              `[실물 상품 배송 정보]`,
+              isManual ? `- 결제수단: 무통장입금(bank_transfer_manual)` : '',
+              isManual ? `- 주문상태: 입금대기` : '',
+              `- 받는 분: ${receiverName || name || ''}`,
+              `- 연락처: ${phone || ''}`,
+              `- 우편번호: ${zipcode || ''}`,
+              `- 주소: ${address || ''} ${detailAddress || ''}`,
+              `- 배송 요청사항: ${deliveryNote || '없음'}`,
+              `- 주문 요청사항: ${orderNote || '없음'}`,
+              `- 주문번호: ${merchantUid}`,
+              `- 결제식별코드: ${isManual ? 'N/A' : paymentId}`
+            ].filter(Boolean).join('\n')
+          } else {
+            formattedShippingMemo = [
+              `[디지털 상품 주문 메모]`,
+              isManual ? `- 결제수단: 무통장입금(bank_transfer_manual)` : '',
+              isManual ? `- 주문상태: 입금대기` : '',
+              `- 신청자: ${name || ''}`,
+              `- 연락처: ${phone || ''}`,
+              `- 주문 요청사항: ${orderNote || '없음'}`,
+              `- 주문번호: ${merchantUid}`,
+              `- 결제식별코드: ${isManual ? 'N/A' : paymentId}`
+            ].filter(Boolean).join('\n')
+          }
         }
 
-        // DB에 실제로 존재하는 컬럼만 안전하게 인서트
         const insertData = {
           product_id: realProductUuid,
-          product_name: product_name || '백도화 상품',
+          product_name: resolvedProductName,
           customer_name: name || '고객',
           customer_email: email,
           customer_phone: phone || '',
@@ -148,8 +176,8 @@ function SuccessContent() {
             searchParams.get('partner_birth_time') ? `시간: ${searchParams.get('partner_birth_time')}` : '',
             searchParams.get('partner_gender') ? `성별: ${searchParams.get('partner_gender') === 'female' ? '여성' : '남성'}` : ''
           ].filter(Boolean).join(' | ') || null,
-          product_title: searchParams.get('product_title') || product_name || '백도화 상품',
-          payment_name: searchParams.get('payment_name') || product_name || '백도화 결제'
+          product_title: searchParams.get('product_title') || resolvedProductName,
+          payment_name: searchParams.get('payment_name') || resolvedProductName
         };
 
         const { data, error } = await supabase
@@ -162,17 +190,20 @@ function SuccessContent() {
           console.error("Supabase insert error details:", error);
           throw error;
         }
+
+        if (isCart) {
+          clearCart();
+        }
         
-        // 정상 저장된 주문 건을 로컬 상태에 등록
         setOrder({
           ...data,
-          // 화면 노출용 가상 주문번호 매핑 (데이터 유실 방지)
           merchant_uid: merchantUid
         })
       } catch (err) {
         console.error("Failed to save order in Supabase:", err)
-        // 혹시 에러가 발생하더라도 결제 자체는 성공했으므로 
-        // 사용자 화면에는 주문 번호와 정보를 정상적으로 노출하여 사용자 이탈을 방지합니다.
+        if (isCart) {
+          clearCart();
+        }
         setOrder({
           product_name: product_name,
           amount: amount,
@@ -197,10 +228,13 @@ function SuccessContent() {
     )
   }
 
+  const isCart = searchParams.get('is_cart') === 'true'
+
   // 상품 이미지 및 분기 처리 결정
   const isPhysical = searchParams.get('product_type') === 'physical' || 
                      searchParams.get('productId') === 'pink-lady' || 
-                     searchParams.get('productId') === 'premium-bookmark';
+                     searchParams.get('productId') === 'premium-bookmark' ||
+                     (isCart && order?.shipping_memo?.includes('[실물 상품 배송 정보]'));
 
   const productImageSrc = searchParams.get('productId') === 'pink-lady' 
     ? '/image/pinklady/p7.webp' 

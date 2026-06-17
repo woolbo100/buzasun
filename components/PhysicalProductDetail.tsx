@@ -11,6 +11,7 @@ import { supabase } from '@/lib/supabase'
 import { useState, useEffect } from 'react'
 import { ChevronDown, CheckCircle2, AlertCircle } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { addToCart } from '@/hooks/useCart'
 
 interface Ingredient {
   title: string;
@@ -102,7 +103,6 @@ export default function PhysicalProductDetail({
     e.preventDefault()
     if (dbOptions.length > 0 && !selectedOption) {
       setShowError(true)
-      // 스무스하게 드롭다운 위치로 이동하면 좋지만 일단 알럿
       alert("옵션을 선택해주세요.")
       return
     }
@@ -112,6 +112,28 @@ export default function PhysicalProductDetail({
       url += `&option=${encodeURIComponent(selectedOption)}`
     }
     router.push(url)
+  }
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (dbOptions.length > 0 && !selectedOption) {
+      setShowError(true)
+      alert("옵션을 선택해주세요.")
+      return
+    }
+
+    addToCart({
+      id: productId,
+      slug: productId,
+      name: title,
+      price: Number(dbPrice),
+      option: selectedOption || undefined,
+      image: heroImage,
+      type: 'physical',
+      category: 'PHYSICAL CARE'
+    }, 1)
+
+    alert("장바구니에 담았습니다.")
   }
 
   const activeOptions = dbOptions[0]; // 현재는 단일 옵션 1개만 지원
@@ -194,18 +216,28 @@ export default function PhysicalProductDetail({
                     </div>
                   )}
 
-                  <button 
-                    onClick={handlePurchase}
-                    className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-500"
-                    style={{
-                      background: 'linear-gradient(135deg, #2D0A1E 0%, #1A0514 100%)',
-                      border: '1px solid rgba(230, 190, 138, 0.4)',
-                      color: '#E6BE8A',
-                      boxShadow: `0 0 40px ${accentColor}26`
-                    }}
-                  >
-                    구매하기 ({typeof dbPrice === 'number' ? dbPrice.toLocaleString() : dbPrice}원)
-                  </button>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+                    <button 
+                      onClick={handleAddToCart}
+                      className="flex-1 py-5 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.02)',
+                        boxShadow: `0 0 20px ${accentColor}10`
+                      }}
+                    >
+                      장바구니 담기
+                    </button>
+                    <button 
+                      onClick={handlePurchase}
+                      className="flex-1 py-5 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#2D0A1E]"
+                      style={{
+                        background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)',
+                        boxShadow: `0 0 30px ${accentColor}26`
+                      }}
+                    >
+                      바로 구매하기 ({typeof dbPrice === 'number' ? dbPrice.toLocaleString() : dbPrice}원)
+                    </button>
+                  </div>
                 </div>
               </Reveal>
             </section>
@@ -363,17 +395,28 @@ export default function PhysicalProductDetail({
                   <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-12 leading-tight">
                     {ctaTitle || `${title}와 함께하는\n아름다운 변화`}
                   </h2>
-                  <button 
-                    onClick={handlePurchase}
-                    className="btn-primary inline-flex items-center px-16 py-6 rounded-xl font-bold text-xl hover:scale-105 transition-all duration-500" 
-                    style={{ 
-                      background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)', 
-                      color: '#2D0A1E', 
-                      boxShadow: `0 0 40px ${accentColor}26` 
-                    }}
-                  >
-                    {ctaButtonText || "지금 바로 구매하기"}
-                  </button>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md relative z-10">
+                    <button 
+                      onClick={handleAddToCart}
+                      className="flex-1 py-5 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        backdropFilter: 'blur(5px)'
+                      }}
+                    >
+                      장바구니 담기
+                    </button>
+                    <button 
+                      onClick={handlePurchase}
+                      className="flex-1 py-5 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#2D0A1E]" 
+                      style={{ 
+                        background: 'linear-gradient(135deg, #E6BE8A 0%, #BA8D7E 100%)', 
+                        boxShadow: `0 0 40px ${accentColor}26` 
+                      }}
+                    >
+                      {ctaButtonText || "바로 구매하기"}
+                    </button>
+                  </div>
                 </Reveal>
               </div>
             </section>
@@ -396,3 +439,4 @@ export default function PhysicalProductDetail({
     </main>
   )
 }
+
