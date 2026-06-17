@@ -232,32 +232,15 @@ export default function Navigation() {
               />
             </Link>
 
-            {/* 비첩 데스크톱 드롭다운 메뉴 */}
-            <div 
-              className="relative group flex items-center"
-              onMouseEnter={() => setActiveDropdown('bicheop' as any)}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <Link href="/bicheop" className={menuLinkClass} style={menuLinkStyle}>
-                비첩
-                <span
-                  className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
-                  style={{
-                    boxShadow: '0 0 8px var(--accent-pink-soft)',
-                  }}
-                />
-              </Link>
-              
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-2 w-32 bg-[#1A0B2E]/95 border border-accent-gold/10 rounded-xl py-2 px-1 shadow-[0_10px_30px_rgba(0,0,0,0.6)] transition-all duration-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible backdrop-blur-md">
-                <div className="space-y-0.5">
-                  <Link href="/bicheop/love" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">연애비첩</Link>
-                  <Link href="/bicheop/reunion" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">재회비첩</Link>
-                  <Link href="/bicheop/abundance" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">풍요비첩</Link>
-                  <Link href="/bicheop/charm" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">매력비첩</Link>
-                  <Link href="/bicheop/mind" className="block px-3 py-1.5 text-xs text-bd-gray hover:text-white hover:bg-white/5 rounded-lg transition-colors font-light text-center">마음비첩</Link>
-                </div>
-              </div>
-            </div>
+            <Link href="/bicheop" className={menuLinkClass} style={menuLinkStyle}>
+              비첩
+              <span
+                className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
+                style={{
+                  boxShadow: '0 0 8px var(--accent-pink-soft)',
+                }}
+              />
+            </Link>
 
             <Link href="/contact" className={menuLinkClass} style={menuLinkStyle}>
               문의하기
@@ -358,62 +341,13 @@ export default function Navigation() {
                 비밀상점
               </Link>
 
-              {/* 모바일 비첩 아코디언 */}
-              <div className="mx-2">
-                <button
-                  onClick={() => setMobileBicheopOpen(!mobileBicheopOpen)}
-                  className="w-full flex justify-between items-center px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg text-left"
-                >
-                  <span className="text-base font-medium" style={{ fontSize: '1rem', letterSpacing: '0.08em' }}>비첩</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileBicheopOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {mobileBicheopOpen && (
-                  <div className="pl-4 py-1 space-y-1 bg-white/[0.01] rounded-lg mt-1 border-l border-white/5 mx-2">
-                    <Link
-                      href="/bicheop"
-                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
-                      onClick={closeMobileMenu}
-                    >
-                      전체 비첩 보기
-                    </Link>
-                    <Link
-                      href="/bicheop/love"
-                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
-                      onClick={closeMobileMenu}
-                    >
-                      연애비첩
-                    </Link>
-                    <Link
-                      href="/bicheop/reunion"
-                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
-                      onClick={closeMobileMenu}
-                    >
-                      재회비첩
-                    </Link>
-                    <Link
-                      href="/bicheop/abundance"
-                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
-                      onClick={closeMobileMenu}
-                    >
-                      풍요비첩
-                    </Link>
-                    <Link
-                      href="/bicheop/charm"
-                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
-                      onClick={closeMobileMenu}
-                    >
-                      매력비첩
-                    </Link>
-                    <Link
-                      href="/bicheop/mind"
-                      className="block px-4 py-2 text-xs text-bd-gray hover:text-bd-ivory transition-colors font-light"
-                      onClick={closeMobileMenu}
-                    >
-                      마음비첩
-                    </Link>
-                  </div>
-                )}
-              </div>
+              <Link
+                href="/bicheop"
+                className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
+                onClick={closeMobileMenu}
+              >
+                비첩
+              </Link>
 
               <Link
                 href="/contact"
