@@ -68,7 +68,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
         <Navigation />
 
         <div className="relative z-10 pt-40 pb-24">
-          <div className="container-premium max-w-3xl mx-auto px-6">
+          <div className="container-premium max-w-5xl mx-auto px-6">
             
             {/* 뒤로 가기 링크 */}
             <Reveal delayMs={50}>
@@ -119,10 +119,10 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
               </Reveal>
             )}
 
-            {/* 본문 콘텐츠 영역 (고풍스러운 비밀 리포트 질감의 gungjung-glass 카드 내부에 배치) */}
+            {/* 본문 콘텐츠 영역 (유리상자 대신 글자가 잘 보이는 연한 베이비핑크 샴페인 골드 톤의 상자 배치) */}
             <Reveal delayMs={200}>
-              <article className="gungjung-glass p-8 md:p-12 border-white/5 rounded-[32px] bg-gradient-to-b from-white/[0.02] to-transparent shadow-[0_20px_50px_rgba(0,0,0,0.5)] mb-20">
-                <MarkdownRenderer content={post.content} />
+              <article className="p-8 md:p-16 border border-[#BA8D7E]/20 rounded-[32px] bg-[linear-gradient(180deg,rgba(255,240,242,0.96),rgba(244,227,215,0.96))] shadow-[0_25px_60px_rgba(45,10,30,0.12)] mb-20">
+                <MarkdownRenderer content={post.content} isLight={true} />
               </article>
             </Reveal>
 

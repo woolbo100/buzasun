@@ -2,9 +2,10 @@ import React from 'react'
 
 interface MarkdownRendererProps {
   content: string;
+  isLight?: boolean;
 }
 
-export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
+export default function MarkdownRenderer({ content, isLight = false }: MarkdownRendererProps) {
   if (!content) return null
 
   // 개행 문자를 기준으로 모든 라인을 쪼갭니다
@@ -24,7 +25,14 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
       }
       // 강조(Bold) 텍스트 추가
       parts.push(
-        <strong key={match.index} className="text-[#E6BE8A] font-bold text-shadow-gold">
+        <strong
+          key={match.index}
+          className={
+            isLight
+              ? "text-[#9E6D5B] font-extrabold"
+              : "text-[#E6BE8A] font-bold text-shadow-gold"
+          }
+        >
           {match[1]}
         </strong>
       )
@@ -50,7 +58,14 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
     // 소제목 H3 (### 소제목)
     if (trimmed.startsWith('### ')) {
       return (
-        <h4 key={idx} className="text-base md:text-lg font-bold text-white mt-6 mb-3 tracking-wider font-elegant border-l-2 border-[#E6BE8A]/40 pl-3">
+        <h4
+          key={idx}
+          className={
+            isLight
+              ? "text-base md:text-lg font-bold text-[#2D0A1E] mt-6 mb-3 tracking-wider font-elegant border-l-2 border-[#BA8D7E]/50 pl-3"
+              : "text-base md:text-lg font-bold text-white mt-6 mb-3 tracking-wider font-elegant border-l-2 border-[#E6BE8A]/40 pl-3"
+          }
+        >
           {parseInlineStyles(trimmed.slice(4))}
         </h4>
       )
@@ -59,7 +74,14 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
     // 중간제목 H2 (## 중간제목)
     if (trimmed.startsWith('## ')) {
       return (
-        <h3 key={idx} className="text-xl md:text-2xl font-bold text-[#E6BE8A] mt-10 mb-5 tracking-wide font-elegant">
+        <h3
+          key={idx}
+          className={
+            isLight
+              ? "text-xl md:text-2xl font-bold text-[#9E6D5B] mt-10 mb-5 tracking-wide font-elegant"
+              : "text-xl md:text-2xl font-bold text-[#E6BE8A] mt-10 mb-5 tracking-wide font-elegant"
+          }
+        >
           {parseInlineStyles(trimmed.slice(3))}
         </h3>
       )
@@ -68,7 +90,14 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
     // 큰제목 H1 (# 큰제목)
     if (trimmed.startsWith('# ')) {
       return (
-        <h2 key={idx} className="text-2xl md:text-3xl font-bold text-white mt-12 mb-6 tracking-widest font-elegant">
+        <h2
+          key={idx}
+          className={
+            isLight
+              ? "text-2xl md:text-3xl font-bold text-[#2D0A1E] mt-12 mb-6 tracking-widest font-elegant"
+              : "text-2xl md:text-3xl font-bold text-white mt-12 mb-6 tracking-widest font-elegant"
+          }
+        >
           {parseInlineStyles(trimmed.slice(2))}
         </h2>
       )
@@ -77,8 +106,15 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
     // 리스트 아이템 (- 목록 또는 * 목록)
     if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
       return (
-        <ul key={idx} className="list-none pl-4 my-2 text-sm md:text-base text-[#EDE6DA]/80 leading-relaxed font-light flex gap-2">
-          <span className="text-[#E6BE8A] select-none">✦</span>
+        <ul
+          key={idx}
+          className={
+            isLight
+              ? "list-none pl-4 my-2 text-sm md:text-base text-[#4A352F] leading-relaxed font-normal flex gap-2"
+              : "list-none pl-4 my-2 text-sm md:text-base text-[#EDE6DA]/80 leading-relaxed font-light flex gap-2"
+          }
+        >
+          <span className={isLight ? "text-[#BA8D7E] select-none" : "text-[#E6BE8A] select-none"}>✦</span>
           <li className="break-keep">{parseInlineStyles(trimmed.slice(2))}</li>
         </ul>
       )
@@ -86,7 +122,14 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
 
     // 일반 문장 단락
     return (
-      <p key={idx} className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed mb-4 break-keep font-light whitespace-pre-wrap">
+      <p
+        key={idx}
+        className={
+          isLight
+            ? "text-sm md:text-base text-[#4A352F] leading-relaxed mb-4 break-keep font-normal whitespace-pre-wrap"
+            : "text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed mb-4 break-keep font-light whitespace-pre-wrap"
+        }
+      >
         {parseInlineStyles(line)}
       </p>
     )
