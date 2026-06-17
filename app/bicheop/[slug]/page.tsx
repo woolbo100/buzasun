@@ -63,7 +63,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
   }
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514] text-white selection:bg-[#E6BE8A] selection:text-black font-sans">
+    <main className="relative min-h-screen bg-[#0a0514] text-white selection:bg-[#BA8D7E] selection:text-black font-sans">
       <GlobalBackground src="/image/shop-hero.png" brightCenter={false}>
         <Navigation />
 
@@ -75,7 +75,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
               <div className="mb-8">
                 <Link
                   href="/bicheop"
-                  className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-[#E6BE8A] transition-colors duration-300 uppercase tracking-widest font-bold"
+                  className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-[#BA8D7E] transition-colors duration-300 uppercase tracking-widest font-bold"
                 >
                   <ArrowLeft className="w-4 h-4" /> 비첩 목록으로 돌아가기
                 </Link>
@@ -86,7 +86,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
             <header className="mb-12">
               <Reveal delayMs={100}>
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full text-[9px] font-bold tracking-widest text-[#E6BE8A] bg-[#2D0A1E]/80 border border-[#E6BE8A]/20 uppercase">
+                  <span className="inline-block px-3 py-1 rounded-full text-[9px] font-bold tracking-widest text-[#BA8D7E] bg-[#2D0A1E]/80 border border-[#BA8D7E]/20 uppercase">
                     {post.categoryName}
                   </span>
                   <span className="text-[10px] text-white/30 tracking-widest font-mono flex items-center gap-1">
@@ -97,7 +97,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
                 <h1 className="text-3xl md:text-4xl font-elegant font-bold text-white leading-snug mb-6 break-keep">
                   {post.title}
                 </h1>
-                <p className="text-sm md:text-base text-[#EDE6DA]/60 leading-relaxed font-light break-keep border-l-2 border-[#E6BE8A]/30 pl-4 py-1 italic">
+                <p className="text-sm md:text-base text-[#EDE6DA]/60 leading-relaxed font-light break-keep border-l-2 border-[#BA8D7E]/30 pl-4 py-1 italic">
                   {post.excerpt}
                 </p>
               </Reveal>
@@ -131,7 +131,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
               <section className="border-t border-white/10 pt-16">
                 <Reveal>
                   <h3 className="text-lg md:text-xl font-elegant font-bold text-white tracking-widest mb-8 border-b border-white/5 pb-4">
-                    다른 비첩 기록 <span className="text-[#E6BE8A]">추천</span>
+                    다른 비첩 기록 <span className="text-[#BA8D7E]">추천</span>
                   </h3>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -139,7 +139,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
                       <Link
                         key={relatedPost.slug}
                         href={`/bicheop/${relatedPost.slug}`}
-                        className="gungjung-glass p-5 rounded-2xl border border-white/5 hover:border-[#E6BE8A]/30 hover:shadow-[0_10px_20px_rgba(230,190,138,0.05)] transition-all duration-300 flex gap-4 items-center group bg-white/[0.01]"
+                        className="gungjung-glass p-5 rounded-2xl border border-white/5 hover:border-[#BA8D7E]/30 hover:shadow-[0_10px_20px_rgba(186,141,126,0.05)] transition-all duration-300 flex gap-4 items-center group bg-white/[0.01]"
                       >
                         {/* 미니 썸네일 */}
                         <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0 border border-white/10 bg-[#0a0514]">
@@ -153,10 +153,10 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
                         
                         {/* 간략 텍스트 */}
                         <div className="min-w-0">
-                          <span className="text-[9px] tracking-wider text-[#E6BE8A] font-bold block mb-1">
+                          <span className="text-[9px] tracking-wider text-[#BA8D7E] font-bold block mb-1">
                             {relatedPost.categoryName}
                           </span>
-                          <h4 className="text-sm font-bold text-white group-hover:text-[#E6BE8A] transition-colors truncate mb-1">
+                          <h4 className="text-sm font-bold text-white group-hover:text-[#BA8D7E] transition-colors truncate mb-1">
                             {relatedPost.title}
                           </h4>
                           <span className="text-[9px] text-white/30 font-mono">
