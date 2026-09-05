@@ -64,7 +64,7 @@ export default function RootLayout({
         />
         {/* 모바일 인트로 도어 이미지 사전 로드 (Preload) */}
         <link rel="preload" as="image" href="/image/baekdohwa-door-closed.webp" />
-        <link rel="preload" as="image" href="/image/baekdohwa-door-open.webp" />
+        <link rel="preload" as="image" href="/image/back.webp" />
       </head>
       <body>
         {children}

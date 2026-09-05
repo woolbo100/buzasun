@@ -10,27 +10,25 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
   const [shouldShow, setShouldShow] = useState<boolean>(false);
 
   // 단계 관리:
-  // 'idle' : 닫힌 문 + 입장 버튼 대기
-  // 'door-opening' : 문 좌우로 열림
-  // 'bridge-active' : 브리지 화면 활성화 (베이지 -> 라벤더 -> 퍼플 전환 및 문구 노출)
-  // 'finished' : 완전 종료
-  const [stage, setStage] = useState<'idle' | 'door-opening' | 'bridge-active' | 'finished'>('idle');
+  // 'idle': 닫힌 대문 + 입장 버튼 대기
+  // 'door-opening': 문 좌우 3D 열림 시작 (문 뒤의 한옥 내부가 드러남)
+  // 'bridge-color-shift': 브리지 오버레이 색감이 베이지 -> 라벤더 -> 메인 퍼플로 스며듦
+  // 'finished': 종료 및 언마운트
+  const [stage, setStage] = useState<'idle' | 'door-opening' | 'bridge-color-shift' | 'finished'>('idle');
 
-  // 브리지 배경 색상 단계: 'beige' | 'lavender' | 'purple'
-  const [bridgeBgColor, setBridgeBgColor] = useState<string>('#F5EDE4');
-  // 문구 노출 상태
+  // 오버레이 단계: 0 (베이지/브라운 웜톤) -> 1 (라벤더) -> 2 (메인 딥 퍼플)
+  const [colorStep, setColorStep] = useState<0 | 1 | 2>(0);
+
+  // 감성 문구 표시 제어
   const [textVisible, setTextVisible] = useState<boolean>(false);
   const [textFadeOut, setTextFadeOut] = useState<boolean>(false);
-  // 전체 오버레이 페이드아웃 (메인 홈과 크로스페이드)
+
+  // 최종 메인 홈으로의 크로스페이드
   const [isFinalFadeOut, setIsFinalFadeOut] = useState<boolean>(false);
 
-  // 백도화 전통 대문 이미지
+  // 이미지 경로
   const doorImgSrc = '/image/baekdohwa-door-closed.webp';
-
-  // 메인 히어로 상단과 100% 동일한 백도화 딥 퍼플 색상
-  const HERO_PURPLE = '#140A23';
-  const SOFT_LAVENDER = '#7A5B89';
-  const CHAMPAGNE_BEIGE = '#F5EDE4';
+  const hanokInteriorImgSrc = '/image/back.webp';
 
   useEffect(() => {
     const checkEligibility = () => {
@@ -42,7 +40,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         hasSeen = false;
       }
 
-      // 테스트용 파라미터 (?intro=1 또는 ?door=1)
+      // 테스트용 강제 실행 파라미터 (?intro=1 또는 ?door=1)
       let forceIntro = false;
       try {
         const urlParams = new URLSearchParams(window.location.search);
@@ -57,9 +55,11 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
 
-        // 대문 이미지 사전 캐싱
-        const img = new window.Image();
-        img.src = doorImgSrc;
+        // 대문 및 한옥 내부 이미지 사전 캐싱
+        const img1 = new window.Image();
+        img1.src = doorImgSrc;
+        const img2 = new window.Image();
+        img2.src = hanokInteriorImgSrc;
       }
     };
 
@@ -71,54 +71,55 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
     };
   }, []);
 
-  // '백도화 매력학당 들어가기' 버튼 클릭 시 전체 시퀀스 진행
+  // '백도화 매력학당 들어가기' 버튼 클릭 시
   const handleEnter = () => {
     if (stage !== 'idle') return;
 
-    // 방문 기록 저장
+    // 방문 기록 저장 (새로고침 시 재노출 방지)
     try {
       localStorage.setItem('baekdohwa_intro_seen', 'true');
     } catch (e) {
       console.error('Failed to write localStorage', e);
     }
 
-    // [1단계] 문 좌우 3D 열림 시작 (0s)
+    // [1] 문 좌우 3D 열림 시작 (0s)
+    // 문 뒤에 이미 한옥 내부 이미지가 배치되어 있어 문 틈 사이로 한옥 전각이 자연스럽게 드러남
     setStage('door-opening');
 
-    // [2단계] 문이 활짝 열리는 시점 (0.75s) : 브리지 활성화 & 문구 페이드인
+    // [2] 문이 약 40% 벌어진 시점 (0.45s) : 감성 문구 페이드인 시작
     setTimeout(() => {
-      setStage('bridge-active');
       setTextVisible(true);
-    }, 750);
+    }, 450);
 
-    // [3단계] 1.05s : 배경색 베이지 -> 부드러운 라벤더로 전환 시작
+    // [3] 문이 활짝 열린 직후 (0.85s) : 브리지 오버레이가 베이지에서 라벤더로 이동 시작
     setTimeout(() => {
-      setBridgeBgColor(SOFT_LAVENDER);
-    }, 1050);
+      setStage('bridge-color-shift');
+      setColorStep(1); // 라벤더 스며들기
+    }, 850);
 
-    // [4단계] 1.85s : 배경색 라벤더 -> 메인 히어로 딥 퍼플(#140A23)로 전환
+    // [4] 1.65s : 메인 홈과 동일한 딥 퍼플로 깊어짐
     setTimeout(() => {
-      setBridgeBgColor(HERO_PURPLE);
-    }, 1850);
+      setColorStep(2); // 딥 퍼플 도달
+    }, 1650);
 
-    // [5단계] 2.75s : 문구 살짝 위로 이동하며 페이드아웃
+    // [5] 2.45s : 문구 살짝 위로 이동하며 페이드아웃
     setTimeout(() => {
       setTextFadeOut(true);
-    }, 2750);
+    }, 2450);
 
-    // [6단계] 3.15s : 동일한 퍼플 배경 위에서 전체 레이어 페이드아웃 (메인 히어로 자연 연결)
+    // [6] 2.95s : 같은 퍼플 배경 위에서 인트로 전체가 부드럽게 페이드아웃 (메인 홈 자연 연결)
     setTimeout(() => {
       setIsFinalFadeOut(true);
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 3150);
+    }, 2950);
 
-    // [7단계] 3.65s : 인트로 완전 언마운트
+    // [7] 3.45s : 인트로 완전 언마운트
     setTimeout(() => {
       setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 3650);
+    }, 3450);
   };
 
   if (!shouldShow || stage === 'finished') {
@@ -132,61 +133,106 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       role="dialog"
       aria-modal="true"
       aria-label="백도화 매력학당 인트로"
-      className={`fixed inset-0 select-none overflow-hidden transition-opacity duration-500 ease-out ${
+      className={`fixed inset-0 select-none overflow-hidden transition-opacity duration-600 ease-out ${
         isFinalFadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       style={{
-        zIndex: 999999,
+        zIndex: 999999, // 카카오톡 상담 등 모든 요소 최상위
         height: '100dvh', // 모바일 주소창 높이 완벽 대응
         width: '100vw',
       }}
     >
       {/* ============================================================ */}
-      {/* [브리지 레이어]: 베이지 -> 라벤더 -> 메인 퍼플로 부드럽게 흐르는 배경 */}
+      {/* [브리지 레이어]: z-0 (대문 바로 뒤에 항상 대기) */}
+      {/* 한옥 내부 이미지 + 베이지 -> 라벤더 -> 메인 퍼플 컬러 스며듦 */}
       {/* ============================================================ */}
-      <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
-        style={{
-          backgroundColor: bridgeBgColor,
-          transition: 'background-color 1.35s cubic-bezier(0.4, 0, 0.2, 1)',
-        }}
-      >
-        {/* 중앙 2줄 브리지 감성 문구 */}
-        <div
-          className={`text-center px-6 transition-all duration-700 ease-out ${
-            textVisible && !textFadeOut
-              ? 'opacity-100 translate-y-0'
-              : textFadeOut
-              ? 'opacity-0 -translate-y-4'
-              : 'opacity-0 translate-y-4'
-          }`}
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#120816]">
+        {/* 1. 한옥 내부 배경 이미지 (blur 3px 적용, opacity 0.52로 은은한 배경화) */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={hanokInteriorImgSrc}
+          alt="백도화 한옥 학당 전각 내부"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           style={{
-            transitionDuration: textFadeOut ? '500ms' : '800ms',
+            objectPosition: 'center center',
+            filter: 'blur(3px)',
+            transform: 'scale(1.06)', // 블러 외곽 흰 테두리 방지
+            opacity: colorStep === 2 ? 0.38 : 0.52,
+            transition: 'opacity 1.4s ease',
           }}
+        />
+
+        {/* 2. 단계별 동적 오버레이 (이미지 위로 퍼플이 점점 깊어지는 그라데이션) */}
+        {/* (A) 초기 베이지/브라운 따뜻한 오버레이 */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(42, 24, 18, 0.45) 0%, rgba(230, 210, 185, 0.38) 42%, rgba(35, 16, 20, 0.58) 100%)',
+            opacity: colorStep === 0 ? 1 : 0,
+          }}
+        />
+
+        {/* (B) 중간 라벤더-퍼플 오버레이 */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(38, 18, 48, 0.62) 0%, rgba(125, 80, 140, 0.45) 45%, rgba(25, 10, 32, 0.72) 100%)',
+            opacity: colorStep === 1 ? 1 : 0,
+          }}
+        />
+
+        {/* (C) 최종 메인 히어로 딥 퍼플 오버레이 (실제 메인 홈 상단과 100% 동일) */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(26, 15, 46, 0.88) 0%, rgba(20, 10, 35, 0.94) 50%, rgba(10, 5, 20, 0.97) 100%)',
+            opacity: colorStep === 2 ? 1 : 0,
+          }}
+        />
+
+        {/* 3. 중앙 2줄 브리지 감성 문구 */}
+        <div
+          className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 px-6 text-center"
         >
-          <p
-            className="text-[20.5px] leading-[1.7] tracking-[0.04em] font-light"
+          <div
+            className={`transition-all ease-out ${
+              textVisible && !textFadeOut
+                ? 'opacity-100 translate-y-0'
+                : textFadeOut
+                ? 'opacity-0 -translate-y-4'
+                : 'opacity-0 translate-y-4'
+            }`}
             style={{
-              fontFamily: "'Noto Serif KR', serif",
-              // 오프화이트 + 은은하고 고급스러운 미세 골드 글로우
-              color: '#FAF6F2',
-              textShadow:
-                '0 0 14px rgba(212, 178, 167, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25)',
+              transitionDuration: textFadeOut ? '500ms' : '750ms',
             }}
           >
-            당신이 몰랐던
-            <br />
-            사랑의 코드가 열립니다.
-          </p>
+            <p
+              className="text-[20.5px] md:text-[22px] leading-[1.75] tracking-[0.05em] font-light"
+              style={{
+                fontFamily: "'Noto Serif KR', serif",
+                // 오프화이트 + 은은한 미세 골드 글로우
+                color: '#FAF6F2',
+                textShadow:
+                  '0 0 14px rgba(212, 178, 167, 0.32), 0 2px 8px rgba(0, 0, 0, 0.55)',
+              }}
+            >
+              당신이 몰랐던
+              <br />
+              사랑의 코드가 열립니다.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* ============================================================ */}
-      {/* [대문 3D 레이어]: z-10 (문 뒤의 브리지 베이지 화면을 가리고 있다가 좌우로 열림) */}
+      {/* [대문 3D 레이어]: z-10 (문 뒤의 한옥 내부를 가리고 있다가 버튼 클릭 시 3D로 열림) */}
       {/* ============================================================ */}
       <div
-        className={`absolute inset-0 w-full h-full overflow-hidden z-10 pointer-events-none transition-opacity duration-400 ${
-          stage === 'bridge-active' ? 'opacity-0' : 'opacity-100'
+        className={`absolute inset-0 w-full h-full overflow-hidden z-10 pointer-events-none transition-opacity duration-350 ${
+          stage === 'bridge-color-shift' ? 'opacity-0' : 'opacity-100'
         }`}
         style={{
           perspective: '1400px',
