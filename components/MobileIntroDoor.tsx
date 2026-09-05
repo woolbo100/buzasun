@@ -11,8 +11,8 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
   const [shouldShow, setShouldShow] = useState<boolean>(false);
   // 애니메이션 진행 단계
   // 'idle': 대기(닫힌 문 + 입장 버튼)
-  // 'opening': 문 열림 + 중앙 황금빛 + 열린 문 줌인 연출 (약 1.35초)
-  // 'fadingOut': 인트로 오버레이 전체 페이드아웃 (약 0.4초)
+  // 'opening': 문 열림 + 중앙 황금빛 폭발 + 활짝 열린 문 줌인 연출 (약 1.45초)
+  // 'fadingOut': 인트로 오버레이 전체 부드러운 페이드아웃 (약 0.4초)
   // 'finished': 종료 후 완전 제거
   const [animationPhase, setAnimationPhase] = useState<'idle' | 'opening' | 'fadingOut' | 'finished'>('idle');
 
@@ -68,19 +68,19 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
     // 2. 문 열림 및 안쪽으로 빨려 들어가는 시네마틱 연출 시작
     setAnimationPhase('opening');
 
-    // 3. 약 1.3초 후 전체 화면 부드러운 페이드아웃 시작
+    // 3. 약 1.45초 후 전체 화면 부드러운 페이드아웃 시작
     const timer1 = setTimeout(() => {
       setAnimationPhase('fadingOut');
-    }, 1300);
+    }, 1450);
 
-    // 4. 약 1.7초 후 인트로 완전 종료 및 본문 스크롤 복구
+    // 4. 약 1.85초 후 인트로 완전 종료 및 본문 스크롤 복구
     const timer2 = setTimeout(() => {
       setAnimationPhase('finished');
       setShouldShow(false);
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
       if (onComplete) onComplete();
-    }, 1700);
+    }, 1850);
 
     return () => {
       clearTimeout(timer1);
@@ -125,13 +125,13 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
             alt="백도화의 닫힌 문"
             className="w-full h-full object-cover"
             style={{
-              // 손잡이와 문 중앙선이 화면 정중앙에 시각적으로 정확히 오도록 세밀 조정
+              // 손잡이와 문 중앙선이 화면 정중앙에 오도록 정밀 배치
               objectPosition: 'center 46%',
             }}
           />
         </div>
 
-        {/* (2) 열린 문 레이어 (클릭 시 확대되며 문 안쪽으로 빨려 들어가는 연출) */}
+        {/* (2) 활짝 열린 문 레이어 (클릭 시 180도 활짝 열려 안쪽 정원으로 쑥 빨려 들어가는 연출) */}
         <div
           className={`absolute inset-0 w-full h-full transition-opacity duration-600 ease-out ${
             animationPhase === 'idle'
@@ -143,7 +143,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={openDoorImg}
-            alt="백도화의 열린 문"
+            alt="백도화의 활짝 열린 문"
             className="w-full h-full object-cover"
             style={{
               objectPosition: 'center 46%',
@@ -170,7 +170,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         {/* (4) 문 안쪽에서 화면 전체로 퍼지는 따뜻한 황금빛 오버레이 (Golden Aura Bloom) */}
         <div
           className={`absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-out ${
-            animationPhase === 'opening' ? 'opacity-80' : 'opacity-0'
+            animationPhase === 'opening' ? 'opacity-85' : 'opacity-0'
           }`}
           style={{
             background:
@@ -253,14 +253,19 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         @keyframes cameraZoomIn {
           0% {
             transform: scale(1);
+            filter: brightness(0.96);
+          }
+          35% {
+            filter: brightness(1.08);
           }
           100% {
-            transform: scale(1.12);
+            transform: scale(1.15);
+            filter: brightness(1.02);
           }
         }
 
         .intro-camera-zoom {
-          animation: cameraZoomIn 1.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          animation: cameraZoomIn 1.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         @media (prefers-reduced-motion: reduce) {
