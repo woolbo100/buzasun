@@ -62,6 +62,9 @@ export default function RootLayout({
           rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
         />
+        {/* 모바일 인트로 도어 이미지 사전 로드 (Preload) */}
+        <link rel="preload" as="image" href="/image/baekdohwa-door-closed.webp" />
+        <link rel="preload" as="image" href="/image/baekdohwa-door-open.webp" />
       </head>
       <body>
         {children}

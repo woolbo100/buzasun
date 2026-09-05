@@ -15,6 +15,7 @@ import BookmarkTassel from '@/components/BookmarkTassel'
 import NorigaeElement from '@/components/NorigaeElement'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import GlobalBackground from '@/components/GlobalBackground'
+import MobileIntroDoor from '@/components/MobileIntroDoor'
 
 export default function Home() {
   useScrollAnimation()
@@ -23,6 +24,9 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen bg-[#0a0514]">
+      {/* 모바일 최초 방문자 전용 인트로 문 애니메이션 */}
+      <MobileIntroDoor />
+
       <GlobalBackground src="/image/main.png">
         <Navigation />
 
