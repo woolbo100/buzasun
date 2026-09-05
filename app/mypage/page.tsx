@@ -225,8 +225,8 @@ export default function MyPage() {
                     <div className="space-y-4">
                       {orders.map((order) => {
                         const cat = getProductCategory(order);
-                        const isPaid = order.payment_status === 'paid' || order.payment_status === 'test_paid';
-                        const isPendingBank = order.payment_status === 'pending_bank_transfer';
+                        const isPaid = order.payment_status === '결제완료' || order.payment_status === 'paid' || order.payment_status === 'test_paid';
+                        const isPendingBank = order.payment_status === '결제대기' || order.payment_status === 'pending_bank_transfer';
                         const hasDownloadFile = Boolean(order.report_file_url || order.report_file_path);
 
                         const getStatusText = () => {
@@ -242,9 +242,14 @@ export default function MyPage() {
                           }
                           // Report
                           switch (order.report_status) {
-                            case 'writing': return '마스터가 사주 리포트를 정밀 제작 중입니다. (1~2일 소요)';
+                            case '작성중':
+                            case 'writing': 
+                              return '마스터가 사주 리포트를 정밀 제작 중입니다. (1~2일 소요)';
+                            case '발송완료':
                             case 'ready':
-                            case 'sent': return '리포트가 완성되었습니다. 다운로드할 수 있습니다.';
+                            case 'sent': 
+                              return '리포트가 완성되었습니다. 다운로드할 수 있습니다.';
+                            case '접수완료':
                             case 'pending':
                             default: 
                               return isPaid ? '리포트 신청 접수 완료 (제작 대기)' : '입금/결제 대기 중';
@@ -331,7 +336,7 @@ export default function MyPage() {
                                         </button>
                                       ) : (
                                         <span className="text-[11px] text-white/40 bg-white/5 px-3 py-1.5 rounded-xl border border-white/10">
-                                          {order.report_status === 'writing' ? '제작 진행 중' : '리포트 준비 중'}
+                                          {order.report_status === '작성중' || order.report_status === 'writing' ? '제작 진행 중' : '리포트 준비 중'}
                                         </span>
                                       )}
                                     </>

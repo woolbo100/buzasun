@@ -112,11 +112,12 @@ function SuccessContent() {
           }
         }
 
-        // 2. 주문 저장 데이터 구성
-        const incomingStatus = isManual ? 'pending_bank_transfer' : (searchParams.get('payment_status') || 'paid');
+        // 2. 주문 저장 데이터 구성 (DB check 제약조건: 결제완료/결제대기/환불완료, 접수완료/작성중/발송완료)
+        const dbPaymentStatus = isManual ? '결제대기' : '결제완료';
         const isTestMode = process.env.NEXT_PUBLIC_PAYMENT_TEST_MODE === 'true';
+        const rawStatus = searchParams.get('payment_status');
         
-        if (incomingStatus === 'test_paid' && process.env.NODE_ENV !== 'development' && !isTestMode) {
+        if (rawStatus === 'test_paid' && process.env.NODE_ENV !== 'development' && !isTestMode) {
           console.error("Test payment not allowed in production without test mode enabled");
           setLoading(false);
           return;
@@ -199,8 +200,8 @@ function SuccessContent() {
           customer_email: email,
           customer_phone: phone || '',
           amount: amount,
-          payment_status: incomingStatus,
-          report_status: 'pending',
+          payment_status: dbPaymentStatus,
+          report_status: '접수완료',
           buyer_type: user ? 'member' : (searchParams.get('buyer_type') || 'guest'),
           user_id: user?.id || null,
           shipping_memo: formattedShippingMemo,
@@ -217,11 +218,9 @@ function SuccessContent() {
           payment_name: searchParams.get('payment_name') || resolvedProductName
         };
 
-        const { data, error } = await supabase
+        const { error } = await supabase
           .from('orders')
-          .insert([insertData])
-          .select()
-          .single()
+          .insert([insertData]);
 
         if (error) {
           console.error("Supabase insert error details:", error);
@@ -233,7 +232,7 @@ function SuccessContent() {
         }
         
         setOrder({
-          ...data,
+          ...insertData,
           merchant_uid: merchantUid
         })
       } catch (err) {

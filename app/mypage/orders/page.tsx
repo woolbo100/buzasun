@@ -178,8 +178,8 @@ export default function MyOrdersPage() {
             <div className="space-y-6">
               {orders.map((order) => {
                 const cat = getProductCategory(order);
-                const isPaid = order.payment_status === 'paid' || order.payment_status === 'test_paid';
-                const isPendingBank = order.payment_status === 'pending_bank_transfer';
+                const isPaid = order.payment_status === '결제완료' || order.payment_status === 'paid' || order.payment_status === 'test_paid';
+                const isPendingBank = order.payment_status === '결제대기' || order.payment_status === 'pending_bank_transfer';
                 const hasDownloadFile = Boolean(order.report_file_url || order.report_file_path);
 
                 const getStatusInfo = () => {
@@ -241,6 +241,7 @@ export default function MyOrdersPage() {
 
                   // Report
                   switch (order.report_status) {
+                    case '작성중':
                     case 'writing':
                       return { 
                         text: '마스터가 사주 리포트를 정밀 제작 중입니다. (1~2일 소요)', 
@@ -249,7 +250,9 @@ export default function MyOrdersPage() {
                         bgColor: 'bg-accent-gold/10',
                         borderColor: 'border-accent-gold/20'
                       };
+                    case '발송완료':
                     case 'ready':
+                    case 'sent':
                       return { 
                         text: '리포트가 완성되었습니다. 지금 다운로드할 수 있습니다.', 
                         icon: CheckCircle2, 
@@ -257,14 +260,7 @@ export default function MyOrdersPage() {
                         bgColor: 'bg-green-400/10',
                         borderColor: 'border-green-400/20'
                       };
-                    case 'sent':
-                      return { 
-                        text: '리포트 전달이 완료되었습니다.', 
-                        icon: CheckCircle2, 
-                        color: 'text-blue-400',
-                        bgColor: 'bg-blue-400/10',
-                        borderColor: 'border-blue-400/20'
-                      };
+                    case '접수완료':
                     case 'pending':
                     default:
                       return { 
@@ -373,7 +369,7 @@ export default function MyOrdersPage() {
                                 </button>
                               ) : (
                                 <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-2xl text-xs text-white/40 font-medium cursor-default">
-                                  {order.report_status === 'writing' ? '제작 진행 중' : '리포트 준비 중'}
+                                  {order.report_status === '작성중' || order.report_status === 'writing' ? '제작 진행 중' : '리포트 준비 중'}
                                 </div>
                               )}
                             </>
