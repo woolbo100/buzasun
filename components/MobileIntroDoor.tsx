@@ -31,7 +31,16 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         hasSeen = false;
       }
 
-      if (isMobile && !hasSeen) {
+      // 테스트용 강제 실행 파라미터 (?intro=1 또는 ?door=1)
+      let forceIntro = false;
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        forceIntro = urlParams.get('intro') === '1' || urlParams.get('door') === '1';
+      } catch (e) {
+        forceIntro = false;
+      }
+
+      if ((isMobile && !hasSeen) || forceIntro) {
         setShouldShow(true);
         // 모바일 주소창 바운스 및 본문 스크롤 잠금
         document.body.style.overflow = 'hidden';
