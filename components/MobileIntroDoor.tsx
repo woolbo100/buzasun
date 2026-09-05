@@ -8,10 +8,29 @@ interface MobileIntroDoorProps {
 
 export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
   const [shouldShow, setShouldShow] = useState<boolean>(false);
-  const [doorState, setDoorState] = useState<'idle' | 'opening' | 'finished'>('idle');
+
+  // 단계 관리:
+  // 'idle' : 닫힌 문 + 입장 버튼 대기
+  // 'door-opening' : 문 좌우로 열림
+  // 'bridge-active' : 브리지 화면 활성화 (베이지 -> 라벤더 -> 퍼플 전환 및 문구 노출)
+  // 'finished' : 완전 종료
+  const [stage, setStage] = useState<'idle' | 'door-opening' | 'bridge-active' | 'finished'>('idle');
+
+  // 브리지 배경 색상 단계: 'beige' | 'lavender' | 'purple'
+  const [bridgeBgColor, setBridgeBgColor] = useState<string>('#F5EDE4');
+  // 문구 노출 상태
+  const [textVisible, setTextVisible] = useState<boolean>(false);
+  const [textFadeOut, setTextFadeOut] = useState<boolean>(false);
+  // 전체 오버레이 페이드아웃 (메인 홈과 크로스페이드)
+  const [isFinalFadeOut, setIsFinalFadeOut] = useState<boolean>(false);
 
   // 백도화 전통 대문 이미지
   const doorImgSrc = '/image/baekdohwa-door-closed.webp';
+
+  // 메인 히어로 상단과 100% 동일한 백도화 딥 퍼플 색상
+  const HERO_PURPLE = '#140A23';
+  const SOFT_LAVENDER = '#7A5B89';
+  const CHAMPAGNE_BEIGE = '#F5EDE4';
 
   useEffect(() => {
     const checkEligibility = () => {
@@ -23,7 +42,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         hasSeen = false;
       }
 
-      // 테스트용 강제 실행 파라미터 (?intro=1 또는 ?door=1)
+      // 테스트용 파라미터 (?intro=1 또는 ?door=1)
       let forceIntro = false;
       try {
         const urlParams = new URLSearchParams(window.location.search);
@@ -52,46 +71,69 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
     };
   }, []);
 
-  // "백도화 매력학당 입장하기" 버튼 클릭 시
+  // '백도화 매력학당 들어가기' 버튼 클릭 시 전체 시퀀스 진행
   const handleEnter = () => {
-    if (doorState !== 'idle') return;
+    if (stage !== 'idle') return;
 
+    // 방문 기록 저장
     try {
       localStorage.setItem('baekdohwa_intro_seen', 'true');
     } catch (e) {
       console.error('Failed to write localStorage', e);
     }
 
-    // 1단계: 문이 좌우로 스르륵 열리기 시작
-    setDoorState('opening');
+    // [1단계] 문 좌우 3D 열림 시작 (0s)
+    setStage('door-opening');
 
-    // 2단계: 문이 완전히 젖혀진 후 (약 1.35초) 스크롤 복구
+    // [2단계] 문이 활짝 열리는 시점 (0.75s) : 브리지 활성화 & 문구 페이드인
     setTimeout(() => {
+      setStage('bridge-active');
+      setTextVisible(true);
+    }, 750);
+
+    // [3단계] 1.05s : 배경색 베이지 -> 부드러운 라벤더로 전환 시작
+    setTimeout(() => {
+      setBridgeBgColor(SOFT_LAVENDER);
+    }, 1050);
+
+    // [4단계] 1.85s : 배경색 라벤더 -> 메인 히어로 딥 퍼플(#140A23)로 전환
+    setTimeout(() => {
+      setBridgeBgColor(HERO_PURPLE);
+    }, 1850);
+
+    // [5단계] 2.75s : 문구 살짝 위로 이동하며 페이드아웃
+    setTimeout(() => {
+      setTextFadeOut(true);
+    }, 2750);
+
+    // [6단계] 3.15s : 동일한 퍼플 배경 위에서 전체 레이어 페이드아웃 (메인 히어로 자연 연결)
+    setTimeout(() => {
+      setIsFinalFadeOut(true);
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 1350);
+    }, 3150);
 
-    // 3단계: 1.75초 후 인트로 컴포넌트 완전히 언마운트
+    // [7단계] 3.65s : 인트로 완전 언마운트
     setTimeout(() => {
-      setDoorState('finished');
+      setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 1750);
+    }, 3650);
   };
 
-  if (!shouldShow || doorState === 'finished') {
+  if (!shouldShow || stage === 'finished') {
     return null;
   }
 
-  const isOpening = doorState === 'opening';
+  const isOpening = stage !== 'idle';
 
   return (
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="백도화 매력학당 인트로 대문"
-      className={`fixed inset-0 select-none overflow-hidden ${
-        isOpening ? 'pointer-events-none' : 'pointer-events-auto'
+      aria-label="백도화 매력학당 인트로"
+      className={`fixed inset-0 select-none overflow-hidden transition-opacity duration-500 ease-out ${
+        isFinalFadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       style={{
         zIndex: 999999,
@@ -100,23 +142,54 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       }}
     >
       {/* ============================================================ */}
-      {/* 1. 문 뒤편에서 스며 나오는 은은하고 자연스러운 샴페인 골드빛 (z-0: 문 뒤 배치) */}
-      {/* 문이 닫혀 있을 때는 문짝에 가려 보이지 않다가, 문이 벌어질 때 비로소 틈새로 은은하게 비침 */}
-      {/* ============================================================ */}
-      {isOpening && (
-        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-          {/* 문 틈에서 조용히 피어오르는 소프트 앰비언트 글로우 */}
-          <div className="natural-soft-glow" />
-        </div>
-      )}
-
-      {/* ============================================================ */}
-      {/* 2. 대문 3D 입체 컨테이너 (z-10: 빛보다 앞쪽에 위치하여 빛을 자연스럽게 가림) */}
+      {/* [브리지 레이어]: 베이지 -> 라벤더 -> 메인 퍼플로 부드럽게 흐르는 배경 */}
       {/* ============================================================ */}
       <div
-        className="absolute inset-0 w-full h-full overflow-hidden z-10"
+        className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
         style={{
-          perspective: '1400px', // 3D 원근감
+          backgroundColor: bridgeBgColor,
+          transition: 'background-color 1.35s cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
+      >
+        {/* 중앙 2줄 브리지 감성 문구 */}
+        <div
+          className={`text-center px-6 transition-all duration-700 ease-out ${
+            textVisible && !textFadeOut
+              ? 'opacity-100 translate-y-0'
+              : textFadeOut
+              ? 'opacity-0 -translate-y-4'
+              : 'opacity-0 translate-y-4'
+          }`}
+          style={{
+            transitionDuration: textFadeOut ? '500ms' : '800ms',
+          }}
+        >
+          <p
+            className="text-[20.5px] leading-[1.7] tracking-[0.04em] font-light"
+            style={{
+              fontFamily: "'Noto Serif KR', serif",
+              // 오프화이트 + 은은하고 고급스러운 미세 골드 글로우
+              color: '#FAF6F2',
+              textShadow:
+                '0 0 14px rgba(212, 178, 167, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25)',
+            }}
+          >
+            당신이 몰랐던
+            <br />
+            사랑의 코드가 열립니다.
+          </p>
+        </div>
+      </div>
+
+      {/* ============================================================ */}
+      {/* [대문 3D 레이어]: z-10 (문 뒤의 브리지 베이지 화면을 가리고 있다가 좌우로 열림) */}
+      {/* ============================================================ */}
+      <div
+        className={`absolute inset-0 w-full h-full overflow-hidden z-10 pointer-events-none transition-opacity duration-400 ${
+          stage === 'bridge-active' ? 'opacity-0' : 'opacity-100'
+        }`}
+        style={{
+          perspective: '1400px',
         }}
       >
         {/* 전체 대문 크기 1.18배 웅장한 스케일 */}
@@ -135,12 +208,11 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
               transform: isOpening
                 ? 'translateX(-104%) rotateY(-28deg)'
                 : 'translateX(0) rotateY(0deg)',
-              transition: 'transform 1.45s cubic-bezier(0.65, 0, 0.2, 1), opacity 0.4s ease 1.15s',
+              transition: 'transform 1.35s cubic-bezier(0.65, 0, 0.2, 1), opacity 0.35s ease 0.95s',
               opacity: isOpening ? 0 : 1,
               boxShadow: isOpening ? 'none' : 'inset -4px 0 16px rgba(0,0,0,0.5)',
             }}
           >
-            {/* 원본 닫힌 문의 왼쪽 절반 */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={doorImgSrc}
@@ -152,8 +224,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
                 objectPosition: 'center 46%',
               }}
             />
-
-            {/* 문 닫힘 시 중앙 맞물림 입체 음영 */}
+            {/* 문 중앙 맞물림 음영 */}
             <div
               className="absolute top-0 bottom-0 right-0 w-[3px] pointer-events-none"
               style={{
@@ -171,12 +242,11 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
               transform: isOpening
                 ? 'translateX(104%) rotateY(28deg)'
                 : 'translateX(0) rotateY(0deg)',
-              transition: 'transform 1.45s cubic-bezier(0.65, 0, 0.2, 1), opacity 0.4s ease 1.15s',
+              transition: 'transform 1.35s cubic-bezier(0.65, 0, 0.2, 1), opacity 0.35s ease 0.95s',
               opacity: isOpening ? 0 : 1,
               boxShadow: isOpening ? 'none' : 'inset 4px 0 16px rgba(0,0,0,0.5)',
             }}
           >
-            {/* 원본 닫힌 문의 오른쪽 절반 */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={doorImgSrc}
@@ -188,8 +258,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
                 objectPosition: 'center 46%',
               }}
             />
-
-            {/* 문 닫힘 시 중앙 맞물림 입체 음영 */}
+            {/* 문 중앙 맞물림 음영 */}
             <div
               className="absolute top-0 bottom-0 left-0 w-[3px] pointer-events-none"
               style={{
@@ -202,7 +271,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       </div>
 
       {/* ============================================================ */}
-      {/* 3. 상단 브랜드 서브 타이틀 */}
+      {/* 상단 브랜드 서브 타이틀 */}
       {/* ============================================================ */}
       <div className="absolute top-0 left-0 right-0 z-30 pt-9 px-6 text-center pointer-events-none">
         <span
@@ -216,26 +285,24 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       </div>
 
       {/* ============================================================ */}
-      {/* 4. 하단 백도화 시그니처 버건디 브랜드 버튼 (화면 하단 고정) */}
+      {/* 하단 백도화 시그니처 딥 버건디 버튼 (화면 하단 고정) */}
       {/* ============================================================ */}
       <div className="absolute bottom-9 left-0 right-0 z-30 px-6 w-full max-w-[400px] mx-auto pointer-events-auto">
         <button
           type="button"
           onClick={handleEnter}
           disabled={isOpening}
-          aria-label="백도화 매력학당 입장하기"
+          aria-label="백도화 매력학당 들어가기"
           className={`w-full py-4 px-6 rounded-[2px] transition-all duration-400 ease-out cursor-pointer active:scale-[0.98] ${
             isOpening
               ? 'opacity-0 translate-y-6 pointer-events-none'
               : 'opacity-100 translate-y-0'
           }`}
           style={{
-            // 백도화의 대표 포인트 컬러인 딥 버건디 그라데이션
+            // 백도화 시그니처 딥 버건디 그라데이션
             background:
               'linear-gradient(135deg, #4E1424 0%, #3B0F1B 50%, #280812 100%)',
-            // 은은한 샴페인 로즈골드 얇은 테두리
             border: '1px solid rgba(220, 180, 170, 0.85)',
-            // 깊은 버건디 그림자 + 은은한 골드빛 글로우
             boxShadow:
               '0 4px 20px rgba(59, 15, 27, 0.7), 0 0 16px rgba(212, 178, 167, 0.3), inset 0 0 12px rgba(212, 178, 167, 0.12)',
           }}
@@ -248,7 +315,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
                 textShadow: '0 1px 3px rgba(0,0,0,0.7)',
               }}
             >
-              백도화 매력학당 입장하기
+              백도화 매력학당 들어가기
             </span>
             {/* 샴페인 골드 화살표 */}
             <svg
@@ -268,46 +335,12 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         </button>
       </div>
 
-      {/* 스타일 및 키프레임: 은은하고 자연스럽게 스며 나오는 빛 */}
+      {/* prefers-reduced-motion 미디어 쿼리 대응 */}
       <style jsx global>{`
-        /* 문 뒤에서 문이 열리는 타이밍에 맞춰 조용히 비쳐 나오는 자연스러운 빛 */
-        .natural-soft-glow {
-          position: absolute;
-          top: 48%;
-          left: 50%;
-          width: 260px;
-          height: 180px;
-          margin-top: -90px;
-          margin-left: -130px;
-          border-radius: 50%;
-          background: radial-gradient(
-            ellipse at center,
-            rgba(255, 240, 205, 0.45) 0%,
-            rgba(225, 185, 140, 0.22) 45%,
-            rgba(180, 120, 90, 0.08) 70%,
-            transparent 90%
-          );
-          filter: blur(28px);
-          animation: gentleGlowReveal 1.5s cubic-bezier(0.25, 0.8, 0.35, 1) 0.18s forwards;
-          opacity: 0;
-        }
-
-        @keyframes gentleGlowReveal {
-          0% {
-            opacity: 0;
-            transform: scale(0.7);
-          }
-          35% {
-            opacity: 0.55; /* 과하지 않고 은은한 최대 밝기 */
-            transform: scale(1.05);
-          }
-          70% {
-            opacity: 0.25;
-            transform: scale(1.25);
-          }
-          100% {
-            opacity: 0;
-            transform: scale(1.4);
+        @media (prefers-reduced-motion: reduce) {
+          * {
+            transition-duration: 0.1s !important;
+            animation-duration: 0.1s !important;
           }
         }
       `}</style>
