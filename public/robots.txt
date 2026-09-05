@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-domain.vercel.app/sitemap.xml
+# 개인정보 및 관리자, 결제 페이지 검색 노출 차단
+Disallow: /login
+Disallow: /signup
+Disallow: /mypage
+Disallow: /admin
+Disallow: /cart
+Disallow: /checkout
+Disallow: /order-success
+
+Sitemap: https://www.baekdohwa.com/sitemap.xml

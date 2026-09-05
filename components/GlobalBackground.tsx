@@ -29,8 +29,8 @@ export default function GlobalBackground({
 }: GlobalBackgroundProps) {
   return (
     <div className="relative min-h-screen">
-      {/* 배경 레이어 시스템 (Fixed로 고정하여 스크롤 시에도 유지) */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      {/* 배경 레이어 시스템 (Fixed로 고정하여 스크롤 시에도 유지, transform-gpu로 레이어 격리) */}
+      <div className="fixed inset-0 z-0 pointer-events-none transform-gpu" style={{ transform: 'translateZ(0)' }}>
         {/* 1. 기본 이미지 레이어 (Next.js Image로 최적화) */}
         <div className="absolute inset-0 z-0">
           <img

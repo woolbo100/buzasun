@@ -1,6 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "백도화 매력학당 | 선천코드 분석 기반 연애·풍요 솔루션",
@@ -8,14 +9,14 @@ export const metadata: Metadata = {
     "당신의 타고난 매력과 부의 그릇을 깨우세요. 선천코드 분석을 통한 맞춤형 연애·풍요 솔루션을 제안합니다. 백도화의 시크릿 아카이브.",
 
   // ✅ 이 주소 기준으로 SNS 미리보기가 만들어짐
-  metadataBase: new URL("https://buzasun.vercel.app"),
+  metadataBase: new URL("https://www.baekdohwa.com"),
 
   openGraph: {
     title: "백도화 매력학당 | 선천코드 분석 기반 연애·풍요 솔루션",
     description:
       "당신의 타고난 매력과 부의 그릇을 깨우세요. 백도화의 시크릿 아카이브.",
     type: "website",
-    url: "https://buzasun.vercel.app",
+    url: "https://www.baekdohwa.com",
     images: [
       {
         // 👉 나중에 이미지 파일만 넣으면 자동 적용됨
@@ -43,6 +44,20 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        {/* Google Analytics 4 (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BW9DP0D6LR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BW9DP0D6LR');
+          `}
+        </Script>
         <link 
           rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 

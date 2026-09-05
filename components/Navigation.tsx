@@ -101,12 +101,13 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
+      className={`fixed top-0 w-full z-50 transform-gpu transition-all duration-500 ease-out ${
         scrolled
           ? 'bg-[rgba(18,0,20,0.85)] backdrop-blur-xl'
           : 'bg-[rgba(18,0,20,0.3)] backdrop-blur-sm'
       }`}
       style={{
+        transform: 'translateZ(0)',
         boxShadow: scrolled
           ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(216, 191, 163, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           : 'none',

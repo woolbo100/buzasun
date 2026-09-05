@@ -41,7 +41,8 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    /* 휠 스크롤 즉각 반응을 위해 기본 스크롤 동작 사용 (한 박자 늦는 지연 현상 방지) */
+    scroll-behavior: auto;
   }
 
   body {
@@ -257,6 +258,11 @@
     border-radius: 20px;
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    /* GPU 하드웨어 가속 레이어 분리로 스크롤 시 리페인트 부하 방지 */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   /* 더 은은하고 투명한 히어로 섹션 전용 유리 효과 */
@@ -268,6 +274,10 @@
     border-radius: 40px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.8s ease;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .gungjung-glass-hero:hover {
