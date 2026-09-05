@@ -100,16 +100,17 @@ export default function MobileIntroDoor({
       setTextVisible(true);
     }, 350);
 
-    // [3] 0.95s: 따뜻한 베이지 한옥 내부를 약 0.6초간 감상한 뒤,
-    // 같은 한옥 내부 이미지가 신비로운 퍼플 톤으로 자연스럽게 변화 시작 (0.9초 transition)
+    // [3] 0.95s: 베이지 한옥을 약 0.6초간 감상한 뒤,
+    // 정지 화면 느낌이 전혀 없도록 '한옥 안으로 조금 더 들어가는 느낌'의
+    // Ken Burns 미세 zoom-in (scale 1.0 -> 1.042) + blur (1.0px -> 3.2px) + 퍼플 농도 변화 시작!
     setTimeout(() => {
       setStage('bridge-color-shift');
       setIsPurple(true);
     }, 950);
 
-    // [4] 3.10s: 퍼플 한옥 내부 상태를 약 1.25초간 충분히 머문 뒤,
-    // 퍼플 한옥 오버레이가 1.3초(1300ms) 동안 아주 부드럽게 스르륵 페이드아웃(fade-out)!
-    // 뒤에 대기 중이던 실제 메인홈 전체가 한옥 이미지 속에서 은은하게 오버레이되어 드러남
+    // [4] 2.40s: 한옥 안으로 약 1.45초간 서서히 전진 줌인된 상태에서,
+    // 한옥 이미지가 완전히 사라지기 전 메인홈 hero가 충분히 보이도록
+    // 마지막 0.95초(950ms) 동안 메인홈과 자연스러운 crossfade 시작!
     setTimeout(() => {
       setTextFadeOut(true);
       setIsCrossfading(true);
@@ -118,14 +119,14 @@ export default function MobileIntroDoor({
       }
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 3100);
+    }, 2400);
 
-    // [5] 4.45s: 1.3초간의 페이드아웃이 완전히 끝난 뒤 인트로 컴포넌트 안전하게 정리
+    // [5] 3.45s: 크로스페이드 완료 후 인트로 컴포넌트 안전하게 정리
     setTimeout(() => {
       setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 4450);
+    }, 3450);
   };
 
   if (!shouldShow) {
@@ -147,18 +148,17 @@ export default function MobileIntroDoor({
         opacity: isCrossfading ? 0 : 1,
         pointerEvents: isCrossfading ? 'none' : 'auto',
         visibility: stage === 'finished' ? 'hidden' : 'visible',
-        // 1300ms 동안 단 한 프레임의 끊김 없이 메인홈 위에서 스르륵 페이드아웃
-        transition: 'opacity 1300ms cubic-bezier(0.4, 0, 0.2, 1)',
+        // 950ms 동안 메인홈 위에서 스르륵 부드럽게 크로스페이드
+        transition: 'opacity 950ms cubic-bezier(0.4, 0, 0.2, 1)',
         willChange: 'opacity',
       }}
     >
       {/* ============================================================ */}
       {/* [브리지 레이어]: z-0 (대문 바로 뒤에 항상 대기) */}
-      {/* 한옥 내부(back.webp) 그대로 유지 + 베이지 톤 -> 퍼플 톤 변화 */}
-      {/* 별도의 퍼플 단색 레이어 완전 제거! */}
+      {/* Ken Burns 미세 zoom-in + 블러 증가 + 퍼플 톤 변화 */}
       {/* ============================================================ */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#0a0514]">
-        {/* 1. 한옥 내부 배경 이미지 (또렷한 opacity 0.95 유지, 미세 블러 0.5px) */}
+        {/* 1. 한옥 내부 배경 이미지 (Ken Burns: scale 1.0 -> 1.042, blur 1.0px -> 3.2px) */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={hanokInteriorImgSrc}
@@ -166,8 +166,14 @@ export default function MobileIntroDoor({
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           style={{
             objectPosition: 'center center',
-            filter: 'blur(0.5px)',
+            transform: isPurple ? 'scale(1.042)' : 'scale(1.0)',
+            filter: isPurple
+              ? 'blur(3.2px) brightness(0.92)'
+              : 'blur(1.0px) brightness(1.0)',
             opacity: 0.95,
+            transition:
+              'transform 2.2s cubic-bezier(0.25, 1, 0.5, 1), filter 2.0s ease-out',
+            willChange: 'transform, filter',
           }}
         />
 
@@ -181,12 +187,12 @@ export default function MobileIntroDoor({
           }}
         />
 
-        {/* 2. (B) 신비로운 퍼플 톤 오버레이 (같은 한옥 내부 이미지가 매혹적인 보랏빛 한옥으로 물듦) */}
+        {/* 2. (B) 신비로운 퍼플 톤 오버레이 (한옥 안으로 들어가며 보랏빛으로 은은하게 물듦) */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-900 ease-in-out"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-1100 ease-in-out"
           style={{
             background:
-              'linear-gradient(180deg, rgba(85, 20, 70, 0.48) 0%, rgba(55, 15, 60, 0.55) 45%, rgba(15, 5, 22, 0.72) 100%)',
+              'linear-gradient(180deg, rgba(88, 22, 75, 0.52) 0%, rgba(58, 16, 62, 0.58) 45%, rgba(15, 5, 24, 0.76) 100%)',
             opacity: isPurple ? 1 : 0,
           }}
         />
@@ -200,11 +206,11 @@ export default function MobileIntroDoor({
               textVisible && !textFadeOut
                 ? 'opacity-100 translate-y-0'
                 : textFadeOut
-                ? 'opacity-0 -translate-y-4'
-                : 'opacity-0 translate-y-4'
+                ? 'opacity-0 -translate-y-3'
+                : 'opacity-0 translate-y-3'
             }`}
             style={{
-              transitionDuration: textFadeOut ? '800ms' : '650ms',
+              transitionDuration: textFadeOut ? '700ms' : '650ms',
               transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             }}
           >
