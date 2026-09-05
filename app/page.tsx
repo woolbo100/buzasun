@@ -40,13 +40,13 @@ export default function Home() {
       />
 
       <GlobalBackground src="/image/main.png">
-        {/* 네비게이션 & 메인 콘텐츠 래퍼: 인트로 퍼플 브리지와 1.35초 크로스페이드 */}
+        {/* 네비게이션 & 메인 콘텐츠 래퍼: 퍼플 한옥 내부와 1.1초 크로스페이드 */}
         <div
           style={{
             opacity: isIntroActive ? (heroVisible ? 1 : 0) : 1,
             visibility: 'visible',
             transitionProperty: 'opacity',
-            transitionDuration: '1350ms',
+            transitionDuration: '1100ms',
             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             willChange: 'opacity',
           }}
