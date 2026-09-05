@@ -19,6 +19,34 @@ const BANK_TRANSFER_INFO = {
   accountHolder: "이끌림"
 }
 
+// Supabase products 테이블의 실제 UUID 매핑
+const PRODUCT_UUID_MAP: Record<string, string> = {
+  'love-secret-ebook': 'bb61bbaa-365e-41d4-adc8-132f9043270d',
+  'love-secret': 'bb61bbaa-365e-41d4-adc8-132f9043270d',
+  'reunion-secret-method': '5594bf01-0b83-443d-8a33-1235b4053d82',
+  'reunion-secret': '5594bf01-0b83-443d-8a33-1235b4053d82',
+  'abundance-secret-guide': '10898351-7c14-4912-a970-f079dd477b1a',
+  'abundance-secret': '10898351-7c14-4912-a970-f079dd477b1a',
+  'baekdohwa-report': '631a5aa2-5f39-4f13-9a40-32d1cf3570f5',
+  'premium-compatibility-report': 'ad001df4-9a69-4f29-8cd3-6378b512c531',
+  'pink-lady': '6472fa45-4657-4c71-a79f-6979ffad1dac',
+  'miss-highlander': '2921df33-c570-488c-b4e7-618fbed5930c',
+  'golden-forever-lady': '62ecefad-cb8d-43e0-983a-ac4655313cc4',
+  'wangbitna-cream': '99325a06-3afe-40bf-8165-72a303be73d0',
+  'premium-bookmark': 'a36e938d-0a6d-407c-88cf-6d3b4d3b52cc'
+}
+
+const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+function resolveProductUuid(rawId: string | null | undefined, typeHint?: string | null): string {
+  if (!rawId) return 'bb61bbaa-365e-41d4-adc8-132f9043270d';
+  if (PRODUCT_UUID_MAP[rawId]) return PRODUCT_UUID_MAP[rawId];
+  if (UUID_REGEX.test(rawId)) return rawId;
+  if (typeHint === 'physical') return '6472fa45-4657-4c71-a79f-6979ffad1dac';
+  if (typeHint === 'digital_report') return '631a5aa2-5f39-4f13-9a40-32d1cf3570f5';
+  return 'bb61bbaa-365e-41d4-adc8-132f9043270d';
+}
+
 function SuccessContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -42,25 +70,37 @@ function SuccessContent() {
       const merchantUid = searchParams.get('merchant_uid') || `order_${Date.now()}`
       const productId = searchParams.get('productId')
       const name = searchParams.get('name')
-      const email = searchParams.get('email')
+      let email = searchParams.get('email')
       const phone = searchParams.get('phone')
       const amount = parseInt(searchParams.get('amount') || '0')
       const product_name = searchParams.get('product_name')
       const product_type = searchParams.get('product_type')
       
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!email && user?.email) {
+        email = user.email;
+      }
+
       if ((!productId && !isCart) || !email) {
         setLoading(false)
         return
       }
 
       try {
-        // 1. 중복 체크
-        const { data: existingOrder } = await supabase
+        // 1. 중복 체크 (최근 1분 내 동일 결제 방지)
+        let checkQuery = supabase
           .from('orders')
-          .select('*')
-          .eq('customer_email', email)
+          .select('*');
+
+        if (user?.id) {
+          checkQuery = checkQuery.or(`customer_email.eq.${email},user_id.eq.${user.id}`);
+        } else {
+          checkQuery = checkQuery.eq('customer_email', email);
+        }
+
+        const { data: existingOrder } = await checkQuery
           .order('created_at', { ascending: false })
-          .limit(1)
+          .limit(1);
 
         if (existingOrder && existingOrder.length > 0) {
           const recent = existingOrder[0]
@@ -81,8 +121,6 @@ function SuccessContent() {
           setLoading(false);
           return;
         }
-
-        const { data: { user } } = await supabase.auth.getUser();
 
         let realProductUuid = '';
         let resolvedProductName = '';
@@ -119,12 +157,11 @@ function SuccessContent() {
             cartListText
           ].filter(Boolean).join('\n')
 
-          realProductUuid = cart.length > 0 ? (cart[0].id === 'pink-lady' ? '6472fa45-4657-4c71-a79f-6979ffad1dac' : cart[0].id) : 'da936fa5-4657-4c71-a79f-6979ffad1dac'
+          const firstItemId = cart.length > 0 ? cart[0].id : null;
+          realProductUuid = resolveProductUuid(firstItemId, hasPhysical ? 'physical' : 'digital_ebook');
           resolvedProductName = product_name || (cart.length === 1 ? cart[0].name : `${cart[0].name} 외 ${cart.length - 1}건`)
         } else {
-          realProductUuid = productId === 'pink-lady' 
-            ? '6472fa45-4657-4c71-a79f-6979ffad1dac' 
-            : productId || '';
+          realProductUuid = resolveProductUuid(productId, product_type);
           resolvedProductName = product_name || '백도화 상품';
 
           if (product_type === 'physical' || productId === 'pink-lady' || productId === 'premium-bookmark') {
@@ -158,13 +195,13 @@ function SuccessContent() {
         const insertData = {
           product_id: realProductUuid,
           product_name: resolvedProductName,
-          customer_name: name || '고객',
+          customer_name: name || user?.user_metadata?.name || '고객',
           customer_email: email,
           customer_phone: phone || '',
           amount: amount,
           payment_status: incomingStatus,
           report_status: 'pending',
-          buyer_type: searchParams.get('buyer_type') || 'guest',
+          buyer_type: user ? 'member' : (searchParams.get('buyer_type') || 'guest'),
           user_id: user?.id || null,
           shipping_memo: formattedShippingMemo,
           birth_date: searchParams.get('birth_date') || null,
