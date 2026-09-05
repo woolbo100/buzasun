@@ -25,11 +25,17 @@ export default function MobileIntroDoor({
   // 오버레이 톤: false (따뜻한 갈색/베이지 톤) -> true (신비로운 퍼플 톤)
   const [isPurple, setIsPurple] = useState<boolean>(false);
 
+  // 단계적 블러 및 딥 퍼플 심화 제어:
+  // 0: 선명 유지 (blur 0.5px, 퍼플 오버레이 0) - 약 0.7초간 유지
+  // 1: blur 증가 (4.5px) + 메인홈 동일 퍼플 오버레이 증가 (0.85) - 약 1.2초간 진행
+  // 2: 마지막 딥 퍼플 농도 심화 (0.98) - 약 0.35초간 진행 후 hero 크로스페이드
+  const [blurStep, setBlurStep] = useState<0 | 1 | 2>(0);
+
   // 감성 문구 표시 제어
   const [textVisible, setTextVisible] = useState<boolean>(false);
   const [textFadeOut, setTextFadeOut] = useState<boolean>(false);
 
-  // 메인홈 Hero와의 1.1초(1100ms) 부드러운 크로스페이드 (브리지 1 -> 0)
+  // 메인홈 Hero와의 0.9초(900ms) 부드러운 크로스페이드 (브리지 1 -> 0)
   const [isCrossfading, setIsCrossfading] = useState<boolean>(false);
 
   // 이미지 경로
@@ -100,33 +106,45 @@ export default function MobileIntroDoor({
       setTextVisible(true);
     }, 350);
 
-    // [3] 0.95s: 베이지 한옥을 약 0.6초간 감상한 뒤,
-    // 정지 화면 느낌이 전혀 없도록 '한옥 안으로 조금 더 들어가는 느낌'의
-    // Ken Burns 미세 zoom-in (scale 1.0 -> 1.042) + blur (1.0px -> 3.2px) + 퍼플 농도 변화 시작!
+    // [3] 1.00s: 따뜻한 베이지 한옥을 약 0.65초간 감상한 뒤 퍼플 톤으로 자연스럽게 전환
     setTimeout(() => {
       setStage('bridge-color-shift');
       setIsPurple(true);
-    }, 950);
+    }, 1000);
 
-    // [4] 2.40s: 한옥 안으로 약 1.45초간 서서히 전진 줌인된 상태에서,
-    // 한옥 이미지가 완전히 사라지기 전 메인홈 hero가 충분히 보이도록
-    // 마지막 0.95초(950ms) 동안 메인홈과 자연스러운 crossfade 시작!
+    // [4] 1.70s ~ 2.40s: [세부동작 1] 퍼플 한옥 내부를 약 0.7초간 '선명하게(blur 0.5px)' 유지!
+    // 디테일이 충분히 보이며 정취를 느낌
+
+    // [5] 2.40s: [세부동작 2, 3, 4] 약 1.2초 동안 blur(0.5px -> 4.5px) 증가 시작!
+    // 동시에 실제 메인홈과 동일한 딥 퍼플 overlay opacity(0 -> 0.85) 서서히 증가!
     setTimeout(() => {
+      setBlurStep(1);
+    }, 2400);
+
+    // [6] 3.60s: [세부동작 5, 6] 마지막 약 0.35초 동안 퍼플 농도를 0.98까지 극대화!
+    // 한옥 내부 디테일이 거의 보이지 않고, 화면이 실제 메인홈 배경과 100% 동일한 딥 퍼플로 안착
+    setTimeout(() => {
+      setBlurStep(2);
       setTextFadeOut(true);
+    }, 3600);
+
+    // [7] 3.95s: [세부동작 7, 8] 퍼플이 충분히 진해진 상태에서 메인홈 hero 콘텐츠 fade-in(900ms)과
+    // 한옥 내부 이미지 fade-out(900ms)을 완벽하게 겹쳐(crossfade) 실행!
+    setTimeout(() => {
       setIsCrossfading(true);
       if (onCrossfadeStart) {
         onCrossfadeStart();
       }
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 2400);
+    }, 3950);
 
-    // [5] 3.45s: 크로스페이드 완료 후 인트로 컴포넌트 안전하게 정리
+    // [8] 4.90s: 크로스페이드 완료 후 인트로 컴포넌트 안전하게 정리
     setTimeout(() => {
       setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 3450);
+    }, 4900);
   };
 
   if (!shouldShow) {
@@ -148,17 +166,17 @@ export default function MobileIntroDoor({
         opacity: isCrossfading ? 0 : 1,
         pointerEvents: isCrossfading ? 'none' : 'auto',
         visibility: stage === 'finished' ? 'hidden' : 'visible',
-        // 950ms 동안 메인홈 위에서 스르륵 부드럽게 크로스페이드
-        transition: 'opacity 950ms cubic-bezier(0.4, 0, 0.2, 1)',
+        // 900ms 동안 메인홈 위에서 스르륵 부드럽게 크로스페이드
+        transition: 'opacity 900ms cubic-bezier(0.4, 0, 0.2, 1)',
         willChange: 'opacity',
       }}
     >
       {/* ============================================================ */}
       {/* [브리지 레이어]: z-0 (대문 바로 뒤에 항상 대기) */}
-      {/* Ken Burns 미세 zoom-in + 블러 증가 + 퍼플 톤 변화 */}
+      {/* 선명한 한옥 -> 1.2s blur(4.5px) + 메인홈 동일 퍼플 오버레이(0->0.85) -> 0.35s 딥퍼플 심화(0.98) */}
       {/* ============================================================ */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#0a0514]">
-        {/* 1. 한옥 내부 배경 이미지 (Ken Burns: scale 1.0 -> 1.042, blur 1.0px -> 3.2px) */}
+        {/* 1. 한옥 내부 배경 이미지 (선명 유지 0.7s -> blur 4.5px 증가 1.2s) */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={hanokInteriorImgSrc}
@@ -166,20 +184,18 @@ export default function MobileIntroDoor({
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           style={{
             objectPosition: 'center center',
-            transform: isPurple ? 'scale(1.042)' : 'scale(1.0)',
-            filter: isPurple
-              ? 'blur(3.2px) brightness(0.92)'
-              : 'blur(1.0px) brightness(1.0)',
+            transform: isPurple ? 'scale(1.035)' : 'scale(1.0)',
+            filter: blurStep === 0 ? 'blur(0.5px)' : 'blur(4.5px)',
             opacity: 0.95,
             transition:
-              'transform 2.2s cubic-bezier(0.25, 1, 0.5, 1), filter 2.0s ease-out',
-            willChange: 'transform, filter',
+              'filter 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 2.4s ease-out',
+            willChange: 'filter, transform',
           }}
         />
 
         {/* 2. (A) 따뜻한 갈색/베이지 톤 오버레이 (문 열린 직후 한옥의 따뜻한 정취) */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-900 ease-in-out"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-800 ease-in-out"
           style={{
             background:
               'linear-gradient(180deg, rgba(215, 175, 135, 0.26) 0%, rgba(180, 135, 95, 0.18) 45%, rgba(20, 8, 12, 0.4) 100%)',
@@ -187,15 +203,48 @@ export default function MobileIntroDoor({
           }}
         />
 
-        {/* 2. (B) 신비로운 퍼플 톤 오버레이 (한옥 안으로 들어가며 보랏빛으로 은은하게 물듦) */}
+        {/* 2. (B) 초기 은은한 퍼플 틴트 (선명한 퍼플 한옥 0.7초 감상용) */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-1100 ease-in-out"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-800 ease-in-out"
           style={{
             background:
-              'linear-gradient(180deg, rgba(88, 22, 75, 0.52) 0%, rgba(58, 16, 62, 0.58) 45%, rgba(15, 5, 24, 0.76) 100%)',
-            opacity: isPurple ? 1 : 0,
+              'linear-gradient(180deg, rgba(88, 22, 75, 0.45) 0%, rgba(58, 16, 62, 0.48) 45%, rgba(15, 5, 24, 0.65) 100%)',
+            opacity: isPurple && blurStep === 0 ? 1 : 0,
           }}
         />
+
+        {/* 2. (C) [핵심] 실제 메인홈 hero와 100% 동일한 퍼플 배경 오버레이 */}
+        {/* blur 증가와 동시에 0 -> 0.85 -> 0.98로 자연스럽게 스며들어 색상 튐 0% 달성 */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            opacity: blurStep === 0 ? 0 : blurStep === 1 ? 0.85 : 0.98,
+            transition:
+              blurStep === 2
+                ? 'opacity 350ms cubic-bezier(0.4, 0, 0.2, 1)'
+                : 'opacity 1200ms cubic-bezier(0.4, 0, 0.2, 1)',
+            willChange: 'opacity',
+          }}
+        >
+          {/* 1) 실제 메인홈과 동일한 main.png (opacity 0.5) */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/image/main.png"
+            alt=""
+            className="w-full h-full object-cover opacity-50"
+            style={{ objectPosition: 'center' }}
+          />
+          {/* 2) 실제 메인홈과 동일한 var(--bg-purple-overlay) */}
+          <div
+            className="absolute inset-0"
+            style={{ background: 'var(--bg-purple-overlay)' }}
+          />
+          {/* 3) 실제 메인홈과 동일한 var(--bg-vignette) */}
+          <div
+            className="absolute inset-0"
+            style={{ background: 'var(--bg-vignette)' }}
+          />
+        </div>
 
         {/* 3. 중앙 2줄 브리지 감성 문구 */}
         <div
