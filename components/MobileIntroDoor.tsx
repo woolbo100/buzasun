@@ -203,13 +203,13 @@ export default function MobileIntroDoor({
           }}
         />
 
-        {/* 2. (B) 초기 은은한 퍼플 틴트 (선명한 퍼플 한옥 0.7초 감상용) */}
+        {/* 2. (B) 초기 은은한 퍼플 틴트 (isPurple 이후 항상 유지되어 번쩍임/밝아짐 원천 차단) */}
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-800 ease-in-out"
           style={{
             background:
               'linear-gradient(180deg, rgba(88, 22, 75, 0.45) 0%, rgba(58, 16, 62, 0.48) 45%, rgba(15, 5, 24, 0.65) 100%)',
-            opacity: isPurple && blurStep === 0 ? 1 : 0,
+            opacity: isPurple ? 1 : 0,
           }}
         />
 
