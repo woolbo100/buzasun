@@ -16,15 +16,15 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
   // 'finished': 종료 및 언마운트
   const [stage, setStage] = useState<'idle' | 'door-opening' | 'bridge-color-shift' | 'finished'>('idle');
 
-  // 오버레이 단계: 0 (골든 베이지 웜톤 틴트) -> 1 (라벤더 틴트) -> 2 (메인 딥 퍼플 심화)
+  // 오버레이 단계: 0 (골든 베이지 웜톤 틴트) -> 1 (라벤더 틴트) -> 2 (메인 딥 퍼플 시스템)
   const [colorStep, setColorStep] = useState<0 | 1 | 2>(0);
 
   // 감성 문구 표시 제어
   const [textVisible, setTextVisible] = useState<boolean>(false);
   const [textFadeOut, setTextFadeOut] = useState<boolean>(false);
 
-  // 최종 메인 홈으로의 크로스페이드
-  const [isFinalFadeOut, setIsFinalFadeOut] = useState<boolean>(false);
+  // 메인홈과의 0.8~1.0초 부드러운 크로스페이드 (브리지 1 -> 0)
+  const [isCrossfading, setIsCrossfading] = useState<boolean>(false);
 
   // 이미지 경로
   const doorImgSrc = '/image/baekdohwa-door-closed.webp';
@@ -71,7 +71,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
     };
   }, []);
 
-  // '백도화 매력학당 들어가기' 버튼 클릭 시 (템포 25~30% 단축된 2.0~2.1초 시퀀스)
+  // '백도화 매력학당 들어가기' 버튼 클릭 시
   const handleEnter = () => {
     if (stage !== 'idle') return;
 
@@ -89,32 +89,34 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       setTextVisible(true);
     }, 350);
 
-    // [3] 0.70s: 문이 거의 활짝 열리는 시점, 라벤더 기운이 스며들기 시작
+    // [3] 0.65s: 문이 거의 활짝 열리는 시점, 라벤더 기운이 스며들기 시작
     setTimeout(() => {
       setStage('bridge-color-shift');
       setColorStep(1); // 라벤더 틴트
-    }, 700);
+    }, 650);
 
-    // [4] 1.15s: 메인 홈의 딥 퍼플로 깊어지기 시작
+    // [4] 1.05s: 메인 홈과 100% 동일한 딥 퍼플 시스템으로 깊어지기 시작
     setTimeout(() => {
-      setColorStep(2); // 딥 퍼플 도달 시작
-    }, 1150);
+      setColorStep(2); // 딥 퍼플 전환
+    }, 1050);
 
-    // [5] 1.60s (퍼플 오버레이 약 75% 진행 시점):
-    // 문구 페이드아웃과 메인홈 히어로 콘텐츠 페이드인을 '동시에 겹쳐서' 크로스페이드 진행!
+    // [5] 1.55s (퍼플 전환이 약 55% 진행된 시점):
+    // 퍼플 안개 속에서 메인홈 hero가 서서히 겹쳐 나타나도록 크로스페이드(900ms) 시작!
+    // 문구 페이드아웃과 메인홈 등장이 자연스럽게 겹치며 하나의 호흡으로 연결
     setTimeout(() => {
       setTextFadeOut(true);
-      setIsFinalFadeOut(true); // 마지막 0.5초간 메인홈과 크로스페이드
+      setIsCrossfading(true); // 브리지 오버레이 1 -> 0 (900ms 동안 서서히 투명화)
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 1600);
+    }, 1550);
 
-    // [6] 2.10s: 메인홈 100% 완전 인지 & 인트로 완전 언마운트
+    // [6] 2.50s (크로스페이드 0.95초 완료 후):
+    // 메인홈이 완벽히 인지된 상태에서 인트로 컴포넌트 안전하게 언마운트
     setTimeout(() => {
       setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 2100);
+    }, 2500);
   };
 
   if (!shouldShow || stage === 'finished') {
@@ -128,21 +130,24 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       role="dialog"
       aria-modal="true"
       aria-label="백도화 매력학당 인트로"
-      className={`fixed inset-0 select-none overflow-hidden transition-opacity duration-500 ease-out ${
-        isFinalFadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
+      className={`fixed inset-0 select-none overflow-hidden transition-opacity ease-out ${
+        isCrossfading ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       style={{
         zIndex: 999999, // 카카오톡 상담 등 모든 요소 최상위
         height: '100dvh', // 모바일 주소창 높이 완벽 대응
         width: '100vw',
+        // 900ms 동안 부드러운 cubic-bezier로 메인홈과 크로스페이드
+        transitionDuration: '900ms',
+        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
       }}
     >
       {/* ============================================================ */}
       {/* [브리지 레이어]: z-0 (대문 바로 뒤에 항상 대기) */}
-      {/* 한옥 내부(back.webp)의 보름달, 등불, 벚꽃 창살이 또렷이 살아있음! */}
+      {/* 한옥 내부(back.webp) -> 라벤더 -> 메인홈과 100% 동일한 퍼플 배경 시스템 */}
       {/* ============================================================ */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#0d0410]">
-        {/* 1. 한옥 내부 배경 이미지 (또렷한 opacity 0.92, 미세 블러 0.5px로 이미지 생생함 극대화) */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#0a0514]">
+        {/* 1. 한옥 내부 배경 이미지 (또렷한 opacity 0.92, 미세 블러 0.5px) */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={hanokInteriorImgSrc}
@@ -151,12 +156,12 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
           style={{
             objectPosition: 'center center',
             filter: 'blur(0.5px)',
-            opacity: colorStep === 2 ? 0.45 : 0.92,
-            transition: 'opacity 0.8s ease',
+            opacity: colorStep === 2 ? 0.25 : 0.92,
+            transition: 'opacity 0.85s ease-in-out',
           }}
         />
 
-        {/* 2. 단계별 동적 오버레이 (이미지를 가리지 않고 색조 틴트만 스며들게 함) */}
+        {/* 2. 단계별 동적 오버레이 */}
         {/* (A) 초기 골든 베이지 웜톤 틴트 (한옥의 달빛과 등불이 완전히 선명하게 비침) */}
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-700 ease-in-out"
@@ -177,17 +182,35 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
           }}
         />
 
-        {/* (C) 최종 메인 히어로 딥 퍼플 오버레이 (메인 홈과 100% 동일한 톤으로 전환) */}
+        {/* (C) 최종 메인 히어로 퍼플 배경 시스템 (실제 GlobalBackground와 100% 동일한 레이어 구성!) */}
+        {/* 이 레이어가 활성화된 상태에서 크로스페이드되므로 색상 차이/튀는 현상이 0.00%로 완벽 일치! */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-700 ease-in-out"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-800 ease-in-out"
           style={{
-            background:
-              'linear-gradient(to bottom, rgba(26, 15, 46, 0.88) 0%, rgba(20, 10, 35, 0.93) 50%, rgba(10, 5, 20, 0.97) 100%)',
             opacity: colorStep === 2 ? 1 : 0,
           }}
-        />
+        >
+          {/* 1) 실제 메인홈과 동일한 main.png (opacity 0.5) */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/image/main.png"
+            alt=""
+            className="w-full h-full object-cover opacity-50"
+            style={{ objectPosition: 'center' }}
+          />
+          {/* 2) 실제 메인홈과 동일한 var(--bg-purple-overlay) */}
+          <div
+            className="absolute inset-0"
+            style={{ background: 'var(--bg-purple-overlay)' }}
+          />
+          {/* 3) 실제 메인홈과 동일한 var(--bg-vignette) */}
+          <div
+            className="absolute inset-0"
+            style={{ background: 'var(--bg-vignette)' }}
+          />
+        </div>
 
-        {/* 3. 중앙 2줄 브리지 감성 문구 (가독성을 위한 미세 섀도우) */}
+        {/* 3. 중앙 2줄 브리지 감성 문구 */}
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 px-6 text-center"
         >
@@ -200,14 +223,15 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
                 : 'opacity-0 translate-y-4'
             }`}
             style={{
-              transitionDuration: textFadeOut ? '400ms' : '600ms',
+              transitionDuration: textFadeOut ? '500ms' : '650ms',
+              transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             }}
           >
             <p
               className="text-[21px] md:text-[22px] leading-[1.75] tracking-[0.05em] font-light"
               style={{
                 fontFamily: "'Noto Serif KR', serif",
-                // 오프화이트 + 선명한 가독성 확보 섀도우
+                // 오프화이트 + 은은한 미세 골드 글로우
                 color: '#FAF6F2',
                 textShadow:
                   '0 0 16px rgba(212, 178, 167, 0.4), 0 2px 10px rgba(0, 0, 0, 0.85), 0 0 4px rgba(0, 0, 0, 0.9)',
