@@ -11,12 +11,12 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
 
   // 단계 관리:
   // 'idle': 닫힌 대문 + 입장 버튼 대기
-  // 'door-opening': 문 좌우 3D 열림 시작 (문 뒤의 한옥 내부가 드러남)
+  // 'door-opening': 문 좌우 3D 열림 시작 (문 뒤의 한옥 내부가 선명하게 드러남)
   // 'bridge-color-shift': 브리지 오버레이 색감이 베이지 -> 라벤더 -> 메인 퍼플로 스며듦
   // 'finished': 종료 및 언마운트
   const [stage, setStage] = useState<'idle' | 'door-opening' | 'bridge-color-shift' | 'finished'>('idle');
 
-  // 오버레이 단계: 0 (베이지/브라운 웜톤) -> 1 (라벤더) -> 2 (메인 딥 퍼플)
+  // 오버레이 단계: 0 (골든 베이지 웜톤 틴트) -> 1 (라벤더 틴트) -> 2 (메인 딥 퍼플 심화)
   const [colorStep, setColorStep] = useState<0 | 1 | 2>(0);
 
   // 감성 문구 표시 제어
@@ -40,7 +40,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         hasSeen = false;
       }
 
-      // 테스트용 강제 실행 파라미터 (?intro=1 또는 ?door=1)
+      // 테스트용 파라미터 (?intro=1 또는 ?door=1)
       let forceIntro = false;
       try {
         const urlParams = new URLSearchParams(window.location.search);
@@ -75,7 +75,6 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
   const handleEnter = () => {
     if (stage !== 'idle') return;
 
-    // 방문 기록 저장 (새로고침 시 재노출 방지)
     try {
       localStorage.setItem('baekdohwa_intro_seen', 'true');
     } catch (e) {
@@ -83,43 +82,43 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
     }
 
     // [1] 문 좌우 3D 열림 시작 (0s)
-    // 문 뒤에 이미 한옥 내부 이미지가 배치되어 있어 문 틈 사이로 한옥 전각이 자연스럽게 드러남
+    // 문 뒤에 한옥 내부(back.webp)가 또렷하게 배치되어 문이 열리며 시원하게 눈앞에 나타남
     setStage('door-opening');
 
-    // [2] 문이 약 40% 벌어진 시점 (0.45s) : 감성 문구 페이드인 시작
+    // [2] 문이 약 40% 벌어진 시점 (0.45s) : 감성 문구 페이드인
     setTimeout(() => {
       setTextVisible(true);
     }, 450);
 
-    // [3] 문이 활짝 열린 직후 (0.85s) : 브리지 오버레이가 베이지에서 라벤더로 이동 시작
+    // [3] 문이 활짝 열린 직후 (0.9s) : 한옥 공간 위로 라벤더 기운이 스며들기 시작
     setTimeout(() => {
       setStage('bridge-color-shift');
-      setColorStep(1); // 라벤더 스며들기
-    }, 850);
+      setColorStep(1); // 라벤더 틴트
+    }, 900);
 
-    // [4] 1.65s : 메인 홈과 동일한 딥 퍼플로 깊어짐
+    // [4] 1.75s : 메인 홈과 동일한 딥 퍼플로 깊어짐
     setTimeout(() => {
       setColorStep(2); // 딥 퍼플 도달
-    }, 1650);
+    }, 1750);
 
-    // [5] 2.45s : 문구 살짝 위로 이동하며 페이드아웃
+    // [5] 2.55s : 문구 살짝 위로 이동하며 페이드아웃
     setTimeout(() => {
       setTextFadeOut(true);
-    }, 2450);
+    }, 2550);
 
-    // [6] 2.95s : 같은 퍼플 배경 위에서 인트로 전체가 부드럽게 페이드아웃 (메인 홈 자연 연결)
+    // [6] 3.05s : 같은 퍼플 톤 위에서 인트로 전체가 부드럽게 페이드아웃 (메인 홈 자연 연결)
     setTimeout(() => {
       setIsFinalFadeOut(true);
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 2950);
+    }, 3050);
 
-    // [7] 3.45s : 인트로 완전 언마운트
+    // [7] 3.55s : 인트로 완전 언마운트
     setTimeout(() => {
       setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 3450);
+    }, 3550);
   };
 
   if (!shouldShow || stage === 'finished') {
@@ -137,17 +136,17 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         isFinalFadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       style={{
-        zIndex: 999999, // 카카오톡 상담 등 모든 요소 최상위
+        zIndex: 999999,
         height: '100dvh', // 모바일 주소창 높이 완벽 대응
         width: '100vw',
       }}
     >
       {/* ============================================================ */}
       {/* [브리지 레이어]: z-0 (대문 바로 뒤에 항상 대기) */}
-      {/* 한옥 내부 이미지 + 베이지 -> 라벤더 -> 메인 퍼플 컬러 스며듦 */}
+      {/* 한옥 내부(back.webp)의 보름달, 등불, 벚꽃 창살이 또렷이 살아있음! */}
       {/* ============================================================ */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#120816]">
-        {/* 1. 한옥 내부 배경 이미지 (blur 3px 적용, opacity 0.52로 은은한 배경화) */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 bg-[#0d0410]">
+        {/* 1. 한옥 내부 배경 이미지 (또렷한 opacity 0.92, 미세 블러 0.5px로 이미지 생생함 극대화) */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={hanokInteriorImgSrc}
@@ -155,45 +154,44 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           style={{
             objectPosition: 'center center',
-            filter: 'blur(3px)',
-            transform: 'scale(1.06)', // 블러 외곽 흰 테두리 방지
-            opacity: colorStep === 2 ? 0.38 : 0.52,
-            transition: 'opacity 1.4s ease',
+            filter: 'blur(0.5px)',
+            opacity: colorStep === 2 ? 0.45 : 0.92,
+            transition: 'opacity 1.2s ease',
           }}
         />
 
-        {/* 2. 단계별 동적 오버레이 (이미지 위로 퍼플이 점점 깊어지는 그라데이션) */}
-        {/* (A) 초기 베이지/브라운 따뜻한 오버레이 */}
+        {/* 2. 단계별 동적 오버레이 (이미지를 가리지 않고 색조 틴트만 스며들게 함) */}
+        {/* (A) 초기 골든 베이지 웜톤 틴트 (한옥의 달빛과 등불이 완전히 선명하게 비침) */}
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
           style={{
             background:
-              'linear-gradient(180deg, rgba(42, 24, 18, 0.45) 0%, rgba(230, 210, 185, 0.38) 42%, rgba(35, 16, 20, 0.58) 100%)',
+              'linear-gradient(180deg, rgba(230, 195, 155, 0.22) 0%, rgba(190, 145, 105, 0.15) 45%, rgba(20, 8, 12, 0.4) 100%)',
             opacity: colorStep === 0 ? 1 : 0,
           }}
         />
 
-        {/* (B) 중간 라벤더-퍼플 오버레이 */}
+        {/* (B) 중간 라벤더-퍼플 틴트 (보라빛 기운이 한옥 내부에 은은하게 번짐) */}
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
           style={{
             background:
-              'linear-gradient(180deg, rgba(38, 18, 48, 0.62) 0%, rgba(125, 80, 140, 0.45) 45%, rgba(25, 10, 32, 0.72) 100%)',
+              'linear-gradient(180deg, rgba(125, 75, 150, 0.38) 0%, rgba(85, 45, 110, 0.28) 45%, rgba(15, 6, 22, 0.55) 100%)',
             opacity: colorStep === 1 ? 1 : 0,
           }}
         />
 
-        {/* (C) 최종 메인 히어로 딥 퍼플 오버레이 (실제 메인 홈 상단과 100% 동일) */}
+        {/* (C) 최종 메인 히어로 딥 퍼플 오버레이 (메인 홈과 100% 동일한 톤으로 전환) */}
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(26, 15, 46, 0.88) 0%, rgba(20, 10, 35, 0.94) 50%, rgba(10, 5, 20, 0.97) 100%)',
+              'linear-gradient(to bottom, rgba(26, 15, 46, 0.88) 0%, rgba(20, 10, 35, 0.93) 50%, rgba(10, 5, 20, 0.97) 100%)',
             opacity: colorStep === 2 ? 1 : 0,
           }}
         />
 
-        {/* 3. 중앙 2줄 브리지 감성 문구 */}
+        {/* 3. 중앙 2줄 브리지 감성 문구 (가독성을 위한 미세 섀도우) */}
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 px-6 text-center"
         >
@@ -210,13 +208,13 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
             }}
           >
             <p
-              className="text-[20.5px] md:text-[22px] leading-[1.75] tracking-[0.05em] font-light"
+              className="text-[21px] md:text-[22px] leading-[1.75] tracking-[0.05em] font-light"
               style={{
                 fontFamily: "'Noto Serif KR', serif",
-                // 오프화이트 + 은은한 미세 골드 글로우
+                // 오프화이트 + 선명한 가독성 확보 섀도우
                 color: '#FAF6F2',
                 textShadow:
-                  '0 0 14px rgba(212, 178, 167, 0.32), 0 2px 8px rgba(0, 0, 0, 0.55)',
+                  '0 0 16px rgba(212, 178, 167, 0.4), 0 2px 10px rgba(0, 0, 0, 0.85), 0 0 4px rgba(0, 0, 0, 0.9)',
               }}
             >
               당신이 몰랐던
