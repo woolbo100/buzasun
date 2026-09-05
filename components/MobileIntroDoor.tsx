@@ -3,10 +3,16 @@
 import React, { useState, useEffect } from 'react';
 
 interface MobileIntroDoorProps {
+  onIntroActive?: (active: boolean) => void;
+  onCrossfadeStart?: () => void;
   onComplete?: () => void;
 }
 
-export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
+export default function MobileIntroDoor({
+  onIntroActive,
+  onCrossfadeStart,
+  onComplete,
+}: MobileIntroDoorProps) {
   const [shouldShow, setShouldShow] = useState<boolean>(false);
 
   // 단계 관리:
@@ -23,7 +29,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
   const [textVisible, setTextVisible] = useState<boolean>(false);
   const [textFadeOut, setTextFadeOut] = useState<boolean>(false);
 
-  // 메인홈과의 0.8~1.0초 부드러운 크로스페이드 (브리지 1 -> 0)
+  // 메인홈 Hero와의 1.35초(1350ms) 부드러운 크로스페이드 (브리지 1 -> 0)
   const [isCrossfading, setIsCrossfading] = useState<boolean>(false);
 
   // 이미지 경로
@@ -49,8 +55,11 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         forceIntro = false;
       }
 
-      if ((isMobile && !hasSeen) || forceIntro) {
+      const active = (isMobile && !hasSeen) || forceIntro;
+
+      if (active) {
         setShouldShow(true);
+        if (onIntroActive) onIntroActive(true);
         // 인트로 진행 동안 본문 스크롤 잠금
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
@@ -60,6 +69,8 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         img1.src = doorImgSrc;
         const img2 = new window.Image();
         img2.src = hanokInteriorImgSrc;
+      } else {
+        if (onIntroActive) onIntroActive(false);
       }
     };
 
@@ -69,7 +80,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
     };
-  }, []);
+  }, [onIntroActive]);
 
   // '백도화 매력학당 들어가기' 버튼 클릭 시
   const handleEnter = () => {
@@ -81,7 +92,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       console.error('Failed to write localStorage', e);
     }
 
-    // [1] 0.0s: 문 좌우 3D 열림 시작
+    // [1] 0.0s: 문 좌우 3D 열림 시작 (1.15s 동안 좌우 180도 개방)
     setStage('door-opening');
 
     // [2] 0.35s: 문이 벌어지며 한옥 내부가 시원하게 보이고 감성 문구 페이드인
@@ -95,31 +106,36 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       setColorStep(1); // 라벤더 틴트
     }, 650);
 
-    // [4] 1.05s: 메인 홈과 100% 동일한 딥 퍼플 시스템으로 깊어지기 시작
+    // [4] 1.05s: 메인 홈과 100% 동일한 딥 퍼플 시스템으로 깊어지기 시작 (800ms 동안 전개)
     setTimeout(() => {
       setColorStep(2); // 딥 퍼플 전환
     }, 1050);
 
-    // [5] 1.55s (퍼플 전환이 약 55% 진행된 시점):
-    // 퍼플 안개 속에서 메인홈 hero가 서서히 겹쳐 나타나도록 크로스페이드(900ms) 시작!
-    // 문구 페이드아웃과 메인홈 등장이 자연스럽게 겹치며 하나의 호흡으로 연결
+    // [5] 1.37s (퍼플 오버레이가 약 40% 진행된 시점):
+    // 퍼플 브리지와 메인홈 Hero가 1.35초(1350ms) 동안 서로 교차(crossfade) 시작!
+    // - 브리지 opacity: 1 -> 0 (1350ms)
+    // - 메인홈 hero opacity: 0 -> 1 (1350ms)
+    // - 감성 문구는 살짝 위로 이동하며 페이드아웃
     setTimeout(() => {
       setTextFadeOut(true);
-      setIsCrossfading(true); // 브리지 오버레이 1 -> 0 (900ms 동안 서서히 투명화)
+      setIsCrossfading(true);
+      if (onCrossfadeStart) {
+        onCrossfadeStart();
+      }
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 1550);
+    }, 1370);
 
-    // [6] 2.50s (크로스페이드 0.95초 완료 후):
-    // 메인홈이 완벽히 인지된 상태에서 인트로 컴포넌트 안전하게 언마운트
+    // [6] 2.75s (1350ms 크로스페이드 완료 후):
+    // 메인홈이 완벽히 인지된 상태에서 인트로 컴포넌트 안전하게 종료
     setTimeout(() => {
       setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 2500);
+    }, 2750);
   };
 
-  if (!shouldShow || stage === 'finished') {
+  if (!shouldShow) {
     return null;
   }
 
@@ -130,16 +146,19 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       role="dialog"
       aria-modal="true"
       aria-label="백도화 매력학당 인트로"
-      className={`fixed inset-0 select-none overflow-hidden transition-opacity ease-out ${
+      className={`fixed inset-0 select-none overflow-hidden ${
         isCrossfading ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       style={{
-        zIndex: 999999, // 카카오톡 상담 등 모든 요소 최상위
+        zIndex: 999999, // 최상위 유지
         height: '100dvh', // 모바일 주소창 높이 완벽 대응
         width: '100vw',
-        // 900ms 동안 부드러운 cubic-bezier로 메인홈과 크로스페이드
-        transitionDuration: '900ms',
+        visibility: stage === 'finished' ? 'hidden' : 'visible',
+        // 1350ms 동안 cubic-bezier로 메인홈과 자연스러운 크로스페이드
+        transitionProperty: 'opacity',
+        transitionDuration: '1350ms',
         transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        willChange: 'opacity',
       }}
     >
       {/* ============================================================ */}
@@ -223,7 +242,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
                 : 'opacity-0 translate-y-4'
             }`}
             style={{
-              transitionDuration: textFadeOut ? '500ms' : '650ms',
+              transitionDuration: textFadeOut ? '900ms' : '650ms',
               transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             }}
           >
