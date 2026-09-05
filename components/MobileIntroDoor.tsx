@@ -71,7 +71,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
     };
   }, []);
 
-  // '백도화 매력학당 들어가기' 버튼 클릭 시
+  // '백도화 매력학당 들어가기' 버튼 클릭 시 (템포 25~30% 단축된 2.0~2.1초 시퀀스)
   const handleEnter = () => {
     if (stage !== 'idle') return;
 
@@ -81,44 +81,40 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       console.error('Failed to write localStorage', e);
     }
 
-    // [1] 문 좌우 3D 열림 시작 (0s)
-    // 문 뒤에 한옥 내부(back.webp)가 또렷하게 배치되어 문이 열리며 시원하게 눈앞에 나타남
+    // [1] 0.0s: 문 좌우 3D 열림 시작
     setStage('door-opening');
 
-    // [2] 문이 약 40% 벌어진 시점 (0.45s) : 감성 문구 페이드인
+    // [2] 0.35s: 문이 벌어지며 한옥 내부가 시원하게 보이고 감성 문구 페이드인
     setTimeout(() => {
       setTextVisible(true);
-    }, 450);
+    }, 350);
 
-    // [3] 문이 활짝 열린 직후 (0.9s) : 한옥 공간 위로 라벤더 기운이 스며들기 시작
+    // [3] 0.70s: 문이 거의 활짝 열리는 시점, 라벤더 기운이 스며들기 시작
     setTimeout(() => {
       setStage('bridge-color-shift');
       setColorStep(1); // 라벤더 틴트
-    }, 900);
+    }, 700);
 
-    // [4] 1.75s : 메인 홈과 동일한 딥 퍼플로 깊어짐
+    // [4] 1.15s: 메인 홈의 딥 퍼플로 깊어지기 시작
     setTimeout(() => {
-      setColorStep(2); // 딥 퍼플 도달
-    }, 1750);
+      setColorStep(2); // 딥 퍼플 도달 시작
+    }, 1150);
 
-    // [5] 2.55s : 문구 살짝 위로 이동하며 페이드아웃
+    // [5] 1.60s (퍼플 오버레이 약 75% 진행 시점):
+    // 문구 페이드아웃과 메인홈 히어로 콘텐츠 페이드인을 '동시에 겹쳐서' 크로스페이드 진행!
     setTimeout(() => {
       setTextFadeOut(true);
-    }, 2550);
-
-    // [6] 3.05s : 같은 퍼플 톤 위에서 인트로 전체가 부드럽게 페이드아웃 (메인 홈 자연 연결)
-    setTimeout(() => {
-      setIsFinalFadeOut(true);
+      setIsFinalFadeOut(true); // 마지막 0.5초간 메인홈과 크로스페이드
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 3050);
+    }, 1600);
 
-    // [7] 3.55s : 인트로 완전 언마운트
+    // [6] 2.10s: 메인홈 100% 완전 인지 & 인트로 완전 언마운트
     setTimeout(() => {
       setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 3550);
+    }, 2100);
   };
 
   if (!shouldShow || stage === 'finished') {
@@ -132,11 +128,11 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       role="dialog"
       aria-modal="true"
       aria-label="백도화 매력학당 인트로"
-      className={`fixed inset-0 select-none overflow-hidden transition-opacity duration-600 ease-out ${
+      className={`fixed inset-0 select-none overflow-hidden transition-opacity duration-500 ease-out ${
         isFinalFadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       style={{
-        zIndex: 999999,
+        zIndex: 999999, // 카카오톡 상담 등 모든 요소 최상위
         height: '100dvh', // 모바일 주소창 높이 완벽 대응
         width: '100vw',
       }}
@@ -156,14 +152,14 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
             objectPosition: 'center center',
             filter: 'blur(0.5px)',
             opacity: colorStep === 2 ? 0.45 : 0.92,
-            transition: 'opacity 1.2s ease',
+            transition: 'opacity 0.8s ease',
           }}
         />
 
         {/* 2. 단계별 동적 오버레이 (이미지를 가리지 않고 색조 틴트만 스며들게 함) */}
         {/* (A) 초기 골든 베이지 웜톤 틴트 (한옥의 달빛과 등불이 완전히 선명하게 비침) */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-700 ease-in-out"
           style={{
             background:
               'linear-gradient(180deg, rgba(230, 195, 155, 0.22) 0%, rgba(190, 145, 105, 0.15) 45%, rgba(20, 8, 12, 0.4) 100%)',
@@ -173,7 +169,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
 
         {/* (B) 중간 라벤더-퍼플 틴트 (보라빛 기운이 한옥 내부에 은은하게 번짐) */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-700 ease-in-out"
           style={{
             background:
               'linear-gradient(180deg, rgba(125, 75, 150, 0.38) 0%, rgba(85, 45, 110, 0.28) 45%, rgba(15, 6, 22, 0.55) 100%)',
@@ -183,7 +179,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
 
         {/* (C) 최종 메인 히어로 딥 퍼플 오버레이 (메인 홈과 100% 동일한 톤으로 전환) */}
         <div
-          className="absolute inset-0 pointer-events-none transition-opacity duration-1000 ease-in-out"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-700 ease-in-out"
           style={{
             background:
               'linear-gradient(to bottom, rgba(26, 15, 46, 0.88) 0%, rgba(20, 10, 35, 0.93) 50%, rgba(10, 5, 20, 0.97) 100%)',
@@ -204,7 +200,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
                 : 'opacity-0 translate-y-4'
             }`}
             style={{
-              transitionDuration: textFadeOut ? '500ms' : '750ms',
+              transitionDuration: textFadeOut ? '400ms' : '600ms',
             }}
           >
             <p
@@ -229,7 +225,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       {/* [대문 3D 레이어]: z-10 (문 뒤의 한옥 내부를 가리고 있다가 버튼 클릭 시 3D로 열림) */}
       {/* ============================================================ */}
       <div
-        className={`absolute inset-0 w-full h-full overflow-hidden z-10 pointer-events-none transition-opacity duration-350 ${
+        className={`absolute inset-0 w-full h-full overflow-hidden z-10 pointer-events-none transition-opacity duration-300 ${
           stage === 'bridge-color-shift' ? 'opacity-0' : 'opacity-100'
         }`}
         style={{
@@ -252,7 +248,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
               transform: isOpening
                 ? 'translateX(-104%) rotateY(-28deg)'
                 : 'translateX(0) rotateY(0deg)',
-              transition: 'transform 1.35s cubic-bezier(0.65, 0, 0.2, 1), opacity 0.35s ease 0.95s',
+              transition: 'transform 1.15s cubic-bezier(0.65, 0, 0.2, 1), opacity 0.3s ease 0.8s',
               opacity: isOpening ? 0 : 1,
               boxShadow: isOpening ? 'none' : 'inset -4px 0 16px rgba(0,0,0,0.5)',
             }}
@@ -286,7 +282,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
               transform: isOpening
                 ? 'translateX(104%) rotateY(28deg)'
                 : 'translateX(0) rotateY(0deg)',
-              transition: 'transform 1.35s cubic-bezier(0.65, 0, 0.2, 1), opacity 0.35s ease 0.95s',
+              transition: 'transform 1.15s cubic-bezier(0.65, 0, 0.2, 1), opacity 0.3s ease 0.8s',
               opacity: isOpening ? 0 : 1,
               boxShadow: isOpening ? 'none' : 'inset 4px 0 16px rgba(0,0,0,0.5)',
             }}
@@ -319,7 +315,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       {/* ============================================================ */}
       <div className="absolute top-0 left-0 right-0 z-30 pt-9 px-6 text-center pointer-events-none">
         <span
-          className={`inline-block text-[11px] tracking-[0.28em] font-light text-[#EBD5CD]/85 uppercase transition-all duration-400 ${
+          className={`inline-block text-[11px] tracking-[0.28em] font-light text-[#EBD5CD]/85 uppercase transition-all duration-300 ${
             isOpening ? 'opacity-0 -translate-y-3' : 'opacity-90 translate-y-0'
           }`}
           style={{ textShadow: '0 2px 5px rgba(0,0,0,0.85)' }}
