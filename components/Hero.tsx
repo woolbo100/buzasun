@@ -88,7 +88,7 @@ export default function Hero() {
               wordBreak: 'keep-all',
             }}
           >
-            선천코드 분석을 통해 당신이 반복하는 연애 패턴과
+            선천코드 분석을 통해 당신이 반복하는 연애 패턴과{" "}
             <br className="hidden md:block" />
             나의 에너지에 공명하는 사랑의 지도를 정밀하게 해독합니다.
           </p>

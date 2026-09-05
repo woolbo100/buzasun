@@ -50,9 +50,9 @@ export default function Contact() {
                 <div className="gold-divider mb-8 max-w-[100px] mx-auto" />
 
                 <p className="text-xl md:text-2xl font-elegant text-[#EDE6DA] leading-relaxed">
-                  <span className="text-[var(--accent-gold)] font-bold">선천코드</span>를 이해하면<br />
-                  <span className="text-[var(--accent-gold)] font-bold">반복되던 연애</span>는 멈추고<br />
-                  <span className="text-[var(--accent-gold)] font-bold">만나는 사람</span>이 달라집니다
+                  <span className="text-[var(--accent-gold)] font-bold">선천코드를</span> 이해하면<br />
+                  <span className="text-[var(--accent-gold)] font-bold">반복되던 연애는</span> 멈추고<br />
+                  <span className="text-[var(--accent-gold)] font-bold">만나는 사람이</span> 달라집니다
                 </p>
               </div>
             </div>

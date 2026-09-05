@@ -36,8 +36,10 @@ export default function About() {
         <Reveal delayMs={200}>
           <div className="gungjung-glass max-w-4xl mx-auto p-12 md:p-20 text-center mb-20">
             <p className="text-xl md:text-2xl leading-loose text-[#EDE6DA] font-light italic mb-10">
-              "백도화의 모든 분석과 설계는<br className="hidden md:block" />
-              전문 자격과 실제 데이터를 기반으로 하는<br className="hidden md:block" />
+              "백도화의 모든 분석과 설계는{" "}
+              <br className="hidden md:block" />
+              전문 자격과 실제 데이터를 기반으로 하는{" "}
+              <br className="hidden md:block" />
               구조적 해석 공간입니다."
             </p>
             
