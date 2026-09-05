@@ -62,10 +62,10 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       console.error('Failed to write localStorage', e);
     }
 
-    // 1단계: 문 열림 & 몽환적인 금빛 블러 안개 확산 시작
+    // 1단계: 문이 좌우로 스르륵 열리기 시작
     setDoorState('opening');
 
-    // 2단계: 문이 완전히 젖혀지고 금빛 안개가 사르르 녹아든 시점 (약 1.35초) 스크롤 복구
+    // 2단계: 문이 완전히 젖혀진 후 (약 1.35초) 스크롤 복구
     setTimeout(() => {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
@@ -100,15 +100,26 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
       }}
     >
       {/* ============================================================ */}
-      {/* 1. 대문 3D 입체 컨테이너 (1.18배 웅장한 대문 스케일) */}
+      {/* 1. 문 뒤편에서 스며 나오는 은은하고 자연스러운 샴페인 골드빛 (z-0: 문 뒤 배치) */}
+      {/* 문이 닫혀 있을 때는 문짝에 가려 보이지 않다가, 문이 벌어질 때 비로소 틈새로 은은하게 비침 */}
+      {/* ============================================================ */}
+      {isOpening && (
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          {/* 문 틈에서 조용히 피어오르는 소프트 앰비언트 글로우 */}
+          <div className="natural-soft-glow" />
+        </div>
+      )}
+
+      {/* ============================================================ */}
+      {/* 2. 대문 3D 입체 컨테이너 (z-10: 빛보다 앞쪽에 위치하여 빛을 자연스럽게 가림) */}
       {/* ============================================================ */}
       <div
-        className="absolute inset-0 w-full h-full overflow-hidden"
+        className="absolute inset-0 w-full h-full overflow-hidden z-10"
         style={{
           perspective: '1400px', // 3D 원근감
         }}
       >
-        {/* 전체 대문 크기 확대 래퍼 */}
+        {/* 전체 대문 크기 1.18배 웅장한 스케일 */}
         <div
           className="absolute inset-0 w-full h-full"
           style={{
@@ -118,7 +129,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         >
           {/* (1) 왼쪽 대문 패널 (Left Door Panel) */}
           <div
-            className="absolute top-0 bottom-0 left-0 w-1/2 overflow-hidden z-10"
+            className="absolute top-0 bottom-0 left-0 w-1/2 overflow-hidden"
             style={{
               transformOrigin: 'left center', // 왼쪽 경첩 축
               transform: isOpening
@@ -154,7 +165,7 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
 
           {/* (2) 오른쪽 대문 패널 (Right Door Panel) */}
           <div
-            className="absolute top-0 bottom-0 right-0 w-1/2 overflow-hidden z-10"
+            className="absolute top-0 bottom-0 right-0 w-1/2 overflow-hidden"
             style={{
               transformOrigin: 'right center', // 오른쪽 경첩 축
               transform: isOpening
@@ -189,31 +200,6 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
           </div>
         </div>
       </div>
-
-      {/* ============================================================ */}
-      {/* 2. 자연스럽게 번져 퍼지는 몽환적인 금빛 블러 안개 효과 (No Round Dots!) */}
-      {/* ============================================================ */}
-      {isOpening && (
-        <div className="absolute inset-0 pointer-events-none z-20 overflow-hidden">
-          {/* (1) 중심 전체를 포근하게 감싸는 메인 골드 블룸 */}
-          <div className="soft-gold-bloom" />
-
-          {/* (2) 좌우로 부드럽게 번져나가는 타원형 금빛 빛무리 1 (Center Flare) */}
-          <div className="soft-mist-flare flare-1" />
-
-          {/* (3) 왼쪽으로 부드럽게 흐르는 샴페인 로즈골드 안개 2 (Left Flow) */}
-          <div className="soft-mist-flare flare-2" />
-
-          {/* (4) 오른쪽으로 부드럽게 흐르는 웜골드 안개 3 (Right Flow) */}
-          <div className="soft-mist-flare flare-3" />
-
-          {/* (5) 상단으로 아지랑이처럼 솟아오르는 은은한 빛 번짐 4 (Upper Bloom) */}
-          <div className="soft-mist-flare flare-4" />
-
-          {/* (6) 부드러운 블러가 먹은 은은한 금빛 아우라 미스트 (Center Aura) */}
-          <div className="soft-mist-flare flare-5" />
-        </div>
-      )}
 
       {/* ============================================================ */}
       {/* 3. 상단 브랜드 서브 타이틀 */}
@@ -282,232 +268,46 @@ export default function MobileIntroDoor({ onComplete }: MobileIntroDoorProps) {
         </button>
       </div>
 
-      {/* 스타일 및 키프레임 (부드러운 블러 번짐 광채) */}
+      {/* 스타일 및 키프레임: 은은하고 자연스럽게 스며 나오는 빛 */}
       <style jsx global>{`
-        /* 1. 화면 중앙 소프트 골드 블룸 */
-        .soft-gold-bloom {
+        /* 문 뒤에서 문이 열리는 타이밍에 맞춰 조용히 비쳐 나오는 자연스러운 빛 */
+        .natural-soft-glow {
           position: absolute;
-          inset: 0;
-          background: radial-gradient(
-            ellipse at 50% 50%,
-            rgba(255, 240, 205, 0.45) 0%,
-            rgba(225, 185, 140, 0.28) 35%,
-            rgba(180, 115, 90, 0.1) 65%,
-            transparent 85%
-          );
-          filter: blur(20px);
-          animation: mainBloomFade 1.6s cubic-bezier(0.2, 0.8, 0.35, 1) forwards;
-        }
-
-        @keyframes mainBloomFade {
-          0% {
-            opacity: 0;
-            transform: scale(0.85);
-          }
-          28% {
-            opacity: 0.9;
-            transform: scale(1.02);
-          }
-          65% {
-            opacity: 0.4;
-            transform: scale(1.15);
-          }
-          100% {
-            opacity: 0;
-            transform: scale(1.25);
-          }
-        }
-
-        /* 2. 블러로 부드럽게 퍼지는 안개형 빛무리(Mist Flare) 공통 */
-        .soft-mist-flare {
-          position: absolute;
-          border-radius: 50%;
-          pointer-events: none;
-          transform-origin: center center;
-        }
-
-        /* 중앙 횡방향 빛 번짐 */
-        .flare-1 {
           top: 48%;
           left: 50%;
-          width: 220px;
-          height: 120px;
-          margin-top: -60px;
-          margin-left: -110px;
+          width: 260px;
+          height: 180px;
+          margin-top: -90px;
+          margin-left: -130px;
+          border-radius: 50%;
           background: radial-gradient(
             ellipse at center,
-            rgba(255, 245, 215, 0.75) 0%,
-            rgba(235, 195, 135, 0.4) 45%,
-            transparent 75%
+            rgba(255, 240, 205, 0.45) 0%,
+            rgba(225, 185, 140, 0.22) 45%,
+            rgba(180, 120, 90, 0.08) 70%,
+            transparent 90%
           );
-          filter: blur(22px);
-          animation: flareAnimCenter 1.5s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+          filter: blur(28px);
+          animation: gentleGlowReveal 1.5s cubic-bezier(0.25, 0.8, 0.35, 1) 0.18s forwards;
+          opacity: 0;
         }
 
-        /* 좌측으로 번져나가는 안개 */
-        .flare-2 {
-          top: 46%;
-          left: 46%;
-          width: 170px;
-          height: 140px;
-          margin-top: -70px;
-          margin-left: -85px;
-          background: radial-gradient(
-            ellipse at center,
-            rgba(255, 230, 190, 0.6) 0%,
-            rgba(215, 165, 135, 0.3) 50%,
-            transparent 75%
-          );
-          filter: blur(20px);
-          animation: flareAnimLeft 1.55s cubic-bezier(0.2, 0.8, 0.3, 1) 0.05s forwards;
-        }
-
-        /* 우측으로 번져나가는 안개 */
-        .flare-3 {
-          top: 47%;
-          left: 54%;
-          width: 180px;
-          height: 130px;
-          margin-top: -65px;
-          margin-left: -90px;
-          background: radial-gradient(
-            ellipse at center,
-            rgba(255, 235, 195, 0.6) 0%,
-            rgba(220, 175, 125, 0.3) 50%,
-            transparent 75%
-          );
-          filter: blur(20px);
-          animation: flareAnimRight 1.55s cubic-bezier(0.2, 0.8, 0.3, 1) 0.05s forwards;
-        }
-
-        /* 상단 아지랑이 빛무리 */
-        .flare-4 {
-          top: 40%;
-          left: 50%;
-          width: 190px;
-          height: 150px;
-          margin-top: -75px;
-          margin-left: -95px;
-          background: radial-gradient(
-            ellipse at center,
-            rgba(255, 240, 210, 0.5) 0%,
-            rgba(200, 150, 120, 0.25) 50%,
-            transparent 75%
-          );
-          filter: blur(24px);
-          animation: flareAnimUp 1.6s cubic-bezier(0.2, 0.8, 0.3, 1) 0.1s forwards;
-        }
-
-        /* 중심 코어 은은한 빛 안개 */
-        .flare-5 {
-          top: 49%;
-          left: 50%;
-          width: 120px;
-          height: 90px;
-          margin-top: -45px;
-          margin-left: -60px;
-          background: radial-gradient(
-            ellipse at center,
-            rgba(255, 250, 230, 0.85) 0%,
-            rgba(240, 205, 150, 0.45) 40%,
-            transparent 70%
-          );
-          filter: blur(14px);
-          animation: flareAnimCenterCore 1.4s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
-        }
-
-        @keyframes flareAnimCenter {
-          0% {
-            opacity: 0;
-            transform: scale(0.6);
-          }
-          30% {
-            opacity: 0.9;
-            transform: scale(1.1);
-          }
-          70% {
-            opacity: 0.35;
-            transform: scale(1.4) translateY(-10px);
-          }
-          100% {
-            opacity: 0;
-            transform: scale(1.6) translateY(-20px);
-          }
-        }
-
-        @keyframes flareAnimLeft {
-          0% {
-            opacity: 0;
-            transform: scale(0.6);
-          }
-          30% {
-            opacity: 0.8;
-            transform: scale(1.05) translateX(-25px);
-          }
-          70% {
-            opacity: 0.3;
-            transform: scale(1.3) translateX(-60px);
-          }
-          100% {
-            opacity: 0;
-            transform: scale(1.5) translateX(-90px);
-          }
-        }
-
-        @keyframes flareAnimRight {
-          0% {
-            opacity: 0;
-            transform: scale(0.6);
-          }
-          30% {
-            opacity: 0.8;
-            transform: scale(1.05) translateX(25px);
-          }
-          70% {
-            opacity: 0.3;
-            transform: scale(1.3) translateX(60px);
-          }
-          100% {
-            opacity: 0;
-            transform: scale(1.5) translateX(90px);
-          }
-        }
-
-        @keyframes flareAnimUp {
+        @keyframes gentleGlowReveal {
           0% {
             opacity: 0;
             transform: scale(0.7);
           }
-          30% {
-            opacity: 0.75;
-            transform: scale(1.1) translateY(-20px);
+          35% {
+            opacity: 0.55; /* 과하지 않고 은은한 최대 밝기 */
+            transform: scale(1.05);
           }
           70% {
             opacity: 0.25;
-            transform: scale(1.35) translateY(-50px);
+            transform: scale(1.25);
           }
           100% {
             opacity: 0;
-            transform: scale(1.5) translateY(-80px);
-          }
-        }
-
-        @keyframes flareAnimCenterCore {
-          0% {
-            opacity: 0;
-            transform: scale(0.5);
-          }
-          25% {
-            opacity: 0.95;
-            transform: scale(1.0);
-          }
-          65% {
-            opacity: 0.4;
-            transform: scale(1.3);
-          }
-          100% {
-            opacity: 0;
-            transform: scale(1.5);
+            transform: scale(1.4);
           }
         }
       `}</style>
