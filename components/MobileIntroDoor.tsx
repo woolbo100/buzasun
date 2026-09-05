@@ -107,9 +107,9 @@ export default function MobileIntroDoor({
       setIsPurple(true);
     }, 950);
 
-    // [4] 3.05s: 퍼플 한옥 내부 상태를 약 1.2초간 충분히 머문 뒤,
-    // 이 퍼플 한옥 내부 이미지 위에서 바로 실제 메인홈 hero 크로스페이드(1.1s) 시작!
-    // 별도의 퍼플 단색 화면 없이 한옥 내부 위에서 메인홈이 서서히 드러남
+    // [4] 3.10s: 퍼플 한옥 내부 상태를 약 1.25초간 충분히 머문 뒤,
+    // 퍼플 한옥 오버레이가 1.3초(1300ms) 동안 아주 부드럽게 스르륵 페이드아웃(fade-out)!
+    // 뒤에 대기 중이던 실제 메인홈 전체가 한옥 이미지 속에서 은은하게 오버레이되어 드러남
     setTimeout(() => {
       setTextFadeOut(true);
       setIsCrossfading(true);
@@ -118,14 +118,14 @@ export default function MobileIntroDoor({
       }
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
-    }, 3050);
+    }, 3100);
 
-    // [5] 4.20s: 메인홈이 완벽히 드러난 뒤 인트로 컴포넌트 안전하게 종료
+    // [5] 4.45s: 1.3초간의 페이드아웃이 완전히 끝난 뒤 인트로 컴포넌트 안전하게 정리
     setTimeout(() => {
       setStage('finished');
       setShouldShow(false);
       if (onComplete) onComplete();
-    }, 4200);
+    }, 4450);
   };
 
   if (!shouldShow) {
@@ -139,18 +139,16 @@ export default function MobileIntroDoor({
       role="dialog"
       aria-modal="true"
       aria-label="백도화 매력학당 인트로"
-      className={`fixed inset-0 select-none overflow-hidden ${
-        isCrossfading ? 'opacity-0 pointer-events-none' : 'opacity-100'
-      }`}
+      className="fixed inset-0 select-none overflow-hidden"
       style={{
         zIndex: 999999, // 최상위 유지
         height: '100dvh', // 모바일 주소창 높이 완벽 대응
         width: '100vw',
+        opacity: isCrossfading ? 0 : 1,
+        pointerEvents: isCrossfading ? 'none' : 'auto',
         visibility: stage === 'finished' ? 'hidden' : 'visible',
-        // 1100ms 동안 cubic-bezier로 메인홈과 자연스러운 크로스페이드
-        transitionProperty: 'opacity',
-        transitionDuration: '1100ms',
-        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        // 1300ms 동안 단 한 프레임의 끊김 없이 메인홈 위에서 스르륵 페이드아웃
+        transition: 'opacity 1300ms cubic-bezier(0.4, 0, 0.2, 1)',
         willChange: 'opacity',
       }}
     >
