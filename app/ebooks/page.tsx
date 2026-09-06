@@ -5,8 +5,8 @@ import Link from 'next/link'
 import Reveal from '@/components/Reveal'
 
 export const metadata = {
-  title: '시크릿 비법서 | 백도화 매력학당',
-  description: '연애와 풍요에 관한 시크릿 비법서를 만나보세요',
+  title: '시크릿 비첩 | 백도화 매력학당',
+  description: '연애와 풍요에 관한 시크릿 비첩을 만나보세요',
 }
 
 export default function EbooksPage() {
@@ -49,10 +49,10 @@ export default function EbooksPage() {
             <div className="text-center mb-20">
               <Reveal>
                 <h1 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-8 tracking-widest">
-                  시크릿 <span className="text-[var(--accent-gold)]">비법서</span>
+                  시크릿 <span className="text-[var(--accent-gold)]">비첩</span>
                 </h1>
                 <p className="text-[#EDE6DA] opacity-80 text-lg md:text-xl font-elegant leading-relaxed max-w-2xl mx-auto break-keep">
-                  연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비법서를 만나보세요.<br className="md:hidden" />
+                  연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비첩을 만나보세요.<br className="md:hidden" />
                   <span className="text-[var(--accent-gold-light)]">선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와<br />풍요로운 삶을 만들어가세요.</span>
                 </p>
               </Reveal>
@@ -108,7 +108,7 @@ export default function EbooksPage() {
             <div className="gungjung-glass p-8 opacity-90 border-dashed border-opacity-30">
               <h3 className="text-bd-white font-elegant font-bold mb-4">결제 완료 후 안내</h3>
               <div className="space-y-2 text-[#EDE6DA] opacity-70">
-                <p>• 결제가 완료되면 이메일로 시크릿 비법서 다운로드 링크가 발송됩니다.</p>
+                <p>• 결제가 완료되면 이메일로 시크릿 비첩 다운로드 링크가 발송됩니다.</p>
                 <p>• 다운로드 링크는 구매 후 7일간 유효합니다.</p>
               </div>
             </div>

@@ -8,21 +8,21 @@ const ebooks = [
     title: "연애비급",
     desc: "관계의 흐름을 바꾸는 심리·프레임·대화 설계",
     href: "/reports/love-secret",
-    subLabel: "관계 설계 비법서",
+    subLabel: "관계 설계 비첩",
     image: "/image/love-secret-thumb.png"
   },
   {
     title: "풍요비책",
     desc: "상태를 바꾸면 현실이 따라온다. 풍요 마인드 실전 가이드",
     href: "/reports/abundance-secret",
-    subLabel: "상태·주파수 비법서",
+    subLabel: "상태·주파수 비첩",
     image: "/image/abundance-secret-thumb.png"
   },
   {
     title: "재회비방",
     desc: "감정선 복구부터 메시지 설계까지. 재회 기준 만들기",
     href: "/reports/reunion-secret",
-    subLabel: "메시지·기준 비법서",
+    subLabel: "메시지·기준 비첩",
     image: "/image/reunion-secret-thumb.png"
   },
 ] as const
@@ -53,7 +53,7 @@ export default function Ebooks() {
                       background: 'rgba(59, 15, 27, 0.5)',
                     }}
                   >
-                    시크릿 비법서 3종
+                    시크릿 비첩 3종
                   </p>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function Ebooks() {
             <Reveal delayMs={200}>
               <div className="flex flex-col items-center justify-center gap-4 mb-8">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold text-[#F5F5F5]">
-                  백도화 시크릿 비법서 아카이브
+                  백도화 시크릿 비첩 아카이브
                 </h2>
                 <Link 
                   href="/ebooks"
@@ -94,7 +94,7 @@ export default function Ebooks() {
 
             <Reveal delayMs={300}>
               <p className="text-base md:text-lg max-w-3xl mx-auto text-[#EDE6DA] opacity-80 leading-relaxed">
-                연애·풍요·재회의 '기준'을 만드는 3권의 시크릿 비법서.<br />
+                연애·풍요·재회의 '기준'을 만드는 3권의 시크릿 비첩.<br />
                 지금 당신에게 필요한 흐름부터 선택하세요.
               </p>
             </Reveal>

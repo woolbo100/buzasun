@@ -9,7 +9,7 @@ import GlobalBackground from '@/components/GlobalBackground'
 
 function ComingSoonContent() {
   const searchParams = useSearchParams()
-  const title = decodeURIComponent(searchParams?.get('title') ?? "시크릿 비법서")
+  const title = decodeURIComponent(searchParams?.get('title') ?? "시크릿 비첩")
   const desc = decodeURIComponent(searchParams?.get('desc') ?? "곧 공개됩니다. 현재는 프리뷰 단계예요.")
 
   return (
@@ -31,7 +31,7 @@ function ComingSoonContent() {
             href="/#ebooks"
             className="inline-flex items-center justify-center rounded-xl px-8 py-4 border border-[var(--glass-border)] bg-white/[0.03] text-[#EDE6DA] hover:bg-white/[0.08] transition-all duration-300 font-elegant"
           >
-            다른 비법서 보기
+            다른 비첩 보기
           </Link>
           <Link
             href="/contact"

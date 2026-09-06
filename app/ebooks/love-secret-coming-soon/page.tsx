@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function LoveSecretComingSoon() {
   const title = "연애비급"
-  const desc = "관계의 흐름을 바꾸는 심리·프레임·대화 설계 비법서"
+  const desc = "관계의 흐름을 바꾸는 심리·프레임·대화 설계 비첩"
 
   return (
     <main className="min-h-screen flex items-center justify-center px-6 py-20 bg-[var(--primary-purple)]">
@@ -50,7 +50,7 @@ export default function LoveSecretComingSoon() {
           >
             아직 열리진 않았지만, 중요한 공간입니다.
             <br />
-            이 비법서는 현재 준비 중이며, 가장 먼저 공개됩니다.
+            이 비첩은 현재 준비 중이며, 가장 먼저 공개됩니다.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function LoveSecretComingSoon() {
             href="/#ebooks"
             className="inline-flex items-center justify-center rounded-xl px-8 py-4 border border-[var(--glass-border)] bg-white/[0.03] text-bd-ivory hover:bg-white/[0.08] transition-all duration-300 font-elegant"
           >
-            다른 비법서 보기
+            다른 비첩 보기
           </Link>
           <Link
             href="/contact"
