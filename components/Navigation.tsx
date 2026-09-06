@@ -214,7 +214,7 @@ export default function Navigation() {
             </Link>
 
             <Link href="/ebooks" className={menuLinkClass} style={menuLinkStyle}>
-              비법서
+              비첩
               <span
                 className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
@@ -234,7 +234,7 @@ export default function Navigation() {
             </Link>
 
             <Link href="/bicheop" className={menuLinkClass} style={menuLinkStyle}>
-              비첩
+              비록
               <span
                 className="absolute bottom-0 left-1/2 h-[1px] w-0 bg-gradient-to-r from-transparent via-[var(--accent-pink)] to-transparent transition-all duration-500 ease-out -translate-x-1/2 group-hover:w-full"
                 style={{
@@ -331,7 +331,7 @@ export default function Navigation() {
                 className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
                 onClick={closeMobileMenu}
               >
-                비법서
+                비첩
               </Link>
 
               <Link
@@ -347,7 +347,7 @@ export default function Navigation() {
                 className="block px-4 py-2 text-bd-gray hover:text-bd-ivory hover:bg-bd-bg3 transition-colors rounded-lg mx-2"
                 onClick={closeMobileMenu}
               >
-                비첩
+                비록
               </Link>
 
               <Link
