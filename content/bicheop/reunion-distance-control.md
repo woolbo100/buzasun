@@ -2,13 +2,13 @@
 title: "재회의 가능성을 높이는 영리한 거리 조절"
 slug: "reunion-distance-control"
 category: "reunion"
-categoryName: "재회비첩"
+categoryName: "재회비록"
 excerpt: "끝난 인연을 억지로 붙잡는 대신, 마음의 주파수를 맞추고 상대방과의 완벽한 거리를 조절하는 비밀 비방을 나눕니다."
 thumbnail: "/image/product-love-report.png"
 date: "2026-06-17"
 status: "published"
-seoTitle: "재회의 가능성을 높이는 영리한 거리 조절 | 백도화 비첩"
-seoDescription: "이별 후 조급한 마음에 매달리는 대신, 완벽한 거리 조절을 통해 재회의 가능성을 높이는 백도화의 재회비첩입니다."
+seoTitle: "재회의 가능성을 높이는 영리한 거리 조절 | 백도화 비록"
+seoDescription: "이별 후 조급한 마음에 매달리는 대신, 완벽한 거리 조절을 통해 재회의 가능성을 높이는 백도화의 재회비록입니다."
 ---
 
 이별 후 가장 많이 저지르는 실수는 **'조급함에 기반한 매달림'**입니다.

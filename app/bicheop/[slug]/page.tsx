@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PostDetailPageProps): Promise
   const post = getBicheopPostBySlug(params.slug)
   if (!post) {
     return {
-      title: '비첩 기록을 찾을 수 없습니다 | 백도화',
+      title: '비록 기록을 찾을 수 없습니다 | 백도화',
     }
   }
   return {
@@ -77,7 +77,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
                   href="/bicheop"
                   className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-[#BA8D7E] transition-colors duration-300 uppercase tracking-widest font-bold"
                 >
-                  <ArrowLeft className="w-4 h-4" /> 비첩 목록으로 돌아가기
+                  <ArrowLeft className="w-4 h-4" /> 비록 목록으로 돌아가기
                 </Link>
               </div>
             </Reveal>
@@ -131,7 +131,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
               <section className="border-t border-white/10 pt-16">
                 <Reveal>
                   <h3 className="text-lg md:text-xl font-elegant font-bold text-white tracking-widest mb-8 border-b border-white/5 pb-4">
-                    다른 비첩 기록 <span className="text-[#BA8D7E]">추천</span>
+                    다른 비록 기록 <span className="text-[#BA8D7E]">추천</span>
                   </h3>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

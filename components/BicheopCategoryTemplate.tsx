@@ -30,11 +30,11 @@ export default function BicheopCategoryTemplate({
   // 카테고리 탭 목록 (현재 탭이 활성화되도록 active 처리)
   const categories = [
     { name: '전체', href: '/bicheop', active: false },
-    { name: '연애비첩', href: '/bicheop/love', active: category === 'love' },
-    { name: '재회비첩', href: '/bicheop/reunion', active: category === 'reunion' },
-    { name: '풍요비첩', href: '/bicheop/abundance', active: category === 'abundance' },
-    { name: '매력비첩', href: '/bicheop/charm', active: category === 'charm' },
-    { name: '마음비첩', href: '/bicheop/mind', active: category === 'mind' },
+    { name: '연애비록', href: '/bicheop/love', active: category === 'love' },
+    { name: '재회비록', href: '/bicheop/reunion', active: category === 'reunion' },
+    { name: '풍요비록', href: '/bicheop/abundance', active: category === 'abundance' },
+    { name: '매력비록', href: '/bicheop/charm', active: category === 'charm' },
+    { name: '마음비록', href: '/bicheop/mind', active: category === 'mind' },
   ]
 
   return (
@@ -51,12 +51,12 @@ export default function BicheopCategoryTemplate({
                 <div className="mb-4 flex justify-center items-center gap-2">
                   <span className="h-[1px] w-6 bg-[#BA8D7E]/30"></span>
                   <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-[#BA8D7E] uppercase font-elegant">
-                    {category.toUpperCase()} BICHEOP
+                    {category.toUpperCase()} BIROK
                   </span>
                   <span className="h-[1px] w-6 bg-[#BA8D7E]/30"></span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-elegant font-bold text-white mb-6 tracking-wide leading-tight">
-                  {categoryName.slice(0, -2)}<span className="text-[#BA8D7E]">{categoryName.slice(-2)}</span> <span className="text-[#BA8D7E] font-normal font-serif text-3xl md:text-5xl">(秘帖)</span>
+                  {categoryName.slice(0, -2)}<span className="text-[#BA8D7E]">{categoryName.slice(-2)}</span> <span className="text-[#BA8D7E] font-normal font-serif text-3xl md:text-5xl">(秘錄)</span>
                 </h1>
                 <p className="text-sm md:text-base text-[#EDE6DA] opacity-75 max-w-xl mx-auto break-keep leading-relaxed font-light font-elegant italic">
                   “{description}”
@@ -88,7 +88,7 @@ export default function BicheopCategoryTemplate({
               <Reveal delayMs={200}>
                 <div className="gungjung-glass p-16 text-center border-white/5 rounded-[24px]">
                   <BookOpen className="w-10 h-10 text-[#BA8D7E]/30 mx-auto mb-4" />
-                  <p className="text-[#EDE6DA] opacity-50 text-sm">등록된 비첩 기록이 없습니다.</p>
+                  <p className="text-[#EDE6DA] opacity-50 text-sm">등록된 비록 기록이 없습니다.</p>
                 </div>
               </Reveal>
             ) : (

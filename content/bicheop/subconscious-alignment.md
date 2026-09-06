@@ -2,12 +2,12 @@
 title: "내면의 힘을 깨우는 무의식 정렬과 명상"
 slug: "subconscious-alignment"
 category: "mind"
-categoryName: "마음비첩"
+categoryName: "마음비록"
 excerpt: "현실을 뒤흔드는 불안과 상처의 감정들을 정화하고, 무의식을 나에게 이로운 방향으로 정렬하는 마음 치유법을 다룹니다."
 thumbnail: "/image/product-love-report.png"
 date: "2026-06-14"
 status: "published"
-seoTitle: "내면의 힘을 깨우는 무의식 정렬과 명상 | 백도화 비첩"
+seoTitle: "내면의 힘을 깨우는 무의식 정렬과 명상 | 백도화 비록"
 seoDescription: "내면의 무의식을 의식의 밝은 빛 아래 드러내어 불안을 정화하고 단단한 내면을 구축하는 백도화 마음 정렬 가이드입니다."
 ---
 

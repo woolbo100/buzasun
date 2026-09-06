@@ -2,13 +2,13 @@
 title: "사랑이 자꾸 어긋나는 진짜 이유"
 slug: "why-love-keeps-missing"
 category: "love"
-categoryName: "연애비첩"
+categoryName: "연애비록"
 excerpt: "사랑이 반복해서 어긋나는 사람들에게 필요한 관계의 시선과 마음의 구조를 다룹니다."
 thumbnail: "/image/product-love-report.png"
 date: "2026-06-18"
 status: "published"
-seoTitle: "사랑이 자꾸 어긋나는 진짜 이유 | 백도화 비첩"
-seoDescription: "연애가 반복해서 어긋나는 이유와 관계의 흐름을 다시 읽는 백도화의 연애비첩 글입니다."
+seoTitle: "사랑이 자꾸 어긋나는 진짜 이유 | 백도화 비록"
+seoDescription: "연애가 반복해서 어긋나는 이유와 관계의 흐름을 다시 읽는 백도화의 연애비록 글입니다."
 ---
 
 우리는 왜 늘 비슷한 연애의 함정에 빠지는 걸까요?

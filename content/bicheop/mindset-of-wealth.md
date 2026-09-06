@@ -2,12 +2,12 @@
 title: "운을 끌어당기는 풍요의 그릇과 마음 법칙"
 slug: "mindset-of-wealth"
 category: "abundance"
-categoryName: "풍요비첩"
+categoryName: "풍요비록"
 excerpt: "돈과 기회, 그리고 운을 담아내는 마음의 크기를 넓히고, 가난의 주파수에서 풍요의 주파수로 전원을 켜는 비밀을 공개합니다."
 thumbnail: "/image/product-love-report.png"
 date: "2026-06-16"
 status: "published"
-seoTitle: "운을 끌어당기는 풍요의 그릇과 마음 법칙 | 백도화 비첩"
+seoTitle: "운을 끌어당기는 풍요의 그릇과 마음 법칙 | 백도화 비록"
 seoDescription: "내 안의 빈곤의 신호를 지우고 돈과 기회를 강력하게 끌어당기는 풍요의 그릇을 넓히는 백도화의 마음 가이드입니다."
 ---
 

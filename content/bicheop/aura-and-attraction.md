@@ -2,12 +2,12 @@
 title: "사람을 홀리는 독보적 아우라와 매력의 법칙"
 slug: "aura-and-attraction"
 category: "charm"
-categoryName: "매력비첩"
+categoryName: "매력비록"
 excerpt: "타고난 외모를 넘어 타인을 이끌어 당기는 신비로운 매력 자기장(Aura)을 깨우는 영적 매력학 이론입니다."
 thumbnail: "/image/product-love-report.png"
 date: "2026-06-15"
 status: "published"
-seoTitle: "사람을 홀리는 독보적 아우라와 매력의 법칙 | 백도화 비첩"
+seoTitle: "사람을 홀리는 독보적 아우라와 매력의 법칙 | 백도화 비록"
 seoDescription: "나만의 고유한 매력 주파수를 깨워 타인을 자연스럽게 끌어당기는 신비로운 분위기 관리 백도화 매력학서입니다."
 ---
 
