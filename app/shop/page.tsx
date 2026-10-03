@@ -167,7 +167,7 @@ export default function ShopPage() {
           if (!hasDubom) {
             mappedData.push({
               id: 'manual-dubom',
-              name: '두봄 | DUBOM',
+              name: '두봄',
               slug: 'dubom',
               category: 'ENERGY CARE',
               description: '여성의 두 번째 봄을 위한 프리미엄 데일리 밸런스 케어 건강기능식품',
@@ -346,9 +346,6 @@ export default function ShopPage() {
                             
                             <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-[var(--accent-gold)] transition-colors duration-500">
                               {product.name}
-                              {product.slug === 'dubom' && (
-                                <span className="text-xs font-normal text-white/50 tracking-[0.2em] block mt-1">DUBOM</span>
-                              )}
                             </h3>
                             <p className="text-sm text-[#EDE6DA] opacity-40 leading-relaxed font-light line-clamp-2">{product.description}</p>
                             
