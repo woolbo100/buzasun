@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import NorigaeElement from './NorigaeElement'
 import { ShoppingCart, User, Menu, X, ChevronDown } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useCart } from '@/hooks/useCart'

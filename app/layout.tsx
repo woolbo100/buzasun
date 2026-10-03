@@ -35,6 +35,7 @@ export const metadata: Metadata = {
 };
 
 import KakaoConsultButton from "@/components/KakaoConsultButton";
+import GlobalNorigae from "@/components/GlobalNorigae";
 
 export default function RootLayout({
   children,
@@ -67,6 +68,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/image/back.webp" />
       </head>
       <body>
+        <GlobalNorigae />
         {children}
         <KakaoConsultButton />
       </body>

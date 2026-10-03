@@ -13,7 +13,6 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import AdminModal from '@/components/AdminModal'
 import BookmarkTassel from '@/components/BookmarkTassel'
-import NorigaeElement from '@/components/NorigaeElement'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import GlobalBackground from '@/components/GlobalBackground'
 import MobileIntroDoor from '@/components/MobileIntroDoor'
@@ -50,18 +49,6 @@ export default function Home() {
           }}
         >
           <Navigation />
-
-          {/* 헤더 바로 오른쪽 아래 배치되는 고정 노리개 (nlg) */}
-          <div 
-            className="fixed top-0 right-4 md:right-12 z-[60] pointer-events-none hidden sm:block"
-            style={{ 
-              animation: 'swingGentle 4s ease-in-out infinite',
-              transformOrigin: 'top center',
-              filter: 'drop-shadow(0 0 20px rgba(212, 178, 167, 0.4))'
-            }}
-          >
-            <NorigaeElement src="/image/nlg.png" size={180} />
-          </div>
 
           {/* 실질적 콘텐츠 영역 */}
           <div className="relative z-10">
