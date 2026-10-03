@@ -31,23 +31,23 @@ export default function GlobalNorigae() {
       aria-hidden="true"
     >
       <div className="relative group pointer-events-auto cursor-pointer w-[85px] sm:w-[130px] md:w-[180px]">
-        {/* 마우스 호버 시 꽃잎에 피어오르는 은은한 자개 펄 블러(Blur) 발광 효과 */}
+        {/* 마우스 호버 시 꽃 주변에만 은은하게 맺히는 자연스러운 미세 발광 효과 */}
         <div 
-          className="pointer-events-none absolute left-1/2 top-[36%] -translate-x-1/2 -translate-y-1/2 w-[75%] aspect-square rounded-full opacity-0 blur-2xl transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-115"
+          className="pointer-events-none absolute left-1/2 top-[35%] -translate-x-1/2 -translate-y-1/2 w-[42%] aspect-square rounded-full opacity-0 blur-md transition-opacity duration-700 ease-out group-hover:opacity-60"
           style={{
-            background: 'radial-gradient(circle, rgba(255, 230, 240, 0.8) 0%, rgba(220, 160, 190, 0.5) 45%, rgba(212, 178, 167, 0.25) 70%, transparent 85%)',
+            background: 'radial-gradient(circle, rgba(255, 240, 245, 0.55) 0%, rgba(225, 185, 195, 0.25) 50%, transparent 75%)',
             mixBlendMode: 'screen',
           }}
         />
 
-        {/* 노리개 본체 이미지 */}
+        {/* 노리개 본체 이미지 (과도한 전체 밝기 증폭 없이 본연의 고급스러움 유지) */}
         <Image
           src="/image/nlg.png"
           alt="백도화 시그니처 노리개 장식"
           width={180}
           height={360}
           priority
-          className="relative z-10 w-full h-auto object-contain object-top transition-all duration-500 group-hover:brightness-110 group-hover:drop-shadow-[0_0_25px_rgba(212,178,167,0.7)]"
+          className="relative z-10 w-full h-auto object-contain object-top transition-opacity duration-300"
         />
       </div>
     </div>
