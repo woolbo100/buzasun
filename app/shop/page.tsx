@@ -45,7 +45,8 @@ export default function ShopPage() {
     'wangbitna-cream': '/image/wangbitna/w7.webp',
     'golden-forever-lady': '/image/golden/m7.webp',
     'premium-bookmark': '/image/pre/p7.webp',
-    'pink-lady': '/image/pinklady/p7.webp'
+    'pink-lady': '/image/pinklady/p7.webp',
+    'dubom': '/image/dubom/m7.webp'
   }
   
   useEffect(() => {
@@ -67,6 +68,7 @@ export default function ShopPage() {
             const isWangbitna = slug === 'wangbitna-cream';
             const isGoldenForever = slug === 'golden-forever-lady';
             const isPinkLady = slug === 'pink-lady' || slug === 'pink-lady-secret-ritual';
+            const isDubom = slug === 'dubom';
             const isLoveReport = slug === 'baekdohwa-report' || slug === 'love-report';
             const isLoveSecret = p.slug?.includes('love-secret') || p.name?.includes('연애비급');
             const isAbundanceSecret = p.slug?.includes('abundance-secret') || p.name?.includes('풍요비책');
@@ -76,14 +78,18 @@ export default function ShopPage() {
             // 슬러그 보정 (사용자 지침 반영: 공백 및 표준 ID 유지)
             let currentSlug = p.slug;
             
-            // 상품명 보정 (필요한 경우에만)
             let currentName = p.name?.trim();
+            let currentDescription = p.short_description || p.description;
             if (isLoveReport) currentName = '선천코드 연애 리포트';
             if (currentSlug.includes('wangbitna-cream') && !currentName?.includes('어디서나')) {
               currentName = '어디서나 왕빛나 크림';
             }
             if (isPinkLady) {
               currentName = '핑크레이디';
+            }
+            if (isDubom) {
+              currentName = '두봄';
+              currentDescription = '여성의 두 번째 봄을 위한 프리미엄 데일리 밸런스 케어';
             }
             if (isPremiumBookmark) {
               currentName = '플라워 북마크 세트';
@@ -93,11 +99,13 @@ export default function ShopPage() {
               ...p,
               name: currentName,
               slug: currentSlug,
+              description: currentDescription,
               main_image: isLoveReport ? '/image/love-code-bg.png' : 
                           isMissHighlander ? '/image/miss/m1.webp' : 
                           isWangbitna ? '/image/wangbitna/w7.webp' :
                           isGoldenForever ? '/image/golden/m7.webp' :
                           isPinkLady ? '/image/pinklady/p7.webp' :
+                          isDubom ? '/image/dubom/m7.webp' :
                           isLoveSecret ? '/image/love-secret-thumb.png' :
                           isAbundanceSecret ? '/image/abundance-secret-thumb.png' :
                           isReunionSecret ? '/image/reunion-secret-thumb.png' :
@@ -153,6 +161,23 @@ export default function ShopPage() {
               type: 'physical'
             })
           }
+
+          // 두봄 수동 추가 (DB에 없을 경우)
+          const hasDubom = mappedData.some(p => p.slug === 'dubom')
+          if (!hasDubom) {
+            mappedData.push({
+              id: 'manual-dubom',
+              name: '두봄 | DUBOM',
+              slug: 'dubom',
+              category: 'ENERGY CARE',
+              description: '여성의 두 번째 봄을 위한 프리미엄 데일리 밸런스 케어 건강기능식품',
+              price: 89000,
+              main_image: '/image/dubom/m7.webp',
+              is_active: true,
+              type: 'physical'
+            })
+          }
+
           // 프리미엄 북마크 수동 추가
           const hasPremiumBookmark = mappedData.some(p => p.slug === 'premium-bookmark')
           if (!hasPremiumBookmark) {
@@ -319,7 +344,12 @@ export default function ShopPage() {
                               <div className="w-1 h-1 rounded-full bg-[var(--accent-gold)] shadow-[0_0_8px_var(--accent-gold)]"></div>
                             </div>
                             
-                            <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-[var(--accent-gold)] transition-colors duration-500">{product.name}</h3>
+                            <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-[var(--accent-gold)] transition-colors duration-500">
+                              {product.name}
+                              {product.slug === 'dubom' && (
+                                <span className="text-xs font-normal text-white/50 tracking-[0.2em] block mt-1">DUBOM</span>
+                              )}
+                            </h3>
                             <p className="text-sm text-[#EDE6DA] opacity-40 leading-relaxed font-light line-clamp-2">{product.description}</p>
                             
                             <div className="pt-6">

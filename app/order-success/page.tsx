@@ -33,7 +33,8 @@ const PRODUCT_UUID_MAP: Record<string, string> = {
   'miss-highlander': '2921df33-c570-488c-b4e7-618fbed5930c',
   'golden-forever-lady': '62ecefad-cb8d-43e0-983a-ac4655313cc4',
   'wangbitna-cream': '99325a06-3afe-40bf-8165-72a303be73d0',
-  'premium-bookmark': 'a36e938d-0a6d-407c-88cf-6d3b4d3b52cc'
+  'premium-bookmark': 'a36e938d-0a6d-407c-88cf-6d3b4d3b52cc',
+  'dubom': '4a21f657-460f-417f-b071-a31665f1a722'
 }
 
 const UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -165,11 +166,16 @@ function SuccessContent() {
           realProductUuid = resolveProductUuid(productId, product_type);
           resolvedProductName = product_name || '백도화 상품';
 
-          if (product_type === 'physical' || productId === 'pink-lady' || productId === 'premium-bookmark') {
+          if (product_type === 'physical' || productId === 'pink-lady' || productId === 'premium-bookmark' || productId === 'dubom') {
+            const qty = searchParams.get('quantity')
+            const unitPrice = searchParams.get('unit_price')
             formattedShippingMemo = [
               `[실물 상품 배송 정보]`,
               isManual ? `- 결제수단: 무통장입금(bank_transfer_manual)` : '',
               isManual ? `- 주문상태: 입금대기` : '',
+              `- 상품명: ${resolvedProductName}`,
+              qty ? `- 수량: ${qty}개` : '',
+              unitPrice ? `- 상품단가: ₩${Number(unitPrice).toLocaleString()}` : '',
               `- 받는 분: ${receiverName || name || ''}`,
               `- 연락처: ${phone || ''}`,
               `- 우편번호: ${zipcode || ''}`,

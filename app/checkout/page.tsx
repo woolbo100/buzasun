@@ -88,6 +88,13 @@ function CheckoutContent() {
       category: "ENERGY CARE",
       image: "/image/golden/m7.webp"
     },
+    "dubom": {
+      name: "두봄 | DUBOM",
+      type: "physical",
+      price: 89000,
+      category: "ENERGY CARE",
+      image: "/image/dubom/m7.webp"
+    },
     "baekdohwa-report": {
       name: "선천코드 연애 리포트",
       type: "digital_report",
@@ -196,15 +203,31 @@ function CheckoutContent() {
           return
         }
 
-        const { data, error } = await supabase
-          .from('products')
-          .select('*')
-          .or(`slug.eq."${productId}",id.eq."${productId}"`)
-          .single()
+        const isUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(productId)
+        let query = supabase.from('products').select('*')
+        if (isUuid) {
+          query = query.or(`slug.eq."${productId}",id.eq."${productId}",product_id.eq."${productId}"`)
+        } else {
+          query = query.or(`slug.eq."${productId}",product_id.eq."${productId}"`)
+        }
+        const { data, error } = await query.maybeSingle()
 
         if (!error && data) {
           let resolvedProduct = { ...data };
-          if (productId === 'pink-lady' || data.slug === 'pink-lady' || data.product_id === 'pink-lady') {
+          const isDubom = productId === 'dubom' || data.slug === 'dubom' || data.product_id === 'dubom';
+          if (isDubom) {
+            resolvedProduct = {
+              ...resolvedProduct,
+              name: '두봄',
+              display_title: '두봄 | DUBOM',
+              english_name: 'DUBOM',
+              type: 'physical',
+              category: data.category || 'ENERGY CARE',
+              price: data.price || 89000,
+              image: data.thumbnail_image || data.main_image || '/image/dubom/m7.webp',
+              requires_shipping: true
+            };
+          } else if (productId === 'pink-lady' || data.slug === 'pink-lady' || data.product_id === 'pink-lady') {
             resolvedProduct = {
               ...resolvedProduct,
               name: '핑크레이디',
@@ -213,6 +236,11 @@ function CheckoutContent() {
               price: 89000,
               category: 'women-balance-care',
               image: '/image/pinklady/p7.webp'
+            };
+          } else {
+            resolvedProduct = {
+              ...resolvedProduct,
+              image: resolvedProduct.thumbnail_image || resolvedProduct.main_image || productMap[productId]?.image || '/image/product-love-report.png'
             };
           }
           setProduct({ ...resolvedProduct, slug: productId, selectedOption: selectedOption })
@@ -256,6 +284,7 @@ function CheckoutContent() {
   const [checkoutOption, setCheckoutOption] = useState<string>(selectedOption || "")
   const [agreements, setAgreements] = useState({ terms: false, refund: false })
   const [showOptionError, setShowOptionError] = useState(false)
+  const [quantity, setQuantity] = useState<number>(1)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -280,9 +309,20 @@ function CheckoutContent() {
   }
 
   // 상품 타입 판별 (DB의 category나 type 필드 기준, 없으면 slug 등으로 추론)
-  const productType = product.type || 
-                     (product.category?.includes('REPORT') ? 'digital_report' : 
-                      product.category?.includes('METHOD') ? 'digital_ebook' : 'physical')
+  const productType = (productId === 'dubom' || product.slug === 'dubom') ? 'physical' : (
+    product.type || 
+    (product.category?.includes('REPORT') ? 'digital_report' : 
+     product.category?.includes('METHOD') ? 'digital_ebook' : 'physical')
+  )
+
+  // 단가 및 수량 기반 금액 계산
+  const unitPrice = Number(product.price || 0)
+  const totalCartPrice = isCart ? cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0) : 0
+  const productSubtotal = isCart ? totalCartPrice : (unitPrice * quantity)
+  
+  const isPhysicalProduct = productType === 'physical' || (isCart && cartItems.some((i: any) => i.type === 'physical'))
+  const currentShippingFee = (isPhysicalProduct && productSubtotal < 50000) ? 3000 : 0
+  const finalTotalAmount = productSubtotal + currentShippingFee
 
   // 포트원 결제를 위한 주문번호 생성
   const generateMerchantUid = () => {
@@ -323,7 +363,11 @@ function CheckoutContent() {
           productId: productId || '',
           product_name: product.name,
           product_type: productType,
-          amount: product.price.toString(),
+          amount: finalTotalAmount.toString(),
+          quantity: (isCart ? cartItems.length : quantity).toString(),
+          unit_price: unitPrice.toString(),
+          total_price: finalTotalAmount.toString(),
+          shipping_fee: currentShippingFee.toString(),
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
@@ -387,7 +431,6 @@ function CheckoutContent() {
       }
 
       // PG사 식별코드 체크
-      // 실결제 모드 전환을 위해 테스트 PG 자동 전환 로직을 제거하고 실제 등록된 PG사 ID를 사용합니다.
       const pgProvider = envPgId;
 
       if (!pgProvider || pgProvider === 'kakaopay.TC0ONETIME' || pgProvider === 'html5_inicis.INIpayTest' || pgProvider.includes('undefined')) {
@@ -397,7 +440,6 @@ function CheckoutContent() {
       }
 
       // 2. 가맹점 식별코드 초기화
-      // 실제 가맹점 식별코드를 사용하여 포트원 SDK를 초기화합니다.
       window.IMP.init(storeCode);
 
       // 3. 주문번호 및 결제명 설정
@@ -412,7 +454,7 @@ function CheckoutContent() {
       console.log("PG사 식별코드(pg):", pgProvider);
       console.log("테스트 모드(testMode):", isTestMode);
       console.log("활성화 상태(enabled):", paymentEnabled);
-      console.log("최종 결제금액(amount):", product.price);
+      console.log("최종 결제금액(amount):", finalTotalAmount);
       console.log("주문 번호(merchant_uid):", merchantUid);
       console.log("-------------------------------");
 
@@ -422,7 +464,7 @@ function CheckoutContent() {
         pay_method: "card",
         merchant_uid: merchantUid,
         name: paymentName,
-        amount: product.price,
+        amount: finalTotalAmount,
         buyer_email: formData.email,
         buyer_name: formData.name,
         buyer_tel: formData.phone,
@@ -433,6 +475,10 @@ function CheckoutContent() {
           productId: productId,
           productType: productType,
           option: checkoutOption,
+          quantity: isCart ? undefined : quantity,
+          unitPrice: unitPrice,
+          totalPrice: finalTotalAmount,
+          shippingFee: currentShippingFee,
           orderNote: formData.orderNote,
           deliveryNote: formData.deliveryNote,
           productTitle: product.display_title || product.name,
@@ -451,10 +497,6 @@ function CheckoutContent() {
         }
       };
 
-      // 5. 결제창 호출 직전 payload 콘솔 출력
-      console.log("결제 요청 Payload PG:", paymentData.pg);
-      console.log("결제 요청 Payload 전체:", paymentData);
-
       // 5. 결제창 호출
       window.IMP.request_pay(paymentData, async (rsp: any) => {
         if (rsp.success) {
@@ -463,7 +505,11 @@ function CheckoutContent() {
             productId: productId || '',
             product_name: product.name,
             product_type: productType,
-            amount: product.price.toString(),
+            amount: finalTotalAmount.toString(),
+            quantity: (isCart ? cartItems.length : quantity).toString(),
+            unit_price: unitPrice.toString(),
+            total_price: finalTotalAmount.toString(),
+            shipping_fee: currentShippingFee.toString(),
             name: formData.name,
             email: formData.email,
             phone: formData.phone,
@@ -479,7 +525,6 @@ function CheckoutContent() {
             orderNote: formData.orderNote,
             product_title: product.display_title || product.name,
             payment_name: paymentName,
-            // 추가 정보들
             buyer_type: buyerType,
             birth_date: formData.birthDate,
             birth_time: formData.birthTime,
@@ -511,10 +556,11 @@ function CheckoutContent() {
   };
 
   const getButtonText = () => {
-    if (productId === 'premium-bookmark') return '프리미엄 플라워 북마크 세트 결제하기'
-    if (productType === 'digital_ebook') return '전자책 결제하기'
-    if (productType === 'digital_report') return '리포트 신청 및 결제하기'
-    return '상품 결제하기'
+    if (productId === 'dubom' || product.slug === 'dubom') return `두봄 결제하기 (₩${finalTotalAmount.toLocaleString()})`
+    if (productId === 'premium-bookmark') return `프리미엄 플라워 북마크 세트 결제하기 (₩${finalTotalAmount.toLocaleString()})`
+    if (productType === 'digital_ebook') return `전자책 결제하기 (₩${finalTotalAmount.toLocaleString()})`
+    if (productType === 'digital_report') return `리포트 신청 및 결제하기 (₩${finalTotalAmount.toLocaleString()})`
+    return `상품 결제하기 (₩${finalTotalAmount.toLocaleString()})`
   }
 
   return (
@@ -680,36 +726,73 @@ function CheckoutContent() {
                   ))}
                 </div>
               ) : (
-                <div className="gungjung-glass p-6 flex items-center gap-6">
-                  <div className="relative w-20 h-24 rounded-lg overflow-hidden shrink-0 border border-white/10">
-                    <Image 
-                      src={product.image || '/image/product-love-report.png'} 
-                      alt={product.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <span className="text-[10px] tracking-widest text-[var(--accent-gold)] opacity-60 uppercase mb-1 block">
-                      {product.category}
-                    </span>
-                    <h2 className="text-xl font-bold text-white mb-1">{product.name}</h2>
-                    <div className="flex items-center gap-3">
-                      <p className="text-[var(--accent-gold)] font-bold">₩{product.price?.toLocaleString()}</p>
-                      {(checkoutOption || (product.options && product.options.length > 0)) && (
-                        <>
-                          <span className="w-[1px] h-3 bg-white/10"></span>
-                          {checkoutOption ? (
-                            <span className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded border border-white/10">
-                              옵션: {checkoutOption}
-                            </span>
-                          ) : (
-                            <span className="text-[10px] text-red-400 animate-pulse">옵션 선택 필요</span>
-                          )}
-                        </>
-                      )}
+                <div className="gungjung-glass p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div className="flex items-center gap-6">
+                    <div className="relative w-20 h-24 rounded-lg overflow-hidden shrink-0 border border-white/10 bg-black/40">
+                      <Image 
+                        src={product.image || '/image/product-love-report.png'} 
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span className="text-[10px] tracking-widest text-[var(--accent-gold)] opacity-70 uppercase font-bold">
+                          {product.category || 'ENERGY CARE'}
+                        </span>
+                        <span className="text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10 text-white/50">
+                          {productType === 'physical' ? '실물상품' : '디지털 상품'}
+                        </span>
+                      </div>
+                      <h2 className="text-xl font-bold text-white mb-1 flex items-baseline gap-2">
+                        {product.name}
+                        {(product.english_name || product.slug === 'dubom') && (
+                          <span className="text-xs text-white/40 tracking-wider font-light uppercase">
+                            {product.english_name || 'DUBOM'}
+                          </span>
+                        )}
+                      </h2>
+                      <div className="flex items-center gap-3">
+                        <p className="text-[var(--accent-gold)] font-bold">₩{unitPrice.toLocaleString()}</p>
+                        {(checkoutOption || (product.options && product.options.length > 0)) && (
+                          <>
+                            <span className="w-[1px] h-3 bg-white/10"></span>
+                            {checkoutOption ? (
+                              <span className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded border border-white/10">
+                                옵션: {checkoutOption}
+                              </span>
+                            ) : (
+                              <span className="text-[10px] text-red-400 animate-pulse">옵션 선택 필요</span>
+                            )}
+                          </>
+                        )}
+                      </div>
                     </div>
                   </div>
+
+                  {/* 단일 실물상품 수량 조절 버튼 */}
+                  {productType === 'physical' && (
+                    <div className="flex items-center gap-3 bg-white/[0.03] border border-white/10 px-4 py-2.5 rounded-xl self-end sm:self-center">
+                      <span className="text-xs text-white/50 mr-1">수량</span>
+                      <button 
+                        type="button"
+                        onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
+                        className="w-7 h-7 rounded-lg bg-white/5 hover:bg-white/10 text-white font-bold flex items-center justify-center transition-colors border border-white/10 disabled:opacity-30"
+                        disabled={quantity <= 1}
+                      >
+                        -
+                      </button>
+                      <span className="text-sm font-bold text-white w-6 text-center">{quantity}</span>
+                      <button 
+                        type="button"
+                        onClick={() => setQuantity(prev => prev + 1)}
+                        className="w-7 h-7 rounded-lg bg-white/5 hover:bg-white/10 text-white font-bold flex items-center justify-center transition-colors border border-white/10"
+                      >
+                        +
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
             </Reveal>
@@ -972,21 +1055,24 @@ function CheckoutContent() {
                 
                 <div className="space-y-4 mb-8">
                   <div className="flex justify-between text-sm">
-                    <span className="text-white/40">주문 금액</span>
-                    <span className="text-white">
-                      ₩{isCart 
-                        ? (product.price - shippingFee).toLocaleString() 
-                        : product.price?.toLocaleString()
-                      }
+                    <span className="text-white/40">주문 상품</span>
+                    <span className="text-white font-medium text-right truncate max-w-[180px]">
+                      {isCart ? product.name : `${product.name} (${quantity}개)`}
                     </span>
                   </div>
                   <div className="flex justify-between text-sm">
+                    <span className="text-white/40">상품 금액</span>
+                    <span className="text-white">₩{productSubtotal.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
                     <span className="text-white/40">배송비</span>
-                    <span className="text-white">₩{shippingFee.toLocaleString()}</span>
+                    <span className="text-white">
+                      {currentShippingFee === 0 ? '무료 배송' : `₩${currentShippingFee.toLocaleString()}`}
+                    </span>
                   </div>
                   <div className="pt-4 border-t border-white/10 flex justify-between items-center">
                     <span className="text-white font-bold">최종 결제 금액</span>
-                    <span className="text-2xl font-bold text-[var(--accent-gold)]">₩{product.price?.toLocaleString()}</span>
+                    <span className="text-2xl font-bold text-[var(--accent-gold)]">₩{finalTotalAmount.toLocaleString()}</span>
                   </div>
                 </div>
 

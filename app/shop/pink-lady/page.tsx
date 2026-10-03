@@ -12,6 +12,7 @@ import { useRouter } from 'next/navigation'
 import { Check, ArrowRight, ShieldCheck, HelpCircle } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { addToCart } from '@/hooks/useCart'
+import RecommendedForCards from '@/components/RecommendedForCards'
 
 export default function PinkLadyDetailPage() {
   useScrollAnimation()
@@ -248,17 +249,7 @@ export default function PinkLadyDetailPage() {
                       이런 분께 추천합니다
                     </h2>
                     
-                    <div className="space-y-3">
-                      {recommendedPoints.map((item, idx) => (
-                        <div key={idx} 
-                             className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.01] border border-white/5 hover:bg-[#2D0A1E]/15 hover:border-[#E6BE8A]/20 transition-all duration-300 group">
-                          <div className="w-5 h-5 rounded-full bg-[#2D0A1E] border border-[#E6BE8A]/30 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-[#E6BE8A]/20 transition-all">
-                            <Check className="w-3 h-3 text-[#E6BE8A]" />
-                          </div>
-                          <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light break-keep">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+                    <RecommendedForCards items={recommendedPoints} />
                   </div>
                   
                   {/* 오른쪽 이미지 */}

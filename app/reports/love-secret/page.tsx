@@ -18,6 +18,7 @@ import {
   AlertCircle,
   ChevronRight
 } from 'lucide-react'
+import RecommendedForCards from '@/components/RecommendedForCards'
 
 const productData = {
   productId: 'love-secret-ebook',
@@ -233,8 +234,8 @@ export default function LoveSecretEbookPage() {
                       이런 분께 <span className="text-[#D4B2A7]">추천합니다</span>
                     </h2>
 
-                    <div className="space-y-4">
-                      {[
+                    <RecommendedForCards 
+                      items={[
                         "연애할 때 늘 내가 더 불안해지는 분",
                         "잘해줄수록 관계가 기울어진다고 느꼈던 분",
                         "사랑받기 위해 나를 자주 설명하고 증명해온 분",
@@ -243,20 +244,8 @@ export default function LoveSecretEbookPage() {
                         "더 이상 사랑 앞에서 작아지고 싶지 않은 분",
                         "관계 안에서도 나의 기준과 품격을 지키고 싶은 분",
                         "성숙한 여성의 연애 감각과 자기 가치를 회복하고 싶은 분"
-                      ].map((text, idx) => (
-                        <div 
-                          key={idx}
-                          className="p-5 rounded-2xl bg-[#FAF7F2] border border-[#D4B2A7]/30 shadow-md flex items-start gap-4 hover:scale-[1.01] transition-transform"
-                        >
-                          <div className="w-5.5 h-5.5 rounded-full bg-[#C58BA0]/10 flex items-center justify-center shrink-0 mt-0.5 border border-[#C58BA0]/30">
-                            <Check className="w-3.5 h-3.5 text-[#C58BA0]" />
-                          </div>
-                          <p className="text-sm md:text-base text-[#3D3530] font-medium leading-relaxed">
-                            {text}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
+                      ]} 
+                    />
                   </div>
 
                   {/* 오른쪽 세로 이미지 */}

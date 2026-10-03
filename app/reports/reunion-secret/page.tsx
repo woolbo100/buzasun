@@ -18,6 +18,7 @@ import {
   AlertCircle,
   ChevronRight
 } from 'lucide-react'
+import RecommendedForCards from '@/components/RecommendedForCards'
 
 const productData = {
   productId: 'reunion-secret-method',
@@ -228,28 +229,16 @@ export default function ReunionSecretPage() {
                       이런 분께 <span className="text-[#E6BE8A]">추천합니다</span>
                     </h2>
 
-                    <div className="space-y-4">
-                      {[
+                    <RecommendedForCards 
+                      items={[
                         "이별 후 상대에게 연락하고 싶지만 어떤 말을 해야 할지 몰라 불안한 분",
                         "상대가 차단했거나 읽씹, 안읽씹을 반복해 어떻게 해야 할지 막막한 분",
                         "지금 연락해야 하는지, 더 기다려야 하는지 판단이 어려운 분",
                         "권태기, 반복 다툼, 집착, 신뢰 상실, 환승 의심 등 이별 원인을 제대로 진단하고 싶은 분",
                         "재회를 원하지만 예전처럼 매달리는 내가 되고 싶지는 않은 분",
                         "상대를 되찾기 전에 먼저 무너진 나의 중심을 되찾고 싶은 분"
-                      ].map((text, idx) => (
-                        <div 
-                          key={idx}
-                          className="p-5 rounded-2xl bg-[#FAF7F2] border border-[#C5A059]/30 shadow-md flex items-start gap-4 hover:scale-[1.01] transition-transform"
-                        >
-                          <div className="w-5.5 h-5.5 rounded-full bg-[#4A0E17]/10 flex items-center justify-center shrink-0 mt-0.5 border border-[#8C1D24]/30">
-                            <Check className="w-3.5 h-3.5 text-[#8C1D24]" />
-                          </div>
-                          <p className="text-sm md:text-base text-[#3D3530] font-medium leading-relaxed">
-                            {text}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
+                      ]} 
+                    />
                   </div>
 
                   {/* 오른쪽 세로 이미지 (r3.webp, 3:4) */}

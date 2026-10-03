@@ -11,6 +11,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import ReportCommonInfo from '@/components/ReportCommonInfo'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
+import RecommendedForCards from '@/components/RecommendedForCards'
 
 export default function PremiumCompatibilityReportPage() {
   useScrollAnimation()
@@ -142,23 +143,16 @@ export default function PremiumCompatibilityReportPage() {
                     <h2 className="text-4xl font-elegant font-bold text-white tracking-widest">
                       이런 분께 <span className="text-[var(--accent-gold)]">추천합니다</span>
                     </h2>
-                    <div className="grid grid-cols-1 gap-6">
-                      {[
+                    <RecommendedForCards 
+                      items={[
                         '지금 만나는 사람과 잘 맞는지 궁금한 분',
                         '썸, 연애, 재회 가능성을 알고 싶은 분',
                         '반복되는 갈등의 이유를 알고 싶은 분',
                         '결혼까지 이어질 수 있는 관계인지 궁금한 분',
                         '오래 가는 관계를 만들고 싶은 분',
                         '상대의 감정 흐름을 이해하고 싶은 분',
-                      ].map((item, idx) => (
-                        <div key={idx} className="gungjung-glass p-8 border-white/[0.03] flex items-center gap-6 group hover:border-[var(--accent-gold)]/30">
-                          <div className="w-12 h-12 rounded-full bg-white/[0.03] flex items-center justify-center shrink-0 text-[var(--accent-gold)]">
-                            <i className="fas fa-check text-sm"></i>
-                          </div>
-                          <p className="text-[#EDE6DA] opacity-80 text-lg font-light break-keep">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+                      ]}
+                    />
                   </div>
                   {/* 세로형 이미지 원본 비율 그대로 노출 */}
                   <div className="relative group">

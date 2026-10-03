@@ -49,6 +49,7 @@ export default function FeaturedProducts() {
             else if (slug === 'wangbitna-cream') main_image = '/image/wangbitna/w7.webp';
             else if (slug === 'golden-forever-lady') main_image = '/image/golden/m7.webp';
             else if (slug === 'premium-bookmark') main_image = '/image/pre/p7.webp';
+            else if (slug === 'dubom') main_image = '/image/dubom/m7.webp';
             
             return { ...p, main_image };
           });

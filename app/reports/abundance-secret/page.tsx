@@ -18,6 +18,7 @@ import {
   AlertCircle,
   ChevronRight
 } from 'lucide-react'
+import RecommendedForCards from '@/components/RecommendedForCards'
 
 const productData = {
   productId: 'abundance-secret-guide',
@@ -234,8 +235,8 @@ export default function AbundanceSecretPage() {
                       이런 분께 <span className="text-[#E6BE8A]">추천합니다</span>
                     </h2>
 
-                    <div className="space-y-4">
-                      {[
+                    <RecommendedForCards 
+                      items={[
                         "열심히 사는데도 같은 돈 패턴이 반복된다고 느끼는 분",
                         "돈을 벌고 싶지만 마음 한쪽에 불안과 두려움이 큰 분",
                         "돈을 쓸 때 죄책감이나 긴장감이 자주 올라오는 분",
@@ -244,20 +245,8 @@ export default function AbundanceSecretPage() {
                         "감사, 순환, 비움의 관점으로 풍요를 다시 정리하고 싶은 분",
                         "자기계발과 마음공부를 통해 돈과의 관계를 바꾸고 싶은 분",
                         "부의 그릇을 키우는 매일의 루틴이 필요한 분"
-                      ].map((text, idx) => (
-                        <div 
-                          key={idx}
-                          className="p-5 rounded-2xl bg-[#FAF7F2] border border-[#E6BE8A]/30 shadow-md flex items-start gap-4 hover:scale-[1.01] transition-transform"
-                        >
-                          <div className="w-5.5 h-5.5 rounded-full bg-[#114234]/10 flex items-center justify-center shrink-0 mt-0.5 border border-[#114234]/30">
-                            <Check className="w-3.5 h-3.5 text-[#114234]" />
-                          </div>
-                          <p className="text-sm md:text-base text-[#3D3530] font-medium leading-relaxed">
-                            {text}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
+                      ]} 
+                    />
                   </div>
 
                   {/* 오른쪽 세로 이미지 */}

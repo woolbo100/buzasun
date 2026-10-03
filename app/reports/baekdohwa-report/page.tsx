@@ -11,6 +11,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import ReportCommonInfo from '@/components/ReportCommonInfo'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
+import RecommendedForCards from '@/components/RecommendedForCards'
 
 export default function BaekdohwaReportPage() {
   useScrollAnimation()
@@ -134,22 +135,15 @@ export default function BaekdohwaReportPage() {
                     <h2 className="text-4xl font-elegant font-bold text-white tracking-widest">
                       이런 분께 <span className="text-[var(--accent-gold)]">추천합니다</span>
                     </h2>
-                    <div className="grid grid-cols-1 gap-6">
-                      {[
+                    <RecommendedForCards 
+                      items={[
                         '늘 비슷한 연애 패턴을 반복하는 분',
                         '상대에게 끌리는 이유를 알고 싶은 분',
                         '내 연애의 강점과 약점을 알고 싶은 분',
                         '관계에서 자꾸 불안하거나 흔들리는 분',
                         '앞으로의 연애 전략을 세우고 싶은 분',
-                      ].map((item, idx) => (
-                        <div key={idx} className="gungjung-glass p-8 border-white/[0.03] flex items-center gap-6 group hover:border-[var(--accent-gold)]/30">
-                          <div className="w-12 h-12 rounded-full bg-white/[0.03] flex items-center justify-center shrink-0 text-[var(--accent-gold)]">
-                            <i className="fas fa-check text-sm"></i>
-                          </div>
-                          <p className="text-[#EDE6DA] opacity-80 text-lg font-light break-keep">{item}</p>
-                        </div>
-                      ))}
-                    </div>
+                      ]}
+                    />
                   </div>
                   {/* 세로형 이미지 그대로 노출 (상자 탈출) */}
                   <div className="relative group">
