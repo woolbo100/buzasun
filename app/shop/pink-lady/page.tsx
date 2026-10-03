@@ -100,7 +100,7 @@ export default function PinkLadyDetailPage() {
                }}
           />
 
-          <div className="container-premium max-w-6xl mx-auto px-6">
+          <div className="container-premium">
 
             {/* ==========================================
                 1. Hero Section
@@ -124,7 +124,7 @@ export default function PinkLadyDetailPage() {
                 </p>
 
                 {/* 메인 비주얼 - 자개 테두리 효과와 럭셔리 섀도우 (p1 이미지 선명도 확보를 위한 bg-white 추가) */}
-                <div className="relative max-w-4xl mx-auto aspect-video mb-12 rounded-[32px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(230,190,138,0.1)] group bg-white">
+                <div className="relative max-w-6xl mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(230,190,138,0.1)] group bg-white">
                   {/* 자개빛 레인보우 그라데이션 테두리 */}
                   <div className="absolute inset-0 p-[1px] rounded-[32px] bg-gradient-to-tr from-[#C58BA0] via-[#E6BE8A] to-[#87CEFA] pointer-events-none z-10 opacity-70">
                     <div className="w-full h-full rounded-[31px] bg-transparent"></div>
@@ -181,7 +181,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-24 md:mb-36">
               <Reveal>
-                <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-16">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-16">
                   {/* 오버뷰 이미지 */}
                   <div className="relative aspect-square overflow-hidden rounded-[32px] border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
                     {/* 은은한 자개 무늬 글로우 */}
@@ -237,7 +237,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-24 md:mb-36">
               <Reveal>
-                <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                   
                   {/* 왼쪽 추천 항목 */}
                   <div className="space-y-10 order-2 md:order-1">
@@ -281,7 +281,7 @@ export default function PinkLadyDetailPage() {
                 </div>
 
                 {/* 포뮬러 비주얼 배너 */}
-                <div className="relative aspect-video rounded-[32px] overflow-hidden border border-white/10 shadow-[0_15px_30px_rgba(0,0,0,0.4)] mb-12 group">
+                <div className="relative max-w-6xl mx-auto aspect-video rounded-[32px] overflow-hidden border border-white/10 shadow-[0_15px_30px_rgba(0,0,0,0.4)] mb-12 group">
                   <Image src="/image/pinklady/p4.webp" alt="Premium Formula ingredients" fill className="object-cover transition-transform duration-[6000ms] group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/70 to-transparent"></div>
                 </div>
@@ -319,7 +319,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-24 md:mb-36">
               <Reveal>
-                <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                   
                   {/* 이미지 */}
                   <div className="relative aspect-square overflow-hidden rounded-[32px] border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
@@ -362,7 +362,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-12 md:mb-16">
               <Reveal>
-                <div className="p-8 md:p-12 rounded-[24px] border border-white/5 bg-[#2D0A1E]/10 backdrop-blur-xl relative overflow-hidden">
+                <div className="max-w-6xl mx-auto p-8 md:p-12 rounded-[24px] border border-white/5 bg-[#2D0A1E]/10 backdrop-blur-xl relative overflow-hidden">
                   {/* 자개 오로라 광채 백그라운드 효과 */}
                   <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-tr from-[#C58BA0]/10 via-[#E6BE8A]/5 to-[#87CEFA]/10 blur-3xl rounded-full pointer-events-none" />
                   
@@ -410,7 +410,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-24 md:mb-36">
               <Reveal>
-                <div className="p-8 md:p-12 rounded-[24px] border border-white/5 bg-white/[0.01]">
+                <div className="max-w-6xl mx-auto p-8 md:p-12 rounded-[24px] border border-white/5 bg-white/[0.01]">
                   <h3 className="text-xl md:text-2xl font-elegant font-bold mb-6 text-white border-l-4 border-[#EDE6DA]/40 pl-4">
                     구매 전 안내
                   </h3>
@@ -448,7 +448,7 @@ export default function PinkLadyDetailPage() {
             {/* ==========================================
                 8. Final CTA
                 ========================================== */}
-            <section className="relative aspect-video overflow-hidden rounded-[32px] mb-20 group">
+            <section className="relative max-w-6xl mx-auto aspect-video overflow-hidden rounded-[32px] mb-20 group">
               <div className="absolute inset-0 z-0">
                 <Image src="/image/pinklady/p6.webp" alt="Feminine elegance background" fill className="object-cover transition-transform duration-[10000ms] group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/50 to-transparent"></div>

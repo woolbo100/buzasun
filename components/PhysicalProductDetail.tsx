@@ -181,7 +181,7 @@ export default function PhysicalProductDetail({
         <Navigation />
 
         <div className="relative z-10 pt-36 md:pt-44 pb-20">
-          <div className="container-premium max-w-6xl mx-auto px-6">
+          <div className="container-premium">
             
             {/* ==========================================
                 1. Hero Section
@@ -227,9 +227,9 @@ export default function PhysicalProductDetail({
                   </p>
                 )}
                 
-                {/* 메인 비주얼 이미지 */}
-                <div className="relative max-w-5xl mx-auto aspect-video mb-12 rounded-[32px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] group bg-black/40">
-                  <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/40 via-[#E6BE8A]/40 to-transparent pointer-events-none z-10 opacity-70" />
+                {/* 메인 비주얼 이미지 (max-w-6xl) */}
+                <div className="relative max-w-6xl mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group bg-black/40">
+                  <div className="absolute inset-0 p-[1px] rounded-[30px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/40 via-[#E6BE8A]/40 to-transparent pointer-events-none z-10 opacity-70" />
                   <Image 
                     src={heroImage} 
                     alt={title}
@@ -240,13 +240,13 @@ export default function PhysicalProductDetail({
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/80 via-transparent to-transparent z-0"></div>
                 </div>
 
-                {/* 히어로 설명 문구 */}
+                {/* 히어로 설명 문구 (max-w-3xl) */}
                 {heroDescription ? (
-                  <div className="max-w-2xl mx-auto text-[#EDE6DA]/85 text-sm md:text-base leading-relaxed mb-10 whitespace-pre-wrap font-light break-keep">
+                  <div className="max-w-3xl mx-auto text-[#EDE6DA]/85 text-sm md:text-base leading-relaxed mb-10 whitespace-pre-wrap font-light break-keep">
                     {heroDescription}
                   </div>
                 ) : (
-                  <p className="text-base md:text-xl text-[#EDE6DA] opacity-80 leading-relaxed mb-10 max-w-2xl mx-auto break-keep font-elegant italic">
+                  <p className="text-base md:text-xl text-[#EDE6DA] opacity-80 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
                     {subtitle}
                   </p>
                 )}
@@ -318,12 +318,12 @@ export default function PhysicalProductDetail({
                 ========================================== */}
             <section className="mb-28 md:mb-36">
               <Reveal>
-                <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-16">
-                  <div className="relative aspect-square overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-black/40">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-16">
+                  <div className="relative w-full aspect-square overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
                     <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-bl from-[#D8A48F]/40 to-[#E6BE8A]/40 pointer-events-none z-10" />
                     <Image src={overviewImage} alt="Brand Story" fill className="object-cover" />
                   </div>
-                  <div className="space-y-6">
+                  <div className="space-y-6 text-left break-keep">
                     <div className="flex items-center gap-3">
                       <BaekdohwaFlowerMark size={26} outlineGold />
                       <span className="text-xs tracking-[0.25em] text-[#E6BE8A] font-bold uppercase">BRAND STORY & OVERVIEW</span>
@@ -343,7 +343,7 @@ export default function PhysicalProductDetail({
 
                 {/* 포인트 카드 6개 그리드 */}
                 {overviewPoints && overviewPoints.length > 0 && (
-                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
                     {overviewPoints.map((point, idx) => (
                       <div 
                         key={idx} 
@@ -367,8 +367,8 @@ export default function PhysicalProductDetail({
                 ========================================== */}
             <section className="mb-28 md:mb-36">
               <Reveal>
-                <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                  <div className="space-y-8 order-2 md:order-1">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+                  <div className="space-y-8 order-2 lg:order-1 text-left break-keep">
                     <div className="flex items-center gap-3">
                       <BaekdohwaFlowerMark size={26} outlineGold />
                       <span className="text-xs tracking-[0.25em] text-[#E6BE8A] font-bold uppercase">RECOMMENDED FOR</span>
@@ -378,7 +378,7 @@ export default function PhysicalProductDetail({
                     </h2>
                     <RecommendedForCards items={recommendedPoints} />
                   </div>
-                  <div className="relative aspect-[3/4] rounded-[32px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] order-1 md:order-2 bg-black/40">
+                  <div className="relative w-full aspect-[3/4] rounded-[32px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl order-1 lg:order-2 bg-black/40">
                     <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src={recommendedImage} alt="Recommended" fill className="object-cover" />
                   </div>
@@ -409,8 +409,8 @@ export default function PhysicalProductDetail({
                   </p>
                 )}
 
-                {/* 포뮬러 메인 이미지 */}
-                <div className="max-w-5xl mx-auto mb-14">
+                {/* 포뮬러 메인 이미지 (max-w-6xl) */}
+                <div className="max-w-6xl mx-auto mb-14">
                   <div className="relative aspect-video rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-xl group bg-black/40">
                     <div className="absolute inset-0 p-[1px] rounded-[28px] md:rounded-[36px] bg-gradient-to-t from-[#D8A48F]/30 to-transparent pointer-events-none z-10" />
                     <Image src={formulaImage} alt="Formula" fill className="object-cover" />
@@ -419,7 +419,7 @@ export default function PhysicalProductDetail({
 
                 {/* 기능성 원료 & 부원료가 분리되어 넘어온 경우 */}
                 {(functionalIngredients && functionalIngredients.length > 0) || (subIngredients && subIngredients.length > 0) ? (
-                  <div className="space-y-10 text-left">
+                  <div className="max-w-6xl mx-auto space-y-10 text-left">
                     {/* 기능성 원료 블록 */}
                     {functionalIngredients && functionalIngredients.length > 0 && (
                       <div className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-[#E6BE8A]/30 bg-gradient-to-br from-[#2D0A1E]/30 to-transparent">
@@ -479,7 +479,7 @@ export default function PhysicalProductDetail({
                   </div>
                 ) : (
                   /* 기존 ingredients 단일 그리드 */
-                  <div className="gungjung-glass p-8 md:p-14 relative overflow-hidden rounded-[28px] border border-white/5">
+                  <div className="gungjung-glass p-8 md:p-14 relative overflow-hidden rounded-[28px] border border-white/5 max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
                       {ingredients.map((ing, idx) => (
                         <div key={idx} className="flex gap-5 items-start p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all">
@@ -498,7 +498,7 @@ export default function PhysicalProductDetail({
 
                 {/* 포뮬러 하단 주의 문구 */}
                 {formulaWarning && (
-                  <div className="mt-8 p-5 rounded-2xl bg-white/[0.02] border border-white/5 max-w-3xl mx-auto">
+                  <div className="mt-8 p-5 rounded-2xl bg-white/[0.02] border border-white/5 max-w-4xl mx-auto">
                     <p className="text-xs text-[#EDE6DA]/50 leading-relaxed break-keep whitespace-pre-wrap">
                       <i className="fas fa-circle-info mr-2 opacity-60"></i>
                       {formulaWarning}
@@ -514,8 +514,8 @@ export default function PhysicalProductDetail({
             {selfCareImage && (
               <section className="mb-28 md:mb-36">
                 <Reveal>
-                  <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                    <div className="space-y-6">
+                  <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+                    <div className="space-y-6 text-left break-keep">
                       <div className="flex items-center gap-3">
                         <BaekdohwaFlowerMark size={26} outlineGold />
                         <span className="text-xs tracking-[0.25em] text-[#E6BE8A] font-bold uppercase">SELF-CARE RITUAL</span>
@@ -527,7 +527,7 @@ export default function PhysicalProductDetail({
                         {selfCareDesc}
                       </div>
                     </div>
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-black/40">
+                    <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
                       <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                       <Image src={selfCareImage} alt="Self Care" fill className="object-cover" />
                     </div>
@@ -541,8 +541,8 @@ export default function PhysicalProductDetail({
                 ========================================== */}
             <section className="mb-28 md:mb-36">
               <Reveal>
-                <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                  <div className="space-y-6 order-2 md:order-1">
+                <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+                  <div className="space-y-6 order-2 lg:order-1 text-left break-keep">
                     <div className="flex items-center gap-3">
                       <BaekdohwaFlowerMark size={26} outlineGold />
                       <span className="text-xs tracking-[0.25em] text-[#E6BE8A] font-bold uppercase">WELLNESS GIFT</span>
@@ -554,7 +554,7 @@ export default function PhysicalProductDetail({
                       {giftDesc}
                     </p>
                   </div>
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] order-1 md:order-2 bg-black/40">
+                  <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl order-1 lg:order-2 bg-black/40">
                     <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-bl from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src={giftImage} alt="Gift" fill className="object-cover" />
                   </div>
@@ -569,17 +569,17 @@ export default function PhysicalProductDetail({
               <section className="mb-28 md:mb-36">
                 <Reveal>
                   {howToUseImage ? (
-                    <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                      <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-black/40">
+                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+                      <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
                         <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                         <Image src={howToUseImage} alt="How to Use" fill className="object-cover" />
                       </div>
-                      <div className="gungjung-glass p-8 md:p-12 rounded-[28px] border border-white/5 space-y-6">
+                      <div className="gungjung-glass p-8 md:p-12 rounded-[28px] border border-white/5 space-y-6 text-left break-keep">
                         <div className="flex items-center gap-3">
                           <span className="text-xs tracking-[0.25em] text-[#E6BE8A] font-bold uppercase">DAILY ROUTINE</span>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white border-l-4 pl-5" style={{ borderColor: `${accentColor}` }}>
-                          매일의 두봄 루틴
+                          매일의 루틴
                         </h2>
                         <div className="text-base text-[#EDE6DA]/85 leading-relaxed break-keep whitespace-pre-wrap font-light">
                           {howToUse}
@@ -595,7 +595,7 @@ export default function PhysicalProductDetail({
                       </div>
                     </div>
                   ) : (
-                    <div className="gungjung-glass p-10 rounded-[28px] border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent">
+                    <div className="gungjung-glass p-10 rounded-[28px] border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent max-w-6xl mx-auto text-left break-keep">
                       <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 pl-6" style={{ borderColor: `${accentColor}80` }}>사용 방법</h2>
                       <div className="space-y-6">
                         <p className="text-base text-[#EDE6DA]/80 leading-relaxed break-keep whitespace-pre-wrap">
@@ -617,11 +617,11 @@ export default function PhysicalProductDetail({
             )}
 
             {/* ==========================================
-                8. Notice Section
+                8. Notice Section (max-w-6xl)
                 ========================================== */}
-            <section className="mb-28 md:mb-36">
+            <section className="mb-28 md:mb-36 max-w-6xl mx-auto">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 rounded-[28px] border border-white/5">
+                <div className="gungjung-glass p-8 md:p-12 rounded-[28px] border border-white/5 text-left">
                   <h2 className="text-xl md:text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#E6BE8A] pl-5">
                     구매 전 안내
                   </h2>
@@ -643,12 +643,12 @@ export default function PhysicalProductDetail({
             </section>
 
             {/* ==========================================
-                9. Final CTA Section
+                9. Final CTA Section (max-w-6xl)
                 ========================================== */}
-            <section className="relative aspect-video overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-white/10">
+            <section className="max-w-6xl mx-auto relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-white/10">
               <div className="absolute inset-0 z-0">
                 <Image src={ctaImage} alt="CTA" fill className="object-cover transition-transform duration-[10000ms] group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/75 to-transparent"></div>
               </div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center">
                 <Reveal>
@@ -676,7 +676,7 @@ export default function PhysicalProductDetail({
                         boxShadow: `0 0 40px ${accentColor}33` 
                       }}
                     >
-                      {ctaButtonText || "두봄 구매하기"}
+                      {ctaButtonText || "바로 구매하기"}
                       <ArrowRight className="w-4 h-4 text-[#2D0A1E]" />
                     </button>
                   </div>
