@@ -176,7 +176,7 @@ export default function PhysicalProductDetail({
   const activeOptions = dbOptions[0];
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514] text-white selection:bg-[#E6BE8A] selection:text-black font-sans" style={{ '--accent-shadow': `${accentColor}26` } as any}>
+    <main className="detail-page relative min-h-screen bg-[#0a0514] text-white selection:bg-[#E6BE8A] selection:text-black font-sans" style={{ '--accent-shadow': `${accentColor}26` } as any}>
       <GlobalBackground src="/image/shop-hero.png" brightCenter={false}>
         <Navigation />
 
@@ -463,7 +463,7 @@ export default function PhysicalProductDetail({
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                           {subIngredients.map((item, idx) => (
-                            <div key={idx} className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 flex gap-4 items-start hover:border-white/15 transition-all">
+                            <div key={idx} className="detail-glass-card p-5 rounded-2xl flex gap-4 items-start transition-all">
                               <div className="w-10 h-10 rounded-xl bg-[#2D0A1E]/80 border border-white/10 flex items-center justify-center shrink-0 text-[#E6BE8A]/80">
                                 <i className={`fas ${item.icon || 'fa-seedling'} text-base`}></i>
                               </div>
@@ -482,7 +482,7 @@ export default function PhysicalProductDetail({
                   <div className="gungjung-glass p-8 md:p-14 relative overflow-hidden rounded-[28px] border border-white/5 max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
                       {ingredients.map((ing, idx) => (
-                        <div key={idx} className="flex gap-5 items-start p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all">
+                        <div key={idx} className="detail-glass-card flex gap-5 items-start p-6 rounded-2xl transition-all">
                           <div className="w-12 h-12 rounded-xl bg-[#2D0A1E] flex items-center justify-center shrink-0" style={{ borderColor: `${accentColor}33`, color: accentColor, border: '1px solid' }}>
                             <i className={`fas ${ing.icon || 'fa-leaf'} text-lg`}></i>
                           </div>
@@ -498,7 +498,7 @@ export default function PhysicalProductDetail({
 
                 {/* 포뮬러 하단 주의 문구 */}
                 {formulaWarning && (
-                  <div className="mt-8 p-5 rounded-2xl bg-white/[0.02] border border-white/5 max-w-4xl mx-auto">
+                  <div className="detail-glass-card mt-8 p-5 rounded-2xl max-w-4xl mx-auto">
                     <p className="text-xs text-[#EDE6DA]/50 leading-relaxed break-keep whitespace-pre-wrap">
                       <i className="fas fa-circle-info mr-2 opacity-60"></i>
                       {formulaWarning}

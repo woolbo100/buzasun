@@ -138,7 +138,7 @@ export default function DynamicReportPage() {
   const activeOptions = displayData.options?.[0]
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514]">
+    <main className="detail-page relative min-h-screen bg-[#0a0514]">
       <GlobalBackground src={(slug === 'love-code' || slug === 'love-code-report') ? "/image/love-code-bg.png" : "/image/main.png"}>
         <Navigation />
 
@@ -240,7 +240,7 @@ export default function DynamicReportPage() {
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-[rgba(255,255,255,0.02)] p-6 rounded-xl border border-[var(--glass-border)]">
+                  <div className="detail-glass-card p-6 rounded-xl">
                     <h3 className="text-lg font-bold mb-4 text-[var(--accent-gold-light)]">추천 대상</h3>
                     <ul className="space-y-2 text-sm text-bd-gray">
                       <li className="flex items-start gap-2">

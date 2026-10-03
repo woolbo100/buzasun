@@ -86,7 +86,7 @@ export default function PinkLadyDetailPage() {
   ]
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514] text-white selection:bg-[#E6BE8A] selection:text-black font-sans">
+    <main className="detail-page relative min-h-screen bg-[#0a0514] text-white selection:bg-[#E6BE8A] selection:text-black font-sans">
       <GlobalBackground src="/image/shop-hero.png" brightCenter={false}>
         <Navigation />
 
@@ -290,7 +290,7 @@ export default function PinkLadyDetailPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                   {ingredients.map((ing, idx) => (
                     <div key={idx} 
-                         className="p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#E6BE8A]/20 hover:bg-[#2D0A1E]/10 transition-all duration-300 flex gap-4">
+                         className="detail-glass-card p-6 md:p-8 rounded-2xl flex gap-4">
                       {/* 성분 아이콘 대신 단아한 전통 문양 포인트 */}
                       <div className="w-10 h-10 rounded-xl bg-[#2D0A1E] border border-[#E6BE8A]/30 flex items-center justify-center shrink-0">
                         <span className="text-xs text-[#E6BE8A] font-bold">숲</span>
@@ -304,7 +304,7 @@ export default function PinkLadyDetailPage() {
                 </div>
 
                 {/* 하단 Disclaimer */}
-                <div className="p-4 rounded-xl bg-white/[0.01] border border-white/5 max-w-2xl mx-auto flex items-center gap-3">
+                <div className="detail-glass-card p-4 rounded-xl max-w-2xl mx-auto flex items-center gap-3">
                   <ShieldCheck className="w-5 h-5 text-[#E6BE8A] shrink-0" />
                   <p className="text-[11px] md:text-xs text-[#EDE6DA]/40 leading-normal break-keep">
                     본 제품은 의약품이 아닙니다. 개인의 체질과 생활환경에 따라 사용감은 달라질 수 있습니다.
@@ -362,7 +362,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-12 md:mb-16">
               <Reveal>
-                <div className="max-w-6xl mx-auto p-8 md:p-12 rounded-[24px] border border-white/5 bg-[#2D0A1E]/10 backdrop-blur-xl relative overflow-hidden">
+                <div className="gungjung-glass max-w-6xl mx-auto p-8 md:p-12 rounded-[24px] relative overflow-hidden">
                   {/* 자개 오로라 광채 백그라운드 효과 */}
                   <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-tr from-[#C58BA0]/10 via-[#E6BE8A]/5 to-[#87CEFA]/10 blur-3xl rounded-full pointer-events-none" />
                   
@@ -410,7 +410,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-24 md:mb-36">
               <Reveal>
-                <div className="max-w-6xl mx-auto p-8 md:p-12 rounded-[24px] border border-white/5 bg-white/[0.01]">
+                <div className="gungjung-glass max-w-6xl mx-auto p-8 md:p-12 rounded-[24px]">
                   <h3 className="text-xl md:text-2xl font-elegant font-bold mb-6 text-white border-l-4 border-[#EDE6DA]/40 pl-4">
                     구매 전 안내
                   </h3>

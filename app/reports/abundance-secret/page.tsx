@@ -102,7 +102,7 @@ export default function AbundanceSecretPage() {
   )
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#0B2B22]">
+    <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#0B2B22]">
       {/* 기존 백도화 템플릿의 다크 배경(GlobalBackground) 유지 */}
       <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
         <Navigation />

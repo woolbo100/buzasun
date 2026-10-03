@@ -101,7 +101,7 @@ export default function LoveSecretEbookPage() {
   )
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#1A0F2E]">
+    <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#1A0F2E]">
       {/* 기존 백도화 템플릿의 다크 배경(GlobalBackground) 유지 */}
       <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
         <Navigation />

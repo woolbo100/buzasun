@@ -37,7 +37,7 @@ export default function PremiumCompatibilityReportPage() {
   }
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514]">
+    <main className="detail-page relative min-h-screen bg-[#0a0514]">
       <GlobalBackground src="/image/main4.png">
         <Navigation />
 
@@ -124,7 +124,7 @@ export default function PremiumCompatibilityReportPage() {
                         "오래가는 관계의 방향성",
                         "결혼/장기 관계 가능성"
                       ].map((item, idx) => (
-                        <div key={idx} className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/5">
+                        <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl">
                           <div className="w-2 h-2 rounded-full bg-[var(--accent-gold)] shadow-[0_0_10px_var(--accent-gold)]"></div>
                           <span className="text-white/80">{item}</span>
                         </div>
@@ -194,7 +194,7 @@ export default function PremiumCompatibilityReportPage() {
                       { t: "미래 관계 해석", d: "결혼 및 장기적 인연의 가능성 탐색", i: "fa-ring" },
                       { t: "성장 방향 제안", d: "함께 더 행복해질 수 있는 실질적 가이드", i: "fa-seedling" }
                     ].map((item, idx) => (
-                      <div key={idx} className="flex flex-col items-center gap-6 p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] transition-all group">
+                      <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group">
                         <div className="w-16 h-16 rounded-2xl bg-[#1A0514] flex items-center justify-center border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] shadow-lg group-hover:scale-110 transition-transform">
                           <i className={`fas ${item.i} text-2xl`}></i>
                         </div>

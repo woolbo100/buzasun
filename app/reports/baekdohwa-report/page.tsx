@@ -37,7 +37,7 @@ export default function BaekdohwaReportPage() {
   }
 
   return (
-    <main className="relative min-h-screen bg-[#0a0514]">
+    <main className="detail-page relative min-h-screen bg-[#0a0514]">
       <GlobalBackground src="/image/main4.png">
         <Navigation />
 
@@ -116,7 +116,7 @@ export default function BaekdohwaReportPage() {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {["타고난 연애 기질", "무의식적 끌림 패턴", "관계 유지 전략", "매력 에너지 활용법"].map((item, idx) => (
-                        <div key={idx} className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/5">
+                        <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl">
                           <div className="w-2 h-2 rounded-full bg-[var(--accent-gold)] shadow-[0_0_10px_var(--accent-gold)]"></div>
                           <span className="text-white/80">{item}</span>
                         </div>
@@ -185,7 +185,7 @@ export default function BaekdohwaReportPage() {
                       { t: "매력 에너지", d: "가장 나다운 모습으로 사랑받는 법", i: "fa-wand-magic-sparkles" },
                       { t: "이별 솔루션", d: "갈등의 고리를 끊어낼 실질적 변화", i: "fa-key" }
                     ].map((item, idx) => (
-                      <div key={idx} className="flex flex-col items-center gap-6 p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] transition-all group">
+                      <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group">
                         <div className="w-16 h-16 rounded-2xl bg-[#2D0A1E] flex items-center justify-center border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] shadow-lg group-hover:scale-110 transition-transform">
                           <i className={`fas ${item.i} text-2xl`}></i>
                         </div>
