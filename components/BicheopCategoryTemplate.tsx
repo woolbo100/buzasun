@@ -29,12 +29,12 @@ export default function BicheopCategoryTemplate({
 
   // 카테고리 탭 목록 (현재 탭이 활성화되도록 active 처리)
   const categories = [
-    { name: '전체', href: '/bicheop', active: false },
-    { name: '연애비록', href: '/bicheop/love', active: category === 'love' },
-    { name: '재회비록', href: '/bicheop/reunion', active: category === 'reunion' },
-    { name: '풍요비록', href: '/bicheop/abundance', active: category === 'abundance' },
-    { name: '매력비록', href: '/bicheop/charm', active: category === 'charm' },
-    { name: '마음비록', href: '/bicheop/mind', active: category === 'mind' },
+    { name: '전체', href: '/birok', active: false },
+    { name: '연애비록', href: '/birok/love', active: category === 'love' },
+    { name: '재회비록', href: '/birok/reunion', active: category === 'reunion' },
+    { name: '풍요비록', href: '/birok/abundance', active: category === 'abundance' },
+    { name: '매력비록', href: '/birok/charm', active: category === 'charm' },
+    { name: '마음비록', href: '/birok/mind', active: category === 'mind' },
   ]
 
   return (
@@ -98,7 +98,7 @@ export default function BicheopCategoryTemplate({
                     <article className="gungjung-glass rounded-[24px] border border-white/5 bg-gradient-to-b from-white/[0.03] to-[#2D0A1E]/5 overflow-hidden hover:border-[#BA8D7E]/30 hover:shadow-[0_15px_30px_rgba(186,141,126,0.08)] transition-all duration-500 flex flex-col h-full group">
                       
                       {/* 썸네일 영역 */}
-                      <Link href={`/bicheop/${post.slug}`} className="relative aspect-video w-full overflow-hidden block bg-[#0a0514] border-b border-white/5">
+                      <Link href={`/birok/${post.slug}`} className="relative aspect-video w-full overflow-hidden block bg-[#0a0514] border-b border-white/5">
                         <Image
                           src={post.thumbnail || '/image/product-love-report.png'}
                           alt={post.title}
@@ -124,7 +124,7 @@ export default function BicheopCategoryTemplate({
                           
                           {/* 제목 */}
                           <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-[#BA8D7E] transition-colors leading-snug break-keep font-elegant">
-                            <Link href={`/bicheop/${post.slug}`}>{post.title}</Link>
+                            <Link href={`/birok/${post.slug}`}>{post.title}</Link>
                           </h3>
                           
                           {/* 요약 */}
@@ -136,7 +136,7 @@ export default function BicheopCategoryTemplate({
                         {/* 하단 버튼 */}
                         <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-end">
                           <Link
-                            href={`/bicheop/${post.slug}`}
+                            href={`/birok/${post.slug}`}
                             className="inline-flex items-center gap-1.5 text-xs text-[#BA8D7E] hover:text-white transition-colors duration-300 font-bold group/btn tracking-widest"
                           >
                             자세히 보기

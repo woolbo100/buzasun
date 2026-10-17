@@ -18,12 +18,12 @@ export default function BicheopListPage() {
 
   // 카테고리 탭 리스트 정의
   const categories = [
-    { name: '전체', href: '/bicheop', active: true },
-    { name: '연애비록', href: '/bicheop/love', active: false },
-    { name: '재회비록', href: '/bicheop/reunion', active: false },
-    { name: '풍요비록', href: '/bicheop/abundance', active: false },
-    { name: '매력비록', href: '/bicheop/charm', active: false },
-    { name: '마음비록', href: '/bicheop/mind', active: false },
+    { name: '전체', href: '/birok', active: true },
+    { name: '연애비록', href: '/birok/love', active: false },
+    { name: '재회비록', href: '/birok/reunion', active: false },
+    { name: '풍요비록', href: '/birok/abundance', active: false },
+    { name: '매력비록', href: '/birok/charm', active: false },
+    { name: '마음비록', href: '/birok/mind', active: false },
   ]
 
   return (
@@ -87,7 +87,7 @@ export default function BicheopListPage() {
                     <article className="gungjung-glass rounded-[24px] border border-white/5 bg-gradient-to-b from-white/[0.03] to-[#2D0A1E]/5 overflow-hidden hover:border-[#BA8D7E]/30 hover:shadow-[0_15px_30px_rgba(186,141,126,0.08)] transition-all duration-500 flex flex-col h-full group">
                       
                       {/* 썸네일 영역 */}
-                      <Link href={`/bicheop/${post.slug}`} className="relative aspect-video w-full overflow-hidden block bg-[#0a0514] border-b border-white/5">
+                      <Link href={`/birok/${post.slug}`} className="relative aspect-video w-full overflow-hidden block bg-[#0a0514] border-b border-white/5">
                         <Image
                           src={post.thumbnail || '/image/product-love-report.png'}
                           alt={post.title}
@@ -113,7 +113,7 @@ export default function BicheopListPage() {
                           
                           {/* 제목 */}
                           <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-[#BA8D7E] transition-colors leading-snug break-keep font-elegant">
-                            <Link href={`/bicheop/${post.slug}`}>{post.title}</Link>
+                            <Link href={`/birok/${post.slug}`}>{post.title}</Link>
                           </h3>
                           
                           {/* 요약 */}
@@ -125,7 +125,7 @@ export default function BicheopListPage() {
                         {/* 하단 버튼 */}
                         <div className="mt-8 pt-4 border-t border-white/5 flex items-center justify-end">
                           <Link
-                            href={`/bicheop/${post.slug}`}
+                            href={`/birok/${post.slug}`}
                             className="inline-flex items-center gap-1.5 text-xs text-[#BA8D7E] hover:text-white transition-colors duration-300 font-bold group/btn tracking-widest"
                           >
                             자세히 보기

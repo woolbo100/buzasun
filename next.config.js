@@ -11,6 +11,20 @@ const nextConfig = {
   compress: true,
   // 프로덕션 소스맵 비활성화 (보안)
   productionBrowserSourceMaps: false,
+  async redirects() {
+    return [
+      {
+        source: '/bicheop',
+        destination: '/birok',
+        permanent: true,
+      },
+      {
+        source: '/bicheop/:path*',
+        destination: '/birok/:path*',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

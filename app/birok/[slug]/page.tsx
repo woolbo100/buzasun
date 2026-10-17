@@ -74,7 +74,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
             <Reveal delayMs={50}>
               <div className="mb-8">
                 <Link
-                  href="/bicheop"
+                  href="/birok"
                   className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-[#BA8D7E] transition-colors duration-300 uppercase tracking-widest font-bold"
                 >
                   <ArrowLeft className="w-4 h-4" /> 비록 목록으로 돌아가기
@@ -138,7 +138,7 @@ export default function BicheopPostDetailPage({ params }: PostDetailPageProps) {
                     {relatedPosts.map((relatedPost) => (
                       <Link
                         key={relatedPost.slug}
-                        href={`/bicheop/${relatedPost.slug}`}
+                        href={`/birok/${relatedPost.slug}`}
                         className="gungjung-glass p-5 rounded-2xl border border-white/5 hover:border-[#BA8D7E]/30 hover:shadow-[0_10px_20px_rgba(186,141,126,0.05)] transition-all duration-300 flex gap-4 items-center group bg-white/[0.01]"
                       >
                         {/* 미니 썸네일 */}

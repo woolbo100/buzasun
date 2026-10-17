@@ -43,14 +43,14 @@ function getProductCategory(order: any) {
       name.includes('비급') || name.includes('비책') || name.includes('비방') || name.includes('전자책') || name.includes('ebook') || name.includes('가이드')
     );
 
-  let ebookReadUrl = '/bicheop/love';
+  let ebookReadUrl = '/birok/love';
   if (isEbook) {
     if (name.includes('재회') || pid === '5594bf01-0b83-443d-8a33-1235b4053d82') {
-      ebookReadUrl = '/bicheop/reunion';
+      ebookReadUrl = '/birok/reunion';
     } else if (name.includes('풍요') || name.includes('부의') || pid === '10898351-7c14-4912-a970-f079dd477b1a') {
-      ebookReadUrl = '/bicheop/abundance';
+      ebookReadUrl = '/birok/abundance';
     } else {
-      ebookReadUrl = '/bicheop/love';
+      ebookReadUrl = '/birok/love';
     }
   }
 
