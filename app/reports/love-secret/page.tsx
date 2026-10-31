@@ -1422,62 +1422,82 @@ export default function LoveSecretEbookPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
-                신규 Section 8 & 기존 Final CTA 통합 확장 (최종 결제 유도)
+                기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1440px)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden rounded-[40px] mb-20 group border border-[#D4B2A7]/60 shadow-2xl p-8 md:p-16 text-center max-w-5xl mx-auto"
-              style={{
-                background: 'radial-gradient(ellipse at 50% 50%, #4A232B 0%, #2A0A14 50%, #0A0514 100%)',
-                boxShadow: '0 0 70px rgba(186, 141, 126, 0.35)'
-              }}
-            >
-              {/* 이미지 교체 영역 8 (매혹의 열쇠 오브제 배경 슬롯) */}
-              <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-                <HybridImageSlot 
-                  assetKey="finalCta" 
-                  className="w-full h-full border-0 rounded-none bg-transparent"
+            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#C5A059]/40 shadow-2xl">
+              {/* l6.webp 배경 */}
+              <div className="absolute inset-0 z-0">
+                <Image 
+                  src={productData.ctaImage} 
+                  alt="연애비급 마지막 안내 배경" 
+                  fill 
+                  className="object-cover transition-transform duration-[10000ms] group-hover:scale-110" 
                 />
+                {/* 텍스트 가독성을 위한 로즈브라운 반투명 오버레이 필터 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#4A232B]/75 to-black/80 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-[#0a0514]/30" />
               </div>
 
               {/* 중앙 정보 및 CTA 버튼 */}
-              <div className="relative z-10 space-y-6 md:space-y-8 break-keep">
+              <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8 break-keep">
+                <Reveal>
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-tight">
+                    이제 사랑 앞에서 작아지지 마세요
+                  </h2>
+                  <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light max-w-xl mx-auto">
+                    사랑은 더 많이 애쓴 사람에게 주어지는 보상이 아니라, 자기 자리를 잃지 않는 사람에게 오래 머무는 에너지입니다.<br/>
+                    불안하게 확인하고 맞춰주는 연애에서 벗어나 나의 기준과 매력을 회복해 보세요.
+                  </p>
+                  
+                  <div className="pt-4">
+                    <CTAButton text="연애비급 구매하기" />
+                  </div>
+                </Reveal>
+              </div>
+            </section>
+
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 Section 8: Final CTA 최종 마감 트리거 추가 (재회비방과 동일 규격)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 p-8 md:p-16 border-2 border-[#C5A059] shadow-[0_0_50px_rgba(186,141,126,0.6)] text-center max-w-5xl mx-auto">
+              {/* 로즈 버건디 풀 컬러 배경 */}
+              <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#6B2838] via-[#4A1824] to-[#1E0810]" />
+              
+              {/* 이미지 교체 영역 8 (매혹의 열쇠 오브제 배경 슬롯) */}
+              <div className="absolute inset-0 z-0 opacity-25 mix-blend-overlay">
+                <HybridImageSlot 
+                  assetKey="finalCta" 
+                  className="w-full h-full rounded-none border-none"
+                  imgClassName="object-cover"
+                />
+              </div>
+
+              <div className="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
                 <Reveal>
                   {/* 경고 카피 */}
-                  <div className="p-4 md:p-5 rounded-2xl bg-black/60 border border-[#D4B2A7]/30 max-w-2xl mx-auto mb-6">
-                    <p className="text-xs md:text-sm text-[#E6BE8A] font-bold leading-relaxed break-keep">
-                      ⚠️ 경고: 사랑받기 위해 더 이상 스스로를 헐값에 던지지 마십시오. 당신이 자리를 지키지 않으면 상대는 결코 당신을 귀하게 대하지 않습니다. 착한 여자의 가면을 벗고 선택하는 여왕으로 우뚝 서십시오.
+                  <div className="p-6 md:p-8 rounded-2xl bg-black/60 border border-[#C5A059]/40 max-w-2xl mx-auto text-left sm:text-center text-sm md:text-base leading-relaxed text-[#EDE6DA] break-keep shadow-xl">
+                    <p className="font-semibold text-[#E6BE8A] text-base md:text-lg mb-2 flex items-center justify-center gap-1.5">
+                      <span>⚠️ 경고: 사랑받기 위해 더 이상 스스로를 헐값에 던지지 마십시오.</span>
+                    </p>
+                    <p className="font-light">
+                      당신이 자리를 지키지 않으면 상대는 결코 당신을 귀하게 대하지 않습니다. 착한 여자의 가면을 벗고 선택하는 여왕으로 우뚝 서십시오.
                     </p>
                   </div>
 
-                  {/* 기존 헤드라인과 설명 보존 */}
-                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-elegant font-bold text-white leading-tight">
-                    이제 사랑 앞에서 작아지지 마세요
-                  </h2>
-
-                  <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light max-w-xl mx-auto">
-                    사랑은 더 많이 애쓴 사람에게 주어지는 보상이 아니라, 자기 자리를 잃지 않는 사람에게 오래 머무는 에너지입니다. 불안하게 확인하고 맞춰주는 연애에서 벗어나 나의 기준과 매력을 회복해 보세요.
-                  </p>
-                  
-                  {/* 최종 CTA 버튼 그룹 */}
-                  <div className="pt-4 max-w-lg mx-auto">
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
-                      <button
-                        onClick={handleAddToCart}
-                        className="flex-1 py-4.5 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#D4B2A7]/40 text-[#D4B2A7] hover:bg-[#D4B2A7]/10 bg-black/40 w-full"
-                      >
-                        장바구니 담기
-                      </button>
-                      <button
-                        onClick={handlePurchase}
-                        className="flex-grow-[1.6] py-4.5 px-6 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF7F2] w-full shadow-[0_0_35px_rgba(212,178,167,0.35)] animate-pulse-slow"
-                        style={{
-                          background: 'linear-gradient(135deg, #BA8D7E 0%, #8C5E50 100%)',
-                          border: '1px solid rgba(212, 178, 167, 0.65)',
-                        }}
-                      >
-                        <span className="break-keep text-center">지금 19,000원에 3종 풀패키지 다운로드하고 연애 주도권 장악하기</span>
-                        <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
-                      </button>
-                    </div>
+                  {/* 최종 CTA 버튼 (은은한 펄스 애니메이션, 샴페인 골드 테두리) */}
+                  <div className="pt-4">
+                    <button
+                      onClick={handlePurchase}
+                      className="w-full sm:w-auto px-8 md:px-14 py-5 md:py-6 rounded-2xl font-elegant font-bold text-lg md:text-2xl text-[#FAF7F2] shadow-[0_0_40px_rgba(230,190,138,0.35)] hover:shadow-[0_0_60px_rgba(230,190,138,0.55)] transition-all duration-300 hover:scale-105 active:scale-95 motion-safe:animate-pulse inline-flex items-center justify-center gap-3 cursor-pointer"
+                      style={{
+                        background: 'linear-gradient(135deg, #BA8D7E 0%, #8C5E50 100%)',
+                        border: '2px solid #C5A059'
+                      }}
+                    >
+                      <Sparkles className="w-6 h-6 text-[#E6BE8A]" />
+                      <span>지금 19,000원에 3종 풀패키지 다운로드하고 연애 주도권 장악하기</span>
+                      <ChevronRight className="w-6 h-6 text-[#E6BE8A]" />
+                    </button>
                   </div>
                 </Reveal>
               </div>
