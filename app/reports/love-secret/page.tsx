@@ -210,12 +210,12 @@ export default function LoveSecretEbookPage() {
           <div className="container-premium">
             
             {/* ═══════════════════════════════════════════════════════════════
-                1. Hero Section (기존 Hero + 신규 Section 1 3종 세트 기획 확장)
+                1. Hero Section (재회비방과 동일한 구성 순서: 풀 이미지 상단 -> 신규 패키지 카드)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="text-center mb-28">
               <Reveal delayMs={100}>
-                {/* 상단 라벨 */}
-                <div className="mb-6">
+                {/* [기존 Hero 보존 영역] 상단 라벨 */}
+                <div className="mb-8">
                   <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#D4B2A7] uppercase"
                     style={{
                       background: 'rgba(186, 141, 126, 0.15)',
@@ -226,13 +226,48 @@ export default function LoveSecretEbookPage() {
                 </div>
 
                 {/* 대제목 */}
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-8 text-white leading-tight">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-10 text-white leading-tight">
                   戀愛秘笈 <span className="text-[#D4B2A7]">연애비급</span>
                 </h1>
 
-                {/* Section 1 신규 통합 Hero 카드: 은은한 로즈 피치 그라데이션 + 골드 매화 문양 배경 */}
+                {/* 1. 최상단: 가로형 풀 이미지 (기존 l1.webp, 16:9 비율) */}
+                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                  <Image 
+                    src={productData.heroImage} 
+                    alt="연애비급"
+                    fill
+                    className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
+                </div>
+
+                {/* 2. 기존 하단 서브카피, 설명 및 구매 버튼 보존 */}
+                <div className="max-w-3xl mx-auto space-y-6 mb-20">
+                  <p className="text-xl md:text-2xl font-elegant font-semibold text-[#BA8D7E] leading-snug break-keep">
+                    사랑을 구걸하는 자리에서, 사랑이 머무는 자리로
+                  </p>
+
+                  <div className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed space-y-3 pt-6 border-t border-white/5 break-keep">
+                    <p>
+                      연애비급은 반복적으로 낮은 자리에 서는 여성을 위한 프리미엄 연애 심리·포지션·매력 구조 해석서입니다.
+                    </p>
+                    <p>
+                      더 많이 애쓰는 것이 아니라, 내가 서 있는 자리를 바꾸는 것.
+                    </p>
+                    <p className="font-semibold text-white">
+                      이제 사랑을 확인하고 붙잡는 연애가 아니라, 나의 기준과 매력을 잃지 않는 연애를 시작해보세요.
+                    </p>
+                  </div>
+
+                  <div className="pt-4">
+                    <CTAButton text="연애비급 구매하기" />
+                  </div>
+                </div>
+
+                {/* 3. 그 밑에 새로 추가된 Section 1: Hero Banner 3종 패키지 확장 통합 카드 */}
                 <div 
-                  className="max-w-6xl mx-auto rounded-[32px] md:rounded-[40px] p-6 md:p-12 mb-16 border border-[#D4B2A7]/40 text-left relative overflow-hidden shadow-2xl"
+                  className="max-w-6xl mx-auto rounded-[32px] md:rounded-[40px] p-6 md:p-12 mb-16 border border-[#D4B2A7]/40 text-left relative overflow-hidden shadow-2xl mt-12"
                   style={{
                     background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
                     boxShadow: '0 0 60px rgba(186, 141, 126, 0.25)'
@@ -288,41 +323,6 @@ export default function LoveSecretEbookPage() {
                         className="w-full aspect-[4/3] md:aspect-square"
                       />
                     </div>
-                  </div>
-                </div>
-
-                {/* 기존 원본 Hero 큰 이미지 배치 (보존) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-12 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
-                  <Image 
-                    src={productData.heroImage} 
-                    alt="연애비급"
-                    fill
-                    className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
-                </div>
-
-                {/* 하단 기존 서브카피, 설명 및 구매 버튼 (보존) */}
-                <div className="max-w-3xl mx-auto space-y-6">
-                  <p className="text-xl md:text-2xl font-elegant font-semibold text-[#BA8D7E] leading-snug break-keep">
-                    사랑을 구걸하는 자리에서, 사랑이 머무는 자리로
-                  </p>
-
-                  <div className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed space-y-3 pt-6 border-t border-white/5 break-keep">
-                    <p>
-                      연애비급은 반복적으로 낮은 자리에 서는 여성을 위한 프리미엄 연애 심리·포지션·매력 구조 해석서입니다.
-                    </p>
-                    <p>
-                      더 많이 애쓰는 것이 아니라, 내가 서 있는 자리를 바꾸는 것.
-                    </p>
-                    <p className="font-semibold text-white">
-                      이제 사랑을 확인하고 붙잡는 연애가 아니라, 나의 기준과 매력을 잃지 않는 연애를 시작해보세요.
-                    </p>
-                  </div>
-
-                  <div className="pt-4">
-                    <CTAButton text="연애비급 구매하기" />
                   </div>
                 </div>
               </Reveal>

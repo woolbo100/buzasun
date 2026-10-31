@@ -211,12 +211,12 @@ export default function AbundanceSecretPage() {
           <div className="container-premium">
             
             {/* ═══════════════════════════════════════════════════════════════
-                1. Hero Section (기존 Hero + 신규 Section 1 3종 세트 기획 확장)
+                1. Hero Section (재회비방과 동일한 구성 순서: 풀 이미지 상단 -> 신규 패키지 카드)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="text-center mb-28">
               <Reveal delayMs={100}>
-                {/* 상단 라벨 */}
-                <div className="mb-6">
+                {/* [기존 Hero 보존 영역] 상단 라벨 */}
+                <div className="mb-8">
                   <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#E6BE8A] uppercase"
                     style={{
                       background: 'rgba(22, 78, 63, 0.25)',
@@ -227,13 +227,48 @@ export default function AbundanceSecretPage() {
                 </div>
 
                 {/* 대제목 */}
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-8 text-white leading-tight">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-10 text-white leading-tight">
                   豊饒秘策 <span className="text-[#E6BE8A]">풍요비책</span>
                 </h1>
 
-                {/* Section 1 신규 통합 Hero 카드: 딥 에메랄드 그린 배경 + 은은한 골드 안개 그라데이션 */}
+                {/* 1. 최상단: 가로형 풀 이미지 (기존 a1.webp, 16:9 비율) */}
+                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                  <Image 
+                    src={productData.heroImage} 
+                    alt="풍요비책"
+                    fill
+                    className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
+                </div>
+
+                {/* 2. 기존 하단 서브카피, 설명 및 구매 버튼 보존 */}
+                <div className="max-w-3xl mx-auto space-y-6 mb-20">
+                  <p className="text-xl md:text-2xl font-elegant font-semibold text-[#E6BE8A] leading-snug break-keep">
+                    숨겨진 황금의 문을 여는 풍요의 비밀서
+                  </p>
+
+                  <div className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed space-y-3 pt-6 border-t border-white/5 break-keep">
+                    <p>
+                      풍요비책은 돈을 쫓는 방식이 아니라, 내면의 결핍 코드를 점검하고 풍요를 받아들일 마음그릇을 키우기 위한 프리미엄 풍요의식 자기계발 전자책입니다.
+                    </p>
+                    <p>
+                      부는 바깥에서 억지로 붙잡는 것이 아니라, 내 안의 문을 여는 순간 다른 방식으로 흐르기 시작합니다.
+                    </p>
+                    <p className="font-semibold text-white">
+                      오늘부터 풍요비책과 함께 나의 무의식, 감정, 언어, 소비, 감사의 루틴을 새롭게 정렬해보세요.
+                    </p>
+                  </div>
+
+                  <div className="pt-4">
+                    <CTAButton text="풍요비책 구매하기" />
+                  </div>
+                </div>
+
+                {/* 3. 그 밑에 새로 추가된 Section 1: Hero Banner 3종 패키지 확장 통합 카드 */}
                 <div 
-                  className="max-w-6xl mx-auto rounded-[32px] md:rounded-[40px] p-6 md:p-12 mb-16 border border-[#C5A059]/40 text-left relative overflow-hidden shadow-2xl"
+                  className="max-w-6xl mx-auto rounded-[32px] md:rounded-[40px] p-6 md:p-12 mb-16 border border-[#C5A059]/40 text-left relative overflow-hidden shadow-2xl mt-12"
                   style={{
                     background: 'radial-gradient(ellipse at 50% 0%, rgba(22, 78, 63, 0.45) 0%, rgba(11, 43, 34, 0.35) 50%, rgba(10, 5, 20, 0.95) 100%)',
                     boxShadow: '0 0 60px rgba(17, 66, 52, 0.3)'
@@ -289,41 +324,6 @@ export default function AbundanceSecretPage() {
                         className="w-full aspect-[4/3] md:aspect-square"
                       />
                     </div>
-                  </div>
-                </div>
-
-                {/* 기존 원본 Hero 큰 이미지 배치 (보존) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-12 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
-                  <Image 
-                    src={productData.heroImage} 
-                    alt="풍요비책"
-                    fill
-                    className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
-                </div>
-
-                {/* 하단 기존 서브카피, 설명 및 구매 버튼 (보존) */}
-                <div className="max-w-3xl mx-auto space-y-6">
-                  <p className="text-xl md:text-2xl font-elegant font-semibold text-[#E6BE8A] leading-snug break-keep">
-                    숨겨진 황금의 문을 여는 풍요의 비밀서
-                  </p>
-
-                  <div className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed space-y-3 pt-6 border-t border-white/5 break-keep">
-                    <p>
-                      풍요비책은 돈을 쫓는 방식이 아니라, 내면의 결핍 코드를 점검하고 풍요를 받아들일 마음그릇을 키우기 위한 프리미엄 풍요의식 자기계발 전자책입니다.
-                    </p>
-                    <p>
-                      부는 바깥에서 억지로 붙잡는 것이 아니라, 내 안의 문을 여는 순간 다른 방식으로 흐르기 시작합니다.
-                    </p>
-                    <p className="font-semibold text-white">
-                      오늘부터 풍요비책과 함께 나의 무의식, 감정, 언어, 소비, 감사의 루틴을 새롭게 정렬해보세요.
-                    </p>
-                  </div>
-
-                  <div className="pt-4">
-                    <CTAButton text="풍요비책 구매하기" />
                   </div>
                 </div>
               </Reveal>
