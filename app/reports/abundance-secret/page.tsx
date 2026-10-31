@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
@@ -16,10 +16,21 @@ import {
   FileText, 
   Smartphone, 
   AlertCircle,
-  ChevronRight
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  AlertTriangle,
+  Sparkles,
+  Clock,
+  CheckCircle2,
+  ImageIcon
 } from 'lucide-react'
 import RecommendedForCards from '@/components/RecommendedForCards'
+import { abundanceSecretAssets } from './assets'
 
+// ═══════════════════════════════════════════════════════════════════════════
+// 📦 상품 기본 정보 및 결제 연동 설정
+// ═══════════════════════════════════════════════════════════════════════════
 const productData = {
   productId: 'abundance-secret-guide',
   slug: 'abundance-secret-guide',
@@ -31,6 +42,9 @@ const productData = {
   category: 'reports',
   path: '/reports/abundance-secret',
   checkoutUrl: '/checkout?productId=abundance-secret-guide',
+  price: 19000,
+  regularPrice: 79000,
+  discountRate: '76% OFF',
 
   heroImage: '/image/abundance/a1.webp',
   overviewImage: '/image/abundance/a2.webp',
@@ -40,22 +54,109 @@ const productData = {
   ctaImage: '/image/abundance/a6.webp',
 }
 
+// 🖼️ 신규 교체형 이미지 슬롯 컴포넌트
+// (샴페인 골드 #E6BE8A / #C5A059 테두리와 딥 에메랄드 그린 배경의 고급 플레이스홀더 제공)
+function HybridImageSlot({
+  assetKey,
+  className = '',
+  imgClassName = '',
+}: {
+  assetKey: keyof typeof abundanceSecretAssets
+  className?: string
+  imgClassName?: string
+}) {
+  const asset = abundanceSecretAssets[assetKey]
+  const [hasError, setHasError] = useState(false)
+  const isPlaceholderPath = !asset.src || asset.src.includes('placeholder')
+
+  return (
+    <div className={`relative overflow-hidden rounded-2xl md:rounded-3xl border border-[#C5A059]/40 bg-gradient-to-br from-[#0B3B24]/40 via-[#082E1E]/60 to-[#0A0514] shadow-xl flex items-center justify-center ${asset.aspectRatio} ${className}`}>
+      {!hasError && !isPlaceholderPath ? (
+        <img
+          src={asset.src}
+          alt={asset.alt}
+          onError={() => setHasError(true)}
+          style={{ objectFit: asset.objectFit }}
+          className={`w-full h-full transition-transform duration-500 hover:scale-[1.02] ${imgClassName}`}
+        />
+      ) : (
+        <div className="flex flex-col items-center justify-center p-6 text-center space-y-3 z-10 w-full h-full bg-[#082E1E]/80 backdrop-blur-sm border border-[#C5A059]/25">
+          <div className="w-12 h-12 rounded-full bg-[#114234] border border-[#E6BE8A]/50 flex items-center justify-center text-[#E6BE8A] shadow-[0_0_15px_rgba(230,190,138,0.25)]">
+            <ImageIcon className="w-6 h-6 opacity-90" />
+          </div>
+          <div>
+            <span className="inline-block px-3 py-0.5 rounded-full text-[10px] tracking-wider uppercase font-bold text-[#E6BE8A] bg-[#114234]/70 border border-[#E6BE8A]/30 mb-2">
+              {asset.placeholderLabel}
+            </span>
+            <p className="text-sm md:text-base font-elegant font-bold text-[#FAF7F2] break-keep">
+              {asset.alt}
+            </p>
+          </div>
+          <span className="text-[11px] text-[#E6BE8A]/80 font-mono bg-black/50 px-3 py-1 rounded border border-[#C5A059]/30">
+            {asset.description}
+          </span>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function AbundanceSecretPage() {
   useScrollAnimation()
   const router = useRouter()
 
+  // FAQ 아코디언 상태 관리 (첫 번째 질문 기본 오픈)
+  const [openFaq, setOpenFaq] = useState<number | null>(0)
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index)
+  }
+
+  // 실전 체감 사례 슬라이더 인덱스 관리
+  const [reviewIndex, setReviewIndex] = useState(0)
+  const reviewCards = [
+    {
+      id: 1,
+      badge: "사례 01 · 가격 도약",
+      quote: "1회 5만 원도 손 떨며 깎아주던 제가, 50만 원으로 10배 올렸는데도 예약이 넘쳐납니다.",
+      tag: "#제값선언문 #가격결계"
+    },
+    {
+      id: 2,
+      badge: "사례 02 · 통장 잔고 혁명",
+      quote: "월급만 들어오면 카드값으로 사라지던 통장에 여유 자금이 500만 원 이상 고이기 시작했습니다.",
+      tag: "#돈맥누수차단 #선천코드락해제"
+    },
+    {
+      id: 3,
+      badge: "사례 03 · 자동 자본 순환",
+      quote: "스펙 설명 대신 정체성 판매 공식을 적용하자마자 자는 동안 결제 알림이 쏟아졌습니다.",
+      tag: "#자본의흑마법 #상징자본"
+    }
+  ]
+
+  const nextReview = () => {
+    setReviewIndex((prev) => (prev + 1) % reviewCards.length)
+  }
+
+  const prevReview = () => {
+    setReviewIndex((prev) => (prev - 1 + reviewCards.length) % reviewCards.length)
+  }
+
+  // 구매 버튼 클릭 핸들러 (기존 풍요비책 결제 흐름 100% 동일 유지)
   const handlePurchase = (e: React.MouseEvent) => {
     e.preventDefault()
     router.push(productData.checkoutUrl)
   }
 
+  // 장바구니 추가 핸들러 (기존 풍요비책 장바구니 연동 동일 유지)
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault()
     addToCart({
       id: productData.productId,
       slug: productData.slug,
-      name: productData.title + ' 가이드',
-      price: 19000,
+      name: productData.title + ' 3종 올인원 세트',
+      price: productData.price,
       image: productData.heroImage,
       type: productData.type,
       category: 'SECRET METHOD'
@@ -65,37 +166,36 @@ export default function AbundanceSecretPage() {
 
   // 샴페인 골드 & 전통 금박 구름 장식 구분선
   const EmeraldCloudDivider = () => (
-    <div className="flex items-center justify-center my-20 opacity-60">
-      <div className="h-[1px] w-16 md:w-28 bg-gradient-to-r from-transparent to-[#E6BE8A]" />
+    <div className="flex items-center justify-center my-20 md:my-28 opacity-70">
+      <div className="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent via-[#E6BE8A]/40 to-[#114234]" />
       <div className="mx-4 flex items-center justify-center">
         {/* 금박 구름 문양 SVG */}
         <svg className="w-6 h-6 text-[#E6BE8A] animate-pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.5 18C3.46 18 1 15.54 1 12.5C1 9.79 2.95 7.54 5.56 7.07C6.73 4.64 9.17 3 12 3C15.42 3 18.3 5.42 18.91 8.68C21.74 9.07 23 11.23 23 13.5C23 15.98 20.98 18 18.5 18H6.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </div>
-      <div className="h-[1px] w-16 md:w-28 bg-gradient-to-l from-transparent to-[#E6BE8A]" />
+      <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent via-[#E6BE8A]/40 to-[#114234]" />
     </div>
   )
 
   // 공통 CTA 버튼 -> 장바구니 / 바로구매 분리 (풍요비책 에메랄드 테마 색상 적용)
   const CTAButton = ({ text }: { text: string }) => (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center my-6 max-w-md mx-auto">
+    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center my-6 max-w-xl mx-auto w-full">
       <button
         onClick={handleAddToCart}
-        className="flex-1 py-4.5 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-transparent w-full"
+        className="py-4 px-6 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/40 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-transparent shrink-0 whitespace-nowrap w-full sm:w-auto"
       >
         장바구니 담기
       </button>
       <button
         onClick={handlePurchase}
-        className="flex-grow-[1.5] py-4.5 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF7F2] w-full animate-pulse-slow"
+        className="flex-1 py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF7F2] w-full shadow-[0_0_35px_rgba(22,78,63,0.35)]"
         style={{
           background: 'linear-gradient(135deg, #114234 0%, #0B2B22 100%)', // 딥 에메랄드 그린
-          border: '1px solid rgba(230, 190, 138, 0.5)',
-          boxShadow: '0 0 35px rgba(22, 78, 63, 0.35)' // 에메랄드 소프트 글로우
+          border: '1px solid rgba(230, 190, 138, 0.55)',
         }}
       >
-        {text}
+        <span className="break-keep text-center">{text}</span>
         <ChevronRight className="w-5 h-5 text-[#FAF7F2]" />
       </button>
     </div>
@@ -110,11 +210,13 @@ export default function AbundanceSecretPage() {
         <div className="relative z-10 pt-44 pb-20">
           <div className="container-premium">
             
-            {/* 1. Hero Section */}
+            {/* ═══════════════════════════════════════════════════════════════
+                1. Hero Section (기존 Hero + 신규 Section 1 3종 세트 기획 확장)
+               ═══════════════════════════════════════════════════════════════ */}
             <section className="text-center mb-28">
               <Reveal delayMs={100}>
                 {/* 상단 라벨 */}
-                <div className="mb-8">
+                <div className="mb-6">
                   <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#E6BE8A] uppercase"
                     style={{
                       background: 'rgba(22, 78, 63, 0.25)',
@@ -125,12 +227,73 @@ export default function AbundanceSecretPage() {
                 </div>
 
                 {/* 대제목 */}
-                <h1 className="text-3xl md:text-5xl font-elegant font-bold mb-10 text-white leading-tight">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-8 text-white leading-tight">
                   豊饒秘策 <span className="text-[#E6BE8A]">풍요비책</span>
                 </h1>
 
-                {/* 큰 이미지 배치 */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                {/* Section 1 신규 통합 Hero 카드: 딥 에메랄드 그린 배경 + 은은한 골드 안개 그라데이션 */}
+                <div 
+                  className="max-w-6xl mx-auto rounded-[32px] md:rounded-[40px] p-6 md:p-12 mb-16 border border-[#C5A059]/40 text-left relative overflow-hidden shadow-2xl"
+                  style={{
+                    background: 'radial-gradient(ellipse at 50% 0%, rgba(22, 78, 63, 0.45) 0%, rgba(11, 43, 34, 0.35) 50%, rgba(10, 5, 20, 0.95) 100%)',
+                    boxShadow: '0 0 60px rgba(17, 66, 52, 0.3)'
+                  }}
+                >
+                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+                    {/* 좌측: 신규 헤드카피, 서브카피, 뱃지, 가격 강조, CTA */}
+                    <div className="lg:col-span-7 space-y-6">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-3.5 py-1.5 rounded-full text-[11px] md:text-xs font-bold tracking-wide text-[#E6BE8A] bg-[#114234]/60 border border-[#E6BE8A]/40">
+                          [본편+실전워크북+특별외전+금옥만당부 4 in 1]
+                        </span>
+                        <span className="px-3.5 py-1.5 rounded-full text-[11px] md:text-xs font-bold tracking-wide text-[#E6BE8A] bg-[#114234]/60 border border-[#E6BE8A]/40">
+                          [실전 템플릿 4종 수록]
+                        </span>
+                      </div>
+
+                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-white leading-snug break-keep">
+                        &ldquo;부는 쫓아야 할 것이 아니라, 내면에서 &apos;여는&apos; 것이다.&rdquo;
+                      </h2>
+
+                      <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light break-keep">
+                        이를 악물고 일해도 통장이 비어 있던 진짜 이유. 무의식의 가난 바이러스를 소각하고 자본의 흑마법을 깨우는 황금의 비밀서(秘密書).
+                      </p>
+
+                      {/* 가격 강조 박스 */}
+                      <div className="p-5 rounded-2xl bg-[#082E1E]/60 border border-[#C5A059]/30 flex flex-wrap items-center justify-between gap-4">
+                        <div className="space-y-1">
+                          <span className="text-xs text-[#EDE6DA]/50 block">백도화 풍요비책 3종 올인원 세트</span>
+                          <div className="flex items-baseline gap-3">
+                            <span className="text-sm md:text-base text-[#EDE6DA]/40 line-through">
+                              정가 79,000원
+                            </span>
+                            <span className="text-2xl md:text-3xl font-elegant font-bold text-[#E6BE8A]">
+                              19,000원
+                            </span>
+                          </div>
+                        </div>
+                        <span className="px-3 py-1 rounded-full text-xs font-bold text-white bg-[#114234] border border-[#E6BE8A]/50 shadow-[0_0_15px_rgba(230,190,138,0.2)]">
+                          76% OFF
+                        </span>
+                      </div>
+
+                      <div className="pt-2">
+                        <CTAButton text="지금 19,000원에 황금의 문 열기" />
+                      </div>
+                    </div>
+
+                    {/* 우측: 이미지 교체 영역 1 (Hero 목업) */}
+                    <div className="lg:col-span-5">
+                      <HybridImageSlot 
+                        assetKey="hero" 
+                        className="w-full aspect-[4/3] md:aspect-square"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* 기존 원본 Hero 큰 이미지 배치 (보존) */}
+                <div className="relative max-w-6xl mx-auto aspect-video mb-12 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
                     src={productData.heroImage} 
                     alt="풍요비책"
@@ -141,7 +304,7 @@ export default function AbundanceSecretPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
                 </div>
 
-                {/* 하단 서브카피, 설명 및 구매 버튼 */}
+                {/* 하단 기존 서브카피, 설명 및 구매 버튼 (보존) */}
                 <div className="max-w-3xl mx-auto space-y-6">
                   <p className="text-xl md:text-2xl font-elegant font-semibold text-[#E6BE8A] leading-snug break-keep">
                     숨겨진 황금의 문을 여는 풍요의 비밀서
@@ -168,7 +331,9 @@ export default function AbundanceSecretPage() {
 
             <EmeraldCloudDivider />
 
-            {/* 2. Product Overview Section */}
+            {/* ═══════════════════════════════════════════════════════════════
+                2. Product Overview Section (기존 풍요비책 개요 보존)
+               ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -225,7 +390,75 @@ export default function AbundanceSecretPage() {
 
             <EmeraldCloudDivider />
 
-            {/* 3. Recommended For Section */}
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 Section 2. Pain Point — 문제 진단 & 공감
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left max-w-6xl mx-auto">
+              <Reveal>
+                <div className="space-y-10">
+                  <div className="text-center max-w-3xl mx-auto space-y-4">
+                    <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
+                      Problem Diagnosis & Resonance
+                    </span>
+                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-tight break-keep">
+                      &ldquo;당신이 밤낮없이 뼈를 갈아 넣어 일해도 돈이 모이지 않던 잔인한 진실&rdquo;
+                    </h2>
+                  </div>
+
+                  <div className="grid lg:grid-cols-12 gap-10 items-center">
+                    {/* 이미지 교체 영역 2 (윈도우 95 에러 및 텅 빈 통장 비주얼) */}
+                    <div className="lg:col-span-5">
+                      <HybridImageSlot 
+                        assetKey="pain" 
+                        className="w-full aspect-[4/3] md:aspect-square"
+                      />
+                    </div>
+
+                    {/* 본문 텍스트 및 5대 저주 체크리스트 */}
+                    <div className="lg:col-span-7 space-y-6 break-keep">
+                      <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light p-6 rounded-2xl bg-[#082E1E]/40 border border-[#C5A059]/30">
+                        최신형 고사양 게임(부자의 삶)을 돌리고 싶은데, 컴퓨터 본체에는 20년 전 &apos;윈도우 95&apos;가 깔려 있습니다. 무의식이 결핍으로 차 있으면 결국 &apos;블루스크린&apos;이 뜹니다. 돈을 벌고 싶다며 엑셀을 밟으면서, 무의식 바닥에서는 돈을 두려워하며 브레이크를 동시에 밟고 있던 당신의 무의식 운영체제부터 포맷해야 합니다.
+                      </p>
+
+                      <div className="space-y-3">
+                        <h3 className="text-base md:text-lg font-elegant font-bold text-[#E6BE8A] flex items-center gap-2">
+                          <AlertTriangle className="w-5 h-5 text-[#E6BE8A]" />
+                          5대 저주 체크리스트
+                        </h3>
+
+                        <div className="space-y-2.5">
+                          {[
+                            "통장에 돈이 조금 모이면 귀신같이 사고나 지출로 빠져나간다 (누수형 저주)",
+                            "내 지식과 상품의 가격을 당당히 올리지 못하고 깎아준다 (구걸형 저주)",
+                            "계좌에서 돈이 빠져나갈 때 가슴이 조이고 숨이 턱 막힌다 (망령형 저주)",
+                            "큰돈이 생기면 왠지 모를 불안감과 죄책감이 든다 (원죄형 저주)",
+                            "남이 돈 번 소식을 들으면 속으로는 박탈감이 치민다"
+                          ].map((curse, idx) => (
+                            <div 
+                              key={idx}
+                              className="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-start gap-3.5 hover:border-[#E6BE8A]/40 transition-colors"
+                            >
+                              <div className="w-5 h-5 rounded border border-[#E6BE8A]/60 flex items-center justify-center shrink-0 mt-0.5 bg-[#114234]/40">
+                                <Check className="w-3.5 h-3.5 text-[#E6BE8A]" />
+                              </div>
+                              <span className="text-xs md:text-sm text-[#FAF7F2] font-medium leading-snug">
+                                {curse}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                3. Recommended For Section (기존 추천 대상 보존)
+               ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -264,7 +497,77 @@ export default function AbundanceSecretPage() {
 
             <EmeraldCloudDivider />
 
-            {/* 4. Core Structure Section */}
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 Section 3. Solution — 4대 핵심 연금술
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-center max-w-6xl mx-auto">
+              <Reveal>
+                <div className="space-y-4 mb-12">
+                  <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
+                    Core Alchemy System
+                  </span>
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-snug break-keep max-w-3xl mx-auto">
+                    &ldquo;부는 바깥을 헤매는 것이 아닌, 닫힌 내면의 통로를 뚫는 정밀한 에너지 연금술입니다.&rdquo;
+                  </h2>
+                </div>
+
+                {/* 4개 카드 (데스크톱 4열 / 2x2, 모바일 1열) */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 text-left">
+                  {[
+                    {
+                      num: "01",
+                      title: "진단 & 물리적 소각",
+                      desc: "어린 시절 결핍 트라우마와 가난 신념을 손으로 적고 불태워 신경망 차단"
+                    },
+                    {
+                      num: "02",
+                      title: "선천코드 5원소 락 해제",
+                      desc: "타고난 오행(목·화·토·금·수)별 치명적 돈맥 누수 지점 해제"
+                    },
+                    {
+                      num: "03",
+                      title: "자본의 흑마법",
+                      desc: "을의 구걸을 깨고 심판관으로 군림하여 결제 통증(뇌섬엽)을 손실 공포로 마비"
+                    },
+                    {
+                      num: "04",
+                      title: "21일 풍요 뇌 재배선",
+                      desc: "3초 지출 판별법, 단중혈 호흡, 5초 루프로 부의 주파수를 현실 자본으로 환전"
+                    }
+                  ].map((card, idx) => (
+                    <div 
+                      key={idx}
+                      className="gungjung-glass p-6 md:p-7 border-[#C5A059]/30 rounded-2xl flex flex-col justify-between hover:border-[#E6BE8A]/60 transition-all group"
+                      style={{
+                        background: 'linear-gradient(180deg, rgba(17, 66, 52, 0.25) 0%, rgba(10, 5, 20, 0.8) 100%)',
+                        boxShadow: '0 8px 32px rgba(22, 78, 63, 0.15)'
+                      }}
+                    >
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between">
+                          <span className="font-serif text-xs font-bold bg-[#114234] text-[#E6BE8A] px-2.5 py-0.5 rounded border border-[#E6BE8A]/40">
+                            연금술 {card.num}
+                          </span>
+                          <Sparkles className="w-4 h-4 text-[#E6BE8A]/50 group-hover:text-[#E6BE8A] transition-colors" />
+                        </div>
+                        <h3 className="text-base md:text-lg font-elegant font-bold text-white group-hover:text-[#E6BE8A] transition-colors">
+                          {card.title}
+                        </h3>
+                        <p className="text-xs md:text-sm text-[#EDE6DA]/75 leading-relaxed font-light break-keep">
+                          {card.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            </section>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                4. Core Structure Section (기존 부의 핵심 구조 보존)
+               ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-center">
               <Reveal>
                 <div className="max-w-4xl mx-auto space-y-4 mb-10">
@@ -360,7 +663,415 @@ export default function AbundanceSecretPage() {
 
             <EmeraldCloudDivider />
 
-            {/* 5. Premium Content Section */}
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 Section 4. Product Showcase — 3종 올인원 세트 상세 해부
+                (제공된 확장 상세 지침 100% 반영: Book 1, Book 2, Book 3, Bonus)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left max-w-6xl mx-auto">
+              <Reveal>
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                  <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
+                    3-in-1 All-in-One Package
+                  </span>
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide">
+                    3종 올인원 세트 상세 해부
+                  </h2>
+                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed font-light break-keep">
+                    본편, 실전 워크북, 특별 외전, 그리고 디지털 부적까지 하나로 통합된 4 in 1 마법서 구성입니다.
+                  </p>
+                </div>
+
+                <div className="space-y-12">
+                  {/* ─────────────────────────────────────────────────────────
+                      Book 1: 《풍요비책(豊饒秘策) 완전판》
+                     ───────────────────────────────────────────────────────── */}
+                  <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/30 rounded-3xl relative overflow-hidden"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(17, 66, 52, 0.3) 0%, rgba(10, 5, 20, 0.85) 100%)',
+                      boxShadow: '0 12px 40px rgba(17, 66, 52, 0.2)'
+                    }}>
+                    <div className="grid lg:grid-cols-12 gap-10 items-start">
+                      {/* 표지 슬롯 */}
+                      <div className="lg:col-span-4">
+                        <HybridImageSlot assetKey="book1" className="w-full aspect-[3/4]" />
+                      </div>
+
+                      {/* 상세 설명 */}
+                      <div className="lg:col-span-8 space-y-6 break-keep">
+                        <div>
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E6BE8A] bg-[#114234]/70 border border-[#E6BE8A]/30 mb-3">
+                            📗 Book 1. [본편]
+                          </span>
+                          <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-2">
+                            《풍요비책(豊饒秘策) 완전판》
+                          </h3>
+                          <p className="text-sm md:text-base text-[#E6BE8A] font-medium">
+                            가난을 황금으로 바꾸는 마음의 연금술 (소장용 비밀 마법서)
+                          </p>
+                        </div>
+
+                        {/* 핵심 내용 ①~⑤ */}
+                        <div className="space-y-4 pt-2">
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">①</span> 무의식의 저주와 가난의 3가지 그림자
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              결핍(Scarcity), 속박(Bondage), 희생자 마인드(Victim) 심판
+                            </p>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">②</span> 선천코드 5원소(오행) 재물 락 해제 비기
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              목·화·토·금·수 기운별 맞춤형 돈그릇 확장법
+                            </p>
+                          </div>
+
+                          {/* ③ 자본의 흑마법 4대 절대 비기 */}
+                          <div className="p-5 rounded-xl bg-[#114234]/25 border border-[#E6BE8A]/30 space-y-3.5">
+                            <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">③</span> 자본의 흑마법 4대 절대 비기
+                            </h4>
+
+                            <div className="grid sm:grid-cols-2 gap-3 pl-2 pt-1">
+                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#C5A059]/20 space-y-1">
+                                <span className="text-xs font-bold text-[#E6BE8A] block">비기 1. [프레임 지배]</span>
+                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-relaxed">
+                                  게이트키핑(자격 심사)을 통해 공급자에서 &apos;심판관&apos;으로 지위 역전
+                                </p>
+                              </div>
+
+                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#C5A059]/20 space-y-1">
+                                <span className="text-xs font-bold text-[#E6BE8A] block">비기 2. [신경 연금술]</span>
+                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-relaxed">
+                                  뇌섬엽 통증을 마비시키고 &apos;미결정 시 겪을 파멸&apos;로 결제를 구원화
+                                </p>
+                              </div>
+
+                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#C5A059]/20 space-y-1">
+                                <span className="text-xs font-bold text-[#E6BE8A] block">비기 3. [상징 자본]</span>
+                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-relaxed">
+                                  스펙 나열을 파괴하고 에르메스처럼 상위 1% 계급의 인장(Seal) 판매
+                                </p>
+                              </div>
+
+                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#C5A059]/20 space-y-1">
+                                <span className="text-xs font-bold text-[#E6BE8A] block">비기 4. [인간 조종술]</span>
+                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-relaxed">
+                                  자이가르닉(열린 고리)과 서늘한 침묵으로 상대의 도파민을 감금
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">④</span> 착한 가격의 저주 파괴
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              헐값 노동의 죄책감을 깨고 내 몸값과 가치를 10배 올리는 가격 결계 3원칙
+                            </p>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">⑤</span> 풍요를 부르는 마음의 법칙 10가지 &amp; 우주 부의 법칙 7가지
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ─────────────────────────────────────────────────────────
+                      Book 2: 《정화와 각성의 서》
+                     ───────────────────────────────────────────────────────── */}
+                  <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/30 rounded-3xl relative overflow-hidden"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(17, 66, 52, 0.3) 0%, rgba(10, 5, 20, 0.85) 100%)',
+                      boxShadow: '0 12px 40px rgba(17, 66, 52, 0.2)'
+                    }}>
+                    <div className="grid lg:grid-cols-12 gap-10 items-start">
+                      {/* 표지 슬롯 */}
+                      <div className="lg:col-span-4">
+                        <HybridImageSlot assetKey="workbook" className="w-full aspect-[3/4]" />
+                      </div>
+
+                      {/* 상세 설명 */}
+                      <div className="lg:col-span-8 space-y-6 break-keep">
+                        <div>
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E6BE8A] bg-[#114234]/70 border border-[#E6BE8A]/30 mb-3">
+                            📙 Book 2. [실전 워크북]
+                          </span>
+                          <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-2">
+                            《정화와 각성의 서》
+                          </h3>
+                          <p className="text-sm md:text-base text-[#E6BE8A] font-medium">
+                            무의식 정화 실천 워크북 (손으로 직접 쓰는 4~6주 완성 지침서)
+                          </p>
+                        </div>
+
+                        {/* 핵심 내용 ①~⑦ */}
+                        <div className="space-y-4 pt-2">
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">①</span> 과거 결핍 코드의 물리적 단절
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              기억의 도서관 청소, 용서의 편지, 가난 신념 소각식 주문
+                            </p>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">②</span> 비움의 법칙
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              지갑 쓰레기 청소, 낡은 옷 폐기, 명현반응(好轉反應) 극복 절대 주문
+                            </p>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">③</span> 나의 풍요 가격 선언문 &amp; 새로운 최상위 정체성 선언서
+                            </h4>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-2">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">④</span> 돈그릇 수용 한계선 3단계 확장 실습
+                            </h4>
+                            <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm text-[#EDE6DA]/85 pl-6">
+                              <span className="px-2.5 py-1 rounded bg-[#114234]/50 border border-[#C5A059]/30">무저항 씨앗 금액</span>
+                              <span>➔</span>
+                              <span className="px-2.5 py-1 rounded bg-[#114234]/50 border border-[#C5A059]/30">저항 돌파</span>
+                              <span>➔</span>
+                              <span className="px-2.5 py-1 rounded bg-[#114234]/50 border border-[#C5A059]/30">도약 비노동 순환</span>
+                            </div>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">⑤</span> 심야의 뇌파 해킹 (5초 루프 각인법)
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              수면 직전 세타파 상태에서 무의식을 속이는 4K 시각화
+                            </p>
+                          </div>
+
+                          {/* ⑥ 실전 통제 치트키 템플릿 4종 */}
+                          <div className="p-5 rounded-xl bg-[#114234]/25 border border-[#E6BE8A]/30 space-y-3.5">
+                            <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">⑥</span> 실전 통제 치트키 템플릿 4종
+                            </h4>
+
+                            <div className="grid sm:grid-cols-2 gap-3 pl-2 pt-1">
+                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#C5A059]/20 space-y-1">
+                                <span className="text-xs font-bold text-[#E6BE8A] block">[자격 거절문]</span>
+                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-relaxed">
+                                  무례한 요구와 선 넘기를 차단하는 자격 거절문
+                                </p>
+                              </div>
+
+                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#C5A059]/20 space-y-1">
+                                <span className="text-xs font-bold text-[#E6BE8A] block">[제값 선언문]</span>
+                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-relaxed">
+                                  헐값 노동과 가격 후려치기를 박살 내는 제값 선언문
+                                </p>
+                              </div>
+
+                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#C5A059]/20 space-y-1">
+                                <span className="text-xs font-bold text-[#E6BE8A] block">[바운더리 선언문]</span>
+                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-relaxed">
+                                  에너지 뱀파이어를 쳐내는 바운더리 선언문
+                                </p>
+                              </div>
+
+                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#C5A059]/20 space-y-1">
+                                <span className="text-xs font-bold text-[#E6BE8A] block">[단호한 종결문]</span>
+                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-relaxed">
+                                  선택과 마감을 내 통제 아래 두는 단호한 종결문
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">⑦</span> 7일 행동 기록장 &amp; 21일 풍요 뇌 데일리 실천 저널
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ─────────────────────────────────────────────────────────
+                      Book 3: 《풍요의 파동(豊饒의 波動)》
+                     ───────────────────────────────────────────────────────── */}
+                  <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/30 rounded-3xl relative overflow-hidden"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(17, 66, 52, 0.3) 0%, rgba(10, 5, 20, 0.85) 100%)',
+                      boxShadow: '0 12px 40px rgba(17, 66, 52, 0.2)'
+                    }}>
+                    <div className="grid lg:grid-cols-12 gap-10 items-start">
+                      {/* 표지 슬롯 */}
+                      <div className="lg:col-span-4">
+                        <HybridImageSlot assetKey="wave" className="w-full aspect-[3/4]" />
+                      </div>
+
+                      {/* 상세 설명 */}
+                      <div className="lg:col-span-8 space-y-6 break-keep">
+                        <div>
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E6BE8A] bg-[#114234]/70 border border-[#E6BE8A]/30 mb-3">
+                            📘 Book 3. [특별 외전]
+                          </span>
+                          <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-2">
+                            《풍요의 파동(豊饒의 波動)》
+                          </h3>
+                          <p className="text-sm md:text-base text-[#E6BE8A] font-medium">
+                            기분과 에너지가 운명을 바꾼다 (끌어당김의 본질, 8대 감정 에너지 백과 잠언록)
+                          </p>
+                        </div>
+
+                        {/* 핵심 내용 ①~⑤ */}
+                        <div className="space-y-4 pt-2">
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">①</span> 5년간의 실증 보고서
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              5만 원, 50만 원, 500만 원, 1,000만 원까지 무노동 자본 순환을 일군 &apos;기분의 법칙&apos;
+                            </p>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">②</span> 기분과 감정의 재정의
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              감정은 마음의 독백이 아닌 우주망에 쏘아 올리는 &apos;실시간 영적 실행 코드&apos;
+                            </p>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">③</span> 저항의 해체
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              &apos;간절히 갈망할수록 결핍이 복제되는 역설&apos;을 부수는 무저항의 기술
+                            </p>
+                          </div>
+
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">④</span> 경쾌함의 권능
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light pl-6">
+                              가벼운 파동이 무거운 물질 세상을 지배하는 물리 법칙
+                            </p>
+                          </div>
+
+                          {/* ⑤ [권말 특전] 8대 감정 파동 즉각 전환 비방전 (제공 5종) */}
+                          <div className="p-5 rounded-xl bg-[#114234]/25 border border-[#E6BE8A]/30 space-y-3.5">
+                            <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-center gap-2">
+                              <span className="text-[#E6BE8A]">⑤</span> [권말 특전] 8대 감정 파동 즉각 전환 비방전
+                            </h4>
+
+                            <div className="space-y-2.5 pl-2 pt-1">
+                              {[
+                                { from: "불안·조급", method: "호흡 '멈춤'을 통한", to: "[평온]" },
+                                { from: "결핍·갈망", method: "'이미 주셔서 감사합니다' 완료형 선점을 통한", to: "[충만]" },
+                                { from: "질투·시기", method: "타인의 성공을 내 징조로 삼는", to: "[동기화]" },
+                                { from: "지출 죄책감", method: "'10배로 귀환하라' 축복을 통한", to: "[순환]" },
+                                { from: "무기력·좌절", method: "신체 배터리 충전을 통한", to: "[이완]" }
+                              ].map((item, idx) => (
+                                <div 
+                                  key={idx}
+                                  className="p-3 rounded-lg bg-black/40 border border-[#C5A059]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs"
+                                >
+                                  <span className="font-semibold text-white/90 shrink-0">{item.from}</span>
+                                  <span className="text-[#EDE6DA]/60 font-light">{item.method}</span>
+                                  <span className="font-bold text-[#E6BE8A] shrink-0">{item.to}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ─────────────────────────────────────────────────────────
+                      Bonus: 《금옥만당부 모바일 월페이퍼》
+                     ───────────────────────────────────────────────────────── */}
+                  <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/40 rounded-3xl relative overflow-hidden"
+                    style={{
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(22, 78, 63, 0.4) 0%, rgba(10, 5, 20, 0.95) 100%)',
+                      boxShadow: '0 12px 40px rgba(17, 66, 52, 0.25)'
+                    }}>
+                    <div className="grid lg:grid-cols-12 gap-10 items-center">
+                      {/* 부적 이미지 슬롯 */}
+                      <div className="lg:col-span-4">
+                        <HybridImageSlot assetKey="amulet" className="w-full aspect-[3/4]" />
+                      </div>
+
+                      {/* 부적 설명 및 패키지 요약 */}
+                      <div className="lg:col-span-8 space-y-6 break-keep">
+                        <div>
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E6BE8A] bg-[#114234]/70 border border-[#E6BE8A]/30 mb-3">
+                            ⚜️ Special Bonus. [디지털 부적]
+                          </span>
+                          <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-2">
+                            금옥만당부 모바일 월페이퍼
+                          </h3>
+                          <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light">
+                            결핍을 지우고 부와 풍요를 끌어당기는 스마트폰 배경화면용 시각적 에너지 결계
+                          </p>
+                        </div>
+
+                        {/* 구성 안내 박스 */}
+                        <div className="p-6 rounded-2xl bg-[#082E1E]/70 border border-[#C5A059]/30 space-y-4">
+                          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
+                            <span className="text-sm font-bold text-white">
+                              구성: 본편 + 실전 워크북 + 특별 외전 + 디지털 부적
+                            </span>
+                            <span className="text-xs px-2.5 py-1 rounded bg-[#114234] text-[#E6BE8A] font-bold border border-[#E6BE8A]/30">
+                              4 in 1 구성
+                            </span>
+                          </div>
+
+                          <div className="flex flex-wrap items-baseline justify-between gap-4">
+                            <div className="space-y-1">
+                              <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
+                              <div className="text-2xl md:text-3xl font-elegant font-bold text-[#E6BE8A]">
+                                런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal">(76% OFF)</span>
+                              </div>
+                            </div>
+                            <span className="text-xs text-[#EDE6DA]/50">
+                              * 전자책은 3종이며, 디지털 부적을 포함한 4 in 1 구성입니다.
+                            </span>
+                          </div>
+
+                          <div className="pt-2">
+                            <CTAButton text="풍요비책 3종 세트 구매하기" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                5. Premium Content Section (기존 프리미엄 가이드북 안내 보존)
+               ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -420,7 +1131,9 @@ export default function AbundanceSecretPage() {
 
             <EmeraldCloudDivider />
 
-            {/* 6. Book Contents Section (목차 영역) */}
+            {/* ═══════════════════════════════════════════════════════════════
+                6. Book Contents Section (기존 목차 영역 보존)
+               ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
               <Reveal>
                 <div className="gungjung-glass p-8 md:p-12 border-[#E6BE8A]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left max-w-6xl mx-auto break-keep">
@@ -494,7 +1207,245 @@ export default function AbundanceSecretPage() {
 
             <EmeraldCloudDivider />
 
-            {/* 7. Digital Product Notice Section (구매 전 안내) */}
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 Section 5. Social Proof — 실전 체감 사례 (슬라이더)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left max-w-6xl mx-auto">
+              <Reveal>
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
+                  <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
+                    Real Life Transformations
+                  </span>
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide">
+                    실전 체감 사례
+                  </h2>
+                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed font-light break-keep">
+                    풍요비책을 실천한 분들의 실제 삶에 일어난 감정과 통장의 구체적인 변화입니다.
+                  </p>
+                </div>
+
+                <div className="grid lg:grid-cols-12 gap-10 items-center">
+                  {/* 좌측: 리뷰 목업 이미지 슬롯 */}
+                  <div className="lg:col-span-5">
+                    <HybridImageSlot 
+                      assetKey="proof" 
+                      className="w-full aspect-[4/3] md:aspect-square"
+                    />
+                  </div>
+
+                  {/* 우측: 후기 슬라이더 */}
+                  <div className="lg:col-span-7 space-y-6">
+                    <div 
+                      className="gungjung-glass p-8 md:p-10 border-[#C5A059]/30 rounded-3xl relative overflow-hidden min-h-[220px] flex flex-col justify-between"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(17, 66, 52, 0.25) 0%, rgba(10, 5, 20, 0.9) 100%)',
+                        boxShadow: '0 8px 32px rgba(22, 78, 63, 0.15)'
+                      }}
+                    >
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between">
+                          <span className="px-3 py-1 rounded-full text-xs font-bold text-[#E6BE8A] bg-[#114234]/70 border border-[#E6BE8A]/30">
+                            {reviewCards[reviewIndex].badge}
+                          </span>
+                          <span className="text-xs text-[#E6BE8A]/60 font-mono">
+                            {reviewCards[reviewIndex].tag}
+                          </span>
+                        </div>
+                        <p className="text-lg md:text-xl font-elegant font-semibold text-white leading-relaxed break-keep">
+                          &ldquo;{reviewCards[reviewIndex].quote}&rdquo;
+                        </p>
+                      </div>
+
+                      {/* 하단 컨트롤러 */}
+                      <div className="flex items-center justify-between pt-6 border-t border-white/5 mt-4">
+                        <div className="flex items-center gap-2">
+                          {reviewCards.map((_, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => setReviewIndex(idx)}
+                              className={`h-2 rounded-full transition-all ${
+                                reviewIndex === idx ? 'w-6 bg-[#E6BE8A]' : 'w-2 bg-white/20'
+                              }`}
+                              aria-label={`리뷰 ${idx + 1} 보기`}
+                            />
+                          ))}
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                          <button
+                            onClick={prevReview}
+                            className="p-2.5 rounded-full border border-white/10 hover:border-[#E6BE8A]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all"
+                            aria-label="이전 후기"
+                          >
+                            <ChevronLeft className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={nextReview}
+                            className="p-2.5 rounded-full border border-white/10 hover:border-[#E6BE8A]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all"
+                            aria-label="다음 후기"
+                          >
+                            <ChevronRight className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 Section 6. Comparison Table — 가치 비교표
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left max-w-6xl mx-auto">
+              <Reveal>
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
+                  <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
+                    Value Comparison
+                  </span>
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide">
+                    가치 비교표
+                  </h2>
+                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed font-light break-keep">
+                    일반 재테크 강의나 뜬구름 잡는 확언과는 완전히 다른 차원의 실전 연금술입니다.
+                  </p>
+                </div>
+
+                {/* 반응형 비교표 컨테이너 */}
+                <div className="overflow-x-auto rounded-3xl border border-[#C5A059]/40 shadow-2xl bg-[#082E1E]/30 backdrop-blur-sm">
+                  <table className="w-full text-left border-collapse min-w-[640px]">
+                    <thead>
+                      <tr className="border-b border-[#C5A059]/30 bg-black/40">
+                        <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">구분</th>
+                        <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">일반 재테크 강의</th>
+                        <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">뜬구름 잡는 끌어당김</th>
+                        <th className="py-5 px-6 text-base font-bold text-[#E6BE8A] bg-[#114234]/40 border-l border-r border-[#C5A059]/40 w-1/4">
+                          백도화 풍요비책 3종 세트
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/5 text-xs md:text-sm">
+                      {/* 행 1: 비용 */}
+                      <tr className="hover:bg-white/[0.01] transition-colors">
+                        <td className="py-5 px-6 font-bold text-white">비용</td>
+                        <td className="py-5 px-6 text-[#EDE6DA]/70">수십~수백만 원</td>
+                        <td className="py-5 px-6 text-[#EDE6DA]/70">1~2만 원</td>
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#114234]/30 border-l border-r border-[#C5A059]/40">
+                          <span className="text-[#E6BE8A] text-base">단 19,000원</span> (영구 소장)
+                        </td>
+                      </tr>
+
+                      {/* 행 2: 내용 */}
+                      <tr className="hover:bg-white/[0.01] transition-colors">
+                        <td className="py-5 px-6 font-bold text-white">내용</td>
+                        <td className="py-5 px-6 text-[#EDE6DA]/70">노동 중심 테크닉</td>
+                        <td className="py-5 px-6 text-[#EDE6DA]/70">뜬구름 잡는 위로</td>
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#114234]/30 border-l border-r border-[#C5A059]/40">
+                          뇌신경 재배선 + 자본의 흑마법
+                        </td>
+                      </tr>
+
+                      {/* 행 3: 도구 */}
+                      <tr className="hover:bg-white/[0.01] transition-colors">
+                        <td className="py-5 px-6 font-bold text-white">도구</td>
+                        <td className="py-5 px-6 text-[#EDE6DA]/70">없음</td>
+                        <td className="py-5 px-6 text-[#EDE6DA]/70">확언 몇 줄</td>
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#114234]/30 border-l border-r border-[#C5A059]/40">
+                          선천코드 진단 + 템플릿 4종 + 21일 저널
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </Reveal>
+            </section>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 Section 7. FAQ — 자주 묻는 질문
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left max-w-4xl mx-auto">
+              <Reveal>
+                <div className="text-center space-y-4 mb-14">
+                  <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
+                    Frequently Asked Questions
+                  </span>
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide">
+                    자주 묻는 질문
+                  </h2>
+                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed font-light break-keep">
+                    구매 전 궁금해하시는 핵심 질문을 모았습니다.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {[
+                    {
+                      q: "1. 시크릿과의 차이점",
+                      questionTitle: "시크릿이나 기존 끌어당김 서적과 무엇이 다른가요?",
+                      a: "뜬구름 잡는 막연한 긍정 확언이 아닙니다. 풍요비책은 뇌신경망 재배선과 결핍의 무의식 코드를 직접 소각하고, 자본의 흑마법과 선천코드 오행 분석을 결합하여 실질적인 부의 통로를 여는 현실적이고 구체적인 심리·에너지 연금술 지침서입니다."
+                    },
+                    {
+                      q: "2. 직장인/주부 적용 여부",
+                      questionTitle: "직장인이나 주부도 적용할 수 있나요?",
+                      a: "네, 당연히 가능합니다. 사업가뿐만 아니라 직장인, 주부, 프리랜서 등 돈을 벌고 소비하는 모든 사람이 겪는 5대 저주(누수, 죄책감, 구걸 등)를 치유하고, 21일 데일리 실천 저널과 4대 실전 템플릿을 통해 일상 속에서 즉시 부의 주파수를 동기화할 수 있습니다."
+                    },
+                    {
+                      q: "3. 선천코드 난이도",
+                      questionTitle: "선천코드 분석의 난이도는 어떤가요?",
+                      a: "사주나 명리학에 대한 전문 지식이 전혀 없어도 누구나 자신의 타고난 오행(목·화·토·금·수) 기운과 돈맥 누수 지점을 쉽게 파악하고 돈그릇을 확장할 수 있도록 친절하고 직관적인 가이드로 구성되어 있습니다."
+                    },
+                    {
+                      q: "4. 다운로드 방식",
+                      questionTitle: "구매 후 다운로드는 어떻게 진행되나요?",
+                      a: "본 상품은 실물 배송이 없는 디지털 전자책(PDF) 및 모바일 월페이퍼 패키지입니다. 결제 완료 즉시 마이페이지 또는 등록된 이메일 안내를 통해 언제 어디서나 기기 제한 없이 영구 소장하여 즉시 열람 및 다운로드하실 수 있습니다."
+                    }
+                  ].map((faq, idx) => {
+                    const isOpen = openFaq === idx
+                    return (
+                      <div 
+                        key={idx}
+                        className="gungjung-glass rounded-2xl border border-[#C5A059]/20 overflow-hidden transition-all duration-300"
+                        style={{
+                          background: isOpen ? 'rgba(17, 66, 52, 0.25)' : 'rgba(255, 255, 255, 0.01)'
+                        }}
+                      >
+                        <button
+                          onClick={() => toggleFaq(idx)}
+                          aria-expanded={isOpen}
+                          className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 text-white hover:text-[#E6BE8A] transition-colors"
+                        >
+                          <div className="space-y-1">
+                            <span className="text-xs font-bold text-[#E6BE8A] block">{faq.q}</span>
+                            <span className="text-base md:text-lg font-elegant font-semibold">{faq.questionTitle}</span>
+                          </div>
+                          <ChevronDown 
+                            className={`w-5 h-5 text-[#E6BE8A] shrink-0 transition-transform duration-300 ${
+                              isOpen ? 'rotate-180' : ''
+                            }`} 
+                          />
+                        </button>
+
+                        {isOpen && (
+                          <div className="px-6 pb-6 pt-2 text-xs md:text-sm text-[#EDE6DA]/80 leading-relaxed font-light border-t border-white/5 break-keep">
+                            {faq.a}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+              </Reveal>
+            </section>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                7. Digital Product Notice Section (기존 구매 전 안내 보존)
+               ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
               <Reveal>
                 <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left max-w-6xl mx-auto break-keep">
@@ -521,39 +1472,71 @@ export default function AbundanceSecretPage() {
               </Reveal>
             </section>
 
-            {/* 8. Final CTA Section */}
-            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#E6BE8A]/40 shadow-2xl">
-              {/* a6.webp 배경 */}
-              <div className="absolute inset-0 z-0">
-                <Image 
-                  src={productData.ctaImage} 
-                  alt="풍요비책 마지막 안내 배경" 
-                  fill 
-                  className="object-cover transition-transform duration-[10000ms] group-hover:scale-110" 
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 Section 8 & 기존 Final CTA 통합 확장 (최종 결제 유도)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="relative overflow-hidden rounded-[40px] mb-20 group border border-[#C5A059]/60 shadow-2xl p-8 md:p-16 text-center max-w-5xl mx-auto"
+              style={{
+                background: 'radial-gradient(ellipse at 50% 50%, #0B3B24 0%, #082E1E 50%, #0A0514 100%)',
+                boxShadow: '0 0 70px rgba(17, 66, 52, 0.4)'
+              }}
+            >
+              {/* 이미지 교체 영역 8 (황금의 문 오브제 배경 슬롯) */}
+              <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+                <HybridImageSlot 
+                  assetKey="finalCta" 
+                  className="w-full h-full border-0 rounded-none bg-transparent"
                 />
-                {/* 텍스트 가독성을 위한 딥그린 반투명 오버레이 필터 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0B2B22]/75 to-black/80 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-[#0a0514]/30" />
               </div>
 
               {/* 중앙 정보 및 CTA 버튼 */}
-              <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8 break-keep">
+              <div className="relative z-10 space-y-6 md:space-y-8 break-keep">
                 <Reveal>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-tight">
+                  {/* 경고 카피 */}
+                  <div className="p-4 md:p-5 rounded-2xl bg-black/60 border border-[#E6BE8A]/30 max-w-2xl mx-auto mb-6">
+                    <p className="text-xs md:text-sm text-[#E6BE8A] font-bold leading-relaxed break-keep">
+                      ⚠️ 결단: 당신은 언제까지 헐값에 착취당하며 결핍의 쳇바퀴를 돌겠습니까? 지금 결제를 미루고 아낀 19,000원 뒤에는 앞으로 날리게 될 수천만 원의 수업료와 피눈물이 기다리고 있습니다.
+                    </p>
+                  </div>
+
+                  {/* 기존 헤드라인과 설명 보존 */}
+                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-elegant font-bold text-white leading-tight">
                     내 안의 황금 문을 여는 시간
                   </h2>
+
                   <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light max-w-xl mx-auto">
                     풍요는 더 많이 쫓는 사람에게만 오는 것이 아니라, 받아들일 준비가 된 마음에 오래 머무릅니다. 결핍을 반복하던 무의식에서 벗어나 나의 감정, 언어, 소비, 감사, 실천 루틴을 새롭게 정렬해 보세요.
                   </p>
                   
-                  <div className="pt-4">
-                    <CTAButton text="풍요비책 구매하기" />
+                  {/* 최종 CTA 버튼 그룹 */}
+                  <div className="pt-4 max-w-lg mx-auto">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
+                      <button
+                        onClick={handleAddToCart}
+                        className="flex-1 py-4.5 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/40 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-black/40 w-full"
+                      >
+                        장바구니 담기
+                      </button>
+                      <button
+                        onClick={handlePurchase}
+                        className="flex-grow-[1.6] py-4.5 px-6 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF7F2] w-full shadow-[0_0_35px_rgba(230,190,138,0.35)] animate-pulse-slow"
+                        style={{
+                          background: 'linear-gradient(135deg, #114234 0%, #0B2B22 100%)',
+                          border: '1px solid rgba(230, 190, 138, 0.65)',
+                        }}
+                      >
+                        <span className="break-keep text-center">지금 19,000원에 3종 풀패키지 다운로드하고 풍요의 문 열기</span>
+                        <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
+                      </button>
+                    </div>
                   </div>
                 </Reveal>
               </div>
             </section>
 
-            {/* Policy Links */}
+            {/* ═══════════════════════════════════════════════════════════════
+                Policy Links (기존 정책 링크 보존)
+               ═══════════════════════════════════════════════════════════════ */}
             <section className="pb-10 text-center">
               <Reveal>
                 <div className="flex justify-center gap-8 text-[10px] tracking-[0.2em] uppercase text-white/30">
