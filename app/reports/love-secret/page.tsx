@@ -47,8 +47,8 @@ const productData = {
   discountRate: '76% OFF',
 
   heroImage: '/image/love/l1.webp',
-  overviewImage: '/image/love/l2.webp',
-  recommendedImage: '/image/love/l3.webp',
+  overviewImage: '/image/love-secret/love-secret-your-choice-3x4.png',
+  recommendedImage: '/image/love-secret/love-secret-keep-yourself-3x4.png',
   structureImage: '/image/love/l4.webp',
   premiumImage: '/image/love/l5.webp',
   ctaImage: '/image/love/l6.webp',
@@ -117,7 +117,6 @@ export default function LoveSecretEbookPage() {
 
   // 인포그래픽 및 패키지 목업 확대 모달 상태
   const [isInfographicZoomed, setIsInfographicZoomed] = useState(false)
-  const [isPackageMockupZoomed, setIsPackageMockupZoomed] = useState(false)
 
   // FAQ 아코디언 상태 관리 (첫 번째 질문 기본 오픈)
   const [openFaq, setOpenFaq] = useState<number | null>(0)
@@ -352,12 +351,13 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  {/* 왼쪽 실제 전자책 목업 */}
-                  <div className="relative w-full aspect-square overflow-hidden rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl">
+                  {/* 왼쪽 세로 이미지 (3:4 비율, 선택하는 주권자의 위상) */}
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl">
                     <Image
                       src={productData.overviewImage}
-                      alt="연애비급 전자책 목업"
+                      alt="사랑은 감정이 아니라 관계의 구조입니다 - 연애비급"
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
@@ -593,12 +593,13 @@ export default function LoveSecretEbookPage() {
                     />
                   </div>
 
-                  {/* 오른쪽 세로 이미지 */}
-                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
+                  {/* 오른쪽 세로 이미지 (3:4 비율, 품격 있는 여성 이미지) */}
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl">
                     <Image
                       src={productData.recommendedImage}
-                      alt="성숙한 여성을 상징하는 이미지"
+                      alt="나의 기준과 품격을 지키는 여성 - 연애비급"
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
@@ -786,13 +787,9 @@ export default function LoveSecretEbookPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left max-w-6xl mx-auto">
               <Reveal>
-                {/* 3종 올인원 세트 목업 이미지 (하단 상자와 동일한 가로 너비로 비율 맞춰 확대, 클릭 시 원본 확대) */}
+                {/* 3종 올인원 세트 목업 이미지 (하단 상자와 동일한 가로 너비 100% 매칭) */}
                 <div className="mb-10 md:mb-14">
-                  <div
-                    onClick={() => setIsPackageMockupZoomed(true)}
-                    className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)] cursor-pointer group transition-all duration-300 hover:border-[#E5C4BB]/60"
-                    title="클릭하여 원본 크기로 확대 보기"
-                  >
+                  <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
                     <div className="relative w-full">
                       <Image
                         src={PACKAGE_MOCKUP_IMAGE}
@@ -800,15 +797,9 @@ export default function LoveSecretEbookPage() {
                         width={1672}
                         height={941}
                         sizes="(max-width: 1024px) 100vw, 1152px"
-                        className="w-full h-auto object-contain block transition-transform duration-500 group-hover:scale-[1.01]"
+                        className="w-full h-auto object-contain block"
                         priority
                       />
-                    </div>
-
-                    {/* 확대 안내 뱃지 */}
-                    <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/80 border border-[#D4B2A7]/50 text-[#E5C4BB] text-xs font-medium shadow-lg backdrop-blur-sm pointer-events-none group-hover:bg-[#2D0A1E] group-hover:border-[#E5C4BB] transition-all">
-                      <ZoomIn className="w-3.5 h-3.5 text-[#E5C4BB]" />
-                      <span>탭하여 크게 보기</span>
                     </div>
                   </div>
 
@@ -822,7 +813,7 @@ export default function LoveSecretEbookPage() {
                   <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
                     3-in-1 All-in-One Package
                   </span>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45] leading-[1.45]">
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     3종 올인원 세트 상세 해부
                   </h2>
                   <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
@@ -1201,7 +1192,7 @@ export default function LoveSecretEbookPage() {
                     <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase block">
                       FAQ
                     </span>
-                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45] leading-[1.45]">
+                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45]">
                       자주 묻는 질문
                     </h2>
                     <p className="text-[#EDE6DA]/75 text-sm md:text-base font-light leading-[1.8] break-keep">
@@ -1427,7 +1418,7 @@ export default function LoveSecretEbookPage() {
                   <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
                     Real Life Transformations
                   </span>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45] leading-[1.45]">
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     실전 체감 사례
                   </h2>
                   <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
@@ -1515,7 +1506,7 @@ export default function LoveSecretEbookPage() {
                   <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
                     Value Comparison
                   </span>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45] leading-[1.45]">
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     가치 비교표
                   </h2>
                   <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
@@ -1583,7 +1574,7 @@ export default function LoveSecretEbookPage() {
                   <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
                     Frequently Asked Questions
                   </span>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45] leading-[1.45]">
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     자주 묻는 질문
                   </h2>
                   <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
@@ -1853,44 +1844,7 @@ export default function LoveSecretEbookPage() {
           </div>
         )}
 
-        {/* 3종 올인원 세트 목업 확대 모달 (라이트박스) */}
-        {isPackageMockupZoomed && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6 bg-black/90 backdrop-blur-md transition-all"
-            onClick={() => setIsPackageMockupZoomed(false)}
-          >
-            <div
-              className="relative max-w-5xl w-full max-h-[95vh] flex flex-col items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* 닫기 버튼 */}
-              <button
-                type="button"
-                onClick={() => setIsPackageMockupZoomed(false)}
-                className="absolute -top-11 right-0 md:-top-12 md:right-0 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900 border border-white/20 text-white hover:text-[#E5C4BB] hover:border-[#E5C4BB] transition-colors text-xs"
-                aria-label="닫기"
-              >
-                <X className="w-4 h-4" />
-                <span>닫기</span>
-              </button>
 
-              {/* 확대된 이미지 (원본 비율 유지, 잘림 없음, 100% 밝기) */}
-              <div className="relative w-full overflow-auto max-h-[85vh] rounded-2xl border border-[#D4B2A7]/40 shadow-2xl bg-black">
-                <Image
-                  src={PACKAGE_MOCKUP_IMAGE}
-                  alt="연애비급 3종 올인원 세트 패키지 목업 확대"
-                  width={1672}
-                  height={941}
-                  className="w-full h-auto object-contain block"
-                />
-              </div>
-
-              <p className="text-xs text-[#EDE6DA]/70 mt-3 text-center">
-                화면 바깥을 누르거나 닫기 버튼을 누르면 닫힙니다.
-              </p>
-            </div>
-          </div>
-        )}
 
         <Footer />
       </GlobalBackground>
