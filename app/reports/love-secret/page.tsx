@@ -1114,53 +1114,14 @@ export default function LoveSecretEbookPage() {
                             </p>
                           </div>
 
-                          {/* Part 4. 실전 상황별 카톡 무의식 침투 프로토콜 */}
-                          <div className="p-5 rounded-xl bg-[#A66B73]/15 border border-[#A66B73]/35 space-y-3.5">
-                            <div className="space-y-1.5">
-                              <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] leading-[1.5] flex items-center gap-2">
-                                <span className="text-[#E5C4BB] font-serif font-bold">Part 4.</span> 실전 상황별 카톡 무의식 침투 프로토콜
-                              </h4>
-                              <p className="text-xs md:text-sm text-[#EDE6DA]/85 font-light pl-6 leading-[1.8]">
-                                썸, 밀당, 잠수, 어장관리 상황에서 그대로 복사해 쓰는 즉답 템플릿 5종
-                              </p>
-                            </div>
-
-                            <div className="grid sm:grid-cols-2 gap-3 pl-2 pt-1">
-                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#D4B2A7]/20 space-y-1">
-                                <span className="text-xs font-bold text-[#E5C4BB] block">[썸·호감기]</span>
-                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-[1.65]">
-                                  밤마다 생각나게 만드는 자이가르닉 훅킹 톡
-                                </p>
-                              </div>
-
-                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#D4B2A7]/20 space-y-1">
-                                <span className="text-xs font-bold text-[#E5C4BB] block">[밀당·거리두기]</span>
-                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-[1.65]">
-                                  상대가 단답일 때 온기만 거두는 부적 처벌 응수 톡
-                                </p>
-                              </div>
-
-                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#D4B2A7]/20 space-y-1">
-                                <span className="text-xs font-bold text-[#E5C4BB] block">[잠수·경계선]</span>
-                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-[1.65]">
-                                  당일 번개와 일방적 약속을 차단하는 여왕의 선 긋기 톡
-                                </p>
-                              </div>
-
-                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#D4B2A7]/20 space-y-1">
-                                <span className="text-xs font-bold text-[#E5C4BB] block">[텐션 소생]</span>
-                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-[1.65]">
-                                  연락 뜸해진 남자의 뇌를 여는 부담 제로 인셉션 톡
-                                </p>
-                              </div>
-
-                              <div className="p-3.5 rounded-lg bg-black/40 border border-[#D4B2A7]/20 space-y-1 sm:col-span-2">
-                                <span className="text-xs font-bold text-[#E5C4BB] block">[프레임 장악]</span>
-                                <p className="text-xs text-[#EDE6DA]/80 font-light leading-[1.65]">
-                                  어장관리와 짓궂은 떠보기를 단칼에 무력화하는 반사구
-                                </p>
-                              </div>
-                            </div>
+                          {/* Part 4 */}
+                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                            <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
+                              <span className="text-[#E5C4BB] font-serif font-bold">Part 4.</span> 실전 상황별 카톡 무의식 침투 프로토콜
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
+                              썸, 밀당, 잠수, 어장관리 상황에서 그대로 복사해 쓰는 즉답 템플릿 5종
+                            </p>
                           </div>
                         </div>
                       </div>
