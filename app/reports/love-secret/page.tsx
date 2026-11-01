@@ -101,12 +101,12 @@ function HybridImageSlot({
   )
 }
 
-// 📦 3종 올인원 세트 패키지 목업 이미지 (추후 교체 시 아래 경로만 변경)
-const PACKAGE_MOCKUP_IMAGE = '/images/love-secret/package-mockup.png'
+// 📦 3종 올인원 세트 패키지 목업 이미지 (캐시 방지 버전 쿼리 적용)
+const PACKAGE_MOCKUP_IMAGE = '/images/love-secret/package-mockup.png?v=20261101_v2'
 
-// 📚 개별 도서 3:4 목업 이미지 (추후 개별 교체 시 아래 경로만 변경)
+// 📚 개별 도서 3:4 목업 이미지 (캐시 방지 버전 쿼리 적용)
 const BOOK_MOCKUPS = {
-  book1: '/images/love-secret/book1-love-mockup.png',       // Book 1: 피치핑크 꽃 장식 《연애비급 완전판》
+  book1: '/images/love-secret/book1-love-mockup.png?v=20261101_v2',       // Book 1: 최신 단독 책 목업 이미지
   book2: '/images/love-secret/book2-secret-mockup.png',     // Book 2: 금빛 열쇠 《매혹의 무의식 침투 프로토콜》
   book3: '/images/love-secret/book3-workbook-mockup.png',   // Book 3: 핫핑크 남녀 실루엣 《30일 매력 각성 워크북》
 }
@@ -797,8 +797,8 @@ export default function LoveSecretEbookPage() {
                       <Image
                         src={PACKAGE_MOCKUP_IMAGE}
                         alt="연애비급 3종 올인원 세트 패키지 목업: 연애비급 완전판, 매혹의 무의식 침투 프로토콜, 30일 매력 각성 워크북, 모바일 배경화면"
-                        width={1200}
-                        height={675}
+                        width={1672}
+                        height={941}
                         sizes="(max-width: 1024px) 100vw, 1152px"
                         className="w-full h-auto object-contain block transition-transform duration-500 group-hover:scale-[1.01]"
                         priority
@@ -1879,8 +1879,8 @@ export default function LoveSecretEbookPage() {
                 <Image
                   src={PACKAGE_MOCKUP_IMAGE}
                   alt="연애비급 3종 올인원 세트 패키지 목업 확대"
-                  width={1920}
-                  height={1080}
+                  width={1672}
+                  height={941}
                   className="w-full h-auto object-contain block"
                 />
               </div>
