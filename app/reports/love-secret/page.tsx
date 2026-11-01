@@ -1679,26 +1679,23 @@ export default function LoveSecretEbookPage() {
                 기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1440px)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#D4B2A7]/40 shadow-2xl">
-              {/* l6.webp 배경 */}
+              {/* l6.webp 배경 (필터/오버레이 제거) */}
               <div className="absolute inset-0 z-0">
                 <Image
                   src={productData.ctaImage}
                   alt="연애비급 마지막 안내 배경"
                   fill
-                  className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
+                  className="object-cover"
                 />
-                {/* 텍스트 가독성을 위한 로즈브라운 반투명 오버레이 필터 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#4A232B]/75 to-black/80 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-[#0a0514]/30" />
               </div>
 
               {/* 중앙 정보 및 CTA 버튼 */}
               <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8 break-keep">
                 <Reveal>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-[1.45]">
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-[1.45] drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
                     이제 사랑 앞에서 작아지지 마세요
                   </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-[1.8] font-light max-w-xl mx-auto">
+                  <p className="text-sm md:text-base text-[#EDE6DA] leading-[1.8] font-medium max-w-xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
                     사랑은 더 많이 애쓴 사람에게 주어지는 보상이 아니라, 자기 자리를 잃지 않는 사람에게 오래 머무는 에너지입니다.<br />
                     불안하게 확인하고 맞춰주는 연애에서 벗어나 나의 기준과 매력을 회복해 보세요.
                   </p>
