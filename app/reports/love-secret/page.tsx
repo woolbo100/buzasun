@@ -45,7 +45,7 @@ const productData = {
   regularPrice: 79000,
   discountRate: '76% OFF',
 
-  heroImage: '/image/love/l1.webp',
+  heroImage: '/image/love-secret/package-mockup2.png',
   overviewImage: '/image/love-secret/love-secret-your-choice-3x4.png',
   recommendedImage: '/image/love-secret/love-secret-keep-yourself-3x4.png',
   structureImage: '/image/love/l4.webp',
@@ -436,10 +436,13 @@ export default function LoveSecretEbookPage() {
                     {/* 본문 텍스트 및 나의 연애 누수 체크리스트 */}
                     <div className="lg:col-span-7 space-y-6 break-keep">
                       <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-[1.8] font-light p-6 rounded-2xl bg-[#2A0A14]/50 border border-[#D4B2A7]/30">
-                        진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 잔인한 거짓말입니다. 연애는 도덕 시험이 아니라 위치(Position) 싸움입니다. 언제든 연락되고 일정을 맞춰주는 순간, 당신은 매혹의 대상이 아닌 &apos;소모품 노동자&apos;로 전락합니다. 남자를 잡으려 하지 말고 자리를 잡으십시오.
+                        진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 잔인한 거짓말입니다. 연애는 도덕 시험이 아니라 위치(Position) 싸움입니다. 언제든 연락되고 일정을 맞춰주는 순간, 당신은 매혹의 대상이 아닌 &apos;소모품 노동자&apos;로 전락합니다. 남자를 잡으려 하지 말고 자리를 잡으십시오. 가만히 있어도 남자가 안달 나 매달리는 &apos;트로피&apos;가 되십시오.
                       </p>
 
                       <div className="space-y-3">
+                        <p className="text-xs md:text-sm text-[#D4B2A7] font-medium tracking-wide">
+                          새벽 2시, 구구절절 보낸 장문 톡 옆에 뜬 ‘숫자 1’
+                        </p>
                         <h3 className="text-base md:text-lg font-elegant font-bold text-[#E5C4BB] leading-[1.5] flex items-center gap-2">
                           <AlertTriangle className="w-5 h-5 text-[#E5C4BB]" />
                           나의 연애 누수 체크리스트

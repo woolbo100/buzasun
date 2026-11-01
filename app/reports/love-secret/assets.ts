@@ -18,12 +18,12 @@ export const loveSecretAssets: Record<string, LoveSecretAssetItem> = {
   // 1. Hero: 연애비급 3종 세트 + 도화만개부 목업
   hero: {
     id: 'hero',
-    src: 'love_mockup_placeholder.png',
+    src: '/image/love-secret/package-mockup2.png',
     alt: '연애비급 3종 세트 + 도화만개부 목업',
-    aspectRatio: 'aspect-video',
+    aspectRatio: 'aspect-square',
     objectFit: 'contain',
     placeholderLabel: '연애비급 3종 세트 + 도화만개부 목업 (Hero 3D)',
-    description: 'love_mockup_placeholder.png'
+    description: 'package-mockup2.png'
   },
 
   // 2. Pain: 기울어진 시소 및 읽씹 화면 비주얼
