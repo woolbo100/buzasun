@@ -85,7 +85,7 @@ function HybridImageSlot({
             <ImageIcon className="w-6 h-6 opacity-90" />
           </div>
           <div>
-            <span className="inline-block px-3 py-0.5 rounded-full text-[10px] tracking-wider uppercase font-bold text-[#E5C4BB] bg-[#8B263E]/70 border border-[#D4B2A7]/30 mb-2">
+            <span className="inline-block px-3 py-0.5 rounded-full text-[10px] tracking-wider uppercase font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/30 mb-2">
               {asset.placeholderLabel}
             </span>
             <p className="text-sm md:text-base font-elegant font-bold text-[#FAF7F2] break-keep">
@@ -181,7 +181,7 @@ export default function LoveSecretEbookPage() {
   // 샴페인 골드 & 핑크 매듭 장식 구분선 (전통적 기품 강조)
   const ChampagneThreadDivider = () => (
     <div className="flex items-center justify-center my-20 md:my-28 opacity-70">
-      <div className="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent via-[#D4B2A7]/40 to-[#8B263E]" />
+      <div className="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent via-[#D4B2A7]/40 to-[#A66B73]" />
       <div className="mx-4 flex items-center justify-center">
         <svg className="w-5 h-5 text-[#D4B2A7] animate-pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2C9.5 2 7.5 4 7.5 6.5C7.5 9 10 11 12 13C14 11 16.5 9 16.5 6.5C16.5 4 14.5 2 12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -189,7 +189,7 @@ export default function LoveSecretEbookPage() {
           <circle cx="12" cy="6.5" r="2" fill="currentColor" />
         </svg>
       </div>
-      <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent via-[#D4B2A7]/40 to-[#8B263E]" />
+      <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent via-[#D4B2A7]/40 to-[#A66B73]" />
     </div>
   )
 
@@ -198,15 +198,15 @@ export default function LoveSecretEbookPage() {
     <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center my-6 max-w-xl mx-auto w-full">
       <button
         onClick={handleAddToCart}
-        className="py-4 px-6 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#D4B2A7]/40 text-[#D4B2A7] hover:bg-[#D4B2A7]/10 bg-transparent shrink-0 whitespace-nowrap w-full sm:w-auto"
+        className="py-4 px-6 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#A66B73]/60 text-[#D4B2A7] hover:bg-[#A66B73]/15 bg-transparent shrink-0 whitespace-nowrap w-full sm:w-auto"
       >
         장바구니 담기
       </button>
       <button
         onClick={handlePurchase}
-        className="flex-1 py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF7F2] w-full shadow-[0_0_35px_rgba(197,139,160,0.25)]"
+        className="flex-1 py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF6EE] w-full shadow-[0_0_35px_rgba(166,107,115,0.25)] hover:brightness-105"
         style={{
-          background: 'linear-gradient(135deg, #BA8D7E 0%, #8C5E50 100%)',
+          background: 'linear-gradient(135deg, #A66B73 0%, #955D65 100%)',
           border: '1px solid rgba(212, 178, 167, 0.55)',
         }}
       >
@@ -293,10 +293,10 @@ export default function LoveSecretEbookPage() {
                     {/* 좌측: 신규 헤드카피, 서브카피, 뱃지, 가격 강조, CTA */}
                     <div className="lg:col-span-7 space-y-6">
                       <div className="flex flex-wrap gap-2">
-                        <span className="px-3.5 py-1.5 rounded-full text-[11px] md:text-xs font-bold tracking-wide text-[#E5C4BB] bg-[#8B263E]/60 border border-[#D4B2A7]/40">
+                        <span className="px-3.5 py-1.5 rounded-full text-[11px] md:text-xs font-bold tracking-wide text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/40">
                           [본편+전략시크릿북+실전워크북+도화만개부 4 in 1]
                         </span>
-                        <span className="px-3.5 py-1.5 rounded-full text-[11px] md:text-xs font-bold tracking-wide text-[#E5C4BB] bg-[#8B263E]/60 border border-[#D4B2A7]/40">
+                        <span className="px-3.5 py-1.5 rounded-full text-[11px] md:text-xs font-bold tracking-wide text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/40">
                           [실전 카톡 템플릿 5종]
                         </span>
                       </div>
@@ -322,7 +322,7 @@ export default function LoveSecretEbookPage() {
                             </span>
                           </div>
                         </div>
-                        <span className="px-3 py-1 rounded-full text-xs font-bold text-white bg-[#8B263E] border border-[#D4B2A7]/50 shadow-[0_0_15px_rgba(212,178,167,0.2)]">
+                        <span className="px-3 py-1 rounded-full text-xs font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/50 shadow-[0_0_15px_rgba(166,107,115,0.25)]">
                           76% OFF
                         </span>
                       </div>
@@ -389,8 +389,8 @@ export default function LoveSecretEbookPage() {
                             boxShadow: '0 8px 32px rgba(197, 139, 160, 0.05)'
                           }}
                         >
-                          <div className="w-6 h-6 rounded-full bg-[#BA8D7E]/20 flex items-center justify-center shrink-0 border border-[#D4B2A7]/30">
-                            <Check className="w-3.5 h-3.5 text-[#D4B2A7]" />
+                          <div className="w-6 h-6 rounded-full bg-[#A66B73] flex items-center justify-center shrink-0 border border-[#A66B73]/50 shadow-sm">
+                            <Check className="w-3.5 h-3.5 text-[#FAF6EE]" />
                           </div>
                           <span className="text-xs md:text-sm text-white/90 font-medium">
                             {item}
@@ -459,8 +459,8 @@ export default function LoveSecretEbookPage() {
                               key={idx}
                               className="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-start gap-3.5 hover:border-[#D4B2A7]/40 transition-colors"
                             >
-                              <div className="w-5 h-5 rounded border border-[#D4B2A7]/60 flex items-center justify-center shrink-0 mt-0.5 bg-[#8B263E]/40">
-                                <Check className="w-3.5 h-3.5 text-[#E5C4BB]" />
+                              <div className="w-5 h-5 rounded border border-[#A66B73]/60 flex items-center justify-center shrink-0 mt-0.5 bg-[#A66B73] shadow-sm">
+                                <Check className="w-3.5 h-3.5 text-[#FAF6EE]" />
                               </div>
                               <span className="text-xs md:text-sm text-[#FAF7F2] font-medium leading-[1.65]">
                                 {item}
@@ -668,7 +668,7 @@ export default function LoveSecretEbookPage() {
                       }}
                     >
                       <div className="flex flex-wrap items-center gap-3 mb-4">
-                        <span className="px-3.5 py-1 rounded-full bg-[#8C5E50] text-[#FAF7F2] font-serif font-bold text-xs tracking-wider border border-[#D4B2A7]/40">
+                        <span className="px-3.5 py-1 rounded-full bg-[#A66B73] text-[#FAF6EE] font-serif font-bold text-xs tracking-wider border border-[#D4B2A7]/40">
                           STEP 1
                         </span>
                         <h3 className="text-xl md:text-2xl font-elegant font-bold text-white leading-[1.5]">
@@ -703,7 +703,7 @@ export default function LoveSecretEbookPage() {
 
                     {/* 연결 화살표 */}
                     <div className="flex justify-center -my-4 relative z-10">
-                      <div className="w-11 h-11 rounded-full bg-[#8B263E]/60 border border-[#D4B2A7]/50 flex items-center justify-center text-[#E5C4BB] shadow-[0_0_20px_rgba(212,178,167,0.25)] font-bold">
+                      <div className="w-11 h-11 rounded-full bg-[#A66B73] border border-[#D4B2A7]/50 flex items-center justify-center text-[#FAF6EE] shadow-[0_0_20px_rgba(166,107,115,0.3)] font-bold">
                         ↓
                       </div>
                     </div>
@@ -717,7 +717,7 @@ export default function LoveSecretEbookPage() {
                       }}
                     >
                       <div className="flex flex-wrap items-center gap-3 mb-4">
-                        <span className="px-3.5 py-1 rounded-full bg-[#8B263E] text-[#E5C4BB] font-serif font-bold text-xs tracking-wider border border-[#D4B2A7]/40">
+                        <span className="px-3.5 py-1 rounded-full bg-[#A66B73] text-[#FAF6EE] font-serif font-bold text-xs tracking-wider border border-[#D4B2A7]/40">
                           STEP 2
                         </span>
                         <h3 className="text-xl md:text-2xl font-elegant font-bold text-white leading-[1.5]">
@@ -757,7 +757,7 @@ export default function LoveSecretEbookPage() {
                             className="p-5 rounded-2xl bg-black/45 border border-[#D4B2A7]/25 hover:border-[#E5C4BB]/60 transition-all group break-keep"
                           >
                             <div className="flex items-center justify-between mb-2">
-                              <span className="font-serif text-xs font-bold bg-[#8B263E] text-[#E5C4BB] px-2.5 py-0.5 rounded border border-[#D4B2A7]/40">
+                              <span className="font-serif text-xs font-bold bg-[#A66B73] text-[#FAF6EE] px-2.5 py-0.5 rounded border border-[#D4B2A7]/40">
                                 {card.num}
                               </span>
                               <Sparkles className="w-4 h-4 text-[#D4B2A7]/50 group-hover:text-[#E5C4BB] transition-colors" />
@@ -857,7 +857,7 @@ export default function LoveSecretEbookPage() {
                       {/* 상세 설명 */}
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E5C4BB] bg-[#8B263E]/70 border border-[#D4B2A7]/30 mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/30 mb-3">
                             🌸 Book 1. [정통 바이블]
                           </span>
                           <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
@@ -943,7 +943,7 @@ export default function LoveSecretEbookPage() {
                       {/* 상세 설명 */}
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E5C4BB] bg-[#8B263E]/70 border border-[#D4B2A7]/30 mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/30 mb-3">
                             🖤 Book 2. [전략 시크릿북]
                           </span>
                           <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
@@ -999,7 +999,7 @@ export default function LoveSecretEbookPage() {
                           </div>
 
                           {/* ⑤ 실전 상황별 카톡 무의식 침투 프로토콜 */}
-                          <div className="p-5 rounded-xl bg-[#8B263E]/20 border border-[#D4B2A7]/30 space-y-3.5">
+                          <div className="p-5 rounded-xl bg-[#A66B73]/15 border border-[#A66B73]/35 space-y-3.5">
                             <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB]">⑤</span> 실전 상황별 카톡 무의식 침투 프로토콜 (복사·붙여넣기 템플릿)
                             </h4>
@@ -1071,7 +1071,7 @@ export default function LoveSecretEbookPage() {
                       {/* 상세 설명 */}
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E5C4BB] bg-[#8B263E]/70 border border-[#D4B2A7]/30 mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/30 mb-3">
                             📖 Book 3. [실전 워크북]
                           </span>
                           <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
@@ -1141,7 +1141,7 @@ export default function LoveSecretEbookPage() {
                       {/* 부적 소개, 설명, 활용 및 패키지 요약 */}
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#E5C4BB] bg-[#8B263E]/70 border border-[#D4B2A7]/30 mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/30 mb-3">
                             🧧 Special Bonus. [디지털 부적]
                           </span>
                           <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
@@ -1162,7 +1162,7 @@ export default function LoveSecretEbookPage() {
                             <span className="text-sm font-bold text-white">
                               구성: 본편 + 전략시크릿북 + 실전워크북 + 도화만개부
                             </span>
-                            <span className="text-xs px-2.5 py-1 rounded bg-[#8B263E] text-[#E5C4BB] font-bold border border-[#D4B2A7]/30">
+                            <span className="text-xs px-2.5 py-1 rounded bg-[#A66B73] text-[#FAF6EE] font-bold border border-[#D4B2A7]/30">
                               4 in 1 구성
                             </span>
                           </div>
@@ -1455,7 +1455,7 @@ export default function LoveSecretEbookPage() {
                     >
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
-                          <span className="px-3 py-1 rounded-full text-xs font-bold text-[#E5C4BB] bg-[#8B263E]/70 border border-[#D4B2A7]/30">
+                          <span className="px-3 py-1 rounded-full text-xs font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/30">
                             {reviewCards[reviewIndex].badge}
                           </span>
                           <span className="text-xs text-[#D4B2A7]/70 font-mono">
@@ -1531,7 +1531,7 @@ export default function LoveSecretEbookPage() {
                         <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">구분</th>
                         <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">일반 인터넷 조언</th>
                         <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">뻔한 여우짓 강의</th>
-                        <th className="py-5 px-6 text-base font-bold text-[#E5C4BB] bg-[#8B263E]/40 border-l border-r border-[#D4B2A7]/40 w-1/4">
+                        <th className="py-5 px-6 text-base font-bold text-[#FAF6EE] bg-[#A66B73]/30 border-l border-r border-[#A66B73]/40 w-1/4">
                           백도화 연애비급 3종 세트
                         </th>
                       </tr>
@@ -1542,7 +1542,7 @@ export default function LoveSecretEbookPage() {
                         <td className="py-5 px-6 font-bold text-white">비용</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">단편적 정보</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">수십만 원 상당</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#8B263E]/30 border-l border-r border-[#D4B2A7]/40">
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#A66B73]/20 border-l border-r border-[#A66B73]/40">
                           <span className="text-[#E5C4BB] text-base">단 19,000원</span> (영구 소장)
                         </td>
                       </tr>
@@ -1552,7 +1552,7 @@ export default function LoveSecretEbookPage() {
                         <td className="py-5 px-6 font-bold text-white">관점</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">&ldquo;답장 늦게 해라&rdquo; 식</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">얄팍한 애교</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#8B263E]/30 border-l border-r border-[#D4B2A7]/40">
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#A66B73]/20 border-l border-r border-[#A66B73]/40">
                           진화심리학 + 최면 역학 + 무너지지 않는 자립 프레임
                         </td>
                       </tr>
@@ -1562,7 +1562,7 @@ export default function LoveSecretEbookPage() {
                         <td className="py-5 px-6 font-bold text-white">도구</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">없음</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">어색한 연기</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#8B263E]/30 border-l border-r border-[#D4B2A7]/40">
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#A66B73]/20 border-l border-r border-[#A66B73]/40">
                           복붙 카톡 프로토콜 5종 + 30일 실천 워크북
                         </td>
                       </tr>
@@ -1620,7 +1620,7 @@ export default function LoveSecretEbookPage() {
                         key={idx}
                         className="gungjung-glass rounded-2xl border border-[#D4B2A7]/20 overflow-hidden transition-all duration-300"
                         style={{
-                          background: isOpen ? 'rgba(139, 38, 62, 0.25)' : 'rgba(255, 255, 255, 0.01)'
+                          background: isOpen ? 'rgba(166, 107, 115, 0.2)' : 'rgba(255, 255, 255, 0.01)'
                         }}
                       >
                         <button
@@ -1737,7 +1737,7 @@ export default function LoveSecretEbookPage() {
                 <Reveal>
                   {/* 손실 회피(소실점) 카피 */}
                   <div className="mb-8 space-y-4">
-                    <span className="inline-block text-[#E5C4BB] text-xs font-elegant font-bold tracking-[0.2em] uppercase bg-[#8B263E]/80 border border-[#D4B2A7]/40 px-4 py-1.5 rounded-full">
+                    <span className="inline-block text-[#FAF6EE] text-xs font-elegant font-bold tracking-[0.2em] uppercase bg-[#A66B73] border border-[#D4B2A7]/40 px-4 py-1.5 rounded-full">
                       CRITICAL CHOICE
                     </span>
                     <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-[1.45]">
@@ -1753,7 +1753,7 @@ export default function LoveSecretEbookPage() {
 
                   {/* 패키지 가격 카드 (기존 연애비급 하단 다크 글래스 박스 규격) */}
                   <div className="p-6 md:p-10 rounded-2xl bg-black/60 border border-[#D4B2A7]/40 shadow-2xl relative backdrop-blur-sm">
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#8B263E] text-[#E5C4BB] border border-[#D4B2A7]/50 text-xs font-elegant font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-[0_0_15px_rgba(212,178,167,0.25)] whitespace-nowrap">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#A66B73] text-[#FAF6EE] border border-[#D4B2A7]/50 text-xs font-elegant font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-[0_0_15px_rgba(166,107,115,0.25)] whitespace-nowrap">
                       런칭 기념 76% 한정 특가
                     </div>
 
@@ -1771,7 +1771,7 @@ export default function LoveSecretEbookPage() {
                       <span className="text-3xl md:text-4xl font-elegant font-bold text-[#E5C4BB]">
                         19,000원
                       </span>
-                      <span className="text-xs font-bold text-white bg-[#8B263E] border border-[#D4B2A7]/50 px-2.5 py-1 rounded-full">
+                      <span className="text-xs font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/50 px-2.5 py-1 rounded-full">
                         76% OFF
                       </span>
                     </div>
@@ -1779,15 +1779,15 @@ export default function LoveSecretEbookPage() {
                     {/* 구매 버튼 (기존 연애비급 샴페인 골드/로즈골드 버튼 스타일) */}
                     <button
                       onClick={handlePurchase}
-                      className="w-full py-4 md:py-5 px-6 rounded-xl font-elegant font-bold text-base md:text-xl text-[#FAF7F2] shadow-[0_0_40px_rgba(212,178,167,0.3)] hover:shadow-[0_0_60px_rgba(229,196,187,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-95 inline-flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full py-4 md:py-5 px-6 rounded-xl font-elegant font-bold text-base md:text-xl text-[#FAF6EE] shadow-[0_0_40px_rgba(166,107,115,0.35)] hover:shadow-[0_0_60px_rgba(166,107,115,0.55)] transition-all duration-300 hover:scale-[1.02] active:scale-95 inline-flex items-center justify-center gap-2 cursor-pointer hover:brightness-105"
                       style={{
-                        background: 'linear-gradient(135deg, #BA8D7E 0%, #8C5E50 100%)',
+                        background: 'linear-gradient(135deg, #A66B73 0%, #955D65 100%)',
                         border: '2px solid #D4B2A7'
                       }}
                     >
-                      <Sparkles className="w-5 h-5 text-[#E5C4BB] shrink-0" />
+                      <Sparkles className="w-5 h-5 text-[#FAF6EE] shrink-0" />
                       <span>사랑이 머무는 자리로 지금 이동하기</span>
-                      <ChevronRight className="w-5 h-5 text-[#E5C4BB] shrink-0" />
+                      <ChevronRight className="w-5 h-5 text-[#FAF6EE] shrink-0" />
                     </button>
 
                     <p className="text-[#EDE6DA]/50 text-xs mt-4 font-light">
