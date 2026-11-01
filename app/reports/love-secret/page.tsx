@@ -244,20 +244,22 @@ export default function LoveSecretEbookPage() {
                   戀愛秘笈 <span className="text-[#D4B2A7]">연애비급</span>
                 </h1>
 
-                {/* 1. 최상단: 가로형 풀 이미지 (love-secret-hero.png, 16:9 비율, 필터/오버레이 제거) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-[#D4B2A7]/25 shadow-2xl">
-                  <Image
-                    src={productData.topBannerImage}
-                    alt="戀愛秘笈 연애비급"
-                    fill
-                    sizes="(max-width: 1200px) 100vw, 1152px"
-                    className="object-cover"
-                    priority
-                  />
+                {/* 1. 최상단: 가로형 풀 이미지 (love-secret-hero.png, 16:9 비율, 1240px 너비 매칭) */}
+                <div className="max-w-[1240px] mx-auto px-6 mb-16">
+                  <div className="relative w-full aspect-video rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#D4B2A7]/25 shadow-2xl">
+                    <Image
+                      src={productData.topBannerImage}
+                      alt="戀愛秘笈 연애비급"
+                      fill
+                      sizes="(max-width: 1300px) 100vw, 1240px"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
                 </div>
 
-                {/* 2. 기존 하단 서브카피, 설명 및 구매 버튼 보존 */}
-                <div className="max-w-3xl mx-auto space-y-7 mb-20">
+                {/* 2. 기존 하단 서브카피 & 설명 보존 (장바구니·구매하기 버튼 2개는 삭제) */}
+                <div className="max-w-3xl mx-auto space-y-7 mb-20 px-6">
                   <p className="text-xl md:text-2xl font-elegant font-semibold text-[#BA8D7E] leading-[1.45] break-keep">
                     사랑을 구걸하는 자리에서, 사랑이 머무는 자리로
                   </p>
@@ -273,69 +275,84 @@ export default function LoveSecretEbookPage() {
                       이제 사랑을 확인하고 붙잡는 연애가 아니라, 나의 기준과 매력을 잃지 않는 연애를 시작해보세요.
                     </p>
                   </div>
-
-                  <div className="pt-4">
-                    <CTAButton text="연애비급 구매하기" />
-                  </div>
                 </div>
 
-                {/* 3. 그 밑에 새로 추가된 Section 1: Hero Banner 3종 패키지 확장 통합 카드 */}
-                <div
-                  className="max-w-6xl mx-auto rounded-[32px] md:rounded-[40px] p-6 md:p-12 mb-16 border border-[#D4B2A7]/40 text-left relative overflow-hidden shadow-2xl mt-12"
-                  style={{
-                    background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
-                    boxShadow: '0 0 60px rgba(186, 141, 126, 0.25)'
-                  }}
-                >
-                  <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-                    {/* 좌측: 신규 헤드카피, 서브카피, 뱃지, 가격 강조, CTA */}
-                    <div className="lg:col-span-7 space-y-6">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3.5 py-1.5 rounded-full text-[11px] md:text-xs font-bold tracking-wide text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/40">
-                          [본편+전략시크릿북+실전워크북+도화만개부 4 in 1]
-                        </span>
-                        <span className="px-3.5 py-1.5 rounded-full text-[11px] md:text-xs font-bold tracking-wide text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/40">
-                          [실전 카톡 템플릿 5종]
-                        </span>
-                      </div>
-
-                      <h2 className="text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-white leading-[1.45] break-keep">
-                        &ldquo;사랑은 노력으로 만들어지지 않는다. 네가 서 있는 자리가 결과를 만든다.&rdquo;
-                      </h2>
-
-                      <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-[1.8] font-light break-keep">
-                        착하게 맞출수록 만만해지던 연애의 잔혹한 끝. 남자의 무의식 신경회로를 뒤흔들고 관계의 절대적 주도권을 쥐는 22가지 비밀 법칙.
-                      </p>
-
-                      {/* 가격 강조 박스 */}
-                      <div className="p-5 rounded-2xl bg-[#2A0A14]/70 border border-[#D4B2A7]/30 flex flex-wrap items-center justify-between gap-4">
-                        <div className="space-y-1">
-                          <span className="text-xs text-[#EDE6DA]/50 block">백도화 연애비급 3종 올인원 세트</span>
-                          <div className="flex items-baseline gap-3">
-                            <span className="text-sm md:text-base text-[#EDE6DA]/40 line-through">
-                              정가 79,000원
-                            </span>
-                            <span className="text-2xl md:text-3xl font-elegant font-bold text-[#E5C4BB]">
-                              19,000원
-                            </span>
-                          </div>
+                {/* 3. Section 1: Hero Banner 3종 패키지 소개 상자 (1240px 너비 매칭, 좌우 24px 여백, 단일 구매 영역) */}
+                <div className="max-w-[1240px] mx-auto px-6 mb-16 mt-8">
+                  <div
+                    className="w-full rounded-[32px] md:rounded-[40px] p-6 sm:p-8 md:p-12 border border-[#D4B2A7]/40 text-left relative overflow-hidden shadow-2xl"
+                    style={{
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
+                      boxShadow: '0 0 60px rgba(186, 141, 126, 0.25)'
+                    }}
+                  >
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
+                      {/* 좌측: 통합 배지, 큰 제목, 설명, 1줄 가격, 간결한 구매/장바구니 버튼 */}
+                      <div className="lg:col-span-7 space-y-5 md:space-y-6">
+                        {/* 상단 통합 배지 & 작은 구성 안내 */}
+                        <div className="space-y-1.5">
+                          <span className="inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-wider text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/40 shadow-sm">
+                            연애비급 3종 올인원 패키지
+                          </span>
+                          <p className="text-xs text-[#D4B2A7]/90 font-light tracking-wide pl-1">
+                            도화만개부 · 실전 카톡 템플릿 5종 포함
+                          </p>
                         </div>
-                        <span className="px-3 py-1 rounded-full text-xs font-bold text-[#FAF6EE] bg-[#A66B73] border border-[#D4B2A7]/50 shadow-[0_0_15px_rgba(166,107,115,0.25)]">
-                          76% OFF
-                        </span>
+
+                        {/* 큰 제목 유지 & 두 줄 이내 설명 */}
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-white leading-[1.4] break-keep">
+                          &ldquo;사랑은 노력으로 만들어지지 않는다.<br className="hidden sm:inline" />
+                          네가 서 있는 자리가 결과를 만든다.&rdquo;
+                        </h2>
+
+                        <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-[1.7] font-light break-keep max-w-xl">
+                          착하게 맞출수록 만만해지던 연애의 잔혹한 끝. 남자의 무의식 신경회로를 뒤흔들고 관계의 절대적 주도권을 쥐는 22가지 비밀 법칙.
+                        </p>
+
+                        {/* 가격 내부 네모상자 제거: 19,000원 가장 크게, 정가와 할인율은 작게 한 줄 정리 */}
+                        <div className="flex items-baseline gap-3 pt-1">
+                          <span className="text-3xl md:text-4xl font-elegant font-bold text-[#E5C4BB] tracking-tight">
+                            19,000원
+                          </span>
+                          <span className="text-sm md:text-base text-[#EDE6DA]/40 line-through">
+                            정가 79,000원
+                          </span>
+                          <span className="text-xs md:text-sm font-bold text-[#FAF6EE] px-2.5 py-0.5 rounded-full bg-[#A66B73] border border-[#D4B2A7]/40 shadow-sm">
+                            76% OFF
+                          </span>
+                        </div>
+
+                        {/* 구매 버튼 문구 간결화 & 장바구니 보조 버튼 */}
+                        <div className="flex flex-col sm:flex-row gap-3 pt-2 items-stretch sm:items-center">
+                          <button
+                            type="button"
+                            onClick={handleAddToCart}
+                            className="py-3 px-4 sm:px-5 rounded-xl font-elegant font-medium text-xs md:text-sm border border-[#D4B2A7]/40 text-[#D4B2A7] hover:bg-[#A66B73]/15 hover:border-[#D4B2A7]/70 transition-all duration-300 shrink-0 whitespace-nowrap text-center order-2 sm:order-1"
+                          >
+                            장바구니
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handlePurchase}
+                            className="py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_0_30px_rgba(166,107,115,0.3)] hover:brightness-105 order-1 sm:order-2 flex-1 sm:flex-initial"
+                            style={{
+                              background: 'linear-gradient(135deg, #A66B73 0%, #8B263E 100%)',
+                              border: '1px solid rgba(212, 178, 167, 0.55)',
+                            }}
+                          >
+                            <span>연애비급 19,000원에 구매하기</span>
+                            <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
+                          </button>
+                        </div>
                       </div>
 
-                      <div className="pt-2">
-                        <CTAButton text="지금 19,000원에 연애의 칼자루 쥐기" />
+                      {/* 우측: 목업 이미지 유지 (글과 이미지 사이 여백 충분히 확보) */}
+                      <div className="lg:col-span-5">
+                        <HybridImageSlot
+                          assetKey="hero"
+                          className="w-full aspect-square max-w-md mx-auto"
+                        />
                       </div>
-                    </div>
-
-                    {/* 우측: 이미지 교체 영역 1 (Hero 목업) */}
-                    <div className="lg:col-span-5">
-                      <HybridImageSlot
-                        assetKey="hero"
-                        className="w-full aspect-[4/3] md:aspect-square"
-                      />
                     </div>
                   </div>
                 </div>
