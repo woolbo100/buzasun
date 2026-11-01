@@ -49,7 +49,7 @@ const productData = {
   overviewImage: '/image/love-secret/love-secret-your-choice-3x4.png',
   recommendedImage: '/image/love-secret/love-secret-keep-yourself-3x4.png',
   structureImage: '/image/love/l4.webp',
-  premiumImage: '/image/love/l5.webp',
+  premiumImage: '/image/love-secret/love-secret-contents.png',
   ctaImage: '/image/love/l6.webp',
 }
 
@@ -1085,41 +1085,41 @@ export default function LoveSecretEbookPage() {
                         {/* 상세 내용 Part 1 ~ Part 4 */}
                         <div className="space-y-4 pt-2">
                           {/* Part 1 */}
-                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                          <div className="py-5 md:py-6 px-5 md:px-6 rounded-2xl bg-white/[0.025] border border-[#D4B2A7]/20 space-y-2 md:space-y-2.5">
                             <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB] font-serif font-bold">Part 1.</span> 9대 유혹자 페르소나 정밀 진단
                             </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/80 font-light pl-6 leading-[1.75] break-keep">
                               남자의 무의식을 뒤흔드는 9가지 원형과 나만의 매혹 무기 장착
                             </p>
                           </div>
 
                           {/* Part 2 */}
-                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                          <div className="py-5 md:py-6 px-5 md:px-6 rounded-2xl bg-white/[0.025] border border-[#D4B2A7]/20 space-y-2 md:space-y-2.5">
                             <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB] font-serif font-bold">Part 2.</span> 이성을 마비시키는 실전 심리·최면 기법 7선
                             </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/80 font-light pl-6 leading-[1.75] break-keep">
                               경계심을 풀고 스스로 빠져들게 만드는 무의식 닻 내리기
                             </p>
                           </div>
 
                           {/* Part 3 */}
-                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                          <div className="py-5 md:py-6 px-5 md:px-6 rounded-2xl bg-white/[0.025] border border-[#D4B2A7]/20 space-y-2 md:space-y-2.5">
                             <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB] font-serif font-bold">Part 3.</span> 관계의 판을 뒤집는 무의식 심리 역학 7대 법칙
                             </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/80 font-light pl-6 leading-[1.75] break-keep">
                               애타는 추격자에서 판을 지배하는 설계자로 거듭나는 법칙
                             </p>
                           </div>
 
                           {/* Part 4 */}
-                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                          <div className="py-5 md:py-6 px-5 md:px-6 rounded-2xl bg-white/[0.025] border border-[#D4B2A7]/20 space-y-2 md:space-y-2.5">
                             <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB] font-serif font-bold">Part 4.</span> 실전 상황별 카톡 무의식 침투 프로토콜
                             </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/80 font-light pl-6 leading-[1.75] break-keep">
                               썸, 밀당, 잠수, 어장관리 상황에서 그대로 복사해 쓰는 즉답 템플릿 5종
                             </p>
                           </div>
@@ -1281,13 +1281,14 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  {/* 왼쪽 이미지 */}
-                  <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
+                  {/* 왼쪽 이미지 (love-secret-contents.png 원본 비율 2:3 유지, 잘림 없이 표시) */}
+                  <div className="relative w-full aspect-[2/3] sm:aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40 flex items-center justify-center">
                     <Image
                       src={productData.premiumImage}
-                      alt="프리미엄 연애 비급서 이미지"
+                      alt="백도화 프리미엄 연애 구조 해석서 목차 및 구성 안내"
                       fill
-                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-contain"
                     />
                   </div>
 
