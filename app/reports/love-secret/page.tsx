@@ -783,11 +783,11 @@ export default function LoveSecretEbookPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left max-w-6xl mx-auto">
               <Reveal>
-                {/* 3종 올인원 세트 목업 이미지 (제목 영역 바로 위 중앙 배치, 원본 비율 유지, 클릭 시 확대) */}
+                {/* 3종 올인원 세트 목업 이미지 (하단 상자와 동일한 가로 너비로 비율 맞춰 확대, 클릭 시 원본 확대) */}
                 <div className="mb-10 md:mb-14">
                   <div
                     onClick={() => setIsPackageMockupZoomed(true)}
-                    className="relative max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)] cursor-pointer group transition-all duration-300 hover:border-[#E6BE8A]/60"
+                    className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)] cursor-pointer group transition-all duration-300 hover:border-[#E6BE8A]/60"
                     title="클릭하여 원본 크기로 확대 보기"
                   >
                     <div className="relative w-full">
@@ -796,7 +796,7 @@ export default function LoveSecretEbookPage() {
                         alt="연애비급 3종 올인원 세트 패키지 목업: 연애비급 완전판, 매혹의 무의식 침투 프로토콜, 30일 매력 각성 워크북, 모바일 배경화면"
                         width={1200}
                         height={675}
-                        sizes="(max-width: 768px) 100vw, 896px"
+                        sizes="(max-width: 1024px) 100vw, 1152px"
                         className="w-full h-auto object-contain block transition-transform duration-500 group-hover:scale-[1.01]"
                         priority
                       />
