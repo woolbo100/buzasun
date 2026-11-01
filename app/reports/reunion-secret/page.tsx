@@ -410,6 +410,88 @@ export default function ReunionSecretPage() {
               </Reveal>
             </section>
 
+            {/* ═════════════════════════════════════════════════════════════════
+                신규 추가 1: Before & After 1:1 매칭 비교 (재회비방 디자인 컨셉 적용)
+            ═════════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 max-w-6xl mx-auto">
+              <Reveal>
+                {/* 섹션: Before & After 1:1 매칭 비교 */}
+                <div
+                  className="gungjung-glass py-12 px-4 md:px-10 rounded-3xl md:rounded-[40px] border border-[#C5A059]/35"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(96, 0, 24, 0.3) 0%, rgba(20, 2, 7, 0.92) 100%)',
+                    boxShadow: '0 12px 40px rgba(96, 0, 24, 0.25)'
+                  }}
+                >
+                  <div className="max-w-3xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
+                    <span className="text-[#E6BE8A] font-elegant text-xs font-bold tracking-[0.25em] uppercase block">
+                      TRANSFORMATION
+                    </span>
+                    <h3 className="text-2xl md:text-3xl font-elegant font-bold text-[#FAF7F2] leading-snug">
+                      &ldquo;매달릴수록 차가워지던 그 사람,<br />
+                      <span className="text-[#E6BE8A]">당신의 에너지가 바뀌면 후폭풍이 시작됩니다.</span>&rdquo;
+                    </h3>
+                    <p className="text-[#EDE6DA]/75 text-xs md:text-sm font-light leading-relaxed">
+                      구차한 붙잡음은 차단을 부릅니다. 미련의 주파수를 끊는 순간 남자의 뇌에 상실감이 각인됩니다.
+                    </p>
+                  </div>
+
+                  <div className="max-w-4xl mx-auto space-y-4 text-left break-keep">
+                    {[
+                      {
+                        beforeTitle: "새벽마다 프로필 염탐하며 장문 톡을 보낸다",
+                        beforeSub: "상대에게 안도감과 질림을 주며 차단 확률만 높임",
+                        afterTitle: "단정한 단절로 상대의 뇌에 통제 불능 공포를 심는다",
+                        afterSub: "나의 침묵이 길어질수록 그가 내 프로필을 염탐하기 시작합니다."
+                      },
+                      {
+                        beforeTitle: "“내가 다 잘못했어, 다시 생각해 줘” 애원한다",
+                        beforeSub: "자신의 가치를 바닥으로 떨어뜨려 경멸을 부르는 태도",
+                        afterTitle: "우아한 쿨엔딩 템플릿으로 죄책감과 아쉬움을 남긴다",
+                        afterSub: "“정말 이 여자를 이렇게 놓쳐도 될까?”라는 의구심을 점화합니다."
+                      },
+                      {
+                        beforeTitle: "기약 없는 시간을 피폐하게 울며 버틴다",
+                        beforeSub: "결핍 에너지가 온몸에 배어 재회 확률을 갉아먹는 상태",
+                        afterTitle: "골든타임별 공백기 공식과 에너지 정화 루틴을 가동한다",
+                        afterSub: "흔들림 없는 본래 매력을 복원해 압도적인 분위기를 형성합니다."
+                      },
+                      {
+                        beforeTitle: "술 취해 새벽에 온 전화 한 통에 바로 흔들려 응한다",
+                        beforeSub: "잠자리 상대나 감정 쓰레기통으로 전락하는 최악의 수",
+                        afterTitle: "찌름성 연락을 완벽한 진심과 사과로 전환시킨다",
+                        afterSub: "가벼운 떠보기를 정식 재회 고백으로 유도하는 프레임을 구사합니다."
+                      }
+                    ].map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-2xl bg-black/45 border border-[#C5A059]/25 hover:border-[#C5A059]/50 transition-colors"
+                      >
+                        <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#1C040B]/70 border border-[#600018]/50">
+                          <span className="text-[#EDE6DA]/70 font-serif font-bold text-[11px] px-2.5 py-1 bg-[#3A0612]/70 border border-[#C5A059]/20 rounded shrink-0">
+                            BEFORE
+                          </span>
+                          <div>
+                            <p className="text-[#EDE6DA]/85 text-sm font-medium leading-snug">{item.beforeTitle}</p>
+                            <p className="text-[#EDE6DA]/50 text-xs mt-1 font-light">{item.beforeSub}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#600018]/35 border border-[#E6BE8A]/40 shadow-[0_0_20px_rgba(230,190,138,0.08)]">
+                          <span className="text-[#E6BE8A] font-serif font-bold text-[11px] px-2.5 py-1 bg-[#600018] border border-[#E6BE8A]/50 rounded shrink-0">
+                            AFTER
+                          </span>
+                          <div>
+                            <p className="text-[#FAF7F2] text-sm font-semibold leading-snug">{item.afterTitle}</p>
+                            <p className="text-[#E6BE8A]/90 text-xs mt-1 font-light">{item.afterSub}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
             <RedThreadDivider />
 
             {/* ═════════════════════════════════════════════════════════════════
@@ -451,131 +533,139 @@ export default function ReunionSecretPage() {
             <RedThreadDivider />
 
             {/* ═════════════════════════════════════════════════════════════════
-                ⑥ 신규 Section 3: 핵심 원리 (Solution)
+                ⑥ 신규 교체 2: 재회 솔루션 인과관계 통합 (STEP 1 -> STEP 2)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-center max-w-6xl mx-auto">
+            <section className="mb-28 text-left max-w-6xl mx-auto">
               <Reveal>
-                <div className="max-w-3xl mx-auto mb-14 space-y-3">
-                  <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
-                    SOLUTION
-                  </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-tight break-keep">
-                    재회는 설득이 아닙니다. 상대의 뇌간을 강제로 흔드는 '신경심리학'입니다.
-                  </h2>
-                </div>
-
-                {/* 4 그리드 카드 레이아웃 */}
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-                  {[
-                    {
-                      title: "대침묵",
-                      desc: "값싸게 퍼주던 관심의 공급을 끊어 결핍과 손실 회피 공황 점화"
-                    },
-                    {
-                      title: "자이가르닉 효과",
-                      desc: "완결된 사과가 아닌 미완성의 찝찝함을 남겨 밤마다 곱씹게 만드는 기술"
-                    },
-                    {
-                      title: "인지 부조화",
-                      desc: "찌질함을 부수고 세련된 프레임으로 뇌 내 도파민 역주행"
-                    },
-                    {
-                      title: "인셉션 메시지",
-                      desc: "감정 배출이 아닌 상대 무의식에 침투하는 단 한 줄의 트리거"
-                    }
-                  ].map((card, idx) => (
-                    <div 
-                      key={idx}
-                      className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-b from-[#1C050D]/90 to-[#0F0206] border border-[#C5A059]/30 hover:border-[#E6BE8A] transition-all duration-300 hover:-translate-y-1 shadow-xl flex flex-col justify-between"
-                    >
-                      <div>
-                        <span className="font-mono text-xs font-bold text-[#E6BE8A] tracking-widest px-2.5 py-1 rounded bg-[#600018]/60 border border-[#E6BE8A]/30 inline-block mb-4">
-                          CARD 0{idx + 1}
-                        </span>
-                        <h3 className="text-xl font-elegant font-bold text-[#FAF7F2] mb-3">
-                          {card.title}
-                        </h3>
-                        <p className="text-sm text-[#EDE6DA]/75 leading-relaxed font-light break-keep">
-                          {card.desc}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            </section>
-
-            <RedThreadDivider />
-
-            {/* ═════════════════════════════════════════════════════════════════
-                ⑦ 기존 “재회비방 5단계 흐름” (원본 그대로 유지)
-            ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-center">
-              <Reveal>
-                <div className="max-w-4xl mx-auto space-y-4 mb-10">
-                  <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">5-Step Strategy</span>
-                  <h2 className="text-3xl md:text-4xl font-elegant font-bold text-white tracking-widest">
-                    재회비방 5단계 흐름
-                  </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed break-keep font-light max-w-2xl mx-auto">
-                    재회비방은 감정적으로 흔들리는 상태에서 무작정 연락을 시도하지 않도록, 이별 후 필요한 과정을 5단계 흐름으로 정리합니다. 상대의 마음을 단정하거나 조종하려는 방식이 아니라, 나의 상태를 회복하고 관계의 구조를 다시 바라보는 방식으로 구성되어 있습니다.
-                  </p>
-                </div>
-
-                <div className="max-w-6xl mx-auto mb-12">
-                  <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl group">
-                    <Image 
-                      src={productData.formulaImage} 
-                      alt="재회비방 5단계 인포그래픽" 
-                      fill 
-                      className="object-cover" 
-                    />
+                {/* 섹션: 재회 솔루션 인과관계 통합 */}
+                <div className="py-4">
+                  <div className="text-center mb-12 space-y-4 break-keep">
+                    <span className="text-[#E6BE8A] font-elegant text-xs font-bold tracking-[0.25em] uppercase block">
+                      THE REUNION MECHANISM
+                    </span>
+                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-snug">
+                      이별의 상처를 매달림으로 풀지 마십시오.<br />
+                      <span className="text-[#E6BE8A]">내 에너지를 회수하고, 상대의 무의식에 후폭풍을 심습니다.</span>
+                    </h2>
+                    <p className="text-[#EDE6DA]/75 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
+                      떠난 남자를 돌아오게 만드는 것은 눈물이 아니라 <strong className="text-[#FAF7F2] font-semibold">통제력의 상실</strong>입니다.<br />
+                      《재회비방》은 <strong className="text-[#FAF7F2] font-semibold">결핍 고리 끊기(에너지 회수)</strong>를 선행한 후, <strong className="text-[#E6BE8A] font-semibold">남자의 뇌에 미련을 점화하는 기술(후폭풍 설계)</strong>을 실행합니다.
+                    </p>
                   </div>
-                </div>
 
-                <div className="grid md:grid-cols-5 gap-4 text-left max-w-6xl mx-auto">
-                  {[
-                    {
-                      num: "1",
-                      title: "파동의 진단",
-                      desc: "왜 이별이 일어났는지 진단합니다. 권태기, 신뢰 상실, 집착, 현실적 문제 등 원인에 따라 재회 전략은 달라집니다."
-                    },
-                    {
-                      num: "2",
-                      title: "비방의 준비",
-                      desc: "가장 어려운 공백기와 침묵을 다룹니다. 아무것도 하지 않는 것이 아니라, 다시 나의 프레임을 온전히 세우는 시간입니다."
-                    },
-                    {
-                      num: "3",
-                      title: "실전 재회술",
-                      desc: "언제, 어떤 방식으로, 어떤 메시지를 보내야 하는지 정리합니다. 상대에게 부담이 아닌 여운을 남기는 접근법입니다."
-                    },
-                    {
-                      num: "4",
-                      title: "재회의 완성",
-                      desc: "다시 만났을 때 무너지지 않는 태도, 첫 대면의 기류, 상대가 던지는 무의식적 테스트를 슬기롭게 통과하는 법을 정리합니다."
-                    },
-                    {
-                      num: "5",
-                      title: "완성된 나",
-                      desc: "재회 이후에도 같은 문제를 반복하지 않기 위해, 나의 내면 감정과 관계 패턴을 단단하게 재설계합니다."
-                    }
-                  ].map((item, idx) => (
-                    <div 
-                      key={idx} 
-                      className="gungjung-glass p-5 border-[#C5A059]/20 flex flex-col justify-between hover:border-[#C5A059]/50 transition-all"
+                  <div className="space-y-10">
+                    {/* STEP 1 */}
+                    <div
+                      className="gungjung-glass p-6 md:p-10 rounded-3xl border border-[#C5A059]/30 relative overflow-hidden"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(45, 6, 16, 0.55) 0%, rgba(10, 2, 5, 0.9) 100%)',
+                        boxShadow: '0 8px 32px rgba(96, 0, 24, 0.2)'
+                      }}
                     >
-                      <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="font-serif text-xs font-bold bg-[#4A0E17] text-[#FAF7F2] px-2.5 py-0.5 rounded border border-[#C5A059]/30">
-                            {item.num}단계
-                          </span>
-                        </div>
-                        <h3 className="text-base md:text-lg font-elegant font-bold text-white mb-2">{item.title}</h3>
-                        <p className="text-xs md:text-sm text-[#EDE6DA]/60 leading-relaxed font-light break-keep">{item.desc}</p>
+                      <div className="flex flex-wrap items-center gap-3 mb-4">
+                        <span className="px-3.5 py-1 rounded-full bg-[#4A0E17] text-[#FAF7F2] font-serif font-bold text-xs tracking-wider border border-[#C5A059]/40">
+                          STEP 1
+                        </span>
+                        <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2]">
+                          결핍 고리 차단 (에너지 회수 5단계)
+                        </h3>
+                      </div>
+                      <p className="text-[#EDE6DA]/75 text-sm mb-8 leading-relaxed font-light break-keep">
+                        상대에게 쏠려 있던 감정의 잔류 에너지를 완전히 거두어들이는 기초 정화 단계입니다. 내가 미련에서 자유로워져야 비로소 상대의 무의식이 결핍을 느끼기 시작합니다.
+                      </p>
+
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {[
+                          { code: "01. Disconnect", title: "접촉 전면 차단", desc: "모든 감정적 누수와 반응 중단" },
+                          { code: "02. Cool-Ending", title: "단정한 종결", desc: "비난 없는 품격 있는 마침표" },
+                          { code: "03. Unconscious", title: "무의식 정화", desc: "불안과 집착의 뿌리 제거" },
+                          { code: "04. Aura Reset", title: "아우라 리셋", desc: "결핍된 을의 파동 완전 소멸" },
+                          { code: "05. Golden Time", title: "공백기 절대 법칙", desc: "이별 유형별 침묵 기간 엄수" },
+                          { code: "06. Re-Centering", title: "중심성 탈환", desc: "내 삶의 주인 자리 복원" }
+                        ].map((item, idx) => (
+                          <div
+                            key={idx}
+                            className="p-4 rounded-2xl bg-black/45 border border-[#C5A059]/20 hover:border-[#C5A059]/50 transition-all break-keep"
+                          >
+                            <span className="text-[#E6BE8A] text-xs font-mono font-bold tracking-wider">{item.code}</span>
+                            <p className="text-[#FAF7F2] text-sm md:text-base font-elegant font-bold mt-1.5">{item.title}</p>
+                            <p className="text-[#EDE6DA]/60 text-xs mt-1 font-light leading-relaxed">{item.desc}</p>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
+
+                    {/* 구분선 화살표 */}
+                    <div className="flex justify-center -my-4 relative z-10">
+                      <div className="w-11 h-11 rounded-full bg-[#600018]/80 border border-[#E6BE8A]/50 flex items-center justify-center text-[#E6BE8A] shadow-[0_0_20px_rgba(230,190,138,0.25)] font-bold">
+                        ↓
+                      </div>
+                    </div>
+
+                    {/* STEP 2 */}
+                    <div
+                      className="gungjung-glass p-6 md:p-10 rounded-3xl border border-[#C5A059]/45 relative overflow-hidden"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(96, 0, 24, 0.35) 0%, rgba(15, 2, 6, 0.92) 100%)',
+                        boxShadow: '0 12px 40px rgba(96, 0, 24, 0.3)'
+                      }}
+                    >
+                      <div className="flex flex-wrap items-center gap-3 mb-4">
+                        <span className="px-3.5 py-1 rounded-full bg-[#600018] text-[#E6BE8A] font-serif font-bold text-xs tracking-wider border border-[#E6BE8A]/40">
+                          STEP 2
+                        </span>
+                        <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2]">
+                          후폭풍 점화 기술 (4대 실전 비방)
+                        </h3>
+                      </div>
+                      <p className="text-[#EDE6DA]/75 text-sm mb-8 leading-relaxed font-light break-keep">
+                        내 에너지가 정렬되면 상대는 ‘자유’가 아니라 ‘공허와 상실’을 맞닥뜨립니다. 남자의 뇌에 기억 왜곡과 미련을 증폭시키는 4대 트리거입니다.
+                      </p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {[
+                          {
+                            num: "비방 01",
+                            title: "자이가르닉 효과 & 미완성 기억",
+                            desc: "매달리지 않고 깔끔하게 끊어버려 상대의 뇌 속에 관계를 '끝나지 않은 찝찝한 숙제'로 각인시킵니다."
+                          },
+                          {
+                            num: "비방 02",
+                            title: "시간차 상실감 유도",
+                            desc: "해방감이 끝나는 3~6주 차, 상대의 감정이 후회로 반전되는 변곡점을 정확히 노려 흔적 없는 호기심을 유발합니다."
+                          },
+                          {
+                            num: "비방 03",
+                            title: "무자극 재접촉 (Ping) 전략",
+                            desc: "부담감 0%, 미련 0%의 무해한 질문 하나로 상대가 먼저 말을 걸고 장문으로 반응하게 만드는 텍스트 공식."
+                          },
+                          {
+                            num: "비방 04",
+                            title: "재회 포지션 재설정",
+                            desc: "다시 사귀어 달라고 애원하는 입장이 아니라, 상대가 용기를 내어 정식으로 용서를 구하게 만드는 절대 프레임."
+                          }
+                        ].map((card, idx) => (
+                          <div
+                            key={idx}
+                            className="p-5 rounded-2xl bg-black/50 border border-[#C5A059]/25 hover:border-[#E6BE8A] transition-all group break-keep"
+                          >
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="font-serif text-xs font-bold bg-[#600018] text-[#E6BE8A] px-2.5 py-0.5 rounded border border-[#E6BE8A]/40">
+                                {card.num}
+                              </span>
+                              <Sparkles className="w-4 h-4 text-[#E6BE8A]/50 group-hover:text-[#E6BE8A] transition-colors" />
+                            </div>
+                            <h4 className="text-[#FAF7F2] font-elegant font-bold text-base md:text-lg group-hover:text-[#E6BE8A] transition-colors">
+                              {card.title}
+                            </h4>
+                            <p className="text-[#EDE6DA]/75 text-xs md:text-sm mt-2 leading-relaxed font-light">
+                              {card.desc}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>
@@ -937,6 +1027,78 @@ export default function ReunionSecretPage() {
               </Reveal>
             </section>
 
+            {/* ═════════════════════════════════════════════════════════════════
+                신규 추가 3: 재회비방 FAQ (패키지 상세 해부 섹션 바로 아래)
+            ═════════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left max-w-4xl mx-auto">
+              <Reveal>
+                {/* 섹션: 재회비방 FAQ */}
+                <div className="py-4">
+                  <div className="text-center space-y-3 mb-14">
+                    <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold block">
+                      FAQ
+                    </span>
+                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-[#FAF7F2] tracking-wide">
+                      재회비방 자주 묻는 질문
+                    </h2>
+                    <p className="text-[#EDE6DA]/75 text-xs md:text-sm font-light leading-relaxed break-keep">
+                      골든타임을 놓치기 전 가장 많이 묻는 핵심 질문입니다.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4 break-keep">
+                    {[
+                      {
+                        q: "이미 매달릴 대로 매달렸고 차단까지 당했는데도 가능한가요?",
+                        a: (
+                          <>
+                            네, 가능합니다. 최악의 상황일수록 필요한 것은 말이 아니라 <strong className="text-[#E6BE8A] font-semibold">반응의 급격한 정지</strong>입니다. 상대가 예상하는 나의 매달림 패턴을 깨뜨리고 차단을 푸는 무의식 자극 프로세스를 그대로 따라 하시면 됩니다.
+                          </>
+                        )
+                      },
+                      {
+                        q: "이별한 지 몇 달이 지났거나 상대에게 환승/새 사람이 생겼다면요?",
+                        a: (
+                          <>
+                            새로운 관계의 도파민은 3개월을 넘기기 힘듭니다. 《재회비방》의 <strong className="text-[#E6BE8A] font-semibold">&apos;대체 불가 앵커링&apos;</strong> 기법은 상대의 새로운 인연이 흔들리는 타이밍에 당신이라는 강력한 기억을 뇌리에 강제 소환하도록 돕습니다.
+                          </>
+                        )
+                      },
+                      {
+                        q: "제공되는 실전 카톡 템플릿은 바로 복사해서 쓸 수 있나요?",
+                        a: (
+                          <>
+                            네. 단어 하나, 문장 부호 하나까지 심리학적으로 검증된 <strong className="text-[#E6BE8A] font-semibold">[쿨엔딩 템플릿], [공백기 후 핑(Ping) 템플릿], [떠보기 대응 템플릿]</strong> 등 상황별 완성문이 그대로 수록되어 있습니다.
+                          </>
+                        )
+                      },
+                      {
+                        q: "결제 즉시 열람할 수 있나요?",
+                        a: (
+                          <>
+                            네. 재회는 1분 1초의 골든타임이 생명입니다. 결제 즉시 <strong className="text-[#E6BE8A] font-semibold">PDF 전자책과 부적 파일</strong>이 마이페이지에 자동 발급되어 오늘 밤 즉시 읽어보실 수 있습니다.
+                          </>
+                        )
+                      }
+                    ].map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="p-6 rounded-2xl border border-[#C5A059]/30 bg-gradient-to-r from-[#1E040D]/90 via-[#140207]/90 to-[#0A0205] hover:border-[#E6BE8A]/60 transition-all shadow-lg"
+                      >
+                        <h4 className="text-[#FAF7F2] font-elegant font-bold text-base md:text-lg flex items-start gap-2.5">
+                          <span className="text-[#E6BE8A] font-serif font-bold shrink-0">Q.</span>
+                          <span>{item.q}</span>
+                        </h4>
+                        <p className="text-[#EDE6DA]/80 text-xs md:text-sm mt-3 pl-6 leading-relaxed font-light border-t border-white/5 pt-3">
+                          {item.a}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
             <RedThreadDivider />
 
             {/* ═════════════════════════════════════════════════════════════════
@@ -1245,7 +1407,9 @@ export default function ReunionSecretPage() {
               </div>
             </section>
 
-            {/* [신규 Section 8: Final CTA 최종 마감 트리거 추가] */}
+            {/* ═════════════════════════════════════════════════════════════════
+                신규 교체/추가 4: 최종 결제 마감 CTA 및 손실 회피 섹션 (재회비방 하단 디자인 유지)
+            ═════════════════════════════════════════════════════════════════ */}
             <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 p-8 md:p-16 border-2 border-[#C5A059] shadow-[0_0_50px_rgba(96,0,24,0.6)] text-center max-w-5xl mx-auto">
               {/* 딥 버건디 풀 컬러 배경 */}
               <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#600018] via-[#4A0012] to-[#1E0208]" />
@@ -1259,31 +1423,66 @@ export default function ReunionSecretPage() {
                 />
               </div>
 
-              <div className="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
+              <div className="relative z-10 max-w-3xl mx-auto space-y-8 break-keep">
                 <Reveal>
-                  <div className="p-6 md:p-8 rounded-2xl bg-black/60 border border-[#C5A059]/40 max-w-2xl mx-auto text-left sm:text-center text-sm md:text-base leading-relaxed text-[#EDE6DA] break-keep shadow-xl">
-                    <p className="font-semibold text-[#E6BE8A] text-base md:text-lg mb-2 flex items-center justify-center gap-1.5">
-                      <span>⚠️ 경고: 재회는 1분 1초의 골든타임 싸움입니다.</span>
-                    </p>
-                    <p className="font-light">
-                      지금 잘못 보낸 카톡 한 줄은 영구 차단의 문을 닫아버리지만, 정교하게 계산된 침묵과 문장 하나는 닫힌 상대방의 문을 부수고 들어옵니다.
+                  {/* 손실 회피(소실점) 카피 */}
+                  <div className="mb-8 space-y-4">
+                    <span className="inline-block text-[#E6BE8A] text-xs font-elegant font-bold tracking-[0.25em] uppercase bg-[#600018]/90 border border-[#E6BE8A]/40 px-4 py-1.5 rounded-full shadow-md">
+                      LAST GOLDEN TIME
+                    </span>
+                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-snug">
+                      잘못 보낸 카톡 한 줄로,<br />
+                      <span className="text-[#E6BE8A]">마지막 재회의 문</span>마저 영영 닫으시겠습니까?
+                    </h2>
+                    <p className="text-[#EDE6DA]/85 text-sm md:text-base font-light leading-relaxed">
+                      감정에 휩쓸려 보내는 새벽 연락은 영원한 차단을 부를 뿐입니다.<br />
+                      망쳐버린 관계를 되살릴 수 있는 시간은 무한하지 않습니다.<br />
+                      <strong className="text-[#FAF7F2] font-semibold">단 19,000원으로 상대가 스스로 후회하고 찾아오게 만드십시오.</strong>
                     </p>
                   </div>
 
-                  {/* 최종 CTA 버튼 (은은한 펄스 애니메이션, 샴페인 골드 테두리) */}
-                  <div className="pt-4">
+                  {/* 패키지 가격 카드 (기존 재회비방 하단 다크 글래스 박스 규격) */}
+                  <div className="p-6 md:p-10 rounded-2xl bg-black/60 border border-[#C5A059]/40 shadow-2xl relative backdrop-blur-sm">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#600018] text-[#E6BE8A] border border-[#E6BE8A]/50 text-xs font-elegant font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-[0_0_15px_rgba(230,190,138,0.25)] whitespace-nowrap">
+                      골든타임 특가 76% OFF
+                    </div>
+
+                    <h3 className="text-lg md:text-xl font-elegant font-bold text-[#FAF7F2] mt-2">
+                      백도화 재회비방 4 in 1 올인원 패키지
+                    </h3>
+                    <p className="text-xs md:text-sm text-[#EDE6DA]/60 mt-1 font-light">
+                      완전판 바이블 + 후폭풍 시크릿북 + 실전 공백기 워크북 + 재회 카톡 템플릿 5종
+                    </p>
+
+                    <div className="flex flex-wrap items-center justify-center gap-3 my-6">
+                      <span className="text-[#EDE6DA]/40 line-through text-base md:text-lg font-mono">
+                        정가 79,000원
+                      </span>
+                      <span className="text-3xl md:text-4xl font-elegant font-bold text-[#E6BE8A]">
+                        19,000원
+                      </span>
+                      <span className="text-xs font-bold text-[#FAF7F2] bg-[#600018] border border-[#E6BE8A]/50 px-2.5 py-1 rounded-full font-mono">
+                        76% OFF
+                      </span>
+                    </div>
+
+                    {/* 구매 버튼 (기존 재회비방 딥 버건디 & 샴페인 골드 테두리 스타일) */}
                     <button
                       onClick={handlePurchase}
-                      className="w-full sm:w-auto px-8 md:px-14 py-5 md:py-6 rounded-2xl font-elegant font-bold text-lg md:text-2xl text-[#FAF7F2] shadow-[0_0_40px_rgba(230,190,138,0.35)] hover:shadow-[0_0_60px_rgba(230,190,138,0.55)] transition-all duration-300 hover:scale-105 active:scale-95 motion-safe:animate-pulse inline-flex items-center justify-center gap-3 cursor-pointer"
+                      className="w-full py-4 md:py-5 px-6 rounded-xl font-elegant font-bold text-base md:text-xl text-[#FAF7F2] shadow-[0_0_40px_rgba(230,190,138,0.3)] hover:shadow-[0_0_60px_rgba(230,190,138,0.5)] transition-all duration-300 hover:scale-[1.02] active:scale-95 inline-flex items-center justify-center gap-2 cursor-pointer"
                       style={{
                         background: 'linear-gradient(135deg, #800020 0%, #4A0012 100%)',
                         border: '2px solid #C5A059'
                       }}
                     >
-                      <Sparkles className="w-6 h-6 text-[#E6BE8A]" />
-                      <span>지금 19,000원에 3종 풀패키지 다운로드하기</span>
-                      <ChevronRight className="w-6 h-6 text-[#E6BE8A]" />
+                      <Sparkles className="w-5 h-5 text-[#E6BE8A] shrink-0" />
+                      <span>상대의 무의식에 후폭풍 점화하기</span>
+                      <ChevronRight className="w-5 h-5 text-[#E6BE8A] shrink-0" />
                     </button>
+
+                    <p className="text-[#EDE6DA]/50 text-xs mt-4 font-light">
+                      * 결제 즉시 PDF 다운로드 가능 / 디지털 콘텐츠 특성상 열람 후 환불 불가
+                    </p>
                   </div>
                 </Reveal>
               </div>
