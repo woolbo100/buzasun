@@ -229,7 +229,6 @@ export default function PhysicalProductDetail({
                 
                 {/* 메인 비주얼 이미지 (max-w-6xl) */}
                 <div className="relative max-w-6xl mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group bg-black/40">
-                  <div className="absolute inset-0 p-[1px] rounded-[30px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/40 via-[#E6BE8A]/40 to-transparent pointer-events-none z-10 opacity-70" />
                   <Image 
                     src={heroImage} 
                     alt={title}
@@ -237,7 +236,6 @@ export default function PhysicalProductDetail({
                     className="object-cover transition-transform duration-[10000ms] group-hover:scale-105"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/80 via-transparent to-transparent z-0"></div>
                 </div>
 
                 {/* 히어로 설명 문구 (max-w-3xl) */}
@@ -320,7 +318,6 @@ export default function PhysicalProductDetail({
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-16">
                   <div className="relative w-full aspect-square overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-bl from-[#D8A48F]/40 to-[#E6BE8A]/40 pointer-events-none z-10" />
                     <Image src={overviewImage} alt="Brand Story" fill className="object-cover" />
                   </div>
                   <div className="space-y-6 text-left break-keep">
@@ -379,7 +376,6 @@ export default function PhysicalProductDetail({
                     <RecommendedForCards items={recommendedPoints} />
                   </div>
                   <div className="relative w-full aspect-[3/4] rounded-[32px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl order-1 lg:order-2 bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src={recommendedImage} alt="Recommended" fill className="object-cover" />
                   </div>
                 </div>
@@ -412,7 +408,6 @@ export default function PhysicalProductDetail({
                 {/* 포뮬러 메인 이미지 (max-w-6xl) */}
                 <div className="max-w-6xl mx-auto mb-14">
                   <div className="relative aspect-video rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-xl group bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[28px] md:rounded-[36px] bg-gradient-to-t from-[#D8A48F]/30 to-transparent pointer-events-none z-10" />
                     <Image src={formulaImage} alt="Formula" fill className="object-cover" />
                   </div>
                 </div>
@@ -528,7 +523,6 @@ export default function PhysicalProductDetail({
                       </div>
                     </div>
                     <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
-                      <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                       <Image src={selfCareImage} alt="Self Care" fill className="object-cover" />
                     </div>
                   </div>
@@ -555,7 +549,6 @@ export default function PhysicalProductDetail({
                     </p>
                   </div>
                   <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl order-1 lg:order-2 bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-bl from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src={giftImage} alt="Gift" fill className="object-cover" />
                   </div>
                 </div>
@@ -571,7 +564,6 @@ export default function PhysicalProductDetail({
                   {howToUseImage ? (
                     <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                       <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
-                        <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                         <Image src={howToUseImage} alt="How to Use" fill className="object-cover" />
                       </div>
                       <div className="gungjung-glass p-8 md:p-12 rounded-[28px] border border-white/5 space-y-6 text-left break-keep">
@@ -648,22 +640,21 @@ export default function PhysicalProductDetail({
             <section className="max-w-6xl mx-auto relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-white/10">
               <div className="absolute inset-0 z-0">
                 <Image src={ctaImage} alt="CTA" fill className="object-cover transition-transform duration-[10000ms] group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/75 to-transparent"></div>
               </div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center">
                 <Reveal>
-                  <h2 className="text-2xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight whitespace-pre-wrap">
+                  <h2 className="text-2xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight whitespace-pre-wrap drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
                     {ctaTitle || `${title}와 함께하는\n아름다운 변화`}
                   </h2>
                   {ctaDescription && (
-                    <p className="text-sm md:text-base text-[#EDE6DA]/80 max-w-xl mx-auto mb-10 leading-relaxed font-light whitespace-pre-wrap break-keep">
+                    <p className="text-sm md:text-base text-[#EDE6DA] max-w-xl mx-auto mb-10 leading-relaxed font-light whitespace-pre-wrap break-keep drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                       {ctaDescription}
                     </p>
                   )}
                   <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md relative z-10 mx-auto">
                     <button 
                       onClick={handleAddToCart}
-                      className="flex-1 py-4.5 rounded-2xl font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-white/[0.05]"
+                      className="flex-1 py-4.5 rounded-2xl font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/40 text-[#E6BE8A] hover:bg-[#0a0514]/90 bg-[#0a0514]/75"
                       style={{ backdropFilter: 'blur(5px)' }}
                     >
                       장바구니 담기

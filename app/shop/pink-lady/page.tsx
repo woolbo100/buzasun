@@ -125,10 +125,6 @@ export default function PinkLadyDetailPage() {
 
                 {/* 메인 비주얼 - 자개 테두리 효과와 럭셔리 섀도우 (p1 이미지 선명도 확보를 위한 bg-white 추가) */}
                 <div className="relative max-w-6xl mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(230,190,138,0.1)] group bg-white">
-                  {/* 자개빛 레인보우 그라데이션 테두리 */}
-                  <div className="absolute inset-0 p-[1px] rounded-[32px] bg-gradient-to-tr from-[#C58BA0] via-[#E6BE8A] to-[#87CEFA] pointer-events-none z-10 opacity-70">
-                    <div className="w-full h-full rounded-[31px] bg-transparent"></div>
-                  </div>
                   <Image 
                     src="/image/pinklady/p1.webp" 
                     alt="Pink Lady Secret Ritual"
@@ -136,7 +132,6 @@ export default function PinkLadyDetailPage() {
                     className="object-cover transition-transform duration-[8000ms] group-hover:scale-105"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/80 via-transparent to-transparent z-0"></div>
                 </div>
 
                 {/* 메인 카피 설명 */}
@@ -184,8 +179,6 @@ export default function PinkLadyDetailPage() {
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center mb-16">
                   {/* 오버뷰 이미지 */}
                   <div className="relative aspect-square overflow-hidden rounded-[32px] border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
-                    {/* 은은한 자개 무늬 글로우 */}
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] bg-gradient-to-bl from-[#C58BA0]/40 to-[#E6BE8A]/40 pointer-events-none z-10" />
                     <Image src="/image/pinklady/p2.webp" alt="Product Overview" fill className="object-cover" />
                   </div>
                   
@@ -254,7 +247,6 @@ export default function PinkLadyDetailPage() {
                   
                   {/* 오른쪽 이미지 */}
                   <div className="relative aspect-[3/4] rounded-[32px] overflow-hidden border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)] order-1 md:order-2">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] bg-gradient-to-tr from-[#E6BE8A]/30 via-[#2D0A1E]/40 to-[#C58BA0]/30 pointer-events-none z-10" />
                     <Image src="/image/pinklady/p3.webp" alt="Recommended for you" fill className="object-cover" />
                   </div>
 
@@ -283,7 +275,6 @@ export default function PinkLadyDetailPage() {
                 {/* 포뮬러 비주얼 배너 */}
                 <div className="relative max-w-6xl mx-auto aspect-video rounded-[32px] overflow-hidden border border-white/10 shadow-[0_15px_30px_rgba(0,0,0,0.4)] mb-12 group">
                   <Image src="/image/pinklady/p4.webp" alt="Premium Formula ingredients" fill className="object-cover transition-transform duration-[6000ms] group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/70 to-transparent"></div>
                 </div>
 
                 {/* 성분 카드 6개 그리드 */}
@@ -323,7 +314,6 @@ export default function PinkLadyDetailPage() {
                   
                   {/* 이미지 */}
                   <div className="relative aspect-square overflow-hidden rounded-[32px] border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] bg-gradient-to-tr from-[#C58BA0]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src="/image/pinklady/p5.webp" alt="Healthy feminine lifestyle" fill className="object-cover" />
                   </div>
 
@@ -451,7 +441,6 @@ export default function PinkLadyDetailPage() {
             <section className="relative max-w-6xl mx-auto aspect-video overflow-hidden rounded-[32px] mb-20 group">
               <div className="absolute inset-0 z-0">
                 <Image src="/image/pinklady/p6.webp" alt="Feminine elegance background" fill className="object-cover transition-transform duration-[10000ms] group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/50 to-transparent"></div>
               </div>
               
               <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 text-center">
@@ -459,10 +448,10 @@ export default function PinkLadyDetailPage() {
                   <div className="mb-4 flex justify-center">
                     <BaekdohwaFlowerMark size={40} outlineGold />
                   </div>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white mb-4 leading-tight">
+                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white mb-4 leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
                     우아한 여성의 작은 습관
                   </h2>
-                  <p className="text-xs md:text-sm text-[#EDE6DA] opacity-80 mb-8 max-w-md mx-auto break-keep">
+                  <p className="text-xs md:text-sm text-[#EDE6DA] mb-8 max-w-md mx-auto break-keep drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                     진정한 자신감은 특별한 날이 아니라 매일의 관리에서 시작됩니다.<br />
                     오늘부터 핑크레이디 시크릿 리추얼로 당신의 첫 프리미엄 케어를 시작하세요.
                   </p>
@@ -470,7 +459,7 @@ export default function PinkLadyDetailPage() {
                   <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md relative z-10">
                     <button 
                       onClick={handleAddToCart}
-                      className="flex-1 py-4.5 rounded-full font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-transparent"
+                      className="flex-1 py-4.5 rounded-full font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/40 text-[#E6BE8A] hover:bg-[#0a0514]/90 bg-[#0a0514]/75 backdrop-blur-sm"
                     >
                       장바구니 담기
                     </button>

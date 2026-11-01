@@ -333,7 +333,9 @@ export default function ShopPage() {
                               priority={idx < 4}
                               className="object-cover transition-transform duration-[2000ms] group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0c0816] via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
+                            {!(product.type === 'physical' || ['miss-highlander', 'pink-lady', 'pink-lady-secret-ritual', 'wangbitna-cream', 'dubom', 'premium-bookmark', 'golden-forever-lady'].includes(product.slug?.trim()?.toLowerCase())) && (
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#0c0816] via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-700"></div>
+                            )}
                           </div>
 
                           <div className="p-8 space-y-4 relative">

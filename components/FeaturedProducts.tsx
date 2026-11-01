@@ -162,7 +162,6 @@ export default function FeaturedProducts() {
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1A0F2E] via-transparent to-transparent opacity-60" />
                     </div>
 
                     <div className="p-8 flex flex-col flex-grow">

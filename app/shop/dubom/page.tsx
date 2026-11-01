@@ -299,7 +299,6 @@ Golden Age가 아닌,
 
                 {/* 메인 16:9 이미지 (/reports/love-secret의 max-w-6xl 규격 적용) */}
                 <div className="relative max-w-6xl mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group bg-black/40">
-                  <div className="absolute inset-0 p-[1px] rounded-[30px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/40 via-[#E6BE8A]/40 to-transparent pointer-events-none z-10 opacity-70" />
                   <Image
                     src={heroImage}
                     alt={title}
@@ -307,7 +306,6 @@ Golden Age가 아닌,
                     className="object-cover transition-transform duration-[10000ms] group-hover:scale-105"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/80 via-transparent to-transparent z-0"></div>
                 </div>
 
                 {/* 히어로 설명 문구 (/reports/love-secret의 max-w-3xl 규격 적용) */}
@@ -369,7 +367,6 @@ Golden Age가 아닌,
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                   {/* 왼쪽 대표 정사각 비주얼 */}
                   <div className="relative w-full aspect-square overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-bl from-[#D8A48F]/40 to-[#E6BE8A]/40 pointer-events-none z-10" />
                     <Image src={overviewImage} alt="두봄 브랜드 스토리" fill className="object-cover" />
                   </div>
 
@@ -432,7 +429,6 @@ Golden Age가 아닌,
 
                   {/* 오른쪽 세로 비주얼 (3:4 비율) */}
                   <div className="relative w-full aspect-[3/4] rounded-[32px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl order-1 lg:order-2 bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src={recommendedImage} alt="두봄 추천 대상" fill className="object-cover" />
                   </div>
                 </div>
@@ -464,7 +460,6 @@ Golden Age가 아닌,
                 {/* 중앙 16:9 와이드 인포그래픽 이미지 (max-w-6xl) */}
                 <div className="max-w-6xl mx-auto mb-14">
                   <div className="relative aspect-video rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-xl group bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[28px] md:rounded-[36px] bg-gradient-to-t from-[#D8A48F]/30 to-transparent pointer-events-none z-10" />
                     <Image src={formulaImage} alt="두봄 포뮬러 배합" fill className="object-cover" />
                   </div>
                 </div>
@@ -568,7 +563,6 @@ Golden Age가 아닌,
                     </div>
                   </div>
                   <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src={selfCareImage} alt="두봄 셀프케어" fill className="object-cover" />
                   </div>
                 </div>
@@ -596,7 +590,6 @@ Golden Age가 아닌,
                     </p>
                   </div>
                   <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl order-1 lg:order-2 bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-bl from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src={giftImage} alt="두봄 선물 포장" fill className="object-cover" />
                   </div>
                 </div>
@@ -610,7 +603,6 @@ Golden Age가 아닌,
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                   <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl bg-black/40">
-                    <div className="absolute inset-0 p-[1px] rounded-[32px] md:rounded-[40px] bg-gradient-to-tr from-[#D8A48F]/30 to-[#E6BE8A]/30 pointer-events-none z-10" />
                     <Image src={howToUseImage} alt="두봄 섭취 방법" fill className="object-cover" />
                   </div>
                   <div className="gungjung-glass p-8 md:p-12 rounded-[28px] border border-white/5 space-y-6 text-left break-keep">
@@ -681,17 +673,16 @@ Golden Age가 아닌,
                   fill
                   className="object-cover transition-transform duration-[10000ms] group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/75 to-transparent"></div>
               </div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center">
                 <Reveal>
-                  <h2 className="text-2xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight whitespace-pre-wrap">
+                  <h2 className="text-2xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight whitespace-pre-wrap drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
                     두봄과 함께하는{'\n'}아름다운 변화
                   </h2>
                   <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md relative z-10 mx-auto">
                     <button
                       onClick={handleAddToCart}
-                      className="flex-1 py-4.5 rounded-2xl font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/30 text-[#E6BE8A] hover:bg-[#E6BE8A]/10 bg-white/[0.05]"
+                      className="flex-1 py-4.5 rounded-2xl font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#E6BE8A]/40 text-[#E6BE8A] hover:bg-[#0a0514]/90 bg-[#0a0514]/75"
                       style={{ backdropFilter: 'blur(5px)' }}
                     >
                       장바구니 담기
