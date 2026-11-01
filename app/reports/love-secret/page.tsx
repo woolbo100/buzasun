@@ -24,7 +24,6 @@ import {
   Clock,
   CheckCircle2,
   ImageIcon,
-  ZoomIn,
   X
 } from 'lucide-react'
 import RecommendedForCards from '@/components/RecommendedForCards'
@@ -116,7 +115,6 @@ export default function LoveSecretEbookPage() {
   const router = useRouter()
 
   // 인포그래픽 및 패키지 목업 확대 모달 상태
-  const [isInfographicZoomed, setIsInfographicZoomed] = useState(false)
 
   // FAQ 아코디언 상태 관리 (첫 번째 질문 기본 오픈)
   const [openFaq, setOpenFaq] = useState<number | null>(0)
@@ -615,13 +613,9 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 text-left max-w-6xl mx-auto">
               <Reveal>
                 <div className="py-4">
-                  {/* 솔루션 시스템 인포그래픽 (제목 바로 위 중앙 배치, 원본 비율 유지, 클릭 시 모달 확대) */}
+                  {/* 솔루션 시스템 인포그래픽 (중앙 배치, 원본 비율 유지, 깔끔한 카드) */}
                   <div className="mb-10 md:mb-14">
-                    <div
-                      onClick={() => setIsInfographicZoomed(true)}
-                      className="relative max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)] cursor-pointer group transition-all duration-300 hover:border-[#E5C4BB]/60"
-                      title="클릭하여 원본 크기로 확대 보기"
-                    >
+                    <div className="relative max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
                       <div className="relative w-full">
                         <Image
                           src="/images/love-secret/solution-system.png"
@@ -629,15 +623,9 @@ export default function LoveSecretEbookPage() {
                           width={1200}
                           height={675}
                           sizes="(max-width: 768px) 100vw, 896px"
-                          className="w-full h-auto object-contain block transition-transform duration-500 group-hover:scale-[1.01]"
+                          className="w-full h-auto object-contain block"
                           priority
                         />
-                      </div>
-
-                      {/* 탭/클릭하여 확대 안내 뱃지 */}
-                      <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/80 border border-[#D4B2A7]/50 text-[#E5C4BB] text-xs font-medium shadow-lg backdrop-blur-sm pointer-events-none group-hover:bg-[#2D0A1E] group-hover:border-[#E5C4BB] transition-all">
-                        <ZoomIn className="w-3.5 h-3.5 text-[#E5C4BB]" />
-                        <span>탭하여 크게 보기</span>
                       </div>
                     </div>
                   </div>
@@ -1805,44 +1793,6 @@ export default function LoveSecretEbookPage() {
           </div>
         </div>
 
-        {/* 인포그래픽 확대 모달 (라이트박스) */}
-        {isInfographicZoomed && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6 bg-black/90 backdrop-blur-md transition-all"
-            onClick={() => setIsInfographicZoomed(false)}
-          >
-            <div
-              className="relative max-w-5xl w-full max-h-[95vh] flex flex-col items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* 닫기 버튼 */}
-              <button
-                type="button"
-                onClick={() => setIsInfographicZoomed(false)}
-                className="absolute -top-11 right-0 md:-top-12 md:right-0 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-900 border border-white/20 text-white hover:text-[#E5C4BB] hover:border-[#E5C4BB] transition-colors text-xs"
-                aria-label="닫기"
-              >
-                <X className="w-4 h-4" />
-                <span>닫기</span>
-              </button>
-
-              {/* 확대된 이미지 (원본 비율 유지, 잘림 없음, 100% 밝기) */}
-              <div className="relative w-full overflow-auto max-h-[85vh] rounded-2xl border border-[#D4B2A7]/40 shadow-2xl bg-black">
-                <Image
-                  src="/images/love-secret/solution-system.png"
-                  alt="연애비급 솔루션 시스템 인포그래픽 확대"
-                  width={1920}
-                  height={1080}
-                  className="w-full h-auto object-contain block"
-                />
-              </div>
-
-              <p className="text-xs text-[#EDE6DA]/70 mt-3 text-center">
-                화면 바깥을 누르거나 닫기 버튼을 누르면 닫힙니다.
-              </p>
-            </div>
-          </div>
-        )}
 
 
 
