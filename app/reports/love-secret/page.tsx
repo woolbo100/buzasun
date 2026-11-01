@@ -1343,170 +1343,35 @@ export default function LoveSecretEbookPage() {
             <ChampagneThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                6. Book Contents Section (기존 목차 영역 보존)
+                6. Position Shift: 관계 시소의 법칙 & 관계 비교 다이어그램
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28">
+            <section className="mb-28 text-left max-w-6xl mx-auto">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-[#D4B2A7]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left max-w-6xl mx-auto break-keep">
-                  <div className="text-center md:text-left mb-10">
-                    <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">Table of Contents</span>
-                    <h2 className="text-2xl md:text-3xl font-elegant font-bold mt-2.5 text-white border-l-4 border-[#D4B2A7] pl-6 leading-[1.45]">
-                      연애비급 구성
+                <div className="gungjung-glass p-8 md:p-14 border-[#D4B2A7]/25 rounded-3xl relative overflow-hidden bg-gradient-to-b from-[#1E0B14]/80 via-[#150710]/90 to-[#0A0514] shadow-2xl">
+                  {/* 상단 텍스트 영역 */}
+                  <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-12 break-keep">
+                    <span className="inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-[#E5C4BB] bg-[#8B263E]/60 border border-[#D4B2A7]/40 shadow-sm">
+                      POSITION SHIFT
+                    </span>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-white leading-[1.45]">
+                      &ldquo;당신의 헌신이 만만함이 되는 이유,<br className="hidden sm:inline" />
+                      &lsquo;관계 시소&rsquo;의 법칙을 모르기 때문입니다.&rdquo;
                     </h2>
-                    <p className="text-xs md:text-sm text-[#EDE6DA]/50 mt-3.5 font-light leading-[1.8] pl-6">
-                      연애비급은 총 7부 구성으로, 연애의 시작부터 매력의 근원, 무의식적 관계 구조, 말의 힘, 관계를 망치는 심리, 오래 가는 사랑의 구조, 그리고 선택의 자리까지 단계적으로 안내합니다.
+                    <p className="text-sm md:text-base text-[#EDE6DA]/80 leading-[1.8] font-light">
+                      애원하며 기다리는 자리를 끝내고, 스스로 갈망하게 만드는 주도권을 쥐십시오.
                     </p>
                   </div>
 
-                  {/* 목차 리스트 (밝은 아이보리 비첩 카드 스타일) */}
-                  <div className="space-y-3.5 md:space-y-5">
-                    {/* 상단: 프롤로그 (전체 폭 가로 띠 카드) */}
-                    <div
-                      className="relative p-5 md:p-6 rounded-[12px] border border-[#C7A46B]/55 overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.25),0_1px_4px_rgba(199,164,107,0.12)] transition-transform hover:-translate-y-0.5 duration-200"
-                      style={{ background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)' }}
-                    >
-                      {/* 귀퉁이 전통 기하학 장식 */}
-                      <svg aria-hidden="true" className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
-                        <path d="M1 9V1h8" />
-                        <path d="M4 9V4h5" />
-                      </svg>
-                      {/* 우하단 도화 선화 장식 */}
-                      <svg aria-hidden="true" className="absolute -bottom-2 -right-2 w-14 h-14 text-[#C7A46B]/20 pointer-events-none select-none" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1">
-                        <circle cx="24" cy="24" r="8" strokeDasharray="2 2" />
-                        <path d="M24 10c3 4 5 10 0 14-5-4-3-10 0-14z" />
-                        <path d="M24 38c3-4 5-10 0-14-5 4-3 10 0 14z" />
-                        <path d="M10 24c4-3 10-5 14 0-4 5-10 3-14 0z" />
-                        <path d="M38 24c-4-3-10-5-14 0 4 5 10 3 14 0z" />
-                      </svg>
-
-                      <div className="relative z-10 space-y-1">
-                        <div className="flex items-center gap-2">
-                          <span className="text-[10px] md:text-[11px] px-2.5 py-0.5 rounded-full bg-[#F7DFDF] text-[#572B35] border border-[#C7A46B]/40 font-semibold tracking-widest uppercase">
-                            PROLOGUE
-                          </span>
-                          <div className="w-6 h-[1px] bg-[#C7A46B]/50" />
-                        </div>
-                        <h3 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant pt-0.5">
-                          프롤로그
-                        </h3>
-                        <p className="text-[14px] md:text-[15px] text-[#66534E] leading-[1.65] font-normal break-keep">
-                          사랑은 노력으로 만들어지지 않는다
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* 중앙: 본편 1~7부 (PC 2열, 모바일 1열, 7부는 전체 폭 md:col-span-2) */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-5">
-                      {[
-                        {
-                          num: "1부",
-                          title: "1부. 시작과 변화",
-                          desc: "남자의 사랑은 어떻게 시작되고 변하는가"
-                        },
-                        {
-                          num: "2부",
-                          title: "2부. 매력의 본질",
-                          desc: "흔들리지 않는 매력의 근원"
-                        },
-                        {
-                          num: "3부",
-                          title: "3부. 무의식과 프레임",
-                          desc: "연애 최면과 유혹의 구조"
-                        },
-                        {
-                          num: "4부",
-                          title: "4부. 언어의 결",
-                          desc: "말의 결, 관계의 위상을 바꾸는 언어"
-                        },
-                        {
-                          num: "5부",
-                          title: "5부. 심리의 함정",
-                          desc: "관계를 망치는 심리와 치명적인 함정"
-                        },
-                        {
-                          num: "6부",
-                          title: "6부. 관계의 완성",
-                          desc: "오래 가는 사랑의 구조"
-                        },
-                        {
-                          num: "7부",
-                          title: "7부. 주체적 관계",
-                          desc: "선택과 졸업"
-                        }
-                      ].map((ch, idx) => (
-                        <div
-                          key={idx}
-                          className={`relative p-5 md:p-6 rounded-[12px] border border-[#C7A46B]/55 overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.25),0_1px_4px_rgba(199,164,107,0.12)] transition-transform hover:-translate-y-0.5 duration-200 flex items-start gap-4 ${
-                            idx === 6 ? 'md:col-span-2' : ''
-                          }`}
-                          style={{ background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)' }}
-                        >
-                          {/* 귀퉁이 전통 기하학 장식 */}
-                          <svg aria-hidden="true" className="absolute top-2.5 left-2.5 w-3 h-3 text-[#C7A46B]/35 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
-                            <path d="M1 9V1h8" />
-                            <path d="M4 9V4h5" />
-                          </svg>
-                          {/* 우하단 도화 선화 장식 */}
-                          <svg aria-hidden="true" className="absolute -bottom-2 -right-2 w-14 h-14 text-[#C7A46B]/18 pointer-events-none select-none" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1">
-                            <circle cx="24" cy="24" r="8" strokeDasharray="2 2" />
-                            <path d="M24 10c3 4 5 10 0 14-5-4-3-10 0-14z" />
-                            <path d="M24 38c3-4 5-10 0-14-5 4-3 10 0 14z" />
-                            <path d="M10 24c4-3 10-5 14 0-4 5-10 3-14 0z" />
-                            <path d="M38 24c-4-3-10-5-14 0 4 5 10 3 14 0z" />
-                          </svg>
-
-                          {/* 왼쪽 번호 배지: 약 44~48px 전통 꽃잎형/문양형 배지 */}
-                          <div className="w-11 h-11 md:w-12 md:h-12 rounded-[10px] bg-[#F7DFDF] border border-[#C7A46B]/50 flex items-center justify-center shrink-0 text-sm md:text-base font-bold font-elegant text-[#572B35] shadow-sm relative z-10">
-                            {ch.num}
-                          </div>
-
-                          {/* 오른쪽 제목 및 설명 */}
-                          <div className="space-y-1 relative z-10 flex-1 min-w-0">
-                            <h3 className="text-[17px] md:text-[19px] font-bold text-[#572B35] font-elegant leading-[1.4] break-keep">
-                              {ch.title}
-                            </h3>
-                            <p className="text-[13.5px] md:text-[14.5px] text-[#66534E] font-normal leading-[1.65] break-keep">
-                              {ch.desc}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* 하단: 에필로그 (전체 폭 가로 띠 카드) */}
-                    <div
-                      className="relative p-5 md:p-6 rounded-[12px] border border-[#C7A46B]/55 overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.25),0_1px_4px_rgba(199,164,107,0.12)] transition-transform hover:-translate-y-0.5 duration-200"
-                      style={{ background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)' }}
-                    >
-                      {/* 귀퉁이 전통 기하학 장식 */}
-                      <svg aria-hidden="true" className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
-                        <path d="M1 9V1h8" />
-                        <path d="M4 9V4h5" />
-                      </svg>
-                      {/* 우하단 도화 선화 장식 */}
-                      <svg aria-hidden="true" className="absolute -bottom-2 -right-2 w-14 h-14 text-[#C7A46B]/20 pointer-events-none select-none" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1">
-                        <circle cx="24" cy="24" r="8" strokeDasharray="2 2" />
-                        <path d="M24 10c3 4 5 10 0 14-5-4-3-10 0-14z" />
-                        <path d="M24 38c3-4 5-10 0-14-5 4-3 10 0 14z" />
-                        <path d="M10 24c4-3 10-5 14 0-4 5-10 3-14 0z" />
-                        <path d="M38 24c-4-3-10-5-14 0 4 5 10 3 14 0z" />
-                      </svg>
-
-                      <div className="relative z-10 space-y-1">
-                        <div className="flex items-center gap-2">
-                          <span className="text-[10px] md:text-[11px] px-2.5 py-0.5 rounded-full bg-[#F7DFDF] text-[#572B35] border border-[#C7A46B]/40 font-semibold tracking-widest uppercase">
-                            EPILOGUE
-                          </span>
-                          <div className="w-6 h-[1px] bg-[#C7A46B]/50" />
-                        </div>
-                        <h3 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant pt-0.5">
-                          에필로그
-                        </h3>
-                        <p className="text-[14px] md:text-[15px] text-[#66534E] leading-[1.65] font-normal break-keep">
-                          사랑을 얻으려 하지 말고, 사랑이 머무를 자리가 되어라
-                        </p>
-                      </div>
-                    </div>
+                  {/* 하단: 대형 관계 비교 이미지 (love-secret-relationship-comparison.png, 3:2 비율) */}
+                  <div className="relative w-full max-w-5xl mx-auto aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/35 shadow-[0_12px_45px_rgba(0,0,0,0.6)] bg-black/40 flex items-center justify-center">
+                    <Image
+                      src="/image/love-secret/love-secret-relationship-comparison.png"
+                      alt="당신의 헌신이 만만함이 되는 이유, 관계 시소의 법칙 - 관계 비교 인포그래픽"
+                      fill
+                      sizes="(max-width: 1200px) 100vw, 1152px"
+                      className="object-contain"
+                      priority
+                    />
                   </div>
                 </div>
               </Reveal>
