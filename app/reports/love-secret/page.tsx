@@ -45,11 +45,12 @@ const productData = {
   regularPrice: 79000,
   discountRate: '76% OFF',
 
+  topBannerImage: '/image/love-secret/love-secret-hero.png',
   heroImage: '/image/love-secret/package-mockup2.png',
   overviewImage: '/image/love-secret/love-secret-your-choice-3x4.png',
   recommendedImage: '/image/love-secret/love-secret-keep-yourself-3x4.png',
   structureImage: '/image/love/l4.webp',
-  premiumImage: '/image/love-secret/love-secret-contents.png',
+  premiumImage: '/image/love-secret/love-secret-contents.png?v=20261102_v2',
   ctaImage: '/image/love/l6.webp',
 }
 
@@ -243,11 +244,11 @@ export default function LoveSecretEbookPage() {
                   戀愛秘笈 <span className="text-[#D4B2A7]">연애비급</span>
                 </h1>
 
-                {/* 1. 최상단: 가로형 풀 이미지 (기존 l1.webp, 16:9 비율) */}
+                {/* 1. 최상단: 가로형 풀 이미지 (love-secret-hero.png, 16:9 비율) */}
                 <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image
-                    src={productData.heroImage}
-                    alt="연애비급"
+                    src={productData.topBannerImage}
+                    alt="戀愛秘笈 연애비급"
                     fill
                     className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
                     priority
@@ -1284,8 +1285,8 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  {/* 왼쪽 이미지 (love-secret-contents.png 원본 비율 2:3 유지, 잘림 없이 표시) */}
-                  <div className="relative w-full aspect-[2/3] sm:aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40 flex items-center justify-center">
+                  {/* 왼쪽 이미지 (love-secret-contents.png 최신 3:4 비율 유지, 잘림 없이 표시) */}
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40 flex items-center justify-center">
                     <Image
                       src={productData.premiumImage}
                       alt="백도화 프리미엄 연애 구조 해석서 목차 및 구성 안내"
