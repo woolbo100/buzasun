@@ -993,6 +993,10 @@ export default function LoveSecretEbookPage() {
                             priority
                           />
                         </div>
+                        {/* 이미지 바로 아래 페이지 수 안내 (16~20px 여백, 핑크골드 컬러, 숫자 강조) */}
+                        <p className="mt-4 md:mt-5 text-center text-sm md:text-[15px] text-[#D4B2A7] font-light tracking-wide">
+                          PDF 전자책 · <strong className="font-bold text-[#E5C4BB]">90</strong>페이지
+                        </p>
                       </div>
 
                       {/* 상세 설명 */}
@@ -1082,6 +1086,10 @@ export default function LoveSecretEbookPage() {
                             className="object-contain"
                           />
                         </div>
+                        {/* 이미지 바로 아래 페이지 수 안내 (16~20px 여백, 핑크골드 컬러, 숫자 강조) */}
+                        <p className="mt-4 md:mt-5 text-center text-sm md:text-[15px] text-[#D4B2A7] font-light tracking-wide">
+                          PDF 전자책 · <strong className="font-bold text-[#E5C4BB]">34</strong>페이지
+                        </p>
                       </div>
 
                       {/* 상세 설명 */}
@@ -1170,6 +1178,10 @@ export default function LoveSecretEbookPage() {
                             className="object-contain"
                           />
                         </div>
+                        {/* 이미지 바로 아래 페이지 수 안내 (16~20px 여백, 핑크골드 컬러, 숫자 강조) */}
+                        <p className="mt-4 md:mt-5 text-center text-sm md:text-[15px] text-[#D4B2A7] font-light tracking-wide">
+                          PDF 워크북 · <strong className="font-bold text-[#E5C4BB]">48</strong>페이지
+                        </p>
                       </div>
 
                       {/* 상세 설명 */}
