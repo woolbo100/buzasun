@@ -535,25 +535,25 @@ export default function LoveSecretEbookPage() {
                     ].map((item, idx) => (
                       <div
                         key={idx}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-4"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-4 items-stretch"
                       >
                         {/* BEFORE 카드 (그레이코코아 #463D3B 톤, 밝은 베이지 텍스트) */}
-                        <div className="flex items-start gap-3 p-4 rounded-xl bg-[#463D3B] border border-[#645753]/60 shadow-sm">
-                          <span className="text-[#EDE6DA] font-serif font-bold text-[11px] px-2.5 py-1 bg-[#332B29] border border-[#5A4E4A] rounded shrink-0">
+                        <div className="h-full flex flex-col sm:flex-row items-start gap-3 p-4 rounded-2xl bg-black/40 border border-[#D4B2A7]/20 hover:border-[#D4B2A7]/50 transition-all">
+                          <span className="w-[72px] h-[28px] shrink-0 rounded flex items-center justify-center text-[11px] leading-none font-serif font-bold text-[#EDE6DA] bg-[#2A0A14] border border-[#D4B2A7]/30 whitespace-nowrap">
                             BEFORE
                           </span>
-                          <div>
+                          <div className="flex-1">
                             <p className="text-[#EDE6DA] text-sm font-medium leading-[1.5]">{item.beforeTitle}</p>
-                            <p className="text-[#EDE6DA]/70 text-xs mt-1.5 font-light leading-[1.65]">{item.beforeSub}</p>
+                            <p className="text-[#EDE6DA]/60 text-xs mt-1.5 font-light leading-[1.65]">{item.beforeSub}</p>
                           </div>
                         </div>
 
                         {/* AFTER 카드 (기존 로즈색 배경·테두리·라벨 색상 100% 유지) */}
-                        <div className="flex items-start gap-3 p-4 rounded-xl bg-[#8B263E]/25 border border-[#D4B2A7]/40 shadow-[0_0_20px_rgba(212,178,167,0.08)]">
-                          <span className="text-[#E5C4BB] font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8B263E]/80 border border-[#E5C4BB]/40 rounded shrink-0">
+                        <div className="h-full flex flex-col sm:flex-row items-start gap-3 p-4 rounded-2xl bg-[#8B263E]/25 border border-[#D4B2A7]/40 shadow-[0_0_20px_rgba(212,178,167,0.08)] hover:border-[#D4B2A7]/60 transition-all">
+                          <span className="w-[72px] h-[28px] shrink-0 rounded flex items-center justify-center text-[11px] leading-none font-serif font-bold text-[#E5C4BB] bg-[#8B263E]/80 border border-[#E5C4BB]/40 whitespace-nowrap">
                             AFTER
                           </span>
-                          <div>
+                          <div className="flex-1">
                             <p className="text-[#FAF7F2] text-sm font-semibold leading-[1.5]">{item.afterTitle}</p>
                             <p className="text-[#E5C4BB]/90 text-xs mt-1.5 font-light leading-[1.65]">{item.afterSub}</p>
                           </div>
