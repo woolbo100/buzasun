@@ -11,6 +11,9 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 export default function ReportsHubPage() {
   useScrollAnimation()
 
+  // 추후 이미지 교체 시 아래 경로만 변경하면 됩니다.
+  const ABUNDANCE_BANNER_IMAGE = '/image/abundance/a1.webp'
+
   const reports = [
     {
       id: 'love-code',
@@ -20,7 +23,8 @@ export default function ReportsHubPage() {
       btnText: '연애 리포트 자세히 보기',
       link: '/reports/baekdohwa-report',
       image: '/image/love-code-bg.png',
-      premium: false
+      premium: false,
+      theme: 'default' as const
     },
     {
       id: 'compatibility',
@@ -30,7 +34,19 @@ export default function ReportsHubPage() {
       btnText: '궁합 리포트 자세히 보기',
       link: '/reports/premium-compatibility-report',
       image: '/image/premium_compatibility_bg.png', 
-      premium: true
+      premium: true,
+      theme: 'default' as const
+    },
+    {
+      id: 'abundance-report',
+      title: '선천코드 풍요 리포트',
+      desc: '나의 타고난 재능과 돈을 대하는 성향, 반복되는 수입·소비 패턴을 읽고 나에게 맞는 풍요의 방향을 살펴봅니다.',
+      label: 'PREMIUM ABUNDANCE REPORT',
+      btnText: '풍요 리포트 자세히 보기',
+      link: '/reports/abundance-report',
+      image: ABUNDANCE_BANNER_IMAGE,
+      premium: false,
+      theme: 'jade-gold' as const
     }
   ]
 
@@ -57,56 +73,71 @@ export default function ReportsHubPage() {
 
             {/* Reports Grid */}
             <div className="space-y-12">
-              {reports.map((report, idx) => (
-                <Reveal key={report.id} delayMs={idx * 200}>
-                  <div className={`gungjung-glass overflow-hidden rounded-[2rem] border transition-all duration-700 hover:shadow-[0_0_50px_rgba(212,178,167,0.15)] group ${
-                    report.premium 
-                      ? 'border-[rgba(212,175,55,0.25)] bg-gradient-to-br from-[#1a0f2e]/80 to-[#0a0514]/95' 
-                      : 'border-white/[0.05] bg-white/[0.03]'
-                  }`}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-                      
-                      {/* Image Side */}
-                      <div className={`relative h-[300px] md:h-[450px] overflow-hidden ${idx % 2 === 1 ? 'md:order-last' : ''}`}>
-                        <Image 
-                          src={report.image} 
-                          alt={report.title}
-                          fill
-                          priority={idx === 0}
-                          className="object-cover transition-transform duration-[3000ms] group-hover:scale-110 opacity-60 group-hover:opacity-80"
-                        />
-                        <div className={`absolute inset-0 bg-gradient-to-t md:bg-gradient-to-${idx % 2 === 1 ? 'l' : 'r'} from-[#0a0514] via-transparent to-transparent`}></div>
-                      </div>
-
-                      {/* Content Side */}
-                      <div className="p-8 md:p-16 space-y-6">
-                        <span className="text-[10px] md:text-xs tracking-[0.4em] text-[var(--accent-gold)] opacity-70 block font-bold uppercase">
-                          {report.label}
-                        </span>
-                        <h2 className="text-3xl md:text-4xl font-elegant font-bold text-white group-hover:text-[var(--accent-gold-light)] transition-colors duration-500">
-                          {report.title}
-                        </h2>
-                        <p className="text-base md:text-lg text-[#EDE6DA] opacity-60 leading-relaxed break-keep font-light">
-                          {report.desc}
-                        </p>
-                        <div className="pt-6">
-                          <Link 
-                            href={report.link}
-                            className={`inline-flex items-center px-10 py-4 rounded-xl transition-all duration-500 text-sm font-bold tracking-widest ${
-                              report.premium 
-                                ? 'bg-[var(--accent-gold)] text-[#120014] hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.3)]' 
-                                : 'border border-[var(--accent-gold-soft)] text-[var(--accent-gold)] hover:bg-[var(--accent-gold-soft)]'
+              {reports.map((report, idx) => {
+                const isJadeGold = report.theme === 'jade-gold'
+                return (
+                  <Reveal key={report.id} delayMs={idx * 200}>
+                    <div className={`gungjung-glass overflow-hidden rounded-[2rem] border transition-all duration-700 group ${
+                      isJadeGold
+                        ? 'border-[#8FD3B6]/25 bg-gradient-to-br from-[#0f241f]/80 via-[#121824]/90 to-[#0a0514]/95 hover:shadow-[0_0_50px_rgba(143,211,182,0.18)]'
+                        : report.premium 
+                          ? 'border-[rgba(212,175,55,0.25)] bg-gradient-to-br from-[#1a0f2e]/80 to-[#0a0514]/95 hover:shadow-[0_0_50px_rgba(212,178,167,0.15)]' 
+                          : 'border-white/[0.05] bg-white/[0.03] hover:shadow-[0_0_50px_rgba(212,178,167,0.15)]'
+                    }`}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+                        
+                        {/* Image Side */}
+                        <div className={`relative h-[300px] md:h-[450px] overflow-hidden ${idx % 2 === 1 ? 'md:order-last' : ''}`}>
+                          <Image 
+                            src={report.image} 
+                            alt={report.title}
+                            fill
+                            priority={idx === 0}
+                            className={`object-cover transition-transform duration-[3000ms] group-hover:scale-110 ${
+                              isJadeGold ? '' : 'opacity-60 group-hover:opacity-80'
                             }`}
-                          >
-                            {report.btnText}
-                          </Link>
+                          />
+                          {!isJadeGold && (
+                            <div className={`absolute inset-0 bg-gradient-to-t md:bg-gradient-to-${idx % 2 === 1 ? 'l' : 'r'} from-[#0a0514] via-transparent to-transparent`}></div>
+                          )}
                         </div>
-                      </div>
 
+                        {/* Content Side */}
+                        <div className="p-8 md:p-16 space-y-6">
+                          <span className={`text-[10px] md:text-xs tracking-[0.4em] block font-bold uppercase ${
+                            isJadeGold ? 'text-[#8FD3B6]' : 'text-[var(--accent-gold)] opacity-70'
+                          }`}>
+                            {report.label}
+                          </span>
+                          <h2 className={`text-3xl md:text-4xl font-elegant font-bold text-white transition-colors duration-500 ${
+                            isJadeGold ? 'group-hover:text-[#E6BE8A]' : 'group-hover:text-[var(--accent-gold-light)]'
+                          }`}>
+                            {report.title}
+                          </h2>
+                          <p className="text-base md:text-lg text-[#EDE6DA] opacity-60 leading-relaxed break-keep font-light">
+                            {report.desc}
+                          </p>
+                          <div className={`pt-6 ${isJadeGold ? 'flex justify-end' : ''}`}>
+                            <Link 
+                              href={report.link}
+                              className={`inline-flex items-center px-10 py-4 rounded-xl transition-all duration-500 text-sm font-bold tracking-widest ${
+                                isJadeGold
+                                  ? 'border border-[#8FD3B6]/45 text-[#E6BE8A] bg-gradient-to-r from-[#8FD3B6]/15 to-[#E6BE8A]/15 hover:from-[#8FD3B6]/25 hover:to-[#E6BE8A]/25 hover:border-[#E6BE8A]/70 shadow-[0_0_25px_rgba(143,211,182,0.15)]'
+                                  : report.premium 
+                                    ? 'bg-[var(--accent-gold)] text-[#120014] hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.3)]' 
+                                    : 'border border-[var(--accent-gold-soft)] text-[var(--accent-gold)] hover:bg-[var(--accent-gold-soft)]'
+                              }`}
+                            >
+                              {report.btnText}
+                            </Link>
+                          </div>
+                        </div>
+
+                      </div>
                     </div>
-                  </div>
-                </Reveal>
-              ))}
+                  </Reveal>
+                )
+              })}
             </div>
 
             {/* Footer Guidance */}
