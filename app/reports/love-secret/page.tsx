@@ -826,17 +826,12 @@ export default function LoveSecretEbookPage() {
                     </div>
                   </div>
 
-                  {/* 이미지 하단 3단계 핵심 역할 카드 (백도화 연애비급 전통 비첩 콘셉트) */}
+                  {/* 이미지 하단 3단계 핵심 역할 카드 (짙은 자주빛 브라운 & 샴페인골드 테마) */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left mt-8 items-stretch">
                     {/* Book 1: Step 1 · 원리 */}
-                    <div
-                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#C7A46B]/55 flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35),0_2px_8px_rgba(199,164,107,0.15)] transition-transform hover:-translate-y-1 duration-200"
-                      style={{
-                        background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)',
-                      }}
-                    >
+                    <div className="relative p-5 sm:p-6 md:p-7 rounded-[12px] bg-[#30212D] border border-[#C6A575]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200">
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
-                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C6A575]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
                         <path d="M1 9V1h8" />
                         <path d="M4 9V4h5" />
                       </svg>
@@ -844,7 +839,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (펼친 책) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#FFEBEF] text-[#572B35] border border-[#C7A46B]/45 font-semibold tracking-tight">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#4E2A35] text-[#FCE3D8] border border-[#C6A575]/30 font-semibold tracking-tight">
                             Step 1 · 원리
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="펼친 책">
@@ -856,29 +851,24 @@ export default function LoveSecretEbookPage() {
                         </div>
 
                         {/* 상품명 */}
-                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9DC] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
                           《연애비급 완전판》
                         </h4>
 
                         {/* 짧은 금색 구분선 */}
-                        <div className="w-8 h-[1px] bg-[#C7A46B]/60 my-2.5 md:my-3" />
+                        <div className="w-8 h-[1px] bg-[#C6A575]/30 my-2.5 md:my-3" />
 
                         {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#66534E] leading-[1.7] font-normal break-keep">
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#D1C0B8] leading-[1.7] font-normal break-keep">
                           남자의 본능과 심리를 꿰뚫어 보고, 사랑을 구걸하던 자리에서 존중받는 중심 자리로 이동하는 근본 바이블.
                         </p>
                       </div>
                     </div>
 
                     {/* Book 2: Step 2 · 전략 */}
-                    <div
-                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#C7A46B]/55 flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35),0_2px_8px_rgba(199,164,107,0.15)] transition-transform hover:-translate-y-1 duration-200"
-                      style={{
-                        background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)',
-                      }}
-                    >
+                    <div className="relative p-5 sm:p-6 md:p-7 rounded-[12px] bg-[#30212D] border border-[#C6A575]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200">
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
-                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C6A575]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
                         <path d="M1 9V1h8" />
                         <path d="M4 9V4h5" />
                       </svg>
@@ -886,7 +876,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (작은 열쇠) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#FFEBEF] text-[#572B35] border border-[#C7A46B]/45 font-semibold tracking-tight">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#4E2A35] text-[#FCE3D8] border border-[#C6A575]/30 font-semibold tracking-tight">
                             Step 2 · 전략
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="작은 열쇠">
@@ -900,29 +890,24 @@ export default function LoveSecretEbookPage() {
                         </div>
 
                         {/* 상품명 */}
-                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9DC] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
                           《매혹의 무의식 침투 프로토콜》
                         </h4>
 
                         {/* 짧은 금색 구분선 */}
-                        <div className="w-8 h-[1px] bg-[#C7A46B]/60 my-2.5 md:my-3" />
+                        <div className="w-8 h-[1px] bg-[#C6A575]/30 my-2.5 md:my-3" />
 
                         {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#66534E] leading-[1.7] font-normal break-keep">
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#D1C0B8] leading-[1.7] font-normal break-keep">
                           9대 유혹자 페르소나와 최면 기법, 실전 카톡 템플릿으로 상대의 뇌를 안달 나게 만드는 즉각적 실전 무기.
                         </p>
                       </div>
                     </div>
 
                     {/* Book 3: Step 3 · 실천 */}
-                    <div
-                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#C7A46B]/55 flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35),0_2px_8px_rgba(199,164,107,0.15)] transition-transform hover:-translate-y-1 duration-200"
-                      style={{
-                        background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)',
-                      }}
-                    >
+                    <div className="relative p-5 sm:p-6 md:p-7 rounded-[12px] bg-[#30212D] border border-[#C6A575]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200">
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
-                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C6A575]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
                         <path d="M1 9V1h8" />
                         <path d="M4 9V4h5" />
                       </svg>
@@ -930,7 +915,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (붓 / 기록지) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#FFEBEF] text-[#572B35] border border-[#C7A46B]/45 font-semibold tracking-tight">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#4E2A35] text-[#FCE3D8] border border-[#C6A575]/30 font-semibold tracking-tight">
                             Step 3 · 실천
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="붓 또는 기록지">
@@ -943,15 +928,15 @@ export default function LoveSecretEbookPage() {
                         </div>
 
                         {/* 상품명 */}
-                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9DC] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
                           《30일 매력 각성 워크북》
                         </h4>
 
                         {/* 짧은 금색 구분선 */}
-                        <div className="w-8 h-[1px] bg-[#C7A46B]/60 my-2.5 md:my-3" />
+                        <div className="w-8 h-[1px] bg-[#C6A575]/30 my-2.5 md:my-3" />
 
                         {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#66534E] leading-[1.7] font-normal break-keep">
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#D1C0B8] leading-[1.7] font-normal break-keep">
                           30일간의 데일리 미션을 통해 휘둘리지 않고 주도권을 쥐는 여왕의 태도를 몸에 새기는 체질 각성서.
                         </p>
                       </div>
