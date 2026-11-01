@@ -29,45 +29,45 @@ export const loveSecretAssets: Record<string, LoveSecretAssetItem> = {
   // 2. Pain: 기울어진 시소 및 읽씹 화면 비주얼
   pain: {
     id: 'pain',
-    src: 'love_pain_placeholder.png',
+    src: '/images/love-secret/love-pain.png',
     alt: '기울어진 시소 및 읽씹 화면 비주얼',
-    aspectRatio: 'aspect-[4/3]',
+    aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
     placeholderLabel: '기울어진 시소 및 읽씹 화면 비주얼',
-    description: 'love_pain_placeholder.png'
+    description: 'love-pain.png'
   },
 
-  // 3. Book 1: 연애비급 본편 표지
+  // 3. Book 1: 연애비급 본편 표지 목업
   book1: {
     id: 'book1',
-    src: 'book1_love_placeholder.png',
-    alt: '연애비급 본편 표지',
+    src: '/images/love-secret/book1-love-mockup.png',
+    alt: 'Book 1. [정통 바이블] 연애비급 완전판 목업',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
-    placeholderLabel: 'Book 1. [정통 바이블] 연애비급 완전판 표지',
-    description: 'book1_love_placeholder.png'
+    placeholderLabel: 'Book 1. [정통 바이블] 연애비급 완전판',
+    description: 'book1-love-mockup.png'
   },
 
-  // 4. Book 2: 매혹의 무의식 침투 프로토콜 표지
+  // 4. Book 2: 매혹의 무의식 침투 프로토콜 표지 목업
   protocol: {
     id: 'protocol',
-    src: 'book2_protocol_placeholder.png',
-    alt: '매혹의 무의식 침투 프로토콜 표지',
+    src: '/images/love-secret/book2-secret-mockup.png',
+    alt: 'Book 2. [전략 시크릿북] 매혹의 무의식 침투 프로토콜 목업',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
-    placeholderLabel: 'Book 2. [전략 시크릿북] 매혹의 무의식 침투 프로토콜 표지',
-    description: 'book2_protocol_placeholder.png'
+    placeholderLabel: 'Book 2. [전략 시크릿북] 매혹의 무의식 침투 프로토콜',
+    description: 'book2-secret-mockup.png'
   },
 
-  // 5. Book 3: 30일 매력 각성 워크북 표지
+  // 5. Book 3: 30일 매력 각성 워크북 표지 목업
   workbook: {
     id: 'workbook',
-    src: 'book3_workbook_placeholder.png',
-    alt: '30일 매력 각성 워크북 표지',
+    src: '/images/love-secret/book3-workbook-mockup.png',
+    alt: 'Book 3. [실전 워크북] 30일 매력 각성 워크북 목업',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
-    placeholderLabel: 'Book 3. [실전 워크북] 30일 매력 각성 워크북 표지',
-    description: 'book3_workbook_placeholder.png'
+    placeholderLabel: 'Book 3. [실전 워크북] 30일 매력 각성 워크북',
+    description: 'book3-workbook-mockup.png'
   },
 
   // 6. Bonus: 도화만개부 부적 이미지
