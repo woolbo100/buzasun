@@ -1000,36 +1000,39 @@ export default function LoveSecretEbookPage() {
                           {[
                             {
                               part: "1부. 남자의 사랑 작동 원리",
-                              desc: "남자가 사랑을 '정복'으로 느끼는 사냥꾼 코드 & 르네 지라르의 삼각 욕망"
+                              desc: "사랑을 '정복'으로 느끼는 사냥꾼 본능 해부"
                             },
                             {
                               part: "2부. 흔들리지 않는 매력의 근원",
-                              desc: "안정된 상태의 힘, 먼 세계의 아우라, 금지된 과일 효과"
+                              desc: "애쓰지 않아도 스스로 찾아오게 만드는 금지된 과일의 법칙"
                             },
                             {
                               part: "3부. 연애 최면과 유혹의 구조",
-                              desc: "상태 동기화(미러링), 앵커링, 라벨링 효과, 자이가르닉 효과, 유혹의 3단계(혼란-고립-각인)"
+                              desc: "의식을 우회해 무의식에 각인시키는 감정 앵커링"
                             },
                             {
                               part: "4부. 말의 결 (언어 포지셔닝)",
-                              desc: "남자를 묶는 3가지 말의 구조 & 남자가 진정으로 원하는 3가지(섹슈얼리티·치어링·서브미시브)"
+                              desc: "설명하지 않고도 관계의 위상을 역전시키는 대화법"
                             },
                             {
                               part: "5부. 관계를 망치는 치명적 함정",
-                              desc: "감정 없는 거리두기(부적 처벌), 간헐적 보상 공식, 감정 잔존 효과"
+                              desc: "착하게 다 맞춰주다 '을'로 전락하는 원인 차단"
                             },
                             {
                               part: "6부. 오래 가는 사랑의 구조",
-                              desc: "남자의 '맹목적 부양본능'을 촉발시키는 조건 & 돈 많은 남자의 지위 피로 공략법"
+                              desc: "남자의 맹목적 부양본능을 자극하는 안식처의 비밀"
                             },
                             {
                               part: "7부. 연애 졸업 선언",
-                              desc: "선택받으려 애쓰지 않고 내가 선택하는 절대 주권자의 완성"
+                              desc: "선택받기를 기다리지 않고, 내가 선택하는 절대 주권의 완성"
                             }
                           ].map((item, idx) => (
-                            <div key={idx} className="p-3.5 rounded-xl bg-black/40 border border-[#D4B2A7]/15 space-y-1">
-                              <h5 className="text-xs md:text-sm font-bold text-[#E5C4BB] leading-[1.5]">{item.part}</h5>
-                              <p className="text-xs text-[#EDE6DA]/75 font-light leading-[1.65]">{item.desc}</p>
+                            <div key={idx} className="p-3.5 rounded-xl bg-black/40 border border-[#D4B2A7]/15">
+                              <p className="text-xs md:text-sm leading-[1.6] break-keep">
+                                <strong className="font-bold text-[#E5C4BB] font-elegant mr-2">{item.part}</strong>
+                                <span className="text-[#D4B2A7]/50 mr-2">|</span>
+                                <span className="text-[#EDE6DA]/85 font-light">{item.desc}</span>
+                              </p>
                             </div>
                           ))}
                         </div>
@@ -1076,52 +1079,51 @@ export default function LoveSecretEbookPage() {
                         {/* 핵심 내용 요약 */}
                         <div className="p-4 rounded-xl bg-white/[0.02] border border-[#D4B2A7]/20 text-xs md:text-sm text-[#EDE6DA]/85 leading-[1.8] font-light">
                           <span className="font-bold text-[#E5C4BB] block mb-1">핵심 내용 요약</span>
-                          9대 유혹자 페르소나 정밀 진단 / 상대 결핍 코드 판별 / 실전 최면 기법 7선 / 쉿 테스트 방어법 / 상황별 복붙 전용 카톡 템플릿 5종
+                          9대 유혹자 페르소나 정밀 진단 / 실전 심리·최면 기법 7선 / 무의식 심리 역학 7대 법칙 / 상황별 복붙 전용 카톡 즉답 템플릿 5종
                         </div>
 
-                        {/* 상세 내용 ①~⑤ */}
+                        {/* 상세 내용 Part 1 ~ Part 4 */}
                         <div className="space-y-4 pt-2">
+                          {/* Part 1 */}
                           <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
                             <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
-                              <span className="text-[#E5C4BB]">①</span> 9대 유혹자(Seducer) 페르소나 정밀 진단
+                              <span className="text-[#E5C4BB] font-serif font-bold">Part 1.</span> 9대 유혹자 페르소나 정밀 진단
                             </h4>
                             <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
-                              세이렌, 레이크, 아이디얼 러버, 댄디, 내추럴, 코케트, 차머, 카리스마, 스타 원형 분석 및 치명적 결함 봉인
+                              남자의 무의식을 뒤흔드는 9가지 원형과 나만의 매혹 무기 장착
                             </p>
                           </div>
 
+                          {/* Part 2 */}
                           <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
                             <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
-                              <span className="text-[#E5C4BB]">②</span> 상대 남자의 3대 무의식 결핍 코드 판별표
+                              <span className="text-[#E5C4BB] font-serif font-bold">Part 2.</span> 이성을 마비시키는 실전 심리·최면 기법 7선
                             </h4>
                             <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
-                              자아 존중 결핍형 / 도파민 고갈형 / 정서적 피로형
+                              경계심을 풀고 스스로 빠져들게 만드는 무의식 닻 내리기
                             </p>
                           </div>
 
+                          {/* Part 3 */}
                           <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
                             <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
-                              <span className="text-[#E5C4BB]">③</span> 상대 이성을 마비시키는 실전 심리·최면 기법 7선
+                              <span className="text-[#E5C4BB] font-serif font-bold">Part 3.</span> 관계의 판을 뒤집는 무의식 심리 역학 7대 법칙
                             </h4>
                             <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
-                              흔들다리 효과, 오감 앵커링, 페이싱&amp;리딩, 밀턴 모델 이중 구속 등
+                              애타는 추격자에서 판을 지배하는 설계자로 거듭나는 법칙
                             </p>
                           </div>
 
-                          <div className="p-4.5 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
-                            <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
-                              <span className="text-[#E5C4BB]">④</span> 관계의 판을 뒤집는 무의식 심리 역학 7대 법칙
-                            </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light pl-6 leading-[1.8]">
-                              에너지 시소의 법칙, 쉿 테스트(떠보기) 여유로운 격퇴법, 정가 지불의 결계
-                            </p>
-                          </div>
-
-                          {/* ⑤ 실전 상황별 카톡 무의식 침투 프로토콜 */}
+                          {/* Part 4. 실전 상황별 카톡 무의식 침투 프로토콜 */}
                           <div className="p-5 rounded-xl bg-[#A66B73]/15 border border-[#A66B73]/35 space-y-3.5">
-                            <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] leading-[1.5] flex items-center gap-2">
-                              <span className="text-[#E5C4BB]">⑤</span> 실전 상황별 카톡 무의식 침투 프로토콜 (복사·붙여넣기 템플릿)
-                            </h4>
+                            <div className="space-y-1.5">
+                              <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] leading-[1.5] flex items-center gap-2">
+                                <span className="text-[#E5C4BB] font-serif font-bold">Part 4.</span> 실전 상황별 카톡 무의식 침투 프로토콜
+                              </h4>
+                              <p className="text-xs md:text-sm text-[#EDE6DA]/85 font-light pl-6 leading-[1.8]">
+                                썸, 밀당, 잠수, 어장관리 상황에서 그대로 복사해 쓰는 즉답 템플릿 5종
+                              </p>
+                            </div>
 
                             <div className="grid sm:grid-cols-2 gap-3 pl-2 pt-1">
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#D4B2A7]/20 space-y-1">
@@ -1139,7 +1141,7 @@ export default function LoveSecretEbookPage() {
                               </div>
 
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#D4B2A7]/20 space-y-1">
-                                <span className="text-xs font-bold text-[#E5C4BB] block">[관계 경계선]</span>
+                                <span className="text-xs font-bold text-[#E5C4BB] block">[잠수·경계선]</span>
                                 <p className="text-xs text-[#EDE6DA]/80 font-light leading-[1.65]">
                                   당일 번개와 일방적 약속을 차단하는 여왕의 선 긋기 톡
                                 </p>
@@ -1213,29 +1215,32 @@ export default function LoveSecretEbookPage() {
 
                           {[
                             {
-                              phase: "PHASE 1 (Day 1~7) 첫인상의 법칙",
-                              desc: "속도와 곡선이 만드는 아우라, 오감 시선 설계, 모호함의 여백"
+                              phase: "Phase 1. 첫인상의 법칙",
+                              desc: "시선을 묶어두는 독보적 아우라와 속도의 설계"
                             },
                             {
-                              phase: "PHASE 2 (Day 8~14) 연결의 기술",
-                              desc: "래포의 5단계, 공통점 발굴 질문법, 소울메이트 3대 대화법, 섹시한 친구 포지션"
+                              phase: "Phase 2. 연결의 기술",
+                              desc: "편안함 속에 서늘한 긴장감을 품은 소울메이트 라포"
                             },
                             {
-                              phase: "PHASE 3 (Day 15~21) 욕망의 온도",
-                              desc: "불규칙한 반응 패턴, 사소한 부탁으로 만드는 헌신의 관성, 침묵의 센터링"
+                              phase: "Phase 3. 욕망의 온도",
+                              desc: "희소성과 결핍을 이용해 상대를 안달 나게 만드는 헌신 유도"
                             },
                             {
-                              phase: "PHASE 4 (Day 22~30) 오래 머물게 하는 여자",
-                              desc: "남자의 동굴을 이해하는 여유, 관계 파국 4대 덫 차단, 10년 뒤에도 그리워지는 존재의 깊이"
+                              phase: "Phase 4. 오래 머물게 하는 여자",
+                              desc: "10년 뒤에도 그리워지는 대체 불가한 존재의 깊이"
                             },
                             {
                               phase: "부록.",
-                              desc: "30일 데일리 실천 플래너 & 주간 여왕의 에너지 자가 진단표 (Day 7, 14, 21, 30)"
+                              desc: "30일 데일리 실천 플래너 & 주간 에너지 자가 진단표"
                             }
                           ].map((item, idx) => (
-                            <div key={idx} className="p-3.5 rounded-xl bg-black/40 border border-[#D4B2A7]/15 space-y-1">
-                              <h5 className="text-xs md:text-sm font-bold text-[#E5C4BB] leading-[1.5]">{item.phase}</h5>
-                              <p className="text-xs text-[#EDE6DA]/75 font-light leading-[1.65]">{item.desc}</p>
+                            <div key={idx} className="p-3.5 rounded-xl bg-black/40 border border-[#D4B2A7]/15">
+                              <p className="text-xs md:text-sm leading-[1.6] break-keep">
+                                <strong className="font-bold text-[#E5C4BB] font-elegant mr-2">{item.phase}</strong>
+                                <span className="text-[#D4B2A7]/50 mr-2">|</span>
+                                <span className="text-[#EDE6DA]/85 font-light">{item.desc}</span>
+                              </p>
                             </div>
                           ))}
                         </div>
