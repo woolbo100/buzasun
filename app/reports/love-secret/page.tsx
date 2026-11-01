@@ -804,45 +804,135 @@ export default function LoveSecretEbookPage() {
                     </div>
                   </div>
 
-                  {/* 이미지 하단 3단계 핵심 역할 카드 */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-left mt-8">
-                    {/* Book 1 */}
-                    <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
-                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-amber-950/80 text-amber-300 border border-amber-600/30 font-medium">
-                        Step 1 · 원리
-                      </span>
-                      <h4 className="text-neutral-100 font-bold text-sm mt-2">
-                        《연애비급 완전판》
-                      </h4>
-                      <p className="text-neutral-400 text-xs mt-1.5 leading-relaxed">
-                        남자의 본능과 심리를 꿰뚫어 보고, 사랑을 구걸하던 자리에서 존중받는 중심 자리로 이동하는 근본 바이블.
-                      </p>
+                  {/* 이미지 하단 3단계 핵심 역할 카드 (백도화 연애비급 전통 비첩 콘셉트) */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left mt-8 items-stretch">
+                    {/* Book 1: Step 1 · 원리 */}
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#C7A46B]/55 flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35),0_2px_8px_rgba(199,164,107,0.15)] transition-transform hover:-translate-y-1 duration-200"
+                      style={{
+                        background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)',
+                      }}
+                    >
+                      {/* 귀퉁이 전통 기하학 금색 장식 */}
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                        <path d="M1 9V1h8" />
+                        <path d="M4 9V4h5" />
+                      </svg>
+
+                      <div>
+                        {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (펼친 책) */}
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#FFEBEF] text-[#572B35] border border-[#C7A46B]/45 font-semibold tracking-tight">
+                            Step 1 · 원리
+                          </span>
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="펼친 책">
+                            <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* 상품명 */}
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                          《연애비급 완전판》
+                        </h4>
+
+                        {/* 짧은 금색 구분선 */}
+                        <div className="w-8 h-[1px] bg-[#C7A46B]/60 my-2.5 md:my-3" />
+
+                        {/* 설명 */}
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#66534E] leading-[1.7] font-normal break-keep">
+                          남자의 본능과 심리를 꿰뚫어 보고, 사랑을 구걸하던 자리에서 존중받는 중심 자리로 이동하는 근본 바이블.
+                        </p>
+                      </div>
                     </div>
 
-                    {/* Book 2 */}
-                    <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
-                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-rose-950/80 text-rose-300 border border-rose-600/30 font-medium">
-                        Step 2 · 전략
-                      </span>
-                      <h4 className="text-neutral-100 font-bold text-sm mt-2">
-                        《매혹의 무의식 침투 프로토콜》
-                      </h4>
-                      <p className="text-neutral-400 text-xs mt-1.5 leading-relaxed">
-                        9대 유혹자 페르소나와 최면 기법, 실전 카톡 템플릿으로 상대의 뇌를 안달 나게 만드는 즉각적 실전 무기.
-                      </p>
+                    {/* Book 2: Step 2 · 전략 */}
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#C7A46B]/55 flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35),0_2px_8px_rgba(199,164,107,0.15)] transition-transform hover:-translate-y-1 duration-200"
+                      style={{
+                        background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)',
+                      }}
+                    >
+                      {/* 귀퉁이 전통 기하학 금색 장식 */}
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                        <path d="M1 9V1h8" />
+                        <path d="M4 9V4h5" />
+                      </svg>
+
+                      <div>
+                        {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (작은 열쇠) */}
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#FFEBEF] text-[#572B35] border border-[#C7A46B]/45 font-semibold tracking-tight">
+                            Step 2 · 전략
+                          </span>
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="작은 열쇠">
+                            <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="7.5" cy="15.5" r="4.5" />
+                              <path d="m21 2-9.6 9.6" />
+                              <path d="m15.5 7.5 3 3" />
+                              <path d="m18.5 4.5 2 2" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* 상품명 */}
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                          《매혹의 무의식 침투 프로토콜》
+                        </h4>
+
+                        {/* 짧은 금색 구분선 */}
+                        <div className="w-8 h-[1px] bg-[#C7A46B]/60 my-2.5 md:my-3" />
+
+                        {/* 설명 */}
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#66534E] leading-[1.7] font-normal break-keep">
+                          9대 유혹자 페르소나와 최면 기법, 실전 카톡 템플릿으로 상대의 뇌를 안달 나게 만드는 즉각적 실전 무기.
+                        </p>
+                      </div>
                     </div>
 
-                    {/* Book 3 */}
-                    <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
-                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700 font-medium">
-                        Step 3 · 실전
-                      </span>
-                      <h4 className="text-neutral-100 font-bold text-sm mt-2">
-                        《30일 매력 각성 워크북》
-                      </h4>
-                      <p className="text-neutral-400 text-xs mt-1.5 leading-relaxed">
-                        30일간의 데일리 미션을 통해 휘둘리지 않고 주도권을 쥐는 여왕의 태도를 몸에 새기는 체질 각성서.
-                      </p>
+                    {/* Book 3: Step 3 · 실천 */}
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#C7A46B]/55 flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.35),0_2px_8px_rgba(199,164,107,0.15)] transition-transform hover:-translate-y-1 duration-200"
+                      style={{
+                        background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)',
+                      }}
+                    >
+                      {/* 귀퉁이 전통 기하학 금색 장식 */}
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                        <path d="M1 9V1h8" />
+                        <path d="M4 9V4h5" />
+                      </svg>
+
+                      <div>
+                        {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (붓 / 기록지) */}
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#FFEBEF] text-[#572B35] border border-[#C7A46B]/45 font-semibold tracking-tight">
+                            Step 3 · 실천
+                          </span>
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="붓 또는 기록지">
+                            <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+                              <line x1="16" y1="8" x2="2" y2="22" />
+                              <line x1="17.5" y1="15" x2="9" y2="15" />
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* 상품명 */}
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                          《30일 매력 각성 워크북》
+                        </h4>
+
+                        {/* 짧은 금색 구분선 */}
+                        <div className="w-8 h-[1px] bg-[#C7A46B]/60 my-2.5 md:my-3" />
+
+                        {/* 설명 */}
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#66534E] leading-[1.7] font-normal break-keep">
+                          30일간의 데일리 미션을 통해 휘둘리지 않고 주도권을 쥐는 여왕의 태도를 몸에 새기는 체질 각성서.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1219,97 +1309,7 @@ export default function LoveSecretEbookPage() {
               </Reveal>
             </section>
 
-            {/* ═══════════════════════════════════════════════════════════════
-                신규 추가: 구매 망설임 차단 FAQ ("3종 올인원 세트 상세 해부" 바로 아래)
-               ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-4xl mx-auto">
-              <Reveal>
-                {/* 섹션: 구매 망설임 차단 FAQ */}
-                <div className="py-4">
-                  <div className="text-center space-y-4 mb-14">
-                    <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase block">
-                      FAQ
-                    </span>
-                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-[1.45]">
-                      자주 묻는 질문
-                    </h2>
-                    <p className="text-[#EDE6DA]/75 text-sm md:text-base font-light leading-[1.8] break-keep">
-                      구매 전 가장 많이 확인하시는 질문들을 모았습니다.
-                    </p>
-                  </div>
-
-                  <div className="space-y-4 break-keep">
-                    {/* Q1 */}
-                    <div
-                      className="gungjung-glass p-6 rounded-2xl border border-[#D4B2A7]/25 hover:border-[#D4B2A7]/50 transition-all"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(139, 38, 62, 0.2) 0%, rgba(10, 5, 20, 0.85) 100%)'
-                      }}
-                    >
-                      <h4 className="text-white font-elegant font-semibold text-base md:text-lg leading-[1.5] flex items-start gap-2.5">
-                        <span className="text-[#E5C4BB] font-serif font-bold shrink-0">Q.</span>
-                        <span>지금 썸 단계이거나 헤어진 상태(재회 희망)여도 적용할 수 있나요?</span>
-                      </h4>
-                      <p className="text-[#EDE6DA]/80 text-xs md:text-sm mt-3.5 pl-6 leading-[1.8] font-light border-t border-white/5 pt-3.5">
-                        네, 완벽히 적용됩니다. 《연애비급》은 특정 연애 기간에 국한된 조언이 아니라, <strong className="text-[#E5C4BB] font-semibold">남자의 무의식이 작동하는 본능적 회로</strong>를 다룹니다. 짝사랑, 썸, 연애 초반 주도권 싸움, 권태기, 이별 후 후폭풍 유도까지 관계의 모든 국면에서 내 포지션을 재설정하는 핵심 원리입니다.
-                      </p>
-                    </div>
-
-                    {/* Q2 */}
-                    <div
-                      className="gungjung-glass p-6 rounded-2xl border border-[#D4B2A7]/25 hover:border-[#D4B2A7]/50 transition-all"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(139, 38, 62, 0.2) 0%, rgba(10, 5, 20, 0.85) 100%)'
-                      }}
-                    >
-                      <h4 className="text-white font-elegant font-semibold text-base md:text-lg leading-[1.5] flex items-start gap-2.5">
-                        <span className="text-[#E5C4BB] font-serif font-bold shrink-0">Q.</span>
-                        <span>제가 마음이 여리고 소심한 편인데, 독해지거나 연기해야 하나요?</span>
-                      </h4>
-                      <p className="text-[#EDE6DA]/80 text-xs md:text-sm mt-3.5 pl-6 leading-[1.8] font-light border-t border-white/5 pt-3.5">
-                        억지로 성격을 바꾸거나 센 척할 필요가 전혀 없습니다. 상대에게 화를 내거나 무리한 밀당을 시도하는 것은 오히려 불안함을 들키는 하책입니다. 이 책은 <strong className="text-[#E5C4BB] font-semibold">말의 배치와 침묵의 타이밍, 답장의 길이</strong>라는 단순한 ‘구조’만 바꾸어 내 본래의 품격을 지켜내도록 돕습니다.
-                      </p>
-                    </div>
-
-                    {/* Q3 */}
-                    <div
-                      className="gungjung-glass p-6 rounded-2xl border border-[#D4B2A7]/25 hover:border-[#D4B2A7]/50 transition-all"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(139, 38, 62, 0.2) 0%, rgba(10, 5, 20, 0.85) 100%)'
-                      }}
-                    >
-                      <h4 className="text-white font-elegant font-semibold text-base md:text-lg leading-[1.5] flex items-start gap-2.5">
-                        <span className="text-[#E5C4BB] font-serif font-bold shrink-0">Q.</span>
-                        <span>책 분량과 구성은 어떻게 되며, 실전 적용이 쉬운가요?</span>
-                      </h4>
-                      <p className="text-[#EDE6DA]/80 text-xs md:text-sm mt-3.5 pl-6 leading-[1.8] font-light border-t border-white/5 pt-3.5">
-                        《연애비급 완전판 본편》, 《전략 시크릿북》, 《실전 워크북》에 더해 막막한 상황에서 복사해 쓸 수 있는 <strong className="text-[#E5C4BB] font-semibold">[실전 카톡 템플릿 5종]</strong>까지 4 in 1 올인원으로 제공됩니다. 추상적인 감정 위로에 머물지 않고 당장 오늘 밤 카톡부터 어떻게 보내야 하는지 구체적인 행동 가이드를 담았습니다.
-                      </p>
-                    </div>
-
-                    {/* Q4 */}
-                    <div
-                      className="gungjung-glass p-6 rounded-2xl border border-[#D4B2A7]/25 hover:border-[#D4B2A7]/50 transition-all"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(139, 38, 62, 0.2) 0%, rgba(10, 5, 20, 0.85) 100%)'
-                      }}
-                    >
-                      <h4 className="text-white font-elegant font-semibold text-base md:text-lg leading-[1.5] flex items-start gap-2.5">
-                        <span className="text-[#E5C4BB] font-serif font-bold shrink-0">Q.</span>
-                        <span>결제 후 어떻게 열람하나요? 종이책 배송인가요?</span>
-                      </h4>
-                      <p className="text-[#EDE6DA]/80 text-xs md:text-sm mt-3.5 pl-6 leading-[1.8] font-light border-t border-white/5 pt-3.5">
-                        실물 배송을 기다릴 필요 없는 <strong className="text-[#E5C4BB] font-semibold">디지털 PDF 전자책 패키지</strong>입니다. 결제 완료 즉시 마이페이지 및 다운로드 링크를 통해 스마트폰, 태블릿, PC에서 영구적으로 소장하고 언제 어디서든 꺼내보실 수 있습니다.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            <ChampagneThreadDivider />
-
-            {/* ═══════════════════════════════════════════════════════════════
+{/* ═══════════════════════════════════════════════════════════════
                 5. Premium Content Section (기존 프리미엄 가이드북 안내 보존)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
@@ -1387,59 +1387,155 @@ export default function LoveSecretEbookPage() {
                     </p>
                   </div>
 
-                  {/* 목차 리스트 */}
-                  <div className="grid md:grid-cols-2 gap-6 text-sm md:text-base leading-relaxed text-[#EDE6DA]/85">
-                    {[
-                      {
-                        title: "프롤로그",
-                        desc: "사랑은 노력으로 만들어지지 않는다"
-                      },
-                      {
-                        title: "1부. 시작과 변화",
-                        desc: "남자의 사랑은 어떻게 시작되고 변하는가"
-                      },
-                      {
-                        title: "2부. 매력의 본질",
-                        desc: "흔들리지 않는 매력의 근원"
-                      },
-                      {
-                        title: "3부. 무의식과 프레임",
-                        desc: "연애 최면과 유혹의 구조"
-                      },
-                      {
-                        title: "4부. 언어의 결",
-                        desc: "말의 결, 관계의 위상을 바꾸는 언어"
-                      },
-                      {
-                        title: "5부. 심리의 함정",
-                        desc: "관계를 망치는 심리와 치명적인 함정"
-                      },
-                      {
-                        title: "6부. 관계의 완성",
-                        desc: "오래 가는 사랑의 구조"
-                      },
-                      {
-                        title: "7부. 주체적 관계",
-                        desc: "선택과 졸업"
-                      },
-                      {
-                        title: "에필로그",
-                        desc: "사랑을 얻으려 하지 말고, 사랑이 머무를 자리가 되어라"
-                      }
-                    ].map((item, idx) => (
-                      <div
-                        key={idx}
-                        className="flex gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] transition-colors"
-                      >
-                        <div className="w-12 h-12 rounded-lg bg-[#BA8D7E]/10 border border-[#D4B2A7]/20 flex items-center justify-center shrink-0 text-xs font-bold font-serif text-[#D4B2A7]">
-                          {idx === 0 ? "Prologue" : idx === 8 ? "Epilogue" : `${idx}부`}
+                  {/* 목차 리스트 (밝은 아이보리 비첩 카드 스타일) */}
+                  <div className="space-y-3.5 md:space-y-5">
+                    {/* 상단: 프롤로그 (전체 폭 가로 띠 카드) */}
+                    <div
+                      className="relative p-5 md:p-6 rounded-[12px] border border-[#C7A46B]/55 overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.25),0_1px_4px_rgba(199,164,107,0.12)] transition-transform hover:-translate-y-0.5 duration-200"
+                      style={{ background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)' }}
+                    >
+                      {/* 귀퉁이 전통 기하학 장식 */}
+                      <svg aria-hidden="true" className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                        <path d="M1 9V1h8" />
+                        <path d="M4 9V4h5" />
+                      </svg>
+                      {/* 우하단 도화 선화 장식 */}
+                      <svg aria-hidden="true" className="absolute -bottom-2 -right-2 w-14 h-14 text-[#C7A46B]/20 pointer-events-none select-none" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1">
+                        <circle cx="24" cy="24" r="8" strokeDasharray="2 2" />
+                        <path d="M24 10c3 4 5 10 0 14-5-4-3-10 0-14z" />
+                        <path d="M24 38c3-4 5-10 0-14-5 4-3 10 0 14z" />
+                        <path d="M10 24c4-3 10-5 14 0-4 5-10 3-14 0z" />
+                        <path d="M38 24c-4-3-10-5-14 0 4 5 10 3 14 0z" />
+                      </svg>
+
+                      <div className="relative z-10 space-y-1">
+                        <div className="flex items-center gap-2">
+                          <span className="text-[10px] md:text-[11px] px-2.5 py-0.5 rounded-full bg-[#F7DFDF] text-[#572B35] border border-[#C7A46B]/40 font-semibold tracking-widest uppercase">
+                            PROLOGUE
+                          </span>
+                          <div className="w-6 h-[1px] bg-[#C7A46B]/50" />
                         </div>
-                        <div className="space-y-1">
-                          <h3 className="font-semibold text-white text-sm md:text-base leading-[1.5]">{item.title}</h3>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/60 font-light leading-[1.65]">{item.desc}</p>
-                        </div>
+                        <h3 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant pt-0.5">
+                          프롤로그
+                        </h3>
+                        <p className="text-[14px] md:text-[15px] text-[#66534E] leading-[1.65] font-normal break-keep">
+                          사랑은 노력으로 만들어지지 않는다
+                        </p>
                       </div>
-                    ))}
+                    </div>
+
+                    {/* 중앙: 본편 1~7부 (PC 2열, 모바일 1열, 7부는 전체 폭 md:col-span-2) */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-5">
+                      {[
+                        {
+                          num: "1부",
+                          title: "1부. 시작과 변화",
+                          desc: "남자의 사랑은 어떻게 시작되고 변하는가"
+                        },
+                        {
+                          num: "2부",
+                          title: "2부. 매력의 본질",
+                          desc: "흔들리지 않는 매력의 근원"
+                        },
+                        {
+                          num: "3부",
+                          title: "3부. 무의식과 프레임",
+                          desc: "연애 최면과 유혹의 구조"
+                        },
+                        {
+                          num: "4부",
+                          title: "4부. 언어의 결",
+                          desc: "말의 결, 관계의 위상을 바꾸는 언어"
+                        },
+                        {
+                          num: "5부",
+                          title: "5부. 심리의 함정",
+                          desc: "관계를 망치는 심리와 치명적인 함정"
+                        },
+                        {
+                          num: "6부",
+                          title: "6부. 관계의 완성",
+                          desc: "오래 가는 사랑의 구조"
+                        },
+                        {
+                          num: "7부",
+                          title: "7부. 주체적 관계",
+                          desc: "선택과 졸업"
+                        }
+                      ].map((ch, idx) => (
+                        <div
+                          key={idx}
+                          className={`relative p-5 md:p-6 rounded-[12px] border border-[#C7A46B]/55 overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.25),0_1px_4px_rgba(199,164,107,0.12)] transition-transform hover:-translate-y-0.5 duration-200 flex items-start gap-4 ${
+                            idx === 6 ? 'md:col-span-2' : ''
+                          }`}
+                          style={{ background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)' }}
+                        >
+                          {/* 귀퉁이 전통 기하학 장식 */}
+                          <svg aria-hidden="true" className="absolute top-2.5 left-2.5 w-3 h-3 text-[#C7A46B]/35 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                            <path d="M1 9V1h8" />
+                            <path d="M4 9V4h5" />
+                          </svg>
+                          {/* 우하단 도화 선화 장식 */}
+                          <svg aria-hidden="true" className="absolute -bottom-2 -right-2 w-14 h-14 text-[#C7A46B]/18 pointer-events-none select-none" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1">
+                            <circle cx="24" cy="24" r="8" strokeDasharray="2 2" />
+                            <path d="M24 10c3 4 5 10 0 14-5-4-3-10 0-14z" />
+                            <path d="M24 38c3-4 5-10 0-14-5 4-3 10 0 14z" />
+                            <path d="M10 24c4-3 10-5 14 0-4 5-10 3-14 0z" />
+                            <path d="M38 24c-4-3-10-5-14 0 4 5 10 3 14 0z" />
+                          </svg>
+
+                          {/* 왼쪽 번호 배지: 약 44~48px 전통 꽃잎형/문양형 배지 */}
+                          <div className="w-11 h-11 md:w-12 md:h-12 rounded-[10px] bg-[#F7DFDF] border border-[#C7A46B]/50 flex items-center justify-center shrink-0 text-sm md:text-base font-bold font-elegant text-[#572B35] shadow-sm relative z-10">
+                            {ch.num}
+                          </div>
+
+                          {/* 오른쪽 제목 및 설명 */}
+                          <div className="space-y-1 relative z-10 flex-1 min-w-0">
+                            <h3 className="text-[17px] md:text-[19px] font-bold text-[#572B35] font-elegant leading-[1.4] break-keep">
+                              {ch.title}
+                            </h3>
+                            <p className="text-[13.5px] md:text-[14.5px] text-[#66534E] font-normal leading-[1.65] break-keep">
+                              {ch.desc}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* 하단: 에필로그 (전체 폭 가로 띠 카드) */}
+                    <div
+                      className="relative p-5 md:p-6 rounded-[12px] border border-[#C7A46B]/55 overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.25),0_1px_4px_rgba(199,164,107,0.12)] transition-transform hover:-translate-y-0.5 duration-200"
+                      style={{ background: 'linear-gradient(180deg, #FFF1F3 0%, #FFF9F2 30%, #FFF8EF 100%)' }}
+                    >
+                      {/* 귀퉁이 전통 기하학 장식 */}
+                      <svg aria-hidden="true" className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C7A46B]/40 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                        <path d="M1 9V1h8" />
+                        <path d="M4 9V4h5" />
+                      </svg>
+                      {/* 우하단 도화 선화 장식 */}
+                      <svg aria-hidden="true" className="absolute -bottom-2 -right-2 w-14 h-14 text-[#C7A46B]/20 pointer-events-none select-none" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1">
+                        <circle cx="24" cy="24" r="8" strokeDasharray="2 2" />
+                        <path d="M24 10c3 4 5 10 0 14-5-4-3-10 0-14z" />
+                        <path d="M24 38c3-4 5-10 0-14-5 4-3 10 0 14z" />
+                        <path d="M10 24c4-3 10-5 14 0-4 5-10 3-14 0z" />
+                        <path d="M38 24c-4-3-10-5-14 0 4 5 10 3 14 0z" />
+                      </svg>
+
+                      <div className="relative z-10 space-y-1">
+                        <div className="flex items-center gap-2">
+                          <span className="text-[10px] md:text-[11px] px-2.5 py-0.5 rounded-full bg-[#F7DFDF] text-[#572B35] border border-[#C7A46B]/40 font-semibold tracking-widest uppercase">
+                            EPILOGUE
+                          </span>
+                          <div className="w-6 h-[1px] bg-[#C7A46B]/50" />
+                        </div>
+                        <h3 className="text-[18px] md:text-[20px] font-bold text-[#572B35] font-elegant pt-0.5">
+                          에필로그
+                        </h3>
+                        <p className="text-[14px] md:text-[15px] text-[#66534E] leading-[1.65] font-normal break-keep">
+                          사랑을 얻으려 하지 말고, 사랑이 머무를 자리가 되어라
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Reveal>
@@ -1604,9 +1700,9 @@ export default function LoveSecretEbookPage() {
             <ChampagneThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                신규 Section 7. FAQ — 자주 묻는 질문
+                통합 자주 묻는 질문 (FAQ 아코디언)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-4xl mx-auto">
+            <section id="faq" className="mb-28 text-left max-w-4xl mx-auto">
               <Reveal>
                 <div className="text-center space-y-4 mb-14">
                   <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
@@ -1616,31 +1712,41 @@ export default function LoveSecretEbookPage() {
                     자주 묻는 질문
                   </h2>
                   <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
-                    구매 전 궁금해하시는 핵심 질문을 모았습니다.
+                    구매 전 궁금하신 내용을 확인해 보세요.
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   {[
                     {
-                      q: "1. 외모/내성적 성격 적용 여부",
-                      questionTitle: "외모에 자신이 없거나 내성적인 성격이어도 적용할 수 있나요?",
-                      a: "네, 당연히 가능합니다. 연애비급은 얄팍한 외모나 애교 기술을 가르치는 책이 아닙니다. 진화심리학적 사냥꾼 코드와 비소유 신호, 말의 결을 통해 어떤 성격이든 나만의 단단하고 우아한 여왕의 아우라를 세우도록 돕는 관계 구조서입니다."
+                      num: "Q1",
+                      q: "외모에 자신이 없거나 내성적이고 소심한 성격이어도 적용할 수 있나요?",
+                      a: "네, 얼마든지 참고하고 적용하실 수 있습니다. 《연애비급》은 얄팍한 외모나 애교 기술을 요구하거나 억지로 센 척하고 독해지기를 강요하지 않습니다. 상대에게 무리하게 화를 내거나 인위적인 밀당을 시도하지 않아도, 말의 배치와 침묵의 타이밍, 답장의 길이 등 단순한 ‘관계의 구조’를 상황에 맞춰 조정함으로써 어떤 성격이든 나만의 단단하고 우아한 태도를 지켜낼 수 있도록 돕습니다."
                     },
                     {
-                      q: "2. 억지 밀당과의 차이점",
-                      questionTitle: "시중의 억지 밀당이나 인터넷 팁과 무엇이 다른가요?",
-                      a: "단순히 \"답장을 늦게 하라\"는 식의 유치한 수싸움이 아닙니다. 상대의 뇌섬엽과 도파민을 자극하는 신경회로 설계, 자이가르닉 효과, 간헐적 보상 공식을 체계화하여 억지로 연기하지 않아도 자연스럽게 주도권이 넘어오는 절대적 포지션 역학입니다."
+                      num: "Q2",
+                      q: "시중의 밀당 조언이나 인터넷 연애 팁과 무엇이 다른가요?",
+                      a: "단순히 \"답장을 늦게 하라\"거나 화를 내라는 식의 유치한 수싸움이 아닙니다. 상대의 심리와 무의식적 관계 구조, 자이가르닉 효과, 간헐적 보상 원리를 체계화하여 억지로 연기하거나 불안해하지 않아도 자연스럽게 주도권과 존중을 확보할 수 있는 포지션 역학을 다룹니다."
                     },
                     {
-                      q: "3. 짝사랑/식은 텐션 소생 여부",
-                      questionTitle: "짝사랑 중이거나 이미 텐션이 식은 관계에서도 효과가 있나요?",
-                      a: "네, 가능합니다. 전략 시크릿북에 수록된 5대 복붙 카톡 프로토콜(부담 제로 인셉션 톡, 반사구 등)과 30일 워크북의 래포 구축 플랜을 통해 어장관리나 식어버린 관계의 프레임을 단칼에 뒤집고 새로운 호기심을 유발할 수 있습니다."
+                      num: "Q3",
+                      q: "짝사랑·썸·권태기·이별 후 상황에도 참고할 수 있나요?",
+                      a: "네, 각 상황에 맞춰 유용하게 참고하고 활용할 수 있습니다. 《연애비급》은 특정 연애 기간에 국한된 조언이 아니라 관계의 무의식적 작동 원리를 다룹니다. 짝사랑, 썸, 연애 초반의 주도권 정립, 권태기, 이별 후 냉각기까지 각 단계에서 상대방의 선택과 감정 경계를 존중하면서도 나의 가치를 바로 세우는 실전적 관점과 소통 방식을 안내합니다."
                     },
                     {
-                      q: "4. 다운로드 방식",
-                      questionTitle: "구매 후 다운로드는 어떻게 진행되나요?",
-                      a: "본 상품은 실물 배송이 없는 디지털 전자책(PDF) 및 모바일 월페이퍼 패키지입니다. 결제 완료 즉시 마이페이지 또는 등록된 이메일 안내를 통해 언제 어디서나 기기 제한 없이 영구 소장하여 즉시 열람 및 다운로드하실 수 있습니다."
+                      num: "Q4",
+                      q: "책의 분량과 구성은 어떻게 되며, 실전에 적용하기 쉬운가요?",
+                      a: "《연애비급 완전판 본편》, 《전략 시크릿북》, 《실전 워크북》 3권의 체계적인 패키지로 구성되어 있습니다. 막연하고 추상적인 감정 위로에 머물지 않고, 시크릿북에 수록된 상황별 실전 소통 템플릿과 워크북의 데일리 미션을 통해 일상 대화와 카톡에서 당장 어떻게 행동해야 하는지 차근차근 실전에 맞춰 활용하실 수 있습니다."
+                    },
+                    {
+                      num: "Q5",
+                      q: "구매 후 다운로드와 열람은 어떻게 진행되나요?",
+                      a: "결제 완료 후 마이페이지의 구매 내역 또는 안내 페이지를 통해 다운로드하실 수 있습니다. 표준 PDF 형식으로 제공되므로 스마트폰, 태블릿, PC 등 다양한 디지털 기기에서 뷰어 앱을 통해 편리하게 열람하고 보관하실 수 있습니다."
+                    },
+                    {
+                      num: "Q6",
+                      q: "종이책이 배송되는 상품인가요?",
+                      a: "아닙니다. 본 상품은 택배로 실물이 배송되지 않는 100% 디지털 다운로드 상품(PDF 전자책 및 디지털 배경화면)입니다. 배송을 기다릴 필요 없이 구매 후 기기에서 바로 파일을 열람하여 학습하실 수 있습니다."
                     }
                   ].map((faq, idx) => {
                     const isOpen = openFaq === idx
@@ -1653,17 +1759,21 @@ export default function LoveSecretEbookPage() {
                         }}
                       >
                         <button
+                          type="button"
                           onClick={() => toggleFaq(idx)}
                           aria-expanded={isOpen}
-                          className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 text-white hover:text-[#E5C4BB] transition-colors"
+                          className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 text-white hover:text-[#E5C4BB] transition-colors focus:outline-none focus:ring-1 focus:ring-[#D4B2A7]/40"
                         >
-                          <div className="space-y-1">
-                            <span className="text-xs font-bold text-[#E5C4BB] block">{faq.q}</span>
-                            <span className="text-base md:text-lg font-elegant font-semibold leading-[1.5]">{faq.questionTitle}</span>
+                          <div className="flex items-center gap-3 md:gap-3.5">
+                            <span className="text-xs font-bold text-[#E5C4BB] font-serif shrink-0">
+                              {faq.num}
+                            </span>
+                            <span className="text-base md:text-lg font-elegant font-semibold leading-[1.5] text-white">
+                              {faq.q}
+                            </span>
                           </div>
                           <ChevronDown
-                            className={`w-5 h-5 text-[#D4B2A7] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
-                              }`}
+                            className={`w-5 h-5 text-[#D4B2A7] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                           />
                         </button>
 
