@@ -453,6 +453,119 @@ export default function LoveSecretEbookPage() {
               </Reveal>
             </section>
 
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 추가: Before & After 1:1 매칭 비교
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28">
+              <Reveal>
+                {/* 섹션: Before & After 1:1 매칭 비교 */}
+                <div className="py-12 bg-neutral-900/40 border-y border-amber-500/20 rounded-2xl">
+                  <div className="max-w-3xl mx-auto px-4 text-center mb-8">
+                    <span className="text-amber-400 text-sm font-semibold tracking-widest uppercase">TRANSFORMATION</span>
+                    <h3 className="text-2xl md:text-3xl font-bold text-neutral-100 mt-2">
+                      “위 체크리스트 중 3개 이상 해당된다면,<br />
+                      <span className="text-amber-300">당신이 서 있는 자리가 이렇게 바뀝니다.</span>”
+                    </h3>
+                    <p className="text-neutral-400 text-sm mt-2">
+                      노력과 헌신으로 붙잡는 연애는 끝났습니다. 자리를 바꾸는 순간 관계의 역학이 뒤집힙니다.
+                    </p>
+                  </div>
+
+                  <div className="max-w-4xl mx-auto px-4 space-y-4 text-left">
+                    {/* 항목 1 */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-red-950/20 border border-red-900/30">
+                        <span className="text-red-400 font-bold text-xs px-2 py-1 bg-red-900/40 rounded">BEFORE</span>
+                        <div>
+                          <p className="text-neutral-300 text-sm font-medium">연락 텀 하나에 하루 종일 멘탈이 요동친다</p>
+                          <p className="text-neutral-500 text-xs mt-1">답장을 기다리며 일상이 마비되는 &apos;을의 자리&apos;</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-amber-950/20 border border-amber-500/30">
+                        <span className="text-amber-400 font-bold text-xs px-2 py-1 bg-amber-900/40 rounded">AFTER</span>
+                        <div>
+                          <p className="text-neutral-100 text-sm font-medium">단정한 여백으로 오히려 상대를 초조하게 만든다</p>
+                          <p className="text-amber-300/80 text-xs mt-1">내 일상에 집중할수록 남자가 먼저 안달 나 연락해옵니다.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 항목 2 */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-red-950/20 border border-red-900/30">
+                        <span className="text-red-400 font-bold text-xs px-2 py-1 bg-red-900/40 rounded">BEFORE</span>
+                        <div>
+                          <p className="text-neutral-300 text-sm font-medium">관계가 깨질까 봐 서운한 일도 웃으며 참는다</p>
+                          <p className="text-neutral-500 text-xs mt-1">맞춰줄수록 &apos;소모품 노동자&apos; 취급을 받는 착한 여자</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-amber-950/20 border border-amber-500/30">
+                        <span className="text-amber-400 font-bold text-xs px-2 py-1 bg-amber-900/40 rounded">AFTER</span>
+                        <div>
+                          <p className="text-neutral-100 text-sm font-medium">감정 소모 없이 우아한 바운더리로 선을 긋는다</p>
+                          <p className="text-amber-300/80 text-xs mt-1">화를 내지 않아도 남자가 스스로 예의를 갖추고 눈치를 봅니다.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 항목 3 */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-red-950/20 border border-red-900/30">
+                        <span className="text-red-400 font-bold text-xs px-2 py-1 bg-red-900/40 rounded">BEFORE</span>
+                        <div>
+                          <p className="text-neutral-300 text-sm font-medium">“나 얼만큼 좋아해?”, “우리 무슨 사이야?” 확인하려 든다</p>
+                          <p className="text-neutral-500 text-xs mt-1">확답을 구걸할수록 가치가 떨어져 달아나는 상대</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-amber-950/20 border border-amber-500/30">
+                        <span className="text-amber-400 font-bold text-xs px-2 py-1 bg-amber-900/40 rounded">AFTER</span>
+                        <div>
+                          <p className="text-neutral-100 text-sm font-medium">남자가 먼저 관계를 정의하고 확답을 조른다</p>
+                          <p className="text-amber-300/80 text-xs mt-1">말하지 않아도 대체 불가능한 &apos;트로피&apos;의 자리에 섭니다.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 항목 4 */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-red-950/20 border border-red-900/30">
+                        <span className="text-red-400 font-bold text-xs px-2 py-1 bg-red-900/40 rounded">BEFORE</span>
+                        <div>
+                          <p className="text-neutral-300 text-sm font-medium">다 챙겨주고 맞춰줬더니 “설레지 않는다”며 차였다</p>
+                          <p className="text-neutral-500 text-xs mt-1">과도한 정성과 헌신이 남자의 정복 욕구를 0으로 만듦</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-amber-950/20 border border-amber-500/30">
+                        <span className="text-amber-400 font-bold text-xs px-2 py-1 bg-amber-900/40 rounded">AFTER</span>
+                        <div>
+                          <p className="text-neutral-100 text-sm font-medium">비소유 신호로 남자의 뇌에 강력한 상실 공포를 심는다</p>
+                          <p className="text-amber-300/80 text-xs mt-1">언제든 떠날 수 있는 품격 있는 여자를 남자는 결코 놓지 못합니다.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 항목 5 */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-xl bg-neutral-950/60 border border-neutral-800">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-red-950/20 border border-red-900/30">
+                        <span className="text-red-400 font-bold text-xs px-2 py-1 bg-red-900/40 rounded">BEFORE</span>
+                        <div>
+                          <p className="text-neutral-300 text-sm font-medium">서운함에 못 이겨 새벽에 긴 장문 카톡을 보낸 적이 있다</p>
+                          <p className="text-neutral-500 text-xs mt-1">상대에게 감정 쓰레기통 취급을 받거나 차단당하는 결말</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-amber-950/20 border border-amber-500/30">
+                        <span className="text-amber-400 font-bold text-xs px-2 py-1 bg-amber-900/40 rounded">AFTER</span>
+                        <div>
+                          <p className="text-neutral-100 text-sm font-medium">단 3줄의 실전 템플릿으로 남자의 뇌에 죄책감을 각인한다</p>
+                          <p className="text-amber-300/80 text-xs mt-1">구구절절 설명하지 않고 침묵과 여백으로 상황을 종결짓습니다.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
             <ChampagneThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
@@ -497,165 +610,126 @@ export default function LoveSecretEbookPage() {
             <ChampagneThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                신규 Section 3. Solution — 4대 핵심 역학
+                신규 교체: 솔루션 인과관계 통합 설명 (STEP 1: 6대 구조 -> STEP 2: 4대 역학)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-center max-w-6xl mx-auto">
+            <section className="mb-28 text-left">
               <Reveal>
-                <div className="space-y-4 mb-12">
-                  <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
-                    Core Dynamics System
-                  </span>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white tracking-wide leading-snug break-keep max-w-3xl mx-auto">
-                    &ldquo;애원하지 마십시오. 상대의 뇌가 스스로 당신을 갈망하도록 신경회로를 설계하십시오.&rdquo;
-                  </h2>
-                </div>
+                {/* 섹션: 솔루션 인과관계 통합 설명 */}
+                <div className="py-16 bg-neutral-950 rounded-2xl">
+                  <div className="max-w-4xl mx-auto px-4">
+                    {/* 인트로 헤드라인 */}
+                    <div className="text-center mb-12">
+                      <span className="text-amber-400 text-xs font-semibold tracking-widest uppercase">THE BAEKDOHWA SOLUTION</span>
+                      <h2 className="text-2xl md:text-4xl font-bold text-neutral-100 mt-2">
+                        복잡한 심리 이론은 필요 없습니다.<br />
+                        <span className="text-amber-300">내 자리를 바로잡고, 상대를 움직이는 기술을 얹습니다.</span>
+                      </h2>
+                      <p className="text-neutral-400 text-sm md:text-base mt-4 max-w-2xl mx-auto">
+                        내가 흔들리는 상태에서는 어떤 밀당 기술도 먹히지 않습니다.<br />
+                        《연애비급》은 <b>내면의 중심(6대 구조)</b>을 먼저 세운 뒤, <b>상대의 무의식을 자극하는 기술(4대 역학)</b>을 실행하도록 설계되었습니다.
+                      </p>
+                    </div>
 
-                {/* 4개 카드 (데스크톱 4열 / 2x2, 모바일 1열) */}
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 text-left">
-                  {[
-                    {
-                      num: "01",
-                      title: "사냥꾼 코드 & 트로피 포지션",
-                      desc: "남자의 정복 본능과 삼각 욕망을 자극해 쫓아오게 만드는 난이도 설계"
-                    },
-                    {
-                      num: "02",
-                      title: "금지된 과일 & 비소유 신호",
-                      desc: "\"너 없이도 내 삶은 충만하다\"는 태도로 상실의 공포 부여"
-                    },
-                    {
-                      num: "03",
-                      title: "연애 최면 & 정체성 지정",
-                      desc: "잔소리 대신 그가 되고 싶어 하는 모습을 지정하여 스스로 헌신하게 유도"
-                    },
-                    {
-                      num: "04",
-                      title: "간헐적 보상 & 부적 처벌",
-                      desc: "텍스트로는 여백을, 만났을 때는 찬란한 몰입을 주어 도파민을 감금"
-                    }
-                  ].map((card, idx) => (
-                    <div 
-                      key={idx}
-                      className="gungjung-glass p-6 md:p-7 border-[#D4B2A7]/30 rounded-2xl flex flex-col justify-between hover:border-[#E6BE8A]/60 transition-all group"
-                      style={{
-                        background: 'linear-gradient(180deg, rgba(139, 38, 62, 0.25) 0%, rgba(10, 5, 20, 0.8) 100%)',
-                        boxShadow: '0 8px 32px rgba(186, 141, 126, 0.12)'
-                      }}
-                    >
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <span className="font-serif text-xs font-bold bg-[#8B263E] text-[#E6BE8A] px-2.5 py-0.5 rounded border border-[#D4B2A7]/40">
-                            역학 {card.num}
-                          </span>
-                          <Sparkles className="w-4 h-4 text-[#D4B2A7]/50 group-hover:text-[#E6BE8A] transition-colors" />
+                    {/* STEP 1 & STEP 2 컨테이너 */}
+                    <div className="space-y-10">
+                      
+                      {/* STEP 1 */}
+                      <div className="p-6 md:p-8 rounded-2xl bg-neutral-900/50 border border-neutral-800 relative overflow-hidden">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="px-3 py-1 rounded-full bg-neutral-800 text-amber-400 font-bold text-xs tracking-wider">STEP 1</span>
+                          <h3 className="text-xl md:text-2xl font-bold text-neutral-100">내 자리 바로잡기 (6대 핵심 구조)</h3>
                         </div>
-                        <h3 className="text-base md:text-lg font-elegant font-bold text-white group-hover:text-[#E6BE8A] transition-colors">
-                          {card.title}
-                        </h3>
-                        <p className="text-xs md:text-sm text-[#EDE6DA]/75 leading-relaxed font-light break-keep">
-                          {card.desc}
+                        <p className="text-neutral-400 text-sm mb-6 leading-relaxed">
+                          사랑받기 위해 나를 설명하고 증명하던 ‘낮은 자리’에서 벗어나는 내면의 기초 작업입니다. 감정에 휘둘리지 않는 자리가 잡혀야 비로소 관계의 주도권이 생깁니다.
                         </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            </section>
 
-            <ChampagneThreadDivider />
-
-            {/* ═══════════════════════════════════════════════════════════════
-                4. Core Structure Section (기존 관계의 핵심 구조 보존)
-               ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-center">
-              <Reveal>
-                <div className="max-w-4xl mx-auto space-y-4 mb-10">
-                  <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">Core Structure</span>
-                  <h2 className="text-3xl md:text-4xl font-elegant font-bold text-white tracking-widest">
-                    관계의 핵심 구조
-                  </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed break-keep font-light max-w-2xl mx-auto">
-                    연애비급은 감정만을 위로하는 책이 아닙니다. 관계가 시작되고, 기울어지고, 반복되고, 다시 회복되는 흐름을 포지션·심리·무의식·언어·매력의 관점에서 6가지 핵심 구조로 나누어 정리합니다.
-                  </p>
-                </div>
-
-                {/* 중앙 인포그래픽 이미지 */}
-                <div className="max-w-6xl mx-auto mb-12">
-                  <div className="relative aspect-video rounded-[30px] overflow-hidden border border-white/10 shadow-xl group">
-                    <Image 
-                      src={productData.structureImage} 
-                      alt="관계의 6가지 핵심 구조 설명 이미지" 
-                      fill 
-                      className="object-cover" 
-                    />
-                  </div>
-                </div>
-
-                {/* 6대 구조 상세 설명 카드 */}
-                <div className="grid md:grid-cols-3 gap-4 text-left max-w-6xl mx-auto">
-                  {[
-                    {
-                      num: "01",
-                      label: "Position",
-                      title: "관계 안에서 서 있는 자리",
-                      desc: "사랑을 확인받으려 애쓰는 낮은 자리가 아닌, 나의 존재감과 가치가 존중받는 중심 자리를 회복합니다."
-                    },
-                    {
-                      num: "02",
-                      label: "State",
-                      title: "그가 느끼는 자기 상태",
-                      desc: "상대가 내 곁에 머물며 느끼는 편안함과, 나라는 존재가 주는 긴장감이 우아하게 공존하는 흐름을 설계합니다."
-                    },
-                    {
-                      num: "03",
-                      label: "Identity",
-                      title: "나에 대한 인식과 정체성",
-                      desc: "그가 나를 수많은 사람들 중 하나가 아닌, 쉽게 대체할 수 없는 고유하고 특별한 가치를 지닌 존재로 인식하게 돕습니다."
-                    },
-                    {
-                      num: "04",
-                      label: "Aura",
-                      title: "설명하지 않아도 남는 분위기",
-                      desc: "구구절절 스스로를 해명하거나 매달리지 않아도, 말과 태도의 여백을 통해 드러나는 고요하고 단단한 아우라입니다."
-                    },
-                    {
-                      num: "05",
-                      label: "Boundary",
-                      title: "사랑 안에서도 지켜야 할 기준",
-                      desc: "스스로를 갉아먹는 과도한 헌신을 멈추고, 관계의 품격을 지키기 위해 결코 양보해서는 안 될 최소한의 경계선입니다."
-                    },
-                    {
-                      num: "06",
-                      label: "Choice",
-                      title: "선택받는 것을 넘어 선택하는 힘",
-                      desc: "상대방의 사소한 리액션에 휘둘리며 응답을 기다리는 관계에서 탈피하여, 내가 관계의 주도권을 쥐고 결정합니다."
-                    }
-                  ].map((item, idx) => (
-                    <div 
-                      key={idx} 
-                      className="gungjung-glass p-6 border-[#D4B2A7]/20 flex flex-col justify-between hover:border-[#D4B2A7]/50 transition-all"
-                      style={{
-                        boxShadow: '0 8px 32px rgba(197, 139, 160, 0.05)'
-                      }}
-                    >
-                      <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="font-serif text-xs font-bold bg-[#8C5E50] text-[#FAF7F2] px-2.5 py-0.5 rounded border border-[#D4B2A7]/30">
-                            {item.num}
-                          </span>
-                          <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#D4B2A7]">{item.label}</span>
+                        {/* 6대 구조 그리드 (간결화) */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                          <div className="p-3 rounded-lg bg-neutral-950/60 border border-neutral-800/80">
+                            <span className="text-amber-400 text-xs font-mono">01. Position</span>
+                            <p className="text-neutral-200 text-sm font-semibold mt-1">중심 자리 회복</p>
+                            <p className="text-neutral-500 text-xs mt-1">확인받는 자리가 아닌 존중받는 자리</p>
+                          </div>
+                          <div className="p-3 rounded-lg bg-neutral-950/60 border border-neutral-800/80">
+                            <span className="text-amber-400 text-xs font-mono">02. State</span>
+                            <p className="text-neutral-200 text-sm font-semibold mt-1">매혹적 긴장감</p>
+                            <p className="text-neutral-500 text-xs mt-1">편안함과 긴장감이 공존하는 상태</p>
+                          </div>
+                          <div className="p-3 rounded-lg bg-neutral-950/60 border border-neutral-800/80">
+                            <span className="text-amber-400 text-xs font-mono">03. Identity</span>
+                            <p className="text-neutral-200 text-sm font-semibold mt-1">고유한 정체성</p>
+                            <p className="text-neutral-500 text-xs mt-1">대체 불가능한 독보적 가치 인식</p>
+                          </div>
+                          <div className="p-3 rounded-lg bg-neutral-950/60 border border-neutral-800/80">
+                            <span className="text-amber-400 text-xs font-mono">04. Aura</span>
+                            <p className="text-neutral-200 text-sm font-semibold mt-1">말 없는 여백</p>
+                            <p className="text-neutral-500 text-xs mt-1">구차한 해명 없이 전해지는 단단함</p>
+                          </div>
+                          <div className="p-3 rounded-lg bg-neutral-950/60 border border-neutral-800/80">
+                            <span className="text-amber-400 text-xs font-mono">05. Boundary</span>
+                            <p className="text-neutral-200 text-sm font-semibold mt-1">품격의 경계선</p>
+                            <p className="text-neutral-500 text-xs mt-1">자기 파괴적 헌신을 차단하는 선</p>
+                          </div>
+                          <div className="p-3 rounded-lg bg-neutral-950/60 border border-neutral-800/80">
+                            <span className="text-amber-400 text-xs font-mono">06. Choice</span>
+                            <p className="text-neutral-200 text-sm font-semibold mt-1">선택하는 권한</p>
+                            <p className="text-neutral-500 text-xs mt-1">처분을 기다리지 않고 내가 결정</p>
+                          </div>
                         </div>
-                        <h3 className="text-base md:text-lg font-elegant font-bold text-white mb-2">{item.title}</h3>
-                        <p className="text-xs md:text-sm text-[#EDE6DA]/60 leading-relaxed font-light break-keep">{item.desc}</p>
                       </div>
-                    </div>
-                  ))}
-                </div>
 
-                <div className="mt-8 text-center">
-                  <p className="text-xs text-[#EDE6DA]/40 leading-relaxed font-light">
-                    * 연애비급은 누군가를 조종하기 위한 책이 아니라, 관계 안에서 나를 잃지 않기 위한 구조 안내서입니다.
-                  </p>
+                      {/* 연결 화살표 */}
+                      <div className="flex justify-center -my-4 relative z-10">
+                        <div className="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+                          ↓
+                        </div>
+                      </div>
+
+                      {/* STEP 2 */}
+                      <div className="p-6 md:p-8 rounded-2xl bg-neutral-900/50 border border-amber-500/30 relative overflow-hidden shadow-2xl shadow-amber-950/20">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold text-xs tracking-wider border border-amber-500/30">STEP 2</span>
+                          <h3 className="text-xl md:text-2xl font-bold text-neutral-100">상대를 움직이는 실전 기술 (4대 핵심 역학)</h3>
+                        </div>
+                        <p className="text-neutral-400 text-sm mb-6 leading-relaxed">
+                          내 자리가 단단해졌다면, 이제 남자의 뇌 신경회로를 건드릴 차례입니다. 애원하지 않고도 상대가 스스로 나를 갈망하도록 유도하는 4가지 실전 메커니즘입니다.
+                        </p>
+
+                        {/* 4대 역학 그리드 */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div className="p-4 rounded-xl bg-neutral-950/80 border border-neutral-800">
+                            <div className="text-amber-400 text-xs font-bold mb-1">역학 01</div>
+                            <h4 className="text-neutral-100 font-bold text-base">사냥꾼 코드 &amp; 트로피 포지션</h4>
+                            <p className="text-neutral-400 text-xs mt-2 leading-relaxed">
+                              남자의 타고난 정복 본능을 자극하는 적정 난이도 설계. 쉬운 사냥감이 아닌, 평생 자랑하고 싶은 트로피가 되는 법.
+                            </p>
+                          </div>
+                          <div className="p-4 rounded-xl bg-neutral-950/80 border border-neutral-800">
+                            <div className="text-amber-400 text-xs font-bold mb-1">역학 02</div>
+                            <h4 className="text-neutral-100 font-bold text-base">금지된 과일 &amp; 비소유 신호</h4>
+                            <p className="text-neutral-400 text-xs mt-2 leading-relaxed">
+                              “너 없이도 내 삶은 이미 충만하다”는 고요한 신호로 상대에게 통제 불가능성과 잠재적 상실 공포를 부여합니다.
+                            </p>
+                          </div>
+                          <div className="p-4 rounded-xl bg-neutral-950/80 border border-neutral-800">
+                            <div className="text-amber-400 text-xs font-bold mb-1">역학 03</div>
+                            <h4 className="text-neutral-100 font-bold text-base">연애 최면 &amp; 정체성 라벨링</h4>
+                            <p className="text-neutral-400 text-xs mt-2 leading-relaxed">
+                              서운함의 잔소리 대신, 그가 되고 싶어 하는 남성적 정체성을 지정해 스스로 자발적 헌신과 배려를 선택하게 만듭니다.
+                            </p>
+                          </div>
+                          <div className="p-4 rounded-xl bg-neutral-950/80 border border-neutral-800">
+                            <div className="text-amber-400 text-xs font-bold mb-1">역학 04</div>
+                            <h4 className="text-neutral-100 font-bold text-base">간헐적 보상 &amp; 텍스트 여백</h4>
+                            <p className="text-neutral-400 text-xs mt-2 leading-relaxed">
+                              연락에는 여백을 두고, 대면했을 때는 찬란한 몰입을 선사하여 상대의 뇌 속에 도파민을 가두는 완급 조절 공식.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>
@@ -1008,6 +1082,70 @@ export default function LoveSecretEbookPage() {
                             <CTAButton text="연애비급 3종 세트 구매하기" />
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 추가: 구매 망설임 차단 FAQ ("3종 올인원 세트 상세 해부" 바로 아래)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left">
+              <Reveal>
+                {/* 섹션: 구매 망설임 차단 FAQ */}
+                <div className="py-16 bg-neutral-950 border-t border-neutral-800 rounded-2xl">
+                  <div className="max-w-3xl mx-auto px-4">
+                    <div className="text-center mb-10">
+                      <span className="text-amber-400 text-xs font-semibold tracking-widest uppercase">FAQ</span>
+                      <h2 className="text-2xl md:text-3xl font-bold text-neutral-100 mt-2">자주 묻는 질문</h2>
+                      <p className="text-neutral-400 text-xs md:text-sm mt-1">구매 전 가장 많이 확인하시는 질문들을 모았습니다.</p>
+                    </div>
+
+                    <div className="space-y-4">
+                      {/* Q1 */}
+                      <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                        <h4 className="text-neutral-100 font-semibold text-base flex items-start gap-2">
+                          <span className="text-amber-400 font-bold">Q.</span>
+                          <span>지금 썸 단계이거나 헤어진 상태(재회 희망)여도 적용할 수 있나요?</span>
+                        </h4>
+                        <p className="text-neutral-400 text-sm mt-3 pl-6 leading-relaxed">
+                          네, 완벽히 적용됩니다. 《연애비급》은 특정 연애 기간에 국한된 조언이 아니라, <b>남자의 무의식이 작동하는 본능적 회로</b>를 다룹니다. 짝사랑, 썸, 연애 초반 주도권 싸움, 권태기, 이별 후 후폭풍 유도까지 관계의 모든 국면에서 내 포지션을 재설정하는 핵심 원리입니다.
+                        </p>
+                      </div>
+
+                      {/* Q2 */}
+                      <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                        <h4 className="text-neutral-100 font-semibold text-base flex items-start gap-2">
+                          <span className="text-amber-400 font-bold">Q.</span>
+                          <span>제가 마음이 여리고 소심한 편인데, 독해지거나 연기해야 하나요?</span>
+                        </h4>
+                        <p className="text-neutral-400 text-sm mt-3 pl-6 leading-relaxed">
+                          억지로 성격을 바꾸거나 센 척할 필요가 전혀 없습니다. 상대에게 화를 내거나 무리한 밀당을 시도하는 것은 오히려 불안함을 들키는 하책입니다. 이 책은 <b>말의 배치와 침묵의 타이밍, 답장의 길이</b>라는 단순한 ‘구조’만 바꾸어 내 본래의 품격을 지켜내도록 돕습니다.
+                        </p>
+                      </div>
+
+                      {/* Q3 */}
+                      <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                        <h4 className="text-neutral-100 font-semibold text-base flex items-start gap-2">
+                          <span className="text-amber-400 font-bold">Q.</span>
+                          <span>책 분량과 구성은 어떻게 되며, 실전 적용이 쉬운가요?</span>
+                        </h4>
+                        <p className="text-neutral-400 text-sm mt-3 pl-6 leading-relaxed">
+                          《연애비급 완전판 본편》, 《전략 시크릿북》, 《실전 워크북》에 더해 막막한 상황에서 복사해 쓸 수 있는 <b>[실전 카톡 템플릿 5종]</b>까지 4 in 1 올인원으로 제공됩니다. 추상적인 감정 위로에 머물지 않고 당장 오늘 밤 카톡부터 어떻게 보내야 하는지 구체적인 행동 가이드를 담았습니다.
+                        </p>
+                      </div>
+
+                      {/* Q4 */}
+                      <div className="p-5 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                        <h4 className="text-neutral-100 font-semibold text-base flex items-start gap-2">
+                          <span className="text-amber-400 font-bold">Q.</span>
+                          <span>결제 후 어떻게 열람하나요? 종이책 배송인가요?</span>
+                        </h4>
+                        <p className="text-neutral-400 text-sm mt-3 pl-6 leading-relaxed">
+                          실물 배송을 기다릴 필요 없는 <b>디지털 PDF 전자책 패키지</b>입니다. 결제 완료 즉시 마이페이지 및 다운로드 링크를 통해 스마트폰, 태블릿, PC에서 영구적으로 소장하고 언제 어디서든 꺼내보실 수 있습니다.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -1457,50 +1595,58 @@ export default function LoveSecretEbookPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
-                신규 Section 8: Final CTA 최종 마감 트리거 추가 (재회비방과 동일 규격)
+                신규 교체/추가: 최종 결제 마감 CTA 및 손실 회피 섹션 (페이지 최하단)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 p-8 md:p-16 border-2 border-[#C5A059] shadow-[0_0_50px_rgba(186,141,126,0.6)] text-center max-w-5xl mx-auto">
-              {/* 로즈 버건디 풀 컬러 배경 */}
-              <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#6B2838] via-[#4A1824] to-[#1E0810]" />
-              
-              {/* 이미지 교체 영역 8 (매혹의 열쇠 오브제 배경 슬롯) */}
-              <div className="absolute inset-0 z-0 opacity-25 mix-blend-overlay">
-                <HybridImageSlot 
-                  assetKey="finalCta" 
-                  className="w-full h-full rounded-none border-none"
-                  imgClassName="object-cover"
-                />
-              </div>
+            <section className="mb-16">
+              <Reveal>
+                {/* 섹션: 최종 결제 마감 CTA */}
+                <div className="py-16 bg-gradient-to-b from-neutral-950 to-neutral-900 border-t border-amber-500/20 text-center rounded-2xl">
+                  <div className="max-w-2xl mx-auto px-4">
+                    
+                    {/* 손실 회피(소실점) 카피 */}
+                    <div className="mb-8">
+                      <span className="text-red-400 text-xs font-bold tracking-widest uppercase bg-red-950/60 border border-red-900/40 px-3 py-1 rounded-full">
+                        CRITICAL CHOICE
+                      </span>
+                      <h2 className="text-2xl md:text-3xl font-bold text-neutral-100 mt-4 leading-snug">
+                        또다시 수개월의 눈물과<br />
+                        <span className="text-red-400">바닥난 자존감</span>을 치르시겠습니까?
+                      </h2>
+                      <p className="text-neutral-400 text-sm mt-3 leading-relaxed">
+                        남자의 변덕과 차가운 답장에 하루를 통째로 낭비하던 악순환.<br />
+                        자리를 바꾸지 않으면 다음 사람을 만나도 같은 자리에서 상처받습니다.<br />
+                        <b>단 한 번 치킨 한 마리 값으로, 평생 관계의 주도권을 쥐십시오.</b>
+                      </p>
+                    </div>
 
-              <div className="relative z-10 max-w-4xl mx-auto space-y-6 md:space-y-8">
-                <Reveal>
-                  {/* 경고 카피 */}
-                  <div className="p-6 md:p-8 rounded-2xl bg-black/60 border border-[#C5A059]/40 max-w-2xl mx-auto text-left sm:text-center text-sm md:text-base leading-relaxed text-[#EDE6DA] break-keep shadow-xl">
-                    <p className="font-semibold text-[#E6BE8A] text-base md:text-lg mb-2 flex items-center justify-center gap-1.5">
-                      <span>⚠️ 경고: 사랑받기 위해 더 이상 스스로를 헐값에 던지지 마십시오.</span>
-                    </p>
-                    <p className="font-light">
-                      당신이 자리를 지키지 않으면 상대는 결코 당신을 귀하게 대하지 않습니다. 착한 여자의 가면을 벗고 선택하는 여왕으로 우뚝 서십시오.
-                    </p>
-                  </div>
+                    {/* 패키지 가격 카드 */}
+                    <div className="p-6 md:p-8 rounded-2xl bg-neutral-950 border border-amber-500/40 shadow-2xl relative">
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-neutral-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                        런칭 기념 76% 한정 특가
+                      </div>
 
-                  {/* 최종 CTA 버튼 (은은한 펄스 애니메이션, 샴페인 골드 테두리) */}
-                  <div className="pt-4">
-                    <button
-                      onClick={handlePurchase}
-                      className="w-full sm:w-auto px-8 md:px-14 py-5 md:py-6 rounded-2xl font-elegant font-bold text-lg md:text-2xl text-[#FAF7F2] shadow-[0_0_40px_rgba(230,190,138,0.35)] hover:shadow-[0_0_60px_rgba(230,190,138,0.55)] transition-all duration-300 hover:scale-105 active:scale-95 motion-safe:animate-pulse inline-flex items-center justify-center gap-3 cursor-pointer"
-                      style={{
-                        background: 'linear-gradient(135deg, #BA8D7E 0%, #8C5E50 100%)',
-                        border: '2px solid #C5A059'
-                      }}
-                    >
-                      <Sparkles className="w-6 h-6 text-[#E6BE8A]" />
-                      <span>지금 19,000원에 3종 풀패키지 다운로드하고 연애 주도권 장악하기</span>
-                      <ChevronRight className="w-6 h-6 text-[#E6BE8A]" />
-                    </button>
+                      <h3 className="text-lg font-bold text-neutral-200 mt-2">백도화 연애비급 4 in 1 올인원 패키지</h3>
+                      <p className="text-xs text-neutral-500 mt-1">완전판 바이블 + 전략 시크릿북 + 실전 워크북 + 카톡 템플릿 5종</p>
+
+                      <div className="flex items-center justify-center gap-3 my-6">
+                        <span className="text-neutral-500 line-through text-lg">정가 79,000원</span>
+                        <span className="text-3xl md:text-4xl font-extrabold text-amber-300">19,000원</span>
+                        <span className="text-xs font-bold text-amber-400 bg-amber-950/80 border border-amber-600/40 px-2 py-1 rounded">76% OFF</span>
+                      </div>
+
+                      {/* 구매 버튼 */}
+                      <a href="/cart?add=love-secret" className="w-full py-4 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-neutral-950 font-bold text-lg hover:brightness-110 transition shadow-lg shadow-amber-500/20 block">
+                        사랑이 머무는 자리로 지금 이동하기 →
+                      </a>
+
+                      <p className="text-neutral-500 text-xs mt-4">
+                        * 결제 즉시 PDF 다운로드 가능 / 디지털 콘텐츠 특성상 열람 후 환불 불가
+                      </p>
+                    </div>
+
                   </div>
-                </Reveal>
-              </div>
+                </div>
+              </Reveal>
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
