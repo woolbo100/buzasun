@@ -775,6 +775,19 @@ export default function LoveSecretEbookPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left max-w-6xl mx-auto">
               <Reveal>
+                {/* 이미지 상단 헤드라인 */}
+                <div className="text-center mb-6 md:mb-8 max-w-3xl mx-auto break-keep">
+                  <span className="text-[#E5C4BB] font-elegant text-xs font-semibold tracking-widest uppercase">
+                    3-STEP MASTER PACKAGE
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mt-2 leading-[1.45]">
+                    관계의 판을 뒤집는 3단계 마스터 패키지
+                  </h3>
+                  <p className="text-[#EDE6DA]/75 text-xs md:text-sm mt-2 leading-[1.8] font-light">
+                    본편으로 원리를 꿰뚫고, 시크릿북으로 실전 무기를 쥐며, 워크북으로 체질을 완성합니다.
+                  </p>
+                </div>
+
                 {/* 3종 올인원 세트 목업 이미지 (하단 상자와 동일한 가로 너비 100% 매칭) */}
                 <div className="mb-10 md:mb-14">
                   <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
@@ -791,10 +804,47 @@ export default function LoveSecretEbookPage() {
                     </div>
                   </div>
 
-                  {/* 이미지 아래 작은 안내 문구 */}
-                  <p className="text-xs md:text-sm text-[#EDE6DA]/70 mt-3.5 text-center font-light tracking-wide">
-                    전자책 PDF 3종 + 모바일 배경화면 · 실물 배송 없음
-                  </p>
+                  {/* 이미지 하단 3단계 핵심 역할 카드 */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-left mt-8">
+                    {/* Book 1 */}
+                    <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-amber-950/80 text-amber-300 border border-amber-600/30 font-medium">
+                        Step 1 · 원리
+                      </span>
+                      <h4 className="text-neutral-100 font-bold text-sm mt-2">
+                        《연애비급 완전판》
+                      </h4>
+                      <p className="text-neutral-400 text-xs mt-1.5 leading-relaxed">
+                        남자의 본능과 심리를 꿰뚫어 보고, 사랑을 구걸하던 자리에서 존중받는 중심 자리로 이동하는 근본 바이블.
+                      </p>
+                    </div>
+
+                    {/* Book 2 */}
+                    <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-rose-950/80 text-rose-300 border border-rose-600/30 font-medium">
+                        Step 2 · 전략
+                      </span>
+                      <h4 className="text-neutral-100 font-bold text-sm mt-2">
+                        《매혹의 무의식 침투 프로토콜》
+                      </h4>
+                      <p className="text-neutral-400 text-xs mt-1.5 leading-relaxed">
+                        9대 유혹자 페르소나와 최면 기법, 실전 카톡 템플릿으로 상대의 뇌를 안달 나게 만드는 즉각적 실전 무기.
+                      </p>
+                    </div>
+
+                    {/* Book 3 */}
+                    <div className="p-4 rounded-xl bg-neutral-900/60 border border-neutral-800">
+                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700 font-medium">
+                        Step 3 · 실전
+                      </span>
+                      <h4 className="text-neutral-100 font-bold text-sm mt-2">
+                        《30일 매력 각성 워크북》
+                      </h4>
+                      <p className="text-neutral-400 text-xs mt-1.5 leading-relaxed">
+                        30일간의 데일리 미션을 통해 휘둘리지 않고 주도권을 쥐는 여왕의 태도를 몸에 새기는 체질 각성서.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="text-center max-w-3xl mx-auto space-y-5 mb-16">
