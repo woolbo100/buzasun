@@ -27,6 +27,7 @@ import {
   X
 } from 'lucide-react'
 import RecommendedForCards from '@/components/RecommendedForCards'
+import MobileStickyBuyBar from '@/components/MobileStickyBuyBar'
 import { loveSecretAssets } from './assets'
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -215,7 +216,7 @@ export default function LoveSecretEbookPage() {
   )
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#1A0F2E]">
+    <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#1A0F2E] pb-24 md:pb-0">
       {/* 기존 백도화 템플릿의 다크 배경(GlobalBackground) 유지 */}
       <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
         <Navigation />
@@ -1810,6 +1811,12 @@ export default function LoveSecretEbookPage() {
 
 
         <Footer />
+
+        {/* 📱 모바일 화면 하단 고정 구매 바 (모바일 전용, PC에서는 숨김) */}
+        <MobileStickyBuyBar
+          price={productData.price}
+          onPurchase={handlePurchase}
+        />
       </GlobalBackground>
     </main>
   )
