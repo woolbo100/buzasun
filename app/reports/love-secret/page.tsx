@@ -969,6 +969,16 @@ export default function LoveSecretEbookPage() {
                   <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
                     정통 바이블, 전략 시크릿북, 실전 워크북, 그리고 디지털 부적까지 하나로 통합된 4 in 1 구성입니다.
                   </p>
+
+                  {/* 📚 추가 안내 문구: 총 페이지 수 요약 (16px 간격, 2줄 유지) */}
+                  <div className="space-y-1">
+                    <p className="text-xs sm:text-sm md:text-base text-[#EDE6DA]/75 font-light leading-[1.6]">
+                      본편부터 전략서, 실전 워크북까지
+                    </p>
+                    <p className="text-sm sm:text-base md:text-lg text-[#E5C4BB] font-bold font-elegant tracking-wide leading-[1.6]">
+                      3종 · 총 172페이지 PDF 패키지
+                    </p>
+                  </div>
                 </div>
 
                 <div className="space-y-12">
