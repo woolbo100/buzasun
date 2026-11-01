@@ -244,16 +244,16 @@ export default function LoveSecretEbookPage() {
                   戀愛秘笈 <span className="text-[#D4B2A7]">연애비급</span>
                 </h1>
 
-                {/* 1. 최상단: 가로형 풀 이미지 (love-secret-hero.png, 16:9 비율) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                {/* 1. 최상단: 가로형 풀 이미지 (love-secret-hero.png, 16:9 비율, 필터/오버레이 제거) */}
+                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-[#D4B2A7]/25 shadow-2xl">
                   <Image
                     src={productData.topBannerImage}
                     alt="戀愛秘笈 연애비급"
                     fill
-                    className="object-cover transition-transform duration-[10000ms] group-hover:scale-110"
+                    sizes="(max-width: 1200px) 100vw, 1152px"
+                    className="object-cover"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/60 to-transparent"></div>
                 </div>
 
                 {/* 2. 기존 하단 서브카피, 설명 및 구매 버튼 보존 */}
@@ -1347,9 +1347,9 @@ export default function LoveSecretEbookPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left max-w-6xl mx-auto">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-14 border-[#D4B2A7]/25 rounded-3xl relative overflow-hidden bg-gradient-to-b from-[#1E0B14]/80 via-[#150710]/90 to-[#0A0514] shadow-2xl">
+                <div>
                   {/* 상단 텍스트 영역 */}
-                  <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-12 break-keep">
+                  <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-14 break-keep">
                     <span className="inline-block px-3.5 py-1 rounded-full text-xs font-bold tracking-[0.2em] uppercase text-[#E5C4BB] bg-[#8B263E]/60 border border-[#D4B2A7]/40 shadow-sm">
                       POSITION SHIFT
                     </span>
@@ -1362,8 +1362,8 @@ export default function LoveSecretEbookPage() {
                     </p>
                   </div>
 
-                  {/* 하단: 대형 관계 비교 이미지 (love-secret-relationship-comparison.png, 3:2 비율) */}
-                  <div className="relative w-full max-w-5xl mx-auto aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/35 shadow-[0_12px_45px_rgba(0,0,0,0.6)] bg-black/40 flex items-center justify-center">
+                  {/* 하단: 전체 폭 대형 관계 비교 이미지 (기존 박스 전체 가로폭 100% 매칭) */}
+                  <div className="relative w-full aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 shadow-[0_12px_45px_rgba(0,0,0,0.6)] bg-black/40 flex items-center justify-center">
                     <Image
                       src="/image/love-secret/love-secret-relationship-comparison.png"
                       alt="당신의 헌신이 만만함이 되는 이유, 관계 시소의 법칙 - 관계 비교 인포그래픽"
