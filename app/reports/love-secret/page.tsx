@@ -52,7 +52,7 @@ const productData = {
   recommendedImage: '/image/love-secret/love-secret-keep-yourself-3x4.png',
   structureImage: '/image/love/l4.webp',
   premiumImage: '/image/love-secret/love-secret-contents.png?v=20261102_v2',
-  ctaImage: '/image/love/l6.webp',
+  ctaImage: '/image/love-secret/love-secret-closing-banner.png?v=20261102',
 }
 
 // 🖼️ 신규 교체형 이미지 슬롯 컴포넌트
@@ -1784,30 +1784,76 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1440px)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#D4B2A7]/40 shadow-2xl">
-              {/* l6.webp 배경 (필터/오버레이 제거) */}
-              <div className="absolute inset-0 z-0">
+            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#1F0710]">
+              {/* 1. 배경 이미지 영역:
+                  - PC(lg): 전체 배경으로 우측 여성 실루엣 배치
+                  - 모바일: 상단에 여성 실루엣이 온전히 보이도록 배치 */}
+              <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto lg:absolute lg:inset-0 lg:h-full">
                 <Image
                   src={productData.ctaImage}
-                  alt="연애비급 마지막 안내 배경"
+                  alt="선택받기 위해 애쓰지 마세요. 이제, 당신이 선택하세요 - 연애비급"
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 1200px"
+                  className="object-cover object-right sm:object-[82%_center]"
+                  priority
                 />
+                {/* PC 전용: 왼쪽 텍스트 가독성 확보용 은은한 다크 그라데이션 (우측 인물 영역은 완전 투명) */}
+                <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-[#18050C]/95 via-[#18050C]/80 to-transparent w-[62%]" />
+                {/* 모바일 전용: 이미지와 하단 텍스트 영역 사이의 자연스러운 그라데이션 페이드 */}
+                <div className="lg:hidden absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#1F0710] to-transparent z-[1]" />
               </div>
 
-              {/* 중앙 정보 및 CTA 버튼 */}
-              <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8 break-keep">
+              {/* 2. 텍스트 및 구매 버튼 영역:
+                  - PC(lg): 왼쪽 여백에 정렬 (너비 58% 이내로 제한하여 오른쪽 여성 인물 침범 차단)
+                  - 모바일: 이미지 아래에 같은 자주빛 배경으로 여유롭게 이어짐 */}
+              <div className="relative z-10 p-6 sm:p-8 lg:p-14 xl:p-16 lg:max-w-[58%] text-left flex flex-col justify-center lg:min-h-[560px]">
                 <Reveal>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-[1.45] drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
-                    이제 사랑 앞에서 작아지지 마세요
-                  </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA] leading-[1.8] font-medium max-w-xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
-                    사랑은 더 많이 애쓴 사람에게 주어지는 보상이 아니라, 자기 자리를 잃지 않는 사람에게 오래 머무는 에너지입니다.<br />
-                    불안하게 확인하고 맞춰주는 연애에서 벗어나 나의 기준과 매력을 회복해 보세요.
-                  </p>
+                  <div className="space-y-6 sm:space-y-7 break-keep">
+                    {/* [큰 제목] */}
+                    <h2 className="text-2xl sm:text-3xl lg:text-[2.15rem] font-elegant font-bold text-[#FAF7F2] leading-[1.38]">
+                      선택받기 위해 애쓰지 마세요.<br />
+                      <span className="text-[#E5C4BB]">이제, 당신이 선택하세요.</span>
+                    </h2>
 
-                  <div className="pt-4">
-                    <CTAButton text="연애비급 구매하기" />
+                    {/* [본문] (최소 16px, 밝은 베이지색, 충분한 줄·문단 간격) */}
+                    <div className="space-y-3.5 text-base sm:text-[1.05rem] text-[#EDE6DA] leading-[1.8] font-light">
+                      <p>
+                        사랑은 더 많이 애쓴 만큼 주어지는 보상이 아닙니다.<br />
+                        진심을 다하는 동안에도, 나의 자리를 잃지 않아야 합니다.
+                      </p>
+                      <p className="text-[#EDE6DA]/90">
+                        불안하게 확인하고 맞추느라 지쳤다면,<br />
+                        이제 나의 기준과 매력을 회복하는 연애를 시작해 보세요.
+                      </p>
+                    </div>
+
+                    {/* [마무리 문장] (은은한 샴페인골드색) */}
+                    <p className="text-sm sm:text-base font-elegant text-[#D4B2A7] font-medium tracking-wide pt-1">
+                      사랑 안에서, 나를 잃지 않도록. 《연애비급》
+                    </p>
+
+                    {/* [구매 버튼] (마무리 문장 아래 충분한 간격, 기존 handleAddToCart 및 handlePurchase 연결 보존) */}
+                    <div className="flex flex-col sm:flex-row gap-3 pt-2 sm:pt-4 items-stretch sm:items-center w-full max-w-lg">
+                      <button
+                        type="button"
+                        onClick={handleAddToCart}
+                        className="py-3.5 px-5 rounded-xl font-elegant font-medium text-sm sm:text-base border border-[#D4B2A7]/50 text-[#EDE6DA] hover:text-[#FAF7F2] hover:bg-[#A66B73]/20 hover:border-[#D4B2A7]/80 transition-all duration-300 shrink-0 whitespace-nowrap text-center bg-black/40 backdrop-blur-sm order-2 sm:order-1"
+                      >
+                        장바구니 담기
+                      </button>
+                      <button
+                        type="button"
+                        onClick={handlePurchase}
+                        className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm sm:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_0_30px_rgba(166,107,115,0.35)] hover:brightness-110 order-1 sm:order-2"
+                        style={{
+                          background: 'linear-gradient(135deg, #A66B73 0%, #8B263E 100%)',
+                          border: '1px solid rgba(212, 178, 167, 0.65)',
+                        }}
+                      >
+                        <span>연애비급 19,000원에 구매하기</span>
+                        <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
+                      </button>
+                    </div>
                   </div>
                 </Reveal>
               </div>
