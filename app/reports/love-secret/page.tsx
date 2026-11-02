@@ -410,8 +410,11 @@ export default function LoveSecretEbookPage() {
 
                     {/* 본문 텍스트 및 나의 연애 누수 체크리스트 */}
                     <div className="lg:col-span-7 space-y-6 break-keep">
-                      <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-[1.8] font-light p-6 rounded-2xl bg-[#2A0A14]/50 border border-[#D4B2A7]/30">
-                        진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 잔인한 거짓말입니다. 연애는 도덕 시험이 아니라 위치(Position) 싸움입니다. 언제든 연락되고 일정을 맞춰주는 순간, 당신은 매혹의 대상이 아닌 &apos;소모품 노동자&apos;로 전락합니다. 남자를 잡으려 하지 말고 자리를 잡으십시오. 가만히 있어도 남자가 안달 나 매달리는 &apos;트로피&apos;가 되십시오.
+                      <p
+                        className="text-sm md:text-base text-[#D5C2C6] leading-[1.8] font-light p-6 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
+                        style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                      >
+                        진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 잔인한 거짓말입니다. 연애는 도덕 시험이 아니라 <strong className="text-[#F5E9E2] font-semibold">위치(Position) 싸움</strong>입니다. 언제든 연락되고 일정을 맞춰주는 순간, 당신은 매혹의 대상이 아닌 <strong className="text-[#F5E9E2] font-semibold">&apos;소모품 노동자&apos;</strong>로 전락합니다. 남자를 잡으려 하지 말고 자리를 잡으십시오. 가만히 있어도 남자가 안달 나 매달리는 <strong className="text-[#F5E9E2] font-semibold">&apos;트로피&apos;</strong>가 되십시오.
                       </p>
 
                       <div className="space-y-3">
@@ -565,14 +568,17 @@ export default function LoveSecretEbookPage() {
                           </div>
                         </div>
 
-                        {/* AFTER 카드 (기존 로즈색 배경·테두리·라벨 색상 100% 유지) */}
-                        <div className="h-full flex flex-col sm:flex-row items-start gap-3 p-4 rounded-2xl bg-[#8B263E]/25 border border-[#D4B2A7]/40 shadow-[0_0_20px_rgba(212,178,167,0.08)] hover:border-[#D4B2A7]/60 transition-all">
-                          <span className="w-[72px] h-[28px] shrink-0 rounded flex items-center justify-center text-[11px] leading-none font-serif font-bold text-[#E5C4BB] bg-[#8B263E]/80 border border-[#E5C4BB]/40 whitespace-nowrap">
+                        {/* AFTER 카드 (차분한 딥 더스티 로즈 #49303F 테마 통일) */}
+                        <div
+                          className="h-full flex flex-col sm:flex-row items-start gap-3 p-4 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_4px_16px_rgba(0,0,0,0.25)] hover:border-[rgba(210,166,172,0.60)] transition-all"
+                          style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                        >
+                          <span className="w-[72px] h-[28px] shrink-0 rounded flex items-center justify-center text-[11px] leading-none font-serif font-bold text-[#F5E9E2] bg-[#694350] border border-[rgba(210,166,172,0.30)] whitespace-nowrap">
                             AFTER
                           </span>
                           <div className="flex-1">
-                            <p className="text-[#FAF7F2] text-sm font-semibold leading-[1.5]">{item.afterTitle}</p>
-                            <p className="text-[#E5C4BB]/90 text-xs mt-1.5 font-light leading-[1.65]">{item.afterSub}</p>
+                            <p className="text-[#F5E9E2] text-sm font-semibold leading-[1.5]">{item.afterTitle}</p>
+                            <p className="text-[#D5C2C6] text-xs mt-1.5 font-light leading-[1.65]">{item.afterSub}</p>
                           </div>
                         </div>
                       </div>
@@ -1013,9 +1019,12 @@ export default function LoveSecretEbookPage() {
                   {/* 이미지 하단 3단계 핵심 역할 카드 (짙은 자주빛 브라운 & 샴페인골드 테마) */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left mt-8 items-stretch">
                     {/* Book 1: Step 1 · 원리 */}
-                    <div className="relative p-5 sm:p-6 md:p-7 rounded-[12px] bg-[#30212D] border border-[#C6A575]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200">
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[rgba(210,166,172,0.30)] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                      style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                    >
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
-                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C6A575]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C5A578]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
                         <path d="M1 9V1h8" />
                         <path d="M4 9V4h5" />
                       </svg>
@@ -1023,10 +1032,10 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (펼친 책) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#4E2A35] text-[#FCE3D8] border border-[#C6A575]/30 font-semibold tracking-tight">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#694350] text-[#F5E9E2] border border-[rgba(210,166,172,0.30)] font-semibold tracking-tight">
                             Step 1 · 원리
                           </span>
-                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="펼친 책">
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="펼친 책">
                             <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                               <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                               <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
@@ -1035,24 +1044,27 @@ export default function LoveSecretEbookPage() {
                         </div>
 
                         {/* 상품명 */}
-                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9DC] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9E2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
                           《연애비급 완전판》
                         </h4>
 
                         {/* 짧은 금색 구분선 */}
-                        <div className="w-8 h-[1px] bg-[#C6A575]/30 my-2.5 md:my-3" />
+                        <div className="w-8 h-[1px] bg-[#C5A578]/30 my-2.5 md:my-3" />
 
                         {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#D1C0B8] leading-[1.7] font-normal break-keep">
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#D5C2C6] leading-[1.7] font-normal break-keep">
                           남자의 본능과 심리를 꿰뚫어 보고, 사랑을 구걸하던 자리에서 존중받는 중심 자리로 이동하는 근본 바이블.
                         </p>
                       </div>
                     </div>
 
                     {/* Book 2: Step 2 · 전략 */}
-                    <div className="relative p-5 sm:p-6 md:p-7 rounded-[12px] bg-[#30212D] border border-[#C6A575]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200">
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[rgba(210,166,172,0.30)] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                      style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                    >
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
-                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C6A575]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C5A578]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
                         <path d="M1 9V1h8" />
                         <path d="M4 9V4h5" />
                       </svg>
@@ -1060,10 +1072,10 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (작은 열쇠) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#4E2A35] text-[#FCE3D8] border border-[#C6A575]/30 font-semibold tracking-tight">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#694350] text-[#F5E9E2] border border-[rgba(210,166,172,0.30)] font-semibold tracking-tight">
                             Step 2 · 전략
                           </span>
-                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="작은 열쇠">
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="작은 열쇠">
                             <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                               <circle cx="7.5" cy="15.5" r="4.5" />
                               <path d="m21 2-9.6 9.6" />
@@ -1074,24 +1086,27 @@ export default function LoveSecretEbookPage() {
                         </div>
 
                         {/* 상품명 */}
-                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9DC] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9E2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
                           《매혹의 무의식 침투 프로토콜》
                         </h4>
 
                         {/* 짧은 금색 구분선 */}
-                        <div className="w-8 h-[1px] bg-[#C6A575]/30 my-2.5 md:my-3" />
+                        <div className="w-8 h-[1px] bg-[#C5A578]/30 my-2.5 md:my-3" />
 
                         {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#D1C0B8] leading-[1.7] font-normal break-keep">
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#D5C2C6] leading-[1.7] font-normal break-keep">
                           9대 유혹자 페르소나와 최면 기법, 실전 카톡 템플릿으로 상대의 뇌를 안달 나게 만드는 즉각적 실전 무기.
                         </p>
                       </div>
                     </div>
 
                     {/* Book 3: Step 3 · 실천 */}
-                    <div className="relative p-5 sm:p-6 md:p-7 rounded-[12px] bg-[#30212D] border border-[#C6A575]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200">
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[rgba(210,166,172,0.30)] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                      style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                    >
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
-                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C6A575]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
+                      <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C5A578]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
                         <path d="M1 9V1h8" />
                         <path d="M4 9V4h5" />
                       </svg>
@@ -1099,10 +1114,10 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (붓 / 기록지) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#4E2A35] text-[#FCE3D8] border border-[#C6A575]/30 font-semibold tracking-tight">
+                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#694350] text-[#F5E9E2] border border-[rgba(210,166,172,0.30)] font-semibold tracking-tight">
                             Step 3 · 실천
                           </span>
-                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C7A46B]" title="붓 또는 기록지">
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="붓 또는 기록지">
                             <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                               <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
                               <line x1="16" y1="8" x2="2" y2="22" />
@@ -1112,15 +1127,15 @@ export default function LoveSecretEbookPage() {
                         </div>
 
                         {/* 상품명 */}
-                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9DC] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#F5E9E2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
                           《30일 매력 각성 워크북》
                         </h4>
 
                         {/* 짧은 금색 구분선 */}
-                        <div className="w-8 h-[1px] bg-[#C6A575]/30 my-2.5 md:my-3" />
+                        <div className="w-8 h-[1px] bg-[#C5A578]/30 my-2.5 md:my-3" />
 
                         {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#D1C0B8] leading-[1.7] font-normal break-keep">
+                        <p className="text-[13.5px] md:text-[14.5px] text-[#D5C2C6] leading-[1.7] font-normal break-keep">
                           30일간의 데일리 미션을 통해 휘둘리지 않고 주도권을 쥐는 여왕의 태도를 몸에 새기는 체질 각성서.
                         </p>
                       </div>
@@ -1887,15 +1902,18 @@ export default function LoveSecretEbookPage() {
                     </div>
                   </div>
 
-                  {/* 항목 3: 연애비급 세트 강조 */}
-                  <div className="p-4 sm:p-5 rounded-2xl bg-[#8B263E]/30 border border-[#D4B2A7]/50 shadow-[0_0_25px_rgba(212,178,167,0.12)] flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[#D4B2A7]/80 transition-all">
-                    <div className="flex items-center gap-3 text-[#FAF6EE] font-elegant font-bold text-sm sm:text-base shrink-0">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#E5C4BB] shrink-0 shadow-[0_0_8px_#E5C4BB]" />
-                      <span className="text-[#FAF7F2]">《연애비급 3종 마스터 세트》</span>
+                  {/* 항목 3: 연애비급 세트 강조 (차분한 딥 더스티 로즈 #49303F 테마 통일) */}
+                  <div
+                    className="p-4 sm:p-5 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[rgba(210,166,172,0.60)] transition-all"
+                    style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                  >
+                    <div className="flex items-center gap-3 text-[#F5E9E2] font-elegant font-bold text-sm sm:text-base shrink-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#C5A578] shrink-0 shadow-[0_0_8px_#C5A578]" />
+                      <span>《연애비급 3종 마스터 세트》</span>
                     </div>
-                    <div className="flex items-center gap-2 text-[#FAF7F2] text-xs sm:text-sm pl-4 md:pl-0 font-medium">
-                      <span className="text-[#E5C4BB] font-bold shrink-0">➔</span>
-                      <span>단 한 번 치킨 한 마리 값(<strong className="text-[#E5C4BB] font-bold">19,000원</strong>)으로 평생 남자를 다루는 절대 프레임을 소장합니다.</span>
+                    <div className="flex items-center gap-2 text-[#D5C2C6] text-xs sm:text-sm pl-4 md:pl-0 font-normal">
+                      <span className="text-[#C5A578] font-bold shrink-0">➔</span>
+                      <span>단 한 번 치킨 한 마리 값(<strong className="text-[#F5E9E2] font-bold">19,000원</strong>)으로 평생 남자를 다루는 절대 프레임을 소장합니다.</span>
                     </div>
                   </div>
                 </div>
