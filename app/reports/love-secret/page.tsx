@@ -1426,7 +1426,7 @@ export default function LoveSecretEbookPage() {
                   <div className="lg:col-span-5">
                     <HybridImageSlot
                       assetKey="reviews"
-                      className="w-full aspect-[4/3] md:aspect-square"
+                      className="w-full aspect-[3/4]"
                     />
                   </div>
 
@@ -1554,6 +1554,45 @@ export default function LoveSecretEbookPage() {
                       </tr>
                     </tbody>
                   </table>
+                </div>
+
+                {/* 가치 비교 핵심 포인트 요약 */}
+                <div className="mt-8 space-y-3 max-w-4xl mx-auto break-keep">
+                  {/* 항목 1 */}
+                  <div className="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[#D4B2A7]/30 transition-all">
+                    <div className="flex items-center gap-3 text-white/90 font-medium text-sm sm:text-base shrink-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D4B2A7]/50 shrink-0" />
+                      <span>1회 15만 원짜리 연애 상담?</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-[#EDE6DA]/70 text-xs sm:text-sm pl-4 md:pl-0 font-light">
+                      <span className="text-[#D4B2A7] font-bold shrink-0">➔</span>
+                      <span>상담 끝나면 또 원점으로 돌아와 불안해집니다.</span>
+                    </div>
+                  </div>
+
+                  {/* 항목 2 */}
+                  <div className="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[#D4B2A7]/30 transition-all">
+                    <div className="flex items-center gap-3 text-white/90 font-medium text-sm sm:text-base shrink-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D4B2A7]/50 shrink-0" />
+                      <span>시중의 수박 겉핥기 연애 유튜브?</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-[#EDE6DA]/70 text-xs sm:text-sm pl-4 md:pl-0 font-light">
+                      <span className="text-[#D4B2A7] font-bold shrink-0">➔</span>
+                      <span>뻔한 &lsquo;밀당해라, 연락 늦게 해라&rsquo; 잡기술로 밑천만 드러납니다.</span>
+                    </div>
+                  </div>
+
+                  {/* 항목 3: 연애비급 세트 강조 */}
+                  <div className="p-4 sm:p-5 rounded-2xl bg-[#8B263E]/30 border border-[#D4B2A7]/50 shadow-[0_0_25px_rgba(212,178,167,0.12)] flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[#D4B2A7]/80 transition-all">
+                    <div className="flex items-center gap-3 text-[#FAF6EE] font-elegant font-bold text-sm sm:text-base shrink-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#E5C4BB] shrink-0 shadow-[0_0_8px_#E5C4BB]" />
+                      <span className="text-[#FAF7F2]">《연애비급 3종 마스터 세트》</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-[#FAF7F2] text-xs sm:text-sm pl-4 md:pl-0 font-medium">
+                      <span className="text-[#E5C4BB] font-bold shrink-0">➔</span>
+                      <span>단 한 번 치킨 한 마리 값(<strong className="text-[#E5C4BB] font-bold">19,000원</strong>)으로 평생 남자를 다루는 절대 프레임을 소장합니다.</span>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>

@@ -84,12 +84,12 @@ export const loveSecretAssets: Record<string, LoveSecretAssetItem> = {
   // 7. Reviews: 독자 실제 변화 리뷰 캡처
   reviews: {
     id: 'reviews',
-    src: 'love_reviews_placeholder.png',
+    src: '/image/love-secret/love-secret-chat-preview.png?v=20261102',
     alt: '독자 실제 변화 리뷰 캡처',
-    aspectRatio: 'aspect-video',
+    aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
     placeholderLabel: '독자 실제 변화 리뷰 캡처',
-    description: 'love_reviews_placeholder.png'
+    description: 'love-secret-chat-preview.png'
   },
 
   // 8. Final CTA: 매혹의 열쇠 오브제
