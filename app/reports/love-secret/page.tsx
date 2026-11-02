@@ -635,16 +635,16 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 text-left max-w-6xl mx-auto">
               <Reveal>
                 <div className="py-4">
-                  {/* 솔루션 시스템 인포그래픽 (중앙 배치, 원본 비율 유지, 깔끔한 카드) */}
+                  {/* 솔루션 시스템 인포그래픽 (하단 STEP 1 박스와 동일한 가로폭 적용) */}
                   <div className="mb-10 md:mb-14">
-                    <div className="relative max-w-4xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+                    <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
                       <div className="relative w-full">
                         <Image
-                          src="/images/love-secret/solution-system.png"
+                          src="/image/love-secret/solution-system.png?v=20261102"
                           alt="연애비급 솔루션 시스템 인포그래픽: STEP 1 내 자리 바로잡기 & STEP 2 관계에 적용하기"
-                          width={1200}
-                          height={675}
-                          sizes="(max-width: 768px) 100vw, 896px"
+                          width={1672}
+                          height={941}
+                          sizes="(max-width: 1200px) 100vw, 1152px"
                           className="w-full h-auto object-contain block"
                           priority
                         />
@@ -1304,7 +1304,7 @@ export default function LoveSecretEbookPage() {
               </Reveal>
             </section>
 
-{/* ═══════════════════════════════════════════════════════════════
+            {/* ═══════════════════════════════════════════════════════════════
                 5. Premium Content Section (기존 프리미엄 가이드북 안내 보존)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
