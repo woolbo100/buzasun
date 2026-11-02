@@ -25,6 +25,7 @@ import {
   CheckCircle2,
   ImageIcon,
   Eye,
+  ZoomIn,
   X
 } from 'lucide-react'
 import RecommendedForCards from '@/components/RecommendedForCards'
@@ -379,7 +380,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 2. Pain Point — 문제 진단 & 공감
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-6xl mx-auto">
+            <section className="mb-12 md:mb-16 text-left max-w-6xl mx-auto">
               <Reveal>
                 <div className="space-y-10">
                   <div className="text-center max-w-3xl mx-auto space-y-5">
@@ -453,45 +454,102 @@ export default function LoveSecretEbookPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
-                체크리스트와 Before/After를 잇는 원인 진단 브릿지
+                신규: 공감 & 자리 진단 — 진심을 탓하지 마세요 & 나의 자리를 돌아볼 때
                ═══════════════════════════════════════════════════════════════ */}
-            <div className="py-8 md:py-14 max-w-4xl mx-auto px-4 text-center">
+            <section className="mb-16 md:mb-24 max-w-6xl mx-auto px-4">
               <Reveal>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 break-keep">
-                  {/* 스텝 01 */}
-                  <div className="flex items-center gap-3 text-left">
-                    <span className="text-[11px] font-mono font-bold text-[#D4B2A7]/70 tracking-widest px-2 py-0.5 rounded border border-[#D4B2A7]/30 shrink-0">
-                      01
-                    </span>
-                    <p className="text-sm md:text-base text-[#EDE6DA] font-medium leading-relaxed">
-                      단 하나라도 해당한다면, <span className="text-[#E5C4BB] font-semibold">당신의 매력이 부족해서가 아닙니다.</span>
-                    </p>
-                  </div>
+                <div
+                  className="gungjung-glass p-6 sm:p-8 md:p-10 lg:p-12 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl relative overflow-hidden"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                  }}
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    {/* 왼쪽: 01, 02 웹 텍스트 글귀 (약 55~58% 비율) */}
+                    <div className="lg:col-span-7 space-y-8 md:space-y-10 break-keep order-1">
+                      {/* 01 · 진심을 탓하지 마세요 */}
+                      <div className="space-y-3.5">
+                        <div className="flex items-center gap-2.5">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                            01
+                          </span>
+                          <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
+                            진심을 탓하지 마세요
+                          </h3>
+                        </div>
+                        <div className="text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-light space-y-2">
+                          <p>
+                            단 하나라도 내 이야기 같았다면,<br />
+                            <span className="text-[#E5C4BB] font-medium">당신의 매력이 부족해서만은 아닙니다.</span>
+                          </p>
+                          <p className="text-[#FAF7F2]/90">
+                            더 참고, 더 맞추고, 더 기다렸던 마음.<br />
+                            그만큼 관계를 소중히 지키고 싶었을 거예요.
+                          </p>
+                        </div>
+                      </div>
 
-                  {/* 연결 화살표: PC는 오른쪽, 모바일은 아래쪽 */}
-                  <div className="text-[#D4B2A7]/60 flex items-center justify-center shrink-0">
-                    <span className="hidden md:inline text-lg font-light">→</span>
-                    <span className="md:hidden text-sm font-light">↓</span>
-                  </div>
+                      {/* 구분선 (은은한 로즈 샴페인 선) */}
+                      <div className="w-full h-[1px] bg-gradient-to-r from-[#D4B2A7]/30 via-[#D4B2A7]/10 to-transparent" />
 
-                  {/* 스텝 02 */}
-                  <div className="flex items-center gap-3 text-left">
-                    <span className="text-[11px] font-mono font-bold text-[#D4B2A7]/70 tracking-widest px-2 py-0.5 rounded border border-[#D4B2A7]/30 shrink-0">
-                      02
-                    </span>
-                    <p className="text-xs md:text-sm text-[#EDE6DA]/90 leading-relaxed">
-                      상대에게 맞출수록 관계가 흔들렸던 이유는 마음의 크기가 아니라<br className="hidden lg:inline" />
-                      <span className="text-[#E5C4BB] font-semibold border-b border-[#E5C4BB]/40 ml-1">
-                        ‘서 있는 자리(Position)’가 아래로 기울어져 있었기 때문
-                      </span>입니다.
-                    </p>
+                      {/* 02 · 이제, 나의 자리를 돌아볼 때 */}
+                      <div className="space-y-3.5">
+                        <div className="flex items-center gap-2.5">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                            02
+                          </span>
+                          <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
+                            이제, <span className="text-[#E5C4BB]">나의 자리를 돌아볼 때</span>
+                          </h3>
+                        </div>
+                        <div className="text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-light space-y-3">
+                          <p>
+                            상대의 기분과 반응을 먼저 살피는 동안,<br />
+                            내 감정과 기준은 자꾸 뒤로 밀리지 않았나요?
+                          </p>
+                          <div className="p-4 sm:p-5 rounded-xl border border-[rgba(210,166,172,0.25)] bg-[#49303F]/60 text-[#FAF7F2] font-normal leading-[1.75]">
+                            《연애비급》에서 말하는 ‘자리’는<br className="hidden sm:inline" />
+                            관계 안에서 <span className="text-[#E5C4BB] font-semibold">내 마음과 선택도 존중받는 위치</span>입니다.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 오른쪽: ‘잘해줄수록, 왜 내 마음은 더 불안해질까요?’ 한옥 창가 여성 이미지 (약 42~45% 비율) */}
+                    <div className="lg:col-span-5 w-full order-2">
+                      <div
+                        onClick={() =>
+                          setPreviewModalItem({
+                            title: '잘해줄수록, 왜 내 마음은 더 불안해질까요?',
+                            imageSrc: '/image/love-secret/love-secret-empathy.png'
+                          })
+                        }
+                        className="cursor-pointer group relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/40 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-black/40 transition-transform duration-300 hover:scale-[1.01]"
+                        title="클릭하여 확대보기"
+                      >
+                        <div className="relative w-full aspect-[3/4]">
+                          <Image
+                            src="/image/love-secret/love-secret-empathy.png"
+                            alt="잘해줄수록, 왜 내 마음은 더 불안해질까요? - 한옥 창가 여성"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 45vw"
+                            className="object-contain"
+                            priority
+                          />
+                        </div>
+
+                        {/* 모바일/PC 클릭 확대 힌트 배지 */}
+                        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[#FAF7F2] text-xs font-medium opacity-90 group-hover:opacity-100 transition-opacity shadow-lg">
+                          <ZoomIn className="w-3.5 h-3.5 text-[#E5C4BB]" />
+                          <span>터치하여 확대</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                {/* 얇은 정돈 선 */}
-                <div className="w-12 h-[1px] bg-[#D4B2A7]/25 mx-auto mt-6 md:mt-8" />
               </Reveal>
-            </div>
+            </section>
 
             {/* ═══════════════════════════════════════════════════════════════
                 신규 추가: Before & After 1:1 매칭 비교 (기존 연애비급 디자인 톤앤매너 적용)
@@ -2341,7 +2399,7 @@ export default function LoveSecretEbookPage() {
             {/* 상단 헤더: 제목 & 닫기 버튼 */}
             <div className="w-full flex items-center justify-between pb-3 mb-3 border-b border-white/10">
               <span className="text-sm sm:text-base font-elegant font-bold text-[#FAF7F2]">
-                {previewModalItem.title} - 실제 페이지 미리보기
+                {previewModalItem.title}
               </span>
               <button
                 type="button"
