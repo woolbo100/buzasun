@@ -1784,29 +1784,29 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1440px)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#1F0710]">
+            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#1F0710] lg:min-h-[640px] xl:min-h-[670px]">
               {/* 1. 배경 이미지 영역:
-                  - PC(lg): 전체 배경으로 우측 여성 실루엣 배치
-                  - 모바일: 상단에 여성 실루엣이 온전히 보이도록 배치 */}
-              <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto lg:absolute lg:inset-0 lg:h-full">
+                  - 업로드된 원본 사이즈(1672:941) 그대로 세로 사이즈를 크게 확보
+                  - object-[85%_top]으로 위쪽 머리 실루엣이 절대 잘리지 않도록 상단 기준 배치 */}
+              <div className="relative w-full aspect-[1672/941] lg:aspect-auto lg:absolute lg:inset-0 lg:h-full">
                 <Image
                   src={productData.ctaImage}
                   alt="선택받기 위해 애쓰지 마세요. 이제, 당신이 선택하세요 - 연애비급"
                   fill
                   sizes="(max-width: 1024px) 100vw, 1200px"
-                  className="object-cover object-right sm:object-[82%_center]"
+                  className="object-cover object-[right_top] sm:object-[85%_top] lg:object-[85%_top]"
                   priority
                 />
-                {/* PC 전용: 왼쪽 텍스트 가독성 확보용 은은한 다크 그라데이션 (우측 인물 영역은 완전 투명) */}
+                {/* PC 전용: 왼쪽 텍스트 가독성 확보용 은은한 다크 그라데이션 (우측 인물 머리 및 실루엣은 100% 선명하게 노출) */}
                 <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-[#18050C]/95 via-[#18050C]/80 to-transparent w-[62%]" />
                 {/* 모바일 전용: 이미지와 하단 텍스트 영역 사이의 자연스러운 그라데이션 페이드 */}
-                <div className="lg:hidden absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#1F0710] to-transparent z-[1]" />
+                <div className="lg:hidden absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#1F0710] to-transparent z-[1]" />
               </div>
 
               {/* 2. 텍스트 및 구매 버튼 영역:
-                  - PC(lg): 왼쪽 여백에 정렬 (너비 58% 이내로 제한하여 오른쪽 여성 인물 침범 차단)
+                  - PC(lg): 왼쪽 여백에 정렬 (너비 58% 이내로 제한하여 오른쪽 여성 인물 침범 차단, 세로 높이 640px 이상 넉넉하게 확장)
                   - 모바일: 이미지 아래에 같은 자주빛 배경으로 여유롭게 이어짐 */}
-              <div className="relative z-10 p-6 sm:p-8 lg:p-14 xl:p-16 lg:max-w-[58%] text-left flex flex-col justify-center lg:min-h-[560px]">
+              <div className="relative z-10 p-6 sm:p-8 lg:p-14 xl:p-16 lg:max-w-[58%] text-left flex flex-col justify-center lg:min-h-[640px] xl:min-h-[670px]">
                 <Reveal>
                   <div className="space-y-6 sm:space-y-7 break-keep">
                     {/* [큰 제목] */}
