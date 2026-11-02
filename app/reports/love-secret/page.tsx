@@ -619,16 +619,17 @@ export default function LoveSecretEbookPage() {
                     boxShadow: '0 12px 40px rgba(186, 141, 126, 0.15)'
                   }}
                 >
-                  <div className="max-w-3xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
-                    <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
-                      TRANSFORMATION
+                  <div className="max-w-2xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
+                    <span className="text-amber-400/90 font-elegant text-xs font-semibold tracking-widest uppercase block">
+                      THE POSITION SHIFT
                     </span>
                     <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white leading-[1.45]">
-                      &ldquo;위 체크리스트 중 3개 이상 해당된다면,<br />
-                      <span className="text-[#E5C4BB]">당신이 서 있는 자리가 이렇게 바뀝니다.</span>&rdquo;
+                      &ldquo;사랑을 공부하고 내 자리를 바로 세웠을 때,<br />
+                      <span className="text-[#E5C4BB]">당신의 연애에 일어나는 극적인 반전</span>&rdquo;
                     </h3>
-                    <p className="text-[#EDE6DA]/75 text-xs md:text-sm font-light leading-[1.8]">
-                      노력과 헌신으로 붙잡는 연애는 끝났습니다. 자리를 바꾸는 순간 관계의 역학이 뒤집힙니다.
+                    <p className="text-[#EDE6DA]/80 text-xs md:text-sm font-light leading-relaxed">
+                      상대의 반응에 끌려다니던 &apos;을의 자리&apos;에서,<br className="hidden md:inline" />
+                      스스로 존중받고 주도권을 쥐는 &apos;중심의 자리&apos;로 이동합니다.
                     </p>
                   </div>
 
