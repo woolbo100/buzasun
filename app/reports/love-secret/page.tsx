@@ -436,6 +436,47 @@ export default function LoveSecretEbookPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
+                체크리스트와 Before/After를 잇는 원인 진단 브릿지
+               ═══════════════════════════════════════════════════════════════ */}
+            <div className="py-8 md:py-14 max-w-4xl mx-auto px-4 text-center">
+              <Reveal>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 break-keep">
+                  {/* 스텝 01 */}
+                  <div className="flex items-center gap-3 text-left">
+                    <span className="text-[11px] font-mono font-bold text-[#D4B2A7]/70 tracking-widest px-2 py-0.5 rounded border border-[#D4B2A7]/30 shrink-0">
+                      01
+                    </span>
+                    <p className="text-sm md:text-base text-[#EDE6DA] font-medium leading-relaxed">
+                      단 하나라도 해당한다면, <span className="text-[#E5C4BB] font-semibold">당신의 매력이 부족해서가 아닙니다.</span>
+                    </p>
+                  </div>
+
+                  {/* 연결 화살표: PC는 오른쪽, 모바일은 아래쪽 */}
+                  <div className="text-[#D4B2A7]/60 flex items-center justify-center shrink-0">
+                    <span className="hidden md:inline text-lg font-light">→</span>
+                    <span className="md:hidden text-sm font-light">↓</span>
+                  </div>
+
+                  {/* 스텝 02 */}
+                  <div className="flex items-center gap-3 text-left">
+                    <span className="text-[11px] font-mono font-bold text-[#D4B2A7]/70 tracking-widest px-2 py-0.5 rounded border border-[#D4B2A7]/30 shrink-0">
+                      02
+                    </span>
+                    <p className="text-xs md:text-sm text-[#EDE6DA]/90 leading-relaxed">
+                      상대에게 맞출수록 관계가 흔들렸던 이유는 마음의 크기가 아니라<br className="hidden lg:inline" />
+                      <span className="text-[#E5C4BB] font-semibold border-b border-[#E5C4BB]/40 ml-1">
+                        ‘서 있는 자리(Position)’가 아래로 기울어져 있었기 때문
+                      </span>입니다.
+                    </p>
+                  </div>
+                </div>
+
+                {/* 얇은 정돈 선 */}
+                <div className="w-12 h-[1px] bg-[#D4B2A7]/25 mx-auto mt-6 md:mt-8" />
+              </Reveal>
+            </div>
+
+            {/* ═══════════════════════════════════════════════════════════════
                 신규 추가: Before & After 1:1 매칭 비교 (기존 연애비급 디자인 톤앤매너 적용)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 max-w-6xl mx-auto">
