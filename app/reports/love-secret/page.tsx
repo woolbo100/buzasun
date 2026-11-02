@@ -551,6 +551,79 @@ export default function LoveSecretEbookPage() {
               </Reveal>
             </section>
 
+            <ChampagneThreadDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                섹션 1: 왜 연애비급을 읽어야 하는가? (진심과 공부 스토리텔링 - 글라스 퍼플 카드)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 max-w-6xl mx-auto space-y-8 md:space-y-10">
+              {/* 상단 이미지: 영역 상자 가로폭(max-w-6xl)과 일치하게 삽입 */}
+              <Reveal>
+                <div className="relative w-full overflow-hidden rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40">
+                  <Image
+                    src="/image/love-secret/love-secret-before-after.png"
+                    alt="연애비급 Before & After 구조 변화"
+                    width={1672}
+                    height={941}
+                    sizes="(max-width: 1024px) 100vw, 1152px"
+                    className="w-full h-auto object-contain block"
+                    priority
+                  />
+                </div>
+              </Reveal>
+
+              <Reveal>
+                <div
+                  className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 text-center"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                  }}
+                >
+                  <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block mb-3">
+                    THE HIDDEN TRUTH
+                  </span>
+                  <h3 className="text-2xl md:text-3xl lg:text-[2rem] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep mb-8 md:mb-10">
+                    &ldquo;진심을 다하고 참아주면 될 줄 알았습니다.<br />
+                    그런데 왜 사랑도 <span className="text-[#E5C4BB]">&lsquo;공부&rsquo;</span>해야 했을까요?&rdquo;
+                  </h3>
+
+                  {/* 이중 상자 제거: 카드 배경 위에 본문 직접 배치 (최대 너비 800px) */}
+                  <div className="max-w-[800px] mx-auto text-left text-base md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.75] space-y-5 md:space-y-6 break-keep">
+                    <p>
+                      어릴 적 우리는 사랑을 이렇게 배웠습니다.<br />
+                      <span className="text-[#FAF7F2] font-medium">
+                        &ldquo;진심을 다하면 결국 통한다. 착하게 맞춰주고 헌신하면 마음을 알아준다.&rdquo;
+                      </span>
+                    </p>
+                    <p>
+                      하지만 현실의 연애는 도덕 시험도, 인내심 테스트도 아니었습니다.
+                      내 감정을 다 쏟아붓고 모든 일정을 상대에게 맞출수록, 돌아온 것은 깊은 사랑이 아니라
+                      <strong className="text-[#E5C4BB] font-semibold"> &ldquo;설레지 않는다&rdquo;, &ldquo;편한 친구 같다&rdquo;는 차가운 통보</strong>였습니다.
+                    </p>
+                    <p>
+                      운전면허 없이 도로에 나가면 사고가 나듯,
+                      <strong className="text-[#FAF7F2] font-medium"> 남자의 무의식 작동 원리와 심리 역학을 모른 채 뛰어드는 연애는 늘 같은 자리에서 상처를 남깁니다.</strong>
+                    </p>
+                    <div className="pt-5 border-t border-[#D4B2A7]/20 text-[#EDE6DA]">
+                      《연애비급》은 뜬구름 잡는 위로나 얄팍한 밀당 기술을 말하지 않습니다.
+                      내가 서 있는 자리를 바로잡고 상대의 심리 회로를 꿰뚫어 보아,
+                      <strong className="text-[#FAF7F2] font-semibold"> 사랑 앞에서 다시는 스스로를 갉아먹지 않는 &lsquo;관계의 구조&rsquo;를 배우는 책입니다.</strong>
+                    </div>
+
+                    {/* 마무리 강조 문장 */}
+                    <div className="pt-6 md:pt-7 mt-6 md:mt-7 border-t border-[#D4B2A7]/25 text-center sm:text-left">
+                      <p className="font-elegant font-bold text-base md:text-lg lg:text-xl text-[#E5C4BB] tracking-wide break-keep leading-relaxed">
+                        연락의 기술보다, 관계의 맥락을 먼저 읽으세요.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <ChampagneThreadDivider />
+
             {/* ═══════════════════════════════════════════════════════════════
                 신규 추가: Before & After 1:1 매칭 비교 (기존 연애비급 디자인 톤앤매너 적용)
                ═══════════════════════════════════════════════════════════════ */}
@@ -647,77 +720,6 @@ export default function LoveSecretEbookPage() {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            <ChampagneThreadDivider />
-
-            {/* ═══════════════════════════════════════════════════════════════
-                섹션 1: 왜 연애비급을 읽어야 하는가? (진심과 공부 스토리텔링 - 글라스 퍼플 카드)
-               ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 max-w-6xl mx-auto space-y-8 md:space-y-10">
-              {/* 상단 이미지: 영역 상자 가로폭(max-w-6xl)과 일치하게 삽입 */}
-              <Reveal>
-                <div className="relative w-full overflow-hidden rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40">
-                  <Image
-                    src="/image/love-secret/love-secret-before-after.png"
-                    alt="연애비급 Before & After 구조 변화"
-                    width={1672}
-                    height={941}
-                    sizes="(max-width: 1024px) 100vw, 1152px"
-                    className="w-full h-auto object-contain block"
-                    priority
-                  />
-                </div>
-              </Reveal>
-
-              <Reveal>
-                <div
-                  className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 text-center"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
-                  }}
-                >
-                  <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block mb-3">
-                    THE HIDDEN TRUTH
-                  </span>
-                  <h3 className="text-2xl md:text-3xl lg:text-[2rem] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep mb-8 md:mb-10">
-                    &ldquo;진심을 다하고 참아주면 될 줄 알았습니다.<br />
-                    그런데 왜 사랑도 <span className="text-[#E5C4BB]">&lsquo;공부&rsquo;</span>해야 했을까요?&rdquo;
-                  </h3>
-
-                  {/* 이중 상자 제거: 카드 배경 위에 본문 직접 배치 (최대 너비 800px) */}
-                  <div className="max-w-[800px] mx-auto text-left text-base md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.75] space-y-5 md:space-y-6 break-keep">
-                    <p>
-                      어릴 적 우리는 사랑을 이렇게 배웠습니다.<br />
-                      <span className="text-[#FAF7F2] font-medium">
-                        &ldquo;진심을 다하면 결국 통한다. 착하게 맞춰주고 헌신하면 마음을 알아준다.&rdquo;
-                      </span>
-                    </p>
-                    <p>
-                      하지만 현실의 연애는 도덕 시험도, 인내심 테스트도 아니었습니다.
-                      내 감정을 다 쏟아붓고 모든 일정을 상대에게 맞출수록, 돌아온 것은 깊은 사랑이 아니라
-                      <strong className="text-[#E5C4BB] font-semibold"> &ldquo;설레지 않는다&rdquo;, &ldquo;편한 친구 같다&rdquo;는 차가운 통보</strong>였습니다.
-                    </p>
-                    <p>
-                      운전면허 없이 도로에 나가면 사고가 나듯,
-                      <strong className="text-[#FAF7F2] font-medium"> 남자의 무의식 작동 원리와 심리 역학을 모른 채 뛰어드는 연애는 늘 같은 자리에서 상처를 남깁니다.</strong>
-                    </p>
-                    <div className="pt-5 border-t border-[#D4B2A7]/20 text-[#EDE6DA]">
-                      《연애비급》은 뜬구름 잡는 위로나 얄팍한 밀당 기술을 말하지 않습니다.
-                      내가 서 있는 자리를 바로잡고 상대의 심리 회로를 꿰뚫어 보아,
-                      <strong className="text-[#FAF7F2] font-semibold"> 사랑 앞에서 다시는 스스로를 갉아먹지 않는 &lsquo;관계의 구조&rsquo;를 배우는 책입니다.</strong>
-                    </div>
-
-                    {/* 마무리 강조 문장 */}
-                    <div className="pt-6 md:pt-7 mt-6 md:mt-7 border-t border-[#D4B2A7]/25 text-center sm:text-left">
-                      <p className="font-elegant font-bold text-base md:text-lg lg:text-xl text-[#E5C4BB] tracking-wide break-keep leading-relaxed">
-                        연락의 기술보다, 관계의 맥락을 먼저 읽으세요.
-                      </p>
-                    </div>
                   </div>
                 </div>
               </Reveal>
