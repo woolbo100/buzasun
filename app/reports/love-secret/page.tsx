@@ -573,7 +573,7 @@ export default function LoveSecretEbookPage() {
                           className="h-full flex flex-col sm:flex-row items-start gap-3 p-4 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_4px_16px_rgba(0,0,0,0.25)] hover:border-[rgba(210,166,172,0.60)] transition-all"
                           style={{ background: 'rgba(73, 48, 63, 0.88)' }}
                         >
-                          <span className="w-[72px] h-[28px] shrink-0 rounded flex items-center justify-center text-[11px] leading-none font-serif font-bold text-[#F5E9E2] bg-[#694350] border border-[rgba(210,166,172,0.30)] whitespace-nowrap">
+                          <span className="shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[4px] bg-[#694350] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] font-serif font-bold leading-none whitespace-nowrap">
                             AFTER
                           </span>
                           <div className="flex-1">
