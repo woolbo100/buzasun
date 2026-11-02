@@ -363,66 +363,6 @@ export default function LoveSecretEbookPage() {
             <ChampagneThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                2. Product Overview Section (기존 상품 소개 보존)
-               ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28">
-              <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  {/* 왼쪽 세로 이미지 (3:4 비율, 선택하는 주권자의 위상) */}
-                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl">
-                    <Image
-                      src={productData.overviewImage}
-                      alt="사랑은 감정이 아니라 관계의 구조입니다 - 연애비급"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* 오른쪽 핵심 가치 및 6개 포인트 카드 */}
-                  <div className="space-y-6 text-left break-keep">
-                    <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white leading-[1.45]">
-                      사랑은 감정이 아니라<br />
-                      <span className="text-[#D4B2A7]">관계의 구조</span>입니다
-                    </h2>
-                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light">
-                      연애비급은 단순히 더 예뻐지는 법, 더 잘해주는 법, 더 참는 법을 말하지 않습니다. 이 책은 연애에서 반복적으로 상처받는 여성이 왜 늘 같은 자리에서 흔들리는지, 어떤 순간 관계의 포지션이 기울어지는지, 그리고 어떻게 다시 나의 중심으로 돌아올 수 있는지를 다룹니다. 사랑받기 위해 애쓰는 여자가 아니라, 사랑이 머물 수밖에 없는 여자가 되는 관계 구조 안내서입니다.
-                    </p>
-
-                    {/* 포인트 카드 6개 (glass card 형태) */}
-                    <div className="grid grid-cols-2 gap-4 pt-4">
-                      {[
-                        "연애 포지션 회복",
-                        "남자의 심리 구조 이해",
-                        "흔들리지 않는 매력의 근원",
-                        "무의식적 관계 패턴 해석",
-                        "말의 결을 바꾸는 언어 구조",
-                        "선택받는 자리에서 선택하는 자리로"
-                      ].map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="gungjung-glass p-4 border-[#D4B2A7]/20 flex items-center gap-3 hover:border-[#D4B2A7]/50 transition-all"
-                          style={{
-                            boxShadow: '0 8px 32px rgba(197, 139, 160, 0.05)'
-                          }}
-                        >
-                          <div className="w-6 h-6 rounded-full bg-[#A66B73] flex items-center justify-center shrink-0 border border-[#A66B73]/50 shadow-sm">
-                            <Check className="w-3.5 h-3.5 text-[#FAF6EE]" />
-                          </div>
-                          <span className="text-xs md:text-sm text-white/90 font-medium">
-                            {item}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            <ChampagneThreadDivider />
-
-            {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 2. Pain Point — 문제 진단 & 공감
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left max-w-6xl mx-auto">
@@ -580,6 +520,126 @@ export default function LoveSecretEbookPage() {
                         </div>
                       </div>
                     ))}
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <ChampagneThreadDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                2. Product Overview Section: 사랑은 감정이 아니라 관계의 구조입니다
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28">
+              <Reveal>
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
+                  {/* 왼쪽 세로 이미지 (3:4 비율, 선택하는 주권자의 위상) */}
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl">
+                    <Image
+                      src={productData.overviewImage}
+                      alt="사랑은 감정이 아니라 관계의 구조입니다 - 연애비급"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* 오른쪽 핵심 가치 및 6개 포인트 카드 */}
+                  <div className="space-y-6 text-left break-keep">
+                    <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white leading-[1.45]">
+                      사랑은 감정이 아니라<br />
+                      <span className="text-[#D4B2A7]">관계의 구조</span>입니다
+                    </h2>
+                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light">
+                      연애비급은 단순히 더 예뻐지는 법, 더 잘해주는 법, 더 참는 법을 말하지 않습니다. 이 책은 연애에서 반복적으로 상처받는 여성이 왜 늘 같은 자리에서 흔들리는지, 어떤 순간 관계의 포지션이 기울어지는지, 그리고 어떻게 다시 나의 중심으로 돌아올 수 있는지를 다룹니다. 사랑받기 위해 애쓰는 여자가 아니라, 사랑이 머물 수밖에 없는 여자가 되는 관계 구조 안내서입니다.
+                    </p>
+
+                    {/* 포인트 카드 6개 (glass card 형태) */}
+                    <div className="grid grid-cols-2 gap-4 pt-4">
+                      {[
+                        "연애 포지션 회복",
+                        "남자의 심리 구조 이해",
+                        "흔들리지 않는 매력의 근원",
+                        "무의식적 관계 패턴 해석",
+                        "말의 결을 바꾸는 언어 구조",
+                        "선택받는 자리에서 선택하는 자리로"
+                      ].map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="gungjung-glass p-4 border-[#D4B2A7]/20 flex items-center gap-3 hover:border-[#D4B2A7]/50 transition-all"
+                          style={{
+                            boxShadow: '0 8px 32px rgba(197, 139, 160, 0.05)'
+                          }}
+                        >
+                          <div className="w-6 h-6 rounded-full bg-[#A66B73] flex items-center justify-center shrink-0 border border-[#A66B73]/50 shadow-sm">
+                            <Check className="w-3.5 h-3.5 text-[#FAF6EE]" />
+                          </div>
+                          <span className="text-xs md:text-sm text-white/90 font-medium">
+                            {item}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <ChampagneThreadDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                2. Product Overview Section: 사랑은 감정이 아니라 관계의 구조입니다
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28">
+              <Reveal>
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
+                  {/* 왼쪽 세로 이미지 (3:4 비율, 선택하는 주권자의 위상) */}
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl">
+                    <Image
+                      src={productData.overviewImage}
+                      alt="사랑은 감정이 아니라 관계의 구조입니다 - 연애비급"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* 오른쪽 핵심 가치 및 6개 포인트 카드 */}
+                  <div className="space-y-6 text-left break-keep">
+                    <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white leading-[1.45]">
+                      사랑은 감정이 아니라<br />
+                      <span className="text-[#D4B2A7]">관계의 구조</span>입니다
+                    </h2>
+                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light">
+                      연애비급은 단순히 더 예뻐지는 법, 더 잘해주는 법, 더 참는 법을 말하지 않습니다. 이 책은 연애에서 반복적으로 상처받는 여성이 왜 늘 같은 자리에서 흔들리는지, 어떤 순간 관계의 포지션이 기울어지는지, 그리고 어떻게 다시 나의 중심으로 돌아올 수 있는지를 다룹니다. 사랑받기 위해 애쓰는 여자가 아니라, 사랑이 머물 수밖에 없는 여자가 되는 관계 구조 안내서입니다.
+                    </p>
+
+                    {/* 포인트 카드 6개 (glass card 형태) */}
+                    <div className="grid grid-cols-2 gap-4 pt-4">
+                      {[
+                        "연애 포지션 회복",
+                        "남자의 심리 구조 이해",
+                        "흔들리지 않는 매력의 근원",
+                        "무의식적 관계 패턴 해석",
+                        "말의 결을 바꾸는 언어 구조",
+                        "선택받는 자리에서 선택하는 자리로"
+                      ].map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="gungjung-glass p-4 border-[#D4B2A7]/20 flex items-center gap-3 hover:border-[#D4B2A7]/50 transition-all"
+                          style={{
+                            boxShadow: '0 8px 32px rgba(197, 139, 160, 0.05)'
+                          }}
+                        >
+                          <div className="w-6 h-6 rounded-full bg-[#A66B73] flex items-center justify-center shrink-0 border border-[#A66B73]/50 shadow-sm">
+                            <Check className="w-3.5 h-3.5 text-[#FAF6EE]" />
+                          </div>
+                          <span className="text-xs md:text-sm text-white/90 font-medium">
+                            {item}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </Reveal>
