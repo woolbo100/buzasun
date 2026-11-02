@@ -1055,7 +1055,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (펼친 책) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#694350] text-[#F5E9E2] border border-[rgba(210,166,172,0.30)] font-semibold tracking-tight">
+                          <span className="inline-flex items-center justify-center py-[4px] px-[10px] rounded-[4px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] md:text-xs font-serif font-bold tracking-tight whitespace-nowrap">
                             Step 1 · 원리
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="펼친 책">
@@ -1095,7 +1095,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (작은 열쇠) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#694350] text-[#F5E9E2] border border-[rgba(210,166,172,0.30)] font-semibold tracking-tight">
+                          <span className="inline-flex items-center justify-center py-[4px] px-[10px] rounded-[4px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] md:text-xs font-serif font-bold tracking-tight whitespace-nowrap">
                             Step 2 · 전략
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="작은 열쇠">
@@ -1137,7 +1137,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (붓 / 기록지) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="text-[11px] md:text-xs px-2.5 py-0.5 rounded-full bg-[#694350] text-[#F5E9E2] border border-[rgba(210,166,172,0.30)] font-semibold tracking-tight">
+                          <span className="inline-flex items-center justify-center py-[4px] px-[10px] rounded-[4px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] md:text-xs font-serif font-bold tracking-tight whitespace-nowrap">
                             Step 3 · 실천
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="붓 또는 기록지">
@@ -2340,7 +2340,7 @@ export default function LoveSecretEbookPage() {
           onPurchase={handlePurchase}
         />
       </GlobalBackground>
-    {/* 🔍 책 속 미리보기 고해상도 확대 모달 (PC/모바일 확대 & 스크롤 지원) */}
+      {/* 🔍 책 속 미리보기 고해상도 확대 모달 (PC/모바일 확대 & 스크롤 지원) */}
       {previewModalItem && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-6 overflow-y-auto"
@@ -2380,6 +2380,6 @@ export default function LoveSecretEbookPage() {
         </div>
       )}
 
-      </main>
+    </main>
   )
 }
