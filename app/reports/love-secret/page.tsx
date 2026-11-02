@@ -412,7 +412,7 @@ export default function LoveSecretEbookPage() {
                     <div className="lg:col-span-7 space-y-6 break-keep">
                       <p
                         className="text-sm md:text-base text-[#D5C2C6] leading-[1.8] font-light p-6 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
-                        style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                        style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                       >
                         진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 잔인한 거짓말입니다. 연애는 도덕 시험이 아니라 <strong className="text-[#F5E9E2] font-semibold">위치(Position) 싸움</strong>입니다. 언제든 연락되고 일정을 맞춰주는 순간, 당신은 매혹의 대상이 아닌 <strong className="text-[#F5E9E2] font-semibold">&apos;소모품 노동자&apos;</strong>로 전락합니다. 남자를 잡으려 하지 말고 자리를 잡으십시오. 가만히 있어도 남자가 안달 나 매달리는 <strong className="text-[#F5E9E2] font-semibold">&apos;트로피&apos;</strong>가 되십시오.
                       </p>
@@ -571,7 +571,7 @@ export default function LoveSecretEbookPage() {
                         {/* AFTER 카드 (차분한 딥 더스티 로즈 #49303F 테마 통일) */}
                         <div
                           className="h-full flex flex-col sm:flex-row items-start gap-3 p-4 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_4px_16px_rgba(0,0,0,0.25)] hover:border-[rgba(210,166,172,0.60)] transition-all"
-                          style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                          style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                         >
                           <span className="shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[4px] bg-[#694350] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] font-serif font-bold leading-none whitespace-nowrap">
                             AFTER
@@ -1021,7 +1021,7 @@ export default function LoveSecretEbookPage() {
                     {/* Book 1: Step 1 · 원리 */}
                     <div
                       className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[rgba(210,166,172,0.30)] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
-                      style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                      style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                     >
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
                       <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C5A578]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
@@ -1061,7 +1061,7 @@ export default function LoveSecretEbookPage() {
                     {/* Book 2: Step 2 · 전략 */}
                     <div
                       className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[rgba(210,166,172,0.30)] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
-                      style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                      style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                     >
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
                       <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C5A578]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
@@ -1103,7 +1103,7 @@ export default function LoveSecretEbookPage() {
                     {/* Book 3: Step 3 · 실천 */}
                     <div
                       className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[rgba(210,166,172,0.30)] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
-                      style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                      style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                     >
                       {/* 귀퉁이 전통 기하학 금색 장식 */}
                       <svg className="absolute top-2.5 left-2.5 w-3.5 h-3.5 text-[#C5A578]/30 pointer-events-none" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1">
@@ -1905,7 +1905,7 @@ export default function LoveSecretEbookPage() {
                   {/* 항목 3: 연애비급 세트 강조 (차분한 딥 더스티 로즈 #49303F 테마 통일) */}
                   <div
                     className="p-4 sm:p-5 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[rgba(210,166,172,0.60)] transition-all"
-                    style={{ background: 'rgba(73, 48, 63, 0.88)' }}
+                    style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                   >
                     <div className="flex items-center gap-3 text-[#F5E9E2] font-elegant font-bold text-sm sm:text-base shrink-0">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C5A578] shrink-0 shadow-[0_0_8px_#C5A578]" />
