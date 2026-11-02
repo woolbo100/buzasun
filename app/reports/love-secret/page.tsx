@@ -1940,25 +1940,16 @@ export default function LoveSecretEbookPage() {
                     },
                     {
                       num: "Q4",
-                      q: "이미 헤어진 상태라면 어떤 책이 더 맞을까요?",
-                      a: "관계 속 나의 기준과 반복되는 연애 패턴을 이해하고 싶다면 《연애비급》을, 이별 후 마음을 정리하고 연락과 재회의 방향을 살펴보고 싶다면 《재회비방》을 먼저 확인해 보세요.",
-                      link: {
-                        text: "이별 후의 관계가 고민이라면, 재회비방 살펴보기 →",
-                        href: "/reports/reunion-secret"
-                      }
-                    },
-                    {
-                      num: "Q5",
                       q: "책의 분량과 구성은 어떻게 되며, 실전에 적용하기 쉬운가요?",
                       a: "《연애비급 완전판 본편》, 《전략 시크릿북》, 《실전 워크북》 3권의 체계적인 패키지로 구성되어 있습니다. 막연하고 추상적인 감정 위로에 머물지 않고, 시크릿북에 수록된 상황별 실전 소통 템플릿과 워크북의 데일리 미션을 통해 일상 대화와 카톡에서 당장 어떻게 행동해야 하는지 차근차근 실전에 맞춰 활용하실 수 있습니다."
                     },
                     {
-                      num: "Q6",
+                      num: "Q5",
                       q: "구매 후 다운로드와 열람은 어떻게 진행되나요?",
                       a: "결제 완료 후 마이페이지의 구매 내역 또는 안내 페이지를 통해 다운로드하실 수 있습니다. 표준 PDF 형식으로 제공되므로 스마트폰, 태블릿, PC 등 다양한 디지털 기기에서 뷰어 앱을 통해 편리하게 열람하고 보관하실 수 있습니다."
                     },
                     {
-                      num: "Q7",
+                      num: "Q6",
                       q: "종이책이 배송되는 상품인가요?",
                       a: "아닙니다. 본 상품은 택배로 실물이 배송되지 않는 100% 디지털 다운로드 상품(PDF 전자책 및 디지털 배경화면)입니다. 배송을 기다릴 필요 없이 구매 후 기기에서 바로 파일을 열람하여 학습하실 수 있습니다."
                     }
@@ -1993,22 +1984,40 @@ export default function LoveSecretEbookPage() {
 
                         {isOpen && (
                           <div className="px-6 pb-6 pt-2.5 text-xs md:text-sm text-[#EDE6DA]/80 leading-[1.8] font-light border-t border-white/5 break-keep">
-                            <p>{faq.a}</p>
-                            {'link' in faq && faq.link && (
-                              <div className="mt-4 pt-1">
-                                <Link
-                                  href={faq.link.href}
-                                  className="inline-flex items-center gap-1.5 text-xs md:text-sm font-medium text-[#E5C4BB] hover:text-[#FAF7F2] transition-colors group"
-                                >
-                                  <span>{faq.link.text}</span>
-                                </Link>
-                              </div>
-                            )}
+                            {faq.a}
                           </div>
                         )}
                       </div>
                     )
                   })}
+                </div>
+
+                {/* FAQ 하단 상시 노출: 재회비방 안내 카드 (FAQ와 가로폭 동일, 은은한 글라스 퍼플) */}
+                <div
+                  className="mt-8 md:mt-10 p-5 sm:p-6 md:p-7 rounded-2xl border border-[#D4B2A7]/25 relative overflow-hidden"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.35) 0%, rgba(15, 6, 20, 0.85) 100%)',
+                    boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)'
+                  }}
+                >
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div className="space-y-1.5">
+                      <h4 className="text-base md:text-lg font-elegant font-bold text-[#FAF7F2] tracking-wide break-keep">
+                        이미 헤어진 관계로 고민하고 계신가요?
+                      </h4>
+                      <p className="text-xs md:text-sm text-[#EDE6DA] font-light leading-relaxed break-keep">
+                        이별 후 마음 정리와 연락·재회의 방향은 《재회비방》에서 살펴보세요.
+                      </p>
+                    </div>
+                    <div className="sm:self-center shrink-0 pt-1 sm:pt-0">
+                      <Link
+                        href="/reports/reunion-secret"
+                        className="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-[#E5C4BB] hover:text-[#FAF7F2] transition-colors group"
+                      >
+                        <span className="group-hover:underline underline-offset-4">재회비방 살펴보기 →</span>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>
