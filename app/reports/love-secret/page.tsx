@@ -1222,7 +1222,7 @@ export default function LoveSecretEbookPage() {
                     3종 올인원 세트 상세 해부
                   </h2>
                   <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
-                    정통 바이블, 전략 시크릿북, 실전 워크북, 그리고 디지털 부적까지 하나로 통합된 4 in 1 구성입니다.
+                    PDF 3종(총 172페이지)과 도화만개부 고화질 이미지 파일이 모두 포함된 올인원 패키지입니다.
                   </p>
 
                   {/* 📚 추가 안내 문구: 총 페이지 수 요약 (16px 간격, 2줄 유지) */}
@@ -1325,6 +1325,14 @@ export default function LoveSecretEbookPage() {
                               </p>
                             </div>
                           ))}
+                        </div>
+
+                        {/* 도화만개부 수록 및 이미지 파일 제공 안내 한 줄 */}
+                        <div className="pt-3 border-t border-white/10">
+                          <p className="text-xs text-[#D4B2A7]/90 font-light tracking-wide flex items-center gap-1.5 break-keep">
+                            <span className="text-[#E5C4BB]">✨</span>
+                            <span>본편 마지막에 도화만개부를 수록하며, 별도 이미지 파일도 함께 제공합니다.</span>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -1506,186 +1514,175 @@ export default function LoveSecretEbookPage() {
                   </div>
 
                   {/* ─────────────────────────────────────────────────────────
-                      Special Bonus: 《도화만개부(桃花滿開符) 모바일 월페이퍼》
+                      책 속에서 먼저 만나보세요 (본문 미리보기 영역)
+                      - 이미지가 등록되기 전: 관리자/편집 화면(?preview=admin)에서만 자리 표시
+                      - 공개 화면: 이미지 등록 전까지 이 영역과 빈 여백을 완전히 숨김 (null)
                      ───────────────────────────────────────────────────────── */}
-                  <div className="gungjung-glass p-8 md:p-12 border-[#D4B2A7]/40 rounded-3xl relative overflow-hidden"
-                    style={{
-                      background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.4) 0%, rgba(10, 5, 20, 0.95) 100%)',
-                      boxShadow: '0 12px 40px rgba(186, 141, 126, 0.22)'
-                    }}>
-                    <div className="grid lg:grid-cols-12 gap-10 items-center">
-                      {/* 부적 이미지 슬롯 */}
-                      <div className="lg:col-span-4">
-                        <HybridImageSlot assetKey="amulet" className="w-full aspect-[3/4]" />
-                      </div>
+                  {(() => {
+                    const previewCards = [
+                      {
+                        order: "01",
+                        title: "연애비급 본편",
+                        desc: "관계를 이해하는 본질적인 원리와 심리 역학",
+                        note: "본문 1쪽",
+                        imageSrc: ""
+                      },
+                      {
+                        order: "02",
+                        title: "매혹의 무의식 침투 프로토콜",
+                        desc: "남자의 신경회로를 건드리는 실전 대화 예시",
+                        note: "실전 예시 1쪽",
+                        imageSrc: ""
+                      },
+                      {
+                        order: "03",
+                        title: "30일 매력각성 워크북",
+                        desc: "스스로를 점검하고 내 자리를 바로잡는 실전 훈련지",
+                        note: "작성용 내지 1쪽",
+                        imageSrc: ""
+                      }
+                    ];
+                    const hasImages = previewCards.some(card => Boolean(card.imageSrc));
+                    const showSection = hasImages || isAdminPreview;
 
-                      {/* 부적 소개, 설명, 활용 및 패키지 요약 */}
-                      <div className="lg:col-span-8 space-y-6 break-keep">
-                        <div>
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold mb-3 whitespace-nowrap">🧧 Special Bonus. [디지털 부적]
-                          </span>
-                          <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
-                            《도화만개부(桃花滿開符) 모바일 월페이퍼》
-                          </h3>
-                          <p className="text-sm md:text-base text-[#D4B2A7] font-medium leading-[1.5] mb-3">
-                            본연의 치명적인 매력을 깨우고 시선을 독점하는 스마트폰 배경화면용 시각적 에너지 결계
-                          </p>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/80 leading-[1.8] font-light space-y-1">
-                            <span className="block">• <strong className="text-white">설명:</strong> 핑크빛 자개 매화와 황금빛 선율이 어우러져 본연의 치명적인 매력을 깨우는 부적</span>
-                            <span className="block">• <strong className="text-white">활용:</strong> 스마트폰 배경화면으로 설정하여 불안을 잠재우고 어디서나 시선을 독점하는 도화 주파수 유지</span>
-                          </p>
-                        </div>
+                    if (!showSection) return null;
 
-                        {/* 구성 안내 박스 */}
-                        <div className="p-6 rounded-2xl bg-[#2A0A14]/70 border border-[#D4B2A7]/30 space-y-4">
-                          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
-                            <span className="text-sm font-bold text-white">
-                              구성: 본편 + 전략시크릿북 + 실전워크북 + 도화만개부
-                            </span>
-                            <span className="text-xs px-2.5 py-1 rounded bg-[#A66B73] text-[#FAF6EE] font-bold border border-[#D4B2A7]/30">
-                              4 in 1 구성
-                            </span>
-                          </div>
+                    return (
+                      <div
+                        className="gungjung-glass p-6 sm:p-8 md:p-12 lg:p-14 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 text-center relative overflow-hidden"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
+                          boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                        }}
+                      >
+                        <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block mb-3">
+                          BOOK PREVIEW
+                        </span>
+                        <h3 className="text-2xl md:text-3xl lg:text-[2.2rem] font-elegant font-bold text-[#FAF7F2] tracking-wide break-keep mb-4">
+                          책 속에서 먼저 만나보세요
+                        </h3>
+                        <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light max-w-2xl mx-auto leading-relaxed break-keep mb-8 md:mb-10">
+                          관계를 이해하는 본문부터 실전 예시와 워크북까지,<br className="hidden sm:inline" />
+                          《연애비급》의 실제 내용을 미리 확인해 보세요.
+                        </p>
 
-                          <div className="flex flex-wrap items-baseline justify-between gap-4">
-                            <div className="space-y-1">
-                              <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
-                              <div className="text-2xl md:text-3xl font-elegant font-bold text-[#E5C4BB]">
-                                런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal">(76% OFF)</span>
+                        {/* PC 3열, 모바일 세로 1열 그리드 */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto text-left">
+                          {previewCards.map((item, idx) => (
+                            <div
+                              key={idx}
+                              className="p-5 md:p-6 rounded-2xl bg-black/40 border border-[#D4B2A7]/25 flex flex-col justify-between hover:border-[#E5C4BB]/60 transition-all group"
+                            >
+                              <div>
+                                <div className="flex items-center justify-between mb-3">
+                                  <span className="text-[#D4B2A7] font-serif font-bold text-xs tracking-wider">
+                                    {item.order}
+                                  </span>
+                                  <span className="inline-flex items-center justify-center py-[4px] px-[10px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] font-bold whitespace-nowrap">
+                                    {isAdminPreview && !item.imageSrc ? "관리자 확인용" : "미리보기"}
+                                  </span>
+                                </div>
+
+                                <h4 className="text-[#FAF7F2] font-elegant font-bold text-lg mb-2 group-hover:text-[#E5C4BB] transition-colors">
+                                  {item.title}
+                                </h4>
+                                <p className="text-xs md:text-sm text-[#EDE6DA]/70 leading-relaxed mb-5">
+                                  {item.desc}
+                                </p>
+                              </div>
+
+                              {/* 내지 이미지 슬롯 (내지는 잘리지 않게 object-contain으로 전체 페이지 표시) */}
+                              <div>
+                                {item.imageSrc ? (
+                                  <div
+                                    onClick={() => setPreviewModalItem({ title: item.title, imageSrc: item.imageSrc })}
+                                    className="cursor-pointer group/img relative rounded-xl overflow-hidden border border-[#D4B2A7]/30 bg-black/50"
+                                  >
+                                    <div className="relative w-full aspect-[3/4]">
+                                      <Image
+                                        src={item.imageSrc}
+                                        alt={item.title}
+                                        fill
+                                        className="object-contain transition-transform duration-300 group-hover/img:scale-105"
+                                      />
+                                    </div>
+                                    <div className="py-2.5 bg-black/70 text-center border-t border-[#D4B2A7]/20 flex items-center justify-center gap-1.5 text-xs text-[#E5C4BB] font-medium group-hover/img:text-white transition-colors">
+                                      <Eye className="w-3.5 h-3.5" />
+                                      <span>눌러서 크게 보기</span>
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="py-12 px-4 rounded-xl border border-dashed border-[#D4B2A7]/40 bg-[#120818]/60 text-center">
+                                    <FileText className="w-8 h-8 text-[#D4B2A7]/50 mx-auto mb-2" />
+                                    <p className="text-xs font-medium text-[#E5C4BB]">
+                                      [실제 페이지 이미지 삽입 예정]
+                                    </p>
+                                    <p className="text-[11px] text-[#EDE6DA]/50 mt-1">
+                                      {item.note}
+                                    </p>
+                                  </div>
+                                )}
                               </div>
                             </div>
-                            <span className="text-xs text-[#EDE6DA]/50">
-                              * 전자책은 3종이며, 디지털 부적을 포함한 4 in 1 구성입니다.
-                            </span>
-                          </div>
+                          ))}
+                        </div>
 
-                          <div className="pt-2">
-                            <CTAButton text="연애비급 3종 세트 구매하기" />
+                        {isAdminPreview && !hasImages && (
+                          <div className="mt-8 text-center">
+                            <p className="text-xs text-[#D4B2A7]/60">
+                              ※ 관리자 편집 화면입니다. 실제 내지 이미지가 등록되면 공개 페이지에도 자동으로 활성화됩니다.
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
+
+                  {/* ─────────────────────────────────────────────────────────
+                      올인원 패키지 가격·장바구니·구매 버튼 묶음 (미리보기 아래 분리 배치)
+                     ───────────────────────────────────────────────────────── */}
+                  <div
+                    className="gungjung-glass p-6 sm:p-8 md:p-10 rounded-3xl border border-[#D4B2A7]/40 relative overflow-hidden shadow-2xl"
+                    style={{
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(10, 5, 20, 0.95) 100%)',
+                      boxShadow: '0 12px 40px rgba(186, 141, 126, 0.20)'
+                    }}
+                  >
+                    <div className="max-w-4xl mx-auto space-y-6 break-keep">
+                      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
+                        <div className="space-y-1">
+                          <span className="text-xs font-elegant font-semibold tracking-wider text-[#D4B2A7] uppercase block">
+                            PACKAGE OVERVIEW
+                          </span>
+                          <h4 className="text-base sm:text-lg md:text-xl font-elegant font-bold text-white">
+                            구성: <span className="text-[#E5C4BB]">PDF 3종 · 총 172페이지 + 도화만개부 이미지 파일 제공</span>
+                          </h4>
+                        </div>
+                        <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                          올인원 패키지
+                        </span>
+                      </div>
+
+                      <div className="flex flex-wrap items-baseline justify-between gap-4">
+                        <div className="space-y-1">
+                          <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
+                          <div className="text-2xl md:text-3xl font-elegant font-bold text-[#E5C4BB]">
+                            런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal">(76% OFF)</span>
                           </div>
                         </div>
+                        <span className="text-xs text-[#EDE6DA]/60">
+                          * 전자책 PDF 3종(총 172페이지)과 도화만개부 고화질 이미지 파일이 함께 제공됩니다.
+                        </span>
+                      </div>
+
+                      <div className="pt-2">
+                        <CTAButton text="연애비급 3종 세트 구매하기" />
                       </div>
                     </div>
                   </div>
                 </div>
               </Reveal>
             </section>
-
-            {/* ═══════════════════════════════════════════════════════════════
-                책 속 미리보기 (독립 영역)
-                - 공개 페이지: 완전 숨김 (null)
-                - 관리자/편집 모드 (?preview=admin 등): 표시
-               ═══════════════════════════════════════════════════════════════ */}
-            {isAdminPreview ? (
-              <section className="mb-28 max-w-6xl mx-auto">
-                <Reveal>
-                  <div
-                    className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 text-center"
-                    style={{
-                      background: "linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)",
-                      boxShadow: "0 12px 40px rgba(0, 0, 0, 0.4)"
-                    }}
-                  >
-                    <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block mb-3">
-                      BOOK PREVIEW
-                    </span>
-                    <h3 className="text-2xl md:text-3xl lg:text-[2.2rem] font-elegant font-bold text-[#FAF7F2] tracking-wide break-keep mb-4">
-                      책 속에서 먼저 만나보세요.
-                    </h3>
-                    <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light max-w-2xl mx-auto leading-relaxed break-keep mb-10 md:mb-12">
-                      관계를 이해하는 본문부터 실전 예시와 워크북까지,<br className="hidden sm:inline" />
-                      《연애비급》의 실제 내용을 미리 확인해 보세요.
-                    </p>
-
-                    {/* 3열 (PC) / 1열 (모바일) 그리드 */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto text-left">
-                      {[
-                        {
-                          order: "01",
-                          title: "연애비급 본편",
-                          desc: "관계를 움직이는 본질적인 원리와 심리 역학 본문",
-                          note: "실제 본문 1쪽 삽입 예정",
-                          imageSrc: ""
-                        },
-                        {
-                          order: "02",
-                          title: "매혹의 무의식 침투 프로토콜",
-                          desc: "남자의 신경회로를 건드리는 실전 대화 예시",
-                          note: "실전 예시 1쪽 삽입 예정",
-                          imageSrc: ""
-                        },
-                        {
-                          order: "03",
-                          title: "30일 매력 각성 워크북",
-                          desc: "스스로를 점검하고 내 자리를 바로잡는 실전 훈련지",
-                          note: "작성 양식 1쪽 삽입 예정",
-                          imageSrc: ""
-                        }
-                      ].map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="p-5 md:p-6 rounded-2xl bg-black/40 border border-[#D4B2A7]/25 flex flex-col justify-between hover:border-[#E5C4BB]/60 transition-all group"
-                        >
-                          <div>
-                            <div className="flex items-center justify-between mb-3">
-                              <span className="text-[#D4B2A7] font-serif font-bold text-xs tracking-wider">
-                                {item.order}
-                              </span>
-                              <span className="inline-flex items-center justify-center py-[4px] px-[10px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] font-bold whitespace-nowrap">{isAdminPreview && !item.imageSrc ? "관리자 확인용" : "미리보기"}</span>
-                            </div>
-
-                            <h4 className="text-[#FAF7F2] font-elegant font-bold text-lg mb-2 group-hover:text-[#E5C4BB] transition-colors">
-                              {item.title}
-                            </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 leading-relaxed mb-5">
-                              {item.desc}
-                            </p>
-                          </div>
-
-                          {/* 이미지 슬롯 */}
-                          <div>
-                            {item.imageSrc ? (
-                              <div
-                                onClick={() => setPreviewModalItem({ title: item.title, imageSrc: item.imageSrc })}
-                                className="cursor-pointer group/img relative rounded-xl overflow-hidden border border-[#D4B2A7]/30 bg-black/50"
-                              >
-                                <div className="relative w-full aspect-[3/4]">
-                                  <Image
-                                    src={item.imageSrc}
-                                    alt={item.title}
-                                    fill
-                                    className="object-contain transition-transform duration-300 group-hover/img:scale-105"
-                                  />
-                                </div>
-                                <div className="py-2.5 bg-black/70 text-center border-t border-[#D4B2A7]/20 flex items-center justify-center gap-1.5 text-xs text-[#E5C4BB] font-medium group-hover/img:text-white transition-colors">
-                                  <Eye className="w-3.5 h-3.5" />
-                                  <span>눌러서 크게 보기</span>
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="py-12 px-4 rounded-xl border border-dashed border-[#D4B2A7]/40 bg-[#120818]/60 text-center">
-                                <FileText className="w-8 h-8 text-[#D4B2A7]/50 mx-auto mb-2" />
-                                <p className="text-xs font-medium text-[#E5C4BB]">
-                                  [실제 페이지 이미지 삽입 예정]
-                                </p>
-                                <p className="text-[11px] text-[#EDE6DA]/50 mt-1">
-                                  {item.note}
-                                </p>
-                              </div>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-8 text-center">
-                      <p className="text-xs text-[#D4B2A7]/60">
-                        ※ 관리자 미리보기 모드입니다. 추후 이미지가 등록되면 공개 페이지에 자동으로 활성화됩니다.
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              </section>
-            ) : null}
 
             <ChampagneThreadDivider />
 
@@ -2311,7 +2308,7 @@ export default function LoveSecretEbookPage() {
                     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#87465B] text-[#FFF1E9] border border-[#D5AFAD] text-xs font-elegant font-bold py-[5px] px-[12px] rounded-[6px] uppercase tracking-wider whitespace-nowrap">런칭 기념 76% 한정 특가</div>
 
                     <h3 className="text-lg md:text-xl font-elegant font-bold text-white mt-2.5 leading-[1.5]">
-                      백도화 연애비급 4 in 1 올인원 패키지
+                      백도화 연애비급 올인원 패키지 (PDF 3종 + 도화만개부)
                     </h3>
                     <p className="text-xs md:text-sm text-[#EDE6DA]/60 mt-1 font-light">
                       완전판 바이블 + 전략 시크릿북 + 실전 워크북 + 카톡 템플릿 5종
