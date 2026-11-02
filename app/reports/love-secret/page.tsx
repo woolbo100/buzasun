@@ -456,95 +456,78 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규: 공감 & 자리 진단 — 진심을 탓하지 마세요 & 나의 자리를 돌아볼 때
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-16 md:mb-24 max-w-6xl mx-auto px-4">
+            <section className="mb-16 md:mb-24 text-left max-w-6xl mx-auto">
               <Reveal>
-                <div
-                  className="gungjung-glass p-6 sm:p-8 md:p-10 lg:p-12 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl relative overflow-hidden"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
-                  }}
-                >
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    {/* 왼쪽: 01, 02 웹 텍스트 글귀 (약 55~58% 비율) */}
-                    <div className="lg:col-span-7 space-y-8 md:space-y-10 break-keep order-1">
-                      {/* 01 · 진심을 탓하지 마세요 */}
-                      <div className="space-y-3.5">
-                        <div className="flex items-center gap-2.5">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
-                            01
-                          </span>
-                          <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
-                            진심을 탓하지 마세요
-                          </h3>
-                        </div>
-                        <div className="text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-light space-y-2">
-                          <p>
-                            단 하나라도 내 이야기 같았다면,<br />
-                            <span className="text-[#E5C4BB] font-medium">당신의 매력이 부족해서만은 아닙니다.</span>
-                          </p>
-                          <p className="text-[#FAF7F2]/90">
-                            더 참고, 더 맞추고, 더 기다렸던 마음.<br />
-                            그만큼 관계를 소중히 지키고 싶었을 거예요.
-                          </p>
-                        </div>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                  {/* 왼쪽: 01, 02 웹 텍스트 글귀 (약 58% 비율, 테두리 없는 은은한 퍼플 그라데이션 배경으로 가독성 확보) */}
+                  <div className="lg:col-span-7 order-1 break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-br from-[#4A232B]/30 via-[#2A0A14]/40 to-transparent backdrop-blur-[2px] space-y-8 md:space-y-10">
+                    {/* 01 · 진심을 탓하지 마세요 */}
+                    <div className="space-y-3.5">
+                      <div className="flex items-center gap-2.5">
+                        <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                          01
+                        </span>
+                        <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
+                          진심을 탓하지 마세요
+                        </h3>
                       </div>
-
-                      {/* 구분선 (은은한 로즈 샴페인 선) */}
-                      <div className="w-full h-[1px] bg-gradient-to-r from-[#D4B2A7]/30 via-[#D4B2A7]/10 to-transparent" />
-
-                      {/* 02 · 이제, 나의 자리를 돌아볼 때 */}
-                      <div className="space-y-3.5">
-                        <div className="flex items-center gap-2.5">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
-                            02
-                          </span>
-                          <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
-                            이제, <span className="text-[#E5C4BB]">나의 자리를 돌아볼 때</span>
-                          </h3>
-                        </div>
-                        <div className="text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-light space-y-3">
-                          <p>
-                            상대의 기분과 반응을 먼저 살피는 동안,<br />
-                            내 감정과 기준은 자꾸 뒤로 밀리지 않았나요?
-                          </p>
-                          <div className="p-4 sm:p-5 rounded-xl border border-[rgba(210,166,172,0.25)] bg-[#49303F]/60 text-[#FAF7F2] font-normal leading-[1.75]">
-                            《연애비급》에서 말하는 ‘자리’는<br className="hidden sm:inline" />
-                            관계 안에서 <span className="text-[#E5C4BB] font-semibold">내 마음과 선택도 존중받는 위치</span>입니다.
-                          </div>
-                        </div>
+                      <div className="text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-light space-y-2">
+                        <p>
+                          단 하나라도 내 이야기 같았다면,<br />
+                          <span className="text-[#E5C4BB] font-medium">당신의 매력이 부족해서만은 아닙니다.</span>
+                        </p>
+                        <p className="text-[#FAF7F2]/90">
+                          더 참고, 더 맞추고, 더 기다렸던 마음.<br />
+                          그만큼 관계를 소중히 지키고 싶었을 거예요.
+                        </p>
                       </div>
                     </div>
 
-                    {/* 오른쪽: ‘잘해줄수록, 왜 내 마음은 더 불안해질까요?’ 한옥 창가 여성 이미지 (약 42~45% 비율) */}
-                    <div className="lg:col-span-5 w-full order-2">
-                      <div
-                        onClick={() =>
-                          setPreviewModalItem({
-                            title: '잘해줄수록, 왜 내 마음은 더 불안해질까요?',
-                            imageSrc: '/image/love-secret/love-secret-empathy.png'
-                          })
-                        }
-                        className="cursor-pointer group relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/40 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-black/40 transition-transform duration-300 hover:scale-[1.01]"
-                        title="클릭하여 확대보기"
-                      >
-                        <div className="relative w-full aspect-[3/4]">
-                          <Image
-                            src="/image/love-secret/love-secret-empathy.png"
-                            alt="잘해줄수록, 왜 내 마음은 더 불안해질까요? - 한옥 창가 여성"
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 45vw"
-                            className="object-contain"
-                            priority
-                          />
-                        </div>
+                    {/* 구분선 (은은한 로즈 샴페인 선) */}
+                    <div className="w-full h-[1px] bg-gradient-to-r from-[#D4B2A7]/30 via-[#D4B2A7]/10 to-transparent" />
 
-                        {/* 모바일/PC 클릭 확대 힌트 배지 */}
-                        <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-[#FAF7F2] text-xs font-medium opacity-90 group-hover:opacity-100 transition-opacity shadow-lg">
-                          <ZoomIn className="w-3.5 h-3.5 text-[#E5C4BB]" />
-                          <span>터치하여 확대</span>
+                    {/* 02 · 이제, 나의 자리를 돌아볼 때 */}
+                    <div className="space-y-3.5">
+                      <div className="flex items-center gap-2.5">
+                        <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                          02
+                        </span>
+                        <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
+                          이제, <span className="text-[#E5C4BB]">나의 자리를 돌아볼 때</span>
+                        </h3>
+                      </div>
+                      <div className="text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-light space-y-3">
+                        <p>
+                          상대의 기분과 반응을 먼저 살피는 동안,<br />
+                          내 감정과 기준은 자꾸 뒤로 밀리지 않았나요?
+                        </p>
+                        <div className="p-4 sm:p-5 rounded-xl border border-[rgba(210,166,172,0.25)] bg-[#49303F]/60 text-[#FAF7F2] font-normal leading-[1.75]">
+                          《연애비급》에서 말하는 ‘자리’는<br className="hidden sm:inline" />
+                          관계 안에서 <span className="text-[#E5C4BB] font-semibold">내 마음과 선택도 존중받는 위치</span>입니다.
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  {/* 오른쪽: 이미지 (약 42% 비율, 상단 이미지와 동일한 크기 및 테두리/모서리 규격, 터치하여 확대 글자 제거) */}
+                  <div className="lg:col-span-5 w-full order-2">
+                    <div
+                      onClick={() =>
+                        setPreviewModalItem({
+                          title: '잘해줄수록, 왜 내 마음은 더 불안해질까요?',
+                          imageSrc: '/image/love-secret/love-secret-empathy.png'
+                        })
+                      }
+                      className="cursor-pointer group relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40 transition-transform duration-300 hover:scale-[1.01]"
+                    >
+                      <Image
+                        src="/image/love-secret/love-secret-empathy.png"
+                        alt="잘해줄수록, 왜 내 마음은 더 불안해질까요? - 한옥 창가 여성"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                        className="object-contain"
+                        priority
+                      />
                     </div>
                   </div>
                 </div>
