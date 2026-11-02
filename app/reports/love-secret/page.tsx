@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
@@ -24,6 +24,7 @@ import {
   Clock,
   CheckCircle2,
   ImageIcon,
+  Eye,
   X
 } from 'lucide-react'
 import RecommendedForCards from '@/components/RecommendedForCards'
@@ -119,6 +120,21 @@ export default function LoveSecretEbookPage() {
   // 인포그래픽 및 패키지 목업 확대 모달 상태
 
   // FAQ 아코디언 상태 관리 (첫 번째 질문 기본 오픈)
+  // 관리자·편집 화면 전용 미리보기 상태 (?preview=admin 파라미터 또는 개발 환경)
+  // 책 속 미리보기 고해상도 확대 모달 상태
+  const [previewModalItem, setPreviewModalItem] = useState<{ title: string; imageSrc: string } | null>(null)
+
+  const [isAdminPreview, setIsAdminPreview] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search)
+      if (params.get("preview") === "admin" || params.get("admin") === "true" || process.env.NODE_ENV === "development") {
+        setIsAdminPreview(true)
+      }
+    }
+  }, [])
+
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
   const toggleFaq = (index: number) => {
@@ -373,7 +389,7 @@ export default function LoveSecretEbookPage() {
                       Problem Diagnosis & Resonance
                     </span>
                     <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-[1.45] break-keep">
-                      &ldquo;당신이 마음을 다 바쳐 헌신할수록, 남자는 왜 만만하게 보고 떠났을까?&rdquo;
+                      잘해줄수록,<br className="sm:hidden" /> 왜 내 마음은 <span className="text-[#E5C4BB]">더 불안해질까요?</span>
                     </h2>
                   </div>
 
@@ -609,6 +625,13 @@ export default function LoveSecretEbookPage() {
                       《연애비급》은 뜬구름 잡는 위로나 얄팍한 밀당 기술을 말하지 않습니다.
                       내가 서 있는 자리를 바로잡고 상대의 심리 회로를 꿰뚫어 보아,
                       <strong className="text-[#FAF7F2] font-semibold"> 사랑 앞에서 다시는 스스로를 갉아먹지 않는 &lsquo;관계의 구조&rsquo;를 배우는 책입니다.</strong>
+                    </div>
+
+                    {/* 마무리 강조 문장 */}
+                    <div className="pt-6 md:pt-7 mt-6 md:mt-7 border-t border-[#D4B2A7]/25 text-center sm:text-left">
+                      <p className="font-elegant font-bold text-base md:text-lg lg:text-xl text-[#E5C4BB] tracking-wide break-keep leading-relaxed">
+                        연락의 기술보다, 관계의 맥락을 먼저 읽으세요.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1466,6 +1489,127 @@ export default function LoveSecretEbookPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
+                책 속 미리보기 (독립 영역)
+                - 공개 페이지: 완전 숨김 (null)
+                - 관리자/편집 모드 (?preview=admin 등): 표시
+               ═══════════════════════════════════════════════════════════════ */}
+            {isAdminPreview ? (
+              <section className="mb-28 max-w-6xl mx-auto">
+                <Reveal>
+                  <div
+                    className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 text-center"
+                    style={{
+                      background: "linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)",
+                      boxShadow: "0 12px 40px rgba(0, 0, 0, 0.4)"
+                    }}
+                  >
+                    <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block mb-3">
+                      BOOK PREVIEW
+                    </span>
+                    <h3 className="text-2xl md:text-3xl lg:text-[2.2rem] font-elegant font-bold text-[#FAF7F2] tracking-wide break-keep mb-4">
+                      책 속에서 먼저 만나보세요.
+                    </h3>
+                    <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light max-w-2xl mx-auto leading-relaxed break-keep mb-10 md:mb-12">
+                      관계를 이해하는 본문부터 실전 예시와 워크북까지,<br className="hidden sm:inline" />
+                      《연애비급》의 실제 내용을 미리 확인해 보세요.
+                    </p>
+
+                    {/* 3열 (PC) / 1열 (모바일) 그리드 */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto text-left">
+                      {[
+                        {
+                          order: "01",
+                          title: "연애비급 본편",
+                          desc: "관계를 움직이는 본질적인 원리와 심리 역학 본문",
+                          note: "실제 본문 1쪽 삽입 예정",
+                          imageSrc: ""
+                        },
+                        {
+                          order: "02",
+                          title: "매혹의 무의식 침투 프로토콜",
+                          desc: "남자의 신경회로를 건드리는 실전 대화 예시",
+                          note: "실전 예시 1쪽 삽입 예정",
+                          imageSrc: ""
+                        },
+                        {
+                          order: "03",
+                          title: "30일 매력 각성 워크북",
+                          desc: "스스로를 점검하고 내 자리를 바로잡는 실전 훈련지",
+                          note: "작성 양식 1쪽 삽입 예정",
+                          imageSrc: ""
+                        }
+                      ].map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="p-5 md:p-6 rounded-2xl bg-black/40 border border-[#D4B2A7]/25 flex flex-col justify-between hover:border-[#E5C4BB]/60 transition-all group"
+                        >
+                          <div>
+                            <div className="flex items-center justify-between mb-3">
+                              <span className="text-[#D4B2A7] font-serif font-bold text-xs tracking-wider">
+                                {item.order}
+                              </span>
+                              <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-[#8B263E]/30 text-[#E5C4BB] border border-[#D4B2A7]/30">
+                                {isAdminPreview && !item.imageSrc ? "관리자 확인용" : "미리보기"}
+                              </span>
+                            </div>
+
+                            <h4 className="text-[#FAF7F2] font-elegant font-bold text-lg mb-2 group-hover:text-[#E5C4BB] transition-colors">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs md:text-sm text-[#EDE6DA]/70 leading-relaxed mb-5">
+                              {item.desc}
+                            </p>
+                          </div>
+
+                          {/* 이미지 슬롯 */}
+                          <div>
+                            {item.imageSrc ? (
+                              <div
+                                onClick={() => setPreviewModalItem({ title: item.title, imageSrc: item.imageSrc })}
+                                className="cursor-pointer group/img relative rounded-xl overflow-hidden border border-[#D4B2A7]/30 bg-black/50"
+                              >
+                                <div className="relative w-full aspect-[3/4]">
+                                  <Image
+                                    src={item.imageSrc}
+                                    alt={item.title}
+                                    fill
+                                    className="object-contain transition-transform duration-300 group-hover/img:scale-105"
+                                  />
+                                </div>
+                                <div className="py-2.5 bg-black/70 text-center border-t border-[#D4B2A7]/20 flex items-center justify-center gap-1.5 text-xs text-[#E5C4BB] font-medium group-hover/img:text-white transition-colors">
+                                  <Eye className="w-3.5 h-3.5" />
+                                  <span>눌러서 크게 보기</span>
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="py-12 px-4 rounded-xl border border-dashed border-[#D4B2A7]/40 bg-[#120818]/60 text-center">
+                                <FileText className="w-8 h-8 text-[#D4B2A7]/50 mx-auto mb-2" />
+                                <p className="text-xs font-medium text-[#E5C4BB]">
+                                  [실제 페이지 이미지 삽입 예정]
+                                </p>
+                                <p className="text-[11px] text-[#EDE6DA]/50 mt-1">
+                                  {item.note}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-8 text-center">
+                      <p className="text-xs text-[#D4B2A7]/60">
+                        ※ 관리자 미리보기 모드입니다. 추후 이미지가 등록되면 공개 페이지에 자동으로 활성화됩니다.
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              </section>
+            ) : null}
+
+            <ChampagneThreadDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
                 5. Premium Content Section (기존 프리미엄 가이드북 안내 보존)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
@@ -1796,16 +1940,25 @@ export default function LoveSecretEbookPage() {
                     },
                     {
                       num: "Q4",
+                      q: "이미 헤어진 상태라면 어떤 책이 더 맞을까요?",
+                      a: "관계 속 나의 기준과 반복되는 연애 패턴을 이해하고 싶다면 《연애비급》을, 이별 후 마음을 정리하고 연락과 재회의 방향을 살펴보고 싶다면 《재회비방》을 먼저 확인해 보세요.",
+                      link: {
+                        text: "이별 후의 관계가 고민이라면, 재회비방 살펴보기 →",
+                        href: "/reports/reunion-secret"
+                      }
+                    },
+                    {
+                      num: "Q5",
                       q: "책의 분량과 구성은 어떻게 되며, 실전에 적용하기 쉬운가요?",
                       a: "《연애비급 완전판 본편》, 《전략 시크릿북》, 《실전 워크북》 3권의 체계적인 패키지로 구성되어 있습니다. 막연하고 추상적인 감정 위로에 머물지 않고, 시크릿북에 수록된 상황별 실전 소통 템플릿과 워크북의 데일리 미션을 통해 일상 대화와 카톡에서 당장 어떻게 행동해야 하는지 차근차근 실전에 맞춰 활용하실 수 있습니다."
                     },
                     {
-                      num: "Q5",
+                      num: "Q6",
                       q: "구매 후 다운로드와 열람은 어떻게 진행되나요?",
                       a: "결제 완료 후 마이페이지의 구매 내역 또는 안내 페이지를 통해 다운로드하실 수 있습니다. 표준 PDF 형식으로 제공되므로 스마트폰, 태블릿, PC 등 다양한 디지털 기기에서 뷰어 앱을 통해 편리하게 열람하고 보관하실 수 있습니다."
                     },
                     {
-                      num: "Q6",
+                      num: "Q7",
                       q: "종이책이 배송되는 상품인가요?",
                       a: "아닙니다. 본 상품은 택배로 실물이 배송되지 않는 100% 디지털 다운로드 상품(PDF 전자책 및 디지털 배경화면)입니다. 배송을 기다릴 필요 없이 구매 후 기기에서 바로 파일을 열람하여 학습하실 수 있습니다."
                     }
@@ -1840,7 +1993,17 @@ export default function LoveSecretEbookPage() {
 
                         {isOpen && (
                           <div className="px-6 pb-6 pt-2.5 text-xs md:text-sm text-[#EDE6DA]/80 leading-[1.8] font-light border-t border-white/5 break-keep">
-                            {faq.a}
+                            <p>{faq.a}</p>
+                            {'link' in faq && faq.link && (
+                              <div className="mt-4 pt-1">
+                                <Link
+                                  href={faq.link.href}
+                                  className="inline-flex items-center gap-1.5 text-xs md:text-sm font-medium text-[#E5C4BB] hover:text-[#FAF7F2] transition-colors group"
+                                >
+                                  <span>{faq.link.text}</span>
+                                </Link>
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>
@@ -1849,6 +2012,65 @@ export default function LoveSecretEbookPage() {
                 </div>
               </Reveal>
             </section>
+
+            {/* ═══════════════════════════════════════════════════════════════
+                [추후 추가 예정 · 구매 및 PDF 열람 방법] 독립 영역
+                - 위치: FAQ 아래, '구매 전 안내' 바로 위
+                - 공개 페이지: 임시 문구·빈 상자·불필요한 여백 완전 숨김 처리 (null 반환)
+                - 관리자/편집 화면(?preview=admin): 편집 가이드 프로세스 노출
+                - 추후 이미지·문구 확정 시 즉시 전환 가능한 독립 모듈 구조
+               ═══════════════════════════════════════════════════════════════ */}
+            {isAdminPreview ? (
+              <>
+                <ChampagneThreadDivider />
+                <section className="mb-28 max-w-6xl mx-auto px-4">
+                  <Reveal>
+                    <div className="p-8 md:p-12 rounded-3xl border-2 border-dashed border-[#D4B2A7]/45 bg-[#2A0A14]/70 backdrop-blur-md text-center max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
+                      {/* 관리자 뱃지 */}
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#8B263E]/40 border border-[#D4B2A7]/40 text-[#FAF6EE] text-xs font-medium mb-4">
+                        <span className="w-2 h-2 rounded-full bg-[#E5C4BB] animate-pulse" />
+                        <span>관리자 · 편집 화면 전용 표시 (공개 페이지에서는 자동 숨김)</span>
+                      </div>
+
+                      {/* 안내 타이틀 */}
+                      <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] mb-3">
+                        [추후 추가 예정 · 구매 및 PDF 열람 방법]
+                      </h3>
+                      <p className="text-sm md:text-base text-[#EDE6DA]/85 mb-8 font-light break-keep">
+                        구매·다운로드 방식 확정 후 3단계 안내와 실제 화면 캡처 삽입.
+                      </p>
+
+                      {/* 3단계 프로세스 자리표시 카드 */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center my-6">
+                        <div className="p-5 rounded-2xl bg-black/50 border border-[#D4B2A7]/25 flex flex-col items-center justify-center space-y-2">
+                          <span className="text-xs font-mono font-bold text-[#E5C4BB] px-2.5 py-0.5 rounded-full bg-[#8B263E]/30 border border-[#E5C4BB]/30">
+                            STEP 01
+                          </span>
+                          <span className="text-sm md:text-base font-semibold text-white">결제</span>
+                        </div>
+                        <div className="p-5 rounded-2xl bg-black/50 border border-[#D4B2A7]/25 flex flex-col items-center justify-center space-y-2">
+                          <span className="text-xs font-mono font-bold text-[#E5C4BB] px-2.5 py-0.5 rounded-full bg-[#8B263E]/30 border border-[#E5C4BB]/30">
+                            STEP 02
+                          </span>
+                          <span className="text-sm md:text-base font-semibold text-white">콘텐츠 수령 경로 확인</span>
+                        </div>
+                        <div className="p-5 rounded-2xl bg-black/50 border border-[#D4B2A7]/25 flex flex-col items-center justify-center space-y-2">
+                          <span className="text-xs font-mono font-bold text-[#E5C4BB] px-2.5 py-0.5 rounded-full bg-[#8B263E]/30 border border-[#E5C4BB]/30">
+                            STEP 03
+                          </span>
+                          <span className="text-sm md:text-base font-semibold text-white">PDF 다운로드 · 열람</span>
+                        </div>
+                      </div>
+
+                      <p className="text-xs text-[#D4B2A7]/80 font-light mt-6">
+                        ※ 단계명과 설명은 실제 제공 방식 확정 후 작성.
+                      </p>
+                    </div>
+                  </Reveal>
+                </section>
+              </>
+            ) : null}
+
 
             <ChampagneThreadDivider />
 
@@ -2068,6 +2290,46 @@ export default function LoveSecretEbookPage() {
           onPurchase={handlePurchase}
         />
       </GlobalBackground>
-    </main>
+    {/* 🔍 책 속 미리보기 고해상도 확대 모달 (PC/모바일 확대 & 스크롤 지원) */}
+      {previewModalItem && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-6 overflow-y-auto"
+          onClick={() => setPreviewModalItem(null)}
+        >
+          <div
+            className="relative max-w-3xl w-full max-h-[90vh] bg-[#1F0710] border border-[#D4B2A7]/50 rounded-2xl md:rounded-3xl p-4 sm:p-6 overflow-auto shadow-2xl flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* 상단 헤더: 제목 & 닫기 버튼 */}
+            <div className="w-full flex items-center justify-between pb-3 mb-3 border-b border-white/10">
+              <span className="text-sm sm:text-base font-elegant font-bold text-[#FAF7F2]">
+                {previewModalItem.title} - 실제 페이지 미리보기
+              </span>
+              <button
+                type="button"
+                onClick={() => setPreviewModalItem(null)}
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-[#FAF7F2] flex items-center justify-center transition-colors text-sm font-bold"
+                aria-label="닫기"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* 고해상도 이미지 영역 (스크롤/확대 지원) */}
+            <div className="relative w-full max-w-xl aspect-[3/4] rounded-xl overflow-hidden bg-black/60 flex items-center justify-center">
+              <img
+                src={previewModalItem.imageSrc}
+                alt={previewModalItem.title}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <p className="text-xs text-[#EDE6DA]/60 mt-3 text-center">
+              터치하거나 스크롤하여 세부 본문 내용을 읽으실 수 있습니다.
+            </p>
+          </div>
+        </div>
+      )}
+
+      </main>
   )
 }
