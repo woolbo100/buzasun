@@ -460,7 +460,13 @@ export default function LoveSecretEbookPage() {
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                   {/* 왼쪽: 01, 02 웹 텍스트 글귀 (약 58% 비율, 테두리 없는 은은한 퍼플 그라데이션 배경으로 가독성 확보) */}
-                  <div className="lg:col-span-7 order-1 break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-br from-[#4A232B]/30 via-[#2A0A14]/40 to-transparent backdrop-blur-[2px] space-y-8 md:space-y-10">
+                  <div
+                    className="lg:col-span-7 order-1 break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#D4B2A7]/30 shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                    }}
+                  >
                     {/* 01 · 진심을 탓하지 마세요 */}
                     <div className="space-y-3.5">
                       <div className="flex items-center gap-2.5">
