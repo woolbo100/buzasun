@@ -501,7 +501,7 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 max-w-6xl mx-auto">
               <Reveal>
                 <div
-                  className="gungjung-glass py-12 px-4 md:px-10 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30"
+                  className="gungjung-glass py-10 md:py-14 px-4 sm:px-6 md:px-8 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30"
                   style={{
                     background: 'linear-gradient(135deg, rgba(139, 38, 62, 0.25) 0%, rgba(10, 5, 20, 0.9) 100%)',
                     boxShadow: '0 12px 40px rgba(186, 141, 126, 0.15)'
@@ -520,7 +520,7 @@ export default function LoveSecretEbookPage() {
                     </p>
                   </div>
 
-                  <div className="max-w-4xl mx-auto space-y-4 text-left break-keep">
+                  <div className="max-w-5xl mx-auto space-y-3.5 md:space-y-4 text-left break-keep">
                     {[
                       {
                         beforeTitle: "연락 텀 하나에 하루 종일 멘탈이 요동친다",
@@ -557,28 +557,36 @@ export default function LoveSecretEbookPage() {
                         key={idx}
                         className="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-4 items-stretch"
                       >
-                        {/* BEFORE 카드 (그레이코코아 #463D3B 톤, 밝은 베이지 텍스트) */}
-                        <div className="h-full flex flex-col sm:flex-row items-start gap-3 p-4 rounded-2xl bg-black/40 border border-[#D4B2A7]/20 hover:border-[#D4B2A7]/50 transition-all">
-                          <span className="w-[72px] h-[28px] shrink-0 rounded flex items-center justify-center text-[11px] leading-none font-serif font-bold text-[#EDE6DA] bg-[#2A0A14] border border-[#D4B2A7]/30 whitespace-nowrap">
+                        {/* BEFORE 카드 (코코아 배지 #4B3C43, 밝은 베이지 텍스트) */}
+                        <div className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-black/40 border border-[#D4B2A7]/20 hover:border-[#D4B2A7]/40 transition-all">
+                          <span className="w-[68px] shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[4px] bg-[#4B3C43] border border-[#79646D] text-[#DED0D2] text-[11px] font-serif font-bold leading-none whitespace-nowrap">
                             BEFORE
                           </span>
-                          <div className="flex-1">
-                            <p className="text-[#EDE6DA] text-sm font-medium leading-[1.5]">{item.beforeTitle}</p>
-                            <p className="text-[#EDE6DA]/60 text-xs mt-1.5 font-light leading-[1.65]">{item.beforeSub}</p>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-[#EDE6DA] text-[14px] sm:text-[15px] font-semibold leading-[1.4] break-keep">
+                              {item.beforeTitle}
+                            </p>
+                            <p className="text-[#EDE6DA]/65 text-[12px] sm:text-[13px] font-light leading-[1.4] mt-1 break-keep">
+                              {item.beforeSub}
+                            </p>
                           </div>
                         </div>
 
-                        {/* AFTER 카드 (차분한 딥 더스티 로즈 #49303F 테마 통일) */}
+                        {/* AFTER 카드 (진한 로즈 배지 #87465B, 딥 플럼 와인 배경) */}
                         <div
-                          className="h-full flex flex-col sm:flex-row items-start gap-3 p-4 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_4px_16px_rgba(0,0,0,0.25)] hover:border-[rgba(210,166,172,0.60)] transition-all"
+                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_4px_16px_rgba(0,0,0,0.25)] hover:border-[rgba(210,166,172,0.60)] transition-all"
                           style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                         >
-                          <span className="shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[4px] bg-[#694350] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] font-serif font-bold leading-none whitespace-nowrap">
+                          <span className="w-[68px] shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[4px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] font-serif font-bold leading-none whitespace-nowrap">
                             AFTER
                           </span>
-                          <div className="flex-1">
-                            <p className="text-[#F5E9E2] text-sm font-semibold leading-[1.5]">{item.afterTitle}</p>
-                            <p className="text-[#D5C2C6] text-xs mt-1.5 font-light leading-[1.65]">{item.afterSub}</p>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-[#F5E9E2] text-[14px] sm:text-[15px] font-semibold leading-[1.4] break-keep">
+                              {item.afterTitle}
+                            </p>
+                            <p className="text-[#D5C2C6] text-[12px] sm:text-[13px] font-light leading-[1.4] mt-1 break-keep">
+                              {item.afterSub}
+                            </p>
                           </div>
                         </div>
                       </div>
