@@ -565,22 +565,8 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 섹션 1: 왜 연애비급을 읽어야 하는가? (진심과 공부 스토리텔링 - 글라스 퍼플 카드)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1280px] mx-auto space-y-8 md:space-y-10">
-              {/* 상단 이미지: 영역 상자 가로폭(max-w-[1280px])과 일치하게 삽입 */}
-              <Reveal>
-                <div className="relative w-full overflow-hidden rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40">
-                  <Image
-                    src="/image/love-secret/love-secret-before-after.png"
-                    alt="연애비급 Before & After 구조 변화"
-                    width={1672}
-                    height={941}
-                    sizes="(max-width: 1280px) 100vw, 1280px"
-                    className="w-full h-auto object-contain block"
-                    priority
-                  />
-                </div>
-              </Reveal>
-
+            <section className="mb-28 w-full max-w-[1280px] mx-auto space-y-[48px] md:space-y-[80px]">
+              {/* 1. THE HIDDEN TRUTH 설명 영역 (설명 글 먼저) */}
               <Reveal>
                 <div
                   className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 text-center"
@@ -627,6 +613,21 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
                   </div>
+                </div>
+              </Reveal>
+
+              {/* 2. BEFORE·AFTER 비교 이미지 영역 (전후 비교 이미지 다음) */}
+              <Reveal>
+                <div className="relative w-full overflow-hidden rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40">
+                  <Image
+                    src="/image/love-secret/love-secret-before-after.png"
+                    alt="연애비급 Before & After 구조 변화"
+                    width={1672}
+                    height={941}
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                    className="w-full h-auto object-contain block"
+                    priority
+                  />
                 </div>
               </Reveal>
             </section>
