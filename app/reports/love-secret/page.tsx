@@ -425,8 +425,8 @@ export default function LoveSecretEbookPage() {
                         <p className="text-xs md:text-sm text-[#D4B2A7] font-medium tracking-wide">
                           새벽 2시, 구구절절 보낸 장문 톡 옆에 뜬 ‘숫자 1’
                         </p>
-                        <h3 className="text-base md:text-lg font-elegant font-bold text-[#E5C4BB] leading-[1.5] flex items-center gap-2">
-                          <AlertTriangle className="w-5 h-5 text-[#E5C4BB]" />
+                        <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] flex items-center gap-2.5 break-keep">
+                          <AlertTriangle className="w-6 h-6 text-[#E5C4BB] shrink-0" />
                           나의 연애 누수 체크리스트
                         </h3>
 
