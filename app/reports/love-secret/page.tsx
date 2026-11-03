@@ -277,14 +277,14 @@ export default function LoveSecretEbookPage() {
                 </div>
 
                 {/* 2. 기존 하단 서브카피 & 설명 보존 (장바구니·구매하기 버튼 2개는 삭제) */}
-                <div className="max-w-3xl mx-auto space-y-7 mb-20 px-6">
-                  <p className="text-2xl md:text-[36px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] break-keep">
+                <div className="max-w-4xl lg:max-w-5xl mx-auto space-y-7 mb-20 px-6 text-center">
+                  <p className="text-2xl md:text-[36px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] break-keep md:whitespace-nowrap">
                     사랑을 구걸하는 자리에서, 사랑이 머무는 자리로
                   </p>
 
-                  <div className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3 pt-6 border-t border-white/5 break-keep">
-                    <p>
-                      연애비급은 반복적으로 낮은 자리에 서는 여성을 위한 프리미엄 연애 심리·포지션·매력 구조 해석서입니다.
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3.5 pt-6 border-t border-white/5 break-keep">
+                    <p className="md:whitespace-nowrap">
+                      연애비급은 사랑할수록 반복적으로 흔들리는 여성을 위한 프리미엄 연애 심리·포지션·매력 구조 해석서입니다.
                     </p>
                     <p>
                       더 많이 애쓰는 것이 아니라, 내가 서 있는 자리를 바꾸는 것.
