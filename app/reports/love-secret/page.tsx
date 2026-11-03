@@ -689,13 +689,13 @@ export default function LoveSecretEbookPage() {
                       {
                         beforeTitle: "다 챙겨주고 맞춰줬더니 “설레지 않는다”며 차였다",
                         beforeSub: "과도한 정성과 헌신이 남자의 정복 욕구를 0으로 만듦",
-                        afterTitle: "비소유 신호로 남자의 뇌에 강력한 상실 공포를 심는다",
+                        afterTitle: "남자의 마음에 놓칠 수 있다는 긴장감을 준다",
                         afterSub: "언제든 떠날 수 있는 품격 있는 여자를 남자는 결코 놓지 못합니다."
                       },
                       {
                         beforeTitle: "서운함에 못 이겨 밤에 장문 카톡을 보낸 적이 있다",
                         beforeSub: "상대에게 감정 쓰레기통 취급을 받거나 차단당하는 결말",
-                        afterTitle: "단 3줄의 실전 템플릿으로 남자의 뇌에 죄책감을 각인한다",
+                        afterTitle: "단 3줄의 절제된 답장으로 여운을 준다",
                         afterSub: "구구절절 설명하지 않고 침묵과 여백으로 상황을 종결짓습니다."
                       }
                     ].map((item, idx) => (
