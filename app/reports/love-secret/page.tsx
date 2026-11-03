@@ -387,7 +387,7 @@ export default function LoveSecretEbookPage() {
                     <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       Problem Diagnosis & Resonance
                     </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.45] break-keep">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       잘해줄수록,<br className="sm:hidden" /> 왜 내 마음은 <span className="text-[#E5C4BB]">더 불안해질까요?</span>
                     </h2>
                   </div>
@@ -637,7 +637,7 @@ export default function LoveSecretEbookPage() {
                     <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                       THE POSITION SHIFT
                     </span>
-                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.45]">
+                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       &ldquo;사랑을 공부하고 내 자리를 바로 세웠을 때,<br />
                       <span className="text-[#E5C4BB]">당신의 연애에 일어나는 극적인 반전</span>&rdquo;
                     </h3>
@@ -815,7 +815,7 @@ export default function LoveSecretEbookPage() {
 
                   {/* 오른쪽 핵심 가치 및 6개 포인트 카드 */}
                   <div className="space-y-6 text-left break-keep">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.45]">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       사랑은 감정이 아니라<br />
                       <span className="text-[#E5C4BB]">관계의 구조</span>입니다
                     </h2>
@@ -926,7 +926,7 @@ export default function LoveSecretEbookPage() {
                     <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       THE BAEKDOHWA SOLUTION
                     </span>
-                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-[1.45]">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       복잡한 심리 이론은 필요 없습니다.<br />
                       <span className="text-[#E5C4BB]">내 자리를 바로잡고, 상대를 움직이는 기술을 얹습니다.</span>
                     </h2>
@@ -1715,7 +1715,7 @@ export default function LoveSecretEbookPage() {
                   <div className="space-y-6 text-left break-keep">
                     <div>
                       <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">PREMIUM GUIDEBOOK</span>
-                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2.5 leading-[1.45]">
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2.5 leading-[1.4] break-keep">
                         백도화가 전하는<br />
                         <span className="text-[#E5C4BB]">프리미엄 연애 구조 해석서</span>
                       </h2>
@@ -1768,7 +1768,7 @@ export default function LoveSecretEbookPage() {
                     <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       POSITION SHIFT
                     </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.45]">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       &ldquo;당신의 헌신이 만만함이 되는 이유,<br className="hidden sm:inline" />
                       <span className="text-[#E5C4BB]">&lsquo;관계 시소&rsquo;의 법칙</span>을 모르기 때문입니다.&rdquo;
                     </h2>
@@ -2230,7 +2230,7 @@ export default function LoveSecretEbookPage() {
                 <Reveal>
                   <div className="space-y-6 sm:space-y-7 break-keep">
                     {/* [큰 제목] */}
-                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.38]">
+                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                       선택받기 위해 애쓰지 마세요.<br />
                       <span className="text-[#E5C4BB]">이제, 당신이 선택하세요.</span>
                     </h2>
@@ -2300,7 +2300,7 @@ export default function LoveSecretEbookPage() {
                   {/* 손실 회피(소실점) 카피 */}
                   <div className="mb-8 space-y-4">
                     <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-elegant font-bold tracking-[0.2em] uppercase bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] whitespace-nowrap">CRITICAL CHOICE</span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.45]">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       또다시 수개월의 눈물과<br />
                       <span className="text-[#E5C4BB]">바닥난 자존감</span>을 치르시겠습니까?
                     </h2>
