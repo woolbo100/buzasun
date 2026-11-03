@@ -1811,25 +1811,27 @@ export default function LoveSecretEbookPage() {
                   </p>
                 </div>
 
-                <div className="grid lg:grid-cols-12 gap-10 items-center">
-                  {/* 좌측: 리뷰 목업 이미지 슬롯 */}
-                  <div className="lg:col-span-5">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                  {/* 좌측: 리뷰 목업 이미지 슬롯 (상하 기준선 일치) */}
+                  <div className="lg:col-span-5 flex flex-col justify-center">
                     <HybridImageSlot
                       assetKey="reviews"
                       className="w-full aspect-[3/4]"
                     />
                   </div>
 
-                  {/* 우측: 후기 슬라이더 */}
-                  <div className="lg:col-span-7 space-y-6">
-                    <div
-                      className="gungjung-glass p-8 md:p-10 border-[#D4B2A7]/30 rounded-3xl relative overflow-hidden min-h-[220px] flex flex-col justify-between"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(139, 38, 62, 0.25) 0%, rgba(10, 5, 20, 0.9) 100%)',
-                        boxShadow: '0 8px 32px rgba(186, 141, 126, 0.12)'
-                      }}
-                    >
-                      <div className="space-y-4">
+                  {/* 우측: 후기 영역 (PC 세로 2개 배치, 모바일 1개 배치, 하단 단일 컨트롤러) */}
+                  <div className="lg:col-span-7 flex flex-col justify-between space-y-5 lg:space-y-6">
+                    {/* 카드 2개 묶음 (PC 기준 간격 20~24px: gap-5 lg:gap-6) */}
+                    <div className="flex-1 flex flex-col gap-5 lg:gap-6 justify-between">
+                      {/* 카드 1 (모바일 & PC 공통 표시) */}
+                      <div
+                        className="flex-1 gungjung-glass p-6 sm:p-7 md:p-8 border-[#D4B2A7]/30 rounded-3xl relative overflow-hidden flex flex-col justify-center space-y-3.5 transition-all duration-300 min-h-[160px] md:min-h-[180px]"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(139, 38, 62, 0.25) 0%, rgba(10, 5, 20, 0.9) 100%)',
+                          boxShadow: '0 8px 32px rgba(186, 141, 126, 0.12)'
+                        }}
+                      >
                         <div className="flex items-center justify-between">
                           <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold text-[#FFF1E9] bg-[#87465B] border border-[#D5AFAD] whitespace-nowrap">
                             {reviewCards[reviewIndex].badge}
@@ -1838,41 +1840,63 @@ export default function LoveSecretEbookPage() {
                             {reviewCards[reviewIndex].tag}
                           </span>
                         </div>
-                        <p className="text-lg md:text-xl font-elegant font-semibold text-white leading-relaxed break-keep">
+                        <p className="text-base sm:text-lg md:text-[19px] font-elegant font-semibold text-white leading-relaxed break-keep">
                           &ldquo;{reviewCards[reviewIndex].quote}&rdquo;
                         </p>
                       </div>
 
-                      {/* 하단 컨트롤러 */}
-                      <div className="flex items-center justify-between pt-6 border-t border-white/5 mt-4">
-                        <div className="flex items-center gap-2">
-                          {reviewCards.map((_, idx) => (
-                            <button
-                              key={idx}
-                              onClick={() => setReviewIndex(idx)}
-                              className={`h-2 rounded-full transition-all ${reviewIndex === idx ? 'w-6 bg-[#D4B2A7]' : 'w-2 bg-white/20'
-                                }`}
-                              aria-label={`후기 ${idx + 1} 보기`}
-                            />
-                          ))}
+                      {/* 카드 2 (PC 화면 전용 세로 배치, 기존 서로 다른 후기 데이터 연결) */}
+                      <div
+                        className="hidden lg:flex flex-1 gungjung-glass p-6 sm:p-7 md:p-8 border-[#D4B2A7]/30 rounded-3xl relative overflow-hidden flex-col justify-center space-y-3.5 transition-all duration-300 min-h-[160px] md:min-h-[180px]"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(139, 38, 62, 0.25) 0%, rgba(10, 5, 20, 0.9) 100%)',
+                          boxShadow: '0 8px 32px rgba(186, 141, 126, 0.12)'
+                        }}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold text-[#FFF1E9] bg-[#87465B] border border-[#D5AFAD] whitespace-nowrap">
+                            {reviewCards[(reviewIndex + 1) % reviewCards.length].badge}
+                          </span>
+                          <span className="text-xs text-[#D4B2A7]/70 font-mono">
+                            {reviewCards[(reviewIndex + 1) % reviewCards.length].tag}
+                          </span>
                         </div>
+                        <p className="text-base sm:text-lg md:text-[19px] font-elegant font-semibold text-white leading-relaxed break-keep">
+                          &ldquo;{reviewCards[(reviewIndex + 1) % reviewCards.length].quote}&rdquo;
+                        </p>
+                      </div>
+                    </div>
 
-                        <div className="flex items-center gap-2">
+                    {/* 하단 컨트롤러: 표시 점 + 전환 화살표 한 세트만 배치 */}
+                    <div className="flex items-center justify-between pt-1 sm:pt-2 px-1">
+                      <div className="flex items-center gap-2">
+                        {reviewCards.map((_, idx) => (
                           <button
-                            onClick={prevReview}
-                            className="p-2.5 rounded-full border border-white/10 hover:border-[#D4B2A7]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all"
-                            aria-label="이전 후기"
-                          >
-                            <ChevronLeft className="w-4 h-4" />
-                          </button>
-                          <button
-                            onClick={nextReview}
-                            className="p-2.5 rounded-full border border-white/10 hover:border-[#D4B2A7]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all"
-                            aria-label="다음 후기"
-                          >
-                            <ChevronRight className="w-4 h-4" />
-                          </button>
-                        </div>
+                            key={idx}
+                            onClick={() => setReviewIndex(idx)}
+                            className={`h-2 rounded-full transition-all ${
+                              reviewIndex === idx ? 'w-6 bg-[#D4B2A7]' : 'w-2 bg-white/20'
+                            }`}
+                            aria-label={`후기 ${idx + 1} 보기`}
+                          />
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={prevReview}
+                          className="p-2.5 rounded-full border border-white/10 hover:border-[#D4B2A7]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all"
+                          aria-label="이전 후기"
+                        >
+                          <ChevronLeft className="w-4 h-4" />
+                        </button>
+                        <button
+                          onClick={nextReview}
+                          className="p-2.5 rounded-full border border-white/10 hover:border-[#D4B2A7]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all"
+                          aria-label="다음 후기"
+                        >
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
                       </div>
                     </div>
                   </div>
