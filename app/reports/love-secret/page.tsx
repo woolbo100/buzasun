@@ -569,7 +569,7 @@ export default function LoveSecretEbookPage() {
               {/* 1. THE HIDDEN TRUTH 설명 영역 (설명 글 먼저) */}
               <Reveal>
                 <div
-                  className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 hover:border-[#E5C4BB]/70 shadow-[0_12px_40px_rgba(0,0,0,0.4)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.4),0_0_24px_rgba(229,196,187,0.14)] transition-all duration-300 ease-out cursor-default text-center"
+                  className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 md:hover:border-[#E5C4BB]/80 shadow-[0_12px_40px_rgba(0,0,0,0.4)] md:hover:shadow-[0_16px_45px_rgba(0,0,0,0.45),0_0_20px_rgba(229,196,187,0.18),0_0_48px_rgba(229,196,187,0.12)] md:hover:-translate-y-1 md:hover:brightness-105 transition-all duration-[350ms] ease-out cursor-default text-center"
                   style={{
                     background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)'
                   }}
