@@ -279,7 +279,7 @@ export default function LoveSecretEbookPage() {
                 {/* 2. 기존 하단 서브카피 & 설명 보존 (장바구니·구매하기 버튼 2개는 삭제) */}
                 <div className="max-w-4xl lg:max-w-5xl mx-auto space-y-7 mb-20 px-6 text-center">
                   <p className="text-2xl md:text-[36px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] break-keep md:whitespace-nowrap">
-                    사랑을 구걸하는 자리에서, 사랑이 머무는 자리로
+                    사랑을 갈구하는 자리에서, 사랑이 머무는 자리로
                   </p>
 
                   <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3.5 pt-6 border-t border-white/5 break-keep">
@@ -1129,7 +1129,7 @@ export default function LoveSecretEbookPage() {
 
                         {/* 설명 */}
                         <p className="text-[13.5px] md:text-[14.5px] text-[#D5C2C6] leading-[1.7] font-normal break-keep">
-                          남자의 본능과 심리를 꿰뚫어 보고, 사랑을 구걸하던 자리에서 존중받는 중심 자리로 이동하는 근본 바이블.
+                          남자의 본능과 심리를 꿰뚫어 보고, 사랑을 갈구하던 자리에서 존중받는 중심 자리로 이동하는 근본 바이블.
                         </p>
                       </div>
                     </div>
