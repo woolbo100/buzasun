@@ -262,14 +262,14 @@ export default function LoveSecretEbookPage() {
                   戀愛秘笈 <span className="text-[#D4B2A7]">연애비급</span>
                 </h1>
 
-                {/* 1. 최상단: 가로형 풀 이미지 (love-secret-hero.png, 16:9 비율, 1240px 너비 매칭) */}
-                <div className="w-full max-w-[1240px] mx-auto mb-16">
+                {/* 1. 최상단: 가로형 풀 이미지 (love-secret-hero.png, 16:9 비율, 1280px 너비 매칭) */}
+                <div className="w-full max-w-[1280px] mx-auto mb-16">
                   <div className="relative w-full aspect-video rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#D4B2A7]/25 shadow-2xl">
                     <Image
                       src={productData.topBannerImage}
                       alt="戀愛秘笈 연애비급"
                       fill
-                      sizes="(max-width: 1300px) 100vw, 1240px"
+                      sizes="(max-width: 1300px) 100vw, 1280px"
                       className="object-cover"
                       priority
                     />
@@ -295,8 +295,8 @@ export default function LoveSecretEbookPage() {
                   </div>
                 </div>
 
-                {/* 3. Section 1: Hero Banner 3종 패키지 소개 상자 (1240px 너비 매칭, 단일 구매 영역) */}
-                <div className="w-full max-w-[1240px] mx-auto mb-16 mt-8">
+                {/* 3. Section 1: Hero Banner 3종 패키지 소개 상자 (1280px 너비 매칭, 단일 구매 영역) */}
+                <div className="w-full max-w-[1280px] mx-auto mb-16 mt-8">
                   <div
                     className="w-full rounded-[32px] md:rounded-[40px] p-6 sm:p-8 md:p-12 border border-[#D4B2A7]/40 text-left relative overflow-hidden shadow-2xl"
                     style={{
@@ -380,7 +380,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 2. Pain Point — 문제 진단 & 공감
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-12 md:mb-16 text-left w-full max-w-[1240px] mx-auto">
+            <section className="mb-12 md:mb-16 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="space-y-10">
                   <div className="text-center max-w-3xl mx-auto space-y-5">
@@ -456,7 +456,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규: 공감 & 자리 진단 — 진심을 탓하지 마세요 & 나의 자리를 돌아볼 때
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-16 md:mb-24 text-left w-full max-w-[1240px] mx-auto">
+            <section className="mb-16 md:mb-24 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                   {/* 왼쪽: 01, 02 웹 텍스트 글귀 (약 58% 비율, 테두리 없는 은은한 퍼플 그라데이션 배경으로 가독성 확보) */}
@@ -545,8 +545,8 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 섹션 1: 왜 연애비급을 읽어야 하는가? (진심과 공부 스토리텔링 - 글라스 퍼플 카드)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1240px] mx-auto space-y-8 md:space-y-10">
-              {/* 상단 이미지: 영역 상자 가로폭(max-w-[1240px])과 일치하게 삽입 */}
+            <section className="mb-28 w-full max-w-[1280px] mx-auto space-y-8 md:space-y-10">
+              {/* 상단 이미지: 영역 상자 가로폭(max-w-[1280px])과 일치하게 삽입 */}
               <Reveal>
                 <div className="relative w-full overflow-hidden rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40">
                   <Image
@@ -554,7 +554,7 @@ export default function LoveSecretEbookPage() {
                     alt="연애비급 Before & After 구조 변화"
                     width={1672}
                     height={941}
-                    sizes="(max-width: 1240px) 100vw, 1240px"
+                    sizes="(max-width: 1280px) 100vw, 1280px"
                     className="w-full h-auto object-contain block"
                     priority
                   />
@@ -616,7 +616,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 추가: Before & After 1:1 매칭 비교 (기존 연애비급 디자인 톤앤매너 적용)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
                   className="gungjung-glass py-10 md:py-14 px-4 sm:px-6 md:px-8 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30"
@@ -720,7 +720,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 섹션 3: 저자 경력 및 [저자의 말] (신뢰 구축 - 글라스 퍼플 카드)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
                   className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30"
@@ -791,7 +791,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 2. Product Overview Section: 사랑은 감정이 아니라 관계의 구조입니다
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   {/* 왼쪽 세로 이미지 (3:4 비율, 선택하는 주권자의 위상) */}
@@ -851,7 +851,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 3. Recommended For Section (기존 추천 대상 보존)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   {/* 왼쪽 추천 리스트 */}
@@ -893,7 +893,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 교체: 솔루션 인과관계 통합 설명 (STEP 1: 6대 구조 -> STEP 2: 4대 역학)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="py-4">
                   {/* 솔루션 시스템 인포그래픽 (하단 STEP 1 박스와 동일한 가로폭 적용) */}
@@ -905,7 +905,7 @@ export default function LoveSecretEbookPage() {
                           alt="연애비급 솔루션 시스템 인포그래픽: STEP 1 내 자리 바로잡기 & STEP 2 관계에 적용하기"
                           width={1672}
                           height={941}
-                          sizes="(max-width: 1240px) 100vw, 1240px"
+                          sizes="(max-width: 1280px) 100vw, 1280px"
                           className="w-full h-auto object-contain block"
                           priority
                         />
@@ -1056,7 +1056,7 @@ export default function LoveSecretEbookPage() {
                 신규 Section 4. Product Showcase — 3종 올인원 세트 상세 해부
                 (Book 1, Book 2, Book 3, Special Bonus 전체 목차 및 상세 반영)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 {/* 이미지 상단 헤드라인 */}
                 <div className="text-center mb-6 md:mb-8 max-w-3xl mx-auto break-keep">
@@ -1080,7 +1080,7 @@ export default function LoveSecretEbookPage() {
                         alt="연애비급 3종 올인원 세트 패키지 목업: 연애비급 완전판, 매혹의 무의식 침투 프로토콜, 30일 매력 각성 워크북, 모바일 배경화면"
                         width={1672}
                         height={941}
-                        sizes="(max-width: 1240px) 100vw, 1240px"
+                        sizes="(max-width: 1280px) 100vw, 1280px"
                         className="w-full h-auto object-contain block"
                         priority
                       />
@@ -1689,7 +1689,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 5. Premium Content Section (기존 프리미엄 가이드북 안내 보존)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   {/* 왼쪽 이미지 (love-secret-contents.png 최신 3:4 비율 유지, 잘림 없이 표시) */}
@@ -1752,7 +1752,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 6. Position Shift: 관계 시소의 법칙 & 관계 비교 다이어그램
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div>
                   {/* 상단 텍스트 영역 */}
@@ -1789,7 +1789,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 5. Social Proof — 실전 체감 사례 (슬라이더)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-5 mb-14">
                   <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
@@ -1877,7 +1877,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 6. Comparison Table — 가치 비교표
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-5 mb-14">
                   <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
@@ -2112,7 +2112,7 @@ export default function LoveSecretEbookPage() {
             {isAdminPreview ? (
               <>
                 <ChampagneThreadDivider />
-                <section className="mb-28 w-full max-w-[1240px] mx-auto px-4">
+                <section className="mb-28 w-full max-w-[1280px] mx-auto px-4">
                   <Reveal>
                     <div className="p-8 md:p-12 rounded-3xl border-2 border-dashed border-[#D4B2A7]/45 bg-[#2A0A14]/70 backdrop-blur-md text-center max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
                       {/* 관리자 뱃지 */}
@@ -2166,9 +2166,9 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 7. Digital Product Notice Section (기존 구매 전 안내 보존)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1240px] mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left w-full max-w-[1240px] mx-auto break-keep">
+                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left w-full max-w-[1280px] mx-auto break-keep">
                   <h2 className="text-2xl font-elegant font-bold mb-10 text-white border-l-4 border-[#D4B2A7] pl-6 leading-[1.45]">
                     구매 전 안내
                   </h2>
@@ -2194,9 +2194,9 @@ export default function LoveSecretEbookPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
-                기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1240px 너비 매칭)
+                기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1280px 너비 매칭)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#1F0710] lg:min-h-[640px] xl:min-h-[670px] w-full max-w-[1240px] mx-auto">
+            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#1F0710] lg:min-h-[640px] xl:min-h-[670px] w-full max-w-[1280px] mx-auto">
               {/* 1. 배경 이미지 영역:
                   - 업로드된 원본 사이즈(1672:941) 그대로 세로 사이즈를 크게 확보
                   - object-[85%_top]으로 위쪽 머리 실루엣이 절대 잘리지 않도록 상단 기준 배치 */}
@@ -2205,7 +2205,7 @@ export default function LoveSecretEbookPage() {
                   src={productData.ctaImage}
                   alt="선택받기 위해 애쓰지 마세요. 이제, 당신이 선택하세요 - 연애비급"
                   fill
-                  sizes="(max-width: 1240px) 100vw, 1240px"
+                  sizes="(max-width: 1280px) 100vw, 1280px"
                   className="object-cover object-[right_top] sm:object-[85%_top] lg:object-[85%_top]"
                   priority
                 />
