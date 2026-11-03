@@ -475,12 +475,12 @@ export default function LoveSecretEbookPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                   {/* 왼쪽: 신규 제목 + 01, 02 반투명 상자 (PC 세로 중앙 정렬) */}
                   <div className="lg:col-span-7 order-1 flex flex-col justify-center">
-                    <h3 className="text-[22px] md:text-[28px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] mb-6 break-keep">
-                      사랑하는 동안, 내 자리는 어디였나요?
+                    <h3 className="text-center text-[22px] md:text-[28px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] mb-6 break-keep">
+                      사랑하는 동안, 내 &lsquo;자리&rsquo;는 어디였나요?
                     </h3>
 
                     <div
-                      className="w-full break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#D4B2A7]/30 shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
+                      className="w-full text-left break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#D4B2A7]/30 shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
                       style={{
                         background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
                         boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
