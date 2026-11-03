@@ -196,7 +196,7 @@ export default function ReunionSecretPage() {
                 </h1>
 
                 {/* 큰 이미지 배치 (기존 r1.webp, 16:9 비율) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="relative w-full max-w-[1280px] mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
                     src={productData.heroImage} 
                     alt="재회비방"
@@ -232,7 +232,7 @@ export default function ReunionSecretPage() {
                 </div>
 
                 {/* ─── [신규 Section 1: Hero Banner 패키지 확장 통합] ─── */}
-                <div className="max-w-6xl mx-auto p-8 md:p-14 rounded-3xl bg-gradient-to-b from-[#2D0610]/95 via-[#1E040B]/90 to-[#0A0514] border border-[#C5A059]/40 shadow-[0_0_45px_rgba(96,0,24,0.4)] mt-12 text-center break-keep">
+                <div className="w-full max-w-[1280px] mx-auto p-8 md:p-14 rounded-3xl bg-gradient-to-b from-[#2D0610]/95 via-[#1E040B]/90 to-[#0A0514] border border-[#C5A059]/40 shadow-[0_0_45px_rgba(96,0,24,0.4)] mt-12 text-center break-keep">
                   {/* 핵심 배지 */}
                   <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
                     <span className="inline-block px-4 py-1.5 rounded-full text-xs md:text-sm font-bold tracking-wider text-[#E6BE8A] bg-[#600018]/70 border border-[#E6BE8A]/50 shadow-md">
@@ -298,7 +298,7 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ③ 기존 “붙잡는 법이 아니라…” 소개 (원본 그대로 유지, 와이드 1440px)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-16 xl:gap-20 items-center">
                   <div className="relative w-full aspect-square overflow-hidden rounded-[40px] border border-[#C5A059]/30 shadow-2xl">
@@ -351,7 +351,7 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ④ 신규 Section 2: 문제 진단 (Pain Point & Hook)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 max-w-6xl mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto mb-14">
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
@@ -413,7 +413,7 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 신규 추가 1: Before & After 1:1 매칭 비교 (재회비방 디자인 컨셉 적용)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 max-w-6xl mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 {/* 섹션: Before & After 1:1 매칭 비교 */}
                 <div
@@ -497,7 +497,7 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ⑤ 기존 “이런 분께 추천합니다” (원본 1440px 와이드 레이아웃 복원 - 베이지 카드 1줄 구현)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-[1.15fr_0.85fr] xl:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 xl:gap-20 items-center">
                   <div className="space-y-8 text-left break-keep">
@@ -535,7 +535,7 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ⑥ 신규 교체 2: 재회 솔루션 인과관계 통합 (STEP 1 -> STEP 2)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-6xl mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 {/* 섹션: 재회 솔루션 인과관계 통합 */}
                 <div className="py-4">
@@ -675,7 +675,7 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ⑧ 기존 “실전 재회 노트” (원본 그대로 유지, 와이드 1440px)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-16 xl:gap-20 items-center">
                   <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
@@ -737,7 +737,7 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ⑨ 신규 Section 4: 패키지 구성 (Product Showcase 상세 해부 확장)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 max-w-6xl mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto mb-14">
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
@@ -1104,9 +1104,9 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ⑩ 기존 “이렇게 활용해보세요” (원본 그대로 유지)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left max-w-6xl mx-auto break-keep">
+                <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left w-full max-w-[1280px] mx-auto break-keep">
                   <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#E6BE8A] pl-6">
                     이렇게 활용해보세요
                   </h2>
@@ -1152,7 +1152,7 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ⑪ 신규 Section 5: 후기 영역 (Social Proof)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 max-w-6xl mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto mb-14">
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
@@ -1346,9 +1346,9 @@ export default function ReunionSecretPage() {
             {/* ═════════════════════════════════════════════════════════════════
                 ⑭ 기존 “구매 전 안내” (원본 그대로 유지)
             ═════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left max-w-6xl mx-auto break-keep">
+                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left w-full max-w-[1280px] mx-auto break-keep">
                   <h2 className="text-2xl font-elegant font-bold mb-10 text-white border-l-4 border-[#E6BE8A] pl-6">
                     구매 전 안내
                   </h2>
@@ -1377,7 +1377,7 @@ export default function ReunionSecretPage() {
                 ⑮ 기존 최종 CTA 확장 (기존 제목/설명/버튼 보존 + Section 8 추가)
             ═════════════════════════════════════════════════════════════════ */}
             {/* [기존 최종 CTA 보존, 와이드 1440px] */}
-            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#C5A059]/40 shadow-2xl">
+            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#C5A059]/40 shadow-2xl w-full max-w-[1280px] mx-auto">
               <div className="absolute inset-0 z-0">
                 <Image 
                   src={productData.ctaImage} 

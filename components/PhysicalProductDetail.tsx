@@ -228,7 +228,7 @@ export default function PhysicalProductDetail({
                 )}
                 
                 {/* 메인 비주얼 이미지 (max-w-6xl) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group bg-black/40">
+                <div className="relative w-full max-w-[1280px] mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group bg-black/40">
                   <Image 
                     src={heroImage} 
                     alt={title}
@@ -340,7 +340,7 @@ export default function PhysicalProductDetail({
 
                 {/* 포인트 카드 6개 그리드 */}
                 {overviewPoints && overviewPoints.length > 0 && (
-                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full max-w-[1280px] mx-auto">
                     {overviewPoints.map((point, idx) => (
                       <div 
                         key={idx} 
@@ -406,7 +406,7 @@ export default function PhysicalProductDetail({
                 )}
 
                 {/* 포뮬러 메인 이미지 (max-w-6xl) */}
-                <div className="max-w-6xl mx-auto mb-14">
+                <div className="w-full max-w-[1280px] mx-auto mb-14">
                   <div className="relative aspect-video rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-xl group bg-black/40">
                     <Image src={formulaImage} alt="Formula" fill className="object-cover" />
                   </div>
@@ -414,7 +414,7 @@ export default function PhysicalProductDetail({
 
                 {/* 기능성 원료 & 부원료가 분리되어 넘어온 경우 */}
                 {(functionalIngredients && functionalIngredients.length > 0) || (subIngredients && subIngredients.length > 0) ? (
-                  <div className="max-w-6xl mx-auto space-y-10 text-left">
+                  <div className="w-full max-w-[1280px] mx-auto space-y-10 text-left">
                     {/* 기능성 원료 블록 */}
                     {functionalIngredients && functionalIngredients.length > 0 && (
                       <div className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-[#E6BE8A]/30 bg-gradient-to-br from-[#2D0A1E]/30 to-transparent">
@@ -474,7 +474,7 @@ export default function PhysicalProductDetail({
                   </div>
                 ) : (
                   /* 기존 ingredients 단일 그리드 */
-                  <div className="gungjung-glass p-8 md:p-14 relative overflow-hidden rounded-[28px] border border-white/5 max-w-6xl mx-auto">
+                  <div className="gungjung-glass p-8 md:p-14 relative overflow-hidden rounded-[28px] border border-white/5 w-full max-w-[1280px] mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
                       {ingredients.map((ing, idx) => (
                         <div key={idx} className="detail-glass-card flex gap-5 items-start p-6 rounded-2xl transition-all">
@@ -587,7 +587,7 @@ export default function PhysicalProductDetail({
                       </div>
                     </div>
                   ) : (
-                    <div className="gungjung-glass p-10 rounded-[28px] border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent max-w-6xl mx-auto text-left break-keep">
+                    <div className="gungjung-glass p-10 rounded-[28px] border-white/5 bg-gradient-to-br from-white/[0.02] to-transparent w-full max-w-[1280px] mx-auto text-left break-keep">
                       <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 pl-6" style={{ borderColor: `${accentColor}80` }}>사용 방법</h2>
                       <div className="space-y-6">
                         <p className="text-base text-[#EDE6DA]/80 leading-relaxed break-keep whitespace-pre-wrap">
@@ -611,7 +611,7 @@ export default function PhysicalProductDetail({
             {/* ==========================================
                 8. Notice Section (max-w-6xl)
                 ========================================== */}
-            <section className="mb-28 md:mb-36 max-w-6xl mx-auto">
+            <section className="mb-28 md:mb-36 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="gungjung-glass p-8 md:p-12 rounded-[28px] border border-white/5 text-left">
                   <h2 className="text-xl md:text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#E6BE8A] pl-5">
@@ -637,7 +637,7 @@ export default function PhysicalProductDetail({
             {/* ==========================================
                 9. Final CTA Section (max-w-6xl)
                 ========================================== */}
-            <section className="max-w-6xl mx-auto relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-white/10">
+            <section className="w-full max-w-[1280px] mx-auto relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-white/10">
               <div className="absolute inset-0 z-0">
                 <Image src={ctaImage} alt="CTA" fill className="object-cover transition-transform duration-[10000ms] group-hover:scale-105" />
               </div>

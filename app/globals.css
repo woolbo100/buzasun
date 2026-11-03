@@ -231,6 +231,11 @@
   .max-w-premium {
     max-width: 1440px;
   }
+
+  /* 모든 상세페이지(전자책, 리포트, 실물 제품)의 메인 컨테이너 최대 폭 1280px 통일 */
+  .detail-page .container-premium {
+    max-width: 1280px;
+  }
 }
 
 @layer components {

@@ -97,7 +97,7 @@ export default function AbundanceReportPage() {
                 </h1>
                 
                 {/* 메인 히어로 이미지 - 어두운 필터나 오버레이 없이 원본 표시 */}
-                <div className="relative max-w-6xl mx-auto mb-16 rounded-[40px] overflow-hidden border border-[#8FD3B6]/20 shadow-2xl group">
+                <div className="relative w-full max-w-[1280px] mx-auto mb-16 rounded-[40px] overflow-hidden border border-[#8FD3B6]/20 shadow-2xl group">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.hero} 
                     alt="선천코드 풍요 리포트 메인 이미지"
@@ -204,7 +204,7 @@ export default function AbundanceReportPage() {
                 <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-[0.2em] mb-16">
                   리포트 <span className="text-[#8FD3B6]">핵심</span> <span className="text-[#E6BE8A]">탐구 주제</span>
                 </h2>
-                <div className="max-w-7xl mx-auto mb-20">
+                <div className="w-full max-w-[1280px] mx-auto mb-20">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.analysis} 
                     alt="선천코드 풍요 리포트 핵심 탐구 주제 이미지" 
@@ -305,7 +305,7 @@ export default function AbundanceReportPage() {
                   </Reveal>
 
                   <Reveal>
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full max-w-[1280px] mx-auto">
                       {fiveElements.map((item, idx) => (
                         <div
                           key={idx}
@@ -359,7 +359,7 @@ export default function AbundanceReportPage() {
                     </div>
                   </Reveal>
 
-                  <div className="grid lg:grid-cols-12 gap-8 max-w-6xl mx-auto">
+                  <div className="grid lg:grid-cols-12 gap-8 w-full max-w-[1280px] mx-auto">
                     <div className="lg:col-span-7 space-y-6">
                       <Reveal>
                         <div className="gungjung-glass p-8 border-[#8FD3B6]/15 h-full flex flex-col justify-between">
@@ -431,7 +431,7 @@ export default function AbundanceReportPage() {
             </section>
 
             {/* 7. CTA - 어두운 필터/오버레이 없이 원본 이미지 표시 + 오픈 예정 비활성 버튼 */}
-            <section className="relative min-h-[600px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group border border-[#8FD3B6]/20">
+            <section className="relative min-h-[600px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group border border-[#8FD3B6]/20 w-full max-w-[1280px] mx-auto">
               <div className="absolute inset-0 z-0">
                 <Image 
                   src={ABUNDANCE_REPORT_IMAGES.finalCta} 

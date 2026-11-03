@@ -57,7 +57,7 @@ export default function BaekdohwaReportPage() {
                 </h1>
                 
                 {/* 메인 히어로 이미지 - 상자 없이 와이드하게 배치 (원본 비율 유지) */}
-                <div className="relative max-w-6xl mx-auto mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="relative w-full max-w-[1280px] mx-auto mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
                     src="/image/lovereport/p1.webp" 
                     alt="Hero"
@@ -233,7 +233,7 @@ export default function BaekdohwaReportPage() {
             </section>
 
             {/* 7. CTA - 웅장한 마무리 */}
-            <section className="relative min-h-[600px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group">
+            <section className="relative min-h-[600px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group w-full max-w-[1280px] mx-auto">
               <div className="absolute inset-0 z-0">
                 <Image 
                   src="/image/lovereport/p6.webp" 

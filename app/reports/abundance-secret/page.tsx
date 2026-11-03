@@ -232,7 +232,7 @@ export default function AbundanceSecretPage() {
                 </h1>
 
                 {/* 1. 최상단: 가로형 풀 이미지 (기존 a1.webp, 16:9 비율) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
+                <div className="relative w-full max-w-[1280px] mx-auto aspect-video mb-16 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
                   <Image 
                     src={productData.heroImage} 
                     alt="풍요비책"
@@ -268,7 +268,7 @@ export default function AbundanceSecretPage() {
 
                 {/* 3. 그 밑에 새로 추가된 Section 1: Hero Banner 3종 패키지 확장 통합 카드 */}
                 <div 
-                  className="max-w-6xl mx-auto rounded-[32px] md:rounded-[40px] p-6 md:p-12 mb-16 border border-[#C5A059]/40 text-left relative overflow-hidden shadow-2xl mt-12"
+                  className="w-full max-w-[1280px] mx-auto rounded-[32px] md:rounded-[40px] p-6 md:p-12 mb-16 border border-[#C5A059]/40 text-left relative overflow-hidden shadow-2xl mt-12"
                   style={{
                     background: 'radial-gradient(ellipse at 50% 0%, rgba(22, 78, 63, 0.45) 0%, rgba(11, 43, 34, 0.35) 50%, rgba(10, 5, 20, 0.95) 100%)',
                     boxShadow: '0 0 60px rgba(17, 66, 52, 0.3)'
@@ -393,7 +393,7 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 2. Pain Point — 문제 진단 & 공감
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-6xl mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="space-y-10">
                   <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -457,7 +457,7 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 추가 1: Before & After 1:1 매칭 비교 (풍요비책 디자인 컨셉 적용)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 max-w-6xl mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 {/* 섹션: Before & After 1:1 매칭 비교 */}
                 <div
@@ -582,7 +582,7 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 교체 2: 풍요 솔루션 인과관계 통합 (STEP 1 -> STEP 2)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-6xl mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 {/* 섹션: 풍요 솔루션 인과관계 통합 */}
                 <div className="py-4">
@@ -723,7 +723,7 @@ export default function AbundanceSecretPage() {
                 신규 Section 4. Product Showcase — 3종 올인원 세트 상세 해부
                 (제공된 확장 상세 지침 100% 반영: Book 1, Book 2, Book 3, Bonus)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-6xl mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
@@ -1267,7 +1267,7 @@ export default function AbundanceSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-[#E6BE8A]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left max-w-6xl mx-auto break-keep">
+                <div className="gungjung-glass p-8 md:p-12 border-[#E6BE8A]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left w-full max-w-[1280px] mx-auto break-keep">
                   <div className="text-center md:text-left mb-10">
                     <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">Table of Contents</span>
                     <h2 className="text-2xl md:text-3xl font-elegant font-bold mt-1 text-white border-l-4 border-[#E6BE8A] pl-6">
@@ -1341,7 +1341,7 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 5. Social Proof — 실전 체감 사례 (슬라이더)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-6xl mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
@@ -1430,7 +1430,7 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 6. Comparison Table — 가치 비교표
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left max-w-6xl mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">
@@ -1577,9 +1577,9 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 7. Digital Product Notice Section (기존 구매 전 안내 보존)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left max-w-6xl mx-auto break-keep">
+                <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left w-full max-w-[1280px] mx-auto break-keep">
                   <h2 className="text-2xl font-elegant font-bold mb-10 text-white border-l-4 border-[#E6BE8A] pl-6">
                     구매 전 안내
                   </h2>
@@ -1606,7 +1606,7 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1440px)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#C5A059]/40 shadow-2xl">
+            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[40px] mb-20 group border border-[#C5A059]/40 shadow-2xl w-full max-w-[1280px] mx-auto">
               {/* a6.webp 배경 */}
               <div className="absolute inset-0 z-0">
                 <Image 

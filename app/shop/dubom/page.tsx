@@ -298,7 +298,7 @@ Golden Age가 아닌,
                 </p>
 
                 {/* 메인 16:9 이미지 (/reports/love-secret의 max-w-6xl 규격 적용) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group bg-black/40">
+                <div className="relative w-full max-w-[1280px] mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group bg-black/40">
                   <Image
                     src={heroImage}
                     alt={title}
@@ -458,14 +458,14 @@ Golden Age가 아닌,
                 </div>
 
                 {/* 중앙 16:9 와이드 인포그래픽 이미지 (max-w-6xl) */}
-                <div className="max-w-6xl mx-auto mb-14">
+                <div className="w-full max-w-[1280px] mx-auto mb-14">
                   <div className="relative aspect-video rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-xl group bg-black/40">
                     <Image src={formulaImage} alt="두봄 포뮬러 배합" fill className="object-cover" />
                   </div>
                 </div>
 
                 {/* 원료 정보 카드 목록 (max-w-6xl) */}
-                <div className="max-w-6xl mx-auto space-y-10 text-left">
+                <div className="w-full max-w-[1280px] mx-auto space-y-10 text-left">
                   {/* 기능성 원료 */}
                   <div className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-[#E6BE8A]/30 bg-gradient-to-br from-[#2D0A1E]/30 to-transparent">
                     <div className="flex items-center gap-3 mb-6">
@@ -636,7 +636,7 @@ Golden Age가 아닌,
             {/* ==========================================
                 8. Notice Section (max-w-6xl 중앙 정렬)
                 ========================================== */}
-            <section className="mb-28 md:mb-36 max-w-6xl mx-auto">
+            <section className="mb-28 md:mb-36 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="gungjung-glass p-8 md:p-12 rounded-[28px] border border-white/5 text-left">
                   <h2 className="text-xl md:text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#E6BE8A] pl-5">
@@ -665,7 +665,7 @@ Golden Age가 아닌,
             {/* ==========================================
                 9. Final CTA Section (max-w-6xl 와이드 배치)
                 ========================================== */}
-            <section className="max-w-6xl mx-auto relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-white/10">
+            <section className="w-full max-w-[1280px] mx-auto relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-white/10">
               <div className="absolute inset-0 z-0">
                 <Image
                   src={ctaImage}

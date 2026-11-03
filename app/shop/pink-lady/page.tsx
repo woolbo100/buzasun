@@ -124,7 +124,7 @@ export default function PinkLadyDetailPage() {
                 </p>
 
                 {/* 메인 비주얼 - 자개 테두리 효과와 럭셔리 섀도우 (p1 이미지 선명도 확보를 위한 bg-white 추가) */}
-                <div className="relative max-w-6xl mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(230,190,138,0.1)] group bg-white">
+                <div className="relative w-full max-w-[1280px] mx-auto aspect-video mb-14 rounded-[30px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(230,190,138,0.1)] group bg-white">
                   <Image 
                     src="/image/pinklady/p1.webp" 
                     alt="Pink Lady Secret Ritual"
@@ -273,7 +273,7 @@ export default function PinkLadyDetailPage() {
                 </div>
 
                 {/* 포뮬러 비주얼 배너 */}
-                <div className="relative max-w-6xl mx-auto aspect-video rounded-[32px] overflow-hidden border border-white/10 shadow-[0_15px_30px_rgba(0,0,0,0.4)] mb-12 group">
+                <div className="relative w-full max-w-[1280px] mx-auto aspect-video rounded-[32px] overflow-hidden border border-white/10 shadow-[0_15px_30px_rgba(0,0,0,0.4)] mb-12 group">
                   <Image src="/image/pinklady/p4.webp" alt="Premium Formula ingredients" fill className="object-cover transition-transform duration-[6000ms] group-hover:scale-105" />
                 </div>
 
@@ -352,7 +352,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-12 md:mb-16">
               <Reveal>
-                <div className="gungjung-glass max-w-6xl mx-auto p-8 md:p-12 rounded-[24px] relative overflow-hidden">
+                <div className="gungjung-glass w-full max-w-[1280px] mx-auto p-8 md:p-12 rounded-[24px] relative overflow-hidden">
                   {/* 자개 오로라 광채 백그라운드 효과 */}
                   <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-gradient-to-tr from-[#C58BA0]/10 via-[#E6BE8A]/5 to-[#87CEFA]/10 blur-3xl rounded-full pointer-events-none" />
                   
@@ -400,7 +400,7 @@ export default function PinkLadyDetailPage() {
                 ========================================== */}
             <section className="mb-24 md:mb-36">
               <Reveal>
-                <div className="gungjung-glass max-w-6xl mx-auto p-8 md:p-12 rounded-[24px]">
+                <div className="gungjung-glass w-full max-w-[1280px] mx-auto p-8 md:p-12 rounded-[24px]">
                   <h3 className="text-xl md:text-2xl font-elegant font-bold mb-6 text-white border-l-4 border-[#EDE6DA]/40 pl-4">
                     구매 전 안내
                   </h3>
@@ -438,7 +438,7 @@ export default function PinkLadyDetailPage() {
             {/* ==========================================
                 8. Final CTA
                 ========================================== */}
-            <section className="relative max-w-6xl mx-auto aspect-video overflow-hidden rounded-[32px] mb-20 group">
+            <section className="relative w-full max-w-[1280px] mx-auto aspect-video overflow-hidden rounded-[32px] mb-20 group">
               <div className="absolute inset-0 z-0">
                 <Image src="/image/pinklady/p6.webp" alt="Feminine elegance background" fill className="object-cover transition-transform duration-[10000ms] group-hover:scale-105" />
               </div>
