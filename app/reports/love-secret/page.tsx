@@ -378,7 +378,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 Section 2. Pain Point — 문제 진단 & 공감
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-12 md:mb-16 text-left w-full max-w-[1280px] mx-auto">
+            <section className="mb-[64px] md:mb-[112px] text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="space-y-10">
                   <div className="text-center max-w-3xl mx-auto space-y-5">
@@ -473,14 +473,19 @@ export default function LoveSecretEbookPage() {
             <section className="mb-16 md:mb-24 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                  {/* 왼쪽: 01, 02 웹 텍스트 글귀 (약 58% 비율, 테두리 없는 은은한 퍼플 그라데이션 배경으로 가독성 확보) */}
-                  <div
-                    className="lg:col-span-7 order-1 break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#D4B2A7]/30 shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
-                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
-                    }}
-                  >
+                  {/* 왼쪽: 신규 제목 + 01, 02 반투명 상자 (PC 세로 중앙 정렬) */}
+                  <div className="lg:col-span-7 order-1 flex flex-col justify-center">
+                    <h3 className="text-[22px] md:text-[28px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] mb-6 break-keep">
+                      사랑하는 동안, 내 자리는 어디였나요?
+                    </h3>
+
+                    <div
+                      className="w-full break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#D4B2A7]/30 shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
+                        boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                      }}
+                    >
                     {/* 01 · 진심을 탓하지 마세요 */}
                     <div className="space-y-3.5">
                       <div className="flex items-center gap-2.5">
@@ -528,9 +533,10 @@ export default function LoveSecretEbookPage() {
                       </div>
                     </div>
                   </div>
+                  </div>
 
                   {/* 오른쪽: 이미지 (약 42% 비율, 상단 이미지와 동일한 크기 및 테두리/모서리 규격, 터치하여 확대 글자 제거) */}
-                  <div className="lg:col-span-5 w-full order-2">
+                  <div className="lg:col-span-5 w-full order-2 flex flex-col justify-center">
                     <div
                       onClick={() =>
                         setPreviewModalItem({
