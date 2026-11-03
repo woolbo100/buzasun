@@ -391,7 +391,7 @@ export default function LoveSecretEbookPage() {
 
                   <div className="grid lg:grid-cols-12 gap-10 items-start">
                     {/* 이미지 교체 영역 (기울어진 시소 및 읽씹 화면 비주얼 - 가로 3 : 세로 4 비율, 잘림 없이 전체 표시) */}
-                    <div className="lg:col-span-5 w-full">
+                    <div className="lg:col-span-5 w-full space-y-3">
                       <div className="relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40">
                         <Image
                           src="/images/love-secret/love-pain.png"
@@ -402,6 +402,9 @@ export default function LoveSecretEbookPage() {
                           priority
                         />
                       </div>
+                      <p className="text-center text-xs md:text-sm text-[#D4B2A7] font-medium tracking-wide">
+                        새벽 2시, 구구절절 보낸 장문 톡 옆에 뜬 ‘숫자 1’
+                      </p>
                     </div>
 
                     {/* 본문 텍스트 및 나의 연애 누수 체크리스트 */}
@@ -422,9 +425,6 @@ export default function LoveSecretEbookPage() {
                       </div>
 
                       <div className="space-y-3">
-                        <p className="text-xs md:text-sm text-[#D4B2A7] font-medium tracking-wide">
-                          새벽 2시, 구구절절 보낸 장문 톡 옆에 뜬 ‘숫자 1’
-                        </p>
                         <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] flex items-center gap-2.5 break-keep">
                           <AlertTriangle className="w-6 h-6 text-[#E5C4BB] shrink-0" />
                           나의 연애 누수 체크리스트
