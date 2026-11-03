@@ -282,7 +282,7 @@ export default function LoveSecretEbookPage() {
                     사랑을 구걸하는 자리에서, 사랑이 머무는 자리로
                   </p>
 
-                  <div className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] space-y-3 pt-6 border-t border-white/5 break-keep">
+                  <div className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3 pt-6 border-t border-white/5 break-keep">
                     <p>
                       연애비급은 반복적으로 낮은 자리에 서는 여성을 위한 프리미엄 연애 심리·포지션·매력 구조 해석서입니다.
                     </p>
@@ -323,7 +323,7 @@ export default function LoveSecretEbookPage() {
                           <span className="text-[#E5C4BB]">네가 서 있는 자리가 결과를 만든다.</span>&rdquo;
                         </h2>
 
-                        <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-[1.7] font-light break-keep max-w-xl">
+                        <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep max-w-xl">
                           착하게 맞출수록 만만해지던 연애의 잔혹한 끝. 남자의 무의식 신경회로를 뒤흔들고 관계의 절대적 주도권을 쥐는 22가지 비밀 법칙.
                         </p>
 
@@ -409,12 +409,20 @@ export default function LoveSecretEbookPage() {
 
                     {/* 본문 텍스트 및 나의 연애 누수 체크리스트 */}
                     <div className="lg:col-span-7 space-y-6 break-keep">
-                      <p
-                        className="text-sm md:text-base text-[#D5C2C6] leading-[1.8] font-light p-6 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_8px_24px_rgba(0,0,0,0.3)]"
+                      <div
+                        className="text-[16px] md:text-[18px] text-[#D5C2C6] leading-[1.8] font-normal p-6 sm:p-7 md:p-8 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_8px_24px_rgba(0,0,0,0.3)] space-y-3.5 break-keep h-auto"
                         style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                       >
-                        진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 잔인한 거짓말입니다. 연애는 도덕 시험이 아니라 <strong className="text-[#F5E9E2] font-semibold">위치(Position) 싸움</strong>입니다. 언제든 연락되고 일정을 맞춰주는 순간, 당신은 매혹의 대상이 아닌 <strong className="text-[#F5E9E2] font-semibold">&apos;소모품 노동자&apos;</strong>로 전락합니다. 남자를 잡으려 하지 말고 자리를 잡으십시오. 가만히 있어도 남자가 안달 나 매달리는 <strong className="text-[#F5E9E2] font-semibold">&apos;트로피&apos;</strong>가 되십시오.
-                      </p>
+                        <p>
+                          진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 잔인한 거짓말입니다. 연애는 도덕 시험이 아니라 <strong className="text-[#F5E9E2] font-semibold">위치(Position) 싸움</strong>입니다.
+                        </p>
+                        <p>
+                          언제든 연락되고 일정을 맞춰주는 순간, 당신은 매혹의 대상이 아닌 <strong className="text-[#F5E9E2] font-semibold">&apos;소모품 노동자&apos;</strong>로 전락합니다.
+                        </p>
+                        <p>
+                          남자를 잡으려 하지 말고 자리를 잡으십시오. 가만히 있어도 남자가 안달 나 매달리는 <strong className="text-[#F5E9E2] font-semibold">&apos;트로피&apos;</strong>가 되십시오.
+                        </p>
+                      </div>
 
                       <div className="space-y-3">
                         <p className="text-xs md:text-sm text-[#D4B2A7] font-medium tracking-wide">
@@ -477,7 +485,7 @@ export default function LoveSecretEbookPage() {
                           진심을 탓하지 마세요
                         </h3>
                       </div>
-                      <div className="text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-light space-y-2">
+                      <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-2 break-keep">
                         <p>
                           단 하나라도 내 이야기 같았다면,<br />
                           <span className="text-[#E5C4BB] font-medium">당신의 매력이 부족해서만은 아닙니다.</span>
@@ -502,7 +510,7 @@ export default function LoveSecretEbookPage() {
                           이제, <span className="text-[#E5C4BB]">나의 자리를 돌아볼 때</span>
                         </h3>
                       </div>
-                      <div className="text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-light space-y-3">
+                      <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-3 break-keep">
                         <p>
                           상대의 기분과 반응을 먼저 살피는 동안,<br />
                           내 감정과 기준은 자꾸 뒤로 밀리지 않았나요?
@@ -578,7 +586,7 @@ export default function LoveSecretEbookPage() {
                   </h3>
 
                   {/* 이중 상자 제거: 카드 배경 위에 본문 직접 배치 (최대 너비 800px) */}
-                  <div className="max-w-[800px] mx-auto text-left text-base md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.75] space-y-5 md:space-y-6 break-keep">
+                  <div className="max-w-[800px] mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep">
                     <p>
                       어릴 적 우리는 사랑을 이렇게 배웠습니다.<br />
                       <span className="text-[#FAF7F2] font-medium">
@@ -633,7 +641,7 @@ export default function LoveSecretEbookPage() {
                       &ldquo;사랑을 공부하고 내 자리를 바로 세웠을 때,<br />
                       <span className="text-[#E5C4BB]">당신의 연애에 일어나는 극적인 반전</span>&rdquo;
                     </h3>
-                    <p className="text-[#EDE6DA]/80 text-xs md:text-sm font-light leading-relaxed">
+                    <p className="text-[#EDE6DA]/80 text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
                       상대의 반응에 끌려다니던 &apos;을의 자리&apos;에서,<br className="hidden md:inline" />
                       스스로 존중받고 주도권을 쥐는 &apos;중심의 자리&apos;로 이동합니다.
                     </p>
@@ -737,7 +745,7 @@ export default function LoveSecretEbookPage() {
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide">
                       백도화 (白桃花)
                     </h3>
-                    <p className="text-sm md:text-base text-[#D4B2A7]/90 font-light">
+                    <p className="text-[17px] md:text-[18px] text-[#D4B2A7]/90 font-normal leading-[1.8] break-keep">
                       마음의 구조를 읽고, 관계의 자리를 회복시키는 심리 멘토
                     </p>
 
@@ -762,7 +770,7 @@ export default function LoveSecretEbookPage() {
                   </div>
 
                   {/* 이중 상자 제거: 저자의 편지 본문 (왼쪽 정렬, 최대 너비 800px) */}
-                  <div className="max-w-[800px] mx-auto text-left text-base md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.75] space-y-5 md:space-y-6 break-keep border-t border-[#D4B2A7]/20 pt-8 md:pt-10">
+                  <div className="max-w-[800px] mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep border-t border-[#D4B2A7]/20 pt-8 md:pt-10">
                     <div className="text-[#D4B2A7]/50 text-3xl font-serif leading-none select-none -mb-2">“</div>
 
                     <p>
@@ -811,7 +819,7 @@ export default function LoveSecretEbookPage() {
                       사랑은 감정이 아니라<br />
                       <span className="text-[#E5C4BB]">관계의 구조</span>입니다
                     </h2>
-                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
                       연애비급은 단순히 더 예뻐지는 법, 더 잘해주는 법, 더 참는 법을 말하지 않습니다. 이 책은 연애에서 반복적으로 상처받는 여성이 왜 늘 같은 자리에서 흔들리는지, 어떤 순간 관계의 포지션이 기울어지는지, 그리고 어떻게 다시 나의 중심으로 돌아올 수 있는지를 다룹니다. 사랑받기 위해 애쓰는 여자가 아니라, 사랑이 머물 수밖에 없는 여자가 되는 관계 구조 안내서입니다.
                     </p>
 
@@ -922,7 +930,7 @@ export default function LoveSecretEbookPage() {
                       복잡한 심리 이론은 필요 없습니다.<br />
                       <span className="text-[#E5C4BB]">내 자리를 바로잡고, 상대를 움직이는 기술을 얹습니다.</span>
                     </h2>
-                    <p className="text-[#EDE6DA]/75 text-sm md:text-base max-w-2xl mx-auto font-light leading-[1.8]">
+                    <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] max-w-2xl mx-auto font-normal leading-[1.8] break-keep">
                       내가 흔들리는 상태에서는 어떤 밀당 기술도 먹히지 않습니다.<br />
                       《연애비급》은 <strong className="text-[#FAF7F2] font-semibold">내면의 중심(6대 구조)</strong>을 먼저 세운 뒤, <strong className="text-[#E5C4BB] font-semibold">상대의 무의식을 자극하는 기술(4대 역학)</strong>을 실행하도록 설계되었습니다.
                     </p>
@@ -947,7 +955,7 @@ export default function LoveSecretEbookPage() {
                           내 자리 바로잡기 (6대 핵심 구조)
                         </h3>
                       </div>
-                      <p className="text-[#EDE6DA]/75 text-sm mb-8 leading-[1.8] font-light break-keep">
+                      <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] mb-8 leading-[1.8] font-normal break-keep">
                         사랑받기 위해 나를 설명하고 증명하던 ‘낮은 자리’에서 벗어나는 내면의 기초 작업입니다. 감정에 휘둘리지 않는 자리가 잡혀야 비로소 관계의 주도권이 생깁니다.
                       </p>
 
@@ -996,7 +1004,7 @@ export default function LoveSecretEbookPage() {
                           상대를 움직이는 실전 기술 (4대 핵심 역학)
                         </h3>
                       </div>
-                      <p className="text-[#EDE6DA]/75 text-sm mb-8 leading-[1.8] font-light break-keep">
+                      <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] mb-8 leading-[1.8] font-normal break-keep">
                         내 자리가 단단해졌다면, 이제 남자의 뇌 신경회로를 건드릴 차례입니다. 애원하지 않고도 상대가 스스로 나를 갈망하도록 유도하는 4가지 실전 메커니즘입니다.
                       </p>
 
@@ -1037,7 +1045,7 @@ export default function LoveSecretEbookPage() {
                             <h4 className="text-white font-elegant font-bold text-base md:text-lg leading-[1.5] group-hover:text-[#E5C4BB] transition-colors">
                               {card.title}
                             </h4>
-                            <p className="text-[#EDE6DA]/75 text-xs md:text-sm mt-2 leading-[1.8] font-light">
+                            <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] mt-2 leading-[1.8] font-normal break-keep">
                               {card.desc}
                             </p>
                           </div>
@@ -1066,7 +1074,7 @@ export default function LoveSecretEbookPage() {
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.45]">
                     관계의 판을 뒤집는 <span className="text-[#E5C4BB]">3단계 마스터 패키지</span>
                   </h3>
-                  <p className="text-[#EDE6DA]/75 text-xs md:text-sm mt-2 leading-[1.8] font-light">
+                  <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] mt-2 leading-[1.8] font-normal break-keep">
                     본편으로 원리를 꿰뚫고, 시크릿북으로 실전 무기를 쥐며, 워크북으로 체질을 완성합니다.
                   </p>
                 </div>
@@ -1221,7 +1229,7 @@ export default function LoveSecretEbookPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     3종 올인원 세트 <span className="text-[#E5C4BB]">상세 해부</span>
                   </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
                     PDF 3종(총 172페이지)과 도화만개부 고화질 이미지 파일이 모두 포함된 올인원 패키지입니다.
                   </p>
 
@@ -1561,7 +1569,7 @@ export default function LoveSecretEbookPage() {
                         <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide break-keep mb-4">
                           책 속에서 먼저 만나보세요
                         </h3>
-                        <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light max-w-2xl mx-auto leading-relaxed break-keep mb-8 md:mb-10">
+                        <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/80 font-normal max-w-2xl mx-auto leading-[1.8] break-keep mb-8 md:mb-10">
                           관계를 이해하는 본문부터 실전 예시와 워크북까지,<br className="hidden sm:inline" />
                           《연애비급》의 실제 내용을 미리 확인해 보세요.
                         </p>
@@ -1713,7 +1721,7 @@ export default function LoveSecretEbookPage() {
                       </h2>
                     </div>
 
-                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
                       연애비급은 가벼운 밀당 기술이나 순간적인 유혹법을 말하지 않습니다. 이 책이 말하는 핵심은 상대를 억지로 붙잡는 방법이 아니라, 내가 더 이상 낮은 자리에서 사랑을 기다리지 않는 법입니다. 여성의 품격, 관계의 중심, 말의 결, 감정의 여백, 그리고 자기 가치의 회복을 다룹니다.
                     </p>
 
@@ -1764,7 +1772,7 @@ export default function LoveSecretEbookPage() {
                       &ldquo;당신의 헌신이 만만함이 되는 이유,<br className="hidden sm:inline" />
                       <span className="text-[#E5C4BB]">&lsquo;관계 시소&rsquo;의 법칙</span>을 모르기 때문입니다.&rdquo;
                     </h2>
-                    <p className="text-sm md:text-base text-[#EDE6DA]/80 leading-[1.8] font-light">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/80 leading-[1.8] font-normal break-keep">
                       애원하며 기다리는 자리를 끝내고, 스스로 갈망하게 만드는 주도권을 쥐십시오.
                     </p>
                   </div>
@@ -1798,7 +1806,7 @@ export default function LoveSecretEbookPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     실전 <span className="text-[#E5C4BB]">체감 사례</span>
                   </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
                     연애비급을 적용한 분들의 실제 관계에 일어난 구체적인 변화입니다.
                   </p>
                 </div>
@@ -1886,7 +1894,7 @@ export default function LoveSecretEbookPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     가치 <span className="text-[#E5C4BB]">비교표</span>
                   </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
                     단편적인 인터넷 조언이나 얄팍한 애교와는 완전히 다른 차원의 관계 역학입니다.
                   </p>
                 </div>
@@ -1996,7 +2004,7 @@ export default function LoveSecretEbookPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     자주 묻는 <span className="text-[#E5C4BB]">질문</span>
                   </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-[1.8] font-light break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
                     구매 전 궁금하신 내용을 확인해 보세요.
                   </p>
                 </div>
@@ -2228,7 +2236,7 @@ export default function LoveSecretEbookPage() {
                     </h2>
 
                     {/* [본문] (최소 16px, 밝은 베이지색, 충분한 줄·문단 간격) */}
-                    <div className="space-y-3.5 text-base sm:text-[1.05rem] text-[#EDE6DA] leading-[1.8] font-light">
+                    <div className="space-y-3.5 text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       <p>
                         사랑은 더 많이 애쓴 만큼 주어지는 보상이 아닙니다.<br />
                         진심을 다하는 동안에도, 나의 자리를 잃지 않아야 합니다.
@@ -2296,7 +2304,7 @@ export default function LoveSecretEbookPage() {
                       또다시 수개월의 눈물과<br />
                       <span className="text-[#E5C4BB]">바닥난 자존감</span>을 치르시겠습니까?
                     </h2>
-                    <p className="text-[#EDE6DA]/85 text-sm md:text-base font-light leading-[1.8]">
+                    <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
                       남자의 변덕과 차가운 답장에 하루를 통째로 낭비하던 악순환.<br />
                       자리를 바꾸지 않으면 다음 사람을 만나도 같은 자리에서 상처받습니다.<br />
                       <strong className="text-[#FAF7F2] font-semibold">단 한 번 치킨 한 마리 값으로, 평생 관계의 주도권을 쥐십시오.</strong>
