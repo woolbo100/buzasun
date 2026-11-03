@@ -321,7 +321,8 @@ export default function LoveSecretEbookPage() {
                         </h2>
 
                         <p className="text-[17px] md:text-[18px] text-[#D5C2C6] leading-[1.8] font-normal break-keep max-w-xl">
-                          착하게 맞출수록 가벼워지던 관계의 끝에서 남자의 무의식을 흔들고 관계의 주도권을 되찾는 22가지 비밀 법칙
+                          착하게 맞출수록 가벼워지던 관계의 끝에서 남자의 무의식을 흔들고<br />
+                          관계의 주도권을 되찾는 22가지 비밀 법칙
                         </p>
 
                         {/* 가격 내부 네모상자 제거: 19,000원 가장 크게, 정가와 할인율은 작게 한 줄 정리 */}
