@@ -523,7 +523,7 @@ export default function LoveSecretEbookPage() {
                         </p>
                         <div className="p-4 sm:p-5 rounded-xl border border-[rgba(210,166,172,0.25)] bg-[#49303F]/60 text-[#FAF7F2] font-normal leading-[1.75]">
                           《연애비급》에서 말하는 ‘자리’는<br className="hidden sm:inline" />
-                          관계 안에서 <span className="text-[#E5C4BB] font-semibold">내 마음과 선택도 존중받는 위치</span>입니다.
+                          관계 안에서 <span className="text-[#E5C4BB] font-semibold">내 마음과 선택도 존중받는 위치(Position)</span>입니다.
                         </div>
                       </div>
                     </div>
