@@ -904,10 +904,10 @@ export default function LoveSecretEbookPage() {
                     {/* 서명과 낙관 묶음 (본문과 28~32px 간격, 오른쪽 정렬) */}
                     <div className="pt-7 md:pt-8 flex items-center justify-end gap-2.5 md:gap-3">
                       <span className="text-[15px] md:text-[17px] text-[#EDE6DA] font-elegant font-medium tracking-wide">
-                        저자 백진선 드림
+                        저자 백도화 드림
                       </span>
                       <img
-                        src="/image/love-secret/baekdohwa-vertical-seal.png"
+                        src="/image/love-secret/baekdohwa-vertical-seal.png?v=20261103"
                         alt="백도화 낙관"
                         className="h-[42px] md:h-[54px] w-auto object-contain select-none opacity-95"
                       />
