@@ -764,19 +764,21 @@ export default function LoveSecretEbookPage() {
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide">
                       백도화 (白桃花)
                     </h3>
-                    <p className="text-[17px] md:text-[18px] text-[#D4B2A7]/90 font-normal leading-[1.8] break-keep">
+                    <p className="text-[18px] text-[#D4B2A7]/90 font-normal leading-[1.8] break-keep">
                       마음의 구조를 읽고, 관계의 자리를 회복시키는 심리 멘토
                     </p>
 
                     {/* 핵심 공인 자격 뱃지 (반투명 로즈퍼플 바탕 + 얇은 테두리) */}
                     <div className="flex flex-wrap justify-center gap-2 md:gap-2.5 pt-3 max-w-2xl mx-auto">
                       {[
-                        "국가공인 브레인트레이너",
+                        "브레인트레이너",
                         "NLP 전문상담사",
                         "전문 최면상담사",
                         "자존감코칭전문가",
                         "심리상담사",
-                        "평생교육사"
+                        "명상지도사",
+                        "연애상담사",
+                        "타로/사주상담사"
                       ].map((badge, idx) => (
                         <span
                           key={idx}
