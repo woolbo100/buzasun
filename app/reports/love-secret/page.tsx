@@ -676,13 +676,13 @@ export default function LoveSecretEbookPage() {
                       },
                       {
                         beforeTitle: "관계가 깨질까 봐 서운한 일도 웃으며 참는다",
-                        beforeSub: "맞춰줄수록 '소모품 노동자' 취급을 받는 착한 여자",
+                        beforeSub: "맞춰줄수록 ‘당연한 권리’가 되어버린 착한 여자",
                         afterTitle: "감정 소모 없이 우아한 바운더리로 선을 긋는다",
                         afterSub: "화를 내지 않아도 남자가 스스로 예의를 갖추고 눈치를 봅니다."
                       },
                       {
                         beforeTitle: "“나 진짜 좋아?”, “우리 무슨 사이야?” 확인하려 든다",
-                        beforeSub: "확답을 구걸할수록 가치가 떨어져 달아나는 상대",
+                        beforeSub: "확답을 요구할수록 가치가 떨어져 달아나는 상대",
                         afterTitle: "남자가 먼저 관계를 정의하고 확답을 조른다",
                         afterSub: "말하지 않아도 대체 불가능한 '트로피'의 자리에 섭니다."
                       },
