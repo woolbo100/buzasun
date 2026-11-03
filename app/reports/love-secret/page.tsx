@@ -414,13 +414,16 @@ export default function LoveSecretEbookPage() {
                         style={{ background: 'rgba(60, 34, 50, 0.80)' }}
                       >
                         <p>
-                          진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 잔인한 거짓말입니다. 연애는 도덕 시험이 아니라 <strong className="text-[#F5E9E2] font-semibold">위치(Position) 싸움</strong>입니다.
+                          진심을 다하고 참아주면 사랑받는다는 말은 연애에서 가장 아픈 착각입니다.<br />
+                          연애는 마음의 크기를 겨루는 도덕 시험이 아니라, 내가 어디에 서 있느냐의 <strong className="text-[#F5E9E2] font-semibold">&lsquo;자리(Position)&rsquo;</strong>의 문제입니다.
                         </p>
                         <p>
-                          언제든 연락되고 일정을 맞춰주는 순간, 당신은 매혹의 대상이 아닌 <strong className="text-[#F5E9E2] font-semibold">&apos;소모품 노동자&apos;</strong>로 전락합니다.
+                          언제든 연락이 닿고, 일정을 맞추며 서운함을 삼키는 순간,<br />
+                          당신은 매혹의 대상이 아닌 <strong className="text-[#F5E9E2] font-semibold">&lsquo;늘 그 자리에 있는 편한 사람&rsquo;</strong>으로 흐려집니다.
                         </p>
                         <p>
-                          남자를 잡으려 하지 말고 자리를 잡으십시오. 가만히 있어도 남자가 안달 나 매달리는 <strong className="text-[#F5E9E2] font-semibold">&apos;트로피&apos;</strong>가 되십시오.
+                          남자를 붙잡으려 애쓰지 말고, 당신의 자리를 먼저 세우십시오.<br />
+                          필요한 것은 더 많은 희생이 아니라, 상대가 스스로 다가오게 만드는 <strong className="text-[#F5E9E2] font-semibold">단단한 중심</strong>입니다.
                         </p>
                       </div>
 
