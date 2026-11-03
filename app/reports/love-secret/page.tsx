@@ -248,7 +248,7 @@ export default function LoveSecretEbookPage() {
               <Reveal delayMs={100}>
                 {/* [기존 Hero 보존 영역] 상단 라벨 */}
                 <div className="mb-8">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#D4B2A7] uppercase"
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[#D4B2A7] uppercase"
                     style={{
                       background: 'rgba(186, 141, 126, 0.15)',
                       border: '1px solid rgba(212, 178, 167, 0.3)',
@@ -384,7 +384,7 @@ export default function LoveSecretEbookPage() {
               <Reveal>
                 <div className="space-y-10">
                   <div className="text-center max-w-3xl mx-auto space-y-5">
-                    <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
+                    <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       Problem Diagnosis & Resonance
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.45] break-keep">
@@ -569,7 +569,7 @@ export default function LoveSecretEbookPage() {
                     boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                   }}
                 >
-                  <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block mb-3">
+                  <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                     THE HIDDEN TRUTH
                   </span>
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep mb-8 md:mb-10">
@@ -626,7 +626,7 @@ export default function LoveSecretEbookPage() {
                   }}
                 >
                   <div className="max-w-2xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
-                    <span className="text-amber-400/90 font-elegant text-xs font-semibold tracking-widest uppercase block">
+                    <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                       THE POSITION SHIFT
                     </span>
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.45]">
@@ -731,7 +731,7 @@ export default function LoveSecretEbookPage() {
                 >
                   {/* 이름 & 타이틀 (가운데 정렬) */}
                   <div className="text-center mb-8 md:mb-10 space-y-2.5 break-keep">
-                    <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       AUTHOR & MASTER
                     </span>
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide">
@@ -915,7 +915,7 @@ export default function LoveSecretEbookPage() {
 
                   {/* 인트로 헤드라인 */}
                   <div className="text-center mb-12 space-y-5 break-keep">
-                    <span className="text-[#D4B2A7] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       THE BAEKDOHWA SOLUTION
                     </span>
                     <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-[1.45]">
@@ -1060,7 +1060,7 @@ export default function LoveSecretEbookPage() {
               <Reveal>
                 {/* 이미지 상단 헤드라인 */}
                 <div className="text-center mb-6 md:mb-8 max-w-3xl mx-auto break-keep">
-                  <span className="text-[#E5C4BB] font-elegant text-xs font-semibold tracking-widest uppercase">
+                  <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     3-STEP MASTER PACKAGE
                   </span>
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.45]">
@@ -1215,7 +1215,7 @@ export default function LoveSecretEbookPage() {
                 </div>
 
                 <div className="text-center max-w-3xl mx-auto space-y-5 mb-16">
-                  <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
+                  <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     3-in-1 All-in-One Package
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
@@ -1706,7 +1706,7 @@ export default function LoveSecretEbookPage() {
                   {/* 오른쪽 특징 리스트 */}
                   <div className="space-y-6 text-left break-keep">
                     <div>
-                      <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">Premium Guidebook</span>
+                      <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">PREMIUM GUIDEBOOK</span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2.5 leading-[1.45]">
                         백도화가 전하는<br />
                         <span className="text-[#E5C4BB]">프리미엄 연애 구조 해석서</span>
@@ -1757,7 +1757,7 @@ export default function LoveSecretEbookPage() {
                 <div>
                   {/* 상단 텍스트 영역 */}
                   <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-14 break-keep">
-                    <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold tracking-[0.2em] uppercase text-[#FFF1E9] bg-[#87465B] border border-[#D5AFAD] whitespace-nowrap">
+                    <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       POSITION SHIFT
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.45]">
@@ -1792,7 +1792,7 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-5 mb-14">
-                  <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
+                  <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     Real Life Transformations
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
@@ -1880,7 +1880,7 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-5 mb-14">
-                  <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
+                  <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     Value Comparison
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
@@ -1990,7 +1990,7 @@ export default function LoveSecretEbookPage() {
             <section id="faq" className="mb-28 text-left max-w-4xl mx-auto">
               <Reveal>
                 <div className="text-center space-y-4 mb-14">
-                  <span className="text-[#D4B2A7] font-elegant tracking-[0.2em] text-xs uppercase">
+                  <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     Frequently Asked Questions
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
