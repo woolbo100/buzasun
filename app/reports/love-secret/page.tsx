@@ -695,7 +695,7 @@ export default function LoveSecretEbookPage() {
                       {
                         beforeTitle: "서운함에 못 이겨 밤에 장문 카톡을 보낸 적이 있다",
                         beforeSub: "상대에게 감정 쓰레기통 취급을 받거나 차단당하는 결말",
-                        afterTitle: "단 3줄의 절제된 답장으로 여운을 준다",
+                        afterTitle: "단 3줄의 절제된 답장으로 의문과 여운을 준다",
                         afterSub: "구구절절 설명하지 않고 침묵과 여백으로 상황을 종결짓습니다."
                       }
                     ].map((item, idx) => (
