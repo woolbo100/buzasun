@@ -588,28 +588,33 @@ export default function LoveSecretEbookPage() {
                     <p>
                       어릴 적 우리는 사랑을 이렇게 배웠습니다.<br />
                       <span className="text-[#FAF7F2] font-semibold">
-                        &ldquo;진심을 다하면 결국 통한다. 착하게 맞춰주고 헌신하면 마음을 알아준다.&rdquo;
-                      </span>
+                        &ldquo;진심을 다하면 결국 통한다. 착하게 배려하고 헌신하면 언젠가 내 마음을 알아준다.&rdquo;
+                      </span><br />
+                      진심을 다하면 마음이 닿고, 더 많이 양보하면 관계는 깊어진다고 믿었습니다.
                     </p>
                     <p>
-                      하지만 현실의 연애는 도덕 시험도, 인내심 테스트도 아니었습니다.
-                      내 감정을 다 쏟아붓고 모든 일정을 상대에게 맞출수록, 돌아온 것은 깊은 사랑이 아니라
-                      <strong className="text-[#E5C4BB] font-semibold"> &ldquo;설레지 않는다&rdquo;, &ldquo;편한 친구 같다&rdquo;는 차가운 통보</strong>였습니다.
+                      하지만 현실의 연애는 도덕 시험도, 인내심 테스트도 아니었습니다. 온 마음을 내어주고 모든 일정을 상대에게 맞출수록 상대의 긴장감은 사라졌고, 돌아온 것은 깊은 사랑이 아니라
+                      <strong className="text-[#E5C4BB] font-semibold"> &ldquo;설레지 않는다&rdquo;, &ldquo;편한 친구 같다&rdquo;는 차가운 통보</strong>였습니다. 헌신의 대가는 존중이 아닌 <strong className="text-[#FAF7F2] font-semibold">&lsquo;당연함&rsquo;과 &lsquo;무관심&rsquo;</strong>이었습니다.
                     </p>
                     <p>
-                      운전면허 없이 도로에 나가면 사고가 나듯,
-                      <strong className="text-[#FAF7F2] font-semibold"> 남자의 무의식 작동 원리와 심리 역학을 모른 채 뛰어드는 연애는 늘 같은 자리에서 상처를 남깁니다.</strong>
+                      상대의 마음이 식은 것은 매력이 부족해서가 아닙니다. 관계를 지탱하는 보이지 않는 <strong className="text-[#E5C4BB] font-semibold">&lsquo;무게중심&rsquo;</strong>을 배우지 못했기 때문입니다. 운전면허 없이 도로에 나가면 사고가 나듯,
+                      <strong className="text-[#FAF7F2] font-semibold"> 사람의 마음이 어떻게 움직이는지 모른 채 뛰어드는 연애는 늘 같은 자리에서 상처를 남깁니다.</strong>
                     </p>
-                    <div className="pt-5 border-t border-[#D4B2A7]/20 text-[#EDE6DA]">
-                      《연애비급》은 뜬구름 잡는 위로나 얄팍한 밀당 기술을 말하지 않습니다.
-                      내가 서 있는 자리를 바로잡고 상대의 심리 회로를 꿰뚫어 보아,
-                      <strong className="text-[#FAF7F2] font-semibold"> 사랑 앞에서 다시는 스스로를 갉아먹지 않는 &lsquo;관계의 구조&rsquo;를 배우는 책입니다.</strong>
+                    <div className="pt-5 border-t border-[#D4B2A7]/20 text-[#EDE6DA] space-y-4">
+                      <p>
+                        《연애비급》은 얄팍한 밀당 기술이 아닙니다. 남자의 심리와 무의식이 작동하는 방식, 말 한마디가 관계의 위치를 바꾸는 언어의 원리, 최면과 NLP에서 가져온 관계의 기술까지.
+                        <strong className="text-[#FAF7F2] font-semibold"> 사랑을 감정이 아닌 구조로 이해하도록 정리한 책입니다.</strong>
+                      </p>
+                      <p>
+                        진심은 그대로입니다. 달라지는 건 그 진심이 닿는 방법입니다.<br />
+                        <strong className="text-[#FAF7F2] font-semibold">불안하게 확인하고 맞춰주던 연애에서, 흔들리지 않고 사랑받는 연애로.</strong>
+                      </p>
                     </div>
 
                     {/* 마무리 강조 문장 */}
                     <div className="pt-6 md:pt-7 mt-6 md:mt-7 border-t border-[#D4B2A7]/25 text-center sm:text-left">
                       <p className="font-elegant font-bold text-base md:text-lg lg:text-xl text-[#E5C4BB] tracking-wide break-keep leading-relaxed">
-                        연락의 기술보다, 관계의 맥락을 먼저 읽으세요.
+                        진심에 관계를 읽는 눈을 더하세요. 연락의 기술보다, 관계의 맥락을 먼저 읽으세요.
                       </p>
                     </div>
                   </div>
