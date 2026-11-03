@@ -750,14 +750,101 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30"
+                  className="relative gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/40 overflow-hidden"
                   style={{
                     background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(212, 178, 167, 0.15)'
                   }}
                 >
+                  {/* 은은한 한지 결 (가독성을 해치지 않는 극저도 불투명도 텍스처) */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 pointer-events-none rounded-[inherit] opacity-[0.035] mix-blend-screen"
+                    style={{
+                      backgroundImage: `
+                        radial-gradient(circle at 50% 50%, rgba(229, 196, 187, 0.1) 0%, transparent 70%),
+                        repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(212, 178, 167, 0.25) 3px, rgba(212, 178, 167, 0.25) 4px),
+                        repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(212, 178, 167, 0.2) 4px, rgba(212, 178, 167, 0.2) 5px)
+                      `
+                    }}
+                  />
+                  {/* 미세 닥종이 질감 노이즈 필터 (SVG) */}
+                  <svg
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full pointer-events-none rounded-[inherit] opacity-[0.03] mix-blend-overlay"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <filter id="hanji-letter-grain">
+                      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch" />
+                      <feColorMatrix type="saturate" values="0" />
+                    </filter>
+                    <rect width="100%" height="100%" filter="url(#hanji-letter-grain)" />
+                  </svg>
+
+                  {/* 네 모서리 전통 한국식 격자 문양 (절제된 크기, 샴페인골드 톤) */}
+                  {/* 좌상단 */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    stroke="#D4B2A7"
+                    strokeWidth="1"
+                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 pointer-events-none text-[#D4B2A7] opacity-65"
+                  >
+                    <path d="M2 30V2H30" strokeOpacity="0.8" />
+                    <path d="M6 26V6H26" strokeOpacity="0.45" />
+                    <rect x="2" y="2" width="10" height="10" strokeOpacity="0.85" />
+                    <rect x="5" y="5" width="4" height="4" strokeOpacity="0.5" />
+                    <path d="M12 6H26M6 12V26" strokeOpacity="0.5" />
+                  </svg>
+                  {/* 우상단 */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    stroke="#D4B2A7"
+                    strokeWidth="1"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 pointer-events-none text-[#D4B2A7] opacity-65 rotate-90"
+                  >
+                    <path d="M2 30V2H30" strokeOpacity="0.8" />
+                    <path d="M6 26V6H26" strokeOpacity="0.45" />
+                    <rect x="2" y="2" width="10" height="10" strokeOpacity="0.85" />
+                    <rect x="5" y="5" width="4" height="4" strokeOpacity="0.5" />
+                    <path d="M12 6H26M6 12V26" strokeOpacity="0.5" />
+                  </svg>
+                  {/* 우하단 */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    stroke="#D4B2A7"
+                    strokeWidth="1"
+                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 pointer-events-none text-[#D4B2A7] opacity-65 rotate-180"
+                  >
+                    <path d="M2 30V2H30" strokeOpacity="0.8" />
+                    <path d="M6 26V6H26" strokeOpacity="0.45" />
+                    <rect x="2" y="2" width="10" height="10" strokeOpacity="0.85" />
+                    <rect x="5" y="5" width="4" height="4" strokeOpacity="0.5" />
+                    <path d="M12 6H26M6 12V26" strokeOpacity="0.5" />
+                  </svg>
+                  {/* 좌하단 */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    stroke="#D4B2A7"
+                    strokeWidth="1"
+                    className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 pointer-events-none text-[#D4B2A7] opacity-65 -rotate-90"
+                  >
+                    <path d="M2 30V2H30" strokeOpacity="0.8" />
+                    <path d="M6 26V6H26" strokeOpacity="0.45" />
+                    <rect x="2" y="2" width="10" height="10" strokeOpacity="0.85" />
+                    <rect x="5" y="5" width="4" height="4" strokeOpacity="0.5" />
+                    <path d="M12 6H26M6 12V26" strokeOpacity="0.5" />
+                  </svg>
+
                   {/* 이름 & 타이틀 (가운데 정렬) */}
-                  <div className="text-center mb-8 md:mb-10 space-y-2.5 break-keep">
+                  <div className="relative z-10 text-center mb-8 md:mb-10 space-y-2.5 break-keep">
                     <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       AUTHOR & MASTER
                     </span>
@@ -791,7 +878,7 @@ export default function LoveSecretEbookPage() {
                   </div>
 
                   {/* 이중 상자 제거: 저자의 편지 본문 (왼쪽 정렬, 최대 너비 800px) */}
-                  <div className="max-w-[800px] mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep border-t border-[#D4B2A7]/20 pt-8 md:pt-10">
+                  <div className="relative z-10 max-w-[800px] mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep border-t border-[#D4B2A7]/20 pt-8 md:pt-10">
                     <div className="text-[#D4B2A7]/50 text-3xl font-serif leading-none select-none -mb-2">“</div>
 
                     <p className="text-[#FAF7F2] font-semibold text-[18px] md:text-[19px]">
@@ -814,8 +901,16 @@ export default function LoveSecretEbookPage() {
                       그리고 나다운 온전한 매력으로 당당하게 사랑받기를.
                     </p>
 
-                    <div className="pt-2 text-right text-xs md:text-sm text-[#D4B2A7] font-elegant tracking-wide">
-                      — 마스터 백도화 드림
+                    {/* 서명과 낙관 묶음 (본문과 28~32px 간격, 오른쪽 정렬) */}
+                    <div className="pt-7 md:pt-8 flex items-center justify-end gap-2.5 md:gap-3">
+                      <span className="text-[15px] md:text-[17px] text-[#EDE6DA] font-elegant font-medium tracking-wide">
+                        저자 백진선 드림
+                      </span>
+                      <img
+                        src="/image/love-secret/baekdohwa-vertical-seal.png"
+                        alt="백도화 낙관"
+                        className="h-[42px] md:h-[54px] w-auto object-contain select-none opacity-95"
+                      />
                     </div>
                   </div>
                 </div>
