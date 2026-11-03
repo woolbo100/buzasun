@@ -569,10 +569,10 @@ export default function LoveSecretEbookPage() {
               {/* 1. THE HIDDEN TRUTH 설명 영역 (설명 글 먼저) */}
               <Reveal>
                 <div
-                  className="relative gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 md:hover:border-[#E5C4BB]/90 shadow-[0_16px_45px_rgba(0,0,0,0.5)] md:hover:shadow-[0_16px_45px_rgba(0,0,0,0.45),0_0_20px_rgba(229,196,187,0.18),0_0_48px_rgba(229,196,187,0.12)] md:hover:-translate-y-1 md:hover:brightness-105 transition-all duration-[350ms] ease-out cursor-default text-center overflow-hidden"
+                  className="relative p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 md:hover:border-[#E5C4BB]/90 shadow-[0_16px_45px_rgba(0,0,0,0.6)] md:hover:shadow-[0_16px_45px_rgba(0,0,0,0.55),0_0_20px_rgba(229,196,187,0.18),0_0_48px_rgba(229,196,187,0.12)] md:hover:-translate-y-1 md:hover:brightness-105 transition-all duration-[350ms] ease-out cursor-default text-center overflow-hidden"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(46, 18, 26, 0.94) 0%, rgba(24, 10, 18, 0.97) 50%, rgba(14, 6, 16, 0.98) 100%)',
-                    boxShadow: '0 16px 45px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
+                    background: 'linear-gradient(135deg, rgba(26, 10, 24, 0.98) 0%, rgba(16, 6, 18, 0.99) 50%, rgba(9, 3, 12, 1) 100%)',
+                    boxShadow: '0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
                   {/* 실제 전통 닥종이 한지 질감 레이어 (짧고 가는 불규칙 섬유 + 은은한 펄프 얼룩 + 미세 종이 입자) */}
@@ -936,10 +936,10 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="relative gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 overflow-hidden"
+                  className="relative p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 overflow-hidden"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(46, 18, 26, 0.94) 0%, rgba(24, 10, 18, 0.97) 50%, rgba(14, 6, 16, 0.98) 100%)',
-                    boxShadow: '0 16px 45px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
+                    background: 'linear-gradient(135deg, rgba(26, 10, 24, 0.98) 0%, rgba(16, 6, 18, 0.99) 50%, rgba(9, 3, 12, 1) 100%)',
+                    boxShadow: '0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
                   {/* 실제 전통 닥종이 한지 질감 레이어 (짧고 가는 불규칙 섬유 + 은은한 펄프 얼룩 + 미세 종이 입자) */}
