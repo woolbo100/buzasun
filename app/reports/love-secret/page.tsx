@@ -750,97 +750,118 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="relative gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/40 overflow-hidden"
+                  className="relative gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 overflow-hidden"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(212, 178, 167, 0.15)'
+                    background: 'linear-gradient(135deg, rgba(46, 18, 26, 0.94) 0%, rgba(24, 10, 18, 0.97) 50%, rgba(14, 6, 16, 0.98) 100%)',
+                    boxShadow: '0 16px 45px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
-                  {/* 은은한 한지 결 (가독성을 해치지 않는 극저도 불투명도 텍스처) */}
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 pointer-events-none rounded-[inherit] opacity-[0.035] mix-blend-screen"
-                    style={{
-                      backgroundImage: `
-                        radial-gradient(circle at 50% 50%, rgba(229, 196, 187, 0.1) 0%, transparent 70%),
-                        repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(212, 178, 167, 0.25) 3px, rgba(212, 178, 167, 0.25) 4px),
-                        repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(212, 178, 167, 0.2) 4px, rgba(212, 178, 167, 0.2) 5px)
-                      `
-                    }}
-                  />
-                  {/* 미세 닥종이 질감 노이즈 필터 (SVG) */}
+                  {/* 실제 한지 질감 레이어 (규칙적인 격자/점무늬 제거, 자연스러운 닥나무 섬유질과 운용지 펄프 구름결) */}
                   <svg
                     aria-hidden="true"
-                    className="absolute inset-0 w-full h-full pointer-events-none rounded-[inherit] opacity-[0.03] mix-blend-overlay"
+                    className="absolute inset-0 w-full h-full pointer-events-none rounded-[inherit] overflow-hidden"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <filter id="hanji-letter-grain">
-                      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch" />
-                      <feColorMatrix type="saturate" values="0" />
-                    </filter>
-                    <rect width="100%" height="100%" filter="url(#hanji-letter-grain)" />
+                    <defs>
+                      {/* 불규칙한 닥나무 섬유 가닥 패턴 */}
+                      <pattern id="hanji-natural-fibers" width="340" height="340" patternUnits="userSpaceOnUse">
+                        {/* 길게 뻗은 자연스러운 곡선 닥나무 섬유 */}
+                        <path d="M20 50 Q60 68 110 58 T180 90" stroke="#E5C4BB" strokeWidth="0.8" strokeLinecap="round" opacity="0.16" fill="none" />
+                        <path d="M240 30 Q285 75 325 45" stroke="#D4B2A7" strokeWidth="0.65" strokeLinecap="round" opacity="0.14" fill="none" />
+                        <path d="M45 200 Q95 175 145 210 T230 190" stroke="#E5C4BB" strokeWidth="0.9" strokeLinecap="round" opacity="0.18" fill="none" />
+                        <path d="M260 150 Q305 195 335 235" stroke="#D4B2A7" strokeWidth="0.75" strokeLinecap="round" opacity="0.13" fill="none" />
+                        <path d="M15 280 Q70 310 135 290 T200 320" stroke="#D4B2A7" strokeWidth="0.85" strokeLinecap="round" opacity="0.15" fill="none" />
+                        <path d="M195 245 Q240 285 300 265" stroke="#E5C4BB" strokeWidth="0.7" strokeLinecap="round" opacity="0.17" fill="none" />
+
+                        {/* 한지 특유의 흩어진 미세 잔섬유 가닥들 */}
+                        <path d="M100 120 Q120 135 135 125" stroke="#D4B2A7" strokeWidth="0.6" strokeLinecap="round" opacity="0.14" fill="none" />
+                        <path d="M185 40 Q200 55 190 70" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.15" fill="none" />
+                        <path d="M300 115 Q315 100 325 120" stroke="#D4B2A7" strokeWidth="0.55" strokeLinecap="round" opacity="0.13" fill="none" />
+                        <path d="M35 140 Q50 155 65 145" stroke="#E5C4BB" strokeWidth="0.75" strokeLinecap="round" opacity="0.16" fill="none" />
+                        <path d="M150 235 Q165 255 155 270" stroke="#D4B2A7" strokeWidth="0.55" strokeLinecap="round" opacity="0.14" fill="none" />
+                        <path d="M220 100 Q240 115 260 105" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.15" fill="none" />
+                        <path d="M75 235 Q90 255 110 245" stroke="#D4B2A7" strokeWidth="0.6" strokeLinecap="round" opacity="0.14" fill="none" />
+                        <path d="M280 295 Q300 315 320 305" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.13" fill="none" />
+                      </pattern>
+
+                      {/* 은은한 닥나무 펄프 뭉침 (운용지 구름결) */}
+                      <filter id="hanji-cloudy-pulp">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.015 0.02" numOctaves="3" result="cloudyNoise" />
+                        <feColorMatrix type="matrix" values="1 0 0 0 0.8  0 1 0 0 0.7  0 0 1 0 0.65  0 0 0 0.07 0" />
+                      </filter>
+                    </defs>
+
+                    {/* 1단계: 운용지 펄프 구름결 */}
+                    <rect width="100%" height="100%" filter="url(#hanji-cloudy-pulp)" opacity="0.85" />
+
+                    {/* 2단계: 불규칙한 닥나무 섬유 결 */}
+                    <rect width="100%" height="100%" fill="url(#hanji-natural-fibers)" />
                   </svg>
 
-                  {/* 네 모서리 전통 한국식 격자 문양 (절제된 크기, 샴페인골드 톤) */}
+                  {/* 네 모서리 전통 한국식 격자 문양 (1.5~2배 확대: PC 36px, 모바일 22px, 선명한 샴페인골드) */}
                   {/* 좌상단 */}
                   <svg
                     aria-hidden="true"
-                    viewBox="0 0 32 32"
+                    viewBox="0 0 40 40"
                     fill="none"
                     stroke="#D4B2A7"
-                    strokeWidth="1"
-                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 pointer-events-none text-[#D4B2A7] opacity-65"
+                    strokeWidth="1.2"
+                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85"
                   >
-                    <path d="M2 30V2H30" strokeOpacity="0.8" />
-                    <path d="M6 26V6H26" strokeOpacity="0.45" />
-                    <rect x="2" y="2" width="10" height="10" strokeOpacity="0.85" />
-                    <rect x="5" y="5" width="4" height="4" strokeOpacity="0.5" />
-                    <path d="M12 6H26M6 12V26" strokeOpacity="0.5" />
+                    <path d="M2 38V2H38" strokeOpacity="0.9" />
+                    <path d="M7 34V7H34" strokeOpacity="0.55" />
+                    <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+                    <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+                    <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+                    <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
                   </svg>
                   {/* 우상단 */}
                   <svg
                     aria-hidden="true"
-                    viewBox="0 0 32 32"
+                    viewBox="0 0 40 40"
                     fill="none"
                     stroke="#D4B2A7"
-                    strokeWidth="1"
-                    className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 pointer-events-none text-[#D4B2A7] opacity-65 rotate-90"
+                    strokeWidth="1.2"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 rotate-90"
                   >
-                    <path d="M2 30V2H30" strokeOpacity="0.8" />
-                    <path d="M6 26V6H26" strokeOpacity="0.45" />
-                    <rect x="2" y="2" width="10" height="10" strokeOpacity="0.85" />
-                    <rect x="5" y="5" width="4" height="4" strokeOpacity="0.5" />
-                    <path d="M12 6H26M6 12V26" strokeOpacity="0.5" />
+                    <path d="M2 38V2H38" strokeOpacity="0.9" />
+                    <path d="M7 34V7H34" strokeOpacity="0.55" />
+                    <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+                    <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+                    <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+                    <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
                   </svg>
                   {/* 우하단 */}
                   <svg
                     aria-hidden="true"
-                    viewBox="0 0 32 32"
+                    viewBox="0 0 40 40"
                     fill="none"
                     stroke="#D4B2A7"
-                    strokeWidth="1"
-                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 pointer-events-none text-[#D4B2A7] opacity-65 rotate-180"
+                    strokeWidth="1.2"
+                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 rotate-180"
                   >
-                    <path d="M2 30V2H30" strokeOpacity="0.8" />
-                    <path d="M6 26V6H26" strokeOpacity="0.45" />
-                    <rect x="2" y="2" width="10" height="10" strokeOpacity="0.85" />
-                    <rect x="5" y="5" width="4" height="4" strokeOpacity="0.5" />
-                    <path d="M12 6H26M6 12V26" strokeOpacity="0.5" />
+                    <path d="M2 38V2H38" strokeOpacity="0.9" />
+                    <path d="M7 34V7H34" strokeOpacity="0.55" />
+                    <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+                    <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+                    <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+                    <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
                   </svg>
                   {/* 좌하단 */}
                   <svg
                     aria-hidden="true"
-                    viewBox="0 0 32 32"
+                    viewBox="0 0 40 40"
                     fill="none"
                     stroke="#D4B2A7"
-                    strokeWidth="1"
-                    className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 pointer-events-none text-[#D4B2A7] opacity-65 -rotate-90"
+                    strokeWidth="1.2"
+                    className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 -rotate-90"
                   >
-                    <path d="M2 30V2H30" strokeOpacity="0.8" />
-                    <path d="M6 26V6H26" strokeOpacity="0.45" />
-                    <rect x="2" y="2" width="10" height="10" strokeOpacity="0.85" />
-                    <rect x="5" y="5" width="4" height="4" strokeOpacity="0.5" />
-                    <path d="M12 6H26M6 12V26" strokeOpacity="0.5" />
+                    <path d="M2 38V2H38" strokeOpacity="0.9" />
+                    <path d="M7 34V7H34" strokeOpacity="0.55" />
+                    <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+                    <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+                    <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+                    <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
                   </svg>
 
                   {/* 이름 & 타이틀 (가운데 정렬) */}
