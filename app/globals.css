@@ -331,6 +331,19 @@
   }
 
   /* 얇은 골드 라인 구분자 */
+  
+  /* 한지 서신 카드 전용 호버 효과 (0.3초 전환, 위로 4px 이동, 모바일 터치 고정 방지) */
+  @media (hover: hover) and (pointer: fine) {
+    .hanji-card-hover {
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+    }
+    .hanji-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(229, 196, 187, 0.9) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 24px rgba(229, 196, 187, 0.16), inset 0 0 0 1px rgba(212, 178, 167, 0.25) !important;
+    }
+  }
+
   .gold-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(216, 191, 163, 0.5), transparent);
