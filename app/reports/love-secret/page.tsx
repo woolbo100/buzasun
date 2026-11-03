@@ -575,9 +575,12 @@ export default function LoveSecretEbookPage() {
                     boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                   }}
                 >
-                  <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
-                    THE HIDDEN TRUTH
-                  </span>
+                  <div className="text-center mb-6">
+                    <span className="inline-flex items-center justify-center py-[5px] md:py-[6px] px-[14px] md:px-[16px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[14px] md:text-[16px] font-bold tracking-wide whitespace-nowrap">
+                      <span className="text-[11px] md:text-[13px] mr-1.5 opacity-90">◆</span>
+                      왜, 연애비급인가?
+                    </span>
+                  </div>
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep mb-8 md:mb-10">
                     &ldquo;진심을 다하고 참아주면 될 줄 알았습니다.<br />
                     그런데 왜 사랑도 <span className="text-[#E5C4BB]">&lsquo;공부&rsquo;</span>해야 했을까요?&rdquo;
@@ -587,7 +590,7 @@ export default function LoveSecretEbookPage() {
                   <div className="max-w-[800px] w-full mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep">
                     <p>
                       어릴 적 우리는 사랑을 이렇게 배웠습니다.<br />
-                      <span className="text-[#FAF7F2] font-semibold">
+                      <span className="text-[#E5C4BB] font-semibold">
                         &ldquo;진심을 다하면 결국 통한다. 착하게 배려하고 헌신하면 언젠가 내 마음을 알아준다.&rdquo;
                       </span><br />
                       진심을 다하면 마음이 닿고, 더 많이 양보하면 관계는 깊어진다고 믿었습니다.
@@ -597,16 +600,16 @@ export default function LoveSecretEbookPage() {
                     </p>
                     <p>
                       상대의 마음이 식은 것은 매력이 부족해서가 아닙니다. 관계를 지탱하는 보이지 않는 <strong className="text-[#E5C4BB] font-semibold">&lsquo;무게중심&rsquo;</strong>을 배우지 못했기 때문입니다. 운전면허 없이 도로에 나가면 사고가 나듯,
-                      <strong className="text-[#FAF7F2] font-semibold"> 사람의 마음이 어떻게 움직이는지 모른 채 뛰어드는 연애는 늘 같은 자리에서 상처를 남깁니다.</strong>
+                      <strong className="text-[#E5C4BB] font-semibold"> 사람의 마음이 어떻게 움직이는지 모른 채 뛰어드는 연애는 늘 같은 자리에서 상처를 남깁니다.</strong>
                     </p>
                     <div className="pt-5 border-t border-[#D4B2A7]/20 text-[#EDE6DA] space-y-4">
                       <p>
                         《연애비급》은 얄팍한 밀당 기술이 아닙니다. 남자의 심리와 무의식이 작동하는 방식, 말 한마디가 관계의 위치를 바꾸는 언어의 원리, 최면과 NLP에서 가져온 관계의 기술까지.
-                        <strong className="text-[#FAF7F2] font-semibold"> 사랑을 감정이 아닌 구조로 이해하도록 정리한 책입니다.</strong>
+                        <strong className="text-[#E5C4BB] font-semibold"> 사랑을 감정이 아닌 구조로 이해하도록 정리한 책입니다.</strong>
                       </p>
                       <p>
                         진심은 그대로입니다. 달라지는 건 그 진심이 닿는 방법입니다.<br />
-                        <strong className="text-[#FAF7F2] font-semibold">불안하게 확인하고 맞춰주던 연애에서, 흔들리지 않고 사랑받는 연애로.</strong>
+                        <strong className="text-[#E5C4BB] font-semibold">불안하게 확인하고 맞춰주던 연애에서, 흔들리지 않고 사랑받는 연애로.</strong>
                       </p>
                     </div>
 
