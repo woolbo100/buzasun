@@ -571,7 +571,7 @@ export default function LoveSecretEbookPage() {
                 <div
                   className="relative hanji-card-hover p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 shadow-[0_16px_45px_rgba(0,0,0,0.65)] cursor-default text-center overflow-hidden"
                   style={{
-                    background: 'linear-gradient(to right, rgba(38, 17, 26, 0.96) 0%, rgba(26, 12, 25, 0.97) 40%, rgba(18, 9, 23, 0.98) 70%, rgba(10, 5, 20, 0.99) 100%)',
+                    background: 'linear-gradient(to right, rgba(38, 17, 26, 0.95) 0%, rgba(26, 12, 25, 0.95) 40%, rgba(18, 9, 23, 0.95) 70%, rgba(10, 5, 20, 0.95) 100%)',
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
@@ -938,7 +938,7 @@ export default function LoveSecretEbookPage() {
                 <div
                   className="relative hanji-card-hover p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 shadow-[0_16px_45px_rgba(0,0,0,0.65)] cursor-default overflow-hidden"
                   style={{
-                    background: 'linear-gradient(to right, rgba(38, 17, 26, 0.96) 0%, rgba(26, 12, 25, 0.97) 40%, rgba(18, 9, 23, 0.98) 70%, rgba(10, 5, 20, 0.99) 100%)',
+                    background: 'linear-gradient(to right, rgba(38, 17, 26, 0.95) 0%, rgba(26, 12, 25, 0.95) 40%, rgba(18, 9, 23, 0.95) 70%, rgba(10, 5, 20, 0.95) 100%)',
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
