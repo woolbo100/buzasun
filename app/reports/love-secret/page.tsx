@@ -385,7 +385,7 @@ export default function LoveSecretEbookPage() {
                       Problem Diagnosis & Resonance
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      잘해줄수록,<br className="sm:hidden" /> 왜 내 마음은 <span className="text-[#E5C4BB]">더 불안해질까요?</span>
+                      진심을 다했는데,<br className="sm:hidden" /> 왜 관계는 <span className="text-[#E5C4BB]">점점 기울었을까요?</span>
                     </h2>
                   </div>
 
@@ -442,10 +442,10 @@ export default function LoveSecretEbookPage() {
                               key={idx}
                               className="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-start gap-3.5 hover:border-[#D4B2A7]/40 transition-colors"
                             >
-                              <div className="w-5 h-5 rounded border border-[#A66B73]/60 flex items-center justify-center shrink-0 mt-0.5 bg-[#A66B73] shadow-sm">
+                              <div className="w-5 h-5 rounded border border-[#A66B73]/60 flex items-center justify-center shrink-0 mt-1 bg-[#A66B73] shadow-sm">
                                 <Check className="w-3.5 h-3.5 text-[#FAF6EE]" />
                               </div>
-                              <span className="text-xs md:text-sm text-[#FAF7F2] font-medium leading-[1.65]">
+                              <span className="text-[16px] md:text-[18px] text-[#FAF7F2] font-medium leading-[1.6] break-keep">
                                 {item}
                               </span>
                             </div>
