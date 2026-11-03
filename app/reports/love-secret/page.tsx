@@ -486,53 +486,53 @@ export default function LoveSecretEbookPage() {
                         boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                       }}
                     >
-                    {/* 01 · 진심을 탓하지 마세요 */}
-                    <div className="space-y-3.5">
-                      <div className="flex items-center gap-2.5">
-                        <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
-                          01
-                        </span>
-                        <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
-                          진심을 탓하지 마세요
-                        </h3>
+                      {/* 01 · 진심을 탓하지 마세요 */}
+                      <div className="space-y-3.5">
+                        <div className="flex items-center gap-2.5">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                            01
+                          </span>
+                          <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
+                            진심을 탓하지 마세요
+                          </h3>
+                        </div>
+                        <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-2 break-keep">
+                          <p>
+                            단 하나라도 내 이야기 같았다면,<br />
+                            <span className="text-[#E5C4BB] font-medium">당신의 매력이 부족해서만은 아닙니다.</span>
+                          </p>
+                          <p className="text-[#FAF7F2]/90">
+                            더 참고, 더 맞추고, 더 기다렸던 마음.<br />
+                            그만큼 관계를 소중히 지키고 싶었을 거예요.
+                          </p>
+                        </div>
                       </div>
-                      <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-2 break-keep">
-                        <p>
-                          단 하나라도 내 이야기 같았다면,<br />
-                          <span className="text-[#E5C4BB] font-medium">당신의 매력이 부족해서만은 아닙니다.</span>
-                        </p>
-                        <p className="text-[#FAF7F2]/90">
-                          더 참고, 더 맞추고, 더 기다렸던 마음.<br />
-                          그만큼 관계를 소중히 지키고 싶었을 거예요.
-                        </p>
-                      </div>
-                    </div>
 
-                    {/* 구분선 (은은한 로즈 샴페인 선) */}
-                    <div className="w-full h-[1px] bg-gradient-to-r from-[#D4B2A7]/30 via-[#D4B2A7]/10 to-transparent" />
+                      {/* 구분선 (은은한 로즈 샴페인 선) */}
+                      <div className="w-full h-[1px] bg-gradient-to-r from-[#D4B2A7]/30 via-[#D4B2A7]/10 to-transparent" />
 
-                    {/* 02 · 이제, 나의 자리를 돌아볼 때 */}
-                    <div className="space-y-3.5">
-                      <div className="flex items-center gap-2.5">
-                        <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
-                          02
-                        </span>
-                        <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
-                          이제, <span className="text-[#E5C4BB]">나의 자리를 돌아볼 때</span>
-                        </h3>
-                      </div>
-                      <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-3 break-keep">
-                        <p>
-                          상대의 기분과 반응을 먼저 살피는 동안,<br />
-                          내 감정과 기준은 자꾸 뒤로 밀리지 않았나요?
-                        </p>
-                        <div className="p-4 sm:p-5 rounded-xl border border-[rgba(210,166,172,0.25)] bg-[#49303F]/60 text-[#FAF7F2] font-normal leading-[1.75]">
-                          《연애비급》에서 말하는 ‘자리’는<br className="hidden sm:inline" />
-                          관계 안에서 <span className="text-[#E5C4BB] font-semibold">내 마음과 선택도 존중받는 위치(Position)</span>입니다.
+                      {/* 02 · 이제, 나의 자리를 돌아볼 때 */}
+                      <div className="space-y-3.5">
+                        <div className="flex items-center gap-2.5">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                            02
+                          </span>
+                          <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
+                            이제, <span className="text-[#E5C4BB]">나의 자리를 돌아볼 때</span>
+                          </h3>
+                        </div>
+                        <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-3 break-keep">
+                          <p>
+                            상대의 기분과 반응을 먼저 살피는 동안,<br />
+                            내 감정과 기준은 자꾸 뒤로 밀리지 않았나요?
+                          </p>
+                          <div className="p-4 sm:p-5 rounded-xl border border-[rgba(210,166,172,0.25)] bg-[#49303F]/60 text-[#FAF7F2] font-normal leading-[1.75]">
+                            《연애비급》에서 말하는 ‘자리’는<br className="hidden sm:inline" />
+                            관계 안에서 <span className="text-[#E5C4BB] font-semibold">내 마음과 선택도 존중받는 위치(Position)</span>입니다.
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
                   </div>
 
                   {/* 오른쪽: 이미지 (약 42% 비율, 상단 이미지와 동일한 크기 및 테두리/모서리 규격, 터치하여 확대 글자 제거) */}
@@ -584,10 +584,10 @@ export default function LoveSecretEbookPage() {
                   </h3>
 
                   {/* 이중 상자 제거: 카드 배경 위에 본문 직접 배치 (최대 너비 800px) */}
-                  <div className="max-w-[800px] mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep">
+                  <div className="max-w-[800px] w-full mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep">
                     <p>
                       어릴 적 우리는 사랑을 이렇게 배웠습니다.<br />
-                      <span className="text-[#FAF7F2] font-medium">
+                      <span className="text-[#FAF7F2] font-semibold">
                         &ldquo;진심을 다하면 결국 통한다. 착하게 맞춰주고 헌신하면 마음을 알아준다.&rdquo;
                       </span>
                     </p>
@@ -598,7 +598,7 @@ export default function LoveSecretEbookPage() {
                     </p>
                     <p>
                       운전면허 없이 도로에 나가면 사고가 나듯,
-                      <strong className="text-[#FAF7F2] font-medium"> 남자의 무의식 작동 원리와 심리 역학을 모른 채 뛰어드는 연애는 늘 같은 자리에서 상처를 남깁니다.</strong>
+                      <strong className="text-[#FAF7F2] font-semibold"> 남자의 무의식 작동 원리와 심리 역학을 모른 채 뛰어드는 연애는 늘 같은 자리에서 상처를 남깁니다.</strong>
                     </p>
                     <div className="pt-5 border-t border-[#D4B2A7]/20 text-[#EDE6DA]">
                       《연애비급》은 뜬구름 잡는 위로나 얄팍한 밀당 기술을 말하지 않습니다.
@@ -1887,9 +1887,8 @@ export default function LoveSecretEbookPage() {
                           <button
                             key={idx}
                             onClick={() => setReviewIndex(idx)}
-                            className={`h-2 rounded-full transition-all ${
-                              reviewIndex === idx ? 'w-6 bg-[#D4B2A7]' : 'w-2 bg-white/20'
-                            }`}
+                            className={`h-2 rounded-full transition-all ${reviewIndex === idx ? 'w-6 bg-[#D4B2A7]' : 'w-2 bg-white/20'
+                              }`}
                             aria-label={`후기 ${idx + 1} 보기`}
                           />
                         ))}
