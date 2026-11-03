@@ -575,38 +575,34 @@ export default function LoveSecretEbookPage() {
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
-                  {/* 실제 한지 질감 레이어 (자연스러운 닥나무 섬유질과 운용지 펄프 구름결) */}
+                  {/* 실제 한지 질감 레이어 (짧고 가는 미세 섬유와 부드러운 종이 결) */}
                   <svg
                     aria-hidden="true"
                     className="absolute inset-0 w-full h-full pointer-events-none rounded-[inherit] overflow-hidden"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <defs>
-                      <pattern id="hanji-why-fibers" width="340" height="340" patternUnits="userSpaceOnUse">
-                        <path d="M20 50 Q60 68 110 58 T180 90" stroke="#E5C4BB" strokeWidth="0.8" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M240 30 Q285 75 325 45" stroke="#D4B2A7" strokeWidth="0.65" strokeLinecap="round" opacity="0.14" fill="none" />
-                        <path d="M45 200 Q95 175 145 210 T230 190" stroke="#E5C4BB" strokeWidth="0.9" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M260 150 Q305 195 335 235" stroke="#D4B2A7" strokeWidth="0.75" strokeLinecap="round" opacity="0.13" fill="none" />
-                        <path d="M15 280 Q70 310 135 290 T200 320" stroke="#D4B2A7" strokeWidth="0.85" strokeLinecap="round" opacity="0.15" fill="none" />
-                        <path d="M195 245 Q240 285 300 265" stroke="#E5C4BB" strokeWidth="0.7" strokeLinecap="round" opacity="0.17" fill="none" />
-
-                        <path d="M100 120 Q120 135 135 125" stroke="#D4B2A7" strokeWidth="0.6" strokeLinecap="round" opacity="0.14" fill="none" />
-                        <path d="M185 40 Q200 55 190 70" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.15" fill="none" />
-                        <path d="M300 115 Q315 100 325 120" stroke="#D4B2A7" strokeWidth="0.55" strokeLinecap="round" opacity="0.13" fill="none" />
-                        <path d="M35 140 Q50 155 65 145" stroke="#E5C4BB" strokeWidth="0.75" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M150 235 Q165 255 155 270" stroke="#D4B2A7" strokeWidth="0.55" strokeLinecap="round" opacity="0.14" fill="none" />
-                        <path d="M220 100 Q240 115 260 105" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.15" fill="none" />
-                        <path d="M75 235 Q90 255 110 245" stroke="#D4B2A7" strokeWidth="0.6" strokeLinecap="round" opacity="0.14" fill="none" />
-                        <path d="M280 295 Q300 315 320 305" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.13" fill="none" />
+                      {/* 짧고 가는 불규칙한 닥나무 미세 잔섬유 (선명한 긴 곡선 제거, 은은한 투명도 0.04~0.05) */}
+                      <pattern id="hanji-why-fibers" width="360" height="360" patternUnits="userSpaceOnUse">
+                        <path d="M40 70 Q60 82 85 75" stroke="#E5C4BB" strokeWidth="0.45" strokeLinecap="round" opacity="0.05" fill="none" />
+                        <path d="M230 45 Q250 65 240 85" stroke="#D4B2A7" strokeWidth="0.4" strokeLinecap="round" opacity="0.045" fill="none" />
+                        <path d="M120 180 Q145 195 170 185" stroke="#E5C4BB" strokeWidth="0.5" strokeLinecap="round" opacity="0.05" fill="none" />
+                        <path d="M290 190 Q310 215 300 235" stroke="#D4B2A7" strokeWidth="0.4" strokeLinecap="round" opacity="0.04" fill="none" />
+                        <path d="M60 280 Q85 300 115 290" stroke="#D4B2A7" strokeWidth="0.45" strokeLinecap="round" opacity="0.045" fill="none" />
+                        <path d="M210 295 Q235 315 260 305" stroke="#E5C4BB" strokeWidth="0.4" strokeLinecap="round" opacity="0.04" fill="none" />
                       </pattern>
 
+                      {/* 미세한 닥종이 표면 결 */}
                       <filter id="hanji-why-cloudy-pulp">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.015 0.02" numOctaves="3" result="cloudyNoise" />
-                        <feColorMatrix type="matrix" values="1 0 0 0 0.8  0 1 0 0 0.7  0 0 1 0 0.65  0 0 0 0.07 0" />
+                        <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" result="fineGrain" />
+                        <feColorMatrix type="matrix" values="1 0 0 0 0.8  0 1 0 0 0.7  0 0 1 0 0.65  0 0 0 0.025 0" />
                       </filter>
                     </defs>
 
-                    <rect width="100%" height="100%" filter="url(#hanji-why-cloudy-pulp)" opacity="0.85" />
+                    {/* 1단계: 미세 한지 표면 결 */}
+                    <rect width="100%" height="100%" filter="url(#hanji-why-cloudy-pulp)" />
+
+                    {/* 2단계: 은은하게 흩어진 짧고 가는 미세 섬유 */}
                     <rect width="100%" height="100%" fill="url(#hanji-why-fibers)" />
                   </svg>
 
@@ -858,45 +854,34 @@ export default function LoveSecretEbookPage() {
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
-                  {/* 실제 한지 질감 레이어 (규칙적인 격자/점무늬 제거, 자연스러운 닥나무 섬유질과 운용지 펄프 구름결) */}
+                  {/* 실제 한지 질감 레이어 (짧고 가는 미세 섬유와 부드러운 종이 결) */}
                   <svg
                     aria-hidden="true"
                     className="absolute inset-0 w-full h-full pointer-events-none rounded-[inherit] overflow-hidden"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <defs>
-                      {/* 불규칙한 닥나무 섬유 가닥 패턴 */}
-                      <pattern id="hanji-natural-fibers" width="340" height="340" patternUnits="userSpaceOnUse">
-                        {/* 길게 뻗은 자연스러운 곡선 닥나무 섬유 */}
-                        <path d="M20 50 Q60 68 110 58 T180 90" stroke="#E5C4BB" strokeWidth="0.8" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M240 30 Q285 75 325 45" stroke="#D4B2A7" strokeWidth="0.65" strokeLinecap="round" opacity="0.14" fill="none" />
-                        <path d="M45 200 Q95 175 145 210 T230 190" stroke="#E5C4BB" strokeWidth="0.9" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M260 150 Q305 195 335 235" stroke="#D4B2A7" strokeWidth="0.75" strokeLinecap="round" opacity="0.13" fill="none" />
-                        <path d="M15 280 Q70 310 135 290 T200 320" stroke="#D4B2A7" strokeWidth="0.85" strokeLinecap="round" opacity="0.15" fill="none" />
-                        <path d="M195 245 Q240 285 300 265" stroke="#E5C4BB" strokeWidth="0.7" strokeLinecap="round" opacity="0.17" fill="none" />
-
-                        {/* 한지 특유의 흩어진 미세 잔섬유 가닥들 */}
-                        <path d="M100 120 Q120 135 135 125" stroke="#D4B2A7" strokeWidth="0.6" strokeLinecap="round" opacity="0.14" fill="none" />
-                        <path d="M185 40 Q200 55 190 70" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.15" fill="none" />
-                        <path d="M300 115 Q315 100 325 120" stroke="#D4B2A7" strokeWidth="0.55" strokeLinecap="round" opacity="0.13" fill="none" />
-                        <path d="M35 140 Q50 155 65 145" stroke="#E5C4BB" strokeWidth="0.75" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M150 235 Q165 255 155 270" stroke="#D4B2A7" strokeWidth="0.55" strokeLinecap="round" opacity="0.14" fill="none" />
-                        <path d="M220 100 Q240 115 260 105" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.15" fill="none" />
-                        <path d="M75 235 Q90 255 110 245" stroke="#D4B2A7" strokeWidth="0.6" strokeLinecap="round" opacity="0.14" fill="none" />
-                        <path d="M280 295 Q300 315 320 305" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.13" fill="none" />
+                      {/* 짧고 가는 불규칙한 닥나무 미세 잔섬유 (선명한 긴 곡선 제거, 은은한 투명도 0.04~0.05) */}
+                      <pattern id="hanji-natural-fibers" width="360" height="360" patternUnits="userSpaceOnUse">
+                        <path d="M40 70 Q60 82 85 75" stroke="#E5C4BB" strokeWidth="0.45" strokeLinecap="round" opacity="0.05" fill="none" />
+                        <path d="M230 45 Q250 65 240 85" stroke="#D4B2A7" strokeWidth="0.4" strokeLinecap="round" opacity="0.045" fill="none" />
+                        <path d="M120 180 Q145 195 170 185" stroke="#E5C4BB" strokeWidth="0.5" strokeLinecap="round" opacity="0.05" fill="none" />
+                        <path d="M290 190 Q310 215 300 235" stroke="#D4B2A7" strokeWidth="0.4" strokeLinecap="round" opacity="0.04" fill="none" />
+                        <path d="M60 280 Q85 300 115 290" stroke="#D4B2A7" strokeWidth="0.45" strokeLinecap="round" opacity="0.045" fill="none" />
+                        <path d="M210 295 Q235 315 260 305" stroke="#E5C4BB" strokeWidth="0.4" strokeLinecap="round" opacity="0.04" fill="none" />
                       </pattern>
 
-                      {/* 은은한 닥나무 펄프 뭉침 (운용지 구름결) */}
+                      {/* 미세한 닥종이 표면 결 */}
                       <filter id="hanji-cloudy-pulp">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.015 0.02" numOctaves="3" result="cloudyNoise" />
-                        <feColorMatrix type="matrix" values="1 0 0 0 0.8  0 1 0 0 0.7  0 0 1 0 0.65  0 0 0 0.07 0" />
+                        <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" result="fineGrain" />
+                        <feColorMatrix type="matrix" values="1 0 0 0 0.8  0 1 0 0 0.7  0 0 1 0 0.65  0 0 0 0.025 0" />
                       </filter>
                     </defs>
 
-                    {/* 1단계: 운용지 펄프 구름결 */}
-                    <rect width="100%" height="100%" filter="url(#hanji-cloudy-pulp)" opacity="0.85" />
+                    {/* 1단계: 미세 한지 표면 결 */}
+                    <rect width="100%" height="100%" filter="url(#hanji-cloudy-pulp)" />
 
-                    {/* 2단계: 불규칙한 닥나무 섬유 결 */}
+                    {/* 2단계: 은은하게 흩어진 짧고 가는 미세 섬유 */}
                     <rect width="100%" height="100%" fill="url(#hanji-natural-fibers)" />
                   </svg>
 
