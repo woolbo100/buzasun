@@ -307,14 +307,11 @@ export default function LoveSecretEbookPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
                       {/* 좌측: 통합 배지, 큰 제목, 설명, 1줄 가격, 간결한 구매/장바구니 버튼 */}
                       <div className="lg:col-span-7 space-y-5 md:space-y-6">
-                        {/* 상단 통합 배지 & 작은 구성 안내 */}
-                        <div className="space-y-1.5">
+                        {/* 상단 통합 배지 */}
+                        <div>
                           <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold tracking-wider whitespace-nowrap">
                             연애비급 3종 올인원 패키지
                           </span>
-                          <p className="text-xs text-[#D4B2A7]/90 font-light tracking-wide pl-1">
-                            도화만개부 · 실전 카톡 템플릿 5종 포함
-                          </p>
                         </div>
 
                         {/* 큰 제목 유지 & 두 줄 이내 설명 */}
@@ -323,8 +320,8 @@ export default function LoveSecretEbookPage() {
                           <span className="text-[#E5C4BB]">네가 서 있는 자리가 결과를 만든다.</span>&rdquo;
                         </h2>
 
-                        <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep max-w-xl">
-                          착하게 맞출수록 만만해지던 연애의 잔혹한 끝. 남자의 무의식 신경회로를 뒤흔들고 관계의 절대적 주도권을 쥐는 22가지 비밀 법칙.
+                        <p className="text-[17px] md:text-[18px] text-[#D5C2C6] leading-[1.8] font-normal break-keep max-w-xl">
+                          착하게 맞출수록 가벼워지던 관계의 끝에서 남자의 무의식을 흔들고 관계의 주도권을 되찾는 22가지 비밀 법칙
                         </p>
 
                         {/* 가격 내부 네모상자 제거: 19,000원 가장 크게, 정가와 할인율은 작게 한 줄 정리 */}
