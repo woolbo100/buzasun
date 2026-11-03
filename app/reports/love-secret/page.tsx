@@ -593,8 +593,7 @@ export default function LoveSecretEbookPage() {
                       진심을 다하면 마음이 닿고, 더 많이 양보하면 관계는 깊어진다고 믿었습니다.
                     </p>
                     <p>
-                      하지만 현실의 연애는 도덕 시험도, 인내심 테스트도 아니었습니다. 온 마음을 내어주고 모든 일정을 상대에게 맞출수록 상대의 긴장감은 사라졌고, 돌아온 것은 깊은 사랑이 아니라
-                      <strong className="text-[#E5C4BB] font-semibold"> &ldquo;설레지 않는다&rdquo;, &ldquo;편한 친구 같다&rdquo;는 차가운 통보</strong>였습니다. 헌신의 대가는 존중이 아닌 <strong className="text-[#FAF7F2] font-semibold">&lsquo;당연함&rsquo;과 &lsquo;무관심&rsquo;</strong>이었습니다.
+                      하지만 현실의 연애는 도덕 시험도, 인내심 테스트도 아니었습니다. 온 마음을 내어주고 모든 일정을 상대에게 맞출수록 상대의 긴장감은 사라졌고, 헌신의 대가로 돌아온 것은 깊은 사랑과 존중 아니라 <strong className="text-[#E5C4BB] font-semibold">&lsquo;당연함&rsquo;과 &lsquo;무관심&rsquo;</strong>이었습니다.
                     </p>
                     <p>
                       상대의 마음이 식은 것은 매력이 부족해서가 아닙니다. 관계를 지탱하는 보이지 않는 <strong className="text-[#E5C4BB] font-semibold">&lsquo;무게중심&rsquo;</strong>을 배우지 못했기 때문입니다. 운전면허 없이 도로에 나가면 사고가 나듯,
