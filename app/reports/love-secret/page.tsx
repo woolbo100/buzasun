@@ -656,10 +656,9 @@ export default function LoveSecretEbookPage() {
                     <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                       THE POSITION SHIFT
                     </span>
-                    <h3 className="text-xl sm:text-2xl md:text-[32px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      <span className="inline-block sm:whitespace-nowrap">&ldquo;사랑을 공부하고 내 자리를 바로 세웠을 때,</span>
-                      <br />
-                      <span className="text-[#E5C4BB] inline-block sm:whitespace-nowrap">당신의 연애에 일어나는 극적인 반전&rdquo;</span>
+                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                      <span className="sm:whitespace-nowrap">&ldquo;사랑을 공부하고 내 자리를 바로 세웠을 때,</span><br />
+                      <span className="text-[#E5C4BB] sm:whitespace-nowrap">당신의 연애에 일어나는 극적인 반전&rdquo;</span>
                     </h3>
                     <p className="text-[#EDE6DA]/80 text-[18px] font-normal leading-[1.8] break-keep">
                       상대의 반응에 끌려다니던 &apos;을의 자리&apos;에서,<br className="hidden md:inline" />
