@@ -652,15 +652,16 @@ export default function LoveSecretEbookPage() {
                     boxShadow: '0 12px 40px rgba(186, 141, 126, 0.15)'
                   }}
                 >
-                  <div className="max-w-2xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
+                  <div className="max-w-4xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
                     <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                       THE POSITION SHIFT
                     </span>
-                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      &ldquo;사랑을 공부하고 내 자리를 바로 세웠을 때,<br />
-                      <span className="text-[#E5C4BB]">당신의 연애에 일어나는 극적인 반전</span>&rdquo;
+                    <h3 className="text-xl sm:text-2xl md:text-[32px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                      <span className="inline-block sm:whitespace-nowrap">&ldquo;사랑을 공부하고 내 자리를 바로 세웠을 때,</span>
+                      <br />
+                      <span className="text-[#E5C4BB] inline-block sm:whitespace-nowrap">당신의 연애에 일어나는 극적인 반전&rdquo;</span>
                     </h3>
-                    <p className="text-[#EDE6DA]/80 text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
+                    <p className="text-[#EDE6DA]/80 text-[18px] font-normal leading-[1.8] break-keep">
                       상대의 반응에 끌려다니던 &apos;을의 자리&apos;에서,<br className="hidden md:inline" />
                       스스로 존중받고 주도권을 쥐는 &apos;중심의 자리&apos;로 이동합니다.
                     </p>
@@ -709,7 +710,7 @@ export default function LoveSecretEbookPage() {
                             BEFORE
                           </span>
                           <div className="flex-1 min-w-0">
-                            <p className="text-[#EDE6DA] text-[14px] sm:text-[15px] font-semibold leading-[1.4] break-keep">
+                            <p className="text-[#EDE6DA] text-[16px] md:text-[17px] font-semibold leading-[1.4] break-keep">
                               {item.beforeTitle}
                             </p>
                             <p className="text-[#EDE6DA]/65 text-[12px] sm:text-[13px] font-light leading-[1.4] mt-1 break-keep">
@@ -727,7 +728,7 @@ export default function LoveSecretEbookPage() {
                             AFTER
                           </span>
                           <div className="flex-1 min-w-0">
-                            <p className="text-[#F5E9E2] text-[14px] sm:text-[15px] font-semibold leading-[1.4] break-keep">
+                            <p className="text-[#F5E9E2] text-[16px] md:text-[17px] font-semibold leading-[1.4] break-keep">
                               {item.afterTitle}
                             </p>
                             <p className="text-[#D5C2C6] text-[12px] sm:text-[13px] font-light leading-[1.4] mt-1 break-keep">
