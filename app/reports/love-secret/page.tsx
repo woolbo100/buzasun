@@ -569,23 +569,125 @@ export default function LoveSecretEbookPage() {
               {/* 1. THE HIDDEN TRUTH 설명 영역 (설명 글 먼저) */}
               <Reveal>
                 <div
-                  className="gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/30 md:hover:border-[#E5C4BB]/80 shadow-[0_12px_40px_rgba(0,0,0,0.4)] md:hover:shadow-[0_16px_45px_rgba(0,0,0,0.45),0_0_20px_rgba(229,196,187,0.18),0_0_48px_rgba(229,196,187,0.12)] md:hover:-translate-y-1 md:hover:brightness-105 transition-all duration-[350ms] ease-out cursor-default text-center"
+                  className="relative gungjung-glass p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 md:hover:border-[#E5C4BB]/90 shadow-[0_16px_45px_rgba(0,0,0,0.5)] md:hover:shadow-[0_16px_45px_rgba(0,0,0,0.45),0_0_20px_rgba(229,196,187,0.18),0_0_48px_rgba(229,196,187,0.12)] md:hover:-translate-y-1 md:hover:brightness-105 transition-all duration-[350ms] ease-out cursor-default text-center overflow-hidden"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)'
+                    background: 'linear-gradient(135deg, rgba(46, 18, 26, 0.94) 0%, rgba(24, 10, 18, 0.97) 50%, rgba(14, 6, 16, 0.98) 100%)',
+                    boxShadow: '0 16px 45px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
-                  <div className="text-center mb-6">
+                  {/* 실제 한지 질감 레이어 (자연스러운 닥나무 섬유질과 운용지 펄프 구름결) */}
+                  <svg
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full pointer-events-none rounded-[inherit] overflow-hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <defs>
+                      <pattern id="hanji-why-fibers" width="340" height="340" patternUnits="userSpaceOnUse">
+                        <path d="M20 50 Q60 68 110 58 T180 90" stroke="#E5C4BB" strokeWidth="0.8" strokeLinecap="round" opacity="0.16" fill="none" />
+                        <path d="M240 30 Q285 75 325 45" stroke="#D4B2A7" strokeWidth="0.65" strokeLinecap="round" opacity="0.14" fill="none" />
+                        <path d="M45 200 Q95 175 145 210 T230 190" stroke="#E5C4BB" strokeWidth="0.9" strokeLinecap="round" opacity="0.18" fill="none" />
+                        <path d="M260 150 Q305 195 335 235" stroke="#D4B2A7" strokeWidth="0.75" strokeLinecap="round" opacity="0.13" fill="none" />
+                        <path d="M15 280 Q70 310 135 290 T200 320" stroke="#D4B2A7" strokeWidth="0.85" strokeLinecap="round" opacity="0.15" fill="none" />
+                        <path d="M195 245 Q240 285 300 265" stroke="#E5C4BB" strokeWidth="0.7" strokeLinecap="round" opacity="0.17" fill="none" />
+
+                        <path d="M100 120 Q120 135 135 125" stroke="#D4B2A7" strokeWidth="0.6" strokeLinecap="round" opacity="0.14" fill="none" />
+                        <path d="M185 40 Q200 55 190 70" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.15" fill="none" />
+                        <path d="M300 115 Q315 100 325 120" stroke="#D4B2A7" strokeWidth="0.55" strokeLinecap="round" opacity="0.13" fill="none" />
+                        <path d="M35 140 Q50 155 65 145" stroke="#E5C4BB" strokeWidth="0.75" strokeLinecap="round" opacity="0.16" fill="none" />
+                        <path d="M150 235 Q165 255 155 270" stroke="#D4B2A7" strokeWidth="0.55" strokeLinecap="round" opacity="0.14" fill="none" />
+                        <path d="M220 100 Q240 115 260 105" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.15" fill="none" />
+                        <path d="M75 235 Q90 255 110 245" stroke="#D4B2A7" strokeWidth="0.6" strokeLinecap="round" opacity="0.14" fill="none" />
+                        <path d="M280 295 Q300 315 320 305" stroke="#E5C4BB" strokeWidth="0.65" strokeLinecap="round" opacity="0.13" fill="none" />
+                      </pattern>
+
+                      <filter id="hanji-why-cloudy-pulp">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.015 0.02" numOctaves="3" result="cloudyNoise" />
+                        <feColorMatrix type="matrix" values="1 0 0 0 0.8  0 1 0 0 0.7  0 0 1 0 0.65  0 0 0 0.07 0" />
+                      </filter>
+                    </defs>
+
+                    <rect width="100%" height="100%" filter="url(#hanji-why-cloudy-pulp)" opacity="0.85" />
+                    <rect width="100%" height="100%" fill="url(#hanji-why-fibers)" />
+                  </svg>
+
+                  {/* 네 모서리 전통 한국식 격자 문양 (PC 36px, 모바일 22px) */}
+                  {/* 좌상단 */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="#D4B2A7"
+                    strokeWidth="1.2"
+                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85"
+                  >
+                    <path d="M2 38V2H38" strokeOpacity="0.9" />
+                    <path d="M7 34V7H34" strokeOpacity="0.55" />
+                    <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+                    <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+                    <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+                    <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
+                  </svg>
+                  {/* 우상단 */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="#D4B2A7"
+                    strokeWidth="1.2"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 rotate-90"
+                  >
+                    <path d="M2 38V2H38" strokeOpacity="0.9" />
+                    <path d="M7 34V7H34" strokeOpacity="0.55" />
+                    <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+                    <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+                    <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+                    <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
+                  </svg>
+                  {/* 우하단 */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="#D4B2A7"
+                    strokeWidth="1.2"
+                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 rotate-180"
+                  >
+                    <path d="M2 38V2H38" strokeOpacity="0.9" />
+                    <path d="M7 34V7H34" strokeOpacity="0.55" />
+                    <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+                    <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+                    <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+                    <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
+                  </svg>
+                  {/* 좌하단 */}
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    stroke="#D4B2A7"
+                    strokeWidth="1.2"
+                    className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 -rotate-90"
+                  >
+                    <path d="M2 38V2H38" strokeOpacity="0.9" />
+                    <path d="M7 34V7H34" strokeOpacity="0.55" />
+                    <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+                    <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+                    <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+                    <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
+                  </svg>
+
+                  <div className="relative z-10 text-center mb-6">
                     <span className="inline-flex items-center justify-center py-[5px] md:py-[6px] px-[14px] md:px-[16px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[14px] md:text-[16px] font-bold tracking-wide whitespace-nowrap">
                       왜, 연애비급인가?
                     </span>
                   </div>
-                  <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep mb-8 md:mb-10">
+                  <h3 className="relative z-10 text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep mb-8 md:mb-10">
                     &ldquo;진심을 다하고 참아주면 될 줄 알았습니다.<br />
                     그런데 왜 사랑도 <span className="text-[#E5C4BB]">&lsquo;공부&rsquo;</span>해야 했을까요?&rdquo;
                   </h3>
 
                   {/* 이중 상자 제거: 카드 배경 위에 본문 직접 배치 (최대 너비 800px) */}
-                  <div className="max-w-[800px] w-full mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep">
+                  <div className="relative z-10 max-w-[800px] w-full mx-auto text-left text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-5 md:space-y-6 break-keep">
                     <p>
                       어릴 적 우리는 사랑을 이렇게 배웠습니다.<br />
                       <span className="text-[#E5C4BB] font-semibold">
@@ -930,7 +1032,7 @@ export default function LoveSecretEbookPage() {
                       <img
                         src="/image/love-secret/baekdohwa-vertical-seal.png?v=20261103"
                         alt="백도화 낙관"
-                        className="h-[42px] md:h-[54px] w-auto object-contain select-none opacity-95"
+                        className="h-[68px] sm:h-[78px] md:h-[92px] w-auto object-contain select-none opacity-95 hover:opacity-100 transition-opacity"
                       />
                     </div>
                   </div>
