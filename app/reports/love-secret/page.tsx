@@ -2161,7 +2161,7 @@ export default function LoveSecretEbookPage() {
                       - 오른쪽 약 55%: 구성 안내 → 구분선 → 가격 안내 → 장바구니/구매 버튼
                      ───────────────────────────────────────────────────────── */}
                   <div
-                    className="gungjung-glass p-6 sm:p-8 md:p-10 rounded-3xl border border-[#D4B2A7]/40 relative overflow-hidden shadow-2xl"
+                    className="gungjung-glass rounded-3xl border border-[#D4B2A7]/40 relative overflow-hidden shadow-2xl"
                     style={{
                       background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(10, 5, 20, 0.95) 100%)',
                       boxShadow: '0 12px 40px rgba(186, 141, 126, 0.20)'
@@ -2229,23 +2229,21 @@ export default function LoveSecretEbookPage() {
                       )}
                     </div>
 
-                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center break-keep">
-                      {/* 왼쪽 약 45%: 독립 이미지 영역 (추후 한 장만 교체 가능, 원본 비율 유지) */}
-                      <div className="lg:col-span-5 w-full flex items-center justify-center">
-                        <div className="relative w-full aspect-[4/3] max-w-[420px] mx-auto rounded-2xl overflow-hidden flex items-center justify-center">
-                          <Image
-                            src={PACKAGE_INNER_PAGES_IMAGE}
-                            alt="연애비급 3종 패키지 내지 미리보기"
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 45vw"
-                            className="object-contain"
-                            priority
-                          />
-                        </div>
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
+                      {/* 왼쪽 약 45%: 상자 끝까지 꽉 차게 들어가는 독립 이미지 영역 (네모 박스 없이 모서리 풀 블리드) */}
+                      <div className="lg:col-span-5 relative w-full min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden flex items-center justify-center">
+                        <Image
+                          src={PACKAGE_INNER_PAGES_IMAGE}
+                          alt="연애비급 3종 패키지 내지 미리보기"
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 45vw"
+                          className="object-cover object-center"
+                          priority
+                        />
                       </div>
 
                       {/* 오른쪽 약 55%: 구성 안내 → 구분선 → 가격 및 제공 안내 → 버튼 순서 */}
-                      <div className="lg:col-span-7 w-full flex flex-col justify-between space-y-5 sm:space-y-6 text-left">
+                      <div className="lg:col-span-7 w-full flex flex-col justify-between space-y-5 sm:space-y-6 text-left p-6 sm:p-8 md:p-10 lg:py-10 lg:pr-10 lg:pl-6">
                         {/* 1. 상단: 구성 안내 & 우측 상단 올인원 패키지 배지 */}
                         <div className="flex items-start justify-between gap-4">
                           <div className="space-y-1.5 flex-1">
