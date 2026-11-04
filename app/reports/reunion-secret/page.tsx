@@ -244,7 +244,7 @@ export default function ReunionSecretPage() {
                   </div>
 
                   {/* 헤드카피 */}
-                  <h2 className="text-2xl sm:text-3xl md:text-5xl font-elegant font-bold text-[#FAF7F2] mb-6 leading-tight">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] mb-6 leading-[1.4] break-keep">
                     간절함은 닿지 않는다. 닿는 것은 오직 네가 되찾은 <span className="text-[#E6BE8A]">'상태'</span>뿐이다.
                   </h2>
 
@@ -257,7 +257,7 @@ export default function ReunionSecretPage() {
                   </div>
 
                   {/* 서브카피 */}
-                  <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA]/90 leading-relaxed font-light max-w-3xl mx-auto mb-8">
+                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.8] font-normal max-w-3xl mx-auto mb-8 break-keep">
                     울며 매달릴수록 남자는 도망칩니다. 남자의 무의식 신경회로에 서늘한 후폭풍을 심는 유일한 비방(秘方). 차단, 읽씹, 환승 이별... 상대의 뇌 속에 각인된 찌질한 잔상을 지우고 <span className="text-[#E6BE8A] font-semibold">'칼자루'를 쥐는 30일간의 신경심리학적 공작</span>.
                   </p>
 
@@ -311,11 +311,11 @@ export default function ReunionSecretPage() {
                   </div>
 
                   <div className="space-y-6 text-left break-keep">
-                    <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white leading-snug">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       붙잡는 법이 아니라,<br/>
                       <span className="text-[#E6BE8A]">다시 선택받을 수 있는 상태</span>로 돌아오는 법
                     </h2>
-                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed font-light">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
                       재회비방은 이별 후 가장 불안한 시기에 무엇을 멈추고, 무엇을 정리하고, 어떤 순서로 다시 움직여야 하는지를 알려주는 프리미엄 재회 전략 전자책입니다. 상대를 억지로 붙잡기 전에 먼저 나의 감정, 프레임, 연락 패턴, 공백기 전략을 차분하게 점검하도록 구성되어 있습니다.
                     </p>
 
@@ -335,7 +335,7 @@ export default function ReunionSecretPage() {
                           <div className="w-6 h-6 rounded-full bg-[#4A0E17]/60 flex items-center justify-center shrink-0 border border-[#C5A059]/30">
                             <Check className="w-3.5 h-3.5 text-[#E6BE8A]" />
                           </div>
-                          <span className="text-xs md:text-sm text-white/90 font-medium">
+                          <span className="text-[15px] md:text-[16px] text-white/90 font-medium">
                             {item}
                           </span>
                         </div>
@@ -357,7 +357,7 @@ export default function ReunionSecretPage() {
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
                     PAIN POINT & HOOK
                   </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] mt-3 leading-snug break-keep">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] mt-3 leading-[1.4] break-keep">
                     당신의 진심이 왜 상대에게는 '공포'와 '질림'이 되었을까?
                   </h2>
                 </div>
@@ -366,13 +366,13 @@ export default function ReunionSecretPage() {
                   {/* 왼쪽 본문 (팩트 폭격 + 자가진단 체크리스트) */}
                   <div className="lg:col-span-7 space-y-6 text-left break-keep">
                     <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#1C050D] to-[#0D0206] border-l-4 border-l-[#600018] border border-[#C5A059]/25 shadow-lg">
-                      <p className="text-base md:text-lg text-[#EDE6DA] leading-relaxed font-light">
+                      <p className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                         맛이 변해 손님이 끊긴 라면집 주인이 떠나는 손님 바짓가랑이를 붙잡고 울면 손님은 더 빨리 도망칩니다. 남자는 이별 직후 '해방감'이라는 가짜 도파민에 취합니다. 당신이 매달릴수록 남자는 '헤어지길 잘했다'는 면죄부를 얻고 안도합니다. 그 면죄부를 즉시 빼앗고 지독한 '결핍의 공황'에 빠뜨려야 합니다.
                       </p>
                     </div>
 
                     <div className="pt-2">
-                      <h3 className="text-base md:text-lg font-elegant font-bold text-[#E6BE8A] mb-4 flex items-center gap-2">
+                      <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#E6BE8A] mb-4 flex items-center gap-2 leading-[1.4]">
                         <AlertTriangle className="w-5 h-5 text-[#E6BE8A]" />
                         <span>자가진단 체크리스트</span>
                       </h3>
@@ -390,7 +390,7 @@ export default function ReunionSecretPage() {
                             <div className="w-6 h-6 rounded-md bg-[#600018] text-[#FAF7F2] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                               <Check className="w-4 h-4 text-[#E6BE8A] stroke-[3]" />
                             </div>
-                            <span className="text-sm md:text-base font-semibold leading-relaxed">
+                            <span className="text-[15px] md:text-[16px] font-semibold leading-[1.6]">
                               {checkItem}
                             </span>
                           </div>
@@ -427,11 +427,11 @@ export default function ReunionSecretPage() {
                     <span className="text-[#E6BE8A] font-elegant text-xs font-bold tracking-[0.25em] uppercase block">
                       TRANSFORMATION
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-elegant font-bold text-[#FAF7F2] leading-snug">
+                    <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                       &ldquo;매달릴수록 차가워지던 그 사람,<br />
                       <span className="text-[#E6BE8A]">당신의 에너지가 바뀌면 후폭풍이 시작됩니다.</span>&rdquo;
                     </h3>
-                    <p className="text-[#EDE6DA]/75 text-xs md:text-sm font-light leading-relaxed">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8] break-keep">
                       구차한 붙잡음은 차단을 부릅니다. 미련의 주파수를 끊는 순간 남자의 뇌에 상실감이 각인됩니다.
                     </p>
                   </div>
@@ -472,8 +472,8 @@ export default function ReunionSecretPage() {
                             BEFORE
                           </span>
                           <div>
-                            <p className="text-[#EDE6DA]/85 text-sm font-medium leading-snug">{item.beforeTitle}</p>
-                            <p className="text-[#EDE6DA]/50 text-xs mt-1 font-light">{item.beforeSub}</p>
+                            <p className="text-[#EDE6DA]/85 text-[15px] md:text-[16px] font-medium leading-snug">{item.beforeTitle}</p>
+                            <p className="text-[#EDE6DA]/50 text-xs md:text-sm mt-1 font-light">{item.beforeSub}</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#600018]/35 border border-[#E6BE8A]/40 shadow-[0_0_20px_rgba(230,190,138,0.08)]">
@@ -481,8 +481,8 @@ export default function ReunionSecretPage() {
                             AFTER
                           </span>
                           <div>
-                            <p className="text-[#FAF7F2] text-sm font-semibold leading-snug">{item.afterTitle}</p>
-                            <p className="text-[#E6BE8A]/90 text-xs mt-1 font-light">{item.afterSub}</p>
+                            <p className="text-[#FAF7F2] text-[15px] md:text-[16px] font-semibold leading-snug">{item.afterTitle}</p>
+                            <p className="text-[#E6BE8A]/90 text-xs md:text-sm mt-1 font-light">{item.afterSub}</p>
                           </div>
                         </div>
                       </div>
@@ -501,12 +501,13 @@ export default function ReunionSecretPage() {
               <Reveal>
                 <div className="grid lg:grid-cols-[1.15fr_0.85fr] xl:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 xl:gap-20 items-center">
                   <div className="space-y-8 text-left break-keep">
-                    <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white tracking-wide">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
                       이런 분께 <span className="text-[#E6BE8A]">추천합니다</span>
                     </h2>
 
                     {/* 충분한 가로폭이 확보되어 베이지 카드의 문장이 한 줄로 여유롭게 배치됩니다 */}
                     <RecommendedForCards 
+                      textClassName="text-[16px] md:text-[18px]"
                       items={[
                         "이별 후 상대에게 연락하고 싶지만 어떤 말을 해야 할지 몰라 불안한 분",
                         "상대가 차단했거나 읽씹, 안읽씹을 반복해 어떻게 해야 할지 막막한 분",
@@ -543,11 +544,11 @@ export default function ReunionSecretPage() {
                     <span className="text-[#E6BE8A] font-elegant text-xs font-bold tracking-[0.25em] uppercase block">
                       THE REUNION MECHANISM
                     </span>
-                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-snug">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                       이별의 상처를 매달림으로 풀지 마십시오.<br />
                       <span className="text-[#E6BE8A]">내 에너지를 회수하고, 상대의 무의식에 후폭풍을 심습니다.</span>
                     </h2>
-                    <p className="text-[#EDE6DA]/75 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto font-normal leading-[1.8] break-keep">
                       떠난 남자를 돌아오게 만드는 것은 눈물이 아니라 <strong className="text-[#FAF7F2] font-semibold">통제력의 상실</strong>입니다.<br />
                       《재회비방》은 <strong className="text-[#FAF7F2] font-semibold">결핍 고리 끊기(에너지 회수)</strong>를 선행한 후, <strong className="text-[#E6BE8A] font-semibold">남자의 뇌에 미련을 점화하는 기술(후폭풍 설계)</strong>을 실행합니다.
                     </p>
@@ -566,11 +567,11 @@ export default function ReunionSecretPage() {
                         <span className="px-3.5 py-1 rounded-full bg-[#4A0E17] text-[#FAF7F2] font-serif font-bold text-xs tracking-wider border border-[#C5A059]/40">
                           STEP 1
                         </span>
-                        <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2]">
+                        <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
                           결핍 고리 차단 (에너지 회수 5단계)
                         </h3>
                       </div>
-                      <p className="text-[#EDE6DA]/75 text-sm mb-8 leading-relaxed font-light break-keep">
+                      <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 mb-8 leading-[1.7] font-light break-keep">
                         상대에게 쏠려 있던 감정의 잔류 에너지를 완전히 거두어들이는 기초 정화 단계입니다. 내가 미련에서 자유로워져야 비로소 상대의 무의식이 결핍을 느끼기 시작합니다.
                       </p>
 
@@ -588,8 +589,8 @@ export default function ReunionSecretPage() {
                             className="p-4 rounded-2xl bg-black/45 border border-[#C5A059]/20 hover:border-[#C5A059]/50 transition-all break-keep"
                           >
                             <span className="text-[#E6BE8A] text-xs font-mono font-bold tracking-wider">{item.code}</span>
-                            <p className="text-[#FAF7F2] text-sm md:text-base font-elegant font-bold mt-1.5">{item.title}</p>
-                            <p className="text-[#EDE6DA]/60 text-xs mt-1 font-light leading-relaxed">{item.desc}</p>
+                            <p className="text-[#FAF7F2] text-[15px] md:text-[16px] font-elegant font-bold mt-1.5">{item.title}</p>
+                            <p className="text-[#EDE6DA]/70 text-[13px] md:text-[14px] mt-1 font-light leading-relaxed">{item.desc}</p>
                           </div>
                         ))}
                       </div>
@@ -614,11 +615,11 @@ export default function ReunionSecretPage() {
                         <span className="px-3.5 py-1 rounded-full bg-[#600018] text-[#E6BE8A] font-serif font-bold text-xs tracking-wider border border-[#E6BE8A]/40">
                           STEP 2
                         </span>
-                        <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2]">
+                        <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
                           후폭풍 점화 기술 (4대 실전 비방)
                         </h3>
                       </div>
-                      <p className="text-[#EDE6DA]/75 text-sm mb-8 leading-relaxed font-light break-keep">
+                      <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 mb-8 leading-[1.7] font-light break-keep">
                         내 에너지가 정렬되면 상대는 ‘자유’가 아니라 ‘공허와 상실’을 맞닥뜨립니다. 남자의 뇌에 기억 왜곡과 미련을 증폭시키는 4대 트리거입니다.
                       </p>
 
@@ -655,10 +656,10 @@ export default function ReunionSecretPage() {
                               </span>
                               <Sparkles className="w-4 h-4 text-[#E6BE8A]/50 group-hover:text-[#E6BE8A] transition-colors" />
                             </div>
-                            <h4 className="text-[#FAF7F2] font-elegant font-bold text-base md:text-lg group-hover:text-[#E6BE8A] transition-colors">
+                            <h4 className="text-[#FAF7F2] font-elegant font-bold text-lg md:text-[20px] group-hover:text-[#E6BE8A] transition-colors">
                               {card.title}
                             </h4>
-                            <p className="text-[#EDE6DA]/75 text-xs md:text-sm mt-2 leading-relaxed font-light">
+                            <p className="text-[#EDE6DA]/80 text-[15px] md:text-[16px] mt-2 leading-[1.6] font-light">
                               {card.desc}
                             </p>
                           </div>
@@ -690,13 +691,13 @@ export default function ReunionSecretPage() {
                   <div className="space-y-6 text-left break-keep">
                     <div>
                       <span className="text-[#E6BE8A] font-elegant tracking-[0.2em] text-xs uppercase">Workbook Included</span>
-                      <h2 className="text-2xl md:text-3xl font-elegant font-bold text-white mt-1 leading-snug">
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-1 leading-[1.4] break-keep">
                         읽고 끝나는 책이 아니라,<br/>
                         <span className="text-[#E6BE8A]">점검하고 적용하는 실전 재회 노트</span>
                       </h2>
                     </div>
                     
-                    <p className="text-sm md:text-base text-[#EDE6DA]/75 leading-relaxed font-light">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
                       재회비방은 단순한 연애 조언 모음이 아닙니다. 이별 유형, 공백기, 문자 흐름, 돌발 상황, 재회 이후 관계 선언까지 직접 진단하고 내 상황에 바로 적용할 수 있는 실전 도구를 담았습니다.
                     </p>
 
@@ -717,7 +718,7 @@ export default function ReunionSecretPage() {
                           className="flex items-center gap-3 p-3 bg-[#FAF7F2] rounded-xl border border-[#C5A059]/25 hover:border-[#8C1D24]/40 transition-colors"
                         >
                           <Check className="w-4 h-4 text-[#8C1D24] shrink-0" />
-                          <span className="text-xs md:text-sm text-[#3D3530] font-semibold">
+                          <span className="text-[15px] md:text-[16px] text-[#3D3530] font-semibold">
                             {item}
                           </span>
                         </div>
@@ -743,7 +744,7 @@ export default function ReunionSecretPage() {
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
                     PRODUCT SHOWCASE
                   </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] mt-3 leading-snug break-keep">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] mt-3 leading-[1.4] break-keep">
                     재회비방 3종 올인원 패키지 상세 해부
                   </h2>
                   <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#600018]/50 border border-[#E6BE8A]/40 text-xs md:text-sm text-[#E6BE8A] font-semibold">
@@ -766,56 +767,56 @@ export default function ReunionSecretPage() {
                       <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#E6BE8A] text-xs font-bold border border-[#E6BE8A]/40 tracking-wider">
                         Book 1. [본편]
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#FAF7F2] leading-tight">
+                      <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                         《재회비방(再會秘方) 완전판》
                       </h3>
-                      <p className="text-base md:text-lg text-[#E6BE8A] font-semibold leading-relaxed">
+                      <p className="text-[17px] md:text-[18px] text-[#E6BE8A] font-semibold leading-[1.6] break-keep">
                         끊어진 인연을 다시 잇는 무의식의 붉은 실
                       </p>
 
                       {/* 핵심 내용 목록 ①~⑤ */}
                       <div className="space-y-3.5 pt-2">
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25 space-y-1">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">①</span>
                             <span>내 이별의 진짜 원인 진단</span>
                           </h4>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/80 pl-5 leading-relaxed font-light">
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
                             가치 하락형(매력 저하) vs 신뢰감 하락형(피로/싸움) 구분 및 8가지 케이스별 완전 처방
                           </p>
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25 space-y-1">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">②</span>
                             <span>연애 기간·상대 성향별 공백기 황금 공식</span>
                           </h4>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/80 pl-5 leading-relaxed font-light">
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
                             3일 단기 트랙부터 6개월 장기 트랙까지 오차 없는 타이밍 계산법
                           </p>
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">③</span>
                             <span>이별 패턴을 읽는 선천코드 5행(목·화·토·금·수) 분석법</span>
                           </h4>
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">④</span>
                             <span>상대 무의식을 뒤흔드는 7대 절대 심리 비방</span>
                           </h4>
                         </div>
 
                         <div className="p-4 rounded-xl bg-gradient-to-r from-[#3B0A16]/50 to-[#1F050B]/50 border border-[#E6BE8A]/35 space-y-2">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">⑤</span>
                             <span>조건부 재회의 법칙</span>
                           </h4>
                           <div className="p-3 rounded-lg bg-black/50 border border-[#E6BE8A]/30">
-                            <p className="text-xs md:text-sm font-elegant font-bold text-[#E6BE8A]">
+                            <p className="text-[15px] md:text-[16px] font-elegant font-bold text-[#E6BE8A]">
                               "너는 세일 상품이 아니다. 정가(正價)를 치르게 하라"
                             </p>
                           </div>
@@ -838,17 +839,17 @@ export default function ReunionSecretPage() {
                       <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#E6BE8A] text-xs font-bold border border-[#E6BE8A]/40 tracking-wider">
                         Book 2. [실전 부록 1]
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#FAF7F2] leading-tight">
+                      <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                         《재회 역전의 법칙: 30일 실전 행동 매뉴얼》
                       </h3>
-                      <p className="text-base md:text-lg text-[#E6BE8A] font-semibold leading-relaxed">
+                      <p className="text-[17px] md:text-[18px] text-[#E6BE8A] font-semibold leading-[1.6] break-keep">
                         카톡·SNS 연출부터 30일 공백기 설계까지, 주도권을 되찾는 매뉴얼
                       </p>
 
                       {/* 핵심 내용 목록 ①~⑤ */}
                       <div className="space-y-3.5 pt-2">
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">①</span>
                             <span>
                               3초 진단 & 6대 상황별 즉시 행동 vs 절대 금지(<span className="text-[#E6BE8A] font-semibold">DO & DON'T</span>) 매뉴얼
@@ -857,29 +858,29 @@ export default function ReunionSecretPage() {
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25 space-y-1">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">②</span>
                             <span>
                               시각적 텔레파시 (<span className="text-[#E6BE8A] font-semibold">4주</span> 카톡 프로필 & SNS 연출 플랜)
                             </span>
                           </h4>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/80 pl-5 leading-relaxed font-light">
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
                             1주차 전신샷부터 4주차 자극까지 주차별 완벽 설계
                           </p>
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25 space-y-1">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">③</span>
                             <span>SNS 미세신호 해독표</span>
                           </h4>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/80 pl-5 leading-relaxed font-light">
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
                             스토리 칼조회, 좋아요 후 즉시 취소, 멀티 프로필 지정 시 대처법
                           </p>
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">④</span>
                             <span>
                               연락 충동이 올라올 때 '<span className="text-[#E6BE8A] font-semibold">10분 SOS 프로토콜</span>'
@@ -888,20 +889,20 @@ export default function ReunionSecretPage() {
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25 space-y-2">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">⑤</span>
                             <span>
                               출력/복사해서 바로 쓰는 <span className="text-[#E6BE8A] font-semibold">실전 기록지</span>
                             </span>
                           </h4>
                           <div className="flex flex-wrap gap-2 pl-5 pt-0.5">
-                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#C5A059]/35 text-xs text-[#FAF7F2]">
+                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#C5A059]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
                               감정 격류 진정 기록지
                             </span>
-                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#C5A059]/35 text-xs text-[#FAF7F2]">
+                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#C5A059]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
                               공백기 일일 점검표
                             </span>
-                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#C5A059]/35 text-xs text-[#FAF7F2]">
+                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#C5A059]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
                               재회 가능성 12문항 자가진단표
                             </span>
                           </div>
@@ -924,17 +925,17 @@ export default function ReunionSecretPage() {
                       <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#E6BE8A] text-xs font-bold border border-[#E6BE8A]/40 tracking-wider">
                         Book 3. [실전 부록 2]
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#FAF7F2] leading-tight">
+                      <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                         《재회 후폭풍 치트키: 무의식 시크릿 메시지 33선》
                       </h3>
-                      <p className="text-base md:text-lg text-[#E6BE8A] font-semibold leading-relaxed">
+                      <p className="text-[17px] md:text-[18px] text-[#E6BE8A] font-semibold leading-[1.6] break-keep">
                         남자의 무의식을 지배하는 33가지 침투술 & 첫 만남 연출법
                       </p>
 
                       {/* 핵심 내용 목록 ①~③ */}
                       <div className="space-y-3.5 pt-2">
                         <div className="p-4 md:p-5 rounded-xl bg-black/40 border border-[#C5A059]/25 space-y-3">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">①</span>
                             <span>
                               복사·붙여넣기 전용 <span className="text-[#E6BE8A] font-semibold">33가지</span> 실전 스크립트 (상황별/타이밍/뉘앙스 해설)
@@ -947,7 +948,7 @@ export default function ReunionSecretPage() {
                               <span className="text-xs font-bold text-[#E6BE8A] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#E6BE8A]/30 shrink-0">
                                 트랙 A
                               </span>
-                              <span className="text-xs sm:text-sm text-[#EDE6DA]/90 leading-relaxed font-light">
+                              <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
                                 안읽씹·번호 차단 직전, 읽씹 3일 차, 잠수 이별·회피형 우회 멘트
                               </span>
                             </div>
@@ -956,7 +957,7 @@ export default function ReunionSecretPage() {
                               <span className="text-xs font-bold text-[#E6BE8A] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#E6BE8A]/30 shrink-0">
                                 트랙 B
                               </span>
-                              <span className="text-xs sm:text-sm text-[#EDE6DA]/90 leading-relaxed font-light">
+                              <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
                                 권태기, 잦은 다툼, 거짓말/신뢰 훼손, 심하게 매달린 후 흑역사 리셋 멘트
                               </span>
                             </div>
@@ -965,7 +966,7 @@ export default function ReunionSecretPage() {
                               <span className="text-xs font-bold text-[#E6BE8A] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#E6BE8A]/30 shrink-0">
                                 트랙 C
                               </span>
-                              <span className="text-xs sm:text-sm text-[#EDE6DA]/90 leading-relaxed font-light">
+                              <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
                                 새 이성(환승/리바운드) 균열 멘트, 친구 프레임 탈출, 늦은 밤 "자니?" 찔러보기 원천 격퇴 멘트
                               </span>
                             </div>
@@ -973,23 +974,23 @@ export default function ReunionSecretPage() {
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25 space-y-1">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">②</span>
                             <span>메시지 발송 후 대화 핑퐁(Turn) 공식</span>
                           </h4>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/80 pl-5 leading-relaxed font-light">
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
                             단답형 유도, 까칠한 반응 무장해제, <span className="text-[#E6BE8A] font-semibold">3턴</span> 만에 만남 약속 잡기
                           </p>
                         </div>
 
                         <div className="p-4 rounded-xl bg-black/40 border border-[#C5A059]/25 space-y-1">
-                          <h4 className="text-sm md:text-base font-bold text-[#FAF7F2] flex items-start gap-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#E6BE8A] shrink-0 font-mono">③</span>
                             <span>
                               재회의 <span className="text-[#E6BE8A] font-semibold">첫 30분</span> 기선제압 연출법
                             </span>
                           </h4>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/80 pl-5 leading-relaxed font-light">
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
                             시각·후각 앵커링 세팅, 자이가르닉 철수 타이밍, 쉿 테스트(떠보기) 반사구 훈련
                           </p>
                         </div>
@@ -1011,14 +1012,14 @@ export default function ReunionSecretPage() {
                       <div className="inline-block px-3.5 py-1 rounded-full bg-[#E6BE8A] text-[#20050E] text-xs font-bold shadow-md tracking-wider">
                         Special Bonus
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#FAF7F2] flex items-center gap-2">
+                      <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] flex items-center gap-2 leading-[1.4] break-keep">
                         <span>회향연부 모바일 부적</span>
                         <Sparkles className="w-6 h-6 text-[#E6BE8A]" />
                       </h3>
-                      <p className="text-base md:text-lg text-[#E6BE8A] font-semibold">
+                      <p className="text-[17px] md:text-[18px] text-[#E6BE8A] font-semibold leading-[1.6] break-keep">
                         흩어진 인연의 궤도를 다시 잇는 시각적 에너지 결계. 스마트폰 배경화면용.
                       </p>
-                      <p className="text-sm md:text-base text-[#EDE6DA]/80 leading-relaxed font-light">
+                      <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-light break-keep">
                         매일 수십 번씩 보게 되는 스마트폰 잠금화면에 설정하여 내면의 흔들림을 잠재우고 상대의 기운을 끌어당기는 고해상도 디지털 부적입니다.
                       </p>
                     </div>
@@ -1038,10 +1039,10 @@ export default function ReunionSecretPage() {
                     <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold block">
                       FAQ
                     </span>
-                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-[#FAF7F2] tracking-wide">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide leading-[1.4] break-keep">
                       재회비방 자주 묻는 질문
                     </h2>
-                    <p className="text-[#EDE6DA]/75 text-xs md:text-sm font-light leading-relaxed break-keep">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8] break-keep">
                       골든타임을 놓치기 전 가장 많이 묻는 핵심 질문입니다.
                     </p>
                   </div>
@@ -1085,11 +1086,11 @@ export default function ReunionSecretPage() {
                         key={idx}
                         className="p-6 rounded-2xl border border-[#C5A059]/30 bg-gradient-to-r from-[#1E040D]/90 via-[#140207]/90 to-[#0A0205] hover:border-[#E6BE8A]/60 transition-all shadow-lg"
                       >
-                        <h4 className="text-[#FAF7F2] font-elegant font-bold text-base md:text-lg flex items-start gap-2.5">
+                        <h4 className="text-[#FAF7F2] font-elegant font-bold text-base md:text-[18px] flex items-start gap-2.5">
                           <span className="text-[#E6BE8A] font-serif font-bold shrink-0">Q.</span>
                           <span>{item.q}</span>
                         </h4>
-                        <p className="text-[#EDE6DA]/80 text-xs md:text-sm mt-3 pl-6 leading-relaxed font-light border-t border-white/5 pt-3">
+                        <p className="text-[#EDE6DA]/85 text-[15px] md:text-[16px] mt-3 pl-6 leading-[1.8] font-light border-t border-white/5 pt-3">
                           {item.a}
                         </p>
                       </div>
@@ -1107,11 +1108,11 @@ export default function ReunionSecretPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="gungjung-glass p-8 md:p-12 border-[#C5A059]/20 bg-gradient-to-br from-white/[0.02] to-transparent text-left w-full max-w-[1280px] mx-auto break-keep">
-                  <h2 className="text-2xl font-elegant font-bold mb-8 text-white border-l-4 border-[#E6BE8A] pl-6">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold mb-8 text-white border-l-4 border-[#E6BE8A] pl-6 leading-[1.4] break-keep">
                     이렇게 활용해보세요
                   </h2>
                   
-                  <div className="grid md:grid-cols-2 gap-8 text-sm md:text-base leading-relaxed text-[#EDE6DA]/85">
+                  <div className="grid md:grid-cols-2 gap-8 text-[15px] md:text-[16px] leading-[1.8] text-[#EDE6DA]/85">
                     {[
                       {
                         title: "1. 내 이별 원인을 진단하세요.",
@@ -1131,8 +1132,8 @@ export default function ReunionSecretPage() {
                       }
                     ].map((item, idx) => (
                       <div key={idx} className="space-y-2">
-                        <h3 className="font-semibold text-[#E6BE8A]">{item.title}</h3>
-                        <p className="text-xs md:text-sm text-[#EDE6DA]/65 font-light leading-relaxed">{item.desc}</p>
+                        <h3 className="font-semibold text-[#E6BE8A] text-base md:text-[18px]">{item.title}</h3>
+                        <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/75 font-light leading-[1.7]">{item.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -1158,7 +1159,7 @@ export default function ReunionSecretPage() {
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
                     SOCIAL PROOF
                   </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] mt-3 leading-snug break-keep">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] mt-3 leading-[1.4] break-keep">
                     실전 카톡 복원 사례
                   </h2>
                 </div>
@@ -1186,7 +1187,7 @@ export default function ReunionSecretPage() {
                         <span className="text-xs font-mono text-[#E6BE8A] block mb-2 font-semibold">
                           CASE 0{idx + 1}
                         </span>
-                        <p className="text-base md:text-lg font-elegant font-bold text-[#FAF7F2] leading-relaxed">
+                        <p className="text-[17px] md:text-[18px] font-elegant font-bold text-[#FAF7F2] leading-[1.7]">
                           "{quote}"
                         </p>
                       </div>
@@ -1207,7 +1208,7 @@ export default function ReunionSecretPage() {
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
                     COMPARISON TABLE
                   </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] mt-3 leading-snug break-keep">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] mt-3 leading-[1.4] break-keep">
                     같은 고민 앞에서, 무엇을 선택하시겠습니까?
                   </h2>
                 </div>
@@ -1284,7 +1285,7 @@ export default function ReunionSecretPage() {
                   <span className="text-[#E6BE8A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
                     FAQ
                   </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] mt-3 leading-snug break-keep">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] mt-3 leading-[1.4] break-keep">
                     자주 묻는 질문
                   </h2>
                 </div>
@@ -1320,7 +1321,7 @@ export default function ReunionSecretPage() {
                         aria-controls={`faq-answer-${idx}`}
                         className="w-full p-5 md:p-6 text-left flex items-center justify-between gap-4 hover:bg-white/[0.03] transition-colors focus:outline-none focus:ring-1 focus:ring-[#E6BE8A]"
                       >
-                        <span className="text-base md:text-lg font-elegant font-bold text-[#FAF7F2] flex items-center gap-3">
+                        <span className="text-base md:text-[18px] font-elegant font-bold text-[#FAF7F2] flex items-center gap-3">
                           <span className="text-[#E6BE8A] font-mono text-lg">Q{idx + 1}.</span>
                           <span>{faq.q}</span>
                         </span>
@@ -1330,7 +1331,7 @@ export default function ReunionSecretPage() {
                       {openFaq === idx && (
                         <div 
                           id={`faq-answer-${idx}`}
-                          className="px-5 pb-6 md:px-6 md:pb-6 text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light border-t border-white/5 pt-4 break-keep bg-[#100207]/60"
+                          className="px-5 pb-6 md:px-6 md:pb-6 text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.8] font-light border-t border-white/5 pt-4 break-keep bg-[#100207]/60"
                         >
                           <p>{faq.a}</p>
                         </div>
@@ -1349,10 +1350,10 @@ export default function ReunionSecretPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="gungjung-glass p-8 md:p-12 border-white/5 text-left w-full max-w-[1280px] mx-auto break-keep">
-                  <h2 className="text-2xl font-elegant font-bold mb-10 text-white border-l-4 border-[#E6BE8A] pl-6">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold mb-10 text-white border-l-4 border-[#E6BE8A] pl-6 leading-[1.4] break-keep">
                     구매 전 안내
                   </h2>
-                  <ul className="space-y-4 text-xs md:text-sm text-[#EDE6DA]/60 font-light">
+                  <ul className="space-y-4 text-[15px] md:text-[16px] text-[#EDE6DA]/75 font-light leading-[1.7]">
                     {[
                       "본 상품은 PDF 형태로 제공되는 디지털 전자책입니다.",
                       "결제 완료 후 안내된 이메일 또는 마이페이지를 통해 파일을 확인하실 수 있습니다.",
@@ -1391,11 +1392,11 @@ export default function ReunionSecretPage() {
 
               <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8 break-keep">
                 <Reveal>
-                  <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-tight">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                     지금 필요한 것은<br/>
                     한 번 더 매달리는 연락이 아닐 수 있습니다
                   </h2>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/85 leading-relaxed font-light max-w-xl mx-auto">
+                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal max-w-xl mx-auto break-keep">
                     먼저 나의 상태를 바꾸고, 관계의 흐름을 다시 읽어야 합니다.<br/>
                     끊어진 인연 앞에서 무너지고 있다면, 이제 감정이 아니라 전략으로 다시 나를 세워보세요.
                   </p>
@@ -1430,11 +1431,11 @@ export default function ReunionSecretPage() {
                     <span className="inline-block text-[#E6BE8A] text-xs font-elegant font-bold tracking-[0.25em] uppercase bg-[#600018]/90 border border-[#E6BE8A]/40 px-4 py-1.5 rounded-full shadow-md">
                       LAST GOLDEN TIME
                     </span>
-                    <h2 className="text-2xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-snug">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                       잘못 보낸 카톡 한 줄로,<br />
                       <span className="text-[#E6BE8A]">마지막 재회의 문</span>마저 영영 닫으시겠습니까?
                     </h2>
-                    <p className="text-[#EDE6DA]/85 text-sm md:text-base font-light leading-relaxed">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8] break-keep">
                       감정에 휩쓸려 보내는 새벽 연락은 영원한 차단을 부를 뿐입니다.<br />
                       망쳐버린 관계를 되살릴 수 있는 시간은 무한하지 않습니다.<br />
                       <strong className="text-[#FAF7F2] font-semibold">단 19,000원으로 상대가 스스로 후회하고 찾아오게 만드십시오.</strong>
@@ -1447,10 +1448,10 @@ export default function ReunionSecretPage() {
                       골든타임 특가 76% OFF
                     </div>
 
-                    <h3 className="text-lg md:text-xl font-elegant font-bold text-[#FAF7F2] mt-2">
+                    <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] mt-2 leading-[1.4]">
                       백도화 재회비방 4 in 1 올인원 패키지
                     </h3>
-                    <p className="text-xs md:text-sm text-[#EDE6DA]/60 mt-1 font-light">
+                    <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/75 mt-1 font-light">
                       완전판 바이블 + 후폭풍 시크릿북 + 실전 공백기 워크북 + 재회 카톡 템플릿 5종
                     </p>
 
