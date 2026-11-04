@@ -6,6 +6,7 @@ import { Check } from 'lucide-react'
 interface RecommendedForCardsProps {
   items: string[]
   className?: string
+  textClassName?: string
 }
 
 /**
@@ -17,10 +18,14 @@ interface RecommendedForCardsProps {
  * - 카드 테두리: 샴페인골드 (rgba(198, 165, 105, 0.65))
  * - 카드 모서리: rounded-[18px] ~ rounded-[22px]
  * - 그림자: 자연스럽게 넓게 퍼지는 소프트 섀도우 (0 8px 24px rgba(20, 12, 25, 0.10))
- * - 텍스트: 따뜻한 브라운 차콜 (#3B312D), 15px~17px, line-height 1.65
+ * - 텍스트: 따뜻한 브라운 차콜 (#3B312D), 16px~18px, line-height 1.65
  * - 체크 아이콘: 차분한 톤다운 버건디/로즈 (#A65F63) 원형 + 밝은 아이보리 체크
  */
-export default function RecommendedForCards({ items, className = '' }: RecommendedForCardsProps) {
+export default function RecommendedForCards({
+  items,
+  className = '',
+  textClassName = 'text-[16px] md:text-[18px]'
+}: RecommendedForCardsProps) {
   if (!items || items.length === 0) return null
 
   // 아주 미세한 천연 한지 섬유 질감 (투명도 0.035로 멀리서는 깨끗한 베이지, 가까이서만 섬세한 결감)
@@ -49,8 +54,8 @@ export default function RecommendedForCards({ items, className = '' }: Recommend
             </div>
           </div>
 
-          {/* 본문 텍스트 (따뜻한 브라운 차콜 #3B312D로 가독성과 온기 유지) */}
-          <p className="text-[15px] md:text-[17px] text-[#3B312D] font-medium leading-[1.65] break-keep select-text">
+          {/* 본문 텍스트 (따뜻한 브라운 차콜 #3B312D, 18px 가독성) */}
+          <p className={`${textClassName} text-[#3B312D] font-medium leading-[1.65] break-keep select-text`}>
             {item}
           </p>
         </div>

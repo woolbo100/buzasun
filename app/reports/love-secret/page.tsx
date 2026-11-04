@@ -1203,34 +1203,64 @@ export default function LoveSecretEbookPage() {
             <ChampagneThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                2. Product Overview Section: 사랑은 감정이 아니라 관계의 구조입니다
+                2. Product Overview Section: THE FINAL SOLUTION · 戀愛秘笈
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  {/* 왼쪽 세로 이미지 (3:4 비율, 선택하는 주권자의 위상) */}
-                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl">
-                    <Image
-                      src={productData.overviewImage}
-                      alt="사랑은 감정이 아니라 관계의 구조입니다 - 연애비급"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
-                    />
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                  {/* 왼쪽 책 이미지 (3:4 비율, 보물 비책 후광 Glow 연출) */}
+                  <div className="relative group w-full max-w-[520px] mx-auto lg:max-w-none">
+                    {/* 은은한 앰버/로즈 빛 블러 후광 */}
+                    <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-tr from-[#F43F5E]/30 via-[#FB7185]/25 to-[#F59E0B]/30 rounded-[48px] blur-3xl opacity-80 group-hover:opacity-100 transition duration-700 pointer-events-none" />
+
+                    <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] sm:rounded-[40px] border border-[#D4B2A7]/40 shadow-[0_0_50px_rgba(244,63,94,0.3)] bg-black/40">
+                      <Image
+                        src={productData.overviewImage}
+                        alt="수많은 눈물과 치열한 연구 끝에 탄생한 연애비급"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                        priority
+                      />
+                    </div>
                   </div>
 
-                  {/* 오른쪽 핵심 가치 및 6개 포인트 카드 */}
-                  <div className="space-y-6 text-left break-keep">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      사랑은 감정이 아니라<br />
-                      <span className="text-[#E5C4BB]">관계의 구조</span>입니다
-                    </h2>
-                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
-                      연애비급은 단순히 더 예뻐지는 법, 더 잘해주는 법, 더 참는 법을 말하지 않습니다. 이 책은 연애에서 반복적으로 상처받는 여성이 왜 늘 같은 자리에서 흔들리는지, 어떤 순간 관계의 포지션이 기울어지는지, 그리고 어떻게 다시 나의 중심으로 돌아올 수 있는지를 다룹니다. 사랑받기 위해 애쓰는 여자가 아니라, 사랑이 머물 수밖에 없는 여자가 되는 관계 구조 안내서입니다.
-                    </p>
+                  {/* 오른쪽 핵심 가치 및 6개 별(✦) 포인트 카드 */}
+                  <div className="space-y-6 sm:space-y-7 text-left break-keep">
+                    {/* 카테고리 / 서브 헤드 */}
+                    <div>
+                      <span className="text-[#D4B2A7] font-elegant text-[12pt] sm:text-[13pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                        THE FINAL SOLUTION · 戀愛秘笈
+                      </span>
 
-                    {/* 포인트 카드 6개 (glass card 형태) */}
-                    <div className="grid grid-cols-2 gap-4 pt-4">
+                      {/* [메인 타이틀] 1.3배 확대, 아이보리 제목 + 피치 로즈 광채 제품명 */}
+                      <h2 className="text-[25px] sm:text-[32px] md:text-[42px] lg:text-[44px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
+                        &ldquo;수많은 눈물과 치열한 연구 끝에,<br />
+                        마침내 당신에게 바치는 단 하나의 비기(秘笈)<br />
+                        <span className="bg-gradient-to-r from-[#FDE68A] via-[#FBAAA6] to-[#F472B6] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_25px_rgba(251,170,166,0.6)]">
+                          《연애비급》
+                        </span>
+                        이 탄생했습니다.&rdquo;
+                      </h2>
+                    </div>
+
+                    {/* [스토리 브릿지 본문] 짧고 직관적으로 분할된 문단 */}
+                    <div className="space-y-4 text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                      <p className="text-[#EDE6DA]/90">
+                        진심만으로 상처받던 시절을 지나, 심리학·최면 역학·뇌과학으로 직접 증명해 낸 관계의 공식.
+                      </p>
+                      <p className="text-[#FAF7F2] font-semibold text-[17px] md:text-[19px]">
+                        더 이상 상대의 눈치를 보며 울지 마십시오.
+                      </p>
+                      <p className="text-[#EDE6DA]/90">
+                        <strong className="text-[#FBAAA6] font-semibold">《연애비급》</strong>은 사랑을 구걸하던 당신의 손에{' '}
+                        <span className="text-[#FAF7F2] font-semibold">&lsquo;선택하는 주도권&rsquo;</span>과{' '}
+                        <span className="text-[#FAF7F2] font-semibold">&lsquo;흔들리지 않는 중심&rsquo;</span>을 쥐여드리기 위해 탄생한 실전 설계도입니다.
+                      </p>
+                    </div>
+
+                    {/* [체크 칩 대신 별(✦) 박스 6개] 3줄 2열 프리미엄 엠블럼 박스 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 sm:pt-3">
                       {[
                         "연애 포지션 회복",
                         "남자의 심리 구조 이해",
@@ -1241,15 +1271,17 @@ export default function LoveSecretEbookPage() {
                       ].map((item, idx) => (
                         <div
                           key={idx}
-                          className="gungjung-glass p-4 border-[#D4B2A7]/20 flex items-center gap-3 hover:border-[#D4B2A7]/50 transition-all"
+                          className="p-3.5 sm:p-4 rounded-xl border border-[#D4B2A7]/30 flex items-center gap-3 backdrop-blur-md transition-all duration-300 hover:border-[#FBAAA6]/60 hover:scale-[1.01]"
                           style={{
-                            boxShadow: '0 8px 32px rgba(197, 139, 160, 0.05)'
+                            background: 'linear-gradient(135deg, rgba(46, 18, 28, 0.75) 0%, rgba(22, 9, 16, 0.85) 100%)',
+                            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.35), inset 0 0 12px rgba(212, 178, 167, 0.08)'
                           }}
                         >
-                          <div className="w-6 h-6 rounded-full bg-[#A66B73] flex items-center justify-center shrink-0 border border-[#A66B73]/50 shadow-sm">
-                            <Check className="w-3.5 h-3.5 text-[#FAF6EE]" />
+                          {/* 별(✦) 엠블럼 */}
+                          <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#A66B73] to-[#7A1E35] flex items-center justify-center shrink-0 border border-[#D4B2A7]/60 shadow-[0_0_10px_rgba(244,114,182,0.35)] text-[#FAF6EE] text-[13px] font-bold">
+                            ✦
                           </div>
-                          <span className="text-xs md:text-sm text-white/90 font-medium">
+                          <span className="text-[14px] sm:text-[15px] text-[#FAF7F2] font-medium tracking-wide break-keep">
                             {item}
                           </span>
                         </div>
@@ -1275,6 +1307,7 @@ export default function LoveSecretEbookPage() {
                     </h2>
 
                     <RecommendedForCards
+                      textClassName="text-[16px] md:text-[18px]"
                       items={[
                         "연애할 때 늘 내가 더 불안해지는 분",
                         "잘해줄수록 관계가 기울어진다고 느꼈던 분",
