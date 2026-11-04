@@ -569,9 +569,9 @@ export default function LoveSecretEbookPage() {
               {/* 1. THE HIDDEN TRUTH 설명 영역 (설명 글 먼저) */}
               <Reveal>
                 <div
-                  className="relative hanji-card-hover p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 shadow-[0_16px_45px_rgba(0,0,0,0.65)] cursor-default text-center overflow-hidden"
+                  className="relative hanji-card-hover backdrop-blur-md p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 shadow-[0_16px_45px_rgba(0,0,0,0.65)] cursor-default text-center overflow-hidden"
                   style={{
-                    background: 'linear-gradient(to right, rgba(38, 17, 26, 0.95) 0%, rgba(26, 12, 25, 0.95) 40%, rgba(18, 9, 23, 0.95) 70%, rgba(10, 5, 20, 0.95) 100%)',
+                    background: 'linear-gradient(to right, rgba(38, 17, 26, 0.85) 0%, rgba(26, 12, 25, 0.85) 40%, rgba(18, 9, 23, 0.85) 70%, rgba(10, 5, 20, 0.85) 100%)',
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
@@ -936,9 +936,9 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="relative hanji-card-hover p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 shadow-[0_16px_45px_rgba(0,0,0,0.65)] cursor-default overflow-hidden"
+                  className="relative hanji-card-hover backdrop-blur-md p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#D4B2A7]/70 shadow-[0_16px_45px_rgba(0,0,0,0.65)] cursor-default overflow-hidden"
                   style={{
-                    background: 'linear-gradient(to right, rgba(38, 17, 26, 0.95) 0%, rgba(26, 12, 25, 0.95) 40%, rgba(18, 9, 23, 0.95) 70%, rgba(10, 5, 20, 0.95) 100%)',
+                    background: 'linear-gradient(to right, rgba(38, 17, 26, 0.85) 0%, rgba(26, 12, 25, 0.85) 40%, rgba(18, 9, 23, 0.85) 70%, rgba(10, 5, 20, 0.85) 100%)',
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
                   }}
                 >
@@ -2328,91 +2328,156 @@ export default function LoveSecretEbookPage() {
                   </p>
                 </div>
 
-                {/* 반응형 비교표 컨테이너 */}
-                <div className="overflow-x-auto rounded-3xl border border-[#D4B2A7]/40 shadow-2xl bg-[#2A0A14]/30 backdrop-blur-sm">
-                  <table className="w-full text-left border-collapse min-w-[640px]">
-                    <thead>
-                      <tr className="border-b border-[#D4B2A7]/30 bg-black/40">
-                        <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">구분</th>
-                        <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">일반 인터넷 조언</th>
-                        <th className="py-5 px-6 text-sm font-bold text-[#EDE6DA]/60 w-1/4">뻔한 여우짓 강의</th>
-                        <th className="py-5 px-6 text-base font-bold text-[#FAF6EE] bg-[#A66B73]/30 border-l border-r border-[#A66B73]/40 w-1/4">
-                          백도화 연애비급 3종 세트
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-white/5 text-xs md:text-sm">
-                      {/* 행 1: 비용 */}
-                      <tr className="hover:bg-white/[0.01] transition-colors">
-                        <td className="py-5 px-6 font-bold text-white">비용</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">단편적 정보</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">수십만 원 상당</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#A66B73]/20 border-l border-r border-[#A66B73]/40">
-                          <span className="text-[#E5C4BB] text-base">단 19,000원</span> (영구 소장)
-                        </td>
-                      </tr>
-
-                      {/* 행 2: 관점 */}
-                      <tr className="hover:bg-white/[0.01] transition-colors">
-                        <td className="py-5 px-6 font-bold text-white">관점</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">&ldquo;답장 늦게 해라&rdquo; 식</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">얄팍한 애교</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#A66B73]/20 border-l border-r border-[#A66B73]/40">
-                          진화심리학 + 최면 역학 + 무너지지 않는 자립 프레임
-                        </td>
-                      </tr>
-
-                      {/* 행 3: 도구 */}
-                      <tr className="hover:bg-white/[0.01] transition-colors">
-                        <td className="py-5 px-6 font-bold text-white">도구</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">없음</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">어색한 연기</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#A66B73]/20 border-l border-r border-[#A66B73]/40">
-                          복붙 카톡 프로토콜 5종 + 30일 실천 워크북
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* 가치 비교 핵심 포인트 요약 */}
-                <div className="mt-8 space-y-3 max-w-4xl mx-auto break-keep">
-                  {/* 항목 1 */}
-                  <div className="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[#D4B2A7]/30 transition-all">
-                    <div className="flex items-center gap-3 text-white/90 font-medium text-sm sm:text-base shrink-0">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#D4B2A7]/50 shrink-0" />
-                      <span>1회 15만 원짜리 연애 상담?</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-[#EDE6DA]/70 text-xs sm:text-sm pl-4 md:pl-0 font-light">
-                      <span className="text-[#D4B2A7] font-bold shrink-0">➔</span>
-                      <span>상담 끝나면 또 원점으로 돌아와 불안해집니다.</span>
-                    </div>
-                  </div>
-
-                  {/* 항목 2 */}
-                  <div className="p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[#D4B2A7]/30 transition-all">
-                    <div className="flex items-center gap-3 text-white/90 font-medium text-sm sm:text-base shrink-0">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#D4B2A7]/50 shrink-0" />
-                      <span>시중의 수박 겉핥기 연애 유튜브?</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-[#EDE6DA]/70 text-xs sm:text-sm pl-4 md:pl-0 font-light">
-                      <span className="text-[#D4B2A7] font-bold shrink-0">➔</span>
-                      <span>뻔한 &lsquo;밀당해라, 연락 늦게 해라&rsquo; 잡기술로 밑천만 드러납니다.</span>
-                    </div>
-                  </div>
-
-                  {/* 항목 3: 연애비급 세트 강조 (차분한 딥 더스티 로즈 #49303F 테마 통일) */}
+                {/* 텍스트 기반 3개 카드 가치 비교 그리드 */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                  {/* 카드 1: 일반 인터넷 조언 */}
                   <div
-                    className="p-4 sm:p-5 rounded-2xl border border-[rgba(210,166,172,0.30)] shadow-[0_8px_24px_rgba(0,0,0,0.35)] flex flex-col md:flex-row md:items-center justify-between gap-2.5 md:gap-4 hover:border-[rgba(210,166,172,0.60)] transition-all"
-                    style={{ background: 'rgba(60, 34, 50, 0.80)' }}
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#5E3B48]/50 shadow-lg text-left backdrop-blur-md flex flex-col justify-between h-full"
+                    style={{ background: 'rgba(32, 16, 24, 0.94)' }}
                   >
-                    <div className="flex items-center gap-3 text-[#F5E9E2] font-elegant font-bold text-sm sm:text-base shrink-0">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#C5A578] shrink-0 shadow-[0_0_8px_#C5A578]" />
-                      <span>《연애비급 3종 마스터 세트》</span>
+                    <div>
+                      {/* 카드 제목 (PC 22px 전후) */}
+                      <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2] pb-5 mb-6 border-b border-white/10">
+                        일반 인터넷 조언
+                      </h3>
+
+                      {/* 항목 리스트: 비용, 관점, 도구 (간격 24px) */}
+                      <div className="space-y-6">
+                        {/* 1. 비용 */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#D4B2A7]/80 block mb-1.5">
+                            비용
+                          </span>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            표면적으로는 무료이지만, 무수한 시행착오와 관계 상처라는 보이지 않는 큰 대가를 치르게 됩니다.
+                          </p>
+                        </div>
+
+                        {/* 2. 관점 */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#D4B2A7]/80 block mb-1.5">
+                            관점
+                          </span>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            &ldquo;답장 늦게 해라&rdquo;, &ldquo;단답으로 튕겨라&rdquo; 식의 원리 없는 1차원적 밀당에 머뭅니다.
+                          </p>
+                        </div>
+
+                        {/* 3. 도구 */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#D4B2A7]/80 block mb-1.5">
+                            도구
+                          </span>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            상황별 명확한 기준과 도구가 없어, 막상 돌발 상황이 닥치면 다시 본래의 불안한 감정대로 흔들립니다.
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-[#D5C2C6] text-xs sm:text-sm pl-4 md:pl-0 font-normal">
-                      <span className="text-[#C5A578] font-bold shrink-0">➔</span>
-                      <span>단 한 번 치킨 한 마리 값(<strong className="text-[#F5E9E2] font-bold">19,000원</strong>)으로 평생 남자를 다루는 절대 프레임을 소장합니다.</span>
+                  </div>
+
+                  {/* 카드 2: 뻔한 여우짓 강의 */}
+                  <div
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#5E3B48]/50 shadow-lg text-left backdrop-blur-md flex flex-col justify-between h-full"
+                    style={{ background: 'rgba(32, 16, 24, 0.94)' }}
+                  >
+                    <div>
+                      {/* 카드 제목 (PC 22px 전후) */}
+                      <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2] pb-5 mb-6 border-b border-white/10">
+                        뻔한 여우짓 강의
+                      </h3>
+
+                      {/* 항목 리스트: 비용, 관점, 도구 (간격 24px) */}
+                      <div className="space-y-6">
+                        {/* 1. 비용 */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#D4B2A7]/80 block mb-1.5">
+                            비용
+                          </span>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            1회 수십만 원에 달하는 고액 수강료를 지불해야 하지만, 상담이 끝나면 다시 혼자 남겨집니다.
+                          </p>
+                        </div>
+
+                        {/* 2. 관점 */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#D4B2A7]/80 block mb-1.5">
+                            관점
+                          </span>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            내 성향과 맞지 않는 과도한 애교나 인위적인 연기를 무리하게 강요하여 오래 지속하기 어렵습니다.
+                          </p>
+                        </div>
+
+                        {/* 3. 도구 */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#D4B2A7]/80 block mb-1.5">
+                            도구
+                          </span>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            체화되지 않는 어색한 연기 기술로, 실전 대화에서 상대방에게 금방 밑천과 조급함이 간파당합니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 카드 3: 백도화 연애비급 (강조 카드) */}
+                  <div
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/60 shadow-[0_12px_40px_rgba(166,107,115,0.22)] text-left backdrop-blur-md flex flex-col justify-between h-full relative"
+                    style={{
+                      background: 'linear-gradient(145deg, rgba(68, 24, 38, 0.95) 0%, rgba(42, 13, 24, 0.95) 100%)'
+                    }}
+                  >
+                    <div>
+                      {/* 상단 배지 */}
+                      <div className="mb-2.5">
+                        <span className="inline-block py-1 px-3 rounded-md text-[12px] font-bold text-[#FAF6EE] bg-[#87465B] border border-[#D5AFAD]/60">
+                          연애비급 3종 패키지
+                        </span>
+                      </div>
+
+                      {/* 카드 제목 (PC 22px 전후) */}
+                      <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2] pb-5 mb-6 border-b border-[#D4B2A7]/25">
+                        백도화 연애비급
+                      </h3>
+
+                      {/* 항목 리스트: 비용, 관점, 도구 (간격 24px) */}
+                      <div className="space-y-6">
+                        {/* 1. 비용 (19,000원 가장 크게 강조) */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#E5C4BB] block mb-1.5">
+                            비용
+                          </span>
+                          <div className="text-[28px] md:text-[32px] font-bold font-elegant text-[#FAF7F2] leading-none mb-2">
+                            19,000<span className="text-[18px] font-normal text-[#E5C4BB] ml-1">원</span>
+                            <span className="text-[13px] md:text-[14px] font-normal text-[#FAF6EE]/80 ml-2 font-sans">(영구 소장)</span>
+                          </div>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            단 한 번 치킨 한 마리 값으로 추가 지출 없이 평생 꺼내보는 압도적인 가성비입니다.
+                          </p>
+                        </div>
+
+                        {/* 2. 관점 */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#E5C4BB] block mb-1.5">
+                            관점
+                          </span>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            진화심리학과 무의식 역학을 바탕으로, 나를 잃지 않고 관계의 무게중심을 회복하는 자립 프레임입니다.
+                          </p>
+                        </div>
+
+                        {/* 3. 도구 */}
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#E5C4BB] block mb-1.5">
+                            도구
+                          </span>
+                          <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                            상황별 즉시 복사해 쓰는 카톡 프로토콜 5종과 30일 매력 각성 워크북으로 실전에 즉각 적용합니다.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2500,7 +2565,7 @@ export default function LoveSecretEbookPage() {
                         </button>
 
                         {isOpen && (
-                          <div className="px-6 pb-6 pt-2.5 text-xs md:text-sm text-[#EDE6DA]/80 leading-[1.8] font-light border-t border-white/5 break-keep">
+                          <div className="px-6 pb-6 pt-2.5 text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.8] font-light border-t border-white/5 break-keep">
                             {faq.a}
                           </div>
                         )}
@@ -2522,7 +2587,7 @@ export default function LoveSecretEbookPage() {
                       <h4 className="text-base md:text-lg font-elegant font-bold text-[#FAF7F2] tracking-wide break-keep">
                         이미 헤어진 관계로 고민하고 계신가요?
                       </h4>
-                      <p className="text-xs md:text-sm text-[#EDE6DA] font-light leading-relaxed break-keep">
+                      <p className="text-[15px] md:text-[16px] text-[#EDE6DA] font-light leading-relaxed break-keep">
                         이별 후 마음 정리와 연락·재회의 방향은 《재회비방》에서 살펴보세요.
                       </p>
                     </div>
@@ -2609,7 +2674,7 @@ export default function LoveSecretEbookPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold mb-10 text-white border-l-4 border-[#E5C4BB] pl-6 leading-[1.45]">
                     구매 전 <span className="text-[#E5C4BB]">안내</span>
                   </h2>
-                  <ul className="space-y-4 text-xs md:text-sm text-[#EDE6DA]/60 font-light">
+                  <ul className="space-y-4 text-[15px] md:text-[16px] text-[#EDE6DA]/75 leading-[1.7] font-light">
                     {[
                       "본 상품은 실물 배송이 없는 디지털 전자책(PDF 파일) 상품입니다.",
                       "결제 완료 후 안내된 방식(마이페이지 또는 가입하신 이메일)에 따라 즉시 콘텐츠를 다운로드해 확인하실 수 있습니다.",
@@ -2658,14 +2723,14 @@ export default function LoveSecretEbookPage() {
               <div className="relative z-10 p-6 sm:p-8 lg:p-14 xl:p-16 lg:max-w-[58%] text-left flex flex-col justify-center lg:min-h-[640px] xl:min-h-[670px]">
                 <Reveal>
                   <div className="space-y-6 sm:space-y-7 break-keep">
-                    {/* [큰 제목] */}
-                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                    {/* [큰 제목] (36px) */}
+                    <h2 className="text-[28px] sm:text-[32px] md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                       선택받기 위해 애쓰지 마세요.<br />
                       <span className="text-[#E5C4BB]">이제, 당신이 선택하세요.</span>
                     </h2>
 
-                    {/* [본문] (최소 16px, 밝은 베이지색, 충분한 줄·문단 간격) */}
-                    <div className="space-y-3.5 text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                    {/* [본문] (18px, 밝은 베이지색, 충분한 줄·문단 간격) */}
+                    <div className="space-y-3.5 text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       <p>
                         사랑은 더 많이 애쓴 만큼 주어지는 보상이 아닙니다.<br />
                         진심을 다하는 동안에도, 나의 자리를 잃지 않아야 합니다.
@@ -2676,8 +2741,8 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
 
-                    {/* [마무리 문장] (은은한 샴페인골드색) */}
-                    <p className="text-sm sm:text-base font-elegant text-[#D4B2A7] font-medium tracking-wide pt-1">
+                    {/* [마무리 문장] (24px, 은은한 샴페인골드색) */}
+                    <p className="text-[19px] sm:text-[21px] md:text-[24px] font-elegant text-[#D4B2A7] font-medium tracking-wide pt-1">
                       사랑 안에서, 나를 잃지 않도록. 《연애비급》
                     </p>
 
