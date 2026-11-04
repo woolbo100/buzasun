@@ -1225,16 +1225,15 @@ export default function LoveSecretEbookPage() {
                     <div>
                       {/* 상단 도입부 (제목보다 좀 작은 글씨) */}
                       <p className="text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-light text-[#EDE6DA]/85 leading-[1.4] mb-2 sm:mb-2.5 break-keep">
-                        수많은 눈물과 연구 끝에, 마침내
+                        수많은 눈물과 연구 끝에,
                       </p>
 
-                      {/* [메인 타이틀] 단 하나의 비기(秘笈) / 《연애비급》이 탄생했습니다. (2줄 구성) */}
-                      <h2 className="text-[26px] sm:text-[34px] md:text-[42px] lg:text-[46px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                        단 하나의 비기(秘笈)<br />
-                        <span className="inline-block bg-gradient-to-r from-[#C2736C] via-[#DC9D96] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)]">
+                      {/* [메인 타이틀] 마침내 탄생한 단 하나의 비기(秘笈) / 《연애비급》 */}
+                      <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
+                        마침내 탄생한 단 하나의 비기(秘笈)<br />
+                        <span className="inline-block bg-gradient-to-r from-[#C2736C] via-[#DC9D96] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)] mt-1">
                           《연애비급》
                         </span>
-                        이 탄생했습니다.
                       </h2>
                     </div>
 
@@ -1247,7 +1246,7 @@ export default function LoveSecretEbookPage() {
                         더 이상 상대의 눈치를 보며 울지 마십시오.
                       </p>
                       <p className="text-[#EDE6DA]/90">
-                        <strong className="text-[#E5C4BB] font-semibold">《연애비급》</strong>은 사랑을 구걸하던 당신의 손에{' '}
+                        <strong className="text-[#E5C4BB] font-semibold">《연애비급》</strong>은 사랑을 갈구하던 당신의 손에{' '}
                         <span className="text-[#FAF7F2] font-semibold">&lsquo;선택하는 주도권&rsquo;</span>과{' '}
                         <span className="text-[#FAF7F2] font-semibold">&lsquo;흔들리지 않는 중심&rsquo;</span>을 쥐여드리기 위해 탄생한 실전 설계도입니다.
                       </p>
