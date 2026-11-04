@@ -1228,11 +1228,11 @@ export default function LoveSecretEbookPage() {
                         수많은 눈물과 연구 끝에,
                       </p>
 
-                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 연애비급 (3줄 줄바꿈, '연' 글자와 '단' 글자 좌측 정렬) */}
+                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 연애비급 (로즈 피치 -> 피치 베이비 핑크 그라데이션 광채 복원 및 크기 확대) */}
                       <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
                         마침내 탄생한<br />
                         단 하나의 비급(秘笈)<br />
-                        <span className="block text-[28px] sm:text-[35px] md:text-[40px] lg:text-[45px] xl:text-[48px] bg-gradient-to-r from-[#C2736C] via-[#DC9D96] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)] mt-1.5">
+                        <span className="block text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] bg-gradient-to-r from-[#D49992] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_24px_rgba(229,196,187,0.45)] mt-2">
                           연애비급
                         </span>
                       </h2>
@@ -2357,11 +2357,11 @@ export default function LoveSecretEbookPage() {
 
                 {/* 텍스트 기반 3개 카드 가치 비교 그리드 */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-                  {/* 카드 1: 일반 인터넷 조언 (기존 상세페이지 퍼플 글라스 반투명 배경) */}
+                  {/* 카드 1: 일반 인터넷 조언 (첨부한 후기 이미지의 퍼플톤 반투명 글라스 배경) */}
                   <div
-                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/30 shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:border-[#D4B2A7]/50 text-left backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300"
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#D4B2A7]/40 text-left backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300"
                     style={{
-                      background: 'linear-gradient(145deg, rgba(38, 17, 26, 0.85) 0%, rgba(22, 11, 24, 0.85) 50%, rgba(14, 7, 20, 0.85) 100%)'
+                      background: 'rgba(35, 24, 49, 0.55)'
                     }}
                   >
                     <div>
@@ -2405,11 +2405,11 @@ export default function LoveSecretEbookPage() {
                     </div>
                   </div>
 
-                  {/* 카드 2: 뻔한 여우짓 강의 (기존 상세페이지 퍼플 글라스 반투명 배경) */}
+                  {/* 카드 2: 뻔한 여우짓 강의 (첨부한 후기 이미지의 퍼플톤 반투명 글라스 배경) */}
                   <div
-                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/30 shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:border-[#D4B2A7]/50 text-left backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300"
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#D4B2A7]/40 text-left backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300"
                     style={{
-                      background: 'linear-gradient(145deg, rgba(38, 17, 26, 0.85) 0%, rgba(22, 11, 24, 0.85) 50%, rgba(14, 7, 20, 0.85) 100%)'
+                      background: 'rgba(35, 24, 49, 0.55)'
                     }}
                   >
                     <div>
