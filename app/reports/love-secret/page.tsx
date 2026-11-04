@@ -1208,21 +1208,16 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                  {/* 왼쪽 책 이미지 (3:4 비율, 보물 비책 후광 Glow 연출) */}
-                  <div className="relative group w-full max-w-[520px] mx-auto lg:max-w-none">
-                    {/* 은은한 앰버/로즈 빛 블러 후광 */}
-                    <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-tr from-[#F43F5E]/30 via-[#FB7185]/25 to-[#F59E0B]/30 rounded-[48px] blur-3xl opacity-80 group-hover:opacity-100 transition duration-700 pointer-events-none" />
-
-                    <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] sm:rounded-[40px] border border-[#D4B2A7]/40 shadow-[0_0_50px_rgba(244,63,94,0.3)] bg-black/40">
-                      <Image
-                        src={productData.overviewImage}
-                        alt="수많은 눈물과 치열한 연구 끝에 탄생한 연애비급"
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                        priority
-                      />
-                    </div>
+                  {/* 왼쪽 책 이미지 (3:4 비율) */}
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] sm:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40">
+                    <Image
+                      src={productData.overviewImage}
+                      alt="수많은 눈물과 치열한 연구 끝에 탄생한 연애비급"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                      priority
+                    />
                   </div>
 
                   {/* 오른쪽 핵심 가치 및 6개 별(✦) 포인트 카드 */}
@@ -1233,14 +1228,18 @@ export default function LoveSecretEbookPage() {
                         THE FINAL SOLUTION · 戀愛秘笈
                       </span>
 
-                      {/* [메인 타이틀] 1.3배 확대, 아이보리 제목 + 피치 로즈 광채 제품명 */}
-                      <h2 className="text-[25px] sm:text-[32px] md:text-[42px] lg:text-[44px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
-                        &ldquo;수많은 눈물과 치열한 연구 끝에,<br />
-                        마침내 당신에게 바치는 단 하나의 비기(秘笈)<br />
+                      {/* 상단 인트로 (본문보다 살짝 큰 20px 내외, 얇은 굵기, 연한 톤) */}
+                      <p className="text-[18px] sm:text-[19px] md:text-[21px] font-elegant font-light text-[#EDE6DA]/75 leading-[1.6] mb-2 sm:mb-2.5 break-keep">
+                        수많은 눈물과 연구 끝에 완성한
+                      </p>
+
+                      {/* [메인 타이틀] 단 하나의 비기(秘笈) / 《연애비급》이 탄생했습니다. */}
+                      <h2 className="text-[26px] sm:text-[34px] md:text-[42px] lg:text-[46px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
+                        단 하나의 비기(秘笈)<br />
                         <span className="bg-gradient-to-r from-[#FDE68A] via-[#FBAAA6] to-[#F472B6] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_25px_rgba(251,170,166,0.6)]">
                           《연애비급》
                         </span>
-                        이 탄생했습니다.&rdquo;
+                        이 탄생했습니다.
                       </h2>
                     </div>
 
@@ -1259,7 +1258,7 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
 
-                    {/* [체크 칩 대신 별(✦) 박스 6개] 3줄 2열 프리미엄 엠블럼 박스 */}
+                    {/* [체크 칩 대신 별(✦) 박스 6개] 로즈코코아 테마 프리미엄 엠블럼 박스 */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 sm:pt-3">
                       {[
                         "연애 포지션 회복",
@@ -1267,21 +1266,21 @@ export default function LoveSecretEbookPage() {
                         "흔들리지 않는 매력의 근원",
                         "무의식적 관계 패턴 해석",
                         "말의 결을 바꾸는 언어 구조",
-                        "선택받는 자리에서 선택하는 자리로"
+                        "내가 선택하는 자리로"
                       ].map((item, idx) => (
                         <div
                           key={idx}
-                          className="p-3.5 sm:p-4 rounded-xl border border-[#D4B2A7]/30 flex items-center gap-3 backdrop-blur-md transition-all duration-300 hover:border-[#FBAAA6]/60 hover:scale-[1.01]"
+                          className="p-3.5 sm:p-4 rounded-xl border border-[rgba(210,166,172,0.35)] flex items-center gap-3 backdrop-blur-md transition-all duration-300 hover:border-[rgba(210,166,172,0.65)] hover:scale-[1.01]"
                           style={{
-                            background: 'linear-gradient(135deg, rgba(46, 18, 28, 0.75) 0%, rgba(22, 9, 16, 0.85) 100%)',
-                            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.35), inset 0 0 12px rgba(212, 178, 167, 0.08)'
+                            background: 'rgba(60, 34, 50, 0.82)',
+                            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.25)'
                           }}
                         >
-                          {/* 별(✦) 엠블럼 */}
-                          <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#A66B73] to-[#7A1E35] flex items-center justify-center shrink-0 border border-[#D4B2A7]/60 shadow-[0_0_10px_rgba(244,114,182,0.35)] text-[#FAF6EE] text-[13px] font-bold">
+                          {/* 별(✦) 엠블럼 (로즈코코아 배지 톤 매칭) */}
+                          <div className="w-6 h-6 rounded-lg bg-[#87465B] flex items-center justify-center shrink-0 border border-[#D5AFAD] shadow-[0_0_10px_rgba(213,175,173,0.35)] text-[#FFF1E9] text-[13px] font-bold">
                             ✦
                           </div>
-                          <span className="text-[14px] sm:text-[15px] text-[#FAF7F2] font-medium tracking-wide break-keep">
+                          <span className="text-[14px] sm:text-[15px] text-[#F5E9E2] font-semibold tracking-wide break-keep">
                             {item}
                           </span>
                         </div>
