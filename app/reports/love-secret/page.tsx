@@ -2554,7 +2554,7 @@ export default function LoveSecretEbookPage() {
                     {/* 항목 리스트: 비용, 관점, 도구 (PC에서는 행별로 동일 높이 유지) */}
                     <div className="space-y-6 flex-1 flex flex-col justify-between">
                       {/* 1. 비용 */}
-                      <div className="md:min-h-[175px] lg:min-h-[160px]">
+                      <div className="md:min-h-[135px] lg:min-h-[120px]">
                         <span className="text-[14px] font-semibold text-[#D4B2A7]/80 block mb-1.5">
                           비용
                         </span>
@@ -2602,7 +2602,7 @@ export default function LoveSecretEbookPage() {
                     {/* 항목 리스트: 비용, 관점, 도구 (PC에서는 행별로 동일 높이 유지) */}
                     <div className="space-y-6 flex-1 flex flex-col justify-between">
                       {/* 1. 비용 */}
-                      <div className="md:min-h-[175px] lg:min-h-[160px]">
+                      <div className="md:min-h-[135px] lg:min-h-[120px]">
                         <span className="text-[14px] font-semibold text-[#D4B2A7]/80 block mb-1.5">
                           비용
                         </span>
@@ -2657,17 +2657,13 @@ export default function LoveSecretEbookPage() {
 
                     {/* 항목 리스트: 비용, 관점, 도구 (PC에서는 행별로 동일 높이 유지) */}
                     <div className="space-y-6 flex-1 flex flex-col justify-between">
-                      {/* 1. 비용 (19,000원 가장 크게 강조) */}
-                      <div className="md:min-h-[175px] lg:min-h-[160px]">
+                      {/* 1. 비용 */}
+                      <div className="md:min-h-[135px] lg:min-h-[120px]">
                         <span className="text-[14px] font-semibold text-[#E5C4BB] block mb-1.5">
                           비용
                         </span>
-                        <div className="text-[28px] md:text-[32px] font-bold font-elegant text-[#FAF7F2] leading-none mb-2">
-                          19,000<span className="text-[18px] font-normal text-[#E5C4BB] ml-1">원</span>
-                          <span className="text-[13px] md:text-[14px] font-normal text-[#FAF6EE]/80 ml-2 font-sans">(영구 소장)</span>
-                        </div>
                         <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
-                          한 번의 구매로 추가 비용 없이, 필요한 순간마다 평생 꺼내 볼 수 있습니다. 커피 몇잔 값으로 오래 남는 관계의 지도를 얻으세요.
+                          커피 몇잔 값으로 필요한 순간마다 평생 꺼내 볼 수 있는 관계의 지도를 얻을 수 있습니다.(영구소장)
                         </p>
                       </div>
 
