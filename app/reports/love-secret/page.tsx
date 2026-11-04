@@ -1267,7 +1267,7 @@ export default function LoveSecretEbookPage() {
                     {/* [체크 칩 대신 별(✦) 박스 6개] 로즈코코아 테마 프리미엄 엠블럼 박스 */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 sm:pt-3">
                       {[
-                        "연애 포지션 회복",
+                        "주도적 연애 포지션 회복",
                         "남자의 심리 구조 이해",
                         "흔들리지 않는 매력의 근원",
                         "무의식적 관계 패턴 해석",
