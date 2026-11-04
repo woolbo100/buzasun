@@ -1223,10 +1223,15 @@ export default function LoveSecretEbookPage() {
                   {/* 오른쪽 핵심 가치 및 6개 별(✦) 포인트 카드 (좌측 이미지 시작선에 맞춤) */}
                   <div className="space-y-6 sm:space-y-7 text-left break-keep lg:pt-1">
                     <div>
+                      {/* 상단 도입부 (제목보다 좀 작은 글씨) */}
+                      <p className="text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-light text-[#EDE6DA]/85 leading-[1.4] mb-2 sm:mb-2.5 break-keep">
+                        수많은 눈물과 연구 끝에, 마침내
+                      </p>
+
                       {/* [메인 타이틀] 단 하나의 비기(秘笈) / 《연애비급》이 탄생했습니다. (2줄 구성) */}
                       <h2 className="text-[26px] sm:text-[34px] md:text-[42px] lg:text-[46px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
                         단 하나의 비기(秘笈)<br />
-                        <span className="bg-gradient-to-r from-[#D49992] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)]">
+                        <span className="inline-block bg-gradient-to-r from-[#C2736C] via-[#DC9D96] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)]">
                           《연애비급》
                         </span>
                         이 탄생했습니다.
