@@ -1681,7 +1681,7 @@ export default function LoveSecretEbookPage() {
 
                         {/* 설명 (16px) */}
                         <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
-                          30일간의 데일리 미션을 통해 휘둘리지 않고 주도권을 쥐는 여왕의 태도를 몸에 새기는 체질 각성서
+                          30일간의 데일리 미션을 통해 휘둘리지 않고 주도권을 쥐는 여왕의 태도를 몸에 새기는<br />체질 개선 각성서
                         </p>
                       </div>
                     </div>
@@ -1727,10 +1727,15 @@ export default function LoveSecretEbookPage() {
                             priority
                           />
                         </div>
-                        {/* 이미지 바로 아래 페이지 수 안내 (16~20px 여백, 핑크골드 컬러, 숫자 강조) */}
-                        <p className="mt-4 md:mt-5 text-center text-sm md:text-[15px] text-[#D4B2A7] font-light tracking-wide">
-                          PDF 전자책 · <strong className="font-bold text-[#E5C4BB]">90</strong>페이지
-                        </p>
+                        {/* 이미지 바로 아래 정통바이블-본편 및 페이지 수 안내 */}
+                        <div className="mt-4 md:mt-5 text-center space-y-1">
+                          <p className="text-sm md:text-[15px] text-[#E5C4BB] font-medium tracking-wide">
+                            정통바이블-본편
+                          </p>
+                          <p className="text-sm md:text-[15px] text-[#D4B2A7] font-light tracking-wide">
+                            PDF 전자책 · <strong className="font-bold text-[#E5C4BB]">90</strong>페이지
+                          </p>
+                        </div>
                       </div>
 
                       {/* 상세 설명 */}
@@ -1741,7 +1746,7 @@ export default function LoveSecretEbookPage() {
                           <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
                             《연애비급(戀愛秘笈) 완전판》
                           </h3>
-                          <p className="text-sm md:text-base text-[#D4B2A7] font-medium leading-[1.5]">
+                          <p className="text-[17px] md:text-[18px] text-[#D4B2A7] font-medium leading-[1.6]">
                             사랑의 본능·심리·무의식을 읽는 22가지 관계 절대 비법서
                           </p>
                         </div>
@@ -1786,11 +1791,15 @@ export default function LoveSecretEbookPage() {
                               desc: "선택받기를 기다리지 않고, 내가 선택하는 절대 주권의 완성"
                             }
                           ].map((item, idx) => (
-                            <div key={idx} className="p-3.5 rounded-xl bg-black/40 border border-[#D4B2A7]/15">
-                              <p className="text-xs md:text-sm leading-[1.6] break-keep">
-                                <strong className="font-bold text-[#E5C4BB] font-elegant mr-2">{item.part}</strong>
-                                <span className="text-[#D4B2A7]/50 mr-2">|</span>
-                                <span className="text-[#EDE6DA]/85 font-light">{item.desc}</span>
+                            <div key={idx} className="p-3.5 sm:p-4 rounded-xl bg-black/40 border border-[#D4B2A7]/15">
+                              <p className="leading-[1.7] break-keep">
+                                <strong className="text-[17px] md:text-[18px] font-bold text-[#E5C4BB] font-elegant mr-2">
+                                  {item.part}
+                                </strong>
+                                <span className="text-[#D4B2A7]/50 mr-2 text-[15px] md:text-[16px]">|</span>
+                                <span className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light">
+                                  {item.desc}
+                                </span>
                               </p>
                             </div>
                           ))}
@@ -1798,9 +1807,8 @@ export default function LoveSecretEbookPage() {
 
                         {/* 도화만개부 수록 및 이미지 파일 제공 안내 한 줄 */}
                         <div className="pt-3 border-t border-white/10">
-                          <p className="text-xs text-[#D4B2A7]/90 font-light tracking-wide flex items-center gap-1.5 break-keep">
-                            <span className="text-[#E5C4BB]">✨</span>
-                            <span>본편 마지막에 도화만개부를 수록하며, 별도 이미지 파일도 함께 제공합니다.</span>
+                          <p className="text-xs md:text-sm text-[#D4B2A7]/90 font-light tracking-wide break-keep">
+                            본편 마지막에 도화만개부를 수록하며, 별도 이미지 파일도 함께 제공합니다.
                           </p>
                         </div>
                       </div>
@@ -1841,7 +1849,7 @@ export default function LoveSecretEbookPage() {
                           <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
                             《매혹의 무의식 침투 프로토콜》
                           </h3>
-                          <p className="text-sm md:text-base text-[#D4B2A7] font-medium leading-[1.5]">
+                          <p className="text-[17px] md:text-[18px] text-[#D4B2A7] font-medium leading-[1.6]">
                             9대 유혹자 페르소나 진단 &amp; 실전 카톡 프로토콜
                           </p>
                         </div>
@@ -1932,7 +1940,7 @@ export default function LoveSecretEbookPage() {
                           <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
                             《30일 매력 각성 워크북》
                           </h3>
-                          <p className="text-sm md:text-base text-[#D4B2A7] font-medium leading-[1.5]">
+                          <p className="text-[17px] md:text-[18px] text-[#D4B2A7] font-medium leading-[1.6]">
                             무의식을 흔들고 기억에 남는 여자의 시크릿 액션 플랜
                           </p>
                         </div>
@@ -1969,11 +1977,15 @@ export default function LoveSecretEbookPage() {
                               desc: "30일 데일리 실천 플래너 & 주간 에너지 자가 진단표"
                             }
                           ].map((item, idx) => (
-                            <div key={idx} className="p-3.5 rounded-xl bg-black/40 border border-[#D4B2A7]/15">
-                              <p className="text-xs md:text-sm leading-[1.6] break-keep">
-                                <strong className="font-bold text-[#E5C4BB] font-elegant mr-2">{item.phase}</strong>
-                                <span className="text-[#D4B2A7]/50 mr-2">|</span>
-                                <span className="text-[#EDE6DA]/85 font-light">{item.desc}</span>
+                            <div key={idx} className="p-3.5 sm:p-4 rounded-xl bg-black/40 border border-[#D4B2A7]/15">
+                              <p className="leading-[1.7] break-keep">
+                                <strong className="text-[17px] md:text-[18px] font-bold text-[#E5C4BB] font-elegant mr-2">
+                                  {item.phase}
+                                </strong>
+                                <span className="text-[#D4B2A7]/50 mr-2 text-[15px] md:text-[16px]">|</span>
+                                <span className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light">
+                                  {item.desc}
+                                </span>
                               </p>
                             </div>
                           ))}
