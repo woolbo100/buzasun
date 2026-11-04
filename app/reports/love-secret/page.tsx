@@ -289,8 +289,9 @@ export default function LoveSecretEbookPage() {
                   </p>
 
                   <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3.5 pt-6 border-t border-white/5 break-keep">
-                    <p className="md:whitespace-nowrap">
-                      연애비급은 사랑할수록 반복적으로 흔들리는 여성을 위한 프리미엄 연애 심리·포지션·매력 구조 해석서입니다.
+                    <p>
+                      연애비급은 사랑할수록 반복적으로 흔들리는 여성을 위한<br />
+                      프리미엄 연애 심리·포지션·매력 구조 해석서입니다.
                     </p>
                     <p>
                       더 많이 애쓰는 것이 아니라, 내가 서 있는 자리를 바꾸는 것.
