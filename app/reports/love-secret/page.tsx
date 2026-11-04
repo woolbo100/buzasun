@@ -1228,12 +1228,12 @@ export default function LoveSecretEbookPage() {
                         수많은 눈물과 연구 끝에,
                       </p>
 
-                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 《연애비급》 (3줄 줄바꿈) */}
+                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 연애비급 (3줄 줄바꿈, '연' 글자와 '단' 글자 좌측 정렬) */}
                       <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
                         마침내 탄생한<br />
                         단 하나의 비급(秘笈)<br />
-                        <span className="inline-block bg-gradient-to-r from-[#C2736C] via-[#DC9D96] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)] mt-1">
-                          《연애비급》
+                        <span className="block text-[28px] sm:text-[35px] md:text-[40px] lg:text-[45px] xl:text-[48px] bg-gradient-to-r from-[#C2736C] via-[#DC9D96] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)] mt-1.5">
+                          연애비급
                         </span>
                       </h2>
                     </div>
