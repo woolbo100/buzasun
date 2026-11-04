@@ -2786,12 +2786,12 @@ export default function LoveSecretEbookPage() {
                   })}
                 </div>
 
-                {/* FAQ 하단 상시 노출: 재회비방 안내 카드 (FAQ와 가로폭 동일, 좌측 로즈코코아 -> 우측 백도화 딥퍼플 그라데이션) */}
+                {/* FAQ 하단 상시 노출: 재회비방 안내 카드 (FAQ와 가로폭 동일, 좌측 로즈코코아 -> 우측 백도화 딥퍼플 그라데이션, 반투명 글라스) */}
                 <div
                   className="mt-8 md:mt-10 p-5 sm:p-6 md:p-7 rounded-2xl border border-[#D4B2A7]/30 backdrop-blur-md relative overflow-hidden"
                   style={{
-                    background: 'linear-gradient(to right, rgba(62, 28, 39, 0.9) 0%, rgba(42, 19, 34, 0.88) 40%, rgba(24, 12, 28, 0.92) 75%, rgba(10, 5, 20, 0.96) 100%)',
-                    boxShadow: '0 12px 36px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(212, 178, 167, 0.15)'
+                    background: 'linear-gradient(to right, rgba(62, 28, 39, 0.45) 0%, rgba(42, 19, 34, 0.42) 40%, rgba(24, 12, 28, 0.48) 75%, rgba(10, 5, 20, 0.55) 100%)',
+                    boxShadow: '0 12px 36px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(212, 178, 167, 0.18)'
                   }}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -2799,14 +2799,14 @@ export default function LoveSecretEbookPage() {
                       <h4 className="text-base md:text-lg font-elegant font-bold text-[#FAF7F2] tracking-wide break-keep">
                         이미 헤어진 관계로 고민하고 계신가요?
                       </h4>
-                      <p className="text-[15px] md:text-[16px] text-[#EDE6DA] font-light leading-relaxed break-keep">
+                      <p className="text-[16px] text-[#EDE6DA] font-light leading-relaxed break-keep">
                         이별 후 마음 정리와 연락·재회의 방향은 《재회비방》에서 살펴보세요.
                       </p>
                     </div>
                     <div className="sm:self-center shrink-0 pt-1 sm:pt-0">
                       <Link
                         href="/reports/reunion-secret"
-                        className="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-[#E5C4BB] hover:text-[#FAF7F2] transition-colors group"
+                        className="inline-flex items-center gap-1.5 text-[16px] font-semibold text-[#E5C4BB] hover:text-[#FAF7F2] transition-colors group"
                       >
                         <span className="group-hover:underline underline-offset-4">재회비방 살펴보기 →</span>
                       </Link>
@@ -2953,9 +2953,9 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
 
-                    {/* [마무리 문장] (24px, 은은한 샴페인골드색) */}
-                    <p className="text-[19px] sm:text-[21px] md:text-[24px] font-elegant text-[#D4B2A7] font-medium tracking-wide pt-1">
-                      사랑 안에서, 나를 잃지 않도록. 《연애비급》
+                    {/* [마무리 문장] (24px, 진하고 또렷한 굵은 텍스트) */}
+                    <p className="text-[19px] sm:text-[21px] md:text-[24px] font-elegant text-[#FAF7F2] font-bold tracking-wide pt-1">
+                      사랑 안에서, 나를 잃지 않도록. <span className="text-[#E5C4BB]">《연애비급》</span>
                     </p>
 
                     {/* [구매 버튼] (마무리 문장 아래 충분한 간격, 기존 handleAddToCart 및 handlePurchase 연결 보존) */}
