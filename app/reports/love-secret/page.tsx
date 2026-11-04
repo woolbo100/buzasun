@@ -1720,17 +1720,17 @@ export default function LoveSecretEbookPage() {
                         <div className="relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] flex items-center justify-center">
                           <Image
                             src={BOOK_MOCKUPS.book1}
-                            alt="Book 1. [정통 바이블] 연애비급 완전판"
+                            alt="Book 1. [원리 바이블] 연애비급 완전판"
                             fill
                             sizes="(max-width: 1024px) 100vw, 33vw"
                             className="object-contain"
                             priority
                           />
                         </div>
-                        {/* 이미지 바로 아래 정통바이블-본편 및 페이지 수 안내 */}
+                        {/* 이미지 바로 아래 원리바이블-본편 및 페이지 수 안내 */}
                         <div className="mt-4 md:mt-5 text-center space-y-1">
                           <p className="text-sm md:text-[15px] text-[#E5C4BB] font-medium tracking-wide">
-                            정통바이블-본편
+                            원리바이블-본편
                           </p>
                           <p className="text-sm md:text-[15px] text-[#D4B2A7] font-light tracking-wide">
                             PDF 전자책 · <strong className="font-bold text-[#E5C4BB]">90</strong>페이지
@@ -1741,7 +1741,7 @@ export default function LoveSecretEbookPage() {
                       {/* 상세 설명 */}
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold mb-3 whitespace-nowrap">🌸 Book 1. [정통 바이블]
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold mb-3 whitespace-nowrap">🌸 Book 1. [원리 바이블]
                           </span>
                           <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white mb-3 leading-[1.45]">
                             《연애비급(戀愛秘笈) 완전판》
@@ -1751,10 +1751,19 @@ export default function LoveSecretEbookPage() {
                           </p>
                         </div>
 
-                        {/* 핵심 내용 요약 */}
-                        <div className="p-4 rounded-xl bg-white/[0.02] border border-[#D4B2A7]/20 text-xs md:text-sm text-[#EDE6DA]/85 leading-[1.8] font-light">
-                          <span className="font-bold text-[#E5C4BB] block mb-1">핵심 내용 요약</span>
-                          남자의 정복 심리 해부 / 흔들리지 않는 매력의 근원 / 앵커링과 라벨링 최면 / 남자가 원하는 3가지(섹슈얼리티·치어링·서브미시브) / 맹목적 부양본능 작동법
+                        {/* 핵심 키워드 */}
+                        <div className="p-4 sm:p-5 rounded-xl bg-white/[0.02] border border-[#D4B2A7]/20 text-sm md:text-[15px] text-[#EDE6DA]/90 leading-[1.8] font-light">
+                          <span className="font-bold text-[#E5C4BB] block mb-2 text-sm md:text-base">핵심 키워드</span>
+                          <div className="space-y-1.5 break-keep">
+                            <p className="flex items-start gap-2">
+                              <span className="text-[#E5C4BB] flex-shrink-0">✦</span>
+                              <span>남자의 정복 본능 해부 &amp; 침묵의 감정 앵커링</span>
+                            </p>
+                            <p className="flex items-start gap-2">
+                              <span className="text-[#E5C4BB] flex-shrink-0">✦</span>
+                              <span>남자를 머물게 하는 3대 무의식 코드 &amp; 맹목적 부양본능 작동법</span>
+                            </p>
+                          </div>
                         </div>
 
                         {/* 상세 목차 1부~7부 */}
@@ -1854,50 +1863,59 @@ export default function LoveSecretEbookPage() {
                           </p>
                         </div>
 
-                        {/* 핵심 내용 요약 */}
-                        <div className="p-4 rounded-xl bg-white/[0.02] border border-[#D4B2A7]/20 text-xs md:text-sm text-[#EDE6DA]/85 leading-[1.8] font-light">
-                          <span className="font-bold text-[#E5C4BB] block mb-1">핵심 내용 요약</span>
-                          9대 유혹자 페르소나 정밀 진단 / 실전 심리·최면 기법 7선 / 무의식 심리 역학 7대 법칙 / 상황별 복붙 전용 카톡 즉답 템플릿 5종
+                        {/* 핵심 키워드 */}
+                        <div className="p-4 sm:p-5 rounded-xl bg-white/[0.02] border border-[#D4B2A7]/20 text-sm md:text-[15px] text-[#EDE6DA]/90 leading-[1.8] font-light">
+                          <span className="font-bold text-[#E5C4BB] block mb-2 text-sm md:text-base">핵심 키워드</span>
+                          <div className="space-y-1.5 break-keep">
+                            <p className="flex items-start gap-2">
+                              <span className="text-[#E5C4BB] flex-shrink-0">✦</span>
+                              <span>9대 유혹자 페르소나 정밀 진단 &amp; 실전 심리·최면 기법 7선</span>
+                            </p>
+                            <p className="flex items-start gap-2">
+                              <span className="text-[#E5C4BB] flex-shrink-0">✦</span>
+                              <span>무의식 심리 역학 7대 법칙 &amp; 상황별 복붙 즉답 템플릿 5종</span>
+                            </p>
+                          </div>
                         </div>
 
                         {/* 상세 내용 Part 1 ~ Part 4 */}
                         <div className="space-y-4 pt-2">
                           {/* Part 1 */}
                           <div className="py-5 md:py-6 px-5 md:px-6 rounded-2xl bg-white/[0.025] border border-[#D4B2A7]/20 space-y-2 md:space-y-2.5">
-                            <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
+                            <h4 className="text-[17px] md:text-[18px] font-bold text-white leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB] font-serif font-bold">Part 1.</span> 9대 유혹자 페르소나 정밀 진단
                             </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/80 font-light pl-6 leading-[1.75] break-keep">
+                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light pl-6 md:pl-7 leading-[1.75] break-keep">
                               남자의 무의식을 뒤흔드는 9가지 원형과 나만의 매혹 무기 장착
                             </p>
                           </div>
 
                           {/* Part 2 */}
                           <div className="py-5 md:py-6 px-5 md:px-6 rounded-2xl bg-white/[0.025] border border-[#D4B2A7]/20 space-y-2 md:space-y-2.5">
-                            <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
+                            <h4 className="text-[17px] md:text-[18px] font-bold text-white leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB] font-serif font-bold">Part 2.</span> 이성을 마비시키는 실전 심리·최면 기법 7선
                             </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/80 font-light pl-6 leading-[1.75] break-keep">
+                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light pl-6 md:pl-7 leading-[1.75] break-keep">
                               경계심을 풀고 스스로 빠져들게 만드는 무의식 닻 내리기
                             </p>
                           </div>
 
                           {/* Part 3 */}
                           <div className="py-5 md:py-6 px-5 md:px-6 rounded-2xl bg-white/[0.025] border border-[#D4B2A7]/20 space-y-2 md:space-y-2.5">
-                            <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
+                            <h4 className="text-[17px] md:text-[18px] font-bold text-white leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB] font-serif font-bold">Part 3.</span> 관계의 판을 뒤집는 무의식 심리 역학 7대 법칙
                             </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/80 font-light pl-6 leading-[1.75] break-keep">
+                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light pl-6 md:pl-7 leading-[1.75] break-keep">
                               애타는 추격자에서 판을 지배하는 설계자로 거듭나는 법칙
                             </p>
                           </div>
 
                           {/* Part 4 */}
                           <div className="py-5 md:py-6 px-5 md:px-6 rounded-2xl bg-white/[0.025] border border-[#D4B2A7]/20 space-y-2 md:space-y-2.5">
-                            <h4 className="text-sm md:text-base font-bold text-white leading-[1.5] flex items-center gap-2">
+                            <h4 className="text-[17px] md:text-[18px] font-bold text-white leading-[1.5] flex items-center gap-2">
                               <span className="text-[#E5C4BB] font-serif font-bold">Part 4.</span> 실전 상황별 카톡 무의식 침투 프로토콜
                             </h4>
-                            <p className="text-xs md:text-sm text-[#EDE6DA]/80 font-light pl-6 leading-[1.75] break-keep">
+                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light pl-6 md:pl-7 leading-[1.75] break-keep">
                               썸, 밀당, 잠수, 어장관리 상황에서 그대로 복사해 쓰는 즉답 템플릿 5종
                             </p>
                           </div>
@@ -1945,10 +1963,19 @@ export default function LoveSecretEbookPage() {
                           </p>
                         </div>
 
-                        {/* 핵심 내용 요약 */}
-                        <div className="p-4 rounded-xl bg-white/[0.02] border border-[#D4B2A7]/20 text-xs md:text-sm text-[#EDE6DA]/85 leading-[1.8] font-light">
-                          <span className="font-bold text-[#E5C4BB] block mb-1">핵심 내용 요약</span>
-                          속도와 곡선이 만드는 아우라 / 래포 구축 5단계 / 소울메이트 가치관 대화법 / 남자의 동굴 대처법 / 30일 데일리 실천 플래너
+                        {/* 핵심 키워드 */}
+                        <div className="p-4 sm:p-5 rounded-xl bg-white/[0.02] border border-[#D4B2A7]/20 text-sm md:text-[15px] text-[#EDE6DA]/90 leading-[1.8] font-light">
+                          <span className="font-bold text-[#E5C4BB] block mb-2 text-sm md:text-base">핵심 키워드</span>
+                          <div className="space-y-1.5 break-keep">
+                            <p className="flex items-start gap-2">
+                              <span className="text-[#E5C4BB] flex-shrink-0">✦</span>
+                              <span>매혹의 아우라 &amp; 깊은 유대감을 만드는 소울메이트 대화법</span>
+                            </p>
+                            <p className="flex items-start gap-2">
+                              <span className="text-[#E5C4BB] flex-shrink-0">✦</span>
+                              <span>남자의 동굴을 여는 대응법 &amp; 30일 실전 루틴</span>
+                            </p>
+                          </div>
                         </div>
 
                         {/* 상세 내용 PHASE 1~4 및 부록 */}

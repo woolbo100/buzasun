@@ -41,10 +41,10 @@ export const loveSecretAssets: Record<string, LoveSecretAssetItem> = {
   book1: {
     id: 'book1',
     src: '/images/love-secret/book1-love-mockup.png?v=20261101_v2',
-    alt: 'Book 1. [정통 바이블] 연애비급 완전판 목업',
+    alt: 'Book 1. [원리 바이블] 연애비급 완전판 목업',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
-    placeholderLabel: 'Book 1. [정통 바이블] 연애비급 완전판',
+    placeholderLabel: 'Book 1. [원리 바이블] 연애비급 완전판',
     description: 'book1-love-mockup.png'
   },
 
