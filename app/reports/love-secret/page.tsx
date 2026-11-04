@@ -1203,11 +1203,11 @@ export default function LoveSecretEbookPage() {
             <ChampagneThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                2. Product Overview Section: THE FINAL SOLUTION · 戀愛秘笈
+                2. Product Overview Section: THE FINAL SOLUTION · 戀愛秘笈 (좌우 상하 기준선 완벽 일치)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-stretch">
                   {/* 왼쪽 책 이미지 (3:4 비율) */}
                   <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] sm:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40">
                     <Image
@@ -1220,15 +1220,16 @@ export default function LoveSecretEbookPage() {
                     />
                   </div>
 
-                  {/* 오른쪽 핵심 가치 및 6개 별(✦) 포인트 카드 (좌측 이미지 시작선에 맞춤) */}
-                  <div className="space-y-6 sm:space-y-7 text-left break-keep lg:pt-1">
+                  {/* 오른쪽 핵심 가치 및 6개 별(✦) 포인트 카드 (좌측 이미지와 상하 기준선 완벽 일치) */}
+                  <div className="h-full flex flex-col justify-between text-left break-keep space-y-6 lg:space-y-0">
+                    {/* [상단 타이틀 영역] */}
                     <div>
                       {/* 상단 도입부 (제목보다 좀 작은 글씨) */}
                       <p className="text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-light text-[#EDE6DA]/85 leading-[1.4] mb-2 sm:mb-2.5 break-keep">
                         수많은 눈물과 연구 끝에,
                       </p>
 
-                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 연애비급 (로즈핑크 #D98CA6 -> 피치 베이비 핑크 #F5CEC7 글자 너비 맞춤 그라데이션) */}
+                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 연애비급 */}
                       <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
                         마침내 탄생한<br />
                         단 하나의 비급(秘笈)<br />
@@ -1249,8 +1250,8 @@ export default function LoveSecretEbookPage() {
                       </h2>
                     </div>
 
-                    {/* [스토리 브릿지 본문] 짧고 직관적으로 분할된 문단 */}
-                    <div className="space-y-4 text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                    {/* [중간 본문] 스토리 브릿지 본문 */}
+                    <div className="space-y-4 text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep lg:py-2">
                       <p className="text-[#EDE6DA]/90">
                         진심만으로 상처받던 시절을 지나, 심리학·최면 역학·뇌과학으로 직접 증명해 낸 관계의 공식.
                       </p>
@@ -1264,8 +1265,8 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
 
-                    {/* [체크 칩 대신 별(✦) 박스 6개] 로즈코코아 테마 프리미엄 엠블럼 박스 */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 sm:pt-3">
+                    {/* [하단 별 박스 6개] 로즈코코아 테마 프리미엄 엠블럼 박스 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                       {[
                         "주도적 연애 포지션 회복",
                         "남자의 심리 구조 이해",
@@ -1348,21 +1349,21 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="py-4">
-                  {/* 커리큘럼 & 아키텍처 상단 헤드라인 */}
-                  <div className="text-center py-12 md:py-16 space-y-3">
-                    {/* 골드 라벨 */}
-                    <span className="text-amber-400 text-xs font-semibold tracking-widest uppercase">
+                  {/* 커리큘럼 & 아키텍처 상단 헤드라인 (기존 디자인 컨셉 규격 통일) */}
+                  <div className="text-center mb-10 md:mb-14 space-y-5 break-keep">
+                    {/* 골드 라벨 (12pt) */}
+                    <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       CURRICULUM & ARCHITECTURE
                     </span>
 
-                    {/* 메인 타이틀 */}
-                    <h3 className="text-2xl md:text-3xl font-bold text-neutral-100 font-serif leading-tight">
+                    {/* 메인 타이틀 (36px) */}
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       &ldquo;사랑을 운에 맡기지 마십시오.<br />
-                      <span className="text-rose-300">《연애비급》이 안내하는 관계의 절대 설계도</span>&rdquo;
-                    </h3>
+                      <span className="text-[#E5C4BB]">《연애비급》이 안내하는 관계의 절대 설계도</span>&rdquo;
+                    </h2>
 
-                    {/* 서브 설명 */}
-                    <p className="text-neutral-400 text-xs md:text-sm max-w-xl mx-auto leading-relaxed pt-1">
+                    {/* 서브 설명 (18px) */}
+                    <p className="text-[#EDE6DA]/85 text-[18px] max-w-3xl mx-auto font-normal leading-[1.8] break-keep">
                       흔들리던 내 자리를 바로잡는 내면의 기초부터,<br className="hidden sm:inline" />
                       상대를 자연스럽게 끌어당기는 실전 심리 역학까지 체계적으로 담았습니다.
                     </p>
@@ -1438,8 +1439,8 @@ export default function LoveSecretEbookPage() {
                             className="p-4 rounded-2xl bg-black/40 border border-[#D4B2A7]/20 hover:border-[#D4B2A7]/50 transition-all break-keep"
                           >
                             <span className="text-[#D4B2A7] text-xs font-serif font-bold tracking-wider">{item.code}</span>
-                            <p className="text-white text-sm md:text-base font-elegant font-bold mt-2 leading-[1.5]">{item.title}</p>
-                            <p className="text-[#EDE6DA]/60 text-xs mt-1.5 font-light leading-[1.65]">{item.desc}</p>
+                            <p className="text-white text-[16px] sm:text-[18px] font-elegant font-bold mt-2 leading-[1.5]">{item.title}</p>
+                            <p className="text-[#EDE6DA]/75 text-[15px] sm:text-[16px] mt-1.5 font-normal leading-[1.6] break-keep">{item.desc}</p>
                           </div>
                         ))}
                       </div>
@@ -1509,7 +1510,7 @@ export default function LoveSecretEbookPage() {
                             <h4 className="text-white font-elegant font-bold text-base md:text-lg leading-[1.5] group-hover:text-[#E5C4BB] transition-colors">
                               {card.title}
                             </h4>
-                            <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] mt-2 leading-[1.8] font-normal break-keep">
+                            <p className="text-[#EDE6DA]/75 text-[16px] mt-2 leading-[1.7] font-normal break-keep">
                               {card.desc}
                             </p>
                           </div>
