@@ -1534,12 +1534,13 @@ export default function LoveSecretEbookPage() {
                 {/* 이미지 상단 헤드라인 */}
                 <div className="text-center mb-6 md:mb-8 max-w-3xl mx-auto break-keep">
                   <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
-                    3-STEP MASTER PACKAGE
+                    PACKAGE COMPOSITION
                   </span>
-                  <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.45]">
-                    관계의 판을 뒤집는 <span className="text-[#E5C4BB]">3단계 마스터 패키지</span>
+                  <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.4] break-keep">
+                    백도화 《연애비급》 3종 마스터 세트<br />
+                    <span className="text-[#E5C4BB]">관계의 판을 뒤집는 3단계 완성형 패키지</span>
                   </h3>
-                  <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] mt-2 leading-[1.8] font-normal break-keep">
+                  <p className="text-[#EDE6DA]/85 text-[18px] mt-3 leading-[1.8] font-normal break-keep">
                     본편으로 원리를 꿰뚫고, 시크릿북으로 실전 무기를 쥐며, 워크북으로 체질을 완성합니다.
                   </p>
                 </div>
