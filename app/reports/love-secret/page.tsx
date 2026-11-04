@@ -2242,16 +2242,16 @@ export default function LoveSecretEbookPage() {
                         />
                       </div>
 
-                      {/* 오른쪽 약 55%: 구성 안내 → 구분선 → 가격 및 제공 안내 → 버튼 순서 */}
-                      <div className="lg:col-span-7 w-full flex flex-col justify-between space-y-5 sm:space-y-6 text-left p-6 sm:p-8 md:p-10 lg:py-10 lg:pr-10 lg:pl-6">
+                      {/* 오른쪽 약 55%: 구성 안내 → 구분선 → 가격 안내 → 버튼 순서 */}
+                      <div className="lg:col-span-7 w-full flex flex-col justify-between space-y-5 sm:space-y-6 text-left p-6 sm:p-8 md:p-10 lg:py-10 lg:pr-10 lg:pl-12">
                         {/* 1. 상단: 구성 안내 & 우측 상단 올인원 패키지 배지 */}
                         <div className="flex items-start justify-between gap-4">
                           <div className="space-y-1.5 flex-1">
                             <span className="text-xs font-elegant font-semibold tracking-wider text-[#D4B2A7] uppercase block">
                               PACKAGE OVERVIEW
                             </span>
-                            <h4 className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                              구성: <span className="text-[#E5C4BB]">PDF 3종 (본편 + 시크릿 전략북 + 실전 워크북)</span>
+                            <h4 className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-[#E5C4BB] leading-[1.4] break-keep">
+                              PDF 3종 (본편 + 시크릿 전략북 + 실전 워크북)
                             </h4>
                             <div className="text-sm md:text-base text-[#EDE6DA]/90 font-light space-y-0.5 leading-[1.6]">
                               <p>PDF 3종 · 총 172페이지</p>
@@ -2268,17 +2268,12 @@ export default function LoveSecretEbookPage() {
                         {/* 2. 구분선 */}
                         <div className="border-b border-white/10" />
 
-                        {/* 3. 가격 및 제공 안내 (피치 베이비 핑크 포인트 컬러 적용) */}
-                        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-3">
-                          <div className="space-y-1">
-                            <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
-                            <div className="text-2xl sm:text-3xl font-elegant font-bold text-[#E5C4BB] leading-none">
-                              런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal ml-1.5">(76% OFF)</span>
-                            </div>
+                        {/* 3. 가격 안내 (피치 베이비 핑크 포인트 컬러 적용) */}
+                        <div className="space-y-1">
+                          <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
+                          <div className="text-2xl sm:text-3xl font-elegant font-bold text-[#E5C4BB] leading-none">
+                            런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal ml-1.5">(76% OFF)</span>
                           </div>
-                          <p className="text-xs text-[#EDE6DA]/60 max-w-[260px] leading-[1.6] sm:text-right">
-                            * 전자책 PDF 3종(총 172페이지)과 도화만개부 고화질 이미지 파일이 함께 제공됩니다.
-                          </p>
                         </div>
 
                         {/* 4. 장바구니 / 결제 구매 버튼 */}
@@ -2672,7 +2667,7 @@ export default function LoveSecretEbookPage() {
                           <span className="text-[13px] md:text-[14px] font-normal text-[#FAF6EE]/80 ml-2 font-sans">(영구 소장)</span>
                         </div>
                         <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
-                          단 한 번 치킨 한 마리 값으로 추가 지출 없이 평생 꺼내보는 압도적인 가성비입니다.
+                          한 번의 구매로 추가 비용 없이, 필요한 순간마다 평생 꺼내 볼 수 있습니다. 커피 몇잔 값으로 오래 남는 관계의 지도를 얻으세요.
                         </p>
                       </div>
 
@@ -3012,13 +3007,12 @@ export default function LoveSecretEbookPage() {
                   <div className="mb-8 space-y-4">
                     <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-elegant font-bold tracking-[0.2em] uppercase bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] whitespace-nowrap">CRITICAL CHOICE</span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      또다시 수개월의 눈물과<br />
-                      <span className="text-[#E5C4BB]">바닥난 자존감</span>을 치르시겠습니까?
+                      같은 자리에서, <span className="text-[#E5C4BB]">또 아파하지 않도록</span>
                     </h2>
                     <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
-                      남자의 변덕과 차가운 답장에 하루를 통째로 낭비하던 악순환.<br />
-                      자리를 바꾸지 않으면 다음 사람을 만나도 같은 자리에서 상처받습니다.<br />
-                      <strong className="text-[#FAF7F2] font-semibold">단 한 번 치킨 한 마리 값으로, 평생 관계의 주도권을 쥐십시오.</strong>
+                      자리를 바꾸지 않으면, 다음 사람을 만나도 비슷한 장면이 반복됩니다.<br />
+                      이번에는 더 애쓰는 대신, 서 있는 자리를 바꿔보세요.<br />
+                      <strong className="text-[#FAF7F2] font-semibold">한 번의 구매로 영구 소장하며, 필요한 순간마다 꺼내 볼 수 있습니다.</strong>
                     </p>
                   </div>
 
@@ -3030,7 +3024,7 @@ export default function LoveSecretEbookPage() {
                       백도화 연애비급 올인원 패키지 (PDF 3종 + 도화만개부)
                     </h3>
                     <p className="text-xs md:text-sm text-[#EDE6DA]/60 mt-1 font-light">
-                      완전판 바이블 + 전략 시크릿북 + 실전 워크북 + 카톡 템플릿 5종
+                      완전판 바이블 본편 · 전략 시크릿북 · 실천 워크북
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-3 my-6">
