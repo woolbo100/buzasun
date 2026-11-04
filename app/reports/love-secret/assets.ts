@@ -92,14 +92,14 @@ export const loveSecretAssets: Record<string, LoveSecretAssetItem> = {
     description: 'love-secret-chat-preview.png'
   },
 
-  // 8. Final CTA: 매혹의 열쇠 오브제
+  // 8. Final CTA: 배너 (선택받기 위해 애쓰지 마세요)
   finalCta: {
     id: 'finalCta',
-    src: 'final_love_bg_placeholder.png',
-    alt: '매혹의 열쇠 오브제',
-    aspectRatio: 'aspect-[16/9]',
+    src: '/image/love-secret/love-secret-closing-banner.png?v=20261105',
+    alt: '선택받기 위해 애쓰지 마세요. 이제, 당신이 선택하세요 - 연애비급',
+    aspectRatio: 'aspect-[1672/941]',
     objectFit: 'cover',
-    placeholderLabel: '매혹의 열쇠 오브제 (최종 CTA)',
-    description: 'final_love_bg_placeholder.png'
+    placeholderLabel: '선택받기 위해 애쓰지 마세요 (최종 배너)',
+    description: 'love-secret-closing-banner.png'
   }
 }

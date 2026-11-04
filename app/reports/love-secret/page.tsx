@@ -54,7 +54,7 @@ const productData = {
   recommendedImage: '/image/love-secret/love-secret-keep-yourself-3x4.png',
   structureImage: '/image/love/l4.webp',
   premiumImage: '/image/love-secret/love-secret-contents.png?v=20261102_v2',
-  ctaImage: '/image/love-secret/love-secret-closing-banner.png?v=20261102',
+  ctaImage: '/image/love-secret/love-secret-closing-banner.png?v=20261105',
 }
 
 // 🖼️ 신규 교체형 이미지 슬롯 컴포넌트
@@ -2786,12 +2786,12 @@ export default function LoveSecretEbookPage() {
                   })}
                 </div>
 
-                {/* FAQ 하단 상시 노출: 재회비방 안내 카드 (FAQ와 가로폭 동일, 은은한 글라스 퍼플) */}
+                {/* FAQ 하단 상시 노출: 재회비방 안내 카드 (FAQ와 가로폭 동일, 좌측 로즈코코아 -> 우측 백도화 딥퍼플 그라데이션) */}
                 <div
-                  className="mt-8 md:mt-10 p-5 sm:p-6 md:p-7 rounded-2xl border border-[#D4B2A7]/25 relative overflow-hidden"
+                  className="mt-8 md:mt-10 p-5 sm:p-6 md:p-7 rounded-2xl border border-[#D4B2A7]/30 backdrop-blur-md relative overflow-hidden"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(74, 35, 43, 0.35) 0%, rgba(15, 6, 20, 0.85) 100%)',
-                    boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)'
+                    background: 'linear-gradient(to right, rgba(62, 28, 39, 0.9) 0%, rgba(42, 19, 34, 0.88) 40%, rgba(24, 12, 28, 0.92) 75%, rgba(10, 5, 20, 0.96) 100%)',
+                    boxShadow: '0 12px 36px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(212, 178, 167, 0.15)'
                   }}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -2910,7 +2910,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1280px 너비 매칭)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#1F0710] lg:min-h-[640px] xl:min-h-[670px] w-full max-w-[1280px] mx-auto">
+            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#3E2031] lg:min-h-[640px] xl:min-h-[670px] w-full max-w-[1280px] mx-auto">
               {/* 1. 배경 이미지 영역:
                   - 업로드된 원본 사이즈(1672:941) 그대로 세로 사이즈를 크게 확보
                   - object-[85%_top]으로 위쪽 머리 실루엣이 절대 잘리지 않도록 상단 기준 배치 */}
@@ -2924,9 +2924,9 @@ export default function LoveSecretEbookPage() {
                   priority
                 />
                 {/* PC 전용: 왼쪽 텍스트 가독성 확보용 은은한 다크 그라데이션 (우측 인물 머리 및 실루엣은 100% 선명하게 노출) */}
-                <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-[#18050C]/95 via-[#18050C]/80 to-transparent w-[62%]" />
+                <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-[#3E2031]/95 via-[#3E2031]/80 to-transparent w-[62%]" />
                 {/* 모바일 전용: 이미지와 하단 텍스트 영역 사이의 자연스러운 그라데이션 페이드 */}
-                <div className="lg:hidden absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#1F0710] to-transparent z-[1]" />
+                <div className="lg:hidden absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#3E2031] to-transparent z-[1]" />
               </div>
 
               {/* 2. 텍스트 및 구매 버튼 영역:
