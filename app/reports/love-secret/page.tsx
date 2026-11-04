@@ -1228,9 +1228,10 @@ export default function LoveSecretEbookPage() {
                         수많은 눈물과 연구 끝에,
                       </p>
 
-                      {/* [메인 타이틀] 마침내 탄생한 단 하나의 비기(秘笈) / 《연애비급》 */}
-                      <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                        마침내 탄생한 단 하나의 비기(秘笈)<br />
+                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 《연애비급》 (3줄 줄바꿈) */}
+                      <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
+                        마침내 탄생한<br />
+                        단 하나의 비급(秘笈)<br />
                         <span className="inline-block bg-gradient-to-r from-[#C2736C] via-[#DC9D96] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)] mt-1">
                           《연애비급》
                         </span>
@@ -2356,10 +2357,12 @@ export default function LoveSecretEbookPage() {
 
                 {/* 텍스트 기반 3개 카드 가치 비교 그리드 */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-                  {/* 카드 1: 일반 인터넷 조언 */}
+                  {/* 카드 1: 일반 인터넷 조언 (기존 상세페이지 퍼플 글라스 반투명 배경) */}
                   <div
-                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#5E3B48]/50 shadow-lg text-left backdrop-blur-md flex flex-col justify-between h-full"
-                    style={{ background: 'rgba(32, 16, 24, 0.94)' }}
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/30 shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:border-[#D4B2A7]/50 text-left backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(145deg, rgba(38, 17, 26, 0.85) 0%, rgba(22, 11, 24, 0.85) 50%, rgba(14, 7, 20, 0.85) 100%)'
+                    }}
                   >
                     <div>
                       {/* 카드 제목 (PC 22px 전후) */}
@@ -2402,10 +2405,12 @@ export default function LoveSecretEbookPage() {
                     </div>
                   </div>
 
-                  {/* 카드 2: 뻔한 여우짓 강의 */}
+                  {/* 카드 2: 뻔한 여우짓 강의 (기존 상세페이지 퍼플 글라스 반투명 배경) */}
                   <div
-                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#5E3B48]/50 shadow-lg text-left backdrop-blur-md flex flex-col justify-between h-full"
-                    style={{ background: 'rgba(32, 16, 24, 0.94)' }}
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/30 shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:border-[#D4B2A7]/50 text-left backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300"
+                    style={{
+                      background: 'linear-gradient(145deg, rgba(38, 17, 26, 0.85) 0%, rgba(22, 11, 24, 0.85) 50%, rgba(14, 7, 20, 0.85) 100%)'
+                    }}
                   >
                     <div>
                       {/* 카드 제목 (PC 22px 전후) */}
@@ -2448,17 +2453,18 @@ export default function LoveSecretEbookPage() {
                     </div>
                   </div>
 
-                  {/* 카드 3: 백도화 연애비급 (강조 카드) */}
+                  {/* 카드 3: 백도화 연애비급 (첨부한 AFTER 카드의 로즈 코코아 반투명 + 은은한 샴페인 골드 테두리) */}
                   <div
-                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/60 shadow-[0_12px_40px_rgba(166,107,115,0.22)] text-left backdrop-blur-md flex flex-col justify-between h-full relative"
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/60 shadow-[0_12px_40px_rgba(166,107,115,0.22)] hover:border-[#D4B2A7]/80 text-left backdrop-blur-md flex flex-col justify-between h-full relative transition-all duration-300"
                     style={{
-                      background: 'linear-gradient(145deg, rgba(68, 24, 38, 0.95) 0%, rgba(42, 13, 24, 0.95) 100%)'
+                      background: 'rgba(60, 34, 50, 0.80)',
+                      boxShadow: '0 8px 30px rgba(0, 0, 0, 0.3)'
                     }}
                   >
                     <div>
-                      {/* 상단 배지 */}
+                      {/* 상단 배지 (AFTER 배지와 동일한 스타일) */}
                       <div className="mb-2.5">
-                        <span className="inline-block py-1 px-3 rounded-md text-[12px] font-bold text-[#FAF6EE] bg-[#87465B] border border-[#D5AFAD]/60">
+                        <span className="inline-block py-1 px-3 rounded-md text-[12px] font-bold text-[#FFF1E9] bg-[#87465B] border border-[#D5AFAD]/70">
                           연애비급 3종 패키지
                         </span>
                       </div>
