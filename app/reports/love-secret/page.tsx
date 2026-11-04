@@ -1348,8 +1348,28 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="py-4">
-                  {/* 솔루션 시스템 인포그래픽 (하단 STEP 1 박스와 동일한 가로폭 적용) */}
-                  <div className="mb-10 md:mb-14">
+                  {/* 커리큘럼 & 아키텍처 상단 헤드라인 */}
+                  <div className="text-center py-12 md:py-16 space-y-3">
+                    {/* 골드 라벨 */}
+                    <span className="text-amber-400 text-xs font-semibold tracking-widest uppercase">
+                      CURRICULUM & ARCHITECTURE
+                    </span>
+
+                    {/* 메인 타이틀 */}
+                    <h3 className="text-2xl md:text-3xl font-bold text-neutral-100 font-serif leading-tight">
+                      &ldquo;사랑을 운에 맡기지 마십시오.<br />
+                      <span className="text-rose-300">《연애비급》이 안내하는 관계의 절대 설계도</span>&rdquo;
+                    </h3>
+
+                    {/* 서브 설명 */}
+                    <p className="text-neutral-400 text-xs md:text-sm max-w-xl mx-auto leading-relaxed pt-1">
+                      흔들리던 내 자리를 바로잡는 내면의 기초부터,<br className="hidden sm:inline" />
+                      상대를 자연스럽게 끌어당기는 실전 심리 역학까지 체계적으로 담았습니다.
+                    </p>
+                  </div>
+
+                  {/* 솔루션 시스템 인포그래픽 (하단 STEP 1 박스와 동일한 가로폭 적용, 하단 간격 확대) */}
+                  <div className="mb-16 md:mb-24 lg:mb-28">
                     <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
                       <div className="relative w-full">
                         <Image
@@ -1366,7 +1386,7 @@ export default function LoveSecretEbookPage() {
                   </div>
 
                   {/* 인트로 헤드라인 */}
-                  <div className="text-center mb-12 space-y-5 break-keep">
+                  <div className="text-center mb-12 md:mb-16 space-y-5 break-keep">
                     <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       THE BAEKDOHWA SOLUTION
                     </span>
@@ -1374,7 +1394,7 @@ export default function LoveSecretEbookPage() {
                       복잡한 심리 이론은 필요 없습니다.<br />
                       <span className="text-[#E5C4BB]">내 자리를 바로잡고, 상대를 움직이는 기술을 얹습니다.</span>
                     </h2>
-                    <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] max-w-2xl mx-auto font-normal leading-[1.8] break-keep">
+                    <p className="text-[#EDE6DA]/85 text-[18px] max-w-3xl mx-auto font-normal leading-[1.8] break-keep">
                       내가 흔들리는 상태에서는 어떤 밀당 기술도 먹히지 않습니다.<br />
                       《연애비급》은 <strong className="text-[#FAF7F2] font-semibold">내면의 중심(6대 구조)</strong>을 먼저 세운 뒤, <strong className="text-[#E5C4BB] font-semibold">상대의 무의식을 자극하는 기술(4대 역학)</strong>을 실행하도록 설계되었습니다.
                     </p>
@@ -1400,7 +1420,7 @@ export default function LoveSecretEbookPage() {
                         </h3>
                       </div>
                       <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] mb-8 leading-[1.8] font-normal break-keep">
-                        사랑받기 위해 나를 설명하고 증명하던 ‘낮은 자리’에서 벗어나는 내면의 기초 작업입니다. 감정에 휘둘리지 않는 자리가 잡혀야 비로소 관계의 주도권이 생깁니다.
+                        나를 증명하려 애쓰지 않고, 감정에 휘둘리지 않는 단단한 나의 자리를 위한 내면의 기초작업입니다.
                       </p>
 
                       {/* 6대 구조 그리드 */}
@@ -1449,7 +1469,7 @@ export default function LoveSecretEbookPage() {
                         </h3>
                       </div>
                       <p className="text-[#EDE6DA]/75 text-[17px] md:text-[18px] mb-8 leading-[1.8] font-normal break-keep">
-                        내 자리가 단단해졌다면, 이제 남자의 뇌 신경회로를 건드릴 차례입니다. 애원하지 않고도 상대가 스스로 나를 갈망하도록 유도하는 4가지 실전 메커니즘입니다.
+                        남자의 마음에 긴장감을 일깨워 스스로 다가오게 만드는 4가지 실전 역학입니다.
                       </p>
 
                       {/* 4대 역학 그리드 */}
@@ -1458,22 +1478,22 @@ export default function LoveSecretEbookPage() {
                           {
                             num: "역학 01",
                             title: "사냥꾼 코드 & 트로피 포지션",
-                            desc: "남자의 타고난 정복 본능을 자극하는 적정 난이도 설계. 쉬운 사냥감이 아닌, 평생 자랑하고 싶은 트로피가 되는 법."
+                            desc: "“쉬운 사람이 아닌, 평생 귀하게 자랑하고 싶은 ‘대체 불가능한 존재’가 되는 법”"
                           },
                           {
                             num: "역학 02",
                             title: "금지된 과일 & 비소유 신호",
-                            desc: "“너 없이도 내 삶은 이미 충만하다”는 고요한 신호로 상대에게 통제 불가능성과 잠재적 상실 공포를 부여합니다."
+                            desc: "“내 삶의 중심을 지켜, 남자의 마음에 ‘언제든 놓칠 수 있다’는 긴장감을 일깨우는 법”"
                           },
                           {
                             num: "역학 03",
                             title: "연애 최면 & 정체성 라벨링",
-                            desc: "서운함의 잔소리 대신, 그가 되고 싶어 하는 남성적 정체성을 지정해 스스로 자발적 헌신과 배려를 선택하게 만듭니다."
+                            desc: "“서운한 잔소리 없이, 남자가 스스로 배려와 다정함을 선택하게 만드는 언어 기술”"
                           },
                           {
                             num: "역학 04",
                             title: "간헐적 보상 & 텍스트 여백",
-                            desc: "연락에는 여백을 두고, 대면했을 때는 찬란한 몰입을 선사하여 상대의 뇌 속에 도파민을 가두는 완급 조절 공식."
+                            desc: "“연락에 얽매이지 않고 여백을 두어, 만났을 때 나에게 온전히 몰입하게 만드는 완급 조절법”"
                           }
                         ].map((card, idx) => (
                           <div
