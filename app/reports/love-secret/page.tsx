@@ -1532,12 +1532,12 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 {/* 이미지 상단 헤드라인 */}
-                <div className="text-center mb-6 md:mb-8 max-w-3xl mx-auto break-keep">
+                <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto break-keep">
                   <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     PACKAGE COMPOSITION
                   </span>
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.4] break-keep">
-                    백도화 《연애비급》 3종 마스터 세트<br />
+                    연애비급 3종 마스터 세트<br />
                     <span className="text-[#E5C4BB]">관계의 판을 뒤집는 3단계 완성형 패키지</span>
                   </h3>
                   <p className="text-[#EDE6DA]/85 text-[18px] mt-3 leading-[1.8] font-normal break-keep">
@@ -1577,7 +1577,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (펼친 책) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] md:text-xs font-serif font-bold tracking-tight whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
                             Step 1 · 원리
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="펼친 책">
@@ -1596,8 +1596,8 @@ export default function LoveSecretEbookPage() {
                         {/* 짧은 금색 구분선 */}
                         <div className="w-8 h-[1px] bg-[#C5A578]/30 my-2.5 md:my-3" />
 
-                        {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#D5C2C6] leading-[1.7] font-normal break-keep">
+                        {/* 설명 (16px) */}
+                        <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
                           남자의 본능과 심리를 꿰뚫어 보고, 사랑을 갈구하던 자리에서 존중받는 중심 자리로 이동하는 근본 바이블.
                         </p>
                       </div>
@@ -1617,7 +1617,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (작은 열쇠) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] md:text-xs font-serif font-bold tracking-tight whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
                             Step 2 · 전략
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="작은 열쇠">
@@ -1638,8 +1638,8 @@ export default function LoveSecretEbookPage() {
                         {/* 짧은 금색 구분선 */}
                         <div className="w-8 h-[1px] bg-[#C5A578]/30 my-2.5 md:my-3" />
 
-                        {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#D5C2C6] leading-[1.7] font-normal break-keep">
+                        {/* 설명 (16px) */}
+                        <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
                           9대 유혹자 페르소나와 최면 기법, 실전 카톡 템플릿으로 상대의 뇌를 안달 나게 만드는 즉각적 실전 무기.
                         </p>
                       </div>
@@ -1659,7 +1659,7 @@ export default function LoveSecretEbookPage() {
                       <div>
                         {/* 상단: 단계 배지 & 우측 샴페인골드 선화 장식 (붓 / 기록지) */}
                         <div className="flex items-center justify-between gap-2">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[11px] md:text-xs font-serif font-bold tracking-tight whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
                             Step 3 · 실천
                           </span>
                           <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#C5A578]" title="붓 또는 기록지">
@@ -1679,8 +1679,8 @@ export default function LoveSecretEbookPage() {
                         {/* 짧은 금색 구분선 */}
                         <div className="w-8 h-[1px] bg-[#C5A578]/30 my-2.5 md:my-3" />
 
-                        {/* 설명 */}
-                        <p className="text-[13.5px] md:text-[14.5px] text-[#D5C2C6] leading-[1.7] font-normal break-keep">
+                        {/* 설명 (16px) */}
+                        <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
                           30일간의 데일리 미션을 통해 휘둘리지 않고 주도권을 쥐는 여왕의 태도를 몸에 새기는 체질 각성서.
                         </p>
                       </div>
@@ -1688,23 +1688,18 @@ export default function LoveSecretEbookPage() {
                   </div>
                 </div>
 
-                <div className="text-center max-w-3xl mx-auto space-y-5 mb-16">
+                <div className="text-center max-w-3xl mx-auto space-y-5 mb-16 pt-16 md:pt-24 lg:pt-28 break-keep">
                   <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     3-in-1 All-in-One Package
                   </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4]">
                     3종 올인원 세트 <span className="text-[#E5C4BB]">상세 해부</span>
                   </h2>
-                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
-                    PDF 3종(총 172페이지)과 도화만개부 고화질 이미지 파일이 모두 포함된 올인원 패키지입니다.
-                  </p>
-
-                  {/* 📚 추가 안내 문구: 총 페이지 수 요약 (16px 간격, 2줄 유지) */}
-                  <div className="space-y-1">
-                    <p className="text-xs sm:text-sm md:text-base text-[#EDE6DA]/75 font-light leading-[1.6]">
+                  <div className="space-y-2 pt-1">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.6]">
                       본편부터 전략서, 실전 워크북까지
                     </p>
-                    <p className="text-sm sm:text-base md:text-lg text-[#E5C4BB] font-bold font-elegant tracking-wide leading-[1.6]">
+                    <p className="text-[18px] md:text-[20px] text-[#E5C4BB] font-bold font-elegant tracking-wide leading-[1.6]">
                       3종 · 총 172페이지 PDF 패키지
                     </p>
                   </div>
