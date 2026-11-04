@@ -1228,11 +1228,22 @@ export default function LoveSecretEbookPage() {
                         수많은 눈물과 연구 끝에,
                       </p>
 
-                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 연애비급 (로즈 피치 -> 피치 베이비 핑크 그라데이션 광채 복원 및 크기 확대) */}
+                      {/* [메인 타이틀] 마침내 탄생한 / 단 하나의 비급(秘笈) / 연애비급 (로즈핑크 #D98CA6 -> 피치 베이비 핑크 #F5CEC7 글자 너비 맞춤 그라데이션) */}
                       <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
                         마침내 탄생한<br />
                         단 하나의 비급(秘笈)<br />
-                        <span className="block text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] bg-gradient-to-r from-[#D49992] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_24px_rgba(229,196,187,0.45)] mt-2">
+                        <span
+                          className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] font-extrabold mt-2"
+                          style={{
+                            display: 'inline-block',
+                            background: 'linear-gradient(90deg, #D98CA6 0%, #F5CEC7 100%)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            color: 'transparent',
+                            WebkitTextFillColor: 'transparent',
+                            opacity: 1
+                          }}
+                        >
                           연애비급
                         </span>
                       </h2>
