@@ -1207,7 +1207,7 @@ export default function LoveSecretEbookPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                   {/* 왼쪽 책 이미지 (3:4 비율) */}
                   <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] sm:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40">
                     <Image
@@ -1220,23 +1220,13 @@ export default function LoveSecretEbookPage() {
                     />
                   </div>
 
-                  {/* 오른쪽 핵심 가치 및 6개 별(✦) 포인트 카드 */}
-                  <div className="space-y-6 sm:space-y-7 text-left break-keep">
-                    {/* 카테고리 / 서브 헤드 */}
+                  {/* 오른쪽 핵심 가치 및 6개 별(✦) 포인트 카드 (좌측 이미지 시작선에 맞춤) */}
+                  <div className="space-y-6 sm:space-y-7 text-left break-keep lg:pt-1">
                     <div>
-                      <span className="text-[#D4B2A7] font-elegant text-[12pt] sm:text-[13pt] font-semibold tracking-[0.2em] uppercase block mb-3">
-                        THE FINAL SOLUTION · 戀愛秘笈
-                      </span>
-
-                      {/* 상단 인트로 (본문보다 살짝 큰 20px 내외, 얇은 굵기, 연한 톤) */}
-                      <p className="text-[18px] sm:text-[19px] md:text-[21px] font-elegant font-light text-[#EDE6DA]/75 leading-[1.6] mb-2 sm:mb-2.5 break-keep">
-                        수많은 눈물과 연구 끝에 완성한
-                      </p>
-
-                      {/* [메인 타이틀] 단 하나의 비기(秘笈) / 《연애비급》이 탄생했습니다. */}
+                      {/* [메인 타이틀] 단 하나의 비기(秘笈) / 《연애비급》이 탄생했습니다. (2줄 구성) */}
                       <h2 className="text-[26px] sm:text-[34px] md:text-[42px] lg:text-[46px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
                         단 하나의 비기(秘笈)<br />
-                        <span className="bg-gradient-to-r from-[#FDE68A] via-[#FBAAA6] to-[#F472B6] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_25px_rgba(251,170,166,0.6)]">
+                        <span className="bg-gradient-to-r from-[#D49992] to-[#E5C4BB] bg-clip-text text-transparent font-extrabold drop-shadow-[0_0_20px_rgba(229,196,187,0.35)]">
                           《연애비급》
                         </span>
                         이 탄생했습니다.
@@ -1252,7 +1242,7 @@ export default function LoveSecretEbookPage() {
                         더 이상 상대의 눈치를 보며 울지 마십시오.
                       </p>
                       <p className="text-[#EDE6DA]/90">
-                        <strong className="text-[#FBAAA6] font-semibold">《연애비급》</strong>은 사랑을 구걸하던 당신의 손에{' '}
+                        <strong className="text-[#E5C4BB] font-semibold">《연애비급》</strong>은 사랑을 구걸하던 당신의 손에{' '}
                         <span className="text-[#FAF7F2] font-semibold">&lsquo;선택하는 주도권&rsquo;</span>과{' '}
                         <span className="text-[#FAF7F2] font-semibold">&lsquo;흔들리지 않는 중심&rsquo;</span>을 쥐여드리기 위해 탄생한 실전 설계도입니다.
                       </p>
