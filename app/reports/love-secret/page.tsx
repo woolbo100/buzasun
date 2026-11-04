@@ -107,6 +107,12 @@ function HybridImageSlot({
 // 📦 3종 올인원 세트 패키지 목업 이미지 (캐시 방지 버전 쿼리 적용)
 const PACKAGE_MOCKUP_IMAGE = '/images/love-secret/package-mockup.png?v=20261101_v2'
 
+// 📖 3종 패키지 내지 3장 겹친 목업 이미지 (추후 이 경로의 이미지 파일만 교체하면 즉시 반영됩니다)
+const PACKAGE_INNER_PAGES_IMAGE = '/images/love-secret/package-inner-pages.png'
+
+// 🪟 패키지 구매 안내 상자 배경 전통 문양 이미지 (추후 외부 이미지 파일로 대체할 경우 이 경로를 지정할 수 있습니다)
+const PACKAGE_PATTERN_BG_IMAGE = ''
+
 // 📚 개별 도서 3:4 목업 이미지 (캐시 방지 버전 쿼리 적용)
 const BOOK_MOCKUPS = {
   book1: '/images/love-secret/book1-love-mockup.png?v=20261101_v2',       // Book 1: 최신 단독 책 목업 이미지
@@ -2150,7 +2156,9 @@ export default function LoveSecretEbookPage() {
                   })()}
 
                   {/* ─────────────────────────────────────────────────────────
-                      올인원 패키지 가격·장바구니·구매 버튼 묶음 (미리보기 아래 분리 배치)
+                      올인원 패키지 가격·장바구니·구매 안내 영역 (좌우 2단 구성)
+                      - 왼쪽 약 45%: 내지 3장 겹친 독립 목업 이미지 영역 (원본 비율 유지, 잘림 없음)
+                      - 오른쪽 약 55%: 구성 안내 → 구분선 → 가격 안내 → 장바구니/구매 버튼
                      ───────────────────────────────────────────────────────── */}
                   <div
                     className="gungjung-glass p-6 sm:p-8 md:p-10 rounded-3xl border border-[#D4B2A7]/40 relative overflow-hidden shadow-2xl"
@@ -2159,35 +2167,144 @@ export default function LoveSecretEbookPage() {
                       boxShadow: '0 12px 40px rgba(186, 141, 126, 0.20)'
                     }}
                   >
-                    <div className="max-w-4xl mx-auto space-y-6 break-keep">
-                      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
-                        <div className="space-y-1">
-                          <span className="text-xs font-elegant font-semibold tracking-wider text-[#D4B2A7] uppercase block">
-                            PACKAGE OVERVIEW
-                          </span>
-                          <h4 className="text-base sm:text-lg md:text-xl font-elegant font-bold text-white">
-                            구성: <span className="text-[#E5C4BB]">PDF 3종 · 총 172페이지 + 도화만개부 이미지 파일 제공</span>
-                          </h4>
+                    {/* 🪟 전통 문양 장식 배경 레이어 (모서리 중심 배치, 글자·가격 뒤쪽은 여백 유지, 포인터 이벤트 차단) */}
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+                      {PACKAGE_PATTERN_BG_IMAGE ? (
+                        <div
+                          className="absolute inset-0 opacity-[0.06] bg-cover bg-center"
+                          style={{ backgroundImage: `url(${PACKAGE_PATTERN_BG_IMAGE})` }}
+                        />
+                      ) : (
+                        <>
+                          {/* 우측 상단 모서리: 전통 창살 격자 + 뻗어나가는 도화(복사꽃) 가지 선화 (로즈 베이지, 약 5.5% 불투명도) */}
+                          <svg
+                            className="absolute -top-4 -right-4 w-72 h-72 sm:w-88 sm:h-88 md:w-96 md:h-96 opacity-[0.055] text-[#D4B2A7]"
+                            viewBox="0 0 320 320"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            {/* 전통 격자 창살 틀 */}
+                            <g strokeWidth="1.2">
+                              <rect x="180" y="20" width="120" height="120" />
+                              <rect x="220" y="20" width="80" height="80" />
+                              <line x1="220" y1="20" x2="220" y2="140" />
+                              <line x1="260" y1="20" x2="260" y2="140" />
+                              <line x1="180" y1="60" x2="300" y2="60" />
+                              <line x1="180" y1="100" x2="300" y2="100" />
+                              <path d="M190 20v20h-10 M290 20v20h10 M180 130h20v10 M300 130h-20v10" />
+                            </g>
+                            {/* 우아한 도화 가지 선화 (모서리에서 은은하게 뻗어나오는 실루엣) */}
+                            <g strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M310 10 C260 40, 230 90, 160 110 C120 120, 90 150, 70 190" />
+                              <path d="M240 70 C220 85, 200 80, 180 65" />
+                              <path d="M195 105 C185 130, 160 145, 135 140" />
+                              <path d="M140 115 C130 100, 115 105, 105 120" />
+                              <circle cx="178" cy="63" r="3.5" fill="currentColor" fillOpacity="0.4" />
+                              <path d="M178 55 C183 55, 186 58, 186 63 C186 68, 183 71, 178 71 C173 71, 170 68, 170 63 C170 58, 173 55, 178 55 Z" />
+                              <circle cx="132" cy="140" r="3" fill="currentColor" fillOpacity="0.4" />
+                              <path d="M132 133 C136 133, 139 136, 139 140 C139 144, 136 147, 132 147 C128 147, 125 144, 125 140 C125 136, 128 133, 132 133 Z" />
+                              <circle cx="215" cy="85" r="2.5" />
+                              <circle cx="103" cy="122" r="2.5" />
+                              <circle cx="68" cy="192" r="3" fill="currentColor" fillOpacity="0.3" />
+                            </g>
+                          </svg>
+
+                          {/* 좌측 하단 모서리: 전통 창살 격자 및 완자문 선화 (로즈 베이지, 약 5% 불투명도) */}
+                          <svg
+                            className="absolute -bottom-6 -left-6 w-64 h-64 sm:w-80 sm:h-80 opacity-[0.05] text-[#D4B2A7]"
+                            viewBox="0 0 280 280"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <g strokeWidth="1.2">
+                              <rect x="20" y="160" width="100" height="100" />
+                              <line x1="20" y1="210" x2="120" y2="210" />
+                              <line x1="70" y1="160" x2="70" y2="260" />
+                              <path d="M45 160v25h25 M95 160v25h-25 M45 260v-25h25 M95 260v-25h-25" />
+                              <path d="M20 185h25v25 M20 235h25v-25 M120 185h-25v25 M120 235h-25v-25" />
+                              <path d="M120 160 L180 100 M70 160 L130 100" strokeDasharray="3 3" />
+                            </g>
+                          </svg>
+                        </>
+                      )}
+                    </div>
+
+                    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center break-keep">
+                      {/* 왼쪽 약 45%: 독립 이미지 영역 (추후 한 장만 교체 가능, 원본 비율 유지) */}
+                      <div className="lg:col-span-5 w-full flex items-center justify-center">
+                        <div className="relative w-full aspect-[4/3] max-w-[420px] mx-auto rounded-2xl overflow-hidden flex items-center justify-center">
+                          <Image
+                            src={PACKAGE_INNER_PAGES_IMAGE}
+                            alt="연애비급 3종 패키지 내지 미리보기"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 45vw"
+                            className="object-contain"
+                            priority
+                          />
                         </div>
-                        <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
-                          올인원 패키지
-                        </span>
                       </div>
 
-                      <div className="flex flex-wrap items-baseline justify-between gap-4">
-                        <div className="space-y-1">
-                          <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
-                          <div className="text-2xl md:text-3xl font-elegant font-bold text-[#E5C4BB]">
-                            런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal">(76% OFF)</span>
+                      {/* 오른쪽 약 55%: 구성 안내 → 구분선 → 가격 및 제공 안내 → 버튼 순서 */}
+                      <div className="lg:col-span-7 w-full flex flex-col justify-between space-y-5 sm:space-y-6 text-left">
+                        {/* 1. 상단: 구성 안내 & 우측 상단 올인원 패키지 배지 */}
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="space-y-1.5 flex-1">
+                            <span className="text-xs font-elegant font-semibold tracking-wider text-[#D4B2A7] uppercase block">
+                              PACKAGE OVERVIEW
+                            </span>
+                            <h4 className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                              구성: <span className="text-[#E5C4BB]">PDF 3종 (본편 + 시크릿 전략북 + 실전 워크북)</span>
+                            </h4>
+                            <div className="text-sm md:text-base text-[#EDE6DA]/90 font-light space-y-0.5 leading-[1.6]">
+                              <p>PDF 3종 · 총 172페이지</p>
+                              <p>도화만개부 이미지 파일 함께 제공</p>
+                            </div>
                           </div>
-                        </div>
-                        <span className="text-xs text-[#EDE6DA]/60">
-                          * 전자책 PDF 3종(총 172페이지)과 도화만개부 고화질 이미지 파일이 함께 제공됩니다.
-                        </span>
-                      </div>
 
-                      <div className="pt-2">
-                        <CTAButton text="연애비급 3종 세트 구매하기" />
+                          {/* '올인원 패키지' 배지 (딥 로즈 배경, 얇은 테두리, 아이보리 글자) */}
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap shrink-0 shadow-sm mt-0.5">
+                            올인원 패키지
+                          </span>
+                        </div>
+
+                        {/* 2. 구분선 */}
+                        <div className="border-b border-white/10" />
+
+                        {/* 3. 가격 및 제공 안내 (피치 베이비 핑크 포인트 컬러 적용) */}
+                        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-3">
+                          <div className="space-y-1">
+                            <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
+                            <div className="text-2xl sm:text-3xl font-elegant font-bold text-[#E5C4BB] leading-none">
+                              런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal ml-1.5">(76% OFF)</span>
+                            </div>
+                          </div>
+                          <p className="text-xs text-[#EDE6DA]/60 max-w-[260px] leading-[1.6] sm:text-right">
+                            * 전자책 PDF 3종(총 172페이지)과 도화만개부 고화질 이미지 파일이 함께 제공됩니다.
+                          </p>
+                        </div>
+
+                        {/* 4. 장바구니 / 결제 구매 버튼 */}
+                        <div className="flex flex-col sm:flex-row gap-3 pt-2 items-stretch sm:items-center w-full">
+                          <button
+                            type="button"
+                            onClick={handleAddToCart}
+                            className="py-3.5 px-5 sm:px-6 rounded-xl font-elegant font-bold text-sm md:text-base border border-[#A66B73]/60 text-[#D4B2A7] hover:bg-[#A66B73]/15 hover:border-[#D4B2A7]/70 transition-all duration-300 shrink-0 whitespace-nowrap text-center bg-transparent order-2 sm:order-1"
+                          >
+                            장바구니 담기
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handlePurchase}
+                            className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_0_35px_rgba(166,107,115,0.25)] hover:brightness-105 order-1 sm:order-2"
+                            style={{
+                              background: 'linear-gradient(135deg, #A66B73 0%, #955D65 100%)',
+                              border: '1px solid rgba(212, 178, 167, 0.55)',
+                            }}
+                          >
+                            <span>연애비급 3종 세트 구매하기</span>
+                            <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2577,7 +2694,7 @@ export default function LoveSecretEbookPage() {
                           도구
                         </span>
                         <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
-                          상황별 즉시 복사해 쓰는 카톡 프로토콜 5종과 30일 매력 각성 워크북으로 실전에 즉각 적용합니다.
+                          심리와 무의식에 대한 기본 원리를 이해하고, 시크릿 전략과 실전 워크북을 통해 즉각 삶에 적용합니다.
                         </p>
                       </div>
                     </div>
