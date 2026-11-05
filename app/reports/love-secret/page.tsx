@@ -2424,13 +2424,31 @@ export default function LoveSecretEbookPage() {
                   {/* 하단: 전체 폭 대형 관계 비교 이미지 (기존 박스 전체 가로폭 100% 매칭) */}
                   <div className="relative w-full aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 shadow-[0_12px_45px_rgba(0,0,0,0.6)] bg-black/40 flex items-center justify-center">
                     <Image
-                      src="/image/love-secret/love-secret-relationship-comparison.png"
+                      src="/image/love-secret/love-secret-relationship-comparison.png?v=2"
                       alt="당신의 헌신이 만만함이 되는 이유, 관계 시소의 법칙 - 관계 비교 인포그래픽"
                       fill
                       sizes="(max-width: 1200px) 100vw, 1152px"
                       className="object-contain"
                       priority
                     />
+                  </div>
+
+                  {/* 이미지 하단 브릿지 카피 (실전 체감 사례로의 연결) */}
+                  <div className="text-center max-w-3xl mx-auto space-y-5 mt-12 md:mt-16 break-keep">
+                    <h3 className="text-xl sm:text-2xl md:text-[32px] font-elegant font-bold text-white leading-[1.5]">
+                      “당신의 헌신이 당연해지던 자리를 떠나,<br className="hidden sm:inline" />
+                      이제 스스로 <span className="text-[#E5C4BB]">‘선택받는 매력녀’</span>가 되십시오.”
+                    </h3>
+
+                    <div className="space-y-2 text-[16px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal">
+                      <p>
+                        사랑을 확인받으려 불안해하던 수많은 여성들이,<br className="hidden sm:inline" />
+                        어떻게 관계의 주도권을 쥐고 먼저 고백받는 주인공이 되었을까요?
+                      </p>
+                      <p className="text-[#E5C4BB] font-medium pt-1">
+                        지금, 먼저 판도를 바꾼 이들의 생생한 변화를 확인하십시오.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </Reveal>
