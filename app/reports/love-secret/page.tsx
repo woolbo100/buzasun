@@ -53,7 +53,7 @@ const productData = {
   overviewImage: '/image/love-secret/love-secret-your-choice-3x4.png',
   recommendedImage: '/image/love-secret/love-secret-keep-yourself-3x4.png',
   structureImage: '/image/love/l4.webp',
-  premiumImage: '/image/love-secret/love-secret-contents.png?v=20261102_v2',
+  premiumImage: '/image/love-secret/love-secret-practical-guide-3x4.png?v=20261106',
   ctaImage: '/image/love-secret/love-secret-closing-banner.png?v=20261105',
 }
 
@@ -2293,11 +2293,11 @@ export default function LoveSecretEbookPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  {/* 왼쪽 이미지 (love-secret-contents.png 최신 3:4 비율 유지, 잘림 없이 표시) */}
+                  {/* 왼쪽 이미지 (love-secret-practical-guide-3x4.png 최신 3:4 비율 유지, 잘림 없이 표시) */}
                   <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40 flex items-center justify-center">
                     <Image
                       src={productData.premiumImage}
-                      alt="백도화 프리미엄 연애 구조 해석서 목차 및 구성 안내"
+                      alt="백도화 연애비급 실전 200% 활용 가이드 구성 안내"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-contain"
