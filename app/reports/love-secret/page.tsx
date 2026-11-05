@@ -215,28 +215,7 @@ export default function LoveSecretEbookPage() {
     </div>
   )
 
-  // 공통 CTA 버튼 -> 장바구니 / 바로구매 분리 (연애비급 테마 색상 적용)
-  const CTAButton = ({ text }: { text: string }) => (
-    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center my-6 max-w-xl mx-auto w-full">
-      <button
-        onClick={handleAddToCart}
-        className="py-4 px-6 rounded-xl font-elegant font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#A66B73]/60 text-[#D4B2A7] hover:bg-[#A66B73]/15 bg-transparent shrink-0 whitespace-nowrap w-full sm:w-auto"
-      >
-        장바구니 담기
-      </button>
-      <button
-        onClick={handlePurchase}
-        className="flex-1 py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF6EE] w-full shadow-[0_0_35px_rgba(166,107,115,0.25)] hover:brightness-105"
-        style={{
-          background: 'linear-gradient(135deg, #A66B73 0%, #955D65 100%)',
-          border: '1px solid rgba(212, 178, 167, 0.55)',
-        }}
-      >
-        <span className="break-keep text-center">{text}</span>
-        <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
-      </button>
-    </div>
-  )
+
 
   return (
     <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#1A0F2E] pb-24 md:pb-0">
@@ -2330,39 +2309,90 @@ export default function LoveSecretEbookPage() {
                     <div>
                       <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">PREMIUM GUIDEBOOK</span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2.5 leading-[1.4] break-keep">
-                        백도화가 전하는<br />
-                        <span className="text-[#E5C4BB]">프리미엄 연애 구조 해석서</span>
+                        <span className="text-[#E5C4BB]">《연애비급》</span> 실전 200% 활용 가이드
                       </h2>
                     </div>
 
-                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
-                      연애비급은 가벼운 밀당 기술이나 순간적인 유혹법을 말하지 않습니다. 이 책이 말하는 핵심은 상대를 억지로 붙잡는 방법이 아니라, 내가 더 이상 낮은 자리에서 사랑을 기다리지 않는 법입니다. 여성의 품격, 관계의 중심, 말의 결, 감정의 여백, 그리고 자기 가치의 회복을 다룹니다.
+                    <p className="text-lg md:text-[20px] font-elegant font-semibold text-[#E5C4BB] leading-[1.6] break-keep">
+                      “사두고 꽂아두는 책이 아닙니다.<br className="hidden sm:inline" /> 필요한 순간마다 꺼내 드는 ‘나만의 비밀 무기’”
                     </p>
+
+                    <div className="space-y-2 text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
+                      <p>
+                        평생 영구 소장하며, 흔들릴 때마다 즉각 내 자리를 되찾는 3단계 실전 활용법입니다.<br />
+                        관계를 이해하는 본편, 상황에 적용하는 시크릿 전략북, 직접 기록하며 연습하는 실전 워크북까지.
+                      </p>
+                      <p className="text-[#EDE6DA]/70 text-sm md:text-[15px]">
+                        읽고, 적용하고, 돌아보는 과정을 3종의 PDF 패키지에 담았습니다.
+                      </p>
+                    </div>
 
                     {/* 강점 6가지 리스트 */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
                       {[
-                        "디지털 파일 형태의 프리미엄 전자책",
-                        "연애 심리와 관계 구조의 융합 분석",
-                        "여성의 자기가치와 연애 감각의 연결",
-                        "백도화 브랜드 톤의 기품 있는 문체",
-                        "관계 속에서 나를 잃지 않는 기준점 제안",
-                        "반복되는 내 안의 연애 패턴 자가 점검"
+                        {
+                          title: "이해부터 실천까지 이어지는 3종 구성",
+                          desc: "본편·전략북·워크북을 목적에 맞게 활용하세요."
+                        },
+                        {
+                          title: "필요한 부분부터 골라 읽기",
+                          desc: "지금 고민하는 상황과 관련된 장부터 살펴보세요."
+                        },
+                        {
+                          title: "상황별 즉답 대화 예시 템플릿",
+                          desc: "내 상황에 맞는 말과 표현을 고민할 때 꺼내보세요."
+                        },
+                        {
+                          title: "직접 기록하는 30일 워크북",
+                          desc: "감정과 기준, 반복되는 행동을 돌아보세요."
+                        },
+                        {
+                          title: "휴대폰·태블릿·PC에서 열람",
+                          desc: "PDF를 지원하는 기기에서 편하게 읽으세요."
+                        },
+                        {
+                          title: "한번 다운로드로 평생소장",
+                          desc: "파일로 소장하고 반복해서 활용해보세요."
+                        }
                       ].map((item, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center gap-3 p-3 bg-[#FAF7F2] rounded-xl border border-[#D4B2A7]/25 hover:border-[#C58BA0]/40 transition-colors"
+                          className="flex items-start gap-3 p-3.5 bg-[#FAF7F2] rounded-xl border border-[#D4B2A7]/25 hover:border-[#C58BA0]/40 transition-colors shadow-sm"
                         >
-                          <Check className="w-4 h-4 text-[#C58BA0] shrink-0" />
-                          <span className="text-xs md:text-sm text-[#3D3530] font-semibold">
-                            {item}
-                          </span>
+                          <Check className="w-4 h-4 text-[#C58BA0] shrink-0 mt-0.5" />
+                          <div className="flex flex-col text-left">
+                            <span className="text-xs md:text-sm text-[#3D3530] font-bold break-keep">
+                              {item.title}
+                            </span>
+                            <span className="text-[11px] md:text-xs text-[#6B5E57] mt-0.5 font-normal leading-relaxed break-keep">
+                              {item.desc}
+                            </span>
+                          </div>
                         </div>
                       ))}
                     </div>
 
-                    <div className="pt-4">
-                      <CTAButton text="연애비급 즉시 다운로드" />
+                    {/* 버튼 영역 (디자인 유지) */}
+                    <div className="pt-2">
+                      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start items-center my-2 max-w-xl w-full">
+                        <button
+                          onClick={handleAddToCart}
+                          className="py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#A66B73]/60 text-[#D4B2A7] hover:bg-[#A66B73]/15 bg-transparent shrink-0 whitespace-nowrap w-full sm:w-auto"
+                        >
+                          장바구니 담기
+                        </button>
+                        <button
+                          onClick={handlePurchase}
+                          className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF6EE] w-full shadow-[0_0_35px_rgba(166,107,115,0.25)] hover:brightness-105"
+                          style={{
+                            background: 'linear-gradient(135deg, #A66B73 0%, #955D65 100%)',
+                            border: '1px solid rgba(212, 178, 167, 0.55)',
+                          }}
+                        >
+                          <span className="break-keep text-center">연애비급 즉시 다운로드</span>
+                          <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
