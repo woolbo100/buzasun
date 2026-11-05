@@ -2372,28 +2372,7 @@ export default function LoveSecretEbookPage() {
                       ))}
                     </div>
 
-                    {/* 버튼 영역 (디자인 유지) */}
-                    <div className="pt-2">
-                      <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start items-center my-2 max-w-xl w-full">
-                        <button
-                          onClick={handleAddToCart}
-                          className="py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#A66B73]/60 text-[#D4B2A7] hover:bg-[#A66B73]/15 bg-transparent shrink-0 whitespace-nowrap w-full sm:w-auto"
-                        >
-                          장바구니 담기
-                        </button>
-                        <button
-                          onClick={handlePurchase}
-                          className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.02] active:scale-95 transition-all duration-500 flex items-center justify-center gap-2 text-[#FAF6EE] w-full shadow-[0_0_35px_rgba(166,107,115,0.25)] hover:brightness-105"
-                          style={{
-                            background: 'linear-gradient(135deg, #A66B73 0%, #955D65 100%)',
-                            border: '1px solid rgba(212, 178, 167, 0.55)',
-                          }}
-                        >
-                          <span className="break-keep text-center">연애비급 즉시 다운로드</span>
-                          <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
-                        </button>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
               </Reveal>
