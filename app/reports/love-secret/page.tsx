@@ -2473,7 +2473,8 @@ export default function LoveSecretEbookPage() {
                     <p className="text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       관계의 시소는 더 많이 매달리고 불안해하는 쪽이 아래로 가라앉고,<br />
                       자신의 중심을 지키며 여유로운 쪽이 관계의 주도권을 쥐는 심리 역학입니다.<br />
-                      시소의 바닥으로 내려앉아 &lsquo;을&rsquo;이 되었던 당신. 이제, 남자가 올려다보는 시소의 꼭대기로 올라서십시오.
+                      시소의 바닥으로 내려앉아 &lsquo;을&rsquo;이 되었던 당신.<br />
+                      이제, 남자가 올려다보는 시소의 꼭대기로 올라서십시오.
                     </p>
                   </div>
 
