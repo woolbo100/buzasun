@@ -2356,8 +2356,8 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
 
-                    {/* 4. 활용 카드 4개 (1열 4행 슬림 미색 한지 카드) */}
-                    <div className="flex flex-col gap-2.5 md:gap-3 pt-1">
+                    {/* 4. 활용 카드 4개 (1열 4행 슬림 미색 한지 카드, 세로 사이즈 축소) */}
+                    <div className="flex flex-col gap-2 md:gap-2.5 pt-1">
                       {[
                         {
                           title: "이해부터 실천까지 이어지는 3종",
@@ -2390,7 +2390,7 @@ export default function LoveSecretEbookPage() {
                             borderColor: 'rgba(206, 175, 153, 0.55)',
                             boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), 0 1px 3px 0 rgba(35, 20, 30, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
                           }}
-                          className="group relative p-[16px_20px] md:p-[17px_24px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 md:gap-4 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
+                          className="group relative p-[11px_18px] md:p-[12px_22px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 md:gap-4 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
                         >
                           {/* 로즈 체크 아이콘 (이런 분께 추천합니다와 동일한 크기) */}
                           <div className="shrink-0 mt-0.5 relative z-10">
@@ -2402,12 +2402,12 @@ export default function LoveSecretEbookPage() {
                             </div>
                           </div>
 
-                          {/* 제목 및 설명 영역 (제목과 설명의 왼쪽 시작선 일치, 설명 글자크기 16px) */}
+                          {/* 제목 및 설명 영역 (제목과 설명의 왼쪽 시작선 일치, 줄간격 미세 축소) */}
                           <div className="flex flex-col text-left w-full relative z-10">
-                            <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-snug break-keep">
+                            <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-[1.3] break-keep">
                               {item.title}
                             </h3>
-                            <p className="text-[15px] md:text-[16px] text-[#634E45] mt-1.5 font-normal leading-relaxed break-keep">
+                            <p className="text-[15px] md:text-[16px] text-[#634E45] mt-0.5 font-normal leading-[1.45] break-keep">
                               {item.desc}
                             </p>
                           </div>
