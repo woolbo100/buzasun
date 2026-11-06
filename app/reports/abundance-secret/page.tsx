@@ -75,7 +75,7 @@ function HybridImageSlot({
   const isPlaceholderPath = !asset.src || asset.src.includes('placeholder')
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl md:rounded-3xl border border-[#B49A70]/40 bg-gradient-to-br from-[#789E90]/25 via-[#789E90]/15 to-[#0A0514] shadow-xl flex items-center justify-center ${asset.aspectRatio} ${className}`}>
+    <div className={`relative overflow-hidden rounded-2xl md:rounded-3xl border border-[#CBEBDE]/40 bg-gradient-to-br from-[#789E90]/45 via-[#224A3E]/75 to-[#12241F] shadow-xl flex items-center justify-center ${asset.aspectRatio} ${className}`}>
       {!hasError && !isPlaceholderPath ? (
         <img
           src={asset.src}
@@ -85,12 +85,12 @@ function HybridImageSlot({
           className={`w-full h-full transition-transform duration-500 hover:scale-[1.02] ${imgClassName}`}
         />
       ) : (
-        <div className="flex flex-col items-center justify-center p-6 text-center space-y-3 z-10 w-full h-full bg-[#789E90]/15 backdrop-blur-sm border border-[#CBEBDE]/25">
-          <div className="w-12 h-12 rounded-full bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 flex items-center justify-center text-[#B59C88] shadow-sm">
+        <div className="flex flex-col items-center justify-center p-6 text-center space-y-3 z-10 w-full h-full bg-[#16382F]/85 backdrop-blur-md border border-[#CBEBDE]/40">
+          <div className="w-12 h-12 rounded-full bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 flex items-center justify-center text-[#B59C88] shadow-sm">
             <ImageIcon className="w-6 h-6 opacity-90" />
           </div>
           <div>
-            <span className="inline-block px-3 py-0.5 rounded-full text-[10px] tracking-wider uppercase font-bold text-[#CDB7A3] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 mb-2">
+            <span className="inline-block px-3 py-0.5 rounded-full text-[10px] tracking-wider uppercase font-bold text-[#CDB7A3] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 mb-2">
               {asset.placeholderLabel}
             </span>
             <p className="text-sm md:text-base font-elegant font-bold text-[#FAF7F2] break-keep">
@@ -272,7 +272,7 @@ export default function AbundanceSecretPage() {
                   <div 
                     className="w-full rounded-[32px] md:rounded-[40px] p-6 sm:p-8 md:p-12 border border-[#B49A70]/40 text-left relative overflow-hidden shadow-2xl"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.22) 0%, rgba(15, 8, 25, 0.90) 100%)',
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)',
                     boxShadow: '0 0 40px rgba(120, 158, 144, 0.12)'
                     }}
                   >
@@ -280,10 +280,10 @@ export default function AbundanceSecretPage() {
                       {/* 좌측: 통합 배지, 큰 제목, 설명, 가격, 구매/장바구니 버튼 */}
                       <div className="lg:col-span-7 space-y-5 md:space-y-6">
                         <div className="flex flex-wrap gap-2">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 text-[#FAF7F2] text-xs font-bold tracking-wider whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 text-[#FAF7F2] text-xs font-bold tracking-wider whitespace-nowrap">
                             풍요비책 3종 올인원 패키지
                           </span>
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/25 text-[#B59C88] text-xs font-bold whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/35 text-[#B59C88] text-xs font-bold whitespace-nowrap">
                             실전 템플릿 4종 수록
                           </span>
                         </div>
@@ -305,7 +305,7 @@ export default function AbundanceSecretPage() {
                           <span className="text-sm md:text-base text-[#EDE6DA]/40 line-through">
                             정가 79,000원
                           </span>
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/20 border border-[#CBEBDE]/30 text-[#FAF7F2] text-xs md:text-sm font-bold whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/20 border border-[#CBEBDE]/40 text-[#FAF7F2] text-xs md:text-sm font-bold whitespace-nowrap">
                             76% OFF
                           </span>
                         </div>
@@ -384,8 +384,8 @@ export default function AbundanceSecretPage() {
                     {/* 본문 텍스트 및 5대 저주 체크리스트 */}
                     <div className="lg:col-span-7 space-y-6 break-keep">
                       <div
-                        className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal p-6 sm:p-7 md:p-8 rounded-2xl border border-[#CBEBDE]/25 shadow-[0_8px_24px_rgba(0,0,0,0.3)] space-y-3.5 break-keep h-auto"
-                        style={{ background: 'rgba(120, 158, 144, 0.18)' }}
+                        className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal p-6 sm:p-7 md:p-8 rounded-2xl border border-[#CBEBDE]/35 shadow-[0_8px_24px_rgba(0,0,0,0.3)] space-y-3.5 break-keep h-auto"
+                        style={{ background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.90) 100%)' }}
                       >
                         <p>
                           최신형 고사양 게임(부자의 삶)을 돌리고 싶은데, 컴퓨터 본체에는 20년 전 &apos;윈도우 95&apos;가 깔려 있습니다. 무의식이 결핍으로 차 있으면 결국 &apos;블루스크린&apos;이 뜹니다.
@@ -413,7 +413,7 @@ export default function AbundanceSecretPage() {
                               key={idx}
                               className="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-start gap-3.5 hover:border-[#B49A70]/40 transition-colors"
                             >
-                              <div className="w-5 h-5 rounded border border-[#CBEBDE]/30 flex items-center justify-center shrink-0 mt-1 bg-[#8CD3B6]/15 shadow-sm">
+                              <div className="w-5 h-5 rounded border border-[#CBEBDE]/40 flex items-center justify-center shrink-0 mt-1 bg-[#8CD3B6]/25 shadow-sm">
                                 <Check className="w-3.5 h-3.5 text-[#FAF7F2]" />
                               </div>
                               <span className="text-[16px] md:text-[18px] text-[#FAF7F2] font-medium leading-[1.6] break-keep">
@@ -443,14 +443,14 @@ export default function AbundanceSecretPage() {
                     <div
                       className="w-full text-left break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#B49A70]/30 shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
                       style={{
-                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.90) 100%)',
+                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                         boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                       }}
                     >
                       {/* 01 · 진심을 탓하지 마세요 */}
                       <div className="space-y-3.5">
                         <div className="flex items-center gap-2.5">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 text-[#FAF7F2] text-xs font-bold whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 text-[#FAF7F2] text-xs font-bold whitespace-nowrap">
                             01
                           </span>
                           <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
@@ -474,7 +474,7 @@ export default function AbundanceSecretPage() {
                       {/* 02 · 이제, 나의 자리를 돌아볼 때 */}
                       <div className="space-y-3.5">
                         <div className="flex items-center gap-2.5">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 text-[#FAF7F2] text-xs font-bold whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 text-[#FAF7F2] text-xs font-bold whitespace-nowrap">
                             02
                           </span>
                           <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
@@ -486,7 +486,7 @@ export default function AbundanceSecretPage() {
                             가격표와 남들의 눈치를 살피는 동안,<br />
                             내 가치와 기준은 자꾸 뒤로 밀리지 않았나요?
                           </p>
-                          <div className="p-4 sm:p-5 rounded-xl border border-[#B49A70]/25 bg-[#789E90]/18 border border-[#CBEBDE]/25 text-[#FAF7F2] font-normal leading-[1.75]">
+                          <div className="p-4 sm:p-5 rounded-xl border border-[#B49A70]/25 bg-[#789E90]/32 border border-[#CBEBDE]/35 text-[#FAF7F2] font-normal leading-[1.75]">
                             《풍요비책》에서 말하는 ‘그릇’은<br className="hidden sm:inline" />
                             돈을 쫓아가는 삶이 아니라 <span className="text-[#B59C88] font-semibold">돈이 스스로 흘러들어 머무는 풍요의 의식(Container)</span>입니다.
                           </div>
@@ -637,9 +637,9 @@ export default function AbundanceSecretPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="gungjung-glass py-12 px-4 md:px-10 rounded-3xl md:rounded-[40px] border border-[#CBEBDE]/30"
+                  className="gungjung-glass py-12 px-4 md:px-10 rounded-3xl md:rounded-[40px] border border-[#CBEBDE]/40"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.90) 100%)',
+                    background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                     boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                   }}
                 >
@@ -688,7 +688,7 @@ export default function AbundanceSecretPage() {
                         className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-2xl bg-black/45 border border-[#B49A70]/20 hover:border-[#B49A70]/45 transition-colors"
                       >
                         <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#789E90]/10 border border-[#CBEBDE]/20">
-                          <span className="text-[#EDE6DA]/70 font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8CD3B6]/12 border border-[#CBEBDE]/25 rounded shrink-0">
+                          <span className="text-[#EDE6DA]/70 font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8CD3B6]/22 border border-[#CBEBDE]/35 rounded shrink-0">
                             BEFORE
                           </span>
                           <div>
@@ -697,7 +697,7 @@ export default function AbundanceSecretPage() {
                           </div>
                         </div>
                         <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#789E90]/20 border border-[#CBEBDE]/35">
-                          <span className="text-[#B59C88] font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8CD3B6]/18 border border-[#CBEBDE]/30 rounded shrink-0">
+                          <span className="text-[#B59C88] font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8CD3B6]/28 border border-[#CBEBDE]/40 rounded shrink-0">
                             AFTER
                           </span>
                           <div>
@@ -900,13 +900,13 @@ export default function AbundanceSecretPage() {
                       ].map((item, idx) => (
                         <div
                           key={idx}
-                          className="p-3.5 sm:p-4 rounded-xl border border-[#CBEBDE]/30 flex items-center gap-3 backdrop-blur-md transition-all duration-300 hover:border-[#CBEBDE]/55 hover:shadow-[0_0_20px_rgba(203,235,222,0.18)] hover:scale-[1.01]"
+                          className="p-3.5 sm:p-4 rounded-xl border border-[#CBEBDE]/40 flex items-center gap-3 backdrop-blur-md transition-all duration-300 hover:border-[#CBEBDE]/65 hover:shadow-[0_0_20px_rgba(203,235,222,0.18)] hover:scale-[1.01]"
                           style={{
-                            background: 'rgba(120, 158, 144, 0.20)',
-                            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.25)'
+                            background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)',
+                            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.35)'
                           }}
                         >
-                          <div className="w-6 h-6 rounded-lg bg-[#8CD3B6]/15 flex items-center justify-center shrink-0 border border-[#CBEBDE]/30 text-[#B59C88] text-[13px] font-bold">
+                          <div className="w-6 h-6 rounded-lg bg-[#8CD3B6]/25 flex items-center justify-center shrink-0 border border-[#CBEBDE]/40 text-[#B59C88] text-[13px] font-bold">
                             ✦
                           </div>
                           <span className="text-[14px] sm:text-[15px] text-[#FAF7F2] font-semibold tracking-wide break-keep">
@@ -987,12 +987,12 @@ export default function AbundanceSecretPage() {
                     <div
                       className="gungjung-glass p-6 md:p-10 rounded-3xl border border-[#B49A70]/30 relative overflow-hidden"
                       style={{
-                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.88) 100%)',
+                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                       }}
                     >
                       <div className="flex flex-wrap items-center gap-3 mb-4">
-                        <span className="px-3.5 py-1 rounded-full bg-[#8CD3B6]/15 text-[#FAF7F2] font-serif font-bold text-xs tracking-wider border border-[#CBEBDE]/30">
+                        <span className="px-3.5 py-1 rounded-full bg-[#8CD3B6]/25 text-[#FAF7F2] font-serif font-bold text-xs tracking-wider border border-[#CBEBDE]/40">
                           STEP 1
                         </span>
                         <h3 className="text-xl md:text-[24px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -1014,7 +1014,7 @@ export default function AbundanceSecretPage() {
                         ].map((item, idx) => (
                           <div
                             key={idx}
-                            className="p-4 rounded-2xl bg-[#789E90]/15 border border-[#CBEBDE]/25 hover:border-[#CBEBDE]/50 hover:shadow-[0_0_15px_rgba(203,235,222,0.15)] transition-all break-keep"
+                            className="p-4 rounded-2xl bg-[#789E90]/32 border border-[#CBEBDE]/35 hover:border-[#CBEBDE]/60 hover:shadow-[0_0_18px_rgba(203,235,222,0.22)] transition-all break-keep"
                           >
                             <span className="text-[#B59C88] text-xs font-mono font-bold tracking-wider">{item.code}</span>
                             <p className="text-white text-[15px] md:text-[16px] font-elegant font-bold mt-1.5">{item.title}</p>
@@ -1026,7 +1026,7 @@ export default function AbundanceSecretPage() {
 
                     {/* 연결 화살표 */}
                     <div className="flex justify-center -my-4 relative z-10">
-                      <div className="w-11 h-11 rounded-full bg-[#8CD3B6]/18 border border-[#CBEBDE]/35 flex items-center justify-center text-[#B59C88] shadow-[0_0_15px_rgba(203,235,222,0.2)] font-bold">
+                      <div className="w-11 h-11 rounded-full bg-[#8CD3B6]/28 border border-[#CBEBDE]/45 flex items-center justify-center text-[#B59C88] shadow-[0_0_15px_rgba(203,235,222,0.2)] font-bold">
                         ↓
                       </div>
                     </div>
@@ -1035,12 +1035,12 @@ export default function AbundanceSecretPage() {
                     <div
                       className="gungjung-glass p-6 md:p-10 rounded-3xl border border-[#B49A70]/45 relative overflow-hidden"
                       style={{
-                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.88) 100%)',
+                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                       }}
                     >
                       <div className="flex flex-wrap items-center gap-3 mb-4">
-                        <span className="px-3.5 py-1 rounded-full bg-[#8CD3B6]/15 text-[#B59C88] font-serif font-bold text-xs tracking-wider border border-[#CBEBDE]/30">
+                        <span className="px-3.5 py-1 rounded-full bg-[#8CD3B6]/25 text-[#B59C88] font-serif font-bold text-xs tracking-wider border border-[#CBEBDE]/40">
                           STEP 2
                         </span>
                         <h3 className="text-xl md:text-[24px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -1076,10 +1076,10 @@ export default function AbundanceSecretPage() {
                         ].map((card, idx) => (
                           <div
                             key={idx}
-                            className="p-5 rounded-2xl bg-[#789E90]/15 border border-[#CBEBDE]/25 hover:border-[#CBEBDE]/50 hover:shadow-[0_0_15px_rgba(203,235,222,0.15)] transition-all group break-keep"
+                            className="p-5 rounded-2xl bg-[#789E90]/32 border border-[#CBEBDE]/35 hover:border-[#CBEBDE]/60 hover:shadow-[0_0_18px_rgba(203,235,222,0.22)] transition-all group break-keep"
                           >
                             <div className="flex items-center justify-between mb-2">
-                              <span className="font-serif text-xs font-bold bg-[#8CD3B6]/15 text-[#B59C88] px-2.5 py-0.5 rounded border border-[#CBEBDE]/30">
+                              <span className="font-serif text-xs font-bold bg-[#8CD3B6]/25 text-[#B59C88] px-2.5 py-0.5 rounded border border-[#CBEBDE]/40">
                                 {card.num}
                               </span>
                               <Sparkles className="w-4 h-4 text-[#B49A70]/50 group-hover:text-[#B49A70] transition-colors" />
@@ -1123,12 +1123,12 @@ export default function AbundanceSecretPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left items-stretch">
                   {/* Book 1 */}
                   <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/55 hover:shadow-[0_8px_30px_rgba(203,235,222,0.18)] hover:-translate-y-1 duration-200"
-                    style={{ background: 'rgba(120, 158, 144, 0.20)' }}
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
+                    style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/35 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
                           Step 1 · 원리
                         </span>
                         <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
@@ -1148,12 +1148,12 @@ export default function AbundanceSecretPage() {
 
                   {/* Book 2 */}
                   <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/55 hover:shadow-[0_8px_30px_rgba(203,235,222,0.18)] hover:-translate-y-1 duration-200"
-                    style={{ background: 'rgba(120, 158, 144, 0.20)' }}
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
+                    style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/35 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
                           Step 2 · 전략
                         </span>
                         <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
@@ -1173,12 +1173,12 @@ export default function AbundanceSecretPage() {
 
                   {/* Book 3 */}
                   <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/55 hover:shadow-[0_8px_30px_rgba(203,235,222,0.18)] hover:-translate-y-1 duration-200"
-                    style={{ background: 'rgba(120, 158, 144, 0.20)' }}
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
+                    style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/35 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
                           Step 3 · 실천
                         </span>
                         <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
@@ -1209,7 +1209,7 @@ export default function AbundanceSecretPage() {
                   {/* Book 1. [본편] 《풍요비책(豊饒秘策) 완전판》 */}
                   <div className="gungjung-glass p-8 md:p-12 border-[#B49A70]/30 rounded-3xl relative overflow-hidden"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.88) 100%)',
+                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                     }}>
                     <div className="grid lg:grid-cols-12 gap-10 items-start">
@@ -1219,7 +1219,7 @@ export default function AbundanceSecretPage() {
 
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 mb-3">
                             📗 Book 1. [본편]
                           </span>
                           <h3 className="text-xl md:text-[24px] font-elegant font-bold text-white mb-2 leading-[1.4] break-keep">
@@ -1251,7 +1251,7 @@ export default function AbundanceSecretPage() {
                           </div>
 
                           {/* ③ 자본의 흑마법 4대 절대 비기 */}
-                          <div className="p-5 rounded-xl bg-[#789E90]/18 border border-[#CBEBDE]/30 space-y-3.5">
+                          <div className="p-5 rounded-xl bg-[#789E90]/32 border border-[#CBEBDE]/40 space-y-3.5">
                             <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-center gap-2">
                               <span className="text-[#B59C88]">③</span> 자본의 흑마법 4대 절대 비기
                             </h4>
@@ -1343,7 +1343,7 @@ export default function AbundanceSecretPage() {
                   {/* Book 2: 《정화와 각성의 서》 */}
                   <div className="gungjung-glass p-8 md:p-12 border-[#B49A70]/30 rounded-3xl relative overflow-hidden"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.88) 100%)',
+                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                     }}>
                     <div className="grid lg:grid-cols-12 gap-10 items-start">
@@ -1353,7 +1353,7 @@ export default function AbundanceSecretPage() {
 
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 mb-3">
                             📙 Book 2. [실전 워크북]
                           </span>
                           <h3 className="text-xl md:text-[24px] font-elegant font-bold text-white mb-2 leading-[1.4] break-keep">
@@ -1394,11 +1394,11 @@ export default function AbundanceSecretPage() {
                               <span className="text-[#B59C88]">④</span> 돈그릇 수용 한계선 3단계 확장 실습
                             </h4>
                             <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm text-[#EDE6DA]/85 pl-6">
-                              <span className="px-2.5 py-1 rounded bg-[#8CD3B6]/15 border border-[#CBEBDE]/25">무저항 씨앗 금액</span>
+                              <span className="px-2.5 py-1 rounded bg-[#8CD3B6]/25 border border-[#CBEBDE]/35">무저항 씨앗 금액</span>
                               <span>➔</span>
-                              <span className="px-2.5 py-1 rounded bg-[#8CD3B6]/15 border border-[#CBEBDE]/25">저항 돌파</span>
+                              <span className="px-2.5 py-1 rounded bg-[#8CD3B6]/25 border border-[#CBEBDE]/35">저항 돌파</span>
                               <span>➔</span>
-                              <span className="px-2.5 py-1 rounded bg-[#8CD3B6]/15 border border-[#CBEBDE]/25">도약 비노동 순환</span>
+                              <span className="px-2.5 py-1 rounded bg-[#8CD3B6]/25 border border-[#CBEBDE]/35">도약 비노동 순환</span>
                             </div>
                           </div>
 
@@ -1411,7 +1411,7 @@ export default function AbundanceSecretPage() {
                             </p>
                           </div>
 
-                          <div className="p-5 rounded-xl bg-[#789E90]/18 border border-[#CBEBDE]/30 space-y-3.5">
+                          <div className="p-5 rounded-xl bg-[#789E90]/32 border border-[#CBEBDE]/40 space-y-3.5">
                             <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-center gap-2">
                               <span className="text-[#B59C88]">⑥</span> 실전 통제 치트키 템플릿 4종
                             </h4>
@@ -1460,7 +1460,7 @@ export default function AbundanceSecretPage() {
                   {/* Book 3: 《풍요의 파동(豊饒의 波動)》 */}
                   <div className="gungjung-glass p-8 md:p-12 border-[#B49A70]/30 rounded-3xl relative overflow-hidden"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.88) 100%)',
+                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                     }}>
                     <div className="grid lg:grid-cols-12 gap-10 items-start">
@@ -1470,7 +1470,7 @@ export default function AbundanceSecretPage() {
 
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 mb-3">
                             📘 Book 3. [특별 외전]
                           </span>
                           <h3 className="text-xl md:text-[24px] font-elegant font-bold text-white mb-2 leading-[1.4] break-keep">
@@ -1518,7 +1518,7 @@ export default function AbundanceSecretPage() {
                             </p>
                           </div>
 
-                          <div className="p-5 rounded-xl bg-[#789E90]/18 border border-[#CBEBDE]/30 space-y-3.5">
+                          <div className="p-5 rounded-xl bg-[#789E90]/32 border border-[#CBEBDE]/40 space-y-3.5">
                             <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-center gap-2">
                               <span className="text-[#B59C88]">⑤</span> [권말 특전] 8대 감정 파동 즉각 전환 비방전
                             </h4>
@@ -1550,7 +1550,7 @@ export default function AbundanceSecretPage() {
                   {/* Bonus: 《금옥만당부 모바일 월페이퍼》 */}
                   <div className="gungjung-glass p-8 md:p-12 border-[#B49A70]/40 rounded-3xl relative overflow-hidden"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.88) 100%)',
+                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                     }}>
                     <div className="grid lg:grid-cols-12 gap-10 items-center">
@@ -1560,7 +1560,7 @@ export default function AbundanceSecretPage() {
 
                       <div className="lg:col-span-8 space-y-6 break-keep">
                         <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 mb-3">
+                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 mb-3">
                             ⚜️ Special Bonus. [디지털 부적]
                           </span>
                           <h3 className="text-xl md:text-[24px] font-elegant font-bold text-white mb-2 leading-[1.4] break-keep">
@@ -1571,12 +1571,12 @@ export default function AbundanceSecretPage() {
                           </p>
                         </div>
 
-                        <div className="p-6 rounded-2xl bg-[#789E90]/18 border border-[#CBEBDE]/30 space-y-4">
+                        <div className="p-6 rounded-2xl bg-[#789E90]/32 border border-[#CBEBDE]/40 space-y-4">
                           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
                             <span className="text-[15px] md:text-[16px] font-bold text-white">
                               구성: 본편 + 실전 워크북 + 특별 외전 + 디지털 부적
                             </span>
-                            <span className="text-xs px-2.5 py-1 rounded bg-[#8CD3B6]/15 text-[#B59C88] font-bold border border-[#CBEBDE]/30">
+                            <span className="text-xs px-2.5 py-1 rounded bg-[#8CD3B6]/25 text-[#B59C88] font-bold border border-[#CBEBDE]/40">
                               4 in 1 구성
                             </span>
                           </div>
@@ -1636,7 +1636,7 @@ export default function AbundanceSecretPage() {
                 <div
                   className="mb-14 gungjung-glass p-6 sm:p-8 md:p-12 lg:p-14 rounded-3xl md:rounded-[40px] border border-[#B49A70]/30 text-center relative overflow-hidden"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.90) 100%)',
+                    background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                     boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                   }}
                 >
@@ -1662,7 +1662,7 @@ export default function AbundanceSecretPage() {
                             <span className="text-[#B59C88] font-serif font-bold text-xs tracking-wider">
                               {item.order}
                             </span>
-                            <span className="inline-flex items-center justify-center py-[4px] px-[10px] rounded-[6px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 text-[#FAF7F2] text-[11px] font-bold whitespace-nowrap">
+                            <span className="inline-flex items-center justify-center py-[4px] px-[10px] rounded-[6px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 text-[#FAF7F2] text-[11px] font-bold whitespace-nowrap">
                               {isAdminPreview && !item.imageSrc ? "관리자 확인용" : "미리보기"}
                             </span>
                           </div>
@@ -1727,7 +1727,7 @@ export default function AbundanceSecretPage() {
             <div
               className="gungjung-glass rounded-3xl border border-[#B49A70]/40 relative overflow-hidden shadow-2xl mb-28"
               style={{
-                background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.22) 0%, rgba(15, 8, 25, 0.90) 100%)',
+                background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)',
                 boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
               }}
             >
@@ -1760,7 +1760,7 @@ export default function AbundanceSecretPage() {
                       </div>
                     </div>
 
-                    <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30 text-[#FAF7F2] text-xs font-bold whitespace-nowrap shrink-0 shadow-sm mt-0.5">
+                    <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 text-[#FAF7F2] text-xs font-bold whitespace-nowrap shrink-0 shadow-sm mt-0.5">
                       올인원 패키지
                     </span>
                   </div>
@@ -1894,7 +1894,7 @@ export default function AbundanceSecretPage() {
                             <div className="shrink-0 mt-0.5 relative z-10">
                               <div
                                 style={{ backgroundColor: 'rgba(140, 211, 182, 0.20)' }}
-                                className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#CBEBDE]/30 shadow-none"
+                                className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#CBEBDE]/40 shadow-none"
                               >
                                 <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FAF7F2] stroke-[2.4]" />
                               </div>
@@ -1928,7 +1928,7 @@ export default function AbundanceSecretPage() {
                         <div key={idx} className="flex items-start gap-2.5">
                           <div
                             style={{ backgroundColor: 'rgba(140, 211, 182, 0.20)' }}
-                            className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 border border-[#CBEBDE]/30 shadow-none"
+                            className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 border border-[#CBEBDE]/40 shadow-none"
                           >
                             <Check className="w-3 h-3 text-[#FAF7F2] stroke-[2.4]" />
                           </div>
@@ -1979,13 +1979,13 @@ export default function AbundanceSecretPage() {
                     <div 
                       className="gungjung-glass p-8 md:p-10 border-[#B49A70]/30 rounded-3xl relative overflow-hidden min-h-[220px] flex flex-col justify-between"
                       style={{
-                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.20) 0%, rgba(15, 8, 25, 0.90) 100%)',
+                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
                       }}
                     >
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
-                          <span className="px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/15 border border-[#CBEBDE]/30">
+                          <span className="px-3 py-1 rounded-full text-xs font-bold text-[#B59C88] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40">
                             {reviewCards[reviewIndex].badge}
                           </span>
                           <span className="text-xs text-[#B59C88]/60 font-mono">
@@ -2053,14 +2053,14 @@ export default function AbundanceSecretPage() {
                   </p>
                 </div>
 
-                <div className="overflow-x-auto rounded-3xl border border-[#B49A70]/40 shadow-2xl bg-[#789E90]/18 border border-[#CBEBDE]/30 shadow-2xl backdrop-blur-sm">
+                <div className="overflow-x-auto rounded-3xl border border-[#B49A70]/40 shadow-2xl bg-[#789E90]/32 border border-[#CBEBDE]/40 shadow-2xl backdrop-blur-sm">
                   <table className="w-full text-left border-collapse min-w-[640px]">
                     <thead>
                       <tr className="border-b border-[#B49A70]/30 bg-black/40">
                         <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EDE6DA]/60 w-1/4">구분</th>
                         <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EDE6DA]/60 w-1/4">일반 재테크 강의</th>
                         <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EDE6DA]/60 w-1/4">뜬구름 잡는 끌어당김</th>
-                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#B59C88] bg-[#8CD3B6]/20 border-l border-r border-[#CBEBDE]/30 w-1/4">
+                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#B59C88] bg-[#8CD3B6]/30 border-l border-r border-[#CBEBDE]/40 w-1/4">
                           백도화 풍요비책 3종 세트
                         </th>
                       </tr>
@@ -2070,7 +2070,7 @@ export default function AbundanceSecretPage() {
                         <td className="py-5 px-6 font-bold text-white">비용</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">수십~수백만 원</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">1~2만 원</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/20 border-l border-r border-[#CBEBDE]/30">
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
                           <span className="text-[#B59C88] text-base">단 19,000원</span> (영구 소장)
                         </td>
                       </tr>
@@ -2079,7 +2079,7 @@ export default function AbundanceSecretPage() {
                         <td className="py-5 px-6 font-bold text-white">내용</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">노동 중심 테크닉</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">뜬구름 잡는 위로</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/20 border-l border-r border-[#CBEBDE]/30">
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
                           뇌신경 재배선 + 자본의 흑마법
                         </td>
                       </tr>
@@ -2088,7 +2088,7 @@ export default function AbundanceSecretPage() {
                         <td className="py-5 px-6 font-bold text-white">도구</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">없음</td>
                         <td className="py-5 px-6 text-[#EDE6DA]/70">확언 몇 줄</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/20 border-l border-r border-[#CBEBDE]/30">
+                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
                           선천코드 진단 + 템플릿 4종 + 21일 저널
                         </td>
                       </tr>
@@ -2166,7 +2166,7 @@ export default function AbundanceSecretPage() {
                         key={idx}
                         className="gungjung-glass rounded-2xl border border-[#CBEBDE]/20 overflow-hidden transition-all duration-300"
                         style={{
-                          background: isOpen ? 'rgba(120, 158, 144, 0.20)' : 'rgba(255, 255, 255, 0.01)'
+                          background: isOpen ? 'rgba(120, 158, 144, 0.38)' : 'rgba(255, 255, 255, 0.01)'
                         }}
                       >
                         <button
@@ -2320,7 +2320,7 @@ export default function AbundanceSecretPage() {
                   <div
                     className="px-6 sm:px-10 md:px-12 py-10 md:py-12 rounded-2xl md:rounded-3xl border border-[#B49A70]/40 relative shadow-2xl text-center"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.22) 0%, rgba(15, 8, 25, 0.90) 100%)'
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)'
                     }}
                   >
                     <h3 className="text-lg sm:text-xl md:text-2xl font-elegant font-bold text-white leading-[1.4] break-keep mb-2">
@@ -2342,7 +2342,7 @@ export default function AbundanceSecretPage() {
                       <span className="text-base md:text-lg text-[#EDE6DA]/40 line-through">
                         정가 79,000원
                       </span>
-                      <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/20 border border-[#CBEBDE]/30 text-[#FAF7F2] text-xs md:text-sm font-bold whitespace-nowrap">
+                      <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/20 border border-[#CBEBDE]/40 text-[#FAF7F2] text-xs md:text-sm font-bold whitespace-nowrap">
                         76% OFF
                       </span>
                     </div>
@@ -2406,7 +2406,7 @@ export default function AbundanceSecretPage() {
           onClick={() => setPreviewModalItem(null)}
         >
           <div
-            className="relative max-w-3xl w-full max-h-[90vh] bg-[#0E1B17] border border-[#CBEBDE]/30 rounded-2xl md:rounded-3xl p-4 sm:p-6 overflow-auto shadow-2xl flex flex-col items-center"
+            className="relative max-w-3xl w-full max-h-[90vh] bg-[#0E1B17] border border-[#CBEBDE]/40 rounded-2xl md:rounded-3xl p-4 sm:p-6 overflow-auto shadow-2xl flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-full flex items-center justify-between pb-3 mb-3 border-b border-white/10">
