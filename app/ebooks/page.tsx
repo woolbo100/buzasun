@@ -13,7 +13,7 @@ export default function EbooksPage() {
   const ebooks = [
     {
       title: '연애비급 (매력 시그널)',
-      description: '상대방의 무의식을 자극하는 당신만의 고유한 아우라 분석.',
+      description: '상대방의 무의식을 자극하는 매력코드 장착하는 방법.',
       href: '/reports/love-secret',
       cta: '연애비급 자세히 보기',
       image: '/image/love-secret-thumb.png',
