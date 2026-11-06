@@ -3129,9 +3129,17 @@ export default function LoveSecretEbookPage() {
                     </p>
                   </div>
 
-                  {/* 패키지 가격 카드 (어두운 플럼 배경 + 은은한 핑크골드 테두리) */}
-                  <div className="p-6 md:p-10 rounded-2xl bg-[#1C0B18]/85 border border-[#E5C4BB]/25 shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative backdrop-blur-md">
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#663544] text-[#FFF1E9] border border-[#D5AFAD]/40 text-xs font-elegant font-bold py-[5px] px-[12px] rounded-[6px] uppercase tracking-wider whitespace-nowrap">런칭 기념 76% 한정 특가</div>
+                  {/* 패키지 가격 카드 (상단 Hero 패키지 상자와 네모상자 & 버튼 디자인 통일) */}
+                  <div
+                    className="p-6 md:p-10 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/40 relative shadow-2xl text-center"
+                    style={{
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
+                      boxShadow: '0 0 60px rgba(186, 141, 126, 0.25)'
+                    }}
+                  >
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#87465B] text-[#FFF1E9] border border-[#D5AFAD] text-xs font-elegant font-bold py-[5px] px-[12px] rounded-[6px] uppercase tracking-wider whitespace-nowrap shadow-md">
+                      런칭 기념 76% 한정 특가
+                    </div>
 
                     <h3 className="text-lg md:text-xl font-elegant font-bold text-white mt-2.5 leading-[1.5]">
                       백도화 연애비급 올인원 패키지 (PDF 3종 + 도화만개부)
@@ -3141,30 +3149,29 @@ export default function LoveSecretEbookPage() {
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-3 my-6">
-                      <span className="text-[#EDE6DA]/40 line-through text-base md:text-lg">
-                        정가 79,000원
-                      </span>
-                      <span className="text-3xl md:text-4xl font-elegant font-bold text-[#E5C4BB]">
+                      <span className="text-3xl md:text-4xl font-elegant font-bold text-[#E5C4BB] tracking-tight">
                         19,000원
                       </span>
-                      <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#663544] border border-[#D5AFAD]/40 text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                      <span className="text-sm md:text-base text-[#EDE6DA]/40 line-through">
+                        정가 79,000원
+                      </span>
+                      <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
                         76% OFF
                       </span>
                     </div>
 
-                    {/* 구매 버튼 (배경보다 확실히 밝은 더스티 로즈 → 로즈코코아 그라데이션) */}
+                    {/* 구매 버튼 (상단 버튼과 디자인 & 아이콘 완벽 통일) */}
                     <button
                       type="button"
                       onClick={handlePurchase}
-                      className="w-full py-4 md:py-5 px-6 rounded-xl font-elegant font-bold text-base md:text-xl text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_35px_rgba(181,121,135,0.45)] transition-all duration-300 hover:scale-[1.01] active:scale-95 inline-flex items-center justify-center gap-2 cursor-pointer hover:brightness-110"
+                      className="w-full py-3.5 md:py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 cursor-pointer"
                       style={{
                         background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
                         border: '1px solid rgba(229, 196, 187, 0.5)'
                       }}
                     >
-                      <Sparkles className="w-5 h-5 text-[#FAF6EE] shrink-0" />
                       <span>연애비급 19,000원에 구매하기</span>
-                      <ChevronRight className="w-5 h-5 text-[#FAF6EE] shrink-0" />
+                      <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
                     </button>
 
                     <p className="text-[#EDE6DA]/50 text-xs mt-4 font-light">
