@@ -2337,7 +2337,7 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
 
-                    {/* 4. 활용 카드 4개 (2열 × 2행 그리드) */}
+                    {/* 4. 활용 카드 4개 (이런 분께 추천합니다와 동일한 프리미엄 미색 한지 카드 스타일) */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
                       {[
                         {
@@ -2359,16 +2359,36 @@ export default function LoveSecretEbookPage() {
                       ].map((item, idx) => (
                         <div
                           key={idx}
-                          className="flex items-start gap-3 p-4 bg-[#FAF7F2] rounded-xl border border-[#D4B2A7]/25 hover:border-[#C58BA0]/45 hover:-translate-y-0.5 transition-all duration-300 shadow-sm h-full"
+                          style={{
+                            backgroundColor: '#F7F1E5',
+                            backgroundImage: `
+                              radial-gradient(circle at 18% 28%, rgba(240, 230, 212, 0.7) 0%, transparent 45%),
+                              radial-gradient(circle at 82% 72%, rgba(235, 220, 198, 0.7) 0%, transparent 50%),
+                              url("data:image/svg+xml,%3Csvg%20viewBox%3D%270%200%20400%20400%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cfilter%20id%3D%27hanjiCard%27%3E%20%20%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.02%200.08%27%20numOctaves%3D%274%27%20result%3D%27fiber%27%20/%3E%20%20%3CfeTurbulence%20type%3D%27turbulence%27%20baseFrequency%3D%270.35%27%20numOctaves%3D%273%27%20result%3D%27grain%27%20/%3E%20%20%3CfeColorMatrix%20in%3D%27fiber%27%20type%3D%27matrix%27%20values%3D%27%20%20%20%200.35%200%20%20%20%200%20%20%20%200%200.62%20%20%20%20%200%20%20%20%200.30%200%20%20%20%200%200.55%20%20%20%20%200%20%20%20%200%20%20%20%200.24%200%200.46%20%20%20%20%200%20%20%20%200%20%20%20%200%20%20%20%200.55%200%27%20result%3D%27coloredFiber%27%20/%3E%20%20%3CfeColorMatrix%20in%3D%27grain%27%20type%3D%27matrix%27%20values%3D%27%20%20%20%200.30%200%20%20%20%200%20%20%20%200%200.58%20%20%20%20%200%20%20%20%200.26%200%20%20%20%200%200.50%20%20%20%20%200%20%20%20%200%20%20%20%200.20%200%200.42%20%20%20%20%200%20%20%20%200%20%20%20%200%20%20%20%200.35%200%27%20result%3D%27coloredGrain%27%20/%3E%20%20%3CfeBlend%20mode%3D%27multiply%27%20in%3D%27coloredFiber%27%20in2%3D%27coloredGrain%27%20/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23hanjiCard%29%27%20/%3E%3C/svg%3E")
+                            `,
+                            backgroundSize: '100% 100%, 100% 100%, 340px 340px',
+                            backgroundPosition: `0 0, 0 0, ${(idx * 79) % 340}px ${(idx * 113) % 340}px`,
+                            borderColor: 'rgba(206, 175, 153, 0.55)',
+                            boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), 0 1px 3px 0 rgba(35, 20, 30, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
+                          }}
+                          className="group relative p-4 md:p-[18px_20px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 md:gap-3.5 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden h-full"
                         >
-                          <Check className="w-4 h-4 text-[#C58BA0] shrink-0 mt-0.5" />
-                          <div className="flex flex-col text-left w-full">
-                            <div className="min-h-[2.4rem] md:min-h-[2.6rem] flex items-start">
-                              <span className="text-xs md:text-[13.5px] text-[#3A242B] font-bold leading-snug break-keep">
-                                {item.title}
-                              </span>
+                          {/* 백도화 시그니처 차분한 마른장미 원형 체크 아이콘 */}
+                          <div className="shrink-0 mt-0.5 relative z-10">
+                            <div 
+                              style={{ backgroundColor: '#A65F63' }}
+                              className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#E5C4BB]/50 shadow-none"
+                            >
+                              <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FAF7F2] stroke-[2.4]" />
                             </div>
-                            <span className="text-[11px] md:text-xs text-[#6B5E57] mt-1 font-normal leading-relaxed break-keep">
+                          </div>
+                          <div className="flex flex-col text-left w-full relative z-10">
+                            <div className="min-h-[2.8rem] md:min-h-[3.2rem] flex items-start">
+                              <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-snug break-keep">
+                                {item.title}
+                              </h3>
+                            </div>
+                            <span className="text-[13px] md:text-[14px] text-[#634E45] mt-1 font-normal leading-relaxed break-keep">
                               {item.desc}
                             </span>
                           </div>
@@ -2389,12 +2409,17 @@ export default function LoveSecretEbookPage() {
                         }
                       ].map((info, idx) => (
                         <div key={idx} className="flex items-start gap-2.5">
-                          <Check className="w-4 h-4 text-[#C58BA0] shrink-0 mt-0.5" />
+                          <div 
+                            style={{ backgroundColor: '#A65F63' }}
+                            className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 border border-[#E5C4BB]/40 shadow-none"
+                          >
+                            <Check className="w-3 h-3 text-[#FAF7F2] stroke-[2.4]" />
+                          </div>
                           <div className="flex flex-col text-left">
-                            <span className="text-[12px] md:text-[13px] font-semibold text-[#EDE6DA] break-keep">
+                            <span className="text-[13px] md:text-[14px] font-semibold text-[#EDE6DA] break-keep">
                               {info.title}
                             </span>
-                            <span className="text-[11px] md:text-xs text-[#EDE6DA]/75 mt-0.5 leading-relaxed break-keep">
+                            <span className="text-[12px] md:text-[13px] text-[#EDE6DA]/75 mt-0.5 leading-relaxed break-keep">
                               {info.desc}
                             </span>
                           </div>
