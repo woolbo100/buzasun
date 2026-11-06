@@ -2488,7 +2488,10 @@ export default function LoveSecretEbookPage() {
                   </div>
 
                   {/* 이미지 하단 브릿지 카피 (이미지와 글자 간격 시원하게 대폭 확대 mt-28 md:mt-40) */}
-                  <div className="text-center max-w-3xl mx-auto space-y-6 mt-28 md:mt-40 break-keep">
+                  <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-28 md:mt-40 break-keep">
+                    <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                      POWER OF ATTRACTION
+                    </span>
                     <h3
                       className="text-[26px] sm:text-[30px] md:text-[36px] font-elegant font-bold text-white break-keep"
                       style={{ lineHeight: 1.4 }}
@@ -2497,7 +2500,7 @@ export default function LoveSecretEbookPage() {
                       이제 스스로 <span className="text-[#E5C4BB]">‘선택받는 매력녀’</span>가 되십시오.”
                     </h3>
 
-                    <div className="space-y-2.5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                    <div className="space-y-2.5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep pt-2">
                       <p>
                         사랑을 확인받으려 불안해하던 수많은 여성들이,<br className="hidden sm:inline" />
                         어떻게 관계의 주도권을 쥐고 먼저 고백받는 주인공이 되었을까요?
