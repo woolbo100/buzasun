@@ -3140,50 +3140,50 @@ export default function LoveSecretEbookPage() {
                       boxShadow: '0 0 60px rgba(186, 141, 126, 0.25)'
                     }}
                   >
-                    {/* 1) 상품명 (다음 요소까지 8px) */}
-                    <h3 className="text-base sm:text-lg md:text-xl font-elegant font-medium text-[#FAF7F2]/90 leading-[1.5] break-keep mb-2">
+                    {/* 1) 상품명 (한 단계 확대: text-lg sm:text-xl md:text-2xl, 다음 요소까지 8px) */}
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-elegant font-bold text-white leading-[1.4] break-keep mb-2">
                       백도화 연애비급 올인원 패키지 (PDF 3종 + 도화만개부)
                     </h3>
 
-                    {/* 2) 구성 안내 (다음 요소까지 24~28px) */}
-                    <p className="text-xs sm:text-sm text-[#EDE6DA]/60 font-light break-keep mb-6 md:mb-7">
+                    {/* 2) 구성 안내 (한 단계 확대: text-sm sm:text-base, 다음 요소까지 24~28px) */}
+                    <p className="text-sm sm:text-base text-[#EDE6DA]/75 font-normal break-keep mb-6 md:mb-7">
                       완전판 바이블 본편 · 전략 시크릿북 · 실천 워크북
                     </p>
 
-                    {/* 3) 판매가 · 정가 · 할인율 (다음 요소까지 24~28px, 19,000원 강조) */}
+                    {/* 3) 판매가 · 정가 · 할인율 (한 단계 확대: text-4xl md:text-5xl, 다음 요소까지 24~28px) */}
                     <div className="flex flex-wrap items-baseline justify-center gap-3 mb-6 md:mb-7">
-                      <span className="text-3xl md:text-4xl font-elegant font-bold text-[#E5C4BB] tracking-tight">
+                      <span className="text-4xl md:text-5xl font-elegant font-bold text-[#E5C4BB] tracking-tight">
                         19,000원
                       </span>
-                      <span className="text-sm md:text-base text-[#EDE6DA]/40 line-through">
+                      <span className="text-base md:text-lg text-[#EDE6DA]/40 line-through">
                         정가 79,000원
                       </span>
-                      <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                      <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs md:text-sm font-bold whitespace-nowrap">
                         76% OFF
                       </span>
                     </div>
 
-                    {/* 4) 구매 버튼 (다음 요소까지 14~16px, 로즈코코아 그라데이션 & 구매 연결 유지) */}
+                    {/* 4) 구매 버튼 (한 단계 확대: text-base md:text-lg, 다음 요소까지 14~16px) */}
                     <button
                       type="button"
                       onClick={handlePurchase}
-                      className="w-full py-3.5 md:py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 cursor-pointer mb-3.5 md:mb-4"
+                      className="w-full py-4 md:py-4.5 px-6 rounded-xl font-elegant font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 cursor-pointer mb-3.5 md:mb-4"
                       style={{
                         background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
                         border: '1px solid rgba(229, 196, 187, 0.5)'
                       }}
                     >
                       <span>연애비급 19,000원에 구매하기</span>
-                      <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
+                      <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
                     </button>
 
-                    {/* 5) 영구 소장 안내 (일반 굵기 작은 본문, 다음 요소까지 8px) */}
-                    <p className="text-[13px] sm:text-sm text-[#EDE6DA]/85 font-normal break-keep mb-2">
+                    {/* 5) 영구 소장 안내 (한 단계 확대: text-[15px] sm:text-base, 다음 요소까지 8px) */}
+                    <p className="text-[15px] sm:text-base text-[#EDE6DA]/90 font-normal break-keep mb-2">
                       한 번의 구매로 영구 소장하며, 필요한 순간마다 꺼내 볼 수 있습니다.
                     </p>
 
-                    {/* 6) 다운로드 및 환불 안내 */}
-                    <p className="text-[11px] sm:text-xs text-[#EDE6DA]/40 font-light break-keep">
+                    {/* 6) 다운로드 및 환불 안내 (한 단계 확대: text-xs sm:text-[13px]) */}
+                    <p className="text-xs sm:text-[13px] text-[#EDE6DA]/50 font-light break-keep">
                       * 결제 즉시 PDF 다운로드 가능 / 디지털 콘텐츠 특성상 열람 후 환불 불가
                     </p>
                   </div>
