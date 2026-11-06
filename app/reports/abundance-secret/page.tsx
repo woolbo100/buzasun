@@ -550,28 +550,28 @@ export default function AbundanceSecretPage() {
 
                   {/* 앤틱 골드 네 모서리 전통 코너 문양 */}
                   <img
-                    src="/image/abundance/corner-ornament.png"
+                    src="/image/abundance/corner-ornament.svg"
                     alt=""
                     aria-hidden="true"
-                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 object-contain pointer-events-none select-none opacity-85 z-10"
+                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 object-contain pointer-events-none select-none opacity-85 z-10"
                   />
                   <img
-                    src="/image/abundance/corner-ornament.png"
+                    src="/image/abundance/corner-ornament.svg"
                     alt=""
                     aria-hidden="true"
-                    className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 object-contain pointer-events-none select-none opacity-85 z-10 -scale-x-100"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 object-contain pointer-events-none select-none opacity-85 z-10 -scale-x-100"
                   />
                   <img
-                    src="/image/abundance/corner-ornament.png"
+                    src="/image/abundance/corner-ornament.svg"
                     alt=""
                     aria-hidden="true"
-                    className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 object-contain pointer-events-none select-none opacity-85 z-10 -scale-y-100"
+                    className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 object-contain pointer-events-none select-none opacity-85 z-10 -scale-y-100"
                   />
                   <img
-                    src="/image/abundance/corner-ornament.png"
+                    src="/image/abundance/corner-ornament.svg"
                     alt=""
                     aria-hidden="true"
-                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 object-contain pointer-events-none select-none opacity-85 z-10 -scale-100"
+                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 object-contain pointer-events-none select-none opacity-85 z-10 -scale-100"
                   />
 
                   <div className="relative z-10 text-center mb-6">
@@ -751,28 +751,28 @@ export default function AbundanceSecretPage() {
 
                   {/* 앤틱 골드 네 모서리 전통 코너 문양 */}
                   <img
-                    src="/image/abundance/corner-ornament.png"
+                    src="/image/abundance/corner-ornament.svg"
                     alt=""
                     aria-hidden="true"
-                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 object-contain pointer-events-none select-none opacity-85 z-10"
+                    className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 object-contain pointer-events-none select-none opacity-85 z-10"
                   />
                   <img
-                    src="/image/abundance/corner-ornament.png"
+                    src="/image/abundance/corner-ornament.svg"
                     alt=""
                     aria-hidden="true"
-                    className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 object-contain pointer-events-none select-none opacity-85 z-10 -scale-x-100"
+                    className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 object-contain pointer-events-none select-none opacity-85 z-10 -scale-x-100"
                   />
                   <img
-                    src="/image/abundance/corner-ornament.png"
+                    src="/image/abundance/corner-ornament.svg"
                     alt=""
                     aria-hidden="true"
-                    className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 object-contain pointer-events-none select-none opacity-85 z-10 -scale-y-100"
+                    className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 object-contain pointer-events-none select-none opacity-85 z-10 -scale-y-100"
                   />
                   <img
-                    src="/image/abundance/corner-ornament.png"
+                    src="/image/abundance/corner-ornament.svg"
                     alt=""
                     aria-hidden="true"
-                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14 object-contain pointer-events-none select-none opacity-85 z-10 -scale-100"
+                    className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 object-contain pointer-events-none select-none opacity-85 z-10 -scale-100"
                   />
 
                   <div className="relative z-10 text-center mb-8 md:mb-10 space-y-2.5 break-keep">

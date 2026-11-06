@@ -1,0 +1,24 @@
+<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="champagneGoldOrnament" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D6C4B2" />
+      <stop offset="50%" stop-color="#B59C88" />
+      <stop offset="100%" stop-color="#9A816E" />
+    </linearGradient>
+  </defs>
+  <!-- L자형 외곽 가이드 라인 -->
+  <path d="M 8 74 L 8 8 L 74 8" stroke="url(#champagneGoldOrnament)" stroke-width="1.3" stroke-linecap="square" />
+  
+  <!-- 전통 뇌문(열쇠문) 가지 꺾임 -->
+  <path d="M 8 56 H 18 V 44 H 12" stroke="url(#champagneGoldOrnament)" stroke-width="1.1" stroke-linejoin="miter" />
+  <path d="M 56 8 V 18 H 44 V 12" stroke="url(#champagneGoldOrnament)" stroke-width="1.1" stroke-linejoin="miter" />
+
+  <!-- 모서리 상단 격자 (전통 창살) -->
+  <rect x="8" y="8" width="22" height="22" stroke="url(#champagneGoldOrnament)" stroke-width="1.2" />
+  <rect x="22" y="8" width="18" height="18" stroke="url(#champagneGoldOrnament)" stroke-width="1.1" />
+  <rect x="8" y="22" width="18" height="18" stroke="url(#champagneGoldOrnament)" stroke-width="1.1" />
+  <rect x="16" y="16" width="22" height="22" stroke="url(#champagneGoldOrnament)" stroke-width="1.2" />
+  
+  <!-- 중심 샴페인 골드 포인트 -->
+  <rect x="24" y="24" width="6" height="6" fill="url(#champagneGoldOrnament)" />
+</svg>
