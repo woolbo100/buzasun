@@ -3115,10 +3115,10 @@ export default function LoveSecretEbookPage() {
                 신규 교체/추가: 최종 결제 마감 CTA 및 손실 회피 섹션
                ═══════════════════════════════════════════════════════════════ */}
             <section id="final-purchase" className="scroll-mt-24 md:scroll-mt-28 pt-12 md:pt-16 mb-24 text-center max-w-4xl mx-auto px-4">
-              <div className="max-w-3xl mx-auto break-keep">
+              <div className="max-w-[820px] mx-auto break-keep">
                 <Reveal>
                   {/* 1. 상단 메시지: 단락 분리 및 명언 강조 (도입 1줄 + 명언 강조 + 결론) */}
-                  <div className="mb-10 md:mb-12">
+                  <div className="max-w-3xl mx-auto mb-14 md:mb-16">
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep mb-5 md:mb-6">
                       같은 자리에서, <span className="text-[#E5C4BB]">또 아파하지 않도록</span>
                     </h2>
@@ -3146,9 +3146,9 @@ export default function LoveSecretEbookPage() {
                     </div>
                   </div>
 
-                  {/* 2. 구매 상자 (상단 배지 제거, 은은한 반투명 배경 & 테두리 유지, 최적화된 내부 간격) */}
+                  {/* 2. 구매 상자 (상단 배지 제거, 은은한 반투명 배경 & 테두리 유지, 크기 소폭 확대 및 최적화된 내부 간격) */}
                   <div
-                    className="px-5 sm:px-8 md:px-10 py-8 md:py-10 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/40 relative shadow-2xl text-center"
+                    className="px-6 sm:px-10 md:px-12 py-10 md:py-12 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/40 relative shadow-2xl text-center"
                     style={{
                       background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
                       boxShadow: '0 0 60px rgba(186, 141, 126, 0.25)'
