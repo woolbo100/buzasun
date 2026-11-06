@@ -2505,9 +2505,6 @@ export default function LoveSecretEbookPage() {
                       <p className="text-[#E5C4BB] font-bold">
                         애원하며 기다리는 자리를 끝내고, 스스로 갈망하게 만드는 주도권을 쥐십시오.
                       </p>
-                      <p className="text-[#EDE6DA]/90 font-medium pt-0.5">
-                        지금, 먼저 판도를 바꾼 이들의 생생한 변화를 확인하십시오.
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -2529,7 +2526,7 @@ export default function LoveSecretEbookPage() {
                     실전 <span className="text-[#E5C4BB]">체감 사례</span>
                   </h2>
                   <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
-                    연애비급을 적용한 분들의 실제 관계에 일어난 구체적인 변화입니다.
+                    연애비급을 적용한 분들의 실제 관계에 일어난 구체적인 변화입니다. 지금, 먼저 판도를 바꾼 이들의 생생한 변화를 확인하십시오.
                   </p>
                 </div>
 
