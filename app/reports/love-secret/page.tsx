@@ -3046,7 +3046,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 기존 최종 CTA 보존 (가로형 와이드 16:9 대형 배너, 1280px 너비 매칭)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#3E2031] lg:min-h-[640px] xl:min-h-[670px] w-full max-w-[1280px] mx-auto">
+            <section className="love-secret-cta-card relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 border border-[#D4B2A7]/40 shadow-2xl bg-[#3E2031] lg:min-h-[640px] xl:min-h-[670px] w-full max-w-[1280px] mx-auto">
               {/* 1. 배경 이미지 영역:
                   - 업로드된 원본 사이즈(1672:941) 그대로 세로 사이즈를 크게 확보
                   - object-[85%_top]으로 위쪽 머리 실루엣이 절대 잘리지 않도록 상단 기준 배치 */}
@@ -3160,10 +3160,9 @@ export default function LoveSecretEbookPage() {
 
                   {/* 2. 구매 상자 (상단 배지 제거, 은은한 반투명 배경 & 테두리 유지, 크기 소폭 확대 및 최적화된 내부 간격) */}
                   <div
-                    className="px-6 sm:px-10 md:px-12 py-10 md:py-12 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/40 relative shadow-2xl text-center"
+                    className="love-secret-purchase-card px-6 sm:px-10 md:px-12 py-10 md:py-12 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/40 relative shadow-2xl text-center"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
-                      boxShadow: '0 0 60px rgba(186, 141, 126, 0.25)'
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)'
                     }}
                   >
                     {/* 1) 상품명 (한 단계 확대: text-lg sm:text-xl md:text-2xl, 다음 요소까지 8px) */}
