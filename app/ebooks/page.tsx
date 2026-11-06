@@ -6,7 +6,7 @@ import Reveal from '@/components/Reveal'
 
 export const metadata = {
   title: '시크릿 비첩 | 백도화 매력학당',
-  description: '연애와 풍요에 관한 시크릿 비첩을 만나보세요',
+  description: '사랑의 매듭을 풀고, 풍요의 문을 여는 비밀. 나를 이해하는 통찰부터 일상에서 실천하는 방법까지, 백도화의 시크릿 비첩에 담았습니다.',
 }
 
 export default function EbooksPage() {
@@ -51,9 +51,12 @@ export default function EbooksPage() {
                 <h1 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-8 tracking-widest">
                   시크릿 <span className="text-[var(--accent-gold)]">비첩</span>
                 </h1>
-                <p className="text-[#EDE6DA] opacity-80 text-lg md:text-xl font-elegant leading-relaxed max-w-2xl mx-auto break-keep">
-                  연애와 풍요에 관한 깊이 있는 지식을 담은 시크릿 비첩을 만나보세요.<br className="md:hidden" />
-                  <span className="text-[var(--accent-gold-light)]">선천코드 분석을 바탕으로 한 실전 가이드로 더 나은 관계와<br />풍요로운 삶을 만들어가세요.</span>
+                <p className="text-[#EDE6DA] opacity-90 text-lg md:text-xl font-elegant leading-relaxed max-w-2xl mx-auto break-keep">
+                  사랑의 매듭을 풀고, 풍요의 문을 여는 비밀.<br />
+                  <span className="text-[var(--accent-gold-light)]">
+                    나를 이해하는 통찰부터 일상에서 실천하는 방법까지,<br />
+                    백도화의 시크릿 비첩에 담았습니다.
+                  </span>
                 </p>
               </Reveal>
             </div>
