@@ -3114,41 +3114,39 @@ export default function LoveSecretEbookPage() {
                 신규 교체/추가: 최종 결제 마감 CTA 및 손실 회피 섹션
                ═══════════════════════════════════════════════════════════════ */}
             <section id="final-purchase" className="scroll-mt-24 md:scroll-mt-28 mb-24 text-center max-w-4xl mx-auto px-4">
-              <div className="max-w-3xl mx-auto space-y-8 break-keep">
+              <div className="max-w-3xl mx-auto break-keep">
                 <Reveal>
-                  {/* 손실 회피(소실점) 카피 */}
-                  <div className="mb-8 space-y-4">
-                    <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-elegant font-bold tracking-[0.2em] uppercase bg-[#663544] border border-[#D5AFAD]/40 text-[#FFF1E9] whitespace-nowrap">CRITICAL CHOICE</span>
+                  {/* 1. 상단 메시지 (CRITICAL CHOICE 배지 제거, 제목-설명 20~24px, 상자 여백 40~48px) */}
+                  <div className="space-y-5 md:space-y-6 mb-10 md:mb-12">
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       같은 자리에서, <span className="text-[#E5C4BB]">또 아파하지 않도록</span>
                     </h2>
                     <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
                       자리를 바꾸지 않으면, 다음 사람을 만나도 비슷한 장면이 반복됩니다.<br />
-                      이번에는 더 애쓰는 대신, 서 있는 자리를 바꿔보세요.<br />
-                      <strong className="text-[#FAF7F2] font-semibold">한 번의 구매로 영구 소장하며, 필요한 순간마다 꺼내 볼 수 있습니다.</strong>
+                      이번에는 더 애쓰는 대신, 서 있는 자리를 바꿔보세요.
                     </p>
                   </div>
 
-                  {/* 패키지 가격 카드 (상단 Hero 패키지 상자와 네모상자 & 버튼 디자인 통일) */}
+                  {/* 2. 구매 상자 (상단 배지 제거, 은은한 반투명 배경 & 테두리 유지, 최적화된 내부 간격) */}
                   <div
-                    className="p-6 md:p-10 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/40 relative shadow-2xl text-center"
+                    className="px-5 sm:px-8 md:px-10 py-8 md:py-10 rounded-2xl md:rounded-3xl border border-[#D4B2A7]/40 relative shadow-2xl text-center"
                     style={{
                       background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
                       boxShadow: '0 0 60px rgba(186, 141, 126, 0.25)'
                     }}
                   >
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#87465B] text-[#FFF1E9] border border-[#D5AFAD] text-xs font-elegant font-bold py-[5px] px-[12px] rounded-[6px] uppercase tracking-wider whitespace-nowrap shadow-md">
-                      런칭 기념 76% 한정 특가
-                    </div>
-
-                    <h3 className="text-lg md:text-xl font-elegant font-bold text-white mt-2.5 leading-[1.5]">
+                    {/* 1) 상품명 (다음 요소까지 8px) */}
+                    <h3 className="text-base sm:text-lg md:text-xl font-elegant font-medium text-[#FAF7F2]/90 leading-[1.5] break-keep mb-2">
                       백도화 연애비급 올인원 패키지 (PDF 3종 + 도화만개부)
                     </h3>
-                    <p className="text-xs md:text-sm text-[#EDE6DA]/60 mt-1 font-light">
+
+                    {/* 2) 구성 안내 (다음 요소까지 24~28px) */}
+                    <p className="text-xs sm:text-sm text-[#EDE6DA]/60 font-light break-keep mb-6 md:mb-7">
                       완전판 바이블 본편 · 전략 시크릿북 · 실천 워크북
                     </p>
 
-                    <div className="flex flex-wrap items-center justify-center gap-3 my-6">
+                    {/* 3) 판매가 · 정가 · 할인율 (다음 요소까지 24~28px, 19,000원 강조) */}
+                    <div className="flex flex-wrap items-baseline justify-center gap-3 mb-6 md:mb-7">
                       <span className="text-3xl md:text-4xl font-elegant font-bold text-[#E5C4BB] tracking-tight">
                         19,000원
                       </span>
@@ -3160,11 +3158,11 @@ export default function LoveSecretEbookPage() {
                       </span>
                     </div>
 
-                    {/* 구매 버튼 (상단 버튼과 디자인 & 아이콘 완벽 통일) */}
+                    {/* 4) 구매 버튼 (다음 요소까지 14~16px, 로즈코코아 그라데이션 & 구매 연결 유지) */}
                     <button
                       type="button"
                       onClick={handlePurchase}
-                      className="w-full py-3.5 md:py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 cursor-pointer"
+                      className="w-full py-3.5 md:py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 cursor-pointer mb-3.5 md:mb-4"
                       style={{
                         background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
                         border: '1px solid rgba(229, 196, 187, 0.5)'
@@ -3174,7 +3172,13 @@ export default function LoveSecretEbookPage() {
                       <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
                     </button>
 
-                    <p className="text-[#EDE6DA]/50 text-xs mt-4 font-light">
+                    {/* 5) 영구 소장 안내 (일반 굵기 작은 본문, 다음 요소까지 8px) */}
+                    <p className="text-[13px] sm:text-sm text-[#EDE6DA]/85 font-normal break-keep mb-2">
+                      한 번의 구매로 영구 소장하며, 필요한 순간마다 꺼내 볼 수 있습니다.
+                    </p>
+
+                    {/* 6) 다운로드 및 환불 안내 */}
+                    <p className="text-[11px] sm:text-xs text-[#EDE6DA]/40 font-light break-keep">
                       * 결제 즉시 PDF 다운로드 가능 / 디지털 콘텐츠 특성상 열람 후 환불 불가
                     </p>
                   </div>
