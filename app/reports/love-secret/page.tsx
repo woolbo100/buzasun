@@ -2326,14 +2326,16 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
 
-                    {/* 3. 본문 가독성 정리 (글자크기 18px) */}
-                    <div className="space-y-3.5 text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                    {/* 3. 본문 가독성 정리 (글자크기 18px, 모든 줄 간격 일정하게 유지) */}
+                    <div className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       <p className="whitespace-normal md:whitespace-nowrap">
                         평생 영구 소장하며, 흔들릴 때마다 즉각 내 자리를 되찾는 3단계
                       </p>
+                      <p>
+                        관계를 이해하는 본편, 상황에 적용하는 시크릿 전략북, 직접 기록하며 연습하는 실전 워크북까지.
+                      </p>
                       <p className="text-[#EDE6DA]/90">
-                        관계를 이해하는 본편, 상황에 적용하는 시크릿 전략북, 직접 기록하며 연습하는 실전 워크북까지.<br className="hidden md:inline" />
-                        {' '}<span className="text-white font-medium">읽고, 적용하고, 돌아보는 과정</span>을 3종의 PDF 패키지에 담았습니다.
+                        <span className="text-white font-medium">읽고, 적용하고, 돌아보는 과정</span>을 3종의 PDF 패키지에 담았습니다.
                       </p>
                     </div>
 
