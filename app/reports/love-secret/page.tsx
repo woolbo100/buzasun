@@ -3114,22 +3114,36 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 교체/추가: 최종 결제 마감 CTA 및 손실 회피 섹션
                ═══════════════════════════════════════════════════════════════ */}
-            <section id="final-purchase" className="scroll-mt-24 md:scroll-mt-28 mb-24 text-center max-w-4xl mx-auto px-4">
+            <section id="final-purchase" className="scroll-mt-24 md:scroll-mt-28 pt-12 md:pt-16 mb-24 text-center max-w-4xl mx-auto px-4">
               <div className="max-w-3xl mx-auto break-keep">
                 <Reveal>
-                  {/* 1. 상단 메시지 (CRITICAL CHOICE 배지 제거, 제목-설명 20~24px, 상자 여백 40~48px) */}
-                  <div className="space-y-5 md:space-y-6 mb-10 md:mb-12">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                  {/* 1. 상단 메시지: 단락 분리 및 명언 강조 (도입 1줄 + 명언 강조 + 결론) */}
+                  <div className="mb-10 md:mb-12">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep mb-5 md:mb-6">
                       같은 자리에서, <span className="text-[#E5C4BB]">또 아파하지 않도록</span>
                     </h2>
-                    <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
-                      자리를 바꾸지 않으면, 다음 사람을 만나도 비슷한 장면이 반복됩니다.<br />
-                      &ldquo;사랑은 갈구하는 자에게 머물지 않고,<br />
-                      자신의 자리를 존엄하게 지키는 자에게 흘러듭니다.&rdquo;<br />
-                      밤새 핸드폰을 쥐고 울던 밤은 오늘로 끝내십시오.<br />
-                      이제 당신이라는 세계를 활짝 열고,<br />
-                      당신을 온전히 귀하게 대접할 사람만을 맞이하십시오.
-                    </p>
+
+                    <div className="space-y-5 md:space-y-6 text-center break-keep">
+                      {/* [도입 1줄] */}
+                      <p className="text-[#EDE6DA]/85 text-[16px] sm:text-[17px] md:text-[18px] font-normal leading-[1.7] break-keep">
+                        자리를 바꾸지 않으면, 다음 사람을 만나도 비슷한 장면이 반복됩니다.
+                      </p>
+
+                      {/* [따옴표 명언 (강조: 폰트 크기 확대 및 굵은 서체, 기품 있는 명조체)] */}
+                      <div className="py-1">
+                        <p className="font-elegant font-semibold text-[19px] sm:text-[20px] md:text-[22px] text-[#FAF7F2] leading-[1.7] break-keep tracking-wide">
+                          &ldquo;사랑은 갈구하는 자에게 머물지 않고,<br />
+                          자신의 자리를 존엄하게 지키는 자에게 흘러듭니다.&rdquo;
+                        </p>
+                      </div>
+
+                      {/* [결론 2줄] */}
+                      <p className="text-[#EDE6DA]/85 text-[16px] sm:text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
+                        밤새 핸드폰을 쥐고 울던 밤은 오늘로 끝내십시오.<br />
+                        이제 당신이라는 세계를 활짝 열고,<br />
+                        당신을 온전히 귀하게 대접할 사람만을 맞이하십시오.
+                      </p>
+                    </div>
                   </div>
 
                   {/* 2. 구매 상자 (상단 배지 제거, 은은한 반투명 배경 & 테두리 유지, 최적화된 내부 간격) */}
