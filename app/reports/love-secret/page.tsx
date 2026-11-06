@@ -2471,7 +2471,8 @@ export default function LoveSecretEbookPage() {
                       <span className="text-[#E5C4BB]">&lsquo;관계 시소&rsquo;의 법칙</span>을 모르기 때문입니다.&rdquo;
                     </h2>
                     <p className="text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
-                      관계의 시소는 더 많이 매달리고 불안해하는 쪽이 아래로 가라앉고, 자신의 중심을 지키며 여유로운 쪽이 관계의 주도권을 쥐는 심리 역학입니다.
+                      관계의 시소는 더 많이 매달리고 불안해하는 쪽이 아래로 가라앉고,<br />
+                      자신의 중심을 지키며 여유로운 쪽이 관계의 주도권을 쥐는 심리 역학입니다.
                     </p>
                   </div>
 
@@ -2544,7 +2545,8 @@ export default function LoveSecretEbookPage() {
                     실전 <span className="text-[#E5C4BB]">체감 사례</span>
                   </h2>
                   <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal break-keep">
-                    연애비급을 적용한 분들의 실제 관계에 일어난 구체적인 변화입니다. 지금, 먼저 판도를 바꾼 이들의 생생한 변화를 확인하십시오.
+                    연애비급을 적용한 분들의 실제 관계에 일어난 구체적인 변화입니다.<br />
+                    지금, 먼저 판도를 바꾼 이들의 생생한 변화를 확인하십시오.
                   </p>
                 </div>
 
