@@ -21,7 +21,7 @@ export default function EbooksPage() {
     },
     {
       title: '풍요비책 (에너지 가이드)',
-      description: '당신에게 흘러들어오는 풍요의 물길을 트는 에너지 활용법.',
+      description: '당신에게 들어오는 풍요의 물길을 트는 에너지 활용법.',
       href: '/reports/abundance-secret',
       cta: '풍요비책 자세히 보기',
       image: '/image/abundance-secret-thumb.png',
@@ -87,7 +87,7 @@ export default function EbooksPage() {
                     <h2 className="text-[22px] sm:text-[23px] md:text-2xl font-elegant font-bold text-[#EDE6DA] mb-3 group-hover:text-[var(--accent-gold)] transition-colors leading-[1.35] break-keep">
                       {ebook.title}
                     </h2>
-                    <p className="text-[#EDE6DA] opacity-80 text-[15px] sm:text-base leading-relaxed mb-6 group-hover:opacity-100 transition-opacity flex-grow min-h-[46px] md:min-h-[50px] break-keep">
+                    <p className="text-[#EDE6DA] opacity-80 text-[15px] sm:text-base leading-relaxed tracking-tight mb-6 group-hover:opacity-100 transition-opacity flex-grow min-h-[26px] md:min-h-[28px] break-keep">
                       {ebook.description}
                     </p>
                     <Link
