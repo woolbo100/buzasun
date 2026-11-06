@@ -2326,100 +2326,100 @@ export default function LoveSecretEbookPage() {
                     {/* 상단 콘텐츠 그룹 */}
                     <div className="space-y-6 md:space-y-7">
                       {/* 1. 제목 (의미 단위 2줄 배치) */}
-                    <div>
-                      <h2 className="font-elegant font-bold leading-[1.3] text-left">
-                        <span className="block text-2xl md:text-[28px] text-[#E5C4BB]">
-                          《연애비급》
-                        </span>
-                        <span className="block text-3xl md:text-[36px] lg:text-[40px] text-[#FAF7F2] mt-1.5 break-keep">
-                          실전 200% 활용 가이드
-                        </span>
-                      </h2>
-                    </div>
+                      <div>
+                        <h2 className="font-elegant font-bold leading-[1.3] text-left">
+                          <span className="block text-2xl md:text-[28px] text-[#E5C4BB]">
+                            《연애비급》
+                          </span>
+                          <span className="block text-3xl md:text-[36px] lg:text-[40px] text-[#FAF7F2] mt-1.5 break-keep">
+                            실전 200% 활용 가이드
+                          </span>
+                        </h2>
+                      </div>
 
-                    {/* 2. 핵심 메시지 강조 (24px, 진하게) */}
-                    <div className="pt-1">
-                      <p className="text-[20px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] break-keep">
-                        “사두고 꽂아두는 책이 아닙니다.<br className="hidden sm:inline" />
-                        {' '}필요한 순간마다 꺼내 드는 <span className="text-[#E5C4BB]">‘나만의 비밀 무기’</span>
-                      </p>
-                    </div>
+                      {/* 2. 핵심 메시지 강조 (24px, 진하게) */}
+                      <div className="pt-1">
+                        <p className="text-[20px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] break-keep">
+                          “사두고 꽂아두는 책이 아닙니다.<br className="hidden sm:inline" />
+                          {' '}필요한 순간마다 꺼내 드는 <span className="text-[#E5C4BB]">‘나만의 비밀 무기’</span>
+                        </p>
+                      </div>
 
-                    {/* 3. 본문 가독성 정리 (글자크기 18px, 모든 줄 간격 일정하게 유지) */}
-                    <div className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
-                      <p className="whitespace-normal md:whitespace-nowrap">
-                        평생 영구 소장하며, 흔들릴 때마다 즉각 내 자리를 되찾는 3단계
-                      </p>
-                      <p>
-                        관계를 이해하는 본편, 상황에 적용하는 시크릿 전략북, 직접 기록하며 연습하는 실전 워크북까지.
-                      </p>
-                      <p className="text-[#EDE6DA]/90">
-                        <span className="text-[#E5C4BB] font-semibold">읽고, 적용하고, 돌아보는 과정</span>을 3종의 PDF 패키지에 담았습니다.
-                      </p>
-                    </div>
+                      {/* 3. 본문 가독성 정리 (글자크기 18px, 모든 줄 간격 일정하게 유지) */}
+                      <div className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                        <p className="whitespace-normal md:whitespace-nowrap">
+                          평생 영구 소장하며, 흔들릴 때마다 즉각 내 자리를 되찾는 3단계
+                        </p>
+                        <p>
+                          관계를 이해하는 본편, 상황에 적용하는 시크릿 전략북, 직접 기록하며 연습하는 실전 워크북까지.
+                        </p>
+                        <p className="text-[#EDE6DA]/90">
+                          <span className="text-[#E5C4BB] font-semibold">읽고, 적용하고, 돌아보는 과정</span>을 3종의 PDF 패키지에 담았습니다.
+                        </p>
+                      </div>
 
-                    {/* 4. 활용 카드 4개 (1열 4행 슬림 미색 한지 카드, 세로 사이즈 축소) */}
-                    <div className="flex flex-col gap-2 md:gap-2.5 pt-1">
-                      {[
-                        {
-                          title: "이해부터 실천까지 이어지는 3종",
-                          desc: "본편·전략북·워크북을 목적에 맞게 활용하세요."
-                        },
-                        {
-                          title: "필요한 부분부터 골라 읽기",
-                          desc: "지금 고민하는 상황과 관련된 장부터 살펴보세요."
-                        },
-                        {
-                          title: "상황별 즉답 대화 예시 템플릿",
-                          desc: "내 상황에 맞는 말과 표현을 고민할 때 꺼내보세요."
-                        },
-                        {
-                          title: "직접 기록하는 30일 워크북",
-                          desc: "감정과 기준, 반복되는 행동을 돌아보세요."
-                        }
-                      ].map((item, idx) => (
-                        <div
-                          key={idx}
-                          style={{
-                            backgroundColor: '#F7F1E5',
-                            backgroundImage: `
+                      {/* 4. 활용 카드 4개 (1열 4행 슬림 미색 한지 카드, 세로 사이즈 축소) */}
+                      <div className="flex flex-col gap-2 md:gap-2.5 pt-1">
+                        {[
+                          {
+                            title: "이해부터 실천까지 이어지는 3종",
+                            desc: "본편·전략북·워크북을 목적에 맞게 활용하세요."
+                          },
+                          {
+                            title: "필요한 부분부터 골라 읽기",
+                            desc: "지금 고민하는 상황과 관련된 장부터 살펴보세요."
+                          },
+                          {
+                            title: "상황별 즉답 대화 예시 템플릿",
+                            desc: "내 상황에 맞는 말과 표현을 고민할 때 꺼내보세요."
+                          },
+                          {
+                            title: "직접 기록하는 30일 워크북",
+                            desc: "감정과 기준, 반복되는 행동을 돌아보세요."
+                          }
+                        ].map((item, idx) => (
+                          <div
+                            key={idx}
+                            style={{
+                              backgroundColor: '#F7F1E5',
+                              backgroundImage: `
                               radial-gradient(circle at 18% 28%, rgba(240, 230, 212, 0.7) 0%, transparent 45%),
                               radial-gradient(circle at 82% 72%, rgba(235, 220, 198, 0.7) 0%, transparent 50%),
                               url("data:image/svg+xml,%3Csvg%20viewBox%3D%270%200%20400%20400%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cfilter%20id%3D%27hanjiCard%27%3E%20%20%3CfeTurbulence%20type%3D%27fractalNoise%27%20baseFrequency%3D%270.02%200.08%27%20numOctaves%3D%274%27%20result%3D%27fiber%27%20/%3E%20%20%3CfeTurbulence%20type%3D%27turbulence%27%20baseFrequency%3D%270.35%27%20numOctaves%3D%273%27%20result%3D%27grain%27%20/%3E%20%20%3CfeColorMatrix%20in%3D%27fiber%27%20type%3D%27matrix%27%20values%3D%27%20%20%20%200.35%200%20%20%20%200%20%20%20%200%200.62%20%20%20%20%200%20%20%20%200.30%200%20%20%20%200%200.55%20%20%20%20%200%20%20%20%200%20%20%20%200.24%200%200.46%20%20%20%20%200%20%20%20%200%20%20%20%200%20%20%20%200.55%200%27%20result%3D%27coloredFiber%27%20/%3E%20%20%3CfeColorMatrix%20in%3D%27grain%27%20type%3D%27matrix%27%20values%3D%27%20%20%20%200.30%200%20%20%20%200%20%20%20%200%200.58%20%20%20%20%200%20%20%20%200.26%200%20%20%20%200%200.50%20%20%20%20%200%20%20%20%200%20%20%20%200.20%200%200.42%20%20%20%20%200%20%20%20%200%20%20%20%200%20%20%20%200.35%200%27%20result%3D%27coloredGrain%27%20/%3E%20%20%3CfeBlend%20mode%3D%27multiply%27%20in%3D%27coloredFiber%27%20in2%3D%27coloredGrain%27%20/%3E%3C/filter%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20filter%3D%27url%28%23hanjiCard%29%27%20/%3E%3C/svg%3E")
                             `,
-                            backgroundSize: '100% 100%, 100% 100%, 340px 340px',
-                            backgroundPosition: `0 0, 0 0, ${(idx * 79) % 340}px ${(idx * 113) % 340}px`,
-                            borderColor: 'rgba(206, 175, 153, 0.55)',
-                            boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), 0 1px 3px 0 rgba(35, 20, 30, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
-                          }}
-                          className="group relative p-[11px_18px] md:p-[12px_22px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 md:gap-4 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
-                        >
-                          {/* 로즈 체크 아이콘 (이런 분께 추천합니다와 동일한 크기) */}
-                          <div className="shrink-0 mt-0.5 relative z-10">
-                            <div 
-                              style={{ backgroundColor: '#A65F63' }}
-                              className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#E5C4BB]/50 shadow-none"
-                            >
-                              <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FAF7F2] stroke-[2.4]" />
+                              backgroundSize: '100% 100%, 100% 100%, 340px 340px',
+                              backgroundPosition: `0 0, 0 0, ${(idx * 79) % 340}px ${(idx * 113) % 340}px`,
+                              borderColor: 'rgba(206, 175, 153, 0.55)',
+                              boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), 0 1px 3px 0 rgba(35, 20, 30, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
+                            }}
+                            className="group relative p-[11px_18px] md:p-[12px_22px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 md:gap-4 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
+                          >
+                            {/* 로즈 체크 아이콘 (이런 분께 추천합니다와 동일한 크기) */}
+                            <div className="shrink-0 mt-0.5 relative z-10">
+                              <div
+                                style={{ backgroundColor: '#A65F63' }}
+                                className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#E5C4BB]/50 shadow-none"
+                              >
+                                <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FAF7F2] stroke-[2.4]" />
+                              </div>
+                            </div>
+
+                            {/* 제목 및 설명 영역 (제목과 설명의 왼쪽 시작선 일치, 줄간격 미세 축소) */}
+                            <div className="flex flex-col text-left w-full relative z-10">
+                              <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-[1.3] break-keep">
+                                {item.title}
+                              </h3>
+                              <p className="text-[15px] md:text-[16px] text-[#634E45] mt-0.5 font-normal leading-[1.45] break-keep">
+                                {item.desc}
+                              </p>
                             </div>
                           </div>
-
-                          {/* 제목 및 설명 영역 (제목과 설명의 왼쪽 시작선 일치, 줄간격 미세 축소) */}
-                          <div className="flex flex-col text-left w-full relative z-10">
-                            <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-[1.3] break-keep">
-                              {item.title}
-                            </h3>
-                            <p className="text-[15px] md:text-[16px] text-[#634E45] mt-0.5 font-normal leading-[1.45] break-keep">
-                              {item.desc}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </div>
 
-                  {/* 5. 이용 안내 2개 (바닥에 안착하여 왼쪽 하단 감성 문구와 높낮이 일치) */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-auto pt-4 md:pt-5 border-t border-[#D4B2A7]/25 min-h-[48px] items-center">
+                    {/* 5. 이용 안내 2개 (바닥에 안착하여 왼쪽 하단 감성 문구와 높낮이 일치) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 lg:mt-auto pt-4 md:pt-5 border-t border-[#D4B2A7]/25 min-h-[48px] items-center">
                       {[
                         {
                           title: "휴대폰·태블릿·PC에서 열람",
@@ -2431,7 +2431,7 @@ export default function LoveSecretEbookPage() {
                         }
                       ].map((info, idx) => (
                         <div key={idx} className="flex items-start gap-2.5">
-                          <div 
+                          <div
                             style={{ backgroundColor: '#A65F63' }}
                             className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 border border-[#E5C4BB]/40 shadow-none"
                           >
@@ -2471,7 +2471,7 @@ export default function LoveSecretEbookPage() {
                       <span className="text-[#E5C4BB]">&lsquo;관계 시소&rsquo;의 법칙</span>을 모르기 때문입니다.&rdquo;
                     </h2>
                     <p className="text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
-                      애원하며 기다리는 자리를 끝내고, 스스로 갈망하게 만드는 주도권을 쥐십시오.
+                      관계의 시소는 더 많이 매달리고 불안해하는 쪽이 아래로 가라앉고, 자신의 중심을 지키며 여유로운 쪽이 관계의 주도권을 쥐는 심리 역학입니다.
                     </p>
                   </div>
 
