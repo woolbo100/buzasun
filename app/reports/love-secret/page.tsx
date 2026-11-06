@@ -3114,22 +3114,10 @@ export default function LoveSecretEbookPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
-                신규 교체/추가: 최종 결제 마감 CTA 및 손실 회피 섹션 (기존 연애비급 하단 박스 디자인 적용)
+                신규 교체/추가: 최종 결제 마감 CTA 및 손실 회피 섹션
                ═══════════════════════════════════════════════════════════════ */}
-            <section id="final-purchase" className="scroll-mt-24 md:scroll-mt-28 relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 p-8 md:p-16 border border-[#D4B2A7]/30 shadow-[0_0_35px_rgba(212,178,167,0.2)] text-center max-w-5xl mx-auto">
-              {/* 차분한 짙은 로즈코코아 → 딥플럼 그라데이션 배경 */}
-              <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#3E1E28] via-[#281320] to-[#150816]" />
-
-              {/* 이미지 교체 영역 8 (매혹의 열쇠 오브제 배경 슬롯 - 붉은기 완화) */}
-              <div className="absolute inset-0 z-0 opacity-15 mix-blend-screen">
-                <HybridImageSlot
-                  assetKey="finalCta"
-                  className="w-full h-full rounded-none border-none"
-                  imgClassName="object-cover"
-                />
-              </div>
-
-              <div className="relative z-10 max-w-3xl mx-auto space-y-8 break-keep">
+            <section id="final-purchase" className="scroll-mt-24 md:scroll-mt-28 mb-24 text-center max-w-4xl mx-auto px-4">
+              <div className="max-w-3xl mx-auto space-y-8 break-keep">
                 <Reveal>
                   {/* 손실 회피(소실점) 카피 */}
                   <div className="mb-8 space-y-4">
