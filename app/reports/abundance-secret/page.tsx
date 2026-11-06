@@ -514,66 +514,37 @@ export default function AbundanceSecretPage() {
             <EmeraldCloudDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                [추가 영역 2] ‘왜, 이 책인가?’ 이미지·설명 영역 (옥빛 질감 & 비취 그라데이션)
+                [추가 영역 2] ‘왜, 이 책인가?’ 이미지·설명 영역 (옥색 한지 텍스처 & 차분한 회옥빛 그라데이션)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto space-y-[48px] md:space-y-[80px]">
               <Reveal>
                 <div
                   className="relative jade-card-hover backdrop-blur-md p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#B49A70]/40 shadow-[0_16px_45px_rgba(0,0,0,0.7)] cursor-default text-center overflow-hidden"
                   style={{
-                    background: 'radial-gradient(circle at 14% 16%, rgba(52, 89, 77, 0.42) 0%, transparent 45%), radial-gradient(circle at 86% 84%, rgba(52, 89, 77, 0.36) 0%, transparent 45%), radial-gradient(ellipse at 50% 0%, rgba(52, 89, 77, 0.25) 0%, transparent 50%), linear-gradient(145deg, #081C16 0%, #0D2B22 100%)',
+                    background: 'radial-gradient(circle at 14% 16%, rgba(138, 160, 125, 0.22) 0%, transparent 48%), radial-gradient(circle at 86% 84%, rgba(138, 160, 125, 0.18) 0%, transparent 48%), radial-gradient(ellipse at 50% 0%, rgba(95, 115, 88, 0.20) 0%, transparent 55%), linear-gradient(145deg, #0D1612 0%, #14221A 100%)',
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.7), inset 0 0 60px rgba(10, 5, 20, 0.65), inset 0 0 0 1px rgba(180, 154, 112, 0.25)'
                   }}
                 >
-                  {/* 천연 옥(Jade) 내부의 은은한 결 & 반투명 깊이감 레이어 (글자 뒤는 차분하게 감쇠) */}
-                  <svg
+                  {/* 실제 전통 옥색 한지(Sage Celadon Hanji) 섬유 텍스처 레이어 (업로드해주신 한지 사진 질감) */}
+                  <div
                     aria-hidden="true"
-                    className="absolute inset-0 w-full h-full pointer-events-none rounded-[inherit] overflow-hidden opacity-40 mix-blend-screen"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      {/* 천연 옥 내부의 부드럽고 흐릿한 광물 결 필터 (선명한 줄무늬 배제, 유려한 흐림 효과) */}
-                      <filter id="jade-why-cloudy-veins" x="0%" y="0%" width="100%" height="100%">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.007 0.012" numOctaves="3" result="jadeNoise" />
-                        <feGaussianBlur in="jadeNoise" stdDeviation="14" result="blurredVeins" />
-                        <feColorMatrix
-                          in="blurredVeins"
-                          type="matrix"
-                          values="0 0 0 0 0.20
-                                  0 0 0 0 0.35
-                                  0 0 0 0 0.30
-                                  0 0 0 0.55 0"
-                          result="jadeCloudMatrix"
-                        />
-                      </filter>
+                    className="absolute inset-0 pointer-events-none rounded-[inherit] overflow-hidden"
+                    style={{
+                      backgroundImage: "url('/image/abundance/jade-hanji-bg.jpg')",
+                      backgroundRepeat: 'repeat',
+                      backgroundSize: '340px 340px',
+                      opacity: 0.36,
+                      mixBlendMode: 'screen',
+                      filter: 'contrast(1.15) brightness(0.85) saturate(0.85)'
+                    }}
+                  />
 
-                      {/* 중앙 글자 가독성을 위해 중심부는 차분하게 비우는 방사형 마스크 */}
-                      <radialGradient id="jade-why-mask" cx="50%" cy="50%" r="60%">
-                        <stop offset="0%" stopColor="#000" stopOpacity="0.05" />
-                        <stop offset="45%" stopColor="#000" stopOpacity="0.25" />
-                        <stop offset="85%" stopColor="#fff" stopOpacity="0.85" />
-                        <stop offset="100%" stopColor="#fff" stopOpacity="1" />
-                      </radialGradient>
-                      <mask id="jade-why-central-calm">
-                        <rect width="100%" height="100%" fill="url(#jade-why-mask)" />
-                      </mask>
-                    </defs>
-
-                    {/* 옥 결 렌더링 (글자 뒤는 마스크로 차분하고 균일하게 유지) */}
-                    <rect
-                      width="100%"
-                      height="100%"
-                      filter="url(#jade-why-cloudy-veins)"
-                      mask="url(#jade-why-central-calm)"
-                    />
-                  </svg>
-
-                  {/* 옥 내부의 부드러운 빛 번짐(Luminescence) & 주변 퍼플 배경 연결용 가장자리 채도 감쇠 비네트 */}
+                  {/* 글자 가독성 보호(중앙 차분한 음영) & 주변 퍼플 배경 연결용 가장자리 채도 감쇠 비네트 */}
                   <div
                     aria-hidden="true"
                     className="absolute inset-0 pointer-events-none rounded-[inherit]"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 15%, rgba(52, 89, 77, 0.18) 0%, transparent 65%), radial-gradient(circle at 50% 50%, transparent 55%, rgba(10, 5, 20, 0.65) 88%, rgba(10, 5, 20, 0.88) 100%)'
+                      background: 'radial-gradient(ellipse at 50% 50%, rgba(13, 22, 18, 0.65) 20%, transparent 80%), radial-gradient(circle at 50% 50%, transparent 55%, rgba(10, 5, 20, 0.65) 88%, rgba(10, 5, 20, 0.90) 100%)'
                     }}
                   />
 
@@ -768,107 +739,37 @@ export default function AbundanceSecretPage() {
             <EmeraldCloudDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                [추가 영역 3] 저자 소개 (백도화 저자 경력, 옥빛 색한지 질감 카드, 자격 뱃지, 저자의 편지, 낙관)
+                [추가 영역 3] 저자 소개 (백도화 저자 경력, 옥색 한지 텍스처 카드, 자격 뱃지, 저자의 편지, 낙관)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
                   className="relative jade-card-hover backdrop-blur-md p-6 sm:p-8 md:p-14 lg:p-16 rounded-3xl md:rounded-[40px] border border-[#B49A70]/40 shadow-[0_16px_45px_rgba(0,0,0,0.7)] cursor-default overflow-hidden"
                   style={{
-                    background: 'radial-gradient(circle at 14% 16%, rgba(52, 89, 77, 0.42) 0%, transparent 45%), radial-gradient(circle at 86% 84%, rgba(52, 89, 77, 0.36) 0%, transparent 45%), radial-gradient(ellipse at 50% 0%, rgba(52, 89, 77, 0.25) 0%, transparent 50%), linear-gradient(145deg, #081C16 0%, #0D2B22 100%)',
+                    background: 'radial-gradient(circle at 14% 16%, rgba(138, 160, 125, 0.22) 0%, transparent 48%), radial-gradient(circle at 86% 84%, rgba(138, 160, 125, 0.18) 0%, transparent 48%), radial-gradient(ellipse at 50% 0%, rgba(95, 115, 88, 0.20) 0%, transparent 55%), linear-gradient(145deg, #0D1612 0%, #14221A 100%)',
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.7), inset 0 0 60px rgba(10, 5, 20, 0.65), inset 0 0 0 1px rgba(180, 154, 112, 0.25)'
                   }}
                 >
-                  {/* 전통 닥종이 한지 섬유 + 깊은 옥빛이 어우러진 고급스러운 색한지(Deep Jade Hanji) 질감 레이어 */}
-                  <svg
+                  {/* 실제 전통 옥색 한지(Sage Celadon Hanji) 섬유 텍스처 레이어 (업로드해주신 한지 사진 질감) */}
+                  <div
                     aria-hidden="true"
-                    className="absolute inset-0 w-full h-full pointer-events-none rounded-[inherit] overflow-hidden"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      {/* 옥빛 색한지 전용 불규칙한 닥나무 섬유 패턴 (회녹색·탁한 옥색·어두운 비취·은은한 금박 섬유 혼합) */}
-                      <pattern id="jade-hanji-fibers" width="260" height="260" patternUnits="userSpaceOnUse">
-                        <path d="M110.5 68.7 Q107.8 70.2 104.8 70.6" stroke="#04140F" strokeWidth="0.7" strokeLinecap="round" opacity="0.28" fill="none" />
-                        <path d="M56.3 56.4 Q64.5 62.2 73.2 67" stroke="#A3B8B0" strokeWidth="0.7" strokeLinecap="round" opacity="0.22" fill="none" />
-                        <path d="M66.5 46.9 Q61 41.4 56 35.5" stroke="#061A13" strokeWidth="0.8" strokeLinecap="round" opacity="0.26" fill="none" />
-                        <path d="M139.8 93.5 Q138.3 90.9 138.1 87.9" stroke="#34594D" strokeWidth="0.8" strokeLinecap="round" opacity="0.20" fill="none" />
-                        <path d="M103.8 29.7 Q105 30.9 105.9 32.3" stroke="#A3B8B0" strokeWidth="0.5" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M198.3 225.5 Q197 223.3 195 221.8" stroke="#04140F" strokeWidth="0.5" strokeLinecap="round" opacity="0.30" fill="none" />
-                        <path d="M171.8 48.9 Q170.2 50.7 168.3 52" stroke="#061A13" strokeWidth="0.6" strokeLinecap="round" opacity="0.24" fill="none" />
-                        <path d="M236.6 256.3 Q233.8 258.7 230.5 260.3" stroke="#04140F" strokeWidth="0.9" strokeLinecap="round" opacity="0.26" fill="none" />
-                        <path d="M224.5 252.9 Q232.8 255.6 241 258.6" stroke="#A3B8B0" strokeWidth="0.7" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M98.5 184.1 Q101.4 181.5 104.3 178.7" stroke="#061A13" strokeWidth="0.8" strokeLinecap="round" opacity="0.28" fill="none" />
-                        <path d="M231.2 192.2 Q231.6 197.9 233.1 203.5" stroke="#08221A" strokeWidth="0.7" strokeLinecap="round" opacity="0.30" fill="none" />
-                        <path d="M39.5 1.3 Q35 3.2 30.5 5" stroke="#34594D" strokeWidth="0.8" strokeLinecap="round" opacity="0.22" fill="none" />
-                        <path d="M178.4 234.7 Q187.2 231.1 196.3 228.5" stroke="#B49A70" strokeWidth="0.7" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M57.1 124.8 Q59.1 122.1 60.7 119.2" stroke="#A3B8B0" strokeWidth="0.7" strokeLinecap="round" opacity="0.19" fill="none" />
-                        <path d="M75.3 198.3 Q78.8 201.7 82.5 204.7" stroke="#34594D" strokeWidth="0.9" strokeLinecap="round" opacity="0.20" fill="none" />
-                        <path d="M156.6 168.8 Q158.1 168.5 159.6 168.1" stroke="#08221A" strokeWidth="0.6" strokeLinecap="round" opacity="0.29" fill="none" />
-                        <path d="M3.2 65.5 Q-3.4 72 -9.4 79.2" stroke="#04140F" strokeWidth="0.8" strokeLinecap="round" opacity="0.28" fill="none" />
-                        <path d="M76 79.3 Q76.2 88.7 76.7 98" stroke="#A3B8B0" strokeWidth="0.6" strokeLinecap="round" opacity="0.20" fill="none" />
-                        <path d="M130.3 103.3 Q133.7 104.8 137.1 106.2" stroke="#04140F" strokeWidth="0.6" strokeLinecap="round" opacity="0.30" fill="none" />
-                        <path d="M114.6 7.6 Q118.6 16 122.9 24.2" stroke="#34594D" strokeWidth="0.6" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M34.4 147.5 Q37.1 143.3 38.6 138.5" stroke="#061A13" strokeWidth="0.7" strokeLinecap="round" opacity="0.26" fill="none" />
-                        <path d="M214.4 240.9 Q213.9 245.2 213 249.4" stroke="#061A13" strokeWidth="0.9" strokeLinecap="round" opacity="0.23" fill="none" />
-                        <path d="M25 218.6 Q26.8 215.8 27.6 212.6" stroke="#04140F" strokeWidth="0.9" strokeLinecap="round" opacity="0.27" fill="none" />
-                        <path d="M159.2 183.2 Q156.3 190.3 152.4 196.9" stroke="#B49A70" strokeWidth="0.8" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M48.2 86.4 Q48.8 84.8 48.2 83.1" stroke="#34594D" strokeWidth="0.5" strokeLinecap="round" opacity="0.20" fill="none" />
-                        <path d="M84.1 194.5 Q88.1 195.2 91.8 196.8" stroke="#A3B8B0" strokeWidth="0.8" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M71.9 63.6 Q64.7 62.5 57.5 62.9" stroke="#34594D" strokeWidth="0.8" strokeLinecap="round" opacity="0.17" fill="none" />
-                        <path d="M69 154.8 Q69 156.5 67.8 157.7" stroke="#A3B8B0" strokeWidth="0.6" strokeLinecap="round" opacity="0.22" fill="none" />
-                        <path d="M131.8 184.3 Q131.6 187.4 131 190.4" stroke="#04140F" strokeWidth="0.7" strokeLinecap="round" opacity="0.25" fill="none" />
-                        <path d="M14.7 30 Q12.8 34.1 9.8 37.5" stroke="#A3B8B0" strokeWidth="0.8" strokeLinecap="round" opacity="0.19" fill="none" />
-                        <path d="M157.5 123.8 Q161.1 122 164.3 119.7" stroke="#A3B8B0" strokeWidth="0.6" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M157.1 141.1 Q157.3 138.9 158.6 137.1" stroke="#34594D" strokeWidth="0.7" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M105.8 227.9 Q102.2 231.7 98.1 235" stroke="#B49A70" strokeWidth="0.7" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M155.3 16 Q156.8 17.9 157.9 20.1" stroke="#A3B8B0" strokeWidth="0.7" strokeLinecap="round" opacity="0.17" fill="none" />
-                        <path d="M256.6 225.1 Q259.4 221.2 261.2 216.6" stroke="#04140F" strokeWidth="0.7" strokeLinecap="round" opacity="0.24" fill="none" />
-                        <path d="M221.2 127.9 Q225 118.8 228.6 109.6" stroke="#04140F" strokeWidth="0.7" strokeLinecap="round" opacity="0.26" fill="none" />
-                        <path d="M19.7 33.8 Q18.5 31.4 17.6 28.9" stroke="#A3B8B0" strokeWidth="0.8" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M15.5 229.5 Q19.7 230.2 23.7 231.7" stroke="#061A13" strokeWidth="0.9" strokeLinecap="round" opacity="0.28" fill="none" />
-                        <path d="M17.1 256.7 Q13.5 254.6 10.8 251.4" stroke="#A3B8B0" strokeWidth="0.7" strokeLinecap="round" opacity="0.16" fill="none" />
-                        <path d="M236.3 93.1 Q237.2 96.7 237.4 100.4" stroke="#34594D" strokeWidth="0.7" strokeLinecap="round" opacity="0.20" fill="none" />
-                        <path d="M99.2 191.5 Q95 187.4 90.7 183.5" stroke="#061A13" strokeWidth="0.6" strokeLinecap="round" opacity="0.29" fill="none" />
-                        <path d="M199.3 96.8 Q201.9 93.5 203.7 89.7" stroke="#A3B8B0" strokeWidth="0.9" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M203.7 210.2 Q203.2 207.3 204.1 204.6" stroke="#A3B8B0" strokeWidth="0.8" strokeLinecap="round" opacity="0.17" fill="none" />
-                        <path d="M139.1 196.2 Q137.8 199.6 135.3 202.4" stroke="#08221A" strokeWidth="0.6" strokeLinecap="round" opacity="0.26" fill="none" />
-                        <path d="M75.8 254 Q77.7 257.5 80.1 260.7" stroke="#B49A70" strokeWidth="0.8" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M16.3 207.1 Q11.3 206.4 6.4 205.7" stroke="#34594D" strokeWidth="0.7" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M151.1 155.8 Q150.8 159.6 149 162.9" stroke="#34594D" strokeWidth="0.6" strokeLinecap="round" opacity="0.19" fill="none" />
-                        <path d="M253.8 57.2 Q254.6 55.4 254.9 53.5" stroke="#A3B8B0" strokeWidth="0.9" strokeLinecap="round" opacity="0.18" fill="none" />
-                        <path d="M27.5 36.2 Q33.8 29 39.9 21.6" stroke="#08221A" strokeWidth="0.7" strokeLinecap="round" opacity="0.22" fill="none" />
-                        <path d="M19.1 25.2 Q14.2 24.8 9.2 24.4" stroke="#A3B8B0" strokeWidth="0.9" strokeLinecap="round" opacity="0.15" fill="none" />
-                      </pattern>
+                    className="absolute inset-0 pointer-events-none rounded-[inherit] overflow-hidden"
+                    style={{
+                      backgroundImage: "url('/image/abundance/jade-hanji-bg.jpg')",
+                      backgroundRepeat: 'repeat',
+                      backgroundSize: '340px 340px',
+                      opacity: 0.36,
+                      mixBlendMode: 'screen',
+                      filter: 'contrast(1.15) brightness(0.85) saturate(0.85)'
+                    }}
+                  />
 
-                      {/* 은은한 옥빛 닥나무 펄프 구름결 명암 얼룩 */}
-                      <filter id="jade-hanji-cloudy-pulp">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="3" result="pulpNoise" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0.20  0 0 0 0 0.35  0 0 0 0 0.30  0 0 0 0.06 0" />
-                      </filter>
-
-                      {/* 미세 종이 입자 (옥빛 한지 표면 질감) */}
-                      <filter id="jade-hanji-paper-grain">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" result="paperTooth" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0.30  0 0 0 0 0.45  0 0 0 0 0.40  0 0 0 0.04 0" />
-                      </filter>
-                    </defs>
-
-                    {/* 1단계: 옥빛 닥나무 펄프 명암 얼룩 */}
-                    <rect width="100%" height="100%" filter="url(#jade-hanji-cloudy-pulp)" />
-
-                    {/* 2단계: 미세 한지 종이 입자 */}
-                    <rect width="100%" height="100%" filter="url(#jade-hanji-paper-grain)" />
-
-                    {/* 3단계: 밀도 높게 흩뿌려진 옥빛 닥나무 섬유들 */}
-                    <rect width="100%" height="100%" fill="url(#jade-hanji-fibers)" />
-                  </svg>
-
-                  {/* 주변 퍼플 배경과 자연스럽게 연결되는 가장자리 녹색 채도 감쇠 비네트 레이어 */}
+                  {/* 글자 가독성 보호(중앙 차분한 음영) & 주변 퍼플 배경 연결용 가장자리 채도 감쇠 비네트 */}
                   <div
                     aria-hidden="true"
                     className="absolute inset-0 pointer-events-none rounded-[inherit]"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 15%, rgba(52, 89, 77, 0.16) 0%, transparent 65%), radial-gradient(circle at 50% 50%, transparent 58%, rgba(10, 5, 20, 0.65) 88%, rgba(10, 5, 20, 0.88) 100%)'
+                      background: 'radial-gradient(ellipse at 50% 50%, rgba(13, 22, 18, 0.65) 20%, transparent 80%), radial-gradient(circle at 50% 50%, transparent 55%, rgba(10, 5, 20, 0.65) 88%, rgba(10, 5, 20, 0.90) 100%)'
                     }}
                   />
 
