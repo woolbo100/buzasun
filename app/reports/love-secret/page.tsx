@@ -2304,31 +2304,44 @@ export default function LoveSecretEbookPage() {
                     />
                   </div>
 
-                  {/* 오른쪽 특징 리스트 */}
-                  <div className="space-y-6 text-left break-keep">
+                  {/* 오른쪽 콘텐츠 영역 */}
+                  <div className="space-y-6 md:space-y-7 text-left break-keep">
+                    {/* 1. 영문 라벨 & 제목 (의미 단위 2줄 배치) */}
                     <div>
-                      <span className="text-[#D4B2A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">PREMIUM GUIDEBOOK</span>
-                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2.5 leading-[1.4] break-keep">
-                        <span className="text-[#E5C4BB]">《연애비급》</span> 실전 200% 활용 가이드
+                      <span className="text-[#D4B2A7] font-elegant text-xs md:text-[13px] font-semibold tracking-[0.2em] uppercase block mb-2">
+                        PREMIUM GUIDEBOOK
+                      </span>
+                      <h2 className="font-elegant font-bold leading-[1.3] text-left">
+                        <span className="block text-2xl md:text-[28px] text-[#C58BA0]">
+                          《연애비급》
+                        </span>
+                        <span className="block text-3xl md:text-[36px] lg:text-[40px] text-[#FAF7F2] mt-1.5 break-keep">
+                          실전 200% 활용 가이드
+                        </span>
                       </h2>
                     </div>
 
-                    <p className="text-lg md:text-[20px] font-elegant font-semibold text-[#E5C4BB] leading-[1.6] break-keep">
-                      “사두고 꽂아두는 책이 아닙니다.<br className="hidden sm:inline" /> 필요한 순간마다 꺼내 드는 ‘나만의 비밀 무기’”
-                    </p>
-
-                    <div className="space-y-2 text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
-                      <p>
-                        평생 영구 소장하며, 흔들릴 때마다 즉각 내 자리를 되찾는 3단계 실전 활용법입니다.<br />
-                        관계를 이해하는 본편, 상황에 적용하는 시크릿 전략북, 직접 기록하며 연습하는 실전 워크북까지.
-                      </p>
-                      <p className="text-[#EDE6DA]/70 text-sm md:text-[15px]">
-                        읽고, 적용하고, 돌아보는 과정을 3종의 PDF 패키지에 담았습니다.
+                    {/* 2. 핵심 메시지 강조 (박스 없이 여백과 색상으로 강조) */}
+                    <div className="pt-1">
+                      <p className="text-[17px] md:text-[19px] lg:text-[20px] font-elegant text-[#FAF7F2] leading-[1.75] md:leading-[1.8] break-keep">
+                        “사두고 꽂아두는 책이 아닙니다.<br className="hidden sm:inline" />
+                        {' '}필요한 순간마다 꺼내 드는 <span className="text-[#E8A5B8] font-semibold">‘나만의 비밀 무기’</span>”
                       </p>
                     </div>
 
-                    {/* 강점 6가지 리스트 */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                    {/* 3. 본문 가독성 정리 (두 단락 구분 및 밝기 개선) */}
+                    <div className="space-y-3 text-[15px] md:text-[16px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                      <p>
+                        평생 영구 소장하며, 흔들릴 때마다 즉각 내 자리를 되찾는 3단계 실전 활용법입니다.
+                      </p>
+                      <p className="text-[#EDE6DA]/90">
+                        관계를 이해하는 본편, 상황에 적용하는 시크릿 전략북, 직접 기록하며 연습하는 실전 워크북까지.<br className="hidden md:inline" />
+                        {' '}<span className="text-white font-medium">읽고, 적용하고, 돌아보는 과정</span>을 3종의 PDF 패키지에 담았습니다.
+                      </p>
+                    </div>
+
+                    {/* 4. 활용 카드 4개 (2열 × 2행 그리드) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
                       {[
                         {
                           title: "이해부터 실천까지 이어지는 3종 구성",
@@ -2345,7 +2358,30 @@ export default function LoveSecretEbookPage() {
                         {
                           title: "직접 기록하는 30일 워크북",
                           desc: "감정과 기준, 반복되는 행동을 돌아보세요."
-                        },
+                        }
+                      ].map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-start gap-3 p-4 bg-[#FAF7F2] rounded-xl border border-[#D4B2A7]/25 hover:border-[#C58BA0]/45 hover:-translate-y-0.5 transition-all duration-300 shadow-sm h-full"
+                        >
+                          <Check className="w-4 h-4 text-[#C58BA0] shrink-0 mt-0.5" />
+                          <div className="flex flex-col text-left w-full">
+                            <div className="min-h-[2.4rem] md:min-h-[2.6rem] flex items-start">
+                              <span className="text-xs md:text-[13.5px] text-[#3A242B] font-bold leading-snug break-keep">
+                                {item.title}
+                              </span>
+                            </div>
+                            <span className="text-[11px] md:text-xs text-[#6B5E57] mt-1 font-normal leading-relaxed break-keep">
+                              {item.desc}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* 5. 이용 안내 2개 (카드 아래 배경 없는 가벼운 배치) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3.5 border-t border-[#D4B2A7]/20">
+                      {[
                         {
                           title: "휴대폰·태블릿·PC에서 열람",
                           desc: "PDF를 지원하는 기기에서 편하게 읽으세요."
@@ -2354,25 +2390,20 @@ export default function LoveSecretEbookPage() {
                           title: "한번 다운로드로 평생소장",
                           desc: "파일로 소장하고 반복해서 활용해보세요."
                         }
-                      ].map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-start gap-3 p-3.5 bg-[#FAF7F2] rounded-xl border border-[#D4B2A7]/25 hover:border-[#C58BA0]/40 transition-colors shadow-sm"
-                        >
+                      ].map((info, idx) => (
+                        <div key={idx} className="flex items-start gap-2.5">
                           <Check className="w-4 h-4 text-[#C58BA0] shrink-0 mt-0.5" />
                           <div className="flex flex-col text-left">
-                            <span className="text-xs md:text-sm text-[#3D3530] font-bold break-keep">
-                              {item.title}
+                            <span className="text-[12px] md:text-[13px] font-semibold text-[#EDE6DA] break-keep">
+                              {info.title}
                             </span>
-                            <span className="text-[11px] md:text-xs text-[#6B5E57] mt-0.5 font-normal leading-relaxed break-keep">
-                              {item.desc}
+                            <span className="text-[11px] md:text-xs text-[#EDE6DA]/75 mt-0.5 leading-relaxed break-keep">
+                              {info.desc}
                             </span>
                           </div>
                         </div>
                       ))}
                     </div>
-
-
                   </div>
                 </div>
               </Reveal>
