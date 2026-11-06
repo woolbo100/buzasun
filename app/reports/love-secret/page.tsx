@@ -2318,16 +2318,16 @@ export default function LoveSecretEbookPage() {
                       </h2>
                     </div>
 
-                    {/* 2. 핵심 메시지 강조 (박스 없이 여백과 색상으로 강조) */}
+                    {/* 2. 핵심 메시지 강조 (24px, 진하게) */}
                     <div className="pt-1">
-                      <p className="text-[17px] md:text-[19px] lg:text-[20px] font-elegant text-[#FAF7F2] leading-[1.75] md:leading-[1.8] break-keep">
+                      <p className="text-[20px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] break-keep">
                         “사두고 꽂아두는 책이 아닙니다.<br className="hidden sm:inline" />
-                        {' '}필요한 순간마다 꺼내 드는 <span className="text-[#E5C4BB] font-semibold">‘나만의 비밀 무기’</span>
+                        {' '}필요한 순간마다 꺼내 드는 <span className="text-[#E5C4BB]">‘나만의 비밀 무기’</span>
                       </p>
                     </div>
 
-                    {/* 3. 본문 가독성 정리 (두 단락 구분 및 밝기 개선) */}
-                    <div className="space-y-3 text-[15px] md:text-[16px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                    {/* 3. 본문 가독성 정리 (글자크기 18px) */}
+                    <div className="space-y-3.5 text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       <p>
                         평생 영구 소장하며, 흔들릴 때마다 즉각 내 자리를 되찾는 3단계 실전 활용법입니다.
                       </p>
