@@ -3134,7 +3134,7 @@ export default function LoveSecretEbookPage() {
                       <div className="py-1">
                         <p className="font-elegant font-semibold text-[19px] sm:text-[20px] md:text-[22px] text-[#FAF7F2] leading-[1.7] break-keep tracking-wide">
                           &ldquo;사랑은 갈구하는 자에게 머물지 않고,<br />
-                          자신의 자리를 존엄하게 지키는 자에게 흘러듭니다.&rdquo;
+                          <span className="text-[#E5C4BB]">자신의 자리를 존엄하게 지키는 자</span>에게 흘러듭니다.&rdquo;
                         </p>
                       </div>
 
