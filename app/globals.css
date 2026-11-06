@@ -342,6 +342,16 @@
       border-color: rgba(229, 196, 187, 0.9) !important;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 24px rgba(229, 196, 187, 0.16), inset 0 0 0 1px rgba(212, 178, 167, 0.25) !important;
     }
+
+    /* 풍요비책 전용 옥빛 카드 호버 효과 (앤티크 골드 #B49A70 & 비취 깊이감) */
+    .jade-card-hover {
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+    }
+    .jade-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(180, 154, 112, 0.75) !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 24px rgba(180, 154, 112, 0.15), inset 0 0 60px rgba(10, 5, 20, 0.65) !important;
+    }
   }
 
   .gold-divider {
