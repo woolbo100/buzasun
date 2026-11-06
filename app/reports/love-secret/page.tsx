@@ -3124,7 +3124,11 @@ export default function LoveSecretEbookPage() {
                     </h2>
                     <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
                       자리를 바꾸지 않으면, 다음 사람을 만나도 비슷한 장면이 반복됩니다.<br />
-                      이번에는 더 애쓰는 대신, 서 있는 자리를 바꿔보세요.
+                      &ldquo;사랑은 갈구하는 자에게 머물지 않고,<br />
+                      자신의 자리를 존엄하게 지키는 자에게 흘러듭니다.&rdquo;<br />
+                      밤새 핸드폰을 쥐고 울던 밤은 오늘로 끝내십시오.<br />
+                      이제 당신이라는 세계를 활짝 열고,<br />
+                      당신을 온전히 귀하게 대접할 사람만을 맞이하십시오.
                     </p>
                   </div>
 
