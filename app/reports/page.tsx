@@ -64,8 +64,8 @@ export default function ReportsHubPage() {
                 <h1 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-8 tracking-widest">
                   선천코드 <span className="text-[var(--accent-gold)]">리포트</span>
                 </h1>
-                <p className="text-[#EDE6DA] opacity-80 text-lg md:text-xl font-elegant leading-relaxed max-w-2xl mx-auto break-keep">
-                  나를 이해하는 리포트에서<br className="md:hidden" /> 우리 관계를 읽는 리포트까지<br />
+                <p className="text-[#EDE6DA] opacity-90 text-[19px] sm:text-xl md:text-[22px] font-elegant leading-[1.8] max-w-3xl mx-auto break-keep">
+                  나를 이해하는 리포트에서 우리 관계를 읽는 리포트까지<br />
                   <span className="text-[var(--accent-gold-light)]">백도화식 선천코드로 사랑의 흐름을 조용히 읽어드립니다.</span>
                 </p>
               </Reveal>
