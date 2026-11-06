@@ -2341,7 +2341,7 @@ export default function LoveSecretEbookPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
                       {[
                         {
-                          title: "이해부터 실천까지 이어지는 3종 구성",
+                          title: "이해부터 실천까지 이어지는 3종",
                           desc: "본편·전략북·워크북을 목적에 맞게 활용하세요."
                         },
                         {
