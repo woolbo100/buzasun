@@ -2385,12 +2385,12 @@ export default function LoveSecretEbookPage() {
                             </div>
                           </div>
 
-                          {/* 제목 및 설명 영역 (제목과 설명의 왼쪽 시작선 일치, 고정 높이 없이 자동) */}
+                          {/* 제목 및 설명 영역 (제목과 설명의 왼쪽 시작선 일치, 설명 글자크기 16px) */}
                           <div className="flex flex-col text-left w-full relative z-10">
                             <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-snug break-keep">
                               {item.title}
                             </h3>
-                            <p className="text-[13px] md:text-[14px] text-[#634E45] mt-1 font-normal leading-relaxed break-keep">
+                            <p className="text-[15px] md:text-[16px] text-[#634E45] mt-1.5 font-normal leading-relaxed break-keep">
                               {item.desc}
                             </p>
                           </div>
