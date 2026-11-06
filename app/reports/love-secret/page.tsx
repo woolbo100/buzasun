@@ -2467,7 +2467,7 @@ export default function LoveSecretEbookPage() {
                       &ldquo;당신의 헌신이 만만함이 되는 이유,<br className="hidden sm:inline" />
                       <span className="text-[#E5C4BB]">&lsquo;관계 시소&rsquo;의 법칙</span>을 모르기 때문입니다.&rdquo;
                     </h2>
-                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/80 leading-[1.8] font-normal break-keep">
+                    <p className="text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       애원하며 기다리는 자리를 끝내고, 스스로 갈망하게 만드는 주도권을 쥐십시오.
                     </p>
                   </div>
@@ -2491,7 +2491,7 @@ export default function LoveSecretEbookPage() {
                       이제 스스로 <span className="text-[#E5C4BB]">‘선택받는 매력녀’</span>가 되십시오.”
                     </h3>
 
-                    <div className="space-y-2 text-[16px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal">
+                    <div className="space-y-2 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal">
                       <p>
                         사랑을 확인받으려 불안해하던 수많은 여성들이,<br className="hidden sm:inline" />
                         어떻게 관계의 주도권을 쥐고 먼저 고백받는 주인공이 되었을까요?
