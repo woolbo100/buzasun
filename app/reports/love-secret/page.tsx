@@ -2487,14 +2487,17 @@ export default function LoveSecretEbookPage() {
                     />
                   </div>
 
-                  {/* 이미지 하단 브릿지 카피 (이미지와의 여백 시원하게 확대) */}
-                  <div className="text-center max-w-3xl mx-auto space-y-6 mt-20 md:mt-28 break-keep">
-                    <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white leading-[1.4]">
-                      “당신의 헌신이 당연해지던 자리를 떠나,<br className="hidden sm:inline" />
+                  {/* 이미지 하단 브릿지 카피 (이미지와 글자 간격 시원하게 대폭 확대 mt-28 md:mt-40) */}
+                  <div className="text-center max-w-3xl mx-auto space-y-6 mt-28 md:mt-40 break-keep">
+                    <h3
+                      className="text-[26px] sm:text-[30px] md:text-[36px] font-elegant font-bold text-white break-keep"
+                      style={{ lineHeight: 1.4 }}
+                    >
+                      “당신의 헌신이 당연해지던 자리를 떠나,<br />
                       이제 스스로 <span className="text-[#E5C4BB]">‘선택받는 매력녀’</span>가 되십시오.”
                     </h3>
 
-                    <div className="space-y-2 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal">
+                    <div className="space-y-2 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       <p>
                         사랑을 확인받으려 불안해하던 수많은 여성들이,<br className="hidden sm:inline" />
                         어떻게 관계의 주도권을 쥐고 먼저 고백받는 주인공이 되었을까요?
