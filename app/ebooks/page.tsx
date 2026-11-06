@@ -51,8 +51,8 @@ export default function EbooksPage() {
                 <h1 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-8 tracking-widest">
                   시크릿 <span className="text-[var(--accent-gold)]">비첩</span>
                 </h1>
-                <p className="text-[#EDE6DA] opacity-90 text-lg md:text-xl font-elegant leading-relaxed max-w-2xl mx-auto break-keep">
-                  사랑의 매듭을 풀고, 풍요의 문을 여는 비밀.<br />
+                <p className="text-[#EDE6DA] opacity-90 text-[19px] sm:text-xl md:text-[22px] font-elegant leading-[1.8] max-w-3xl mx-auto break-keep">
+                  사랑의 매듭을 풀고, 풍요의 문을 여는 비밀<br />
                   <span className="text-[var(--accent-gold-light)]">
                     나를 이해하는 통찰부터 일상에서 실천하는 방법까지,<br />
                     백도화의 시크릿 비첩에 담았습니다.
