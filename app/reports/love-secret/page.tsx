@@ -2497,12 +2497,15 @@ export default function LoveSecretEbookPage() {
                       이제 스스로 <span className="text-[#E5C4BB]">‘선택받는 매력녀’</span>가 되십시오.”
                     </h3>
 
-                    <div className="space-y-2 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                    <div className="space-y-2.5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       <p>
                         사랑을 확인받으려 불안해하던 수많은 여성들이,<br className="hidden sm:inline" />
                         어떻게 관계의 주도권을 쥐고 먼저 고백받는 주인공이 되었을까요?
                       </p>
-                      <p className="text-[#E5C4BB] font-medium pt-1">
+                      <p className="text-[#E5C4BB] font-bold">
+                        애원하며 기다리는 자리를 끝내고, 스스로 갈망하게 만드는 주도권을 쥐십시오.
+                      </p>
+                      <p className="text-[#EDE6DA]/90 font-medium pt-0.5">
                         지금, 먼저 판도를 바꾼 이들의 생생한 변화를 확인하십시오.
                       </p>
                     </div>
