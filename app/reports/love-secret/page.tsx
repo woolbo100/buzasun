@@ -2339,8 +2339,8 @@ export default function LoveSecretEbookPage() {
                       </p>
                     </div>
 
-                    {/* 4. 활용 카드 4개 (이런 분께 추천합니다와 동일한 프리미엄 미색 한지 카드 스타일) */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+                    {/* 4. 활용 카드 4개 (1열 4행 슬림 미색 한지 카드) */}
+                    <div className="flex flex-col gap-2.5 md:gap-3 pt-1">
                       {[
                         {
                           title: "이해부터 실천까지 이어지는 3종",
@@ -2373,33 +2373,33 @@ export default function LoveSecretEbookPage() {
                             borderColor: 'rgba(206, 175, 153, 0.55)',
                             boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), 0 1px 3px 0 rgba(35, 20, 30, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
                           }}
-                          className="group relative p-4 md:p-[18px_20px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 md:gap-3.5 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden h-full"
+                          className="group relative p-[16px_20px] md:p-[17px_24px] rounded-[12px] md:rounded-[14px] border flex items-start gap-2.5 md:gap-3.5 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
                         >
-                          {/* 백도화 시그니처 차분한 마른장미 원형 체크 아이콘 */}
+                          {/* 로즈 체크 아이콘 (18~20px 축소, 제목 왼쪽에 배치) */}
                           <div className="shrink-0 mt-0.5 relative z-10">
                             <div 
                               style={{ backgroundColor: '#A65F63' }}
-                              className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#E5C4BB]/50 shadow-none"
+                              className="w-[18px] h-[18px] md:w-[20px] md:h-[20px] rounded-full flex items-center justify-center p-0.5 border border-[#E5C4BB]/50 shadow-none"
                             >
-                              <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FAF7F2] stroke-[2.4]" />
+                              <Check className="w-2.5 h-2.5 md:w-3 md:h-3 text-[#FAF7F2] stroke-[2.5]" />
                             </div>
                           </div>
+
+                          {/* 제목 및 설명 영역 (제목과 설명의 왼쪽 시작선 일치, 고정 높이 없이 자동) */}
                           <div className="flex flex-col text-left w-full relative z-10">
-                            <div className="min-h-[2.8rem] md:min-h-[3.2rem] flex items-start">
-                              <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-snug break-keep">
-                                {item.title}
-                              </h3>
-                            </div>
-                            <span className="text-[13px] md:text-[14px] text-[#634E45] mt-1 font-normal leading-relaxed break-keep">
+                            <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-snug break-keep">
+                              {item.title}
+                            </h3>
+                            <p className="text-[13px] md:text-[14px] text-[#634E45] mt-1 font-normal leading-relaxed break-keep">
                               {item.desc}
-                            </span>
+                            </p>
                           </div>
                         </div>
                       ))}
                     </div>
 
-                    {/* 5. 이용 안내 2개 (카드 아래 배경 없는 가벼운 배치) */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3.5 border-t border-[#D4B2A7]/20">
+                    {/* 5. 이용 안내 2개 (카드 아래 충분한 간격 확보) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 md:mt-7 pt-4 md:pt-5 border-t border-[#D4B2A7]/25">
                       {[
                         {
                           title: "휴대폰·태블릿·PC에서 열람",
