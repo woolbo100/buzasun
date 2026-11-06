@@ -87,19 +87,22 @@ export default function EbooksPage() {
                     <h2 className="text-xl font-elegant font-bold text-[#EDE6DA] mb-3 group-hover:text-[var(--accent-gold)] transition-colors">
                       {ebook.title}
                     </h2>
-                    <p className="text-[#EDE6DA] opacity-60 text-sm leading-relaxed mb-8 group-hover:opacity-100 transition-opacity flex-grow">
+                    <p className="text-[#EDE6DA] opacity-75 text-sm leading-relaxed mb-6 group-hover:opacity-100 transition-opacity flex-grow min-h-[44px] md:min-h-[48px]">
                       {ebook.description}
                     </p>
                     <Link
                       href={ebook.href}
-                      className="py-3 px-4 rounded-lg text-xs font-bold text-center border transition-all duration-300 hover:shadow-[0_0_15px_rgba(212,178,167,0.3)] hover:border-[var(--accent-gold)]"
+                      className="group/btn w-full h-[50px] sm:h-[52px] rounded-xl text-[15px] sm:text-[16px] font-semibold text-center border transition-all duration-300 flex items-center justify-center gap-1.5 shadow-[0_4px_15px_rgba(0,0,0,0.3)] hover:shadow-[0_0_22px_rgba(229,196,187,0.45)] hover:border-[#E5C4BB] hover:brightness-110 active:scale-[0.98] mt-auto cursor-pointer"
                       style={{
-                        background: 'rgba(59, 15, 27, 0.6)',
-                        borderColor: 'rgba(216, 191, 163, 0.3)',
-                        color: 'var(--accent-gold-light)',
+                        background: 'linear-gradient(135deg, rgba(85, 25, 42, 0.85) 0%, rgba(50, 15, 26, 0.95) 100%)',
+                        borderColor: 'rgba(229, 196, 187, 0.55)',
+                        color: '#FAF7F2',
                       }}
                     >
-                      {ebook.cta}
+                      <span>{ebook.cta}</span>
+                      <span className="font-normal text-[18px] sm:text-[19px] leading-none transition-transform duration-300 group-hover/btn:translate-x-1 text-[#E5C4BB]">
+                        ›
+                      </span>
                     </Link>
                   </div>
                 </div>
