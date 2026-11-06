@@ -13,7 +13,7 @@ export default function EbooksPage() {
   const ebooks = [
     {
       title: '연애비급 (매력 시그널)',
-      description: '상대방의 무의식을 자극하는 매력코드 장착하는 방법.',
+      description: '상대방의 무의식을 자극하는 매력코드 장착하는 방법',
       href: '/reports/love-secret',
       cta: '연애비급 자세히 보기',
       image: '/image/love-secret-thumb.png',
@@ -21,7 +21,7 @@ export default function EbooksPage() {
     },
     {
       title: '풍요비책 (에너지 가이드)',
-      description: '당신에게 들어오는 풍요의 물길을 트는 에너지 활용법.',
+      description: '당신에게 들어오는 풍요의 물길을 트는 에너지 활용법',
       href: '/reports/abundance-secret',
       cta: '풍요비책 자세히 보기',
       image: '/image/abundance-secret-thumb.png',
@@ -29,7 +29,7 @@ export default function EbooksPage() {
     },
     {
       title: '재회비방 (시크릿 솔루션)',
-      description: '어긋난 인연을 다시 잇는 가장 은밀하고 확실한 방법.',
+      description: '어긋난 인연을 다시 잇는 가장 은밀하고 확실한 방법',
       href: '/reports/reunion-secret',
       cta: '재회비방 자세히 보기',
       image: '/image/reunion-secret-thumb.png',
