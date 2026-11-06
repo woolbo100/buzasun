@@ -3061,27 +3061,29 @@ export default function LoveSecretEbookPage() {
                       사랑 안에서, 나를 잃지 않도록. <span className="text-[#E5C4BB]">《연애비급》</span>
                     </p>
 
-                    {/* [구매 버튼] (마무리 문장 아래 충분한 간격, 기존 handleAddToCart 및 handlePurchase 연결 보존) */}
-                    <div className="flex flex-col sm:flex-row gap-3 pt-2 sm:pt-4 items-stretch sm:items-center w-full max-w-lg">
-                      <button
-                        type="button"
-                        onClick={handleAddToCart}
-                        className="py-3.5 px-5 rounded-xl font-elegant font-medium text-sm sm:text-base border border-[#D4B2A7]/50 text-[#EDE6DA] hover:text-[#FAF7F2] hover:bg-[#A66B73]/20 hover:border-[#D4B2A7]/80 transition-all duration-300 shrink-0 whitespace-nowrap text-center bg-black/40 backdrop-blur-sm order-2 sm:order-1"
-                      >
-                        장바구니 담기
-                      </button>
-                      <button
-                        type="button"
-                        onClick={handlePurchase}
-                        className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm sm:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 order-1 sm:order-2"
-                        style={{
-                          background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
-                          border: '1px solid rgba(229, 196, 187, 0.5)',
+                    {/* [감성 텍스트 링크] (기존 장바구니/구매 버튼 대체 -> 하단 최종 결제 영역으로 스크롤 이동) */}
+                    <div className="pt-4 sm:pt-6">
+                      <a
+                        href="#final-purchase"
+                        onClick={(e) => {
+                          e.preventDefault()
+                          const target = document.getElementById('final-purchase')
+                          if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' })
+                          }
                         }}
+                        className="group inline-flex flex-col items-start py-2.5 -my-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C4BB]/60 rounded-sm cursor-pointer"
+                        aria-label="사랑이 머무는 자리로 이동하기 (하단 구매 영역으로 이동)"
                       >
-                        <span>연애비급 19,000원에 구매하기</span>
-                        <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
-                      </button>
+                        <div className="inline-flex items-center gap-2 text-[#E5C4BB] group-hover:text-[#FFF1E9] font-elegant font-medium text-[17px] sm:text-[18px] md:text-[21px] tracking-wide transition-colors duration-300">
+                          <span>사랑이 머무는 자리로 이동하기</span>
+                          <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300 ease-out text-[19px] sm:text-[20px] md:text-[22px]">
+                            →
+                          </span>
+                        </div>
+                        {/* 밑줄: 기본 상태 45% -> 호버 시 100% 전체 너비로 부드럽게 확장 (250~350ms) */}
+                        <span className="h-[1.5px] w-[45%] group-hover:w-full bg-[#E5C4BB]/60 group-hover:bg-[#FFF1E9]/80 transition-[width,background-color] duration-300 ease-out mt-1.5" />
+                      </a>
                     </div>
                   </div>
                 </Reveal>
@@ -3091,7 +3093,7 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 교체/추가: 최종 결제 마감 CTA 및 손실 회피 섹션 (기존 연애비급 하단 박스 디자인 적용)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 p-8 md:p-16 border border-[#D4B2A7]/30 shadow-[0_0_35px_rgba(212,178,167,0.2)] text-center max-w-5xl mx-auto">
+            <section id="final-purchase" className="scroll-mt-24 md:scroll-mt-28 relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 p-8 md:p-16 border border-[#D4B2A7]/30 shadow-[0_0_35px_rgba(212,178,167,0.2)] text-center max-w-5xl mx-auto">
               {/* 차분한 짙은 로즈코코아 → 딥플럼 그라데이션 배경 */}
               <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#3E1E28] via-[#281320] to-[#150816]" />
 
