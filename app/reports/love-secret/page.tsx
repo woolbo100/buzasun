@@ -2484,9 +2484,9 @@ export default function LoveSecretEbookPage() {
                     />
                   </div>
 
-                  {/* 이미지 하단 브릿지 카피 (실전 체감 사례로의 연결) */}
-                  <div className="text-center max-w-3xl mx-auto space-y-5 mt-12 md:mt-16 break-keep">
-                    <h3 className="text-xl sm:text-2xl md:text-[32px] font-elegant font-bold text-white leading-[1.5]">
+                  {/* 이미지 하단 브릿지 카피 (이미지와의 여백 시원하게 확대) */}
+                  <div className="text-center max-w-3xl mx-auto space-y-6 mt-20 md:mt-28 break-keep">
+                    <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white leading-[1.4]">
                       “당신의 헌신이 당연해지던 자리를 떠나,<br className="hidden sm:inline" />
                       이제 스스로 <span className="text-[#E5C4BB]">‘선택받는 매력녀’</span>가 되십시오.”
                     </h3>
