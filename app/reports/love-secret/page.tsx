@@ -267,7 +267,18 @@ export default function LoveSecretEbookPage() {
                     사랑을 갈구하는 자리에서, 사랑이 머무는 자리로
                   </p>
 
-                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3.5 pt-6 border-t border-white/5 break-keep">
+                  {/* 피치베이비핑크 & 은은한 금빛 글로우 디바이더 라인 */}
+                  <div className="flex items-center justify-center py-1">
+                    <div
+                      className="h-[1.5px] w-56 sm:w-72 md:w-96 rounded-full"
+                      style={{
+                        background: 'linear-gradient(90deg, transparent 0%, rgba(229, 196, 187, 0.2) 15%, rgba(229, 196, 187, 0.85) 42%, rgba(235, 202, 148, 0.95) 50%, rgba(229, 196, 187, 0.85) 58%, rgba(229, 196, 187, 0.2) 85%, transparent 100%)',
+                        boxShadow: '0 0 12px rgba(229, 196, 187, 0.45), 0 0 5px rgba(235, 202, 148, 0.6)'
+                      }}
+                    />
+                  </div>
+
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3.5 break-keep">
                     <p>
                       연애비급은 사랑할수록 반복적으로 흔들리는 여성을 위한<br />
                       프리미엄 연애 심리·포지션·매력 구조 해석서입니다.
