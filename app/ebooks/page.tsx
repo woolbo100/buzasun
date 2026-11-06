@@ -82,12 +82,12 @@ export default function EbooksPage() {
                     </div>
                   </div>
 
-                  {/* 상품 정보 영역 */}
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h2 className="text-xl font-elegant font-bold text-[#EDE6DA] mb-3 group-hover:text-[var(--accent-gold)] transition-colors">
+                  {/* 상품 정보 영역 (상단 패딩을 살짝 늘려 글자 위치를 아래로 내림) */}
+                  <div className="px-6 pb-6 pt-7 sm:pt-8 flex flex-col flex-grow">
+                    <h2 className="text-[22px] sm:text-[23px] md:text-2xl font-elegant font-bold text-[#EDE6DA] mb-3 group-hover:text-[var(--accent-gold)] transition-colors leading-[1.35] break-keep">
                       {ebook.title}
                     </h2>
-                    <p className="text-[#EDE6DA] opacity-75 text-sm leading-relaxed mb-6 group-hover:opacity-100 transition-opacity flex-grow min-h-[44px] md:min-h-[48px]">
+                    <p className="text-[#EDE6DA] opacity-80 text-[15px] sm:text-base leading-relaxed mb-6 group-hover:opacity-100 transition-opacity flex-grow min-h-[46px] md:min-h-[50px] break-keep">
                       {ebook.description}
                     </p>
                     <Link
