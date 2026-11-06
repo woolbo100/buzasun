@@ -2306,13 +2306,10 @@ export default function LoveSecretEbookPage() {
 
                   {/* 오른쪽 콘텐츠 영역 */}
                   <div className="space-y-6 md:space-y-7 text-left break-keep">
-                    {/* 1. 영문 라벨 & 제목 (의미 단위 2줄 배치) */}
+                    {/* 1. 제목 (의미 단위 2줄 배치) */}
                     <div>
-                      <span className="text-[#D4B2A7] font-elegant text-xs md:text-[13px] font-semibold tracking-[0.2em] uppercase block mb-2">
-                        PREMIUM GUIDEBOOK
-                      </span>
                       <h2 className="font-elegant font-bold leading-[1.3] text-left">
-                        <span className="block text-2xl md:text-[28px] text-[#C58BA0]">
+                        <span className="block text-2xl md:text-[28px] text-[#E5C4BB]">
                           《연애비급》
                         </span>
                         <span className="block text-3xl md:text-[36px] lg:text-[40px] text-[#FAF7F2] mt-1.5 break-keep">
@@ -2325,7 +2322,7 @@ export default function LoveSecretEbookPage() {
                     <div className="pt-1">
                       <p className="text-[17px] md:text-[19px] lg:text-[20px] font-elegant text-[#FAF7F2] leading-[1.75] md:leading-[1.8] break-keep">
                         “사두고 꽂아두는 책이 아닙니다.<br className="hidden sm:inline" />
-                        {' '}필요한 순간마다 꺼내 드는 <span className="text-[#E8A5B8] font-semibold">‘나만의 비밀 무기’</span>”
+                        {' '}필요한 순간마다 꺼내 드는 <span className="text-[#E5C4BB] font-semibold">‘나만의 비밀 무기’</span>
                       </p>
                     </div>
 
