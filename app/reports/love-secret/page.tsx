@@ -334,10 +334,10 @@ export default function LoveSecretEbookPage() {
                           <button
                             type="button"
                             onClick={handlePurchase}
-                            className="py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_0_30px_rgba(166,107,115,0.3)] hover:brightness-105 order-1 sm:order-2 flex-1 sm:flex-initial"
+                            className="py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 order-1 sm:order-2 flex-1 sm:flex-initial"
                             style={{
-                              background: 'linear-gradient(135deg, #A66B73 0%, #8B263E 100%)',
-                              border: '1px solid rgba(212, 178, 167, 0.55)',
+                              background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
+                              border: '1px solid rgba(229, 196, 187, 0.5)',
                             }}
                           >
                             <span>연애비급 19,000원에 구매하기</span>
@@ -3073,10 +3073,10 @@ export default function LoveSecretEbookPage() {
                       <button
                         type="button"
                         onClick={handlePurchase}
-                        className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm sm:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_0_30px_rgba(166,107,115,0.35)] hover:brightness-110 order-1 sm:order-2"
+                        className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm sm:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 order-1 sm:order-2"
                         style={{
-                          background: 'linear-gradient(135deg, #A66B73 0%, #8B263E 100%)',
-                          border: '1px solid rgba(212, 178, 167, 0.65)',
+                          background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
+                          border: '1px solid rgba(229, 196, 187, 0.5)',
                         }}
                       >
                         <span>연애비급 19,000원에 구매하기</span>
@@ -3091,12 +3091,12 @@ export default function LoveSecretEbookPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 신규 교체/추가: 최종 결제 마감 CTA 및 손실 회피 섹션 (기존 연애비급 하단 박스 디자인 적용)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 p-8 md:p-16 border-2 border-[#D4B2A7] shadow-[0_0_50px_rgba(186,141,126,0.6)] text-center max-w-5xl mx-auto">
-              {/* 로즈 버건디 풀 컬러 배경 */}
-              <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#6B2838] via-[#4A1824] to-[#1E0810]" />
+            <section className="relative overflow-hidden rounded-3xl md:rounded-[40px] mb-20 p-8 md:p-16 border border-[#D4B2A7]/30 shadow-[0_0_35px_rgba(212,178,167,0.2)] text-center max-w-5xl mx-auto">
+              {/* 차분한 짙은 로즈코코아 → 딥플럼 그라데이션 배경 */}
+              <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#3E1E28] via-[#281320] to-[#150816]" />
 
-              {/* 이미지 교체 영역 8 (매혹의 열쇠 오브제 배경 슬롯) */}
-              <div className="absolute inset-0 z-0 opacity-25 mix-blend-overlay">
+              {/* 이미지 교체 영역 8 (매혹의 열쇠 오브제 배경 슬롯 - 붉은기 완화) */}
+              <div className="absolute inset-0 z-0 opacity-15 mix-blend-screen">
                 <HybridImageSlot
                   assetKey="finalCta"
                   className="w-full h-full rounded-none border-none"
@@ -3108,7 +3108,7 @@ export default function LoveSecretEbookPage() {
                 <Reveal>
                   {/* 손실 회피(소실점) 카피 */}
                   <div className="mb-8 space-y-4">
-                    <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-elegant font-bold tracking-[0.2em] uppercase bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] whitespace-nowrap">CRITICAL CHOICE</span>
+                    <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-elegant font-bold tracking-[0.2em] uppercase bg-[#663544] border border-[#D5AFAD]/40 text-[#FFF1E9] whitespace-nowrap">CRITICAL CHOICE</span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       같은 자리에서, <span className="text-[#E5C4BB]">또 아파하지 않도록</span>
                     </h2>
@@ -3119,9 +3119,9 @@ export default function LoveSecretEbookPage() {
                     </p>
                   </div>
 
-                  {/* 패키지 가격 카드 (기존 연애비급 하단 다크 글래스 박스 규격) */}
-                  <div className="p-6 md:p-10 rounded-2xl bg-black/60 border border-[#D4B2A7]/40 shadow-2xl relative backdrop-blur-sm">
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#87465B] text-[#FFF1E9] border border-[#D5AFAD] text-xs font-elegant font-bold py-[5px] px-[12px] rounded-[6px] uppercase tracking-wider whitespace-nowrap">런칭 기념 76% 한정 특가</div>
+                  {/* 패키지 가격 카드 (어두운 플럼 배경 + 은은한 핑크골드 테두리) */}
+                  <div className="p-6 md:p-10 rounded-2xl bg-[#1C0B18]/85 border border-[#E5C4BB]/25 shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative backdrop-blur-md">
+                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#663544] text-[#FFF1E9] border border-[#D5AFAD]/40 text-xs font-elegant font-bold py-[5px] px-[12px] rounded-[6px] uppercase tracking-wider whitespace-nowrap">런칭 기념 76% 한정 특가</div>
 
                     <h3 className="text-lg md:text-xl font-elegant font-bold text-white mt-2.5 leading-[1.5]">
                       백도화 연애비급 올인원 패키지 (PDF 3종 + 도화만개부)
@@ -3137,22 +3137,23 @@ export default function LoveSecretEbookPage() {
                       <span className="text-3xl md:text-4xl font-elegant font-bold text-[#E5C4BB]">
                         19,000원
                       </span>
-                      <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B] border border-[#D5AFAD] text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
+                      <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#663544] border border-[#D5AFAD]/40 text-[#FFF1E9] text-xs font-bold whitespace-nowrap">
                         76% OFF
                       </span>
                     </div>
 
-                    {/* 구매 버튼 (기존 연애비급 샴페인 골드/로즈골드 버튼 스타일) */}
+                    {/* 구매 버튼 (배경보다 확실히 밝은 더스티 로즈 → 로즈코코아 그라데이션) */}
                     <button
+                      type="button"
                       onClick={handlePurchase}
-                      className="w-full py-4 md:py-5 px-6 rounded-xl font-elegant font-bold text-base md:text-xl text-[#FAF6EE] shadow-[0_0_40px_rgba(166,107,115,0.35)] hover:shadow-[0_0_60px_rgba(166,107,115,0.55)] transition-all duration-300 hover:scale-[1.02] active:scale-95 inline-flex items-center justify-center gap-2 cursor-pointer hover:brightness-105"
+                      className="w-full py-4 md:py-5 px-6 rounded-xl font-elegant font-bold text-base md:text-xl text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_35px_rgba(181,121,135,0.45)] transition-all duration-300 hover:scale-[1.01] active:scale-95 inline-flex items-center justify-center gap-2 cursor-pointer hover:brightness-110"
                       style={{
-                        background: 'linear-gradient(135deg, #A66B73 0%, #955D65 100%)',
-                        border: '2px solid #D4B2A7'
+                        background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
+                        border: '1px solid rgba(229, 196, 187, 0.5)'
                       }}
                     >
                       <Sparkles className="w-5 h-5 text-[#FAF6EE] shrink-0" />
-                      <span>사랑이 머무는 자리로 지금 이동하기</span>
+                      <span>연애비급 19,000원에 구매하기</span>
                       <ChevronRight className="w-5 h-5 text-[#FAF6EE] shrink-0" />
                     </button>
 
