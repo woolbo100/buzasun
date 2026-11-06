@@ -3145,9 +3145,14 @@ export default function LoveSecretEbookPage() {
                       백도화 연애비급 올인원 패키지 (PDF 3종 + 도화만개부)
                     </h3>
 
-                    {/* 2) 구성 안내 (한 단계 확대: text-sm sm:text-base, 다음 요소까지 24~28px) */}
-                    <p className="text-sm sm:text-base text-[#EDE6DA]/75 font-normal break-keep mb-6 md:mb-7">
+                    {/* 2) 구성 안내 (크기 18px로 확대) */}
+                    <p className="text-[18px] text-[#FAF7F2] font-semibold break-keep mb-1.5">
                       완전판 바이블 본편 · 전략 시크릿북 · 실천 워크북
+                    </p>
+
+                    {/* 3) 특별 부록 안내 */}
+                    <p className="text-[15px] sm:text-[16px] text-[#E5C4BB] font-medium break-keep mb-6 md:mb-7">
+                      ✦ 특별 부록 도화만개부(桃花滿開符) 디지털 부적
                     </p>
 
                     {/* 3) 판매가 · 정가 · 할인율 (한 단계 확대: text-4xl md:text-5xl, 다음 요소까지 24~28px) */}
