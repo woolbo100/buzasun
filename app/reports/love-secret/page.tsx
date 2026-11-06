@@ -2352,7 +2352,7 @@ export default function LoveSecretEbookPage() {
                         관계를 이해하는 본편, 상황에 적용하는 시크릿 전략북, 직접 기록하며 연습하는 실전 워크북까지.
                       </p>
                       <p className="text-[#EDE6DA]/90">
-                        <span className="text-white font-medium">읽고, 적용하고, 돌아보는 과정</span>을 3종의 PDF 패키지에 담았습니다.
+                        <span className="text-[#E5C4BB] font-semibold">읽고, 적용하고, 돌아보는 과정</span>을 3종의 PDF 패키지에 담았습니다.
                       </p>
                     </div>
 
