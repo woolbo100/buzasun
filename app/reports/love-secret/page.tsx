@@ -2373,15 +2373,15 @@ export default function LoveSecretEbookPage() {
                             borderColor: 'rgba(206, 175, 153, 0.55)',
                             boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), 0 1px 3px 0 rgba(35, 20, 30, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
                           }}
-                          className="group relative p-[16px_20px] md:p-[17px_24px] rounded-[12px] md:rounded-[14px] border flex items-start gap-2.5 md:gap-3.5 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
+                          className="group relative p-[16px_20px] md:p-[17px_24px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 md:gap-4 transition-all duration-300 hover:border-[#C59B82] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
                         >
-                          {/* 로즈 체크 아이콘 (18~20px 축소, 제목 왼쪽에 배치) */}
+                          {/* 로즈 체크 아이콘 (이런 분께 추천합니다와 동일한 크기) */}
                           <div className="shrink-0 mt-0.5 relative z-10">
                             <div 
                               style={{ backgroundColor: '#A65F63' }}
-                              className="w-[18px] h-[18px] md:w-[20px] md:h-[20px] rounded-full flex items-center justify-center p-0.5 border border-[#E5C4BB]/50 shadow-none"
+                              className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#E5C4BB]/50 shadow-none"
                             >
-                              <Check className="w-2.5 h-2.5 md:w-3 md:h-3 text-[#FAF7F2] stroke-[2.5]" />
+                              <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FAF7F2] stroke-[2.4]" />
                             </div>
                           </div>
 
