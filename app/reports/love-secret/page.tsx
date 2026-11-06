@@ -2292,16 +2292,33 @@ export default function LoveSecretEbookPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  {/* 왼쪽 이미지 (love-secret-practical-guide-3x4.png 최신 3:4 비율 유지, 잘림 없이 표시) */}
-                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40 flex items-center justify-center">
-                    <Image
-                      src={productData.premiumImage}
-                      alt="백도화 연애비급 실전 200% 활용 가이드 구성 안내"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-contain"
-                    />
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                  {/* 왼쪽: 이미지 + 하단 감성 문구 묶음 */}
+                  <div className="flex flex-col items-center w-full">
+                    {/* 왼쪽 이미지 (love-secret-practical-guide-3x4.png 최신 3:4 비율 유지, 잘림 없이 표시) */}
+                    <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#D4B2A7]/30 shadow-2xl bg-black/40 flex items-center justify-center">
+                      <Image
+                        src={productData.premiumImage}
+                        alt="백도화 연애비급 실전 200% 활용 가이드 구성 안내"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-contain"
+                      />
+                    </div>
+
+                    {/* 이미지 하단 감성 문구 (24~32px 간격, 양옆 로즈골드 장식선, 가운데 정렬) */}
+                    <div className="mt-6 md:mt-7 w-full flex flex-col items-center text-center">
+                      <div className="flex items-center justify-center gap-3 w-full">
+                        <div className="h-[1px] w-8 sm:w-12 bg-gradient-to-r from-transparent to-[#D4B2A7]/60" />
+                        <p className="font-elegant text-[15px] sm:text-[16px] text-[#E5C4BB] tracking-wide">
+                          읽고, 적용하고, 나의 것으로.
+                        </p>
+                        <div className="h-[1px] w-8 sm:w-12 bg-gradient-to-l from-transparent to-[#D4B2A7]/60" />
+                      </div>
+                      <p className="text-[12px] sm:text-[13px] text-[#FAF7F2]/75 mt-1.5 tracking-wider font-light">
+                        사랑 앞에서 내 자리를 지키는 시간
+                      </p>
+                    </div>
                   </div>
 
                   {/* 오른쪽 콘텐츠 영역 */}
