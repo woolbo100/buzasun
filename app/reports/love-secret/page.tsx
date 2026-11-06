@@ -2509,16 +2509,13 @@ export default function LoveSecretEbookPage() {
                       <p className="text-[#E5C4BB] font-bold">
                         애원하며 기다리는 자리를 끝내고, 스스로 갈망하게 만드는 주도권을 쥐십시오.
                       </p>
-                      <p className="text-[#EDE6DA]/90 font-medium pt-0.5">
-                        지금, 먼저 판도를 바꾼 이들의 생생한 변화를 확인하십시오.
-                      </p>
                     </div>
                   </div>
 
                   {/* 신규: 매혹의 한복 배너 이미지 (관계 시소 이미지와 동일한 전체 가로폭 & 비율 유지 풀사이즈) */}
                   <div className="relative w-full aspect-[1672/941] rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 shadow-[0_12px_45px_rgba(0,0,0,0.6)] bg-black/40 flex items-center justify-center mt-12 md:mt-16">
                     <Image
-                      src="/image/love-secret/magnetic-charm-hanbok-banner.png"
+                      src="/image/love-secret/magnetic-charm-hanbok-banner.png?v=1"
                       alt="선택받는 매력녀 - 한복 배너"
                       fill
                       sizes="(max-width: 1280px) 100vw, 1280px"
