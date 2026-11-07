@@ -167,7 +167,41 @@ export default function ReunionSecretPage() {
 
   return (
     <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#4A0E17] selection:text-[#FAF7F2] pb-24 md:pb-0">
-      <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
+      <GlobalBackground 
+        src="/image/love-code-bg.png" 
+        brightCenter={false}
+        overlay={
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            {/* 1. 좌측 은은한 딥 플럼 앰비언트 글로우 (자연스러운 입체감과 부드러운 시작) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 70% 60% at 15% 25%, rgba(56, 31, 50, 0.40) 0%, rgba(56, 31, 50, 0.15) 60%, transparent 90%),
+                  radial-gradient(ellipse 60% 70% at 10% 70%, rgba(42, 22, 38, 0.35) 0%, transparent 80%)
+                `,
+              }}
+            />
+
+            {/* 2. 좌->우 딥 플럼 버건디(#381F32) 그라데이션 (왼쪽은 차분한 딥 플럼, 오른쪽으로 갈수록 기존 퍼플이 온전히 드러남) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  linear-gradient(
+                    90deg,
+                    rgba(56, 31, 50, 0.48) 0%,
+                    rgba(56, 31, 50, 0.36) 25%,
+                    rgba(56, 31, 50, 0.16) 55%,
+                    rgba(56, 31, 50, 0.04) 75%,
+                    rgba(56, 31, 50, 0) 100%
+                  )
+                `,
+              }}
+            />
+          </div>
+        }
+      >
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
