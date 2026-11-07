@@ -481,7 +481,7 @@ export default function AbundanceSecretPage() {
                         <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
                           THE MOMENT OF ANXIETY
                         </span>
-                        <h3 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-elegant font-bold text-white leading-[1.38] break-keep">
+                        <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                           열심히 살아왔는데,<br />
                           <span className="text-[#C2A477]">왜 돈 앞에서는 늘 불안할까요?</span>
                         </h3>
@@ -948,9 +948,9 @@ export default function AbundanceSecretPage() {
                     <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
                       TRANSFORMATION
                     </span>
-                    <h3 className="text-[19px] sm:text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       열심히 사는데 왜 늘 통장은 마를까?<br />
-                      <span className="text-[#C2A477] inline-block whitespace-nowrap">결핍의 무의식을 지우면 돈의 흐름이 달라집니다.</span>
+                      <span className="text-[#C2A477] sm:whitespace-nowrap">결핍의 무의식을 지우면 돈의 흐름이 달라집니다.</span>
                     </h3>
                     <p className="text-[17px] md:text-[18px] text-[#F0EBE2] font-normal leading-[1.8] break-keep">
                       돈을 쫓으며 아등바등하던 삶에서, 부가 스스로 머무는 풍요의 그릇으로 전환됩니다.
