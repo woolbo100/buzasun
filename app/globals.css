@@ -318,6 +318,35 @@
     border-color: rgba(255, 255, 255, 0.15) !important;
   }
 
+  /* 🌿 풍요비책 전용 딥 제이드 차콜(#203632) & 다크 틸(#142724) 큰 글라스 컨테이너
+     - 연애비급·재회비방 및 공통 영역에 영향 없이 풍요비책(.abundance-detail-page)에만 독립 적용
+     - 반투명 먹빛 톤과 배경 블러, 은은한 테두리로 입체감과 깊이감 보존
+  */
+  .detail-page.abundance-detail-page .gungjung-glass,
+  .detail-page.abundance-detail-page .detail-glass-card,
+  .detail-page.abundance-detail-page .detail-glass-box {
+    background: linear-gradient(
+      135deg,
+      rgba(32, 54, 50, 0.55) 0%,
+      rgba(20, 39, 36, 0.65) 100%
+    ) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(203, 235, 222, 0.15) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  .detail-page.abundance-detail-page .gungjung-glass:hover,
+  .detail-page.abundance-detail-page .detail-glass-card:hover,
+  .detail-page.abundance-detail-page .detail-glass-box:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(38, 64, 59, 0.68) 0%,
+      rgba(25, 48, 44, 0.76) 100%
+    ) !important;
+    border-color: rgba(203, 235, 222, 0.28) !important;
+  }
+
   /* 노리개 장식용 흔들림 애니메이션 */
   @keyframes norigaeShake {
     0%, 100% { transform: rotate(0deg); }
