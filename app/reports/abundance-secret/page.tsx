@@ -11,11 +11,11 @@ import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
-import { 
-  Check, 
-  BookOpen, 
-  FileText, 
-  Smartphone, 
+import {
+  Check,
+  BookOpen,
+  FileText,
+  Smartphone,
   AlertCircle,
   ChevronRight,
   ChevronLeft,
@@ -29,7 +29,7 @@ import {
   ZoomIn,
   X
 } from 'lucide-react'
-import RecommendedForCards from '@/components/RecommendedForCards'
+import RecommendedForCards, { hanjiFiberSvg } from '@/components/RecommendedForCards'
 import MobileStickyBuyBar from '@/components/MobileStickyBuyBar'
 import { abundanceSecretAssets } from './assets'
 
@@ -189,7 +189,7 @@ export default function AbundanceSecretPage() {
       <div className="h-[1px] w-16 md:w-32 bg-gradient-to-r from-transparent via-[#947852]/40 to-[#789E90]/30" />
       <div className="mx-4 flex items-center justify-center">
         <svg className="w-6 h-6 text-[#947852] animate-pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6.5 18C3.46 18 1 15.54 1 12.5C1 9.79 2.95 7.54 5.56 7.07C6.73 4.64 9.17 3 12 3C15.42 3 18.3 5.42 18.91 8.68C21.74 9.07 23 11.23 23 13.5C23 15.98 20.98 18 18.5 18H6.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M6.5 18C3.46 18 1 15.54 1 12.5C1 9.79 2.95 7.54 5.56 7.07C6.73 4.64 9.17 3 12 3C15.42 3 18.3 5.42 18.91 8.68C21.74 9.07 23 11.23 23 13.5C23 15.98 20.98 18 18.5 18H6.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
       <div className="h-[1px] w-16 md:w-32 bg-gradient-to-l from-transparent via-[#947852]/40 to-[#789E90]/30" />
@@ -198,8 +198,8 @@ export default function AbundanceSecretPage() {
 
   return (
     <main className="detail-page abundance-detail-page relative min-h-screen bg-[#0a0514] text-[#EAE4D8] font-sans selection:bg-[#FAF7F2] selection:text-[#0B2B22] pb-24 md:pb-0">
-      <GlobalBackground 
-        src="/image/love-code-bg.png" 
+      <GlobalBackground
+        src="/image/love-code-bg.png"
         brightCenter={false}
         overlay={
           <div className="absolute inset-0 w-full h-full pointer-events-none">
@@ -238,7 +238,7 @@ export default function AbundanceSecretPage() {
 
         <div className="relative z-10 pt-44 pb-20">
           <div className="container-premium">
-            
+
             {/* ═══════════════════════════════════════════════════════════════
                 1. Hero Section (연애비급 규격 일치: 풀 이미지 상단 -> 서브카피 -> 3종 패키지 소개 상자)
                ═══════════════════════════════════════════════════════════════ */}
@@ -263,10 +263,10 @@ export default function AbundanceSecretPage() {
                 {/* 1. 최상단: 가로형 풀 이미지 (16:9 비율, 1280px 매칭) */}
                 <div className="w-full max-w-[1280px] mx-auto mb-16">
                   <div className="relative w-full aspect-video rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#947852]/30 shadow-2xl">
-                    <Image 
-                      src={productData.heroImage} 
-                      alt="豊饒秘策 풍요비책" 
-                      fill 
+                    <Image
+                      src={productData.heroImage}
+                      alt="豊饒秘策 풍요비책"
+                      fill
                       sizes="(max-width: 1300px) 100vw, 1280px"
                       className="object-cover"
                       priority
@@ -305,11 +305,11 @@ export default function AbundanceSecretPage() {
 
                 {/* 3. Section 1: Hero Banner 3종 패키지 소개 상자 (단일 구매 영역) */}
                 <div className="w-full max-w-[1280px] mx-auto mb-16 mt-8">
-                  <div 
+                  <div
                     className="w-full rounded-[32px] md:rounded-[40px] p-6 sm:p-8 md:p-12 border border-[#947852]/40 text-left relative overflow-hidden shadow-2xl"
                     style={{
                       background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)',
-                    boxShadow: '0 0 40px rgba(120, 158, 144, 0.12)'
+                      boxShadow: '0 0 40px rgba(120, 158, 144, 0.12)'
                     }}
                   >
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
@@ -370,8 +370,8 @@ export default function AbundanceSecretPage() {
 
                       {/* 우측 목업 */}
                       <div className="lg:col-span-5">
-                        <HybridImageSlot 
-                          assetKey="hero" 
+                        <HybridImageSlot
+                          assetKey="hero"
                           className="w-full aspect-square max-w-md mx-auto"
                         />
                       </div>
@@ -402,8 +402,8 @@ export default function AbundanceSecretPage() {
                   <div className="grid lg:grid-cols-12 gap-10 items-start">
                     {/* 이미지 영역 (3:4 비율) */}
                     <div className="lg:col-span-5 w-full space-y-3.5">
-                      <HybridImageSlot 
-                        assetKey="pain" 
+                      <HybridImageSlot
+                        assetKey="pain"
                         className="w-full aspect-[3/4]"
                       />
                       <div className="space-y-1.5 text-center">
@@ -444,7 +444,7 @@ export default function AbundanceSecretPage() {
                             "큰돈이 생기면 왠지 모를 불안감과 죄책감이 든다",
                             "남이 돈 번 소식을 들으면 속으로는 박탈감이 치민다"
                           ].map((curse, idx) => (
-                            <div 
+                            <div
                               key={idx}
                               className="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-start gap-3.5 hover:border-[#947852]/40 transition-colors"
                             >
@@ -481,7 +481,7 @@ export default function AbundanceSecretPage() {
                     {/* 3대 공감 카드 (옥빛 차콜 글라스 스타일) */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {/* 카드 1 */}
-                      <div 
+                      <div
                         className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#BBCDC6]/35 flex flex-col justify-between"
                         style={{
                           background: 'linear-gradient(135deg, rgba(46, 66, 66, 0.64) 0%, rgba(27, 39, 45, 0.70) 100%)',
@@ -492,21 +492,29 @@ export default function AbundanceSecretPage() {
                         }}
                       >
                         <div>
+                          {/* 1. 공감 번호 */}
                           <div className="text-[#AA8A57] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 01
                           </div>
-                          <h4 className="text-[22px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.35] break-keep">
+
+                          {/* 2. 카드 제목 (한 단계 낮추어 한 줄 정렬) */}
+                          <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep whitespace-nowrap">
                             확언 뒤에 남는 서늘한 불안
                           </h4>
+
+                          {/* 3. 제목 바로 아래 얇은 가로 구분선 */}
+                          <div className="w-full h-[1px] bg-[#C2A477]/25 my-4 sm:my-4.5" />
+
+                          {/* 4. 본문 설명 */}
                           <p className="text-[16px] md:text-[17px] text-[#EAE4D8] leading-[1.75] font-normal break-keep">
                             “나는 부자다”를 외치면서도, 불쑥 날아오는 카드값 고지서 앞에서는 가슴이 쿵 내려앉는 괴리감과 죄책감을 겪지 않았나요?
                           </p>
                         </div>
 
-                        {/* 본문 하단 중앙 연꽃 라인 아트 장식 */}
-                        <div className="flex items-center justify-center gap-3 pt-6 mt-6 border-t border-[#C2A477]/10" aria-hidden="true">
+                        {/* 5. 본문 하단 중앙 연꽃 라인 아트 장식 (20~30% 확대, 긴 구분선 제거) */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
                           <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#C2A477]/60" />
-                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[19px] h-[19px] opacity-65 shrink-0">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[24px] h-[24px] opacity-75 shrink-0">
                             <path d="M12 3C10.5 7 10.5 12 12 16C13.5 12 13.5 7 12 3Z" />
                             <path d="M12 16C9 14 6 10 7 7C9.5 7.5 11 11 12 16Z" />
                             <path d="M12 16C15 14 18 10 17 7C14.5 7.5 13 11 12 16Z" />
@@ -517,7 +525,7 @@ export default function AbundanceSecretPage() {
                       </div>
 
                       {/* 카드 2 */}
-                      <div 
+                      <div
                         className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#BBCDC6]/35 flex flex-col justify-between"
                         style={{
                           background: 'linear-gradient(135deg, rgba(46, 66, 66, 0.64) 0%, rgba(27, 39, 45, 0.70) 100%)',
@@ -528,21 +536,29 @@ export default function AbundanceSecretPage() {
                         }}
                       >
                         <div>
+                          {/* 1. 공감 번호 */}
                           <div className="text-[#AA8A57] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 02
                           </div>
-                          <h4 className="text-[22px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.35] break-keep">
-                            억지 긍정이 낳은 무의식의 역풍
+
+                          {/* 2. 카드 제목 (문구 변경 및 한 단계 낮추어 한 줄 정렬) */}
+                          <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep whitespace-nowrap">
+                            억지 긍정이 낳은 무의식의 저항
                           </h4>
+
+                          {/* 3. 제목 바로 아래 얇은 가로 구분선 */}
+                          <div className="w-full h-[1px] bg-[#C2A477]/25 my-4 sm:my-4.5" />
+
+                          {/* 4. 본문 설명 */}
                           <p className="text-[16px] md:text-[17px] text-[#EAE4D8] leading-[1.75] font-normal break-keep">
                             불안과 두려움을 ‘부정적인 감정’이라며 억누른 채 덮어두다 보니, 억압된 결핍이 현실에서 예기치 못한 지출로 터져 나왔습니다.
                           </p>
                         </div>
 
-                        {/* 본문 하단 중앙 연꽃 라인 아트 장식 */}
-                        <div className="flex items-center justify-center gap-3 pt-6 mt-6 border-t border-[#C2A477]/10" aria-hidden="true">
+                        {/* 5. 본문 하단 중앙 연꽃 라인 아트 장식 (20~30% 확대, 긴 구분선 제거) */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
                           <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#C2A477]/60" />
-                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[19px] h-[19px] opacity-65 shrink-0">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[24px] h-[24px] opacity-75 shrink-0">
                             <path d="M12 3C10.5 7 10.5 12 12 16C13.5 12 13.5 7 12 3Z" />
                             <path d="M12 16C9 14 6 10 7 7C9.5 7.5 11 11 12 16Z" />
                             <path d="M12 16C15 14 18 10 17 7C14.5 7.5 13 11 12 16Z" />
@@ -553,7 +569,7 @@ export default function AbundanceSecretPage() {
                       </div>
 
                       {/* 카드 3 */}
-                      <div 
+                      <div
                         className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#BBCDC6]/35 flex flex-col justify-between"
                         style={{
                           background: 'linear-gradient(135deg, rgba(46, 66, 66, 0.64) 0%, rgba(27, 39, 45, 0.70) 100%)',
@@ -564,21 +580,29 @@ export default function AbundanceSecretPage() {
                         }}
                       >
                         <div>
+                          {/* 1. 공감 번호 */}
                           <div className="text-[#AA8A57] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 03
                           </div>
-                          <h4 className="text-[22px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.35] break-keep whitespace-nowrap">
+
+                          {/* 2. 카드 제목 (한 단계 낮추어 한 줄 정렬) */}
+                          <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep whitespace-nowrap">
                             ‘간절함’이라는 결핍 주파수
                           </h4>
+
+                          {/* 3. 제목 바로 아래 얇은 가로 구분선 */}
+                          <div className="w-full h-[1px] bg-[#C2A477]/25 my-4 sm:my-4.5" />
+
+                          {/* 4. 본문 설명 */}
                           <p className="text-[16px] md:text-[17px] text-[#EAE4D8] leading-[1.75] font-normal break-keep">
                             간절함은 역설적으로 “지금 내게 돈이 없다”는 것을 가장 크게 증명하는 신호입니다. 쫓아가는 마음에는 결코 부가 머물지 않습니다.
                           </p>
                         </div>
 
-                        {/* 본문 하단 중앙 연꽃 라인 아트 장식 */}
-                        <div className="flex items-center justify-center gap-3 pt-6 mt-6 border-t border-[#C2A477]/10" aria-hidden="true">
+                        {/* 5. 본문 하단 중앙 연꽃 라인 아트 장식 (20~30% 확대, 긴 구분선 제거) */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
                           <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#C2A477]/60" />
-                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[19px] h-[19px] opacity-65 shrink-0">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[24px] h-[24px] opacity-75 shrink-0">
                             <path d="M12 3C10.5 7 10.5 12 12 16C13.5 12 13.5 7 12 3Z" />
                             <path d="M12 16C9 14 6 10 7 7C9.5 7.5 11 11 12 16Z" />
                             <path d="M12 16C15 14 18 10 17 7C14.5 7.5 13 11 12 16Z" />
@@ -589,81 +613,34 @@ export default function AbundanceSecretPage() {
                       </div>
                     </div>
 
-                    {/* 공감 마무리 메시지 (상자 없이 배경 위에 직접 배치 + 금빛 물결 & 연꽃 애니메이션) */}
+                    {/* 공감 마무리 메시지 (상자 없이 배경 위에 직접 배치 + 금빛 텍스트 흐름 & 연꽃 심벌) */}
                     <div className="mt-14 md:mt-[65px] text-center max-w-[1050px] mx-auto px-4 break-keep">
                       {/* 첫 번째 문장 */}
-                      <p className="text-[#FAF7F2] text-[17px] sm:text-[18px] md:text-[20px] font-elegant leading-[1.75] break-keep">
+                      <p className="text-[#FAF7F2] text-[17px] sm:text-[18px] md:text-[20px] font-elegant leading-[1.75] break-keep mb-3.5 sm:mb-4.5">
                         금이 가 물이 새는 독에는, 아무리 화려한 <span className="text-[#C2A477] font-semibold">황금빛 주문</span>을 외워도 물이 차오르지 않습니다.
                       </p>
 
-                      {/* 두 문장 사이의 금빛 물결과 연꽃 (SVG & 스크롤 드로잉 애니메이션) */}
-                      <div className="flex items-center justify-center my-6 md:my-7" aria-hidden="true">
-                        <svg 
-                          viewBox="0 0 320 24" 
-                          fill="none" 
-                          className="w-[200px] sm:w-[250px] md:w-[290px] h-6 overflow-visible"
-                        >
-                          {/* 좌측 물결선 (왼쪽에서 오른쪽으로 드로잉) */}
-                          <motion.path
-                            d="M 10 12 C 50 3, 90 21, 135 12"
-                            stroke="#C2A477"
-                            strokeWidth="1.2"
-                            strokeLinecap="round"
-                            initial={{ pathLength: 0, opacity: 0 }}
-                            whileInView={{ pathLength: 1, opacity: 0.75 }}
-                            viewport={{ once: true, margin: "-40px" }}
-                            transition={{ duration: 2.0, ease: "easeOut" }}
-                          />
-                          
-                          {/* 중앙 미니 연꽃 라인 아이콘 (부드러운 페이드인) */}
-                          <motion.g
-                            transform="translate(148, 1) scale(0.9)"
-                            initial={{ opacity: 0, scale: 0.7 }}
-                            whileInView={{ opacity: 0.85, scale: 0.9 }}
-                            viewport={{ once: true, margin: "-40px" }}
-                            transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
-                          >
-                            <path d="M12 3C10.8 6.5 10.8 11 12 15C13.2 11 13.2 6.5 12 3Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                            <path d="M12 15C9.5 13.2 6.8 9.5 7.8 6.8C10 7.2 11.2 10.5 12 15Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                            <path d="M12 15C14.5 13.2 17.2 9.5 16.2 6.8C14 7.2 12.8 10.5 12 15Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-                            <path d="M6.5 17C9 16 15 16 17.5 17" stroke="#C2A477" strokeWidth="1" strokeLinecap="round" />
-                          </motion.g>
-
-                          {/* 우측 물결선 (왼쪽에서 오른쪽으로 드로잉) */}
-                          <motion.path
-                            d="M 185 12 C 230 3, 270 21, 310 12"
-                            stroke="#C2A477"
-                            strokeWidth="1.2"
-                            strokeLinecap="round"
-                            initial={{ pathLength: 0, opacity: 0 }}
-                            whileInView={{ pathLength: 1, opacity: 0.75 }}
-                            viewport={{ once: true, margin: "-40px" }}
-                            transition={{ duration: 2.0, delay: 0.25, ease: "easeOut" }}
-                          />
-                        </svg>
-                      </div>
-
-                      {/* 두 번째 핵심 문장 (아래에서 살짝 떠오르며 페이드업) */}
-                      <motion.p 
+                      {/* 두 번째 핵심 문장 (금빛 강조 텍스트 흐름 애니메이션 적용) */}
+                      <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-40px" }}
-                        transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                         className="text-[#FAF7F2] text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep"
                       >
-                        이제 주문을 멈추고, 당신의 무의식 밑바닥 <span className="text-[#C2A477] font-bold">‘그릇’부터 온전히 기워내야 할 때</span>입니다.
+                        이제 주문을 멈추고, 당신의 무의식 밑바닥 <span className="gold-shimmer-text font-bold">‘그릇’부터 온전히 기워내야 할 때입니다.</span>
                       </motion.p>
 
-                      {/* 하단 연꽃 심벌 & 잔잔한 수면 파동 */}
-                      <motion.div 
+                      {/* 하단 연꽃 심벌 & 잔잔한 수면 파동 (35~40% 확대) */}
+                      <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, margin: "-40px" }}
-                        transition={{ duration: 0.8, delay: 1.4, ease: "easeOut" }}
-                        className="flex flex-col items-center justify-center mt-6 md:mt-7"
+                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        className="flex flex-col items-center justify-center mt-7 md:mt-8"
                         aria-hidden="true"
                       >
-                        <svg viewBox="0 0 32 32" fill="none" className="w-7 h-7 sm:w-8 sm:h-8 opacity-75">
+                        <svg viewBox="0 0 32 32" fill="none" className="w-[38px] h-[38px] sm:w-[44px] sm:h-[44px] opacity-85">
                           {/* 연꽃 꽃잎들 */}
                           <path d="M16 4C14 9.5 14 16 16 21C18 16 18 9.5 16 4Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                           <path d="M16 21C12 18.5 8 13.5 9.5 9.5C12.5 10 14.5 14.5 16 21Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -748,7 +725,7 @@ export default function AbundanceSecretPage() {
                             가격표와 남들의 눈치를 살피는 동안,<br />
                             내 가치와 기준은 자꾸 뒤로 밀리지 않았나요?
                           </p>
-                          <div 
+                          <div
                             className="p-4 sm:p-5 rounded-xl border border-[#CBEBDE]/35 shadow-[0_8px_24px_rgba(0,0,0,0.25)] backdrop-blur-sm text-[#FAF7F2] font-normal leading-[1.75]"
                             style={{ background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.90) 100%)' }}
                           >
@@ -950,24 +927,47 @@ export default function AbundanceSecretPage() {
                     ].map((item, idx) => (
                       <div
                         key={idx}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-2xl bg-black/45 border border-[#947852]/20 hover:border-[#947852]/45 transition-colors"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-4 items-stretch"
                       >
-                        <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#789E90]/10 border border-[#CBEBDE]/20">
-                          <span className="text-[#EAE4D8] font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8CD3B6]/22 border border-[#CBEBDE]/35 rounded shrink-0">
+                        {/* BEFORE 카드 (딥 차콜 에메랄드 #111B1E, 테두리 #45534E) */}
+                        <div
+                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border border-[#45534E] hover:border-[#668B7C]/70 transition-all"
+                          style={{ backgroundColor: '#111B1E' }}
+                        >
+                          <span
+                            className="w-[68px] shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] border border-[#45534E] text-[11px] font-serif font-bold leading-none whitespace-nowrap"
+                            style={{ backgroundColor: '#303A3A', color: '#E5DED0' }}
+                          >
                             BEFORE
                           </span>
-                          <div>
-                            <p className="text-[#F0EBE2] text-[15px] md:text-[16px] font-medium leading-snug">{item.beforeTitle}</p>
-                            <p className="text-[#EAE4D8] text-xs md:text-sm mt-1 font-light">{item.beforeSub}</p>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-[#F1EBE2] text-[15px] sm:text-[16px] md:text-[17px] font-semibold leading-[1.4] break-keep">
+                              {item.beforeTitle}
+                            </p>
+                            <p className="text-[#C3C8C2] text-[12px] sm:text-[13px] font-light leading-[1.4] mt-1 break-keep">
+                              {item.beforeSub}
+                            </p>
                           </div>
                         </div>
-                        <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#789E90]/20 border border-[#CBEBDE]/35">
-                          <span className="text-[#AA8A57] font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8CD3B6]/28 border border-[#CBEBDE]/40 rounded shrink-0">
+
+                        {/* AFTER 카드 (밝은 옥빛 에메랄드 #294B45, 테두리 #668B7C, 앤티크 골드 배지 #B79A6A) */}
+                        <div
+                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border border-[#668B7C] shadow-[0_4px_16px_rgba(0,0,0,0.25)] hover:border-[#8CD3B6]/80 transition-all"
+                          style={{ backgroundColor: '#294B45' }}
+                        >
+                          <span
+                            className="w-[68px] shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] border border-[#D8C49B] text-[11px] font-serif font-bold leading-none whitespace-nowrap"
+                            style={{ backgroundColor: '#B79A6A', color: '#201D18' }}
+                          >
                             AFTER
                           </span>
-                          <div>
-                            <p className="text-[#FAF7F2] text-[15px] md:text-[16px] font-semibold leading-snug">{item.afterTitle}</p>
-                            <p className="text-[#AA8A57]/90 text-xs md:text-sm mt-1 font-light">{item.afterSub}</p>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-[#FFF5E6] text-[15px] sm:text-[16px] md:text-[17px] font-semibold leading-[1.4] break-keep">
+                              {item.afterTitle}
+                            </p>
+                            <p className="text-[#E0E8DF] text-[12px] sm:text-[13px] font-light leading-[1.4] mt-1 break-keep">
+                              {item.afterSub}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -1198,8 +1198,14 @@ export default function AbundanceSecretPage() {
                       이런 분께 <span className="text-[#C2A477]">추천합니다</span>
                     </h2>
 
-                    <RecommendedForCards 
+                    <RecommendedForCards
                       textClassName="text-[16px] md:text-[18px]"
+                      cardBgColor="#F3E9D8"
+                      cardBorderColor="rgba(197, 168, 140, 0.45)"
+                      checkBgColor="#527E73"
+                      checkBorderColor="border-[#7FA69C]/40"
+                      checkIconColor="text-[#FFF9EB]"
+                      textColor="text-[#352F2A]"
                       items={[
                         "열심히 사는데도 같은 돈 패턴이 반복된다고 느끼는 분",
                         "돈을 벌고 싶지만 마음 한쪽에 불안과 두려움이 큰 분",
@@ -1209,16 +1215,16 @@ export default function AbundanceSecretPage() {
                         "감사, 순환, 비움의 관점으로 풍요를 다시 정리하고 싶은 분",
                         "자기계발과 마음공부를 통해 돈과의 관계를 바꾸고 싶은 분",
                         "부의 그릇을 키우는 매일의 루틴이 필요한 분"
-                      ]} 
+                      ]}
                     />
                   </div>
 
                   <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
-                    <Image 
-                      src={productData.recommendedImage} 
-                      alt="풍요를 지닌 성숙한 여성을 상징하는 이미지" 
-                      fill 
-                      className="object-cover" 
+                    <Image
+                      src={productData.recommendedImage}
+                      alt="풍요를 지닌 성숙한 여성을 상징하는 이미지"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </div>
@@ -1588,8 +1594,8 @@ export default function AbundanceSecretPage() {
                               { title: "실전 챌린지. 21일 풍요 뇌 만들기", desc: "무의식 속에 부의 감각을 각인하는 21일 챌린지" },
                               { title: "에필로그", desc: "부가 오기 전의 징조" }
                             ].map((item, idx) => (
-                              <div 
-                                key={idx} 
+                              <div
+                                key={idx}
                                 className="p-3 rounded-lg bg-black/40 border border-[#947852]/15 flex items-start gap-2.5"
                               >
                                 <span className="text-[#AA8A57] font-mono text-xs font-bold shrink-0 mt-0.5">
@@ -1798,8 +1804,8 @@ export default function AbundanceSecretPage() {
                                 { from: "지출 죄책감", method: "'10배로 귀환하라' 축복을 통한", to: "[순환]" },
                                 { from: "무기력·좌절", method: "신체 배터리 충전을 통한", to: "[이완]" }
                               ].map((item, idx) => (
-                                <div 
-                                  key={idx} 
+                                <div
+                                  key={idx}
                                   className="p-3 rounded-lg bg-black/40 border border-[#947852]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs"
                                 >
                                   <span className="font-semibold text-white/90 shrink-0">{item.from}</span>
@@ -2129,7 +2135,7 @@ export default function AbundanceSecretPage() {
                         </p>
                       </div>
 
-                      {/* 1열 4행 슬림 미색 한지 카드 */}
+                      {/* 1열 4행 슬림 미색 한지 카드 (이런 분께 추천합니다와 동일한 옥빛 체크 및 한지 스타일) */}
                       <div className="flex flex-col gap-2 md:gap-2.5 pt-1">
                         {[
                           {
@@ -2152,26 +2158,33 @@ export default function AbundanceSecretPage() {
                           <div
                             key={idx}
                             style={{
-                              backgroundColor: '#F7F1E5',
-                              borderColor: 'rgba(206, 175, 153, 0.55)',
+                              backgroundColor: '#F3E9D8',
+                              backgroundImage: `
+                                radial-gradient(circle at 18% 28%, rgba(240, 230, 212, 0.7) 0%, transparent 45%),
+                                radial-gradient(circle at 82% 72%, rgba(235, 220, 198, 0.7) 0%, transparent 50%),
+                                ${hanjiFiberSvg}
+                              `,
+                              backgroundSize: '100% 100%, 100% 100%, 340px 340px',
+                              backgroundPosition: `0 0, 0 0, ${(idx * 79) % 340}px ${(idx * 113) % 340}px`,
+                              borderColor: 'rgba(197, 168, 140, 0.45)',
                               boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
                             }}
                             className="group relative p-[11px_18px] md:p-[12px_22px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 md:gap-4 transition-all duration-300 hover:border-[#947852] overflow-hidden"
                           >
                             <div className="shrink-0 mt-0.5 relative z-10">
                               <div
-                                style={{ backgroundColor: 'rgba(140, 211, 182, 0.20)' }}
-                                className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#CBEBDE]/40 shadow-none"
+                                style={{ backgroundColor: '#527E73' }}
+                                className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#7FA69C]/40 shadow-none"
                               >
-                                <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FAF7F2] stroke-[2.4]" />
+                                <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FFF9EB] stroke-[2.4]" />
                               </div>
                             </div>
 
                             <div className="flex flex-col text-left w-full relative z-10">
-                              <h3 className="text-[16px] md:text-[18px] text-[#362822] font-semibold leading-[1.3] break-keep">
+                              <h3 className="text-[16px] md:text-[18px] text-[#352F2A] font-semibold leading-[1.3] break-keep">
                                 {item.title}
                               </h3>
-                              <p className="text-[15px] md:text-[16px] text-[#634E45] mt-0.5 font-normal leading-[1.45] break-keep">
+                              <p className="text-[15px] md:text-[16px] text-[#5C4A42] mt-0.5 font-normal leading-[1.45] break-keep">
                                 {item.desc}
                               </p>
                             </div>
@@ -2194,10 +2207,10 @@ export default function AbundanceSecretPage() {
                       ].map((info, idx) => (
                         <div key={idx} className="flex items-start gap-2.5">
                           <div
-                            style={{ backgroundColor: 'rgba(140, 211, 182, 0.20)' }}
-                            className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 border border-[#CBEBDE]/40 shadow-none"
+                            style={{ backgroundColor: '#527E73' }}
+                            className="w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 border border-[#7FA69C]/40 shadow-none"
                           >
-                            <Check className="w-3 h-3 text-[#FAF7F2] stroke-[2.4]" />
+                            <Check className="w-3 h-3 text-[#FFF9EB] stroke-[2.4]" />
                           </div>
                           <div className="flex flex-col text-left">
                             <span className="text-[13px] md:text-[14px] font-semibold text-[#EAE4D8] break-keep">
@@ -2234,66 +2247,91 @@ export default function AbundanceSecretPage() {
                   </p>
                 </div>
 
-                <div className="grid lg:grid-cols-12 gap-10 items-center">
-                  <div className="lg:col-span-5">
-                    <HybridImageSlot 
-                      assetKey="proof" 
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                  {/* 좌측: 리뷰 목업 이미지 슬롯 (상하 기준선 일치) */}
+                  <div className="lg:col-span-5 flex flex-col justify-center">
+                    <HybridImageSlot
+                      assetKey="proof"
                       className="w-full aspect-[3/4]"
                     />
                   </div>
 
-                  <div className="lg:col-span-7 space-y-6">
-                    <div 
-                      className="gungjung-glass p-8 md:p-10 border-[#947852]/30 rounded-3xl relative overflow-hidden min-h-[220px] flex flex-col justify-between"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
-                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
-                      }}
-                    >
-                      <div className="space-y-4">
+                  {/* 우측: 후기 영역 (PC 세로 2개 배치, 모바일 1개 배치, 하단 단일 컨트롤러) */}
+                  <div className="lg:col-span-7 flex flex-col justify-between space-y-5 lg:space-y-6">
+                    {/* 카드 2개 묶음 (PC 기준 간격 20~24px: gap-5 lg:gap-6) */}
+                    <div className="flex-1 flex flex-col gap-5 lg:gap-6 justify-between">
+                      {/* 카드 1 (모바일 & PC 공통 표시) */}
+                      <div
+                        className="flex-1 gungjung-glass p-6 sm:p-7 md:p-8 border-[#947852]/30 rounded-3xl relative overflow-hidden flex flex-col justify-center space-y-3.5 transition-all duration-300 min-h-[160px] md:min-h-[180px]"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.35) 0%, rgba(18, 38, 32, 0.92) 100%)',
+                          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
+                        }}
+                      >
                         <div className="flex items-center justify-between">
-                          <span className="px-3 py-1 rounded-full text-xs font-bold text-[#AA8A57] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold text-[#FAF7F2] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 whitespace-nowrap">
                             {reviewCards[reviewIndex].badge}
                           </span>
-                          <span className="text-xs text-[#AA8A57]/60 font-mono">
+                          <span className="text-xs text-[#C2A477]/70 font-mono">
                             {reviewCards[reviewIndex].tag}
                           </span>
                         </div>
-                        <p className="text-[17px] md:text-[18px] font-elegant font-semibold text-white leading-[1.7] break-keep">
+                        <p className="text-base sm:text-lg md:text-[19px] font-elegant font-semibold text-white leading-relaxed break-keep">
                           &ldquo;{reviewCards[reviewIndex].quote}&rdquo;
                         </p>
                       </div>
 
-                      <div className="flex items-center justify-between pt-6 border-t border-white/5 mt-4">
-                        <div className="flex items-center gap-2">
-                          {reviewCards.map((_, idx) => (
-                            <button
-                              key={idx}
-                              onClick={() => setReviewIndex(idx)}
-                              className={`h-2 rounded-full transition-all ${
-                                reviewIndex === idx ? 'w-6 bg-[#AA8A57]' : 'w-2 bg-white/20'
-                              }`}
-                              aria-label={`리뷰 ${idx + 1} 보기`}
-                            />
-                          ))}
+                      {/* 카드 2 (PC 화면 전용 세로 배치, 기존 서로 다른 후기 데이터 연결) */}
+                      <div
+                        className="hidden lg:flex flex-1 gungjung-glass p-6 sm:p-7 md:p-8 border-[#947852]/30 rounded-3xl relative overflow-hidden flex-col justify-center space-y-3.5 transition-all duration-300 min-h-[160px] md:min-h-[180px]"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.35) 0%, rgba(18, 38, 32, 0.92) 100%)',
+                          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)'
+                        }}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold text-[#FAF7F2] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 whitespace-nowrap">
+                            {reviewCards[(reviewIndex + 1) % reviewCards.length].badge}
+                          </span>
+                          <span className="text-xs text-[#C2A477]/70 font-mono">
+                            {reviewCards[(reviewIndex + 1) % reviewCards.length].tag}
+                          </span>
                         </div>
+                        <p className="text-base sm:text-lg md:text-[19px] font-elegant font-semibold text-white leading-relaxed break-keep">
+                          &ldquo;{reviewCards[(reviewIndex + 1) % reviewCards.length].quote}&rdquo;
+                        </p>
+                      </div>
+                    </div>
 
-                        <div className="flex items-center gap-2">
+                    {/* 하단 컨트롤러: 표시 점 + 전환 화살표 한 세트만 배치 */}
+                    <div className="flex items-center justify-between pt-1 sm:pt-2 px-1">
+                      <div className="flex items-center gap-2">
+                        {reviewCards.map((_, idx) => (
                           <button
-                            onClick={prevReview}
-                            className="p-2.5 rounded-full border border-white/10 hover:border-[#947852]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EAE4D8] transition-all"
-                            aria-label="이전 후기"
-                          >
-                            <ChevronLeft className="w-4 h-4" />
-                          </button>
-                          <button
-                            onClick={nextReview}
-                            className="p-2.5 rounded-full border border-white/10 hover:border-[#947852]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EAE4D8] transition-all"
-                            aria-label="다음 후기"
-                          >
-                            <ChevronRight className="w-4 h-4" />
-                          </button>
-                        </div>
+                            key={idx}
+                            onClick={() => setReviewIndex(idx)}
+                            className={`h-2 rounded-full transition-all ${reviewIndex === idx ? 'w-6 bg-[#C2A477]' : 'w-2 bg-white/20'
+                              }`}
+                            aria-label={`리뷰 ${idx + 1} 보기`}
+                          />
+                        ))}
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={prevReview}
+                          className="p-2.5 rounded-full border border-white/10 hover:border-[#947852]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EAE4D8] transition-all"
+                          aria-label="이전 후기"
+                        >
+                          <ChevronLeft className="w-4 h-4" />
+                        </button>
+                        <button
+                          onClick={nextReview}
+                          className="p-2.5 rounded-full border border-white/10 hover:border-[#947852]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EAE4D8] transition-all"
+                          aria-label="다음 후기"
+                        >
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -2322,11 +2360,13 @@ export default function AbundanceSecretPage() {
 
                 {/* 3열 세로형 프리미엄 비교 카드 그리드 */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-                  {/* 카드 1: 일반 재테크 강의 (다크 퍼플 글라스) */}
+                  {/* 카드 1: 일반 재테크 강의 (옥빛 차콜 글라스) */}
                   <div
                     className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#C2A477]/40 text-left backdrop-blur-md flex flex-col h-full transition-all duration-300 hover:-translate-y-1"
                     style={{
-                      background: 'rgba(35, 24, 49, 0.55)'
+                      background: 'linear-gradient(135deg, rgba(46, 66, 66, 0.64) 0%, rgba(27, 39, 45, 0.70) 100%)',
+                      border: '1px solid rgba(187, 210, 198, 0.15)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                     }}
                   >
                     {/* 카드 제목 헤더 */}
@@ -2371,11 +2411,13 @@ export default function AbundanceSecretPage() {
                     </div>
                   </div>
 
-                  {/* 카드 2: 뜬구름 잡는 끌어당김 (다크 퍼플 글라스) */}
+                  {/* 카드 2: 뜬구름 잡는 끌어당김 (옥빛 차콜 글라스) */}
                   <div
                     className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#C2A477]/40 text-left backdrop-blur-md flex flex-col h-full transition-all duration-300 hover:-translate-y-1"
                     style={{
-                      background: 'rgba(35, 24, 49, 0.55)'
+                      background: 'linear-gradient(135deg, rgba(46, 66, 66, 0.64) 0%, rgba(27, 39, 45, 0.70) 100%)',
+                      border: '1px solid rgba(187, 210, 198, 0.15)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                     }}
                   >
                     {/* 카드 제목 헤더 */}
@@ -2420,14 +2462,39 @@ export default function AbundanceSecretPage() {
                     </div>
                   </div>
 
-                  {/* 카드 3: 백도화 풍요비책 3종 세트 (옥빛 차콜 글라스 + 샴페인 골드 테두리 강조 카드) */}
+                  {/* 카드 3: 백도화 풍요비책 3종 세트 (옥색 한지 텍스처 글라스 + 샴페인 골드 테두리 강조 카드) */}
                   <div
                     className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#C2A477]/60 shadow-[0_12px_40px_rgba(0,0,0,0.4)] hover:border-[#C2A477] text-left backdrop-blur-md flex flex-col h-full relative transition-all duration-300 hover:-translate-y-1"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(30, 56, 50, 0.75) 0%, rgba(18, 38, 34, 0.88) 100%)',
+                      background: 'linear-gradient(135deg, rgba(28, 54, 48, 0.88) 0%, rgba(16, 36, 32, 0.94) 100%)',
                       boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                     }}
                   >
+                    {/* 옥색 한지 텍스처 배경 레이어 (상단 배지 잘림 방지를 위해 내부에 모서리 라운드 클리핑 적용) */}
+                    <div
+                      className="absolute inset-0 pointer-events-none rounded-2xl md:rounded-3xl overflow-hidden z-0"
+                      aria-hidden="true"
+                    >
+                      <div
+                        className="w-full h-full"
+                        style={{
+                          backgroundImage: "url('/image/abundance-secret/jade-hanji-texture.webp')",
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center',
+                          opacity: 0.26,
+                          mixBlendMode: 'overlay',
+                          filter: 'contrast(125%)',
+                        }}
+                      />
+                      {/* 은은한 옥빛 깊이감 및 텍스트 가독성을 위한 그라데이션 필터 */}
+                      <div
+                        className="absolute inset-0"
+                        style={{
+                          background: 'linear-gradient(180deg, rgba(20, 44, 38, 0.25) 0%, rgba(12, 28, 24, 0.55) 100%)'
+                        }}
+                      />
+                    </div>
+
                     {/* 상단 배지 (카드 상단 테두리에 걸치는 absolute 배치) */}
                     <div className="absolute -top-3.5 left-7 sm:left-8 z-10">
                       <span className="inline-block py-1 px-3 rounded-md text-[12px] font-bold text-[#FAF7F2] bg-[#163B32] border border-[#C2A477]/70 shadow-sm">
@@ -2436,14 +2503,14 @@ export default function AbundanceSecretPage() {
                     </div>
 
                     {/* 카드 제목 헤더 */}
-                    <div className="pb-5 mb-6 border-b border-[#C2A477]/25 min-h-[48px] md:min-h-[56px] flex items-center">
+                    <div className="pb-5 mb-6 border-b border-[#C2A477]/25 min-h-[48px] md:min-h-[56px] flex items-center relative z-10">
                       <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2]">
                         백도화 풍요비책 3종 세트
                       </h3>
                     </div>
 
                     {/* 항목 리스트: 비용, 관점, 도구 (동일 높이 정렬) */}
-                    <div className="space-y-6 flex-1 flex flex-col justify-between">
+                    <div className="space-y-6 flex-1 flex flex-col justify-between relative z-10">
                       {/* 1. 비용 (19,000원 가장 크게 강조) */}
                       <div className="md:min-h-[175px] lg:min-h-[160px]">
                         <span className="text-[14px] font-semibold text-[#C2A477] block mb-1.5">
@@ -2549,7 +2616,7 @@ export default function AbundanceSecretPage() {
                   ].map((faq, idx) => {
                     const isOpen = openFaq === idx
                     return (
-                      <div 
+                      <div
                         key={idx}
                         className="gungjung-glass rounded-2xl border border-[#CBEBDE]/20 overflow-hidden transition-all duration-300"
                         style={{
@@ -2570,10 +2637,9 @@ export default function AbundanceSecretPage() {
                               {faq.q}
                             </span>
                           </div>
-                          <ChevronDown 
-                            className={`w-5 h-5 text-[#AA8A57] shrink-0 transition-transform duration-300 ${
-                              isOpen ? 'rotate-180' : ''
-                            }`} 
+                          <ChevronDown
+                            className={`w-5 h-5 text-[#AA8A57] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+                              }`}
                           />
                         </button>
 
@@ -2626,11 +2692,11 @@ export default function AbundanceSecretPage() {
             <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-[#947852]/40 shadow-2xl w-full max-w-[1280px] mx-auto">
               {/* 배경 이미지: 필터/반투명막/그라데이션 오버레이 완전 제거하여 원본 색감 100% 보존 */}
               <div className="absolute inset-0 z-0">
-                <Image 
-                  src={productData.ctaImage} 
-                  alt="내 안의 황금 문을 여는 시간" 
-                  fill 
-                  className="object-cover object-right md:object-center transition-transform duration-[10000ms] group-hover:scale-105" 
+                <Image
+                  src={productData.ctaImage}
+                  alt="내 안의 황금 문을 여는 시간"
+                  fill
+                  className="object-cover object-right md:object-center transition-transform duration-[10000ms] group-hover:scale-105"
                   priority
                 />
               </div>
@@ -2643,10 +2709,10 @@ export default function AbundanceSecretPage() {
                       내 안의 황금 문을 여는 시간
                     </h2>
                     <p className="text-[15px] sm:text-[16px] md:text-[17px] text-[#F0EBE2] leading-[1.75] font-normal break-keep">
-                      풍요는 더 많이 쫓는 사람에게만 오는 것이 아니라, 받아들일 준비가 된 마음에 오래 머무릅니다.<br className="hidden sm:inline"/>
+                      풍요는 더 많이 쫓는 사람에게만 오는 것이 아니라, 받아들일 준비가 된 마음에 오래 머무릅니다.<br className="hidden sm:inline" />
                       결핍을 반복하던 무의식에서 벗어나 나의 감정, 언어, 소비, 감사, 실천 루틴을 새롭게 정렬해 보세요.
                     </p>
-                    
+
                     {/* 연애비급 방식의 배경 없는 감성 텍스트 링크 (좌측 정렬) */}
                     <div className="pt-3 sm:pt-5">
                       <a
@@ -2718,7 +2784,7 @@ export default function AbundanceSecretPage() {
                     </h3>
 
                     <p className="text-[18px] text-[#FAF7F2] font-semibold break-keep mb-1.5">
-                      완전판 바이블 + 자산화 시크릿북 + 실전 풍요 워크북
+                      완전판 바이블 본편 · 실전 워크북 · 특별 외전
                     </p>
 
                     <p className="text-[15px] sm:text-[16px] text-[#AA8A57] font-medium break-keep mb-6 md:mb-7">

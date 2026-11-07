@@ -254,6 +254,44 @@
     50% { background-position: 100% 50%; }
   }
 
+  /* 풍요비책 샴페인·앤티크 골드 은은한 흐름 텍스트 애니메이션 (6~8초 주기, 좌->우 이동) */
+  .gold-shimmer-text {
+    color: #C2A477;
+    background: linear-gradient(
+      90deg,
+      #C2A477 0%,
+      #C2A477 22%,
+      #FFF4DE 48%,
+      #F0DEC0 58%,
+      #C2A477 80%,
+      #C2A477 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShimmerMove 7s ease-in-out infinite;
+    display: inline;
+  }
+
+  @keyframes goldShimmerMove {
+    0% {
+      background-position: 100% center;
+    }
+    100% {
+      background-position: -100% center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gold-shimmer-text {
+      animation: none;
+      background: none;
+      -webkit-text-fill-color: #C2A477;
+      color: #C2A477;
+    }
+  }
+
   /* 궁중유리(Gungjung Glass) 공통 스타일 */
   .gungjung-glass {
     background: var(--glass-bg);
