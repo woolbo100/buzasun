@@ -84,12 +84,12 @@ export const abundanceSecretAssets: Record<string, AbundanceSecretAssetItem> = {
   // 7. Proof: 수강생/독자 실제 변화 리뷰 캡처
   proof: {
     id: 'proof',
-    src: 'proof_reviews_placeholder.png',
-    alt: '수강생/독자 실제 변화 리뷰 캡처',
-    aspectRatio: 'aspect-video',
-    objectFit: 'contain',
-    placeholderLabel: '수강생/독자 실제 변화 리뷰 캡처',
-    description: 'proof_reviews_placeholder.png'
+    src: '/image/abundance-secret/abundance-income-flow.webp',
+    alt: '풍요비책 실전 체감 사례 및 수입 흐름 변화',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'cover',
+    placeholderLabel: '풍요비책 실전 체감 사례',
+    description: 'abundance-income-flow.webp'
   },
 
   // 8. Final CTA: 황금의 문 오브제

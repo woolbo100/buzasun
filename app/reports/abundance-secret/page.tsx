@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
@@ -55,8 +56,8 @@ const productData = {
   overviewImage: '/image/abundance-secret/golden-abundance.webp',
   recommendedImage: '/image/abundance/a3.webp',
   structureImage: '/image/abundance-secret/abundance-transformation.webp',
-  premiumImage: '/image/abundance/a5.webp',
-  ctaImage: '/image/abundance/a6.webp',
+  premiumImage: '/image/abundance-secret/abundance-secret-book-luxury-flatlay.webp',
+  ctaImage: '/image/abundance-secret/abundance-celadon-ritual-banner.webp',
 }
 
 // 🖼️ 신규 교체형 이미지 슬롯 컴포넌트
@@ -461,7 +462,7 @@ export default function AbundanceSecretPage() {
                   </div>
 
                   {/* 마음공부 / 끌어당김 역설 공감 섹션 */}
-                  <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] !mb-[56px] md:!mb-[96px] w-full max-w-[1280px] mx-auto">
+                  <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
                     {/* 상단 영문 섹션 라벨 및 헤더 */}
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
                       <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
@@ -491,15 +492,27 @@ export default function AbundanceSecretPage() {
                         }}
                       >
                         <div>
-                          <div className="text-[#AA8A57] font-elegant font-semibold text-xs md:text-sm tracking-wider mb-2.5">
+                          <div className="text-[#AA8A57] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 01
                           </div>
-                          <h4 className="text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.4] break-keep">
+                          <h4 className="text-[22px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.35] break-keep">
                             확언 뒤에 남는 서늘한 불안
                           </h4>
-                          <p className="text-[15px] md:text-[16px] text-[#EAE4D8] leading-[1.7] font-normal break-keep">
+                          <p className="text-[16px] md:text-[17px] text-[#EAE4D8] leading-[1.75] font-normal break-keep">
                             “나는 부자다”를 외치면서도, 불쑥 날아오는 카드값 고지서 앞에서는 가슴이 쿵 내려앉는 괴리감과 죄책감을 겪지 않았나요?
                           </p>
+                        </div>
+
+                        {/* 본문 하단 중앙 연꽃 라인 아트 장식 */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6 border-t border-[#C2A477]/10" aria-hidden="true">
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#C2A477]/60" />
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[19px] h-[19px] opacity-65 shrink-0">
+                            <path d="M12 3C10.5 7 10.5 12 12 16C13.5 12 13.5 7 12 3Z" />
+                            <path d="M12 16C9 14 6 10 7 7C9.5 7.5 11 11 12 16Z" />
+                            <path d="M12 16C15 14 18 10 17 7C14.5 7.5 13 11 12 16Z" />
+                            <path d="M6 18.5C9 17 15 17 18 18.5" />
+                          </svg>
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#C2A477]/60" />
                         </div>
                       </div>
 
@@ -515,15 +528,27 @@ export default function AbundanceSecretPage() {
                         }}
                       >
                         <div>
-                          <div className="text-[#AA8A57] font-elegant font-semibold text-xs md:text-sm tracking-wider mb-2.5">
+                          <div className="text-[#AA8A57] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 02
                           </div>
-                          <h4 className="text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.4] break-keep">
+                          <h4 className="text-[22px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.35] break-keep">
                             억지 긍정이 낳은 무의식의 역풍
                           </h4>
-                          <p className="text-[15px] md:text-[16px] text-[#EAE4D8] leading-[1.7] font-normal break-keep">
+                          <p className="text-[16px] md:text-[17px] text-[#EAE4D8] leading-[1.75] font-normal break-keep">
                             불안과 두려움을 ‘부정적인 감정’이라며 억누른 채 덮어두다 보니, 억압된 결핍이 현실에서 예기치 못한 지출로 터져 나왔습니다.
                           </p>
+                        </div>
+
+                        {/* 본문 하단 중앙 연꽃 라인 아트 장식 */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6 border-t border-[#C2A477]/10" aria-hidden="true">
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#C2A477]/60" />
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[19px] h-[19px] opacity-65 shrink-0">
+                            <path d="M12 3C10.5 7 10.5 12 12 16C13.5 12 13.5 7 12 3Z" />
+                            <path d="M12 16C9 14 6 10 7 7C9.5 7.5 11 11 12 16Z" />
+                            <path d="M12 16C15 14 18 10 17 7C14.5 7.5 13 11 12 16Z" />
+                            <path d="M6 18.5C9 17 15 17 18 18.5" />
+                          </svg>
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#C2A477]/60" />
                         </div>
                       </div>
 
@@ -539,31 +564,120 @@ export default function AbundanceSecretPage() {
                         }}
                       >
                         <div>
-                          <div className="text-[#AA8A57] font-elegant font-semibold text-xs md:text-sm tracking-wider mb-2.5">
+                          <div className="text-[#AA8A57] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 03
                           </div>
-                          <h4 className="text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.4] break-keep">
-                            ‘간절함’이라는 이름의 결핍 주파수
+                          <h4 className="text-[22px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.35] break-keep whitespace-nowrap">
+                            ‘간절함’이라는 결핍 주파수
                           </h4>
-                          <p className="text-[15px] md:text-[16px] text-[#EAE4D8] leading-[1.7] font-normal break-keep">
+                          <p className="text-[16px] md:text-[17px] text-[#EAE4D8] leading-[1.75] font-normal break-keep">
                             간절함은 역설적으로 “지금 내게 돈이 없다”는 것을 가장 크게 증명하는 신호입니다. 쫓아가는 마음에는 결코 부가 머물지 않습니다.
                           </p>
+                        </div>
+
+                        {/* 본문 하단 중앙 연꽃 라인 아트 장식 */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6 border-t border-[#C2A477]/10" aria-hidden="true">
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#C2A477]/60" />
+                          <svg viewBox="0 0 24 24" fill="none" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="w-[19px] h-[19px] opacity-65 shrink-0">
+                            <path d="M12 3C10.5 7 10.5 12 12 16C13.5 12 13.5 7 12 3Z" />
+                            <path d="M12 16C9 14 6 10 7 7C9.5 7.5 11 11 12 16Z" />
+                            <path d="M12 16C15 14 18 10 17 7C14.5 7.5 13 11 12 16Z" />
+                            <path d="M6 18.5C9 17 15 17 18 18.5" />
+                          </svg>
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#C2A477]/60" />
                         </div>
                       </div>
                     </div>
 
-                    {/* 공감 마무리 메시지 (상자 없이 배경 위에 직접 배치) */}
-                    <div className="mt-10 sm:mt-12 md:mt-[72px] text-center max-w-[1050px] mx-auto px-4 break-keep">
-                      <p className="text-[#FAF7F2] text-[17px] sm:text-[19px] md:text-[21px] lg:text-[22px] font-elegant leading-[1.6]">
-                        금이 가 물이 새는 독에는, 아무리 화려한 황금빛 주문을 외워도 물이 차오르지 않습니다.
+                    {/* 공감 마무리 메시지 (상자 없이 배경 위에 직접 배치 + 금빛 물결 & 연꽃 애니메이션) */}
+                    <div className="mt-14 md:mt-[65px] text-center max-w-[1050px] mx-auto px-4 break-keep">
+                      {/* 첫 번째 문장 */}
+                      <p className="text-[#FAF7F2] text-[17px] sm:text-[18px] md:text-[20px] font-elegant leading-[1.75] break-keep">
+                        금이 가 물이 새는 독에는, 아무리 화려한 <span className="text-[#C2A477] font-semibold">황금빛 주문</span>을 외워도 물이 차오르지 않습니다.
                       </p>
-                      <p className="text-[#C2A477] text-[18px] sm:text-[20px] md:text-[23px] lg:text-[24px] font-elegant font-semibold leading-[1.6] mt-3.5 md:mt-4">
-                        이제 주문을 멈추고, 당신의 무의식 밑바닥 ‘그릇’부터 온전히 기워내야 할 때입니다.
-                      </p>
+
+                      {/* 두 문장 사이의 금빛 물결과 연꽃 (SVG & 스크롤 드로잉 애니메이션) */}
+                      <div className="flex items-center justify-center my-6 md:my-7" aria-hidden="true">
+                        <svg 
+                          viewBox="0 0 320 24" 
+                          fill="none" 
+                          className="w-[200px] sm:w-[250px] md:w-[290px] h-6 overflow-visible"
+                        >
+                          {/* 좌측 물결선 (왼쪽에서 오른쪽으로 드로잉) */}
+                          <motion.path
+                            d="M 10 12 C 50 3, 90 21, 135 12"
+                            stroke="#C2A477"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            initial={{ pathLength: 0, opacity: 0 }}
+                            whileInView={{ pathLength: 1, opacity: 0.75 }}
+                            viewport={{ once: true, margin: "-40px" }}
+                            transition={{ duration: 2.0, ease: "easeOut" }}
+                          />
+                          
+                          {/* 중앙 미니 연꽃 라인 아이콘 (부드러운 페이드인) */}
+                          <motion.g
+                            transform="translate(148, 1) scale(0.9)"
+                            initial={{ opacity: 0, scale: 0.7 }}
+                            whileInView={{ opacity: 0.85, scale: 0.9 }}
+                            viewport={{ once: true, margin: "-40px" }}
+                            transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
+                          >
+                            <path d="M12 3C10.8 6.5 10.8 11 12 15C13.2 11 13.2 6.5 12 3Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                            <path d="M12 15C9.5 13.2 6.8 9.5 7.8 6.8C10 7.2 11.2 10.5 12 15Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                            <path d="M12 15C14.5 13.2 17.2 9.5 16.2 6.8C14 7.2 12.8 10.5 12 15Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                            <path d="M6.5 17C9 16 15 16 17.5 17" stroke="#C2A477" strokeWidth="1" strokeLinecap="round" />
+                          </motion.g>
+
+                          {/* 우측 물결선 (왼쪽에서 오른쪽으로 드로잉) */}
+                          <motion.path
+                            d="M 185 12 C 230 3, 270 21, 310 12"
+                            stroke="#C2A477"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            initial={{ pathLength: 0, opacity: 0 }}
+                            whileInView={{ pathLength: 1, opacity: 0.75 }}
+                            viewport={{ once: true, margin: "-40px" }}
+                            transition={{ duration: 2.0, delay: 0.25, ease: "easeOut" }}
+                          />
+                        </svg>
+                      </div>
+
+                      {/* 두 번째 핵심 문장 (아래에서 살짝 떠오르며 페이드업) */}
+                      <motion.p 
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-40px" }}
+                        transition={{ duration: 0.8, delay: 1.1, ease: "easeOut" }}
+                        className="text-[#FAF7F2] text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep"
+                      >
+                        이제 주문을 멈추고, 당신의 무의식 밑바닥 <span className="text-[#C2A477] font-bold">‘그릇’부터 온전히 기워내야 할 때</span>입니다.
+                      </motion.p>
+
+                      {/* 하단 연꽃 심벌 & 잔잔한 수면 파동 */}
+                      <motion.div 
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true, margin: "-40px" }}
+                        transition={{ duration: 0.8, delay: 1.4, ease: "easeOut" }}
+                        className="flex flex-col items-center justify-center mt-6 md:mt-7"
+                        aria-hidden="true"
+                      >
+                        <svg viewBox="0 0 32 32" fill="none" className="w-7 h-7 sm:w-8 sm:h-8 opacity-75">
+                          {/* 연꽃 꽃잎들 */}
+                          <path d="M16 4C14 9.5 14 16 16 21C18 16 18 9.5 16 4Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M16 21C12 18.5 8 13.5 9.5 9.5C12.5 10 14.5 14.5 16 21Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M16 21C20 18.5 24 13.5 22.5 9.5C19.5 10 17.5 14.5 16 21Z" stroke="#C2A477" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                          {/* 수면 잔잔한 파동 1 */}
+                          <path d="M7 24C12 22.5 20 22.5 25 24" stroke="#C2A477" strokeWidth="1" strokeLinecap="round" opacity="0.6" />
+                          {/* 수면 잔잔한 파동 2 */}
+                          <path d="M10 27C13.5 26 18.5 26 22 27" stroke="#C2A477" strokeWidth="0.8" strokeLinecap="round" opacity="0.35" />
+                        </svg>
+                      </motion.div>
                     </div>
 
                     {/* 16:9 비주얼: 황금빛 흐름과 부의 그릇 */}
-                    <div className="mt-10 md:mt-14 w-full aspect-[16/9] relative rounded-[20px] overflow-hidden">
+                    <div className="mt-16 md:mt-[80px] w-full aspect-[16/9] relative rounded-[20px] overflow-hidden">
                       <Image
                         src="/image/abundance-secret/abundance-vessel-golden-flow.webp"
                         alt="풍요비책 부의 그릇과 황금빛 흐름"
@@ -580,7 +694,7 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 [추가 영역 1] 공감 연결 영역 — ‘진심을 탓하지 마세요 / 이제, 나의 자리를 돌아볼 때’
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-16 md:mb-24 text-left w-full max-w-[1280px] mx-auto">
+            <section className="mt-[80px] sm:mt-[100px] md:mt-[150px] mb-16 md:mb-24 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-8 lg:gap-10 items-stretch">
                   <div className="order-1 flex flex-col justify-between h-auto lg:h-full">
@@ -1885,17 +1999,15 @@ export default function AbundanceSecretPage() {
               }}
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
-                <div className="lg:col-span-5 relative w-full min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden flex items-center justify-center p-6 sm:p-8">
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
-                    <Image
-                      src={productData.heroImage}
-                      alt="풍요비책 3종 올인원 세트"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 45vw"
-                      className="object-cover object-center rounded-2xl"
-                      priority
-                    />
-                  </div>
+                <div className="lg:col-span-5 relative w-full min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden flex items-center justify-center">
+                  <Image
+                    src="/image/abundance-secret/abundance-secret-three-book-collection.webp"
+                    alt="풍요비책 3종 올인원 세트 컬렉션"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover object-center"
+                    priority
+                  />
                 </div>
 
                 <div className="lg:col-span-7 w-full flex flex-col justify-between space-y-5 sm:space-y-6 text-left p-6 sm:p-8 md:p-10 lg:py-10 lg:pr-10 lg:pl-12">
@@ -1963,13 +2075,14 @@ export default function AbundanceSecretPage() {
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
                   <div className="flex flex-col lg:justify-between w-full h-full">
-                    <div className="relative w-full aspect-[4/5] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#947852]/30 shadow-2xl bg-black/40 flex items-center justify-center">
+                    <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#947852]/30 shadow-2xl bg-black/40 flex items-center justify-center">
                       <Image
                         src={productData.premiumImage}
                         alt="백도화 풍요비책 실전 활용 가이드"
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-contain"
+                        className="object-cover"
+                        priority
                       />
                     </div>
 
@@ -2125,7 +2238,7 @@ export default function AbundanceSecretPage() {
                   <div className="lg:col-span-5">
                     <HybridImageSlot 
                       assetKey="proof" 
-                      className="w-full aspect-[4/3] md:aspect-square"
+                      className="w-full aspect-[3/4]"
                     />
                   </div>
 
@@ -2191,63 +2304,183 @@ export default function AbundanceSecretPage() {
             <EmeraldCloudDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 6: Comparison Table (가치 비교표)
+                Section 6: Comparison Table — 가치 비교표 (3열 세로형 프리미엄 비교 카드)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-                  <span className="text-[#C2A477] font-elegant tracking-[0.2em] text-xs uppercase">
-                    Value Comparison
+                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    VALUE COMPARISON
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
                     가치 비교표
                   </h2>
                   <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal break-keep">
-                    일반 재테크 강의나 뜬구름 잡는 확언과는 완전히 다른 차원의 실전 연금술입니다.
+                    일반 재테크 강의나 뜬구름 잡는 확언과는 다른, 무의식의 결핍과 현실의 실행을 함께 다루는 《풍요비책》의 가치를 비교해 보세요.
                   </p>
                 </div>
 
-                <div className="overflow-x-auto rounded-3xl border border-[#947852]/40 shadow-2xl bg-[#789E90]/32 border border-[#CBEBDE]/40 shadow-2xl backdrop-blur-sm">
-                  <table className="w-full text-left border-collapse min-w-[640px]">
-                    <thead>
-                      <tr className="border-b border-[#947852]/30 bg-black/40">
-                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EAE4D8] w-1/4">구분</th>
-                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EAE4D8] w-1/4">일반 재테크 강의</th>
-                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EAE4D8] w-1/4">뜬구름 잡는 끌어당김</th>
-                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#AA8A57] bg-[#8CD3B6]/30 border-l border-r border-[#CBEBDE]/40 w-1/4">
-                          백도화 풍요비책 3종 세트
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-white/5 text-[15px] md:text-[16px]">
-                      <tr className="hover:bg-white/[0.01] transition-colors">
-                        <td className="py-5 px-6 font-bold text-white">비용</td>
-                        <td className="py-5 px-6 text-[#EAE4D8]">수십~수백만 원</td>
-                        <td className="py-5 px-6 text-[#EAE4D8]">1~2만 원</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
-                          <span className="text-[#AA8A57] text-base">단 19,000원</span> (영구 소장)
-                        </td>
-                      </tr>
+                {/* 3열 세로형 프리미엄 비교 카드 그리드 */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                  {/* 카드 1: 일반 재테크 강의 (다크 퍼플 글라스) */}
+                  <div
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#C2A477]/40 text-left backdrop-blur-md flex flex-col h-full transition-all duration-300 hover:-translate-y-1"
+                    style={{
+                      background: 'rgba(35, 24, 49, 0.55)'
+                    }}
+                  >
+                    {/* 카드 제목 헤더 */}
+                    <div className="pb-5 mb-6 border-b border-white/10 min-h-[48px] md:min-h-[56px] flex items-center">
+                      <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2]">
+                        일반 재테크 강의
+                      </h3>
+                    </div>
 
-                      <tr className="hover:bg-white/[0.01] transition-colors">
-                        <td className="py-5 px-6 font-bold text-white">내용</td>
-                        <td className="py-5 px-6 text-[#EAE4D8]">노동 중심 테크닉</td>
-                        <td className="py-5 px-6 text-[#EAE4D8]">뜬구름 잡는 위로</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
-                          뇌신경 재배선 + 자본의 흑마법
-                        </td>
-                      </tr>
+                    {/* 항목 리스트: 비용, 관점, 도구 (동일 높이 정렬) */}
+                    <div className="space-y-6 flex-1 flex flex-col justify-between">
+                      {/* 1. 비용 */}
+                      <div className="md:min-h-[175px] lg:min-h-[160px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
+                          비용
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          수십만 원에서 수백만 원까지 다양한 수강료가 필요합니다.
+                        </p>
+                      </div>
 
-                      <tr className="hover:bg-white/[0.01] transition-colors">
-                        <td className="py-5 px-6 font-bold text-white">도구</td>
-                        <td className="py-5 px-6 text-[#EAE4D8]">없음</td>
-                        <td className="py-5 px-6 text-[#EAE4D8]">확언 몇 줄</td>
-                        <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
-                          선천코드 진단 + 템플릿 4종 + 21일 저널
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                      {/* 2. 관점 */}
+                      <div className="md:min-h-[135px] lg:min-h-[120px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
+                          관점
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          저축, 투자, 자산관리 등 외부의 금융 지식과 기술을 중심으로 접근합니다.<br className="hidden sm:inline" />
+                          하지만 돈에 대한 불안이나 결핍감처럼 내면의 반복적인 패턴까지 다루기는 어렵습니다.
+                        </p>
+                      </div>
+
+                      {/* 3. 도구 */}
+                      <div className="md:min-h-[125px] lg:min-h-[110px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
+                          도구
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          금융 지식과 투자 전략을 배울 수 있지만, 돈에 대한 자신의 감정과 무의식적 신념을 돌아보는 도구는 별도로 필요할 수 있습니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 카드 2: 뜬구름 잡는 끌어당김 (다크 퍼플 글라스) */}
+                  <div
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-white/10 shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:border-[#C2A477]/40 text-left backdrop-blur-md flex flex-col h-full transition-all duration-300 hover:-translate-y-1"
+                    style={{
+                      background: 'rgba(35, 24, 49, 0.55)'
+                    }}
+                  >
+                    {/* 카드 제목 헤더 */}
+                    <div className="pb-5 mb-6 border-b border-white/10 min-h-[48px] md:min-h-[56px] flex items-center">
+                      <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2]">
+                        뜬구름 잡는 끌어당김
+                      </h3>
+                    </div>
+
+                    {/* 항목 리스트: 비용, 관점, 도구 (동일 높이 정렬) */}
+                    <div className="space-y-6 flex-1 flex flex-col justify-between">
+                      {/* 1. 비용 */}
+                      <div className="md:min-h-[175px] lg:min-h-[160px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
+                          비용
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          1~2만 원대의 관련 도구나 콘텐츠도 있습니다.
+                        </p>
+                      </div>
+
+                      {/* 2. 관점 */}
+                      <div className="md:min-h-[135px] lg:min-h-[120px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
+                          관점
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          긍정적인 확언과 상상을 통해 풍요로운 마음가짐을 형성하는 데 집중합니다.<br className="hidden sm:inline" />
+                          하지만 구체적인 행동과 현실적인 재정 관리가 뒷받침되지 않으면 변화가 지속되기 어렵습니다.
+                        </p>
+                      </div>
+
+                      {/* 3. 도구 */}
+                      <div className="md:min-h-[125px] lg:min-h-[110px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
+                          도구
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          확언 문장이나 시각화 활동을 활용하지만, 자신의 결핍 패턴을 분석하고 실제 생활에 적용하는 체계적인 과정은 부족할 수 있습니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 카드 3: 백도화 풍요비책 3종 세트 (옥빛 차콜 글라스 + 샴페인 골드 테두리 강조 카드) */}
+                  <div
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#C2A477]/60 shadow-[0_12px_40px_rgba(0,0,0,0.4)] hover:border-[#C2A477] text-left backdrop-blur-md flex flex-col h-full relative transition-all duration-300 hover:-translate-y-1"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(30, 56, 50, 0.75) 0%, rgba(18, 38, 34, 0.88) 100%)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                    }}
+                  >
+                    {/* 상단 배지 (카드 상단 테두리에 걸치는 absolute 배치) */}
+                    <div className="absolute -top-3.5 left-7 sm:left-8 z-10">
+                      <span className="inline-block py-1 px-3 rounded-md text-[12px] font-bold text-[#FAF7F2] bg-[#163B32] border border-[#C2A477]/70 shadow-sm">
+                        풍요비책 3종 올인원 패키지
+                      </span>
+                    </div>
+
+                    {/* 카드 제목 헤더 */}
+                    <div className="pb-5 mb-6 border-b border-[#C2A477]/25 min-h-[48px] md:min-h-[56px] flex items-center">
+                      <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2]">
+                        백도화 풍요비책 3종 세트
+                      </h3>
+                    </div>
+
+                    {/* 항목 리스트: 비용, 관점, 도구 (동일 높이 정렬) */}
+                    <div className="space-y-6 flex-1 flex flex-col justify-between">
+                      {/* 1. 비용 (19,000원 가장 크게 강조) */}
+                      <div className="md:min-h-[175px] lg:min-h-[160px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477] block mb-1.5">
+                          비용
+                        </span>
+                        <div className="text-[28px] md:text-[32px] font-bold font-elegant text-[#FAF7F2] leading-none mb-2">
+                          19,000<span className="text-[18px] font-normal text-[#C2A477] ml-1">원</span>
+                          <span className="text-[13px] md:text-[14px] font-normal text-[#FAF6EE]/80 ml-2 font-sans">(영구 소장)</span>
+                        </div>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          한 번 구매하면 필요할 때마다 다시 꺼내 읽고 실천할 수 있는 디지털 콘텐츠입니다.
+                        </p>
+                      </div>
+
+                      {/* 2. 관점 */}
+                      <div className="md:min-h-[135px] lg:min-h-[120px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477] block mb-1.5">
+                          관점
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          돈에 대한 무의식적 결핍과 제한적인 신념을 돌아보고, 자신의 가치와 풍요에 대한 태도를 새롭게 정립합니다.<br className="hidden sm:inline" />
+                          내면의 변화와 현실적인 실천을 함께 연결하는 자기성찰 중심의 접근법입니다.
+                        </p>
+                      </div>
+
+                      {/* 3. 도구 */}
+                      <div className="md:min-h-[125px] lg:min-h-[110px]">
+                        <span className="text-[14px] font-semibold text-[#C2A477] block mb-1.5">
+                          도구
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA] leading-[1.7] break-keep">
+                          선천코드 진단, 자본의 흑마법 4종, 21일 실천 저널 등 자기이해와 행동 변화를 돕는 도구를 제공합니다.<br className="hidden sm:inline" />
+                          본편과 부록을 통해 이해부터 실천까지 단계적으로 이어갑니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>
@@ -2388,54 +2621,57 @@ export default function AbundanceSecretPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════════════════════
-                [수정] 감성 이미지 영역 (버튼 디자인 -> 연애비급 감성 텍스트 링크로 교체)
+                [수정] 감성 이미지 영역 (abundance-celadon-ritual-banner 필터 완전 제거 + 좌측 정렬 텍스트)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-[#947852]/40 shadow-2xl w-full max-w-[1280px] mx-auto bg-[#082E1E]">
+            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-[#947852]/40 shadow-2xl w-full max-w-[1280px] mx-auto">
+              {/* 배경 이미지: 필터/반투명막/그라데이션 오버레이 완전 제거하여 원본 색감 100% 보존 */}
               <div className="absolute inset-0 z-0">
                 <Image 
                   src={productData.ctaImage} 
                   alt="내 안의 황금 문을 여는 시간" 
                   fill 
-                  className="object-cover transition-transform duration-[10000ms] group-hover:scale-105" 
+                  className="object-cover object-right md:object-center transition-transform duration-[10000ms] group-hover:scale-105" 
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#182924]/60 to-black/80 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-[#0a0514]/40" />
               </div>
 
-              <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 md:px-10 text-center max-w-5xl mx-auto space-y-6 md:space-y-8 break-keep">
-                <Reveal>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                    내 안의 황금 문을 여는 시간
-                  </h2>
-                  <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal max-w-xl mx-auto break-keep">
-                    풍요는 더 많이 쫓는 사람에게만 오는 것이 아니라, 받아들일 준비가 된 마음에 오래 머무릅니다.<br/>
-                    결핍을 반복하던 무의식에서 벗어나 나의 감정, 언어, 소비, 감사, 실천 루틴을 새롭게 정렬해 보세요.
-                  </p>
-                  
-                  {/* 연애비급 방식의 배경 없는 감성 텍스트 링크 */}
-                  <div className="pt-4 sm:pt-6">
-                    <a
-                      href="#final-purchase"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        const target = document.getElementById('final-purchase')
-                        if (target) {
-                          target.scrollIntoView({ behavior: 'smooth' })
-                        }
-                      }}
-                      className="group inline-flex flex-col items-center py-2.5 -my-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#AA8A57]/60 rounded-sm cursor-pointer"
-                      aria-label="마르지 않는 풍요의 그릇 완성하기 (하단 구매 영역으로 이동)"
-                    >
-                      <div className="inline-flex items-center gap-2 text-[#AA8A57] group-hover:text-[#FFF1E9] font-elegant font-medium text-[17px] sm:text-[18px] md:text-[21px] tracking-wide transition-colors duration-300">
-                        <span>마르지 않는 풍요의 그릇 완성하기</span>
-                        <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300 ease-out text-[19px] sm:text-[20px] md:text-[22px]">
-                          →
-                        </span>
-                      </div>
-                      <span className="h-[1.5px] w-[45%] group-hover:w-full bg-[#AA8A57]/60 group-hover:bg-[#FFF1E9]/80 transition-[width,background-color] duration-300 ease-out mt-1.5" />
-                    </a>
-                  </div>
-                </Reveal>
+              {/* 텍스트 영역: 좌측 약 45~50% 영역에 세로 중앙 정렬 및 좌측 정렬 */}
+              <div className="relative z-10 h-full flex flex-col justify-center pl-7 sm:pl-12 md:pl-16 lg:pl-20 pr-6 text-left break-keep">
+                <div className="w-full max-w-[92%] sm:max-w-[75%] md:max-w-[50%] lg:max-w-[46%] space-y-3.5 sm:space-y-4 md:space-y-5">
+                  <Reveal>
+                    <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-elegant font-bold text-white leading-[1.35] break-keep mb-3 md:mb-4">
+                      내 안의 황금 문을 여는 시간
+                    </h2>
+                    <p className="text-[15px] sm:text-[16px] md:text-[17px] text-[#F0EBE2] leading-[1.75] font-normal break-keep">
+                      풍요는 더 많이 쫓는 사람에게만 오는 것이 아니라, 받아들일 준비가 된 마음에 오래 머무릅니다.<br className="hidden sm:inline"/>
+                      결핍을 반복하던 무의식에서 벗어나 나의 감정, 언어, 소비, 감사, 실천 루틴을 새롭게 정렬해 보세요.
+                    </p>
+                    
+                    {/* 연애비급 방식의 배경 없는 감성 텍스트 링크 (좌측 정렬) */}
+                    <div className="pt-3 sm:pt-5">
+                      <a
+                        href="#final-purchase"
+                        onClick={(e) => {
+                          e.preventDefault()
+                          const target = document.getElementById('final-purchase')
+                          if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' })
+                          }
+                        }}
+                        className="group inline-flex flex-col items-start py-2.5 -my-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#AA8A57]/60 rounded-sm cursor-pointer"
+                        aria-label="마르지 않는 풍요의 그릇 완성하기 (하단 구매 영역으로 이동)"
+                      >
+                        <div className="inline-flex items-center gap-2 text-[#C2A477] group-hover:text-[#FFF1E9] font-elegant font-medium text-[16px] sm:text-[18px] md:text-[20px] tracking-wide transition-colors duration-300">
+                          <span>마르지 않는 풍요의 그릇 완성하기</span>
+                          <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300 ease-out text-[18px] sm:text-[20px] md:text-[22px]">
+                            →
+                          </span>
+                        </div>
+                        <span className="h-[1.5px] w-[50%] group-hover:w-full bg-[#C2A477]/60 group-hover:bg-[#FFF1E9]/80 transition-[width,background-color] duration-300 ease-out mt-1.5" />
+                      </a>
+                    </div>
+                  </Reveal>
+                </div>
               </div>
             </section>
 
