@@ -167,42 +167,7 @@ export default function ReunionSecretPage() {
 
   return (
     <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#4A0E17] selection:text-[#FAF7F2] pb-24 md:pb-0">
-      <GlobalBackground 
-        src="/image/love-code-bg.png" 
-        brightCenter={false}
-        overlay={
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 상단/중앙 신비로운 딥 플럼 버건디 라이트 오라 (풍요비책과 동일 구조로 전체 입체감과 질감 보존) */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  radial-gradient(ellipse 90% 55% at 50% 12%, rgba(78, 40, 69, 0.45) 0%, rgba(56, 31, 50, 0.20) 55%, transparent 85%),
-                  radial-gradient(circle 700px at 80% 20%, rgba(68, 36, 61, 0.28) 0%, transparent 70%),
-                  radial-gradient(circle 600px at 20% 60%, rgba(56, 31, 50, 0.22) 0%, transparent 70%)
-                `,
-              }}
-            />
-
-            {/* 2. 메인 딥 플럼 버건디(#381F32) 수직 그라데이션 (배경 전체에 깊은 플럼빛과 버건디가 자연스럽게 퍼짐) */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  linear-gradient(
-                    180deg,
-                    rgba(56, 31, 50, 0.70) 0%,
-                    rgba(68, 36, 61, 0.75) 22%,
-                    rgba(56, 31, 50, 0.82) 52%,
-                    rgba(40, 20, 36, 0.88) 80%,
-                    rgba(20, 10, 18, 0.94) 100%
-                  )
-                `,
-              }}
-            />
-          </div>
-        }
-      >
+      <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">

@@ -220,42 +220,7 @@ export default function LoveSecretEbookPage() {
   return (
     <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#1A0F2E] pb-24 md:pb-0">
       {/* 기존 백도화 템플릿의 다크 배경(GlobalBackground) 유지 */}
-      <GlobalBackground 
-        src="/image/love-code-bg.png" 
-        brightCenter={false}
-        overlay={
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 상단/중앙 신비로운 더스티 로즈 퍼플 라이트 오라 (풍요비책과 동일 구조로 전체 입체감과 질감 보존) */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  radial-gradient(ellipse 90% 55% at 50% 12%, rgba(95, 60, 92, 0.42) 0%, rgba(73, 48, 71, 0.18) 55%, transparent 85%),
-                  radial-gradient(circle 700px at 80% 20%, rgba(85, 54, 82, 0.25) 0%, transparent 70%),
-                  radial-gradient(circle 600px at 20% 60%, rgba(73, 48, 71, 0.20) 0%, transparent 70%)
-                `,
-              }}
-            />
-
-            {/* 2. 메인 더스티 로즈 퍼플(#493047) 수직 그라데이션 (배경 전체에 부드러운 로즈빛과 퍼플이 자연스럽게 퍼짐) */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  linear-gradient(
-                    180deg,
-                    rgba(73, 48, 71, 0.65) 0%,
-                    rgba(85, 54, 82, 0.70) 22%,
-                    rgba(73, 48, 71, 0.78) 52%,
-                    rgba(55, 34, 53, 0.84) 80%,
-                    rgba(32, 18, 31, 0.92) 100%
-                  )
-                `,
-              }}
-            />
-          </div>
-        }
-      >
+      <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
