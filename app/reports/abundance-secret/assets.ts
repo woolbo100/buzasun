@@ -18,12 +18,12 @@ export const abundanceSecretAssets: Record<string, AbundanceSecretAssetItem> = {
   // 1. Hero: 풍요비책 3종 세트 + 금옥만당부 목업
   hero: {
     id: 'hero',
-    src: 'abundance_mockup_placeholder.png',
-    alt: '풍요비책 3종 세트 + 금옥만당부 목업',
-    aspectRatio: 'aspect-video',
-    objectFit: 'contain',
-    placeholderLabel: '풍요비책 3종 세트 + 금옥만당부 목업 (Hero 3D)',
-    description: 'abundance_mockup_placeholder.png'
+    src: '/image/abundance-secret/baekdohwa-abundance-book-set.webp',
+    alt: '풍요비책 3종 올인원 세트 목업',
+    aspectRatio: 'aspect-square',
+    objectFit: 'cover',
+    placeholderLabel: '풍요비책 3종 세트 목업',
+    description: 'baekdohwa-abundance-book-set.webp'
   },
 
   // 2. Pain: 윈도우 95 에러 및 텅 빈 통장 비주얼

@@ -50,8 +50,8 @@ const productData = {
   regularPrice: 79000,
   discountRate: '76% OFF',
 
-  topBannerImage: '/image/abundance/a1.webp',
-  heroImage: '/image/abundance/a1.webp',
+  topBannerImage: '/image/abundance-secret/korean-hanbok-abundance.webp',
+  heroImage: '/image/abundance-secret/korean-hanbok-abundance.webp',
   overviewImage: '/image/abundance/a2.webp',
   recommendedImage: '/image/abundance/a3.webp',
   structureImage: '/image/abundance/a4.webp',
@@ -291,7 +291,8 @@ export default function AbundanceSecretPage() {
 
                   <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3.5 break-keep">
                     <p>
-                      풍요비책은 돈을 쫓는 방식이 아니라, 내면의 결핍 코드를 점검하고 풍요를 받아들일 마음그릇을 키우기 위한 프리미엄 풍요의식 자기계발 전자책입니다.
+                      풍요비책은 돈을 쫓는 방식이 아니라, 내면의 결핍 코드를 점검하고 풍요를 받아들일 마음그릇을 키우기 위한<br />
+                      프리미엄 풍요의식 전자책입니다.
                     </p>
                     <p>
                       부는 바깥에서 억지로 붙잡는 것이 아니라, 내 안의 문을 여는 순간 다른 방식으로 흐르기 시작합니다.
@@ -318,9 +319,6 @@ export default function AbundanceSecretPage() {
                           <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 text-[#FAF7F2] text-xs font-bold tracking-wider whitespace-nowrap">
                             풍요비책 3종 올인원 패키지
                           </span>
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/35 text-[#AA8A57] text-xs font-bold whitespace-nowrap">
-                            실전 템플릿 4종 수록
-                          </span>
                         </div>
 
                         <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -329,7 +327,7 @@ export default function AbundanceSecretPage() {
                         </h2>
 
                         <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.8] font-normal break-keep max-w-xl">
-                          이를 악물고 일해도 통장이 비어 있던 진짜 이유. 무의식의 가난 바이러스를 소각하고 자본의 흑마법을 깨우는 황금의 비밀서(秘密書).
+                          이를 악물고 일해도 통장이 비어 있던 진짜 이유. 무의식의 가난 바이러스를 소각하고 황금의 비밀코드를 깨우는 황금의 비밀서(秘密書)
                         </p>
 
                         {/* 가격 안내 */}
