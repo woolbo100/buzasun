@@ -354,10 +354,11 @@ export default function AbundanceSecretPage() {
                           <button
                             type="button"
                             onClick={handlePurchase}
-                            className="py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(120,158,144,0.3)] hover:shadow-[0_0_20px_rgba(203,235,222,0.35)] hover:brightness-110 order-1 sm:order-2 flex-1 sm:flex-initial"
+                            className="py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] hover:brightness-110 order-1 sm:order-2 flex-1 sm:flex-initial"
                             style={{
                               background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
-                        border: '1px solid rgba(203, 235, 222, 0.45)',
+                              border: '1.5px solid #E5C378',
+                              boxShadow: '0 0 22px rgba(229, 195, 120, 0.6), 0 4px 16px rgba(194, 164, 119, 0.45)'
                             }}
                           >
                             <span>풍요비책 19,000원에 구매하기</span>
@@ -458,6 +459,62 @@ export default function AbundanceSecretPage() {
                       </div>
                     </div>
                   </div>
+
+                  {/* 마음공부 / 끌어당김 역설 공감 섹션 */}
+                  <div className="my-16 max-w-4xl mx-auto px-4">
+                    {/* 상단 골드 라벨 */}
+                    <div className="text-center mb-6">
+                      <span className="text-amber-400 text-xs tracking-widest font-semibold uppercase px-3 py-1 rounded-full border border-amber-400/30 bg-amber-950/20">
+                        THE PARADOX OF ATTRACTION
+                      </span>
+                      <h3 className="text-2xl md:text-3xl font-bold text-neutral-100 font-serif mt-3 leading-snug break-keep">
+                        “확언을 100번씩 쓰고 ‘끌어당김’을 간절히 외쳤는데…<br />
+                        <span className="text-amber-300">왜 통장은 더 바닥나고 마음은 쫓겼을까요?”</span>
+                      </h3>
+                      <p className="text-neutral-400 text-sm mt-3 max-w-xl mx-auto leading-relaxed break-keep">
+                        당신의 정성이 부족해서가 아닙니다. 풍요를 바라는 마음 이면에 도사린<br className="hidden sm:inline" />
+                        ‘간절한 결핍’이 무의식의 톱니바퀴를 거꾸로 돌리고 있었기 때문입니다.
+                      </p>
+                    </div>
+
+                    {/* 3대 공감 카드 (기존 백도화 UI 스타일의 반투명 다크 카드) */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                      {/* 카드 1 */}
+                      <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 backdrop-blur-sm hover:border-amber-500/40 transition-colors break-keep">
+                        <div className="text-amber-400/80 text-xs font-semibold mb-2">공감 01</div>
+                        <h4 className="text-neutral-100 font-bold text-base mb-2">확언 뒤에 남는 서늘한 불안</h4>
+                        <p className="text-neutral-400 text-xs leading-relaxed">
+                          “나는 부자다”를 외치면서도, 불쑥 날아오는 카드값 고지서 앞에서는 가슴이 쿵 내려앉는 괴리감과 죄책감을 겪지 않았나요?
+                        </p>
+                      </div>
+
+                      {/* 카드 2 */}
+                      <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 backdrop-blur-sm hover:border-amber-500/40 transition-colors break-keep">
+                        <div className="text-amber-400/80 text-xs font-semibold mb-2">공감 02</div>
+                        <h4 className="text-neutral-100 font-bold text-base mb-2">억지 긍정이 낳은 무의식의 역풍</h4>
+                        <p className="text-neutral-400 text-xs leading-relaxed">
+                          불안과 두려움을 ‘부정적인 감정’이라며 억누른 채 덮어두다 보니, 억압된 결핍이 현실에서 예기치 못한 지출로 터져 나왔습니다.
+                        </p>
+                      </div>
+
+                      {/* 카드 3 */}
+                      <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 backdrop-blur-sm hover:border-amber-500/40 transition-colors break-keep">
+                        <div className="text-amber-400/80 text-xs font-semibold mb-2">공감 03</div>
+                        <h4 className="text-neutral-100 font-bold text-base mb-2">‘간절함’이라는 이름의 결핍 주파수</h4>
+                        <p className="text-neutral-400 text-xs leading-relaxed">
+                          간절함은 역설적으로 “지금 내게 돈이 없다”는 것을 가장 크게 증명하는 신호입니다. 쫓아가는 마음에는 결코 부가 머물지 않습니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* 아래 섹션으로 이어주는 브릿지 박스 */}
+                    <div className="mt-8 text-center p-6 rounded-2xl bg-gradient-to-r from-amber-950/20 via-neutral-900/40 to-amber-950/20 border border-amber-500/20 break-keep">
+                      <p className="text-neutral-300 text-sm md:text-base font-serif leading-relaxed">
+                        금이 가 물이 새는 독에는, 아무리 화려한 황금빛 주문을 외워도 물이 차오르지 않습니다.<br />
+                        <strong className="text-amber-300 font-semibold">이제 주문을 멈추고, 당신의 무의식 밑바닥 ‘그릇’부터 온전히 기워내야 할 때입니다.</strong>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>
@@ -531,8 +588,8 @@ export default function AbundanceSecretPage() {
                   <div className="lg:col-span-5 w-full order-2 flex flex-col justify-center">
                     <div className="group relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40">
                       <Image
-                        src="/image/abundance-secret/golden-abundance.webp"
-                        alt="풍요비책 부의 그릇 비주얼"
+                        src="/image/abundance-secret/abundance-scarcity-mindset.webp"
+                        alt="풍요비책 부의 의식 비주얼"
                         fill
                         sizes="(max-width: 1024px) 100vw, 40vw"
                         className="object-cover"
@@ -1818,10 +1875,11 @@ export default function AbundanceSecretPage() {
                     <button
                       type="button"
                       onClick={handlePurchase}
-                      className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(120,158,144,0.3)] hover:shadow-[0_0_20px_rgba(203,235,222,0.35)] hover:brightness-110 order-1 sm:order-2 cursor-pointer"
+                      className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] hover:brightness-110 order-1 sm:order-2 cursor-pointer"
                       style={{
                         background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
-                        border: '1px solid rgba(203, 235, 222, 0.45)',
+                        border: '1.5px solid #E5C378',
+                        boxShadow: '0 0 22px rgba(229, 195, 120, 0.6), 0 4px 16px rgba(194, 164, 119, 0.45)'
                       }}
                     >
                       <span>풍요비책 19,000원에 구매하기</span>
@@ -2383,13 +2441,14 @@ export default function AbundanceSecretPage() {
                     <button
                       type="button"
                       onClick={handlePurchase}
-                      className="w-full py-4 md:py-4.5 px-6 rounded-xl font-elegant font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(120,158,144,0.3)] hover:shadow-[0_0_20px_rgba(203,235,222,0.35)] hover:brightness-110 cursor-pointer mb-3.5 md:mb-4"
+                      className="w-full py-4 md:py-4.5 px-6 rounded-xl font-elegant font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] hover:brightness-110 cursor-pointer mb-3.5 md:mb-4"
                       style={{
                         background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
-                        border: '1px solid rgba(203, 235, 222, 0.45)'
+                        border: '1.5px solid #E5C378',
+                        boxShadow: '0 0 25px rgba(229, 195, 120, 0.65), 0 4px 18px rgba(194, 164, 119, 0.5)'
                       }}
                     >
-                      <Sparkles className="w-5 h-5 text-[#947852] shrink-0" />
+                      <Sparkles className="w-5 h-5 text-[#E5C378] shrink-0" />
                       <span>풍요비책 19,000원에 구매하기</span>
                       <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
                     </button>
