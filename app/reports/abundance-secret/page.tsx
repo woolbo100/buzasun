@@ -461,7 +461,7 @@ export default function AbundanceSecretPage() {
                   </div>
 
                   {/* 마음공부 / 끌어당김 역설 공감 섹션 */}
-                  <div className="mt-24 md:mt-28 mb-8 md:mb-12 w-full max-w-[1100px] mx-auto px-4 sm:px-6">
+                  <div className="!my-[64px] sm:!my-[72px] md:!my-[120px] w-full max-w-[1100px] mx-auto px-4 sm:px-6">
                     {/* 상단 영문 섹션 라벨 및 헤더 */}
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
                       <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
@@ -568,14 +568,14 @@ export default function AbundanceSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-16 md:mb-24 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center lg:items-end">
-                  <div className="lg:col-span-7 order-1 flex flex-col justify-end">
-                    <h3 className="text-center text-[22px] md:text-[28px] font-elegant font-bold text-[#C2A477] leading-[1.4] mb-6 break-keep">
-                      열심히 일하는 동안, 내 &lsquo;부의 그릇&rsquo;은 어디에 있었나요?
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                  <div className="lg:col-span-7 order-1 flex flex-col justify-between h-auto lg:h-full">
+                    <h3 className="text-center lg:text-left text-[22px] md:text-[28px] font-elegant font-bold text-[#C2A477] leading-[1.4] mb-6 break-keep">
+                      그토록 애쓰는 동안, 내 &lsquo;부의 그릇&rsquo;은 왜 비어 있었을까요?
                     </h3>
 
                     <div
-                      className="w-full text-left break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#947852]/30 shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
+                      className="w-full flex-1 flex flex-col justify-between text-left break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#947852]/30 shadow-2xl relative overflow-hidden"
                       style={{
                         background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
                         boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
@@ -603,7 +603,7 @@ export default function AbundanceSecretPage() {
                         </div>
                       </div>
 
-                      <div className="w-full h-[1px] bg-gradient-to-r from-[#947852]/30 via-[#947852]/10 to-transparent" />
+                      <div className="w-full h-[1px] bg-gradient-to-r from-[#947852]/30 via-[#947852]/10 to-transparent my-6 md:my-7" />
 
                       {/* 02 · 이제, 나의 자리를 돌아볼 때 */}
                       <div className="space-y-3.5">
@@ -629,8 +629,8 @@ export default function AbundanceSecretPage() {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-5 w-full order-2 flex flex-col justify-end">
-                    <div className="group relative w-full max-w-[440px] aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40 mx-auto lg:ml-auto lg:mr-0">
+                  <div className="lg:col-span-5 w-full order-2 flex flex-col justify-start">
+                    <div className="group relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40">
                       <Image
                         src="/image/abundance-secret/abundance-scarcity-mindset.webp"
                         alt="풍요비책 부의 의식 비주얼"
