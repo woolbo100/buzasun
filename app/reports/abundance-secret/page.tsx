@@ -54,7 +54,13 @@ const productData = {
   topBannerImage: '/image/abundance-secret/korean-hanbok-abundance.webp',
   heroImage: '/image/abundance-secret/korean-hanbok-abundance.webp',
   overviewImage: '/image/abundance-secret/golden-abundance.webp',
-  recommendedImage: '/image/abundance/a3.webp',
+  recommendedImage: '/image/abundance-secret/abundance-secret-recommended-for-you.webp',
+  // 💡 [커리큘럼 & 아키텍처] 16:9 와이드 인포그래픽 이미지 경로
+  curriculumImage: '/image/abundance-secret/abundance-vessel-golden-flow.webp',
+  // 💡 [신규 영역 1] 부의 그릇의 법칙 (3:2 인포그래픽 다이어그램 이미지 경로)
+  wealthVesselImage: '',
+  // 💡 [신규 영역 2] 황금빛 풍요의 주권자 (16:9 와이드 배너 이미지 경로)
+  sovereignImage: '',
   structureImage: '/image/abundance-secret/abundance-transformation.webp',
   premiumImage: '/image/abundance-secret/abundance-secret-book-luxury-flatlay.webp',
   ctaImage: '/image/abundance-secret/abundance-celadon-ritual-banner.webp',
@@ -1222,10 +1228,58 @@ export default function AbundanceSecretPage() {
                   <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
                     <Image
                       src={productData.recommendedImage}
-                      alt="풍요를 지닌 성숙한 여성을 상징하는 이미지"
+                      alt="풍요비책 이런 분께 추천합니다 안내 이미지"
                       fill
-                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover object-center"
+                      priority
                     />
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 섹션: CURRICULUM & ARCHITECTURE (풍요의 내면 설계도)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div className="py-4">
+                  {/* 커리큘럼 & 아키텍처 상단 헤드라인 */}
+                  <div className="text-center mb-10 md:mb-14 space-y-5 break-keep">
+                    {/* 골드 라벨 (12pt) */}
+                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                      CURRICULUM &amp; ARCHITECTURE
+                    </span>
+
+                    {/* 메인 타이틀 (36px) */}
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                      &ldquo;풍요를 운에 맡기지 마십시오.<br />
+                      <span className="text-[#C2A477]">《풍요비책》이 안내하는 풍요의 내면 설계도</span>&rdquo;
+                    </h2>
+
+                    {/* 서브 설명 (18px) */}
+                    <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] max-w-3xl mx-auto font-normal leading-[1.8] break-keep">
+                      결핍의 순환에서 벗어나, 풍요를 받아들이고 다루는 내면의 원리부터<br className="hidden sm:inline" />
+                      삶에 적용하는 구체적인 실천 방법까지 체계적으로 담았습니다.
+                    </p>
+                  </div>
+
+                  {/* 커리큘럼 & 아키텍처 16:9 와이드 인포그래픽 이미지 영역 */}
+                  <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+                    <div className="relative w-full">
+                      <Image
+                        src={productData.curriculumImage}
+                        alt="풍요비책 커리큘럼 & 아키텍처 인포그래픽: 풍요의 내면 설계도"
+                        width={1671}
+                        height={941}
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        className="w-full h-auto object-contain block"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
               </Reveal>
@@ -1397,7 +1451,7 @@ export default function AbundanceSecretPage() {
                   <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
                     <div className="relative w-full">
                       <Image
-                        src="/image/abundance-secret/abundance-secret-3book-collection.webp"
+                        src="/image/abundance-secret/abundance-secret-3book-collection.webp?v=20261108"
                         alt="풍요비책 3종 올인원 세트 패키지 목업: 풍요비책 완전판, 정화와 각성의 서, 풍요의 파동"
                         width={1671}
                         height={941}
@@ -1863,56 +1917,6 @@ export default function AbundanceSecretPage() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Bonus: 《금옥만당부 모바일 월페이퍼》 */}
-                  <div className="gungjung-glass p-8 md:p-12 border-[#947852]/40 rounded-3xl relative overflow-hidden"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.92) 100%)',
-                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
-                    }}>
-                    <div className="grid lg:grid-cols-12 gap-10 items-center">
-                      <div className="lg:col-span-4">
-                        <HybridImageSlot assetKey="amulet" className="w-full aspect-[3/4]" />
-                      </div>
-
-                      <div className="lg:col-span-8 space-y-6 break-keep">
-                        <div>
-                          <span className="inline-block px-3 py-1 rounded-full text-xs font-bold text-[#AA8A57] bg-[#8CD3B6]/25 border border-[#CBEBDE]/40 mb-3">
-                            ⚜️ Special Bonus. [디지털 부적]
-                          </span>
-                          <h3 className="text-xl md:text-[24px] font-elegant font-bold text-white mb-2 leading-[1.4] break-keep">
-                            금옥만당부 모바일 월페이퍼
-                          </h3>
-                          <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal break-keep">
-                            결핍을 지우고 부와 풍요를 끌어당기는 스마트폰 배경화면용 시각적 에너지 결계
-                          </p>
-                        </div>
-
-                        <div className="p-6 rounded-2xl bg-[#789E90]/32 border border-[#CBEBDE]/40 space-y-4">
-                          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
-                            <span className="text-[15px] md:text-[16px] font-bold text-white">
-                              구성: 본편 + 실전 워크북 + 특별 외전 + 디지털 부적
-                            </span>
-                            <span className="text-xs px-2.5 py-1 rounded bg-[#8CD3B6]/25 text-[#AA8A57] font-bold border border-[#CBEBDE]/40">
-                              4 in 1 구성
-                            </span>
-                          </div>
-
-                          <div className="flex flex-wrap items-baseline justify-between gap-4">
-                            <div className="space-y-1">
-                              <span className="text-xs text-[#EAE4D8]">정가 79,000원</span>
-                              <div className="text-2xl md:text-3xl font-elegant font-bold text-[#C2A477]">
-                                런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal">(76% OFF)</span>
-                              </div>
-                            </div>
-                            <span className="text-xs text-[#EAE4D8]">
-                              * 전자책은 3종이며, 디지털 부적을 포함한 4 in 1 구성입니다.
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </Reveal>
             </section>
@@ -2267,6 +2271,207 @@ export default function AbundanceSecretPage() {
                         </div>
                       ))}
                     </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                신규 섹션: Position Shift — 부의 그릇의 법칙 & 황금빛 풍요의 주권자
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div>
+                  {/* [신규 영역 1] 부의 그릇의 법칙 상단 텍스트 영역 */}
+                  <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-14 break-keep">
+                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                      POSITION SHIFT
+                    </span>
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                      &ldquo;열심히 일해도 풍요가 머물지 않았던 이유,<br className="hidden sm:inline" />
+                      어쩌면 <span className="text-[#C2A477]">&lsquo;부의 그릇&rsquo;</span>을 돌보지 않았기 때문입니다.&rdquo;
+                    </h2>
+                    <div className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep space-y-2">
+                      <p>
+                        돈을 더 많이 버는 방법만 고민하는 동안,<br className="hidden sm:inline" />
+                        우리는 돈을 대하는 내면의 습관을 놓치곤 합니다.
+                      </p>
+                      <p>
+                        결핍에 쫓기던 마음을 돌아보고,<br className="hidden sm:inline" />
+                        이제 풍요를 담을 수 있는 나만의 그릇을 만들어보세요.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* [신규 영역 1] 하단: 부의 그릇의 법칙 비교 다이어그램 이미지 영역 (aspect-[3/2]) */}
+                  <div className="relative w-full aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_45px_rgba(0,0,0,0.6)] bg-black/40 flex items-center justify-center">
+                    {productData.wealthVesselImage ? (
+                      <Image
+                        src={productData.wealthVesselImage}
+                        alt="열심히 일해도 풍요가 머물지 않았던 이유, 부의 그릇의 법칙 비교 인포그래픽"
+                        fill
+                        sizes="(max-width: 1200px) 100vw, 1152px"
+                        className="object-contain"
+                        priority
+                      />
+                    ) : (
+                      /* 최종 이미지 교체 전에도 레이아웃이 무너지지 않는 세련된 인포그래픽 카드 */
+                      <div className="w-full h-full p-6 sm:p-10 md:p-14 flex flex-col justify-between relative overflow-hidden"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(20, 44, 37, 0.85) 0%, rgba(10, 22, 19, 0.95) 100%)'
+                        }}>
+                        {/* 배경 은은한 격자 & 오라 */}
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,158,144,0.18)_0%,transparent_70%)] pointer-events-none" />
+
+                        {/* 상단 라벨 */}
+                        <div className="text-center relative z-10">
+                          <span className="inline-block px-4 py-1.5 rounded-full text-xs md:text-sm font-elegant font-bold text-[#C2A477] bg-[#8CD3B6]/20 border border-[#CBEBDE]/35">
+                            부의 그릇의 법칙 · THE LAW OF WEALTH VESSEL
+                          </span>
+                        </div>
+
+                        {/* 좌우 비교 카드 (왼쪽: 결핍에 쫓기는 사람 vs 오른쪽: 풍요를 담는 사람) */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 relative z-10 my-auto items-stretch">
+                          {/* 왼쪽: 결핍에 쫓기는 사람 */}
+                          <div className="p-5 sm:p-6 md:p-8 rounded-2xl bg-[#111B1E]/90 border border-[#45534E] flex flex-col justify-between space-y-4 shadow-lg">
+                            <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                              <span className="px-3 py-1 rounded bg-[#303A3A] text-xs font-bold text-[#E5DED0]">
+                                결핍에 쫓기는 사람
+                              </span>
+                              <span className="text-xs text-[#C3C8C2]/60 font-mono">SCARCITY LOOP</span>
+                            </div>
+                            <div className="space-y-3">
+                              <div className="flex items-center gap-2.5 text-[#F1EBE2] text-sm md:text-base font-medium">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#87465B]" />
+                                <span>가격표 강박</span>
+                              </div>
+                              <div className="flex items-center gap-2.5 text-[#F1EBE2] text-sm md:text-base font-medium">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#87465B]" />
+                                <span>지출 죄책감</span>
+                              </div>
+                              <div className="flex items-center gap-2.5 text-[#F1EBE2] text-sm md:text-base font-medium">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#87465B]" />
+                                <span>노동 집착</span>
+                              </div>
+                            </div>
+                            <p className="text-xs text-[#C3C8C2] pt-2 border-t border-white/5">
+                              돈을 쫓지만 늘 마음이 메마른 상태
+                            </p>
+                          </div>
+
+                          {/* 오른쪽: 풍요를 담는 사람 */}
+                          <div className="p-5 sm:p-6 md:p-8 rounded-2xl bg-[#294B45]/90 border border-[#668B7C] flex flex-col justify-between space-y-4 shadow-lg">
+                            <div className="flex items-center justify-between border-b border-[#668B7C]/40 pb-3">
+                              <span className="px-3 py-1 rounded bg-[#B79A6A] text-xs font-bold text-[#201D18]">
+                                풍요를 담는 사람
+                              </span>
+                              <span className="text-xs text-[#C2A477]/80 font-mono">ABUNDANCE VESSEL</span>
+                            </div>
+                            <div className="space-y-3">
+                              <div className="flex items-center gap-2.5 text-[#FFF5E6] text-sm md:text-base font-medium">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#C2A477]" />
+                                <span>무의식 정화</span>
+                              </div>
+                              <div className="flex items-center gap-2.5 text-[#FFF5E6] text-sm md:text-base font-medium">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#C2A477]" />
+                                <span>풍요의 확신</span>
+                              </div>
+                              <div className="flex items-center gap-2.5 text-[#FFF5E6] text-sm md:text-base font-medium">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#C2A477]" />
+                                <span>선택의 여유</span>
+                              </div>
+                            </div>
+                            <p className="text-xs text-[#E0E8DF] pt-2 border-t border-[#668B7C]/30">
+                              부가 스스로 머무는 견고한 그릇의 완성
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* 하단 안내 주석 */}
+                        <div className="text-center text-[11px] text-[#AA8A57]/60 font-mono relative z-10">
+                          ※ 인포그래픽 최종 이미지가 등록되면 위 영역이 고해상도 그래픽으로 자동 대체됩니다.
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* [신규 영역 2] 황금빛 풍요의 주권자 브릿지 카피 (mt-28 md:mt-40) */}
+                  <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-28 md:mt-40 break-keep">
+                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                      SOVEREIGN OF ABUNDANCE
+                    </span>
+                    <h3
+                      className="text-[26px] sm:text-[30px] md:text-[36px] font-elegant font-bold text-[#FAF7F2] break-keep"
+                      style={{ lineHeight: 1.4 }}
+                    >
+                      “결핍과 조급함에 쫓기던 자리를 떠나,<br />
+                      이제 스스로 <span className="text-[#C2A477]">‘풍요의 주권자’</span>가 되십시오.”
+                    </h3>
+
+                    <div className="space-y-3 text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep pt-2">
+                      <p>
+                        돈 앞에서 불안해하며 스스로를 작게 만들었던 순간들.
+                      </p>
+                      <p>
+                        이제는 내면의 결핍을 돌아보고,<br className="hidden sm:inline" />
+                        나의 가치를 믿으며 풍요를 선택하는 삶으로 나아갈 시간입니다.
+                      </p>
+                      <p className="text-[#C2A477] font-bold font-elegant text-[18px] md:text-[20px] pt-1">
+                        돈을 쫓는 삶에서, 풍요를 담아내는 삶으로.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* [신규 영역 2] 하단: 황금빛 풍요의 주권자 16:9 와이드 배너 이미지 (mt-12 md:mt-16) */}
+                  <div className="relative w-full aspect-[1672/941] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_45px_rgba(0,0,0,0.6)] bg-black/40 flex items-center justify-center mt-12 md:mt-16">
+                    {productData.sovereignImage ? (
+                      <Image
+                        src={productData.sovereignImage}
+                        alt="풍요를 끌어당기는 황금빛 풍요의 주권자"
+                        fill
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        className="object-cover"
+                        priority
+                      />
+                    ) : (
+                      /* 최종 배너 이미지 교체 전에도 품격 있게 표시되는 16:9 와이드 카드 */
+                      <div className="w-full h-full p-8 sm:p-12 md:p-16 lg:p-20 flex flex-col justify-between relative overflow-hidden text-left"
+                        style={{
+                          background: 'radial-gradient(ellipse at 80% 50%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.95) 70%, rgba(10, 20, 18, 1) 100%)'
+                        }}>
+                        {/* 은은한 배경 오라 */}
+                        <div className="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#C2A477]/10 blur-3xl pointer-events-none" />
+
+                        {/* 상단 서브 카피 */}
+                        <div className="relative z-10 space-y-2">
+                          <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[#C2A477] uppercase block">
+                            THE SOVEREIGN MINDSET
+                          </span>
+                          <p className="text-lg sm:text-xl md:text-2xl font-light text-[#EDE6DA] leading-relaxed break-keep">
+                            조급함을 내려놓고,<br />
+                            내 안의 그릇을 온전히 채워갈 때
+                          </p>
+                        </div>
+
+                        {/* 하단 메인 타이틀 */}
+                        <div className="relative z-10 pt-6">
+                          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-white leading-tight break-keep">
+                            풍요를 끌어당기는<br />
+                            <span className="text-[#C2A477]">황금빛 풍요의 주권자</span>
+                          </p>
+                        </div>
+
+                        {/* 우측 연꽃 장식 심볼 */}
+                        <div className="absolute right-8 md:right-16 bottom-8 md:bottom-12 opacity-25 pointer-events-none text-[#C2A477]">
+                          <svg className="w-32 h-32 md:w-48 md:h-48" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1">
+                            <path d="M32 8 C30 18, 22 26, 12 28 C22 30, 30 38, 32 48 C34 38, 42 30, 52 28 C42 26, 34 18, 32 8 Z" fill="currentColor" fillOpacity="0.1" />
+                            <circle cx="32" cy="28" r="4" fill="currentColor" />
+                          </svg>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </Reveal>
