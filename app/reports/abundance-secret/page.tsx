@@ -52,7 +52,7 @@ const productData = {
 
   topBannerImage: '/image/abundance-secret/korean-hanbok-abundance.webp',
   heroImage: '/image/abundance-secret/korean-hanbok-abundance.webp',
-  overviewImage: '/image/abundance/a2.webp',
+  overviewImage: '/image/abundance-secret/golden-abundance.webp',
   recommendedImage: '/image/abundance/a3.webp',
   structureImage: '/image/abundance/a4.webp',
   premiumImage: '/image/abundance/a5.webp',
@@ -392,7 +392,8 @@ export default function AbundanceSecretPage() {
                       Problem Diagnosis & Resonance
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      &ldquo;당신이 밤낮없이 뼈를 갈아 넣어 일해도 <span className="text-[#C2A477]">돈이 모이지 않던 잔인한 진실</span>&rdquo;
+                      &ldquo;당신이 밤낮없이 뼈를 갈아 넣어 일해도<br />
+                      <span className="text-[#C2A477]">돈이 모이지 않던 잔인한 진실</span>&rdquo;
                     </h2>
                   </div>
 
@@ -430,15 +431,15 @@ export default function AbundanceSecretPage() {
                       <div className="space-y-3">
                         <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-elegant font-bold text-[#C2A477] leading-[1.4] flex items-center gap-2.5 break-keep">
                           <AlertTriangle className="w-6 h-6 text-[#947852] shrink-0" />
-                          나의 재정 누수 5대 저주 체크리스트
+                          나의 재정 누수 체크리스트
                         </h3>
 
                         <div className="space-y-2.5">
                           {[
-                            "통장에 돈이 조금 모이면 귀신같이 사고나 지출로 빠져나간다 (누수형 저주)",
-                            "내 지식과 상품의 가격을 당당히 올리지 못하고 깎아준다 (구걸형 저주)",
-                            "계좌에서 돈이 빠져나갈 때 가슴이 조이고 숨이 턱 막힌다 (망령형 저주)",
-                            "큰돈이 생기면 왠지 모를 불안감과 죄책감이 든다 (원죄형 저주)",
+                            "통장에 돈이 조금 모이면 귀신같이 사고나 지출로 빠져나간다",
+                            "내 지식과 상품의 가격을 당당히 올리지 못하고 깎아준다",
+                            "계좌에서 돈이 빠져나갈 때 가슴이 조이고 숨이 턱 막힌다",
+                            "큰돈이 생기면 왠지 모를 불안감과 죄책감이 든다",
                             "남이 돈 번 소식을 들으면 속으로는 박탈감이 치민다"
                           ].map((curse, idx) => (
                             <div 
@@ -530,8 +531,8 @@ export default function AbundanceSecretPage() {
                   <div className="lg:col-span-5 w-full order-2 flex flex-col justify-center">
                     <div className="group relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40">
                       <Image
-                        src={productData.overviewImage}
-                        alt="풍요비책 풍요 의식 회복 비주얼"
+                        src="/image/abundance-secret/golden-abundance.webp"
+                        alt="풍요비책 부의 그릇 비주얼"
                         fill
                         sizes="(max-width: 1024px) 100vw, 40vw"
                         className="object-cover"

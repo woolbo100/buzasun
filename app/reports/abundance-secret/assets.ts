@@ -26,15 +26,15 @@ export const abundanceSecretAssets: Record<string, AbundanceSecretAssetItem> = {
     description: 'baekdohwa-abundance-book-set.webp'
   },
 
-  // 2. Pain: 윈도우 95 에러 및 텅 빈 통장 비주얼
+  // 2. Pain: 깨진 그릇의 잔혹한 굴레 (3:4)
   pain: {
     id: 'pain',
-    src: 'poverty_filter_placeholder.png',
-    alt: '윈도우 95 에러 및 텅 빈 통장 비주얼',
-    aspectRatio: 'aspect-[4/3]',
-    objectFit: 'contain',
-    placeholderLabel: '윈도우 95 에러 및 텅 빈 통장 비주얼',
-    description: 'poverty_filter_placeholder.png'
+    src: '/image/abundance-secret/broken-wealth-vessel.webp',
+    alt: '아무리 퍼부어도 채워지지 않던, 깨진 그릇의 잔혹한 굴레',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'cover',
+    placeholderLabel: '깨진 그릇의 잔혹한 굴레',
+    description: 'broken-wealth-vessel.webp'
   },
 
   // 3. Book 1: 풍요비책 본편 표지
