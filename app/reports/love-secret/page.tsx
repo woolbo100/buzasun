@@ -225,28 +225,30 @@ export default function LoveSecretEbookPage() {
         brightCenter={false}
         overlay={
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 좌측 상단 은은한 로즈 퍼플 라이트 앰비언트 (색온도를 부드럽게 조정) */}
+            {/* 1. 상단/중앙 신비로운 더스티 로즈 퍼플 라이트 오라 (풍요비책과 동일 구조로 전체 입체감과 질감 보존) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
-                  radial-gradient(ellipse 75% 65% at 15% 20%, rgba(84, 55, 82, 0.16) 0%, rgba(73, 48, 71, 0.06) 60%, transparent 85%)
+                  radial-gradient(ellipse 90% 55% at 50% 12%, rgba(95, 60, 92, 0.42) 0%, rgba(73, 48, 71, 0.18) 55%, transparent 85%),
+                  radial-gradient(circle 700px at 80% 20%, rgba(85, 54, 82, 0.25) 0%, transparent 70%),
+                  radial-gradient(circle 600px at 20% 60%, rgba(73, 48, 71, 0.20) 0%, transparent 70%)
                 `,
               }}
             />
 
-            {/* 2. 좌->우 더스티 로즈 퍼플(#493047) 미세 그라데이션 (15~20%의 아주 은은한 투명도로 왼쪽 말린 장미빛 + 오른쪽 기존 퍼플 보존) */}
+            {/* 2. 메인 더스티 로즈 퍼플(#493047) 수직 그라데이션 (배경 전체에 부드러운 로즈빛과 퍼플이 자연스럽게 퍼짐) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
                   linear-gradient(
-                    90deg,
-                    rgba(73, 48, 71, 0.20) 0%,
-                    rgba(73, 48, 71, 0.15) 25%,
-                    rgba(73, 48, 71, 0.07) 55%,
-                    rgba(73, 48, 71, 0.02) 80%,
-                    rgba(73, 48, 71, 0) 100%
+                    180deg,
+                    rgba(73, 48, 71, 0.65) 0%,
+                    rgba(85, 54, 82, 0.70) 22%,
+                    rgba(73, 48, 71, 0.78) 52%,
+                    rgba(55, 34, 53, 0.84) 80%,
+                    rgba(32, 18, 31, 0.92) 100%
                   )
                 `,
               }}

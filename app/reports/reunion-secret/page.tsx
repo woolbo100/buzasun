@@ -172,29 +172,30 @@ export default function ReunionSecretPage() {
         brightCenter={false}
         overlay={
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 좌측 은은한 딥 플럼 앰비언트 글로우 (자연스러운 입체감과 부드러운 시작) */}
+            {/* 1. 상단/중앙 신비로운 딥 플럼 버건디 라이트 오라 (풍요비책과 동일 구조로 전체 입체감과 질감 보존) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
-                  radial-gradient(ellipse 70% 60% at 15% 25%, rgba(56, 31, 50, 0.40) 0%, rgba(56, 31, 50, 0.15) 60%, transparent 90%),
-                  radial-gradient(ellipse 60% 70% at 10% 70%, rgba(42, 22, 38, 0.35) 0%, transparent 80%)
+                  radial-gradient(ellipse 90% 55% at 50% 12%, rgba(78, 40, 69, 0.45) 0%, rgba(56, 31, 50, 0.20) 55%, transparent 85%),
+                  radial-gradient(circle 700px at 80% 20%, rgba(68, 36, 61, 0.28) 0%, transparent 70%),
+                  radial-gradient(circle 600px at 20% 60%, rgba(56, 31, 50, 0.22) 0%, transparent 70%)
                 `,
               }}
             />
 
-            {/* 2. 좌->우 딥 플럼 버건디(#381F32) 그라데이션 (왼쪽은 차분한 딥 플럼, 오른쪽으로 갈수록 기존 퍼플이 온전히 드러남) */}
+            {/* 2. 메인 딥 플럼 버건디(#381F32) 수직 그라데이션 (배경 전체에 깊은 플럼빛과 버건디가 자연스럽게 퍼짐) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
                   linear-gradient(
-                    90deg,
-                    rgba(56, 31, 50, 0.48) 0%,
-                    rgba(56, 31, 50, 0.36) 25%,
-                    rgba(56, 31, 50, 0.16) 55%,
-                    rgba(56, 31, 50, 0.04) 75%,
-                    rgba(56, 31, 50, 0) 100%
+                    180deg,
+                    rgba(56, 31, 50, 0.70) 0%,
+                    rgba(68, 36, 61, 0.75) 22%,
+                    rgba(56, 31, 50, 0.82) 52%,
+                    rgba(40, 20, 36, 0.88) 80%,
+                    rgba(20, 10, 18, 0.94) 100%
                   )
                 `,
               }}
