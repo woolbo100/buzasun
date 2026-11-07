@@ -37,37 +37,37 @@ export const abundanceSecretAssets: Record<string, AbundanceSecretAssetItem> = {
     description: 'broken-wealth-vessel.webp'
   },
 
-  // 3. Book 1: 풍요비책 본편 표지
+  // 3. Book 1: 풍요비책 본편 표지 (3:4 목업)
   book1: {
     id: 'book1',
-    src: 'book1_abundance_placeholder.png',
-    alt: '풍요비책 본편 표지',
+    src: '/image/abundance-secret/abundance-secret-main-book-mockup.webp',
+    alt: '《풍요비책》 본편 목업 이미지',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
     placeholderLabel: 'Book 1. [본편] 풍요비책 완전판 표지',
-    description: 'book1_abundance_placeholder.png'
+    description: 'abundance-secret-main-book-mockup.webp'
   },
 
-  // 4. Book 2: 정화와 각성의 서 표지
+  // 4. Book 2: 정화와 각성의 서 표지 (3:4 목업)
   workbook: {
     id: 'workbook',
-    src: 'book2_workbook_placeholder.png',
-    alt: '정화와 각성의 서 표지',
+    src: '/image/abundance-secret/abundance-cleansing-awakening-mockup.webp',
+    alt: '《정화와 각성의 서》 실전 워크북 목업 이미지',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
     placeholderLabel: 'Book 2. [실전 워크북] 정화와 각성의 서 표지',
-    description: 'book2_workbook_placeholder.png'
+    description: 'abundance-cleansing-awakening-mockup.webp'
   },
 
-  // 5. Book 3: 풍요의 파동 표지
+  // 5. Book 3: 풍요의 파동 표지 (3:4 목업)
   wave: {
     id: 'wave',
-    src: 'book3_wave_placeholder.png',
-    alt: '풍요의 파동 표지',
+    src: '/image/abundance-secret/abundance-energy-wave-mockup.webp',
+    alt: '《풍요의 파동》 특별 외전 목업 이미지',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
     placeholderLabel: 'Book 3. [특별 외전] 풍요의 파동 표지',
-    description: 'book3_wave_placeholder.png'
+    description: 'abundance-energy-wave-mockup.webp'
   },
 
   // 6. Bonus: 금옥만당부 부적 이미지

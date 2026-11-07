@@ -1375,9 +1375,9 @@ export default function AbundanceSecretPage() {
             <EmeraldCloudDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                [추가 영역 5] 3종 역할 요약 카드 (Step 1 · 원리, Step 2 · 전략, Step 3 · 실천)
+                Section 4. Product Showcase — 3종 올인원 세트 상세 해부
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-14 text-left w-full max-w-[1280px] mx-auto">
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto break-keep">
                   <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
@@ -1392,8 +1392,24 @@ export default function AbundanceSecretPage() {
                   </p>
                 </div>
 
-                {/* 3단계 핵심 역할 카드 3개 */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left items-stretch">
+                {/* 3종 올인원 세트 목업 이미지 (연애비급 규격과 100% 매칭되는 전체 가로 와이드 컷) */}
+                <div className="mb-10 md:mb-14">
+                  <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+                    <div className="relative w-full">
+                      <Image
+                        src="/image/abundance-secret/abundance-secret-3book-collection.webp"
+                        alt="풍요비책 3종 올인원 세트 패키지 목업: 풍요비책 완전판, 정화와 각성의 서, 풍요의 파동"
+                        width={1671}
+                        height={941}
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        className="w-full h-auto object-contain block"
+                        priority
+                      />
+                    </div>
+                  </div>
+
+                  {/* 3단계 핵심 역할 카드 3개 */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left mt-8 items-stretch">
                   {/* Book 1 */}
                   <div
                     className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
@@ -1469,15 +1485,26 @@ export default function AbundanceSecretPage() {
                     </div>
                   </div>
                 </div>
-              </Reveal>
-            </section>
+              </div>
 
-            {/* ═══════════════════════════════════════════════════════════════
-                Product Showcase — 3종 올인원 세트 상세 해부
-                (풍요비책 구성 목차를 Book 1 본편 상세 소개 안으로 통합!)
-               ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1280px] mx-auto">
-              <Reveal>
+                {/* 3종 올인원 세트 상세 해부 서브헤더 (연애비급과 동일한 간격 및 풍요비책 테마 컬러) */}
+                <div className="text-center max-w-3xl mx-auto mb-16 pt-16 md:pt-24 lg:pt-28 break-keep">
+                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                    3-in-1 All-in-One Package
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] mb-3">
+                    3종 올인원 세트 <span className="text-[#C2A477]">상세 해부</span>
+                  </h2>
+                  <div className="space-y-1.5">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.5]">
+                      본편부터 실전 워크북, 특별 외전까지
+                    </p>
+                    <p className="text-[18px] md:text-[20px] text-[#C2A477] font-bold font-elegant tracking-wide leading-[1.5]">
+                      3종 · 총 175페이지 PDF 패키지
+                    </p>
+                  </div>
+                </div>
+
                 <div className="space-y-12">
                   {/* Book 1. [본편] 《풍요비책(豊饒秘策) 완전판》 */}
                   <div className="gungjung-glass p-8 md:p-12 border-[#947852]/30 rounded-3xl relative overflow-hidden"
@@ -1486,8 +1513,17 @@ export default function AbundanceSecretPage() {
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                     }}>
                     <div className="grid lg:grid-cols-12 gap-10 items-start">
-                      <div className="lg:col-span-4">
+                      <div className="lg:col-span-4 w-full">
                         <HybridImageSlot assetKey="book1" className="w-full aspect-[3/4]" />
+                        {/* 이미지 바로 아래 원리바이블-본편 및 페이지 수 안내 */}
+                        <div className="mt-4 md:mt-5 text-center space-y-1">
+                          <p className="text-sm md:text-[15px] text-[#C2A477] font-medium tracking-wide">
+                            원리바이블-본편
+                          </p>
+                          <p className="text-sm md:text-[15px] text-[#EAE4D8] font-light tracking-wide">
+                            PDF 전자책 · <strong className="font-bold text-[#C2A477]">96</strong>페이지
+                          </p>
+                        </div>
                       </div>
 
                       <div className="lg:col-span-8 space-y-6 break-keep">
@@ -1620,8 +1656,12 @@ export default function AbundanceSecretPage() {
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                     }}>
                     <div className="grid lg:grid-cols-12 gap-10 items-start">
-                      <div className="lg:col-span-4">
+                      <div className="lg:col-span-4 w-full">
                         <HybridImageSlot assetKey="workbook" className="w-full aspect-[3/4]" />
+                        {/* 이미지 바로 아래 페이지 수 안내 (16~20px 여백, 앤티크골드 컬러, 숫자 강조) */}
+                        <p className="mt-4 md:mt-5 text-center text-sm md:text-[15px] text-[#EAE4D8] font-light tracking-wide">
+                          PDF 전자책 · <strong className="font-bold text-[#C2A477]">54</strong>페이지
+                        </p>
                       </div>
 
                       <div className="lg:col-span-8 space-y-6 break-keep">
@@ -1737,8 +1777,12 @@ export default function AbundanceSecretPage() {
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
                     }}>
                     <div className="grid lg:grid-cols-12 gap-10 items-start">
-                      <div className="lg:col-span-4">
+                      <div className="lg:col-span-4 w-full">
                         <HybridImageSlot assetKey="wave" className="w-full aspect-[3/4]" />
+                        {/* 이미지 바로 아래 페이지 수 안내 (16~20px 여백, 앤티크골드 컬러, 숫자 강조) */}
+                        <p className="mt-4 md:mt-5 text-center text-sm md:text-[15px] text-[#EAE4D8] font-light tracking-wide">
+                          PDF 전자책 · <strong className="font-bold text-[#C2A477]">25</strong>페이지
+                        </p>
                       </div>
 
                       <div className="lg:col-span-8 space-y-6 break-keep">
@@ -2007,7 +2051,7 @@ export default function AbundanceSecretPage() {
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
                 <div className="lg:col-span-5 relative w-full min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden flex items-center justify-center">
                   <Image
-                    src="/image/abundance-secret/abundance-secret-three-book-collection.webp"
+                    src="/image/abundance-secret/abundance-secret-three-book-collection.webp?v=2"
                     alt="풍요비책 3종 올인원 세트 컬렉션"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
