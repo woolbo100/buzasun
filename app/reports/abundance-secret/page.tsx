@@ -461,7 +461,7 @@ export default function AbundanceSecretPage() {
                   </div>
 
                   {/* 마음공부 / 끌어당김 역설 공감 섹션 */}
-                  <div className="!my-[64px] sm:!my-[72px] md:!my-[120px] w-full max-w-[1100px] mx-auto px-4 sm:px-6">
+                  <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] !mb-[56px] md:!mb-[96px] w-full max-w-[1280px] mx-auto">
                     {/* 상단 영문 섹션 라벨 및 헤더 */}
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
                       <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
@@ -471,7 +471,7 @@ export default function AbundanceSecretPage() {
                         &ldquo;확언을 100번씩 쓰고 &lsquo;끌어당김&rsquo;을 간절히 외쳤는데…<br />
                         <span className="text-[#C2A477]">왜 통장은 더 바닥나고 마음은 쫓겼을까요?</span>&rdquo;
                       </h3>
-                      <p className="text-[16px] md:text-[18px] text-[#EAE4D8] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
+                      <p className="text-[17px] md:text-[18px] text-[#EAE4D8] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
                         당신의 정성이 부족해서가 아닙니다. 풍요를 바라는 마음 이면에 도사린<br className="hidden sm:inline" />
                         ‘간절한 결핍’이 무의식의 톱니바퀴를 거꾸로 돌리고 있었기 때문입니다.
                       </p>
@@ -545,18 +545,29 @@ export default function AbundanceSecretPage() {
 
                     {/* 아래 섹션으로 이어주는 딥 그린 글라스 브릿지 박스 */}
                     <div 
-                      className="mt-10 md:mt-12 text-center p-7 sm:p-9 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#947852]/35 relative overflow-hidden break-keep"
+                      className="mt-10 md:mt-12 text-center p-8 sm:p-10 md:p-12 rounded-2xl md:rounded-3xl gungjung-glass border border-[#947852]/35 relative overflow-hidden break-keep"
                       style={{
                         background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.40) 0%, rgba(18, 38, 32, 0.92) 100%)',
                         boxShadow: '0 10px 36px rgba(0, 0, 0, 0.4)'
                       }}
                     >
-                      <p className="text-[#FAF7F2] text-[16px] md:text-[18px] font-elegant leading-[1.8] break-keep">
+                      <p className="text-[#FAF7F2] text-[19px] sm:text-[21px] md:text-[24px] font-elegant leading-[1.6] break-keep">
                         금이 가 물이 새는 독에는, 아무리 화려한 황금빛 주문을 외워도 물이 차오르지 않습니다.<br />
-                        <strong className="text-[#C2A477] font-semibold block mt-1.5 md:mt-2">
+                        <strong className="text-[#C2A477] font-semibold block mt-2 md:mt-3">
                           이제 주문을 멈추고, 당신의 무의식 밑바닥 ‘그릇’부터 온전히 기워내야 할 때입니다.
                         </strong>
                       </p>
+                    </div>
+
+                    {/* 16:9 비주얼: 황금빛 흐름과 부의 그릇 */}
+                    <div className="mt-7 md:mt-12 w-full aspect-[16/9] relative rounded-[20px] overflow-hidden">
+                      <Image
+                        src="/image/abundance-secret/abundance-vessel-golden-flow.webp"
+                        alt="풍요비책 부의 그릇과 황금빛 흐름"
+                        fill
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        className="object-cover"
+                      />
                     </div>
                   </div>
                 </div>
@@ -570,8 +581,8 @@ export default function AbundanceSecretPage() {
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
                   <div className="lg:col-span-7 order-1 flex flex-col justify-between h-auto lg:h-full">
-                    <h3 className="text-center lg:text-left text-[22px] md:text-[28px] font-elegant font-bold text-[#C2A477] leading-[1.4] mb-6 break-keep">
-                      그토록 애쓰는 동안, 내 &lsquo;부의 그릇&rsquo;은 왜 비어 있었을까요?
+                    <h3 className="text-center lg:text-left text-[20px] sm:text-[23px] md:text-[25px] lg:text-[26px] xl:text-[28px] font-elegant font-bold text-[#C2A477] leading-[1.4] mb-6 break-keep lg:whitespace-nowrap">
+                      그토록 애쓰는 동안, 내 &lsquo;부의 그릇&rsquo;은 채워졌나요?
                     </h3>
 
                     <div
@@ -620,7 +631,10 @@ export default function AbundanceSecretPage() {
                             가격표와 남들의 눈치를 살피는 동안,<br />
                             내 가치와 기준은 자꾸 뒤로 밀리지 않았나요?
                           </p>
-                          <div className="p-4 sm:p-5 rounded-xl border border-[#947852]/25 bg-[#789E90]/32 border border-[#CBEBDE]/35 text-[#FAF7F2] font-normal leading-[1.75]">
+                          <div 
+                            className="p-4 sm:p-5 rounded-xl border border-[#CBEBDE]/35 shadow-[0_8px_24px_rgba(0,0,0,0.25)] backdrop-blur-sm text-[#FAF7F2] font-normal leading-[1.75]"
+                            style={{ background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.90) 100%)' }}
+                          >
                             《풍요비책》에서 말하는 ‘그릇’은<br className="hidden sm:inline" />
                             돈을 쫓아가는 삶이 아니라 <span className="text-[#AA8A57] font-semibold">돈이 스스로 흘러들어 머무는 풍요의 의식(Container)</span>입니다.
                           </div>
