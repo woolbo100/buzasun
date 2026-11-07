@@ -470,6 +470,56 @@ export default function AbundanceSecretPage() {
                     </div>
                   </div>
 
+                  {/* ═══════════════════════════════════════════════════════════════
+                      [신규 추가] 공감 영역 — 열심히 살아왔는데, 왜 돈 앞에서는 늘 불안할까요?
+                      (뉴스/체크리스트 직후 배치: 좌측 공감 문구 55% + 우측 카드값 불안 이미지 45%)
+                     ═══════════════════════════════════════════════════════════════ */}
+                  <div className="!mt-16 sm:!mt-20 md:!mt-28 pt-10 md:pt-14 border-t border-[#947852]/20">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                      {/* 좌측 55% 공감 문구 */}
+                      <div className="lg:col-span-7 space-y-5 text-left break-keep">
+                        <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                          THE MOMENT OF ANXIETY
+                        </span>
+                        <h3 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-elegant font-bold text-white leading-[1.38] break-keep">
+                          열심히 살아왔는데,<br />
+                          <span className="text-[#C2A477]">왜 돈 앞에서는 늘 불안할까요?</span>
+                        </h3>
+                        <div className="space-y-3.5 text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                          <p>
+                            월급이 들어와도 마음이 놓이지 않고,<br />
+                            카드값 문자를 보는 순간 다시 조급해지는 마음.
+                          </p>
+                          <p>
+                            열심히 일하고 아껴 쓰면서도,<br />
+                            어쩐지 돈 앞에서는 늘 작아지는 나를 발견합니다.
+                          </p>
+                        </div>
+                        <div className="pt-6 border-t border-[#947852]/25 mt-6">
+                          <p className="text-[#FAF7F2] font-elegant font-medium text-[16px] sm:text-[17px] md:text-[19px] leading-[1.75] break-keep">
+                            어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
+                            더 열심히 버티는 방법이 아니라<br />
+                            <span className="text-[#C2A477] font-semibold">돈을 대하는 내 마음부터 돌아보는 시간</span>인지도 모릅니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* 우측 45% 카드값 이미지 (3:4 비율) */}
+                      <div className="lg:col-span-5 w-full flex flex-col items-center">
+                        <div className="relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/35 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-black/40 flex items-center justify-center">
+                          <Image
+                            src="/image/abundance-secret/abundance-credit-card-anxiety.webp"
+                            alt="열심히 살아왔는데, 왜 돈 앞에서는 늘 불안할까요? - 카드값과 경제적 불안 공감"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 45vw"
+                            className="object-contain"
+                            priority
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* 마음공부 / 끌어당김 역설 공감 섹션 */}
                   <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
                     {/* 상단 영문 섹션 라벨 및 헤더 */}
@@ -880,155 +930,6 @@ export default function AbundanceSecretPage() {
               </Reveal>
             </section>
 
-            {/* ═══════════════════════════════════════════════════════════════
-                [신규 추가] ✦ 《풍요비책》은 무엇이 다른가? (차별화 카드 3종)
-               ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
-              <Reveal>
-                <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-14 break-keep">
-                  <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
-                    CORE DIFFERENTIATION
-                  </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4]">
-                    <span className="text-[#C2A477] mr-1.5 md:mr-2">✦</span>
-                    《풍요비책》은 무엇이 다른가?
-                  </h2>
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
-                    추상적인 위로나 억지 긍정을 넘어, 무의식의 결핍 코드를 소각하고 현실의 부로 연결하는 3대 핵심 차별화
-                  </p>
-                </div>
-
-                {/* 3개의 카드: PC 3열, 모바일 1열 */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7 items-stretch">
-                  {/* CARD 01 | 무의식의 정화 */}
-                  <div
-                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#C2A477]/30 shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D8B878]/60 hover:shadow-[0_16px_40px_rgba(216,184,120,0.18)] group"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(46, 26, 38, 0.72) 0%, rgba(20, 12, 24, 0.88) 100%)'
-                    }}
-                  >
-                    <div>
-                      {/* 카드 상단: 작은 아이콘 + 라벨/제목 */}
-                      <div className="pb-5 mb-5 border-b border-[#C2A477]/20 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-xl bg-[#C2A477]/15 border border-[#C2A477]/35 flex items-center justify-center text-[#EAD6B0] shadow-sm group-hover:border-[#EAD6B0]/60 transition-colors">
-                            <RotateCcw className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <span className="text-[11px] font-mono tracking-widest text-[#C2A477]/80 uppercase block">
-                              CARD 01
-                            </span>
-                            <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
-                              무의식의 정화
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* 본문 영역: 헤드라인(샴페인골드 강조) + 상세 설명(부드러운 아이보리) */}
-                      <div className="space-y-4">
-                        <p className="text-[16px] md:text-[17px] font-bold text-[#EAD6B0] leading-[1.55] break-keep min-h-[48px] md:min-h-[52px]">
-                          뜬구름 잡는 위로가 아닌 ‘무의식 운영체제(OS)의 포맷’입니다.
-                        </p>
-                        <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
-                          <p>
-                            “나는 부자다”를 외치며 불안을 억누르는 억지 긍정이 아닙니다.
-                          </p>
-                          <p>
-                            왜 통장에 돈이 들어올 때마다 가슴이 조이고 예기치 못한 지출로 새어나갔는지, 그 근원적 ‘결핍 코드’를 뇌과학과 무의식 역학으로 분해하여 소각합니다.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* CARD 02 | 풍요의 현실화 */}
-                  <div
-                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#C2A477]/30 shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D8B878]/60 hover:shadow-[0_16px_40px_rgba(216,184,120,0.18)] group"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(46, 26, 38, 0.72) 0%, rgba(20, 12, 24, 0.88) 100%)'
-                    }}
-                  >
-                    <div>
-                      {/* 카드 상단: 작은 아이콘 + 라벨/제목 */}
-                      <div className="pb-5 mb-5 border-b border-[#C2A477]/20 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-xl bg-[#C2A477]/15 border border-[#C2A477]/35 flex items-center justify-center text-[#EAD6B0] shadow-sm group-hover:border-[#EAD6B0]/60 transition-colors">
-                            <Coins className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <span className="text-[11px] font-mono tracking-widest text-[#C2A477]/80 uppercase block">
-                              CARD 02
-                            </span>
-                            <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
-                              풍요의 현실화
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* 본문 영역: 헤드라인(샴페인골드 강조) + 상세 설명(부드러운 아이보리) */}
-                      <div className="space-y-4">
-                        <p className="text-[16px] md:text-[17px] font-bold text-[#EAD6B0] leading-[1.55] break-keep min-h-[48px] md:min-h-[52px]">
-                          4차원에 이미 완성된 풍요를 ‘3차원 물질’로 인출합니다.
-                        </p>
-                        <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
-                          <p>
-                            상상과 공상에 머물지 않습니다.
-                          </p>
-                          <p>
-                            내 타고난 기운(선천코드)에 맞는 부의 경로를 파악하고, 손으로 직접 적고 하나씩 지워나가는 물리적 소거법을 통해 머릿속 에너지를 통장의 숫자로 실체화합니다.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* CARD 03 | 평생의 비밀 자산 */}
-                  <div
-                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#C2A477]/30 shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D8B878]/60 hover:shadow-[0_16px_40px_rgba(216,184,120,0.18)] group"
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(46, 26, 38, 0.72) 0%, rgba(20, 12, 24, 0.88) 100%)'
-                    }}
-                  >
-                    <div>
-                      {/* 카드 상단: 작은 아이콘 + 라벨/제목 */}
-                      <div className="pb-5 mb-5 border-b border-[#C2A477]/20 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-xl bg-[#C2A477]/15 border border-[#C2A477]/35 flex items-center justify-center text-[#EAD6B0] shadow-sm group-hover:border-[#EAD6B0]/60 transition-colors">
-                            <ShieldCheck className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <span className="text-[11px] font-mono tracking-widest text-[#C2A477]/80 uppercase block">
-                              CARD 03
-                            </span>
-                            <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
-                              평생의 비밀 자산
-                            </h3>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* 본문 영역: 헤드라인(샴페인골드 강조) + 상세 설명(부드러운 아이보리) */}
-                      <div className="space-y-4">
-                        <p className="text-[16px] md:text-[17px] font-bold text-[#EAD6B0] leading-[1.55] break-keep min-h-[48px] md:min-h-[52px]">
-                          평생 곁에 두고 새어나가는 부를 지키는 ‘평생의 비밀 자산’입니다.
-                        </p>
-                        <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
-                          <p>
-                            한 번 읽고 덮는 책이 아닙니다.
-                          </p>
-                          <p>
-                            재정적 위기나 가격표 앞에서 작아질 때마다 스마트폰으로 즉시 꺼내보며, 내 부의 그릇을 단단하게 재정렬하는 가장 은밀하고 강력한 무기입니다.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
             <EmeraldCloudDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
@@ -1043,13 +944,13 @@ export default function AbundanceSecretPage() {
                     boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                   }}
                 >
-                  <div className="max-w-3xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
+                  <div className="max-w-4xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
                     <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
                       TRANSFORMATION
                     </span>
-                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      &ldquo;열심히 사는데 왜 늘 통장은 마를까?<br />
-                      <span className="text-[#C2A477]">결핍의 무의식을 지우면 돈의 흐름이 반전됩니다.</span>&rdquo;
+                    <h3 className="text-[19px] sm:text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                      열심히 사는데 왜 늘 통장은 마를까?<br />
+                      <span className="text-[#C2A477] inline-block whitespace-nowrap">결핍의 무의식을 지우면 돈의 흐름이 달라집니다.</span>
                     </h3>
                     <p className="text-[17px] md:text-[18px] text-[#F0EBE2] font-normal leading-[1.8] break-keep">
                       돈을 쫓으며 아등바등하던 삶에서, 부가 스스로 머무는 풍요의 그릇으로 전환됩니다.
@@ -1068,7 +969,7 @@ export default function AbundanceSecretPage() {
                         beforeTitle: "몸을 갈아 넣어 일해도 수입의 한계가 있다",
                         beforeSub: "노동 시간과 소득을 1:1로 맞바꾸는 고갈형 노동자 마인드",
                         afterTitle: "나만의 고유 가치를 자산화·시스템화한다",
-                        afterSub: "내가 잠든 시간에도 작동하는 지식/콘텐츠 수익 파이프라인을 구축합니다."
+                        afterSub: "내가 잠든 시간에도 작동하는 수익 파이프라인을 구축합니다."
                       },
                       {
                         beforeTitle: "목돈이 생겨도 예상치 못한 일로 빠져나간다",
@@ -2280,6 +2181,161 @@ export default function AbundanceSecretPage() {
                 </div>
               </div>
             </div>
+
+            <EmeraldCloudDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                ✦ 《풍요비책》은 무엇이 다른가? (차별화 카드 3종)
+                (전자책 3종 소개 완료 직후 배치)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-14 break-keep">
+                  <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                    CORE DIFFERENTIATION
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4]">
+                    <span className="text-[#C2A477] mr-1.5 md:mr-2">✦</span>
+                    《풍요비책》은 무엇이 다른가?
+                  </h2>
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
+                    추상적인 위로나 억지 긍정을 넘어, 무의식의 결핍 코드를 소각하고 현실의 부로 연결하는 3대 핵심 차별화
+                  </p>
+                </div>
+
+                {/* 3개의 카드: PC 3열, 모바일 1열 */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7 items-stretch">
+                  {/* CARD 01 | 무의식의 정화 */}
+                  <div
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/35 shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D8B878]/60 hover:shadow-[0_16px_40px_rgba(84,127,117,0.22)] group"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(23, 63, 59, 0.78) 0%, rgba(12, 33, 29, 0.92) 100%)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                    }}
+                  >
+                    <div>
+                      {/* 카드 상단: 작은 아이콘 + 라벨/제목 */}
+                      <div className="pb-5 mb-5 border-b border-[#947852]/25 flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-[#8CD3B6]/20 border border-[#CBEBDE]/35 flex items-center justify-center text-[#EAD6B0] shadow-sm group-hover:border-[#EAD6B0]/60 transition-colors">
+                            <RotateCcw className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <span className="text-[11px] font-mono tracking-widest text-[#C2A477]/80 uppercase block">
+                              CARD 01
+                            </span>
+                            <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
+                              무의식의 정화
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 본문 영역: 헤드라인(샴페인골드 강조) + 상세 설명(부드러운 아이보리) */}
+                      <div className="space-y-4">
+                        <p className="text-[16px] md:text-[17px] font-bold text-[#EAD6B0] leading-[1.55] break-keep min-h-[48px] md:min-h-[52px]">
+                          뜬구름 잡는 위로가 아닌 ‘무의식 운영체제(OS)의 포맷’입니다.
+                        </p>
+                        <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
+                          <p>
+                            “나는 부자다”를 외치며 불안을 억누르는 억지 긍정이 아닙니다.
+                          </p>
+                          <p>
+                            왜 통장에 돈이 들어올 때마다 가슴이 조이고 예기치 못한 지출로 새어나갔는지, 그 근원적 ‘결핍 코드’를 뇌과학과 무의식 역학으로 분해하여 소각합니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CARD 02 | 풍요의 현실화 */}
+                  <div
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/35 shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D8B878]/60 hover:shadow-[0_16px_40px_rgba(84,127,117,0.22)] group"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(23, 63, 59, 0.78) 0%, rgba(12, 33, 29, 0.92) 100%)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                    }}
+                  >
+                    <div>
+                      {/* 카드 상단: 작은 아이콘 + 라벨/제목 */}
+                      <div className="pb-5 mb-5 border-b border-[#947852]/25 flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-[#8CD3B6]/20 border border-[#CBEBDE]/35 flex items-center justify-center text-[#EAD6B0] shadow-sm group-hover:border-[#EAD6B0]/60 transition-colors">
+                            <Coins className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <span className="text-[11px] font-mono tracking-widest text-[#C2A477]/80 uppercase block">
+                              CARD 02
+                            </span>
+                            <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
+                              풍요의 현실화
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 본문 영역: 헤드라인(샴페인골드 강조) + 상세 설명(부드러운 아이보리) */}
+                      <div className="space-y-4">
+                        <p className="text-[16px] md:text-[17px] font-bold text-[#EAD6B0] leading-[1.55] break-keep min-h-[48px] md:min-h-[52px]">
+                          4차원에 이미 완성된 풍요를 ‘3차원 물질’로 인출합니다.
+                        </p>
+                        <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
+                          <p>
+                            상상과 공상에 머물지 않습니다.
+                          </p>
+                          <p>
+                            내 타고난 기운(선천코드)에 맞는 부의 경로를 파악하고, 손으로 직접 적고 하나씩 지워나가는 물리적 소거법을 통해 머릿속 에너지를 통장의 숫자로 실체화합니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CARD 03 | 평생의 비밀 자산 */}
+                  <div
+                    className="p-7 sm:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/35 shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D8B878]/60 hover:shadow-[0_16px_40px_rgba(84,127,117,0.22)] group"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(23, 63, 59, 0.78) 0%, rgba(12, 33, 29, 0.92) 100%)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                    }}
+                  >
+                    <div>
+                      {/* 카드 상단: 작은 아이콘 + 라벨/제목 */}
+                      <div className="pb-5 mb-5 border-b border-[#947852]/25 flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-[#8CD3B6]/20 border border-[#CBEBDE]/35 flex items-center justify-center text-[#EAD6B0] shadow-sm group-hover:border-[#EAD6B0]/60 transition-colors">
+                            <ShieldCheck className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <span className="text-[11px] font-mono tracking-widest text-[#C2A477]/80 uppercase block">
+                              CARD 03
+                            </span>
+                            <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
+                              평생의 비밀 자산
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 본문 영역: 헤드라인(샴페인골드 강조) + 상세 설명(부드러운 아이보리) */}
+                      <div className="space-y-4">
+                        <p className="text-[16px] md:text-[17px] font-bold text-[#EAD6B0] leading-[1.55] break-keep min-h-[48px] md:min-h-[52px]">
+                          평생 곁에 두고 새어나가는 부를 지키는 ‘평생의 비밀 자산’입니다.
+                        </p>
+                        <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
+                          <p>
+                            한 번 읽고 덮는 책이 아닙니다.
+                          </p>
+                          <p>
+                            재정적 위기나 가격표 앞에서 작아질 때마다 스마트폰으로 즉시 꺼내보며, 내 부의 그릇을 단단하게 재정렬하는 가장 은밀하고 강력한 무기입니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
 
             <EmeraldCloudDivider />
 
