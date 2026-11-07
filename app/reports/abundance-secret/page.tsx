@@ -196,7 +196,7 @@ export default function AbundanceSecretPage() {
   )
 
   return (
-    <main className="detail-page abundance-detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#0B2B22] pb-24 md:pb-0">
+    <main className="detail-page abundance-detail-page relative min-h-screen bg-[#0a0514] text-[#EAE4D8] font-sans selection:bg-[#FAF7F2] selection:text-[#0B2B22] pb-24 md:pb-0">
       <GlobalBackground 
         src="/image/love-code-bg.png" 
         brightCenter={false}
@@ -289,7 +289,7 @@ export default function AbundanceSecretPage() {
                     />
                   </div>
 
-                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3.5 break-keep">
+                  <div className="text-[16px] md:text-[18px] text-[#EAE4D8] leading-[1.8] font-normal space-y-3.5 break-keep">
                     <p>
                       부(富)는 바깥에서 쫓는 것이 아니라, 내 안의 결핍을 비워낼 때 비로소 흘러듭니다.
                     </p>
@@ -325,7 +325,7 @@ export default function AbundanceSecretPage() {
                           <span className="text-[#AA8A57]">내면에서 &apos;여는&apos; 것이다.</span>&rdquo;
                         </h2>
 
-                        <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.8] font-normal break-keep max-w-xl">
+                        <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal break-keep max-w-xl">
                           이를 악물고 일해도 통장이 비어 있던 진짜 이유. 무의식의 가난 바이러스를 소각하고 황금의 비밀코드를 깨우는 황금의 비밀서(秘密書)
                         </p>
 
@@ -357,8 +357,8 @@ export default function AbundanceSecretPage() {
                             className="py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] hover:brightness-110 order-1 sm:order-2 flex-1 sm:flex-initial"
                             style={{
                               background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
-                              border: '1.5px solid #E5C378',
-                              boxShadow: '0 0 22px rgba(229, 195, 120, 0.6), 0 4px 16px rgba(194, 164, 119, 0.45)'
+                              border: '1.2px solid #E5C378',
+                              boxShadow: '0 0 10px rgba(194, 164, 119, 0.35), 0 3px 10px rgba(0, 0, 0, 0.3)'
                             }}
                           >
                             <span>풍요비책 19,000원에 구매하기</span>
@@ -418,7 +418,7 @@ export default function AbundanceSecretPage() {
                     {/* 본문 텍스트 및 5대 저주 체크리스트 */}
                     <div className="lg:col-span-7 space-y-6 break-keep">
                       <div
-                        className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal p-6 sm:p-7 md:p-8 rounded-2xl border border-[#CBEBDE]/35 shadow-[0_8px_24px_rgba(0,0,0,0.3)] space-y-3.5 break-keep h-auto"
+                        className="text-[16px] md:text-[18px] text-[#EAE4D8] leading-[1.8] font-normal p-6 sm:p-7 md:p-8 rounded-2xl border border-[#CBEBDE]/35 shadow-[0_8px_24px_rgba(0,0,0,0.3)] space-y-3.5 break-keep h-auto"
                         style={{ background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.42) 0%, rgba(18, 38, 32, 0.90) 100%)' }}
                       >
                         <p>
@@ -461,57 +461,101 @@ export default function AbundanceSecretPage() {
                   </div>
 
                   {/* 마음공부 / 끌어당김 역설 공감 섹션 */}
-                  <div className="my-16 max-w-4xl mx-auto px-4">
-                    {/* 상단 골드 라벨 */}
-                    <div className="text-center mb-6">
-                      <span className="text-amber-400 text-xs tracking-widest font-semibold uppercase px-3 py-1 rounded-full border border-amber-400/30 bg-amber-950/20">
+                  <div className="mt-24 md:mt-28 mb-8 md:mb-12 w-full max-w-[1100px] mx-auto px-4 sm:px-6">
+                    {/* 상단 영문 섹션 라벨 및 헤더 */}
+                    <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
+                      <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
                         THE PARADOX OF ATTRACTION
                       </span>
-                      <h3 className="text-2xl md:text-3xl font-bold text-neutral-100 font-serif mt-3 leading-snug break-keep">
-                        “확언을 100번씩 쓰고 ‘끌어당김’을 간절히 외쳤는데…<br />
-                        <span className="text-amber-300">왜 통장은 더 바닥나고 마음은 쫓겼을까요?”</span>
+                      <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                        &ldquo;확언을 100번씩 쓰고 &lsquo;끌어당김&rsquo;을 간절히 외쳤는데…<br />
+                        <span className="text-[#C2A477]">왜 통장은 더 바닥나고 마음은 쫓겼을까요?</span>&rdquo;
                       </h3>
-                      <p className="text-neutral-400 text-sm mt-3 max-w-xl mx-auto leading-relaxed break-keep">
+                      <p className="text-[16px] md:text-[18px] text-[#EAE4D8] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
                         당신의 정성이 부족해서가 아닙니다. 풍요를 바라는 마음 이면에 도사린<br className="hidden sm:inline" />
                         ‘간절한 결핍’이 무의식의 톱니바퀴를 거꾸로 돌리고 있었기 때문입니다.
                       </p>
                     </div>
 
-                    {/* 3대 공감 카드 (기존 백도화 UI 스타일의 반투명 다크 카드) */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                    {/* 3대 공감 카드 (딥 에메랄드 글라스 스타일) */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {/* 카드 1 */}
-                      <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 backdrop-blur-sm hover:border-amber-500/40 transition-colors break-keep">
-                        <div className="text-amber-400/80 text-xs font-semibold mb-2">공감 01</div>
-                        <h4 className="text-neutral-100 font-bold text-base mb-2">확언 뒤에 남는 서늘한 불안</h4>
-                        <p className="text-neutral-400 text-xs leading-relaxed">
-                          “나는 부자다”를 외치면서도, 불쑥 날아오는 카드값 고지서 앞에서는 가슴이 쿵 내려앉는 괴리감과 죄책감을 겪지 않았나요?
-                        </p>
+                      <div 
+                        className="gungjung-glass p-7 md:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/30 relative overflow-hidden transition-all duration-300 hover:border-[#C2A477]/60 flex flex-col justify-between"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.35) 0%, rgba(18, 38, 32, 0.88) 100%)',
+                          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                        }}
+                      >
+                        <div>
+                          <div className="text-[#AA8A57] font-elegant font-semibold text-xs md:text-sm tracking-wider mb-2.5">
+                            공감 01
+                          </div>
+                          <h4 className="text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.4] break-keep">
+                            확언 뒤에 남는 서늘한 불안
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EAE4D8] leading-[1.7] font-normal break-keep">
+                            “나는 부자다”를 외치면서도, 불쑥 날아오는 카드값 고지서 앞에서는 가슴이 쿵 내려앉는 괴리감과 죄책감을 겪지 않았나요?
+                          </p>
+                        </div>
                       </div>
 
                       {/* 카드 2 */}
-                      <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 backdrop-blur-sm hover:border-amber-500/40 transition-colors break-keep">
-                        <div className="text-amber-400/80 text-xs font-semibold mb-2">공감 02</div>
-                        <h4 className="text-neutral-100 font-bold text-base mb-2">억지 긍정이 낳은 무의식의 역풍</h4>
-                        <p className="text-neutral-400 text-xs leading-relaxed">
-                          불안과 두려움을 ‘부정적인 감정’이라며 억누른 채 덮어두다 보니, 억압된 결핍이 현실에서 예기치 못한 지출로 터져 나왔습니다.
-                        </p>
+                      <div 
+                        className="gungjung-glass p-7 md:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/30 relative overflow-hidden transition-all duration-300 hover:border-[#C2A477]/60 flex flex-col justify-between"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.35) 0%, rgba(18, 38, 32, 0.88) 100%)',
+                          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                        }}
+                      >
+                        <div>
+                          <div className="text-[#AA8A57] font-elegant font-semibold text-xs md:text-sm tracking-wider mb-2.5">
+                            공감 02
+                          </div>
+                          <h4 className="text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.4] break-keep">
+                            억지 긍정이 낳은 무의식의 역풍
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EAE4D8] leading-[1.7] font-normal break-keep">
+                            불안과 두려움을 ‘부정적인 감정’이라며 억누른 채 덮어두다 보니, 억압된 결핍이 현실에서 예기치 못한 지출로 터져 나왔습니다.
+                          </p>
+                        </div>
                       </div>
 
                       {/* 카드 3 */}
-                      <div className="bg-neutral-900/60 border border-neutral-800 rounded-2xl p-6 backdrop-blur-sm hover:border-amber-500/40 transition-colors break-keep">
-                        <div className="text-amber-400/80 text-xs font-semibold mb-2">공감 03</div>
-                        <h4 className="text-neutral-100 font-bold text-base mb-2">‘간절함’이라는 이름의 결핍 주파수</h4>
-                        <p className="text-neutral-400 text-xs leading-relaxed">
-                          간절함은 역설적으로 “지금 내게 돈이 없다”는 것을 가장 크게 증명하는 신호입니다. 쫓아가는 마음에는 결코 부가 머물지 않습니다.
-                        </p>
+                      <div 
+                        className="gungjung-glass p-7 md:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/30 relative overflow-hidden transition-all duration-300 hover:border-[#C2A477]/60 flex flex-col justify-between"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.35) 0%, rgba(18, 38, 32, 0.88) 100%)',
+                          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                        }}
+                      >
+                        <div>
+                          <div className="text-[#AA8A57] font-elegant font-semibold text-xs md:text-sm tracking-wider mb-2.5">
+                            공감 03
+                          </div>
+                          <h4 className="text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] mb-3 leading-[1.4] break-keep">
+                            ‘간절함’이라는 이름의 결핍 주파수
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EAE4D8] leading-[1.7] font-normal break-keep">
+                            간절함은 역설적으로 “지금 내게 돈이 없다”는 것을 가장 크게 증명하는 신호입니다. 쫓아가는 마음에는 결코 부가 머물지 않습니다.
+                          </p>
+                        </div>
                       </div>
                     </div>
 
-                    {/* 아래 섹션으로 이어주는 브릿지 박스 */}
-                    <div className="mt-8 text-center p-6 rounded-2xl bg-gradient-to-r from-amber-950/20 via-neutral-900/40 to-amber-950/20 border border-amber-500/20 break-keep">
-                      <p className="text-neutral-300 text-sm md:text-base font-serif leading-relaxed">
+                    {/* 아래 섹션으로 이어주는 딥 그린 글라스 브릿지 박스 */}
+                    <div 
+                      className="mt-10 md:mt-12 text-center p-7 sm:p-9 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#947852]/35 relative overflow-hidden break-keep"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.40) 0%, rgba(18, 38, 32, 0.92) 100%)',
+                        boxShadow: '0 10px 36px rgba(0, 0, 0, 0.4)'
+                      }}
+                    >
+                      <p className="text-[#FAF7F2] text-[16px] md:text-[18px] font-elegant leading-[1.8] break-keep">
                         금이 가 물이 새는 독에는, 아무리 화려한 황금빛 주문을 외워도 물이 차오르지 않습니다.<br />
-                        <strong className="text-amber-300 font-semibold">이제 주문을 멈추고, 당신의 무의식 밑바닥 ‘그릇’부터 온전히 기워내야 할 때입니다.</strong>
+                        <strong className="text-[#C2A477] font-semibold block mt-1.5 md:mt-2">
+                          이제 주문을 멈추고, 당신의 무의식 밑바닥 ‘그릇’부터 온전히 기워내야 할 때입니다.
+                        </strong>
                       </p>
                     </div>
                   </div>
@@ -524,8 +568,8 @@ export default function AbundanceSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-16 md:mb-24 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                  <div className="lg:col-span-7 order-1 flex flex-col justify-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center lg:items-end">
+                  <div className="lg:col-span-7 order-1 flex flex-col justify-end">
                     <h3 className="text-center text-[22px] md:text-[28px] font-elegant font-bold text-[#C2A477] leading-[1.4] mb-6 break-keep">
                       열심히 일하는 동안, 내 &lsquo;부의 그릇&rsquo;은 어디에 있었나요?
                     </h3>
@@ -547,7 +591,7 @@ export default function AbundanceSecretPage() {
                             노력을 탓하지 마세요
                           </h3>
                         </div>
-                        <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-2 break-keep">
+                        <div className="text-[17px] md:text-[18px] text-[#EAE4D8] leading-[1.8] font-normal space-y-2 break-keep">
                           <p>
                             단 하나라도 내 이야기 같았다면,<br />
                             <span className="text-[#AA8A57] font-medium">당신의 능력이 부족해서가 결코 아닙니다.</span>
@@ -571,7 +615,7 @@ export default function AbundanceSecretPage() {
                             이제, <span className="text-[#AA8A57]">나의 부의 의식을 돌아볼 때</span>
                           </h3>
                         </div>
-                        <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-3 break-keep">
+                        <div className="text-[17px] md:text-[18px] text-[#EAE4D8] leading-[1.8] font-normal space-y-3 break-keep">
                           <p>
                             가격표와 남들의 눈치를 살피는 동안,<br />
                             내 가치와 기준은 자꾸 뒤로 밀리지 않았나요?
@@ -585,8 +629,8 @@ export default function AbundanceSecretPage() {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-5 w-full order-2 flex flex-col justify-center">
-                    <div className="group relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40">
+                  <div className="lg:col-span-5 w-full order-2 flex flex-col justify-end">
+                    <div className="group relative w-full max-w-[440px] aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40 mx-auto lg:ml-auto lg:mr-0">
                       <Image
                         src="/image/abundance-secret/abundance-scarcity-mindset.webp"
                         alt="풍요비책 부의 의식 비주얼"
@@ -680,13 +724,13 @@ export default function AbundanceSecretPage() {
                       <span className="text-[#AA8A57] font-semibold">
                         &ldquo;땀 흘려 고생하고 무조건 아껴야 돈이 모인다.&rdquo;
                       </span><br />
-                      <span className="text-[#A3B8B0]">하지만 현실의 경제는 단순한 노동 시간과 인내의 비례가 아니었습니다.</span>
+                      <span className="text-[#EAE4D8]">하지만 현실의 경제는 단순한 노동 시간과 인내의 비례가 아니었습니다.</span>
                     </p>
                     <p>
                       마음속 깊은 곳에 가난의 공포와 결핍이 자리 잡고 있다면, 아무리 많은 돈이 들어와도 깨진 항아리처럼 귀신같이 빠져나갑니다. 부는 억지로 쫓아가는 것이 아니라, 내 안의 그릇을 온전히 넓히고 자본의 흐름을 여는 것입니다.
                     </p>
                     <div className="pt-5 border-t border-[#947852]/20 text-[#FAF7F2] space-y-4">
-                      <p className="text-[#A3B8B0]">
+                      <p className="text-[#EAE4D8]">
                         《풍요비책》은 뜬구름 잡는 확언집이 아닙니다. 무의식 속 가난 코드를 소각하고, 선천코드 오행 분석과 자본의 흑마법을 통해 현실의 화폐로 치환하는 구체적 지침서입니다.
                       </p>
                       <p>
@@ -741,7 +785,7 @@ export default function AbundanceSecretPage() {
                       &ldquo;열심히 사는데 왜 늘 통장은 마를까?<br />
                       <span className="text-[#C2A477]">결핍의 무의식을 지우면 돈의 흐름이 반전됩니다.</span>&rdquo;
                     </h3>
-                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8] break-keep">
+                    <p className="text-[17px] md:text-[18px] text-[#F0EBE2] font-normal leading-[1.8] break-keep">
                       돈을 쫓으며 아등바등하던 삶에서, 부가 스스로 머무는 풍요의 그릇으로 전환됩니다.
                     </p>
                   </div>
@@ -778,12 +822,12 @@ export default function AbundanceSecretPage() {
                         className="grid grid-cols-1 md:grid-cols-2 gap-3 p-4 rounded-2xl bg-black/45 border border-[#947852]/20 hover:border-[#947852]/45 transition-colors"
                       >
                         <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#789E90]/10 border border-[#CBEBDE]/20">
-                          <span className="text-[#EDE6DA]/70 font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8CD3B6]/22 border border-[#CBEBDE]/35 rounded shrink-0">
+                          <span className="text-[#EAE4D8] font-serif font-bold text-[11px] px-2.5 py-1 bg-[#8CD3B6]/22 border border-[#CBEBDE]/35 rounded shrink-0">
                             BEFORE
                           </span>
                           <div>
-                            <p className="text-[#EDE6DA]/85 text-[15px] md:text-[16px] font-medium leading-snug">{item.beforeTitle}</p>
-                            <p className="text-[#EDE6DA]/50 text-xs md:text-sm mt-1 font-light">{item.beforeSub}</p>
+                            <p className="text-[#F0EBE2] text-[15px] md:text-[16px] font-medium leading-snug">{item.beforeTitle}</p>
+                            <p className="text-[#EAE4D8] text-xs md:text-sm mt-1 font-light">{item.beforeSub}</p>
                           </div>
                         </div>
                         <div className="flex items-start gap-3 p-3.5 rounded-xl bg-[#789E90]/20 border border-[#CBEBDE]/35">
@@ -872,7 +916,7 @@ export default function AbundanceSecretPage() {
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide">
                       백도화 (白桃花)
                     </h3>
-                    <p className="text-[18px] text-[#A3B8B0] font-normal leading-[1.8] break-keep">
+                    <p className="text-[18px] text-[#EAE4D8] font-normal leading-[1.8] break-keep">
                       마음의 구조를 읽고, 관계와 부의 자리를 회복시키는 심리 멘토
                     </p>
 
@@ -904,12 +948,12 @@ export default function AbundanceSecretPage() {
                       풍요비책의 저자 백도화입니다.
                     </p>
                     <p className="text-[#FAF7F2]">
-                      저 또한 통장에 찍히는 숫자 하나에 가슴 졸이며, 끝없는 불안과 결핍 속에서 밤낮없이 일했던 시절이 있었습니다. <span className="text-[#A3B8B0]">아끼고 아껴도 돈은 늘 모자랐고, 돈을 쓸 때마다 가슴 한구석이 서늘하게 죄여왔습니다.</span>
+                      저 또한 통장에 찍히는 숫자 하나에 가슴 졸이며, 끝없는 불안과 결핍 속에서 밤낮없이 일했던 시절이 있었습니다. <span className="text-[#EAE4D8]">아끼고 아껴도 돈은 늘 모자랐고, 돈을 쓸 때마다 가슴 한구석이 서늘하게 죄여왔습니다.</span>
                     </p>
                     <p className="text-[#FAF7F2]">
                       그 결핍의 고통 끝에 <span className="text-[#AA8A57] font-semibold">사람의 마음과 무의식이 돈이라는 에너지와 어떻게 상호작용하는지 깊이 연구하기 시작했습니다.</span> 그리고 무의식의 결핍 코드를 소각하고 부의 그릇을 확장했을 때, 통장과 삶의 흐름이 거짓말처럼 반전되는 경험을 했습니다.
                     </p>
-                    <p className="text-[#A3B8B0]">
+                    <p className="text-[#EAE4D8]">
                       부는 억지로 쫓는 노동의 대가가 아닙니다. 내면의 결핍을 지우고, 가치를 담아낼 온전한 그릇을 세우는 마음의 연금술입니다.
                     </p>
                     <p className="text-[#AA8A57] font-semibold pt-1">
@@ -918,7 +962,7 @@ export default function AbundanceSecretPage() {
                     </p>
 
                     <div className="pt-7 md:pt-8 flex items-center justify-end gap-2.5 md:gap-3">
-                      <span className="text-[15px] md:text-[17px] text-[#A3B8B0] font-elegant font-medium tracking-wide">
+                      <span className="text-[15px] md:text-[17px] text-[#EAE4D8] font-elegant font-medium tracking-wide">
                         저자 백도화 드림
                       </span>
                       <img
@@ -953,7 +997,7 @@ export default function AbundanceSecretPage() {
 
                   <div className="h-full flex flex-col justify-between text-left break-keep space-y-6 lg:space-y-0">
                     <div>
-                      <p className="text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-light text-[#EDE6DA]/85 leading-[1.4] mb-2 sm:mb-2.5 break-keep">
+                      <p className="text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-light text-[#F0EBE2] leading-[1.4] mb-2 sm:mb-2.5 break-keep">
                         수많은 눈물과 연구 끝에,
                       </p>
                       <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
@@ -965,14 +1009,14 @@ export default function AbundanceSecretPage() {
                       </h2>
                     </div>
 
-                    <div className="space-y-4 text-[16px] md:text-[17px] lg:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep lg:py-2">
-                      <p className="text-[#EDE6DA]/90">
+                    <div className="space-y-4 text-[16px] md:text-[17px] lg:text-[18px] text-[#EAE4D8] leading-[1.8] font-normal break-keep lg:py-2">
+                      <p className="text-[#F0EBE2]">
                         더 이상 가격표 앞에서 망설이며 불안해하지 마십시오.
                       </p>
                       <p className="text-[#FAF7F2] font-semibold text-[17px] md:text-[19px]">
                         부는 쫓는 것이 아니라, 내 안에서 여는 것입니다.
                       </p>
-                      <p className="text-[#EDE6DA]/90">
+                      <p className="text-[#F0EBE2]">
                         <strong className="text-[#AA8A57] font-semibold">《풍요비책》</strong>은 결핍과 가난의 무의식을 소각하고{' '}
                         <span className="text-[#FAF7F2] font-semibold">&lsquo;당당한 가치 책정&rsquo;</span>과{' '}
                         <span className="text-[#FAF7F2] font-semibold">&lsquo;마르지 않는 자본의 순환&rsquo;</span>을 손에 쥐여드리기 위해 탄생한 실전 설계도입니다.
@@ -1066,7 +1110,7 @@ export default function AbundanceSecretPage() {
                       가난을 두려워하는 마음으로는 절대 부자가 될 수 없습니다.<br />
                       <span className="text-[#C2A477]">내면의 부의 그릇을 넓히고, 현실의 시스템을 가동합니다.</span>
                     </h2>
-                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto font-normal leading-[1.8] break-keep">
+                    <p className="text-[17px] md:text-[18px] text-[#F0EBE2] max-w-2xl mx-auto font-normal leading-[1.8] break-keep">
                       통장의 숫자는 내 무의식 프로그램의 그림자일 뿐입니다.<br />
                       《풍요비책》은 <strong className="text-[#FAF7F2] font-semibold">돈의 무의식 정화(내적 그릇)</strong>를 마친 후, <strong className="text-[#AA8A57] font-semibold">마르지 않는 부의 파이프라인(외적 자산화)</strong>을 세우도록 설계되었습니다.
                     </p>
@@ -1089,7 +1133,7 @@ export default function AbundanceSecretPage() {
                           결핍 정화 &amp; 부의 그릇 재설계 (내적 정렬)
                         </h3>
                       </div>
-                      <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 mb-8 leading-[1.7] font-light break-keep">
+                      <p className="text-[15px] md:text-[16px] text-[#F0EBE2] mb-8 leading-[1.7] font-light break-keep">
                         어린 시절부터 학습된 가난의 죄책감, 결핍 공포, 부자에 대한 무의식적 거부감을 뿌리 뽑습니다. 그릇이 온전해야 어떤 돈이 들어와도 넘치지 않고 담깁니다.
                       </p>
 
@@ -1104,11 +1148,12 @@ export default function AbundanceSecretPage() {
                         ].map((item, idx) => (
                           <div
                             key={idx}
-                            className="p-4 rounded-2xl bg-[#789E90]/32 border border-[#CBEBDE]/35 hover:border-[#CBEBDE]/60 hover:shadow-[0_0_18px_rgba(203,235,222,0.22)] transition-all break-keep"
+                            className="p-4 rounded-2xl border border-[#CBEBDE]/30 hover:border-[#CBEBDE]/55 hover:shadow-[0_0_18px_rgba(203,235,222,0.15)] transition-all break-keep"
+                            style={{ background: 'rgba(10, 12, 15, 0.88)' }}
                           >
                             <span className="text-[#AA8A57] text-xs font-mono font-bold tracking-wider">{item.code}</span>
                             <p className="text-white text-[15px] md:text-[16px] font-elegant font-bold mt-1.5">{item.title}</p>
-                            <p className="text-[#EDE6DA]/70 text-[13px] md:text-[14px] mt-1 font-light leading-relaxed">{item.desc}</p>
+                            <p className="text-[#EAE4D8] text-[13px] md:text-[14px] mt-1 font-light leading-relaxed">{item.desc}</p>
                           </div>
                         ))}
                       </div>
@@ -1137,7 +1182,7 @@ export default function AbundanceSecretPage() {
                           현실 부의 창출 공식 (4대 머니 메커니즘)
                         </h3>
                       </div>
-                      <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 mb-8 leading-[1.7] font-light break-keep">
+                      <p className="text-[15px] md:text-[16px] text-[#F0EBE2] mb-8 leading-[1.7] font-light break-keep">
                         마인드만으로 통장에 돈이 꽂히지 않습니다. 풍요의 의식을 현실의 화폐로 치환하는 4가지 구체적 지식자산화 전략입니다.
                       </p>
 
@@ -1166,7 +1211,8 @@ export default function AbundanceSecretPage() {
                         ].map((card, idx) => (
                           <div
                             key={idx}
-                            className="p-5 rounded-2xl bg-[#789E90]/32 border border-[#CBEBDE]/35 hover:border-[#CBEBDE]/60 hover:shadow-[0_0_18px_rgba(203,235,222,0.22)] transition-all group break-keep"
+                            className="p-5 rounded-2xl border border-[#CBEBDE]/30 hover:border-[#CBEBDE]/55 hover:shadow-[0_0_18px_rgba(203,235,222,0.15)] transition-all group break-keep"
+                            style={{ background: 'rgba(10, 12, 15, 0.88)' }}
                           >
                             <div className="flex items-center justify-between mb-2">
                               <span className="font-serif text-xs font-bold bg-[#8CD3B6]/25 text-[#AA8A57] px-2.5 py-0.5 rounded border border-[#CBEBDE]/40">
@@ -1177,7 +1223,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-white font-elegant font-bold text-[17px] md:text-[18px] group-hover:text-[#AA8A57] transition-colors">
                               {card.title}
                             </h4>
-                            <p className="text-[#EDE6DA]/75 text-[15px] md:text-[16px] mt-2 leading-[1.6] font-light">
+                            <p className="text-[#EAE4D8] text-[15px] md:text-[16px] mt-2 leading-[1.6] font-light">
                               {card.desc}
                             </p>
                           </div>
@@ -1204,7 +1250,7 @@ export default function AbundanceSecretPage() {
                     풍요비책 3종 올인원 세트<br />
                     <span className="text-[#AA8A57]">결핍을 황금으로 바꾸는 3단계 완성형 패키지</span>
                   </h3>
-                  <p className="text-[#EDE6DA]/85 text-[18px] mt-3 leading-[1.8] font-normal break-keep">
+                  <p className="text-[#F0EBE2] text-[18px] mt-3 leading-[1.8] font-normal break-keep">
                     본편으로 원리를 꿰뚫고, 실전 워크북으로 그릇을 넓히며, 특별 외전으로 부의 파동을 완성합니다.
                   </p>
                 </div>
@@ -1230,7 +1276,7 @@ export default function AbundanceSecretPage() {
                         《풍요비책 완전판》
                       </h4>
                       <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
-                      <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
+                      <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
                         가난의 무의식 저주를 풀고 선천코드 오행 분석과 자본의 흑마법을 담은 근본 마법서
                       </p>
                     </div>
@@ -1255,7 +1301,7 @@ export default function AbundanceSecretPage() {
                         《정화와 각성의 서》
                       </h4>
                       <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
-                      <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
+                      <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
                         비움의 법칙, 제값 선언문, 5초 루프 각인법, 21일 풍요 뇌 데일리 실천 저널 워크북
                       </p>
                     </div>
@@ -1280,7 +1326,7 @@ export default function AbundanceSecretPage() {
                         《풍요의 파동》
                       </h4>
                       <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
-                      <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
+                      <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
                         기분의 법칙, 저항의 해체, 8대 감정 파동 즉각 전환 비방전을 담은 특별 잠언서
                       </p>
                     </div>
@@ -1326,7 +1372,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">①</span> 무의식의 저주와 가난의 3가지 그림자
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               결핍(Scarcity), 속박(Bondage), 희생자 마인드(Victim) 심판
                             </p>
                           </div>
@@ -1335,7 +1381,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">②</span> 선천코드 5원소(오행) 재물 락 해제 비기
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               목·화·토·금·수 기운별 맞춤형 돈그릇 확장법
                             </p>
                           </div>
@@ -1349,28 +1395,28 @@ export default function AbundanceSecretPage() {
                             <div className="grid sm:grid-cols-2 gap-3 pl-2 pt-1">
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#947852]/20 space-y-1">
                                 <span className="text-xs font-bold text-[#AA8A57] block">비기 1. [프레임 지배]</span>
-                                <p className="text-[13px] md:text-[14px] text-[#EDE6DA]/80 font-light leading-relaxed">
+                                <p className="text-[13px] md:text-[14px] text-[#EAE4D8] font-light leading-relaxed">
                                   게이트키핑(자격 심사)을 통해 공급자에서 &apos;심판관&apos;으로 지위 역전
                                 </p>
                               </div>
 
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#947852]/20 space-y-1">
                                 <span className="text-xs font-bold text-[#AA8A57] block">비기 2. [신경 연금술]</span>
-                                <p className="text-[13px] md:text-[14px] text-[#EDE6DA]/80 font-light leading-relaxed">
+                                <p className="text-[13px] md:text-[14px] text-[#EAE4D8] font-light leading-relaxed">
                                   뇌섬엽 통증을 마비시키고 &apos;미결정 시 겪을 파멸&apos;로 결제를 구원화
                                 </p>
                               </div>
 
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#947852]/20 space-y-1">
                                 <span className="text-xs font-bold text-[#AA8A57] block">비기 3. [상징 자본]</span>
-                                <p className="text-[13px] md:text-[14px] text-[#EDE6DA]/80 font-light leading-relaxed">
+                                <p className="text-[13px] md:text-[14px] text-[#EAE4D8] font-light leading-relaxed">
                                   스펙 나열을 파괴하고 에르메스처럼 상위 1% 계급의 인장(Seal) 판매
                                 </p>
                               </div>
 
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#947852]/20 space-y-1">
                                 <span className="text-xs font-bold text-[#AA8A57] block">비기 4. [인간 조종술]</span>
-                                <p className="text-[13px] md:text-[14px] text-[#EDE6DA]/80 font-light leading-relaxed">
+                                <p className="text-[13px] md:text-[14px] text-[#EAE4D8] font-light leading-relaxed">
                                   자이가르닉(열린 고리)과 서늘한 침묵으로 상대의 도파민을 감금
                                 </p>
                               </div>
@@ -1381,7 +1427,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">④</span> 착한 가격의 저주 파괴
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               헐값 노동의 죄책감을 깨고 내 몸값과 가치를 10배 올리는 가격 결계 3원칙
                             </p>
                           </div>
@@ -1420,7 +1466,7 @@ export default function AbundanceSecretPage() {
                                 </span>
                                 <div>
                                   <p className="font-semibold text-white text-xs md:text-sm">{item.title}</p>
-                                  <p className="text-[#EDE6DA]/70 text-[11px] md:text-xs font-light mt-0.5">{item.desc}</p>
+                                  <p className="text-[#EAE4D8] text-[11px] md:text-xs font-light mt-0.5">{item.desc}</p>
                                 </div>
                               </div>
                             ))}
@@ -1459,7 +1505,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">①</span> 과거 결핍 코드의 물리적 단절
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               기억의 도서관 청소, 용서의 편지, 가난 신념 소각식 주문
                             </p>
                           </div>
@@ -1468,7 +1514,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">②</span> 비움의 법칙
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               지갑 쓰레기 청소, 낡은 옷 폐기, 명현반응(好轉反應) 극복 절대 주문
                             </p>
                           </div>
@@ -1483,7 +1529,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">④</span> 돈그릇 수용 한계선 3단계 확장 실습
                             </h4>
-                            <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm text-[#EDE6DA]/85 pl-6">
+                            <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm text-[#F0EBE2] pl-6">
                               <span className="px-2.5 py-1 rounded bg-[#8CD3B6]/25 border border-[#CBEBDE]/35">무저항 씨앗 금액</span>
                               <span>➔</span>
                               <span className="px-2.5 py-1 rounded bg-[#8CD3B6]/25 border border-[#CBEBDE]/35">저항 돌파</span>
@@ -1496,7 +1542,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">⑤</span> 심야의 뇌파 해킹 (5초 루프 각인법)
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               수면 직전 세타파 상태에서 무의식을 속이는 4K 시각화
                             </p>
                           </div>
@@ -1509,28 +1555,28 @@ export default function AbundanceSecretPage() {
                             <div className="grid sm:grid-cols-2 gap-3 pl-2 pt-1">
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#947852]/20 space-y-1">
                                 <span className="text-xs font-bold text-[#AA8A57] block">[자격 거절문]</span>
-                                <p className="text-[13px] md:text-[14px] text-[#EDE6DA]/80 font-light leading-relaxed">
+                                <p className="text-[13px] md:text-[14px] text-[#EAE4D8] font-light leading-relaxed">
                                   무례한 요구와 선 넘기를 차단하는 자격 거절문
                                 </p>
                               </div>
 
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#947852]/20 space-y-1">
                                 <span className="text-xs font-bold text-[#AA8A57] block">[제값 선언문]</span>
-                                <p className="text-[13px] md:text-[14px] text-[#EDE6DA]/80 font-light leading-relaxed">
+                                <p className="text-[13px] md:text-[14px] text-[#EAE4D8] font-light leading-relaxed">
                                   헐값 노동과 가격 후려치기를 박살 내는 제값 선언문
                                 </p>
                               </div>
 
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#947852]/20 space-y-1">
                                 <span className="text-xs font-bold text-[#AA8A57] block">[바운더리 선언문]</span>
-                                <p className="text-[13px] md:text-[14px] text-[#EDE6DA]/80 font-light leading-relaxed">
+                                <p className="text-[13px] md:text-[14px] text-[#EAE4D8] font-light leading-relaxed">
                                   에너지 뱀파이어를 쳐내는 바운더리 선언문
                                 </p>
                               </div>
 
                               <div className="p-3.5 rounded-lg bg-black/40 border border-[#947852]/20 space-y-1">
                                 <span className="text-xs font-bold text-[#AA8A57] block">[단호한 종결문]</span>
-                                <p className="text-[13px] md:text-[14px] text-[#EDE6DA]/80 font-light leading-relaxed">
+                                <p className="text-[13px] md:text-[14px] text-[#EAE4D8] font-light leading-relaxed">
                                   선택과 마감을 내 통제 아래 두는 단호한 종결문
                                 </p>
                               </div>
@@ -1576,7 +1622,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">①</span> 5년간의 실증 보고서
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               5만 원, 50만 원, 500만 원, 1,000만 원까지 무노동 자본 순환을 일군 &apos;기분의 법칙&apos;
                             </p>
                           </div>
@@ -1585,7 +1631,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">②</span> 기분과 감정의 재정의
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               감정은 마음의 독백이 아닌 우주망에 쏘아 올리는 &apos;실시간 영적 실행 코드&apos;
                             </p>
                           </div>
@@ -1594,7 +1640,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">③</span> 저항의 해체
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               &apos;간절히 갈망할수록 결핍이 복제되는 역설&apos;을 부수는 무저항의 기술
                             </p>
                           </div>
@@ -1603,7 +1649,7 @@ export default function AbundanceSecretPage() {
                             <h4 className="text-[15px] md:text-[16px] font-bold text-white flex items-center gap-2">
                               <span className="text-[#AA8A57]">④</span> 경쾌함의 권능
                             </h4>
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/70 font-light pl-6 leading-[1.6]">
+                            <p className="text-[15px] md:text-[16px] text-[#EAE4D8] font-light pl-6 leading-[1.6]">
                               가벼운 파동이 무거운 물질 세상을 지배하는 물리 법칙
                             </p>
                           </div>
@@ -1626,7 +1672,7 @@ export default function AbundanceSecretPage() {
                                   className="p-3 rounded-lg bg-black/40 border border-[#947852]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs"
                                 >
                                   <span className="font-semibold text-white/90 shrink-0">{item.from}</span>
-                                  <span className="text-[#EDE6DA]/60 font-light">{item.method}</span>
+                                  <span className="text-[#EAE4D8] font-light">{item.method}</span>
                                   <span className="font-bold text-[#AA8A57] shrink-0">{item.to}</span>
                                 </div>
                               ))}
@@ -1656,7 +1702,7 @@ export default function AbundanceSecretPage() {
                           <h3 className="text-xl md:text-[24px] font-elegant font-bold text-white mb-2 leading-[1.4] break-keep">
                             금옥만당부 모바일 월페이퍼
                           </h3>
-                          <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
+                          <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal break-keep">
                             결핍을 지우고 부와 풍요를 끌어당기는 스마트폰 배경화면용 시각적 에너지 결계
                           </p>
                         </div>
@@ -1673,12 +1719,12 @@ export default function AbundanceSecretPage() {
 
                           <div className="flex flex-wrap items-baseline justify-between gap-4">
                             <div className="space-y-1">
-                              <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
+                              <span className="text-xs text-[#EAE4D8]">정가 79,000원</span>
                               <div className="text-2xl md:text-3xl font-elegant font-bold text-[#C2A477]">
                                 런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal">(76% OFF)</span>
                               </div>
                             </div>
-                            <span className="text-xs text-[#EDE6DA]/50">
+                            <span className="text-xs text-[#EAE4D8]">
                               * 전자책은 3종이며, 디지털 부적을 포함한 4 in 1 구성입니다.
                             </span>
                           </div>
@@ -1736,7 +1782,7 @@ export default function AbundanceSecretPage() {
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide break-keep mb-4">
                     책 속에서 먼저 만나보세요
                   </h3>
-                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/80 font-normal max-w-2xl mx-auto leading-[1.8] break-keep mb-8 md:mb-10">
+                  <p className="text-[17px] md:text-[18px] text-[#EAE4D8] font-normal max-w-2xl mx-auto leading-[1.8] break-keep mb-8 md:mb-10">
                     부의 의식을 깨우는 본문부터 실전 워크북과 비방전까지,<br className="hidden sm:inline" />
                     《풍요비책》의 실제 내용을 미리 확인해 보세요.
                   </p>
@@ -1760,7 +1806,7 @@ export default function AbundanceSecretPage() {
                           <h4 className="text-[#FAF7F2] font-elegant font-bold text-lg mb-2 group-hover:text-[#AA8A57] transition-colors">
                             {item.title}
                           </h4>
-                          <p className="text-xs md:text-sm text-[#EDE6DA]/70 leading-relaxed mb-5">
+                          <p className="text-xs md:text-sm text-[#EAE4D8] leading-relaxed mb-5">
                             {item.desc}
                           </p>
                         </div>
@@ -1790,7 +1836,7 @@ export default function AbundanceSecretPage() {
                               <p className="text-xs font-medium text-[#AA8A57]">
                                 [실제 페이지 이미지 삽입 예정]
                               </p>
-                              <p className="text-[11px] text-[#EDE6DA]/50 mt-1">
+                              <p className="text-[11px] text-[#EAE4D8] mt-1">
                                 {item.note}
                               </p>
                             </div>
@@ -1844,7 +1890,7 @@ export default function AbundanceSecretPage() {
                       <h4 className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                         PDF 3종 (본편 + 실전 워크북 + 특별 외전) + 모바일 월페이퍼
                       </h4>
-                      <div className="text-sm md:text-base text-[#EDE6DA]/90 font-light space-y-0.5 leading-[1.6]">
+                      <div className="text-sm md:text-base text-[#F0EBE2] font-light space-y-0.5 leading-[1.6]">
                         <p>풍요비책 4 in 1 마스터 패키지</p>
                         <p>금옥만당부 고해상도 디지털 부적 함께 제공</p>
                       </div>
@@ -1858,7 +1904,7 @@ export default function AbundanceSecretPage() {
                   <div className="border-b border-white/10" />
 
                   <div className="space-y-1">
-                    <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
+                    <span className="text-xs text-[#EAE4D8]">정가 79,000원</span>
                     <div className="text-2xl sm:text-3xl font-elegant font-bold text-[#C2A477] leading-none">
                       런칭 특가 19,000원 <span className="text-sm text-white/70 font-sans font-normal ml-1.5">(76% OFF)</span>
                     </div>
@@ -1878,8 +1924,8 @@ export default function AbundanceSecretPage() {
                       className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] hover:brightness-110 order-1 sm:order-2 cursor-pointer"
                       style={{
                         background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
-                        border: '1.5px solid #E5C378',
-                        boxShadow: '0 0 22px rgba(229, 195, 120, 0.6), 0 4px 16px rgba(194, 164, 119, 0.45)'
+                        border: '1.2px solid #E5C378',
+                        boxShadow: '0 0 10px rgba(194, 164, 119, 0.35), 0 3px 10px rgba(0, 0, 0, 0.3)'
                       }}
                     >
                       <span>풍요비책 19,000원에 구매하기</span>
@@ -1944,7 +1990,7 @@ export default function AbundanceSecretPage() {
                         </p>
                       </div>
 
-                      <div className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                      <div className="text-[16px] md:text-[18px] text-[#EAE4D8] leading-[1.8] font-normal break-keep">
                         <p>
                           풍요비책은 돈을 더 간절히 쫓는 방법이 아니라, 내 안의 결핍 신호를 알아차리고 풍요가 머물 수 있는 마음의 공간을 만드는 법을 다룹니다.
                         </p>
@@ -2024,10 +2070,10 @@ export default function AbundanceSecretPage() {
                             <Check className="w-3 h-3 text-[#FAF7F2] stroke-[2.4]" />
                           </div>
                           <div className="flex flex-col text-left">
-                            <span className="text-[13px] md:text-[14px] font-semibold text-[#EDE6DA] break-keep">
+                            <span className="text-[13px] md:text-[14px] font-semibold text-[#EAE4D8] break-keep">
                               {info.title}
                             </span>
-                            <span className="text-[12px] md:text-[13px] text-[#EDE6DA]/75 mt-0.5 leading-relaxed break-keep">
+                            <span className="text-[12px] md:text-[13px] text-[#EAE4D8] mt-0.5 leading-relaxed break-keep">
                               {info.desc}
                             </span>
                           </div>
@@ -2053,7 +2099,7 @@ export default function AbundanceSecretPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
                     실전 체감 사례
                   </h2>
-                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal break-keep">
                     풍요비책을 실천한 분들의 실제 삶에 일어난 감정과 통장의 구체적인 변화입니다.
                   </p>
                 </div>
@@ -2105,14 +2151,14 @@ export default function AbundanceSecretPage() {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={prevReview}
-                            className="p-2.5 rounded-full border border-white/10 hover:border-[#947852]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all"
+                            className="p-2.5 rounded-full border border-white/10 hover:border-[#947852]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EAE4D8] transition-all"
                             aria-label="이전 후기"
                           >
                             <ChevronLeft className="w-4 h-4" />
                           </button>
                           <button
                             onClick={nextReview}
-                            className="p-2.5 rounded-full border border-white/10 hover:border-[#947852]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all"
+                            className="p-2.5 rounded-full border border-white/10 hover:border-[#947852]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EAE4D8] transition-all"
                             aria-label="다음 후기"
                           >
                             <ChevronRight className="w-4 h-4" />
@@ -2139,7 +2185,7 @@ export default function AbundanceSecretPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
                     가치 비교표
                   </h2>
-                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal break-keep">
                     일반 재테크 강의나 뜬구름 잡는 확언과는 완전히 다른 차원의 실전 연금술입니다.
                   </p>
                 </div>
@@ -2148,9 +2194,9 @@ export default function AbundanceSecretPage() {
                   <table className="w-full text-left border-collapse min-w-[640px]">
                     <thead>
                       <tr className="border-b border-[#947852]/30 bg-black/40">
-                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EDE6DA]/60 w-1/4">구분</th>
-                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EDE6DA]/60 w-1/4">일반 재테크 강의</th>
-                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EDE6DA]/60 w-1/4">뜬구름 잡는 끌어당김</th>
+                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EAE4D8] w-1/4">구분</th>
+                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EAE4D8] w-1/4">일반 재테크 강의</th>
+                        <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#EAE4D8] w-1/4">뜬구름 잡는 끌어당김</th>
                         <th className="py-5 px-6 text-[15px] md:text-[16px] font-bold text-[#AA8A57] bg-[#8CD3B6]/30 border-l border-r border-[#CBEBDE]/40 w-1/4">
                           백도화 풍요비책 3종 세트
                         </th>
@@ -2159,8 +2205,8 @@ export default function AbundanceSecretPage() {
                     <tbody className="divide-y divide-white/5 text-[15px] md:text-[16px]">
                       <tr className="hover:bg-white/[0.01] transition-colors">
                         <td className="py-5 px-6 font-bold text-white">비용</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">수십~수백만 원</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">1~2만 원</td>
+                        <td className="py-5 px-6 text-[#EAE4D8]">수십~수백만 원</td>
+                        <td className="py-5 px-6 text-[#EAE4D8]">1~2만 원</td>
                         <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
                           <span className="text-[#AA8A57] text-base">단 19,000원</span> (영구 소장)
                         </td>
@@ -2168,8 +2214,8 @@ export default function AbundanceSecretPage() {
 
                       <tr className="hover:bg-white/[0.01] transition-colors">
                         <td className="py-5 px-6 font-bold text-white">내용</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">노동 중심 테크닉</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">뜬구름 잡는 위로</td>
+                        <td className="py-5 px-6 text-[#EAE4D8]">노동 중심 테크닉</td>
+                        <td className="py-5 px-6 text-[#EAE4D8]">뜬구름 잡는 위로</td>
                         <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
                           뇌신경 재배선 + 자본의 흑마법
                         </td>
@@ -2177,8 +2223,8 @@ export default function AbundanceSecretPage() {
 
                       <tr className="hover:bg-white/[0.01] transition-colors">
                         <td className="py-5 px-6 font-bold text-white">도구</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">없음</td>
-                        <td className="py-5 px-6 text-[#EDE6DA]/70">확언 몇 줄</td>
+                        <td className="py-5 px-6 text-[#EAE4D8]">없음</td>
+                        <td className="py-5 px-6 text-[#EAE4D8]">확언 몇 줄</td>
                         <td className="py-5 px-6 font-bold text-[#FAF7F2] bg-[#789E90]/32 border-l border-r border-[#CBEBDE]/40">
                           선천코드 진단 + 템플릿 4종 + 21일 저널
                         </td>
@@ -2203,7 +2249,7 @@ export default function AbundanceSecretPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
                     자주 묻는 <span className="text-[#C2A477]">질문</span>
                   </h2>
-                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal break-keep">
                     구매 전 궁금해하시는 핵심 질문을 모았습니다.
                   </p>
                 </div>
@@ -2282,7 +2328,7 @@ export default function AbundanceSecretPage() {
                         </button>
 
                         {isOpen && (
-                          <div className="px-6 pb-6 pt-2.5 text-[15px] md:text-[16px] text-[#EDE6DA]/80 leading-[1.8] font-light border-t border-white/5 break-keep">
+                          <div className="px-6 pb-6 pt-2.5 text-[15px] md:text-[16px] text-[#EAE4D8] leading-[1.8] font-light border-t border-white/5 break-keep">
                             {faq.a}
                           </div>
                         )}
@@ -2304,7 +2350,7 @@ export default function AbundanceSecretPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold mb-10 text-white border-l-4 border-[#947852] pl-6 leading-[1.4] break-keep">
                     구매 전 안내
                   </h2>
-                  <ul className="space-y-4 text-[15px] md:text-[16px] text-[#EDE6DA]/75 font-light leading-[1.7]">
+                  <ul className="space-y-4 text-[15px] md:text-[16px] text-[#EAE4D8] font-light leading-[1.7]">
                     {[
                       "본 상품은 실물 배송이 없는 디지털 전자책(PDF 파일) 상품입니다.",
                       "결제 완료 후 안내된 방식(마이페이지 또는 등록된 이메일)에 따라 즉시 다운로드해 확인하실 수 있습니다.",
@@ -2344,7 +2390,7 @@ export default function AbundanceSecretPage() {
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                     내 안의 황금 문을 여는 시간
                   </h2>
-                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal max-w-xl mx-auto break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#F0EBE2] leading-[1.8] font-normal max-w-xl mx-auto break-keep">
                     풍요는 더 많이 쫓는 사람에게만 오는 것이 아니라, 받아들일 준비가 된 마음에 오래 머무릅니다.<br/>
                     결핍을 반복하던 무의식에서 벗어나 나의 감정, 언어, 소비, 감사, 실천 루틴을 새롭게 정렬해 보세요.
                   </p>
@@ -2389,7 +2435,7 @@ export default function AbundanceSecretPage() {
                     </h2>
 
                     <div className="space-y-5 md:space-y-6 text-center break-keep">
-                      <p className="text-[#EDE6DA]/85 text-[16px] sm:text-[17px] md:text-[18px] font-normal leading-[1.7] break-keep">
+                      <p className="text-[#F0EBE2] text-[16px] sm:text-[17px] md:text-[18px] font-normal leading-[1.7] break-keep">
                         생각을 바꾸지 않으면 10년 후에도 똑같이 시간에 쫓기며 돈을 걱정합니다.
                       </p>
 
@@ -2400,7 +2446,7 @@ export default function AbundanceSecretPage() {
                         </p>
                       </div>
 
-                      <p className="text-[#EDE6DA]/85 text-[16px] sm:text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
+                      <p className="text-[#F0EBE2] text-[16px] sm:text-[17px] md:text-[18px] font-normal leading-[1.8] break-keep">
                         돈을 쫓아가는 삶을 멈추고, 돈이 나를 찾아오게 만드십시오.<br />
                         단 19,000원으로 평생을 관통하는 부의 회로를 소장하십시오.
                       </p>
@@ -2444,8 +2490,8 @@ export default function AbundanceSecretPage() {
                       className="w-full py-4 md:py-4.5 px-6 rounded-xl font-elegant font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] hover:brightness-110 cursor-pointer mb-3.5 md:mb-4"
                       style={{
                         background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
-                        border: '1.5px solid #E5C378',
-                        boxShadow: '0 0 25px rgba(229, 195, 120, 0.65), 0 4px 18px rgba(194, 164, 119, 0.5)'
+                        border: '1.2px solid #E5C378',
+                        boxShadow: '0 0 12px rgba(194, 164, 119, 0.38), 0 3px 12px rgba(0, 0, 0, 0.3)'
                       }}
                     >
                       <Sparkles className="w-5 h-5 text-[#E5C378] shrink-0" />
@@ -2453,11 +2499,11 @@ export default function AbundanceSecretPage() {
                       <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
                     </button>
 
-                    <p className="text-[15px] sm:text-base text-[#EDE6DA]/90 font-normal break-keep mb-2">
+                    <p className="text-[15px] sm:text-base text-[#F0EBE2] font-normal break-keep mb-2">
                       한 번의 구매로 영구 소장하며, 필요한 순간마다 꺼내 볼 수 있습니다.
                     </p>
 
-                    <p className="text-xs sm:text-[13px] text-[#EDE6DA]/50 font-light break-keep">
+                    <p className="text-xs sm:text-[13px] text-[#EAE4D8] font-light break-keep">
                       * 결제 즉시 PDF 다운로드 가능 / 디지털 콘텐츠 특성상 열람 후 환불 불가
                     </p>
                   </div>
@@ -2522,7 +2568,7 @@ export default function AbundanceSecretPage() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <p className="text-xs text-[#EDE6DA]/60 mt-3 text-center">
+            <p className="text-xs text-[#EAE4D8] mt-3 text-center">
               터치하거나 스크롤하여 세부 본문 내용을 읽으실 수 있습니다.
             </p>
           </div>
