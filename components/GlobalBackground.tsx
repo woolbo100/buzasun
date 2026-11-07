@@ -11,6 +11,8 @@ interface GlobalBackgroundProps {
   showPetals?: boolean
   /** 중앙 영역을 더 밝게 유지할지 여부 (기본값: false, 비밀상점용) */
   brightCenter?: boolean
+  /** 페이지별 추가 배경 오버레이 (기존 보라색 배경 위에 반투명하게 얹히는 커스텀 레이어) */
+  overlay?: React.ReactNode
 }
 
 /**
@@ -18,6 +20,7 @@ interface GlobalBackgroundProps {
  * 
  * 1. Background Image (페이지별 이미지, Opacity 0.5)
  * 2. Purple Gradient Overlay (전역 공통)
+ * 2.5 Custom Overlay (페이지별 선택적 오버레이, 예: 풍요비책 딥 에메랄드 그린)
  * 3. Vignette Overlay (전역 공통)
  * 4. Content Layer (Z-index 및 가독성 확보)
  */
@@ -25,7 +28,8 @@ export default function GlobalBackground({
   children,
   src,
   showPetals = true,
-  brightCenter = false
+  brightCenter = false,
+  overlay
 }: GlobalBackgroundProps) {
   return (
     <div className="relative min-h-screen">
@@ -47,6 +51,13 @@ export default function GlobalBackground({
           className="absolute inset-0 z-10"
           style={{ background: 'var(--bg-purple-overlay)' }}
         />
+
+        {/* 2.5 페이지별 커스텀 오버레이 (특정 페이지에서 기존 보라색 배경 위에 얹힘) */}
+        {overlay && (
+          <div className="absolute inset-0 z-15 pointer-events-none">
+            {overlay}
+          </div>
+        )}
 
         {/* 3. 비네팅 오버레이 (몰입감 및 가독성) */}
         <div
