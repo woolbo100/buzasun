@@ -291,14 +291,13 @@ export default function AbundanceSecretPage() {
 
                   <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/75 leading-[1.8] font-normal space-y-3.5 break-keep">
                     <p>
-                      풍요비책은 돈을 쫓는 방식이 아니라, 내면의 결핍 코드를 점검하고 풍요를 받아들일 마음그릇을 키우기 위한<br />
-                      프리미엄 풍요의식 전자책입니다.
+                      부(富)는 바깥에서 쫓는 것이 아니라, 내 안의 결핍을 비워낼 때 비로소 흘러듭니다.
                     </p>
                     <p>
-                      부는 바깥에서 억지로 붙잡는 것이 아니라, 내 안의 문을 여는 순간 다른 방식으로 흐르기 시작합니다.
+                      억지로 붙잡지 않아도 스스로 흐르기 시작하는 절대 풍요의 궤도를 경험해 보세요.
                     </p>
                     <p className="font-semibold text-white">
-                      오늘부터 풍요비책과 함께 나의 무의식, 감정, 언어, 소비, 감사의 루틴을 새롭게 정렬해보세요.
+                      오늘부터 풍요비책과 함께 무의식 깊은 곳의 부의 흐름을 새롭게 정렬하십시오.
                     </p>
                   </div>
                 </div>

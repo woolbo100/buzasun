@@ -327,13 +327,13 @@
   .detail-page.abundance-detail-page .detail-glass-box {
     background: linear-gradient(
       135deg,
-      rgba(32, 54, 50, 0.55) 0%,
-      rgba(20, 39, 36, 0.65) 100%
+      rgba(32, 54, 50, 0.48) 0%,
+      rgba(20, 39, 36, 0.52) 100%
     ) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(203, 235, 222, 0.15) !important;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(203, 235, 222, 0.12) !important;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.25) !important;
   }
 
   .detail-page.abundance-detail-page .gungjung-glass:hover,
@@ -341,10 +341,10 @@
   .detail-page.abundance-detail-page .detail-glass-box:hover {
     background: linear-gradient(
       135deg,
-      rgba(38, 64, 59, 0.68) 0%,
-      rgba(25, 48, 44, 0.76) 100%
+      rgba(38, 64, 59, 0.58) 0%,
+      rgba(25, 48, 44, 0.62) 100%
     ) !important;
-    border-color: rgba(203, 235, 222, 0.28) !important;
+    border-color: rgba(203, 235, 222, 0.24) !important;
   }
 
   /* 노리개 장식용 흔들림 애니메이션 */
