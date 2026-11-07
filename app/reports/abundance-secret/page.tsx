@@ -54,7 +54,7 @@ const productData = {
   heroImage: '/image/abundance-secret/korean-hanbok-abundance.webp',
   overviewImage: '/image/abundance-secret/golden-abundance.webp',
   recommendedImage: '/image/abundance/a3.webp',
-  structureImage: '/image/abundance/a4.webp',
+  structureImage: '/image/abundance-secret/abundance-transformation.webp',
   premiumImage: '/image/abundance/a5.webp',
   ctaImage: '/image/abundance/a6.webp',
 }
@@ -343,11 +343,11 @@ export default function AbundanceSecretPage() {
                         </div>
 
                         {/* 구매/장바구니 버튼 */}
-                        <div className="flex flex-col sm:flex-row gap-3 pt-2 items-stretch sm:items-center">
+                        <div className="flex flex-col sm:flex-row gap-3 pt-2 items-stretch">
                           <button
                             type="button"
                             onClick={handleAddToCart}
-                            className="py-3 px-4 sm:px-5 rounded-xl font-elegant font-medium text-xs md:text-sm border border-[#947852]/40 text-[#AA8A57] hover:bg-[#789E90]/20 hover:border-[#CBEBDE]/50 transition-all duration-300 shrink-0 whitespace-nowrap text-center order-2 sm:order-1"
+                            className="py-3.5 px-5 sm:px-6 rounded-xl font-elegant font-medium text-sm md:text-base border border-[#947852]/40 text-[#AA8A57] hover:bg-[#789E90]/20 hover:border-[#CBEBDE]/50 transition-all duration-300 shrink-0 whitespace-nowrap text-center order-2 sm:order-1 flex items-center justify-center"
                           >
                             장바구니
                           </button>
@@ -464,7 +464,7 @@ export default function AbundanceSecretPage() {
                   <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] !mb-[56px] md:!mb-[96px] w-full max-w-[1280px] mx-auto">
                     {/* 상단 영문 섹션 라벨 및 헤더 */}
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
-                      <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
+                      <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                         THE PARADOX OF ATTRACTION
                       </span>
                       <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -477,13 +477,16 @@ export default function AbundanceSecretPage() {
                       </p>
                     </div>
 
-                    {/* 3대 공감 카드 (딥 에메랄드 글라스 스타일) */}
+                    {/* 3대 공감 카드 (옥빛 차콜 글라스 스타일) */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {/* 카드 1 */}
                       <div 
-                        className="gungjung-glass p-7 md:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/30 relative overflow-hidden transition-all duration-300 hover:border-[#C2A477]/60 flex flex-col justify-between"
+                        className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#BBCDC6]/35 flex flex-col justify-between"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.35) 0%, rgba(18, 38, 32, 0.88) 100%)',
+                          background: 'linear-gradient(135deg, rgba(46, 66, 66, 0.64) 0%, rgba(27, 39, 45, 0.70) 100%)',
+                          border: '1px solid rgba(187, 210, 198, 0.15)',
+                          backdropFilter: 'blur(10px)',
+                          WebkitBackdropFilter: 'blur(10px)',
                           boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                         }}
                       >
@@ -502,9 +505,12 @@ export default function AbundanceSecretPage() {
 
                       {/* 카드 2 */}
                       <div 
-                        className="gungjung-glass p-7 md:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/30 relative overflow-hidden transition-all duration-300 hover:border-[#C2A477]/60 flex flex-col justify-between"
+                        className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#BBCDC6]/35 flex flex-col justify-between"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.35) 0%, rgba(18, 38, 32, 0.88) 100%)',
+                          background: 'linear-gradient(135deg, rgba(46, 66, 66, 0.64) 0%, rgba(27, 39, 45, 0.70) 100%)',
+                          border: '1px solid rgba(187, 210, 198, 0.15)',
+                          backdropFilter: 'blur(10px)',
+                          WebkitBackdropFilter: 'blur(10px)',
                           boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                         }}
                       >
@@ -523,9 +529,12 @@ export default function AbundanceSecretPage() {
 
                       {/* 카드 3 */}
                       <div 
-                        className="gungjung-glass p-7 md:p-8 rounded-2xl md:rounded-3xl border border-[#947852]/30 relative overflow-hidden transition-all duration-300 hover:border-[#C2A477]/60 flex flex-col justify-between"
+                        className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#BBCDC6]/35 flex flex-col justify-between"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.35) 0%, rgba(18, 38, 32, 0.88) 100%)',
+                          background: 'linear-gradient(135deg, rgba(46, 66, 66, 0.64) 0%, rgba(27, 39, 45, 0.70) 100%)',
+                          border: '1px solid rgba(187, 210, 198, 0.15)',
+                          backdropFilter: 'blur(10px)',
+                          WebkitBackdropFilter: 'blur(10px)',
                           boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                         }}
                       >
@@ -543,24 +552,18 @@ export default function AbundanceSecretPage() {
                       </div>
                     </div>
 
-                    {/* 아래 섹션으로 이어주는 딥 그린 글라스 브릿지 박스 */}
-                    <div 
-                      className="mt-10 md:mt-12 text-center p-8 sm:p-10 md:p-12 rounded-2xl md:rounded-3xl gungjung-glass border border-[#947852]/35 relative overflow-hidden break-keep"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(120, 158, 144, 0.40) 0%, rgba(18, 38, 32, 0.92) 100%)',
-                        boxShadow: '0 10px 36px rgba(0, 0, 0, 0.4)'
-                      }}
-                    >
-                      <p className="text-[#FAF7F2] text-[19px] sm:text-[21px] md:text-[24px] font-elegant leading-[1.6] break-keep">
-                        금이 가 물이 새는 독에는, 아무리 화려한 황금빛 주문을 외워도 물이 차오르지 않습니다.<br />
-                        <strong className="text-[#C2A477] font-semibold block mt-2 md:mt-3">
-                          이제 주문을 멈추고, 당신의 무의식 밑바닥 ‘그릇’부터 온전히 기워내야 할 때입니다.
-                        </strong>
+                    {/* 공감 마무리 메시지 (상자 없이 배경 위에 직접 배치) */}
+                    <div className="mt-10 sm:mt-12 md:mt-[72px] text-center max-w-[1050px] mx-auto px-4 break-keep">
+                      <p className="text-[#FAF7F2] text-[17px] sm:text-[19px] md:text-[21px] lg:text-[22px] font-elegant leading-[1.6]">
+                        금이 가 물이 새는 독에는, 아무리 화려한 황금빛 주문을 외워도 물이 차오르지 않습니다.
+                      </p>
+                      <p className="text-[#C2A477] text-[18px] sm:text-[20px] md:text-[23px] lg:text-[24px] font-elegant font-semibold leading-[1.6] mt-3.5 md:mt-4">
+                        이제 주문을 멈추고, 당신의 무의식 밑바닥 ‘그릇’부터 온전히 기워내야 할 때입니다.
                       </p>
                     </div>
 
                     {/* 16:9 비주얼: 황금빛 흐름과 부의 그릇 */}
-                    <div className="mt-7 md:mt-12 w-full aspect-[16/9] relative rounded-[20px] overflow-hidden">
+                    <div className="mt-10 md:mt-14 w-full aspect-[16/9] relative rounded-[20px] overflow-hidden">
                       <Image
                         src="/image/abundance-secret/abundance-vessel-golden-flow.webp"
                         alt="풍요비책 부의 그릇과 황금빛 흐름"
@@ -579,8 +582,8 @@ export default function AbundanceSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-16 md:mb-24 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-                  <div className="lg:col-span-7 order-1 flex flex-col justify-between h-auto lg:h-full">
+                <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-8 lg:gap-10 items-stretch">
+                  <div className="order-1 flex flex-col justify-between h-auto lg:h-full">
                     <h3 className="text-center lg:text-left text-[20px] sm:text-[23px] md:text-[25px] lg:text-[26px] xl:text-[28px] font-elegant font-bold text-[#C2A477] leading-[1.4] mb-6 break-keep lg:whitespace-nowrap">
                       그토록 애쓰는 동안, 내 &lsquo;부의 그릇&rsquo;은 채워졌나요?
                     </h3>
@@ -643,8 +646,8 @@ export default function AbundanceSecretPage() {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-5 w-full order-2 flex flex-col justify-start">
-                    <div className="group relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40">
+                  <div className="w-full order-2 flex flex-col justify-between h-auto lg:h-full">
+                    <div className="group relative w-full aspect-[3/4] lg:aspect-auto lg:h-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40">
                       <Image
                         src="/image/abundance-secret/abundance-scarcity-mindset.webp"
                         alt="풍요비책 부의 의식 비주얼"
@@ -761,14 +764,14 @@ export default function AbundanceSecretPage() {
                 </div>
               </Reveal>
 
-              {/* BEFORE·AFTER 비교 이미지 자리 (a4.webp 활용) */}
+              {/* BEFORE·AFTER 비교 이미지 자리 (abundance-transformation.webp 활용) */}
               <Reveal>
                 <div className="relative w-full overflow-hidden rounded-3xl md:rounded-[40px] border border-[#947852]/30 shadow-2xl bg-black/40">
                   <Image
                     src={productData.structureImage}
-                    alt="풍요비책 Before & After 구조 변화"
-                    width={1672}
-                    height={941}
+                    alt="풍요비책 Before & After 트랜스포메이션"
+                    width={1670}
+                    height={942}
                     sizes="(max-width: 1280px) 100vw, 1280px"
                     className="w-full h-auto object-contain block"
                     priority
