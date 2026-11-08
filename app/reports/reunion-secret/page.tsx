@@ -26,7 +26,6 @@ import {
   CheckCircle2,
   ImageIcon,
   Eye,
-  ZoomIn,
   X,
   RotateCcw,
   Coins,
@@ -319,9 +318,6 @@ const messageBookToc = [
 export default function ReunionSecretPage() {
   useScrollAnimation()
   const router = useRouter()
-
-  // 책 속 미리보기 고해상도 확대 모달 상태
-  const [previewModalItem, setPreviewModalItem] = useState<{ title: string; imageSrc: string } | null>(null)
   const [isAdminPreview, setIsAdminPreview] = useState(false)
 
   useEffect(() => {
@@ -2209,57 +2205,6 @@ export default function ReunionSecretPage() {
                       </div>
                     </div>
                   </div>
-
-                  {/* 내지 미리보기 슬롯 (BOOK PREVIEW) */}
-                  {(() => {
-                    const previewList = [
-                      { title: "[본편] 4대 이별 유형 진단표", imageSrc: "/image/reunion-secret/r2.webp" },
-                      { title: "[본편] 남자의 이별 심리 3단계 회로", imageSrc: "/image/reunion-secret/r3.webp" },
-                      { title: "[실전 부록 1] 30일 행동 매뉴얼 데일리 체크", imageSrc: "/image/reunion-secret/r4.webp" },
-                      { title: "[실전 부록 2] 상황별 시크릿 메시지 스크립트", imageSrc: "/image/reunion-secret/r5.webp" },
-                    ]
-
-                    return (
-                      <div className="pt-10 border-t border-[#B49A70]/20">
-                        <div className="text-center max-w-2xl mx-auto space-y-3 mb-8">
-                          <span className="text-xs font-elegant font-semibold tracking-widest text-[#C2A477] uppercase block">
-                            BOOK PREVIEW
-                          </span>
-                          <h4 className="text-xl sm:text-2xl font-elegant font-bold text-[#FAF7F2]">
-                            책 속 미리보기
-                          </h4>
-                          <p className="text-xs sm:text-sm text-[#EDE6DA]/70 font-light">
-                            실제 수록된 전자책 내지의 일부를 확인해 보세요.
-                          </p>
-                        </div>
-
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                          {previewList.map((item, idx) => (
-                            <div
-                              key={idx}
-                              onClick={() => setPreviewModalItem(item)}
-                              className="group relative aspect-[3/4] rounded-xl overflow-hidden border border-[#B49A70]/30 bg-[#341824] cursor-pointer shadow-md hover:border-[#B49A70]/70 transition-all"
-                            >
-                              <Image
-                                src={item.imageSrc}
-                                alt={item.title}
-                                fill
-                                sizes="(max-width: 768px) 50vw, 25vw"
-                                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                              />
-                              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
-                                <ZoomIn className="w-6 h-6 text-[#C2A477] mb-2" />
-                                <span className="text-xs font-elegant font-bold text-white break-keep">
-                                  {item.title}
-                                </span>
-                                <span className="text-[10px] text-[#EDE6DA]/70 mt-1">클릭하여 크게보기</span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )
-                  })()}
                 </div>
               </Reveal>
             </section>
@@ -3292,50 +3237,6 @@ export default function ReunionSecretPage() {
           onPurchase={handlePurchase}
           buttonText="재회비방 구매하기 →"
         />
-
-        {/* 🔍 책 속 미리보기 고해상도 확대 모달 */}
-        {previewModalItem && (
-          <div
-            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
-            onClick={() => setPreviewModalItem(null)}
-          >
-            <div
-              className="relative max-w-3xl w-full max-h-[90vh] bg-[#341824] border border-[#B49A70]/50 rounded-2xl md:rounded-3xl p-6 sm:p-8 flex flex-col items-center justify-center shadow-2xl space-y-4"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                type="button"
-                onClick={() => setPreviewModalItem(null)}
-                className="absolute top-4 right-4 p-2 rounded-full bg-black/40 text-white/70 hover:text-white hover:bg-black/70 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              <div className="text-center space-y-1">
-                <span className="text-xs font-mono text-[#C2A477] uppercase tracking-wider block">
-                  BOOK PREVIEW
-                </span>
-                <h4 className="text-lg sm:text-xl font-elegant font-bold text-[#FAF7F2]">
-                  {previewModalItem.title}
-                </h4>
-              </div>
-
-              <div className="relative w-full aspect-[3/4] max-h-[65vh] rounded-xl overflow-hidden border border-[#B49A70]/30 bg-black/50">
-                <Image
-                  src={previewModalItem.imageSrc}
-                  alt={previewModalItem.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 768px"
-                  className="object-contain"
-                />
-              </div>
-
-              <p className="text-xs text-[#EDE6DA]/60 text-center font-light">
-                ※ 실제 구매 시 고해상도 전체 내용이 담긴 PDF 파일이 제공됩니다.
-              </p>
-            </div>
-          </div>
-        )}
 
         <Footer />
       </GlobalBackground>
