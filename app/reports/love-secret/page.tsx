@@ -218,38 +218,37 @@ export default function LoveSecretEbookPage() {
 
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#211725] text-[#EDE6DA] font-sans selection:bg-[#61404A] selection:text-[#FAF7F2] pb-24 md:pb-0">
-      {/* 연애비급 전용 딥 로즈플럼 x 로즈코코아 배경 시스템 (보라색 완전 제거 및 궁중 문양 보존) */}
+    <main className="detail-page relative min-h-screen bg-[#130917] text-[#EDE6DA] font-sans selection:bg-[#61404A] selection:text-[#FAF7F2] pb-24 md:pb-0">
+      {/* 연애비급 전용 딥 퍼플(좌) x 톤다운 로즈코코아(우) 그라데이션 배경 시스템 */}
       <GlobalBackground
         src="/image/love-code-bg.png"
         brightCenter={false}
         customBaseOverlay={
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 대각선 메인 로즈플럼 x 로즈코코아 베이스 그라데이션 (딥 로즈플럼 #211725 -> 미드 로즈코코아 #392633 -> 소프트 로즈코코아 #61404A) */}
+            {/* 1. 우측 은은한 톤다운 로즈코코아 라이트 오라 (우측 입체감 및 은은한 비침 연출) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 70% 50% at 88% 25%, rgba(110, 58, 76, 0.20) 0%, rgba(65, 33, 46, 0.08) 50%, transparent 75%),
+                  radial-gradient(circle 600px at 90% 70%, rgba(85, 44, 60, 0.15) 0%, transparent 65%)
+                `,
+              }}
+            />
+
+            {/* 2. 메인 가로 그라데이션 (왼쪽: 딥 퍼플 100% 완전 불투명 차단, 오른쪽: 톤다운 로즈코코아 은은한 투명 비침) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
                   linear-gradient(
-                    135deg,
-                    rgba(33, 23, 37, 0.92) 0%,
-                    rgba(45, 30, 42, 0.88) 28%,
-                    rgba(57, 38, 51, 0.85) 52%,
-                    rgba(78, 51, 62, 0.87) 80%,
-                    rgba(97, 64, 74, 0.92) 100%
+                    95deg,
+                    #130917 0%,
+                    #190E1E 35%,
+                    rgba(35, 20, 36, 0.98) 55%,
+                    rgba(52, 29, 44, 0.94) 75%,
+                    rgba(74, 42, 56, 0.87) 100%
                   )
-                `,
-              }}
-            />
-
-            {/* 2. 입체적인 로즈빛 & 샴페인 로즈골드 라이트 오라 (특정 구간에만 은은한 깊이감 부여) */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  radial-gradient(ellipse 950px 700px at 76% 30%, rgba(157, 95, 116, 0.26) 0%, rgba(97, 64, 74, 0.12) 45%, transparent 65%),
-                  radial-gradient(ellipse 850px 650px at 20% 70%, rgba(85, 48, 68, 0.18) 0%, transparent 60%),
-                  radial-gradient(ellipse 65% 35% at 50% 0%, rgba(212, 178, 167, 0.06) 0%, transparent 70%)
                 `,
               }}
             />
@@ -261,10 +260,16 @@ export default function LoveSecretEbookPage() {
             style={{
               background: `
                 radial-gradient(
-                  circle at center,
-                  rgba(0, 0, 0, 0) 45%,
-                  rgba(33, 23, 37, 0.35) 75%,
-                  rgba(20, 13, 24, 0.72) 100%
+                  circle at 65% 45%,
+                  rgba(0, 0, 0, 0) 40%,
+                  rgba(19, 9, 23, 0.35) 75%,
+                  rgba(10, 5, 14, 0.75) 100%
+                ),
+                linear-gradient(
+                  to right,
+                  rgba(12, 6, 16, 0.65) 0%,
+                  rgba(12, 6, 16, 0.25) 25%,
+                  transparent 50%
                 )
               `,
             }}
