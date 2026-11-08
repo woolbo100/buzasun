@@ -57,7 +57,7 @@ const productData = {
 
   topBannerImage: '/image/reunion-secret/reunion-secret-hero.webp?v=20261108_1',
   heroImage: '/image/reunion-secret/r9.webp',
-  overviewImage: '/image/reunion-secret/r2.webp',
+  overviewImage: '/image/reunion-secret/reunion-emotional-empathy.webp?v=20261108',
   recommendedImage: '/image/reunion-secret/reunion-secret-recommended.webp?v=20261108',
   formulaImage: '/image/reunion-secret/r4.webp',
   bookIntroImage: '/image/reunion-secret/reunion-secret-book-intro.webp?v=20261108',
@@ -985,15 +985,15 @@ export default function ReunionSecretPage() {
                     </div>
                   </div>
 
-                  {/* 오른쪽: 이미지 */}
+                  {/* 오른쪽: 이미지 (3:4 세로형 감성 공감 포스터) */}
                   <div className="lg:col-span-5 w-full order-2 flex flex-col justify-center">
-                    <div className="group relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.6)] bg-black/40">
+                    <div className="relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-black/30">
                       <Image
                         src={productData.overviewImage}
-                        alt="재회비방 상태 회복 비주얼"
+                        alt="붙잡으려 애쓰는 동안 내 중심은 어디에 있었나요? 재회비방"
                         fill
-                        sizes="(max-width: 1024px) 100vw, 40vw"
-                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 42vw"
+                        className="object-contain object-center"
                         priority
                       />
                     </div>
