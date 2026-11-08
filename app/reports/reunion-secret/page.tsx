@@ -480,8 +480,8 @@ export default function ReunionSecretPage() {
 
                 {/* 대제목 */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-elegant font-bold text-white tracking-tight mb-8 leading-tight">
-                  <span className="text-[#C2A477] font-normal mr-3">再會秘方</span>
-                  재회비방
+                  <span className="font-normal mr-3">再會秘方</span>
+                  <span className="text-[#C2A477]">재회비방</span>
                 </h1>
 
                 {/* 1. 최상단: 가로형 풀 이미지 (16:9 비율, 1280px 매칭) */}
