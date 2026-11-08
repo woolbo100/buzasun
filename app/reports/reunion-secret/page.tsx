@@ -809,11 +809,11 @@ export default function ReunionSecretPage() {
                             공감 01
                           </div>
                           <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                            “지금 안 잡으면 영영 잊혀질까 봐…”
+                            “지금 안 잡으면 잊혀질까 봐…”
                           </h4>
                           <div className="h-[1px] w-full bg-[#B49A70]/20 my-3" />
                           <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                            불안을 이기지 못해 보낸 구구절절한 장문 카톡. 하지만 상대에게는 감정의 강요로 느껴져 &apos;차단&apos;이라는 더 차가운 방어벽을 세우게 만들었습니다.
+                            불안을 이기지 못해 보낸 구구절절한 장문 카톡. 상대는 감정의 강요로 느껴 &apos;차단&apos;이라는 더 차가운 방어벽을 세우게 만들었습니다.
                           </p>
                         </div>
                         {/* 본문 하단 중앙 모란꽃 라인 아트 장식 (풍요비책 연꽃과 동일 비율 · 재회비방 모란꽃 문양) */}
@@ -909,7 +909,7 @@ export default function ReunionSecretPage() {
                             공감 03
                           </div>
                           <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                            “이별 직후 설득하려 했던 치명적 실수”
+                            “이별 직후 매달렸던 치명적 실수”
                           </h4>
                           <div className="h-[1px] w-full bg-[#B49A70]/20 my-3" />
                           <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
