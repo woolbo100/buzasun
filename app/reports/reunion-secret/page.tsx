@@ -649,8 +649,9 @@ export default function ReunionSecretPage() {
                       <div
                         className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal p-6 sm:p-7 md:p-8 rounded-2xl shadow-[0_8px_24px_rgba(0,0,0,0.3)] space-y-3.5 break-keep h-auto"
                         style={{
-                          background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
-                          border: '1px solid rgba(185, 154, 115, 0.35)'
+                          background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                          border: '1px solid rgba(185, 154, 115, 0.35)',
+                          boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                         }}
                       >
                         <p>
@@ -796,11 +797,11 @@ export default function ReunionSecretPage() {
                       <div
                         className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
+                          background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                           border: '1px solid rgba(185, 154, 115, 0.35)',
                           backdropFilter: 'blur(10px)',
                           WebkitBackdropFilter: 'blur(10px)',
-                          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                          boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                         }}
                       >
                         <div>
@@ -827,11 +828,11 @@ export default function ReunionSecretPage() {
                       <div
                         className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
+                          background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                           border: '1px solid rgba(185, 154, 115, 0.35)',
                           backdropFilter: 'blur(10px)',
                           WebkitBackdropFilter: 'blur(10px)',
-                          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                          boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                         }}
                       >
                         <div>
@@ -858,11 +859,11 @@ export default function ReunionSecretPage() {
                       <div
                         className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
+                          background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                           border: '1px solid rgba(185, 154, 115, 0.35)',
                           backdropFilter: 'blur(10px)',
                           WebkitBackdropFilter: 'blur(10px)',
-                          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                          boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                         }}
                       >
                         <div>
@@ -928,9 +929,9 @@ export default function ReunionSecretPage() {
                     <div
                       className="w-full text-left break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
                       style={{
-                        background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
+                        background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                         border: '1px solid rgba(185, 154, 115, 0.35)',
-                        boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                        boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                       }}
                     >
                       {/* 01 · 진심을 탓하지 마세요 */}
@@ -975,8 +976,8 @@ export default function ReunionSecretPage() {
                           <div
                             className="p-4 sm:p-5 rounded-xl text-[#FAF7F2] font-normal leading-[1.75]"
                             style={{
-                              background: 'rgba(67, 39, 53, 0.45)',
-                              border: '1px solid rgba(185, 151, 130, 0.25)'
+                              background: 'linear-gradient(135deg, #321C2A 0%, #3D2230 55%, #291923 100%)',
+                              border: '1px solid rgba(185, 154, 115, 0.25)'
                             }}
                           >
                             《재회비방》에서 말하는 ‘상태’는<br className="hidden sm:inline" />
@@ -1099,10 +1100,11 @@ export default function ReunionSecretPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="gungjung-glass py-12 px-4 md:px-10 rounded-3xl md:rounded-[40px] border border-[#B49A70]/30"
+                  className="gungjung-glass py-12 px-4 md:px-10 rounded-3xl md:rounded-[40px]"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(60, 10, 25, 0.35) 0%, rgba(18, 4, 10, 0.90) 100%)',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                    background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                    border: '1px solid rgba(185, 154, 115, 0.35)',
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                   }}
                 >
                   <div className="max-w-4xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
@@ -1149,14 +1151,17 @@ export default function ReunionSecretPage() {
                         key={idx}
                         className="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-4 items-stretch"
                       >
-                        {/* BEFORE 카드 (차분한 로즈코코아 · 다크 퍼플 계열) */}
+                        {/* BEFORE 카드 (어두운 딥 플럼 버건디) */}
                         <div
-                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border border-[#4A2430]/70 hover:border-[#8C4D60]/70 transition-all backdrop-blur-md"
-                          style={{ backgroundColor: 'rgba(28, 12, 18, 0.85)' }}
+                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl transition-all backdrop-blur-md"
+                          style={{
+                            background: 'linear-gradient(135deg, #271622 0%, #301a26 55%, #20131b 100%)',
+                            border: '1px solid rgba(185, 154, 115, 0.25)'
+                          }}
                         >
                           <span
                             className="w-[68px] shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] border border-[#5E3340] text-[11px] font-serif font-bold leading-none whitespace-nowrap"
-                            style={{ backgroundColor: '#3D1C26', color: '#E5DED0' }}
+                            style={{ backgroundColor: '#3A1E2E', color: '#E5DED0' }}
                           >
                             BEFORE
                           </span>
@@ -1170,10 +1175,13 @@ export default function ReunionSecretPage() {
                           </div>
                         </div>
 
-                        {/* AFTER 카드 (고급스러운 버건디 · 로즈골드 계열) */}
+                        {/* AFTER 카드 (깊은 딥 플럼 버건디) */}
                         <div
-                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border border-[#B49A70]/50 shadow-[0_4px_16px_rgba(96,0,24,0.3)] hover:border-[#C2A477]/80 transition-all backdrop-blur-md"
-                          style={{ backgroundColor: 'rgba(65, 12, 28, 0.85)' }}
+                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl shadow-[0_4px_16px_rgba(0,0,0,0.3)] transition-all backdrop-blur-md"
+                          style={{
+                            background: 'linear-gradient(135deg, #3D2230 0%, #321C2A 55%, #291923 100%)',
+                            border: '1px solid rgba(185, 154, 115, 0.45)'
+                          }}
                         >
                           <span
                             className="w-[68px] shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] border border-[#D8C49B] text-[11px] font-serif font-bold leading-none whitespace-nowrap"
@@ -1359,14 +1367,14 @@ export default function ReunionSecretPage() {
                           key={idx}
                           className="p-3.5 sm:p-4 rounded-xl flex items-center gap-3 backdrop-blur-md transition-all duration-300 hover:border-[#B49A70]/65 hover:shadow-[0_0_20px_rgba(185,151,130,0.18)] hover:scale-[1.01]"
                           style={{
-                            background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
-                            border: '1px solid rgba(185, 154, 115, 0.35)',
+                            background: 'linear-gradient(135deg, #321C2A 0%, #3D2230 55%, #291923 100%)',
+                            border: '1px solid rgba(185, 154, 115, 0.25)',
                             boxShadow: '0 4px 16px rgba(0, 0, 0, 0.35)'
                           }}
                         >
                           <div
                             className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0 border border-[#B49A70]/40 text-[#C2A477] text-[13px] font-bold"
-                            style={{ background: '#552334' }}
+                            style={{ background: '#3D2230' }}
                           >
                             ✦
                           </div>
@@ -1474,7 +1482,9 @@ export default function ReunionSecretPage() {
                       /* 최종 인포그래픽 교체 전에도 품격 있게 표시되는 아키텍처 다이어그램 카드 */
                       <div className="w-full p-6 sm:p-10 md:p-14 flex flex-col justify-between relative overflow-hidden text-left"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.95) 0%, rgba(52, 32, 40, 0.98) 100%)'
+                          background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                          border: '1px solid rgba(185, 154, 115, 0.35)',
+                          boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                         }}>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 relative z-10 my-4 items-stretch">
                           {[
@@ -1501,7 +1511,11 @@ export default function ReunionSecretPage() {
                           ].map((phase, idx) => (
                             <div
                               key={idx}
-                              className="p-5 sm:p-6 rounded-2xl bg-[#20040B]/80 border border-[#B49A70]/30 flex flex-col justify-between space-y-3 shadow-lg hover:border-[#B49A70]/60 transition-colors"
+                              className="p-5 sm:p-6 rounded-2xl flex flex-col justify-between space-y-3 shadow-lg hover:border-[#B49A70]/60 transition-colors"
+                              style={{
+                                background: 'linear-gradient(135deg, #321C2A 0%, #3D2230 55%, #291923 100%)',
+                                border: '1px solid rgba(185, 154, 115, 0.25)'
+                              }}
                             >
                               <div className="space-y-1">
                                 <span className="text-[11px] font-mono tracking-widest text-[#B59C88] uppercase block">
@@ -1553,9 +1567,9 @@ export default function ReunionSecretPage() {
                     <div
                       className="p-8 sm:p-10 rounded-2xl md:rounded-3xl shadow-2xl flex flex-col justify-between space-y-6"
                       style={{
-                        background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
+                        background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                         border: '1px solid rgba(185, 154, 115, 0.35)',
-                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                        boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                       }}
                     >
                       <div className="space-y-5">
@@ -1596,7 +1610,13 @@ export default function ReunionSecretPage() {
                           </li>
                         </ul>
                       </div>
-                      <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/20 text-xs text-[#B59C88] font-light">
+                      <div
+                        className="p-4 rounded-xl text-xs text-[#FAF7F2] font-normal"
+                        style={{
+                          background: 'linear-gradient(135deg, #321C2A 0%, #3D2230 55%, #291923 100%)',
+                          border: '1px solid rgba(185, 154, 115, 0.25)'
+                        }}
+                      >
                         💡 침묵은 패배가 아닙니다. 상대방의 무의식을 뒤흔드는 가장 강력한 무기입니다.
                       </div>
                     </div>
@@ -1605,9 +1625,9 @@ export default function ReunionSecretPage() {
                     <div
                       className="p-8 sm:p-10 rounded-2xl md:rounded-3xl shadow-2xl flex flex-col justify-between space-y-6"
                       style={{
-                        background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
+                        background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                         border: '1px solid rgba(185, 154, 115, 0.35)',
-                        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                        boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                       }}
                     >
                       <div className="space-y-5">
@@ -1640,7 +1660,13 @@ export default function ReunionSecretPage() {
                           </li>
                         </ul>
                       </div>
-                      <div className="p-4 rounded-xl bg-[#462D38]/50 border border-[#B49A70]/40 text-xs text-[#FAF7F2] font-medium">
+                      <div
+                        className="p-4 rounded-xl text-xs text-[#FAF7F2] font-normal"
+                        style={{
+                          background: 'linear-gradient(135deg, #321C2A 0%, #3D2230 55%, #291923 100%)',
+                          border: '1px solid rgba(185, 154, 115, 0.25)'
+                        }}
+                      >
                         ✨ 이때 상대방은 &apos;내가 잘못 판단했구나&apos;라는 후회와 함께 자발적으로 다가옵니다.
                       </div>
                     </div>
@@ -1673,10 +1699,11 @@ export default function ReunionSecretPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left items-stretch">
                   {/* Book 1 */}
                   <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] flex flex-col justify-between overflow-hidden transition-transform hover:-translate-y-1 duration-200"
                     style={{
-                      background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
-                      border: '1px solid rgba(185, 154, 115, 0.35)'
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                      border: '1px solid rgba(185, 154, 115, 0.35)',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                     }}
                   >
                     <div>
@@ -1701,10 +1728,11 @@ export default function ReunionSecretPage() {
 
                   {/* Book 2 */}
                   <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] flex flex-col justify-between overflow-hidden transition-transform hover:-translate-y-1 duration-200"
                     style={{
-                      background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
-                      border: '1px solid rgba(185, 154, 115, 0.35)'
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                      border: '1px solid rgba(185, 154, 115, 0.35)',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                     }}
                   >
                     <div>
@@ -1729,10 +1757,11 @@ export default function ReunionSecretPage() {
 
                   {/* Book 3 */}
                   <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] flex flex-col justify-between overflow-hidden transition-transform hover:-translate-y-1 duration-200"
                     style={{
-                      background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
-                      border: '1px solid rgba(185, 154, 115, 0.35)'
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                      border: '1px solid rgba(185, 154, 115, 0.35)',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                     }}
                   >
                     <div>
@@ -1767,7 +1796,14 @@ export default function ReunionSecretPage() {
               <Reveal>
                 <div className="space-y-10">
                   {/* Book 1. [본편] 《재회비방(再會秘方) 완전판》 */}
-                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#542638] via-[#40202d] to-[#2a1720] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  <div
+                    className="p-6 md:p-10 lg:p-12 rounded-3xl shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start"
+                    style={{
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                      border: '1px solid rgba(185, 154, 115, 0.35)',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
+                    }}
+                  >
                     <div className="lg:col-span-5 flex justify-center">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
@@ -1822,7 +1858,13 @@ export default function ReunionSecretPage() {
                           </h4>
                         </div>
 
-                        <div className="p-4 rounded-xl bg-gradient-to-r from-[#3B0A16]/50 to-[#1F050B]/50 border border-[#B49A70]/35 space-y-2">
+                        <div
+                          className="p-4 rounded-xl space-y-2"
+                          style={{
+                            background: 'linear-gradient(135deg, #321C2A 0%, #3D2230 55%, #291923 100%)',
+                            border: '1px solid rgba(185, 154, 115, 0.25)'
+                          }}
+                        >
                           <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
                             <span className="text-[#B59C88] shrink-0 font-mono">⑤</span>
                             <span>조건부 재회의 법칙</span>
@@ -1842,7 +1884,14 @@ export default function ReunionSecretPage() {
                   </div>
 
                   {/* Book 2. [실전 부록 1] 《재회 역전의 법칙: 30일 실전 행동 매뉴얼》 */}
-                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#542638] via-[#40202d] to-[#2a1720] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  <div
+                    className="p-6 md:p-10 lg:p-12 rounded-3xl shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start"
+                    style={{
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                      border: '1px solid rgba(185, 154, 115, 0.35)',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
+                    }}
+                  >
                     <div className="lg:col-span-5 flex justify-center order-last lg:order-first">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
@@ -1911,13 +1960,13 @@ export default function ReunionSecretPage() {
                             </span>
                           </h4>
                           <div className="flex flex-wrap gap-2 pl-5 pt-0.5">
-                            <span className="px-2.5 py-1 rounded-md bg-[#552334] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
+                            <span className="px-2.5 py-1 rounded-md bg-[#3D2230] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
                               감정 격류 진정 기록지
                             </span>
-                            <span className="px-2.5 py-1 rounded-md bg-[#552334] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
+                            <span className="px-2.5 py-1 rounded-md bg-[#3D2230] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
                               공백기 일일 점검표
                             </span>
-                            <span className="px-2.5 py-1 rounded-md bg-[#552334] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
+                            <span className="px-2.5 py-1 rounded-md bg-[#3D2230] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
                               재회 가능성 12문항 자가진단표
                             </span>
                           </div>
@@ -1931,7 +1980,14 @@ export default function ReunionSecretPage() {
                   </div>
 
                   {/* Book 3. [실전 부록 2] 《재회 후폭풍 치트키: 무의식 시크릿 메시지 33선》 */}
-                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#542638] via-[#40202d] to-[#2a1720] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  <div
+                    className="p-6 md:p-10 lg:p-12 rounded-3xl shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start"
+                    style={{
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                      border: '1px solid rgba(185, 154, 115, 0.35)',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
+                    }}
+                  >
                     <div className="lg:col-span-5 flex justify-center">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
@@ -2176,9 +2232,9 @@ export default function ReunionSecretPage() {
                   <div
                     className="p-7 sm:p-8 rounded-2xl md:rounded-3xl shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#B49A70]/70 group"
                     style={{
-                      background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                       border: '1px solid rgba(185, 154, 115, 0.35)',
-                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                     }}
                   >
                     <div>
@@ -2186,7 +2242,7 @@ export default function ReunionSecretPage() {
                         <div className="flex items-center gap-3">
                           <div
                             className="w-10 h-10 rounded-xl border border-[#B49A70]/40 flex items-center justify-center text-[#B59C88] shadow-sm group-hover:border-[#C2A477]/60 transition-colors"
-                            style={{ background: '#552334' }}
+                            style={{ background: '#3D2230' }}
                           >
                             <RotateCcw className="w-5 h-5 text-[#C2A477]" />
                           </div>
@@ -2221,9 +2277,9 @@ export default function ReunionSecretPage() {
                   <div
                     className="p-7 sm:p-8 rounded-2xl md:rounded-3xl shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#B49A70]/70 group"
                     style={{
-                      background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                       border: '1px solid rgba(185, 154, 115, 0.35)',
-                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                     }}
                   >
                     <div>
@@ -2231,7 +2287,7 @@ export default function ReunionSecretPage() {
                         <div className="flex items-center gap-3">
                           <div
                             className="w-10 h-10 rounded-xl border border-[#B49A70]/40 flex items-center justify-center text-[#B59C88] shadow-sm group-hover:border-[#C2A477]/60 transition-colors"
-                            style={{ background: '#552334' }}
+                            style={{ background: '#3D2230' }}
                           >
                             <Clock className="w-5 h-5 text-[#C2A477]" />
                           </div>
@@ -2266,9 +2322,9 @@ export default function ReunionSecretPage() {
                   <div
                     className="p-7 sm:p-8 rounded-2xl md:rounded-3xl shadow-[0_12px_36px_rgba(0,0,0,0.35)] backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1.5 hover:border-[#B49A70]/70 group"
                     style={{
-                      background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
+                      background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                       border: '1px solid rgba(185, 154, 115, 0.35)',
-                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                     }}
                   >
                     <div>
@@ -2276,7 +2332,7 @@ export default function ReunionSecretPage() {
                         <div className="flex items-center gap-3">
                           <div
                             className="w-10 h-10 rounded-xl border border-[#B49A70]/40 flex items-center justify-center text-[#B59C88] shadow-sm group-hover:border-[#C2A477]/60 transition-colors"
-                            style={{ background: '#552334' }}
+                            style={{ background: '#3D2230' }}
                           >
                             <ShieldCheck className="w-5 h-5 text-[#C2A477]" />
                           </div>
@@ -2492,7 +2548,9 @@ export default function ReunionSecretPage() {
                     ) : (
                       <div className="w-full h-full p-6 sm:p-10 md:p-14 flex flex-col justify-between relative overflow-hidden"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.92) 0%, rgba(48, 23, 34, 0.98) 100%)'
+                          background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                          border: '1px solid rgba(185, 154, 115, 0.35)',
+                          boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                         }}>
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(180,154,112,0.15)_0%,transparent_70%)] pointer-events-none" />
 
@@ -2505,9 +2563,15 @@ export default function ReunionSecretPage() {
                         {/* 좌우 비교 카드 (왼쪽: 불안에 쫓기는 사람 vs 오른쪽: 내 중심을 지키는 사람) */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 relative z-10 my-auto items-stretch">
                           {/* 왼쪽: 불안에 쫓기는 사람 */}
-                          <div className="p-5 sm:p-6 md:p-8 rounded-2xl bg-[#301923]/90 border border-[#542638] flex flex-col justify-between space-y-4 shadow-lg">
+                          <div
+                            className="p-5 sm:p-6 md:p-8 rounded-2xl flex flex-col justify-between space-y-4 shadow-lg"
+                            style={{
+                              background: 'linear-gradient(135deg, #271622 0%, #301a26 55%, #20131b 100%)',
+                              border: '1px solid rgba(185, 154, 115, 0.2)'
+                            }}
+                          >
                             <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                              <span className="px-3 py-1 rounded bg-[#4a2231] text-xs font-bold text-[#E5DED0]">
+                              <span className="px-3 py-1 rounded bg-[#3A1E2E] text-xs font-bold text-[#E5DED0]">
                                 불안에 쫓기는 사람
                               </span>
                               <span className="text-xs text-red-400 font-medium">을의 연애 / 매달림</span>
@@ -2532,9 +2596,15 @@ export default function ReunionSecretPage() {
                           </div>
 
                           {/* 오른쪽: 내 중심을 지키는 사람 */}
-                          <div className="p-5 sm:p-6 md:p-8 rounded-2xl bg-[#421e2c]/90 border border-[#B49A70]/60 flex flex-col justify-between space-y-4 shadow-xl">
+                          <div
+                            className="p-5 sm:p-6 md:p-8 rounded-2xl flex flex-col justify-between space-y-4 shadow-xl"
+                            style={{
+                              background: 'linear-gradient(135deg, #3D2230 0%, #321C2A 55%, #291923 100%)',
+                              border: '1px solid rgba(185, 154, 115, 0.45)'
+                            }}
+                          >
                             <div className="flex items-center justify-between border-b border-[#B49A70]/30 pb-3">
-                              <span className="px-3 py-1 rounded bg-[#552334] text-xs font-bold text-[#FAF7F2] border border-[#B49A70]/40">
+                              <span className="px-3 py-1 rounded bg-[#4A2434] text-xs font-bold text-[#FAF7F2] border border-[#B49A70]/40">
                                 내 중심을 지키는 사람
                               </span>
                               <span className="text-xs text-[#C2A477] font-bold">프레임 역전 / 주도권</span>
@@ -2668,7 +2738,13 @@ export default function ReunionSecretPage() {
                         </p>
                       </div>
 
-                      <div className="p-7 rounded-2xl bg-[#542638]/60 border border-[#B49A70]/30 space-y-3">
+                      <div
+                        className="p-7 rounded-2xl space-y-3"
+                        style={{
+                          background: 'linear-gradient(135deg, #321C2A 0%, #3D2230 55%, #291923 100%)',
+                          border: '1px solid rgba(185, 154, 115, 0.25)'
+                        }}
+                      >
                         <p className="text-lg md:text-xl font-elegant font-medium text-[#FAF7F2] leading-relaxed break-keep">
                           &ldquo;{reviewCards[reviewIndex].quote}&rdquo;
                         </p>
@@ -2681,7 +2757,7 @@ export default function ReunionSecretPage() {
                         <button
                           type="button"
                           onClick={prevReview}
-                          className="p-3 rounded-full border border-[#B49A70]/40 text-[#FAF7F2] hover:bg-[#542638]/60 transition-colors"
+                          className="p-3 rounded-full border border-[#B49A70]/40 text-[#FAF7F2] hover:bg-[#3D2230]/60 transition-colors"
                         >
                           <ChevronLeft className="w-5 h-5" />
                         </button>
@@ -2691,7 +2767,7 @@ export default function ReunionSecretPage() {
                         <button
                           type="button"
                           onClick={nextReview}
-                          className="p-3 rounded-full border border-[#B49A70]/40 text-[#FAF7F2] hover:bg-[#542638]/60 transition-colors"
+                          className="p-3 rounded-full border border-[#B49A70]/40 text-[#FAF7F2] hover:bg-[#3D2230]/60 transition-colors"
                         >
                           <ChevronRight className="w-5 h-5" />
                         </button>
@@ -2720,7 +2796,7 @@ export default function ReunionSecretPage() {
                 <div
                   className="overflow-x-auto rounded-3xl md:rounded-[36px] border border-[#B49A70]/35 shadow-2xl backdrop-blur-xl"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.65) 0%, rgba(38, 18, 26, 0.88) 100%)',
+                    background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                     boxShadow: '0 16px 45px rgba(0, 0, 0, 0.45), 0 0 25px rgba(180, 154, 112, 0.08)'
                   }}
                 >
@@ -2739,7 +2815,7 @@ export default function ReunionSecretPage() {
                         <th
                           className="py-6 px-6 md:px-8 text-base md:text-lg font-elegant font-bold text-[#C2A477] border-l border-[#B49A70]/40 w-5/12"
                           style={{
-                            background: 'linear-gradient(180deg, rgba(84, 38, 56, 0.70) 0%, rgba(52, 32, 40, 0.88) 100%)'
+                            background: 'linear-gradient(180deg, #3D2230 0%, #321C2A 55%, #291923 100%)'
                           }}
                         >
                           <div className="flex items-center gap-2">
@@ -2763,7 +2839,7 @@ export default function ReunionSecretPage() {
                         <td
                           className="py-6 md:py-7 px-6 md:px-8 font-bold text-[#FAF7F2] border-l border-[#B49A70]/35"
                           style={{
-                            background: 'linear-gradient(180deg, rgba(84, 38, 56, 0.45) 0%, rgba(52, 32, 40, 0.70) 100%)'
+                            background: 'linear-gradient(180deg, rgba(61, 34, 48, 0.45) 0%, rgba(41, 25, 35, 0.70) 100%)'
                           }}
                         >
                           <span className="text-lg md:text-xl font-elegant text-[#C2A477]">
@@ -2786,7 +2862,7 @@ export default function ReunionSecretPage() {
                         <td
                           className="py-6 md:py-7 px-6 md:px-8 font-bold text-[#FAF7F2] border-l border-[#B49A70]/35"
                           style={{
-                            background: 'linear-gradient(180deg, rgba(84, 38, 56, 0.45) 0%, rgba(52, 32, 40, 0.70) 100%)'
+                            background: 'linear-gradient(180deg, rgba(61, 34, 48, 0.45) 0%, rgba(41, 25, 35, 0.70) 100%)'
                           }}
                         >
                           <span className="text-[#C2A477]">뇌과학 기반 심리전</span> + 행동 매뉴얼
@@ -2807,7 +2883,7 @@ export default function ReunionSecretPage() {
                         <td
                           className="py-6 md:py-7 px-6 md:px-8 font-bold text-[#FAF7F2] border-l border-[#B49A70]/35"
                           style={{
-                            background: 'linear-gradient(180deg, rgba(84, 38, 56, 0.45) 0%, rgba(52, 32, 40, 0.70) 100%)'
+                            background: 'linear-gradient(180deg, rgba(61, 34, 48, 0.45) 0%, rgba(41, 25, 35, 0.70) 100%)'
                           }}
                         >
                           상황별 <span className="text-[#C2A477]">33선 스크립트</span> + 30일 워크시트 제공
@@ -2921,9 +2997,11 @@ export default function ReunionSecretPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="gungjung-glass rounded-3xl border border-[#B49A70]/30 p-8 sm:p-10 md:p-12 text-left space-y-6"
+                  className="gungjung-glass rounded-3xl p-8 sm:p-10 md:p-12 text-left space-y-6"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.75) 0%, rgba(48, 23, 34, 0.90) 100%)'
+                    background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
+                    border: '1px solid rgba(185, 154, 115, 0.35)',
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                   }}
                 >
                   <div className="space-y-2 border-b border-white/10 pb-4">
@@ -3023,9 +3101,9 @@ export default function ReunionSecretPage() {
                 <div
                   className="rounded-3xl p-8 sm:p-10 md:p-12 relative overflow-hidden shadow-2xl max-w-2xl mx-auto"
                   style={{
-                    background: 'linear-gradient(180deg, #542638 0%, #44202e 52%, #2c1620 100%)',
+                    background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                     border: '1px solid rgba(190, 158, 108, 0.78)',
-                    boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.12), 0 12px 40px rgba(84, 38, 56, 0.40)'
+                    boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.12), 0 16px 45px rgba(0, 0, 0, 0.45)'
                   }}
                 >
                   <div className="space-y-6">
