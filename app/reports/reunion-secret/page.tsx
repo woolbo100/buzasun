@@ -66,7 +66,7 @@ const productData = {
   ctaImage: '/image/reunion-secret/r6.webp',
 
   // 💡 [커리큘럼 & 아키텍처] 16:9 와이드 인포그래픽 이미지 경로
-  curriculumImage: '',
+  curriculumImage: '/image/reunion-secret/reunion-secret-two-step-transformation.webp',
   // 💡 [신규 영역 1] 관계 역전의 법칙 (16:9 인포그래픽 다이어그램 이미지 경로)
   reunionLawImage: '',
   // 💡 [신규 영역 2] 인연의 주권자 (16:9 와이드 배너 이미지 경로)
@@ -1619,7 +1619,7 @@ export default function ReunionSecretPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="py-4">
-                  <div className="text-center mb-10 md:mb-14 space-y-5 break-keep">
+                  <div className="text-center space-y-4 md:space-y-5 break-keep">
                     <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       CURRICULUM &amp; ARCHITECTURE
                     </span>
@@ -1633,70 +1633,17 @@ export default function ReunionSecretPage() {
                     </p>
                   </div>
 
-                  {/* 커리큘럼 & 아키텍처 16:9 와이드 인포그래픽 이미지 영역 */}
-                  <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
-                    {productData.curriculumImage ? (
-                      <Image
-                        src={productData.curriculumImage}
-                        alt="재회비방 커리큘럼 & 아키텍처 인포그래픽: 무의식 재회 설계도"
-                        width={1671}
-                        height={941}
-                        sizes="(max-width: 1280px) 100vw, 1280px"
-                        className="w-full h-auto object-contain block"
-                        priority
-                      />
-                    ) : (
-                      /* 최종 인포그래픽 교체 전에도 품격 있게 표시되는 아키텍처 다이어그램 카드 */
-                      <div className="w-full p-6 sm:p-10 md:p-14 flex flex-col justify-between relative overflow-hidden text-left"
-                        style={{
-                          background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.95) 0%, rgba(52, 32, 40, 0.98) 100%)'
-                        }}>
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 relative z-10 my-4 items-stretch">
-                          {[
-                            {
-                              step: "PHASE 01",
-                              title: "내면 정렬 & 에너지 회수",
-                              desc: "매달림 멈춤, 결핍 고리 차단, 쿨엔딩 멘트로 흑역사 리셋"
-                            },
-                            {
-                              step: "PHASE 02",
-                              title: "최적 공백기 설계",
-                              desc: "이별 4대 유형별 골든타임 산정, 무자극 프로필 관리"
-                            },
-                            {
-                              step: "PHASE 03",
-                              title: "무의식 자극 & 핑(Ping)",
-                              desc: "거부감 없는 미세 신호, 대체 불가 앵커링, 호기심 유도"
-                            },
-                            {
-                              step: "PHASE 04",
-                              title: "프레임 역전 & 재회 완성",
-                              desc: "상대가 먼저 연락하는 위치 확보, 대등하고 건강한 재결합"
-                            }
-                          ].map((phase, idx) => (
-                            <div
-                              key={idx}
-                              className="p-5 sm:p-6 rounded-2xl bg-[#20040B]/80 border border-[#B49A70]/30 flex flex-col justify-between space-y-3 shadow-lg hover:border-[#B49A70]/60 transition-colors"
-                            >
-                              <div className="space-y-1">
-                                <span className="text-[11px] font-mono tracking-widest text-[#B59C88] uppercase block">
-                                  {phase.step}
-                                </span>
-                                <h4 className="text-base sm:text-lg font-elegant font-bold text-[#FAF7F2]">
-                                  {phase.title}
-                                </h4>
-                              </div>
-                              <p className="text-xs text-[#EDE6DA]/75 leading-relaxed font-light">
-                                {phase.desc}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="text-center text-[11px] text-[#B59C88]/60 font-mono relative z-10 pt-4">
-                          ※ 인포그래픽 최종 이미지가 등록되면 위 영역이 고해상도 그래픽으로 자동 대체됩니다.
-                        </div>
-                      </div>
-                    )}
+                  {/* 16:9 와이드 인포그래픽 이미지 영역 (콘텐츠 가로폭 100%, 모서리 20px, 위쪽 간격 32~40px) */}
+                  <div className="mt-8 md:mt-10 relative w-full rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
+                    <Image
+                      src="/image/reunion-secret/reunion-secret-two-step-transformation.webp"
+                      alt="재회를 운에 맡기지 마십시오. 《재회비방》이 안내하는 무의식 재회 설계도"
+                      width={1600}
+                      height={900}
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                      className="w-full h-auto object-contain block"
+                      priority
+                    />
                   </div>
                 </div>
               </Reveal>
