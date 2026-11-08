@@ -1541,82 +1541,82 @@ export default function AbundanceSecretPage() {
 
                   {/* 3단계 핵심 역할 카드 3개 */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left mt-8 items-stretch">
-                  {/* Book 1 */}
-                  <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
-                    style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
-                          Step 1 · 원리
-                        </span>
-                        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#AA8A57]">
-                          <BookOpen className="w-6 h-6" />
+                    {/* Book 1 */}
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
+                      style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
+                    >
+                      <div>
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                            Step 1 · 원리
+                          </span>
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#AA8A57]">
+                            <BookOpen className="w-6 h-6" />
+                          </div>
                         </div>
-                      </div>
 
-                      <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
-                        《풍요비책 완전판》
-                      </h4>
-                      <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
-                      <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
-                        가난의 무의식 저주를 풀고 선천코드 오행 분석과 자본의 흑마법을 담은 근본 마법서
-                      </p>
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                          《풍요비책 완전판》
+                        </h4>
+                        <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
+                        <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
+                          가난의 무의식 저주를 풀고 선천코드 오행 분석과 자본의 흑마법을 담은 근본 마법서
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Book 2 */}
-                  <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
-                    style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
-                          Step 2 · 전략
-                        </span>
-                        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#AA8A57]">
-                          <Smartphone className="w-6 h-6" />
+                    {/* Book 2 */}
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
+                      style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
+                    >
+                      <div>
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                            Step 2 · 전략
+                          </span>
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#AA8A57]">
+                            <Smartphone className="w-6 h-6" />
+                          </div>
                         </div>
-                      </div>
 
-                      <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
-                        《정화와 각성의 서》
-                      </h4>
-                      <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
-                      <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
-                        비움의 법칙, 제값 선언문, 5초 루프 각인법, 21일 풍요 뇌 데일리 실천 저널 워크북
-                      </p>
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                          《정화와 각성의 서》
+                        </h4>
+                        <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
+                        <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
+                          비움의 법칙, 제값 선언문, 5초 루프 각인법, 21일 풍요 뇌 데일리 실천 저널 워크북
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Book 3 */}
-                  <div
-                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
-                    style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
-                          Step 3 · 실천
-                        </span>
-                        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#AA8A57]">
-                          <Sparkles className="w-6 h-6" />
+                    {/* Book 3 */}
+                    <div
+                      className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#CBEBDE]/40 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-all hover:border-[#CBEBDE]/65 hover:shadow-[0_8px_30px_rgba(203,235,222,0.22)] hover:-translate-y-1 duration-200"
+                      style={{ background: 'linear-gradient(145deg, rgba(120, 158, 144, 0.45) 0%, rgba(20, 44, 37, 0.90) 100%)' }}
+                    >
+                      <div>
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#8CD3B6]/25 border border-[#CBEBDE]/45 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                            Step 3 · 실천
+                          </span>
+                          <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#AA8A57]">
+                            <Sparkles className="w-6 h-6" />
+                          </div>
                         </div>
-                      </div>
 
-                      <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
-                        《풍요의 파동》
-                      </h4>
-                      <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
-                      <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
-                        기분의 법칙, 저항의 해체, 8대 감정 파동 즉각 전환 비방전을 담은 특별 잠언서
-                      </p>
+                        <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                          《풍요의 파동》
+                        </h4>
+                        <div className="w-8 h-[1px] bg-[#AA8A57]/30 my-2.5 md:my-3" />
+                        <p className="text-[16px] text-[#F0EBE2] leading-[1.7] font-normal break-keep">
+                          기분의 법칙, 저항의 해체, 8대 감정 파동 즉각 전환 비방전을 담은 특별 잠언서
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
                 {/* 3종 올인원 세트 상세 해부 서브헤더 (연애비급과 동일한 간격 및 풍요비책 테마 컬러) */}
                 <div className="text-center max-w-3xl mx-auto mb-16 pt-16 md:pt-24 lg:pt-28 break-keep">
@@ -2123,11 +2123,9 @@ export default function AbundanceSecretPage() {
                 중간 패키지 구매 안내 상자 (연애비급 규격 일치)
                ═══════════════════════════════════════════════════════════════ */}
             <div
-              className="gungjung-glass rounded-3xl relative overflow-hidden shadow-2xl mb-28"
+              className="abundance-gold-frame relative overflow-hidden mb-28"
               style={{
-                background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)',
-                border: '1px solid rgba(190, 158, 108, 0.78)',
-                boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.09), 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
+                background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)'
               }}
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
@@ -3262,11 +3260,9 @@ export default function AbundanceSecretPage() {
 
                   {/* 안쪽 구매 카드 (연애비급 디자인 규격 일치) */}
                   <div
-                    className="px-6 sm:px-10 md:px-12 py-10 md:py-12 rounded-2xl md:rounded-3xl relative shadow-2xl text-center"
+                    className="abundance-gold-frame-final px-6 sm:px-10 md:px-12 py-10 md:py-12 relative text-center"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)',
-                      border: '1px solid rgba(190, 158, 108, 0.78)',
-                      boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.09), 0 12px 40px rgba(0, 0, 0, 0.4)'
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)'
                     }}
                   >
                     <h3 className="text-lg sm:text-xl md:text-2xl font-elegant font-bold text-white leading-[1.4] break-keep mb-2">
