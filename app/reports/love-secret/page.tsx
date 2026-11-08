@@ -515,11 +515,12 @@ export default function LoveSecretEbookPage() {
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    {/* ═══════════════════════════════════════════════════════════════
-                        [공감 영역 1] 불안의 순간 공감
-                        (좌측 55% 공감 문구 + 우측 45% 불안/차단 이미지)
-                       ═══════════════════════════════════════════════════════════════ */}
+                  {/* ═══════════════════════════════════════════════════════════════
+                      [공감 영역 1] 불안의 순간 공감
+                      (좌측 55% 공감 문구 + 우측 45% 불안/차단 이미지)
+                     ═══════════════════════════════════════════════════════════════ */}
                     <div className="!mt-16 sm:!mt-20 md:!mt-28 pt-10 md:pt-14 border-t border-[#B49A70]/20">
                       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                         {/* 좌측 55% 공감 문구 */}
@@ -823,9 +824,8 @@ export default function LoveSecretEbookPage() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </Reveal>
-            </section>
+                </Reveal>
+              </section>
 
             <ChampagneThreadDivider />
 
