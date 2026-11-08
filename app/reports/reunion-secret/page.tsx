@@ -1534,23 +1534,49 @@ export default function ReunionSecretPage() {
                       </h2>
                     </div>
 
-                    <RecommendedForCards
-                      textClassName="text-[15px] sm:text-[16px] md:text-[17px]"
-                      cardBgColor="#F3E9D8"
-                      cardBorderColor="rgba(197, 168, 140, 0.45)"
-                      checkBgColor="#462D38"
-                      checkBorderColor="border-[#462D38]/40"
-                      checkIconColor="text-[#FFF5E8]"
-                      textColor="text-[#2C151D]"
-                      items={[
+                    <div className="space-y-3.5 md:space-y-4">
+                      {[
                         "이별 후 상대에게 연락하고 싶지만 어떤 말을 해야 할지 몰라 불안한 분",
                         "상대가 차단했거나 읽씹, 안읽씹을 반복해 어떻게 해야 할지 막막한 분",
                         "지금 연락해야 하는지, 더 기다려야 하는지 판단이 어려운 분",
                         "권태기, 반복 다툼, 집착, 신뢰 상실, 환승 의심 등 이별 원인을 제대로 진단하고 싶은 분",
                         "재회를 원하지만 예전처럼 매달리는 내가 되고 싶지는 않은 분",
                         "상대를 되찾기 전에 먼저 무너진 나의 중심과 가치를 바로잡고 싶은 분"
-                      ]}
-                    />
+                      ].map((item, idx) => (
+                        <div
+                          key={idx}
+                          style={{
+                            background: 'linear-gradient(135deg, #F5EEE3 0%, #F0E6D7 55%, #E9DECD 100%)',
+                            backgroundImage: `
+                              radial-gradient(circle at 18% 28%, rgba(245, 238, 227, 0.8) 0%, transparent 45%),
+                              radial-gradient(circle at 82% 72%, rgba(233, 222, 205, 0.8) 0%, transparent 50%),
+                              ${hanjiFiberSvg},
+                              linear-gradient(135deg, #F5EEE3 0%, #F0E6D7 55%, #E9DECD 100%)
+                            `,
+                            backgroundSize: '100% 100%, 100% 100%, 340px 340px, 100% 100%',
+                            backgroundPosition: `0 0, 0 0, ${(idx * 79) % 340}px ${(idx * 113) % 340}px, 0 0`,
+                            borderColor: 'rgba(165, 135, 105, 0.30)',
+                            boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), 0 1px 3px 0 rgba(35, 20, 30, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
+                          }}
+                          className="group relative p-4 md:p-[18px_24px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3.5 md:gap-4 transition-all duration-300 hover:border-[#947852] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
+                        >
+                          {/* 딥 플럼 버건디 원형 체크 아이콘 */}
+                          <div className="shrink-0 mt-0.5 relative z-10">
+                            <div 
+                              style={{ backgroundColor: '#54283D', borderColor: 'rgba(125, 75, 89, 0.25)' }}
+                              className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border shadow-none"
+                            >
+                              <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FFF7EC] stroke-[2.4]" />
+                            </div>
+                          </div>
+
+                          {/* 본문 텍스트 */}
+                          <p className="text-[15px] sm:text-[16px] md:text-[17px] text-[#352521] font-semibold leading-[1.65] break-keep select-text relative z-10">
+                            {item}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   {/* 오른쪽: 《재회비방》 3:4 세로형 브랜드 포스터 이미지 (약 42% 너비) */}
@@ -2531,34 +2557,35 @@ export default function ReunionSecretPage() {
                           <div
                             key={idx}
                             style={{
-                              backgroundColor: '#F3E9D8',
+                              background: 'linear-gradient(135deg, #F5EEE3 0%, #F0E6D7 55%, #E9DECD 100%)',
                               backgroundImage: `
-                                radial-gradient(circle at 18% 28%, rgba(240, 230, 212, 0.7) 0%, transparent 45%),
-                                radial-gradient(circle at 82% 72%, rgba(235, 220, 198, 0.7) 0%, transparent 50%),
-                                ${hanjiFiberSvg}
+                                radial-gradient(circle at 18% 28%, rgba(245, 238, 227, 0.8) 0%, transparent 45%),
+                                radial-gradient(circle at 82% 72%, rgba(233, 222, 205, 0.8) 0%, transparent 50%),
+                                ${hanjiFiberSvg},
+                                linear-gradient(135deg, #F5EEE3 0%, #F0E6D7 55%, #E9DECD 100%)
                               `,
-                              backgroundSize: '100% 100%, 100% 100%, 340px 340px',
-                              backgroundPosition: `0 0, 0 0, ${(idx * 79) % 340}px ${(idx * 113) % 340}px`,
-                              borderColor: 'rgba(197, 168, 140, 0.45)',
+                              backgroundSize: '100% 100%, 100% 100%, 340px 340px, 100% 100%',
+                              backgroundPosition: `0 0, 0 0, ${(idx * 79) % 340}px ${(idx * 113) % 340}px, 0 0`,
+                              borderColor: 'rgba(165, 135, 105, 0.30)',
                               boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
                             }}
                             className="group relative p-3.5 sm:p-4 md:p-[14px_20px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3.5 md:gap-4 transition-all duration-300 hover:border-[#947852] hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
                           >
-                            {/* 딥 버건디 원형 체크 아이콘 (이런 분께 추천합니다와 크기·색상·비율 100% 일치) */}
+                            {/* 딥 플럼 버건디 원형 체크 아이콘 (이런 분께 추천합니다와 크기·색상·비율 100% 일치) */}
                             <div className="shrink-0 mt-0.5 relative z-10">
                               <div
-                                style={{ backgroundColor: '#462D38' }}
-                                className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#462D38]/40 shadow-none"
+                                style={{ backgroundColor: '#54283D', borderColor: 'rgba(125, 75, 89, 0.25)' }}
+                                className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border shadow-none"
                               >
-                                <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FFF5E8] stroke-[2.4]" />
+                                <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FFF7EC] stroke-[2.4]" />
                               </div>
                             </div>
 
                             <div className="flex flex-col text-left w-full relative z-10 space-y-0.5">
-                              <h3 className="font-elegant text-[15px] sm:text-[16px] font-bold text-[#240A12] leading-snug break-keep">
+                              <h3 className="font-elegant text-[15px] sm:text-[16px] font-bold text-[#352521] leading-snug break-keep">
                                 {item.title}
                               </h3>
-                              <p className="text-[13px] sm:text-[14px] text-[#4A2630] font-normal leading-relaxed break-keep">
+                              <p className="text-[13px] sm:text-[14px] text-[#74665D] font-normal leading-relaxed break-keep">
                                 {item.desc}
                               </p>
                             </div>
