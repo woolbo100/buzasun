@@ -525,12 +525,13 @@ export default function ReunionSecretPage() {
                   </div>
                 </div>
 
-                {/* 3. Hero Banner 3종 패키지 소개 상자 (단일 구매 영역) */}
+                {/* 3. Hero Banner 3종 패키지 소개 상자 (단일 구매 영역 - 딥 브라운 버건디) */}
                 <div
-                  className="gungjung-glass rounded-3xl border border-[#B49A70]/40 relative overflow-hidden shadow-2xl"
+                  className="rounded-3xl relative overflow-hidden shadow-2xl"
                   style={{
-                    background: 'radial-gradient(ellipse at 50% 0%, rgba(96, 0, 24, 0.35) 0%, rgba(10, 5, 20, 0.95) 100%)',
-                    boxShadow: '0 12px 40px rgba(96, 0, 24, 0.20)'
+                    background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #21171b 100%)',
+                    border: '1px solid rgba(185, 154, 115, 0.35)',
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                   }}
                 >
                   <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
@@ -2043,10 +2044,11 @@ export default function ReunionSecretPage() {
                 Section 13: 패키지 구성 요약과 중간 구매 CTA
                ═══════════════════════════════════════════════════════════════ */}
             <div
-              className="rounded-3xl relative overflow-hidden shadow-2xl mb-28 bg-gradient-to-r from-[#1E040D] via-[#140207] to-[#0A0205]"
+              className="rounded-3xl relative overflow-hidden shadow-2xl mb-28"
               style={{
-                border: '1px solid rgba(190, 158, 108, 0.78)',
-                boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.12), 0 12px 40px rgba(0, 0, 0, 0.45)'
+                background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #21171b 100%)',
+                border: '1px solid rgba(185, 154, 115, 0.35)',
+                boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
               }}
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
