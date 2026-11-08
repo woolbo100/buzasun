@@ -491,11 +491,7 @@ export default function ReunionSecretPage() {
                           <button
                             type="button"
                             onClick={handlePurchase}
-                            className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(96,0,24,0.45)] hover:shadow-[0_0_20px_rgba(180,154,112,0.3)] hover:brightness-110 order-1 sm:order-2 cursor-pointer"
-                            style={{
-                              background: 'linear-gradient(135deg, #800020 0%, #4A0012 100%)',
-                              border: '1px solid rgba(180, 154, 112, 0.65)',
-                            }}
+                            className="reunion-cta-btn flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer"
                           >
                             <span>재회비방 19,000원에 구매하기</span>
                             <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
@@ -1919,11 +1915,7 @@ export default function ReunionSecretPage() {
                     <button
                       type="button"
                       onClick={handlePurchase}
-                      className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(96,0,24,0.45)] hover:shadow-[0_0_20px_rgba(180,154,112,0.3)] hover:brightness-110 order-1 sm:order-2 cursor-pointer"
-                      style={{
-                        background: 'linear-gradient(135deg, #800020 0%, #4A0012 100%)',
-                        border: '1px solid rgba(180, 154, 112, 0.65)',
-                      }}
+                      className="reunion-cta-btn flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer"
                     >
                       <span>재회비방 19,000원에 구매하기</span>
                       <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
@@ -2817,11 +2809,7 @@ export default function ReunionSecretPage() {
                       <button
                         type="button"
                         onClick={handlePurchase}
-                        className="flex-1 py-4 px-8 rounded-xl font-elegant font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_25px_rgba(96,0,24,0.55)] hover:shadow-[0_0_25px_rgba(180,154,112,0.4)] hover:brightness-110 order-1 sm:order-2 cursor-pointer"
-                        style={{
-                          background: 'linear-gradient(135deg, #800020 0%, #4A0012 100%)',
-                          border: '1px solid rgba(180, 154, 112, 0.75)',
-                        }}
+                        className="reunion-cta-btn flex-1 py-4 px-8 rounded-xl font-elegant font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer"
                       >
                         <span>재회비방 19,000원에 구매하기</span>
                         <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
