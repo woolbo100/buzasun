@@ -383,7 +383,43 @@ export default function ReunionSecretPage() {
 
   return (
     <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#4A0E17] selection:text-[#FAF7F2] pb-24 md:pb-0">
-      <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
+      <GlobalBackground
+        src="/image/love-code-bg.png"
+        brightCenter={false}
+        overlay={
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            {/* 1. 상단/측면 신비로운 로즈 버건디 & 앤티크 골드 라이트 오라 (입체감과 깊이감 보존) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 90% 55% at 50% 12%, rgba(85, 35, 52, 0.28) 0%, rgba(39, 22, 41, 0.15) 55%, transparent 85%),
+                  radial-gradient(ellipse 850px 650px at 75% 40%, rgba(95, 37, 56, 0.20) 0%, transparent 60%),
+                  radial-gradient(circle 700px at 20% 65%, rgba(65, 26, 42, 0.18) 0%, transparent 70%),
+                  radial-gradient(ellipse 60% 40% at 50% 0%, rgba(180, 154, 112, 0.05) 0%, transparent 70%)
+                `,
+              }}
+            />
+
+            {/* 2. 메인 딥 플럼 퍼플 × 버건디 그라데이션 (퍼플 베이스와 버건디 카드를 조화롭게 연결) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  linear-gradient(
+                    160deg,
+                    rgba(23, 17, 38, 0.68) 0%,
+                    rgba(39, 22, 41, 0.72) 32%,
+                    rgba(56, 25, 35, 0.64) 62%,
+                    rgba(39, 22, 41, 0.76) 84%,
+                    rgba(18, 12, 26, 0.85) 100%
+                  )
+                `,
+              }}
+            />
+          </div>
+        }
+      >
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
