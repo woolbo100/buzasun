@@ -1499,8 +1499,8 @@ export default function ReunionSecretPage() {
                       ))}
                     </div>
 
-                    {/* 저자의 편지 본문 (18pt / 24px) */}
-                    <div className="text-[17px] sm:text-[19px] md:text-[21px] lg:text-[24px] text-[#251219] leading-[1.75] font-normal space-y-4 sm:space-y-5 break-keep pt-2 sm:pt-4">
+                    {/* 저자의 편지 본문 (18px) */}
+                    <div className="text-[15px] sm:text-[16px] md:text-[18px] text-[#251219] leading-[1.75] font-normal space-y-4 sm:space-y-5 break-keep pt-2 sm:pt-4">
                       <p>
                         &ldquo;재회에서 가장 위험한 것은 &apos;진심이면 통할 것&apos;이라는 순진한 착각입니다. 상대방이 마음의 문을 닫았을 때 보내는 당신의 진심은, 상대에게는 질식할 것 같은 무거운 빚이 됩니다.&rdquo;
                       </p>
