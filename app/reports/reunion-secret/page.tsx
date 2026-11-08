@@ -1512,8 +1512,8 @@ export default function ReunionSecretPage() {
                       </p>
                     </div>
 
-                    {/* 낙관 (백도화 서명 인장 이미지) */}
-                    <div className="pt-5 sm:pt-7 flex items-end justify-end gap-2.5 sm:gap-3">
+                    {/* 낙관 (백도화 서명 인장 이미지 - 왼쪽 정렬로 우측 꽃 장식과 분리) */}
+                    <div className="pt-5 sm:pt-7 flex items-end justify-start gap-2.5 sm:gap-3">
                       <span className="text-[16px] sm:text-[17px] font-elegant text-[#1F070F] font-bold pb-1 tracking-wider">
                         백도화 올림
                       </span>
