@@ -683,8 +683,14 @@ export default function ReunionSecretPage() {
                               key={idx}
                               className="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-start gap-3.5 hover:border-[#B49A70]/40 transition-colors"
                             >
-                              <div className="w-5 h-5 rounded border border-[#B49A70]/60 flex items-center justify-center shrink-0 mt-1 bg-[#462D38] shadow-sm">
-                                <Check className="w-3.5 h-3.5 text-[#FAF7F2]" />
+                              <div
+                                style={{
+                                  backgroundColor: '#54283D',
+                                  borderColor: 'rgba(185, 145, 155, 0.55)'
+                                }}
+                                className="w-5 h-5 rounded border flex items-center justify-center shrink-0 mt-1 shadow-sm"
+                              >
+                                <Check className="w-3.5 h-3.5 text-[#FFF7EC] stroke-[2.4]" />
                               </div>
                               <span className="text-[16px] md:text-[18px] text-[#FAF7F2] font-medium leading-[1.6] break-keep">
                                 {item}
