@@ -816,11 +816,30 @@ export default function ReunionSecretPage() {
                             불안을 이기지 못해 보낸 구구절절한 장문 카톡. 하지만 상대에게는 감정의 강요로 느껴져 &apos;차단&apos;이라는 더 차가운 방어벽을 세우게 만들었습니다.
                           </p>
                         </div>
-                        <div className="mt-6 flex justify-center text-[#B49A70]/30">
-                          <svg className="w-8 h-8" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1">
-                            <path d="M32 8 C30 18, 22 26, 12 28 C22 30, 30 38, 32 48 C34 38, 42 30, 52 28 C42 26, 34 18, 32 8 Z" fill="currentColor" fillOpacity="0.1" />
-                            <circle cx="32" cy="28" r="4" fill="currentColor" />
+                        {/* 본문 하단 중앙 모란꽃 라인 아트 장식 (풍요비책 연꽃과 동일 비율 · 재회비방 모란꽃 문양) */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#B79A77"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                          >
+                            {/* 중앙 둥근 꽃잎 */}
+                            <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
+                            {/* 좌우 안쪽 꽃잎 */}
+                            <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
+                            <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
+                            {/* 좌우 바깥 꽃잎 */}
+                            <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
+                            <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
+                            {/* 하단 꽃받침 */}
+                            <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
                           </svg>
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
                         </div>
                       </div>
 
@@ -847,11 +866,30 @@ export default function ReunionSecretPage() {
                             내 모든 자존감과 가치를 깎아내리며 매달릴수록, 상대의 무의식 속에서 당신의 매력과 프레임은 바닥으로 곤두박질쳤습니다.
                           </p>
                         </div>
-                        <div className="mt-6 flex justify-center text-[#B49A70]/30">
-                          <svg className="w-8 h-8" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1">
-                            <path d="M32 8 C30 18, 22 26, 12 28 C22 30, 30 38, 32 48 C34 38, 42 30, 52 28 C42 26, 34 18, 32 8 Z" fill="currentColor" fillOpacity="0.1" />
-                            <circle cx="32" cy="28" r="4" fill="currentColor" />
+                        {/* 본문 하단 중앙 모란꽃 라인 아트 장식 (풍요비책 연꽃과 동일 비율 · 재회비방 모란꽃 문양) */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#B79A77"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                          >
+                            {/* 중앙 둥근 꽃잎 */}
+                            <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
+                            {/* 좌우 안쪽 꽃잎 */}
+                            <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
+                            <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
+                            {/* 좌우 바깥 꽃잎 */}
+                            <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
+                            <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
+                            {/* 하단 꽃받침 */}
+                            <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
                           </svg>
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
                         </div>
                       </div>
 
@@ -878,11 +916,30 @@ export default function ReunionSecretPage() {
                             남자가 이별 직후 느끼는 &apos;해방감&apos; 타이밍에 무작정 매달리는 것은, 상대에게 &apos;헤어지길 참 잘했다&apos;는 안도감과 면죄부만 쥐여줄 뿐입니다.
                           </p>
                         </div>
-                        <div className="mt-6 flex justify-center text-[#B49A70]/30">
-                          <svg className="w-8 h-8" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1">
-                            <path d="M32 8 C30 18, 22 26, 12 28 C22 30, 30 38, 32 48 C34 38, 42 30, 52 28 C42 26, 34 18, 32 8 Z" fill="currentColor" fillOpacity="0.1" />
-                            <circle cx="32" cy="28" r="4" fill="currentColor" />
+                        {/* 본문 하단 중앙 모란꽃 라인 아트 장식 (풍요비책 연꽃과 동일 비율 · 재회비방 모란꽃 문양) */}
+                        <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#B79A77"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                          >
+                            {/* 중앙 둥근 꽃잎 */}
+                            <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
+                            {/* 좌우 안쪽 꽃잎 */}
+                            <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
+                            <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
+                            {/* 좌우 바깥 꽃잎 */}
+                            <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
+                            <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
+                            {/* 하단 꽃받침 */}
+                            <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
                           </svg>
+                          <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
                         </div>
                       </div>
                     </div>
