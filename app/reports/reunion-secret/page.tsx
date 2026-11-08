@@ -1934,6 +1934,15 @@ export default function ReunionSecretPage() {
                           assetKey="book1"
                           className="aspect-[3/4] shadow-2xl"
                         />
+                        {/* 📖 Book 1 목업 하단 정보 */}
+                        <div className="mt-4 md:mt-5 text-center space-y-1 text-[16px] md:text-[18px] leading-[1.5]">
+                          <p className="text-[#C4A477] font-semibold tracking-wide">
+                            원리바이블-본편
+                          </p>
+                          <p className="text-[#E8DED6] font-normal tracking-wide">
+                            PDF 전자책 · <strong className="font-bold">92페이지</strong>
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <div className="lg:col-span-7 space-y-5 text-left break-keep">
@@ -2014,6 +2023,12 @@ export default function ReunionSecretPage() {
                           assetKey="book2"
                           className="aspect-[3/4] shadow-2xl"
                         />
+                        {/* 📖 Book 2 목업 하단 정보 */}
+                        <div className="mt-4 md:mt-5 text-center text-[16px] md:text-[18px] leading-[1.5]">
+                          <p className="text-[#E8DED6] font-normal tracking-wide">
+                            PDF 전자책 · <strong className="font-bold">43페이지</strong>
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <div className="lg:col-span-7 space-y-5 text-left break-keep">
@@ -2108,6 +2123,12 @@ export default function ReunionSecretPage() {
                           assetKey="book3"
                           className="aspect-[3/4] shadow-2xl"
                         />
+                        {/* 📖 Book 3 목업 하단 정보 */}
+                        <div className="mt-4 md:mt-5 text-center text-[16px] md:text-[18px] leading-[1.5]">
+                          <p className="text-[#E8DED6] font-normal tracking-wide">
+                            PDF 전자책 · <strong className="font-bold">54페이지</strong>
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <div className="lg:col-span-7 space-y-5 text-left break-keep">
