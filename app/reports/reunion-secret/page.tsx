@@ -10,11 +10,11 @@ import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
-import { 
-  Check, 
-  BookOpen, 
-  FileText, 
-  Smartphone, 
+import {
+  Check,
+  BookOpen,
+  FileText,
+  Smartphone,
   AlertCircle,
   ChevronRight,
   ChevronLeft,
@@ -203,9 +203,8 @@ function BookTocAccordion({
         <div className="flex items-center gap-1.5 text-xs text-[#C2A477]">
           <span>{isOpen ? '목차 접기' : '목차 펼쳐보기'}</span>
           <ChevronDown
-            className={`w-4 h-4 transition-transform duration-300 ${
-              isOpen ? 'rotate-180' : ''
-            }`}
+            className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+              }`}
           />
         </div>
       </button>
@@ -466,7 +465,7 @@ export default function ReunionSecretPage() {
 
         <div className="relative z-10 pt-44 pb-20">
           <div className="container-premium">
-            
+
             {/* ═══════════════════════════════════════════════════════════════
                 Section 1: Hero Section (히어로 및 상품 소개)
                ═══════════════════════════════════════════════════════════════ */}
@@ -1162,14 +1161,14 @@ export default function ReunionSecretPage() {
             <RedThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 6: 저자 소개 (AUTHOR & MASTER 백도화 - r6.webp 한지 비단 배경 카드)
+                Section 6: 저자 소개 (AUTHOR & MASTER 백도화 - r8.webp 한지 비단 배경 카드)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
                   className="rounded-3xl border border-[#B49A70]/40 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden shadow-2xl text-left transition-all duration-300 hover:shadow-[0_0_24px_rgba(185,145,91,0.2)]"
                   style={{
-                    backgroundImage: "url('/image/reunion-secret/r6.webp')",
+                    backgroundImage: "url('/image/reunion-secret/r8.webp')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -2815,9 +2814,8 @@ export default function ReunionSecretPage() {
                             </span>
                           </div>
                           <ChevronDown
-                            className={`w-5 h-5 text-[#C2A477] shrink-0 transition-transform duration-300 ${
-                              isOpen ? 'rotate-180' : ''
-                            }`}
+                            className={`w-5 h-5 text-[#C2A477] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''
+                              }`}
                           />
                         </button>
                         {isOpen && (
@@ -2892,7 +2890,7 @@ export default function ReunionSecretPage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D0709] via-[#0D0709]/70 to-transparent" />
-              
+
               <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 text-left max-w-2xl">
                 <span className="text-[#C2A477] font-elegant text-xs md:text-sm tracking-[0.3em] uppercase mb-3 block font-semibold">
                   A WORD FOR YOUR HEART
@@ -2905,7 +2903,7 @@ export default function ReunionSecretPage() {
                   먼저 나의 상태를 바꾸고, 관계의 흐름을 다시 읽어야 합니다.<br />
                   끊어진 인연 앞에서 무너지고 있다면, 이제 감정이 아니라 전략으로 다시 나를 세워보세요.
                 </p>
-                
+
                 {/* 연애비급 방식의 배경 없는 감성 텍스트 링크 */}
                 <div className="pt-2">
                   <a
