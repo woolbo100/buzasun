@@ -529,7 +529,7 @@ export default function ReunionSecretPage() {
                 <div
                   className="rounded-3xl relative overflow-hidden shadow-2xl"
                   style={{
-                    background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #21171b 100%)',
+                    background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                     border: '1px solid rgba(185, 154, 115, 0.35)',
                     boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
                   }}
@@ -2072,7 +2072,7 @@ export default function ReunionSecretPage() {
             <div
               className="rounded-3xl relative overflow-hidden shadow-2xl mb-28"
               style={{
-                background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #21171b 100%)',
+                background: 'linear-gradient(115deg, #302023 0%, #29191d 52%, #302027 100%)',
                 border: '1px solid rgba(185, 154, 115, 0.35)',
                 boxShadow: '0 12px 40px rgba(0, 0, 0, 0.35)'
               }}
