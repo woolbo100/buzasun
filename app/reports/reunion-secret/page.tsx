@@ -1922,7 +1922,12 @@ export default function ReunionSecretPage() {
               <Reveal>
                 <div className="space-y-10">
                   {/* Book 1. [본편] 《재회비방(再會秘方) 완전판》 */}
-                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#542638] via-[#40202d] to-[#2a1720] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  <div
+                    className="gungjung-glass reunion-transformation-box p-6 md:p-10 lg:p-12 rounded-3xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start transition-all duration-300"
+                    style={{
+                      boxShadow: '0 12px 35px rgba(0, 0, 0, 0.25)'
+                    }}
+                  >
                     <div className="lg:col-span-5 flex justify-center">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
@@ -1997,7 +2002,12 @@ export default function ReunionSecretPage() {
                   </div>
 
                   {/* Book 2. [실전 부록 1] 《재회 역전의 법칙: 30일 실전 행동 매뉴얼》 */}
-                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#542638] via-[#40202d] to-[#2a1720] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  <div
+                    className="gungjung-glass reunion-transformation-box p-6 md:p-10 lg:p-12 rounded-3xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start transition-all duration-300"
+                    style={{
+                      boxShadow: '0 12px 35px rgba(0, 0, 0, 0.25)'
+                    }}
+                  >
                     <div className="lg:col-span-5 flex justify-center order-last lg:order-first">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
@@ -2086,7 +2096,12 @@ export default function ReunionSecretPage() {
                   </div>
 
                   {/* Book 3. [실전 부록 2] 《재회 후폭풍 치트키: 무의식 시크릿 메시지 33선》 */}
-                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#542638] via-[#40202d] to-[#2a1720] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  <div
+                    className="gungjung-glass reunion-transformation-box p-6 md:p-10 lg:p-12 rounded-3xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start transition-all duration-300"
+                    style={{
+                      boxShadow: '0 12px 35px rgba(0, 0, 0, 0.25)'
+                    }}
+                  >
                     <div className="lg:col-span-5 flex justify-center">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
