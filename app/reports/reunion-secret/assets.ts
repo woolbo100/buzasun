@@ -29,12 +29,12 @@ export const reunionSecretAssets: Record<string, ReunionSecretAssetItem> = {
   // 2. Pain: 읽씹·차단 상황 이미지
   pain: {
     id: 'pain',
-    src: 'kakao_blocked_placeholder.png',
+    src: '/image/reunion-secret/kakao_blocked_placeholder.webp',
     alt: '카톡 읽씹/차단 화면 목업',
-    aspectRatio: 'aspect-[4/5]',
-    objectFit: 'contain',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'cover',
     placeholderLabel: '카톡 읽씹·차단 화면 목업',
-    description: 'kakao_blocked_placeholder.png'
+    description: 'kakao_blocked_placeholder.webp'
   },
 
   // 3. Book 1: 본편 표지

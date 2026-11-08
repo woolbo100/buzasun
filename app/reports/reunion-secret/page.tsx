@@ -118,7 +118,7 @@ function HybridImageSlot({
     )
   }
 
-  const isRealImage = asset.src && !asset.src.includes('placeholder')
+  const isRealImage = asset.src && (asset.src.startsWith('/') || !asset.src.includes('placeholder'))
 
   if (isRealImage) {
     return (
