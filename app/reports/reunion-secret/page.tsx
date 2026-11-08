@@ -1905,10 +1905,10 @@ export default function ReunionSecretPage() {
                   </h2>
                   <div className="space-y-1.5">
                     <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.5]">
-                      본편부터 실전 워크북, 특별 외전까지
+                      본편부터 실전 워크북 1, 실전 워크북 2 까지
                     </p>
                     <p className="text-[18px] md:text-[20px] text-[#C2A477] font-bold font-elegant tracking-wide leading-[1.5]">
-                      3종 · 총 175페이지 PDF 패키지
+                      3종 · 총 189페이지 PDF 패키지
                     </p>
                   </div>
                 </div>
