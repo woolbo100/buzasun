@@ -934,35 +934,32 @@ export default function ReunionSecretPage() {
                     </h2>
                   </div>
 
-                  <div className="w-full text-left break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass border border-[#B49A70]/30 shadow-2xl relative overflow-hidden"
+                  {/* r1.webp 한지 비단 배경 카드 */}
+                  <div
+                    className="w-full text-left break-keep p-6 sm:p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl border border-[#B49A70]/40 shadow-2xl relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_24px_rgba(185,145,91,0.2)]"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(60, 0, 24, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)',
-                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
+                      backgroundImage: "url('/image/reunion-secret/r1.webp')",
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center right',
+                      backgroundRepeat: 'no-repeat',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
                     }}
                   >
-                    <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.6] mb-5">
-                      &ldquo;진심을 다해 매달렸는데 왜 더 멀어졌을까요?<br />
-                      이별 후에도 <span className="text-[#CDB7A3]">&lsquo;전략과 심리&rsquo;</span>가 필요했던 이유&rdquo;
-                    </h3>
+                    {/* 오른쪽 한지 영역 위에 배치되는 텍스트 컨테이너 */}
+                    <div className="w-full lg:w-[62%] xl:w-[58%] ml-auto bg-[#FAF7F2]/85 lg:bg-transparent backdrop-blur-[3px] lg:backdrop-blur-none p-6 sm:p-8 lg:p-0 rounded-2xl lg:rounded-none shadow-sm lg:shadow-none border border-[#B49A70]/30 lg:border-none">
+                      <h3 className="text-xl sm:text-2xl lg:text-[26px] font-elegant font-bold text-[#240A12] leading-[1.55] mb-5 sm:mb-6 break-keep">
+                        &ldquo;진심을 다해 매달렸는데 왜 더 멀어졌을까요?<br />
+                        이별 후에도 <span className="text-[#7A0D23] font-extrabold">&lsquo;전략과 심리&rsquo;</span>가 필요했던 이유&rdquo;
+                      </h3>
 
-                    <div className="relative w-full aspect-[16/9] md:aspect-video rounded-xl md:rounded-2xl overflow-hidden border border-[#B49A70]/20 mb-6 bg-black/40">
-                      <Image
-                        src={productData.formulaImage}
-                        alt="재회비방 프레임 역전 원리"
-                        fill
-                        sizes="(max-width: 1280px) 100vw, 1280px"
-                        className="object-cover"
-                        priority
-                      />
-                    </div>
-
-                    <div className="text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-4 break-keep">
-                      <p>
-                        연애 중의 다정함과 이별 후의 재회는 작동하는 무의식의 문법이 완전히 다릅니다. 이별하는 순간, 상대방의 뇌 속에서 당신은 &apos;사랑하는 연인&apos;에서 &apos;나의 자유를 옭아매는 부담스러운 존재&apos;로 재분류됩니다.
-                      </p>
-                      <p>
-                        이 상태에서 쏟아붓는 눈물과 사과는 상대를 질리게 만들 뿐입니다. 재회의 유일한 열쇠는 <strong className="text-[#FAF7F2] font-semibold">&apos;무의식적 프레임 역전&apos;</strong>입니다. 내가 먼저 물러서서 상대의 예측을 박살 내고, 상대의 결핍과 후폭풍을 설계해야 합니다.
-                      </p>
+                      <div className="text-[16px] sm:text-[17px] md:text-[18px] text-[#2C151D] leading-[1.85] font-normal space-y-4 break-keep">
+                        <p>
+                          연애 중의 다정함과 이별 후의 재회는 작동하는 무의식의 문법이 완전히 다릅니다. 이별하는 순간, 상대방의 뇌 속에서 당신은 &apos;사랑하는 연인&apos;에서 &apos;나의 자유를 옭아매는 부담스러운 존재&apos;로 재분류됩니다.
+                        </p>
+                        <p>
+                          이 상태에서 쏟아붓는 눈물과 사과는 상대를 질리게 만들 뿐입니다. 재회의 유일한 열쇠는 <strong className="text-[#7A0D23] font-bold">&apos;무의식적 프레임 역전&apos;</strong>입니다. 내가 먼저 물러서서 상대의 예측을 박살 내고, 상대의 결핍과 후폭풍을 설계해야 합니다.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1089,33 +1086,37 @@ export default function ReunionSecretPage() {
             <RedThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 6: 저자 소개 (AUTHOR & MASTER 백도화)
+                Section 6: 저자 소개 (AUTHOR & MASTER 백도화 - r6.webp 한지 비단 배경 카드)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="gungjung-glass rounded-3xl border border-[#B49A70]/40 p-8 sm:p-10 md:p-14 relative overflow-hidden shadow-2xl text-left"
+                  className="rounded-3xl border border-[#B49A70]/40 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden shadow-2xl text-left transition-all duration-300 hover:shadow-[0_0_24px_rgba(185,145,91,0.2)]"
                   style={{
-                    background: 'radial-gradient(ellipse at 50% 0%, rgba(96, 0, 24, 0.40) 0%, rgba(15, 4, 10, 0.96) 100%)',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.5)'
+                    backgroundImage: "url('/image/reunion-secret/r6.webp')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
                   }}
                 >
-                  <div className="max-w-3xl mx-auto space-y-8">
+                  {/* 중앙~좌측 한지 영역 위에 배치되는 텍스트 컨테이너 (오른쪽 달과 붉은 매듭, 하단 비단 장식과 조화) */}
+                  <div className="max-w-2xl lg:max-w-3xl mr-auto lg:pr-10 space-y-6 sm:space-y-8 bg-[#FAF7F2]/85 lg:bg-transparent backdrop-blur-[3px] lg:backdrop-blur-none p-6 sm:p-8 lg:p-0 rounded-2xl lg:rounded-none shadow-sm lg:shadow-none border border-[#B49A70]/30 lg:border-none">
                     {/* 이름 & 타이틀 */}
-                    <div className="space-y-2 border-b border-[#B49A70]/25 pb-6">
-                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#CDB7A3] uppercase block">
+                    <div className="space-y-2 border-b border-[#B49A70]/30 pb-5 sm:pb-6">
+                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#7A0D23] uppercase block">
                         AUTHOR & MASTER
                       </span>
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2]">
-                        백도화 <span className="text-[#B59C88] text-xl md:text-2xl font-normal">(白桃花)</span>
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#1F070F]">
+                        백도화 <span className="text-[#600018] text-xl md:text-2xl font-normal">(白桃花)</span>
                       </h2>
-                      <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light">
+                      <p className="text-sm md:text-base text-[#381E26] font-medium">
                         마음의 구조를 읽고, 관계의 자리를 회복시키는 심리 멘토
                       </p>
                     </div>
 
                     {/* 핵심 공인 자격 뱃지 */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-1">
                       {[
                         "심리상담사 1급",
                         "인간관계관리사 1급",
@@ -1124,24 +1125,24 @@ export default function ReunionSecretPage() {
                       ].map((cert, idx) => (
                         <div
                           key={idx}
-                          className="p-3 rounded-xl border border-[#B49A70]/30 bg-[#2E0B16]/50 text-center space-y-1 shadow-sm"
+                          className="p-3 rounded-xl border border-[#B49A70]/40 bg-[#FAF7F2]/90 text-center space-y-1 shadow-sm"
                         >
-                          <CheckCircle2 className="w-4 h-4 text-[#B59C88] mx-auto" />
-                          <span className="text-xs font-elegant font-bold text-[#FAF7F2] block break-keep">
+                          <CheckCircle2 className="w-4 h-4 text-[#7A0D23] mx-auto" />
+                          <span className="text-xs font-elegant font-bold text-[#1F070F] block break-keep">
                             {cert}
                           </span>
-                          <span className="text-[10px] text-[#EDE6DA]/50 block">공인 자격 보유</span>
+                          <span className="text-[10px] text-[#4A2630]/70 block">공인 자격 보유</span>
                         </div>
                       ))}
                     </div>
 
                     {/* 저자의 편지 본문 */}
-                    <div className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.85] font-light space-y-4 break-keep pt-4">
+                    <div className="text-[16px] md:text-[18px] text-[#251219] leading-[1.85] font-normal space-y-4 break-keep pt-2 sm:pt-4">
                       <p>
                         &ldquo;재회에서 가장 위험한 것은 &apos;진심이면 통할 것&apos;이라는 순진한 착각입니다. 상대방이 마음의 문을 닫았을 때 보내는 당신의 진심은, 상대에게는 질식할 것 같은 무거운 빚이 됩니다.&rdquo;
                       </p>
                       <p>
-                        수많은 내담자들의 이별 눈물을 닦아주며 확인한 진실은 하나였습니다. 떠난 사람의 발길을 돌리는 것은 눈물이 아니라, <strong className="text-[#FAF7F2] font-semibold">&apos;다시 호기심을 갖게 만드는 당신의 달라진 상태와 에너지&apos;</strong>입니다.
+                        수많은 내담자들의 이별 눈물을 닦아주며 확인한 진실은 하나였습니다. 떠난 사람의 발길을 돌리는 것은 눈물이 아니라, <strong className="text-[#7A0D23] font-bold">&apos;다시 호기심을 갖게 만드는 당신의 달라진 상태와 에너지&apos;</strong>입니다.
                       </p>
                       <p>
                         오늘 밤, 이 책을 통해 매달림의 흑역사를 멈추고 당당하게 당신의 가치를 되찾으시길 바랍니다.
@@ -1149,9 +1150,9 @@ export default function ReunionSecretPage() {
                     </div>
 
                     {/* 낙관 */}
-                    <div className="pt-6 flex items-center justify-end gap-3">
-                      <span className="text-sm font-elegant text-[#FAF7F2]">백도화 올림</span>
-                      <div className="w-8 h-8 rounded-lg bg-[#8C1D24] border border-[#B49A70] flex items-center justify-center text-xs font-bold text-white shadow-md">
+                    <div className="pt-4 sm:pt-6 flex items-center justify-end gap-3">
+                      <span className="text-sm font-elegant text-[#1F070F] font-semibold">백도화 올림</span>
+                      <div className="w-8 h-8 rounded-lg bg-[#7A0D23] border border-[#B49A70] flex items-center justify-center text-xs font-bold text-white shadow-md">
                         印
                       </div>
                     </div>
