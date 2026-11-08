@@ -56,7 +56,7 @@ const productData = {
   discountRate: '76% OFF',
 
   topBannerImage: '/image/reunion-secret/reunion-secret-hero.webp?v=20261108_1',
-  heroImage: '/image/reunion-secret/r9.webp',
+  heroImage: '/image/reunion-secret/r9.webp?v=20261108_2',
   overviewImage: '/image/reunion-secret/reunion-emotional-empathy.webp?v=20261108',
   recommendedImage: '/image/reunion-secret/reunion-secret-recommended.webp?v=20261108',
   formulaImage: '/image/reunion-secret/r4.webp',
