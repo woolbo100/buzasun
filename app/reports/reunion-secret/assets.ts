@@ -40,34 +40,34 @@ export const reunionSecretAssets: Record<string, ReunionSecretAssetItem> = {
   // 3. Book 1: 본편 표지
   book1: {
     id: 'book1',
-    src: 'book1_placeholder.png',
-    alt: '본편 양장본 표지',
+    src: '/image/reunion-secret/book1.webp',
+    alt: '재회비방(再會秘方) 완전판 목업 이미지',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
     placeholderLabel: 'Book 1. [본편] 재회비방 완전판 표지',
-    description: 'book1_placeholder.png'
+    description: 'book1.webp'
   },
 
   // 4. Book 2: 부록 1 표지
   book2: {
     id: 'book2',
-    src: 'book2_placeholder.png',
-    alt: '실전 행동 매뉴얼 표지',
+    src: '/image/reunion-secret/book2.webp',
+    alt: '재회 역전의 법칙 목업 이미지',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
     placeholderLabel: 'Book 2. [부록 1] 재회 역전의 법칙 표지',
-    description: 'book2_placeholder.png'
+    description: 'book2.webp'
   },
 
   // 5. Book 3: 부록 2 표지
   book3: {
     id: 'book3',
-    src: 'book3_placeholder.png',
-    alt: '시크릿 메시지 33선 표지',
+    src: '/image/reunion-secret/book3.webp',
+    alt: '재회 후폭풍 치트키 목업 이미지',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
     placeholderLabel: 'Book 3. [부록 2] 재회 후폭풍 치트키 표지',
-    description: 'book3_placeholder.png'
+    description: 'book3.webp'
   },
 
   // 6. Amulet: 모바일 부적
