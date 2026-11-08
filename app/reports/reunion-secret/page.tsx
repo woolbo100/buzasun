@@ -1163,62 +1163,86 @@ export default function ReunionSecretPage() {
             <RedThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 7: 탄생 배경 (단 하나의 비방)
+                Section 7: 탄생 배경 (단 하나의 비방 - 풍요비책 레이아웃과 100% 동일)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center text-left break-keep">
-                  {/* 왼쪽 책 이미지 */}
-                  <div className="lg:col-span-5 w-full flex flex-col justify-center">
-                    <div className="relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-2xl bg-black/40">
-                      <Image
-                        src={productData.formulaImage}
-                        alt="재회비방 책의 탄생 비주얼"
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 40vw"
-                        className="object-cover"
-                      />
-                    </div>
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-stretch">
+                  {/* 왼쪽 책 비주얼 이미지 (풍요비책 3:4 라운드 프레임과 동일) */}
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] sm:rounded-[40px] border border-[#B49A70]/30 shadow-2xl bg-black/40">
+                    <Image
+                      src={productData.formulaImage}
+                      alt="수많은 눈물과 연구 끝에 탄생한 재회비방"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                      priority
+                    />
                   </div>
 
-                  {/* 오른쪽 핵심 가치 및 6개 엠블럼 박스 */}
-                  <div className="lg:col-span-7 space-y-6">
-                    <div className="space-y-3">
-                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#CDB7A3] uppercase block">
-                        THE BIRTH OF THE SECRET
-                      </span>
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-snug">
-                        수많은 눈물과 연구 끝에,<br />
-                        마침내 탄생한 <span className="text-[#CDB7A3]">단 하나의 비방(秘方)</span>
+                  {/* 오른쪽 핵심 가치 및 6개 알약형 특징 카드 */}
+                  <div className="h-full flex flex-col justify-between text-left break-keep space-y-6 lg:space-y-0">
+                    <div>
+                      <p className="text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-light text-[#F0EBE2] leading-[1.4] mb-2 sm:mb-2.5 break-keep">
+                        수많은 눈물과 연구 끝에,
+                      </p>
+                      <h2 className="text-[24px] sm:text-[30px] md:text-[34px] lg:text-[38px] xl:text-[40px] font-elegant font-bold text-[#FAF7F2] leading-[1.38] break-keep">
+                        마침내 탄생한<br />
+                        단 하나의 비방(秘方)<br />
+                        <span
+                          className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] font-extrabold mt-2 inline-block"
+                          style={{
+                            background: 'linear-gradient(110deg, #EAD6B0 0%, #D8B878 38%, #C8C39C 65%, #C2909C 100%)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            color: 'transparent',
+                            WebkitTextFillColor: 'transparent',
+                            opacity: 1
+                          }}
+                        >
+                          재회비방
+                        </span>
                       </h2>
-                      <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light leading-relaxed">
-                        시중의 뻔한 연애 팁이나 근거 없는 감정적 위로를 거부합니다. 뇌과학, 인지심리학, 무의식 역학을 집대성하여 오직 &apos;실제 재회&apos;만을 위해 설계되었습니다.
+                    </div>
+
+                    <div className="space-y-4 text-[16px] md:text-[17px] lg:text-[18px] text-[#EAE4D8] leading-[1.8] font-normal break-keep lg:py-2">
+                      <p className="text-[#F0EBE2]">
+                        더 이상 어긋난 인연 앞에서 자책하며 무너지지 마십시오.
+                      </p>
+                      <p className="text-[#FAF7F2] font-semibold text-[17px] md:text-[19px]">
+                        재회는 매달리는 것이 아니라, 내 안의 프레임을 바로 세우는 것입니다.
+                      </p>
+                      <p className="text-[#F0EBE2]">
+                        <strong className="text-[#CDB7A3] font-semibold">《재회비방》</strong>은 시중의 뻔한 연애 팁이나 근거 없는 감정적 위로를 거부하고{' '}
+                        <span className="text-[#FAF7F2] font-semibold">&lsquo;뇌과학 심리전&rsquo;</span>과{' '}
+                        <span className="text-[#FAF7F2] font-semibold">&lsquo;무의식 역학&rsquo;</span>을 집대성하여 오직 실제 재회만을 위해 탄생한 실전 비방서입니다.
                       </p>
                     </div>
 
-                    {/* 6개 엠블럼 박스 */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-2">
+                    {/* 2열 3행 알약형 특징 카드 (풍요비책과 100% 동일한 레이아웃) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                       {[
-                        { title: "뇌과학 심리전", desc: "남녀 뇌 구조와 도파민 회로 분석" },
-                        { title: "프레임 역전", desc: "을에서 갑으로 위치 재설계" },
-                        { title: "골든타임 공식", desc: "4대 유형별 맞춤 공백기 도출" },
-                        { title: "33선 스크립트", desc: "복사해서 바로 쓰는 검증된 문자" },
-                        { title: "30일 행동 지침", desc: "매일 따라 하는 데일리 로드맵" },
-                        { title: "회향연부 부적", desc: "인연을 다시 잇는 모바일 부적" }
+                        "뇌과학 무의식 심리전",
+                        "을에서 갑으로 프레임 역전",
+                        "4대 유형별 골든타임 공식",
+                        "복사 전용 33선 스크립트",
+                        "30일 실전 행동 데일리 매뉴얼",
+                        "인연 결속 회향연부 모바일 부적"
                       ].map((item, idx) => (
                         <div
                           key={idx}
-                          className="p-3.5 rounded-xl border border-[#B49A70]/25 bg-[#2E0B16]/40 space-y-1 hover:border-[#B49A70]/50 transition-colors"
+                          className="p-3.5 sm:p-4 rounded-xl border border-[#B49A70]/40 flex items-center gap-3 backdrop-blur-md transition-all duration-300 hover:border-[#B49A70]/65 hover:shadow-[0_0_20px_rgba(180,154,112,0.18)] hover:scale-[1.01]"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(96, 0, 24, 0.40) 0%, rgba(26, 4, 11, 0.90) 100%)',
+                            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.35)'
+                          }}
                         >
-                          <div className="flex items-center gap-1.5 text-[#CDB7A3]">
-                            <Sparkles className="w-3.5 h-3.5 shrink-0" />
-                            <span className="text-xs font-elegant font-bold text-[#FAF7F2] break-keep">
-                              {item.title}
-                            </span>
+                          <div className="w-6 h-6 rounded-lg bg-[#600018]/50 flex items-center justify-center shrink-0 border border-[#B49A70]/40 text-[#CDB7A3] text-[13px] font-bold">
+                            ✦
                           </div>
-                          <p className="text-[11px] text-[#EDE6DA]/60 leading-tight break-keep">
-                            {item.desc}
-                          </p>
+                          <span className="text-[14px] sm:text-[15px] text-[#FAF7F2] font-semibold tracking-wide break-keep">
+                            {item}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -2807,7 +2831,7 @@ export default function ReunionSecretPage() {
                   <span className="text-[#CDB7A3] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     TIME TO RECLAIM YOUR POWER
                   </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-[40px] font-elegant font-bold text-white leading-tight break-keep">
+                  <h2 className="text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] font-elegant font-bold text-white leading-[1.4] break-keep mb-5 md:mb-6">
                     잘못 보낸 카톡 한 줄로,<br />
                     <span className="text-[#CDB7A3]">마지막 재회의 문</span>마저 닫지 않도록
                   </h2>
