@@ -405,42 +405,56 @@ export default function ReunionSecretPage() {
   )
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#4A0E17] selection:text-[#FAF7F2] pb-24 md:pb-0">
+    <main className="detail-page relative min-h-screen bg-[#180D16] text-[#EDE6DA] font-sans selection:bg-[#552435] selection:text-[#FAF7F2] pb-24 md:pb-0">
       <GlobalBackground
         src="/image/love-code-bg.png"
         brightCenter={false}
-        overlay={
+        customBaseOverlay={
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 상단/측면 신비로운 로즈 버건디 & 앤티크 골드 라이트 오라 (입체감과 깊이감 보존) */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  radial-gradient(ellipse 90% 55% at 50% 12%, rgba(85, 35, 52, 0.28) 0%, rgba(39, 22, 41, 0.15) 55%, transparent 85%),
-                  radial-gradient(ellipse 850px 650px at 75% 40%, rgba(95, 37, 56, 0.20) 0%, transparent 60%),
-                  radial-gradient(circle 700px at 20% 65%, rgba(65, 26, 42, 0.18) 0%, transparent 70%),
-                  radial-gradient(ellipse 60% 40% at 50% 0%, rgba(180, 154, 112, 0.05) 0%, transparent 70%)
-                `,
-              }}
-            />
-
-            {/* 2. 메인 딥 플럼 퍼플 × 버건디 그라데이션 (퍼플 베이스와 버건디 카드를 조화롭게 연결) */}
+            {/* 1. 대각선 메인 와인 버건디 베이스 그라데이션 (블랙 와인 #180D16 -> 딥 버건디 #351521 -> 로즈 와인 #552435) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
                   linear-gradient(
-                    160deg,
-                    rgba(23, 17, 38, 0.68) 0%,
-                    rgba(39, 22, 41, 0.72) 32%,
-                    rgba(56, 25, 35, 0.64) 62%,
-                    rgba(39, 22, 41, 0.76) 84%,
-                    rgba(18, 12, 26, 0.85) 100%
+                    135deg,
+                    rgba(24, 13, 22, 0.92) 0%,
+                    rgba(38, 16, 25, 0.88) 28%,
+                    rgba(53, 21, 33, 0.85) 55%,
+                    rgba(70, 28, 44, 0.87) 82%,
+                    rgba(85, 36, 53, 0.92) 100%
                   )
                 `,
               }}
             />
+
+            {/* 2. 입체적인 로즈 와인 & 앤티크 골드 라이트 오라 (특정 구간에만 은은한 깊이감 부여) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 950px 700px at 75% 35%, rgba(125, 49, 72, 0.28) 0%, rgba(85, 36, 53, 0.12) 45%, transparent 65%),
+                  radial-gradient(ellipse 850px 650px at 20% 70%, rgba(95, 37, 56, 0.20) 0%, transparent 60%),
+                  radial-gradient(ellipse 60% 35% at 50% 0%, rgba(180, 154, 112, 0.05) 0%, transparent 70%)
+                `,
+              }}
+            />
           </div>
+        }
+        customVignette={
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `
+                radial-gradient(
+                  circle at center,
+                  rgba(0, 0, 0, 0) 45%,
+                  rgba(24, 13, 22, 0.35) 75%,
+                  rgba(15, 7, 13, 0.70) 100%
+                )
+              `,
+            }}
+          />
         }
       >
         <Navigation />
@@ -2834,7 +2848,7 @@ export default function ReunionSecretPage() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0514] via-[#0A0514]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#180D16] via-[#180D16]/60 to-transparent" />
               
               <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 text-left max-w-2xl">
                 <span className="text-[#CDB7A3] font-elegant text-xs md:text-sm tracking-[0.3em] uppercase mb-3 block font-semibold">

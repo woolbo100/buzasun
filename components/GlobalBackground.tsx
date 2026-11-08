@@ -13,6 +13,15 @@ interface GlobalBackgroundProps {
   brightCenter?: boolean
   /** 페이지별 추가 배경 오버레이 (기존 보라색 배경 위에 반투명하게 얹히는 커스텀 레이어) */
   overlay?: React.ReactNode
+  /** 
+   * 기존 퍼플 그라데이션 오버레이를 완전히 대체할 커스텀 베이스 오버레이
+   * (지정 시 var(--bg-purple-overlay)를 건너뛰고 이 오버레이가 기본 색상 레이어가 됨)
+   */
+  customBaseOverlay?: React.ReactNode
+  /**
+   * 커스텀 비네팅 오버레이 또는 false로 비네팅 비활성화
+   */
+  customVignette?: React.ReactNode | false
 }
 
 /**
@@ -29,7 +38,9 @@ export default function GlobalBackground({
   src,
   showPetals = true,
   brightCenter = false,
-  overlay
+  overlay,
+  customBaseOverlay,
+  customVignette
 }: GlobalBackgroundProps) {
   return (
     <div className="relative min-h-screen">
@@ -46,13 +57,19 @@ export default function GlobalBackground({
           />
         </div>
 
-        {/* 2. 퍼플 그라데이션 오버레이 (브랜드 톤 유지) */}
-        <div
-          className="absolute inset-0 z-10"
-          style={{ background: 'var(--bg-purple-overlay)' }}
-        />
+        {/* 2. 퍼플 그라데이션 오버레이 (브랜드 톤 유지) 또는 대체 커스텀 베이스 */}
+        {customBaseOverlay ? (
+          <div className="absolute inset-0 z-10 pointer-events-none">
+            {customBaseOverlay}
+          </div>
+        ) : (
+          <div
+            className="absolute inset-0 z-10"
+            style={{ background: 'var(--bg-purple-overlay)' }}
+          />
+        )}
 
-        {/* 2.5 페이지별 커스텀 오버레이 (특정 페이지에서 기존 보라색 배경 위에 얹힘) */}
+        {/* 2.5 페이지별 커스텀 오버레이 (특정 페이지에서 기존 배경 위에 얹힘) */}
         {overlay && (
           <div className="absolute inset-0 z-15 pointer-events-none">
             {overlay}
@@ -60,14 +77,20 @@ export default function GlobalBackground({
         )}
 
         {/* 3. 비네팅 오버레이 (몰입감 및 가독성) */}
-        <div
-          className="absolute inset-0 z-20"
-          style={{
-            background: 'var(--bg-vignette)',
-            /* brightCenter 옵션이 켜지면 비네팅의 불투명도를 낮춰 중앙을 더 밝게 표현 */
-            opacity: brightCenter ? 0.5 : 1
-          }}
-        />
+        {customVignette === false ? null : customVignette ? (
+          <div className="absolute inset-0 z-20 pointer-events-none">
+            {customVignette}
+          </div>
+        ) : (
+          <div
+            className="absolute inset-0 z-20"
+            style={{
+              background: 'var(--bg-vignette)',
+              /* brightCenter 옵션이 켜지면 비네팅의 불투명도를 낮춰 중앙을 더 밝게 표현 */
+              opacity: brightCenter ? 0.5 : 1
+            }}
+          />
+        )}
 
         {/* 4. 선택적 꽃잎 파티클 효과 (수량 대폭 증가) */}
         {showPetals && <PetalsCanvas color="#EDE6DA" density={80} />}
