@@ -1444,92 +1444,93 @@ export default function ReunionSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-14 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="space-y-6 md:space-y-8">
-                  <div className="text-center max-w-3xl mx-auto space-y-4">
-                    <span className="text-[#CDB7A3] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
-                      PACKAGE COMPOSITION
-                    </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      재회비방 3종 올인원 세트
-                    </h2>
-                    <p className="text-sm md:text-base text-[#EDE6DA]/70 font-light">
-                      끊어진 인연을 되돌리는 3단계 완성형 패키지<br className="hidden sm:inline" />
-                      본편으로 원리를 꿰뚫고, 행동 매뉴얼로 공백기를 설계하며, 시크릿 메시지로 후폭풍을 완성합니다.
-                    </p>
+                <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto break-keep">
+                  <span className="text-[#CDB7A3] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    PACKAGE COMPOSITION
+                  </span>
+                  <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.4] break-keep">
+                    재회비방 3종 올인원 세트<br />
+                    <span className="text-[#CDB7A3]">끊어진 인연을 되돌리는 3단계 완성형 패키지</span>
+                  </h3>
+                  <p className="text-[#EDE6DA]/85 text-[18px] mt-3 leading-[1.8] font-normal break-keep">
+                    본편으로 원리를 꿰뚫고, 행동 매뉴얼로 공백기를 설계하며, 시크릿 메시지로 후폭풍을 완성합니다.
+                  </p>
+                </div>
+
+                {/* 3단계 핵심 역할 카드 3개 */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 text-left items-stretch">
+                  {/* Book 1 */}
+                  <div
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#B49A70]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                    style={{ background: 'rgba(45, 6, 16, 0.85)' }}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                          Step 1 · 원리
+                        </span>
+                        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
+                          <BookOpen className="w-6 h-6" />
+                        </div>
+                      </div>
+
+                      <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        《재회비방 완전판》
+                      </h4>
+                      <div className="w-8 h-[1px] bg-[#B59C88]/30 my-2.5 md:my-3" />
+                      <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
+                        이별 원인 진단부터 선천코드 오행 분석, 상대 무의식을 뒤흔드는 7대 절대 심리 비방 바이블
+                      </p>
+                    </div>
                   </div>
 
-                  {/* 3단계 핵심 역할 카드 3개 */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {/* Book 1 */}
-                    <div
-                      className="p-6 sm:p-7 rounded-2xl border border-[#B49A70]/30 shadow-lg text-left break-keep flex flex-col justify-between"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(60, 0, 24, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)'
-                      }}
-                    >
-                      <div className="space-y-3">
-                        <span className="text-xs font-mono font-bold text-[#CDB7A3] block">
-                          STEP 01 · 원리
+                  {/* Book 2 */}
+                  <div
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#B49A70]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                    style={{ background: 'rgba(45, 6, 16, 0.85)' }}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                          Step 2 · 전략
                         </span>
-                        <h4 className="text-lg md:text-xl font-elegant font-bold text-[#FAF7F2]">
-                          Book 1. [본편]<br />
-                          재회비방 완전판
-                        </h4>
-                        <p className="text-xs md:text-sm text-[#EDE6DA]/70 leading-relaxed font-light">
-                          이별 후 남자의 뇌에서 일어나는 도파민 변화와 프레임 역전의 절대 원리를 규명합니다.
-                        </p>
+                        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
+                          <Smartphone className="w-6 h-6" />
+                        </div>
                       </div>
-                      <div className="pt-4 mt-4 border-t border-white/5 text-[11px] text-[#B59C88]">
-                        PDF 전자책 (핵심 원리편)
-                      </div>
-                    </div>
 
-                    {/* Book 2 */}
-                    <div
-                      className="p-6 sm:p-7 rounded-2xl border border-[#B49A70]/30 shadow-lg text-left break-keep flex flex-col justify-between"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(60, 0, 24, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)'
-                      }}
-                    >
-                      <div className="space-y-3">
-                        <span className="text-xs font-mono font-bold text-[#CDB7A3] block">
-                          STEP 02 · 전략
-                        </span>
-                        <h4 className="text-lg md:text-xl font-elegant font-bold text-[#FAF7F2]">
-                          Book 2. [실전 부록 1]<br />
-                          재회 역전의 법칙 (30일 매뉴얼)
-                        </h4>
-                        <p className="text-xs md:text-sm text-[#EDE6DA]/70 leading-relaxed font-light">
-                          이별 1일 차부터 30일 차까지 하루도 빠짐없이 따라 하는 데일리 실전 행동 로드맵을 제공합니다.
-                        </p>
-                      </div>
-                      <div className="pt-4 mt-4 border-t border-white/5 text-[11px] text-[#B59C88]">
-                        PDF 전자책 (실전 매뉴얼편)
-                      </div>
+                      <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        《재회 역전의 법칙》
+                      </h4>
+                      <div className="w-8 h-[1px] bg-[#B59C88]/30 my-2.5 md:my-3" />
+                      <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
+                        4주 카톡·SNS 연출 플랜, 10분 SOS 프로토콜, 공백기 일일 점검표 등 30일 실전 행동 매뉴얼
+                      </p>
                     </div>
+                  </div>
 
-                    {/* Book 3 */}
-                    <div
-                      className="p-6 sm:p-7 rounded-2xl border border-[#B49A70]/30 shadow-lg text-left break-keep flex flex-col justify-between"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(60, 0, 24, 0.45) 0%, rgba(15, 6, 20, 0.94) 100%)'
-                      }}
-                    >
-                      <div className="space-y-3">
-                        <span className="text-xs font-mono font-bold text-[#CDB7A3] block">
-                          STEP 03 · 실천
+                  {/* Book 3 */}
+                  <div
+                    className="relative p-5 sm:p-6 md:p-7 rounded-[12px] border border-[#B49A70]/30 flex flex-col justify-between overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)] transition-transform hover:-translate-y-1 duration-200"
+                    style={{ background: 'rgba(45, 6, 16, 0.85)' }}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                          Step 3 · 실천
                         </span>
-                        <h4 className="text-lg md:text-xl font-elegant font-bold text-[#FAF7F2]">
-                          Book 3. [실전 부록 2]<br />
-                          재회 후폭풍 치트키 (33선)
-                        </h4>
-                        <p className="text-xs md:text-sm text-[#EDE6DA]/70 leading-relaxed font-light">
-                          복사해서 바로 보낼 수 있도록 완성된 상황별 카톡 메시지 33선과 떠보기 대처법을 수록했습니다.
-                        </p>
+                        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
+                          <Sparkles className="w-6 h-6" />
+                        </div>
                       </div>
-                      <div className="pt-4 mt-4 border-t border-white/5 text-[11px] text-[#B59C88]">
-                        PDF 전자책 (메시지 스크립트편)
-                      </div>
+
+                      <h4 className="text-[18px] md:text-[20px] font-bold text-[#FAF7F2] font-elegant mt-3 md:mt-3.5 leading-[1.4] break-keep">
+                        《무의식 시크릿 메시지 33선》
+                      </h4>
+                      <div className="w-8 h-[1px] bg-[#B59C88]/30 my-2.5 md:my-3" />
+                      <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.7] font-normal break-keep">
+                        복사·붙여넣기 전용 33가지 실전 멘트와 3턴 만에 만남 잡는 대화 공식
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1539,128 +1540,261 @@ export default function ReunionSecretPage() {
             <RedThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 12: 본편·부록별 상세 소개 및 목차 (Product Showcase)
+                Section 12: 본편·부록별 상세 소개 및 목차 (Product Showcase — 3종 올인원 세트 상세 해부)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="space-y-16">
+                <div className="space-y-10">
                   {/* Book 1. [본편] 《재회비방(再會秘方) 완전판》 */}
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center text-left break-keep">
-                    <div className="lg:col-span-5 w-full flex flex-col justify-center">
-                      <HybridImageSlot
-                        assetKey="book1"
-                        className="w-full aspect-[3/4]"
-                      />
+                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#1E040D] via-[#140207] to-[#0A0205] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                    <div className="lg:col-span-5 flex justify-center">
+                      <div className="w-full max-w-[340px] lg:max-w-none">
+                        <HybridImageSlot
+                          assetKey="book1"
+                          className="aspect-[3/4] shadow-2xl"
+                        />
+                      </div>
                     </div>
-                    <div className="lg:col-span-7 space-y-6">
-                      <div className="space-y-3">
-                        <span className="text-xs font-mono font-bold text-[#CDB7A3] uppercase tracking-wider block">
-                          BOOK 1 · [본편 완전판]
-                        </span>
-                        <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#FAF7F2] leading-snug">
-                          《재회비방(再會秘方) 완전판》
-                        </h3>
-                        <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light leading-relaxed">
-                          끊어진 인연을 다시 잇는 무의식의 붉은 실.<br />
-                          남자의 뇌가 이별을 처리하는 3단계 심리 회로를 해부하고, 매달리지 않고도 상대가 스스로 당신을 그리워하게 만드는 절대 법칙을 전수합니다.
-                        </p>
+                    <div className="lg:col-span-7 space-y-5 text-left break-keep">
+                      <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#B59C88] text-xs font-bold border border-[#B49A70]/40 tracking-wider">
+                        Book 1. [본편]
                       </div>
+                      <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                        《재회비방(再會秘方) 완전판》
+                      </h3>
+                      <p className="text-[17px] md:text-[18px] text-[#B59C88] font-semibold leading-[1.6] break-keep">
+                        끊어진 인연을 다시 잇는 무의식의 붉은 실
+                      </p>
 
-                      <div className="space-y-2.5 pt-2">
-                        {[
-                          "내 이별의 진짜 원인 진단 (권태·신뢰·상황·환승 4대 유형)",
-                          "남자의 '해방감'이 '공허감'으로 전환되는 3단계 도파민 사이클",
-                          "매달릴수록 낮아지는 나의 프레임을 즉각 리셋하는 심리 공식",
-                          "상대가 먼저 연락을 걸어올 수밖에 없게 만드는 무의식 앵커링"
-                        ].map((point, idx) => (
-                          <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#FAF7F2]">
-                            <Check className="w-4 h-4 text-[#CDB7A3] shrink-0 mt-0.5" />
-                            <span>{point}</span>
+                      <div className="space-y-3.5 pt-2">
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25 space-y-1">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">①</span>
+                            <span>내 이별의 진짜 원인 진단</span>
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
+                            가치 하락형(매력 저하) vs 신뢰감 하락형(피로/싸움) 구분 및 8가지 케이스별 완전 처방
+                          </p>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25 space-y-1">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">②</span>
+                            <span>연애 기간·상대 성향별 공백기 황금 공식</span>
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
+                            3일 단기 트랙부터 6개월 장기 트랙까지 오차 없는 타이밍 계산법
+                          </p>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">③</span>
+                            <span>이별 패턴을 읽는 선천코드 5행(목·화·토·금·수) 분석법</span>
+                          </h4>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">④</span>
+                            <span>상대 무의식을 뒤흔드는 7대 절대 심리 비방</span>
+                          </h4>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-gradient-to-r from-[#3B0A16]/50 to-[#1F050B]/50 border border-[#B49A70]/35 space-y-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">⑤</span>
+                            <span>조건부 재회의 법칙</span>
+                          </h4>
+                          <div className="p-3 rounded-lg bg-black/50 border border-[#B49A70]/30">
+                            <p className="text-[15px] md:text-[16px] font-elegant font-bold text-[#B59C88]">
+                              &ldquo;너는 세일 상품이 아니다. 정가(正價)를 치르게 하라&rdquo;
+                            </p>
                           </div>
-                        ))}
+                        </div>
                       </div>
 
-                      <BookTocAccordion items={mainBookToc} badgeText="[본편] 상세 목차 미리보기" />
+                      <div className="pt-2">
+                        <BookTocAccordion items={mainBookToc} badgeText="[본편] 상세 목차 미리보기" />
+                      </div>
                     </div>
                   </div>
 
                   {/* Book 2. [실전 부록 1] 《재회 역전의 법칙: 30일 실전 행동 매뉴얼》 */}
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center text-left break-keep">
-                    <div className="lg:col-span-5 lg:order-2 w-full flex flex-col justify-center">
-                      <HybridImageSlot
-                        assetKey="book2"
-                        className="w-full aspect-[3/4]"
-                      />
+                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#1E040D] via-[#140207] to-[#0A0205] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                    <div className="lg:col-span-5 flex justify-center order-last lg:order-first">
+                      <div className="w-full max-w-[340px] lg:max-w-none">
+                        <HybridImageSlot
+                          assetKey="book2"
+                          className="aspect-[3/4] shadow-2xl"
+                        />
+                      </div>
                     </div>
-                    <div className="lg:col-span-7 lg:order-1 space-y-6">
-                      <div className="space-y-3">
-                        <span className="text-xs font-mono font-bold text-[#CDB7A3] uppercase tracking-wider block">
-                          BOOK 2 · [실전 행동 지침]
-                        </span>
-                        <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#FAF7F2] leading-snug">
-                          《재회 역전의 법칙: 30일 실전 행동 매뉴얼》
-                        </h3>
-                        <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light leading-relaxed">
-                          머리로는 알겠는데 당장 오늘 뭘 해야 할지 모르는 당신을 위한 30일 액션 플랜.<br />
-                          이별 1일 차 응급처치부터 30일 차 만남 성사까지 하루도 빠짐없이 따라 할 수 있는 명확한 행동 수칙을 담았습니다.
-                        </p>
+                    <div className="lg:col-span-7 space-y-5 text-left break-keep">
+                      <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#B59C88] text-xs font-bold border border-[#B49A70]/40 tracking-wider">
+                        Book 2. [실전 부록 1]
                       </div>
+                      <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                        《재회 역전의 법칙: 30일 실전 행동 매뉴얼》
+                      </h3>
+                      <p className="text-[17px] md:text-[18px] text-[#B59C88] font-semibold leading-[1.6] break-keep">
+                        카톡·SNS 연출부터 30일 공백기 설계까지, 주도권을 되찾는 매뉴얼
+                      </p>
 
-                      <div className="space-y-2.5 pt-2">
-                        {[
-                          "이별 직후 3일: 흑역사를 지우는 쿨엔딩 템플릿과 메신저 동결법",
-                          "공백기 14일: 상대의 염탐을 유도하는 프로필 사진 및 상태 메시지 전략",
-                          "공백기 21일: 침묵을 깨지 않고 상대의 무의식을 흔드는 간접 자극법",
-                          "재회 30일: 거부감 없이 자연스럽게 첫 만남 약속을 잡는 기술"
-                        ].map((point, idx) => (
-                          <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#FAF7F2]">
-                            <Check className="w-4 h-4 text-[#CDB7A3] shrink-0 mt-0.5" />
-                            <span>{point}</span>
+                      <div className="space-y-3.5 pt-2">
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">①</span>
+                            <span>
+                              3초 진단 & 6대 상황별 즉시 행동 vs 절대 금지(<span className="text-[#B59C88] font-semibold">DO & DON&apos;T</span>) 매뉴얼
+                            </span>
+                          </h4>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25 space-y-1">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">②</span>
+                            <span>
+                              시각적 텔레파시 (<span className="text-[#B59C88] font-semibold">4주</span> 카톡 프로필 & SNS 연출 플랜)
+                            </span>
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
+                            1주차 전신샷부터 4주차 자극까지 주차별 완벽 설계
+                          </p>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25 space-y-1">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">③</span>
+                            <span>SNS 미세신호 해독표</span>
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
+                            스토리 칼조회, 좋아요 후 즉시 취소, 멀티 프로필 지정 시 대처법
+                          </p>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">④</span>
+                            <span>
+                              연락 충동이 올라올 때 &apos;<span className="text-[#B59C88] font-semibold">10분 SOS 프로토콜</span>&apos;
+                            </span>
+                          </h4>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25 space-y-2">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">⑤</span>
+                            <span>
+                              출력/복사해서 바로 쓰는 <span className="text-[#B59C88] font-semibold">실전 기록지</span>
+                            </span>
+                          </h4>
+                          <div className="flex flex-wrap gap-2 pl-5 pt-0.5">
+                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
+                              감정 격류 진정 기록지
+                            </span>
+                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
+                              공백기 일일 점검표
+                            </span>
+                            <span className="px-2.5 py-1 rounded-md bg-[#2A0510] border border-[#B49A70]/35 text-[13px] md:text-[14px] text-[#FAF7F2]">
+                              재회 가능성 12문항 자가진단표
+                            </span>
                           </div>
-                        ))}
+                        </div>
                       </div>
 
-                      <BookTocAccordion items={manualBookToc} badgeText="[실전 부록 1] 상세 목차 미리보기" />
+                      <div className="pt-2">
+                        <BookTocAccordion items={manualBookToc} badgeText="[실전 부록 1] 상세 목차 미리보기" />
+                      </div>
                     </div>
                   </div>
 
                   {/* Book 3. [실전 부록 2] 《재회 후폭풍 치트키: 무의식 시크릿 메시지 33선》 */}
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center text-left break-keep">
-                    <div className="lg:col-span-5 w-full flex flex-col justify-center">
-                      <HybridImageSlot
-                        assetKey="book3"
-                        className="w-full aspect-[3/4]"
-                      />
+                  <div className="p-6 md:p-10 lg:p-12 rounded-3xl bg-gradient-to-r from-[#1E040D] via-[#140207] to-[#0A0205] border border-[#B49A70]/40 shadow-2xl grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                    <div className="lg:col-span-5 flex justify-center">
+                      <div className="w-full max-w-[340px] lg:max-w-none">
+                        <HybridImageSlot
+                          assetKey="book3"
+                          className="aspect-[3/4] shadow-2xl"
+                        />
+                      </div>
                     </div>
-                    <div className="lg:col-span-7 space-y-6">
-                      <div className="space-y-3">
-                        <span className="text-xs font-mono font-bold text-[#CDB7A3] uppercase tracking-wider block">
-                          BOOK 3 · [완성형 스크립트]
-                        </span>
-                        <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#FAF7F2] leading-snug">
-                          《재회 후폭풍 치트키: 무의식 시크릿 메시지 33선》
-                        </h3>
-                        <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light leading-relaxed">
-                          단어 하나, 띄어쓰기 하나에 상대의 마음이 닫히거나 열립니다.<br />
-                          상황별로 검증된 33가지 실제 완성문 카톡 스크립트를 그대로 복사하여 전송할 수 있도록 수록했습니다.
-                        </p>
+                    <div className="lg:col-span-7 space-y-5 text-left break-keep">
+                      <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#B59C88] text-xs font-bold border border-[#B49A70]/40 tracking-wider">
+                        Book 3. [실전 부록 2]
                       </div>
+                      <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                        《재회 후폭풍 치트키: 무의식 시크릿 메시지 33선》
+                      </h3>
+                      <p className="text-[17px] md:text-[18px] text-[#B59C88] font-semibold leading-[1.6] break-keep">
+                        남자의 무의식을 지배하는 33가지 침투술 & 첫 만남 연출법
+                      </p>
 
-                      <div className="space-y-2.5 pt-2">
-                        {[
-                          "상대의 후폭풍을 폭발시키는 '마지막 작별 쿨엔딩 멘트' 7선",
-                          "공백기 후 자연스럽게 답장을 이끌어내는 '부담 제로 핑(Ping) 멘트' 10선",
-                          "상대가 새벽에 툭 던지는 '자니?'에 안달 나게 만드는 고단수 응수법 8선",
-                          "어색함 없이 자연스러운 만남으로 연결하는 '클로징 멘트' 8선"
-                        ].map((point, idx) => (
-                          <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#FAF7F2]">
-                            <Check className="w-4 h-4 text-[#CDB7A3] shrink-0 mt-0.5" />
-                            <span>{point}</span>
+                      <div className="space-y-3.5 pt-2">
+                        <div className="p-4 md:p-5 rounded-xl bg-black/40 border border-[#B49A70]/25 space-y-3">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">①</span>
+                            <span>
+                              복사·붙여넣기 전용 <span className="text-[#B59C88] font-semibold">33가지</span> 실전 스크립트
+                            </span>
+                          </h4>
+
+                          <div className="space-y-2 pl-1 sm:pl-5 pt-1">
+                            <div className="p-3 rounded-lg bg-[#1B050E] border border-[#B49A70]/20 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2.5">
+                              <span className="text-xs font-bold text-[#B59C88] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#B49A70]/30 shrink-0">
+                                트랙 A
+                              </span>
+                              <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
+                                안읽씹·번호 차단 직전, 읽씹 3일 차, 잠수 이별·회피형 우회 멘트
+                              </span>
+                            </div>
+
+                            <div className="p-3 rounded-lg bg-[#1B050E] border border-[#B49A70]/20 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2.5">
+                              <span className="text-xs font-bold text-[#B59C88] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#B49A70]/30 shrink-0">
+                                트랙 B
+                              </span>
+                              <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
+                                권태기, 잦은 다툼, 거짓말/신뢰 훼손, 심하게 매달린 후 흑역사 리셋 멘트
+                              </span>
+                            </div>
+
+                            <div className="p-3 rounded-lg bg-[#1B050E] border border-[#B49A70]/20 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2.5">
+                              <span className="text-xs font-bold text-[#B59C88] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#B49A70]/30 shrink-0">
+                                트랙 C
+                              </span>
+                              <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
+                                새 이성(환승/리바운드) 균열 멘트, 친구 프레임 탈출, 늦은 밤 &quot;자니?&quot; 찔러보기 원천 격퇴 멘트
+                              </span>
+                            </div>
                           </div>
-                        ))}
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25 space-y-1">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">②</span>
+                            <span>메시지 발송 후 대화 핑퐁(Turn) 공식</span>
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
+                            단답형 유도, 까칠한 반응 무장해제, <span className="text-[#B59C88] font-semibold">3턴</span> 만에 만남 약속 잡기
+                          </p>
+                        </div>
+
+                        <div className="p-4 rounded-xl bg-black/40 border border-[#B49A70]/25 space-y-1">
+                          <h4 className="text-[15px] md:text-[16px] font-bold text-[#FAF7F2] flex items-start gap-2">
+                            <span className="text-[#B59C88] shrink-0 font-mono">③</span>
+                            <span>
+                              재회의 <span className="text-[#B59C88] font-semibold">첫 30분</span> 기선제압 연출법
+                            </span>
+                          </h4>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/80 pl-5 leading-[1.6] font-light">
+                            시각·후각 앵커링 세팅, 자이가르닉 철수 타이밍, 쉿 테스트(떠보기) 반사구 훈련
+                          </p>
+                        </div>
                       </div>
 
-                      <BookTocAccordion items={messageBookToc} badgeText="[실전 부록 2] 상세 목차 미리보기" />
+                      <div className="pt-2">
+                        <BookTocAccordion items={messageBookToc} badgeText="[실전 부록 2] 상세 목차 미리보기" />
+                      </div>
                     </div>
                   </div>
 
