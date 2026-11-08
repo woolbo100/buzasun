@@ -60,6 +60,7 @@ const productData = {
   overviewImage: '/image/reunion-secret/r2.webp',
   recommendedImage: '/image/reunion-secret/r3.webp',
   formulaImage: '/image/reunion-secret/r4.webp',
+  bookIntroImage: '/image/reunion-secret/reunion-secret-book-intro.webp?v=20261108',
   premiumImage: '/image/reunion-secret/r5.webp',
   ctaImage: '/image/reunion-secret/r6.webp',
 
@@ -1294,11 +1295,11 @@ export default function ReunionSecretPage() {
                   {/* 왼쪽 책 비주얼 이미지 (풍요비책 3:4 라운드 프레임과 동일) */}
                   <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] sm:rounded-[40px] border border-[#B49A70]/30 shadow-2xl bg-black/40">
                     <Image
-                      src={productData.formulaImage}
+                      src={productData.bookIntroImage}
                       alt="수많은 눈물과 연구 끝에 탄생한 재회비방"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover"
+                      className="object-cover object-center"
                       priority
                     />
                   </div>
