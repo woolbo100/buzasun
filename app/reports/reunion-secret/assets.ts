@@ -92,7 +92,51 @@ export const reunionSecretAssets: Record<string, ReunionSecretAssetItem> = {
     description: 'review_kakao_placeholder.png'
   },
 
-  // 8. Final CTA: 최종 CTA 배경 오브제
+  // 8. Anxiety: 이별 불안 및 순간 공감 (3:4)
+  anxiety: {
+    id: 'anxiety',
+    src: 'anxiety_placeholder.png',
+    alt: '열심히 사랑했는데 왜 상대는 도망치듯 차가워졌을까 - 이별 불안 공감',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'contain',
+    placeholderLabel: '이별 불안 및 순간 공감 (3:4 목업)',
+    description: 'anxiety_placeholder.png'
+  },
+
+  // 9. Curriculum: 커리큘럼 & 아키텍처 16:9 와이드 인포그래픽
+  curriculum: {
+    id: 'curriculum',
+    src: 'curriculum_placeholder.png',
+    alt: '재회비방 커리큘럼 & 아키텍처 인포그래픽: 무의식 재회 설계도',
+    aspectRatio: 'aspect-video',
+    objectFit: 'contain',
+    placeholderLabel: '커리큘럼 & 아키텍처 인포그래픽 (16:9)',
+    description: 'curriculum_placeholder.png'
+  },
+
+  // 10. Reunion Law: 관계 역전의 법칙 비교 다이어그램 (16:9)
+  reunionLaw: {
+    id: 'reunionLaw',
+    src: 'reunion_law_placeholder.png',
+    alt: '관계 역전의 법칙 비교 인포그래픽',
+    aspectRatio: 'aspect-video',
+    objectFit: 'contain',
+    placeholderLabel: '관계 역전의 법칙 비교 다이어그램 (16:9)',
+    description: 'reunion_law_placeholder.png'
+  },
+
+  // 11. Sovereign: 인연의 주권자 16:9 와이드 배너
+  sovereign: {
+    id: 'sovereign',
+    src: 'sovereign_placeholder.png',
+    alt: '을의 자리에서 벗어나 관계의 주권자로 - 인연의 주권자 와이드 배너',
+    aspectRatio: 'aspect-video',
+    objectFit: 'contain',
+    placeholderLabel: '인연의 주권자 와이드 배너 (16:9)',
+    description: 'sovereign_placeholder.png'
+  },
+
+  // 12. Final CTA: 최종 CTA 배경 오브제
   finalCta: {
     id: 'finalCta',
     src: 'final_cta_bg_placeholder.png',

@@ -64,6 +64,8 @@ const productData = {
   wealthVesselImage: '/image/abundance-secret/abundance-wealth-vessel-transformation.webp',
   // 💡 [신규 영역 2] 황금빛 풍요의 주권자 (16:9 와이드 배너 이미지 경로)
   sovereignImage: '/image/abundance-secret/abundance-golden-sovereign.webp',
+  // 💡 [신규 추가] 현실 부의 창출 공식 (4대 머니 메커니즘) 인포그래픽 이미지 경로
+  innerAlignmentImage: '/image/abundance-secret/abundance-inner-alignment.webp',
   structureImage: '/image/abundance-secret/abundance-transformation.webp',
   premiumImage: '/image/abundance-secret/abundance-secret-book-luxury-flatlay.webp',
   ctaImage: '/image/abundance-secret/abundance-celadon-ritual-banner.webp',
@@ -1484,6 +1486,20 @@ export default function AbundanceSecretPage() {
                         ))}
                       </div>
                     </div>
+
+                    {/* 💡 [신규 추가] 현실 부의 창출 공식 (4대 머니 메커니즘) 16:9 와이드 인포그래픽 이미지 (콘텐츠 가로 풀사이즈) */}
+                    <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+                      <div className="relative w-full">
+                        <Image
+                          src="/image/abundance-secret/abundance-inner-alignment.webp"
+                          alt="현실 부의 창출 공식 (4대 머니 메커니즘) 인포그래픽: 풍요의 의식을 현실의 화폐로 치환하는 4가지 지식자산화 전략"
+                          width={1671}
+                          height={941}
+                          sizes="(max-width: 1280px) 100vw, 1280px"
+                          className="w-full h-auto object-contain block"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Reveal>
@@ -2109,10 +2125,11 @@ export default function AbundanceSecretPage() {
                 중간 패키지 구매 안내 상자 (연애비급 규격 일치)
                ═══════════════════════════════════════════════════════════════ */}
             <div
-              className="gungjung-glass rounded-3xl border border-[#947852]/40 relative overflow-hidden shadow-2xl mb-28"
+              className="gungjung-glass rounded-3xl relative overflow-hidden shadow-2xl mb-28"
               style={{
                 background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)',
-                boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
+                border: '1px solid rgba(190, 158, 108, 0.78)',
+                boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.09), 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(120, 158, 144, 0.08)'
               }}
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
@@ -3156,7 +3173,13 @@ export default function AbundanceSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 [수정] 감성 이미지 영역 (abundance-celadon-ritual-banner 필터 완전 제거 + 좌측 정렬 텍스트)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group border border-[#947852]/40 shadow-2xl w-full max-w-[1280px] mx-auto">
+            <section
+              className="relative aspect-[16/9] md:aspect-video overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group shadow-2xl w-full max-w-[1280px] mx-auto"
+              style={{
+                border: '1px solid rgba(190, 158, 108, 0.78)',
+                boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.09), 0 16px 45px rgba(0, 0, 0, 0.5)'
+              }}
+            >
               {/* 배경 이미지: 필터/반투명막/그라데이션 오버레이 완전 제거하여 원본 색감 100% 보존 */}
               <div className="absolute inset-0 z-0">
                 <Image
@@ -3241,9 +3264,11 @@ export default function AbundanceSecretPage() {
 
                   {/* 안쪽 구매 카드 (연애비급 디자인 규격 일치) */}
                   <div
-                    className="px-6 sm:px-10 md:px-12 py-10 md:py-12 rounded-2xl md:rounded-3xl border border-[#947852]/40 relative shadow-2xl text-center"
+                    className="px-6 sm:px-10 md:px-12 py-10 md:py-12 rounded-2xl md:rounded-3xl relative shadow-2xl text-center"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)'
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(120, 158, 144, 0.45) 0%, rgba(18, 38, 32, 0.92) 100%)',
+                      border: '1px solid rgba(190, 158, 108, 0.78)',
+                      boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.09), 0 12px 40px rgba(0, 0, 0, 0.4)'
                     }}
                   >
                     <h3 className="text-lg sm:text-xl md:text-2xl font-elegant font-bold text-white leading-[1.4] break-keep mb-2">
