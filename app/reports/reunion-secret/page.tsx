@@ -591,9 +591,9 @@ export default function ReunionSecretPage() {
                       </div>
                     </div>
 
-                    {/* 우측 목업 */}
+                    {/* 우측 목업 (1:1 비율로 잘림 없이 온전히 표시) */}
                     <div className="lg:col-span-5 relative w-full min-h-[300px] sm:min-h-[360px] lg:min-h-full overflow-hidden flex items-center justify-center p-6 sm:p-8">
-                      <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                      <div className="relative w-full aspect-square max-w-[440px] rounded-2xl overflow-hidden shadow-xl border border-white/10">
                         <Image
                           src={productData.heroImage}
                           alt="재회비방 3종 올인원 세트 목업"
@@ -2053,9 +2053,9 @@ export default function ReunionSecretPage() {
               }}
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
-                {/* 왼쪽 목업 이미지 영역 */}
+                {/* 왼쪽 목업 이미지 영역 (1:1 비율로 잘림 없이 온전히 표시) */}
                 <div className="lg:col-span-5 relative w-full min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden flex items-center justify-center p-6 sm:p-8">
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+                  <div className="relative w-full aspect-square max-w-[440px] rounded-2xl overflow-hidden shadow-xl border border-white/10">
                     <Image
                       src={productData.heroImage}
                       alt="재회비방 3종 올인원 세트"
