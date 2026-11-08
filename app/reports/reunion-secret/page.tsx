@@ -880,8 +880,8 @@ export default function ReunionSecretPage() {
                         THE PARADOX OF REUNION
                       </span>
                       <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                        &ldquo;진심을 보이고 매달릴수록…<br />
-                        <span className="text-[#C2A477]">왜 상대는 더 매정해지고 마음은 지옥 같았을까요?</span>&rdquo;
+                        진심을 보이고 매달릴수록…<br />
+                        <span className="text-[#C2A477]">왜 상대는 더 매정해지고 마음은 지옥 같았을까요?</span>
                       </h3>
                       <p className="text-[17px] md:text-[18px] text-[#EDE6DA] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
                         당신의 사랑이 부족해서가 아닙니다. 상대를 붙잡고 싶던 간절함이<br className="hidden sm:inline" />
