@@ -1894,10 +1894,26 @@ export default function ReunionSecretPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* 3종 올인원 세트 상세 해부 서브헤더 (풍요비책 레이아웃과 100% 동일) */}
+                <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 pt-16 md:pt-20 lg:pt-24 break-keep">
+                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                    3-in-1 All-in-One Package
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] mb-3">
+                    3종 올인원 세트 <span className="text-[#C2A477]">상세 해부</span>
+                  </h2>
+                  <div className="space-y-1.5">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.5]">
+                      본편부터 실전 워크북, 특별 외전까지
+                    </p>
+                    <p className="text-[18px] md:text-[20px] text-[#C2A477] font-bold font-elegant tracking-wide leading-[1.5]">
+                      3종 · 총 175페이지 PDF 패키지
+                    </p>
+                  </div>
+                </div>
               </Reveal>
             </section>
-
-            <RedThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
                 Section 12: 본편·부록별 상세 소개 및 목차 (Product Showcase — 3종 올인원 세트 상세 해부)
