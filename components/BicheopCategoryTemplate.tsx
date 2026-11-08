@@ -39,7 +39,7 @@ export default function BicheopCategoryTemplate({
 
   return (
     <main className="relative min-h-screen bg-[#0a0514] text-white selection:bg-[#BA8D7E] selection:text-black font-sans">
-      <GlobalBackground src="/image/shop-hero.png" brightCenter={false}>
+      <GlobalBackground src="/image/love-code-bg.png" brightCenter={true}>
         <Navigation />
 
         <div className="relative z-10 pt-40 pb-24">
