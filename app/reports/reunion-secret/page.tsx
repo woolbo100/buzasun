@@ -948,7 +948,7 @@ export default function ReunionSecretPage() {
                     <div className="mt-14 md:mt-[65px] text-center max-w-[1050px] mx-auto px-4 break-keep">
                       {/* 첫 번째 줄 — 상대적으로 작은 글자 & 가벼운 두께 */}
                       <p className="text-[#FAF7F2] text-[17px] sm:text-[18px] md:text-[20px] font-elegant font-normal leading-[1.75] break-keep mb-3 sm:mb-4">
-                        “불안에 떨며 매달리는 손길에는, 아무리 <span className="gold-shimmer-text font-semibold">뜨거운 진심을 쏟아도</span> 닿지 않습니다,
+                        불안에 떨며 매달리는 손길에는, 아무리 <span className="gold-shimmer-text font-semibold">뜨거운 진심을 쏟아도</span> 닿지 않습니다,
                       </p>
 
                       {/* 두 번째 줄 — 약 15~20% 더 크고 강조된 글자 & 굵은 두께 (금빛 강조 텍스트 흐름 애니메이션 적용) */}
@@ -957,9 +957,9 @@ export default function ReunionSecretPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-40px" }}
                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="text-[#FAF7F2] text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep"
+                        className="text-[#FAF7F2] text-[19px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep sm:whitespace-nowrap"
                       >
-                        이제 애원을 멈추고, 무너져버린 당신의 <span className="gold-shimmer-text font-bold">‘중심과 프레임’부터 온전히 바로 세워야 할 때입니다.</span>”
+                        이제 애원을 멈추고, 당신의 <span className="gold-shimmer-text font-bold">‘중심과 프레임’부터 온전히 바로 세워야 할 때입니다.</span>
                       </motion.p>
 
                       {/* 하단 모란꽃 심벌 & 잔잔한 받침선 곡선 (풍요비책과 동일한 위치·크기·여백) */}
