@@ -1333,17 +1333,6 @@ export default function ReunionSecretPage() {
                       </div>
                     ))}
                   </div>
-
-                  {/* 하단 BEFORE·AFTER 비교 이미지 자리 (r4.webp / formulaImage) */}
-                  <div className="mt-10 md:mt-12 relative w-full aspect-[16/9] md:aspect-video rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-2xl bg-black/40">
-                    <Image
-                      src={productData.formulaImage}
-                      alt="재회비방 전후 변화 인포그래픽"
-                      fill
-                      sizes="(max-width: 1280px) 100vw, 1280px"
-                      className="object-cover"
-                    />
-                  </div>
                 </div>
               </Reveal>
             </section>
