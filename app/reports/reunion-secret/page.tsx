@@ -1200,13 +1200,13 @@ export default function ReunionSecretPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 Section 6: 저자 소개 (AUTHOR & MASTER 백도화 - r8.webp 한지 비단 배경 카드)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1280px] mx-auto">
+            <section className="mb-28 w-full max-w-[1200px] mx-auto">
               <Reveal>
                 <div
-                  className="rounded-3xl border border-[#B49A70]/40 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden shadow-2xl text-left transition-all duration-300 hover:shadow-[0_0_24px_rgba(185,145,91,0.2)]"
+                  className="rounded-xl sm:rounded-2xl border border-[#B49A70]/30 p-6 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden shadow-2xl text-left transition-all duration-300 hover:shadow-[0_0_24px_rgba(185,145,91,0.25)] min-h-[540px] md:min-h-[600px] flex flex-col justify-between"
                   style={{
                     backgroundImage: "url('/image/reunion-secret/r8.webp')",
-                    backgroundSize: 'cover',
+                    backgroundSize: '100% 100%',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                     boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
