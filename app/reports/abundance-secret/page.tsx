@@ -1485,11 +1485,9 @@ export default function AbundanceSecretPage() {
                           </div>
                         ))}
                       </div>
-                    </div>
 
-                    {/* 💡 [신규 추가] 현실 부의 창출 공식 (4대 머니 메커니즘) 16:9 와이드 인포그래픽 이미지 (콘텐츠 가로 풀사이즈) */}
-                    <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#947852]/30 bg-black/40 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
-                      <div className="relative w-full">
+                      {/* 💡 [신규 추가] 현실 부의 창출 공식 (4대 머니 메커니즘) 16:9 와이드 인포그래픽 이미지 (카드 내부 가로 풀사이즈) */}
+                      <div className="mt-6 md:mt-8 relative w-full rounded-2xl overflow-hidden border border-[#947852]/40 bg-black/40 shadow-xl">
                         <Image
                           src="/image/abundance-secret/abundance-inner-alignment.webp"
                           alt="현실 부의 창출 공식 (4대 머니 메커니즘) 인포그래픽: 풍요의 의식을 현실의 화폐로 치환하는 4가지 지식자산화 전략"
