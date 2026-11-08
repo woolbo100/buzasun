@@ -218,7 +218,7 @@ export default function LoveSecretEbookPage() {
 
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#200F26] text-[#EDE6DA] font-sans selection:bg-[#61404A] selection:text-[#FAF7F2] pb-24 md:pb-0">
+    <main className="detail-page relative min-h-screen bg-[#130917] text-[#EDE6DA] font-sans selection:bg-[#61404A] selection:text-[#FAF7F2] pb-24 md:pb-0">
       {/* 연애비급 전용 딥 퍼플(좌) x 톤다운 로즈코코아(우) 그라데이션 배경 시스템 */}
       <GlobalBackground
         src="/image/love-code-bg.png"
@@ -236,17 +236,17 @@ export default function LoveSecretEbookPage() {
               }}
             />
 
-            {/* 2. 메인 가로 그라데이션 (왼쪽: 완전 블랙이 아닌 깊고 그윽한 어두운 퍼플, 오른쪽: 톤다운 로즈코코아 은은한 투명 비침) */}
+            {/* 2. 메인 가로 그라데이션 (왼쪽: 딥 퍼플 100% 완전 불투명 차단, 오른쪽: 톤다운 로즈코코아 은은한 투명 비침) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
                   linear-gradient(
                     95deg,
-                    #24132B 0%,
-                    #2D1635 35%,
-                    rgba(48, 24, 46, 0.98) 55%,
-                    rgba(60, 32, 50, 0.94) 75%,
+                    #130917 0%,
+                    #190E1E 35%,
+                    rgba(35, 20, 36, 0.98) 55%,
+                    rgba(52, 29, 44, 0.94) 75%,
                     rgba(74, 42, 56, 0.87) 100%
                   )
                 `,
@@ -262,13 +262,13 @@ export default function LoveSecretEbookPage() {
                 radial-gradient(
                   circle at 65% 45%,
                   rgba(0, 0, 0, 0) 40%,
-                  rgba(24, 11, 28, 0.35) 75%,
-                  rgba(14, 6, 18, 0.70) 100%
+                  rgba(19, 9, 23, 0.35) 75%,
+                  rgba(10, 5, 14, 0.75) 100%
                 ),
                 linear-gradient(
                   to right,
-                  rgba(28, 12, 34, 0.40) 0%,
-                  rgba(28, 12, 34, 0.15) 25%,
+                  rgba(12, 6, 16, 0.65) 0%,
+                  rgba(12, 6, 16, 0.25) 25%,
                   transparent 50%
                 )
               `,

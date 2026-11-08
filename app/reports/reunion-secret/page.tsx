@@ -405,7 +405,7 @@ export default function ReunionSecretPage() {
   )
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#1F1014] text-[#EDE6DA] font-sans selection:bg-[#361722] selection:text-[#FAF7F2] pb-24 md:pb-0">
+    <main className="detail-page relative min-h-screen bg-[#0D0709] text-[#EDE6DA] font-sans selection:bg-[#361722] selection:text-[#FAF7F2] pb-24 md:pb-0">
       <GlobalBackground
         src="/image/love-code-bg.png"
         brightCenter={false}
@@ -416,24 +416,24 @@ export default function ReunionSecretPage() {
               className="absolute inset-0"
               style={{
                 background: `
-                  radial-gradient(ellipse 70% 50% at 88% 22%, rgba(82, 34, 46, 0.25) 0%, rgba(48, 20, 27, 0.10) 50%, transparent 75%),
-                  radial-gradient(circle 600px at 90% 65%, rgba(70, 28, 39, 0.18) 0%, transparent 65%)
+                  radial-gradient(ellipse 70% 50% at 88% 22%, rgba(78, 32, 45, 0.25) 0%, rgba(45, 18, 25, 0.10) 50%, transparent 75%),
+                  radial-gradient(circle 600px at 90% 65%, rgba(65, 26, 37, 0.18) 0%, transparent 65%)
                 `,
               }}
             />
 
-            {/* 2. 메인 가로 그라데이션 (왼쪽: 완전 검정이 아닌 깊은 어두운 브라운 버건디, 오른쪽: 살짝 투명한 앤티크 버건디 비침) */}
+            {/* 2. 메인 가로 그라데이션 (왼쪽은 100% 완전 불투명 암흑 와인으로 배경 차단, 오른쪽만 살짝 투명도를 주어 은은하게 비침) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
                   linear-gradient(
                     95deg,
-                    #241217 0%,
-                    #2B151B 35%,
-                    rgba(48, 23, 30, 0.98) 55%,
-                    rgba(56, 26, 34, 0.94) 75%,
-                    rgba(66, 29, 39, 0.88) 100%
+                    #12080B 0%,
+                    #160D11 35%,
+                    rgba(28, 14, 18, 0.98) 55%,
+                    rgba(43, 20, 27, 0.94) 75%,
+                    rgba(60, 26, 36, 0.88) 100%
                   )
                 `,
               }}
@@ -448,13 +448,13 @@ export default function ReunionSecretPage() {
                 radial-gradient(
                   circle at 65% 45%,
                   rgba(0, 0, 0, 0) 40%,
-                  rgba(20, 9, 13, 0.35) 75%,
-                  rgba(12, 5, 8, 0.70) 100%
+                  rgba(13, 7, 9, 0.35) 75%,
+                  rgba(8, 4, 6, 0.75) 100%
                 ),
                 linear-gradient(
                   to right,
-                  rgba(25, 11, 15, 0.40) 0%,
-                  rgba(25, 11, 15, 0.15) 25%,
+                  rgba(10, 4, 6, 0.65) 0%,
+                  rgba(10, 4, 6, 0.25) 25%,
                   transparent 50%
                 )
               `,
