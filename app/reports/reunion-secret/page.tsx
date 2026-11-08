@@ -863,6 +863,27 @@ export default function ReunionSecretPage() {
                         </div>
                       </div>
                     </div>
+
+                    {/* 공감 카드 하단 브릿지 문구 */}
+                    <div className="mt-10 sm:mt-12 md:mt-14 text-center max-w-[1050px] mx-auto px-4 space-y-2.5 sm:space-y-3 break-keep">
+                      <p className="text-[18px] sm:text-[21px] md:text-[23px] font-elegant font-bold text-[#C2A477] leading-[1.6] tracking-tight">
+                        “불안에 떨며 매달리는 손길에는, 아무리 뜨거운 진심을 쏟아도 닿지 않습니다,
+                      </p>
+                      <p className="text-[16px] sm:text-[18px] md:text-[20px] font-elegant font-medium text-[#FAF7F2] leading-[1.6]">
+                        이제 애원을 멈추고, 무너져버린 당신의 <span className="text-[#C2A477] font-semibold">‘중심과 프레임’</span>부터 온전히 바로 세워야 할 때입니다.”
+                      </p>
+                    </div>
+
+                    {/* 16:9 와이드 브릿지 이미지 (1672x941 매칭, 콘텐츠 전체 너비 100%) */}
+                    <div className="mt-7 sm:mt-8 md:mt-9 w-full aspect-[16/9] md:aspect-[1672/941] relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-2xl bg-black/40 flex items-center justify-center">
+                      <Image
+                        src="/image/reunion-secret/reunion-emotional-bridge.webp"
+                        alt="재회비방 공감 브릿지 와이드 배너"
+                        fill
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               </Reveal>
