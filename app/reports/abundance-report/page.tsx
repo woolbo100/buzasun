@@ -9,6 +9,24 @@ import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import RecommendedForCards from '@/components/RecommendedForCards'
 
+// 새로 추가된 풍요 리포트 전용 18개 설득 블록 독립 컴포넌트들
+import WealthPatternChecklist from '@/components/reports/abundance-report/WealthPatternChecklist'
+import WealthAdviceComparison from '@/components/reports/abundance-report/WealthAdviceComparison'
+import WealthPatternFlow from '@/components/reports/abundance-report/WealthPatternFlow'
+import WealthAnalysisMethod from '@/components/reports/abundance-report/WealthAnalysisMethod'
+import WealthPersonalizedCases from '@/components/reports/abundance-report/WealthPersonalizedCases'
+import WealthComparisonTable from '@/components/reports/abundance-report/WealthComparisonTable'
+import WealthReportTableOfContents from '@/components/reports/abundance-report/WealthReportTableOfContents'
+import WealthReportProcess from '@/components/reports/abundance-report/WealthReportProcess'
+import WealthReportPreview from '@/components/reports/abundance-report/WealthReportPreview'
+import WealthChangeScenario from '@/components/reports/abundance-report/WealthChangeScenario'
+import WealthAudience from '@/components/reports/abundance-report/WealthAudience'
+import WealthTestimonials from '@/components/reports/abundance-report/WealthTestimonials'
+import WealthPhilosophy from '@/components/reports/abundance-report/WealthPhilosophy'
+import WealthValueSummary from '@/components/reports/abundance-report/WealthValueSummary'
+import WealthReportFAQ from '@/components/reports/abundance-report/WealthReportFAQ'
+import WealthPurchaseNotice from '@/components/reports/abundance-report/WealthPurchaseNotice'
+
 // 추후 개별 이미지 교체 시 아래 경로만 수정하면 각 섹션에 즉시 반영됩니다.
 const ABUNDANCE_REPORT_IMAGES = {
   hero: '/image/abundance/a1.webp',
@@ -22,7 +40,16 @@ const ABUNDANCE_REPORT_IMAGES = {
 export default function AbundanceReportPage() {
   useScrollAnimation()
 
-  // 오행 에너지 카드 정보
+  // 리포트 샘플 미리보기 스크롤 보조 함수
+  const scrollToSample = (e: React.MouseEvent) => {
+    e.preventDefault()
+    const element = document.getElementById('sample-preview')
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  // 오행 에너지 카드 정보 (기존 자산 보존)
   const fiveElements = [
     {
       hanja: '木',
@@ -81,26 +108,47 @@ export default function AbundanceReportPage() {
       <GlobalBackground src="/image/main4.png">
         <Navigation />
 
-        <div className="relative z-10 pt-40 pb-20">
+        <div className="relative z-10 pt-36 md:pt-40 pb-20">
           <div className="container-premium">
             
-            {/* 1. Hero Section */}
-            <section className="text-center mb-32">
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 01. 히어로 — 나의 풍요 설계도 (기존 이미지 & 버튼 상태 100% 보존) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="text-center mb-36">
               <Reveal delayMs={100}>
-                <div className="mb-8">
+                <div className="mb-6">
                   <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase bg-[#8FD3B6]/10 border border-[#8FD3B6]/35 text-[#8FD3B6]">
                     PREMIUM ABUNDANCE REPORT
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-7xl font-elegant font-bold mb-10 text-white leading-tight">
+
+                {/* 서브 타이틀 카피 */}
+                <p className="text-base md:text-xl text-[#8FD3B6] font-medium tracking-wide mb-4">
+                  선천코드로 읽는 나의 풍요 설계도
+                </p>
+
+                {/* 메인 제품명 */}
+                <h1 className="text-4xl md:text-7xl font-elegant font-bold mb-8 text-white leading-tight">
                   선천코드 <span className="text-[#8FD3B6]">풍요</span> <span className="text-[#E6BE8A]">리포트</span>
                 </h1>
+
+                {/* 핵심 후킹 카피 */}
+                <div className="max-w-2xl mx-auto mb-12">
+                  <p className="text-xl md:text-3xl text-white font-elegant font-medium leading-relaxed break-keep">
+                    &ldquo;벌어도 같은 자리에서 새어나간다면,<br />
+                    돈이 아니라 반복되는 선택을 살펴볼 때입니다.&rdquo;
+                  </p>
+                  <p className="text-sm md:text-base text-[#EDE6DA]/75 mt-4 break-keep font-light leading-relaxed">
+                    타고난 재물 성향과 현실에서 반복되는 돈의 패턴을 함께 읽고,<br className="hidden sm:inline" />
+                    나에게 어울리는 수입 방식과 실천 방향을 정리한 1:1 맞춤 리포트.
+                  </p>
+                </div>
                 
-                {/* 메인 히어로 이미지 - 어두운 필터나 오버레이 없이 원본 표시 */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-16 rounded-[40px] overflow-hidden border border-[#8FD3B6]/20 shadow-2xl group">
+                {/* 메인 히어로 이미지 - 기존 a1.webp 에셋 보존 */}
+                <div className="relative w-full max-w-[1280px] mx-auto mb-14 rounded-[40px] overflow-hidden border border-[#8FD3B6]/20 shadow-2xl group">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.hero} 
-                    alt="선천코드 풍요 리포트 메인 이미지"
+                    alt="선천코드 풍요 리포트 메인 히어로 이미지" 
                     width={1440}
                     height={810}
                     priority
@@ -108,17 +156,23 @@ export default function AbundanceReportPage() {
                   />
                 </div>
 
-                <p className="text-xl md:text-3xl text-[#EDE6DA] opacity-90 leading-relaxed mb-12 max-w-3xl mx-auto break-keep font-elegant italic">
+                <p className="text-lg md:text-2xl text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
                   나의 타고난 재능과 돈을 대하는 성향을 이해할 때, 나에게 맞는 풍요의 방향이 보입니다.
                 </p>
                 
-                {/* 구매 영역 - 판매 정보 확정 전 '오픈 예정' 비활성 버튼 */}
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center">
+                {/* 기존 버튼 상태 보존 및 리포트 미리보기 보조 버튼 */}
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center">
+                  <button 
+                    onClick={scrollToSample}
+                    className="w-full sm:w-auto px-6 py-5 rounded-2xl font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-white/20 text-[#EDE6DA] hover:bg-white/10 bg-black/40"
+                  >
+                    리포트 미리보기
+                  </button>
                   <button 
                     type="button"
                     disabled
                     aria-disabled="true"
-                    className="w-full py-5 rounded-2xl font-bold text-lg cursor-not-allowed border border-[#8FD3B6]/40 text-[#E6BE8A] bg-gradient-to-r from-[#0f241f]/90 via-[#152e27]/90 to-[#0f241f]/90 opacity-85 tracking-widest shadow-[0_0_35px_rgba(143,211,182,0.15)]"
+                    className="w-full sm:flex-1 py-5 rounded-2xl font-bold text-lg cursor-not-allowed border border-[#8FD3B6]/40 text-[#E6BE8A] bg-gradient-to-r from-[#0f241f]/90 via-[#152e27]/90 to-[#0f241f]/90 opacity-85 tracking-widest shadow-[0_0_35px_rgba(143,211,182,0.15)]"
                   >
                     오픈 예정
                   </button>
@@ -126,7 +180,27 @@ export default function AbundanceReportPage() {
               </Reveal>
             </section>
 
-            {/* 2. Overview Section - 좌우 배치 구조 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 02. 돈의 반복 패턴 체크리스트 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPatternChecklist />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 03. 왜 일반적인 성공 공식이 맞지 않았을까? */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthAdviceComparison />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 04. 반복되는 돈의 흐름을 재정의하다 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPatternFlow />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 05. 선천코드 풍요 리포트 분석 체계 (기존 Overview & 6대 주제 통합) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthAnalysisMethod />
+
+            {/* 기존 Overview 섹션 (a2.webp 에셋 보존) */}
             <section className="mb-40">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -165,40 +239,7 @@ export default function AbundanceReportPage() {
               </Reveal>
             </section>
 
-            {/* 3. Recommended For - 세로형 이미지 본연의 비율 강조 */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="grid lg:grid-cols-2 gap-24 items-center">
-                  <div className="space-y-12">
-                    <h2 className="text-4xl font-elegant font-bold text-white tracking-widest">
-                      이런 분께 <span className="text-[#8FD3B6]">추천</span><span className="text-[#E6BE8A]">합니다</span>
-                    </h2>
-                    <RecommendedForCards 
-                      items={[
-                        '나의 타고난 재능과 강점을 객관적으로 발견하고 싶은 분',
-                        '나에게 자연스럽게 맞는 일과 수익 활동 성향이 궁금한 분',
-                        '돈을 대하는 나의 태도와 심리적 기준을 돌아보고 싶은 분',
-                        '반복되는 수입·소비 패턴을 점검하고 흐름을 정돈하고 싶은 분',
-                        '무리한 목표 대신 현실에서 꾸준히 실천할 방향을 찾고 싶은 분',
-                      ]}
-                    />
-                  </div>
-                  {/* 세로형 이미지 그대로 노출 (어두운 필터나 오버레이 없음) */}
-                  <div className="relative group">
-                    <div className="absolute -inset-4 bg-[#8FD3B6]/10 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <Image 
-                      src={ABUNDANCE_REPORT_IMAGES.recommended} 
-                      alt="선천코드 풍요 리포트 추천 대상 이미지" 
-                      width={600}
-                      height={900}
-                      className="relative z-10 w-full h-auto rounded-[50px] shadow-3xl border border-[#8FD3B6]/20 transition-transform duration-1000 group-hover:scale-[1.02]" 
-                    />
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 4. Analysis Content - 와이드 배치 */}
+            {/* 기존 6대 핵심 탐구 주제 및 이미지 (a4.webp 에셋 보존) */}
             <section className="mb-40 text-center">
               <Reveal>
                 <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-[0.2em] mb-16">
@@ -238,7 +279,58 @@ export default function AbundanceReportPage() {
               </Reveal>
             </section>
 
-            {/* 5. Premium Section */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 06. 같은 선천코드, 다른 돈의 선택 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPersonalizedCases />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 07. 일반 재물운 풀이와의 차별점 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthComparisonTable />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 08. 풍요 리포트 목차 공개 (7 PART & PART 07 강조) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthReportTableOfContents />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 09. 개인 맞춤 리포트 제작 과정 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthReportProcess />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 10. 리포트 샘플 미리보기 (확대 라이트박스 지원) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthReportPreview />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 11. 리포트를 읽은 뒤 달라질 수 있는 선택 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthChangeScenario />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 12. 추천 대상과 맞지 않는 대상 (a3.webp & 추천 카드 보존) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthAudience />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 13. 고객 후기 (검증된 후기 등록 시 활성화) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthTestimonials />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 14. 백도화의 풍요 분석 철학 (궁중 서신 편지 형태) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPhilosophy />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 15. 소장 가치와 오행 에너지 카드 & 전자책 연결 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 15-1. 소장 가치 6대 핵심 요소 요약 및 《풍요비책》 전자책 연결 카드 */}
+            <WealthValueSummary />
+
+            {/* 15-2. 기존 프리미엄 섹션 (a5.webp 에셋 보존) */}
             <section className="mb-40">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -266,10 +358,10 @@ export default function AbundanceReportPage() {
               </Reveal>
             </section>
 
-            {/* 6. Common Report Info (오행 에너지 카드 및 분석 정보 안내) */}
+            {/* 15-3. 기존 오행 에너지 카드 5종 및 제작/수령 안내 보존 */}
             <section className="mb-40">
               <div className="space-y-40">
-                {/* 6-1. 오행 에너지 카드 안내 */}
+                {/* 오행 에너지 카드 안내 */}
                 <div className="relative">
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gradient-to-r from-emerald-900/10 via-amber-900/5 to-teal-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
@@ -343,7 +435,7 @@ export default function AbundanceReportPage() {
                   </Reveal>
                 </div>
 
-                {/* 6-2. 리포트 제작 과정 및 필요 정보 안내 */}
+                {/* 리포트 준비 과정 및 필요 정보 안내 */}
                 <div className="relative">
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
@@ -430,8 +522,20 @@ export default function AbundanceReportPage() {
               </div>
             </section>
 
-            {/* 7. CTA - 어두운 필터/오버레이 없이 원본 이미지 표시 + 오픈 예정 비활성 버튼 */}
-            <section className="relative min-h-[600px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group border border-[#8FD3B6]/20 w-full max-w-[1280px] mx-auto">
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 16. 자주 묻는 질문 FAQ (10개 항목 아코디언) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthReportFAQ />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 17. 구매 전 안내 (6대 중요 안내 사항) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPurchaseNotice />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 18. 최종 구매 CTA (a6.webp 및 버튼 상태 보존) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group border border-[#8FD3B6]/20 w-full max-w-[1280px] mx-auto shadow-2xl">
               <div className="absolute inset-0 z-0">
                 <Image 
                   src={ABUNDANCE_REPORT_IMAGES.finalCta} 
@@ -439,13 +543,30 @@ export default function AbundanceReportPage() {
                   fill
                   className="object-cover transition-transform duration-[15000ms] group-hover:scale-125" 
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/75 to-transparent"></div>
               </div>
-              <div className="relative z-10 text-center px-10">
+
+              <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <h2 className="text-4xl md:text-7xl font-elegant font-bold text-white mb-12 leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
-                    나다운 풍요의 방향을 <br />
-                    <span className="text-[#8FD3B6]">마주하는</span> <span className="text-[#E6BE8A]">시작</span>
+                  <span className="inline-block px-5 py-1.5 rounded-full text-xs font-bold tracking-[0.3em] uppercase bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] mb-8">
+                    EMBRACE YOUR ABUNDANCE
+                  </span>
+                  
+                  {/* 기존 메인 카피 보존 */}
+                  <h2 className="text-3xl md:text-6xl font-elegant font-bold text-white mb-6 leading-tight">
+                    나다운 풍요의 방향을 <span className="text-[#8FD3B6]">마주하는</span> <span className="text-[#E6BE8A]">시작</span>
                   </h2>
+
+                  {/* 새로운 보조 강조 문구 추가 */}
+                  <p className="text-xl md:text-2xl text-[#E6BE8A] font-medium mb-6 max-w-2xl mx-auto break-keep font-elegant">
+                    &ldquo;내 안의 풍요를 읽는 첫 장을 펼치십시오.&rdquo;
+                  </p>
+                  
+                  <p className="text-base md:text-lg text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
+                    남의 성공 공식이 아니라, 나의 기질과 반복되는 선택에서 출발하십시오.<br />
+                    돈의 흐름을 이해하고, 나에게 맞는 풍요의 방식을 설계할 시간입니다.
+                  </p>
+
                   <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto relative z-10 justify-center">
                     <button 
                       type="button"
@@ -460,7 +581,7 @@ export default function AbundanceReportPage() {
               </div>
             </section>
 
-            {/* Policy Links */}
+            {/* 기존 정책 링크 보존 */}
             <section className="pb-20 text-center">
               <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
                 <Link href="/terms" className="hover:text-[#E6BE8A] transition-colors">이용약관</Link>
@@ -476,4 +597,3 @@ export default function AbundanceReportPage() {
     </main>
   )
 }
-
