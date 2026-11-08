@@ -73,6 +73,29 @@ const productData = {
   anxietyImage: '',
 }
 
+// 🏷️ 통일된 뮤트 로즈코코아 뱃지 컴포넌트 (풍요비책 사각 뱃지 규격 계승)
+function ReunionBadge({
+  children,
+  className = '',
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
+  return (
+    <span
+      className={`inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-semibold whitespace-nowrap shadow-sm tracking-wide ${className}`}
+      style={{
+        background: 'linear-gradient(110deg, #563743 0%, #48303D 100%)',
+        border: '1px solid rgba(185, 154, 115, 0.7)',
+        color: '#F5E6DA',
+        lineHeight: 1.3,
+      }}
+    >
+      {children}
+    </span>
+  )
+}
+
 // 🖼️ 교체형 이미지 슬롯 컴포넌트
 // (로즈골드/샴페인골드 #B49A70 테두리와 깊은 버건디 배경의 고급 플레이스홀더 제공)
 function HybridImageSlot({
@@ -128,9 +151,9 @@ function HybridImageSlot({
         </div>
 
         <div className="space-y-1">
-          <span className="inline-block px-3 py-1 rounded-full text-[11px] font-mono tracking-wider text-[#CDB7A3] bg-black/40 border border-[#B49A70]/30">
+          <ReunionBadge className="text-[11px] font-mono tracking-wider">
             {asset.aspectRatio || '3:4 비율 권장'}
-          </span>
+          </ReunionBadge>
           <h4 className="text-sm md:text-base font-elegant font-bold text-[#FAF7F2] break-keep pt-1">
             {asset.placeholderLabel}
           </h4>
@@ -432,13 +455,9 @@ export default function ReunionSecretPage() {
               <Reveal delayMs={100}>
                 {/* 상단 라벨 */}
                 <div className="mb-8">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[#CDB7A3] uppercase"
-                    style={{
-                      background: 'rgba(74, 14, 23, 0.4)',
-                      border: '1px solid rgba(180, 154, 112, 0.3)',
-                    }}>
+                  <ReunionBadge className="text-xs md:text-[13px] py-1.5 px-5 tracking-[0.2em] uppercase font-elegant">
                     PREMIUM REUNION STRATEGY EBOOK
-                  </span>
+                  </ReunionBadge>
                 </div>
 
                 {/* 대제목 */}
@@ -483,9 +502,9 @@ export default function ReunionSecretPage() {
                     <div className="lg:col-span-7 w-full flex flex-col justify-between space-y-6 text-left p-6 sm:p-8 md:p-10 lg:p-12">
                       <div className="space-y-4">
                         <div className="flex flex-wrap items-center gap-2.5">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-xs font-bold whitespace-nowrap shadow-sm">
+                          <ReunionBadge>
                             재회비방 3종 올인원 세트
-                          </span>
+                          </ReunionBadge>
                           <span className="text-xs text-[#CDB7A3] font-light">
                             PDF 전자책 3종 + 회향연부 모바일 부적
                           </span>
@@ -688,9 +707,9 @@ export default function ReunionSecretPage() {
                                 background: 'radial-gradient(ellipse at 50% 30%, rgba(96, 0, 24, 0.45) 0%, rgba(28, 4, 11, 0.95) 100%)'
                               }}>
                               <div className="text-center relative z-10 space-y-2">
-                                <span className="inline-block px-3 py-1 rounded-full text-xs font-elegant text-[#CDB7A3] bg-[#600018]/50 border border-[#B49A70]/30">
+                                <ReunionBadge>
                                   이별 후폭풍 및 감정 공감
-                                </span>
+                                </ReunionBadge>
                                 <h4 className="text-lg font-elegant font-bold text-[#FAF7F2]">
                                   닫혀버린 상대방의 마음
                                 </h4>
@@ -855,9 +874,9 @@ export default function ReunionSecretPage() {
                       {/* 01 · 진심을 탓하지 마세요 */}
                       <div className="space-y-3.5">
                         <div className="flex items-center gap-2.5">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-xs font-bold whitespace-nowrap">
+                          <ReunionBadge>
                             01
-                          </span>
+                          </ReunionBadge>
                           <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
                             진심을 탓하지 마세요
                           </h3>
@@ -879,9 +898,9 @@ export default function ReunionSecretPage() {
                       {/* 02 · 이제, 나의 자리를 돌아볼 때 */}
                       <div className="space-y-3.5">
                         <div className="flex items-center gap-2.5">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-xs font-bold whitespace-nowrap">
+                          <ReunionBadge>
                             02
-                          </span>
+                          </ReunionBadge>
                           <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
                             이제, <span className="text-[#B59C88]">나의 상태를 회복할 때</span>
                           </h3>
@@ -1428,9 +1447,9 @@ export default function ReunionSecretPage() {
                           <span className="text-xs font-mono font-bold text-[#CDB7A3] uppercase tracking-widest">
                             STEP 01
                           </span>
-                          <span className="text-xs px-2.5 py-1 rounded-full bg-[#600018] text-[#FAF7F2] font-semibold border border-[#B49A70]/30">
+                          <ReunionBadge>
                             응급 처치 &amp; 침묵
-                          </span>
+                          </ReunionBadge>
                         </div>
                         <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
                           결핍 고리 차단 (에너지 회수 5단계)
@@ -1479,9 +1498,9 @@ export default function ReunionSecretPage() {
                           <span className="text-xs font-mono font-bold text-[#CDB7A3] uppercase tracking-widest">
                             STEP 02
                           </span>
-                          <span className="text-xs px-2.5 py-1 rounded-full bg-[#800020] text-[#FAF7F2] font-semibold border border-[#B49A70]/50">
+                          <ReunionBadge>
                             프레임 역전 &amp; 후폭풍
-                          </span>
+                          </ReunionBadge>
                         </div>
                         <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
                           프레임 재배치 및 무의식 자극 (후폭풍 유도 3단계)
@@ -1542,9 +1561,9 @@ export default function ReunionSecretPage() {
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                        <ReunionBadge>
                           Step 1 · 원리
-                        </span>
+                        </ReunionBadge>
                         <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
                           <BookOpen className="w-6 h-6" />
                         </div>
@@ -1567,9 +1586,9 @@ export default function ReunionSecretPage() {
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                        <ReunionBadge>
                           Step 2 · 전략
-                        </span>
+                        </ReunionBadge>
                         <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
                           <Smartphone className="w-6 h-6" />
                         </div>
@@ -1592,9 +1611,9 @@ export default function ReunionSecretPage() {
                   >
                     <div>
                       <div className="flex items-center justify-between gap-2">
-                        <span className="inline-flex items-center justify-center py-[6px] px-[14px] rounded-[8px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-[13px] md:text-[14px] font-serif font-bold whitespace-nowrap shadow-sm">
+                        <ReunionBadge>
                           Step 3 · 실천
-                        </span>
+                        </ReunionBadge>
                         <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 text-[#B59C88]">
                           <Sparkles className="w-6 h-6" />
                         </div>
@@ -1632,8 +1651,8 @@ export default function ReunionSecretPage() {
                       </div>
                     </div>
                     <div className="lg:col-span-7 space-y-5 text-left break-keep">
-                      <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#B59C88] text-xs font-bold border border-[#B49A70]/40 tracking-wider">
-                        Book 1. [본편]
+                      <div>
+                        <ReunionBadge>Book 1. [본편]</ReunionBadge>
                       </div>
                       <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                         《재회비방(再會秘方) 완전판》
@@ -1707,8 +1726,8 @@ export default function ReunionSecretPage() {
                       </div>
                     </div>
                     <div className="lg:col-span-7 space-y-5 text-left break-keep">
-                      <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#B59C88] text-xs font-bold border border-[#B49A70]/40 tracking-wider">
-                        Book 2. [실전 부록 1]
+                      <div>
+                        <ReunionBadge>Book 2. [실전 부록 1]</ReunionBadge>
                       </div>
                       <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                         《재회 역전의 법칙: 30일 실전 행동 매뉴얼》
@@ -1796,8 +1815,8 @@ export default function ReunionSecretPage() {
                       </div>
                     </div>
                     <div className="lg:col-span-7 space-y-5 text-left break-keep">
-                      <div className="inline-block px-3.5 py-1 rounded-full bg-[#600018] text-[#B59C88] text-xs font-bold border border-[#B49A70]/40 tracking-wider">
-                        Book 3. [실전 부록 2]
+                      <div>
+                        <ReunionBadge>Book 3. [실전 부록 2]</ReunionBadge>
                       </div>
                       <h3 className="text-xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
                         《재회 후폭풍 치트키: 무의식 시크릿 메시지 33선》
@@ -1817,27 +1836,27 @@ export default function ReunionSecretPage() {
 
                           <div className="space-y-2 pl-1 sm:pl-5 pt-1">
                             <div className="p-3 rounded-lg bg-[#1B050E] border border-[#B49A70]/20 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2.5">
-                              <span className="text-xs font-bold text-[#B59C88] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#B49A70]/30 shrink-0">
+                              <ReunionBadge className="py-0.5 px-2 text-[11px] shrink-0">
                                 트랙 A
-                              </span>
+                              </ReunionBadge>
                               <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
                                 안읽씹·번호 차단 직전, 읽씹 3일 차, 잠수 이별·회피형 우회 멘트
                               </span>
                             </div>
 
                             <div className="p-3 rounded-lg bg-[#1B050E] border border-[#B49A70]/20 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2.5">
-                              <span className="text-xs font-bold text-[#B59C88] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#B49A70]/30 shrink-0">
+                              <ReunionBadge className="py-0.5 px-2 text-[11px] shrink-0">
                                 트랙 B
-                              </span>
+                              </ReunionBadge>
                               <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
                                 권태기, 잦은 다툼, 거짓말/신뢰 훼손, 심하게 매달린 후 흑역사 리셋 멘트
                               </span>
                             </div>
 
                             <div className="p-3 rounded-lg bg-[#1B050E] border border-[#B49A70]/20 flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2.5">
-                              <span className="text-xs font-bold text-[#B59C88] bg-[#600018]/70 px-2 py-0.5 rounded border border-[#B49A70]/30 shrink-0">
+                              <ReunionBadge className="py-0.5 px-2 text-[11px] shrink-0">
                                 트랙 C
-                              </span>
+                              </ReunionBadge>
                               <span className="text-sm md:text-[15px] text-[#EDE6DA]/90 leading-relaxed font-light">
                                 새 이성(환승/리바운드) 균열 멘트, 친구 프레임 탈출, 늦은 밤 &quot;자니?&quot; 찔러보기 원천 격퇴 멘트
                               </span>
@@ -1969,9 +1988,9 @@ export default function ReunionSecretPage() {
                       </div>
                     </div>
 
-                    <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#600018] border border-[#B49A70]/50 text-[#FAF7F2] text-xs font-bold whitespace-nowrap shrink-0 shadow-sm mt-0.5">
+                    <ReunionBadge className="shrink-0 mt-0.5">
                       올인원 패키지
-                    </span>
+                    </ReunionBadge>
                   </div>
 
                   <div className="border-b border-white/10" />
@@ -2339,9 +2358,9 @@ export default function ReunionSecretPage() {
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(180,154,112,0.15)_0%,transparent_70%)] pointer-events-none" />
 
                         <div className="text-center relative z-10">
-                          <span className="inline-block px-4 py-1.5 rounded-full text-xs md:text-sm font-elegant font-bold text-[#CDB7A3] bg-[#600018]/50 border border-[#B49A70]/35">
+                          <ReunionBadge className="text-xs md:text-sm">
                             관계 역전의 법칙 · THE LAW OF FRAME REVERSAL
-                          </span>
+                          </ReunionBadge>
                         </div>
 
                         {/* 좌우 비교 카드 (왼쪽: 불안에 쫓기는 사람 vs 오른쪽: 내 중심을 지키는 사람) */}
@@ -2872,9 +2891,11 @@ export default function ReunionSecretPage() {
                 >
                   <div className="space-y-6">
                     <div className="space-y-2 text-center">
-                      <span className="inline-block px-3.5 py-1 rounded-full text-xs font-elegant font-bold text-[#FAF7F2] bg-[#600018] border border-[#B49A70]/40">
-                        올인원 완성형 패키지
-                      </span>
+                      <div>
+                        <ReunionBadge>
+                          올인원 완성형 패키지
+                        </ReunionBadge>
+                      </div>
                       <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#FAF7F2]">
                         재회비방 3종 + 회향연부 부적
                       </h3>
