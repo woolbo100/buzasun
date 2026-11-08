@@ -496,15 +496,33 @@ export default function ReunionSecretPage() {
                   />
                 </div>
 
-                {/* 2. 서브카피 & 설명 */}
-                <div className="max-w-3xl mx-auto space-y-4 mb-16">
-                  <p className="text-xl sm:text-2xl md:text-3xl font-elegant font-semibold text-[#FAF7F2] leading-snug">
+                {/* 2. 서브카피 & 설명 (풍요비책 규격 일치: 골드 서브타이틀, 중앙 금색 광채 구분선, 계층형 본문) */}
+                <div className="max-w-4xl lg:max-w-5xl mx-auto space-y-7 mb-20 px-6 text-center">
+                  <p className="text-2xl md:text-[36px] font-elegant font-bold text-[#C2A477] leading-[1.4] break-keep md:whitespace-nowrap">
                     끊어진 인연 앞에서 무너진 나를 다시 세우는 재회 비방서
                   </p>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
-                    매달림과 자책으로 밤을 지새우는 당신을 위해,<br className="hidden sm:inline" />
-                    감정이 아닌 &apos;무의식 심리 메커니즘&apos;과 &apos;프레임 역전&apos;으로 다시 주도권을 찾는 실전 전략을 전합니다.
-                  </p>
+
+                  <div className="flex items-center justify-center py-1">
+                    <div
+                      className="h-[1.5px] w-56 sm:w-72 md:w-96 rounded-full"
+                      style={{
+                        background: 'linear-gradient(90deg, transparent 0%, rgba(148, 120, 82, 0.2) 15%, rgba(148, 120, 82, 0.85) 42%, rgba(194, 164, 119, 0.95) 50%, rgba(148, 120, 82, 0.85) 58%, rgba(148, 120, 82, 0.2) 85%, transparent 100%)',
+                        boxShadow: '0 0 12px rgba(148, 120, 82, 0.45)'
+                      }}
+                    />
+                  </div>
+
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal space-y-3.5 break-keep">
+                    <p>
+                      매달림과 자책으로 밤을 지새우던 시간을 끝내십시오.
+                    </p>
+                    <p>
+                      감정이 아닌 &lsquo;무의식 심리 메커니즘&rsquo;과 &lsquo;프레임 역전&rsquo;으로 관계의 주도권을 되찾는 실전 전략을 전합니다.
+                    </p>
+                    <p className="font-semibold text-white">
+                      오늘부터 《재회비방》과 함께 차갑게 식어버린 상대의 마음을 흔드는 절대 비기를 장착하십시오.
+                    </p>
+                  </div>
                 </div>
 
                 {/* 3. Hero Banner 3종 패키지 소개 상자 (단일 구매 영역) */}
