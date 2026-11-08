@@ -1575,7 +1575,7 @@ export default function ReunionSecretPage() {
                         >
                           {/* 딥 플럼 버건디 원형 체크 아이콘 */}
                           <div className="shrink-0 mt-0.5 relative z-10">
-                            <div 
+                            <div
                               style={{ backgroundColor: '#54283D', borderColor: 'rgba(125, 75, 89, 0.25)' }}
                               className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border shadow-none"
                             >
@@ -2841,12 +2841,12 @@ export default function ReunionSecretPage() {
             )}
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 18: Comparison Table (가치 비교표)
+                Section 18: Comparison Table (가치 비교 카드)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 max-w-4xl mx-auto">
               <Reveal>
-                <div className="text-center max-w-3xl mx-auto mb-12 md:mb-14">
-                  <span className="text-[#C2A477] font-elegant tracking-[0.25em] text-xs uppercase font-bold block mb-2">
+                <div className="text-center max-w-3xl mx-auto mb-12 md:mb-14 break-keep">
+                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                     COMPARISON TABLE
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
@@ -2854,105 +2854,113 @@ export default function ReunionSecretPage() {
                   </h2>
                 </div>
 
-                {/* 다크 퍼플 및 반투명 글라스 스타일의 고급 비교 테이블 */}
-                <div
-                  className="overflow-x-auto rounded-3xl md:rounded-[36px] border border-[#B49A70]/35 shadow-2xl backdrop-blur-xl"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.65) 0%, rgba(38, 18, 26, 0.88) 100%)',
-                    boxShadow: '0 16px 45px rgba(0, 0, 0, 0.45), 0 0 25px rgba(180, 154, 112, 0.08)'
-                  }}
-                >
-                  <table className="w-full text-left border-collapse min-w-[620px]">
-                    <thead>
-                      <tr className="border-b border-[#B49A70]/25">
-                        <th className="py-6 px-6 md:px-8 text-sm md:text-base font-elegant font-bold text-[#FAF7F2] w-1/4">
-                          구분
-                        </th>
-                        <th
-                          className="py-6 px-6 md:px-8 text-sm md:text-base font-elegant font-bold text-[#EDE6DA]/80 w-1/3 border-l border-[#B49A70]/15"
-                          style={{ backgroundColor: 'rgba(45, 20, 30, 0.65)' }}
-                        >
-                          일반 타로·연애 상담
-                        </th>
-                        <th
-                          className="py-6 px-6 md:px-8 text-base md:text-lg font-elegant font-bold text-[#C2A477] border-l border-[#B49A70]/40 w-5/12"
-                          style={{
-                            background: 'linear-gradient(180deg, rgba(84, 38, 56, 0.70) 0%, rgba(52, 32, 40, 0.88) 100%)'
-                          }}
-                        >
-                          <div className="flex items-center gap-2">
-                            <span>백도화 《재회비방 3종 세트》</span>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-[#B49A70]/15 text-sm md:text-base">
+                {/* 세로형 2열 비교 카드 그리드 (PC 2열, 모바일 1열) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch pt-2">
+                  {/* 카드 1 — 일반 타로·연애 상담 (어두운 브라운 버건디 글라스) */}
+                  <div
+                    className="p-7 sm:p-9 rounded-2xl md:rounded-3xl border border-[#B99A73]/20 shadow-[0_8px_32px_rgba(0,0,0,0.35)] hover:border-[#B49A70]/40 text-left backdrop-blur-md flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1"
+                    style={{
+                      background: 'linear-gradient(145deg, rgba(39, 25, 31, 0.78), rgba(28, 20, 25, 0.84))',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                    }}
+                  >
+                    {/* 카드 제목 헤더 */}
+                    <div className="pb-5 mb-6 border-b border-white/10 min-h-[48px] md:min-h-[56px] flex items-center">
+                      <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2]/90">
+                        일반 타로·연애 상담
+                      </h3>
+                    </div>
+
+                    {/* 항목 리스트: 비용, 내용, 실행 도구 */}
+                    <div className="space-y-6 flex-1 flex flex-col justify-between">
                       {/* 1. 비용 */}
-                      <tr className="hover:bg-white/[0.02] transition-colors">
-                        <td className="py-6 md:py-7 px-6 md:px-8 font-semibold text-[#FAF7F2] bg-white/[0.015]">
+                      <div>
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
                           비용
-                        </td>
-                        <td
-                          className="py-6 md:py-7 px-6 md:px-8 text-[#EDE6DA]/85 border-l border-[#B49A70]/15 leading-relaxed"
-                          style={{ backgroundColor: 'rgba(38, 18, 26, 0.45)' }}
-                        >
+                        </span>
+                        <div className="text-[22px] md:text-[24px] font-bold font-elegant text-[#FAF7F2] leading-none mb-1">
                           1회 15만 원 이상
-                        </td>
-                        <td
-                          className="py-6 md:py-7 px-6 md:px-8 font-bold text-[#FAF7F2] border-l border-[#B49A70]/35"
-                          style={{
-                            background: 'linear-gradient(180deg, rgba(84, 38, 56, 0.45) 0%, rgba(52, 32, 40, 0.70) 100%)'
-                          }}
-                        >
-                          <span className="text-lg md:text-xl font-elegant text-[#C2A477]">
-                            단 19,000원 (영구 소장)
-                          </span>
-                        </td>
-                      </tr>
+                        </div>
+                      </div>
 
                       {/* 2. 내용 */}
-                      <tr className="hover:bg-white/[0.02] transition-colors">
-                        <td className="py-6 md:py-7 px-6 md:px-8 font-semibold text-[#FAF7F2] bg-white/[0.015]">
+                      <div>
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
                           내용
-                        </td>
-                        <td
-                          className="py-6 md:py-7 px-6 md:px-8 text-[#EDE6DA]/85 border-l border-[#B49A70]/15 leading-relaxed"
-                          style={{ backgroundColor: 'rgba(38, 18, 26, 0.45)' }}
-                        >
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA]/85 leading-[1.7] break-keep">
                           감정적 위로와 시간 끌기
-                        </td>
-                        <td
-                          className="py-6 md:py-7 px-6 md:px-8 font-bold text-[#FAF7F2] border-l border-[#B49A70]/35"
-                          style={{
-                            background: 'linear-gradient(180deg, rgba(84, 38, 56, 0.45) 0%, rgba(52, 32, 40, 0.70) 100%)'
-                          }}
-                        >
-                          <span className="text-[#C2A477]">뇌과학 기반 심리전</span> + 행동 매뉴얼
-                        </td>
-                      </tr>
+                        </p>
+                      </div>
 
                       {/* 3. 실행 도구 */}
-                      <tr className="hover:bg-white/[0.02] transition-colors">
-                        <td className="py-6 md:py-7 px-6 md:px-8 font-semibold text-[#FAF7F2] bg-white/[0.015]">
+                      <div>
+                        <span className="text-[14px] font-semibold text-[#C2A477]/80 block mb-1.5">
                           실행 도구
-                        </td>
-                        <td
-                          className="py-6 md:py-7 px-6 md:px-8 text-[#EDE6DA]/85 border-l border-[#B49A70]/15 leading-relaxed"
-                          style={{ backgroundColor: 'rgba(38, 18, 26, 0.45)' }}
-                        >
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA]/85 leading-[1.7] break-keep">
                           없음
-                        </td>
-                        <td
-                          className="py-6 md:py-7 px-6 md:px-8 font-bold text-[#FAF7F2] border-l border-[#B49A70]/35"
-                          style={{
-                            background: 'linear-gradient(180deg, rgba(84, 38, 56, 0.45) 0%, rgba(52, 32, 40, 0.70) 100%)'
-                          }}
-                        >
-                          상황별 <span className="text-[#C2A477]">33선 스크립트</span> + 30일 워크시트 제공
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 카드 2 — 백도화 《재회비방 3종 세트》 (뮤트 버건디 플럼 글라스 + 샴페인 골드 테두리 강조) */}
+                  <div
+                    className="p-7 sm:p-9 rounded-2xl md:rounded-3xl border border-[#BE9D70]/50 shadow-[0_12px_40px_rgba(0,0,0,0.4)] hover:border-[#C2A477] text-left backdrop-blur-md flex flex-col justify-between h-full relative transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_45px_rgba(0,0,0,0.5),0_0_25px_rgba(190,157,112,0.22)]"
+                    style={{
+                      background: 'linear-gradient(145deg, rgba(91, 49, 65, 0.78), rgba(58, 31, 44, 0.86))',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(190, 157, 112, 0.12)'
+                    }}
+                  >
+                    {/* 상단 뱃지 (라벨) */}
+                    <div className="absolute -top-3.5 left-7 sm:left-9 z-10">
+                      <span className="inline-block py-1 px-3 rounded-md text-[12px] font-bold text-[#FAF7F2] bg-[#562B3B] border border-[#C2A477]/70 shadow-sm">
+                        재회비방 3종 올인원 패키지
+                      </span>
+                    </div>
+
+                    {/* 카드 제목 헤더 */}
+                    <div className="pb-5 mb-6 border-b border-[#C2A477]/25 min-h-[48px] md:min-h-[56px] flex items-center relative z-10">
+                      <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2]">
+                        백도화 《재회비방 3종 세트》
+                      </h3>
+                    </div>
+
+                    {/* 항목 리스트: 비용, 내용, 실행 도구 */}
+                    <div className="space-y-6 flex-1 flex flex-col justify-between relative z-10">
+                      {/* 1. 비용 (단 19,000원 크게 강조) */}
+                      <div>
+                        <span className="text-[14px] font-semibold text-[#C2A477] block mb-1.5">
+                          비용
+                        </span>
+                        <div className="text-[28px] md:text-[32px] font-bold font-elegant text-[#FAF7F2] leading-none mb-1">
+                          단 19,000<span className="text-[18px] font-normal text-[#C2A477] ml-1">원</span>
+                          <span className="text-[13px] md:text-[14px] font-normal text-[#FAF6EE]/80 ml-2 font-sans">(영구 소장)</span>
+                        </div>
+                      </div>
+
+                      {/* 2. 내용 */}
+                      <div>
+                        <span className="text-[14px] font-semibold text-[#C2A477] block mb-1.5">
+                          내용
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-[1.7] break-keep">
+                          <span className="text-[#C2A477] font-bold">뇌과학 기반 심리전</span> + 행동 매뉴얼
+                        </p>
+                      </div>
+
+                      {/* 3. 실행 도구 */}
+                      <div>
+                        <span className="text-[14px] font-semibold text-[#C2A477] block mb-1.5">
+                          실행 도구
+                        </span>
+                        <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-[1.7] break-keep">
+                          상황별 <span className="text-[#C2A477] font-bold">33선 스크립트</span> + 30일 워크시트 제공
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>
