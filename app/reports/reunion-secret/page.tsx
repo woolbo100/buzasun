@@ -1542,9 +1542,6 @@ export default function ReunionSecretPage() {
                   {/* 왼쪽: 기존 '이런 분께 추천합니다' 제목 및 추천 카드 (약 58% 너비) */}
                   <div className="lg:col-span-7 space-y-6 md:space-y-8 text-left break-keep">
                     <div>
-                      <span className="text-[#C2A477] font-elegant tracking-[0.25em] text-xs uppercase font-bold block mb-2">
-                        RECOMMENDED FOR
-                      </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
                         이런 분께 <span className="text-[#C2A477]">추천합니다</span>
                       </h2>
@@ -1557,7 +1554,9 @@ export default function ReunionSecretPage() {
                         "지금 연락해야 하는지, 더 기다려야 하는지 판단이 어려운 분",
                         "권태기, 반복 다툼, 집착, 신뢰 상실, 환승 의심 등 이별 원인을 제대로 진단하고 싶은 분",
                         "재회를 원하지만 예전처럼 매달리는 내가 되고 싶지는 않은 분",
-                        "상대를 되찾기 전에 먼저 무너진 나의 중심과 가치를 바로잡고 싶은 분"
+                        "상대를 되찾기 전에 먼저 무너진 나의 중심과 가치를 바로잡고 싶은 분",
+                        "이별 후 상대의 SNS나 근황을 반복해서 확인하며 감정이 흔들리는 분",
+                        "재회 가능성만 기다리기보다 관계의 반복 패턴을 이해하고 새로운 시작을 준비하고 싶은 분"
                       ].map((item, idx) => (
                         <div
                           key={idx}
