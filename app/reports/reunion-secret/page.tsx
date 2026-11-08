@@ -1865,9 +1865,8 @@ export default function ReunionSecretPage() {
                 Section 13: 패키지 구성 요약과 중간 구매 CTA
                ═══════════════════════════════════════════════════════════════ */}
             <div
-              className="gungjung-glass rounded-3xl relative overflow-hidden shadow-2xl mb-28"
+              className="rounded-3xl relative overflow-hidden shadow-2xl mb-28 bg-gradient-to-r from-[#1E040D] via-[#140207] to-[#0A0205]"
               style={{
-                background: 'linear-gradient(135deg, rgba(80, 4, 24, 0.55) 0%, rgba(20, 4, 11, 0.96) 100%)',
                 border: '1px solid rgba(190, 158, 108, 0.78)',
                 boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.12), 0 12px 40px rgba(0, 0, 0, 0.45)'
               }}
@@ -2784,9 +2783,8 @@ export default function ReunionSecretPage() {
 
                 {/* 안쪽 구매 카드 */}
                 <div
-                  className="gungjung-glass rounded-3xl p-8 sm:p-10 md:p-12 relative overflow-hidden shadow-2xl max-w-2xl mx-auto"
+                  className="rounded-3xl p-8 sm:p-10 md:p-12 relative overflow-hidden shadow-2xl max-w-2xl mx-auto bg-gradient-to-b from-[#1E040D] via-[#140207] to-[#0A0205]"
                   style={{
-                    background: 'radial-gradient(ellipse at 50% 0%, rgba(96, 0, 24, 0.45) 0%, rgba(15, 4, 10, 0.98) 100%)',
                     border: '1px solid rgba(190, 158, 108, 0.78)',
                     boxShadow: '0 0 0 1px rgba(221, 190, 142, 0.08), 0 0 24px rgba(185, 145, 91, 0.12), 0 12px 40px rgba(96, 0, 24, 0.30)'
                   }}
