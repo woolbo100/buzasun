@@ -711,7 +711,7 @@ export default function ReunionSecretPage() {
               <Reveal>
                 <div className="space-y-10">
                   <div className="text-center max-w-3xl mx-auto space-y-5">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       PAIN POINT & HOOK
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -802,7 +802,7 @@ export default function ReunionSecretPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                       {/* 좌측 55% 공감 문구 */}
                       <div className="lg:col-span-7 space-y-5 text-left break-keep">
-                        <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                        <span className="text-[#D8BB94] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
                           THE MOMENT OF ANXIETY
                         </span>
                         <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -876,7 +876,7 @@ export default function ReunionSecretPage() {
                      ═══════════════════════════════════════════════════════════════ */}
                   <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
-                      <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                      <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                         THE PARADOX OF REUNION
                       </span>
                       <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -1245,7 +1245,7 @@ export default function ReunionSecretPage() {
               <Reveal>
                 <div className="space-y-6 md:space-y-8">
                   <div className="text-center max-w-3xl mx-auto space-y-3">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       THE REUNION SECRET
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
@@ -1337,7 +1337,7 @@ export default function ReunionSecretPage() {
                   }}
                 >
                   <div className="max-w-4xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#D8BB94] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
                       TRANSFORMATION
                     </span>
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -1712,7 +1712,7 @@ export default function ReunionSecretPage() {
               <Reveal>
                 <div className="py-4">
                   <div className="text-center space-y-4 md:space-y-5 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       CURRICULUM &amp; ARCHITECTURE
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
@@ -1871,7 +1871,7 @@ export default function ReunionSecretPage() {
             <section className="mb-14 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center mb-6 md:mb-8 max-w-3xl mx-auto break-keep">
-                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     PACKAGE COMPOSITION
                   </span>
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.4] break-keep">
@@ -2388,7 +2388,7 @@ export default function ReunionSecretPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-14 break-keep">
-                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     CORE DIFFERENTIATION
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4]">
@@ -2691,7 +2691,7 @@ export default function ReunionSecretPage() {
                 <div>
                   {/* [신규 영역 1] 관계 역전의 법칙 상단 텍스트 영역 */}
                   <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-14 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       POSITION SHIFT
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
@@ -2800,7 +2800,7 @@ export default function ReunionSecretPage() {
 
                   {/* [신규 영역 2] 인연의 주권자 브릿지 카피 (mt-28 md:mt-40) */}
                   <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-28 md:mt-40 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       SOVEREIGN OF RELATIONSHIP
                     </span>
                     <h3
@@ -3109,7 +3109,7 @@ export default function ReunionSecretPage() {
             <section id="faq" className="mb-28 text-left max-w-4xl mx-auto">
               <Reveal>
                 <div className="text-center space-y-4 mb-14">
-                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     Frequently Asked Questions
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
@@ -3321,7 +3321,7 @@ export default function ReunionSecretPage() {
             <section id="final-purchase" className="scroll-mt-24 md:scroll-mt-28 pt-12 md:pt-16 mb-24 text-center max-w-4xl mx-auto px-4">
               <Reveal>
                 <div className="text-center space-y-4 mb-10 md:mb-12">
-                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     TIME TO RECLAIM YOUR POWER
                   </span>
                   <h2 className="text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] font-elegant font-bold text-white leading-[1.4] break-keep mb-5 md:mb-6">

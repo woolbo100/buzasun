@@ -257,7 +257,7 @@ export default function AbundanceSecretPage() {
               <Reveal delayMs={100}>
                 {/* 상단 라벨 */}
                 <div className="mb-8">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[#C2A477] uppercase"
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[#8FB4A4] uppercase"
                     style={{
                       background: 'rgba(120, 158, 144, 0.18)',
                       border: '1px solid rgba(203, 235, 222, 0.3)',
@@ -268,7 +268,7 @@ export default function AbundanceSecretPage() {
 
                 {/* 대제목 */}
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-10 text-white leading-[1.45]">
-                  豊饒秘策 <span className="text-[#C2A477]">풍요비책</span>
+                  豊饒秘策 <span className="gradient-text-abundance">풍요비책</span>
                 </h1>
 
                 {/* 1. 최상단: 가로형 풀 이미지 (16:9 비율, 1280px 매칭) */}
@@ -401,7 +401,7 @@ export default function AbundanceSecretPage() {
               <Reveal>
                 <div className="space-y-10">
                   <div className="text-center max-w-3xl mx-auto space-y-5">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       Problem Diagnosis & Resonance
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -480,7 +480,7 @@ export default function AbundanceSecretPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                       {/* 좌측 55% 공감 문구 */}
                       <div className="lg:col-span-7 space-y-5 text-left break-keep">
-                        <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                        <span className="text-[#8FB4A4] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
                           THE MOMENT OF ANXIETY
                         </span>
                         <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -526,7 +526,7 @@ export default function AbundanceSecretPage() {
                   <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
                     {/* 상단 영문 섹션 라벨 및 헤더 */}
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
-                      <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                      <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                         THE PARADOX OF ATTRACTION
                       </span>
                       <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -947,7 +947,7 @@ export default function AbundanceSecretPage() {
                   }}
                 >
                   <div className="max-w-4xl mx-auto px-4 text-center mb-10 space-y-3 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#8FB4A4] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
                       TRANSFORMATION
                     </span>
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -1102,7 +1102,7 @@ export default function AbundanceSecretPage() {
                   />
 
                   <div className="relative z-10 text-center mb-8 md:mb-10 space-y-2.5 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       AUTHOR & MASTER
                     </span>
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide">
@@ -1315,7 +1315,7 @@ export default function AbundanceSecretPage() {
                   {/* 커리큘럼 & 아키텍처 상단 헤드라인 */}
                   <div className="text-center mb-10 md:mb-14 space-y-5 break-keep">
                     {/* 골드 라벨 (12pt) */}
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       CURRICULUM &amp; ARCHITECTURE
                     </span>
 
@@ -1359,7 +1359,7 @@ export default function AbundanceSecretPage() {
               <Reveal>
                 <div className="py-4">
                   <div className="text-center mb-12 space-y-4 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#8FB4A4] font-elegant text-xs font-semibold tracking-[0.2em] uppercase block">
                       ABUNDANCE CODE
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -1511,7 +1511,7 @@ export default function AbundanceSecretPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto break-keep">
-                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     PACKAGE COMPOSITION
                   </span>
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.4] break-keep">
@@ -2204,7 +2204,7 @@ export default function AbundanceSecretPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-14 break-keep">
-                  <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                  <span className="text-[#8FB4A4] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
                     CORE DIFFERENTIATION
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4]">
@@ -2517,7 +2517,7 @@ export default function AbundanceSecretPage() {
                 <div>
                   {/* [신규 영역 1] 부의 그릇의 법칙 상단 텍스트 영역 */}
                   <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-14 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       POSITION SHIFT
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
@@ -2630,7 +2630,7 @@ export default function AbundanceSecretPage() {
 
                   {/* [신규 영역 2] 황금빛 풍요의 주권자 브릿지 카피 (mt-28 md:mt-40) */}
                   <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-28 md:mt-40 break-keep">
-                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       SOVEREIGN OF ABUNDANCE
                     </span>
                     <h3
@@ -2827,7 +2827,7 @@ export default function AbundanceSecretPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     VALUE COMPARISON
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
@@ -3040,7 +3040,7 @@ export default function AbundanceSecretPage() {
             <section id="faq" className="mb-28 text-left max-w-4xl mx-auto">
               <Reveal>
                 <div className="text-center space-y-4 mb-14">
-                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#8FB4A4] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     Frequently Asked Questions
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">

@@ -16,7 +16,7 @@ export default function ReportFAQ() {
     <section className="mb-40" id="faq">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
             FREQUENTLY ASKED QUESTIONS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -42,7 +42,7 @@ export default function ReportFAQ() {
                   aria-expanded={isOpen}
                 >
                   <span className="text-base md:text-lg font-bold text-white break-keep flex items-center gap-3">
-                    <span className="text-xs font-mono text-[var(--accent-gold)] shrink-0">
+                    <span className="text-xs font-mono text-[#D9A8A7] shrink-0">
                       Q{idx + 1}.
                     </span>
                     {item.q}
@@ -50,7 +50,7 @@ export default function ReportFAQ() {
                   <div
                     className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'rotate-180 bg-[var(--accent-gold)]/20 text-[var(--accent-gold)] border-[var(--accent-gold)]/40'
+                        ? 'rotate-180 bg-[#B7788D]/20 text-[#D9A8A7] border-[#B7788D]/40'
                         : 'text-white/50 bg-white/5'
                     }`}
                   >

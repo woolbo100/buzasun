@@ -13,7 +13,7 @@ export default function CompatibilityTestimonials() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
             REAL COUPLE REVIEWS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -31,7 +31,7 @@ export default function CompatibilityTestimonials() {
               className="gungjung-glass p-8 rounded-[28px] border border-white/10 flex flex-col justify-between"
             >
               <div>
-                <span className="text-xs px-2.5 py-1 rounded bg-[var(--accent-gold)]/15 text-[var(--accent-gold-light)] font-medium mb-4 inline-block">
+                <span className="text-xs px-2.5 py-1 rounded bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] font-medium mb-4 inline-block">
                   {rev.tag}
                 </span>
                 <h4 className="text-[20px] md:text-[24px] font-bold text-white mb-3 leading-snug break-keep">

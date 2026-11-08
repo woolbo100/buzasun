@@ -8,7 +8,7 @@ export default function WealthAdviceComparison() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
             BEYOND STANDARD FORMULAS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -23,7 +23,7 @@ export default function WealthAdviceComparison() {
           {wealthAdviceData.cards.map((card, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-white/10 hover:border-[#8FD3B6]/50 bg-gradient-to-b from-[#0f241f]/30 via-transparent to-black/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(143,211,182,0.15)] flex flex-col justify-between group"
+              className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-white/10 hover:border-[#608F82]/50 bg-gradient-to-b from-[#0f241f]/30 via-transparent to-black/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(96, 143, 130, 0.15)] flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -34,7 +34,7 @@ export default function WealthAdviceComparison() {
                     {card.tag}
                   </span>
                 </div>
-                <h3 className="text-[20px] md:text-[24px] font-elegant font-bold text-white mb-4 leading-snug break-keep group-hover:text-[#8FD3B6] transition-colors">
+                <h3 className="text-[20px] md:text-[24px] font-elegant font-bold text-white mb-4 leading-snug break-keep group-hover:text-[#8FB4A4] transition-colors">
                   &ldquo;{card.content}&rdquo;
                 </h3>
               </div>

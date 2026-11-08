@@ -16,7 +16,7 @@ export default function CompatibilityFAQ() {
     <section className="mb-40" id="faq">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
             FREQUENTLY ASKED QUESTIONS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -42,7 +42,7 @@ export default function CompatibilityFAQ() {
                   aria-expanded={isOpen}
                 >
                   <span className="text-base md:text-lg font-bold text-white break-keep flex items-center gap-3">
-                    <span className="text-xs font-mono text-[var(--accent-gold)] shrink-0">
+                    <span className="text-xs font-mono text-[#D8BB94] shrink-0">
                       Q{idx + 1}.
                     </span>
                     {item.q}
@@ -50,7 +50,7 @@ export default function CompatibilityFAQ() {
                   <div
                     className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'rotate-180 bg-[var(--accent-gold)]/20 text-[var(--accent-gold)] border-[var(--accent-gold)]/40'
+                        ? 'rotate-180 bg-[#663244]/30 text-[#D8BB94] border-[#935C6B]/50'
                         : 'text-white/50 bg-white/5'
                     }`}
                   >

@@ -8,7 +8,7 @@ export default function WealthPersonalizedCases() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
             DIFFERENT CHOICES, DIFFERENT WEALTH
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -24,11 +24,11 @@ export default function WealthPersonalizedCases() {
           {wealthCaseData.cases.map((c, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-white/10 hover:border-[#8FD3B6]/50 bg-gradient-to-b from-[#0f241f]/40 via-black/40 to-black/60 transition-all duration-300 relative overflow-hidden flex flex-col justify-between group"
+              className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-white/10 hover:border-[#608F82]/50 bg-gradient-to-b from-[#0f241f]/40 via-black/40 to-black/60 transition-all duration-300 relative overflow-hidden flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider bg-[#8FD3B6] text-[#0f241f]">
+                  <span className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider bg-[#608F82] text-[#0f241f]">
                     {c.badge}
                   </span>
                   <div className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-[#E6BE8A]">
@@ -36,7 +36,7 @@ export default function WealthPersonalizedCases() {
                   </div>
                 </div>
 
-                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-6 group-hover:text-[#8FD3B6] transition-colors leading-snug break-keep">
+                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-6 group-hover:text-[#8FB4A4] transition-colors leading-snug break-keep">
                   {c.typeName}
                 </h3>
 
@@ -52,8 +52,8 @@ export default function WealthPersonalizedCases() {
                   </div>
 
                   {/* 반복되는 선택 */}
-                  <div className="p-4 rounded-2xl bg-emerald-950/20 border border-[#8FD3B6]/25">
-                    <span className="text-xs font-bold text-[#8FD3B6]/80 block mb-1">
+                  <div className="p-4 rounded-2xl bg-emerald-950/20 border border-[#608F82]/25">
+                    <span className="text-xs font-bold text-[#8FB4A4]/80 block mb-1">
                       {c.decisionTitle}
                     </span>
                     <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
@@ -64,7 +64,7 @@ export default function WealthPersonalizedCases() {
               </div>
 
               {/* 실천 처방 방향 (하단 강조) */}
-              <div className="mt-8 pt-6 border-t border-[#8FD3B6]/25 p-4 rounded-2xl bg-[#8FD3B6]/10">
+              <div className="mt-8 pt-6 border-t border-[#608F82]/25 p-4 rounded-2xl bg-[#608F82]/15">
                 <span className="text-xs font-bold text-[#E6BE8A] block mb-1">
                   ✨ {c.solutionTitle}
                 </span>

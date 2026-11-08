@@ -9,7 +9,7 @@ export default function PurchaseNotice() {
     <section className="mb-40" id="notice">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
             PURCHASE NOTICE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -24,7 +24,7 @@ export default function PurchaseNotice() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {purchaseNoticeData.notices.map((notice, idx) => (
               <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="w-8 h-8 rounded-lg bg-[var(--accent-gold)]/10 flex items-center justify-center text-[var(--accent-gold)] shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-lg bg-[#B7788D]/15 flex items-center justify-center text-[#D9A8A7] shrink-0 mt-0.5">
                   <Info className="w-4 h-4" />
                 </div>
                 <div>

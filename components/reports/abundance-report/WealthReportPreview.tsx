@@ -40,7 +40,7 @@ export default function WealthReportPreview() {
     <section className="mb-40" id="sample-preview">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
             DIGITAL REPORT PREVIEW
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -57,7 +57,7 @@ export default function WealthReportPreview() {
             <div
               key={sample.id}
               onClick={() => setActiveModalIndex(idx)}
-              className="gungjung-glass p-5 rounded-[28px] border border-white/10 hover:border-[#8FD3B6]/50 bg-gradient-to-b from-[#0f241f]/30 via-transparent to-black/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
+              className="gungjung-glass p-5 rounded-[28px] border border-white/10 hover:border-[#608F82]/50 bg-gradient-to-b from-[#0f241f]/30 via-transparent to-black/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
             >
               <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4 bg-black/40 border border-white/5">
                 <Image
@@ -67,18 +67,18 @@ export default function WealthReportPreview() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#8FD3B6]">
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#8FB4A4]">
                   {sample.badge}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-[#8FD3B6]/40 flex items-center justify-center text-[#8FD3B6] shadow-xl">
+                  <div className="w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-[#608F82]/40 flex items-center justify-center text-[#8FB4A4] shadow-xl">
                     <ZoomIn className="w-5 h-5" />
                   </div>
                 </div>
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#8FD3B6] transition-colors">
+                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#8FB4A4] transition-colors">
                   {sample.title}
                 </h4>
                 <p className="text-xs text-[#EDE6DA]/60 font-light break-keep">
@@ -101,13 +101,13 @@ export default function WealthReportPreview() {
           onClick={() => setActiveModalIndex(null)}
         >
           <div
-            className="relative max-w-4xl w-full max-h-[90vh] bg-[#0c1a16] rounded-3xl border border-[#8FD3B6]/40 p-6 md:p-8 flex flex-col items-center overflow-hidden shadow-2xl"
+            className="relative max-w-4xl w-full max-h-[90vh] bg-[#0c1a16] rounded-3xl border border-[#608F82]/40 p-6 md:p-8 flex flex-col items-center overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* 닫기 버튼 */}
             <button
               onClick={() => setActiveModalIndex(null)}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#8FD3B6] hover:text-[#0f241f] transition-colors z-20"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#608F82] hover:text-[#0f241f] transition-colors z-20"
               aria-label="모달 닫기"
             >
               <X className="w-5 h-5" />
@@ -116,7 +116,7 @@ export default function WealthReportPreview() {
             {/* 이전 버튼 */}
             <button
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#8FD3B6] hover:text-[#0f241f] transition-colors z-20"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#608F82] hover:text-[#0f241f] transition-colors z-20"
               aria-label="이전 샘플"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -125,14 +125,14 @@ export default function WealthReportPreview() {
             {/* 다음 버튼 */}
             <button
               onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#8FD3B6] hover:text-[#0f241f] transition-colors z-20"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#608F82] hover:text-[#0f241f] transition-colors z-20"
               aria-label="다음 샘플"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
 
             <div className="text-center mb-4 z-10">
-              <span className="text-xs font-mono text-[#E6BE8A] px-2.5 py-0.5 rounded bg-[#8FD3B6]/10 mb-2 inline-block">
+              <span className="text-xs font-mono text-[#E6BE8A] px-2.5 py-0.5 rounded bg-[#608F82]/15 mb-2 inline-block">
                 {currentSample.badge}
               </span>
               <h3 className="text-xl md:text-2xl font-bold text-white">

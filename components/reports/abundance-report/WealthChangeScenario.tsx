@@ -9,7 +9,7 @@ export default function WealthChangeScenario() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
             TRANSFORMATION SCENARIO
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -32,7 +32,7 @@ export default function WealthChangeScenario() {
                     <span className="text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-md bg-white/10 text-white">
                       {stage.stage}
                     </span>
-                    <span className="text-xs text-[#8FD3B6] font-semibold">
+                    <span className="text-xs text-[#8FB4A4] font-semibold">
                       {stage.tag}
                     </span>
                   </div>
@@ -55,10 +55,10 @@ export default function WealthChangeScenario() {
               {/* 연결 화살표 */}
               {idx < wealthScenarioData.stages.length - 1 && (
                 <>
-                  <div className="hidden md:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#0a0514] border border-[#8FD3B6]/40 items-center justify-center text-[#8FD3B6] shadow-md">
+                  <div className="hidden md:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#0a0514] border border-[#608F82]/40 items-center justify-center text-[#8FB4A4] shadow-md">
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
-                  <div className="flex md:hidden justify-center my-2 text-[#8FD3B6]">
+                  <div className="flex md:hidden justify-center my-2 text-[#8FB4A4]">
                     <ArrowDown className="w-5 h-5" />
                   </div>
                 </>

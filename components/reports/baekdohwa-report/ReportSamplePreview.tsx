@@ -17,7 +17,7 @@ export default function ReportSamplePreview() {
     <section className="mb-40" id="sample-preview">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
             DIGITAL REPORT PREVIEW
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -40,7 +40,7 @@ export default function ReportSamplePreview() {
                   desc: sample.desc
                 })
               }
-              className="gungjung-glass p-5 rounded-[28px] border border-white/10 hover:border-[var(--accent-gold)]/50 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
+              className="gungjung-glass p-5 rounded-[28px] border border-white/10 hover:border-[#B7788D]/50 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
             >
               <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4 bg-black/40 border border-white/5">
                 <Image
@@ -50,18 +50,18 @@ export default function ReportSamplePreview() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[var(--accent-gold-light)]">
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#E6BFA9]">
                   {sample.badge}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-[var(--accent-gold)]/40 flex items-center justify-center text-[var(--accent-gold)] shadow-xl">
+                  <div className="w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-[#B7788D]/40 flex items-center justify-center text-[#D9A8A7] shadow-xl">
                     <ZoomIn className="w-5 h-5" />
                   </div>
                 </div>
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[var(--accent-gold-light)] transition-colors">
+                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#E6BFA9] transition-colors">
                   {sample.title}
                 </h4>
                 <p className="text-xs text-[#EDE6DA]/60 font-light break-keep">
@@ -84,12 +84,12 @@ export default function ReportSamplePreview() {
           onClick={() => setActiveModalImage(null)}
         >
           <div
-            className="relative max-w-4xl w-full max-h-[90vh] bg-[#120014] rounded-3xl border border-[var(--accent-gold)]/30 p-6 md:p-8 flex flex-col items-center overflow-hidden shadow-2xl"
+            className="relative max-w-4xl w-full max-h-[90vh] bg-[#120014] rounded-3xl border border-[#B7788D]/30 p-6 md:p-8 flex flex-col items-center overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setActiveModalImage(null)}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[var(--accent-gold)] hover:text-black transition-colors"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#B7788D] hover:text-black transition-colors"
               aria-label="모달 닫기"
             >
               <X className="w-5 h-5" />

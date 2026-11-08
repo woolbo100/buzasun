@@ -79,19 +79,19 @@ export default function PremiumCompatibilityReportPage() {
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94]">
                     BAEKDOHWA PREMIUM COMPATIBILITY REPORT
                   </span>
                 </div>
 
                 {/* 서브 카피 타이틀 */}
-                <p className="text-[16px] md:text-[18px] text-[var(--accent-gold)] font-medium tracking-wide mb-4">
+                <p className="text-[16px] md:text-[18px] text-[#D8BB94] font-medium tracking-wide mb-4">
                   두 사람의 선천코드와 관계 패턴을 함께 읽는 1:1 프리미엄 궁합 설계도
                 </p>
 
                 {/* 메인 제품명 */}
                 <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-8 text-white leading-[1.25] md:leading-[1.3] break-keep">
-                  프리미엄 <span className="text-[var(--accent-gold)]">궁합 리포트</span>
+                  프리미엄 <span className="gradient-text-reunion">궁합 리포트</span>
                 </h1>
 
                 {/* 추가 헤드라인 및 서브 카피 */}
@@ -134,7 +134,7 @@ export default function PremiumCompatibilityReportPage() {
                   </button>
                   <button 
                     onClick={handleAddToCart}
-                    className="w-full sm:w-auto px-8 py-5 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/40 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 bg-transparent"
+                    className="w-full sm:w-auto px-8 py-5 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/20 bg-transparent"
                   >
                     장바구니 담기
                   </button>
@@ -142,8 +142,10 @@ export default function PremiumCompatibilityReportPage() {
                     onClick={handlePurchase}
                     className="w-full sm:flex-1 py-5 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
                     style={{
-                      background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)',
-                      boxShadow: '0 0 40px rgba(212, 178, 167, 0.3)'
+                      background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
+                      border: '1px solid rgba(216, 187, 148, 0.5)',
+                      color: '#FAF7F2',
+                      boxShadow: '0 0 40px rgba(102, 50, 68, 0.45)'
                     }}
                   >
                     바로 신청하기
@@ -203,7 +205,7 @@ export default function PremiumCompatibilityReportPage() {
                         "결혼/장기 관계 가능성"
                       ].map((item, idx) => (
                         <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl">
-                          <div className="w-2 h-2 rounded-full bg-[var(--accent-gold)] shadow-[0_0_10px_var(--accent-gold)]"></div>
+                          <div className="w-2 h-2 rounded-full bg-[#D8BB94] shadow-[0_0_10px_rgba(216,187,148,0.5)]"></div>
                           <span className="text-white/80">{item}</span>
                         </div>
                       ))}
@@ -217,7 +219,7 @@ export default function PremiumCompatibilityReportPage() {
             <section className="mb-40 text-center">
               <Reveal>
                 <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
-                  리포트 <span className="text-[var(--accent-gold)]">주요 분석</span> 내용
+                  리포트 <span className="gradient-text-reunion">주요 분석 내용</span>
                 </h2>
                 <div className="max-w-7xl mx-auto mb-20">
                   <Image 
@@ -239,7 +241,7 @@ export default function PremiumCompatibilityReportPage() {
                       { t: "성장 방향 제안", d: "함께 더 행복해질 수 있는 실질적 가이드", i: "fa-seedling" }
                     ].map((item, idx) => (
                       <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group">
-                        <div className="w-16 h-16 rounded-2xl bg-[#1A0514] flex items-center justify-center border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] shadow-lg group-hover:scale-110 transition-transform">
+                        <div className="w-16 h-16 rounded-2xl bg-[#1A0514] flex items-center justify-center border border-[#935C6B]/40 text-[#D8BB94] shadow-lg group-hover:scale-110 transition-transform">
                           <i className={`fas ${item.i} text-2xl`}></i>
                         </div>
                         <div>
@@ -315,7 +317,7 @@ export default function PremiumCompatibilityReportPage() {
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="space-y-10 order-2 lg:order-1">
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      소장하고 싶은 <br /> <span className="text-[var(--accent-gold)]">프리미엄 궁합 리포트</span>
+                      소장하고 싶은 <br /> <span className="gradient-text-reunion">프리미엄 궁합 리포트</span>
                     </h2>
                     <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       프리미엄 궁합 리포트는 한 번 읽고 끝나는 결과지가 아니라, 두 사람의 관계를 다시 바라보게 만드는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
@@ -323,7 +325,7 @@ export default function PremiumCompatibilityReportPage() {
                     </p>
                   </div>
                   <div className="order-1 lg:order-2 relative group">
-                    <div className="absolute -inset-10 bg-[var(--accent-gold)]/5 blur-[60px] rounded-full"></div>
+                    <div className="absolute -inset-10 bg-[#663244]/15 blur-[60px] rounded-full"></div>
                     <Image 
                       src="/image/compatibility/p5.webp" 
                       alt="Premium Design" 
@@ -367,7 +369,7 @@ export default function PremiumCompatibilityReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)] mb-8">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] mb-8">
                     HARMONY FOR TWO
                   </span>
                   
@@ -390,7 +392,7 @@ export default function PremiumCompatibilityReportPage() {
                   <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto relative z-10 justify-center">
                     <button 
                       onClick={handleAddToCart}
-                      className="flex-1 py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 bg-transparent"
+                      className="flex-1 py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/20 bg-transparent"
                     >
                       장바구니 담기
                     </button>
@@ -398,8 +400,10 @@ export default function PremiumCompatibilityReportPage() {
                       onClick={handlePurchase}
                       className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
                       style={{
-                        background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)',
-                        boxShadow: '0 0 50px rgba(212, 178, 167, 0.4)'
+                        background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
+                        border: '1px solid rgba(216, 187, 148, 0.5)',
+                        color: '#FAF7F2',
+                        boxShadow: '0 0 50px rgba(102, 50, 68, 0.5)'
                       }}
                     >
                       바로 신청하기
@@ -412,7 +416,7 @@ export default function PremiumCompatibilityReportPage() {
             {/* 기존 정책 링크 보존 */}
             <section className="pb-20 text-center">
               <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
-                <Link href="/terms" className="hover:text-[var(--accent-gold)] transition-colors">이용약관</Link>
+                <Link href="/terms" className="hover:text-[#D8BB94] transition-colors">이용약관</Link>
                 <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>
                 <Link href="/refund" className="hover:text-[var(--accent-gold)] transition-colors">환불정책</Link>
               </div>

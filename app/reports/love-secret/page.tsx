@@ -300,7 +300,7 @@ export default function LoveSecretEbookPage() {
 
                 {/* 대제목 */}
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-10 text-white leading-[1.45]">
-                  戀愛秘笈 <span className="text-[#D4B2A7]">연애비급</span>
+                  戀愛秘笈 <span className="gradient-text-love">연애비급</span>
                 </h1>
 
                 {/* 1. 최상단: 가로형 풀 이미지 (love-secret-hero.png, 16:9 비율, 1280px 너비 매칭) */}
@@ -525,12 +525,12 @@ export default function LoveSecretEbookPage() {
                       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                         {/* 좌측 55% 공감 문구 */}
                         <div className="lg:col-span-7 space-y-5 text-left break-keep">
-                          <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                          <span className="text-[#D9A8A7] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
                             THE MOMENT OF ANXIETY
                           </span>
                           <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                             진심을 다해 사랑했는데,<br />
-                            <span className="text-[#C2A477]">왜 상대는 도망치듯 차가워졌을까요?</span>
+                            <span className="text-[#D9A8A7]">왜 상대는 도망치듯 차가워졌을까요?</span>
                           </h3>
                           <div className="space-y-3.5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                             <p>
@@ -546,7 +546,7 @@ export default function LoveSecretEbookPage() {
                             <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
                               어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
                               눈물로 매달리는 애원이 아니라<br />
-                              <span className="text-[#C2A477] font-semibold">무너진 내 중심과 관계의 프레임부터 돌아보는 시간</span>인지도 모릅니다.
+                              <span className="text-[#D9A8A7] font-semibold">무너진 내 중심과 관계의 프레임부터 돌아보는 시간</span>인지도 모릅니다.
                             </p>
                           </div>
                         </div>
@@ -572,12 +572,12 @@ export default function LoveSecretEbookPage() {
                        ═══════════════════════════════════════════════════════════════ */}
                     <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
                       <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
-                        <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                        <span className="text-[#D9A8A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                           THE PARADOX OF REUNION
                         </span>
                         <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                           진심을 보이고 매달릴수록…<br />
-                          <span className="text-[#C2A477]">왜 상대는 더 매정해지고 마음은 지옥 같았을까요?</span>
+                          <span className="text-[#D9A8A7]">왜 상대는 더 매정해지고 마음은 지옥 같았을까요?</span>
                         </h3>
                         <p className="text-[17px] md:text-[18px] text-[#EDE6DA] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
                           당신의 사랑이 부족해서가 아닙니다. 상대를 붙잡고 싶던 간절함이<br className="hidden sm:inline" />
@@ -757,7 +757,7 @@ export default function LoveSecretEbookPage() {
                             {/* 중앙 둥근 모란 꽃잎 */}
                             <path
                               d="M16 21 C13.5 16 13 10 16 6 C19 10 18.5 16 16 21 Z"
-                              stroke="#C2A477"
+                              stroke="#D9A8A7"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
@@ -765,14 +765,14 @@ export default function LoveSecretEbookPage() {
                             {/* 좌우 안쪽 모란 꽃잎 */}
                             <path
                               d="M16 20.5 C12.5 17 10 12.5 11.5 8 C12.5 6 14.8 7 15.6 9.5"
-                              stroke="#C2A477"
+                              stroke="#D9A8A7"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             />
                             <path
                               d="M16 20.5 C19.5 17 22 12.5 20.5 8 C19.5 6 17.2 7 16.4 9.5"
-                              stroke="#C2A477"
+                              stroke="#D9A8A7"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
@@ -780,14 +780,14 @@ export default function LoveSecretEbookPage() {
                             {/* 좌우 바깥 모란 꽃잎 */}
                             <path
                               d="M13 21 C9 18.5 6 14.5 7 10.5 C7.8 8.5 10 9.8 11 12"
-                              stroke="#C2A477"
+                              stroke="#D9A8A7"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             />
                             <path
                               d="M19 21 C23 18.5 26 14.5 25 10.5 C24.2 8.5 22 9.8 21 12"
-                              stroke="#C2A477"
+                              stroke="#D9A8A7"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
@@ -795,7 +795,7 @@ export default function LoveSecretEbookPage() {
                             {/* 하단 모란 받침선 곡선 1 */}
                             <path
                               d="M8 24 C13 22.5 19 22.5 24 24"
-                              stroke="#C2A477"
+                              stroke="#D9A8A7"
                               strokeWidth="1"
                               strokeLinecap="round"
                               opacity="0.6"
@@ -803,7 +803,7 @@ export default function LoveSecretEbookPage() {
                             {/* 하단 모란 받침선 곡선 2 */}
                             <path
                               d="M11 27 C14 26 18 26 21 27"
-                              stroke="#C2A477"
+                              stroke="#D9A8A7"
                               strokeWidth="0.8"
                               strokeLinecap="round"
                               opacity="0.35"

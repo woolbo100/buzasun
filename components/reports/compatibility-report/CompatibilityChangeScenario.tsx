@@ -9,7 +9,7 @@ export default function CompatibilityChangeScenario() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
             TRANSFORMATION SCENARIO
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -32,11 +32,11 @@ export default function CompatibilityChangeScenario() {
                     <span className="text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-md bg-white/10 text-white">
                       {stage.stage}
                     </span>
-                    <span className="text-xs text-[var(--accent-gold-light)] font-semibold">
+                    <span className="text-xs text-[#C19B83] font-semibold">
                       {stage.tag}
                     </span>
                   </div>
-                  <h4 className="text-[20px] md:text-[24px] font-elegant font-bold text-[var(--accent-gold-light)] mb-4 leading-snug break-keep">
+                  <h4 className="text-[20px] md:text-[24px] font-elegant font-bold text-[#C19B83] mb-4 leading-snug break-keep">
                     {stage.quote}
                   </h4>
                   <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
@@ -55,10 +55,10 @@ export default function CompatibilityChangeScenario() {
               {/* 연결 화살표 */}
               {idx < compatibilityScenarioData.stages.length - 1 && (
                 <>
-                  <div className="hidden md:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#1A0514] border border-[var(--accent-gold)]/40 items-center justify-center text-[var(--accent-gold)] shadow-md">
+                  <div className="hidden md:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#1A0514] border border-[#935C6B]/50 items-center justify-center text-[#D8BB94] shadow-md">
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
-                  <div className="flex md:hidden justify-center my-2 text-[var(--accent-gold)]">
+                  <div className="flex md:hidden justify-center my-2 text-[#D8BB94]">
                     <ArrowDown className="w-5 h-5" />
                   </div>
                 </>

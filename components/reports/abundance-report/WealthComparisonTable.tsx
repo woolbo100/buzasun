@@ -8,7 +8,7 @@ export default function WealthComparisonTable() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
             DIFFERENCE IN VALUE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -34,7 +34,7 @@ export default function WealthComparisonTable() {
                   <th className="py-5 px-6 text-sm font-semibold text-white/60 w-1/4 text-center">
                     일반 재물 사주
                   </th>
-                  <th className="py-5 px-6 text-base font-bold text-[#8FD3B6] w-1/4 text-center bg-[#0f241f]/70 rounded-t-2xl border-t border-x border-[#8FD3B6]/40">
+                  <th className="py-5 px-6 text-base font-bold text-[#8FB4A4] w-1/4 text-center bg-[#0f241f]/70 rounded-t-2xl border-t border-x border-[#608F82]/40">
                     백도화 풍요 리포트
                   </th>
                 </tr>
@@ -51,7 +51,7 @@ export default function WealthComparisonTable() {
                     <td className="py-5 px-6 text-sm text-[#EDE6DA]/60 text-center break-keep">
                       {row.traditional}
                     </td>
-                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#0f241f]/40 border-x border-[#8FD3B6]/25 shadow-inner">
+                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#0f241f]/40 border-x border-[#608F82]/25 shadow-inner">
                       <span className="text-[#E6BE8A] font-bold">
                         {row.baekdohwa}
                       </span>

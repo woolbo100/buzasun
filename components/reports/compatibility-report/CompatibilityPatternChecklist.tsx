@@ -23,7 +23,7 @@ export default function CompatibilityPatternChecklist() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
             RELATIONSHIP CHECKLIST
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -47,14 +47,14 @@ export default function CompatibilityPatternChecklist() {
                   onClick={() => toggleCheck(idx)}
                   className={`cursor-pointer p-4 md:p-5 rounded-2xl border transition-all duration-300 flex items-center gap-4 ${
                     isChecked
-                      ? 'bg-gradient-to-r from-[#3B0F1B]/60 to-[#2D0A1E]/40 border-[var(--accent-gold)]/70 text-white shadow-[0_0_20px_rgba(212,178,167,0.15)]'
+                      ? 'bg-gradient-to-r from-[#3B0F1B]/60 to-[#2D0A1E]/40 border-[#935C6B]/70 text-white shadow-[0_0_20px_rgba(147, 92, 107, 0.15)]'
                       : 'bg-white/[0.02] border-white/5 text-[#EDE6DA]/75 hover:bg-white/[0.04] hover:border-white/15'
                   }`}
                 >
                   <div
                     className={`w-6 h-6 md:w-7 md:h-7 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 ${
                       isChecked
-                        ? 'bg-[var(--accent-gold)] border-[var(--accent-gold)] text-[#1A0514]'
+                        ? 'bg-[#663244] border-[#935C6B] text-[#1A0514]'
                         : 'border-white/20 bg-black/30'
                     }`}
                   >
@@ -71,13 +71,13 @@ export default function CompatibilityPatternChecklist() {
           {/* 결과 안내 카드 */}
           <div className="p-6 rounded-2xl bg-black/50 border border-white/10 text-center relative z-10 transition-all duration-500">
             <div className="mb-2">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-[var(--accent-gold-light)] border border-white/10">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-[#C19B83] border border-white/10">
                 선택 항목: {selectedCount} / {compatibilityChecklistData.items.length}
               </span>
             </div>
 
             {isHighPattern && (
-              <p className="text-[var(--accent-gold)] font-bold text-base md:text-lg mb-2">
+              <p className="text-[#D8BB94] font-bold text-base md:text-lg mb-2">
                 {compatibilityChecklistData.highlight}
               </p>
             )}

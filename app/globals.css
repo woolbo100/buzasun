@@ -15,6 +15,30 @@
   --accent-pink-soft: rgba(197, 139, 160, 0.3);
   --text-white: #F5F5F5;
   --text-ivory: #EDE6DA;
+
+  /* =========================================================================
+     백도화 3대 상품 컬러 패밀리 토큰 (전자책 3종 & 리포트 3종 포인트 컬러 통합)
+     ========================================================================= */
+  /* A. 연애 계열 — Rose Pink (연애비급 & 선천코드 연애 리포트) */
+  --love-main: #B7788D;
+  --love-sub: #D9A8A7;
+  --love-bright: #E6BFA9;
+  --love-ivory: #F4DDD1;
+  --love-gradient: linear-gradient(110deg, #F4DDD1 0%, #D9A8A7 48%, #E6BFA9 100%);
+
+  /* B. 풍요 계열 — Jade Emerald (풍요비책 & 선천코드 풍요 리포트) */
+  --abundance-main: #608F82;
+  --abundance-sub: #8FB4A4;
+  --abundance-bright: #C3C9AC;
+  --abundance-gold: #C6A477;
+  --abundance-gradient: linear-gradient(110deg, #E5D7B7 0%, #B7CDBB 50%, #C6A477 100%);
+
+  /* C. 재회·궁합 계열 — Burgundy Plum (재회비방 & 프리미엄 궁합 리포트) */
+  --reunion-main: #663244;
+  --reunion-sub: #935C6B;
+  --reunion-bronze: #C19B83;
+  --reunion-gold: #D8BB94;
+  --reunion-gradient: linear-gradient(110deg, #F0D9C5 0%, #D8BB94 48%, #C19B83 100%);
   --glass-bg: rgba(255, 255, 255, 0.04); 
   --glass-border: rgba(216, 191, 163, 0.15); /* 샴페인 골드 얇은 테두리 */
 
@@ -247,6 +271,31 @@
     background-size: 200% 200%;
     animation: gradientText 4s ease infinite;
     filter: drop-shadow(0 0 10px rgba(216, 191, 163, 0.2));
+  }
+
+  /* 3대 패밀리 타이틀 그라데이션 텍스트 */
+  .gradient-text-love {
+    background: linear-gradient(110deg, #F4DDD1 0%, #D9A8A7 48%, #E6BFA9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  .gradient-text-abundance {
+    background: linear-gradient(110deg, #E5D7B7 0%, #B7CDBB 50%, #C6A477 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  .gradient-text-reunion {
+    background: linear-gradient(110deg, #F0D9C5 0%, #D8BB94 48%, #C19B83 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
   }
 
   @keyframes gradientText {

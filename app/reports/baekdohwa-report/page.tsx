@@ -79,19 +79,19 @@ export default function BaekdohwaReportPage() {
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7]">
                     PREMIUM LOVE CODE REPORT
                   </span>
                 </div>
 
                 {/* 메인 서브 타이틀 카피 */}
-                <p className="text-[16px] md:text-[18px] text-[var(--accent-gold)] font-medium tracking-wide mb-4">
+                <p className="text-[16px] md:text-[18px] text-[#D9A8A7] font-medium tracking-wide mb-4">
                   선천코드로 읽는 나의 사랑 설계도
                 </p>
 
                 {/* 메인 제품명 */}
                 <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-8 text-white leading-[1.25] md:leading-[1.3] break-keep">
-                  선천코드 <span className="text-[var(--accent-gold)]">연애 리포트</span>
+                  선천코드 <span className="gradient-text-love">연애 리포트</span>
                 </h1>
 
                 {/* 핵심 후킹 카피 */}
@@ -133,7 +133,7 @@ export default function BaekdohwaReportPage() {
                   </button>
                   <button 
                     onClick={handleAddToCart}
-                    className="w-full sm:w-auto px-8 py-5 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/40 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 bg-transparent"
+                    className="w-full sm:w-auto px-8 py-5 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#B7788D]/40 text-[#E6BFA9] hover:bg-[#B7788D]/10 bg-transparent"
                   >
                     장바구니 담기
                   </button>
@@ -141,8 +141,8 @@ export default function BaekdohwaReportPage() {
                     onClick={handlePurchase}
                     className="w-full sm:flex-1 py-5 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
                     style={{
-                      background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)',
-                      boxShadow: '0 0 40px rgba(212, 178, 167, 0.3)'
+                      background: 'linear-gradient(135deg, #B7788D 0%, #8A485E 100%)',
+                      boxShadow: '0 0 40px rgba(183, 120, 141, 0.35)'
                     }}
                   >
                     바로 신청하기
@@ -186,7 +186,7 @@ export default function BaekdohwaReportPage() {
                   </div>
                   <div className="space-y-10">
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      당신의 사랑은 <br /> <span className="text-[var(--accent-gold)]">우연이 아닙니다</span>
+                      당신의 사랑은 <br /> <span className="gradient-text-love">우연이 아닙니다</span>
                     </h2>
                     <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 연애 리포트는 단순한 연애운 풀이가 아니라, 당신이 어떤 사람에게 끌리고, 왜 비슷한 관계 패턴을 반복하는지, 그리고 어떤 방식으로 사랑을 회복하고 성장시킬 수 있는지를 섬세하게 해석하는 프리미엄 연애 리포트입니다.
@@ -194,7 +194,7 @@ export default function BaekdohwaReportPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {["타고난 연애 기질", "무의식적 끌림 패턴", "관계 유지 전략", "매력 에너지 활용법"].map((item, idx) => (
                         <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl">
-                          <div className="w-2 h-2 rounded-full bg-[var(--accent-gold)] shadow-[0_0_10px_var(--accent-gold)]"></div>
+                          <div className="w-2 h-2 rounded-full bg-[#B7788D] shadow-[0_0_10px_rgba(183,120,141,0.5)]"></div>
                           <span className="text-white/80">{item}</span>
                         </div>
                       ))}
@@ -208,7 +208,7 @@ export default function BaekdohwaReportPage() {
             <section className="mb-40 text-center">
               <Reveal>
                 <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
-                  리포트 <span className="text-[var(--accent-gold)]">주요 분석</span> 내용
+                  리포트 <span className="gradient-text-love">주요 분석</span> 내용
                 </h2>
                 <div className="max-w-7xl mx-auto mb-20">
                   <Image 
@@ -230,7 +230,7 @@ export default function BaekdohwaReportPage() {
                       { t: "이별 솔루션", d: "갈등의 고리를 끊어낼 실질적 변화", i: "fa-key" }
                     ].map((item, idx) => (
                       <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group">
-                        <div className="w-16 h-16 rounded-2xl bg-[#2D0A1E] flex items-center justify-center border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] shadow-lg group-hover:scale-110 transition-transform">
+                        <div className="w-16 h-16 rounded-2xl bg-[#2D0A1E] flex items-center justify-center border border-[#B7788D]/35 text-[#D9A8A7] shadow-lg group-hover:scale-110 transition-transform">
                           <i className={`fas ${item.i} text-2xl`}></i>
                         </div>
                         <div>
@@ -301,7 +301,7 @@ export default function BaekdohwaReportPage() {
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="space-y-10 order-2 lg:order-1">
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      소장하고 싶은 <br /> <span className="text-[var(--accent-gold)]">프리미엄 리포트</span>
+                      소장하고 싶은 <br /> <span className="gradient-text-love">프리미엄 리포트</span>
                     </h2>
                     <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 연애 리포트는 한 번 읽고 끝나는 결과지가 아니라, 당신의 사랑을 다시 바라보게 하는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
@@ -309,7 +309,7 @@ export default function BaekdohwaReportPage() {
                     </p>
                   </div>
                   <div className="order-1 lg:order-2 relative group">
-                    <div className="absolute -inset-10 bg-[var(--accent-gold)]/5 blur-[60px] rounded-full"></div>
+                    <div className="absolute -inset-10 bg-[#B7788D]/10 blur-[60px] rounded-full"></div>
                     <Image 
                       src="/image/lovereport/p5.webp" 
                       alt="Premium Design" 
@@ -353,7 +353,7 @@ export default function BaekdohwaReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)] mb-8">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] mb-8">
                     BEGIN YOUR JOURNEY
                   </span>
                   
@@ -369,7 +369,7 @@ export default function BaekdohwaReportPage() {
                   <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto relative z-10 justify-center">
                     <button 
                       onClick={handleAddToCart}
-                      className="flex-1 py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[var(--accent-gold)]/30 text-[var(--accent-gold)] hover:bg-[var(--accent-gold)]/10 bg-transparent"
+                      className="flex-1 py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#B7788D]/35 text-[#E6BFA9] hover:bg-[#B7788D]/10 bg-transparent"
                     >
                       장바구니 담기
                     </button>
@@ -377,8 +377,8 @@ export default function BaekdohwaReportPage() {
                       onClick={handlePurchase}
                       className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
                       style={{
-                        background: 'linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-deep) 100%)',
-                        boxShadow: '0 0 50px rgba(212, 178, 167, 0.4)'
+                        background: 'linear-gradient(135deg, #B7788D 0%, #8A485E 100%)',
+                        boxShadow: '0 0 50px rgba(183, 120, 141, 0.45)'
                       }}
                     >
                       바로 신청하기
@@ -391,7 +391,7 @@ export default function BaekdohwaReportPage() {
             {/* 기존 정책 링크 보존 */}
             <section className="pb-20 text-center">
               <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
-                <Link href="/terms" className="hover:text-[var(--accent-gold)] transition-colors">이용약관</Link>
+                <Link href="/terms" className="hover:text-[#D9A8A7] transition-colors">이용약관</Link>
                 <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>
                 <Link href="/refund" className="hover:text-[var(--accent-gold)] transition-colors">환불정책</Link>
               </div>

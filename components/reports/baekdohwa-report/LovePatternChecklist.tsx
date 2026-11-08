@@ -23,7 +23,7 @@ export default function LovePatternChecklist() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
             PATTERN CHECKLIST
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -36,7 +36,7 @@ export default function LovePatternChecklist() {
 
         <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-3xl mx-auto border border-white/10 shadow-2xl relative overflow-hidden">
           {/* 은은한 배경 광채 */}
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-[var(--accent-gold)]/5 rounded-full blur-[80px] pointer-events-none"></div>
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#B7788D]/10 rounded-full blur-[80px] pointer-events-none"></div>
 
           <div className="space-y-4 mb-8">
             {checklistData.items.map((item, idx) => {
@@ -47,14 +47,14 @@ export default function LovePatternChecklist() {
                   onClick={() => toggleCheck(idx)}
                   className={`cursor-pointer p-4 md:p-5 rounded-2xl border transition-all duration-300 flex items-center gap-4 ${
                     isChecked
-                      ? 'bg-[var(--accent-gold)]/10 border-[var(--accent-gold)]/60 text-white shadow-[0_0_20px_rgba(212,178,167,0.15)]'
+                      ? 'bg-[#B7788D]/15 border-[#B7788D]/60 text-white shadow-[0_0_20px_rgba(183, 120, 141, 0.15)]'
                       : 'bg-white/[0.02] border-white/5 text-[#EDE6DA]/70 hover:bg-white/[0.04] hover:border-white/15'
                   }`}
                 >
                   <div
                     className={`w-6 h-6 md:w-7 md:h-7 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 ${
                       isChecked
-                        ? 'bg-[var(--accent-gold)] border-[var(--accent-gold)] text-[#1A0514]'
+                        ? 'bg-[#B7788D] border-[#B7788D] text-[#1A0514]'
                         : 'border-white/20 bg-black/20'
                     }`}
                   >
@@ -71,13 +71,13 @@ export default function LovePatternChecklist() {
           {/* 결과 안내 카드 */}
           <div className="p-6 rounded-2xl bg-black/40 border border-white/10 text-center transition-all duration-500">
             <div className="mb-2">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-[var(--accent-gold-light)] border border-white/10">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-[#E6BFA9] border border-white/10">
                 선택 항목: {selectedCount} / {checklistData.items.length}
               </span>
             </div>
 
             {isHighPattern && (
-              <p className="text-[var(--accent-gold)] font-bold text-base md:text-lg mb-2">
+              <p className="text-[#D9A8A7] font-bold text-base md:text-lg mb-2">
                 {checklistData.highlight}
               </p>
             )}

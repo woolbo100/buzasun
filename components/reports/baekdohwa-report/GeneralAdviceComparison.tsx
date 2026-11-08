@@ -8,7 +8,7 @@ export default function GeneralAdviceComparison() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
             THE REAL ISSUE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -23,18 +23,18 @@ export default function GeneralAdviceComparison() {
           {generalAdviceData.cards.map((card, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-white/10 hover:border-[var(--accent-gold)]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(212,178,167,0.1)] flex flex-col justify-between group"
+              className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-white/10 hover:border-[#B7788D]/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(183, 120, 141, 0.1)] flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-xs font-mono font-bold tracking-widest text-[var(--accent-gold)]">
+                  <span className="text-xs font-mono font-bold tracking-widest text-[#D9A8A7]">
                     {card.num}
                   </span>
                   <span className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/70">
                     {card.tag}
                   </span>
                 </div>
-                <h3 className="text-[20px] md:text-[24px] font-elegant font-bold text-white mb-4 leading-snug break-keep group-hover:text-[var(--accent-gold-light)] transition-colors">
+                <h3 className="text-[20px] md:text-[24px] font-elegant font-bold text-white mb-4 leading-snug break-keep group-hover:text-[#E6BFA9] transition-colors">
                   &ldquo;{card.content}&rdquo;
                 </h3>
               </div>

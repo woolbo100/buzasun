@@ -8,7 +8,7 @@ export default function CompatibilityComparisonTable() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
             DIFFERENCE IN DEPTH
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -34,7 +34,7 @@ export default function CompatibilityComparisonTable() {
                   <th className="py-5 px-6 text-sm font-semibold text-white/60 w-1/4 text-center">
                     일반 사주 궁합
                   </th>
-                  <th className="py-5 px-6 text-base font-bold text-[var(--accent-gold)] w-1/4 text-center bg-[#3B0F1B]/40 rounded-t-2xl border-t border-x border-[var(--accent-gold)]/30">
+                  <th className="py-5 px-6 text-base font-bold text-[#D8BB94] w-1/4 text-center bg-[#3B0F1B]/40 rounded-t-2xl border-t border-x border-[#935C6B]/40">
                     백도화 프리미엄 궁합
                   </th>
                 </tr>
@@ -51,8 +51,8 @@ export default function CompatibilityComparisonTable() {
                     <td className="py-5 px-6 text-sm text-[#EDE6DA]/60 text-center break-keep">
                       {row.traditional}
                     </td>
-                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#2D0A1E]/30 border-x border-[var(--accent-gold)]/20 shadow-inner">
-                      <span className="text-[var(--accent-gold-light)] font-bold">
+                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#2D0A1E]/30 border-x border-[#935C6B]/30 shadow-inner">
+                      <span className="text-[#C19B83] font-bold">
                         {row.baekdohwa}
                       </span>
                     </td>

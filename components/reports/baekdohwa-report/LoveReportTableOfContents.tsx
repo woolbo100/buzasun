@@ -21,7 +21,7 @@ export default function LoveReportTableOfContents() {
     <section className="mb-40" id="table-of-contents">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
             CHAPTERS & CURRICULUM
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -43,7 +43,7 @@ export default function LoveReportTableOfContents() {
                 key={part.id}
                 className={`rounded-[24px] border transition-all duration-300 overflow-hidden ${
                   isSpecial
-                    ? 'bg-gradient-to-r from-[var(--accent-gold)]/15 via-[#2D0A1E]/80 to-[var(--accent-gold)]/10 border-[var(--accent-gold)]/50 shadow-[0_0_30px_rgba(212,178,167,0.15)]'
+                    ? 'bg-gradient-to-r from-[var(--accent-gold)]/15 via-[#2D0A1E]/80 to-[var(--accent-gold)]/10 border-[#B7788D]/50 shadow-[0_0_30px_rgba(183, 120, 141, 0.15)]'
                     : 'gungjung-glass border-white/10 hover:border-white/20'
                 }`}
               >
@@ -59,15 +59,15 @@ export default function LoveReportTableOfContents() {
                       <span
                         className={`text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-md ${
                           isSpecial
-                            ? 'bg-[var(--accent-gold)] text-[#1A0514]'
-                            : 'bg-white/10 text-[var(--accent-gold-light)]'
+                            ? 'bg-[#B7788D] text-[#1A0514]'
+                            : 'bg-white/10 text-[#E6BFA9]'
                         }`}
                       >
                         {part.number}
                       </span>
                       {isSpecial && (
-                        <span className="flex items-center gap-1 text-[11px] text-[var(--accent-gold-light)] font-bold">
-                          <Sparkles className="w-3.5 h-3.5 text-[var(--accent-gold)]" />
+                        <span className="flex items-center gap-1 text-[11px] text-[#E6BFA9] font-bold">
+                          <Sparkles className="w-3.5 h-3.5 text-[#D9A8A7]" />
                           핵심 실천 처방
                         </span>
                       )}
@@ -83,7 +83,7 @@ export default function LoveReportTableOfContents() {
                   <div
                     className={`w-9 h-9 rounded-full flex items-center justify-center border shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'rotate-180 bg-[var(--accent-gold)]/20 border-[var(--accent-gold)]/50 text-[var(--accent-gold)]'
+                        ? 'rotate-180 bg-[#B7788D]/20 border-[#B7788D]/50 text-[#D9A8A7]'
                         : 'border-white/10 bg-white/5 text-white/50'
                     }`}
                   >
@@ -98,9 +98,9 @@ export default function LoveReportTableOfContents() {
                       {part.items.map((item, itemIdx) => (
                         <div
                           key={itemIdx}
-                          className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-[var(--accent-gold)]/30 transition-colors"
+                          className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-[#B7788D]/30 transition-colors"
                         >
-                          <span className="w-2 h-2 rounded-full bg-[var(--accent-gold)] mt-2 shrink-0"></span>
+                          <span className="w-2 h-2 rounded-full bg-[#B7788D] mt-2 shrink-0"></span>
                           <span className="text-sm md:text-base text-[#EDE6DA]/90 font-medium break-keep">
                             {item}
                           </span>
@@ -115,11 +115,11 @@ export default function LoveReportTableOfContents() {
         </div>
 
         {/* PART 07 별도 프리미엄 독립 강조 카드 */}
-        <div className="max-w-4xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#2D0A1E] via-[#1A0514] to-[#0A0514] border-2 border-[var(--accent-gold)]/50 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[var(--accent-gold)]/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="max-w-4xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#2D0A1E] via-[#1A0514] to-[#0A0514] border-2 border-[#B7788D]/50 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#B7788D]/15 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10 text-center mb-10">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-bold tracking-widest bg-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] border border-[var(--accent-gold)]/40 mb-6 uppercase">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-bold tracking-widest bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] border border-[#B7788D]/40 mb-6 uppercase">
               <Sparkles className="w-3.5 h-3.5" />
               PART 07 SPECIAL EMPHASIS
             </span>
@@ -135,10 +135,10 @@ export default function LoveReportTableOfContents() {
             {tableOfContentsData.part7Highlight.features.map((feat, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-black/40 border border-[var(--accent-gold)]/20 hover:border-[var(--accent-gold)]/60 transition-colors"
+                className="p-6 rounded-2xl bg-black/40 border border-[#B7788D]/25 hover:border-[#B7788D]/60 transition-colors"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-base font-bold font-mono text-[var(--accent-gold)] px-2.5 py-0.5 rounded-md bg-[var(--accent-gold)]/10">
+                  <span className="text-base font-bold font-mono text-[#D9A8A7] px-2.5 py-0.5 rounded-md bg-[#B7788D]/15">
                     NO. {feat.num}
                   </span>
                   <h4 className="text-lg font-bold text-white break-keep">

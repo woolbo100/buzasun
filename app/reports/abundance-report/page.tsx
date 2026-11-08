@@ -117,19 +117,19 @@ export default function AbundanceReportPage() {
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#8FD3B6]/10 border border-[#8FD3B6]/35 text-[#8FD3B6]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4]">
                     PREMIUM ABUNDANCE REPORT
                   </span>
                 </div>
 
                 {/* 서브 타이틀 카피 */}
-                <p className="text-[16px] md:text-[18px] text-[#8FD3B6] font-medium tracking-wide mb-4">
+                <p className="text-[16px] md:text-[18px] text-[#8FB4A4] font-medium tracking-wide mb-4">
                   선천코드로 읽는 나의 풍요 설계도
                 </p>
 
                 {/* 메인 제품명 */}
                 <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-8 text-white leading-[1.25] md:leading-[1.3] break-keep">
-                  선천코드 <span className="text-[#8FD3B6]">풍요</span> <span className="text-[#E6BE8A]">리포트</span>
+                  선천코드 <span className="gradient-text-abundance">풍요 리포트</span>
                 </h1>
 
                 {/* 핵심 후킹 카피 */}
@@ -145,7 +145,7 @@ export default function AbundanceReportPage() {
                 </div>
                 
                 {/* 메인 히어로 이미지 - 기존 a1.webp 에셋 보존 */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-14 rounded-[40px] overflow-hidden border border-[#8FD3B6]/20 shadow-2xl group">
+                <div className="relative w-full max-w-[1280px] mx-auto mb-14 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl group">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.hero} 
                     alt="선천코드 풍요 리포트 메인 히어로 이미지" 
@@ -172,7 +172,7 @@ export default function AbundanceReportPage() {
                     type="button"
                     disabled
                     aria-disabled="true"
-                    className="w-full sm:flex-1 py-5 rounded-2xl font-bold text-lg cursor-not-allowed border border-[#8FD3B6]/40 text-[#E6BE8A] bg-gradient-to-r from-[#0f241f]/90 via-[#152e27]/90 to-[#0f241f]/90 opacity-85 tracking-widest shadow-[0_0_35px_rgba(143,211,182,0.15)]"
+                    className="w-full sm:flex-1 py-5 rounded-2xl font-bold text-lg cursor-not-allowed border border-[#608F82]/40 text-[#C6A477] bg-gradient-to-r from-[#0f241f]/90 via-[#152e27]/90 to-[#0f241f]/90 opacity-85 tracking-widest shadow-[0_0_35px_rgba(96,143,130,0.2)]"
                   >
                     오픈 예정
                   </button>
@@ -204,7 +204,7 @@ export default function AbundanceReportPage() {
             <section className="mb-40">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="relative overflow-hidden rounded-[40px] border border-[#8FD3B6]/20 shadow-2xl">
+                  <div className="relative overflow-hidden rounded-[40px] border border-[#608F82]/25 shadow-2xl">
                     <Image 
                       src={ABUNDANCE_REPORT_IMAGES.overview} 
                       alt="선천코드 풍요 리포트 소개 이미지" 
@@ -216,7 +216,7 @@ export default function AbundanceReportPage() {
                   <div className="space-y-10">
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       나에게 맞는 풍요의 길은 <br />
-                      <span className="text-[#8FD3B6]">나를 아는 것</span><span className="text-[#E6BE8A]">에서 시작됩니다</span>
+                      <span className="gradient-text-abundance">나를 아는 것에서 시작됩니다</span>
                     </h2>
                     <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 풍요 리포트는 막연한 요행을 바라는 운세 풀이가 아닙니다. 내가 타고난 재능과 강점이 무엇인지, 돈을 대할 때 어떤 태도와 기준이 작동하는지, 그리고 일상에서 왜 비슷한 수입·소비 패턴이 반복되는지를 차분하게 짚어보고 현실에서 실천할 방향을 함께 모색하는 리포트입니다.
@@ -243,7 +243,7 @@ export default function AbundanceReportPage() {
             <section className="mb-40 text-center">
               <Reveal>
                 <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
-                  리포트 <span className="text-[#8FD3B6]">핵심</span> <span className="text-[#E6BE8A]">탐구 주제</span>
+                  리포트 <span className="text-[#8FB4A4]">핵심</span> <span className="text-[#E6BE8A]">탐구 주제</span>
                 </h2>
                 <div className="w-full max-w-[1280px] mx-auto mb-20">
                   <Image 
@@ -251,7 +251,7 @@ export default function AbundanceReportPage() {
                     alt="선천코드 풍요 리포트 핵심 탐구 주제 이미지" 
                     width={1200}
                     height={800}
-                    className="w-full h-auto rounded-[50px] shadow-2xl border border-[#8FD3B6]/20" 
+                    className="w-full h-auto rounded-[50px] shadow-2xl border border-[#608F82]/25" 
                   />
                 </div>
                 <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden border border-[#8FD3B6]/15">
@@ -266,7 +266,7 @@ export default function AbundanceReportPage() {
                     ].map((item, idx) => (
                       <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group border border-[#8FD3B6]/15">
                         <div className="w-16 h-16 rounded-2xl bg-[#0f241f] flex items-center justify-center border border-[#8FD3B6]/35 text-[#E6BE8A] shadow-lg group-hover:scale-110 transition-transform">
-                          <i className={`fas ${item.i} text-2xl text-[#8FD3B6]`}></i>
+                          <i className={`fas ${item.i} text-2xl text-[#8FB4A4]`}></i>
                         </div>
                         <div>
                           <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 group-hover:text-[#E6BE8A] transition-colors leading-snug break-keep">{item.t}</h3>
@@ -337,7 +337,7 @@ export default function AbundanceReportPage() {
                   <div className="space-y-10 order-2 lg:order-1">
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       나만의 기준을 세우는 <br />
-                      <span className="text-[#8FD3B6]">프리미엄</span> <span className="text-[#E6BE8A]">풍요 리포트</span>
+                      <span className="text-[#8FB4A4]">프리미엄</span> <span className="text-[#E6BE8A]">풍요 리포트</span>
                     </h2>
                     <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 풍요 리포트는 타인의 기준을 무작정 따라가는 대신, 나의 기질과 생활의 리듬에 어울리는 풍요의 방향을 차분히 정리해 보는 맞춤형 리포트입니다.{"\n\n"}
@@ -345,13 +345,13 @@ export default function AbundanceReportPage() {
                     </p>
                   </div>
                   <div className="order-1 lg:order-2 relative group">
-                    <div className="absolute -inset-10 bg-[#8FD3B6]/5 blur-[60px] rounded-full"></div>
+                    <div className="absolute -inset-10 bg-[#608F82]/10 blur-[60px] rounded-full"></div>
                     <Image 
                       src={ABUNDANCE_REPORT_IMAGES.premium} 
                       alt="선천코드 풍요 리포트 프리미엄 디자인 이미지" 
                       width={800}
                       height={600}
-                      className="relative z-10 w-full h-auto rounded-[60px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-[#8FD3B6]/20 transition-transform duration-1000 group-hover:scale-[1.03]" 
+                      className="relative z-10 w-full h-auto rounded-[60px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-[#608F82]/25 transition-transform duration-1000 group-hover:scale-[1.03]" 
                     />
                   </div>
                 </div>
@@ -367,11 +367,11 @@ export default function AbundanceReportPage() {
 
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
-                      <span className="inline-block px-4 py-1 rounded-full text-[12px] font-bold tracking-[0.2em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase">
+                      <span className="inline-block px-4 py-1 rounded-full text-[12px] font-bold tracking-[0.2em] bg-[#608F82]/15 border border-[#608F82]/30 text-[#8FB4A4] uppercase">
                         Digital Ritual Gift
                       </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
-                        당신의 흐름에 맞춘 <span className="text-[#8FD3B6]">오행 에너지</span> <span className="text-[#E6BE8A]">카드</span>
+                        당신의 흐름에 맞춘 <span className="text-[#8FB4A4]">오행 에너지</span> <span className="text-[#E6BE8A]">카드</span>
                       </h2>
                       <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep font-light">
                         ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 기질과 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
@@ -411,10 +411,10 @@ export default function AbundanceReportPage() {
                               <span className="text-4xl md:text-5xl font-elegant font-bold text-[#E6BE8A] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                                 {item.hanja}
                               </span>
-                              <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-[#8FD3B6]/40"></div>
-                              <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-[#8FD3B6]/40"></div>
-                              <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-[#8FD3B6]/40"></div>
-                              <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-[#8FD3B6]/40"></div>
+                              <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-[#608F82]/40"></div>
+                              <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-[#608F82]/40"></div>
+                              <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-[#608F82]/40"></div>
+                              <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-[#608F82]/40"></div>
                             </div>
 
                             <span className={`inline-block px-3 py-1 rounded-md text-xs font-semibold mb-3 ${item.tagColor}`}>
@@ -439,11 +439,11 @@ export default function AbundanceReportPage() {
                 <div className="relative">
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
-                      <span className="inline-block px-4 py-1 rounded-full text-[12px] font-bold tracking-[0.2em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase">
+                      <span className="inline-block px-4 py-1 rounded-full text-[12px] font-bold tracking-[0.2em] bg-[#608F82]/15 border border-[#608F82]/30 text-[#8FB4A4] uppercase">
                         Process & Info
                       </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
-                        리포트는 <span className="text-[#8FD3B6]">이렇게</span> <span className="text-[#E6BE8A]">준비됩니다</span>
+                        리포트는 <span className="text-[#8FB4A4]">이렇게</span> <span className="text-[#E6BE8A]">준비됩니다</span>
                       </h2>
                       <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light">
                         백도화의 선천코드 리포트는 신청자분의 선천 정보를 바탕으로 정성스럽게 분석하여 작성되는 디지털 리포트입니다.
@@ -500,7 +500,7 @@ export default function AbundanceReportPage() {
                                 { label: "리포트 수령 이메일", icon: "fa-envelope" }
                               ].map((info, idx) => (
                                 <div key={idx} className="flex items-center gap-3 p-3 bg-white/[0.02] rounded-xl border border-white/5">
-                                  <div className="w-8 h-8 rounded-lg bg-[#8FD3B6]/10 flex items-center justify-center text-[#8FD3B6] shrink-0">
+                                  <div className="w-8 h-8 rounded-lg bg-[#608F82]/15 flex items-center justify-center text-[#8FB4A4] shrink-0">
                                     <i className={`fas ${info.icon} text-xs`}></i>
                                   </div>
                                   <span className="text-xs text-[#EDE6DA]/80 font-medium">{info.label}</span>
@@ -509,7 +509,7 @@ export default function AbundanceReportPage() {
                             </div>
                           </div>
 
-                          <div className="p-4 bg-[#8FD3B6]/5 border border-[#8FD3B6]/20 rounded-xl">
+                          <div className="p-4 bg-[#608F82]/10 border border-[#608F82]/25 rounded-xl">
                             <p className="text-xs text-[#EDE6DA]/70 leading-relaxed break-keep font-light">
                               ※ 본 리포트는 개인의 선천적 기질과 재정적 습관을 성찰하고 현실적인 방향을 모색하기 위한 분석 콘텐츠이며, 특정 수익이나 재물의 증가를 보장하지 않습니다.
                             </p>
@@ -535,7 +535,7 @@ export default function AbundanceReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 18. 최종 구매 CTA (a6.webp 및 버튼 상태 보존) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group border border-[#8FD3B6]/20 w-full max-w-[1280px] mx-auto shadow-2xl">
+            <section className="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group border border-[#608F82]/25 w-full max-w-[1280px] mx-auto shadow-2xl">
               <div className="absolute inset-0 z-0">
                 <Image 
                   src={ABUNDANCE_REPORT_IMAGES.finalCta} 
@@ -548,13 +548,13 @@ export default function AbundanceReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] mb-8">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#608F82]/15 border border-[#608F82]/30 text-[#8FB4A4] mb-8">
                     EMBRACE YOUR ABUNDANCE
                   </span>
                   
                   {/* 기존 메인 카피 보존 */}
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    나다운 풍요의 방향을 <span className="text-[#8FD3B6]">마주하는</span> <span className="text-[#E6BE8A]">시작</span>
+                    나다운 풍요의 방향을 <span className="text-[#8FB4A4]">마주하는</span> <span className="text-[#E6BE8A]">시작</span>
                   </h2>
 
                   {/* 새로운 보조 강조 문구 추가 */}

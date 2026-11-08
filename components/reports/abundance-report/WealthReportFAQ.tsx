@@ -16,7 +16,7 @@ export default function WealthReportFAQ() {
     <section className="mb-40" id="faq">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
             FREQUENTLY ASKED QUESTIONS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -33,7 +33,7 @@ export default function WealthReportFAQ() {
             return (
               <div
                 key={idx}
-                className="gungjung-glass rounded-2xl border border-white/10 overflow-hidden transition-colors hover:border-[#8FD3B6]/30 bg-gradient-to-b from-[#0f241f]/20 via-transparent to-black/40"
+                className="gungjung-glass rounded-2xl border border-white/10 overflow-hidden transition-colors hover:border-[#608F82]/30 bg-gradient-to-b from-[#0f241f]/20 via-transparent to-black/40"
               >
                 <button
                   type="button"
@@ -42,7 +42,7 @@ export default function WealthReportFAQ() {
                   aria-expanded={isOpen}
                 >
                   <span className="text-base md:text-lg font-bold text-white break-keep flex items-center gap-3">
-                    <span className="text-xs font-mono text-[#8FD3B6] shrink-0">
+                    <span className="text-xs font-mono text-[#8FB4A4] shrink-0">
                       Q{idx + 1}.
                     </span>
                     {item.q}
@@ -50,7 +50,7 @@ export default function WealthReportFAQ() {
                   <div
                     className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'rotate-180 bg-[#8FD3B6]/20 text-[#8FD3B6] border-[#8FD3B6]/40'
+                        ? 'rotate-180 bg-[#608F82]/20 text-[#8FB4A4] border-[#608F82]/40'
                         : 'text-white/50 bg-white/5'
                     }`}
                   >

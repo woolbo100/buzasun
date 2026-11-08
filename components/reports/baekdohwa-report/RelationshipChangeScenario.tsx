@@ -9,7 +9,7 @@ export default function RelationshipChangeScenario() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
             TRANSFORMATION SCENARIO
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -32,7 +32,7 @@ export default function RelationshipChangeScenario() {
                     <span className="text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-md bg-white/10 text-white">
                       {stage.stage}
                     </span>
-                    <span className="text-xs text-[var(--accent-gold-light)] font-semibold">
+                    <span className="text-xs text-[#E6BFA9] font-semibold">
                       {stage.tag}
                     </span>
                   </div>
@@ -52,10 +52,10 @@ export default function RelationshipChangeScenario() {
               {/* 연결 화살표 */}
               {idx < scenarioData.stages.length - 1 && (
                 <>
-                  <div className="hidden md:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#1A0514] border border-[var(--accent-gold)]/40 items-center justify-center text-[var(--accent-gold)] shadow-md">
+                  <div className="hidden md:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#1A0514] border border-[#B7788D]/40 items-center justify-center text-[#D9A8A7] shadow-md">
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
-                  <div className="flex md:hidden justify-center my-2 text-[var(--accent-gold)]">
+                  <div className="flex md:hidden justify-center my-2 text-[#D9A8A7]">
                     <ArrowDown className="w-5 h-5" />
                   </div>
                 </>

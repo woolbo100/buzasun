@@ -8,7 +8,7 @@ export default function ReportComparisonTable() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
             COMPARISON MATRIX
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -34,7 +34,7 @@ export default function ReportComparisonTable() {
                   <th className="py-5 px-6 text-sm font-semibold text-white/60 w-1/4 text-center">
                     일반 사주 풀이
                   </th>
-                  <th className="py-5 px-6 text-base font-bold text-[var(--accent-gold)] w-1/4 text-center bg-[var(--accent-gold)]/10 rounded-t-2xl border-t border-x border-[var(--accent-gold)]/30">
+                  <th className="py-5 px-6 text-base font-bold text-[#D9A8A7] w-1/4 text-center bg-[#B7788D]/15 rounded-t-2xl border-t border-x border-[#B7788D]/30">
                     백도화 선천코드 리포트
                   </th>
                 </tr>
@@ -51,8 +51,8 @@ export default function ReportComparisonTable() {
                     <td className="py-5 px-6 text-sm text-[#EDE6DA]/60 text-center break-keep">
                       {row.traditional}
                     </td>
-                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[var(--accent-gold)]/5 border-x border-[var(--accent-gold)]/20 shadow-inner">
-                      <span className="text-[var(--accent-gold-light)] font-bold">
+                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#B7788D]/10 border-x border-[#B7788D]/25 shadow-inner">
+                      <span className="text-[#E6BFA9] font-bold">
                         {row.baekdohwa}
                       </span>
                     </td>

@@ -40,7 +40,7 @@ export default function CompatibilityReportPreview() {
     <section className="mb-40" id="sample-preview">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
             DIGITAL REPORT PREVIEW
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -57,7 +57,7 @@ export default function CompatibilityReportPreview() {
             <div
               key={sample.id}
               onClick={() => setActiveModalIndex(idx)}
-              className="gungjung-glass p-5 rounded-[28px] border border-white/10 hover:border-[var(--accent-gold)]/50 bg-gradient-to-b from-[#2D0A1E]/30 via-transparent to-black/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
+              className="gungjung-glass p-5 rounded-[28px] border border-white/10 hover:border-[#935C6B]/50 bg-gradient-to-b from-[#2D0A1E]/30 via-transparent to-black/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
             >
               <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4 bg-black/40 border border-white/5">
                 <Image
@@ -67,18 +67,18 @@ export default function CompatibilityReportPreview() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[var(--accent-gold-light)]">
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#C19B83]">
                   {sample.badge}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-[var(--accent-gold)]/40 flex items-center justify-center text-[var(--accent-gold)] shadow-xl">
+                  <div className="w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-[#935C6B]/50 flex items-center justify-center text-[#D8BB94] shadow-xl">
                     <ZoomIn className="w-5 h-5" />
                   </div>
                 </div>
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[var(--accent-gold-light)] transition-colors">
+                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#C19B83] transition-colors">
                   {sample.title}
                 </h4>
                 <p className="text-xs text-[#EDE6DA]/60 font-light break-keep">
@@ -101,13 +101,13 @@ export default function CompatibilityReportPreview() {
           onClick={() => setActiveModalIndex(null)}
         >
           <div
-            className="relative max-w-4xl w-full max-h-[90vh] bg-[#1a0514] rounded-3xl border border-[var(--accent-gold)]/40 p-6 md:p-8 flex flex-col items-center overflow-hidden shadow-2xl"
+            className="relative max-w-4xl w-full max-h-[90vh] bg-[#1a0514] rounded-3xl border border-[#935C6B]/50 p-6 md:p-8 flex flex-col items-center overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* 닫기 버튼 */}
             <button
               onClick={() => setActiveModalIndex(null)}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[var(--accent-gold)] hover:text-black transition-colors z-20"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#663244] hover:text-black transition-colors z-20"
               aria-label="모달 닫기"
             >
               <X className="w-5 h-5" />
@@ -116,7 +116,7 @@ export default function CompatibilityReportPreview() {
             {/* 이전 버튼 */}
             <button
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[var(--accent-gold)] hover:text-black transition-colors z-20"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#663244] hover:text-black transition-colors z-20"
               aria-label="이전 샘플"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -125,14 +125,14 @@ export default function CompatibilityReportPreview() {
             {/* 다음 버튼 */}
             <button
               onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[var(--accent-gold)] hover:text-black transition-colors z-20"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#663244] hover:text-black transition-colors z-20"
               aria-label="다음 샘플"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
 
             <div className="text-center mb-4 z-10">
-              <span className="text-xs font-mono text-[var(--accent-gold)] px-2.5 py-0.5 rounded bg-[var(--accent-gold)]/10 mb-2 inline-block">
+              <span className="text-xs font-mono text-[#D8BB94] px-2.5 py-0.5 rounded bg-[#663244]/20 mb-2 inline-block">
                 {currentSample.badge}
               </span>
               <h3 className="text-xl md:text-2xl font-bold text-white">
