@@ -67,6 +67,8 @@ const productData = {
 
   // 💡 [커리큘럼 & 아키텍처] 16:9 와이드 인포그래픽 이미지 경로
   curriculumImage: '/image/reunion-secret/reunion-secret-two-step-transformation.webp',
+  // 💡 [패키지 구성] 16:9 와이드 3종 책 목업 이미지 경로
+  packageImage: '/image/reunion-secret/reunion-package-3books.webp',
   // 💡 [신규 영역 1] 관계 역전의 법칙 (16:9 인포그래픽 다이어그램 이미지 경로)
   reunionLawImage: '',
   // 💡 [신규 영역 2] 인연의 주권자 (16:9 와이드 배너 이미지 경로)
@@ -1778,7 +1780,7 @@ export default function ReunionSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-14 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="text-center mb-10 md:mb-12 max-w-3xl mx-auto break-keep">
+                <div className="text-center mb-6 md:mb-8 max-w-3xl mx-auto break-keep">
                   <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     PACKAGE COMPOSITION
                   </span>
@@ -1789,6 +1791,21 @@ export default function ReunionSecretPage() {
                   <p className="text-[#EDE6DA]/85 text-[18px] mt-3 leading-[1.8] font-normal break-keep">
                     본편으로 원리를 꿰뚫고, 행동 매뉴얼로 공백기를 설계하며, 시크릿 메시지로 후폭풍을 완성합니다.
                   </p>
+                </div>
+
+                {/* 3종 올인원 세트 목업 이미지 (16:9 가로 와이드 컷) */}
+                <div className="mb-10 md:mb-14">
+                  <div className="relative w-full rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
+                    <Image
+                      src="/image/reunion-secret/reunion-package-3books.webp"
+                      alt="재회비방 본편과 실전 부록으로 구성된 3종 올인원 패키지"
+                      width={1600}
+                      height={900}
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                      className="w-full h-auto object-contain block rounded-[20px]"
+                      priority
+                    />
+                  </div>
                 </div>
 
                 {/* 3단계 핵심 역할 카드 3개 */}
