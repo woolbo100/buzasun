@@ -1468,7 +1468,7 @@ export default function ReunionSecretPage() {
                         <span
                           className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] font-extrabold mt-2 inline-block"
                           style={{
-                            background: 'linear-gradient(110deg, #EAD6B0 0%, #D8B878 38%, #C8C39C 65%, #C2909C 100%)',
+                            background: 'linear-gradient(110deg, #D7BC91 0%, #C9A68F 35%, #B78E83 65%, #794653 100%)',
                             backgroundClip: 'text',
                             WebkitBackgroundClip: 'text',
                             color: 'transparent',
@@ -1503,7 +1503,7 @@ export default function ReunionSecretPage() {
                         "4대 유형별 골든타임 공식",
                         "복사 전용 33선 스크립트",
                         "30일 실전 행동 데일리 매뉴얼",
-                        "인연 결속 회향연부 모바일 부적"
+                        "인연 결속 모바일 부적"
                       ].map((item, idx) => (
                         <div
                           key={idx}
