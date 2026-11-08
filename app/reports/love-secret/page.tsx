@@ -218,9 +218,59 @@ export default function LoveSecretEbookPage() {
 
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#0a0514] text-[#EDE6DA] font-sans selection:bg-[#FAF7F2] selection:text-[#1A0F2E] pb-24 md:pb-0">
-      {/* 기존 백도화 템플릿의 다크 배경(GlobalBackground) 유지 */}
-      <GlobalBackground src="/image/love-code-bg.png" brightCenter={false}>
+    <main className="detail-page relative min-h-screen bg-[#211725] text-[#EDE6DA] font-sans selection:bg-[#61404A] selection:text-[#FAF7F2] pb-24 md:pb-0">
+      {/* 연애비급 전용 딥 로즈플럼 x 로즈코코아 배경 시스템 (보라색 완전 제거 및 궁중 문양 보존) */}
+      <GlobalBackground
+        src="/image/love-code-bg.png"
+        brightCenter={false}
+        customBaseOverlay={
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            {/* 1. 대각선 메인 로즈플럼 x 로즈코코아 베이스 그라데이션 (딥 로즈플럼 #211725 -> 미드 로즈코코아 #392633 -> 소프트 로즈코코아 #61404A) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  linear-gradient(
+                    135deg,
+                    rgba(33, 23, 37, 0.92) 0%,
+                    rgba(45, 30, 42, 0.88) 28%,
+                    rgba(57, 38, 51, 0.85) 52%,
+                    rgba(78, 51, 62, 0.87) 80%,
+                    rgba(97, 64, 74, 0.92) 100%
+                  )
+                `,
+              }}
+            />
+
+            {/* 2. 입체적인 로즈빛 & 샴페인 로즈골드 라이트 오라 (특정 구간에만 은은한 깊이감 부여) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 950px 700px at 76% 30%, rgba(157, 95, 116, 0.26) 0%, rgba(97, 64, 74, 0.12) 45%, transparent 65%),
+                  radial-gradient(ellipse 850px 650px at 20% 70%, rgba(85, 48, 68, 0.18) 0%, transparent 60%),
+                  radial-gradient(ellipse 65% 35% at 50% 0%, rgba(212, 178, 167, 0.06) 0%, transparent 70%)
+                `,
+              }}
+            />
+          </div>
+        }
+        customVignette={
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `
+                radial-gradient(
+                  circle at center,
+                  rgba(0, 0, 0, 0) 45%,
+                  rgba(33, 23, 37, 0.35) 75%,
+                  rgba(20, 13, 24, 0.72) 100%
+                )
+              `,
+            }}
+          />
+        }
+      >
         <Navigation />
 
         <div className="relative z-10 pt-44 pb-20">
