@@ -967,30 +967,68 @@ export default function ReunionSecretPage() {
                     </h2>
                   </div>
 
-                  {/* r1.webp 한지 비단 배경 카드 */}
+                  {/* ════ 데스크톱 / 태블릿 (md 이상): 16:9 원본 비율 유지 단일 카드 ════ */}
                   <div
-                    className="w-full text-left break-keep p-6 sm:p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl border border-[#B49A70]/40 shadow-2xl relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_24px_rgba(185,145,91,0.2)]"
+                    className="hidden md:block w-full aspect-[16/9] rounded-2xl md:rounded-3xl border border-[#B49A70]/40 shadow-2xl relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_24px_rgba(185,145,91,0.2)]"
                     style={{
-                      backgroundImage: "url('/image/reunion-secret/r1.webp')",
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center right',
+                      backgroundImage: "url('/image/reunion-secret/r7.webp')",
+                      backgroundSize: '100% 100%',
+                      backgroundPosition: 'center',
                       backgroundRepeat: 'no-repeat',
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
                     }}
                   >
-                    {/* 오른쪽 한지 영역 위에 배치되는 텍스트 컨테이너 */}
-                    <div className="w-full lg:w-[62%] xl:w-[58%] ml-auto bg-[#FAF7F2]/85 lg:bg-transparent backdrop-blur-[3px] lg:backdrop-blur-none p-6 sm:p-8 lg:p-0 rounded-2xl lg:rounded-none shadow-sm lg:shadow-none border border-[#B49A70]/30 lg:border-none">
-                      <h3 className="text-xl sm:text-2xl lg:text-[26px] font-elegant font-bold text-[#240A12] leading-[1.55] mb-5 sm:mb-6 break-keep">
+                    {/* 왼쪽 베이지 한지 영역 위에 배치되는 텍스트 컨테이너 (왼쪽 7% 시작, 너비 52%) */}
+                    <div className="w-full h-full flex flex-col justify-center text-left pl-[6.5%] lg:pl-[7.5%] pr-4">
+                      <div className="w-[52%] max-w-[54%] space-y-3.5 lg:space-y-4 xl:space-y-5">
+                        <h3 className="text-lg md:text-[21px] lg:text-[24px] xl:text-[26px] font-elegant font-bold text-[#512733] leading-[1.45] xl:leading-[1.5] break-keep">
+                          &ldquo;진심을 다해 매달렸는데 왜 더 멀어졌을까요?<br />
+                          이별 후에도 <span className="text-[#713F4C] font-extrabold">&lsquo;전략과 심리&rsquo;</span>가 필요했던 이유&rdquo;
+                        </h3>
+
+                        <div className="text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] text-[#453536] leading-[1.7] lg:leading-[1.75] xl:leading-[1.8] font-normal space-y-2.5 lg:space-y-3 break-keep">
+                          <p>
+                            연애 중의 다정함과 이별 후의 재회는 작동하는 무의식의 문법이 완전히 다릅니다. 이별하는 순간, 상대방의 뇌 속에서 당신은 &apos;사랑하는 연인&apos;에서 &apos;나의 자유를 옭아매는 부담스러운 존재&apos;로 재분류됩니다.
+                          </p>
+                          <p>
+                            이 상태에서 쏟아붓는 눈물과 사과는 상대를 질리게 만들 뿐입니다. 재회의 유일한 열쇠는 <strong className="text-[#713F4C] font-bold">&apos;무의식적 프레임 역전&apos;</strong>입니다. 내가 먼저 물러서서 상대의 예측을 박살 내고, 상대의 결핍과 후폭풍을 설계해야 합니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ════ 모바일 (md 미만): 16:9 이미지 전체 표시 + 하단 한지 텍스트 자연스러운 결합 ════ */}
+                  <div
+                    className="md:hidden w-full rounded-2xl border border-[#B49A70]/40 shadow-2xl overflow-hidden transition-all duration-300"
+                    style={{
+                      backgroundColor: '#F3E9D8',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
+                    }}
+                  >
+                    {/* 상단 16:9 원본 이미지 (노리개와 비단, 테두리가 잘리지 않고 전체 노출) */}
+                    <div
+                      className="w-full aspect-[16/9] relative"
+                      style={{
+                        backgroundImage: "url('/image/reunion-secret/r7.webp')",
+                        backgroundSize: '100% 100%',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                      }}
+                    />
+                    {/* 하단 한지 텍스트 영역 (가독성 100% 확보) */}
+                    <div className="p-6 text-left break-keep space-y-4">
+                      <h3 className="text-lg sm:text-xl font-elegant font-bold text-[#512733] leading-[1.5] break-keep">
                         &ldquo;진심을 다해 매달렸는데 왜 더 멀어졌을까요?<br />
-                        이별 후에도 <span className="text-[#7A0D23] font-extrabold">&lsquo;전략과 심리&rsquo;</span>가 필요했던 이유&rdquo;
+                        이별 후에도 <span className="text-[#713F4C] font-extrabold">&lsquo;전략과 심리&rsquo;</span>가 필요했던 이유&rdquo;
                       </h3>
 
-                      <div className="text-[16px] sm:text-[17px] md:text-[18px] text-[#2C151D] leading-[1.85] font-normal space-y-4 break-keep">
+                      <div className="text-[15px] sm:text-[16px] text-[#453536] leading-[1.8] font-normal space-y-3 break-keep">
                         <p>
                           연애 중의 다정함과 이별 후의 재회는 작동하는 무의식의 문법이 완전히 다릅니다. 이별하는 순간, 상대방의 뇌 속에서 당신은 &apos;사랑하는 연인&apos;에서 &apos;나의 자유를 옭아매는 부담스러운 존재&apos;로 재분류됩니다.
                         </p>
                         <p>
-                          이 상태에서 쏟아붓는 눈물과 사과는 상대를 질리게 만들 뿐입니다. 재회의 유일한 열쇠는 <strong className="text-[#7A0D23] font-bold">&apos;무의식적 프레임 역전&apos;</strong>입니다. 내가 먼저 물러서서 상대의 예측을 박살 내고, 상대의 결핍과 후폭풍을 설계해야 합니다.
+                          이 상태에서 쏟아붓는 눈물과 사과는 상대를 질리게 만들 뿐입니다. 재회의 유일한 열쇠는 <strong className="text-[#713F4C] font-bold">&apos;무의식적 프레임 역전&apos;</strong>입니다. 내가 먼저 물러서서 상대의 예측을 박살 내고, 상대의 결핍과 후폭풍을 설계해야 합니다.
                         </p>
                       </div>
                     </div>
