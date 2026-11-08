@@ -15,13 +15,13 @@ export default function CompatibilityAnalysisMethod() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
             THREE-STEP ANALYSIS
           </span>
-          <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight whitespace-pre-line">
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {compatibilityAnalysisMethodData.title}
           </h2>
-          <p className="text-lg md:text-xl text-[#EDE6DA] opacity-75 font-light">
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {compatibilityAnalysisMethodData.subTitle}
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function CompatibilityAnalysisMethod() {
                 <span className="text-xs font-mono font-bold tracking-widest text-[var(--accent-gold)] mb-2 block">
                   PHASE {card.num}
                 </span>
-                <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>
+                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-2 leading-snug break-keep">{card.title}</h3>
                 <span className="text-xs text-[var(--accent-gold-light)]/80 font-medium mb-4 block">
                   {card.subtitle}
                 </span>

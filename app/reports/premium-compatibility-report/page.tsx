@@ -79,28 +79,28 @@ export default function PremiumCompatibilityReportPage() {
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)]">
                     BAEKDOHWA PREMIUM COMPATIBILITY REPORT
                   </span>
                 </div>
 
                 {/* 서브 카피 타이틀 */}
-                <p className="text-base md:text-xl text-[var(--accent-gold)] font-medium tracking-wide mb-4">
+                <p className="text-[16px] md:text-[18px] text-[var(--accent-gold)] font-medium tracking-wide mb-4">
                   두 사람의 선천코드와 관계 패턴을 함께 읽는 1:1 프리미엄 궁합 설계도
                 </p>
 
                 {/* 메인 제품명 */}
-                <h1 className="text-4xl md:text-7xl font-elegant font-bold mb-8 text-white leading-tight">
+                <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-8 text-white leading-[1.25] md:leading-[1.3] break-keep">
                   프리미엄 <span className="text-[var(--accent-gold)]">궁합 리포트</span>
                 </h1>
 
                 {/* 추가 헤드라인 및 서브 카피 */}
                 <div className="max-w-2xl mx-auto mb-12">
-                  <p className="text-xl md:text-3xl text-white font-elegant font-medium leading-relaxed break-keep">
+                  <p className="text-xl md:text-[28px] text-white font-elegant font-medium leading-[1.3] break-keep">
                     &ldquo;서로 사랑하는데,<br />
                     왜 같은 문제로 계속 부딪힐까요?&rdquo;
                   </p>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 mt-4 break-keep font-light leading-relaxed">
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 mt-4 break-keep font-light leading-relaxed">
                     끌림의 이유부터 반복되는 갈등, 서로의 차이를 이해하는 방법과<br className="hidden sm:inline" />
                     관계를 조율하는 지혜로운 실천 방향까지.
                   </p>
@@ -120,7 +120,7 @@ export default function PremiumCompatibilityReportPage() {
                 </div>
 
                 {/* 기존 메인 카피 보존 */}
-                <p className="text-lg md:text-2xl text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
+                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
                   두 사람의 인연은 우연이 아니라 흐름입니다.
                 </p>
                 
@@ -186,10 +186,10 @@ export default function PremiumCompatibilityReportPage() {
                     />
                   </div>
                   <div className="space-y-10">
-                    <h2 className="text-4xl md:text-5xl font-elegant font-bold text-white leading-tight">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       사랑은 감정이지만,<br /> <span className="text-[var(--accent-gold)]">관계는 흐름입니다</span>
                     </h2>
-                    <p className="text-xl text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       프리미엄 궁합 리포트는 단순한 궁합 점수가 아니라,{"\n\n"}
                       두 사람이 왜 끌리는지, 왜 자꾸 부딪히는지, 어떤 방식으로 함께 성장할 수 있는지를 섬세하게 해석하는 프리미엄 관계 분석 리포트입니다.
                     </p>
@@ -216,7 +216,7 @@ export default function PremiumCompatibilityReportPage() {
             {/* 기존 6대 분석 내용 카드 및 이미지 (p4.webp 에셋 보존) */}
             <section className="mb-40 text-center">
               <Reveal>
-                <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-[0.2em] mb-16">
+                <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
                   리포트 <span className="text-[var(--accent-gold)]">주요 분석</span> 내용
                 </h2>
                 <div className="max-w-7xl mx-auto mb-20">
@@ -243,14 +243,14 @@ export default function PremiumCompatibilityReportPage() {
                           <i className={`fas ${item.i} text-2xl`}></i>
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-white mb-3">{item.t}</h3>
-                          <p className="text-sm text-[#EDE6DA] opacity-50 font-light break-keep">{item.d}</p>
+                          <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 leading-snug break-keep">{item.t}</h3>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA] opacity-60 font-light break-keep">{item.d}</p>
                         </div>
                       </div>
                     ))}
                   </div>
                   <div className="mt-16 pt-16 border-t border-white/5 text-center">
-                    <p className="text-[#EDE6DA] opacity-60 italic font-elegant text-lg break-keep">
+                    <p className="text-[#EDE6DA] opacity-75 italic font-elegant text-[16px] md:text-[18px] break-keep">
                       &ldquo;이 리포트는 단순한 궁합 점수가 아니라, 관계의 흐름을 이해하고 더 건강한 사랑을 선택하기 위한 프리미엄 자기이해 리포트입니다.&rdquo;
                     </p>
                   </div>
@@ -314,10 +314,10 @@ export default function PremiumCompatibilityReportPage() {
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="space-y-10 order-2 lg:order-1">
-                    <h2 className="text-4xl md:text-6xl font-elegant font-bold text-white leading-tight">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       소장하고 싶은 <br /> <span className="text-[var(--accent-gold)]">프리미엄 궁합 리포트</span>
                     </h2>
-                    <p className="text-xl text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       프리미엄 궁합 리포트는 한 번 읽고 끝나는 결과지가 아니라, 두 사람의 관계를 다시 바라보게 만드는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
                       서로의 성향, 반복되는 관계 패턴, 끌림과 거리감의 이유, 그리고 더 나은 사랑을 위한 방향성을 백도화만의 언어로 정리해드립니다.
                     </p>
@@ -367,22 +367,22 @@ export default function PremiumCompatibilityReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-xs font-bold tracking-[0.3em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)] mb-8">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)] mb-8">
                     HARMONY FOR TWO
                   </span>
                   
                   {/* 기존 메인 카피 보존 */}
-                  <h2 className="text-3xl md:text-6xl font-elegant font-bold text-white mb-6 leading-tight">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
                     사랑의 방향을 <span className="text-[var(--accent-gold)]">결정하는 순간</span>
                   </h2>
 
                   {/* 새로운 보조 강조 문구 추가 */}
-                  <p className="text-xl md:text-2xl text-[var(--accent-gold-light)] font-medium mb-6 max-w-2xl mx-auto break-keep font-elegant">
+                  <p className="text-[18px] md:text-[22px] text-[var(--accent-gold-light)] font-medium mb-6 max-w-2xl mx-auto break-keep font-elegant leading-[1.3]">
                     &ldquo;두 사람의 차이를 이해하는 순간,<br />
                     관계의 새로운 선택이 시작됩니다.&rdquo;
                   </p>
                   
-                  <p className="text-base md:text-lg text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
                     우리의 관계를 단순한 점수로 판단하지 마십시오.<br />
                     서로의 기질과 반복되는 관계 패턴을 이해하고, 앞으로의 선택을 위한 두 사람만의 설계도를 펼쳐보십시오.
                   </p>

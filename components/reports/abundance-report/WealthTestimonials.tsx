@@ -13,13 +13,13 @@ export default function WealthTestimonials() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
             REAL CLIENT REVIEWS
           </span>
-          <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight">
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             {wealthTestimonialConfig.title}
           </h2>
-          <p className="text-lg md:text-xl text-[#EDE6DA] opacity-75 font-light">
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {wealthTestimonialConfig.subTitle}
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function WealthTestimonials() {
                 <span className="text-xs px-2.5 py-1 rounded bg-[#8FD3B6]/15 text-[#8FD3B6] font-medium mb-4 inline-block">
                   {rev.tag}
                 </span>
-                <h4 className="text-lg font-bold text-white mb-3 break-keep">
+                <h4 className="text-[20px] md:text-[24px] font-bold text-white mb-3 leading-snug break-keep">
                   {rev.title}
                 </h4>
                 <p className="text-sm text-[#EDE6DA]/75 font-light leading-relaxed break-keep">

@@ -16,13 +16,13 @@ export default function ReportFAQ() {
     <section className="mb-40" id="faq">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
             FREQUENTLY ASKED QUESTIONS
           </span>
-          <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight">
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             {faqData.title}
           </h2>
-          <p className="text-lg md:text-xl text-[#EDE6DA] opacity-75 font-light">
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {faqData.subTitle}
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function ReportFAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-sm md:text-base text-[#EDE6DA]/75 font-light leading-relaxed break-keep border-t border-white/5">
+                  <div className="px-6 pb-6 pt-2 text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep border-t border-white/5">
                     {item.a}
                   </div>
                 )}

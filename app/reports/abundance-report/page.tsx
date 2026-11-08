@@ -117,28 +117,28 @@ export default function AbundanceReportPage() {
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase bg-[#8FD3B6]/10 border border-[#8FD3B6]/35 text-[#8FD3B6]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#8FD3B6]/10 border border-[#8FD3B6]/35 text-[#8FD3B6]">
                     PREMIUM ABUNDANCE REPORT
                   </span>
                 </div>
 
                 {/* 서브 타이틀 카피 */}
-                <p className="text-base md:text-xl text-[#8FD3B6] font-medium tracking-wide mb-4">
+                <p className="text-[16px] md:text-[18px] text-[#8FD3B6] font-medium tracking-wide mb-4">
                   선천코드로 읽는 나의 풍요 설계도
                 </p>
 
                 {/* 메인 제품명 */}
-                <h1 className="text-4xl md:text-7xl font-elegant font-bold mb-8 text-white leading-tight">
+                <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-8 text-white leading-[1.25] md:leading-[1.3] break-keep">
                   선천코드 <span className="text-[#8FD3B6]">풍요</span> <span className="text-[#E6BE8A]">리포트</span>
                 </h1>
 
                 {/* 핵심 후킹 카피 */}
                 <div className="max-w-2xl mx-auto mb-12">
-                  <p className="text-xl md:text-3xl text-white font-elegant font-medium leading-relaxed break-keep">
+                  <p className="text-xl md:text-[28px] text-white font-elegant font-medium leading-[1.3] break-keep">
                     &ldquo;벌어도 같은 자리에서 새어나간다면,<br />
                     돈이 아니라 반복되는 선택을 살펴볼 때입니다.&rdquo;
                   </p>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 mt-4 break-keep font-light leading-relaxed">
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 mt-4 break-keep font-light leading-relaxed">
                     타고난 재물 성향과 현실에서 반복되는 돈의 패턴을 함께 읽고,<br className="hidden sm:inline" />
                     나에게 어울리는 수입 방식과 실천 방향을 정리한 1:1 맞춤 리포트.
                   </p>
@@ -156,7 +156,7 @@ export default function AbundanceReportPage() {
                   />
                 </div>
 
-                <p className="text-lg md:text-2xl text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
+                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
                   나의 타고난 재능과 돈을 대하는 성향을 이해할 때, 나에게 맞는 풍요의 방향이 보입니다.
                 </p>
                 
@@ -214,11 +214,11 @@ export default function AbundanceReportPage() {
                     />
                   </div>
                   <div className="space-y-10">
-                    <h2 className="text-4xl md:text-5xl font-elegant font-bold text-white leading-tight break-keep">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       나에게 맞는 풍요의 길은 <br />
                       <span className="text-[#8FD3B6]">나를 아는 것</span><span className="text-[#E6BE8A]">에서 시작됩니다</span>
                     </h2>
-                    <p className="text-xl text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 풍요 리포트는 막연한 요행을 바라는 운세 풀이가 아닙니다. 내가 타고난 재능과 강점이 무엇인지, 돈을 대할 때 어떤 태도와 기준이 작동하는지, 그리고 일상에서 왜 비슷한 수입·소비 패턴이 반복되는지를 차분하게 짚어보고 현실에서 실천할 방향을 함께 모색하는 리포트입니다.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -242,7 +242,7 @@ export default function AbundanceReportPage() {
             {/* 기존 6대 핵심 탐구 주제 및 이미지 (a4.webp 에셋 보존) */}
             <section className="mb-40 text-center">
               <Reveal>
-                <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-[0.2em] mb-16">
+                <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
                   리포트 <span className="text-[#8FD3B6]">핵심</span> <span className="text-[#E6BE8A]">탐구 주제</span>
                 </h2>
                 <div className="w-full max-w-[1280px] mx-auto mb-20">
@@ -269,8 +269,8 @@ export default function AbundanceReportPage() {
                           <i className={`fas ${item.i} text-2xl text-[#8FD3B6]`}></i>
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#E6BE8A] transition-colors">{item.t}</h3>
-                          <p className="text-sm text-[#EDE6DA] opacity-65 font-light break-keep leading-relaxed">{item.d}</p>
+                          <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 group-hover:text-[#E6BE8A] transition-colors leading-snug break-keep">{item.t}</h3>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA] opacity-65 font-light break-keep leading-relaxed">{item.d}</p>
                         </div>
                       </div>
                     ))}
@@ -335,11 +335,11 @@ export default function AbundanceReportPage() {
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="space-y-10 order-2 lg:order-1">
-                    <h2 className="text-4xl md:text-6xl font-elegant font-bold text-white leading-tight break-keep">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       나만의 기준을 세우는 <br />
                       <span className="text-[#8FD3B6]">프리미엄</span> <span className="text-[#E6BE8A]">풍요 리포트</span>
                     </h2>
-                    <p className="text-xl text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 풍요 리포트는 타인의 기준을 무작정 따라가는 대신, 나의 기질과 생활의 리듬에 어울리는 풍요의 방향을 차분히 정리해 보는 맞춤형 리포트입니다.{"\n\n"}
                       백도화만의 깊이 있는 해석과 정갈한 문체로, 내 안의 강점과 일상의 재정 습관을 돌아보고 현실에서 단단하게 걸어갈 방향을 함께 그려봅니다.
                     </p>
@@ -367,13 +367,13 @@ export default function AbundanceReportPage() {
 
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
-                      <span className="inline-block px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase">
+                      <span className="inline-block px-4 py-1 rounded-full text-[12px] font-bold tracking-[0.2em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase">
                         Digital Ritual Gift
                       </span>
-                      <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-wide">
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
                         당신의 흐름에 맞춘 <span className="text-[#8FD3B6]">오행 에너지</span> <span className="text-[#E6BE8A]">카드</span>
                       </h2>
-                      <p className="text-sm md:text-base text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep">
+                      <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep font-light">
                         ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 기질과 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
                       </p>
                     </div>
@@ -381,18 +381,18 @@ export default function AbundanceReportPage() {
 
                   <Reveal>
                     <div className="gungjung-glass p-8 md:p-12 max-w-4xl mx-auto mb-16 text-center border-[#8FD3B6]/15 relative overflow-hidden">
-                      <p className="text-lg md:text-xl text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
+                      <div className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
                         <span className="block text-white font-medium">
                           백도화 선천코드 리포트 이용 시, 고객님의 선천적 기질과 흐름에 어울리는 오행 에너지 카드가 함께 안내됩니다.
                         </span>
-                        <span className="block text-base opacity-75">
+                        <span className="block text-[15px] md:text-[16px] opacity-75">
                           오행 에너지 카드는 목·화·토·금·수의 상징을 한국적 자개 무드로 표현한 디지털 리추얼 이미지입니다. <br className="hidden md:inline" />
                           나에게 필요한 균형과 태도를 시각적으로 되새기며 일상의 중심을 다잡는 카드로 활용하실 수 있습니다.
                         </span>
                         <span className="block text-sm text-[#E6BE8A] opacity-90 border-t border-white/5 pt-6 mt-6">
                           ✨ 휴대폰 배경화면, 잠금화면, 개인 노트 표지, 일상 다짐 리추얼 이미지 등으로 자유롭게 활용하실 수 있습니다.
                         </span>
-                      </p>
+                      </div>
                     </div>
                   </Reveal>
 
@@ -439,13 +439,13 @@ export default function AbundanceReportPage() {
                 <div className="relative">
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
-                      <span className="inline-block px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase">
+                      <span className="inline-block px-4 py-1 rounded-full text-[12px] font-bold tracking-[0.2em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase">
                         Process & Info
                       </span>
-                      <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-wide">
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
                         리포트는 <span className="text-[#8FD3B6]">이렇게</span> <span className="text-[#E6BE8A]">준비됩니다</span>
                       </h2>
-                      <p className="text-base text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light">
+                      <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light">
                         백도화의 선천코드 리포트는 신청자분의 선천 정보를 바탕으로 정성스럽게 분석하여 작성되는 디지털 리포트입니다.
                       </p>
                     </div>
@@ -548,21 +548,21 @@ export default function AbundanceReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-xs font-bold tracking-[0.3em] uppercase bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] mb-8">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] mb-8">
                     EMBRACE YOUR ABUNDANCE
                   </span>
                   
                   {/* 기존 메인 카피 보존 */}
-                  <h2 className="text-3xl md:text-6xl font-elegant font-bold text-white mb-6 leading-tight">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
                     나다운 풍요의 방향을 <span className="text-[#8FD3B6]">마주하는</span> <span className="text-[#E6BE8A]">시작</span>
                   </h2>
 
                   {/* 새로운 보조 강조 문구 추가 */}
-                  <p className="text-xl md:text-2xl text-[#E6BE8A] font-medium mb-6 max-w-2xl mx-auto break-keep font-elegant">
+                  <p className="text-[18px] md:text-[22px] text-[#E6BE8A] font-medium mb-6 max-w-2xl mx-auto break-keep font-elegant leading-[1.3]">
                     &ldquo;내 안의 풍요를 읽는 첫 장을 펼치십시오.&rdquo;
                   </p>
                   
-                  <p className="text-base md:text-lg text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
                     남의 성공 공식이 아니라, 나의 기질과 반복되는 선택에서 출발하십시오.<br />
                     돈의 흐름을 이해하고, 나에게 맞는 풍요의 방식을 설계할 시간입니다.
                   </p>

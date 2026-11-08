@@ -10,13 +10,13 @@ export default function WealthAudience() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
             TARGET AUDIENCE
           </span>
-          <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight">
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             당신을 위한 <span className="text-[#8FD3B6]">풍요 리포트</span>인가요?
           </h2>
-          <p className="text-lg md:text-xl text-[#EDE6DA] opacity-75 font-light">
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             솔직하고 명확한 안내를 통해 진정한 경제적 자기 이해를 전해드립니다.
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function WealthAudience() {
                 <div className="w-8 h-8 rounded-full bg-[#8FD3B6]/20 border border-[#8FD3B6] flex items-center justify-center text-[#8FD3B6]">
                   <Check className="w-4 h-4 stroke-[3]" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-[20px] md:text-[24px] font-bold text-white leading-snug break-keep">
                   {wealthAudienceData.recommended.title}
                 </h3>
               </div>
@@ -61,7 +61,7 @@ export default function WealthAudience() {
                 <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/60">
                   <X className="w-4 h-4 stroke-[2.5]" />
                 </div>
-                <h3 className="text-2xl font-bold text-white/90">
+                <h3 className="text-[20px] md:text-[24px] font-bold text-white/90 leading-snug break-keep">
                   {wealthAudienceData.notRecommended.title}
                 </h3>
               </div>

@@ -21,13 +21,13 @@ export default function CompatibilityReportTableOfContents() {
     <section className="mb-40" id="table-of-contents">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
             CHAPTERS & CURRICULUM
           </span>
-          <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight whitespace-pre-line">
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {compatibilityTableOfContentsData.title}
           </h2>
-          <p className="text-lg md:text-xl text-[#EDE6DA] opacity-75 font-light">
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {compatibilityTableOfContentsData.subTitle}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function CompatibilityReportTableOfContents() {
                         </span>
                       )}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-white break-keep">
+                    <h3 className="text-[20px] md:text-[24px] font-bold text-white break-keep">
                       {part.title}
                     </h3>
                     <p className="text-xs md:text-sm text-[#EDE6DA]/60 font-light break-keep md:ml-auto">
@@ -119,14 +119,14 @@ export default function CompatibilityReportTableOfContents() {
           <div className="absolute top-0 right-0 w-80 h-80 bg-[var(--accent-gold)]/10 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10 text-center mb-10">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest bg-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] border border-[var(--accent-gold)]/40 mb-6 uppercase">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-bold tracking-widest bg-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] border border-[var(--accent-gold)]/40 mb-6 uppercase">
               <Sparkles className="w-3.5 h-3.5" />
               PART 07 COMPATIBILITY PRESCRIPTION
             </span>
-            <h3 className="text-2xl md:text-4xl font-elegant font-bold text-white mb-4 leading-snug whitespace-pre-line">
+            <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-4 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
               {compatibilityTableOfContentsData.part7Highlight.title}
             </h3>
-            <p className="text-sm md:text-base text-[#EDE6DA]/75 max-w-2xl mx-auto font-light break-keep">
+            <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto font-light leading-relaxed break-keep">
               {compatibilityTableOfContentsData.part7Highlight.subTitle}
             </p>
           </div>

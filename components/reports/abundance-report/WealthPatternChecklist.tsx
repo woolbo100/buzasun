@@ -23,13 +23,13 @@ export default function WealthPatternChecklist() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#8FD3B6]/10 border border-[#8FD3B6]/30 text-[#8FD3B6] uppercase mb-6">
             WEALTH PATTERN CHECKLIST
           </span>
-          <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white mb-6 leading-tight whitespace-pre-line">
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {wealthChecklistData.title}
           </h2>
-          <p className="text-lg md:text-xl text-[#EDE6DA] opacity-80 whitespace-pre-line leading-relaxed font-light">
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-80 whitespace-pre-line leading-relaxed font-light break-keep">
             {wealthChecklistData.subtitle}
           </p>
         </div>

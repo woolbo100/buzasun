@@ -18,15 +18,15 @@ export default function BaekdohwaPhilosophy() {
             </div>
 
             <div className="text-center mb-10">
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
+              <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase mb-6">
                 OUR PHILOSOPHY
               </span>
-              <h2 className="text-2xl md:text-4xl font-elegant font-bold text-white leading-tight whitespace-pre-line">
+              <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
                 {philosophyData.title}
               </h2>
             </div>
 
-            <div className="max-w-2xl mx-auto space-y-6 text-center text-[#EDE6DA] text-base md:text-lg leading-relaxed font-light break-keep whitespace-pre-line">
+            <div className="max-w-2xl mx-auto space-y-6 text-center text-[#EDE6DA] text-[16px] md:text-[18px] leading-relaxed font-light break-keep whitespace-pre-line">
               {philosophyData.letter}
             </div>
 

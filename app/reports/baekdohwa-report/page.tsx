@@ -79,28 +79,28 @@ export default function BaekdohwaReportPage() {
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)]">
                     PREMIUM LOVE CODE REPORT
                   </span>
                 </div>
 
                 {/* 메인 서브 타이틀 카피 */}
-                <p className="text-base md:text-xl text-[var(--accent-gold)] font-medium tracking-wide mb-4">
+                <p className="text-[16px] md:text-[18px] text-[var(--accent-gold)] font-medium tracking-wide mb-4">
                   선천코드로 읽는 나의 사랑 설계도
                 </p>
 
                 {/* 메인 제품명 */}
-                <h1 className="text-4xl md:text-7xl font-elegant font-bold mb-8 text-white leading-tight">
+                <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-8 text-white leading-[1.25] md:leading-[1.3] break-keep">
                   선천코드 <span className="text-[var(--accent-gold)]">연애 리포트</span>
                 </h1>
 
                 {/* 핵심 후킹 카피 */}
                 <div className="max-w-2xl mx-auto mb-12">
-                  <p className="text-xl md:text-3xl text-white font-elegant font-medium leading-relaxed break-keep">
+                  <p className="text-xl md:text-[28px] text-white font-elegant font-medium leading-[1.3] break-keep">
                     &ldquo;같은 자리에서 계속 넘어졌다면,<br />
                     걸음이 아니라 지도가 문제였습니다.&rdquo;
                   </p>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/75 mt-4 break-keep font-light leading-relaxed">
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 mt-4 break-keep font-light leading-relaxed">
                     타고난 사랑의 구조와 반복되는 관계 패턴을 함께 읽고,<br className="hidden sm:inline" />
                     나에게 필요한 선택과 실천의 방향을 발견하는 1:1 맞춤 리포트.
                   </p>
@@ -119,7 +119,7 @@ export default function BaekdohwaReportPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 to-transparent"></div>
                 </div>
 
-                <p className="text-lg md:text-2xl text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
+                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
                   나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
                 </p>
                 
@@ -185,10 +185,10 @@ export default function BaekdohwaReportPage() {
                     />
                   </div>
                   <div className="space-y-10">
-                    <h2 className="text-4xl md:text-5xl font-elegant font-bold text-white leading-tight">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       당신의 사랑은 <br /> <span className="text-[var(--accent-gold)]">우연이 아닙니다</span>
                     </h2>
-                    <p className="text-xl text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 연애 리포트는 단순한 연애운 풀이가 아니라, 당신이 어떤 사람에게 끌리고, 왜 비슷한 관계 패턴을 반복하는지, 그리고 어떤 방식으로 사랑을 회복하고 성장시킬 수 있는지를 섬세하게 해석하는 프리미엄 연애 리포트입니다.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -207,7 +207,7 @@ export default function BaekdohwaReportPage() {
             {/* 기존 6대 분석 내용 카드 및 이미지 (p4.webp 에셋 보존) */}
             <section className="mb-40 text-center">
               <Reveal>
-                <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-[0.2em] mb-16">
+                <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
                   리포트 <span className="text-[var(--accent-gold)]">주요 분석</span> 내용
                 </h2>
                 <div className="max-w-7xl mx-auto mb-20">
@@ -234,8 +234,8 @@ export default function BaekdohwaReportPage() {
                           <i className={`fas ${item.i} text-2xl`}></i>
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-white mb-3">{item.t}</h3>
-                          <p className="text-sm text-[#EDE6DA] opacity-50 font-light break-keep">{item.d}</p>
+                          <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 leading-snug break-keep">{item.t}</h3>
+                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA] opacity-60 font-light break-keep">{item.d}</p>
                         </div>
                       </div>
                     ))}
@@ -300,10 +300,10 @@ export default function BaekdohwaReportPage() {
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="space-y-10 order-2 lg:order-1">
-                    <h2 className="text-4xl md:text-6xl font-elegant font-bold text-white leading-tight">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       소장하고 싶은 <br /> <span className="text-[var(--accent-gold)]">프리미엄 리포트</span>
                     </h2>
-                    <p className="text-xl text-[#EDE6DA] opacity-70 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 연애 리포트는 한 번 읽고 끝나는 결과지가 아니라, 당신의 사랑을 다시 바라보게 하는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
                       백도화만의 깊이 있는 해석과 우아한 문체로 당신의 사랑 이야기를 새롭게 정의해 드립니다.
                     </p>
@@ -353,15 +353,15 @@ export default function BaekdohwaReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-xs font-bold tracking-[0.3em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)] mb-8">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/30 text-[var(--accent-gold-light)] mb-8">
                     BEGIN YOUR JOURNEY
                   </span>
                   
-                  <h2 className="text-3xl md:text-6xl font-elegant font-bold text-white mb-6 leading-tight">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
                     &ldquo;반복을 끊는 첫 장을 펼치십시오.&rdquo;
                   </h2>
                   
-                  <p className="text-base md:text-xl text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
                     사랑의 답을 바깥에서만 찾지 마십시오.<br />
                     나의 관계 구조를 이해하는 것에서 새로운 선택이 시작됩니다.
                   </p>
