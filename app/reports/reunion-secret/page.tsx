@@ -405,41 +405,25 @@ export default function ReunionSecretPage() {
   )
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#180D16] text-[#EDE6DA] font-sans selection:bg-[#552435] selection:text-[#FAF7F2] pb-24 md:pb-0">
+    <main className="detail-page relative min-h-screen bg-[#160E11] text-[#EDE6DA] font-sans selection:bg-[#42262A] selection:text-[#FAF7F2] pb-24 md:pb-0">
       <GlobalBackground
         src="/image/love-code-bg.png"
         brightCenter={false}
         customBaseOverlay={
-          <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 대각선 메인 와인 버건디 베이스 그라데이션 (블랙 와인 #180D16 -> 딥 버건디 #351521 -> 로즈 와인 #552435) */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  linear-gradient(
-                    135deg,
-                    rgba(24, 13, 22, 0.92) 0%,
-                    rgba(38, 16, 25, 0.88) 28%,
-                    rgba(53, 21, 33, 0.85) 55%,
-                    rgba(70, 28, 44, 0.87) 82%,
-                    rgba(85, 36, 53, 0.92) 100%
-                  )
-                `,
-              }}
-            />
-
-            {/* 2. 입체적인 로즈 와인 & 앤티크 골드 라이트 오라 (특정 구간에만 은은한 깊이감 부여) */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `
-                  radial-gradient(ellipse 950px 700px at 75% 35%, rgba(125, 49, 72, 0.28) 0%, rgba(85, 36, 53, 0.12) 45%, transparent 65%),
-                  radial-gradient(ellipse 850px 650px at 20% 70%, rgba(95, 37, 56, 0.20) 0%, transparent 60%),
-                  radial-gradient(ellipse 60% 35% at 50% 0%, rgba(180, 154, 112, 0.05) 0%, transparent 70%)
-                `,
-              }}
-            />
-          </div>
+          <div
+            className="absolute inset-0 w-full h-full pointer-events-none"
+            style={{
+              /* 앤티크 브라운 버건디 단일 3색 선형 그라데이션 (붉은 기운을 절제한 차분하고 깊은 브라운 버건디) */
+              background: `
+                linear-gradient(
+                  135deg,
+                  rgba(22, 14, 17, 0.94) 0%,
+                  rgba(43, 23, 27, 0.90) 52%,
+                  rgba(66, 38, 42, 0.94) 100%
+                )
+              `,
+            }}
+          />
         }
         customVignette={
           <div
@@ -449,8 +433,8 @@ export default function ReunionSecretPage() {
                 radial-gradient(
                   circle at center,
                   rgba(0, 0, 0, 0) 45%,
-                  rgba(24, 13, 22, 0.35) 75%,
-                  rgba(15, 7, 13, 0.70) 100%
+                  rgba(22, 14, 17, 0.35) 75%,
+                  rgba(15, 8, 10, 0.70) 100%
                 )
               `,
             }}
@@ -2886,7 +2870,7 @@ export default function ReunionSecretPage() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#180D16] via-[#180D16]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#160E11] via-[#160E11]/60 to-transparent" />
               
               <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 text-left max-w-2xl">
                 <span className="text-[#CDB7A3] font-elegant text-xs md:text-sm tracking-[0.3em] uppercase mb-3 block font-semibold">
