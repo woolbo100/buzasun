@@ -398,6 +398,32 @@
     border-color: rgba(177, 143, 119, 0.28) !important;
   }
 
+  /* 🌌 재회비방 FAQ 카드 반투명 글라스 (TRANSFORMATION 큰 상자와 완벽 일치)
+     - 불투명한 진한 버건디 제거, 뒤쪽 배경이 은은하게 비치도록 투명도 설정
+     - 닫힌 상태와 열린 상태 모두 동일한 배경 유지
+  */
+  .detail-page .reunion-faq-card {
+    background: linear-gradient(
+      135deg,
+      rgba(70, 43, 48, 0.08) 0%,
+      rgba(49, 30, 39, 0.12) 100%
+    ) !important;
+    border: 1px solid rgba(177, 143, 119, 0.18) !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  .detail-page .reunion-faq-card:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(70, 43, 48, 0.14) 0%,
+      rgba(49, 30, 39, 0.18) 100%
+    ) !important;
+    border-color: rgba(177, 143, 119, 0.28) !important;
+  }
+
   /* 🌿 풍요비책 전용 딥 제이드 차콜(#203632) & 다크 틸(#142724) 큰 글라스 컨테이너
      - 연애비급·재회비방 및 공통 영역에 영향 없이 풍요비책(.abundance-detail-page)에만 독립 적용
      - 반투명 먹빛 톤과 배경 블러, 은은한 테두리로 입체감과 깊이감 보존

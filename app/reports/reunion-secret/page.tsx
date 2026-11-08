@@ -3018,7 +3018,12 @@ export default function ReunionSecretPage() {
                     return (
                       <div
                         key={idx}
-                        className="rounded-2xl border border-[#B49A70]/30 overflow-hidden bg-[#3d1c29]/65 transition-colors"
+                        className="reunion-faq-card rounded-2xl overflow-hidden transition-all duration-300"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(70, 43, 48, 0.08) 0%, rgba(49, 30, 39, 0.12) 100%)',
+                          border: '1px solid rgba(177, 143, 119, 0.18)',
+                          boxShadow: 'none',
+                        }}
                       >
                         <button
                           type="button"
@@ -3040,7 +3045,7 @@ export default function ReunionSecretPage() {
                           />
                         </button>
                         {isOpen && (
-                          <div className="px-5 pb-6 sm:px-6 sm:pb-7 text-sm sm:text-base text-[#EDE6DA]/85 leading-relaxed font-light border-t border-white/5 pt-4 break-keep">
+                          <div className="px-5 pb-6 sm:px-6 sm:pb-7 text-sm sm:text-base text-[#EDE6DA]/85 leading-relaxed font-light border-t border-[#B49A70]/15 pt-4 break-keep">
                             {faq.a}
                           </div>
                         )}
