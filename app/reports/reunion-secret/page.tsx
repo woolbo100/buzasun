@@ -410,22 +410,36 @@ export default function ReunionSecretPage() {
         src="/image/love-code-bg.png"
         brightCenter={false}
         customBaseOverlay={
-          <div
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            style={{
-              /* 톤다운된 깊고 묵직한 앤티크 브라운 버건디 그라데이션 (허옇게 뜨는 현상을 완벽히 잡은 딥 리치 톤) */
-              background: `
-                linear-gradient(
-                  145deg,
-                  #0D0709 0%,
-                  #160B0F 28%,
-                  #200E14 55%,
-                  #2B131B 82%,
-                  #361722 100%
-                )
-              `,
-            }}
-          />
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            {/* 1. 상단/우측 신비로운 앤티크 브라운 버건디 라이트 오라 (풍요비책 방식: 우측 투명도 확보로 뒷배경 문양 비침) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 90% 55% at 50% 12%, rgba(55, 23, 33, 0.45) 0%, rgba(30, 13, 18, 0.20) 55%, transparent 85%),
+                  radial-gradient(circle 750px at 82% 24%, rgba(66, 27, 39, 0.32) 0%, rgba(37, 16, 22, 0.15) 45%, transparent 70%),
+                  radial-gradient(circle 650px at 18% 65%, rgba(37, 16, 22, 0.25) 0%, transparent 70%)
+                `,
+              }}
+            />
+
+            {/* 2. 메인 딥 앤티크 브라운 버건디 그라데이션 (풍요비책과 동일한 투명도 설계로 뒷배경 궁중 문양이 은은하게 비침) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  linear-gradient(
+                    145deg,
+                    rgba(13, 7, 9, 0.78) 0%,
+                    rgba(24, 11, 15, 0.82) 25%,
+                    rgba(37, 16, 22, 0.85) 55%,
+                    rgba(50, 21, 30, 0.88) 80%,
+                    rgba(66, 27, 39, 0.94) 100%
+                  )
+                `,
+              }}
+            />
+          </div>
         }
         customVignette={
           <div
@@ -433,10 +447,10 @@ export default function ReunionSecretPage() {
             style={{
               background: `
                 radial-gradient(
-                  ellipse 1200px 900px at 50% 25%,
-                  transparent 25%,
-                  rgba(13, 7, 9, 0.45) 65%,
-                  rgba(8, 4, 6, 0.85) 100%
+                  circle at center,
+                  rgba(0, 0, 0, 0) 45%,
+                  rgba(13, 7, 9, 0.30) 75%,
+                  rgba(8, 4, 6, 0.65) 100%
                 )
               `,
             }}
