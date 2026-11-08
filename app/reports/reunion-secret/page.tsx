@@ -1630,16 +1630,16 @@ export default function ReunionSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
-                  {/* 왼쪽: '이런 분께 추천합니다' 제목 및 추천 카드 (좌측 가로폭 충분히 확보하여 1줄 유지) */}
-                  <div className="lg:col-span-7 space-y-6 md:space-y-8 text-left break-keep">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-14 items-center">
+                  {/* 왼쪽: '이런 분께 추천합니다' 제목 및 추천 카드 (약 52% 너비) */}
+                  <div className="w-full lg:w-[53%] xl:w-[52%] space-y-5 md:space-y-7 text-left break-keep shrink-0">
                     <div>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
                         이런 분께 <span className="text-[#C2A477]">추천합니다</span>
                       </h2>
                     </div>
 
-                    <div className="space-y-3 md:space-y-3.5">
+                    <div className="space-y-2.5 sm:space-y-3 md:space-y-3">
                       {[
                         "이별 후 상대에게 연락하고 싶지만 어떤 말을 해야 할지 몰라 불안한 분",
                         "상대가 차단했거나 읽씹, 안읽씹을 반복해 어떻게 해야 할지 막막한 분",
@@ -1665,20 +1665,20 @@ export default function ReunionSecretPage() {
                             borderColor: 'rgba(165, 135, 105, 0.30)',
                             boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), 0 1px 3px 0 rgba(35, 20, 30, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
                           }}
-                          className="group relative p-3.5 sm:p-4 md:p-[13px_20px] rounded-[12px] md:rounded-[14px] border flex items-center gap-3 md:gap-3.5 transition-all duration-300 hover:border-[#947852] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
+                          className="group relative p-3 sm:p-3.5 md:p-[13px_18px] lg:p-[14px_20px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3 sm:gap-3.5 md:gap-4 transition-all duration-300 hover:border-[#947852] hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
                         >
-                          {/* 딥 플럼 버건디 원형 체크 아이콘 */}
-                          <div className="shrink-0 relative z-10">
+                          {/* 딥 플럼 버건디 원형 체크 아이콘 (텍스트 첫 줄에 맞춤) */}
+                          <div className="shrink-0 mt-0.5 sm:mt-1 relative z-10">
                             <div
                               style={{ backgroundColor: '#54283D', borderColor: 'rgba(125, 75, 89, 0.25)' }}
-                              className="w-5 h-5 sm:w-6 sm:h-6 md:w-[25px] md:h-[25px] rounded-full flex items-center justify-center p-1 border shadow-none"
+                              className="w-5 h-5 sm:w-6 sm:h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border shadow-none"
                             >
-                              <Check className="w-3.5 h-3.5 md:w-3.5 md:h-3.5 text-[#FFF7EC] stroke-[2.4]" />
+                              <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FFF7EC] stroke-[2.4]" />
                             </div>
                           </div>
 
-                          {/* 본문 텍스트 (데스크톱에서 깔끔하게 한 줄로 유지) */}
-                          <p className="text-[14.5px] sm:text-[15.5px] lg:text-[15.5px] xl:text-[16px] text-[#352521] font-semibold leading-normal lg:whitespace-nowrap break-keep select-text relative z-10">
+                          {/* 본문 텍스트 (16~17px 확대, 두 줄로 자연스럽게 늘어남) */}
+                          <p className="text-[15px] sm:text-[16px] md:text-[16.5px] lg:text-[17px] text-[#352521] font-semibold leading-[1.55] sm:leading-[1.6] break-keep select-text relative z-10">
                             {item}
                           </p>
                         </div>
@@ -1686,14 +1686,14 @@ export default function ReunionSecretPage() {
                     </div>
                   </div>
 
-                  {/* 오른쪽: 《재회비방》 3:4 세로형 브랜드 포스터 이미지 (크기를 알맞게 축소) */}
-                  <div className="lg:col-span-5 w-full flex justify-center">
-                    <div className="relative w-full max-w-[380px] sm:max-w-[410px] aspect-[3/4] overflow-hidden rounded-[28px] md:rounded-[36px] border border-[#B49A70]/30 shadow-2xl bg-black/20">
+                  {/* 오른쪽: 《재회비방》 3:4 세로형 브랜드 포스터 이미지 (약 48% 너비, 시각적 존재감 확대) */}
+                  <div className="w-full lg:w-[47%] xl:w-[48%] flex justify-center items-center">
+                    <div className="relative w-full max-w-[440px] sm:max-w-[480px] lg:max-w-[500px] xl:max-w-[520px] aspect-[3/4] overflow-hidden rounded-[28px] md:rounded-[36px] border border-[#B49A70]/30 shadow-2xl bg-black/20">
                       <Image
                         src={productData.recommendedImage}
                         alt="재회를 바라더라도, 나를 지키는 기준은 필요합니다. 재회비방"
                         fill
-                        sizes="(max-width: 1024px) 100vw, 42vw"
+                        sizes="(max-width: 1024px) 100vw, 48vw"
                         className="object-cover object-center"
                         priority
                       />
