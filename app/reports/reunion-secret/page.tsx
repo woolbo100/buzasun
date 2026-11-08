@@ -70,7 +70,7 @@ const productData = {
   // 💡 [신규 영역 2] 인연의 주권자 (16:9 와이드 배너 이미지 경로)
   sovereignImage: '',
   // 💡 이별 불안 공감 (3:4 이미지 경로)
-  anxietyImage: '',
+  anxietyImage: '/image/reunion-secret/reunion-closed-heart.webp',
 }
 
 // 🏷️ 통일된 뮤트 로즈코코아 뱃지 컴포넌트 (추천 1안: 배경 #563743 · 테두리 #A78383 · 풍요비책 사각 뱃지 규격)
@@ -716,7 +716,7 @@ export default function ReunionSecretPage() {
                               alt="진심을 다해 사랑했는데, 왜 상대는 도망치듯 차가워졌을까 - 이별 불안 공감"
                               fill
                               sizes="(max-width: 1024px) 100vw, 45vw"
-                              className="object-contain"
+                              className="object-cover"
                               priority
                             />
                           ) : (
