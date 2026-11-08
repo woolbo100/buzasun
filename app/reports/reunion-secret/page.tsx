@@ -405,7 +405,7 @@ export default function ReunionSecretPage() {
   )
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#160E11] text-[#EDE6DA] font-sans selection:bg-[#42262A] selection:text-[#FAF7F2] pb-24 md:pb-0">
+    <main className="detail-page relative min-h-screen bg-[#0D0709] text-[#EDE6DA] font-sans selection:bg-[#361722] selection:text-[#FAF7F2] pb-24 md:pb-0">
       <GlobalBackground
         src="/image/love-code-bg.png"
         brightCenter={false}
@@ -413,13 +413,15 @@ export default function ReunionSecretPage() {
           <div
             className="absolute inset-0 w-full h-full pointer-events-none"
             style={{
-              /* 앤티크 브라운 버건디 단일 3색 선형 그라데이션 (붉은 기운을 절제한 차분하고 깊은 브라운 버건디) */
+              /* 톤다운된 깊고 묵직한 앤티크 브라운 버건디 그라데이션 (허옇게 뜨는 현상을 완벽히 잡은 딥 리치 톤) */
               background: `
                 linear-gradient(
-                  135deg,
-                  rgba(22, 14, 17, 0.94) 0%,
-                  rgba(43, 23, 27, 0.90) 52%,
-                  rgba(66, 38, 42, 0.94) 100%
+                  145deg,
+                  #0D0709 0%,
+                  #160B0F 28%,
+                  #200E14 55%,
+                  #2B131B 82%,
+                  #361722 100%
                 )
               `,
             }}
@@ -431,10 +433,10 @@ export default function ReunionSecretPage() {
             style={{
               background: `
                 radial-gradient(
-                  circle at center,
-                  rgba(0, 0, 0, 0) 45%,
-                  rgba(22, 14, 17, 0.35) 75%,
-                  rgba(15, 8, 10, 0.70) 100%
+                  ellipse 1200px 900px at 50% 25%,
+                  transparent 25%,
+                  rgba(13, 7, 9, 0.45) 65%,
+                  rgba(8, 4, 6, 0.85) 100%
                 )
               `,
             }}
@@ -2870,7 +2872,7 @@ export default function ReunionSecretPage() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#160E11] via-[#160E11]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0709] via-[#0D0709]/70 to-transparent" />
               
               <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 text-left max-w-2xl">
                 <span className="text-[#CDB7A3] font-elegant text-xs md:text-sm tracking-[0.3em] uppercase mb-3 block font-semibold">
