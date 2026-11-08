@@ -2294,7 +2294,7 @@ export default function ReunionSecretPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-14 break-keep">
-                  <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     CORE DIFFERENTIATION
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4]">
@@ -2302,7 +2302,8 @@ export default function ReunionSecretPage() {
                     《재회비방》은 무엇이 다른가?
                   </h2>
                   <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
-                    감정적 매달림이나 억지 위로를 넘어, 관계의 프레임을 역전시키고 상대의 무의식에 후폭풍을 심는 3대 핵심 차별화
+                    감정적 매달림이나 억지 위로를 넘어, 관계의 프레임을 역전시키고<br />
+                    상대의 무의식에 후폭풍을 심는 3대 핵심 차별화
                   </p>
                 </div>
 
