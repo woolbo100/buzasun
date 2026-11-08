@@ -99,6 +99,64 @@ function ReunionBadge({
   )
 }
 
+// 🖼️ 실전 체감 사례 이미지 슬롯 컴포넌트
+function ReunionCaseImageSlot({
+  src,
+  alt,
+  placeholderText,
+  className = "",
+}: {
+  src: string
+  alt: string
+  placeholderText: string
+  className?: string
+}) {
+  const [hasError, setHasError] = useState(false)
+
+  return (
+    <div className={`relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-2xl bg-[#23131A] transition-all duration-300 ${className}`}>
+      {!hasError ? (
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover transition-opacity duration-300"
+          onError={() => setHasError(true)}
+        />
+      ) : (
+        <div
+          className="w-full h-full flex flex-col items-center justify-center p-8 text-center space-y-4"
+          style={{
+            background: 'radial-gradient(ellipse at 50% 35%, rgba(86, 43, 59, 0.45) 0%, rgba(35, 19, 26, 0.95) 100%)',
+          }}
+        >
+          <div className="w-14 h-14 rounded-2xl bg-[#462D38]/60 border border-[#B49A70]/50 flex items-center justify-center text-[#B59C88] shadow-md">
+            <ImageIcon className="w-7 h-7 text-[#C2A477]" />
+          </div>
+          <div className="space-y-2 max-w-xs">
+            <span
+              className="inline-flex items-center justify-center py-[4px] px-[10px] rounded-[6px] text-xs font-semibold text-[#F5E6DA]"
+              style={{
+                background: '#563743',
+                border: '1px solid #A78383',
+              }}
+            >
+              실전 체감 사례
+            </span>
+            <p className="text-sm font-elegant text-[#FAF7F2] font-medium leading-relaxed break-keep">
+              {alt}
+            </p>
+            <p className="text-xs text-[#EDE6DA]/60 font-light leading-relaxed break-keep">
+              {placeholderText}
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 // 🖼️ 교체형 이미지 슬롯 컴포넌트
 // (로즈골드/샴페인골드 #B49A70 테두리와 깊은 버건디 배경의 고급 플레이스홀더 제공)
 function HybridImageSlot({
@@ -336,35 +394,71 @@ export default function ReunionSecretPage() {
     setOpenFaq(openFaq === index ? null : index)
   }
 
-  // 실전 체감 사례 슬라이더 인덱스 관리 (비노출 상태로 준비)
-  const [reviewIndex, setReviewIndex] = useState(0)
-  const reviewCards = [
+  // 🌟 실전 체감 사례 슬라이드 데이터 및 인덱스 관리
+  const [caseSlideIndex, setCaseSlideIndex] = useState(0)
+  const transformationSlides = [
     {
       id: 1,
-      badge: "사례 01 · 3주 만의 차단 해제",
-      quote: "장문 카톡 보냈다가 차단당해서 하늘이 무너졌는데, 비방대로 공백기 갖고 프로필 바꿨더니 상대가 먼저 차단 풀고 '잘 지내?' 연락 왔습니다.",
-      tag: "#차단해제 #쿨엔딩효과"
+      title: "연락 충동과 감정 회복",
+      image: "/image/reunion-secret/reunion-case-01.webp",
+      imagePlaceholder: "연락 충동: 한옥 창가, 휴대전화를 내려놓은 여인, 은은한 달빛, 버건디 실크",
+      cases: [
+        {
+          num: "사례 01 · 연락 충동",
+          tag: "#연락충동 #감정회복",
+          quote: "상대의 프로필을 확인하고 연락하고 싶은 순간, 즉각 반응하기보다 내 감정을 먼저 정리하는 연습."
+        },
+        {
+          num: "사례 02 · 자존감 회복",
+          tag: "#자존감회복 #관계중심",
+          quote: "이별의 원인을 모두 내 탓으로 돌리던 태도에서 벗어나, 관계를 조금 더 객관적으로 바라보는 변화."
+        }
+      ]
     },
     {
       id: 2,
-      badge: "사례 02 · 환승 후폭풍 역전",
-      quote: "다른 사람 만나러 간다며 잔인하게 버려졌는데, 앵커링 치트키 쓰고 한 달 만에 상대에게서 장문의 후회 카톡이 쏟아졌습니다.",
-      tag: "#환승역전 #후폭풍유도"
+      title: "공백기와 재접촉",
+      image: "/image/reunion-secret/reunion-case-02.webp",
+      imagePlaceholder: "공백기: 조용한 서책과 모란꽃, 따뜻한 촛불, 자신을 돌보는 시간",
+      cases: [
+        {
+          num: "사례 03 · 공백기 설계",
+          tag: "#공백기 #관계거리",
+          quote: "막연히 기다리는 시간이 아니라, 감정과 일상을 회복하기 위한 공백기 실천."
+        },
+        {
+          num: "사례 04 · 재접촉 판단",
+          tag: "#재접촉 #대화전략",
+          quote: "상대의 반응에 휘둘리지 않고, 연락의 필요성과 시점을 차분히 판단하는 연습."
+        }
+      ]
     },
     {
       id: 3,
-      badge: "사례 03 · 1년 장기 이별 극복",
-      quote: "1년 동안 잊지 못해 고통스러웠는데, 내 에너지를 회수하고 나니 상대방이 먼저 술 먹고 전화 와서 붙잡았습니다.",
-      tag: "#에너지회수 #프레임역전"
+      title: "반복 패턴과 관계 재정립",
+      image: "/image/reunion-secret/reunion-case-03.webp",
+      imagePlaceholder: "관계 재정립: 단정한 와인빛 한복을 입은 여인, 열린 창과 새벽빛, 평온한 분위기",
+      cases: [
+        {
+          num: "사례 05 · 반복 패턴 인식",
+          tag: "#관계패턴 #자기이해",
+          quote: "불안할수록 더 매달리던 관계 패턴을 알아차리고, 다른 선택을 시도하는 과정."
+        },
+        {
+          num: "사례 06 · 관계 재정립",
+          tag: "#관계기준 #자기존중",
+          quote: "재회를 원하는 마음과 별개로, 내가 지켜야 할 관계의 기준을 분명히 세우는 변화."
+        }
+      ]
     }
   ]
 
-  const nextReview = () => {
-    setReviewIndex((prev) => (prev + 1) % reviewCards.length)
+  const nextCaseSlide = () => {
+    setCaseSlideIndex((prev) => (prev + 1) % transformationSlides.length)
   }
 
-  const prevReview = () => {
-    setReviewIndex((prev) => (prev - 1 + reviewCards.length) % reviewCards.length)
+  const prevCaseSlide = () => {
+    setCaseSlideIndex((prev) => (prev - 1 + transformationSlides.length) % transformationSlides.length)
   }
 
   // 구매 버튼 클릭 핸들러 (기존 결제 흐름 동일 유지)
@@ -2782,63 +2876,105 @@ export default function ReunionSecretPage() {
             <RedThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 17: 실전 사례·후기 영역 (비노출 상태로 준비)
-                - 실제 검증된 콘텐츠가 확보될 때까지 비노출(false &&)로 유지
+                Section 17: REAL LIFE TRANSFORMATIONS (실전 체감 사례)
                ═══════════════════════════════════════════════════════════════ */}
-            {false && (
-              <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
-                <Reveal>
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
-                    <div className="lg:col-span-5 relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-2xl bg-black/40 flex items-center justify-center">
-                      <HybridImageSlot assetKey="review" className="w-full h-full" />
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 break-keep">
+                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                    REAL LIFE TRANSFORMATIONS
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
+                    실전 체감 사례
+                  </h2>
+                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
+                    이별 후 무너진 중심을 회복하고, 반복되던 관계의 패턴을 바꾸는 구체적인 실천 장면을 살펴보세요.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+                  {/* 좌측: 실전 체감 사례 이미지 슬롯 (aspect-[3/4]) */}
+                  <div className="lg:col-span-5 flex flex-col justify-center">
+                    <ReunionCaseImageSlot
+                      src={transformationSlides[caseSlideIndex].image}
+                      alt={transformationSlides[caseSlideIndex].title}
+                      placeholderText={transformationSlides[caseSlideIndex].imagePlaceholder}
+                    />
+                  </div>
+
+                  {/* 우측: 사례 카드 영역 (상하 2개 카드 + 하단 컨트롤러) */}
+                  <div className="lg:col-span-7 flex flex-col justify-between space-y-5 lg:space-y-6">
+                    {/* 상하 사례 카드 2개 묶음 */}
+                    <div className="flex-1 flex flex-col gap-4 sm:gap-5 justify-between">
+                      {transformationSlides[caseSlideIndex].cases.map((cItem, cIdx) => (
+                        <div
+                          key={cIdx}
+                          className="flex-1 p-6 sm:p-7 md:p-8 rounded-2xl md:rounded-3xl border border-[#B49A70]/25 shadow-lg relative overflow-hidden flex flex-col justify-center space-y-3.5 transition-all duration-300 min-h-[160px] md:min-h-[180px] hover:-translate-y-1 hover:border-[#C2A477]/40"
+                          style={{
+                            background: 'linear-gradient(145deg, rgba(49, 29, 37, 0.72), rgba(35, 23, 30, 0.82))',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
+                          }}
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <span
+                              className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-semibold whitespace-nowrap shadow-sm tracking-wide"
+                              style={{
+                                background: '#563743',
+                                border: '1px solid #A78383',
+                                color: '#F5E6DA',
+                                lineHeight: 1.3,
+                              }}
+                            >
+                              {cItem.num}
+                            </span>
+                            <span className="text-xs text-[#C2A477]/70 font-mono">
+                              {cItem.tag}
+                            </span>
+                          </div>
+                          <p className="text-base sm:text-lg md:text-[18px] font-elegant font-medium text-white leading-relaxed break-keep">
+                            &ldquo;{cItem.quote}&rdquo;
+                          </p>
+                        </div>
+                      ))}
                     </div>
 
-                    <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
-                      <div className="space-y-4">
-                        <span className="text-xs font-mono font-bold text-[#C2A477] uppercase tracking-wider block">
-                          REAL TRANSFORMATION
-                        </span>
-                        <h3 className="text-2xl md:text-3xl font-elegant font-bold text-white">
-                          실전 재회 후폭풍 사례
-                        </h3>
-                        <p className="text-sm text-[#EDE6DA]/80 leading-relaxed font-light">
-                          {reviewCards[reviewIndex].badge}
-                        </p>
+                    {/* 하단 컨트롤러: 표시 점(인디케이터) + 전환 화살표 버튼 */}
+                    <div className="flex items-center justify-between pt-1 sm:pt-2 px-1">
+                      <div className="flex items-center gap-2">
+                        {transformationSlides.map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setCaseSlideIndex(idx)}
+                            className={`h-2 rounded-full transition-all cursor-pointer ${caseSlideIndex === idx ? 'w-6 bg-[#C2A477]' : 'w-2 bg-white/20'
+                              }`}
+                            aria-label={`사례 슬라이드 ${idx + 1} 보기`}
+                          />
+                        ))}
                       </div>
 
-                      <div className="p-7 rounded-2xl bg-[#542638]/60 border border-[#B49A70]/30 space-y-3">
-                        <p className="text-lg md:text-xl font-elegant font-medium text-[#FAF7F2] leading-relaxed break-keep">
-                          &ldquo;{reviewCards[reviewIndex].quote}&rdquo;
-                        </p>
-                        <span className="text-xs text-[#C2A477] font-mono">
-                          {reviewCards[reviewIndex].tag}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center gap-3 pt-2">
+                      <div className="flex items-center gap-2">
                         <button
                           type="button"
-                          onClick={prevReview}
-                          className="p-3 rounded-full border border-[#B49A70]/40 text-[#FAF7F2] hover:bg-[#542638]/60 transition-colors"
+                          onClick={prevCaseSlide}
+                          className="p-2.5 rounded-full border border-white/10 hover:border-[#B49A70]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all cursor-pointer"
+                          aria-label="이전 사례"
                         >
-                          <ChevronLeft className="w-5 h-5" />
+                          <ChevronLeft className="w-4 h-4" />
                         </button>
-                        <span className="text-sm font-mono text-[#C2A477]">
-                          {reviewIndex + 1} / {reviewCards.length}
-                        </span>
                         <button
                           type="button"
-                          onClick={nextReview}
-                          className="p-3 rounded-full border border-[#B49A70]/40 text-[#FAF7F2] hover:bg-[#542638]/60 transition-colors"
+                          onClick={nextCaseSlide}
+                          className="p-2.5 rounded-full border border-white/10 hover:border-[#B49A70]/50 bg-white/[0.02] hover:bg-white/[0.05] text-[#EDE6DA] transition-all cursor-pointer"
+                          aria-label="다음 사례"
                         >
-                          <ChevronRight className="w-5 h-5" />
+                          <ChevronRight className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
                   </div>
-                </Reveal>
-              </section>
-            )}
+                </div>
+              </Reveal>
+            </section>
 
             {/* ═══════════════════════════════════════════════════════════════
                 Section 18: Comparison Table (가치 비교 카드)
