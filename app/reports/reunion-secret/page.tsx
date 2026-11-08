@@ -1152,11 +1152,11 @@ export default function ReunionSecretPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto space-y-[48px] md:space-y-[80px]">
               <Reveal>
                 <div className="space-y-6 md:space-y-8">
-                  <div className="text-center max-w-3xl mx-auto space-y-4">
+                  <div className="text-center max-w-3xl mx-auto space-y-3">
                     <span className="text-[#C2A477] font-elegant tracking-[0.25em] text-[12px] uppercase font-bold block">
                       THE REUNION SECRET
                     </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                    <h2 className="text-[28px] sm:text-[32px] md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
                       왜, <span className="text-[#C2A477]">재회비방</span>인가?
                     </h2>
                   </div>
@@ -1172,15 +1172,15 @@ export default function ReunionSecretPage() {
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
                     }}
                   >
-                    {/* 왼쪽 베이지 한지 영역 위에 배치되는 텍스트 컨테이너 (왼쪽 7% 시작, 너비 52%, 위치 살짝 상단 이동) */}
-                    <div className="w-full h-full flex flex-col justify-center text-left pl-[6.5%] lg:pl-[7.5%] pr-4 -translate-y-2 lg:-translate-y-4">
-                      <div className="w-[52%] max-w-[54%] space-y-3.5 lg:space-y-4 xl:space-y-5">
-                        <h3 className="text-[20px] md:text-[23px] lg:text-[26px] xl:text-[28px] font-elegant font-bold text-[#512733] leading-[1.4] xl:leading-[1.45] break-keep">
+                    {/* 왼쪽 베이지 한지 영역 위에 배치되는 텍스트 컨테이너 (왼쪽 7% 시작, 너비 53%, 위치 살짝 상단 이동) */}
+                    <div className="w-full h-full flex flex-col justify-center text-left pl-[6.5%] lg:pl-[7.5%] pr-4 -translate-y-2 lg:-translate-y-3">
+                      <div className="w-[53%] max-w-[55%] space-y-3 lg:space-y-4">
+                        <h3 className="text-[20px] md:text-[22px] lg:text-[25px] xl:text-[26px] font-elegant font-bold text-[#512733] leading-[1.4] break-keep">
                           &ldquo;진심을 다해 매달렸는데 왜 더 멀어졌을까요?<br />
                           이별 후에도 <span className="text-[#713F4C] font-extrabold">&lsquo;전략과 심리&rsquo;</span>가 필요했던 이유&rdquo;
                         </h3>
 
-                        <div className="text-[15px] md:text-[16px] lg:text-[18px] text-[#453536] leading-[1.7] lg:leading-[1.75] font-normal space-y-2.5 lg:space-y-3 break-keep">
+                        <div className="text-[18px] text-[#453536] leading-[1.7] lg:leading-[1.75] font-normal space-y-2.5 lg:space-y-3 break-keep">
                           <p>
                             연애 중의 다정함과 이별 후의 재회는 작동하는 무의식의 문법이 완전히 다릅니다. 이별하는 순간, 상대방의 뇌 속에서 당신은 &apos;사랑하는 연인&apos;에서 &apos;나의 자유를 옭아매는 부담스러운 존재&apos;로 재분류됩니다.
                           </p>
@@ -1212,12 +1212,12 @@ export default function ReunionSecretPage() {
                     />
                     {/* 하단 한지 텍스트 영역 (가독성 100% 확보) */}
                     <div className="p-6 text-left break-keep space-y-4">
-                      <h3 className="text-[19px] sm:text-[22px] font-elegant font-bold text-[#512733] leading-[1.45] break-keep">
+                      <h3 className="text-[20px] sm:text-[22px] font-elegant font-bold text-[#512733] leading-[1.45] break-keep">
                         &ldquo;진심을 다해 매달렸는데 왜 더 멀어졌을까요?<br />
                         이별 후에도 <span className="text-[#713F4C] font-extrabold">&lsquo;전략과 심리&rsquo;</span>가 필요했던 이유&rdquo;
                       </h3>
 
-                      <div className="text-[16px] sm:text-[18px] text-[#453536] leading-[1.75] font-normal space-y-3 break-keep">
+                      <div className="text-[18px] text-[#453536] leading-[1.75] font-normal space-y-3 break-keep">
                         <p>
                           연애 중의 다정함과 이별 후의 재회는 작동하는 무의식의 문법이 완전히 다릅니다. 이별하는 순간, 상대방의 뇌 속에서 당신은 &apos;사랑하는 연인&apos;에서 &apos;나의 자유를 옭아매는 부담스러운 존재&apos;로 재분류됩니다.
                         </p>
