@@ -541,14 +541,11 @@ export default function ReunionSecretPage() {
                           <ReunionBadge>
                             재회비방 3종 올인원 세트
                           </ReunionBadge>
-                          <span className="text-xs text-[#C2A477] font-light">
-                            PDF 전자책 3종 + 회향연부 모바일 부적
-                          </span>
                         </div>
 
-                        <h2 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-tight break-keep">
-                          감정의 을에서 벗어나,<br />
-                          상대가 먼저 찾아오게 만드는 <span className="text-[#C2A477]">재회의 정석</span>
+                        <h2 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                          을(乙)의 자리를 끝내고,<br />
+                          상대가 먼저 찾게 만드는 <span className="text-[#C2A477]">재회의 정석</span>
                         </h2>
 
                         <div className="text-sm md:text-base text-[#EDE6DA]/85 space-y-2 leading-relaxed font-light">
