@@ -55,7 +55,7 @@ const productData = {
   regularPrice: 79000,
   discountRate: '76% OFF',
 
-  topBannerImage: '/image/reunion-secret/reunion-secret-hero.webp',
+  topBannerImage: '/image/reunion-secret/reunion-secret-hero.webp?v=20261108_1',
   heroImage: '/image/reunion-secret/r9.webp',
   overviewImage: '/image/reunion-secret/r2.webp',
   recommendedImage: '/image/reunion-secret/r3.webp',

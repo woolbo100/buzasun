@@ -18,7 +18,7 @@ export const reunionSecretAssets: Record<string, ReunionSecretAssetItem> = {
   // 1. Hero: 패키지 전체 목업
   hero: {
     id: 'hero',
-    src: 'hero_mockup_placeholder.png',
+    src: '/image/reunion-secret/reunion-secret-hero.webp?v=20261108_1',
     alt: '재회비방 3종 패키지 + 부적 3D 목업',
     aspectRatio: 'aspect-video',
     objectFit: 'contain',
