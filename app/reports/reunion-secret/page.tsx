@@ -2277,7 +2277,7 @@ export default function ReunionSecretPage() {
                         PACKAGE OVERVIEW
                       </span>
                       <h4 className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
-                        PDF 3종 (본편 + 행동 매뉴얼 + 메시지 33선) + 모바일 부적
+                        원리바이블 본편 + 실전부록 1 + 실전부록 2 + 모바일 부적
                       </h4>
                       <div className="text-sm md:text-base text-[#EDE6DA]/90 font-light space-y-0.5 leading-[1.6]">
                         <p>재회비방 4 in 1 마스터 패키지</p>
