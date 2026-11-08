@@ -1198,17 +1198,19 @@ export default function ReunionSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="space-y-12">
-                  <div className="text-center max-w-3xl mx-auto space-y-4">
-                    <span className="text-[#CDB7A3] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
-                      RECOMMENDED FOR
-                    </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
-                      이런 분께 <span className="text-[#CDB7A3]">추천합니다</span>
-                    </h2>
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                  <div className="space-y-6 md:space-y-8 text-left break-keep">
+                    <div>
+                      <span className="text-[#CDB7A3] font-elegant tracking-[0.25em] text-xs uppercase font-bold block mb-2">
+                        RECOMMENDED FOR
+                      </span>
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
+                        이런 분께 <span className="text-[#CDB7A3]">추천합니다</span>
+                      </h2>
+                    </div>
 
                     <RecommendedForCards
-                      textClassName="text-[16px] md:text-[18px]"
+                      textClassName="text-[15px] sm:text-[16px] md:text-[17px]"
                       items={[
                         "이별 후 상대에게 연락하고 싶지만 어떤 말을 해야 할지 몰라 불안한 분",
                         "상대가 차단했거나 읽씹, 안읽씹을 반복해 어떻게 해야 할지 막막한 분",
@@ -1217,6 +1219,17 @@ export default function ReunionSecretPage() {
                         "재회를 원하지만 예전처럼 매달리는 내가 되고 싶지는 않은 분",
                         "상대를 되찾기 전에 먼저 무너진 나의 중심과 가치를 바로잡고 싶은 분"
                       ]}
+                    />
+                  </div>
+
+                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl">
+                    <Image
+                      src={productData.recommendedImage}
+                      alt="재회비방 이런 분께 추천합니다 안내 이미지"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover object-center"
+                      priority
                     />
                   </div>
                 </div>
