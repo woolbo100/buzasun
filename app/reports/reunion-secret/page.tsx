@@ -1630,9 +1630,9 @@ export default function ReunionSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-center">
-                  {/* 왼쪽: 기존 '이런 분께 추천합니다' 제목 및 추천 카드 (약 58% 너비) */}
-                  <div className="lg:col-span-7 space-y-6 md:space-y-8 text-left break-keep">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+                  {/* 왼쪽: '이런 분께 추천합니다' 제목 및 추천 카드 (풍요비책과 동일한 1:1 비율) */}
+                  <div className="space-y-6 md:space-y-8 text-left break-keep">
                     <div>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
                         이런 분께 <span className="text-[#C2A477]">추천합니다</span>
@@ -1644,11 +1644,11 @@ export default function ReunionSecretPage() {
                         "이별 후 상대에게 연락하고 싶지만 어떤 말을 해야 할지 몰라 불안한 분",
                         "상대가 차단했거나 읽씹, 안읽씹을 반복해 어떻게 해야 할지 막막한 분",
                         "지금 연락해야 하는지, 더 기다려야 하는지 판단이 어려운 분",
-                        "권태기, 반복 다툼, 집착, 신뢰 상실, 환승 의심 등 이별 원인을 제대로 진단하고 싶은 분",
+                        "권태기, 반복 다툼, 집착, 환승 의심 등 이별 원인을 제대로 진단하고 싶은 분",
                         "재회를 원하지만 예전처럼 매달리는 내가 되고 싶지는 않은 분",
                         "상대를 되찾기 전에 먼저 무너진 나의 중심과 가치를 바로잡고 싶은 분",
                         "이별 후 상대의 SNS나 근황을 반복해서 확인하며 감정이 흔들리는 분",
-                        "재회 가능성만 기다리기보다 관계의 반복 패턴을 이해하고 새로운 시작을 준비하고 싶은 분"
+                        "재회 가능성만 기다리기보다 관계를 이해하고 새로운 시작을 준비하고 싶은 분"
                       ].map((item, idx) => (
                         <div
                           key={idx}
@@ -1686,15 +1686,15 @@ export default function ReunionSecretPage() {
                     </div>
                   </div>
 
-                  {/* 오른쪽: 《재회비방》 3:4 세로형 브랜드 포스터 이미지 (약 42% 너비) */}
-                  <div className="lg:col-span-5 w-full flex justify-center">
-                    <div className="relative w-full max-w-[440px] sm:max-w-[480px] aspect-[3/4] overflow-hidden rounded-[28px] md:rounded-[36px] border border-[#B49A70]/30 shadow-xl bg-black/20">
+                  {/* 오른쪽: 《재회비방》 3:4 세로형 브랜드 포스터 이미지 (풍요비책과 동일하게 1:1 비율 및 최대 크기 확장) */}
+                  <div className="w-full flex justify-center">
+                    <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#B49A70]/30 shadow-2xl">
                       <Image
                         src={productData.recommendedImage}
                         alt="재회를 바라더라도, 나를 지키는 기준은 필요합니다. 재회비방"
                         fill
-                        sizes="(max-width: 1024px) 100vw, 45vw"
-                        className="object-contain object-center"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-center"
                         priority
                       />
                     </div>
