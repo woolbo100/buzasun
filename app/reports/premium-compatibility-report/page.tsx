@@ -14,6 +14,9 @@ import { addToCart } from '@/hooks/useCart'
 import RecommendedForCards from '@/components/RecommendedForCards'
 
 // 새로 추가된 궁합 전용 18개 설득 블록 독립 컴포넌트들
+import CompatibilityCoreDifferentiation from '@/components/reports/compatibility-report/CompatibilityCoreDifferentiation'
+import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
+import CompatibilityPrescriptionSample from '@/components/reports/compatibility-report/CompatibilityPrescriptionSample'
 import CompatibilityPatternChecklist from '@/components/reports/compatibility-report/CompatibilityPatternChecklist'
 import CompatibilityAdviceComparison from '@/components/reports/compatibility-report/CompatibilityAdviceComparison'
 import CompatibilityRelationshipDiagram from '@/components/reports/compatibility-report/CompatibilityRelationshipDiagram'
@@ -94,16 +97,20 @@ export default function PremiumCompatibilityReportPage() {
                   프리미엄 <span className="gradient-text-reunion">궁합 리포트</span>
                 </h1>
 
-                {/* 추가 헤드라인 및 서브 카피 */}
-                <div className="max-w-2xl mx-auto mb-12">
-                  <p className="text-xl md:text-[28px] text-white font-elegant font-medium leading-[1.3] break-keep">
-                    &ldquo;서로 사랑하는데,<br />
-                    왜 같은 문제로 계속 부딪힐까요?&rdquo;
+                {/* 핵심 후킹 카피 — 날카롭고 강렬한 질문 */}
+                <div className="max-w-3xl mx-auto mb-12">
+                  <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
+                    &ldquo;분명 사랑하는데,<br className="hidden sm:inline" />
+                    왜 우리는 같은 이유로 <span className="gradient-text-reunion">계속 상처를 주고받을까?</span>&rdquo;
                   </p>
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 mt-4 break-keep font-light leading-relaxed">
-                    끌림의 이유부터 반복되는 갈등, 서로의 차이를 이해하는 방법과<br className="hidden sm:inline" />
-                    관계를 조율하는 지혜로운 실천 방향까지.
-                  </p>
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+                    <p>한 사람은 대화를 원하고, 다른 사람은 입을 닫는다.</p>
+                    <p>한 사람은 확인받고 싶어 하고, 다른 사람은 간섭받는다고 느낀다.</p>
+                    <p>같은 사건인데 서로가 받아들이는 의미는 전혀 다르다.</p>
+                    <p className="pt-2 text-[#D8BB94] font-medium leading-relaxed">
+                      사랑이 부족해서가 아니라, 서로의 반응 방식이 충돌하고 있을 수 있습니다.
+                    </p>
+                  </div>
                 </div>
                 
                 {/* 메인 히어로 이미지 - 기존 p1.webp 에셋 보존 */}
@@ -158,6 +165,11 @@ export default function PremiumCompatibilityReportPage() {
             {/* SECTION 02. 관계 반복 패턴 체크리스트 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityPatternChecklist />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. 궁합이 좋다는 말보다 중요한 것은 왜 부딪히는지 아는 것 (차별화) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <CompatibilityCoreDifferentiation />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 03. 일반적인 연애 조언이 충분하지 않은 이유 */}
@@ -271,9 +283,19 @@ export default function PremiumCompatibilityReportPage() {
             <CompatibilityComparisonTable />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. 당신은 아직도 미래가 어떻게 될지만 묻고 있습니까? (패러다임 전환) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <QuestionShiftComparison theme="compatibility" />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 08. 프리미엄 궁합 리포트 목차 공개 (7 PART & PART 07 강조) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityReportTableOfContents />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. PART 07 실제 행동 대화 처방전 샘플 영역 (구체적 소통 솔루션) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <CompatibilityPrescriptionSample />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 09. 맞춤 리포트 제작 과정 */}

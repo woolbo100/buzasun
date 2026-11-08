@@ -10,6 +10,9 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import RecommendedForCards from '@/components/RecommendedForCards'
 
 // 새로 추가된 풍요 리포트 전용 18개 설득 블록 독립 컴포넌트들
+import WealthCoreDifferentiation from '@/components/reports/abundance-report/WealthCoreDifferentiation'
+import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
+import WealthPrescriptionSample from '@/components/reports/abundance-report/WealthPrescriptionSample'
 import WealthPatternChecklist from '@/components/reports/abundance-report/WealthPatternChecklist'
 import WealthAdviceComparison from '@/components/reports/abundance-report/WealthAdviceComparison'
 import WealthPatternFlow from '@/components/reports/abundance-report/WealthPatternFlow'
@@ -132,16 +135,20 @@ export default function AbundanceReportPage() {
                   선천코드 <span className="gradient-text-abundance">풍요 리포트</span>
                 </h1>
 
-                {/* 핵심 후킹 카피 */}
-                <div className="max-w-2xl mx-auto mb-12">
-                  <p className="text-xl md:text-[28px] text-white font-elegant font-medium leading-[1.3] break-keep">
-                    &ldquo;벌어도 같은 자리에서 새어나간다면,<br />
-                    돈이 아니라 반복되는 선택을 살펴볼 때입니다.&rdquo;
+                {/* 핵심 후킹 카피 — 날카롭고 강렬한 질문 */}
+                <div className="max-w-3xl mx-auto mb-12">
+                  <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
+                    &ldquo;남들보다 열심히 사는데,<br className="hidden sm:inline" />
+                    왜 내 통장은 <span className="gradient-text-abundance">늘 제자리</span>일까?&rdquo;
                   </p>
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 mt-4 break-keep font-light leading-relaxed">
-                    타고난 재물 성향과 현실에서 반복되는 돈의 패턴을 함께 읽고,<br className="hidden sm:inline" />
-                    나에게 어울리는 수입 방식과 실천 방향을 정리한 1:1 맞춤 리포트.
-                  </p>
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+                    <p>돈을 벌 기회가 없었던 것도 아니다. 분명 수입은 있었고, 누구보다 부지런히 움직였다.</p>
+                    <p>그런데 정작 내 손에 남은 것은 생각보다 적다.</p>
+                    <p className="pt-2 text-[#C6A477] font-medium leading-relaxed">
+                      혹시 당신은 돈을 버는 방법만 배웠지,<br className="hidden sm:inline" />
+                      돈 앞에서 반복되는 자신의 선택은 한 번도 분석하지 않았던 것은 아닐까요?
+                    </p>
+                  </div>
                 </div>
                 
                 {/* 메인 히어로 이미지 - 기존 a1.webp 에셋 보존 */}
@@ -184,6 +191,11 @@ export default function AbundanceReportPage() {
             {/* SECTION 02. 돈의 반복 패턴 체크리스트 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthPatternChecklist />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. 돈이 부족한 이유를 수입에서만 찾지 마라 (차별화 섹션) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthCoreDifferentiation />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 03. 왜 일반적인 성공 공식이 맞지 않았을까? */}
@@ -290,9 +302,19 @@ export default function AbundanceReportPage() {
             <WealthComparisonTable />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. 당신은 아직도 미래가 어떻게 될지만 묻고 있습니까? (패러다임 전환) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <QuestionShiftComparison theme="abundance" />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 08. 풍요 리포트 목차 공개 (7 PART & PART 07 강조) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthReportTableOfContents />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. PART 07 실제 행동 처방전 샘플 영역 (구체적 실천 솔루션) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPrescriptionSample />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 09. 개인 맞춤 리포트 제작 과정 */}

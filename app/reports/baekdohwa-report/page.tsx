@@ -14,6 +14,9 @@ import { addToCart } from '@/hooks/useCart'
 import RecommendedForCards from '@/components/RecommendedForCards'
 
 // 새로 추가된 18개 설득 블록 독립 컴포넌트들
+import LoveCoreDifferentiation from '@/components/reports/baekdohwa-report/LoveCoreDifferentiation'
+import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
+import LovePrescriptionSample from '@/components/reports/baekdohwa-report/LovePrescriptionSample'
 import LovePatternChecklist from '@/components/reports/baekdohwa-report/LovePatternChecklist'
 import GeneralAdviceComparison from '@/components/reports/baekdohwa-report/GeneralAdviceComparison'
 import RelationshipPatternFlow from '@/components/reports/baekdohwa-report/RelationshipPatternFlow'
@@ -94,16 +97,20 @@ export default function BaekdohwaReportPage() {
                   선천코드 <span className="gradient-text-love">연애 리포트</span>
                 </h1>
 
-                {/* 핵심 후킹 카피 */}
-                <div className="max-w-2xl mx-auto mb-12">
-                  <p className="text-xl md:text-[28px] text-white font-elegant font-medium leading-[1.3] break-keep">
-                    &ldquo;같은 자리에서 계속 넘어졌다면,<br />
-                    걸음이 아니라 지도가 문제였습니다.&rdquo;
+                {/* 핵심 후킹 카피 — 날카롭고 강렬한 질문 */}
+                <div className="max-w-3xl mx-auto mb-12">
+                  <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
+                    &ldquo;남자만 바뀌었을 뿐,<br className="hidden sm:inline" />
+                    당신의 연애는 왜 <span className="gradient-text-love">매번 같은 결말</span>을 맞을까?&rdquo;
                   </p>
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 mt-4 break-keep font-light leading-relaxed">
-                    타고난 사랑의 구조와 반복되는 관계 패턴을 함께 읽고,<br className="hidden sm:inline" />
-                    나에게 필요한 선택과 실천의 방향을 발견하는 1:1 맞춤 리포트.
-                  </p>
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+                    <p>처음에는 다정했다. 이번만큼은 다를 거라 믿었다.</p>
+                    <p>그런데 어느 순간부터 또 내가 기다리고, 내가 불안해하고, 내가 관계를 붙잡고 있다.</p>
+                    <p className="pt-2 text-[#E6BFA9] font-medium leading-relaxed">
+                      문제는 이번에 만난 남자 한 사람만이 아닐 수 있습니다.<br className="hidden sm:inline" />
+                      당신이 사랑을 선택하고 반응하는 방식에도 반복되는 패턴이 있을지 모릅니다.
+                    </p>
+                  </div>
                 </div>
                 
                 {/* 메인 히어로 이미지 - 기존 에셋 보존 */}
@@ -155,6 +162,11 @@ export default function BaekdohwaReportPage() {
             {/* SECTION 02. 반복되는 연애 패턴 체크리스트 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <LovePatternChecklist />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. 사람을 바꾸는 것만으로는 같은 연애가 끝나지 않는다 (차별화 섹션) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <LoveCoreDifferentiation />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 03. 일반적인 연애 조언이 맞지 않았던 이유 */}
@@ -255,9 +267,19 @@ export default function BaekdohwaReportPage() {
             <ReportComparisonTable />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. 당신은 아직도 미래가 어떻게 될지만 묻고 있습니까? (패러다임 전환) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <QuestionShiftComparison theme="love" />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 08. 목차 공개 — 가장 중요한 핵심 영역 (7 PART & PART 07 강조) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <LoveReportTableOfContents />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. PART 07 실제 행동 처방전 샘플 영역 (구체적 실천 솔루션) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <LovePrescriptionSample />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 09. 맞춤 리포트 제작 과정 */}
