@@ -3208,9 +3208,11 @@ export default function ReunionSecretPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="gungjung-glass rounded-3xl border border-[#B49A70]/30 p-8 sm:p-10 md:p-12 text-left space-y-6"
+                  className="rounded-3xl p-8 sm:p-10 md:p-12 text-left space-y-6 backdrop-blur-md transition-all duration-300"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.75) 0%, rgba(48, 23, 34, 0.90) 100%)'
+                    background: 'linear-gradient(135deg, rgba(70, 43, 48, 0.08) 0%, rgba(49, 30, 39, 0.12) 100%)',
+                    border: '1px solid rgba(177, 143, 119, 0.18)',
+                    boxShadow: 'none',
                   }}
                 >
                   <div className="space-y-2 border-b border-white/10 pb-4">
@@ -3218,24 +3220,50 @@ export default function ReunionSecretPage() {
                       NOTICE
                     </span>
                     <h3 className="text-xl sm:text-2xl font-elegant font-bold text-[#FAF7F2]">
-                      구매 전 안내사항
+                      구매 전 안내
                     </h3>
                   </div>
 
-                  <div className="space-y-4 text-xs sm:text-sm text-[#EDE6DA]/75 leading-relaxed font-light">
-                    <p>
-                      • 본 상품은 실물 종이책이 아닌 <strong>PDF 디지털 전자책</strong> 및 <strong>디지털 이미지 파일</strong> 상품입니다. 결제 즉시 사이트 내 마이페이지에서 평생 무제한으로 다운로드하여 열람하실 수 있습니다.
-                    </p>
-                    <p>
-                      • 디지털 콘텐츠의 특성상 파일이 열람 또는 다운로드된 이후에는 전자상거래법에 따라 단순 변심에 의한 환불이 제한될 수 있습니다.
-                    </p>
-                    <p>
-                      • 본 전자책의 모든 저작권은 백도화에 있으며, 무단 복제, 배포, 재판매, 공유 시 저작권법에 의해 민·형사상 법적 책임을 질 수 있습니다.
-                    </p>
-                    <p>
-                      • 결제 또는 다운로드 관련 문의 사항은 고객센터를 통해 신속하게 도움을 받으실 수 있습니다.
-                    </p>
-                  </div>
+                  <ul className="space-y-3.5 text-xs sm:text-sm md:text-[15px] text-[#EDE6DA]/85 leading-relaxed font-light break-keep">
+                    <li className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C2A477] shrink-0" />
+                      <span>본 상품은 실물 배송이 없는 디지털 전자책(PDF 파일) 상품입니다.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C2A477] shrink-0" />
+                      <span>결제 완료 후 안내된 방식(마이페이지 또는 등록된 이메일)에 따라 즉시 다운로드해 확인하실 수 있습니다.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C2A477] shrink-0" />
+                      <span>디지털 콘텐츠의 특성상 파일이 다운로드되거나 메일로 발송된 이후에는 단순 변심에 의한 환불이 제한될 수 있습니다.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C2A477] shrink-0" />
+                      <span>개인의 관계 상황, 상대방의 의사와 행동, 실천 방식에 따라 배움의 깊이와 체감되는 결과는 다를 수 있습니다.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C2A477] shrink-0" />
+                      <span>본 콘텐츠는 관계 심리의 이해, 자기인식 및 건강한 관계 형성을 돕기 위한 자기계발 콘텐츠이며, 전문적인 심리치료·정신건강 상담·법률 자문을 대체하지 않습니다.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C2A477] shrink-0" />
+                      <span>특정 상대방과의 재회, 연락 재개, 관계 회복 또는 상대방의 감정과 행동 변화를 무조건 보장하지 않습니다.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#C2A477] shrink-0" />
+                      <span>
+                        자세한 취소/환불 기준은 하단의{' '}
+                        <Link href="/terms" className="text-[#C2A477] underline underline-offset-4 hover:text-white transition-colors">
+                          이용약관
+                        </Link>
+                        {' '}및{' '}
+                        <Link href="/refund" className="text-[#C2A477] underline underline-offset-4 hover:text-white transition-colors">
+                          환불정책
+                        </Link>
+                        을 참고해 주시기 바랍니다.
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </Reveal>
             </section>
