@@ -1239,9 +1239,8 @@ export default function ReunionSecretPage() {
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
-                  className="gungjung-glass py-12 px-4 md:px-10 rounded-3xl md:rounded-[40px] border border-[#B49A70]/30"
+                  className="gungjung-glass reunion-transformation-box py-12 px-4 md:px-10 rounded-3xl md:rounded-[40px] transition-all duration-300"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(60, 10, 25, 0.35) 0%, rgba(18, 4, 10, 0.90) 100%)',
                     boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                   }}
                 >
@@ -1289,10 +1288,13 @@ export default function ReunionSecretPage() {
                         key={idx}
                         className="grid grid-cols-1 md:grid-cols-2 gap-3.5 md:gap-4 items-stretch"
                       >
-                        {/* BEFORE 카드 (차분한 로즈코코아 · 다크 퍼플 계열) */}
+                        {/* BEFORE 카드 (다크 브라운 버건디 계열) */}
                         <div
-                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border border-[#4A2430]/70 hover:border-[#8C4D60]/70 transition-all backdrop-blur-md"
-                          style={{ backgroundColor: 'rgba(28, 12, 18, 0.85)' }}
+                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border transition-all duration-300 backdrop-blur-md hover:border-[rgba(161,125,119,0.35)]"
+                          style={{
+                            background: 'linear-gradient(125deg, #211318 0%, #28161D 55%, #24151B 100%)',
+                            borderColor: 'rgba(161, 125, 119, 0.15)'
+                          }}
                         >
                           <span
                             className="w-[68px] shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] border border-[#5E3340] text-[11px] font-serif font-bold leading-none whitespace-nowrap"
@@ -1310,10 +1312,14 @@ export default function ReunionSecretPage() {
                           </div>
                         </div>
 
-                        {/* AFTER 카드 (고급스러운 버건디 · 로즈골드 계열) */}
+                        {/* AFTER 카드 (톤다운 딥 플럼 버건디 계열) */}
                         <div
-                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border border-[#B49A70]/50 shadow-[0_4px_16px_rgba(96,0,24,0.3)] hover:border-[#C2A477]/80 transition-all backdrop-blur-md"
-                          style={{ backgroundColor: 'rgba(65, 12, 28, 0.85)' }}
+                          className="h-full flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl border transition-all duration-300 backdrop-blur-md hover:border-[rgba(179,141,127,0.50)]"
+                          style={{
+                            background: 'linear-gradient(120deg, #472630 0%, #4B2936 52%, #3D2430 100%)',
+                            borderColor: 'rgba(179, 141, 127, 0.28)',
+                            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.35)'
+                          }}
                         >
                           <span
                             className="w-[68px] shrink-0 inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] border border-[#D8C49B] text-[11px] font-serif font-bold leading-none whitespace-nowrap"

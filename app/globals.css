@@ -376,6 +376,28 @@
     ) !important;
   }
 
+  /* 🌌 재회비방 TRANSFORMATION 대형 컨테이너 브라운 플럼 글라스
+     - 퍼플 기운을 완전히 제거하고 Section 3과 동일한 은은한 브라운 플럼 반투명 톤 적용
+     - 앤티크 브라운 테두리로 품격 있는 절제미 구현
+  */
+  .detail-page .gungjung-glass.reunion-transformation-box {
+    background: linear-gradient(
+      135deg,
+      rgba(70, 43, 48, 0.08) 0%,
+      rgba(49, 30, 39, 0.12) 100%
+    ) !important;
+    border: 1px solid rgba(177, 143, 119, 0.18) !important;
+  }
+
+  .detail-page .gungjung-glass.reunion-transformation-box:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(70, 43, 48, 0.12) 0%,
+      rgba(49, 30, 39, 0.16) 100%
+    ) !important;
+    border-color: rgba(177, 143, 119, 0.28) !important;
+  }
+
   /* 🌿 풍요비책 전용 딥 제이드 차콜(#203632) & 다크 틸(#142724) 큰 글라스 컨테이너
      - 연애비급·재회비방 및 공통 영역에 영향 없이 풍요비책(.abundance-detail-page)에만 독립 적용
      - 반투명 먹빛 톤과 배경 블러, 은은한 테두리로 입체감과 깊이감 보존
