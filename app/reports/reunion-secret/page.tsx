@@ -33,7 +33,7 @@ import {
   Heart,
   MessageSquare
 } from 'lucide-react'
-import RecommendedForCards from '@/components/RecommendedForCards'
+import RecommendedForCards, { hanjiFiberSvg } from '@/components/RecommendedForCards'
 import MobileStickyBuyBar from '@/components/MobileStickyBuyBar'
 import { reunionSecretAssets } from './assets'
 
@@ -1272,6 +1272,12 @@ export default function ReunionSecretPage() {
 
                     <RecommendedForCards
                       textClassName="text-[15px] sm:text-[16px] md:text-[17px]"
+                      cardBgColor="#F3E9D8"
+                      cardBorderColor="rgba(197, 168, 140, 0.45)"
+                      checkBgColor="#682438"
+                      checkBorderColor="border-[#8C3A4F]/40"
+                      checkIconColor="text-[#FFF5E8]"
+                      textColor="text-[#2C151D]"
                       items={[
                         "이별 후 상대에게 연락하고 싶지만 어떤 말을 해야 할지 몰라 불안한 분",
                         "상대가 차단했거나 읽씹, 안읽씹을 반복해 어떻게 해야 할지 막막한 분",
@@ -2210,7 +2216,7 @@ export default function ReunionSecretPage() {
                         </p>
                       </div>
 
-                      {/* 1열 4행 슬림 미색 한지 카드 (기존 ‘이렇게 활용해보세요’ 4개 문항 통합 보존) */}
+                      {/* 1열 4행 슬림 미색 한지 카드 (풍요비책 및 이런 분께 추천합니다와 100% 동일한 딥 버건디 체크 및 한지 스타일) */}
                       <div className="flex flex-col gap-2 md:gap-2.5 pt-1">
                         {[
                           {
@@ -2233,20 +2239,34 @@ export default function ReunionSecretPage() {
                           <div
                             key={idx}
                             style={{
-                              backgroundColor: '#F7F1E5',
-                              borderColor: 'rgba(206, 175, 153, 0.55)',
-                              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.85)'
+                              backgroundColor: '#F3E9D8',
+                              backgroundImage: `
+                                radial-gradient(circle at 18% 28%, rgba(240, 230, 212, 0.7) 0%, transparent 45%),
+                                radial-gradient(circle at 82% 72%, rgba(235, 220, 198, 0.7) 0%, transparent 50%),
+                                ${hanjiFiberSvg}
+                              `,
+                              backgroundSize: '100% 100%, 100% 100%, 340px 340px',
+                              backgroundPosition: `0 0, 0 0, ${(idx * 79) % 340}px ${(idx * 113) % 340}px`,
+                              borderColor: 'rgba(197, 168, 140, 0.45)',
+                              boxShadow: '0 3px 10px -2px rgba(35, 20, 30, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95)',
                             }}
-                            className="p-3.5 sm:p-4 rounded-xl border text-left flex items-start gap-3 transition-colors"
+                            className="group relative p-3.5 sm:p-4 md:p-[14px_20px] rounded-[12px] md:rounded-[14px] border flex items-start gap-3.5 md:gap-4 transition-all duration-300 hover:border-[#947852] hover:-translate-y-0.5 hover:shadow-[0_4px_16px_rgba(35,20,30,0.12)] overflow-hidden"
                           >
-                            <div className="w-5 h-5 rounded-full bg-[#600018] flex items-center justify-center shrink-0 mt-0.5">
-                              <Check className="w-3 h-3 text-[#FAF7F2]" />
+                            {/* 딥 버건디 원형 체크 아이콘 (이런 분께 추천합니다와 크기·색상·비율 100% 일치) */}
+                            <div className="shrink-0 mt-0.5 relative z-10">
+                              <div
+                                style={{ backgroundColor: '#682438' }}
+                                className="w-6 h-6 md:w-[26px] md:h-[26px] rounded-full flex items-center justify-center p-1 border border-[#8C3A4F]/40 shadow-none"
+                              >
+                                <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#FFF5E8] stroke-[2.4]" />
+                              </div>
                             </div>
-                            <div className="space-y-0.5 min-w-0">
-                              <h3 className="font-elegant text-[14px] sm:text-[15px] font-bold text-[#2A1810] leading-snug break-keep">
+
+                            <div className="flex flex-col text-left w-full relative z-10 space-y-0.5">
+                              <h3 className="font-elegant text-[15px] sm:text-[16px] font-bold text-[#240A12] leading-snug break-keep">
                                 {item.title}
                               </h3>
-                              <p className="text-[12px] sm:text-[13px] text-[#4A3B32] font-light leading-relaxed break-keep">
+                              <p className="text-[13px] sm:text-[14px] text-[#4A2630] font-normal leading-relaxed break-keep">
                                 {item.desc}
                               </p>
                             </div>
