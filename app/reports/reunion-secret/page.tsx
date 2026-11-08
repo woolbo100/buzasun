@@ -544,12 +544,12 @@ export default function ReunionSecretPage() {
                           </ReunionBadge>
                         </div>
 
-                        <h2 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                        <h2 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] md:leading-[1.65] break-keep">
                           을(乙)의 자리를 끝내고,<br />
                           상대가 먼저 찾게 만드는 <span className="text-[#C2A477]">재회의 정석</span>
                         </h2>
 
-                        <div className="text-sm md:text-base text-[#EDE6DA]/85 space-y-2 leading-relaxed font-light">
+                        <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 leading-[1.8] font-light">
                           <p>
                             이별 후 무너진 감정, 흐트러진 프레임, 반복되는 집착의 패턴을 정리하고 다시 나의 중심을 회복하기 위한 실전 재회 전략서입니다.
                           </p>
