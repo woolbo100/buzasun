@@ -356,6 +356,26 @@
     border-color: rgba(255, 255, 255, 0.15) !important;
   }
 
+  /* 🌸 《재회비방》 Section 3 "붙잡으려 애쓰는 동안, 내 '중심'은 어디에 있었나요?" 큰 반투명 상자 단독 테스트
+     - 다른 영역 및 다른 페이지에 전혀 영향 없이 해당 상자(.reunion-center-test-box)에만 단독 적용
+     - 퍼플 기운을 빼고 배경이 거의 그대로 비치는 초경량 투명 브라운 플럼 그라데이션 적용
+  */
+  .detail-page .gungjung-glass.reunion-center-test-box {
+    background: linear-gradient(
+      135deg,
+      rgba(70, 43, 48, 0.08) 0%,
+      rgba(49, 30, 39, 0.12) 100%
+    ) !important;
+  }
+
+  .detail-page .gungjung-glass.reunion-center-test-box:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(70, 43, 48, 0.12) 0%,
+      rgba(49, 30, 39, 0.16) 100%
+    ) !important;
+  }
+
   /* 🌿 풍요비책 전용 딥 제이드 차콜(#203632) & 다크 틸(#142724) 큰 글라스 컨테이너
      - 연애비급·재회비방 및 공통 영역에 영향 없이 풍요비책(.abundance-detail-page)에만 독립 적용
      - 반투명 먹빛 톤과 배경 블러, 은은한 테두리로 입체감과 깊이감 보존

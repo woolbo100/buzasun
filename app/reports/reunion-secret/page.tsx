@@ -1060,9 +1060,9 @@ export default function ReunionSecretPage() {
                     </h3>
 
                     <div
-                      className="w-full text-left break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
+                      className="w-full text-left break-keep p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl gungjung-glass reunion-center-test-box shadow-2xl space-y-8 md:space-y-10 relative overflow-hidden"
                       style={{
-                        background: 'linear-gradient(115deg, #542638 0%, #482535 48%, #342028 100%)',
+                        background: 'linear-gradient(135deg, rgba(70, 43, 48, 0.08) 0%, rgba(49, 30, 39, 0.12) 100%)',
                         border: '1px solid rgba(185, 154, 115, 0.35)',
                         boxShadow: '0 12px 40px rgba(0, 0, 0, 0.4)'
                       }}
