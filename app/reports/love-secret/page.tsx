@@ -7,6 +7,7 @@ import Reveal from '@/components/Reveal'
 import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
@@ -514,10 +515,319 @@ export default function LoveSecretEbookPage() {
                         </div>
                       </div>
                     </div>
+
+                    {/* ═══════════════════════════════════════════════════════════════
+                        [공감 영역 1] 불안의 순간 공감
+                        (좌측 55% 공감 문구 + 우측 45% 불안/차단 이미지)
+                       ═══════════════════════════════════════════════════════════════ */}
+                    <div className="!mt-16 sm:!mt-20 md:!mt-28 pt-10 md:pt-14 border-t border-[#B49A70]/20">
+                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                        {/* 좌측 55% 공감 문구 */}
+                        <div className="lg:col-span-7 space-y-5 text-left break-keep">
+                          <span className="text-[#C2A477] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                            THE MOMENT OF ANXIETY
+                          </span>
+                          <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                            진심을 다해 사랑했는데,<br />
+                            <span className="text-[#C2A477]">왜 상대는 도망치듯 차가워졌을까요?</span>
+                          </h3>
+                          <div className="space-y-3.5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                            <p>
+                              새벽 2시, 적었다 지우기를 반복하던 카톡 메시지.<br />
+                              프로필 사진 하나 바뀔 때마다 가슴이 쿵 내려앉던 피 마르는 순간들.
+                            </p>
+                            <p>
+                              더 많이 사랑을 증명하고 더 간절히 애원할수록,<br />
+                              어쩐지 상대는 더 냉정하게 돌아서며 나를 작아지게 만들었습니다.
+                            </p>
+                          </div>
+                          <div className="pt-6 border-t border-[#B49A70]/25 mt-6">
+                            <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
+                              어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
+                              눈물로 매달리는 애원이 아니라<br />
+                              <span className="text-[#C2A477] font-semibold">무너진 내 중심과 관계의 프레임부터 돌아보는 시간</span>인지도 모릅니다.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* 우측 45% 불안 이미지 (3:4 비율) */}
+                        <div className="lg:col-span-5 w-full flex flex-col items-center">
+                          <div className="relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/35 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-black/40 flex items-center justify-center">
+                            <Image
+                              src="/image/reunion-secret/reunion-closed-heart.webp"
+                              alt="진심을 다해 사랑했는데, 왜 상대는 도망치듯 차가워졌을까 - 이별 불안 공감"
+                              fill
+                              sizes="(max-width: 1024px) 100vw, 45vw"
+                              className="object-cover"
+                              priority
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* ═══════════════════════════════════════════════════════════════
+                        [공감 영역 2] 재회의 역설 3대 공감 카드
+                       ═══════════════════════════════════════════════════════════════ */}
+                    <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
+                      <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
+                        <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                          THE PARADOX OF REUNION
+                        </span>
+                        <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                          &ldquo;진심을 보이고 매달릴수록…<br />
+                          <span className="text-[#C2A477]">왜 상대는 더 매정해지고 마음은 지옥 같았을까요?</span>&rdquo;
+                        </h3>
+                        <p className="text-[17px] md:text-[18px] text-[#EDE6DA] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
+                          당신의 사랑이 부족해서가 아닙니다. 상대를 붙잡고 싶던 간절함이<br className="hidden sm:inline" />
+                          &apos;결핍과 불안의 신호&apos;가 되어 상대의 무의식에 부담과 질림을 주었기 때문입니다.
+                        </p>
+                      </div>
+
+                      {/* 3대 공감 카드 (버건디 글라스 스타일) */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {/* 카드 1 */}
+                        <div
+                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
+                            border: '1px solid rgba(185, 154, 115, 0.35)',
+                            backdropFilter: 'blur(10px)',
+                            WebkitBackdropFilter: 'blur(10px)',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                          }}
+                        >
+                          <div>
+                            <div className="text-[#B59C88] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
+                              공감 01
+                            </div>
+                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
+                              “지금 안 잡으면 잊혀질까 봐…”
+                            </h4>
+                            <div className="h-[1px] w-full bg-[#B49A70]/20 my-3" />
+                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
+                              불안을 이기지 못해 보낸 구구절절한 장문 카톡. 상대는 감정의 강요로 느껴 &apos;차단&apos;이라는 더 차가운 방어벽을 세우게 만들었습니다.
+                            </p>
+                          </div>
+                          {/* 본문 하단 중앙 모란꽃 라인 아트 장식 */}
+                          <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="#B79A77"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                            >
+                              <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
+                              <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
+                              <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
+                              <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
+                              <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
+                              <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
+                            </svg>
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
+                          </div>
+                        </div>
+
+                        {/* 카드 2 */}
+                        <div
+                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
+                            border: '1px solid rgba(185, 154, 115, 0.35)',
+                            backdropFilter: 'blur(10px)',
+                            WebkitBackdropFilter: 'blur(10px)',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                          }}
+                        >
+                          <div>
+                            <div className="text-[#B59C88] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
+                              공감 02
+                            </div>
+                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
+                              “내가 다 맞출게, 제발 돌아와줘”
+                            </h4>
+                            <div className="h-[1px] w-full bg-[#B49A70]/20 my-3" />
+                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
+                              내 모든 자존감과 가치를 깎아내리며 매달릴수록, 상대의 무의식 속에서 당신의 매력과 프레임은 바닥으로 곤두박질쳤습니다.
+                            </p>
+                          </div>
+                          {/* 본문 하단 중앙 모란꽃 라인 아트 장식 */}
+                          <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="#B79A77"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                            >
+                              <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
+                              <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
+                              <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
+                              <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
+                              <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
+                              <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
+                            </svg>
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
+                          </div>
+                        </div>
+
+                        {/* 카드 3 */}
+                        <div
+                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
+                            border: '1px solid rgba(185, 154, 115, 0.35)',
+                            backdropFilter: 'blur(10px)',
+                            WebkitBackdropFilter: 'blur(10px)',
+                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
+                          }}
+                        >
+                          <div>
+                            <div className="text-[#B59C88] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
+                              공감 03
+                            </div>
+                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
+                              “이별 직후 매달렸던 치명적 실수”
+                            </h4>
+                            <div className="h-[1px] w-full bg-[#B49A70]/20 my-3" />
+                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
+                              남자가 이별 직후 느끼는 &apos;해방감&apos; 타이밍에 무작정 매달리는 것은, 상대에게 &apos;헤어지길 참 잘했다&apos;는 안도감과 면죄부만 쥐여줄 뿐입니다.
+                            </p>
+                          </div>
+                          {/* 본문 하단 중앙 모란꽃 라인 아트 장식 */}
+                          <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="#B79A77"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                            >
+                              <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
+                              <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
+                              <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
+                              <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
+                              <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
+                              <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
+                            </svg>
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 공감 마무리 브릿지 메시지 (상자 없이 배경 위에 직접 배치 + 금빛 텍스트 흐름 & 모란꽃 심벌) */}
+                      <div className="mt-14 md:mt-[65px] text-center max-w-[1050px] mx-auto px-4 break-keep">
+                        {/* 첫 번째 줄 — 상대적으로 작은 글자 & 가벼운 두께 */}
+                        <p className="text-[#FAF7F2] text-[17px] sm:text-[18px] md:text-[20px] font-elegant font-normal leading-[1.75] break-keep mb-3 sm:mb-4">
+                          불안에 떨며 매달리는 손길에는, 아무리 <span className="gold-shimmer-text font-semibold">뜨거운 진심을 쏟아도</span> 닿지 않습니다,
+                        </p>
+
+                        {/* 두 번째 줄 — 약 15~20% 더 크고 강조된 글자 & 굵은 두께 (금빛 강조 텍스트 흐름 애니메이션 적용) */}
+                        <motion.p
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true, margin: "-40px" }}
+                          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                          className="text-[#FAF7F2] text-[19px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep sm:whitespace-nowrap"
+                        >
+                          이제 애원을 멈추고, 당신의 <span className="gold-shimmer-text font-bold">‘중심과 프레임’부터 온전히 바로 세워야 할 때입니다.</span>
+                        </motion.p>
+
+                        {/* 하단 모란꽃 심벌 & 잔잔한 받침선 곡선 */}
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true, margin: "-40px" }}
+                          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                          className="flex flex-col items-center justify-center mt-7 md:mt-8"
+                          aria-hidden="true"
+                        >
+                          <svg viewBox="0 0 32 32" fill="none" className="w-[38px] h-[38px] sm:w-[44px] sm:h-[44px] opacity-85">
+                            {/* 중앙 둥근 모란 꽃잎 */}
+                            <path
+                              d="M16 21 C13.5 16 13 10 16 6 C19 10 18.5 16 16 21 Z"
+                              stroke="#C2A477"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            {/* 좌우 안쪽 모란 꽃잎 */}
+                            <path
+                              d="M16 20.5 C12.5 17 10 12.5 11.5 8 C12.5 6 14.8 7 15.6 9.5"
+                              stroke="#C2A477"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M16 20.5 C19.5 17 22 12.5 20.5 8 C19.5 6 17.2 7 16.4 9.5"
+                              stroke="#C2A477"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            {/* 좌우 바깥 모란 꽃잎 */}
+                            <path
+                              d="M13 21 C9 18.5 6 14.5 7 10.5 C7.8 8.5 10 9.8 11 12"
+                              stroke="#C2A477"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M19 21 C23 18.5 26 14.5 25 10.5 C24.2 8.5 22 9.8 21 12"
+                              stroke="#C2A477"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            {/* 하단 모란 받침선 곡선 1 */}
+                            <path
+                              d="M8 24 C13 22.5 19 22.5 24 24"
+                              stroke="#C2A477"
+                              strokeWidth="1"
+                              strokeLinecap="round"
+                              opacity="0.6"
+                            />
+                            {/* 하단 모란 받침선 곡선 2 */}
+                            <path
+                              d="M11 27 C14 26 18 26 21 27"
+                              stroke="#C2A477"
+                              strokeWidth="0.8"
+                              strokeLinecap="round"
+                              opacity="0.35"
+                            />
+                          </svg>
+                        </motion.div>
+                      </div>
+
+                      {/* 16:9 와이드 브릿지 이미지 (1672x941 매칭, 콘텐츠 전체 너비 100%) */}
+                      <div className="mt-7 sm:mt-8 md:mt-9 w-full aspect-[16/9] md:aspect-[1672/941] relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-2xl bg-black/40 flex items-center justify-center">
+                        <Image
+                          src="/image/reunion-secret/reunion-emotional-bridge.webp"
+                          alt="공감 브릿지 와이드 배너"
+                          fill
+                          sizes="(max-width: 1280px) 100vw, 1280px"
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Reveal>
             </section>
+
+            <ChampagneThreadDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
                 신규: 공감 & 자리 진단 — 진심을 탓하지 마세요 & 나의 자리를 돌아볼 때
