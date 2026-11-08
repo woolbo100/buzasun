@@ -552,7 +552,8 @@ export default function ReunionSecretPage() {
 
                         <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 leading-[1.8] font-light">
                           <p>
-                            이별 후 무너진 감정, 흐트러진 프레임, 반복되는 집착의 패턴을 정리하고 다시 나의 중심을 회복하기 위한 실전 재회 전략서입니다.
+                            이별 후 무너진 감정, 흐트러진 프레임, 반복되는 집착의 패턴을 정리하고<br />
+                            다시 나의 중심을 회복하기 위한 실전 재회 전략서입니다.
                           </p>
                           <p className="font-semibold text-white">
                             단순한 위로가 아닌, 상대를 뒤흔드는 무의식 공략 비방을 담았습니다.
@@ -621,7 +622,8 @@ export default function ReunionSecretPage() {
                       PAIN POINT & HOOK
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      당신의 진심이 왜 상대에게는 <span className="text-[#C2A477]">&apos;공포&apos;와 &apos;질림&apos;</span>이 되었을까?
+                      당신의 진심이 왜 상대에게는<br />
+                      <span className="text-[#C2A477]">&apos;공포&apos;와 &apos;질림&apos;</span>이 되었을까?
                     </h2>
                   </div>
 
