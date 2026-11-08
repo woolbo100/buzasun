@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Reveal from '@/components/Reveal'
@@ -944,14 +945,90 @@ export default function ReunionSecretPage() {
                       </div>
                     </div>
 
-                    {/* 공감 카드 하단 브릿지 문구 */}
-                    <div className="mt-10 sm:mt-12 md:mt-14 text-center max-w-[1050px] mx-auto px-4 space-y-2.5 sm:space-y-3 break-keep">
-                      <p className="text-[18px] sm:text-[21px] md:text-[23px] font-elegant font-bold text-[#C2A477] leading-[1.6] tracking-tight">
-                        “불안에 떨며 매달리는 손길에는, 아무리 뜨거운 진심을 쏟아도 닿지 않습니다,
+                    {/* 공감 마무리 브릿지 메시지 (상자 없이 배경 위에 직접 배치 + 금빛 텍스트 흐름 & 모란꽃 심벌) */}
+                    <div className="mt-14 md:mt-[65px] text-center max-w-[1050px] mx-auto px-4 break-keep">
+                      {/* 첫 번째 줄 — 상대적으로 작은 글자 & 가벼운 두께 */}
+                      <p className="text-[#FAF7F2] text-[17px] sm:text-[18px] md:text-[20px] font-elegant font-normal leading-[1.75] break-keep mb-3 sm:mb-4">
+                        “불안에 떨며 매달리는 손길에는, 아무리 <span className="gold-shimmer-text font-semibold">뜨거운 진심을 쏟아도</span> 닿지 않습니다,
                       </p>
-                      <p className="text-[16px] sm:text-[18px] md:text-[20px] font-elegant font-medium text-[#FAF7F2] leading-[1.6]">
-                        이제 애원을 멈추고, 무너져버린 당신의 <span className="text-[#C2A477] font-semibold">‘중심과 프레임’</span>부터 온전히 바로 세워야 할 때입니다.”
-                      </p>
+
+                      {/* 두 번째 줄 — 약 15~20% 더 크고 강조된 글자 & 굵은 두께 (금빛 강조 텍스트 흐름 애니메이션 적용) */}
+                      <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-40px" }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                        className="text-[#FAF7F2] text-[20px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep"
+                      >
+                        이제 애원을 멈추고, 무너져버린 당신의 <span className="gold-shimmer-text font-bold">‘중심과 프레임’부터 온전히 바로 세워야 할 때입니다.</span>”
+                      </motion.p>
+
+                      {/* 하단 모란꽃 심벌 & 잔잔한 받침선 곡선 (풍요비책과 동일한 위치·크기·여백) */}
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true, margin: "-40px" }}
+                        transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                        className="flex flex-col items-center justify-center mt-7 md:mt-8"
+                        aria-hidden="true"
+                      >
+                        <svg viewBox="0 0 32 32" fill="none" className="w-[38px] h-[38px] sm:w-[44px] sm:h-[44px] opacity-85">
+                          {/* 중앙 둥근 모란 꽃잎 */}
+                          <path
+                            d="M16 21 C13.5 16 13 10 16 6 C19 10 18.5 16 16 21 Z"
+                            stroke="#C2A477"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          {/* 좌우 안쪽 모란 꽃잎 */}
+                          <path
+                            d="M16 20.5 C12.5 17 10 12.5 11.5 8 C12.5 6 14.8 7 15.6 9.5"
+                            stroke="#C2A477"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M16 20.5 C19.5 17 22 12.5 20.5 8 C19.5 6 17.2 7 16.4 9.5"
+                            stroke="#C2A477"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          {/* 좌우 바깥 모란 꽃잎 */}
+                          <path
+                            d="M13 21 C9 18.5 6 14.5 7 10.5 C7.8 8.5 10 9.8 11 12"
+                            stroke="#C2A477"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M19 21 C23 18.5 26 14.5 25 10.5 C24.2 8.5 22 9.8 21 12"
+                            stroke="#C2A477"
+                            strokeWidth="1.2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          {/* 하단 모란 받침선 곡선 1 */}
+                          <path
+                            d="M8 24 C13 22.5 19 22.5 24 24"
+                            stroke="#C2A477"
+                            strokeWidth="1"
+                            strokeLinecap="round"
+                            opacity="0.6"
+                          />
+                          {/* 하단 모란 받침선 곡선 2 */}
+                          <path
+                            d="M11 27 C14 26 18 26 21 27"
+                            stroke="#C2A477"
+                            strokeWidth="0.8"
+                            strokeLinecap="round"
+                            opacity="0.35"
+                          />
+                        </svg>
+                      </motion.div>
                     </div>
 
                     {/* 16:9 와이드 브릿지 이미지 (1672x941 매칭, 콘텐츠 전체 너비 100%) */}
