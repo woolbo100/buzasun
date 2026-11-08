@@ -487,7 +487,7 @@ export default function AbundanceSecretPage() {
                           열심히 살아왔는데,<br />
                           <span className="text-[#C2A477]">왜 돈 앞에서는 늘 불안할까요?</span>
                         </h3>
-                        <div className="space-y-3.5 text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                        <div className="space-y-3.5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                           <p>
                             월급이 들어와도 마음이 놓이지 않고,<br />
                             카드값 문자를 보는 순간 다시 조급해지는 마음.
@@ -498,7 +498,7 @@ export default function AbundanceSecretPage() {
                           </p>
                         </div>
                         <div className="pt-6 border-t border-[#947852]/25 mt-6">
-                          <p className="text-[#FAF7F2] font-elegant font-medium text-[16px] sm:text-[17px] md:text-[19px] leading-[1.75] break-keep">
+                          <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
                             어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
                             더 열심히 버티는 방법이 아니라<br />
                             <span className="text-[#C2A477] font-semibold">돈을 대하는 내 마음부터 돌아보는 시간</span>인지도 모릅니다.

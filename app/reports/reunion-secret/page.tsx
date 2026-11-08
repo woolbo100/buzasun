@@ -710,7 +710,7 @@ export default function ReunionSecretPage() {
                           진심을 다해 사랑했는데,<br />
                           <span className="text-[#C2A477]">왜 상대는 도망치듯 차가워졌을까요?</span>
                         </h3>
-                        <div className="space-y-3.5 text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                        <div className="space-y-3.5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                           <p>
                             새벽 2시, 적었다 지우기를 반복하던 카톡 메시지.<br />
                             프로필 사진 하나 바뀔 때마다 가슴이 쿵 내려앉던 피 마르는 순간들.
@@ -721,7 +721,7 @@ export default function ReunionSecretPage() {
                           </p>
                         </div>
                         <div className="pt-6 border-t border-[#B49A70]/25 mt-6">
-                          <p className="text-[#FAF7F2] font-elegant font-medium text-[16px] sm:text-[17px] md:text-[19px] leading-[1.75] break-keep">
+                          <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
                             어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
                             눈물로 매달리는 애원이 아니라<br />
                             <span className="text-[#C2A477] font-semibold">무너진 내 중심과 관계의 프레임부터 돌아보는 시간</span>인지도 모릅니다.
