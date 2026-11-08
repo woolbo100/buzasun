@@ -58,7 +58,7 @@ const productData = {
   topBannerImage: '/image/reunion-secret/reunion-secret-hero.webp?v=20261108_1',
   heroImage: '/image/reunion-secret/r9.webp',
   overviewImage: '/image/reunion-secret/r2.webp',
-  recommendedImage: '/image/reunion-secret/r3.webp',
+  recommendedImage: '/image/reunion-secret/reunion-secret-recommended.webp?v=20261108',
   formulaImage: '/image/reunion-secret/r4.webp',
   bookIntroImage: '/image/reunion-secret/reunion-secret-book-intro.webp?v=20261108',
   premiumImage: '/image/reunion-secret/r5.webp',
@@ -1386,8 +1386,9 @@ export default function ReunionSecretPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                  <div className="space-y-6 md:space-y-8 text-left break-keep">
+                <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-center">
+                  {/* 왼쪽: 기존 '이런 분께 추천합니다' 제목 및 추천 카드 (약 58% 너비) */}
+                  <div className="lg:col-span-7 space-y-6 md:space-y-8 text-left break-keep">
                     <div>
                       <span className="text-[#C2A477] font-elegant tracking-[0.25em] text-xs uppercase font-bold block mb-2">
                         RECOMMENDED FOR
@@ -1416,15 +1417,18 @@ export default function ReunionSecretPage() {
                     />
                   </div>
 
-                  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 shadow-2xl">
-                    <Image
-                      src={productData.recommendedImage}
-                      alt="재회비방 이런 분께 추천합니다 안내 이미지"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover object-center"
-                      priority
-                    />
+                  {/* 오른쪽: 《재회비방》 3:4 세로형 브랜드 포스터 이미지 (약 42% 너비) */}
+                  <div className="lg:col-span-5 w-full flex justify-center">
+                    <div className="relative w-full max-w-[440px] sm:max-w-[480px] aspect-[3/4] overflow-hidden rounded-[28px] md:rounded-[36px] border border-[#B49A70]/30 shadow-xl bg-black/20">
+                      <Image
+                        src={productData.recommendedImage}
+                        alt="재회를 바라더라도, 나를 지키는 기준은 필요합니다. 재회비방"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 45vw"
+                        className="object-contain object-center"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
               </Reveal>
