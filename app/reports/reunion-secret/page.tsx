@@ -65,7 +65,7 @@ const productData = {
   ctaImage: '/image/reunion-secret/return-secret-cta-bg.webp?v=20261109_v2',
 
   // 💡 [커리큘럼 & 아키텍처] 16:9 와이드 인포그래픽 이미지 경로
-  curriculumImage: '/image/reunion-secret/reunion-secret-two-step-transformation.webp',
+  curriculumImage: '/image/reunion-secret/reunion-secret-two-step-transformation.webp?v=20261109_transparent',
   // 💡 [패키지 구성] 16:9 와이드 3종 책 목업 이미지 경로
   packageImage: '/image/reunion-secret/reunion-package-3books.webp',
   // 💡 [신규 영역 1] 관계 역전의 법칙 (16:9 인포그래픽 다이어그램 이미지 경로)
@@ -1729,13 +1729,13 @@ export default function ReunionSecretPage() {
                     </p>
                   </div>
 
-                  {/* 16:9 와이드 인포그래픽 이미지 영역 (뒤의 네모 상자/테두리/그림자 삭제, 이미지만 단독 노출) */}
+                  {/* 16:9 와이드 인포그래픽 이미지 영역 (바깥 검은 사각 배경을 완전 투명화하여 카드만 단독 노출) */}
                   <div className="mt-8 md:mt-10 relative w-full">
                     <Image
-                      src="/image/reunion-secret/reunion-secret-two-step-transformation.webp"
+                      src="/image/reunion-secret/reunion-secret-two-step-transformation.webp?v=20261109_transparent"
                       alt="재회를 운에 맡기지 마십시오. 《재회비방》이 안내하는 무의식 재회 설계도"
-                      width={1695}
-                      height={928}
+                      width={1655}
+                      height={879}
                       sizes="(max-width: 1280px) 100vw, 1280px"
                       className="w-full h-auto object-contain block"
                       priority
@@ -1992,28 +1992,11 @@ export default function ReunionSecretPage() {
                   </div>
                 </div>
 
-                {/* 3종 올인원 세트 상세 해부 서브헤더 (풍요비책 레이아웃과 100% 동일) */}
-                <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 pt-16 md:pt-20 lg:pt-24 break-keep">
-                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
-                    3-in-1 All-in-One Package
-                  </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] mb-3">
-                    3종 올인원 세트 <span className="text-[#C2A477]">상세 해부</span>
-                  </h2>
-                  <div className="space-y-1.5">
-                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.5]">
-                      본편부터 실전 워크북 1, 실전 워크북 2 까지
-                    </p>
-                    <p className="text-[18px] md:text-[20px] text-[#C2A477] font-bold font-elegant tracking-wide leading-[1.5]">
-                      3종 · 총 189페이지 PDF 패키지
-                    </p>
-                  </div>
-                </div>
-
                 {/* ─────────────────────────────────────────────────────────
-                    [신규 섹션] INSIDE THE SECRET BOOK: 책 속에서 만날 내용 (미리보기 이미지 3종 세로 1열 갤러리)
+                    [신규 섹션] INSIDE THE SECRET BOOK: 책 속에서 만날 내용
+                    (3종 올인원 세트 상세 해부 위로 이동, 데스크톱 가로 3열 나란히 배치)
                    ───────────────────────────────────────────────────────── */}
-                <div className="mt-14 md:mt-18 mb-16 md:mb-20">
+                <div className="pt-16 md:pt-20 lg:pt-24 mb-14 md:mb-18">
                   {/* 섹션 제목 및 부제 */}
                   <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14 break-keep px-4">
                     <span className="text-[#C2A477] font-elegant text-xs md:text-sm tracking-[0.2em] uppercase block mb-2.5 md:mb-3 font-semibold">
@@ -2027,49 +2010,61 @@ export default function ReunionSecretPage() {
                     </p>
                   </div>
 
-                  {/* 세로 1열 독립 카드 배치 (데스크톱 440~500px, 모바일 화면 92%, 카드 간격 28~44px) */}
-                  <div className="flex flex-col gap-7 md:gap-11 items-center justify-center w-full px-4">
+                  {/* 가로 3열 이미지 카드 그리드 (데스크톱 한 줄 3열, 모바일 세로 1열) */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7 lg:gap-8 items-start w-full max-w-[1240px] mx-auto px-4">
                     {/* 이미지 1 — 진단·기준·조언 */}
-                    <Reveal>
-                      <div className="w-[92%] sm:w-full max-w-[480px] mx-auto rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
-                        <Image
-                          src={productData.bookPreviewGuideImage}
-                          alt="책 속에서 만날 내용 - 진단·기준·조언"
-                          width={440}
-                          height={661}
-                          className="w-full h-auto object-contain block"
-                          sizes="(max-width: 640px) 92vw, 480px"
-                        />
-                      </div>
-                    </Reveal>
+                    <div className="w-full rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_10px_30px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
+                      <Image
+                        src={productData.bookPreviewGuideImage}
+                        alt="책 속에서 만날 내용 - 진단·기준·조언"
+                        width={440}
+                        height={661}
+                        className="w-full h-auto object-contain block"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
 
                     {/* 이미지 2 — 여섯 가지 실전 도구 */}
-                    <Reveal>
-                      <div className="w-[92%] sm:w-full max-w-[480px] mx-auto rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
-                        <Image
-                          src={productData.bookPreviewToolsImage}
-                          alt="막막한 순간에 펼쳐 볼 여섯 가지 도구 - 6가지 실전 자료"
-                          width={440}
-                          height={656}
-                          className="w-full h-auto object-contain block"
-                          sizes="(max-width: 640px) 92vw, 480px"
-                        />
-                      </div>
-                    </Reveal>
+                    <div className="w-full rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_10px_30px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
+                      <Image
+                        src={productData.bookPreviewToolsImage}
+                        alt="막막한 순간에 펼쳐 볼 여섯 가지 도구 - 6가지 실전 자료"
+                        width={440}
+                        height={656}
+                        className="w-full h-auto object-contain block"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
 
                     {/* 이미지 3 — 재회의 5단계 여정 */}
-                    <Reveal>
-                      <div className="w-[92%] sm:w-full max-w-[480px] mx-auto rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
-                        <Image
-                          src={productData.bookPreviewJourneyImage}
-                          alt="다시 만나는 일만큼, 나를 잃지 않는 일 - 파동의 진단부터 완성된 나까지 다섯 단계"
-                          width={440}
-                          height={658}
-                          className="w-full h-auto object-contain block"
-                          sizes="(max-width: 640px) 92vw, 480px"
-                        />
-                      </div>
-                    </Reveal>
+                    <div className="w-full rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_10px_30px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
+                      <Image
+                        src={productData.bookPreviewJourneyImage}
+                        alt="다시 만나는 일만큼, 나를 잃지 않는 일 - 파동의 진단부터 완성된 나까지 다섯 단계"
+                        width={440}
+                        height={658}
+                        className="w-full h-auto object-contain block"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3종 올인원 세트 상세 해부 서브헤더 (책 속에서 만날 내용 섹션 아래로 배치) */}
+                <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 pt-12 md:pt-16 lg:pt-20 break-keep">
+                  <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                    3-in-1 All-in-One Package
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] mb-3">
+                    3종 올인원 세트 <span className="text-[#C2A477]">상세 해부</span>
+                  </h2>
+                  <div className="space-y-1.5">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.5]">
+                      본편부터 실전 워크북 1, 실전 워크북 2 까지
+                    </p>
+                    <p className="text-[18px] md:text-[20px] text-[#C2A477] font-bold font-elegant tracking-wide leading-[1.5]">
+                      3종 · 총 189페이지 PDF 패키지
+                    </p>
                   </div>
                 </div>
               </Reveal>
