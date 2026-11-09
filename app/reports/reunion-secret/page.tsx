@@ -62,7 +62,7 @@ const productData = {
   formulaImage: '/image/reunion-secret/r4.webp',
   bookIntroImage: '/image/reunion-secret/reunion-secret-book-intro.webp?v=20261108',
   premiumImage: '/image/reunion-secret/return-secret-usage-guide.webp',
-  ctaImage: '/image/reunion-secret/return-secret-cta-bg.webp',
+  ctaImage: '/image/reunion-secret/return-secret-cta-bg.webp?v=20261109_v2',
 
   // 💡 [커리큘럼 & 아키텍처] 16:9 와이드 인포그래픽 이미지 경로
   curriculumImage: '/image/reunion-secret/reunion-secret-two-step-transformation.webp',
@@ -1729,13 +1729,13 @@ export default function ReunionSecretPage() {
                     </p>
                   </div>
 
-                  {/* 16:9 와이드 인포그래픽 이미지 영역 (콘텐츠 가로폭 100%, 모서리 20px, 위쪽 간격 32~40px) */}
-                  <div className="mt-8 md:mt-10 relative w-full rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
+                  {/* 16:9 와이드 인포그래픽 이미지 영역 (뒤의 네모 상자/테두리/그림자 삭제, 이미지만 단독 노출) */}
+                  <div className="mt-8 md:mt-10 relative w-full">
                     <Image
                       src="/image/reunion-secret/reunion-secret-two-step-transformation.webp"
                       alt="재회를 운에 맡기지 마십시오. 《재회비방》이 안내하는 무의식 재회 설계도"
-                      width={1600}
-                      height={900}
+                      width={1695}
+                      height={928}
                       sizes="(max-width: 1280px) 100vw, 1280px"
                       className="w-full h-auto object-contain block"
                       priority
@@ -1757,9 +1757,12 @@ export default function ReunionSecretPage() {
                     <span className="text-[#C2A477] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
                       THE REUNION MECHANISM
                     </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] md:leading-[1.5] break-keep">
                       이별의 상처를 매달림으로 풀지 마십시오.<br />
-                      <span className="text-[#C2A477]">내 에너지를 회수하고, 상대의 무의식에 후폭풍을 심습니다.</span>
+                      <span className="text-[#C2A477]">
+                        내 에너지를 회수하고, 상대의 무의식에<br />
+                        후폭풍을 심습니다.
+                      </span>
                     </h2>
                     <p className="text-sm md:text-base text-[#EDE6DA]/70 font-light">
                       떠난 남자를 돌아오게 만드는 것은 눈물이 아니라 &apos;통제된 결핍과 프레임 역전&apos;입니다.
