@@ -20,7 +20,7 @@ export default function CompatibilityCaseComparison() {
         </div>
 
         {/* CASE A & B 비교 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-12">
           {compatibilityCaseData.cases.map((c, idx) => (
             <div
               key={idx}

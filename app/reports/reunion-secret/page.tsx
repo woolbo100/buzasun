@@ -2315,18 +2315,16 @@ export default function ReunionSecretPage() {
               }}
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
-                {/* 왼쪽 목업 이미지 영역 (1:1 비율로 잘림 없이 온전히 표시) */}
-                <div className="lg:col-span-5 relative w-full min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden flex items-center justify-center p-6 sm:p-8">
-                  <div className="relative w-full aspect-square max-w-[440px] rounded-2xl overflow-hidden shadow-xl border border-white/10">
-                    <Image
-                      src={productData.heroImage}
-                      alt="재회비방 3종 올인원 세트"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 45vw"
-                      className="object-cover object-center rounded-2xl"
-                      priority
-                    />
-                  </div>
+                {/* 왼쪽 약 45%: 상자 끝까지 꽉 차게 들어가는 독립 이미지 영역 (네모 박스 없이 모서리 풀 블리드) */}
+                <div className="lg:col-span-5 relative w-full min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden flex items-center justify-center">
+                  <Image
+                    src="/image/reunion-secret/bookiner.webp"
+                    alt="재회비방 3종 패키지 내지 미리보기"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover object-center"
+                    priority
+                  />
                 </div>
 
                 {/* 오른쪽: 구성 안내 → 구분선 → 가격 안내 → 버튼 */}
@@ -2337,11 +2335,11 @@ export default function ReunionSecretPage() {
                         PACKAGE OVERVIEW
                       </span>
                       <h4 className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
-                        원리바이블 본편 + 실전부록 1 + 실전부록 2 + 모바일 부적
+                        PDF 3종 (본편 + 실전부록 1 + 실전부록 2)
                       </h4>
                       <div className="text-sm md:text-base text-[#EDE6DA]/90 font-light space-y-0.5 leading-[1.6]">
-                        <p>재회비방 4 in 1 마스터 패키지</p>
-                        <p>회향연부 고해상도 디지털 부적 함께 제공</p>
+                        <p>PDF 3종 · 총 189페이지</p>
+                        <p>회향연부 이미지 파일 함께 제공</p>
                       </div>
                     </div>
 

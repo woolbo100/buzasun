@@ -19,7 +19,7 @@ export default function WealthAdviceComparison() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {wealthAdviceData.cards.map((card, idx) => (
             <div
               key={idx}

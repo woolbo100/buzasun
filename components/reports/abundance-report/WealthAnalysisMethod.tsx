@@ -27,7 +27,7 @@ export default function WealthAnalysisMethod() {
         </div>
 
         {/* 3대 분석 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {wealthAnalysisMethodData.cards.map((card, idx) => (
             <div
               key={idx}
@@ -53,7 +53,7 @@ export default function WealthAnalysisMethod() {
         </div>
 
         {/* 강조 문구 배너 */}
-        <div className="max-w-4xl mx-auto p-6 md:p-8 rounded-2xl bg-gradient-to-r from-[#0f241f]/50 via-white/[0.02] to-[#0f241f]/50 border border-[#608F82]/25 text-center">
+        <div className="max-w-7xl mx-auto p-6 md:p-8 rounded-2xl bg-gradient-to-r from-[#0f241f]/50 via-white/[0.02] to-[#0f241f]/50 border border-[#608F82]/25 text-center">
           <p className="text-base md:text-lg text-[#EDE6DA] font-light leading-relaxed break-keep">
             ✨ {wealthAnalysisMethodData.highlight}
           </p>

@@ -21,7 +21,7 @@ export default function CompatibilityChangeScenario() {
         </div>
 
         {/* 3단계 시나리오 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto mb-10 items-stretch">
           {compatibilityScenarioData.stages.map((stage, idx) => (
             <div key={idx} className="relative flex flex-col">
               <div

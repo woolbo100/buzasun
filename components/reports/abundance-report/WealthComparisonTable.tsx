@@ -20,7 +20,7 @@ export default function WealthComparisonTable() {
         </div>
 
         {/* 데스크톱/태블릿 비교표 (가로 스크롤 완벽 대응) */}
-        <div className="max-w-5xl mx-auto overflow-x-auto pb-4">
+        <div className="max-w-7xl mx-auto overflow-x-auto pb-4">
           <div className="min-w-[680px]">
             <table className="w-full border-collapse text-left">
               <thead>

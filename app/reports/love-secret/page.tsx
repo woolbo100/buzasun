@@ -526,42 +526,68 @@ export default function LoveSecretEbookPage() {
                         {/* 좌측 55% 공감 문구 */}
                         <div className="lg:col-span-7 space-y-5 text-left break-keep">
                           <span className="text-[#D9A8A7] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
-                            THE MOMENT OF ANXIETY
+                            THE MOMENT OF AWAKENING
                           </span>
                           <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                            진심을 다해 사랑했는데,<br />
-                            <span className="text-[#D9A8A7]">왜 상대는 도망치듯 차가워졌을까요?</span>
+                            왜 나는 사랑할수록,<br />
+                            <span className="text-[#D9A8A7]">나 자신을 잃어버리게 될까요?</span>
                           </h3>
                           <div className="space-y-3.5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                             <p>
-                              새벽 2시, 적었다 지우기를 반복하던 카톡 메시지.<br />
-                              프로필 사진 하나 바뀔 때마다 가슴이 쿵 내려앉던 피 마르는 순간들.
+                              상대의 말 한마디에 하루의 기분이 달라지고,<br />
+                              답장 하나에 안도했다가 다시 불안해지는 마음.
                             </p>
                             <p>
-                              더 많이 사랑을 증명하고 더 간절히 애원할수록,<br />
-                              어쩐지 상대는 더 냉정하게 돌아서며 나를 작아지게 만들었습니다.
+                              사랑받고 싶어서 더 많이 맞춰주고 더 많이 이해했지만,<br />
+                              어느 순간 관계의 중심에는 상대만 남아 있었습니다.
                             </p>
                           </div>
                           <div className="pt-6 border-t border-[#B49A70]/25 mt-6">
                             <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
                               어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
-                              눈물로 매달리는 애원이 아니라<br />
-                              <span className="text-[#D9A8A7] font-semibold">무너진 내 중심과 관계의 프레임부터 돌아보는 시간</span>인지도 모릅니다.
+                              더 사랑받기 위해 애쓰는 방법이 아니라<br />
+                              <span className="text-[#D9A8A7] font-semibold">내가 가진 매력의 중심을 되찾고</span>, 사랑의 흐름을 바꾸는 일인지도 모릅니다.
                             </p>
                           </div>
                         </div>
 
-                        {/* 우측 45% 불안 이미지 (3:4 비율) */}
+                        {/* 우측 45% 연애비급 거울 이미지 (3:4 비율) */}
                         <div className="lg:col-span-5 w-full flex flex-col items-center">
-                          <div className="relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/35 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-black/40 flex items-center justify-center">
+                          <div className="group relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/35 shadow-[0_12px_40px_rgba(0,0,0,0.5)] bg-black/40 flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/60">
                             <Image
-                              src="/image/reunion-secret/reunion-closed-heart.webp"
-                              alt="진심을 다해 사랑했는데, 왜 상대는 도망치듯 차가워졌을까 - 이별 불안 공감"
+                              src="/image/love-secret/love-secret-mirror.webp"
+                              alt="왜 나는 사랑할수록 나 자신을 잃어버릴까 - 사랑의 불안과 관계 심리"
                               fill
                               sizes="(max-width: 1024px) 100vw, 45vw"
-                              className="object-cover"
+                              className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                               priority
                             />
+
+                            {/* 상/하단 은은한 그라데이션 오버레이 (중앙의 여성 얼굴과 거울은 투명하게 유지) */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/75 pointer-events-none" />
+
+                            {/* 이미지 위 오버레이 텍스트 */}
+                            <div className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-between pointer-events-none z-10">
+                              {/* 상단: 작은 배지 & 큰 제목 */}
+                              <div className="text-center space-y-2">
+                                <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B]/90 border border-[#D5AFAD]/60 text-[#FFF1E9] text-xs font-bold tracking-wider whitespace-nowrap shadow-md backdrop-blur-sm">
+                                  사랑의 불안과 관계 심리
+                                </span>
+                                <h4 className="text-[18px] sm:text-[20px] font-elegant font-bold text-[#FAF7F2] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] tracking-wide">
+                                  사랑할수록 작아지는 나
+                                </h4>
+                              </div>
+
+                              {/* 하단: 감성 문구 & 강조 문구 */}
+                              <div className="p-3.5 sm:p-4 rounded-xl bg-black/60 border border-[#B49A70]/30 text-center space-y-1 backdrop-blur-sm shadow-lg">
+                                <p className="text-xs sm:text-[13px] text-[#D5AFAD] font-medium drop-shadow-sm">
+                                  &ldquo;그에게 더 사랑받고 싶었을 뿐인데&hellip;&rdquo;
+                                </p>
+                                <p className="text-xs sm:text-sm text-[#FAF7F2] font-semibold drop-shadow-sm break-keep">
+                                  사랑받으려 애쓸수록, 나의 중심은 흔들립니다.
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -573,167 +599,170 @@ export default function LoveSecretEbookPage() {
                     <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
                       <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
                         <span className="text-[#D9A8A7] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
-                          THE PARADOX OF REUNION
+                          THE PARADOX OF LOVE
                         </span>
                         <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                          진심을 보이고 매달릴수록…<br />
-                          <span className="text-[#D9A8A7]">왜 상대는 더 매정해지고 마음은 지옥 같았을까요?</span>
+                          사랑받으려 애쓸수록…<br />
+                          <span className="text-[#D9A8A7]">왜 나의 매력은 오히려 빛을 잃어갈까요?</span>
                         </h3>
                         <p className="text-[17px] md:text-[18px] text-[#EDE6DA] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
-                          당신의 사랑이 부족해서가 아닙니다. 상대를 붙잡고 싶던 간절함이<br className="hidden sm:inline" />
-                          &apos;결핍과 불안의 신호&apos;가 되어 상대의 무의식에 부담과 질림을 주었기 때문입니다.
+                          당신의 매력이 부족해서가 아닙니다. 사랑을 지키고 싶은 간절함이<br className="hidden sm:inline" />
+                          어느새 &apos;나의 중심&apos;을 잃게 만드는 관계의 패턴으로 굳어졌기 때문입니다.
                         </p>
                       </div>
 
-                      {/* 3대 공감 카드 (버건디 글라스 스타일) */}
+                      {/* 3대 공감 카드 (로즈코코아 글라스 스타일) */}
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {/* 카드 1 */}
                         <div
-                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
+                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(235,180,192,0.55)] flex flex-col justify-between"
                           style={{
-                            background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
-                            border: '1px solid rgba(185, 154, 115, 0.35)',
+                            background: 'linear-gradient(135deg, rgba(85, 48, 64, 0.90) 0%, rgba(56, 35, 48, 0.92) 100%)',
+                            border: '1px solid rgba(219, 159, 174, 0.30)',
                             backdropFilter: 'blur(10px)',
                             WebkitBackdropFilter: 'blur(10px)',
                             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                           }}
                         >
                           <div>
-                            <div className="text-[#B59C88] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
+                            <div className="text-[#D7AD9B] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                               공감 01
                             </div>
-                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                              “지금 안 잡으면 잊혀질까 봐…”
+                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FFF2EB] leading-[1.35] break-keep">
+                              “나만 더 좋아하는 것 같아…”
                             </h4>
-                            <div className="h-[1px] w-full bg-[#B49A70]/20 my-3" />
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                              불안을 이기지 못해 보낸 구구절절한 장문 카톡. 상대는 감정의 강요로 느껴 &apos;차단&apos;이라는 더 차가운 방어벽을 세우게 만들었습니다.
+                            <div className="h-[1px] w-full bg-[rgba(219,159,174,0.25)] my-3" />
+                            <p className="text-[15px] md:text-[16px] text-[#E2D2D4] leading-[1.75] font-light break-keep">
+                              상대의 연락과 반응에 일희일비하며, 어느새 내 하루의 중심이 상대에게로 옮겨갔습니다.
                             </p>
                           </div>
-                          {/* 본문 하단 중앙 모란꽃 라인 아트 장식 */}
+                          {/* 본문 하단 중앙 정면 5잎 도화꽃 라인 아트 장식 */}
                           <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
-                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#D7AD9B]/60" />
                             <svg
                               viewBox="0 0 24 24"
                               fill="none"
-                              stroke="#B79A77"
+                              stroke="#D7AD9B"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
-                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-85 shrink-0"
                             >
-                              <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
-                              <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
-                              <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
-                              <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
-                              <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
-                              <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
+                              {/* 5장의 정면형 대칭 도화 꽃잎 */}
+                              <path d="M12 12 C10 8 9.5 4.5 12 3 C14.5 4.5 14 8 12 12 Z" />
+                              <path d="M12 12 C15 9.5 18.5 9 19.8 11.5 C19 14 15.5 13.5 12 12 Z" />
+                              <path d="M12 12 C14.5 14.5 16 18 13.8 19.5 C12 18.5 12.2 15 12 12 Z" />
+                              <path d="M12 12 C11.8 15 12 18.5 10.2 19.5 C8 18 9.5 14.5 12 12 Z" />
+                              <path d="M12 12 C8.5 13.5 5 14 4.2 11.5 C5.5 9 9 9.5 12 12 Z" />
+                              <circle cx="12" cy="12" r="1.3" stroke="#D7AD9B" strokeWidth="1" />
                             </svg>
-                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#D7AD9B]/60" />
                           </div>
                         </div>
 
                         {/* 카드 2 */}
                         <div
-                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
+                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(235,180,192,0.55)] flex flex-col justify-between"
                           style={{
-                            background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
-                            border: '1px solid rgba(185, 154, 115, 0.35)',
+                            background: 'linear-gradient(135deg, rgba(85, 48, 64, 0.90) 0%, rgba(56, 35, 48, 0.92) 100%)',
+                            border: '1px solid rgba(219, 159, 174, 0.30)',
                             backdropFilter: 'blur(10px)',
                             WebkitBackdropFilter: 'blur(10px)',
                             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                           }}
                         >
                           <div>
-                            <div className="text-[#B59C88] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
+                            <div className="text-[#D7AD9B] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                               공감 02
                             </div>
-                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                              “내가 다 맞출게, 제발 돌아와줘”
+                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FFF2EB] leading-[1.35] break-keep">
+                              “내가 조금만 더 맞춰주면…”
                             </h4>
-                            <div className="h-[1px] w-full bg-[#B49A70]/20 my-3" />
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                              내 모든 자존감과 가치를 깎아내리며 매달릴수록, 상대의 무의식 속에서 당신의 매력과 프레임은 바닥으로 곤두박질쳤습니다.
+                            <div className="h-[1px] w-full bg-[rgba(219,159,174,0.25)] my-3" />
+                            <p className="text-[15px] md:text-[16px] text-[#E2D2D4] leading-[1.75] font-light break-keep">
+                              싫은 것도 괜찮다 말하고, 원하는 것도 숨기면서 사랑받기 위해 나 자신을 조금씩 지워왔습니다.
                             </p>
                           </div>
-                          {/* 본문 하단 중앙 모란꽃 라인 아트 장식 */}
+                          {/* 본문 하단 중앙 정면 5잎 도화꽃 라인 아트 장식 */}
                           <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
-                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#D7AD9B]/60" />
                             <svg
                               viewBox="0 0 24 24"
                               fill="none"
-                              stroke="#B79A77"
+                              stroke="#D7AD9B"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
-                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-85 shrink-0"
                             >
-                              <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
-                              <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
-                              <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
-                              <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
-                              <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
-                              <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
+                              {/* 5장의 정면형 대칭 도화 꽃잎 */}
+                              <path d="M12 12 C10 8 9.5 4.5 12 3 C14.5 4.5 14 8 12 12 Z" />
+                              <path d="M12 12 C15 9.5 18.5 9 19.8 11.5 C19 14 15.5 13.5 12 12 Z" />
+                              <path d="M12 12 C14.5 14.5 16 18 13.8 19.5 C12 18.5 12.2 15 12 12 Z" />
+                              <path d="M12 12 C11.8 15 12 18.5 10.2 19.5 C8 18 9.5 14.5 12 12 Z" />
+                              <path d="M12 12 C8.5 13.5 5 14 4.2 11.5 C5.5 9 9 9.5 12 12 Z" />
+                              <circle cx="12" cy="12" r="1.3" stroke="#D7AD9B" strokeWidth="1" />
                             </svg>
-                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#D7AD9B]/60" />
                           </div>
                         </div>
 
                         {/* 카드 3 */}
                         <div
-                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#B49A70]/50 flex flex-col justify-between"
+                          className="p-7 md:p-8 rounded-2xl md:rounded-3xl relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[rgba(235,180,192,0.55)] flex flex-col justify-between"
                           style={{
-                            background: 'linear-gradient(135deg, rgba(84, 38, 56, 0.78) 0%, rgba(52, 32, 40, 0.90) 100%)',
-                            border: '1px solid rgba(185, 154, 115, 0.35)',
+                            background: 'linear-gradient(135deg, rgba(85, 48, 64, 0.90) 0%, rgba(56, 35, 48, 0.92) 100%)',
+                            border: '1px solid rgba(219, 159, 174, 0.30)',
                             backdropFilter: 'blur(10px)',
                             WebkitBackdropFilter: 'blur(10px)',
                             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.35)'
                           }}
                         >
                           <div>
-                            <div className="text-[#B59C88] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
+                            <div className="text-[#D7AD9B] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                               공감 03
                             </div>
-                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                              “이별 직후 매달렸던 치명적 실수”
+                            <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FFF2EB] leading-[1.35] break-keep">
+                              “왜 늘 비슷한 연애만 반복될까?”
                             </h4>
-                            <div className="h-[1px] w-full bg-[#B49A70]/20 my-3" />
-                            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                              남자가 이별 직후 느끼는 &apos;해방감&apos; 타이밍에 무작정 매달리는 것은, 상대에게 &apos;헤어지길 참 잘했다&apos;는 안도감과 면죄부만 쥐여줄 뿐입니다.
+                            <div className="h-[1px] w-full bg-[rgba(219,159,174,0.25)] my-3" />
+                            <p className="text-[15px] md:text-[16px] text-[#E2D2D4] leading-[1.75] font-light break-keep">
+                              사람은 달라져도 불안과 서운함은 반복되고, 사랑할수록 내 자존감과 매력은 점점 작아졌습니다.
                             </p>
                           </div>
-                          {/* 본문 하단 중앙 모란꽃 라인 아트 장식 */}
+                          {/* 본문 하단 중앙 정면 5잎 도화꽃 라인 아트 장식 */}
                           <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
-                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B79A77]/60" />
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-r from-transparent to-[#D7AD9B]/60" />
                             <svg
                               viewBox="0 0 24 24"
                               fill="none"
-                              stroke="#B79A77"
+                              stroke="#D7AD9B"
                               strokeWidth="1.2"
                               strokeLinecap="round"
                               strokeLinejoin="round"
-                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-80 shrink-0"
+                              className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] opacity-85 shrink-0"
                             >
-                              <path d="M12 17.5 C10.2 13.5 10 9 12 6 C14 9 13.8 13.5 12 17.5 Z" />
-                              <path d="M12 17 C9.5 14.5 7.8 11 8.8 7.5 C9.6 6 11.2 6.8 11.8 8.5" />
-                              <path d="M12 17 C14.5 14.5 16.2 11 15.2 7.5 C14.4 6 12.8 6.8 12.2 8.5" />
-                              <path d="M9.8 17.5 C7 15.5 5 12.5 5.5 9.5 C6 8 7.8 8.8 8.5 10.5" />
-                              <path d="M14.2 17.5 C17 15.5 19 12.5 18.5 9.5 C18 8 16.2 8.8 15.5 10.5" />
-                              <path d="M8 19.5 C10.5 18 13.5 18 16 19.5" />
+                              {/* 5장의 정면형 대칭 도화 꽃잎 */}
+                              <path d="M12 12 C10 8 9.5 4.5 12 3 C14.5 4.5 14 8 12 12 Z" />
+                              <path d="M12 12 C15 9.5 18.5 9 19.8 11.5 C19 14 15.5 13.5 12 12 Z" />
+                              <path d="M12 12 C14.5 14.5 16 18 13.8 19.5 C12 18.5 12.2 15 12 12 Z" />
+                              <path d="M12 12 C11.8 15 12 18.5 10.2 19.5 C8 18 9.5 14.5 12 12 Z" />
+                              <path d="M12 12 C8.5 13.5 5 14 4.2 11.5 C5.5 9 9 9.5 12 12 Z" />
+                              <circle cx="12" cy="12" r="1.3" stroke="#D7AD9B" strokeWidth="1" />
                             </svg>
-                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#B79A77]/60" />
+                            <span className="w-10 sm:w-12 h-[1px] bg-gradient-to-l from-transparent to-[#D7AD9B]/60" />
                           </div>
                         </div>
                       </div>
 
-                      {/* 공감 마무리 브릿지 메시지 (상자 없이 배경 위에 직접 배치 + 금빛 텍스트 흐름 & 모란꽃 심벌) */}
+                      {/* 공감 마무리 브릿지 메시지 (상자 없이 배경 위에 직접 배치 + 로즈골드 텍스트 흐름 & 도화꽃 심벌) */}
                       <div className="mt-14 md:mt-[65px] text-center max-w-[1050px] mx-auto px-4 break-keep">
                         {/* 첫 번째 줄 — 상대적으로 작은 글자 & 가벼운 두께 */}
                         <p className="text-[#FAF7F2] text-[17px] sm:text-[18px] md:text-[20px] font-elegant font-normal leading-[1.75] break-keep mb-3 sm:mb-4">
-                          불안에 떨며 매달리는 손길에는, 아무리 <span className="gold-shimmer-text font-semibold">뜨거운 진심을 쏟아도</span> 닿지 않습니다,
+                          사랑받기 위해 나를 지우는 순간, 아무리 많은 진심을 쏟아도 관계의 균형은 흔들립니다.
                         </p>
 
-                        {/* 두 번째 줄 — 약 15~20% 더 크고 강조된 글자 & 굵은 두께 (금빛 강조 텍스트 흐름 애니메이션 적용) */}
+                        {/* 두 번째 줄 — 약 15~20% 더 크고 강조된 글자 & 굵은 두께 (로즈핑크 강조 적용) */}
                         <motion.p
                           initial={{ opacity: 0, y: 10 }}
                           whileInView={{ opacity: 1, y: 0 }}
@@ -741,10 +770,10 @@ export default function LoveSecretEbookPage() {
                           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                           className="text-[#FAF7F2] text-[19px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep sm:whitespace-nowrap"
                         >
-                          이제 애원을 멈추고, 당신의 <span className="gold-shimmer-text font-bold">‘중심과 프레임’부터 온전히 바로 세워야 할 때입니다.</span>
+                          이제 더 사랑받으려 애쓰기보다, 당신만의 <span className="text-[#D9A8A7] font-bold">‘매력과 중심’</span>을 되찾아야 할 때입니다.
                         </motion.p>
 
-                        {/* 하단 모란꽃 심벌 & 잔잔한 받침선 곡선 */}
+                        {/* 하단 정면 5잎 도화꽃 심벌 & 잔잔한 받침선 곡선 */}
                         <motion.div
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
@@ -754,69 +783,30 @@ export default function LoveSecretEbookPage() {
                           aria-hidden="true"
                         >
                           <svg viewBox="0 0 32 32" fill="none" className="w-[38px] h-[38px] sm:w-[44px] sm:h-[44px] opacity-85">
-                            {/* 중앙 둥근 모란 꽃잎 */}
-                            <path
-                              d="M16 21 C13.5 16 13 10 16 6 C19 10 18.5 16 16 21 Z"
-                              stroke="#D9A8A7"
-                              strokeWidth="1.2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            {/* 좌우 안쪽 모란 꽃잎 */}
-                            <path
-                              d="M16 20.5 C12.5 17 10 12.5 11.5 8 C12.5 6 14.8 7 15.6 9.5"
-                              stroke="#D9A8A7"
-                              strokeWidth="1.2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M16 20.5 C19.5 17 22 12.5 20.5 8 C19.5 6 17.2 7 16.4 9.5"
-                              stroke="#D9A8A7"
-                              strokeWidth="1.2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            {/* 좌우 바깥 모란 꽃잎 */}
-                            <path
-                              d="M13 21 C9 18.5 6 14.5 7 10.5 C7.8 8.5 10 9.8 11 12"
-                              stroke="#D9A8A7"
-                              strokeWidth="1.2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M19 21 C23 18.5 26 14.5 25 10.5 C24.2 8.5 22 9.8 21 12"
-                              stroke="#D9A8A7"
-                              strokeWidth="1.2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            {/* 하단 모란 받침선 곡선 1 */}
-                            <path
-                              d="M8 24 C13 22.5 19 22.5 24 24"
-                              stroke="#D9A8A7"
-                              strokeWidth="1"
-                              strokeLinecap="round"
-                              opacity="0.6"
-                            />
-                            {/* 하단 모란 받침선 곡선 2 */}
-                            <path
-                              d="M11 27 C14 26 18 26 21 27"
-                              stroke="#D9A8A7"
-                              strokeWidth="0.8"
-                              strokeLinecap="round"
-                              opacity="0.35"
-                            />
+                            {/* 상단 꽃잎 */}
+                            <path d="M16 16 C13.5 11 13 6 16 4 C19 6 18.5 11 16 16 Z" stroke="#D7AD9B" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                            {/* 우상단 꽃잎 */}
+                            <path d="M16 16 C20 13 24.5 12.5 26 15.5 C25 18.8 20.5 18 16 16 Z" stroke="#D7AD9B" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                            {/* 우하단 꽃잎 */}
+                            <path d="M16 16 C19.5 19.5 21.5 24 18.5 26 C16 24.5 16.2 20 16 16 Z" stroke="#D7AD9B" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                            {/* 좌하단 꽃잎 */}
+                            <path d="M16 16 C15.8 20 16 24.5 13.5 26 C10.5 24 12.5 19.5 16 16 Z" stroke="#D7AD9B" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                            {/* 좌상단 꽃잎 */}
+                            <path d="M16 16 C11.5 18 7 18.8 6 15.5 C7.5 12.5 12 13 16 16 Z" stroke="#D7AD9B" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                            {/* 중심 꽃술 원 */}
+                            <circle cx="16" cy="16" r="1.8" stroke="#D7AD9B" strokeWidth="1" />
+                            {/* 하단 잔잔한 받침선 곡선 */}
+                            <path d="M9 28 C13.5 26.5 18.5 26.5 23 28" stroke="#D7AD9B" strokeWidth="1" strokeLinecap="round" opacity="0.6" />
+                            <path d="M12 30 C14.5 29.2 17.5 29.2 20 30" stroke="#D7AD9B" strokeWidth="0.8" strokeLinecap="round" opacity="0.35" />
                           </svg>
                         </motion.div>
                       </div>
 
                       {/* 16:9 와이드 브릿지 이미지 (1672x941 매칭, 콘텐츠 전체 너비 100%) */}
-                      <div className="mt-7 sm:mt-8 md:mt-9 w-full aspect-[16/9] md:aspect-[1672/941] relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#B49A70]/30 shadow-2xl bg-black/40 flex items-center justify-center">
+                      <div className="mt-7 sm:mt-8 md:mt-9 w-full aspect-[16/9] md:aspect-[1672/941] relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#D4B2A7]/30 shadow-2xl bg-black/40 flex items-center justify-center">
                         <Image
-                          src="/image/reunion-secret/reunion-emotional-bridge.webp"
-                          alt="공감 브릿지 와이드 배너"
+                          src="/image/love-secret/love-secret-empty-love.webp"
+                          alt="로즈핑크 한복 여성이 자신의 잔을 비워 상대 잔을 채우는 장면 - 사랑받으려 애쓸수록 나의 매력은 빛을 잃어갑니다"
                           fill
                           sizes="(max-width: 1280px) 100vw, 1280px"
                           className="object-cover"

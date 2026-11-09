@@ -20,7 +20,7 @@ export default function WealthPurchaseNotice() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-white/10 max-w-5xl mx-auto bg-gradient-to-b from-[#0f241f]/35 via-black/40 to-black/60">
+        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-white/10 max-w-7xl mx-auto bg-gradient-to-b from-[#0f241f]/35 via-black/40 to-black/60">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {wealthNoticeData.notices.map((notice, idx) => (
               <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">

@@ -168,7 +168,7 @@ export default function ReportCommonInfo({ isCompatibility = false }: ReportComm
           </div>
         </Reveal>
 
-        <div className="grid lg:grid-cols-12 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-8 max-w-7xl mx-auto">
           {/* 제작 흐름 안내 (좌측 7칸) */}
           <div className="lg:col-span-7 space-y-6">
             <Reveal>

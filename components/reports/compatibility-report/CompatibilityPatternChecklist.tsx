@@ -34,7 +34,7 @@ export default function CompatibilityPatternChecklist() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-3xl mx-auto border border-white/10 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#2D0A1E]/30 via-black/40 to-black/60">
+        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-7xl mx-auto border border-white/10 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#2D0A1E]/30 via-black/40 to-black/60">
           {/* 딥 버건디 은은한 배경 광채 */}
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#450a18]/20 rounded-full blur-[90px] pointer-events-none"></div>
 

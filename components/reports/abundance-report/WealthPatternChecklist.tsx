@@ -34,7 +34,7 @@ export default function WealthPatternChecklist() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-3xl mx-auto border border-[#608F82]/25 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#0f241f]/40 via-black/40 to-black/60">
+        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-7xl mx-auto border border-[#608F82]/25 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#0f241f]/40 via-black/40 to-black/60">
           {/* 연옥빛 은은한 배경 광채 */}
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#608F82]/15 rounded-full blur-[90px] pointer-events-none"></div>
 

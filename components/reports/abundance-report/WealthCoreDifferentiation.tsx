@@ -40,7 +40,7 @@ export default function WealthCoreDifferentiation() {
         </div>
 
         {/* 3대 날카로운 질문 카드 */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {painQuestions.map((item, idx) => {
             const Icon = item.icon
             return (
@@ -65,7 +65,7 @@ export default function WealthCoreDifferentiation() {
         </div>
 
         {/* 본문 설명 및 풍요 리포트 정의 */}
-        <div className="max-w-4xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#608F82]/35 bg-gradient-to-r from-[#0f241f]/90 via-[#152e27]/40 to-[#0a0514]/90 text-center relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#608F82]/35 bg-gradient-to-r from-[#0f241f]/90 via-[#152e27]/40 to-[#0a0514]/90 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto space-y-6">
             <p className="text-base md:text-lg text-[#EDE6DA] leading-relaxed font-light break-keep">
               단순히 운세가 좋다는 말이나 뜬구름 잡는 확언은 현실의 통장을 채워주지 않습니다.

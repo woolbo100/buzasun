@@ -27,7 +27,7 @@ export default function PersonalAnalysisMethod() {
         </div>
 
         {/* 3대 분석 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {analysisMethodData.cards.map((card, idx) => (
             <div
               key={idx}
@@ -53,7 +53,7 @@ export default function PersonalAnalysisMethod() {
         </div>
 
         {/* 강조 문구 배너 */}
-        <div className="max-w-4xl mx-auto p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
+        <div className="max-w-7xl mx-auto p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10 text-center">
           <p className="text-base md:text-lg text-[#EDE6DA] font-light leading-relaxed break-keep">
             ✨ {analysisMethodData.highlight}
           </p>

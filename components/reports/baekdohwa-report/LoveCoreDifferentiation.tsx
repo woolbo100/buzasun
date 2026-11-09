@@ -40,7 +40,7 @@ export default function LoveCoreDifferentiation() {
         </div>
 
         {/* 3대 날카로운 질문 카드 */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {painQuestions.map((item, idx) => {
             const Icon = item.icon
             return (
@@ -65,7 +65,7 @@ export default function LoveCoreDifferentiation() {
         </div>
 
         {/* 본문 설명 및 백도화 연애 리포트 정의 */}
-        <div className="max-w-4xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#B7788D]/35 bg-gradient-to-r from-[#1A0514]/90 via-[#2D0A1E]/40 to-[#0A0514]/90 text-center relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#B7788D]/35 bg-gradient-to-r from-[#1A0514]/90 via-[#2D0A1E]/40 to-[#0A0514]/90 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto space-y-6">
             <p className="text-base md:text-lg text-[#EDE6DA] leading-relaxed font-light break-keep">
               당신에게 필요한 것은 또 하나의 가벼운 연애운 풀이가 아닐 수 있습니다.

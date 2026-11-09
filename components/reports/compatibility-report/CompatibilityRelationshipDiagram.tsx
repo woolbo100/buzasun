@@ -21,7 +21,7 @@ export default function CompatibilityRelationshipDiagram() {
         </div>
 
         {/* 4단계 도식 컨테이너 */}
-        <div className="max-w-6xl mx-auto mb-16">
+        <div className="max-w-7xl mx-auto mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative items-stretch">
             {compatibilityDiagramData.steps.map((step, idx) => (
               <div key={idx} className="relative flex flex-col">
@@ -61,7 +61,7 @@ export default function CompatibilityRelationshipDiagram() {
         </div>
 
         {/* 핵심 인용 강조 배너 (버건디 & 앤티크 골드) */}
-        <div className="max-w-3xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#3B0F1B]/40 via-[#2D0A1E]/60 to-[#3B0F1B]/40 border border-[#935C6B]/40 text-center shadow-xl">
+        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#3B0F1B]/40 via-[#2D0A1E]/60 to-[#3B0F1B]/40 border border-[#935C6B]/40 text-center shadow-xl">
           <p className="text-lg md:text-2xl font-elegant font-bold text-[#C19B83] leading-relaxed whitespace-pre-line">
             &ldquo;{compatibilityDiagramData.quote}&rdquo;
           </p>

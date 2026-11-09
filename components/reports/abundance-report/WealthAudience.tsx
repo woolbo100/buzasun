@@ -22,7 +22,7 @@ export default function WealthAudience() {
         </div>
 
         {/* 상단: 기존 a3.webp 이미지와 추천/비추천 대상의 조화로운 배치 */}
-        <div className="grid lg:grid-cols-12 gap-10 items-center max-w-6xl mx-auto mb-16">
+        <div className="grid lg:grid-cols-12 gap-10 items-center max-w-7xl mx-auto mb-16">
           <div className="lg:col-span-5 relative group">
             <div className="absolute -inset-4 bg-[#608F82]/15 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <Image

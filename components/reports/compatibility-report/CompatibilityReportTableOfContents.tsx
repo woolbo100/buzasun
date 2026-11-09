@@ -33,7 +33,7 @@ export default function CompatibilityReportTableOfContents() {
         </div>
 
         {/* 7개 PART 아코디언 목록 */}
-        <div className="max-w-4xl mx-auto space-y-4 mb-16">
+        <div className="max-w-7xl mx-auto space-y-4 mb-16">
           {compatibilityTableOfContentsData.parts.map((part) => {
             const isOpen = openParts.includes(part.id)
             const isSpecial = part.isSpecial
@@ -115,7 +115,7 @@ export default function CompatibilityReportTableOfContents() {
         </div>
 
         {/* PART 07 별도 프리미엄 독립 강조 카드 (딥 버건디 & 앤티크 골드) */}
-        <div className="max-w-4xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#3B0F1B] via-[#2D0A1E] to-[#120014] border-2 border-[#935C6B]/50 shadow-2xl relative overflow-hidden">
+        <div className="max-w-7xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#3B0F1B] via-[#2D0A1E] to-[#120014] border-2 border-[#935C6B]/50 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#663244]/20 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10 text-center mb-10">

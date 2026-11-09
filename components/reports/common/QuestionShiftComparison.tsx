@@ -57,7 +57,7 @@ export default function QuestionShiftComparison({ theme }: QuestionShiftComparis
         </div>
 
         {/* 2단 비교 카드 (모바일 세로, 데스크톱 가로) */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-12">
           
           {/* CARD 01 — 기존의 운세 중심 질문 */}
           <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-white/10 bg-white/[0.02] flex flex-col justify-between relative overflow-hidden">

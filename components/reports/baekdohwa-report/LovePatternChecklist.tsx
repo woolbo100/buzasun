@@ -34,7 +34,7 @@ export default function LovePatternChecklist() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-3xl mx-auto border border-white/10 shadow-2xl relative overflow-hidden">
+        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-7xl mx-auto border border-white/10 shadow-2xl relative overflow-hidden">
           {/* 은은한 배경 광채 */}
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#B7788D]/10 rounded-full blur-[80px] pointer-events-none"></div>
 

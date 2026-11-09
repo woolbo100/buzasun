@@ -21,7 +21,7 @@ export default function WealthPatternFlow() {
         </div>
 
         {/* 4단계 도식 컨테이너 */}
-        <div className="max-w-6xl mx-auto mb-16">
+        <div className="max-w-7xl mx-auto mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative items-stretch">
             {wealthPatternFlowData.steps.map((step, idx) => (
               <div key={idx} className="relative flex flex-col">
@@ -61,7 +61,7 @@ export default function WealthPatternFlow() {
         </div>
 
         {/* 핵심 인용 강조 배너 */}
-        <div className="max-w-3xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#0f241f]/60 via-[#152e27]/80 to-[#0f241f]/60 border border-[#608F82]/35 text-center shadow-xl">
+        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#0f241f]/60 via-[#152e27]/80 to-[#0f241f]/60 border border-[#608F82]/35 text-center shadow-xl">
           <p className="text-lg md:text-2xl font-elegant font-bold text-[#E6BE8A] leading-relaxed whitespace-pre-line">
             &ldquo;{wealthPatternFlowData.quote}&rdquo;
           </p>

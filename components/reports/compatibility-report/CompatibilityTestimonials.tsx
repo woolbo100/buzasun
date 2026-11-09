@@ -24,7 +24,7 @@ export default function CompatibilityTestimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {compatibilityTestimonialConfig.reviews.map((rev: any, idx: number) => (
             <div
               key={idx}

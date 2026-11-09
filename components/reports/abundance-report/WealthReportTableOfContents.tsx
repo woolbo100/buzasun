@@ -33,7 +33,7 @@ export default function WealthReportTableOfContents() {
         </div>
 
         {/* 7개 PART 아코디언 목록 */}
-        <div className="max-w-4xl mx-auto space-y-4 mb-16">
+        <div className="max-w-7xl mx-auto space-y-4 mb-16">
           {wealthTableOfContentsData.parts.map((part) => {
             const isOpen = openParts.includes(part.id)
             const isSpecial = part.isSpecial
@@ -115,7 +115,7 @@ export default function WealthReportTableOfContents() {
         </div>
 
         {/* PART 07 별도 프리미엄 독립 강조 카드 (연옥 & 앤티크 골드) */}
-        <div className="max-w-4xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#0f241f] via-[#152e27] to-[#0a0514] border-2 border-[#608F82]/50 shadow-2xl relative overflow-hidden">
+        <div className="max-w-7xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#0f241f] via-[#152e27] to-[#0a0514] border-2 border-[#608F82]/50 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#608F82]/15 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10 text-center mb-10">
