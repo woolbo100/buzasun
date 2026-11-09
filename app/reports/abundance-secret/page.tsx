@@ -1618,8 +1618,78 @@ export default function AbundanceSecretPage() {
                   </div>
                 </div>
 
-                {/* 3종 올인원 세트 상세 해부 서브헤더 (연애비급과 동일한 간격 및 풍요비책 테마 컬러) */}
-                <div className="text-center max-w-3xl mx-auto mb-16 pt-16 md:pt-24 lg:pt-28 break-keep">
+                                {/* ─────────────────────────────────────────────────────────
+                    [신규 섹션] INSIDE THE SECRET BOOK: 책 속에서 만날 내용
+                    (반투명 외곽 컨테이너 1개 내에 이미지 3장 가로 배치, 상자 속 상자 금지)
+                   ───────────────────────────────────────────────────────── */}
+                <div className="pt-16 md:pt-20 lg:pt-24 mb-14 md:mb-18">
+                  {/* 섹션 제목 및 부제 (컨테이너 바깥 위쪽 배치) */}
+                  <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14 break-keep px-4">
+                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                      INSIDE THE SECRET BOOK
+                    </span>
+                    <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide mb-3 md:mb-4">
+                      책 속에서 만날 내용
+                    </h3>
+                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.6] break-keep">
+                      《풍요비책》이 안내하는 부와 풍요의 원리부터 실천까지, 그 특별한 여정을 미리 만나보세요.
+                    </p>
+                  </div>
+
+                  {/* 이미지 3장을 감싸는 단일 반투명 컨테이너 (기존 가로 풀 사이즈 w-full 적용 & 간격 최적화) */}
+                  <div className="w-full">
+                    <div
+                      className="w-full rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
+                      style={{
+                        background: 'rgba(85, 53, 67, 0.12)',
+                        border: '1px solid rgba(194, 150, 145, 0.18)',
+                        boxShadow: '0 8px 30px rgba(0, 0, 0, 0.15)'
+                      }}
+                    >
+                      {/* 가로 3열 이미지 그리드 (상자 여백 축소 & 이미지 크기 확대) */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start w-full">
+                        {/* 이미지 1 — 진단·기준·조언 */}
+                        <div className="w-full hover:-translate-y-1 transition-transform duration-300">
+                          <Image
+                            src="/image/reunion-secret/return-secret-book-preview-guide.webp"
+                            alt="책 속에서 만날 내용 - 진단·기준·조언"
+                            width={440}
+                            height={661}
+                            className="w-full h-auto object-contain block rounded-[14px] md:rounded-[18px]"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                        </div>
+
+                        {/* 이미지 2 — 여섯 가지 실전 도구 */}
+                        <div className="w-full hover:-translate-y-1 transition-transform duration-300">
+                          <Image
+                            src="/image/reunion-secret/return-secret-book-preview-tools.webp"
+                            alt="막막한 순간에 펼쳐 볼 여섯 가지 도구 - 6가지 실전 자료"
+                            width={440}
+                            height={656}
+                            className="w-full h-auto object-contain block rounded-[14px] md:rounded-[18px]"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                        </div>
+
+                        {/* 이미지 3 — 재회의 5단계 여정 */}
+                        <div className="w-full hover:-translate-y-1 transition-transform duration-300">
+                          <Image
+                            src="/image/reunion-secret/return-secret-book-preview-journey.webp"
+                            alt="다시 만나는 일만큼, 나를 잃지 않는 일 - 파동의 진단부터 완성된 나까지 다섯 단계"
+                            width={440}
+                            height={658}
+                            className="w-full h-auto object-contain block rounded-[14px] md:rounded-[18px]"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3종 올인원 세트 상세 해부 서브헤더 (책 속에서 만날 내용 섹션 아래로 배치) */}
+                <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 pt-12 md:pt-16 lg:pt-20 break-keep">
                   <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                     3-in-1 All-in-One Package
                   </span>
