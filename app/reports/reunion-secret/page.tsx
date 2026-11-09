@@ -71,7 +71,7 @@ const productData = {
   // 💡 [신규 영역 1] 관계 역전의 법칙 (16:9 인포그래픽 다이어그램 이미지 경로)
   reunionLawImage: '/image/reunion-secret/return-secret-position-shift.webp',
   // 💡 [신규 영역 2] 인연의 주권자 (16:9 와이드 배너 이미지 경로)
-  sovereignImage: '/image/reunion-secret/return-secret-sovereign-mindset-visual-v2.webp',
+  sovereignImage: '/image/reunion-secret/return-secret-sovereign-mindset-visual-v2.webp?v=20261109_v2',
   // 💡 [책 속에서 만날 내용] 미리보기 이미지 3종
   bookPreviewGuideImage: '/image/reunion-secret/return-secret-book-preview-guide.webp',
   bookPreviewToolsImage: '/image/reunion-secret/return-secret-book-preview-tools.webp',
@@ -2010,18 +2010,18 @@ export default function ReunionSecretPage() {
                     </p>
                   </div>
 
-                  {/* 이미지 3장을 감싸는 단일 반투명 컨테이너 (개별 카드 상자 제거) */}
-                  <div className="w-full max-w-[1240px] mx-auto px-4 sm:px-6">
+                  {/* 이미지 3장을 감싸는 단일 반투명 컨테이너 (기존 가로 풀 사이즈 w-full 적용 & 간격 최적화) */}
+                  <div className="w-full">
                     <div
-                      className="w-full rounded-[24px] p-5 sm:p-6 md:p-8 lg:p-9 transition-all duration-300"
+                      className="w-full rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
                       style={{
                         background: 'rgba(85, 53, 67, 0.12)',
                         border: '1px solid rgba(194, 150, 145, 0.18)',
                         boxShadow: '0 8px 30px rgba(0, 0, 0, 0.15)'
                       }}
                     >
-                      {/* 가로 3열 이미지 그리드 (데스크톱 가로 1줄, 모바일 1열) */}
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start w-full">
+                      {/* 가로 3열 이미지 그리드 (상자 여백 축소 & 이미지 크기 확대) */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start w-full">
                         {/* 이미지 1 — 진단·기준·조언 */}
                         <div className="w-full hover:-translate-y-1 transition-transform duration-300">
                           <Image
@@ -2029,7 +2029,7 @@ export default function ReunionSecretPage() {
                             alt="책 속에서 만날 내용 - 진단·기준·조언"
                             width={440}
                             height={661}
-                            className="w-full h-auto object-contain block rounded-[16px] md:rounded-[20px]"
+                            className="w-full h-auto object-contain block rounded-[14px] md:rounded-[18px]"
                             sizes="(max-width: 768px) 100vw, 33vw"
                           />
                         </div>
@@ -2041,7 +2041,7 @@ export default function ReunionSecretPage() {
                             alt="막막한 순간에 펼쳐 볼 여섯 가지 도구 - 6가지 실전 자료"
                             width={440}
                             height={656}
-                            className="w-full h-auto object-contain block rounded-[16px] md:rounded-[20px]"
+                            className="w-full h-auto object-contain block rounded-[14px] md:rounded-[18px]"
                             sizes="(max-width: 768px) 100vw, 33vw"
                           />
                         </div>
@@ -2053,7 +2053,7 @@ export default function ReunionSecretPage() {
                             alt="다시 만나는 일만큼, 나를 잃지 않는 일 - 파동의 진단부터 완성된 나까지 다섯 단계"
                             width={440}
                             height={658}
-                            className="w-full h-auto object-contain block rounded-[16px] md:rounded-[20px]"
+                            className="w-full h-auto object-contain block rounded-[14px] md:rounded-[18px]"
                             sizes="(max-width: 768px) 100vw, 33vw"
                           />
                         </div>
@@ -2765,14 +2765,16 @@ export default function ReunionSecretPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div>
-                  {/* [신규 영역 1] 관계 역전의 법칙 상단 텍스트 영역 */}
-                  <div className="text-center max-w-3xl mx-auto space-y-4 mb-10 md:mb-14 break-keep">
+                  {/* [신규 영역 1] 관계 역전의 법칙 상단 텍스트 영역 (max-w-4xl 및 한 줄 정렬 최적화) */}
+                  <div className="text-center max-w-4xl mx-auto space-y-4 mb-10 md:mb-14 break-keep">
                     <span className="text-[#D8BB94] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       POSITION SHIFT
                     </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
-                      &ldquo;매달려도 차가워졌던 이유,<br className="hidden sm:inline" />
-                      어쩌면 <span className="text-[#C2A477]">&lsquo;관계의 프레임&rsquo;</span>을 돌보지 않았기 때문입니다.&rdquo;
+                    <h2 className="text-xl sm:text-2xl md:text-[30px] lg:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] md:leading-[1.45] break-keep">
+                      &ldquo;매달려도 차가워졌던 이유,<br />
+                      <span className="whitespace-normal sm:whitespace-nowrap">
+                        어쩌면 <span className="text-[#C2A477]">&lsquo;관계의 프레임&rsquo;</span>을 돌보지 않았기 때문입니다.&rdquo;
+                      </span>
                     </h2>
                     <div className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep space-y-2">
                       <p>
