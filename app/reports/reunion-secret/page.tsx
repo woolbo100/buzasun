@@ -1994,12 +1994,12 @@ export default function ReunionSecretPage() {
 
                 {/* ─────────────────────────────────────────────────────────
                     [신규 섹션] INSIDE THE SECRET BOOK: 책 속에서 만날 내용
-                    (3종 올인원 세트 상세 해부 위로 이동, 데스크톱 가로 3열 나란히 배치)
+                    (반투명 외곽 컨테이너 1개 내에 이미지 3장 가로 배치, 상자 속 상자 금지)
                    ───────────────────────────────────────────────────────── */}
                 <div className="pt-16 md:pt-20 lg:pt-24 mb-14 md:mb-18">
-                  {/* 섹션 제목 및 부제 */}
+                  {/* 섹션 제목 및 부제 (컨테이너 바깥 위쪽 배치) */}
                   <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14 break-keep px-4">
-                    <span className="text-[#C2A477] font-elegant text-xs md:text-sm tracking-[0.2em] uppercase block mb-2.5 md:mb-3 font-semibold">
+                    <span className="text-[#C2A477] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                       INSIDE THE SECRET BOOK
                     </span>
                     <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide mb-3 md:mb-4">
@@ -2010,42 +2010,54 @@ export default function ReunionSecretPage() {
                     </p>
                   </div>
 
-                  {/* 가로 3열 이미지 카드 그리드 (데스크톱 한 줄 3열, 모바일 세로 1열) */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7 lg:gap-8 items-start w-full max-w-[1240px] mx-auto px-4">
-                    {/* 이미지 1 — 진단·기준·조언 */}
-                    <div className="w-full rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_10px_30px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
-                      <Image
-                        src={productData.bookPreviewGuideImage}
-                        alt="책 속에서 만날 내용 - 진단·기준·조언"
-                        width={440}
-                        height={661}
-                        className="w-full h-auto object-contain block"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                    </div>
+                  {/* 이미지 3장을 감싸는 단일 반투명 컨테이너 (개별 카드 상자 제거) */}
+                  <div className="w-full max-w-[1240px] mx-auto px-4 sm:px-6">
+                    <div
+                      className="w-full rounded-[24px] p-5 sm:p-6 md:p-8 lg:p-9 transition-all duration-300"
+                      style={{
+                        background: 'rgba(85, 53, 67, 0.12)',
+                        border: '1px solid rgba(194, 150, 145, 0.18)',
+                        boxShadow: '0 8px 30px rgba(0, 0, 0, 0.15)'
+                      }}
+                    >
+                      {/* 가로 3열 이미지 그리드 (데스크톱 가로 1줄, 모바일 1열) */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start w-full">
+                        {/* 이미지 1 — 진단·기준·조언 */}
+                        <div className="w-full hover:-translate-y-1 transition-transform duration-300">
+                          <Image
+                            src={productData.bookPreviewGuideImage}
+                            alt="책 속에서 만날 내용 - 진단·기준·조언"
+                            width={440}
+                            height={661}
+                            className="w-full h-auto object-contain block rounded-[16px] md:rounded-[20px]"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                        </div>
 
-                    {/* 이미지 2 — 여섯 가지 실전 도구 */}
-                    <div className="w-full rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_10px_30px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
-                      <Image
-                        src={productData.bookPreviewToolsImage}
-                        alt="막막한 순간에 펼쳐 볼 여섯 가지 도구 - 6가지 실전 자료"
-                        width={440}
-                        height={656}
-                        className="w-full h-auto object-contain block"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                    </div>
+                        {/* 이미지 2 — 여섯 가지 실전 도구 */}
+                        <div className="w-full hover:-translate-y-1 transition-transform duration-300">
+                          <Image
+                            src={productData.bookPreviewToolsImage}
+                            alt="막막한 순간에 펼쳐 볼 여섯 가지 도구 - 6가지 실전 자료"
+                            width={440}
+                            height={656}
+                            className="w-full h-auto object-contain block rounded-[16px] md:rounded-[20px]"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                        </div>
 
-                    {/* 이미지 3 — 재회의 5단계 여정 */}
-                    <div className="w-full rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_10px_30px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
-                      <Image
-                        src={productData.bookPreviewJourneyImage}
-                        alt="다시 만나는 일만큼, 나를 잃지 않는 일 - 파동의 진단부터 완성된 나까지 다섯 단계"
-                        width={440}
-                        height={658}
-                        className="w-full h-auto object-contain block"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
+                        {/* 이미지 3 — 재회의 5단계 여정 */}
+                        <div className="w-full hover:-translate-y-1 transition-transform duration-300">
+                          <Image
+                            src={productData.bookPreviewJourneyImage}
+                            alt="다시 만나는 일만큼, 나를 잃지 않는 일 - 파동의 진단부터 완성된 나까지 다섯 단계"
+                            width={440}
+                            height={658}
+                            className="w-full h-auto object-contain block rounded-[16px] md:rounded-[20px]"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
