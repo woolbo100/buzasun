@@ -72,6 +72,10 @@ const productData = {
   reunionLawImage: '/image/reunion-secret/return-secret-position-shift.webp',
   // 💡 [신규 영역 2] 인연의 주권자 (16:9 와이드 배너 이미지 경로)
   sovereignImage: '/image/reunion-secret/return-secret-sovereign-mindset-visual-v2.webp',
+  // 💡 [책 속에서 만날 내용] 미리보기 이미지 3종
+  bookPreviewGuideImage: '/image/reunion-secret/return-secret-book-preview-guide.webp',
+  bookPreviewToolsImage: '/image/reunion-secret/return-secret-book-preview-tools.webp',
+  bookPreviewJourneyImage: '/image/reunion-secret/return-secret-book-preview-journey.webp',
   // 💡 이별 불안 공감 (3:4 이미지 경로)
   anxietyImage: '/image/reunion-secret/reunion-closed-heart.webp',
 }
@@ -2002,6 +2006,69 @@ export default function ReunionSecretPage() {
                     </p>
                   </div>
                 </div>
+
+                {/* ─────────────────────────────────────────────────────────
+                    [신규 섹션] INSIDE THE SECRET BOOK: 책 속에서 만날 내용 (미리보기 이미지 3종 세로 1열 갤러리)
+                   ───────────────────────────────────────────────────────── */}
+                <div className="mt-14 md:mt-18 mb-16 md:mb-20">
+                  {/* 섹션 제목 및 부제 */}
+                  <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14 break-keep px-4">
+                    <span className="text-[#C2A477] font-elegant text-xs md:text-sm tracking-[0.2em] uppercase block mb-2.5 md:mb-3 font-semibold">
+                      INSIDE THE SECRET BOOK
+                    </span>
+                    <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide mb-3 md:mb-4">
+                      책 속에서 만날 내용
+                    </h3>
+                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.6] break-keep">
+                      《재회비방》이 안내하는 관계의 이해부터 실천까지, 그 특별한 여정을 미리 만나보세요.
+                    </p>
+                  </div>
+
+                  {/* 세로 1열 독립 카드 배치 (데스크톱 440~500px, 모바일 화면 92%, 카드 간격 28~44px) */}
+                  <div className="flex flex-col gap-7 md:gap-11 items-center justify-center w-full px-4">
+                    {/* 이미지 1 — 진단·기준·조언 */}
+                    <Reveal>
+                      <div className="w-[92%] sm:w-full max-w-[480px] mx-auto rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
+                        <Image
+                          src={productData.bookPreviewGuideImage}
+                          alt="책 속에서 만날 내용 - 진단·기준·조언"
+                          width={440}
+                          height={661}
+                          className="w-full h-auto object-contain block"
+                          sizes="(max-width: 640px) 92vw, 480px"
+                        />
+                      </div>
+                    </Reveal>
+
+                    {/* 이미지 2 — 여섯 가지 실전 도구 */}
+                    <Reveal>
+                      <div className="w-[92%] sm:w-full max-w-[480px] mx-auto rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
+                        <Image
+                          src={productData.bookPreviewToolsImage}
+                          alt="막막한 순간에 펼쳐 볼 여섯 가지 도구 - 6가지 실전 자료"
+                          width={440}
+                          height={656}
+                          className="w-full h-auto object-contain block"
+                          sizes="(max-width: 640px) 92vw, 480px"
+                        />
+                      </div>
+                    </Reveal>
+
+                    {/* 이미지 3 — 재회의 5단계 여정 */}
+                    <Reveal>
+                      <div className="w-[92%] sm:w-full max-w-[480px] mx-auto rounded-2xl md:rounded-[20px] overflow-hidden border border-[#B49A70]/30 shadow-[0_12px_40px_rgba(0,0,0,0.35)] bg-black/40 hover:-translate-y-1 transition-all duration-300">
+                        <Image
+                          src={productData.bookPreviewJourneyImage}
+                          alt="다시 만나는 일만큼, 나를 잃지 않는 일 - 파동의 진단부터 완성된 나까지 다섯 단계"
+                          width={440}
+                          height={658}
+                          className="w-full h-auto object-contain block"
+                          sizes="(max-width: 640px) 92vw, 480px"
+                        />
+                      </div>
+                    </Reveal>
+                  </div>
+                </div>
               </Reveal>
             </section>
 
@@ -3238,9 +3305,9 @@ export default function ReunionSecretPage() {
                   </p>
                 </div>
 
-                {/* 안쪽 구매 카드 */}
+                {/* 안쪽 구매 카드 (상자 가로폭을 max-w-[820px]로 확장하여 상품명 한 줄 표시 최적화) */}
                 <div
-                  className="rounded-3xl p-8 sm:p-10 md:p-12 relative overflow-hidden shadow-2xl max-w-2xl mx-auto"
+                  className="rounded-3xl px-6 sm:px-10 md:px-12 py-8 sm:py-10 md:py-12 relative overflow-hidden shadow-2xl max-w-[820px] mx-auto"
                   style={{
                     background: 'linear-gradient(180deg, #542638 0%, #44202e 52%, #2c1620 100%)',
                     border: '1px solid rgba(190, 158, 108, 0.78)',
