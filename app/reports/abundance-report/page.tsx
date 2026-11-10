@@ -423,7 +423,7 @@ export default function AbundanceReportPage() {
                       {fiveElements.map((item, idx) => (
                         <div
                           key={idx}
-                          className={`gungjung-glass p-8 border ${item.borderClass} bg-gradient-to-b ${item.gradientClass} relative overflow-hidden group flex flex-col items-center justify-between text-center transition-all duration-500 hover:-translate-y-2`}
+                          className={`gungjung-glass point-box p-8 border ${item.borderClass} bg-gradient-to-b ${item.gradientClass} relative overflow-hidden group flex flex-col items-center justify-between text-center transition-all duration-500 hover:-translate-y-2`}
                         >
                           <div className={`absolute -inset-10 ${item.bgGlow} blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
                           <div className="absolute inset-2 border border-white/[0.03] group-hover:border-[#E6BE8A]/25 rounded-xl pointer-events-none transition-colors duration-500"></div>

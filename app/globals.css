@@ -416,12 +416,8 @@
   .detail-page.love-report-page .gungjung-glass:not(.point-box),
   .detail-page.love-report-page .detail-glass-card:not(.point-box),
   .detail-page.love-report-page .detail-glass-box:not(.point-box) {
-    background: linear-gradient(
-      180deg,
-      rgba(166, 91, 128, 0.22) 0%,
-      rgba(117, 65, 95, 0.12) 50%,
-      rgba(10, 5, 20, 0.35) 100%
-    ) !important;
+    background-color: rgba(166, 91, 128, 0.18) !important;
+    background-image: none !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(196, 139, 159, 0.25) !important;
@@ -431,12 +427,8 @@
   .detail-page.love-report-page .gungjung-glass:not(.point-box):hover,
   .detail-page.love-report-page .detail-glass-card:not(.point-box):hover,
   .detail-page.love-report-page .detail-glass-box:not(.point-box):hover {
-    background: linear-gradient(
-      180deg,
-      rgba(166, 91, 128, 0.26) 0%,
-      rgba(117, 65, 95, 0.15) 50%,
-      rgba(10, 5, 20, 0.38) 100%
-    ) !important;
+    background-color: rgba(166, 91, 128, 0.22) !important;
+    background-image: none !important;
     border-color: rgba(196, 139, 159, 0.4) !important;
     box-shadow: 0 0 50px rgba(166, 91, 128, 0.22) !important;
   }
@@ -445,12 +437,8 @@
   .detail-page.compatibility-report-page .gungjung-glass:not(.point-box),
   .detail-page.compatibility-report-page .detail-glass-card:not(.point-box),
   .detail-page.compatibility-report-page .detail-glass-box:not(.point-box) {
-    background: linear-gradient(
-      180deg,
-      rgba(113, 60, 67, 0.22) 0%,
-      rgba(89, 52, 60, 0.12) 50%,
-      rgba(10, 5, 20, 0.35) 100%
-    ) !important;
+    background-color: rgba(113, 60, 67, 0.18) !important;
+    background-image: none !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(113, 60, 67, 0.25) !important;
@@ -460,12 +448,8 @@
   .detail-page.compatibility-report-page .gungjung-glass:not(.point-box):hover,
   .detail-page.compatibility-report-page .detail-glass-card:not(.point-box):hover,
   .detail-page.compatibility-report-page .detail-glass-box:not(.point-box):hover {
-    background: linear-gradient(
-      180deg,
-      rgba(113, 60, 67, 0.26) 0%,
-      rgba(89, 52, 60, 0.15) 50%,
-      rgba(10, 5, 20, 0.38) 100%
-    ) !important;
+    background-color: rgba(113, 60, 67, 0.22) !important;
+    background-image: none !important;
     border-color: rgba(113, 60, 67, 0.4) !important;
     box-shadow: 0 0 50px rgba(113, 60, 67, 0.22) !important;
   }
@@ -474,12 +458,8 @@
   .detail-page.abundance-report-page .gungjung-glass:not(.point-box),
   .detail-page.abundance-report-page .detail-glass-card:not(.point-box),
   .detail-page.abundance-report-page .detail-glass-box:not(.point-box) {
-    background: linear-gradient(
-      180deg,
-      rgba(86, 141, 134, 0.22) 0%,
-      rgba(65, 106, 112, 0.12) 50%,
-      rgba(10, 5, 20, 0.35) 100%
-    ) !important;
+    background-color: rgba(86, 141, 134, 0.18) !important;
+    background-image: none !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(86, 141, 134, 0.25) !important;
@@ -489,12 +469,8 @@
   .detail-page.abundance-report-page .gungjung-glass:not(.point-box):hover,
   .detail-page.abundance-report-page .detail-glass-card:not(.point-box):hover,
   .detail-page.abundance-report-page .detail-glass-box:not(.point-box):hover {
-    background: linear-gradient(
-      180deg,
-      rgba(86, 141, 134, 0.26) 0%,
-      rgba(65, 106, 112, 0.15) 50%,
-      rgba(10, 5, 20, 0.38) 100%
-    ) !important;
+    background-color: rgba(86, 141, 134, 0.22) !important;
+    background-image: none !important;
     border-color: rgba(86, 141, 134, 0.4) !important;
     box-shadow: 0 0 50px rgba(86, 141, 134, 0.22) !important;
   }
