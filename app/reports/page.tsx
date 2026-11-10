@@ -103,7 +103,7 @@ export default function ReportsHubPage() {
                         {/* Content Side */}
                         <div className="p-8 md:p-16 space-y-6">
                           <span className={`text-[12px] md:text-[15px] tracking-[0.4em] block font-bold uppercase ${
-                            isJadeGold ? 'text-[#8FD3B6]' : 'text-[var(--accent-gold)] opacity-70'
+                            isJadeGold ? 'text-[#CBEBDE]' : 'text-[var(--accent-gold)] opacity-70'
                           }`}>
                             {report.label}
                           </span>
