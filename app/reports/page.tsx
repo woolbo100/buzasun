@@ -12,7 +12,7 @@ export default function ReportsHubPage() {
   useScrollAnimation()
 
   // 추후 이미지 교체 시 아래 경로만 변경하면 됩니다.
-  const ABUNDANCE_BANNER_IMAGE = '/image/abundance/a1.webp'
+  const ABUNDANCE_BANNER_IMAGE = '/image/baekdohwa-wealth-destiny.webp'
 
   const reports = [
     {
@@ -22,8 +22,11 @@ export default function ReportsHubPage() {
       label: 'PREMIUM REPORT',
       btnText: '연애 리포트 자세히 보기',
       link: '/reports/baekdohwa-report',
-      image: '/image/love-code-bg.png',
-      premium: false,
+      image: '/image/baekdohwa-love-destiny.webp',
+      // ① 선천코드 연애 리포트 — 로즈핑크 플럼 글라스 + 은은한 로즈골드 테두리
+      cardClass: 'border-[#C48B9F]/25 bg-gradient-to-b from-[#A65B80]/[0.22] via-[#75415F]/[0.12] to-[#0a0514]/[0.35] hover:border-[#C48B9F]/40 hover:shadow-[0_0_50px_rgba(166,91,128,0.22)]',
+      // CTA 버튼: 배경 #A65B80 / 호버 #B96D92
+      btnClass: 'bg-[#A65B80] hover:bg-[#B96D92] text-[#EDE6DA] hover:text-white shadow-[0_4px_20px_rgba(166,91,128,0.25)] hover:shadow-[0_4px_25px_rgba(166,91,128,0.4)]',
       theme: 'default' as const
     },
     {
@@ -33,8 +36,11 @@ export default function ReportsHubPage() {
       label: 'PREMIUM COMPATIBILITY READING',
       btnText: '궁합 리포트 자세히 보기',
       link: '/reports/premium-compatibility-report',
-      image: '/image/premium_compatibility_bg.png', 
-      premium: true,
+      image: '/image/baekdohwa-romantic-compatibility.webp', 
+      // ② 프리미엄 궁합 리포트 — 버건디 플럼 글라스 + 차분한 버건디 플럼 테두리
+      cardClass: 'border-[#793B58]/25 bg-gradient-to-b from-[#793B58]/[0.22] via-[#542C49]/[0.12] to-[#0a0514]/[0.35] hover:border-[#793B58]/40 hover:shadow-[0_0_50px_rgba(121,59,88,0.22)]',
+      // CTA 버튼: 배경 #793B58 / 호버 #945071
+      btnClass: 'bg-[#793B58] hover:bg-[#945071] text-[#EDE6DA] hover:text-white shadow-[0_4px_20px_rgba(121,59,88,0.25)] hover:shadow-[0_4px_25px_rgba(121,59,88,0.4)]',
       theme: 'default' as const
     },
     {
@@ -44,8 +50,11 @@ export default function ReportsHubPage() {
       label: 'PREMIUM ABUNDANCE REPORT',
       btnText: '풍요 리포트 자세히 보기',
       link: '/reports/abundance-report',
-      image: ABUNDANCE_BANNER_IMAGE,
-      premium: false,
+      image: '/image/baekdohwa-wealth-destiny.webp',
+      // ③ 선천코드 풍요 리포트 — 옥색 글라스 + 은은한 청옥빛 테두리
+      cardClass: 'border-[#568D86]/25 bg-gradient-to-b from-[#568D86]/[0.22] via-[#416A70]/[0.12] to-[#0a0514]/[0.35] hover:border-[#568D86]/40 hover:shadow-[0_0_50px_rgba(86,141,134,0.22)]',
+      // CTA 버튼: 배경 #568D86 / 호버 #70A59D
+      btnClass: 'bg-[#568D86] hover:bg-[#70A59D] text-[#EDE6DA] hover:text-white shadow-[0_4px_20px_rgba(86,141,134,0.25)] hover:shadow-[0_4px_25px_rgba(86,141,134,0.4)]',
       theme: 'jade-gold' as const
     }
   ]
@@ -65,8 +74,8 @@ export default function ReportsHubPage() {
                   선천코드 <span className="text-[var(--accent-gold)]">리포트</span>
                 </h1>
                 <p className="text-[#EDE6DA] opacity-90 text-[19px] sm:text-xl md:text-[22px] font-elegant leading-[1.8] max-w-3xl mx-auto break-keep">
-                  나를 이해하는 리포트에서 우리 관계를 읽는 리포트까지<br />
-                  <span className="text-[var(--accent-gold-light)]">백도화식 선천코드로 사랑의 흐름을 조용히 읽어드립니다.</span>
+                  사랑의 비밀, 인연의 결, 풍요의 흐름까지<br />
+                  <span className="text-[var(--accent-gold-light)]">타고난 선천코드에 담긴 나만의 이야기를 백도화의 시선으로 풀어드립니다.</span>
                 </p>
               </Reveal>
             </div>
@@ -77,13 +86,7 @@ export default function ReportsHubPage() {
                 const isJadeGold = report.theme === 'jade-gold'
                 return (
                   <Reveal key={report.id} delayMs={idx * 200}>
-                    <div className={`gungjung-glass overflow-hidden rounded-[2rem] border transition-all duration-700 group ${
-                      isJadeGold
-                        ? 'border-[#8FD3B6]/25 bg-gradient-to-br from-[#0f241f]/80 via-[#121824]/90 to-[#0a0514]/95 hover:shadow-[0_0_50px_rgba(143,211,182,0.18)]'
-                        : report.premium 
-                          ? 'border-[rgba(212,175,55,0.25)] bg-gradient-to-br from-[#1a0f2e]/80 to-[#0a0514]/95 hover:shadow-[0_0_50px_rgba(212,178,167,0.15)]' 
-                          : 'border-white/[0.05] bg-white/[0.03] hover:shadow-[0_0_50px_rgba(212,178,167,0.15)]'
-                    }`}>
+                    <div className={`gungjung-glass overflow-hidden rounded-[2rem] border transition-all duration-700 group ${report.cardClass}`}>
                       <div className="grid grid-cols-1 md:grid-cols-2 items-center">
                         
                         {/* Image Side */}
@@ -120,13 +123,7 @@ export default function ReportsHubPage() {
                           <div className={`pt-6 ${isJadeGold ? 'flex justify-end' : ''}`}>
                             <Link 
                               href={report.link}
-                              className={`inline-flex items-center px-10 py-4 rounded-xl transition-all duration-500 text-sm font-bold tracking-widest ${
-                                isJadeGold
-                                  ? 'border border-[#8FD3B6]/45 text-[#E6BE8A] bg-gradient-to-r from-[#8FD3B6]/15 to-[#E6BE8A]/15 hover:from-[#8FD3B6]/25 hover:to-[#E6BE8A]/25 hover:border-[#E6BE8A]/70 shadow-[0_0_25px_rgba(143,211,182,0.15)]'
-                                  : report.premium 
-                                    ? 'bg-[var(--accent-gold)] text-[#120014] hover:brightness-110 shadow-[0_0_20px_rgba(212,175,55,0.3)]' 
-                                    : 'border border-[var(--accent-gold-soft)] text-[var(--accent-gold)] hover:bg-[var(--accent-gold-soft)]'
-                              }`}
+                              className={`inline-flex items-center px-10 py-4 rounded-xl transition-all duration-500 text-sm font-bold tracking-widest hover:-translate-y-0.5 ${report.btnClass}`}
                             >
                               {report.btnText}
                             </Link>
@@ -144,13 +141,13 @@ export default function ReportsHubPage() {
             <div className="mt-24 text-center">
               <Reveal>
                 <p className="text-[#EDE6DA] opacity-60 text-base md:text-lg mb-10 max-w-2xl mx-auto break-keep leading-relaxed font-light italic">
-                  “처음이라면 연애 리포트부터,<br className="md:hidden" /> 이미 마음에 두고 있는 관계가 있다면 궁합 리포트부터 시작하셔도 좋습니다.”
+                  “나만의 선천코드를 읽기 전, 사랑과 관계, 풍요의 비밀을 먼저 만나보세요.”
                 </p>
                 <Link 
-                  href="/shop"
+                  href="/ebooks"
                   className="text-[var(--accent-gold)] opacity-50 hover:opacity-100 hover:text-[var(--accent-gold-light)] transition-all flex items-center justify-center gap-2 group mx-auto w-fit"
                 >
-                  <span className="text-sm tracking-[0.2em]">비밀상점 둘러보기</span>
+                  <span className="text-sm tracking-[0.2em]">백도화 비급서 둘러보기</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
