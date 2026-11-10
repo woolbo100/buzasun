@@ -69,7 +69,7 @@ export default function PremiumCompatibilityReportPage() {
   }
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#0a0514]">
+    <main className="detail-page compatibility-report-page relative min-h-screen bg-[#0a0514]">
       <GlobalBackground src="/image/main4.png">
         <Navigation />
 
@@ -147,13 +147,7 @@ export default function PremiumCompatibilityReportPage() {
                   </button>
                   <button 
                     onClick={handlePurchase}
-                    className="w-full sm:flex-1 py-5 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
-                    style={{
-                      background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
-                      border: '1px solid rgba(216, 187, 148, 0.5)',
-                      color: '#FAF7F2',
-                      boxShadow: '0 0 40px rgba(102, 50, 68, 0.45)'
-                    }}
+                    className="w-full sm:flex-1 py-5 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-[linear-gradient(110deg,#552334_0%,#431a2a_55%,#32141f_100%)] hover:bg-[linear-gradient(110deg,#64293d_0%,#522034_55%,#3e1927_100%)] border border-[rgba(229,196,187,0.6)] hover:border-[rgba(229,196,187,0.85)] text-[#FAF7F2] shadow-[0_4px_16px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4),0_0_20px_rgba(229,196,187,0.32)] hover:brightness-105"
                   >
                     바로 신청하기
                   </button>
@@ -420,13 +414,7 @@ export default function PremiumCompatibilityReportPage() {
                     </button>
                     <button 
                       onClick={handlePurchase}
-                      className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
-                      style={{
-                        background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
-                        border: '1px solid rgba(216, 187, 148, 0.5)',
-                        color: '#FAF7F2',
-                        boxShadow: '0 0 50px rgba(102, 50, 68, 0.5)'
-                      }}
+                      className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-[linear-gradient(110deg,#552334_0%,#431a2a_55%,#32141f_100%)] hover:bg-[linear-gradient(110deg,#64293d_0%,#522034_55%,#3e1927_100%)] border border-[rgba(229,196,187,0.6)] hover:border-[rgba(229,196,187,0.85)] text-[#FAF7F2] shadow-[0_4px_16px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4),0_0_20px_rgba(229,196,187,0.32)] hover:brightness-105"
                     >
                       바로 신청하기
                     </button>

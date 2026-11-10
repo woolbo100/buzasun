@@ -110,7 +110,7 @@ export default function ReportCommonInfo({ isCompatibility = false }: ReportComm
             {fiveElements.map((item, idx) => (
               <div
                 key={idx}
-                className={`gungjung-glass p-8 border ${item.borderClass} bg-gradient-to-b ${item.gradientClass} relative overflow-hidden group flex flex-col items-center justify-between text-center transition-all duration-500 hover:-translate-y-2`}
+                className={`gungjung-glass point-box p-8 border ${item.borderClass} bg-gradient-to-b ${item.gradientClass} relative overflow-hidden group flex flex-col items-center justify-between text-center transition-all duration-500 hover:-translate-y-2`}
               >
                 {/* 카드 내 펄 광채 효과 백그라운드 */}
                 <div className={`absolute -inset-10 ${item.bgGlow} blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>

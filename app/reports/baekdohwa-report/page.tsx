@@ -69,7 +69,7 @@ export default function BaekdohwaReportPage() {
   }
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#0a0514]">
+    <main className="detail-page love-report-page relative min-h-screen bg-[#0a0514]">
       <GlobalBackground src="/image/main4.png">
         <Navigation />
 
@@ -146,11 +146,7 @@ export default function BaekdohwaReportPage() {
                   </button>
                   <button 
                     onClick={handlePurchase}
-                    className="w-full sm:flex-1 py-5 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
-                    style={{
-                      background: 'linear-gradient(135deg, #B7788D 0%, #8A485E 100%)',
-                      boxShadow: '0 0 40px rgba(183, 120, 141, 0.35)'
-                    }}
+                    className="w-full sm:flex-1 py-5 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_25px_rgba(181,121,135,0.45)] hover:brightness-110"
                   >
                     바로 신청하기
                   </button>
@@ -397,11 +393,7 @@ export default function BaekdohwaReportPage() {
                     </button>
                     <button 
                       onClick={handlePurchase}
-                      className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 text-[#1A0514]"
-                      style={{
-                        background: 'linear-gradient(135deg, #B7788D 0%, #8A485E 100%)',
-                        boxShadow: '0 0 50px rgba(183, 120, 141, 0.45)'
-                      }}
+                      className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_25px_rgba(181,121,135,0.45)] hover:brightness-110"
                     >
                       바로 신청하기
                     </button>

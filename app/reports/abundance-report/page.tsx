@@ -107,7 +107,7 @@ export default function AbundanceReportPage() {
   ]
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#0a0514]">
+    <main className="detail-page abundance-report-page relative min-h-screen bg-[#0a0514]">
       <GlobalBackground src="/image/main4.png">
         <Navigation />
 
@@ -179,7 +179,7 @@ export default function AbundanceReportPage() {
                     type="button"
                     disabled
                     aria-disabled="true"
-                    className="w-full sm:flex-1 py-5 rounded-2xl font-bold text-lg cursor-not-allowed border border-[#608F82]/40 text-[#C6A477] bg-gradient-to-r from-[#0f241f]/90 via-[#152e27]/90 to-[#0f241f]/90 opacity-85 tracking-widest shadow-[0_0_35px_rgba(96,143,130,0.2)]"
+                    className="w-full sm:flex-1 py-5 rounded-2xl font-bold text-lg cursor-not-allowed tracking-widest bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] opacity-90"
                   >
                     오픈 예정
                   </button>
@@ -594,7 +594,7 @@ export default function AbundanceReportPage() {
                       type="button"
                       disabled
                       aria-disabled="true"
-                      className="w-full py-6 rounded-2xl font-bold text-xl cursor-not-allowed border border-[#8FD3B6]/50 text-[#E6BE8A] bg-[#0a0514]/85 backdrop-blur-md tracking-widest shadow-[0_0_50px_rgba(0,0,0,0.6)]"
+                      className="w-full py-6 rounded-2xl font-bold text-xl cursor-not-allowed tracking-widest bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] opacity-90"
                     >
                       오픈 예정
                     </button>

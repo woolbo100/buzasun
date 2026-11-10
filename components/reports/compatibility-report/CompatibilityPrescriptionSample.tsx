@@ -22,7 +22,7 @@ export default function CompatibilityPrescriptionSample() {
         </div>
 
         {/* 실제 처방전 형태의 프리미엄 샘플 카드 */}
-        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[36px] border-2 border-[#935C6B]/40 bg-gradient-to-b from-[#2D0A1E]/95 via-[#3B0F1B]/40 to-[#0A0514]/95 shadow-2xl relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass point-box p-8 md:p-12 rounded-[36px] border-2 border-[#935C6B]/40 bg-gradient-to-b from-[#2D0A1E]/95 via-[#3B0F1B]/40 to-[#0A0514]/95 shadow-2xl relative overflow-hidden">
           {/* 상단 샘플 알림 뱃지 */}
           <div className="flex items-center justify-between pb-6 mb-8 border-b border-white/10">
             <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-[#D8BB94] font-bold">

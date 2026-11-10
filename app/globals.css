@@ -381,7 +381,7 @@
   .gungjung-glass:hover {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
     border-color: rgba(216, 191, 163, 0.35);
-    background: rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.06);
     transform: translateY(-4px);
   }
 
@@ -403,6 +403,100 @@
   .detail-page .detail-glass-box:hover {
     background: rgba(45, 32, 62, 0.68) !important;
     border-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+     선천코드 리포트 상세페이지 3종 통합 글라스 스타일 (허브페이지 기준)
+     - 다른 페이지(비첩, 비밀상점, 허브페이지 등)에 영향 없도록 상세페이지 전용 클래스로 엄격 제한
+     - 허브페이지의 실제 배경 컬러, 글라스 투명도(알파값), 테두리 및 그림자 100% 일치화
+     - 포인트 컬러 상자(.point-box)는 고유 색상 보존
+     ══════════════════════════════════════════════════════════════════════ */
+
+  /* ① 선천코드 연애 리포트 상세페이지 (.love-report-page) — 로즈핑크 플럼 글라스 + 은은한 로즈골드 테두리 */
+  .detail-page.love-report-page .gungjung-glass:not(.point-box),
+  .detail-page.love-report-page .detail-glass-card:not(.point-box),
+  .detail-page.love-report-page .detail-glass-box:not(.point-box) {
+    background: linear-gradient(
+      180deg,
+      rgba(166, 91, 128, 0.22) 0%,
+      rgba(117, 65, 95, 0.12) 50%,
+      rgba(10, 5, 20, 0.35) 100%
+    ) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(196, 139, 159, 0.25) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .detail-page.love-report-page .gungjung-glass:not(.point-box):hover,
+  .detail-page.love-report-page .detail-glass-card:not(.point-box):hover,
+  .detail-page.love-report-page .detail-glass-box:not(.point-box):hover {
+    background: linear-gradient(
+      180deg,
+      rgba(166, 91, 128, 0.26) 0%,
+      rgba(117, 65, 95, 0.15) 50%,
+      rgba(10, 5, 20, 0.38) 100%
+    ) !important;
+    border-color: rgba(196, 139, 159, 0.4) !important;
+    box-shadow: 0 0 50px rgba(166, 91, 128, 0.22) !important;
+  }
+
+  /* ② 프리미엄 궁합 리포트 상세페이지 (.compatibility-report-page) — 앤티크 브라운 버건디 글라스 + 차분한 브라운 버건디 테두리 */
+  .detail-page.compatibility-report-page .gungjung-glass:not(.point-box),
+  .detail-page.compatibility-report-page .detail-glass-card:not(.point-box),
+  .detail-page.compatibility-report-page .detail-glass-box:not(.point-box) {
+    background: linear-gradient(
+      180deg,
+      rgba(113, 60, 67, 0.22) 0%,
+      rgba(89, 52, 60, 0.12) 50%,
+      rgba(10, 5, 20, 0.35) 100%
+    ) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(113, 60, 67, 0.25) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .detail-page.compatibility-report-page .gungjung-glass:not(.point-box):hover,
+  .detail-page.compatibility-report-page .detail-glass-card:not(.point-box):hover,
+  .detail-page.compatibility-report-page .detail-glass-box:not(.point-box):hover {
+    background: linear-gradient(
+      180deg,
+      rgba(113, 60, 67, 0.26) 0%,
+      rgba(89, 52, 60, 0.15) 50%,
+      rgba(10, 5, 20, 0.38) 100%
+    ) !important;
+    border-color: rgba(113, 60, 67, 0.4) !important;
+    box-shadow: 0 0 50px rgba(113, 60, 67, 0.22) !important;
+  }
+
+  /* ③ 선천코드 풍요 리포트 상세페이지 (.abundance-report-page) — 옥색 글라스 + 은은한 청옥빛 테두리 */
+  .detail-page.abundance-report-page .gungjung-glass:not(.point-box),
+  .detail-page.abundance-report-page .detail-glass-card:not(.point-box),
+  .detail-page.abundance-report-page .detail-glass-box:not(.point-box) {
+    background: linear-gradient(
+      180deg,
+      rgba(86, 141, 134, 0.22) 0%,
+      rgba(65, 106, 112, 0.12) 50%,
+      rgba(10, 5, 20, 0.35) 100%
+    ) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(86, 141, 134, 0.25) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .detail-page.abundance-report-page .gungjung-glass:not(.point-box):hover,
+  .detail-page.abundance-report-page .detail-glass-card:not(.point-box):hover,
+  .detail-page.abundance-report-page .detail-glass-box:not(.point-box):hover {
+    background: linear-gradient(
+      180deg,
+      rgba(86, 141, 134, 0.26) 0%,
+      rgba(65, 106, 112, 0.15) 50%,
+      rgba(10, 5, 20, 0.38) 100%
+    ) !important;
+    border-color: rgba(86, 141, 134, 0.4) !important;
+    box-shadow: 0 0 50px rgba(86, 141, 134, 0.22) !important;
   }
 
   /* 🌸 《재회비방》 Section 3 "붙잡으려 애쓰는 동안, 내 '중심'은 어디에 있었나요?" 큰 반투명 상자 단독 테스트

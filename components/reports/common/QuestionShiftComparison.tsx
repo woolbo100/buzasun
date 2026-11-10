@@ -96,7 +96,7 @@ export default function QuestionShiftComparison({ theme }: QuestionShiftComparis
           </div>
 
           {/* CARD 02 — 백도화 선천코드의 질문 */}
-          <div className={`gungjung-glass p-8 md:p-10 rounded-[32px] border ${themeConfig.cardBorder} ${themeConfig.shadowClass} flex flex-col justify-between relative overflow-hidden bg-gradient-to-b from-[#1A0514]/80 via-[#2D0A1E]/30 to-[#0A0514]/90`}>
+          <div className={`gungjung-glass point-box p-8 md:p-10 rounded-[32px] border ${themeConfig.cardBorder} ${themeConfig.shadowClass} flex flex-col justify-between relative overflow-hidden bg-gradient-to-b from-[#1A0514]/80 via-[#2D0A1E]/30 to-[#0A0514]/90`}>
             {/* 배경 은은한 광채 */}
             <div className={`absolute -top-20 -right-20 w-60 h-60 ${themeConfig.glowBg} rounded-full blur-[80px] pointer-events-none`}></div>
 

@@ -25,7 +25,7 @@ export default function WealthChangeScenario() {
           {wealthScenarioData.stages.map((stage, idx) => (
             <div key={idx} className="relative flex flex-col">
               <div
-                className={`gungjung-glass p-8 md:p-10 rounded-[32px] border ${stage.borderColor} bg-gradient-to-b ${stage.color} h-full flex flex-col justify-between transition-all duration-300 hover:-translate-y-1`}
+                className={`gungjung-glass point-box p-8 md:p-10 rounded-[32px] border ${stage.borderColor} bg-gradient-to-b ${stage.color} h-full flex flex-col justify-between transition-all duration-300 hover:-translate-y-1`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
