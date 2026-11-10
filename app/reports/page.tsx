@@ -142,7 +142,7 @@ export default function ReportsHubPage() {
                   href="/ebooks"
                   className="text-[var(--accent-gold)] opacity-50 hover:opacity-100 hover:text-[var(--accent-gold-light)] transition-all flex items-center justify-center gap-2 group mx-auto w-fit"
                 >
-                  <span className="text-sm tracking-[0.2em]">백도화 비책 둘러보기</span>
+                  <span className="text-sm tracking-[0.2em]">백도화 비첩 둘러보기</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
