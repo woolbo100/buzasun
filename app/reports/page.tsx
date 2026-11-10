@@ -37,8 +37,8 @@ export default function ReportsHubPage() {
       btnText: '궁합 리포트 자세히 보기',
       link: '/reports/premium-compatibility-report',
       image: '/image/baekdohwa-romantic-compatibility.webp', 
-      // ② 프리미엄 궁합 리포트 — 버건디 플럼 글라스 + 차분한 버건디 플럼 테두리
-      cardClass: 'border-[#793B58]/25 bg-gradient-to-b from-[#793B58]/[0.22] via-[#542C49]/[0.12] to-[#0a0514]/[0.35] hover:border-[#793B58]/40 hover:shadow-[0_0_50px_rgba(121,59,88,0.22)]',
+      // ② 프리미엄 궁합 리포트 — 앤티크 브라운 버건디 글라스 + 차분한 브라운 버건디 테두리
+      cardClass: 'border-[#713C43]/25 bg-gradient-to-b from-[#713C43]/[0.22] via-[#59343C]/[0.12] to-[#0a0514]/[0.35] hover:border-[#713C43]/40 hover:shadow-[0_0_50px_rgba(113,60,67,0.22)]',
       // CTA 버튼: 배경 #793B58 / 호버 #945071
       btnClass: 'bg-[#793B58] hover:bg-[#945071] text-[#EDE6DA] hover:text-white shadow-[0_4px_20px_rgba(121,59,88,0.25)] hover:shadow-[0_4px_25px_rgba(121,59,88,0.4)]',
       theme: 'default' as const
@@ -96,18 +96,13 @@ export default function ReportsHubPage() {
                             alt={report.title}
                             fill
                             priority={idx === 0}
-                            className={`object-cover transition-transform duration-[3000ms] group-hover:scale-110 ${
-                              isJadeGold ? '' : 'opacity-60 group-hover:opacity-80'
-                            }`}
+                            className="object-cover transition-transform duration-[3000ms] group-hover:scale-110"
                           />
-                          {!isJadeGold && (
-                            <div className={`absolute inset-0 bg-gradient-to-t md:bg-gradient-to-${idx % 2 === 1 ? 'l' : 'r'} from-[#0a0514] via-transparent to-transparent`}></div>
-                          )}
                         </div>
 
                         {/* Content Side */}
                         <div className="p-8 md:p-16 space-y-6">
-                          <span className={`text-[10px] md:text-xs tracking-[0.4em] block font-bold uppercase ${
+                          <span className={`text-[12px] md:text-[15px] tracking-[0.4em] block font-bold uppercase ${
                             isJadeGold ? 'text-[#8FD3B6]' : 'text-[var(--accent-gold)] opacity-70'
                           }`}>
                             {report.label}
@@ -147,7 +142,7 @@ export default function ReportsHubPage() {
                   href="/ebooks"
                   className="text-[var(--accent-gold)] opacity-50 hover:opacity-100 hover:text-[var(--accent-gold-light)] transition-all flex items-center justify-center gap-2 group mx-auto w-fit"
                 >
-                  <span className="text-sm tracking-[0.2em]">백도화 비급서 둘러보기</span>
+                  <span className="text-sm tracking-[0.2em]">백도화 비책 둘러보기</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
