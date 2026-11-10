@@ -25,8 +25,8 @@ export default function ReportsHubPage() {
       image: '/image/baekdohwa-love-destiny.webp',
       // ① 선천코드 연애 리포트 — 로즈핑크 플럼 글라스 + 은은한 로즈골드 테두리
       cardClass: 'border-[#C48B9F]/25 bg-gradient-to-b from-[#A65B80]/[0.22] via-[#75415F]/[0.12] to-[#0a0514]/[0.35] hover:border-[#C48B9F]/40 hover:shadow-[0_0_50px_rgba(166,91,128,0.22)]',
-      // CTA 버튼: 배경 #A65B80 / 호버 #B96D92
-      btnClass: 'bg-[#A65B80] hover:bg-[#B96D92] text-[#EDE6DA] hover:text-white shadow-[0_4px_20px_rgba(166,91,128,0.25)] hover:shadow-[0_4px_25px_rgba(166,91,128,0.4)]',
+      // CTA 버튼: 《연애비급》 구매 버튼 스타일 (로즈핑크·마른장미 계열 그라데이션)
+      btnClass: 'bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_25px_rgba(181,121,135,0.45)] hover:brightness-110',
       theme: 'default' as const
     },
     {
@@ -39,8 +39,8 @@ export default function ReportsHubPage() {
       image: '/image/baekdohwa-romantic-compatibility.webp', 
       // ② 프리미엄 궁합 리포트 — 앤티크 브라운 버건디 글라스 + 차분한 브라운 버건디 테두리
       cardClass: 'border-[#713C43]/25 bg-gradient-to-b from-[#713C43]/[0.22] via-[#59343C]/[0.12] to-[#0a0514]/[0.35] hover:border-[#713C43]/40 hover:shadow-[0_0_50px_rgba(113,60,67,0.22)]',
-      // CTA 버튼: 배경 #793B58 / 호버 #945071
-      btnClass: 'bg-[#793B58] hover:bg-[#945071] text-[#EDE6DA] hover:text-white shadow-[0_4px_20px_rgba(121,59,88,0.25)] hover:shadow-[0_4px_25px_rgba(121,59,88,0.4)]',
+      // CTA 버튼: 《재회비방》 구매 버튼 스타일 (딥 버건디·브라운 버건디 계열 그라데이션)
+      btnClass: 'bg-[linear-gradient(110deg,#552334_0%,#431a2a_55%,#32141f_100%)] hover:bg-[linear-gradient(110deg,#64293d_0%,#522034_55%,#3e1927_100%)] border border-[rgba(229,196,187,0.6)] hover:border-[rgba(229,196,187,0.85)] text-[#FAF7F2] shadow-[0_4px_16px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4),0_0_20px_rgba(229,196,187,0.32)] hover:brightness-105',
       theme: 'default' as const
     },
     {
@@ -53,8 +53,8 @@ export default function ReportsHubPage() {
       image: '/image/baekdohwa-wealth-destiny.webp',
       // ③ 선천코드 풍요 리포트 — 옥색 글라스 + 은은한 청옥빛 테두리
       cardClass: 'border-[#568D86]/25 bg-gradient-to-b from-[#568D86]/[0.22] via-[#416A70]/[0.12] to-[#0a0514]/[0.35] hover:border-[#568D86]/40 hover:shadow-[0_0_50px_rgba(86,141,134,0.22)]',
-      // CTA 버튼: 배경 #568D86 / 호버 #70A59D
-      btnClass: 'bg-[#568D86] hover:bg-[#70A59D] text-[#EDE6DA] hover:text-white shadow-[0_4px_20px_rgba(86,141,134,0.25)] hover:shadow-[0_4px_25px_rgba(86,141,134,0.4)]',
+      // CTA 버튼: 《풍요비책》 구매 버튼 스타일 (딥 옥색·청옥색 계열 그라데이션)
+      btnClass: 'bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_0_18px_rgba(194,164,119,0.5)] hover:brightness-110',
       theme: 'jade-gold' as const
     }
   ]
