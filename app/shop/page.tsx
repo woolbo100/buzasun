@@ -221,7 +221,20 @@ export default function ShopPage() {
 
   return (
     <main className="relative min-h-screen bg-[#0c0816] text-white selection:bg-[var(--accent-gold)] selection:text-black">
-      <GlobalBackground src="/image/baekdohwa-secret-boutique-bg.webp" brightCenter={false}>
+      {/* 비록(/birok)과 동일한 brightCenter={true}(비네팅 50% 완화) + 비밀상점 전용 퍼플 오버레이 알파 소폭 완화 */}
+      <GlobalBackground
+        src="/image/baekdohwa-secret-boutique-bg.webp?v=20261111_2"
+        brightCenter={true}
+        customBaseOverlay={
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(to bottom, rgba(26, 15, 46, 0.5), rgba(20, 10, 35, 0.72), rgba(10, 5, 20, 0.87))',
+            }}
+          />
+        }
+      >
         <Navigation />
         
         {/* 1. Hero Section: Premium Boutique Atmosphere */}
@@ -243,12 +256,12 @@ export default function ShopPage() {
               </Reveal>
 
               <Reveal delayMs={300}>
-                <div className="flex justify-center -mt-3 -mb-1 md:-mt-7 md:-mb-5 pointer-events-none select-none">
+                <div className="flex justify-center -mt-2 mb-0 md:-mt-4 md:-mb-3 pointer-events-none select-none">
                   <img
                     src="/image/baekdohwa-rose-gold-divider.png"
                     alt=""
                     aria-hidden="true"
-                    className="w-[220px] sm:w-[260px] md:w-[340px] max-w-full h-auto object-contain"
+                    className="w-[190px] sm:w-[225px] md:w-[290px] max-w-full h-auto object-contain opacity-85"
                   />
                 </div>
               </Reveal>
