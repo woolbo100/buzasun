@@ -221,7 +221,7 @@ export default function ShopPage() {
 
   return (
     <main className="relative min-h-screen bg-[#0c0816] text-white selection:bg-[var(--accent-gold)] selection:text-black">
-      <GlobalBackground src="/image/shop-hero.png" brightCenter={false}>
+      <GlobalBackground src="/image/baekdohwa-secret-boutique-bg.webp" brightCenter={false}>
         <Navigation />
         
         {/* 1. Hero Section: Premium Boutique Atmosphere */}
@@ -237,9 +237,20 @@ export default function ShopPage() {
               </Reveal>
               
               <Reveal delayMs={200}>
-                <h1 className="text-5xl md:text-8xl font-elegant font-bold mb-12 leading-tight">
+                <h1 className="text-5xl md:text-8xl font-elegant font-bold mb-0 leading-tight">
                   <span className="gradient-text italic px-4">비밀상점</span>
                 </h1>
+              </Reveal>
+
+              <Reveal delayMs={300}>
+                <div className="flex justify-center -mt-3 -mb-1 md:-mt-7 md:-mb-5 pointer-events-none select-none">
+                  <img
+                    src="/image/baekdohwa-rose-gold-divider.png"
+                    alt=""
+                    aria-hidden="true"
+                    className="w-[220px] sm:w-[260px] md:w-[340px] max-w-full h-auto object-contain"
+                  />
+                </div>
               </Reveal>
               
               <Reveal delayMs={400}>
