@@ -62,13 +62,13 @@ export default function PetalsCanvas({
         y: rand(-h, h),
         r: rand(4, 10), // 작고 섬세한 사이즈
         rot: rand(0, Math.PI * 2),
-        rotSpd: rand(-0.015, 0.015), // 살짝 부드러운 회전
-        spd: rand(0.28, 0.65), // 아주 살짝만 여유롭고 서정적인 낙하 속도
-        drift: rand(-0.15, 0.22),
+        rotSpd: rand(-0.008, 0.008), // 기존 대비 느리고 부드러운 회전
+        spd: rand(0.15, 0.36), // 기존 대비 한층 여유롭고 서정적인 낙하 속도
+        drift: rand(-0.08, 0.12),
         wobble: rand(0, Math.PI * 2),
-        wobbleSpd: rand(0.008, 0.022),
+        wobbleSpd: rand(0.0045, 0.012),
         verticalWobble: rand(0, Math.PI * 2),
-        verticalWobbleSpd: rand(0.004, 0.012),
+        verticalWobbleSpd: rand(0.0022, 0.0065),
         alpha: rand(0.3, 0.6), // 은은한 투명도
       }));
     };
@@ -152,8 +152,8 @@ export default function PetalsCanvas({
         p.rot += p.rotSpd;
         
         // 바람에 살랑거리며 우아하게 흩날리는 이동
-        p.x += p.drift + Math.sin(p.wobble) * 0.95;
-        p.y += p.spd + Math.cos(p.verticalWobble) * 0.35;
+        p.x += p.drift + Math.sin(p.wobble) * 0.52;
+        p.y += p.spd + Math.cos(p.verticalWobble) * 0.19;
 
         drawPetal(p);
 
