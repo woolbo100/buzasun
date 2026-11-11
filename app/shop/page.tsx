@@ -234,6 +234,15 @@ export default function ShopPage() {
             }}
           />
         }
+        customVignette={
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(circle at center, rgba(0, 0, 0, 0) 45%, rgba(15, 8, 25, 0.20) 74%, rgba(8, 4, 15, 0.48) 100%)',
+            }}
+          />
+        }
       >
         <Navigation />
         
