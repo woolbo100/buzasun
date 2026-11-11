@@ -69,8 +69,64 @@ export default function BaekdohwaReportPage() {
   }
 
   return (
-    <main className="detail-page love-report-page relative min-h-screen bg-[#0a0514]">
-      <GlobalBackground src="/image/main4.png">
+    <main className="detail-page love-report-page relative min-h-screen bg-[#130917]">
+      {/* 연애비급 전용 딥 퍼플(좌) x 톤다운 로즈코코아(우) 그라데이션 배경 시스템 동일 적용 */}
+      <GlobalBackground
+        src="/image/main4.png"
+        brightCenter={false}
+        customBaseOverlay={
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            {/* 1. 우측 은은한 톤다운 로즈코코아 라이트 오라 (우측 입체감 및 은은한 비침 연출) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 70% 50% at 88% 25%, rgba(110, 58, 76, 0.20) 0%, rgba(65, 33, 46, 0.08) 50%, transparent 75%),
+                  radial-gradient(circle 600px at 90% 70%, rgba(85, 44, 60, 0.15) 0%, transparent 65%)
+                `,
+              }}
+            />
+
+            {/* 2. 메인 가로 그라데이션 (왼쪽: 딥 퍼플 100% 완전 불투명 차단, 오른쪽: 톤다운 로즈코코아 은은한 투명 비침) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  linear-gradient(
+                    95deg,
+                    #130917 0%,
+                    #190E1E 35%,
+                    rgba(35, 20, 36, 0.98) 55%,
+                    rgba(52, 29, 44, 0.94) 75%,
+                    rgba(74, 42, 56, 0.87) 100%
+                  )
+                `,
+              }}
+            />
+          </div>
+        }
+        customVignette={
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `
+                radial-gradient(
+                  circle at 65% 45%,
+                  rgba(0, 0, 0, 0) 40%,
+                  rgba(19, 9, 23, 0.35) 75%,
+                  rgba(10, 5, 14, 0.75) 100%
+                ),
+                linear-gradient(
+                  to right,
+                  rgba(12, 6, 16, 0.65) 0%,
+                  rgba(12, 6, 16, 0.25) 25%,
+                  transparent 50%
+                )
+              `,
+            }}
+          />
+        }
+      >
         <Navigation />
 
         <div className="relative z-10 pt-36 md:pt-40 pb-20">

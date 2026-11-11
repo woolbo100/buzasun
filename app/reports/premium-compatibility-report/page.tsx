@@ -69,8 +69,64 @@ export default function PremiumCompatibilityReportPage() {
   }
 
   return (
-    <main className="detail-page compatibility-report-page relative min-h-screen bg-[#0a0514]">
-      <GlobalBackground src="/image/main4.png">
+    <main className="detail-page compatibility-report-page relative min-h-screen bg-[#0D0709]">
+      {/* 재회비방 전용 딥 다크 플럼 x 버건디 그라데이션 배경 시스템 동일 적용 */}
+      <GlobalBackground
+        src="/image/main4.png"
+        brightCenter={false}
+        customBaseOverlay={
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            {/* 1. 우측 은은한 딥 플럼 버건디 라이트 오라 (오른쪽 입체감 및 비침 효과 강화) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 70% 50% at 88% 22%, rgba(70, 45, 56, 0.22) 0%, rgba(56, 33, 43, 0.10) 50%, transparent 75%),
+                  radial-gradient(circle 600px at 90% 65%, rgba(64, 48, 57, 0.15) 0%, transparent 65%)
+                `,
+              }}
+            />
+
+            {/* 2. 메인 가로 그라데이션 (왼쪽은 딥 다크 플럼으로 배경 차단, 오른쪽만 살짝 투명도를 주어 은은하게 비침) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  linear-gradient(
+                    95deg,
+                    #120B0E 0%,
+                    #181014 35%,
+                    rgba(26, 17, 22, 0.98) 55%,
+                    rgba(38, 25, 32, 0.94) 75%,
+                    rgba(56, 33, 43, 0.88) 100%
+                  )
+                `,
+              }}
+            />
+          </div>
+        }
+        customVignette={
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: `
+                radial-gradient(
+                  circle at 65% 45%,
+                  rgba(0, 0, 0, 0) 40%,
+                  rgba(13, 7, 9, 0.35) 75%,
+                  rgba(8, 4, 6, 0.75) 100%
+                ),
+                linear-gradient(
+                  to right,
+                  rgba(10, 4, 6, 0.65) 0%,
+                  rgba(10, 4, 6, 0.25) 25%,
+                  transparent 50%
+                )
+              `,
+            }}
+          />
+        }
+      >
         <Navigation />
 
         <div className="relative z-10 pt-36 md:pt-40 pb-20">

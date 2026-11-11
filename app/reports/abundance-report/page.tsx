@@ -108,7 +108,43 @@ export default function AbundanceReportPage() {
 
   return (
     <main className="detail-page abundance-report-page relative min-h-screen bg-[#0a0514]">
-      <GlobalBackground src="/image/main4.png">
+      {/* 풍요비책 전용 딥 에메랄드 그린 그라데이션 배경 시스템 동일 적용 */}
+      <GlobalBackground
+        src="/image/main4.png"
+        brightCenter={false}
+        overlay={
+          <div className="absolute inset-0 w-full h-full pointer-events-none">
+            {/* 1. 상단/중앙 신비로운 옥빛 라이트 오라 (입체감과 질감 보존) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  radial-gradient(ellipse 90% 55% at 50% 12%, rgba(34, 88, 79, 0.45) 0%, rgba(20, 47, 43, 0.2) 55%, transparent 85%),
+                  radial-gradient(circle 700px at 80% 20%, rgba(27, 66, 61, 0.3) 0%, transparent 70%),
+                  radial-gradient(circle 600px at 20% 60%, rgba(20, 47, 43, 0.25) 0%, transparent 70%)
+                `,
+              }}
+            />
+
+            {/* 2. 메인 딥 에메랄드(#142F2B) 수직 그라데이션 (보라색을 딥 옥빛 & 다크 그린으로 부드럽게 전환) */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background: `
+                  linear-gradient(
+                    180deg,
+                    rgba(20, 47, 43, 0.72) 0%,
+                    rgba(27, 66, 61, 0.78) 22%,
+                    rgba(20, 47, 43, 0.84) 52%,
+                    rgba(13, 32, 29, 0.90) 80%,
+                    rgba(8, 21, 19, 0.95) 100%
+                  )
+                `,
+              }}
+            />
+          </div>
+        }
+      >
         <Navigation />
 
         <div className="relative z-10 pt-36 md:pt-40 pb-20">
