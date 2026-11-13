@@ -502,35 +502,35 @@ export default function SeoncheonCodeBigiPage() {
   )
 
   return (
-    <main className="detail-page relative min-h-screen bg-[#0E0C0F] text-[#F2EAE0] font-sans selection:bg-[#493740] selection:text-[#FAF7F2] pb-24 md:pb-0">
+    <main className="detail-page relative min-h-screen bg-[#0D0709] text-[#EDE6DA] font-sans selection:bg-[#361722] selection:text-[#FAF7F2] pb-24 md:pb-0">
       <GlobalBackground
         src="/image/love-code-bg.png"
         brightCenter={false}
         customBaseOverlay={
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 우측 은은한 먹묵자색 라이트 오라 */}
+            {/* 1. 우측 은은한 딥 플럼 버건디 라이트 오라 (오른쪽 입체감 및 비침 효과 강화) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
-                  radial-gradient(ellipse 70% 50% at 88% 22%, rgba(73, 55, 64, 0.22) 0%, rgba(48, 38, 47, 0.10) 50%, transparent 75%),
-                  radial-gradient(circle 600px at 90% 65%, rgba(55, 45, 53, 0.15) 0%, transparent 65%)
+                  radial-gradient(ellipse 70% 50% at 88% 22%, rgba(70, 45, 56, 0.22) 0%, rgba(56, 33, 43, 0.10) 50%, transparent 75%),
+                  radial-gradient(circle 600px at 90% 65%, rgba(64, 48, 57, 0.15) 0%, transparent 65%)
                 `,
               }}
             />
 
-            {/* 2. 메인 가로 그라데이션 (먹빛 묵자색 베이스) */}
+            {/* 2. 메인 가로 그라데이션 (왼쪽은 딥 다크 플럼으로 배경 차단, 오른쪽만 살짝 투명도를 주어 은은하게 비침) */}
             <div
               className="absolute inset-0"
               style={{
                 background: `
                   linear-gradient(
                     95deg,
-                    #0E0C0F 0%,
-                    #151216 35%,
-                    rgba(24, 20, 25, 0.98) 55%,
-                    rgba(36, 30, 37, 0.94) 75%,
-                    rgba(48, 38, 47, 0.88) 100%
+                    #120B0E 0%,
+                    #181014 35%,
+                    rgba(26, 17, 22, 0.98) 55%,
+                    rgba(38, 25, 32, 0.94) 75%,
+                    rgba(56, 33, 43, 0.88) 100%
                   )
                 `,
               }}
@@ -545,13 +545,13 @@ export default function SeoncheonCodeBigiPage() {
                 radial-gradient(
                   circle at 65% 45%,
                   rgba(0, 0, 0, 0) 40%,
-                  rgba(14, 12, 15, 0.35) 75%,
-                  rgba(10, 8, 11, 0.75) 100%
+                  rgba(13, 7, 9, 0.35) 75%,
+                  rgba(8, 4, 6, 0.75) 100%
                 ),
                 linear-gradient(
                   to right,
-                  rgba(10, 8, 11, 0.65) 0%,
-                  rgba(10, 8, 11, 0.25) 25%,
+                  rgba(10, 4, 6, 0.65) 0%,
+                  rgba(10, 4, 6, 0.25) 25%,
                   transparent 50%
                 )
               `,
@@ -561,8 +561,8 @@ export default function SeoncheonCodeBigiPage() {
       >
         <Navigation />
 
-        <div className="relative pt-24 md:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="max-w-5xl mx-auto text-center">
+        <div className="relative z-10 pt-44 pb-20">
+          <div className="container-premium">
 
             {/* ═══════════════════════════════════════════════════════════════
                 Section 1: Hero Section (히어로 및 상품 소개)
