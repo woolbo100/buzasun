@@ -34,8 +34,8 @@ export default function EbooksPage() {
       href: '/reports/reunion-secret',
       cta: '재회비방 자세히 보기',
       image: '/image/reunion-secret-thumb.png',
-      // ② 재회비방 — 앤티크 브라운 버건디 글라스 + 차분한 브라운 버건디 테두리
-      cardClass: 'border-[#713C43]/25 bg-gradient-to-b from-[#713C43]/[0.22] via-[#59343C]/[0.12] to-[#0a0514]/[0.35] hover:border-[#713C43]/40 hover:shadow-[0_0_50px_rgba(113,60,67,0.22)]',
+      // ② 재회비방 — 앤티크 브라운 버건디 글라스 (붉은기 뺀 차분한 브라운 버건디)
+      cardClass: 'border-[#6B443B]/25 bg-gradient-to-b from-[#5E3B32]/[0.22] via-[#472A24]/[0.12] to-[#0a0514]/[0.35] hover:border-[#6B443B]/40 hover:shadow-[0_0_50px_rgba(107,68,59,0.22)]',
       isAvailable: true,
     },
     {
@@ -60,9 +60,9 @@ export default function EbooksPage() {
       href: '',
       cta: '선천코드 비기 준비 중',
       image: '/image/seoncheon-code-secret-book.webp',
-      imageClass: 'object-[28%_center]',
-      // ④ 선천코드 비기 — 먹빛 차콜 & 딥 묵자색 글라스 (풍요비책과 동일한 투명도 및 그라데이션)
-      cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#40343F]/[0.22] via-[#302B32]/[0.12] to-[#0a0514]/[0.35] hover:border-[#B7A18A]/40 hover:shadow-[0_0_50px_rgba(183,161,138,0.22)]',
+      imageClass: 'object-[65%_center]',
+      // ④ 선천코드 비기 — 앤티크 브라운 버건디 & 딥 묵빛 글라스 (붉은기 뺀 브라운 버건디)
+      cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#4D3A37]/[0.22] via-[#382A28]/[0.12] to-[#0a0514]/[0.35] hover:border-[#B7A18A]/40 hover:shadow-[0_0_50px_rgba(183,161,138,0.22)]',
       isAvailable: false,
     },
   ]

@@ -37,8 +37,8 @@ export default function ReportsHubPage() {
       btnText: '궁합 리포트 자세히 보기',
       link: '/reports/premium-compatibility-report',
       image: '/image/baekdohwa-romantic-compatibility.webp', 
-      // ② 프리미엄 궁합 리포트 — 앤티크 브라운 버건디 글라스 + 차분한 브라운 버건디 테두리
-      cardClass: 'border-[#713C43]/25 bg-gradient-to-b from-[#713C43]/[0.22] via-[#59343C]/[0.12] to-[#0a0514]/[0.35] hover:border-[#713C43]/40 hover:shadow-[0_0_50px_rgba(113,60,67,0.22)]',
+      // ② 프리미엄 궁합 리포트 — 앤티크 브라운 버건디 글라스 (붉은기 뺀 차분한 브라운 버건디)
+      cardClass: 'border-[#6B443B]/25 bg-gradient-to-b from-[#5E3B32]/[0.22] via-[#472A24]/[0.12] to-[#0a0514]/[0.35] hover:border-[#6B443B]/40 hover:shadow-[0_0_50px_rgba(107,68,59,0.22)]',
       // CTA 버튼: 《재회비방》 구매 버튼 스타일 (딥 버건디·브라운 버건디 계열 그라데이션)
       btnClass: 'bg-[linear-gradient(110deg,#552334_0%,#431a2a_55%,#32141f_100%)] hover:bg-[linear-gradient(110deg,#64293d_0%,#522034_55%,#3e1927_100%)] border border-[rgba(229,196,187,0.6)] hover:border-[rgba(229,196,187,0.85)] text-[#FAF7F2] shadow-[0_4px_16px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4),0_0_20px_rgba(229,196,187,0.32)] hover:brightness-105',
       theme: 'default' as const
