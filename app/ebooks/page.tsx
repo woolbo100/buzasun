@@ -61,8 +61,8 @@ export default function EbooksPage() {
       cta: '선천코드 비기 준비 중',
       image: '/image/seoncheon-code-secret-book.webp',
       imageClass: 'object-[65%_center]',
-      // ④ 선천코드 비기 — 앤티크 브라운 버건디 & 딥 묵빛 글라스 (붉은기 뺀 브라운 버건디)
-      cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#4D3A37]/[0.22] via-[#382A28]/[0.12] to-[#0a0514]/[0.35] hover:border-[#B7A18A]/40 hover:shadow-[0_0_50px_rgba(183,161,138,0.22)]',
+      // ④ 선천코드 비기 — 정통 묵빛 차콜(먹색) 글라스 (투명도/그라데이션 비율 일치, 고유 먹색 톤)
+      cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#2E2C30]/[0.22] via-[#1E1D20]/[0.12] to-[#0a0514]/[0.35] hover:border-[#B7A18A]/40 hover:shadow-[0_0_50px_rgba(183,161,138,0.22)]',
       isAvailable: false,
     },
   ]
