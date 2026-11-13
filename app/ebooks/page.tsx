@@ -61,10 +61,8 @@ export default function EbooksPage() {
       cta: '선천코드 비기 준비 중',
       image: '/image/seoncheon-code-secret-book.webp',
       imageClass: 'object-[28%_center]',
-      // ④ 선천코드 비기 — 카드 테두리는 무광 앤티크 샴페인 골드
-      cardClass: 'border-[#B7A18A]/25 bg-[#1a151c]/30 hover:border-[#B7A18A]/45 hover:shadow-[0_0_50px_rgba(183,161,138,0.18)]',
-      // 좌측(글자 있는 설명 영역)에 먹색(차콜 블랙) 딥 묵자색 배경 적용
-      contentClass: 'bg-gradient-to-br from-[#40343F]/85 via-[#302B32]/80 to-[#201a21]/90 backdrop-blur-md rounded-2xl md:rounded-none md:rounded-l-[2rem] border border-[#B7A18A]/15 md:border-r md:border-y-0 md:border-l-0',
+      // ④ 선천코드 비기 — 먹빛 차콜 & 딥 묵자색 글라스 (풍요비책과 동일한 투명도 및 그라데이션)
+      cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#40343F]/[0.22] via-[#302B32]/[0.12] to-[#0a0514]/[0.35] hover:border-[#B7A18A]/40 hover:shadow-[0_0_50px_rgba(183,161,138,0.22)]',
       isAvailable: false,
     },
   ]
@@ -136,7 +134,7 @@ export default function EbooksPage() {
                         </div>
 
                         {/* 설명 영역 (1. 라벨 -> 2. 제목 -> 3. 핵심 소개 -> 4. 추가 설명 -> 5. 버건디 버튼) */}
-                        <div className={`p-8 sm:p-10 md:p-14 lg:p-16 space-y-6 flex flex-col justify-center transition-colors duration-500 ${ebook.contentClass || ''}`}>
+                        <div className="p-8 sm:p-10 md:p-14 lg:p-16 space-y-6 flex flex-col justify-center">
                           {/* 1. 영문 카테고리 라벨 */}
                           <div>
                             <span className="text-[12px] md:text-[14px] tracking-[0.35em] block font-bold uppercase text-[var(--accent-gold)] opacity-80">
