@@ -60,8 +60,8 @@ export default function EbooksPage() {
       href: '',
       cta: '선천코드 비기 준비 중',
       image: '',
-      // ④ 선천코드 비기 — 앤티크 골드 & 딥 앰버 글라스 테두리
-      cardClass: 'border-[var(--accent-gold)]/25 bg-gradient-to-b from-[#6b4e3d]/[0.22] via-[#3d273a]/[0.14] to-[#0a0514]/[0.35] hover:border-[var(--accent-gold)]/40 hover:shadow-[0_0_50px_rgba(212,175,55,0.2)]',
+      // ④ 선천코드 비기 — 먹빛 차콜 & 딥 묵자색 글라스 + 무광 앤티크 샴페인 골드 테두리
+      cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#40343F]/[0.35] via-[#302B32]/[0.25] to-[#0a0514]/[0.45] hover:border-[#B7A18A]/45 hover:shadow-[0_0_50px_rgba(183,161,138,0.18)]',
       isAvailable: false,
     },
   ]
@@ -114,18 +114,18 @@ export default function EbooksPage() {
                               className="object-cover object-center transition-transform duration-[2000ms] group-hover:scale-105"
                             />
                           ) : (
-                            /* 네 번째 선천코드 비기 임시 영역 (공식 이미지 준비 전 고품격 플레이스홀더) */
-                            <div className="w-full h-full min-h-[280px] sm:min-h-[350px] md:min-h-[440px] flex flex-col items-center justify-center p-8 text-center relative bg-gradient-to-br from-[#2a1727]/50 via-[#180d22]/70 to-[#0a0514]/90 select-none">
-                              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-[var(--accent-gold)]/30 flex items-center justify-center mb-5 shadow-[0_0_30px_rgba(212,175,55,0.15)] bg-[#1a0f2e]/60">
-                                <span className="text-2xl sm:text-3xl text-[var(--accent-gold)] font-elegant">秘</span>
+                            /* 네 번째 선천코드 비기 임시 영역 (먹색 딥 묵자색 & 앤티크 샴페인 골드 플레이스홀더) */
+                            <div className="w-full h-full min-h-[280px] sm:min-h-[350px] md:min-h-[440px] flex flex-col items-center justify-center p-8 text-center relative bg-gradient-to-br from-[#40343F]/40 via-[#302B32]/60 to-[#120F14]/90 select-none">
+                              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-[#B7A18A]/35 flex items-center justify-center mb-5 shadow-[0_0_25px_rgba(183,161,138,0.15)] bg-[#252026]/75">
+                                <span className="text-2xl sm:text-3xl text-[#B7A18A] font-elegant">秘</span>
                               </div>
-                              <span className="text-[11px] sm:text-xs tracking-[0.3em] uppercase text-[var(--accent-gold)] opacity-70 mb-2 font-mono">
+                              <span className="text-[11px] sm:text-xs tracking-[0.3em] uppercase text-[#B7A18A] opacity-80 mb-2 font-mono">
                                 SECRET ARCHIVE
                               </span>
                               <h3 className="text-xl sm:text-2xl font-elegant font-bold text-white mb-2">
                                 선천코드 비기 (先天秘記)
                               </h3>
-                              <p className="text-xs sm:text-sm text-[#EDE6DA] opacity-60 font-light">
+                              <p className="text-xs sm:text-sm text-[#EDE6DA] opacity-65 font-light">
                                 비첩 집필 및 도감 편찬 중입니다
                               </p>
                             </div>
