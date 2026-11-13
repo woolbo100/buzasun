@@ -57,13 +57,13 @@ export default function EbooksPage() {
       category: 'INNER CODE',
       summary: '나를 이해하는 순간, 삶을 바라보는 시선이 달라집니다.',
       description: '오행과 선천코드의 기본 원리를 통해 나의 타고난 성향과 관계, 삶의 흐름을 탐색하는 비밀 도감입니다.',
-      href: '',
-      cta: '선천코드 비기 준비 중',
+      href: '/reports/seoncheon-code-bigi',
+      cta: '선천코드 비기 자세히 보기',
       image: '/image/seoncheon-code-secret-book.webp',
       imageClass: 'object-[65%_center]',
       // ④ 선천코드 비기 — 상단 스모키 먹색 & 하단 투명 글라스 (풍요비책처럼 상단 먹빛 강조, 하단 투명화)
       cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#58505D]/[0.30] via-[#332F38]/[0.10] to-[#0a0514]/[0.25] hover:border-[#B7A18A]/40 hover:shadow-[0_0_50px_rgba(183,161,138,0.22)]',
-      isAvailable: false,
+      isAvailable: true,
     },
   ]
 
