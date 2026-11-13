@@ -59,7 +59,8 @@ export default function EbooksPage() {
       description: '오행과 선천코드의 기본 원리를 통해 나의 타고난 성향과 관계, 삶의 흐름을 탐색하는 비밀 도감입니다.',
       href: '',
       cta: '선천코드 비기 준비 중',
-      image: '',
+      image: '/image/seoncheon-code-secret-book.webp',
+      imageClass: 'object-[28%_center]',
       // ④ 선천코드 비기 — 카드 테두리는 무광 앤티크 샴페인 골드
       cardClass: 'border-[#B7A18A]/25 bg-[#1a151c]/30 hover:border-[#B7A18A]/45 hover:shadow-[0_0_50px_rgba(183,161,138,0.18)]',
       // 좌측(글자 있는 설명 영역)에 먹색(차콜 블랙) 딥 묵자색 배경 적용
@@ -113,7 +114,7 @@ export default function EbooksPage() {
                               fill
                               sizes="(max-width: 768px) 100vw, 50vw"
                               priority={idx === 0}
-                              className="object-cover object-center transition-transform duration-[2000ms] group-hover:scale-105"
+                              className={`object-cover ${ebook.imageClass || 'object-center'} transition-transform duration-[2000ms] group-hover:scale-105`}
                             />
                           ) : (
                             /* 네 번째 선천코드 비기 임시 영역 (나중에 이미지가 들어올 투명하고 은은한 프레임) */
