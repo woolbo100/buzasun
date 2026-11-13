@@ -60,8 +60,10 @@ export default function EbooksPage() {
       href: '',
       cta: '선천코드 비기 준비 중',
       image: '',
-      // ④ 선천코드 비기 — 먹빛 차콜 & 딥 묵자색 글라스 + 무광 앤티크 샴페인 골드 테두리
-      cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#40343F]/[0.35] via-[#302B32]/[0.25] to-[#0a0514]/[0.45] hover:border-[#B7A18A]/45 hover:shadow-[0_0_50px_rgba(183,161,138,0.18)]',
+      // ④ 선천코드 비기 — 카드 테두리는 무광 앤티크 샴페인 골드
+      cardClass: 'border-[#B7A18A]/25 bg-[#1a151c]/30 hover:border-[#B7A18A]/45 hover:shadow-[0_0_50px_rgba(183,161,138,0.18)]',
+      // 좌측(글자 있는 설명 영역)에 먹색(차콜 블랙) 딥 묵자색 배경 적용
+      contentClass: 'bg-gradient-to-br from-[#40343F]/85 via-[#302B32]/80 to-[#201a21]/90 backdrop-blur-md rounded-2xl md:rounded-none md:rounded-l-[2rem] border border-[#B7A18A]/15 md:border-r md:border-y-0 md:border-l-0',
       isAvailable: false,
     },
   ]
@@ -114,9 +116,9 @@ export default function EbooksPage() {
                               className="object-cover object-center transition-transform duration-[2000ms] group-hover:scale-105"
                             />
                           ) : (
-                            /* 네 번째 선천코드 비기 임시 영역 (먹색 딥 묵자색 & 앤티크 샴페인 골드 플레이스홀더) */
-                            <div className="w-full h-full min-h-[280px] sm:min-h-[350px] md:min-h-[440px] flex flex-col items-center justify-center p-8 text-center relative bg-gradient-to-br from-[#40343F]/40 via-[#302B32]/60 to-[#120F14]/90 select-none">
-                              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-[#B7A18A]/35 flex items-center justify-center mb-5 shadow-[0_0_25px_rgba(183,161,138,0.15)] bg-[#252026]/75">
+                            /* 네 번째 선천코드 비기 임시 영역 (나중에 이미지가 들어올 투명하고 은은한 프레임) */
+                            <div className="w-full h-full min-h-[280px] sm:min-h-[350px] md:min-h-[440px] flex flex-col items-center justify-center p-8 text-center relative bg-black/25 backdrop-blur-sm select-none">
+                              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-[#B7A18A]/35 flex items-center justify-center mb-5 shadow-[0_0_25px_rgba(183,161,138,0.15)] bg-[#252026]/60">
                                 <span className="text-2xl sm:text-3xl text-[#B7A18A] font-elegant">秘</span>
                               </div>
                               <span className="text-[11px] sm:text-xs tracking-[0.3em] uppercase text-[#B7A18A] opacity-80 mb-2 font-mono">
@@ -133,7 +135,7 @@ export default function EbooksPage() {
                         </div>
 
                         {/* 설명 영역 (1. 라벨 -> 2. 제목 -> 3. 핵심 소개 -> 4. 추가 설명 -> 5. 버건디 버튼) */}
-                        <div className="p-8 sm:p-10 md:p-14 lg:p-16 space-y-6 flex flex-col justify-center">
+                        <div className={`p-8 sm:p-10 md:p-14 lg:p-16 space-y-6 flex flex-col justify-center transition-colors duration-500 ${ebook.contentClass || ''}`}>
                           {/* 1. 영문 카테고리 라벨 */}
                           <div>
                             <span className="text-[12px] md:text-[14px] tracking-[0.35em] block font-bold uppercase text-[var(--accent-gold)] opacity-80">
