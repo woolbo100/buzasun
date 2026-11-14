@@ -156,7 +156,7 @@ export default function PremiumCompatibilityReportPage() {
               <Reveal delayMs={100}>
                 {/* 1. 상단 배지 */}
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] uppercase bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94]">
                     BAEKDOHWA PREMIUM COMPATIBILITY REPORT
                   </span>
                 </div>
@@ -463,7 +463,7 @@ export default function PremiumCompatibilityReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="block text-[12px] font-semibold tracking-[0.2em] uppercase text-[#D8BB94] mb-6">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase text-[#D8BB94] mb-6">
                     HARMONY FOR TWO
                   </span>
                   

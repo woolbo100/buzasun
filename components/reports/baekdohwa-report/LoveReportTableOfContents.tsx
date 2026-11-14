@@ -21,7 +21,7 @@ export default function LoveReportTableOfContents() {
     <section className="mb-40" id="table-of-contents">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             CHAPTERS & CURRICULUM
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -119,7 +119,7 @@ export default function LoveReportTableOfContents() {
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#B7788D]/15 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10 text-center mb-10">
-            <span className="inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.2em] text-[#D9A8A7] mb-4 uppercase">
+            <span className="inline-flex items-center gap-2 font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] mb-4 uppercase">
               <Sparkles className="w-3.5 h-3.5" />
               PART 07 SPECIAL EMPHASIS
             </span>

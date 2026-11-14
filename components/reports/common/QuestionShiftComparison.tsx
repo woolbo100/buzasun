@@ -43,7 +43,7 @@ export default function QuestionShiftComparison({ theme }: QuestionShiftComparis
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className={`block text-[12px] font-semibold tracking-[0.2em] ${themeConfig.activeText} uppercase mb-4`}>
+          <span className={`block font-elegant text-[12pt] font-semibold tracking-[0.2em] ${themeConfig.activeText} uppercase mb-4`}>
             PARADIGM SHIFT
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">

@@ -18,7 +18,7 @@ export default function BaekdohwaPhilosophy() {
             </div>
 
             <div className="text-center mb-10">
-              <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+              <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
                 OUR PHILOSOPHY
               </span>
               <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">

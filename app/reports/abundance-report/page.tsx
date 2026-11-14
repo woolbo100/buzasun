@@ -158,7 +158,7 @@ export default function AbundanceReportPage() {
               <Reveal delayMs={100}>
                 {/* 1. 상단 배지 */}
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] uppercase bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4]">
                     PREMIUM ABUNDANCE REPORT
                   </span>
                 </div>
@@ -433,7 +433,7 @@ export default function AbundanceReportPage() {
 
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
-                      <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
                         Digital Ritual Gift
                       </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
@@ -505,7 +505,7 @@ export default function AbundanceReportPage() {
                 <div className="relative">
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
-                      <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
                         Process & Info
                       </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
@@ -614,7 +614,7 @@ export default function AbundanceReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="block text-[12px] font-semibold tracking-[0.2em] uppercase text-[#8FB4A4] mb-6">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase text-[#8FB4A4] mb-6">
                     EMBRACE YOUR ABUNDANCE
                   </span>
                   

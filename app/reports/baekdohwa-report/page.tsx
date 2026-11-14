@@ -156,7 +156,7 @@ export default function BaekdohwaReportPage() {
               <Reveal delayMs={100}>
                 {/* 1. 상단 배지 */}
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] uppercase bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7]">
                     PREMIUM LOVE CODE REPORT
                   </span>
                 </div>
@@ -450,7 +450,7 @@ export default function BaekdohwaReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="block text-[12px] font-semibold tracking-[0.2em] uppercase text-[#D9A8A7] mb-6">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase text-[#D9A8A7] mb-6">
                     BEGIN YOUR JOURNEY
                   </span>
                   
