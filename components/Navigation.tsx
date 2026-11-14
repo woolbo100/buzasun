@@ -21,11 +21,16 @@ export default function Navigation() {
   const { totalCount } = useCart()
 
   useEffect(() => {
+    let rafId: number
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-    window.addEventListener('scroll', handleScroll)
-    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    // 페이지 이동 직후 이전 페이지의 잔여 scrollY로 인한 순간 깜빡임 방지
+    rafId = requestAnimationFrame(() => {
+      handleScroll()
+    })
 
     // Auth state check
     const checkUser = async () => {
@@ -39,6 +44,7 @@ export default function Navigation() {
     })
 
     return () => {
+      cancelAnimationFrame(rafId)
       window.removeEventListener('scroll', handleScroll)
       authListener.subscription.unsubscribe()
     }
@@ -100,13 +106,12 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transform-gpu transition-all duration-500 ease-out ${
+      className={`fixed top-0 w-full z-50 backdrop-blur-md transition-[background-color,box-shadow] duration-500 ease-out ${
         scrolled
-          ? 'bg-[rgba(18,0,20,0.85)] backdrop-blur-xl'
-          : 'bg-[rgba(18,0,20,0.3)] backdrop-blur-sm'
+          ? 'bg-[rgba(18,0,20,0.85)]'
+          : 'bg-[rgba(18,0,20,0.3)]'
       }`}
       style={{
-        transform: 'translateZ(0)',
         boxShadow: scrolled
           ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(216, 191, 163, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           : 'none',
