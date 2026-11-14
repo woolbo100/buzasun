@@ -20,7 +20,8 @@ export default function EbooksPage() {
       description: '끌려가는 관계가 아닌 스스로 선택하는 관계를 위해 매력의 원리와 실천 방법을 담았습니다.',
       href: '/reports/love-secret',
       cta: '연애비급 자세히 보기',
-      image: '/image/love-secret-thumb.png',
+      image: '/image/love-secret-book-showcase.webp',
+      imageClass: 'object-[25%_center]',
       // ① 연애비급 — 로즈핑크 플럼 글라스 + 은은한 로즈골드 테두리
       cardClass: 'border-[#C48B9F]/25 bg-gradient-to-b from-[#A65B80]/[0.22] via-[#75415F]/[0.12] to-[#0a0514]/[0.35] hover:border-[#C48B9F]/40 hover:shadow-[0_0_50px_rgba(166,91,128,0.22)]',
       isAvailable: true,
@@ -33,7 +34,8 @@ export default function EbooksPage() {
       description: '이별 이후의 감정과 관계의 흐름을 이해하고, 다시 선택해야 할 기준을 발견하도록 돕습니다.',
       href: '/reports/reunion-secret',
       cta: '재회비방 자세히 보기',
-      image: '/image/reunion-secret-thumb.png',
+      image: '/image/reunion-secret-book-showcase.webp',
+      imageClass: 'object-[75%_center]',
       // ② 재회비방 — 앤티크 브라운 버건디 글라스 (붉은기 뺀 차분한 브라운 버건디)
       cardClass: 'border-[#6B443B]/25 bg-gradient-to-b from-[#5E3B32]/[0.22] via-[#472A24]/[0.12] to-[#0a0514]/[0.35] hover:border-[#6B443B]/40 hover:shadow-[0_0_50px_rgba(107,68,59,0.22)]',
       isAvailable: true,
@@ -46,7 +48,8 @@ export default function EbooksPage() {
       description: '풍요에 대한 관점을 바꾸고, 일상에서 적용할 수 있는 구체적인 실천 방법을 담았습니다.',
       href: '/reports/abundance-secret',
       cta: '풍요비책 자세히 보기',
-      image: '/image/abundance-secret-thumb.png',
+      image: '/image/abundance-secret-book-showcase.webp',
+      imageClass: 'object-[25%_center]',
       // ③ 풍요비책 — 옥색 글라스 + 은은한 청옥빛 테두리
       cardClass: 'border-[#568D86]/25 bg-gradient-to-b from-[#568D86]/[0.22] via-[#416A70]/[0.12] to-[#0a0514]/[0.35] hover:border-[#568D86]/40 hover:shadow-[0_0_50px_rgba(86,141,134,0.22)]',
       isAvailable: true,
@@ -60,7 +63,7 @@ export default function EbooksPage() {
       href: '/reports/seoncheon-code-bigi',
       cta: '선천코드 비기 자세히 보기',
       image: '/image/seoncheon-code-secret-book.webp',
-      imageClass: 'object-[65%_center]',
+      imageClass: 'object-[75%_center]',
       // ④ 선천코드 비기 — 상단 스모키 먹색 & 하단 투명 글라스 (풍요비책처럼 상단 먹빛 강조, 하단 투명화)
       cardClass: 'border-[#B7A18A]/25 bg-gradient-to-b from-[#58505D]/[0.30] via-[#332F38]/[0.10] to-[#0a0514]/[0.25] hover:border-[#B7A18A]/40 hover:shadow-[0_0_50px_rgba(183,161,138,0.22)]',
       isAvailable: true,
@@ -104,7 +107,7 @@ export default function EbooksPage() {
                       <div className="grid grid-cols-1 md:grid-cols-2 items-center">
                         
                         {/* 이미지 영역 */}
-                        <div className={`relative h-[280px] sm:h-[350px] md:h-full md:min-h-[440px] overflow-hidden ${isImageRightOnDesktop ? 'md:order-last' : ''}`}>
+                        <div className={`relative w-full aspect-[16/9] md:aspect-auto md:h-full md:min-h-[420px] overflow-hidden ${isImageRightOnDesktop ? 'md:order-last' : ''}`}>
                           {ebook.image ? (
                             <Image 
                               src={ebook.image} 
