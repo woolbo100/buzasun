@@ -9,7 +9,7 @@ export default function CompatibilityRelationshipDiagram() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             INTERACTION DYNAMICS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -61,7 +61,7 @@ export default function CompatibilityRelationshipDiagram() {
         </div>
 
         {/* 핵심 인용 강조 배너 (버건디 & 앤티크 골드) */}
-        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#3B0F1B]/40 via-[#2D0A1E]/60 to-[#3B0F1B]/40 border border-[#935C6B]/40 text-center shadow-xl">
+        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#3B0F1B]/25 via-[#2D0A1E]/35 to-[#3B0F1B]/25 border border-[#935C6B]/40 text-center shadow-xl">
           <p className="text-lg md:text-2xl font-elegant font-bold text-[#C19B83] leading-relaxed whitespace-pre-line">
             &ldquo;{compatibilityDiagramData.quote}&rdquo;
           </p>

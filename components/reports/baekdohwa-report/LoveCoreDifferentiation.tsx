@@ -26,7 +26,7 @@ export default function LoveCoreDifferentiation() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             ROOT CAUSE ANALYSIS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -46,7 +46,7 @@ export default function LoveCoreDifferentiation() {
             return (
               <div
                 key={idx}
-                className="gungjung-glass p-8 rounded-[28px] border border-[#B7788D]/25 bg-gradient-to-b from-[#2D0A1E]/30 to-[#1A0514]/60 hover:border-[#B7788D]/60 transition-all duration-300 flex flex-col justify-between"
+                className="gungjung-glass p-8 rounded-[28px] border border-[#B7788D]/25 bg-gradient-to-b from-[#2D0A1E]/20 to-[#1A0514]/35 hover:border-[#B7788D]/60 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-[#B7788D]/15 border border-[#B7788D]/35 flex items-center justify-center text-[#D9A8A7] mb-6">
@@ -65,7 +65,7 @@ export default function LoveCoreDifferentiation() {
         </div>
 
         {/* 본문 설명 및 백도화 연애 리포트 정의 */}
-        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#B7788D]/35 bg-gradient-to-r from-[#1A0514]/90 via-[#2D0A1E]/40 to-[#0A0514]/90 text-center relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#B7788D]/35 bg-gradient-to-r from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto space-y-6">
             <p className="text-base md:text-lg text-[#EDE6DA] leading-relaxed font-light break-keep">
               당신에게 필요한 것은 또 하나의 가벼운 연애운 풀이가 아닐 수 있습니다.

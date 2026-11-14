@@ -21,7 +21,7 @@ export default function WealthReportTableOfContents() {
     <section className="mb-40" id="table-of-contents">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             CHAPTERS & CURRICULUM
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -115,11 +115,11 @@ export default function WealthReportTableOfContents() {
         </div>
 
         {/* PART 07 별도 프리미엄 독립 강조 카드 (연옥 & 앤티크 골드) */}
-        <div className="max-w-7xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#0f241f] via-[#152e27] to-[#0a0514] border-2 border-[#608F82]/50 shadow-2xl relative overflow-hidden">
+        <div className="max-w-7xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#0f241f]/35 via-[#152e27]/25 to-[#0a0514]/35 border-2 border-[#608F82]/50 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#608F82]/15 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10 text-center mb-10">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[12px] font-bold tracking-widest bg-[#608F82]/20 text-[#8FB4A4] border border-[#608F82]/40 mb-6 uppercase">
+            <span className="inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] mb-4 uppercase">
               <Sparkles className="w-3.5 h-3.5 text-[#E6BE8A]" />
               PART 07 WEALTH PRESCRIPTION
             </span>

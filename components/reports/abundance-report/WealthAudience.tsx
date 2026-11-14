@@ -10,7 +10,7 @@ export default function WealthAudience() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             TARGET AUDIENCE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -36,7 +36,7 @@ export default function WealthAudience() {
 
           <div className="lg:col-span-7 space-y-6">
             {/* 추천하는 분 카드 */}
-            <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-[#608F82]/40 bg-gradient-to-b from-[#0f241f]/50 via-[#152e27]/30 to-black/40">
+            <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-[#608F82]/40 bg-gradient-to-b from-[#0f241f]/35 via-[#152e27]/25 to-black/35">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 rounded-full bg-[#608F82]/20 border border-[#608F82] flex items-center justify-center text-[#8FB4A4]">
                   <Check className="w-4 h-4 stroke-[3]" />

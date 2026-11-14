@@ -9,7 +9,7 @@ export default function CompatibilityPhilosophy() {
       <Reveal>
         <div className="max-w-4xl mx-auto">
           {/* 서신(Letter) 형태의 고급스러운 궁중 한지/글라스 카드 */}
-          <div className="gungjung-glass point-box p-10 md:p-16 rounded-[36px] border border-[#935C6B]/40 bg-gradient-to-b from-[#2D0A1E]/80 via-[#1A0514]/90 to-[#0A0514]/95 relative overflow-hidden shadow-2xl">
+          <div className="gungjung-glass point-box p-10 md:p-16 rounded-[36px] border border-[#935C6B]/40 bg-gradient-to-b from-[#2D0A1E]/35 via-[#1A0514]/25 to-[#0A0514]/35 relative overflow-hidden shadow-2xl">
             {/* 배경 은은한 청동 인장 장식 */}
             <div className="absolute top-8 right-8 w-24 h-24 border-2 border-[#935C6B]/30 rounded-2xl flex items-center justify-center rotate-6 pointer-events-none opacity-40">
               <span className="text-xs font-elegant font-bold text-[#D8BB94] tracking-widest text-center">
@@ -18,7 +18,7 @@ export default function CompatibilityPhilosophy() {
             </div>
 
             <div className="text-center mb-10">
-              <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
+              <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
                 PHILOSOPHY OF HARMONY
               </span>
               <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">

@@ -9,7 +9,7 @@ export default function CompatibilityPurchaseNotice() {
     <section className="mb-40" id="notice">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             PURCHASE NOTICE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -20,7 +20,7 @@ export default function CompatibilityPurchaseNotice() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-white/10 max-w-7xl mx-auto bg-gradient-to-b from-[#2D0A1E]/30 via-black/40 to-black/60">
+        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-white/10 max-w-7xl mx-auto bg-gradient-to-b from-[#2D0A1E]/25 via-black/30 to-black/35">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {compatibilityNoticeData.notices.map((notice, idx) => (
               <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">

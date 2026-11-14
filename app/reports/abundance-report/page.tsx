@@ -33,6 +33,7 @@ import WealthPurchaseNotice from '@/components/reports/abundance-report/WealthPu
 // 추후 개별 이미지 교체 시 아래 경로만 수정하면 각 섹션에 즉시 반영됩니다.
 const ABUNDANCE_REPORT_IMAGES = {
   hero: '/image/abundance/a1.webp',
+  empathy: '/image/abundance/a2.webp', // 공감 문구 아래 가로 16:9 이미지 (추후 손쉽게 교체 가능)
   overview: '/image/abundance/a2.webp',
   recommended: '/image/abundance/a3.webp',
   analysis: '/image/abundance/a4.webp',
@@ -151,33 +152,59 @@ export default function AbundanceReportPage() {
           <div className="container-premium">
             
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 01. 히어로 — 나의 풍요 설계도 (기존 이미지 & 버튼 상태 100% 보존) */}
+            {/* SECTION 01. 히어로 — 제목 → 16:9 메인 이미지 → 버튼 → 공감 문구 → 공감 16:9 이미지 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
+                {/* 1. 상단 배지 */}
                 <div className="mb-6">
                   <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4]">
                     PREMIUM ABUNDANCE REPORT
                   </span>
                 </div>
 
-                {/* 서브 타이틀 카피 */}
+                {/* 2. 보조 카피 */}
                 <p className="text-[16px] md:text-[18px] text-[#8FB4A4] font-medium tracking-wide mb-4">
                   선천코드로 읽는 나의 풍요 설계도
                 </p>
 
-                {/* 메인 제품명 */}
-                <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-8 text-white leading-[1.25] md:leading-[1.3] break-keep">
+                {/* 3. 메인 제품명 제목 */}
+                <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-10 text-white leading-[1.25] md:leading-[1.3] break-keep">
                   선천코드 <span className="gradient-text-abundance">풍요 리포트</span>
                 </h1>
 
-                {/* 핵심 후킹 카피 — 날카롭고 강렬한 질문 */}
-                <div className="max-w-3xl mx-auto mb-12">
+                {/* 4. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
+                <div className="relative w-full max-w-[1280px] mx-auto mb-10 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl group aspect-[16/9] bg-[#0B1514]">
+                  <Image 
+                    src={ABUNDANCE_REPORT_IMAGES.hero} 
+                    alt="선천코드 풍요 리포트 메인 히어로 16:9" 
+                    width={1440}
+                    height={810}
+                    priority
+                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
+                </div>
+
+                {/* 5. 구매 버튼 영역 */}
+                <div className="flex justify-center items-center w-full max-w-sm mx-auto mb-24 md:mb-28">
+                  <button 
+                    type="button"
+                    disabled
+                    aria-disabled="true"
+                    className="w-full py-5 px-8 rounded-2xl font-bold text-base md:text-lg cursor-not-allowed tracking-widest bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] opacity-90 text-center"
+                  >
+                    오픈 예정
+                  </button>
+                </div>
+
+                {/* 6. 기존 공감 문구 (구매 버튼 아래로 이동) */}
+                <div className="max-w-3xl mx-auto mb-14 text-center">
                   <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
                     &ldquo;남들보다 열심히 사는데,<br className="hidden sm:inline" />
                     왜 내 통장은 <span className="gradient-text-abundance">늘 제자리</span>일까?&rdquo;
                   </p>
-                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto mb-6">
                     <p>돈을 벌 기회가 없었던 것도 아니다. 분명 수입은 있었고, 누구보다 부지런히 움직였다.</p>
                     <p>그런데 정작 내 손에 남은 것은 생각보다 적다.</p>
                     <p className="pt-2 text-[#C6A477] font-medium leading-relaxed">
@@ -185,40 +212,21 @@ export default function AbundanceReportPage() {
                       돈 앞에서 반복되는 자신의 선택은 한 번도 분석하지 않았던 것은 아닐까요?
                     </p>
                   </div>
-                </div>
-                
-                {/* 메인 히어로 이미지 - 기존 a1.webp 에셋 보존 */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-14 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl group">
-                  <Image 
-                    src={ABUNDANCE_REPORT_IMAGES.hero} 
-                    alt="선천코드 풍요 리포트 메인 히어로 이미지" 
-                    width={1440}
-                    height={810}
-                    priority
-                    className="w-full h-auto transition-transform duration-[10000ms] group-hover:scale-110"
-                  />
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic">
+                    나의 타고난 재능과 돈을 대하는 성향을 이해할 때, 나에게 맞는 풍요의 방향이 보입니다.
+                  </p>
                 </div>
 
-                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
-                  나의 타고난 재능과 돈을 대하는 성향을 이해할 때, 나에게 맞는 풍요의 방향이 보입니다.
-                </p>
-                
-                {/* 기존 버튼 상태 보존 및 리포트 미리보기 보조 버튼 */}
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center">
-                  <button 
-                    onClick={scrollToSample}
-                    className="w-full sm:w-auto px-6 py-5 rounded-2xl font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-white/20 text-[#EDE6DA] hover:bg-white/10 bg-black/40"
-                  >
-                    리포트 미리보기
-                  </button>
-                  <button 
-                    type="button"
-                    disabled
-                    aria-disabled="true"
-                    className="w-full sm:flex-1 py-5 rounded-2xl font-bold text-lg cursor-not-allowed tracking-widest bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] opacity-90"
-                  >
-                    오픈 예정
-                  </button>
+                {/* 7. 공감 문구 아래 추가 가로 이미지 (16:9, 교체 가능 구조) */}
+                <div className="relative w-full max-w-[1280px] mx-auto rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl group aspect-[16/9] bg-[#0B1514]">
+                  <Image 
+                    src={ABUNDANCE_REPORT_IMAGES.empathy} 
+                    alt="선천코드 풍요 리포트 공감 가로 비주얼 16:9" 
+                    width={1440}
+                    height={810}
+                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               </Reveal>
             </section>
@@ -425,7 +433,7 @@ export default function AbundanceReportPage() {
 
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
-                      <span className="inline-block px-4 py-1 rounded-full text-[12px] font-bold tracking-[0.2em] bg-[#608F82]/15 border border-[#608F82]/30 text-[#8FB4A4] uppercase">
+                      <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
                         Digital Ritual Gift
                       </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
@@ -497,7 +505,7 @@ export default function AbundanceReportPage() {
                 <div className="relative">
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
-                      <span className="inline-block px-4 py-1 rounded-full text-[12px] font-bold tracking-[0.2em] bg-[#608F82]/15 border border-[#608F82]/30 text-[#8FB4A4] uppercase">
+                      <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
                         Process & Info
                       </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
@@ -606,7 +614,7 @@ export default function AbundanceReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#608F82]/15 border border-[#608F82]/30 text-[#8FB4A4] mb-8">
+                  <span className="block text-[12px] font-semibold tracking-[0.2em] uppercase text-[#8FB4A4] mb-6">
                     EMBRACE YOUR ABUNDANCE
                   </span>
                   

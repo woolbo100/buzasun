@@ -10,7 +10,7 @@ export default function CompatibilityRecommendedAudience() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             TARGET COUPLES
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -36,7 +36,7 @@ export default function CompatibilityRecommendedAudience() {
 
           <div className="lg:col-span-7 space-y-6">
             {/* 추천하는 분 카드 */}
-            <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-[#935C6B]/50 bg-gradient-to-b from-[#3B0F1B]/30 via-[#2D0A1E]/30 to-black/40">
+            <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-[#935C6B]/50 bg-gradient-to-b from-[#3B0F1B]/30 via-[#2D0A1E]/30 to-black/35">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 rounded-full bg-[#663244]/30 border border-[#935C6B] flex items-center justify-center text-[#D8BB94]">
                   <Check className="w-4 h-4 stroke-[3]" />

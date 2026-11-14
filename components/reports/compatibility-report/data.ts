@@ -380,7 +380,7 @@ export const compatibilityScenarioData = {
       quote: "“왜 항상 내 마음을 몰라줘?”",
       desc: "서로의 감정 표현 방식과 갈등 대처 방식이 달라 사소한 일로 시작해 결국 같은 문제로 다시 다투는 상태.",
       state: "상대의 태도를 '나를 덜 사랑해서'라고 오해하며 상처를 누적하는 단계",
-      color: "from-rose-950/40 via-[#2D0A1E]/30 to-black/40",
+      color: "from-rose-950/30 via-[#2D0A1E]/25 to-black/35",
       borderColor: "border-rose-900/40"
     },
     {
@@ -389,7 +389,7 @@ export const compatibilityScenarioData = {
       quote: "“상대는 나와 다른 방식으로 감정을 정리하는 사람이구나.”",
       desc: "한 사람의 잘못이나 성격 탓으로 보기보다, 타고난 기질과 방어기제의 차이에서 비롯된 반응임을 이해하는 과정.",
       state: "공격과 방어의 굴레에서 벗어나 관계의 구조를 객관적으로 바라보는 단계",
-      color: "from-purple-950/40 via-[#1A0514]/40 to-black/40",
+      color: "from-purple-950/30 via-[#1A0514]/25 to-black/35",
       borderColor: "border-[var(--accent-gold)]/40"
     },
     {
@@ -398,7 +398,7 @@ export const compatibilityScenarioData = {
       quote: "“우리에게 맞는 대화 방식을 함께 정해보자.”",
       desc: "갈등 상황에서도 감정에 휩쓸리지 않고, 서로의 감정과 심리적 경계를 존중하며 합의된 방식으로 조율해 나가는 실천.",
       state: "서로의 다름을 매력으로 품으며 더 깊고 흔들림 없는 신뢰를 쌓아가는 상태",
-      color: "from-[var(--accent-gold)]/15 via-[#2D0A1E]/30 to-black/40",
+      color: "from-[var(--accent-gold)]/15 via-[#2D0A1E]/25 to-black/35",
       borderColor: "border-[var(--accent-gold)]"
     }
   ]

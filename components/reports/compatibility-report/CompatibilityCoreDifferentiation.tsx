@@ -26,7 +26,7 @@ export default function CompatibilityCoreDifferentiation() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             CONFLICT STRUCTURE ANALYSIS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -46,7 +46,7 @@ export default function CompatibilityCoreDifferentiation() {
             return (
               <div
                 key={idx}
-                className="gungjung-glass p-8 rounded-[28px] border border-[#935C6B]/30 bg-gradient-to-b from-[#3B0F1B]/30 to-[#1A0514]/60 hover:border-[#935C6B]/70 transition-all duration-300 flex flex-col justify-between"
+                className="gungjung-glass p-8 rounded-[28px] border border-[#935C6B]/30 bg-gradient-to-b from-[#3B0F1B]/20 to-[#1A0514]/35 hover:border-[#935C6B]/70 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-[#663244]/20 border border-[#935C6B]/40 flex items-center justify-center text-[#D8BB94] mb-6">
@@ -65,7 +65,7 @@ export default function CompatibilityCoreDifferentiation() {
         </div>
 
         {/* 본문 설명 및 궁합 리포트 정의 */}
-        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#935C6B]/40 bg-gradient-to-r from-[#2D0A1E]/90 via-[#3B0F1B]/40 to-[#0A0514]/90 text-center relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#935C6B]/40 bg-gradient-to-r from-[#2D0A1E]/35 via-[#3B0F1B]/20 to-[#0A0514]/35 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto space-y-6">
             <p className="text-base md:text-lg text-[#EDE6DA] leading-relaxed font-light break-keep">
               &lsquo;천생연분&rsquo;이라는 점괘를 믿고 방심하거나, &lsquo;상극&rsquo;이라는 말에 미리 체념할 필요가 없습니다.

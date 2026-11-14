@@ -9,7 +9,7 @@ export default function WealthPatternFlow() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             WEALTH DYNAMICS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -61,7 +61,7 @@ export default function WealthPatternFlow() {
         </div>
 
         {/* 핵심 인용 강조 배너 */}
-        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#0f241f]/60 via-[#152e27]/80 to-[#0f241f]/60 border border-[#608F82]/35 text-center shadow-xl">
+        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#0f241f]/25 via-[#152e27]/35 to-[#0f241f]/25 border border-[#608F82]/35 text-center shadow-xl">
           <p className="text-lg md:text-2xl font-elegant font-bold text-[#E6BE8A] leading-relaxed whitespace-pre-line">
             &ldquo;{wealthPatternFlowData.quote}&rdquo;
           </p>

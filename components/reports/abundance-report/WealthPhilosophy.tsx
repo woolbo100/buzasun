@@ -9,7 +9,7 @@ export default function WealthPhilosophy() {
       <Reveal>
         <div className="max-w-4xl mx-auto">
           {/* 서신(Letter) 형태의 고급스러운 궁중 한지/글라스 카드 */}
-          <div className="gungjung-glass point-box p-10 md:p-16 rounded-[36px] border border-[#608F82]/30 bg-gradient-to-b from-[#0f241f]/80 via-[#152e27]/40 to-[#0a0514]/90 relative overflow-hidden shadow-2xl">
+          <div className="gungjung-glass point-box p-10 md:p-16 rounded-[36px] border border-[#608F82]/30 bg-gradient-to-b from-[#0f241f]/35 via-[#152e27]/20 to-[#0a0514]/35 relative overflow-hidden shadow-2xl">
             {/* 배경 은은한 옥빛 인장 장식 */}
             <div className="absolute top-8 right-8 w-24 h-24 border-2 border-[#608F82]/25 rounded-2xl flex items-center justify-center rotate-6 pointer-events-none opacity-40">
               <span className="text-xs font-elegant font-bold text-[#8FB4A4] tracking-widest text-center">
@@ -18,7 +18,7 @@ export default function WealthPhilosophy() {
             </div>
 
             <div className="text-center mb-10">
-              <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
+              <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
                 PHILOSOPHY OF ABUNDANCE
               </span>
               <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">

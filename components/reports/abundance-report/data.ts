@@ -379,7 +379,7 @@ export const wealthScenarioData = {
       quote: "“열심히 일하는데 왜 항상 돈이 부족할까?”",
       desc: "남들의 성공 법칙만 쫓다가 무리한 지출을 하거나, 수입이 늘어도 그만큼 새어나가 답답함을 느끼는 상태.",
       state: "내 기질에 맞지 않는 돈의 방식으로 인해 불안과 자책이 반복되는 단계",
-      color: "from-emerald-950/40 via-[#0f241f]/30 to-black/40",
+      color: "from-emerald-950/30 via-[#0f241f]/25 to-black/35",
       borderColor: "border-[#8FD3B6]/30"
     },
     {
@@ -388,7 +388,7 @@ export const wealthScenarioData = {
       quote: "“나는 수입이 늘어날 때마다 계획 없이 지출을 늘리고 있었구나.”",
       desc: "나의 타고난 재물 기질과 무의식적인 결핍감이 어떻게 충동적인 소비나 시작의 지연으로 연결되는지 객관적으로 돌아봅니다.",
       state: "의지박약이 아닌 '나의 재물 코드가 오작동하던 순간'을 알아차리는 단계",
-      color: "from-[#152e27]/40 via-teal-950/30 to-black/40",
+      color: "from-[#152e27]/30 via-teal-950/25 to-black/35",
       borderColor: "border-[#8FD3B6]/50"
     },
     {
@@ -397,7 +397,7 @@ export const wealthScenarioData = {
       quote: "“이번에는 소비 전에 기준을 세우고, 작은 금액부터 관리해 보자.”",
       desc: "남의 기준이 아닌 나만의 수입 구조를 세우고, 실천 가능한 재정 루틴을 일상에 적용하여 단단한 만족감을 쌓아갑니다.",
       state: "불안에 쫓기지 않고 나다운 주관으로 풍요의 흐름을 건강하게 지켜내는 상태",
-      color: "from-[#8FD3B6]/15 via-[#0f241f]/40 to-black/40",
+      color: "from-[#8FD3B6]/15 via-[#0f241f]/25 to-black/35",
       borderColor: "border-[#8FD3B6]"
     }
   ]

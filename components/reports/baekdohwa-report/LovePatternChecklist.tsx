@@ -23,7 +23,7 @@ export default function LovePatternChecklist() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             PATTERN CHECKLIST
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -38,7 +38,20 @@ export default function LovePatternChecklist() {
           {/* 은은한 배경 광채 */}
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#B7788D]/10 rounded-full blur-[80px] pointer-events-none"></div>
 
-          <div className="space-y-4 mb-8">
+          {/* 체크리스트 직접 체험 인터랙션 안내 문구 */}
+          <div className="mb-6 pb-6 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left relative z-10">
+            <div className="flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-[#B7788D] animate-pulse"></span>
+              <p className="text-[14px] md:text-[15px] text-[#EDE6DA] font-medium break-keep">
+                아래 항목 중 내 이야기처럼 느껴지는 것이 있다면 체크해보세요.
+              </p>
+            </div>
+            <span className="text-[12px] text-[#EDE6DA]/50 font-light shrink-0">
+              * 항목을 직접 탭(클릭)하여 선택할 수 있습니다
+            </span>
+          </div>
+
+          <div className="space-y-4 mb-8 relative z-10">
             {checklistData.items.map((item, idx) => {
               const isChecked = checkedIndices.includes(idx)
               return (
@@ -69,12 +82,16 @@ export default function LovePatternChecklist() {
           </div>
 
           {/* 결과 안내 카드 */}
-          <div className="p-6 rounded-2xl bg-black/40 border border-white/10 text-center transition-all duration-500">
+          <div className="p-6 rounded-2xl bg-black/40 border border-white/10 text-center relative z-10 transition-all duration-500">
             <div className="mb-2">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-white/5 text-[#E6BFA9] border border-white/10">
-                선택 항목: {selectedCount} / {checklistData.items.length}
+              <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-[#E6BFA9] border border-white/10">
+                체크한 항목 수 · {selectedCount} / {checklistData.items.length}
               </span>
             </div>
+
+            <p className="text-[12px] md:text-[13px] text-[#EDE6DA]/60 font-light mb-4 break-keep">
+              정답을 고르는 체크가 아니라, 반복되는 패턴을 살펴보기 위한 체크입니다.
+            </p>
 
             {isHighPattern && (
               <p className="text-[#D9A8A7] font-bold text-base md:text-lg mb-2">

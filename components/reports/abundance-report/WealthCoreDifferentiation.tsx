@@ -26,7 +26,7 @@ export default function WealthCoreDifferentiation() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             WEALTH DYNAMICS ANALYSIS
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -46,7 +46,7 @@ export default function WealthCoreDifferentiation() {
             return (
               <div
                 key={idx}
-                className="gungjung-glass p-8 rounded-[28px] border border-[#608F82]/25 bg-gradient-to-b from-[#0f241f]/30 to-[#0a0514]/60 hover:border-[#608F82]/60 transition-all duration-300 flex flex-col justify-between"
+                className="gungjung-glass p-8 rounded-[28px] border border-[#608F82]/25 bg-gradient-to-b from-[#0f241f]/20 to-[#0a0514]/35 hover:border-[#608F82]/60 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-[#608F82]/15 border border-[#608F82]/35 flex items-center justify-center text-[#8FB4A4] mb-6">
@@ -65,7 +65,7 @@ export default function WealthCoreDifferentiation() {
         </div>
 
         {/* 본문 설명 및 풍요 리포트 정의 */}
-        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#608F82]/35 bg-gradient-to-r from-[#0f241f]/90 via-[#152e27]/40 to-[#0a0514]/90 text-center relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#608F82]/35 bg-gradient-to-r from-[#0f241f]/35 via-[#152e27]/20 to-[#0a0514]/35 text-center relative overflow-hidden">
           <div className="max-w-2xl mx-auto space-y-6">
             <p className="text-base md:text-lg text-[#EDE6DA] leading-relaxed font-light break-keep">
               단순히 운세가 좋다는 말이나 뜬구름 잡는 확언은 현실의 통장을 채워주지 않습니다.

@@ -8,7 +8,7 @@ export default function CompatibilityPrescriptionSample() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             ACTIONABLE DIALOGUE PRESCRIPTION [SAMPLE]
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -22,7 +22,7 @@ export default function CompatibilityPrescriptionSample() {
         </div>
 
         {/* 실제 처방전 형태의 프리미엄 샘플 카드 */}
-        <div className="max-w-7xl mx-auto gungjung-glass point-box p-8 md:p-12 rounded-[36px] border-2 border-[#935C6B]/40 bg-gradient-to-b from-[#2D0A1E]/95 via-[#3B0F1B]/40 to-[#0A0514]/95 shadow-2xl relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass point-box p-8 md:p-12 rounded-[36px] border-2 border-[#935C6B]/40 bg-gradient-to-b from-[#2D0A1E]/35 via-[#3B0F1B]/20 to-[#0A0514]/35 shadow-2xl relative overflow-hidden">
           {/* 상단 샘플 알림 뱃지 */}
           <div className="flex items-center justify-between pb-6 mb-8 border-b border-white/10">
             <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-[#D8BB94] font-bold">

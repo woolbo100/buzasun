@@ -34,6 +34,23 @@ import CompatibilityValueSummary from '@/components/reports/compatibility-report
 import CompatibilityFAQ from '@/components/reports/compatibility-report/CompatibilityFAQ'
 import CompatibilityPurchaseNotice from '@/components/reports/compatibility-report/CompatibilityPurchaseNotice'
 
+// ══════════════════════════════════════════════════════════════════════
+// 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
+// ══════════════════════════════════════════════════════════════════════
+const HERO_IMAGE_CONFIG = {
+  src: '/image/compatibility/p1.webp',
+  alt: '프리미엄 궁합 리포트 메인 히어로 16:9',
+  width: 1440,
+  height: 810,
+}
+
+const EMPATHY_IMAGE_CONFIG = {
+  src: '/image/compatibility/p2.webp',
+  alt: '프리미엄 궁합 리포트 공감 가로 비주얼 16:9',
+  width: 1440,
+  height: 810,
+}
+
 export default function PremiumCompatibilityReportPage() {
   useScrollAnimation()
   const router = useRouter()
@@ -133,33 +150,63 @@ export default function PremiumCompatibilityReportPage() {
           <div className="container-premium">
             
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 01. 히어로 — 관계 설계도 (기존 이미지 & 구매 기능 100% 보존) */}
+            {/* SECTION 01. 히어로 — 제목 → 16:9 메인 이미지 → 버튼 → 공감 문구 → 공감 16:9 이미지 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
+                {/* 1. 상단 배지 */}
                 <div className="mb-6">
                   <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94]">
                     BAEKDOHWA PREMIUM COMPATIBILITY REPORT
                   </span>
                 </div>
 
-                {/* 서브 카피 타이틀 */}
+                {/* 2. 보조 카피 */}
                 <p className="text-[16px] md:text-[18px] text-[#D8BB94] font-medium tracking-wide mb-4">
                   두 사람의 선천코드와 관계 패턴을 함께 읽는 1:1 프리미엄 궁합 설계도
                 </p>
 
-                {/* 메인 제품명 */}
-                <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-8 text-white leading-[1.25] md:leading-[1.3] break-keep">
+                {/* 3. 메인 제품명 제목 */}
+                <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-10 text-white leading-[1.25] md:leading-[1.3] break-keep">
                   프리미엄 <span className="gradient-text-reunion">궁합 리포트</span>
                 </h1>
 
-                {/* 핵심 후킹 카피 — 날카롭고 강렬한 질문 */}
-                <div className="max-w-3xl mx-auto mb-12">
+                {/* 4. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
+                <div className="relative w-full max-w-[1280px] mx-auto mb-10 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#14080E]">
+                  <Image 
+                    src={HERO_IMAGE_CONFIG.src} 
+                    alt={HERO_IMAGE_CONFIG.alt}
+                    width={HERO_IMAGE_CONFIG.width}
+                    height={HERO_IMAGE_CONFIG.height}
+                    priority
+                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
+                </div>
+
+                {/* 5. 구매 버튼 영역 */}
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center mb-24 md:mb-28">
+                  <button 
+                    onClick={handleAddToCart}
+                    className="w-full sm:w-1/2 py-5 px-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/20 bg-transparent text-center"
+                  >
+                    장바구니 담기
+                  </button>
+                  <button 
+                    onClick={handlePurchase}
+                    className="w-full sm:w-1/2 py-5 px-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-[linear-gradient(110deg,#552334_0%,#431a2a_55%,#32141f_100%)] hover:bg-[linear-gradient(110deg,#64293d_0%,#522034_55%,#3e1927_100%)] border border-[rgba(229,196,187,0.6)] hover:border-[rgba(229,196,187,0.85)] text-[#FAF7F2] shadow-[0_4px_16px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4),0_0_20px_rgba(229,196,187,0.32)] hover:brightness-105 text-center"
+                  >
+                    바로 신청하기
+                  </button>
+                </div>
+
+                {/* 6. 기존 공감 문구 (구매 버튼 아래로 이동) */}
+                <div className="max-w-3xl mx-auto mb-14 text-center">
                   <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
                     &ldquo;분명 사랑하는데,<br className="hidden sm:inline" />
                     왜 우리는 같은 이유로 <span className="gradient-text-reunion">계속 상처를 주고받을까?</span>&rdquo;
                   </p>
-                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto mb-6">
                     <p>한 사람은 대화를 원하고, 다른 사람은 입을 닫는다.</p>
                     <p>한 사람은 확인받고 싶어 하고, 다른 사람은 간섭받는다고 느낀다.</p>
                     <p>같은 사건인데 서로가 받아들이는 의미는 전혀 다르다.</p>
@@ -167,46 +214,21 @@ export default function PremiumCompatibilityReportPage() {
                       사랑이 부족해서가 아니라, 서로의 반응 방식이 충돌하고 있을 수 있습니다.
                     </p>
                   </div>
-                </div>
-                
-                {/* 메인 히어로 이미지 - 기존 p1.webp 에셋 보존 */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-14 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group">
-                  <Image 
-                    src="/image/compatibility/p1.webp" 
-                    alt="프리미엄 궁합 리포트 메인 히어로"
-                    width={1440}
-                    height={810}
-                    priority
-                    className="w-full h-auto transition-transform duration-[10000ms] group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 to-transparent"></div>
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic">
+                    두 사람의 인연은 우연이 아니라 흐름입니다.
+                  </p>
                 </div>
 
-                {/* 기존 메인 카피 보존 */}
-                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed mb-10 max-w-3xl mx-auto break-keep font-elegant italic">
-                  두 사람의 인연은 우연이 아니라 흐름입니다.
-                </p>
-                
-                {/* 기존 구매 버튼 및 리포트 미리보기 보조 버튼 */}
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xl mx-auto justify-center items-center">
-                  <button 
-                    onClick={scrollToSample}
-                    className="w-full sm:w-auto px-6 py-5 rounded-2xl font-bold text-base hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-white/20 text-[#EDE6DA] hover:bg-white/10 bg-black/40"
-                  >
-                    리포트 미리보기
-                  </button>
-                  <button 
-                    onClick={handleAddToCart}
-                    className="w-full sm:w-auto px-8 py-5 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/20 bg-transparent"
-                  >
-                    장바구니 담기
-                  </button>
-                  <button 
-                    onClick={handlePurchase}
-                    className="w-full sm:flex-1 py-5 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-[linear-gradient(110deg,#552334_0%,#431a2a_55%,#32141f_100%)] hover:bg-[linear-gradient(110deg,#64293d_0%,#522034_55%,#3e1927_100%)] border border-[rgba(229,196,187,0.6)] hover:border-[rgba(229,196,187,0.85)] text-[#FAF7F2] shadow-[0_4px_16px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4),0_0_20px_rgba(229,196,187,0.32)] hover:brightness-105"
-                  >
-                    바로 신청하기
-                  </button>
+                {/* 7. 공감 문구 아래 추가 가로 이미지 (16:9, 교체 가능 구조) */}
+                <div className="relative w-full max-w-[1280px] mx-auto rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#14080E]">
+                  <Image 
+                    src={EMPATHY_IMAGE_CONFIG.src} 
+                    alt={EMPATHY_IMAGE_CONFIG.alt}
+                    width={EMPATHY_IMAGE_CONFIG.width}
+                    height={EMPATHY_IMAGE_CONFIG.height}
+                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               </Reveal>
             </section>
@@ -441,7 +463,7 @@ export default function PremiumCompatibilityReportPage() {
 
               <div className="relative z-10 text-center px-6 md:px-10 py-16">
                 <Reveal>
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] uppercase bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] mb-8">
+                  <span className="block text-[12px] font-semibold tracking-[0.2em] uppercase text-[#D8BB94] mb-6">
                     HARMONY FOR TWO
                   </span>
                   

@@ -10,7 +10,7 @@ export default function WealthValueSummary() {
     <div className="mb-20">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-[12px] font-bold tracking-[0.25em] bg-[#608F82]/15 border border-[#608F82]/35 text-[#8FB4A4] uppercase mb-6">
+          <span className="block text-[12px] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             LIFELONG COMPASS FOR WEALTH
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -40,7 +40,7 @@ export default function WealthValueSummary() {
         </div>
 
         {/* 《풍요비책》 전자책 함께 보기 소형 안내 카드 */}
-        <div className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-gradient-to-r from-[#0f241f]/80 via-[#152e27]/70 to-[#0f241f]/80 border border-[#608F82]/35 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-gradient-to-r from-[#0f241f]/35 via-[#152e27]/25 to-[#0f241f]/35 border border-[#608F82]/35 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="flex items-center gap-4 text-left">
             <div className="w-12 h-12 rounded-2xl bg-[#0f241f] border border-[#608F82]/40 flex items-center justify-center text-[#8FB4A4] shrink-0">
               <BookOpen className="w-6 h-6" />

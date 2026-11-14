@@ -376,7 +376,7 @@ export const scenarioData = {
       tag: "패턴을 알아차리는 순간",
       desc: "내가 언제 침묵을 택하고, 어떤 상황에서 방어적으로 닫히는지 나의 기질적 원인을 객관적으로 이해합니다.",
       state: "내 탓이나 남 탓이 아닌, '나의 코드가 오작동하던 순간'을 알아차림",
-      color: "from-purple-950/40 to-pink-950/30",
+      color: "from-purple-950/35 to-pink-950/25",
       borderColor: "border-[var(--accent-gold)]/40"
     },
     {
