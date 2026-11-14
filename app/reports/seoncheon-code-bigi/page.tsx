@@ -486,6 +486,15 @@ export default function SeoncheonCodeBigiPage() {
     alert('《선천코드 비기》는 현재 정식 출간 준비 중입니다. 곧 오픈될 예정입니다.')
   }
 
+  // 구매/상세 안내 영역으로 부드럽게 스크롤 이동
+  const scrollToFinalCta = (e: React.MouseEvent) => {
+    e.preventDefault()
+    const target = document.getElementById('final-cta')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   // 백도화 전통 묵자실 장식 구분선 (앤티크 샴페인 골드 포인트)
   const AntiqueDivider = () => (
     <div className="flex items-center justify-center my-20 md:my-28 opacity-70">
@@ -1076,64 +1085,711 @@ export default function SeoncheonCodeBigiPage() {
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 4: 왜, 선천코드 비기인가? (Why Seoncheon Code?)
+                Section 4: 왜, 선천코드 비기인가? (Why Seoncheon Code Secret)
+                - 핵심 수정 영역 A: 왜 《선천코드 비기》인가 & 4대 핵심 가치 카드
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
+            <section className="mb-24 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div>
-                  {/* PC (md 이상): 한지 스타일 카드 */}
+                <div className="space-y-10 md:space-y-12">
+                  {/* 📜 메인 한지 카드: 왜 《선천코드 비기》를 내 손에 두어야 할까요? */}
                   <div
-                    className="hidden md:block w-full rounded-2xl md:rounded-3xl border border-[#B7A18A]/40 shadow-2xl overflow-hidden transition-all duration-300"
+                    className="w-full rounded-2xl md:rounded-3xl border border-[#B7A18A]/40 shadow-2xl overflow-hidden transition-all duration-300"
                     style={{
                       backgroundColor: '#F2EAE0',
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
                     }}
                   >
-                    <div className="p-8 sm:p-10 md:p-12 lg:p-14 text-left break-keep space-y-5">
-                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#493740] uppercase block">
-                        WHY SEONCHEON CODE SECRET
-                      </span>
-                      <h3 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[34px] font-elegant font-bold text-[#241E25] leading-[1.4] break-keep">
-                        &ldquo;단순한 미신이나 통계가 아닙니다.<br />
-                        인간 본능의 무의식을 푸는 <span className="text-[#493740] font-extrabold">&lsquo;오행 심리 암호&rsquo;</span>입니다.&rdquo;
-                      </h3>
+                    <div className="p-7 sm:p-10 md:p-12 lg:p-14 text-left break-keep space-y-6 md:space-y-7">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[#493740]" />
+                        <span className="text-xs font-elegant font-semibold tracking-widest text-[#493740] uppercase">
+                          WHY SEONCHEON CODE SECRET
+                        </span>
+                      </div>
 
-                      <div className="text-[16px] md:text-[18px] text-[#30262F] leading-[1.8] font-normal space-y-3.5 break-keep">
-                        <p>
-                          시중의 단순한 혈액형이나 MBTI, 겉핥기식 사주 풀이는 당신의 진짜 관계 문제를 해결해주지 못합니다. 사람은 저마다 타고난 일간과 십성의 본능에 따라 욕망과 방어기제가 전혀 다르게 작동합니다.
+                      <div className="space-y-3">
+                        <h3 className="text-[22px] sm:text-[26px] md:text-[32px] lg:text-[34px] font-elegant font-bold text-[#241E25] leading-[1.38] break-keep">
+                          왜 《선천코드 비기》를 내 손에 두어야 할까요?
+                        </h3>
+                        <p className="text-[17px] sm:text-[19px] md:text-[22px] font-elegant font-bold text-[#493740] leading-[1.45] break-keep">
+                          &ldquo;누군가의 해석을 기다리는 대신, 이제 당신이 직접 관계의 코드를 읽어보세요.&rdquo;
                         </p>
+                      </div>
+
+                      {/* 본문 설명 */}
+                      <div className="text-[15px] sm:text-[16px] md:text-[17px] text-[#30262F] leading-[1.85] font-normal space-y-4 break-keep border-t border-[#B7A18A]/30 pt-6">
+                        <div className="space-y-2">
+                          <p className="font-semibold text-[#241E25]">
+                            사람을 알아갈 때마다 같은 질문이 반복됩니다.
+                          </p>
+                          <div className="pl-3 sm:pl-4 border-l-2 border-[#B7A18A] space-y-1.5 text-[#493740] font-medium text-[14px] sm:text-[15px]">
+                            <p>&ldquo;왜 저 사람은 저렇게 행동할까?&rdquo;</p>
+                            <p>&ldquo;왜 나는 비슷한 관계에서 같은 문제를 겪을까?&rdquo;</p>
+                            <p>&ldquo;우리는 무엇이 닮았고, 어디에서 부딪히는 걸까?&rdquo;</p>
+                          </div>
+                        </div>
+
                         <p>
-                          상대를 설득하고 매혹하는 진짜 열쇠는 <strong className="text-[#493740] font-bold">&lsquo;선천코드의 오행 조화&rsquo;</strong>에 있습니다. 내 코드를 바로 알고 상대의 기운을 판독할 때 비로소 상대를 끌어당기는 진정한 인연의 주도권을 쥐게 됩니다.
+                          누군가에게 매번 물어볼 수도 있지만, 관계를 이해하는 기본 원리와 해석 방법을 익힌다면 스스로 살펴볼 수 있는 영역이 넓어집니다.
+                        </p>
+
+                        <p>
+                          <strong className="text-[#241E25] font-bold">《선천코드 비기》</strong>는 사주 오행과 십성, 관계의 상호작용을 일상적인 언어로 풀어낸 <span className="text-[#493740] font-semibold">관계 해석 도감</span>입니다.
+                        </p>
+
+                        <p>
+                          자신의 만세력뿐 아니라 상대방의 만세력 정보가 있을 때도 책의 해석 기준을 참고하여 성향과 관계 패턴을 비교해 볼 수 있습니다.
+                        </p>
+
+                        <p>
+                          한 번 읽고 덮어두는 책이 아니라, 궁금한 사람이 생기거나 관계에서 이해되지 않는 상황을 만날 때 다시 펼쳐보는 <strong className="text-[#493740] font-bold">실전 참고서</strong>입니다.
+                        </p>
+                      </div>
+
+                      {/* 강조 카피 박스 */}
+                      <div
+                        className="p-5 md:p-6 rounded-xl border border-[#B7A18A]/60 text-center"
+                        style={{
+                          background: 'linear-gradient(135deg, rgba(73, 55, 64, 0.08) 0%, rgba(183, 161, 138, 0.15) 100%)',
+                        }}
+                      >
+                        <p className="text-[16px] sm:text-[18px] md:text-[20px] font-elegant font-bold text-[#241E25] leading-relaxed break-keep">
+                          &ldquo;한 사람의 답을 알려주는 책이 아니라,<br className="hidden sm:inline" /> 여러 관계를 스스로 이해하는 기준을 길러주는 책.&rdquo;
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* 모바일 (md 미만): 한지 텍스트 결합 */}
+                  {/* 🎴 4대 핵심 가치 카드 */}
+                  <div className="space-y-6">
+                    <div className="text-center max-w-2xl mx-auto space-y-2">
+                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase">
+                        CORE VALUES OF THE BOOK
+                      </span>
+                      <h4 className="text-[20px] sm:text-[24px] font-elegant font-bold text-[#FAF7F2]">
+                        《선천코드 비기》가 전하는 4가지 본질적 가치
+                      </h4>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+                      {/* CARD 01 */}
+                      <div
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
+                        style={{ backgroundColor: '#F2EAE0' }}
+                      >
+                        <div className="space-y-3.5">
+                          <div className="flex items-center justify-between">
+                            <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                              CARD 01
+                            </span>
+                            <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
+                              <BookOpen className="w-4 h-4" />
+                            </div>
+                          </div>
+                          <div>
+                            <span className="text-[11px] font-medium text-[#493740] block mb-1">자기주도 해석</span>
+                            <h5 className="text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                              스스로 읽는 힘
+                            </h5>
+                          </div>
+                          <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                            매번 누군가의 해석을 기다리지 않고, 오행과 십성의 기본 원리를 바탕으로 직접 살펴봅니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* CARD 02 */}
+                      <div
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
+                        style={{ backgroundColor: '#F2EAE0' }}
+                      >
+                        <div className="space-y-3.5">
+                          <div className="flex items-center justify-between">
+                            <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                              CARD 02
+                            </span>
+                            <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
+                              <Compass className="w-4 h-4" />
+                            </div>
+                          </div>
+                          <div>
+                            <span className="text-[11px] font-medium text-[#493740] block mb-1">관계 패턴 이해</span>
+                            <h5 className="text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                              관계를 비교하는 시선
+                            </h5>
+                          </div>
+                          <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                            나와 상대의 성향, 표현 방식, 관계에서 부딪히기 쉬운 지점을 비교해 봅니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* CARD 03 */}
+                      <div
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
+                        style={{ backgroundColor: '#F2EAE0' }}
+                      >
+                        <div className="space-y-3.5">
+                          <div className="flex items-center justify-between">
+                            <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                              CARD 03
+                            </span>
+                            <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
+                              <RotateCcw className="w-4 h-4" />
+                            </div>
+                          </div>
+                          <div>
+                            <span className="text-[11px] font-medium text-[#493740] block mb-1">반복 활용</span>
+                            <h5 className="text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                              필요할 때 다시 펼치는 도감
+                            </h5>
+                          </div>
+                          <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                            썸, 연애, 배우자와의 관계 등 다양한 상황에서 필요한 해석 기준을 다시 찾아볼 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* CARD 04 */}
+                      <div
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
+                        style={{ backgroundColor: '#F2EAE0' }}
+                      >
+                        <div className="space-y-3.5">
+                          <div className="flex items-center justify-between">
+                            <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                              CARD 04
+                            </span>
+                            <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
+                              <Sparkles className="w-4 h-4" />
+                            </div>
+                          </div>
+                          <div>
+                            <span className="text-[11px] font-medium text-[#493740] block mb-1">해석 원리 학습</span>
+                            <h5 className="text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                              원리부터 익히는 관계 공부
+                            </h5>
+                          </div>
+                          <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                            단순한 운세 결과를 넘어, 오행과 십성이 어떤 의미로 해석되는지 그 구조를 이해합니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 카드 하단 강조 문구 */}
+                    <div className="pt-2 text-center">
+                      <p className="text-sm sm:text-base md:text-lg font-elegant font-semibold text-[#B7A18A] break-keep">
+                        &ldquo;정답을 대신 내려주는 책이 아니라, 스스로 질문하고 해석하는 힘을 길러주는 책.&rdquo;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <AntiqueDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                Section 4-B: 전자책과 개인 맞춤 리포트 비교 (Product Comparison)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-24 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div className="space-y-8 md:space-y-10">
+                  {/* 헤더 */}
+                  <div className="text-center max-w-3xl mx-auto space-y-3 break-keep">
+                    <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
+                      PRODUCT COMPARISON
+                    </span>
+                    <h3 className="text-[24px] sm:text-[28px] md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.35]">
+                      《선천코드 비기》와 《선천코드 리포트》, 무엇이 다를까요?
+                    </h3>
+                    <p className="text-[16px] sm:text-[18px] text-[#B7A18A] font-medium">
+                      &ldquo;같은 선천코드에서 출발하지만, 역할과 쓰임새는 다릅니다.&rdquo;
+                    </p>
+                  </div>
+
+                  {/* 설명 안내 블록 */}
                   <div
-                    className="md:hidden w-full rounded-2xl border border-[#B7A18A]/40 shadow-2xl overflow-hidden transition-all duration-300"
+                    className="p-6 sm:p-8 rounded-2xl border border-[#B7A18A]/30 text-left space-y-3.5 leading-relaxed text-[#EDE6DA] text-[15px] sm:text-[16px] break-keep shadow-xl"
                     style={{
-                      backgroundColor: '#F2EAE0',
-                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
+                      background: 'linear-gradient(135deg, rgba(73, 55, 64, 0.3) 0%, rgba(36, 30, 37, 0.7) 100%)',
                     }}
                   >
-                    <div className="p-6 text-left break-keep space-y-4">
-                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#493740] uppercase block">
-                        WHY SEONCHEON CODE
-                      </span>
-                      <h3 className="text-[20px] sm:text-[22px] font-elegant font-bold text-[#241E25] leading-[1.45] break-keep">
-                        &ldquo;단순한 미신이 아닌<br />
-                        인간 본능의 <span className="text-[#493740] font-extrabold">&lsquo;오행 심리 암호&rsquo;</span>&rdquo;
-                      </h3>
+                    <p>
+                      <strong className="text-[#FAF7F2] font-semibold">《선천코드 비기》</strong>는 오행과 십성의 해석 원리를 익혀 다양한 사람과 관계를 스스로 살펴볼 수 있도록 구성한 <span className="text-[#B7A18A] font-semibold">전자책</span>입니다.
+                    </p>
+                    <p>
+                      반면 <strong className="text-[#FAF7F2] font-semibold">《선천코드 리포트》</strong>는 고객이 제공한 출생 정보를 바탕으로 개인의 사주 구조와 특정 고민을 중심으로 작성하는 <span className="text-[#B7A18A] font-semibold">맞춤 분석서</span>입니다.
+                    </p>
+                    <p className="text-[#B7A18A] font-medium pt-1 border-t border-[#B7A18A]/20">
+                      ✦ 하나는 스스로 해석하는 방법을 배우는 도감이고, 다른 하나는 자신의 구조를 중심으로 분석한 개인별 결과물입니다.
+                    </p>
+                  </div>
 
-                      <div className="text-[15px] sm:text-[16px] text-[#30262F] leading-[1.75] font-normal space-y-3 break-keep">
-                        <p>
-                          사람은 저마다 타고난 일간과 십성의 본능에 따라 욕망과 방어기제가 다릅니다.
-                        </p>
-                        <p>
-                          내 코드를 바로 알고 상대의 기운을 판독할 때, 상대를 끌어당기는 인연의 주도권을 갖게 됩니다.
-                        </p>
+                  {/* 📊 데스크톱 비교표 (md 이상) */}
+                  <div className="hidden md:block overflow-hidden rounded-2xl border border-[#B7A18A]/40 shadow-2xl bg-[#1C171D]">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="border-b border-[#B7A18A]/30 bg-[#30262F]/90">
+                          <th className="py-4 px-6 text-sm font-elegant font-bold text-[#B7A18A] w-[20%] text-center">
+                            구분
+                          </th>
+                          <th className="py-4 px-6 text-base font-elegant font-bold text-[#FAF7F2] w-[40%] bg-[#493740]/40 border-l border-[#B7A18A]/20">
+                            <div className="flex items-center gap-2">
+                              <span className="w-2 h-2 rounded-full bg-[#B7A18A]" />
+                              <span>선천코드 비기</span>
+                              <span className="text-xs font-normal text-[#B7A18A]/80 font-sans ml-1">(평생 소장 도감)</span>
+                            </div>
+                          </th>
+                          <th className="py-4 px-6 text-base font-elegant font-bold text-[#FAF7F2] w-[40%] border-l border-[#B7A18A]/20">
+                            <div className="flex items-center gap-2">
+                              <span className="w-2 h-2 rounded-full bg-[#82968F]" />
+                              <span>선천코드 리포트</span>
+                              <span className="text-xs font-normal text-[#82968F]/80 font-sans ml-1">(1:1 맞춤 분석서)</span>
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-[#B7A18A]/15 text-sm text-[#EDE6DA]">
+                        <tr className="hover:bg-white/[0.02] transition-colors">
+                          <td className="py-4 px-6 font-semibold text-[#B7A18A] text-center bg-[#241E25]/50">핵심 역할</td>
+                          <td className="py-4 px-6 font-bold text-[#FAF7F2] bg-[#493740]/15 border-l border-[#B7A18A]/20">스스로 읽는 해석 도감</td>
+                          <td className="py-4 px-6 font-medium text-[#FAF7F2] border-l border-[#B7A18A]/20">개인 맞춤 분석서</td>
+                        </tr>
+                        <tr className="hover:bg-white/[0.02] transition-colors">
+                          <td className="py-4 px-6 font-semibold text-[#B7A18A] text-center bg-[#241E25]/50">제공 형태</td>
+                          <td className="py-4 px-6 bg-[#493740]/15 border-l border-[#B7A18A]/20">공통 교육 콘텐츠 PDF</td>
+                          <td className="py-4 px-6 border-l border-[#B7A18A]/20">개인별 작성 PDF</td>
+                        </tr>
+                        <tr className="hover:bg-white/[0.02] transition-colors">
+                          <td className="py-4 px-6 font-semibold text-[#B7A18A] text-center bg-[#241E25]/50">분석 대상</td>
+                          <td className="py-4 px-6 bg-[#493740]/15 border-l border-[#B7A18A]/20">자신 및 다양한 관계</td>
+                          <td className="py-4 px-6 border-l border-[#B7A18A]/20">신청자 또는 신청한 궁합 대상</td>
+                        </tr>
+                        <tr className="hover:bg-white/[0.02] transition-colors">
+                          <td className="py-4 px-6 font-semibold text-[#B7A18A] text-center bg-[#241E25]/50">주요 내용</td>
+                          <td className="py-4 px-6 bg-[#493740]/15 border-l border-[#B7A18A]/20">오행·십성·관계 해석 원리</td>
+                          <td className="py-4 px-6 border-l border-[#B7A18A]/20">개인 사주 구조와 주제별 분석</td>
+                        </tr>
+                        <tr className="hover:bg-white/[0.02] transition-colors">
+                          <td className="py-4 px-6 font-semibold text-[#B7A18A] text-center bg-[#241E25]/50">활용 방식</td>
+                          <td className="py-4 px-6 bg-[#493740]/15 border-l border-[#B7A18A]/20">필요할 때 반복 참고</td>
+                          <td className="py-4 px-6 border-l border-[#B7A18A]/20">자신의 특성과 고민을 집중적으로 이해</td>
+                        </tr>
+                        <tr className="hover:bg-white/[0.02] transition-colors">
+                          <td className="py-4 px-6 font-semibold text-[#B7A18A] text-center bg-[#241E25]/50">주요 장점</td>
+                          <td className="py-4 px-6 bg-[#493740]/15 border-l border-[#B7A18A]/20">해석 원리 학습과 반복 활용</td>
+                          <td className="py-4 px-6 border-l border-[#B7A18A]/20">개인화된 분석과 실천 제안</td>
+                        </tr>
+                        <tr className="hover:bg-white/[0.02] transition-colors">
+                          <td className="py-4 px-6 font-semibold text-[#B7A18A] text-center bg-[#241E25]/50">추천 대상</td>
+                          <td className="py-4 px-6 font-semibold text-[#FAF7F2] bg-[#493740]/15 border-l border-[#B7A18A]/20">
+                            직접 공부하고 비교하고 싶은 분
+                          </td>
+                          <td className="py-4 px-6 font-semibold text-[#FAF7F2] border-l border-[#B7A18A]/20">
+                            자신의 사주를 개별적으로 분석받고 싶은 분
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* 📱 모바일 비교 카드 (md 미만) */}
+                  <div className="md:hidden space-y-4">
+                    {/* 비기 카드 */}
+                    <div
+                      className="rounded-2xl p-6 border border-[#B7A18A]/50 shadow-xl space-y-4"
+                      style={{ backgroundColor: '#F2EAE0' }}
+                    >
+                      <div className="flex items-center justify-between border-b border-[#B7A18A]/30 pb-3">
+                        <div className="space-y-0.5">
+                          <span className="text-[11px] font-semibold text-[#493740] block">평생 소장 도감</span>
+                          <h4 className="text-[19px] font-elegant font-bold text-[#241E25]">선천코드 비기</h4>
+                        </div>
+                        <SeoncheonBadge>학습·도감형</SeoncheonBadge>
                       </div>
+
+                      <div className="space-y-2.5 text-xs text-[#30262F]">
+                        <div className="flex justify-between py-1 border-b border-[#B7A18A]/20">
+                          <span className="font-semibold text-[#493740] shrink-0">핵심 역할</span>
+                          <span className="font-bold text-[#241E25] text-right">스스로 읽는 해석 도감</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-[#B7A18A]/20">
+                          <span className="font-semibold text-[#493740] shrink-0">제공 형태</span>
+                          <span className="text-right">공통 교육 콘텐츠 PDF</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-[#B7A18A]/20">
+                          <span className="font-semibold text-[#493740] shrink-0">분석 대상</span>
+                          <span className="text-right">자신 및 다양한 관계</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-[#B7A18A]/20">
+                          <span className="font-semibold text-[#493740] shrink-0">주요 내용</span>
+                          <span className="text-right">오행·십성·관계 해석 원리</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-[#B7A18A]/20">
+                          <span className="font-semibold text-[#493740] shrink-0">활용 방식</span>
+                          <span className="text-right">필요할 때 반복 참고</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-[#B7A18A]/20">
+                          <span className="font-semibold text-[#493740] shrink-0">주요 장점</span>
+                          <span className="text-right">해석 원리 학습과 반복 활용</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span className="font-semibold text-[#493740] shrink-0">추천 대상</span>
+                          <span className="font-bold text-[#493740] text-right">직접 공부하고 비교하고 싶은 분</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 리포트 카드 */}
+                    <div
+                      className="rounded-2xl p-6 border border-[#B7A18A]/35 shadow-xl space-y-4 bg-[#241E25]"
+                    >
+                      <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                        <div className="space-y-0.5">
+                          <span className="text-[11px] font-semibold text-[#82968F] block">1:1 맞춤 분석서</span>
+                          <h4 className="text-[19px] font-elegant font-bold text-[#FAF7F2]">선천코드 리포트</h4>
+                        </div>
+                        <span className="py-1 px-2.5 rounded text-[11px] font-medium bg-[#82968F]/20 text-[#82968F] border border-[#82968F]/40">
+                          개인 맞춤형
+                        </span>
+                      </div>
+
+                      <div className="space-y-2.5 text-xs text-[#EDE6DA]">
+                        <div className="flex justify-between py-1 border-b border-white/5">
+                          <span className="text-[#B7A18A] shrink-0">핵심 역할</span>
+                          <span className="font-semibold text-[#FAF7F2] text-right">개인 맞춤 분석서</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-white/5">
+                          <span className="text-[#B7A18A] shrink-0">제공 형태</span>
+                          <span className="text-right">개인별 작성 PDF</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-white/5">
+                          <span className="text-[#B7A18A] shrink-0">분석 대상</span>
+                          <span className="text-right">신청자 또는 궁합 대상</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-white/5">
+                          <span className="text-[#B7A18A] shrink-0">주요 내용</span>
+                          <span className="text-right">개인 사주 구조와 주제별 분석</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-white/5">
+                          <span className="text-[#B7A18A] shrink-0">활용 방식</span>
+                          <span className="text-right">자신의 특성과 고민을 집중 이해</span>
+                        </div>
+                        <div className="flex justify-between py-1 border-b border-white/5">
+                          <span className="text-[#B7A18A] shrink-0">주요 장점</span>
+                          <span className="text-right">개인화된 분석과 실천 제안</span>
+                        </div>
+                        <div className="flex justify-between py-1">
+                          <span className="text-[#B7A18A] shrink-0">추천 대상</span>
+                          <span className="font-semibold text-[#FAF7F2] text-right">개별 분석을 받고 싶은 분</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 비교표 하단 카피 */}
+                  <div className="text-center pt-2">
+                    <p className="text-[17px] sm:text-[20px] font-elegant font-bold text-[#FAF7F2] leading-relaxed break-keep">
+                      &ldquo;비기는 읽는 방법을 알려주고, 리포트는 나의 이야기를 깊이 들여다봅니다.&rdquo;
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <AntiqueDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                Section 4-C: 나에게 맞는 선택은? (Selection Guide)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-24 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div className="space-y-8 md:space-y-10">
+                  <div className="text-center max-w-2xl mx-auto space-y-2.5 break-keep">
+                    <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
+                      SELECTION GUIDE
+                    </span>
+                    <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-elegant font-bold text-[#FAF7F2]">
+                      지금 당신에게 필요한 것은 무엇인가요?
+                    </h3>
+                    <p className="text-sm sm:text-base text-[#EDE6DA]/70 font-light">
+                      나의 고민과 목적에 맞는 가장 지혜로운 방식을 선택해 보세요.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+                    {/* 선택 카드 01 — 《선천코드 비기》 */}
+                    <div
+                      className="rounded-3xl p-7 sm:p-9 flex flex-col justify-between border-2 border-[#B7A18A] shadow-2xl relative overflow-hidden transition-all duration-300"
+                      style={{
+                        backgroundColor: '#F2EAE0',
+                        boxShadow: '0 16px 44px rgba(0, 0, 0, 0.45)'
+                      }}
+                    >
+                      <div className="space-y-5">
+                        <div className="flex items-center justify-between">
+                          <span
+                            className="inline-flex items-center justify-center py-1 px-3 rounded text-xs font-semibold"
+                            style={{
+                              background: '#493740',
+                              color: '#F2EAE0',
+                              border: '1px solid #B7A18A'
+                            }}
+                          >
+                            스스로 읽는 해석 도감
+                          </span>
+                          <span className="text-xs font-mono text-[#493740] font-bold">CHOICE 01</span>
+                        </div>
+
+                        <div className="space-y-1.5">
+                          <h4 className="text-[22px] sm:text-[25px] font-elegant font-bold text-[#241E25] leading-tight">
+                            &ldquo;스스로 읽고 이해하고 싶다면&rdquo;
+                          </h4>
+                          <p className="text-xs sm:text-sm text-[#493740] font-medium">
+                            선천코드 비기 (전자책 평생 소장)
+                          </p>
+                        </div>
+
+                        {/* 체크리스트 */}
+                        <ul className="space-y-2.5 text-[14px] sm:text-[15px] text-[#30262F] font-medium pt-2 border-t border-[#B7A18A]/30">
+                          <li className="flex items-start gap-2.5">
+                            <CheckCircle2 className="w-5 h-5 text-[#493740] shrink-0 mt-0.5" />
+                            <span>오행과 십성의 원리를 배우고 싶다.</span>
+                          </li>
+                          <li className="flex items-start gap-2.5">
+                            <CheckCircle2 className="w-5 h-5 text-[#493740] shrink-0 mt-0.5" />
+                            <span>나와 상대의 차이를 비교해 보고 싶다.</span>
+                          </li>
+                          <li className="flex items-start gap-2.5">
+                            <CheckCircle2 className="w-5 h-5 text-[#493740] shrink-0 mt-0.5" />
+                            <span>여러 관계에서 반복 활용할 참고서가 필요하다.</span>
+                          </li>
+                          <li className="flex items-start gap-2.5">
+                            <CheckCircle2 className="w-5 h-5 text-[#493740] shrink-0 mt-0.5" />
+                            <span>관계 패턴을 이해하는 공부를 하고 싶다.</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="pt-6 space-y-4 border-t border-[#B7A18A]/30 mt-6">
+                        <div className="text-center">
+                          <span className="text-xs font-semibold text-[#493740] block mb-0.5">핵심 포지셔닝</span>
+                          <p className="text-[17px] font-elegant font-bold text-[#241E25]">
+                            &ldquo;내 손안의 선천코드 해석 도감&rdquo;
+                          </p>
+                        </div>
+
+                        <button
+                          type="button"
+                          onClick={scrollToFinalCta}
+                          className="w-full py-4 px-6 rounded-xl font-elegant font-bold text-base transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-md hover:brightness-110 cursor-pointer"
+                          style={{
+                            background: 'linear-gradient(135deg, #493740 0%, #30262F 100%)',
+                            border: '1px solid #B7A18A'
+                          }}
+                        >
+                          <span>《선천코드 비기》 자세히 보기</span>
+                          <ChevronDown className="w-4 h-4 text-[#FAF7F2]" />
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* 선택 카드 02 — 《선천코드 리포트》 */}
+                    <div
+                      className="rounded-3xl p-7 sm:p-9 flex flex-col justify-between border border-[#B7A18A]/40 shadow-2xl relative overflow-hidden bg-[#241E25] transition-all duration-300"
+                    >
+                      <div className="space-y-5">
+                        <div className="flex items-center justify-between">
+                          <span className="inline-flex items-center justify-center py-1 px-3 rounded text-xs font-semibold bg-[#82968F]/20 text-[#82968F] border border-[#82968F]/40">
+                            1:1 개인 맞춤 분석서
+                          </span>
+                          <span className="text-xs font-mono text-[#EDE6DA]/50 font-bold">CHOICE 02</span>
+                        </div>
+
+                        <div className="space-y-1.5">
+                          <h4 className="text-[22px] sm:text-[25px] font-elegant font-bold text-[#FAF7F2] leading-tight">
+                            &ldquo;나의 이야기를 개별적으로 분석받고 싶다면&rdquo;
+                          </h4>
+                          <p className="text-xs sm:text-sm text-[#82968F] font-medium">
+                            선천코드 리포트 (연애·궁합·풍요 맞춤 분석)
+                          </p>
+                        </div>
+
+                        {/* 체크리스트 */}
+                        <ul className="space-y-2.5 text-[14px] sm:text-[15px] text-[#EDE6DA] font-light pt-2 border-t border-white/10">
+                          <li className="flex items-start gap-2.5">
+                            <Check className="w-5 h-5 text-[#82968F] shrink-0 mt-0.5" />
+                            <span>내 사주 구조를 종합적으로 알고 싶다.</span>
+                          </li>
+                          <li className="flex items-start gap-2.5">
+                            <Check className="w-5 h-5 text-[#82968F] shrink-0 mt-0.5" />
+                            <span>나의 연애 성향과 반복 패턴이 궁금하다.</span>
+                          </li>
+                          <li className="flex items-start gap-2.5">
+                            <Check className="w-5 h-5 text-[#82968F] shrink-0 mt-0.5" />
+                            <span>특정 상대와의 관계를 집중적으로 살펴보고 싶다.</span>
+                          </li>
+                          <li className="flex items-start gap-2.5">
+                            <Check className="w-5 h-5 text-[#82968F] shrink-0 mt-0.5" />
+                            <span>개인 상황에 맞는 해석과 실천 제안을 받고 싶다.</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="pt-6 space-y-4 border-t border-white/10 mt-6">
+                        <div className="text-center">
+                          <span className="text-xs font-semibold text-[#82968F] block mb-0.5">핵심 포지셔닝</span>
+                          <p className="text-[17px] font-elegant font-bold text-[#FAF7F2]">
+                            &ldquo;오직 나를 위해 작성되는 1:1 맞춤 분석서&rdquo;
+                          </p>
+                        </div>
+
+                        <Link
+                          href="/reports"
+                          className="w-full py-4 px-6 rounded-xl font-elegant font-bold text-base transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] border border-[#B7A18A]/50 bg-[#30262F]/70 hover:bg-[#493740]/80 hover:border-[#B7A18A] text-center"
+                        >
+                          <span>개인 맞춤 리포트 살펴보기</span>
+                          <ChevronRight className="w-4 h-4 text-[#B7A18A]" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            <AntiqueDivider />
+
+            {/* ═══════════════════════════════════════════════════════════════
+                Section 4-D: 두 상품을 함께 활용하는 방법 (Synergy Roadmap & CTA)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-24 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div className="space-y-8 md:space-y-10">
+                  {/* 헤더 */}
+                  <div className="text-center max-w-3xl mx-auto space-y-3 break-keep">
+                    <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
+                      HOW TO USE TOGETHER
+                    </span>
+                    <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-elegant font-bold text-[#FAF7F2] leading-[1.38]">
+                      원리를 이해하고, 나의 구조를 더 깊이 살펴보는 방법.
+                    </h3>
+                    <p className="text-sm sm:text-base text-[#EDE6DA]/70 font-light">
+                      각 상품은 독립적으로 소장하고 활용할 수 있으며, 함께할 때 가장 깊이 있는 관계의 통찰을 제공합니다.
+                    </p>
+                  </div>
+
+                  {/* 3단계 카드 */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    {/* STEP 01 */}
+                    <div
+                      className="rounded-2xl p-6 sm:p-7 border border-[#B7A18A]/35 shadow-xl bg-[#241E25] space-y-3.5 relative overflow-hidden"
+                    >
+                      <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                        <span className="text-xs font-mono font-bold tracking-widest text-[#B7A18A]">
+                          STEP 01
+                        </span>
+                        <span className="text-xs font-elegant font-bold text-[#FAF7F2] px-2.5 py-0.5 rounded bg-white/5 border border-white/10">
+                          이해하다
+                        </span>
+                      </div>
+                      <h4 className="text-[18px] font-elegant font-bold text-[#FAF7F2]">
+                        해석의 기준을 세우다
+                      </h4>
+                      <p className="text-sm text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
+                        <strong className="text-[#FAF7F2] font-medium">《선천코드 비기》</strong>로 오행과 십성, 관계를 해석하는 기본 원리를 익힙니다.
+                      </p>
+                    </div>
+
+                    {/* STEP 02 */}
+                    <div
+                      className="rounded-2xl p-6 sm:p-7 border border-[#B7A18A]/35 shadow-xl bg-[#241E25] space-y-3.5 relative overflow-hidden"
+                    >
+                      <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                        <span className="text-xs font-mono font-bold tracking-widest text-[#82968F]">
+                          STEP 02
+                        </span>
+                        <span className="text-xs font-elegant font-bold text-[#FAF7F2] px-2.5 py-0.5 rounded bg-white/5 border border-white/10">
+                          확인하다
+                        </span>
+                      </div>
+                      <h4 className="text-[18px] font-elegant font-bold text-[#FAF7F2]">
+                        나의 코드를 깊이 읽다
+                      </h4>
+                      <p className="text-sm text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
+                        <strong className="text-[#FAF7F2] font-medium">《선천코드 리포트》</strong>로 자신의 사주 구조와 개별적인 해석을 살펴봅니다.
+                      </p>
+                    </div>
+
+                    {/* STEP 03 */}
+                    <div
+                      className="rounded-2xl p-6 sm:p-7 border border-[#B7A18A]/35 shadow-xl bg-[#241E25] space-y-3.5 relative overflow-hidden"
+                    >
+                      <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                        <span className="text-xs font-mono font-bold tracking-widest text-[#B7A18A]">
+                          STEP 03
+                        </span>
+                        <span className="text-xs font-elegant font-bold text-[#FAF7F2] px-2.5 py-0.5 rounded bg-white/5 border border-white/10">
+                          활용하다
+                        </span>
+                      </div>
+                      <h4 className="text-[18px] font-elegant font-bold text-[#FAF7F2]">
+                        관계의 중심을 잡다
+                      </h4>
+                      <p className="text-sm text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
+                        배운 원리와 개인별 분석 내용을 참고하여 자신의 관계 패턴을 돌아보고 실천 방향을 정리합니다.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 하단 카피 */}
+                  <div className="text-center pt-2">
+                    <p className="text-[17px] sm:text-[20px] font-elegant font-bold text-[#B7A18A] break-keep">
+                      &ldquo;비기로 해석의 눈을 기르고, 리포트로 나를 더 깊이 이해하세요.&rdquo;
+                    </p>
+                  </div>
+
+                  {/* 🎯 전환 및 브릿지 CTA */}
+                  <div
+                    className="rounded-2xl p-6 sm:p-8 text-center border border-[#B7A18A]/40 shadow-xl space-y-4 max-w-2xl mx-auto"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(73, 55, 64, 0.4) 0%, rgba(36, 30, 37, 0.8) 100%)',
+                    }}
+                  >
+                    <div className="space-y-1">
+                      <span className="text-xs font-elegant font-semibold text-[#B7A18A] tracking-wider uppercase block">
+                        BEGIN YOUR JOURNEY
+                      </span>
+                      <h4 className="text-[19px] sm:text-[22px] font-elegant font-bold text-[#FAF7F2]">
+                        이제, 나만의 해석 도감을 펼쳐보세요.
+                      </h4>
+                    </div>
+
+                    <div className="pt-2">
+                      <button
+                        type="button"
+                        onClick={handlePurchase}
+                        className="py-3.5 px-8 rounded-xl font-elegant font-bold text-base transition-all duration-300 inline-flex items-center justify-center gap-2 text-[#FAF7F2] shadow-lg hover:brightness-110 cursor-pointer"
+                        style={{
+                          background: 'linear-gradient(135deg, #493740 0%, #30262F 100%)',
+                          border: '1px solid #B7A18A'
+                        }}
+                      >
+                        <span>《선천코드 비기》 소장하기</span>
+                        <ChevronRight className="w-4 h-4 text-[#FAF7F2]" />
+                      </button>
+                    </div>
+
+                    <div className="pt-2 text-xs sm:text-sm text-[#EDE6DA]/70 font-light">
+                      <span>나만을 위한 분석이 궁금하다면? </span>
+                      <Link
+                        href="/reports"
+                        className="text-[#B7A18A] font-semibold underline underline-offset-4 hover:text-[#FAF7F2] transition-colors ml-1"
+                      >
+                        선천코드 맞춤 리포트 살펴보기 →
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -2766,7 +3422,7 @@ export default function SeoncheonCodeBigiPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 Section 22: 최종 구매 CTA (Final Purchase / 출간 준비 중 안내)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-3xl mx-auto">
+            <section id="final-cta" className="mb-28 w-full max-w-3xl mx-auto scroll-mt-28">
               <Reveal>
                 <div
                   className="rounded-3xl p-8 sm:p-10 md:p-12 text-center shadow-2xl relative overflow-hidden"
