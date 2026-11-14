@@ -612,6 +612,9 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(216, 191, 163, 0.5), transparent);
     opacity: 0.25;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
   }
 
   .btn-primary {
