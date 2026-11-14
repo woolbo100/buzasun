@@ -172,7 +172,7 @@ export default function BaekdohwaReportPage() {
                 </h1>
 
                 {/* 4. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-10 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
+                <div className="relative w-full max-w-[1280px] mx-auto mb-6 md:mb-8 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
                   <Image 
                     src={HERO_IMAGE_CONFIG.src} 
                     alt={HERO_IMAGE_CONFIG.alt}
@@ -184,7 +184,12 @@ export default function BaekdohwaReportPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
-                {/* 5. 구매 버튼 영역 */}
+                {/* 5. 메인 이미지 하단 기울어진 감성 문구 */}
+                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
+                  나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
+                </p>
+
+                {/* 6. 구매 버튼 영역 */}
                 <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center mb-24 md:mb-28">
                   <button 
                     onClick={handleAddToCart}
@@ -200,13 +205,13 @@ export default function BaekdohwaReportPage() {
                   </button>
                 </div>
 
-                {/* 6. 기존 공감 문구 (구매 버튼 아래로 이동) */}
+                {/* 7. 기존 공감 문구 (구매 버튼 아래로 이동) */}
                 <div className="max-w-3xl mx-auto mb-14 text-center">
                   <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
                     &ldquo;상대만 바뀌었을 뿐,<br className="hidden sm:inline" />
                     당신의 연애는 왜 <span className="gradient-text-love">매번 같은 결말</span>을 맞을까?&rdquo;
                   </p>
-                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto mb-6">
+                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
                     <p>처음에는 다정했다. 이번만큼은 다를 거라 믿었다.</p>
                     <p>그런데 어느 순간부터 또 내가 기다리고, 내가 불안해하고, 내가 관계를 붙잡고 있다.</p>
                     <p className="pt-2 text-[#E6BFA9] font-medium leading-relaxed">
@@ -214,12 +219,9 @@ export default function BaekdohwaReportPage() {
                       당신이 사랑을 선택하고 반응하는 방식에도 반복되는 패턴이 있을지 모릅니다.
                     </p>
                   </div>
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic">
-                    나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
-                  </p>
                 </div>
 
-                {/* 7. 공감 문구 아래 추가 가로 이미지 (16:9, 교체 가능 구조) */}
+                {/* 8. 공감 문구 아래 추가 가로 이미지 (16:9, 교체 가능 구조) */}
                 <div className="relative w-full max-w-[1280px] mx-auto rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
                   <Image 
                     src={EMPATHY_IMAGE_CONFIG.src} 
