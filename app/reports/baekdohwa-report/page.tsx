@@ -233,8 +233,8 @@ export default function BaekdohwaReportPage() {
                   <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#D5AFAD]/35 to-transparent" />
                 </div>
 
-                {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (재회비방 패키지 카드 구조) */}
-                <div className="max-w-[1280px] mx-auto mb-24 md:mb-28 text-left">
+                {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (하단 공감 문구와의 여유로운 숨 공간 확보) */}
+                <div className="max-w-[1280px] mx-auto mb-36 md:mb-48 lg:mb-52 text-left">
                   <div 
                     className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#D5AFAD]/35 overflow-hidden shadow-2xl"
                     style={{
@@ -328,6 +328,9 @@ export default function BaekdohwaReportPage() {
 
                 {/* 6. 공감 문구 (핵심 카피 1: 왜 이별의 타이밍도, 상처받는 방식도 놀라울 만큼 닮아 있을까요?) */}
                 <div className="max-w-3xl mx-auto mb-14 text-center">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+                    THE REPEATING LOOP
+                  </span>
                   <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
                     &ldquo;왜 이별의 타이밍도, 상처받는 방식도<br className="hidden sm:inline" />
                     <span className="gradient-text-love">놀라울 만큼 닮아</span> 있을까요?&rdquo;
@@ -375,7 +378,7 @@ export default function BaekdohwaReportPage() {
                       </span>
                       <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold mb-6 leading-[1.3] break-keep">
                         <span className="text-[#FAF7F2]">끌림만 믿고 시작한 사랑,</span><br />
-                        <span className="gradient-text-love">왜 늘 같은 미로에 갇힐까?</span>
+                        <span className="gradient-text-love">왜 늘 같은 미로에 갇힐까요?</span>
                       </h2>
                     </div>
 
@@ -385,21 +388,19 @@ export default function BaekdohwaReportPage() {
                         설렘을 운명이라 착각하는 동안, 우리의 연애는 늘 같은 결말을 향해 달렸습니다.
                       </p>
                       <p className="text-[#FAF7F2] font-semibold">
-                        내 안의 진짜 무기가 무엇인지도 모른 채 남자의 비위를 맞추고, 관계의 을(乙)이 되기를 자처했던 시간들.
+                        내 안의 진짜 무기가 무엇인지도 모른 채 남자의 비위를 맞추고,<br />
+                        관계의 을(乙)이 되기를 자처했던 시간들.
                       </p>
                       <p>
                         내 사랑의 지도조차 없었기에, 늘 낯선 길에서 길을 잃었던 것입니다.
                       </p>
                     </div>
 
-                    {/* 구분선 및 마지막 핵심 후킹 */}
-                    <div className="pt-6 border-t border-[#B49A70]/25 mt-6 space-y-2">
-                      <p className="font-elegant font-bold text-[19px] md:text-[22px] leading-[1.6] break-keep text-white">
-                        &ldquo;내 사랑의 설계도도 모르면서,<br className="sm:hidden" />
-                        <span className="gradient-text-love"> 왜 상대의 마음부터 읽으려 합니까?</span>&rdquo;
-                      </p>
-                      <p className="text-[#FAF7F2] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep pt-1">
-                        이제 끌림을 쫓기 전에, 당신 내면에 새겨진 선천코드를 먼저 펼쳐보십시오.
+                    {/* 구분선 및 마지막 핵심 메시지 */}
+                    <div className="pt-6 border-t border-[#B49A70]/25 mt-6">
+                      <p className="font-elegant font-bold text-[18px] sm:text-[20px] md:text-[22px] leading-[1.6] break-keep text-white">
+                        이제 끌림을 쫓기 전에,<br className="hidden sm:inline" />
+                        <span className="gradient-text-love"> 당신 내면에 새겨진 선천코드를 먼저 펼쳐볼 때입니다.</span>
                       </p>
                     </div>
                   </div>

@@ -115,18 +115,18 @@ export default function LovePatternChecklist() {
               </span>
             </div>
 
-            <p className="text-[16px] text-[#EDE6DA]/75 font-light mb-4 break-keep">
-              정답을 고르는 체크가 아니라, 반복되는 패턴을 살펴보기 위한 체크입니다.
-            </p>
-
             {isHighPattern && (
               <p className="text-[#D9A8A7] font-bold text-[20px] md:text-[22px] mb-2 break-keep">
                 {checklistData.highlight}
               </p>
             )}
 
-            <p className="text-[18px] text-[#EDE6DA] break-keep font-normal leading-relaxed">
+            <p className="text-[18px] text-[#EDE6DA] break-keep font-medium leading-relaxed mb-3">
               {isHighPattern ? checklistData.feedbackHigh : checklistData.feedbackLow}
+            </p>
+
+            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/75 font-light mb-2 break-keep">
+              정답을 고르는 체크가 아니라, 반복되는 패턴을 살펴보기 위한 체크입니다.
             </p>
 
             <p className="text-[13px] md:text-[14px] text-white/50 mt-5 break-keep">

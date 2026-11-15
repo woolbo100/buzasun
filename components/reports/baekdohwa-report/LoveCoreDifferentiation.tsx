@@ -13,13 +13,13 @@ export default function LoveCoreDifferentiation() {
     },
     {
       icon: ShieldAlert,
-      question: "사람을 바꿔도 왜 늘 똑같은 방향으로 연애가 흘러갈까?",
+      question: "나는 왜 늘 똑같은 방향으로 연애가 흘러갈까?",
       desc: "상대의 얼굴과 조건은 달라졌는데, 관계가 깊어질수록 내가 느끼는 감정과 부딪히는 지점은 늘 제자리걸음인 이유"
     },
     {
       icon: AlertCircle,
-      question: "사람을 바꿔도, 왜 늘 똑같은 결말의 상처만 반복될까?",
-      desc: "이별의 모양결도, 아픔의 크기도 신기할 정도로 닮아 있는 이유는 내 안의 반복되는 연애 알고리즘 때문"
+      question: "나는 왜 늘 똑같은 결말의 상처만 반복될까?",
+      desc: "사람도 상황도 많은 것이 달라졌는데 이별의 모양결도, 아픔의 크기도 신기할 정도로 닮아 있는 이유"
     }
   ]
 
@@ -36,7 +36,7 @@ export default function LoveCoreDifferentiation() {
             </span>
             <br />
             <span className="gradient-text-love">
-              같은 연애가 끝나지 않는다.&rdquo;
+              같은 연애가 끝나지 않습니다.&rdquo;
             </span>
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
