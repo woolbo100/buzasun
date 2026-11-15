@@ -34,7 +34,15 @@ export default function LovePatternChecklist() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-7xl mx-auto border border-white/10 shadow-2xl relative overflow-hidden">
+        <div 
+          className="p-8 md:p-14 rounded-[32px] max-w-7xl mx-auto shadow-2xl relative overflow-hidden"
+          style={{
+            background: 'rgba(125, 76, 100, 0.22)',
+            border: '1px solid rgba(215, 170, 185, 0.20)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+          }}
+        >
           {/* 은은한 배경 광채 */}
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#B7788D]/10 rounded-full blur-[80px] pointer-events-none"></div>
 
@@ -42,7 +50,7 @@ export default function LovePatternChecklist() {
           <div className="mb-6 pb-6 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left relative z-10">
             <div className="flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-[#B7788D] animate-pulse"></span>
-              <p className="text-[14px] md:text-[15px] text-[#EDE6DA] font-medium break-keep">
+              <p className="text-[14px] md:text-[15px] text-[#F3E5E9] font-medium break-keep">
                 아래 항목 중 내 이야기처럼 느껴지는 것이 있다면 체크해보세요.
               </p>
             </div>
@@ -58,22 +66,35 @@ export default function LovePatternChecklist() {
                 <div
                   key={idx}
                   onClick={() => toggleCheck(idx)}
-                  className={`cursor-pointer p-4 md:p-5 rounded-2xl border transition-all duration-300 flex items-center gap-4 ${
-                    isChecked
-                      ? 'bg-[#B7788D]/15 border-[#B7788D]/60 text-white shadow-[0_0_20px_rgba(183, 120, 141, 0.15)]'
-                      : 'bg-white/[0.02] border-white/5 text-[#EDE6DA]/70 hover:bg-white/[0.04] hover:border-white/15'
-                  }`}
+                  style={{
+                    background: isChecked 
+                      ? 'rgba(145, 80, 110, 0.78)' 
+                      : 'rgba(92, 53, 78, 0.68)',
+                    borderColor: isChecked 
+                      ? 'rgba(245, 218, 226, 0.55)' 
+                      : 'rgba(218, 174, 190, 0.16)',
+                    boxShadow: isChecked 
+                      ? '0 0 24px rgba(183, 120, 141, 0.25)' 
+                      : 'none',
+                  }}
+                  className="cursor-pointer p-4 md:p-5 rounded-2xl border transition-all duration-300 flex items-center gap-4 hover:border-[rgba(245,218,226,0.35)]"
                 >
                   <div
+                    style={{
+                      borderColor: isChecked ? '#B7788D' : 'rgba(245, 218, 226, 0.55)',
+                    }}
                     className={`w-6 h-6 md:w-7 md:h-7 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300 ${
                       isChecked
-                        ? 'bg-[#B7788D] border-[#B7788D] text-[#1A0514]'
-                        : 'border-white/20 bg-black/20'
+                        ? 'bg-[#B7788D] text-[#1A0514]'
+                        : 'bg-black/30'
                     }`}
                   >
                     {isChecked && <Check className="w-4 h-4 stroke-[3]" />}
                   </div>
-                  <span className="text-base md:text-lg font-medium select-none break-keep">
+                  <span 
+                    style={{ color: '#F3E5E9' }}
+                    className="text-base md:text-lg font-medium select-none break-keep"
+                  >
                     {item}
                   </span>
                 </div>
@@ -81,8 +102,16 @@ export default function LovePatternChecklist() {
             })}
           </div>
 
-          {/* 결과 안내 카드 */}
-          <div className="p-6 rounded-2xl bg-black/40 border border-white/10 text-center relative z-10 transition-all duration-500">
+          {/* 결과 안내 카드 (가장 진한 딥플럼) */}
+          <div 
+            style={{
+              background: 'rgba(28, 15, 24, 0.85)',
+              border: '1px solid rgba(218, 174, 190, 0.22)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+            }}
+            className="p-6 rounded-2xl text-center relative z-10 transition-all duration-500 shadow-xl"
+          >
             <div className="mb-2">
               <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-[#E6BFA9] border border-white/10">
                 체크한 항목 수 · {selectedCount} / {checklistData.items.length}

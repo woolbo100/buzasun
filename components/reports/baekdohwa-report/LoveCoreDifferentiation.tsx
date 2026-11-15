@@ -1,6 +1,7 @@
 ﻿'use client'
 
 import Reveal from '@/components/Reveal'
+import Image from 'next/image'
 import { AlertCircle, ShieldAlert, HeartCrack, CheckCircle2 } from 'lucide-react'
 
 export default function LoveCoreDifferentiation() {
@@ -37,6 +38,18 @@ export default function LoveCoreDifferentiation() {
             새로운 사람을 만나도 몇 달 뒤 똑같은 외로움과 불안을 겪고 있다면,<br className="hidden sm:inline" />
             이제는 바깥이 아니라 <span className="text-[#E6BFA9] font-medium">내 안의 사랑의 작동 방식</span>을 들여다봐야 합니다.
           </p>
+        </div>
+
+        {/* ROOT CAUSE 16:9 미로 비주얼 */}
+        <div className="relative w-full max-w-[1280px] mx-auto mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
+          <Image 
+            src="/image/lovereport/love-pattern-maze.webp" 
+            alt="사랑의 반복 패턴 미로" 
+            width={1671}
+            height={941}
+            className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
         </div>
 
         {/* 3대 날카로운 질문 카드 */}

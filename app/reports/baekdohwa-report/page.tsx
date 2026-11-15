@@ -477,20 +477,22 @@ export default function BaekdohwaReportPage() {
             {/* 구매 전 안내 (6대 중요 안내 사항) */}
             <PurchaseNotice />
 
-            {/* 최종 구매 CTA (핵심 카피 7 반영) */}
-            <section className="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group w-full max-w-[1280px] mx-auto border border-white/10 shadow-2xl">
-              <div className="absolute inset-0 z-0">
-                <Image 
-                  src="/image/lovereport/p6.webp" 
-                  alt="Final CTA Background" 
-                  fill
-                  className="object-cover transition-transform duration-[15000ms] group-hover:scale-125" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/75 to-transparent"></div>
-              </div>
+            {/* 최종 구매 CTA (이미지와 텍스트·버튼 분리 구조) */}
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                {/* ① 기존 배경 이미지 단독 표시 (필터 및 오버레이 완전 제거) */}
+                <div className="relative w-full rounded-[40px] overflow-hidden border border-white/10 shadow-2xl aspect-[16/9] bg-[#130917] mb-14 md:mb-16 group">
+                  <Image 
+                    src="/image/lovereport/p6.webp" 
+                    alt="Final CTA Journey" 
+                    width={1672}
+                    height={941}
+                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105" 
+                  />
+                </div>
 
-              <div className="relative z-10 text-center px-6 md:px-10 py-16">
-                <Reveal>
+                {/* ② 이미지 아래 텍스트 영역 (중앙 정렬) */}
+                <div className="text-center max-w-3xl mx-auto px-4 mb-10 md:mb-12">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase text-[#D9A8A7] mb-6">
                     BEGIN YOUR JOURNEY
                   </span>
@@ -499,27 +501,28 @@ export default function BaekdohwaReportPage() {
                     &ldquo;반복을 끊는 첫 장을 펼치십시오.&rdquo;
                   </h2>
                   
-                  <p className="text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
-                    당신은 사랑받기 위해 더 애써야 하는 사람이 아닙니다.<br />
+                  <p className="text-[18px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep max-w-2xl mx-auto">
+                    당신은 사랑받기 위해 더 애써야 하는 사람이 아닙니다.<br className="hidden sm:inline" />
                     이제는 당신에게 이미 있는 매력을 알고, 누구에게 어떻게 마음을 내어줄지 선택할 차례입니다.
                   </p>
+                </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto relative z-10 justify-center">
-                    <button 
-                      onClick={handleAddToCart}
-                      className="flex-1 py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#B7788D]/35 text-[#E6BFA9] hover:bg-[#B7788D]/10 bg-transparent"
-                    >
-                      장바구니 담기
-                    </button>
-                    <button 
-                      onClick={handlePurchase}
-                      className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_25px_rgba(181,121,135,0.45)] hover:brightness-110"
-                    >
-                      바로 신청하기
-                    </button>
-                  </div>
-                </Reveal>
-              </div>
+                {/* ③ 구매 버튼 영역 (중앙 정렬) */}
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto justify-center items-center">
+                  <button 
+                    onClick={handleAddToCart}
+                    className="w-full sm:flex-1 py-5 md:py-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#B7788D]/40 text-[#E6BFA9] hover:bg-[#B7788D]/10 bg-transparent text-center"
+                  >
+                    장바구니 담기
+                  </button>
+                  <button 
+                    onClick={handlePurchase}
+                    className="w-full sm:flex-grow-[1.4] py-5 md:py-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_25px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
+                  >
+                    바로 신청하기
+                  </button>
+                </div>
+              </Reveal>
             </section>
 
             {/* 기존 정책 링크 보존 */}
