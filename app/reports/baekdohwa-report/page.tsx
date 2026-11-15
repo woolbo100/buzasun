@@ -254,15 +254,14 @@ export default function BaekdohwaReportPage() {
                           </span>
                         </div>
 
-                        {/* 2. 메인 카피 (2~3줄의 강한 카피) */}
+                        {/* 2. 메인 카피 (기존 히어로 하단 문구 적용) */}
                         <h3 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-white leading-[1.35] md:leading-[1.4] break-keep">
-                          비슷한 사랑이 반복되는 이유,<br />
-                          <span className="gradient-text-love">당신의 선천코드 안에 이미 적혀 있습니다.</span>
+                          선천코드로 읽는 <span className="gradient-text-love">나의 사랑 설계도</span>
                         </h3>
 
                         {/* 3. 설명 문구 */}
-                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA]/85 leading-[1.8] font-light break-keep max-w-xl">
-                          당신의 연애 기질, 반복되는 끌림의 패턴, 잘 맞는 인연과 피해야 할 관계 흐름까지 선천코드 기반으로 정리한 1:1 맞춤 PDF 리포트입니다.
+                        <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.7] font-light break-keep max-w-xl">
+                          나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
                         </p>
 
                         {/* 4. 가격 영역 & 5. 상품 정보 */}
