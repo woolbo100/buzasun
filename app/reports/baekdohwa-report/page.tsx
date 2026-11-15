@@ -448,16 +448,18 @@ export default function BaekdohwaReportPage() {
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
                         THE HIDDEN CODE
                       </span>
-                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.3] break-keep">
-                        &ldquo;사주를 들여다보니,<br className="sm:hidden" />
-                        <span className="gradient-text-love"> 지나온 사랑이 다르게</span> 보이기 시작했습니다.&rdquo;
+                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.35] break-keep">
+                        &ldquo;사주를 들여다보니,<br />
+                        <span className="gradient-text-love">지나온 사랑이 다르게</span><br />
+                        보이기 시작했습니다.&rdquo;
                       </h2>
                     </div>
 
                     {/* 본문 서사 */}
                     <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-light break-keep">
                       <p className="text-[#FAF7F2] font-medium">
-                        서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 일정한 패턴으로 읽히는 순간, 누구나 깊은 소름과 마주하게 됩니다.
+                        서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 일정한 패턴으로 읽히는 순간,<br />
+                        누구나 깊은 소름과 마주하게 됩니다.
                       </p>
                       <p>
                         우연이라 믿었던 이별의 타이밍도, 늘 비슷한 결의 사람에게 무너지던 순간도—<br className="hidden sm:inline" />
