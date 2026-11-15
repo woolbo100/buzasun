@@ -21,33 +21,40 @@ export default function RelationshipPatternFlow() {
 
           {/* 추가된 끌림과 설계도 서사 블록 */}
           <div className="pt-4 space-y-5 max-w-3xl mx-auto">
-            <p className="text-sm md:text-base text-[#D9A8A7] font-medium tracking-wide">
-              감정적 끌림에만 의존하던 연애가 왜 자꾸 상처로 끝났는지, 그 근본적인 원인을 짚어줍니다.
-            </p>
-
-            <div className="space-y-3 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
+            <div className="space-y-4 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
               <p>
-                그동안 우리는 사랑이라는 이름 아래, 무방비로 감정적 &lsquo;끌림&rsquo;에 몸을 맡겨왔습니다.
+                그동안 우리는 뜨거운 감정의 한복판에 갇혀, 내가 왜 또 같은 상처를 향해 걸어가고 있는지조차 보지 못했습니다.
               </p>
-              <p>
-                내 안의 진짜 무기가 무엇인지도 모른 채, 상대의 비위를 맞추고 관계의 을(乙)이 되기를 자처했지요.
+              <p className="text-[#FAF7F2] font-medium leading-relaxed">
+                마음공부에서 나를 제3자의 시선으로 바라볼 때 비로소 집착에서 깨어나듯,<br className="hidden sm:inline" />
+                내 연애 역시 선천코드라는 객관적인 지도 위에서 내려다볼 때 비로소 무의식의 쳇바퀴를 멈출 수 있습니다.
               </p>
             </div>
 
             {/* 하지만 기억하십시오 & 핵심 경각심 강조 박스 */}
             <div 
-              className="p-6 md:p-8 rounded-2xl border text-center space-y-3 backdrop-blur-sm"
+              className="p-6 md:p-8 rounded-2xl border text-center space-y-3 backdrop-blur-sm my-6"
               style={{
                 background: 'rgba(125, 76, 100, 0.20)',
                 borderColor: 'rgba(215, 170, 185, 0.20)',
               }}
             >
               <span className="inline-block text-xs md:text-sm font-bold tracking-widest text-[#F3C4D1] uppercase">
-                하지만 기억하십시오
+                하지만 기억하십시오.
               </span>
               <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
                 &ldquo;끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.<br className="hidden sm:inline" />
-                <span className="text-[#D9A8A7] font-semibold"> 내 설계도를 모른 채 달리는 연애는, 언제나 같은 벽에 부딪히게 되어있습니다.</span>&rdquo;
+                <span className="text-[#D9A8A7] font-semibold"> 내 설계도를 모른 채 달리는 연애는, 언제나 같은 벽에 부딪히게 되어 있습니다.</span>&rdquo;
+              </p>
+            </div>
+
+            {/* 하단 카드(01, 02, 03) 연결 브릿지 */}
+            <div className="pt-2 pb-2 text-center max-w-2xl mx-auto space-y-2">
+              <p className="text-[#FAF7F2] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
+                이제 감정에 휩쓸리는 당사자가 아니라, 내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.
+              </p>
+              <p className="text-sm md:text-base text-[#D9A8A7] font-light break-keep">
+                아래 3가지 핵심 축을 통해, 당신을 가두던 반복의 알고리즘을 투명하게 해부합니다.
               </p>
             </div>
           </div>

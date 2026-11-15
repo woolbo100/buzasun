@@ -8,18 +8,18 @@ export default function LoveCoreDifferentiation() {
   const painQuestions = [
     {
       icon: HeartCrack,
-      question: "나는 왜 비슷한 사람한테 끌릴까?",
+      question: "나는 왜 늘 비슷한 성향의 사람한테 끌릴까?",
       desc: "상대를 바꾸면 다를 줄 알았지만, 결국 내 안의 결핍이 이끄는 똑같은 유형의 사람에게 또다시 마음을 빼앗기는 이유"
     },
     {
       icon: ShieldAlert,
-      question: "사람을 바꿔도, 왜 늘 똑같은 결말의 상처만 반복될까?",
-      desc: "이별의 모양결도, 아픔의 크기도 신기할 정도로 닮아 있는 이유는 내 안의 반복되는 연애 알고리즘 때문"
+      question: "사람을 바꿔도 왜 늘 똑같은 방향으로 연애가 흘러갈까?",
+      desc: "상대의 얼굴과 조건은 달라졌는데, 관계가 깊어질수록 내가 느끼는 감정과 부딪히는 지점은 늘 제자리걸음인 이유"
     },
     {
       icon: AlertCircle,
-      question: "왜 내 연애는 항상 똑같은 미로 속을 맴돌다 끝날까?",
-      desc: "내 설계도를 해독하지 못한 채, 매번 정해진 쳇바퀴를 돌며 지쳐가는 관계의 구조에서 벗어나지 못하는 이유"
+      question: "사람을 바꿔도, 왜 늘 똑같은 결말의 상처만 반복될까?",
+      desc: "이별의 모양결도, 아픔의 크기도 신기할 정도로 닮아 있는 이유는 내 안의 반복되는 연애 알고리즘 때문"
     }
   ]
 
@@ -73,7 +73,7 @@ export default function LoveCoreDifferentiation() {
                   <h3 className="text-lg md:text-[19px] font-bold text-white mb-4 leading-snug break-keep">
                     {item.question}
                   </h3>
-                  <p className="text-sm text-[#EDE6DA]/70 font-light leading-relaxed break-keep">
+                  <p className="text-[16px] text-[#EDE6DA]/75 font-light leading-relaxed break-keep">
                     {item.desc}
                   </p>
                 </div>

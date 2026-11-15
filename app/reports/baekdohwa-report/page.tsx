@@ -198,6 +198,17 @@ export default function BaekdohwaReportPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
+                {/* 3-1. 메인 히어로 하단 질문 카피 (제목 크기 및 줄간격 적용) */}
+                <div className="max-w-4xl mx-auto mb-10 text-center px-4 space-y-4">
+                  <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] md:leading-[1.35] break-keep">
+                    &ldquo;혹시 내가 만나는 사람이 <span className="gradient-text-love">우연이라고 믿고 있나요?</span>&rdquo;
+                  </h2>
+                  <p className="text-lg sm:text-xl md:text-[22px] font-elegant text-[#FAF7F2] leading-[1.6] md:leading-[1.65] break-keep max-w-3xl mx-auto opacity-95 font-medium">
+                    완전히 다른 사람을 만났다고 생각했지만,<br className="hidden sm:inline" />
+                    돌아보면 그 사랑의 흔적이 기묘할 만큼 닮아 있다고 느낀적은 없으신가요.
+                  </p>
+                </div>
+
                 {/* 4. 메인 이미지 하단 감성 문구 */}
                 <p className="text-[18px] text-[#D9A8A7] font-medium tracking-wide mb-2">
                   선천코드로 읽는 나의 사랑 설계도
