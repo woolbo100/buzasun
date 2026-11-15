@@ -369,7 +369,7 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-24 md:mb-32">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-20 items-center">
                   {/* 좌측 55%: 라벨 + 제목 + 본문 및 마지막 핵심 후킹 */}
                   <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1">
                     <div>
@@ -427,9 +427,9 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-24 md:mb-32">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-                  {/* 좌측 45%: 세로형 3:4 이미지 영역 (원본 비율 유지 및 두루마리 전체 표시) */}
-                  <div className="lg:col-span-5 w-full flex flex-col items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-20 items-center">
+                  {/* 좌측 45%: 세로형 3:4 이미지 영역 (좌측 정렬 및 간격 확보) */}
+                  <div className="lg:col-span-5 w-full max-w-[420px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start">
                     <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/40">
                       <Image
                         src={DISCOVERY_STORY_IMAGE_CONFIG.src}
@@ -442,16 +442,15 @@ export default function BaekdohwaReportPage() {
                     </div>
                   </div>
 
-                  {/* 우측 55%: 라벨 + 제목 + 본문 및 선천코드 알고리즘 서사 */}
-                  <div className="lg:col-span-7 space-y-6 text-left break-keep">
+                  {/* 우측 55%: 라벨 + 제목 + 본문 (간격 확대 및 우측 끝선 상단 이미지와 정렬) */}
+                  <div className="lg:col-span-7 space-y-6 text-left break-keep lg:pl-6 xl:pl-10">
                     <div>
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
                         THE HIDDEN CODE
                       </span>
-                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.35] break-keep">
-                        &ldquo;사주를 들여다보니,<br />
-                        <span className="gradient-text-love">지나온 사랑이 다르게</span><br />
-                        보이기 시작했습니다.&rdquo;
+                      <h2 className="text-2xl md:text-[32px] lg:text-[35px] font-elegant font-bold text-white mb-6 leading-[1.35] break-keep">
+                        &ldquo;사주를 조금이라도 깊게 들여다 본 분들이라면<br />
+                        <span className="gradient-text-love">지나온 사랑이 다르게 보인 적이</span> 있으실겁니다.&rdquo;
                       </h2>
                     </div>
 
@@ -462,7 +461,8 @@ export default function BaekdohwaReportPage() {
                         누구나 깊은 소름과 마주하게 됩니다.
                       </p>
                       <p>
-                        우연이라 믿었던 이별의 타이밍도, 늘 비슷한 결의 사람에게 무너지던 순간도—<br className="hidden sm:inline" />
+                        <span className="text-[#FAF7F2] font-medium">이것은 우연도, 단순한 불운도 아닙니다.</span><br />
+                        우연이라 믿었던 이별의 타이밍도, 늘 비슷한 결의 사람에게 무너지던 순간도<br className="hidden sm:inline" />
                         모두 당신의 선천코드 속에 촘촘히 새겨져 있던 <span className="text-[#D9A8A7] font-semibold">반복의 알고리즘</span>이었습니다.
                       </p>
                     </div>

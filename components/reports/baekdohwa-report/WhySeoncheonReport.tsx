@@ -87,13 +87,19 @@ export default function WhySeoncheonReport() {
           </div>
 
           {/* 6. 리포트 소개 문구 */}
-          <div className="max-w-3xl mx-auto space-y-2 text-[16px] md:text-[17px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-6">
+          <div className="max-w-3xl mx-auto space-y-4 text-[16px] md:text-[17px] text-[#EDE6DA] opacity-90 font-light leading-[1.8] break-keep mb-8">
             <p>
               백도화 선천코드 연애 리포트는 타고난 기질을 바탕으로 나의 매력과 관계의 그림자, 잘 맞는 상대와 주의할 유형을 살펴봅니다.
             </p>
             <p>
               그리고 나만의 연애 기준과 실제 관계에서 활용할 수 있는 실천 전략을 제안합니다.
             </p>
+            <div className="pt-2">
+              <p className="font-elegant font-semibold text-[17px] md:text-[19px] text-[#FAF7F2] leading-[1.7] break-keep">
+                &ldquo;찍어낸 듯 똑같은 사주 풀이는 이제 그만.<br className="hidden sm:inline" />
+                <span className="text-[#D9A8A7]"> 당신의 만세력 여섯 글자(또는 여덟 글자)로 빚어낸 45~50페이지 분량의 1:1 맞춤형 왕실 비급 처방서</span>&rdquo;
+              </p>
+            </div>
           </div>
 
           {/* 6-1. 브랜드 해석 관점 라벨 */}
