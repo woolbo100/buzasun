@@ -280,30 +280,20 @@ export default function BaekdohwaReportPage() {
                       </span>
                       <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold mb-6 leading-[1.3] break-keep">
                         <span className="text-[#FAF7F2]">끌림만 믿고 시작한 사랑,</span><br />
-                        <span className="gradient-text-love">왜 늘 같은 미로에 갇혔을까요?</span>
+                        <span className="gradient-text-love">왜 늘 같은 미로에 갇힐까?</span>
                       </h2>
                     </div>
 
                     {/* 본문 서사 */}
                     <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
                       <p>
-                        그냥 끌려서 시작한 사랑.
+                        설렘을 운명이라 착각하는 동안, 우리의 연애는 늘 같은 결말을 향해 달렸습니다.
                       </p>
                       <p className="text-[#FAF7F2] font-semibold">
-                        강렬하게 끌린다고, 나에게 맞는 사람이라는 뜻은 아닙니다.
+                        내 안의 진짜 무기가 무엇인지도 모른 채 남자의 비위를 맞추고, 관계의 을(乙)이 되기를 자처했던 시간들.
                       </p>
                       <p>
-                        설렘을 운명이라 믿었던 순간,<br />
-                        우리는 가장 중요한 질문을 놓쳤습니다.
-                      </p>
-                      <div className="pl-4 border-l-2 border-[#D9A8A7]/40 py-1 space-y-1 text-[#F3E5E9]/90">
-                        <p>내가 어떤 사람에게 끌리는지,</p>
-                        <p>어떤 관계에서 나의 매력이 빛나는지,</p>
-                        <p>어떤 순간에 나의 기준이 무너지는지.</p>
-                      </div>
-                      <p>
-                        정작 나의 사랑 설계도는 모른 채,<br />
-                        우리는 상대의 마음부터 알아내려 했습니다.
+                        내 사랑의 지도조차 없었기에, 늘 낯선 길에서 길을 잃었던 것입니다.
                       </p>
                     </div>
 
@@ -311,10 +301,10 @@ export default function BaekdohwaReportPage() {
                     <div className="pt-6 border-t border-[#B49A70]/25 mt-6 space-y-2">
                       <p className="font-elegant font-bold text-[19px] md:text-[22px] leading-[1.6] break-keep text-white">
                         &ldquo;내 사랑의 설계도도 모르면서,<br className="sm:hidden" />
-                        <span className="gradient-text-love"> 왜 상대의 마음부터 읽습니까?</span>&rdquo;
+                        <span className="gradient-text-love"> 왜 상대의 마음부터 읽으려 합니까?</span>&rdquo;
                       </p>
                       <p className="text-[#FAF7F2] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep pt-1">
-                        이제는 끌림을 따라가기 전에, 나의 선천코드부터 읽어야 할 차례입니다.
+                        이제 끌림을 쫓기 전에, 당신 내면에 새겨진 선천코드를 먼저 펼쳐보십시오.
                       </p>
                     </div>
                   </div>
