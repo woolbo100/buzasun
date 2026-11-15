@@ -33,7 +33,17 @@ export default function ReportFAQ() {
             return (
               <div
                 key={idx}
-                className="gungjung-glass rounded-2xl border border-white/10 overflow-hidden transition-colors hover:border-white/20"
+                className="rounded-2xl transition-all duration-300 overflow-hidden shadow-lg hover:border-[rgba(215,170,185,0.30)]"
+                style={{
+                  background: isOpen 
+                    ? 'rgba(125, 76, 100, 0.18)' 
+                    : 'rgba(125, 76, 100, 0.15)',
+                  border: isOpen 
+                    ? '1px solid rgba(215, 170, 185, 0.24)' 
+                    : '1px solid rgba(215, 170, 185, 0.16)',
+                  backdropFilter: 'blur(8px)',
+                  WebkitBackdropFilter: 'blur(8px)',
+                }}
               >
                 <button
                   type="button"
@@ -48,10 +58,10 @@ export default function ReportFAQ() {
                     {item.q}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isOpen
-                        ? 'rotate-180 bg-[#B7788D]/20 text-[#D9A8A7] border-[#B7788D]/40'
-                        : 'text-white/50 bg-white/5'
+                        ? 'rotate-180 bg-[#B7788D]/25 text-[#F3C4D1] border-[#B7788D]/40'
+                        : 'text-white/60 bg-black/20 border-white/10'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -59,7 +69,7 @@ export default function ReportFAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep border-t border-white/5">
+                  <div className="px-6 pb-6 pt-3 text-[15px] md:text-[16px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep border-t border-[rgba(215,170,185,0.12)]">
                     {item.a}
                   </div>
                 )}

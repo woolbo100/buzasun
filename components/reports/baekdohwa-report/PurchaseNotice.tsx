@@ -20,18 +20,36 @@ export default function PurchaseNotice() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-white/10 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div 
+          className="p-8 md:p-12 rounded-[32px] max-w-7xl mx-auto shadow-2xl relative overflow-hidden"
+          style={{
+            background: 'rgba(125, 76, 100, 0.22)',
+            border: '1px solid rgba(215, 170, 185, 0.20)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+          }}
+        >
+          {/* 은은한 배경 광채 */}
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#B7788D]/10 rounded-full blur-[80px] pointer-events-none" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10">
             {purchaseNoticeData.notices.map((notice, idx) => (
-              <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="w-8 h-8 rounded-lg bg-[#B7788D]/15 flex items-center justify-center text-[#D9A8A7] shrink-0 mt-0.5">
+              <div 
+                key={idx} 
+                className="flex items-start gap-4 p-5 md:p-6 rounded-2xl border transition-all duration-300 hover:border-[rgba(245,218,226,0.35)] backdrop-blur-sm"
+                style={{
+                  background: 'rgba(92, 53, 78, 0.68)',
+                  borderColor: 'rgba(218, 174, 190, 0.16)',
+                }}
+              >
+                <div className="w-9 h-9 rounded-xl bg-[#B7788D]/25 border border-[#B7788D]/30 flex items-center justify-center text-[#F3C4D1] shrink-0 mt-0.5">
                   <Info className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-white mb-1.5 break-keep">
+                  <h4 className="text-base md:text-[17px] font-bold text-white mb-1.5 break-keep">
                     {notice.title}
                   </h4>
-                  <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light leading-relaxed break-keep">
+                  <p className="text-xs md:text-sm text-[#F3E5E9]/90 font-light leading-relaxed break-keep">
                     {notice.desc}
                   </p>
                 </div>
@@ -39,8 +57,8 @@ export default function PurchaseNotice() {
             ))}
           </div>
 
-          <div className="mt-8 pt-6 border-t border-white/5 text-center">
-            <p className="text-xs text-white/40">
+          <div className="mt-8 pt-6 border-t border-white/10 text-center relative z-10">
+            <p className="text-xs text-white/50">
               ※ 백도화 매력학당의 모든 리포트는 전자상거래 등에서의 소비자보호에 관한 법률 및 사이트의 기본 이용약관을 철저히 준수합니다.
             </p>
           </div>

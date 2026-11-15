@@ -168,10 +168,10 @@ export default function ReportCommonInfo({ isCompatibility = false }: ReportComm
           </div>
         </Reveal>
 
-        <div className="grid lg:grid-cols-12 gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-8 max-w-7xl mx-auto items-stretch">
           {/* 제작 흐름 안내 (좌측 7칸) */}
-          <div className="lg:col-span-7 space-y-6">
-            <Reveal>
+          <div className="lg:col-span-7 h-full">
+            <Reveal className="h-full">
               <div className="gungjung-glass p-8 border-white/[0.04] h-full flex flex-col justify-between">
                 <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
                   <span className="w-1.5 h-6 bg-[var(--accent-gold)] rounded-full"></span>
@@ -198,8 +198,8 @@ export default function ReportCommonInfo({ isCompatibility = false }: ReportComm
           </div>
 
           {/* 정확한 분석을 위해 필요한 정보 (우측 5칸) */}
-          <div className="lg:col-span-5 space-y-6">
-            <Reveal>
+          <div className="lg:col-span-5 h-full">
+            <Reveal className="h-full">
               <div className="gungjung-glass p-8 border-white/[0.04] h-full flex flex-col justify-between bg-gradient-to-b from-white/[0.02] to-transparent">
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
@@ -210,7 +210,7 @@ export default function ReportCommonInfo({ isCompatibility = false }: ReportComm
                     사주 분석 리포트의 특성상 아래의 정확한 선천 정보가 필요합니다.
                   </p>
 
-                  <div className="grid grid-cols-2 gap-3 mb-8">
+                  <div className="grid grid-cols-2 gap-3 mb-6">
                     {[
                       { label: "이름 또는 닉네임", icon: "fa-user" },
                       { label: "생년월일", icon: "fa-calendar-days" },
@@ -227,10 +227,21 @@ export default function ReportCommonInfo({ isCompatibility = false }: ReportComm
                       </div>
                     ))}
                   </div>
+
+                  {/* 출생시간 미상 안내 문구 */}
+                  <div className="pt-5 border-t border-white/10 space-y-1.5">
+                    <p className="text-xs md:text-[13px] font-bold text-[var(--accent-gold-light)] flex items-center gap-1.5 break-keep">
+                      <i className="fas fa-circle-info text-[11px] shrink-0 text-[var(--accent-gold)]"></i>
+                      <span>출생시간을 모르셔도 신청하실 수 있습니다.</span>
+                    </p>
+                    <p className="text-xs text-[#EDE6DA]/75 leading-relaxed break-keep font-light pl-4">
+                      다만 출생시간이 확인되지 않으면 시주(時柱)를 포함한 일부 분석이 제한되며, 연애 성향과 관계 해석의 구체성에 차이가 있을 수 있습니다.
+                    </p>
+                  </div>
                 </div>
 
                 {isCompatibility && (
-                  <div className="p-4 bg-[var(--accent-gold)]/5 border border-[var(--accent-gold)]/20 rounded-xl">
+                  <div className="mt-6 p-4 bg-[var(--accent-gold)]/5 border border-[var(--accent-gold)]/20 rounded-xl">
                     <p className="text-xs text-[var(--accent-gold-light)] leading-relaxed break-keep font-light flex items-start gap-2">
                       <i className="fas fa-circle-info mt-0.5 shrink-0"></i>
                       <span><strong>궁합 리포트의 경우</strong>, 본인과 상대방의 정보가 모두 필요합니다. 결제 페이지에서 두 분의 정보를 빠짐없이 입력해 주세요.</span>

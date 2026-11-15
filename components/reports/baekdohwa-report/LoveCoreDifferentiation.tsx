@@ -45,16 +45,16 @@ export default function LoveCoreDifferentiation() {
           </p>
         </div>
 
-        {/* ROOT CAUSE 16:9 미로 비주얼 */}
+        {/* ROOT CAUSE 16:9 나침반 비주얼 (the compass of repetition.webp) */}
         <div className="relative w-full max-w-[1280px] mx-auto mb-16 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
           <Image 
-            src="/image/lovereport/love-pattern-maze.webp" 
-            alt="사랑의 반복 패턴 미로" 
-            width={1671}
+            src="/image/lovereport/the%20compass%20of%20repetition.webp" 
+            alt="사랑의 반복 패턴 나침반" 
+            width={1672}
             height={941}
-            className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+            className="w-full h-full object-contain transition-transform duration-[10000ms] group-hover:scale-105"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
         </div>
 
         {/* 3대 날카로운 질문 카드 */}

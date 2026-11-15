@@ -24,7 +24,7 @@ export default function WhySeoncheonReport() {
   return (
     <section className="mb-28 md:mb-36">
       <Reveal>
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-[1280px] mx-auto text-center">
           {/* 1. 작은 섹션 라벨 */}
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             WHY SEONCHEON CODE
@@ -36,9 +36,9 @@ export default function WhySeoncheonReport() {
           </h2>
 
           {/* 3. 운세와 백도화의 질문 대비 블록 */}
-          <div className="max-w-3xl mx-auto mb-10 md:mb-12 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+          <div className="max-w-4xl mx-auto mb-10 md:mb-12 grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
             {/* 일반 운세의 질문 */}
-            <div className="p-6 rounded-2xl bg-black/25 border border-white/10 backdrop-blur-sm flex flex-col justify-between">
+            <div className="p-6 md:p-8 rounded-2xl bg-black/25 border border-white/10 backdrop-blur-sm flex flex-col justify-between">
               <span className="text-xs font-semibold text-white/50 tracking-wider uppercase mb-2">
                 일반 운세의 질문
               </span>
@@ -50,7 +50,7 @@ export default function WhySeoncheonReport() {
 
             {/* 백도화의 질문 */}
             <div 
-              className="p-6 rounded-2xl border backdrop-blur-sm flex flex-col justify-between"
+              className="p-6 md:p-8 rounded-2xl border backdrop-blur-sm flex flex-col justify-between"
               style={{
                 background: 'rgba(125, 76, 100, 0.28)',
                 borderColor: 'rgba(215, 170, 185, 0.28)',
@@ -67,7 +67,7 @@ export default function WhySeoncheonReport() {
           </div>
 
           {/* 4. 설명 본문 */}
-          <div className="max-w-2xl mx-auto space-y-3 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-12">
+          <div className="max-w-3xl mx-auto space-y-3 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-12">
             <p>
               누군가를 언제 만날지보다 중요한 것은,<br className="hidden sm:inline" />
               그 사람 앞에서 내가 어떤 모습이 되는가입니다.
@@ -79,7 +79,7 @@ export default function WhySeoncheonReport() {
           </div>
 
           {/* 5. 가장 강조할 문장 (충분한 상하 여백과 큰 타이포그래피) */}
-          <div className="my-10 md:my-14 py-8 md:py-10 border-y border-[#B49A70]/25 max-w-3xl mx-auto">
+          <div className="my-10 md:my-14 py-8 md:py-10 border-y border-[#B49A70]/25 max-w-4xl mx-auto">
             <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[28px] text-white leading-relaxed break-keep">
               &ldquo;연애 조언은 넘쳐납니다.<br className="sm:hidden" />
               <span className="gradient-text-love"> 당신만의 처방전은 없었습니다.</span>&rdquo;
@@ -87,7 +87,7 @@ export default function WhySeoncheonReport() {
           </div>
 
           {/* 6. 리포트 소개 문구 */}
-          <div className="max-w-2xl mx-auto space-y-2 text-[16px] md:text-[17px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-12 md:mb-16">
+          <div className="max-w-3xl mx-auto space-y-2 text-[16px] md:text-[17px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-12 md:mb-16">
             <p>
               백도화 선천코드 연애 리포트는 타고난 기질을 바탕으로 나의 매력과 관계의 그림자, 잘 맞는 상대와 주의할 유형을 살펴봅니다.
             </p>
@@ -96,12 +96,12 @@ export default function WhySeoncheonReport() {
             </p>
           </div>
 
-          {/* 7. 차별점 3가지 카드 (PC 3열 / 모바일 1열, 체크리스트 바깥 카드 글라스 스타일) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-5xl mx-auto mb-14 md:mb-16">
+          {/* 7. 차별점 3가지 카드 (가로 컨텐츠 사이즈 1280px 기준 시원한 3열 배치) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left w-full max-w-[1280px] mx-auto mb-14 md:mb-16">
             {differentiators.map((diff, idx) => (
               <div
                 key={idx}
-                className="p-6 md:p-8 rounded-[24px] shadow-xl relative overflow-hidden transition-all duration-300 hover:border-[rgba(245,218,226,0.35)] flex flex-col justify-between"
+                className="p-8 md:p-10 rounded-[28px] shadow-xl relative overflow-hidden transition-all duration-300 hover:border-[rgba(245,218,226,0.35)] flex flex-col justify-between"
                 style={{
                   background: 'rgba(125, 76, 100, 0.22)',
                   border: '1px solid rgba(215, 170, 185, 0.20)',
@@ -113,10 +113,10 @@ export default function WhySeoncheonReport() {
                   <span className="block font-elegant text-sm font-bold tracking-[0.2em] text-[#D9A8A7] mb-3">
                     {diff.num}
                   </span>
-                  <h3 className="text-[18px] md:text-[19px] font-bold text-white mb-3 leading-snug break-keep">
+                  <h3 className="text-[19px] md:text-[21px] font-bold text-white mb-3.5 leading-snug break-keep">
                     {diff.title}
                   </h3>
-                  <p className="text-[14px] md:text-[15px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
+                  <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
                     {diff.desc}
                   </p>
                 </div>
