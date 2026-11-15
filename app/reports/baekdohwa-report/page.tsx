@@ -448,9 +448,8 @@ export default function BaekdohwaReportPage() {
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
                         THE HIDDEN CODE
                       </span>
-                      <h2 className="text-2xl md:text-[32px] lg:text-[35px] font-elegant font-bold text-white mb-6 leading-[1.35] break-keep">
-                        &ldquo;사주를 조금이라도 깊게 들여다 본 분들이라면<br />
-                        <span className="gradient-text-love">지나온 사랑이 다르게 보인 적이</span> 있으실겁니다.&rdquo;
+                      <h2 className="text-xl sm:text-2xl md:text-[26px] lg:text-[29px] xl:text-[31px] font-elegant font-bold text-white mb-6 leading-[1.35] break-keep">
+                        &ldquo;사주를 한번이라도 본적 있으시다면 <span className="gradient-text-love">지나온 사랑이 다르게 보인 적이</span> 있으실겁니다.&rdquo;
                       </h2>
                     </div>
 
