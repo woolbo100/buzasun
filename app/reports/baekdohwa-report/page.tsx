@@ -372,6 +372,31 @@ export default function BaekdohwaReportPage() {
                       <p className="text-[#FAF7F2] font-medium">
                         서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 패턴으로 읽히기 시작하는 순간입니다.
                       </p>
+
+                      {/* 추가된 소름 돋는 순간과 반복의 알고리즘 서사 */}
+                      <div className="pt-3 space-y-4">
+                        <p className="text-[#F3C4D1] font-medium text-[16px] md:text-[17px]">
+                          &ldquo;사주를 조금이라도 깊이 들여다본 분들이라면, 누구나 한 번쯤 이런 소름 돋는 순간을 마주합니다.&rdquo;
+                        </p>
+
+                        <div className="p-4 md:p-5 rounded-2xl bg-black/25 border border-[#D9A8A7]/25 backdrop-blur-sm space-y-2">
+                          <p className="text-[#EDE6DA] font-light text-[15px] md:text-[16px]">
+                            &lsquo;어째서 늘 비슷한 결의 사람에게만 마음을 빼앗겼을까&rsquo;
+                          </p>
+                          <p className="text-[#EDE6DA] font-light text-[15px] md:text-[16px]">
+                            &lsquo;왜 이별의 타이밍과 아픔의 모양결은 늘 신기할 정도로 닮아 있었을까&rsquo;
+                          </p>
+                        </div>
+
+                        <div className="space-y-1.5 pt-1">
+                          <p className="text-white font-medium">
+                            이것은 우연도, 단순한 불운도 아닙니다.
+                          </p>
+                          <p className="font-elegant font-medium text-[17px] md:text-[18px] text-[#FAF7F2] leading-relaxed">
+                            당신의 사주와 선천코드 속에 이미 촘촘하게 새겨져 있던 <span className="text-[#D9A8A7] font-semibold">반복의 알고리즘</span>이었습니다.
+                          </p>
+                        </div>
+                      </div>
                     </div>
 
                     {/* 구분선 */}
