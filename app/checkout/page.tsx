@@ -98,7 +98,7 @@ function CheckoutContent() {
     "baekdohwa-report": {
       name: "선천코드 연애 리포트",
       type: "digital_report",
-      price: 49000,
+      price: 39000,
       category: "PREMIUM REPORT",
       image: "/image/love-code-bg.png"
     },

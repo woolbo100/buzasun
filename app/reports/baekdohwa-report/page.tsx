@@ -27,6 +27,7 @@ import ReportComparisonTable from '@/components/reports/baekdohwa-report/ReportC
 import LoveReportTableOfContents from '@/components/reports/baekdohwa-report/LoveReportTableOfContents'
 import ReportProductionTimeline from '@/components/reports/baekdohwa-report/ReportProductionTimeline'
 import ReportSamplePreview from '@/components/reports/baekdohwa-report/ReportSamplePreview'
+import TransformationThreeChanges from '@/components/reports/baekdohwa-report/TransformationThreeChanges'
 import RelationshipChangeScenario from '@/components/reports/baekdohwa-report/RelationshipChangeScenario'
 import RecommendedAudience from '@/components/reports/baekdohwa-report/RecommendedAudience'
 import ReportTestimonials from '@/components/reports/baekdohwa-report/ReportTestimonials'
@@ -86,7 +87,7 @@ export default function BaekdohwaReportPage() {
       id: 'baekdohwa-report',
       slug: 'baekdohwa-report',
       name: '선천코드 연애 리포트',
-      price: 49000,
+      price: 39000,
       image: '/image/love-code-bg.png',
       type: 'digital_report',
       category: 'PREMIUM REPORT'
@@ -205,7 +206,17 @@ export default function BaekdohwaReportPage() {
                   나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
                 </p>
 
-                {/* 5. 구매 버튼 영역 */}
+                {/* 5-1. 가격 및 혜택 표시 */}
+                <div className="mb-6 flex flex-col items-center">
+                  <div className="text-3xl md:text-4xl font-bold font-elegant text-white tracking-tight mb-2">
+                    39,000원
+                  </div>
+                  <p className="text-xs md:text-sm text-[#D9A8A7] font-medium tracking-wide">
+                    1:1 맞춤 PDF 리포트 · 오행 에너지 카드 1종 증정
+                  </p>
+                </div>
+
+                {/* 5-2. 구매 버튼 영역 */}
                 <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center mb-24 md:mb-28">
                   <button 
                     onClick={handleAddToCart}
@@ -650,8 +661,55 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
+            {/* 리포트를 열어보는 순간, 당신의 연애에 생기는 3가지 변화 */}
+            <TransformationThreeChanges />
+
             {/* 리포트를 읽은 뒤 달라질 수 있는 선택 (BEFORE -> AWARENESS -> AFTER) */}
             <RelationshipChangeScenario />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 중간 CTA: TRANSFORMATION SCENARIO 직후 배치 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-40 max-w-4xl mx-auto px-4">
+              <Reveal>
+                <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#B7788D]/40 bg-gradient-to-b from-[#250F22]/70 via-[#180A1A]/60 to-[#100612]/80 text-center relative overflow-hidden shadow-2xl">
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#B7788D]/15 rounded-full blur-[80px] pointer-events-none" />
+
+                  <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D9A8A7] uppercase mb-4">
+                    BEGIN YOUR JOURNEY
+                  </span>
+
+                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white mb-4 leading-snug break-keep">
+                    내 사랑의 설계도를 읽을 준비가 되셨나요?
+                  </h3>
+
+                  <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed max-w-xl mx-auto break-keep mb-6">
+                    끌림의 이유부터 나만의 관계 처방까지. 이제 당신의 선천코드를 펼쳐보세요.
+                  </p>
+
+                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#B7788D]/15 border border-[#B7788D]/35 text-xs md:text-sm text-[#E6BFA9] font-medium mb-8">
+                    39,000원 · 맞춤 PDF · 오행 카드 1종 포함
+                  </div>
+
+                  {/* 구매 버튼 (기존 상단/하단 동작 재사용) */}
+                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center">
+                    <button 
+                      onClick={handleAddToCart}
+                      className="w-full sm:w-1/2 py-4 md:py-5 px-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#B7788D]/40 text-[#E6BFA9] hover:bg-[#B7788D]/10 bg-transparent text-center"
+                    >
+                      장바구니 담기
+                    </button>
+                    <button 
+                      onClick={handlePurchase}
+                      className="w-full sm:w-1/2 py-4 md:py-5 px-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_25px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
+                    >
+                      바로 신청하기
+                    </button>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
 
             {/* 추천 대상과 맞지 않는 대상 */}
             <RecommendedAudience />

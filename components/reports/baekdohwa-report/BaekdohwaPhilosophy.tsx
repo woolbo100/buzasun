@@ -30,7 +30,30 @@ export default function BaekdohwaPhilosophy() {
               {philosophyData.letter}
             </div>
 
-            <div className="mt-12 pt-8 border-t border-[#B7788D]/25 text-center">
+            {/* 작은 독립 영역: 분석가 소개 (ABOUT THE ANALYST) */}
+            <div className="mt-14 pt-10 border-t border-[#B7788D]/25">
+              <div className="max-w-2xl mx-auto p-6 md:p-8 rounded-2xl bg-[#190E1E]/60 border border-[#B7788D]/30 backdrop-blur-sm text-left">
+                <span className="block font-elegant text-xs font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-2">
+                  ABOUT THE ANALYST
+                </span>
+                <h3 className="text-xl md:text-2xl font-elegant font-bold text-white mb-2 leading-snug">
+                  사주를 읽고, 마음의 결을 함께 살핍니다.
+                </h3>
+                <p className="text-xs md:text-sm text-[#E6BFA9] font-medium mb-5">
+                  백도화 | 선천코드 연애 리포트 기획·분석
+                </p>
+                <div className="space-y-3.5 text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
+                  <p>
+                    명리학을 공부하며 사람마다 다른 선천적 기질을 탐구하고, NLP·최면 상담과 심리적 자기 이해의 관점을 함께 익혀왔습니다.
+                  </p>
+                  <p>
+                    백도화는 타고난 성향만을 해석하는 데 머무르지 않고, 실제 관계에서 반복되는 감정과 선택을 함께 살펴 자신만의 사랑 기준을 찾아가는 리포트를 지향합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 pt-6 border-t border-[#B7788D]/20 text-center">
               <span className="text-xs tracking-[0.3em] uppercase text-[#E6BFA9]/70 font-mono">
                 BAEKDOHWA RELATIONSHIP INSTITUTE
               </span>

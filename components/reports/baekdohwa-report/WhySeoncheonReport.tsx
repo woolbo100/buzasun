@@ -87,13 +87,25 @@ export default function WhySeoncheonReport() {
           </div>
 
           {/* 6. 리포트 소개 문구 */}
-          <div className="max-w-3xl mx-auto space-y-2 text-[16px] md:text-[17px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-12 md:mb-16">
+          <div className="max-w-3xl mx-auto space-y-2 text-[16px] md:text-[17px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-6">
             <p>
               백도화 선천코드 연애 리포트는 타고난 기질을 바탕으로 나의 매력과 관계의 그림자, 잘 맞는 상대와 주의할 유형을 살펴봅니다.
             </p>
             <p>
               그리고 나만의 연애 기준과 실제 관계에서 활용할 수 있는 실천 전략을 제안합니다.
             </p>
+          </div>
+
+          {/* 6-1. 브랜드 해석 관점 라벨 */}
+          <div className="text-center max-w-xl mx-auto mb-12 md:mb-16">
+            <div className="inline-flex flex-col items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#B7788D]/10 border border-[#B7788D]/25">
+              <span className="text-[12px] md:text-[13px] font-medium tracking-[0.12em] text-[#E6BFA9] break-keep leading-relaxed">
+                동양 명리학 <span className="text-[#D9A8A7]/70 mx-1">✦</span> 관계 심리학 <span className="text-[#D9A8A7]/70 mx-1">✦</span> 뇌과학적 통찰
+              </span>
+              <span className="text-[10px] md:text-[11px] font-mono tracking-[0.18em] uppercase text-[#D9A8A7]/60">
+                EASTERN WISDOM × PSYCHOLOGY × NEUROSCIENCE
+              </span>
+            </div>
           </div>
 
           {/* 7. 차별점 3가지 카드 (가로 컨텐츠 사이즈 1280px 기준 시원한 3열 배치) */}
