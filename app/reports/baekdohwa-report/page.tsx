@@ -58,10 +58,10 @@ const EMPATHY_IMAGE_CONFIG = {
 // 스토리 교차 레이아웃 이미지 설정 (언제든 경로만 교체 가능)
 // ══════════════════════════════════════════════════════════════════════
 const DISCOVERY_STORY_IMAGE_CONFIG = {
-  src: '/image/lovereport/p7.webp', // 추후 지정할 4:5 세로형 이미지 경로 (플레이스홀더 / 기존 에셋)
-  alt: '사주를 들여다보니 지나온 사랑이 다르게 보이기 시작했다',
-  width: 800,
-  height: 1000,
+  src: '/image/lovereport/the%20hidden%20love%20blueprint.webp',
+  alt: '사주를 들여다보니 지나온 사랑이 다르게 보이기 시작했다 - the hidden love blueprint',
+  width: 1086,
+  height: 1448,
 }
 
 const AWAKENING_STORY_IMAGE_CONFIG = {
@@ -426,17 +426,17 @@ export default function BaekdohwaReportPage() {
             <section className="mb-24 md:mb-32">
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-                  {/* 좌측 45%: 세로형 4:5 이미지 영역 (언제든 경로만 교체 가능한 구조) */}
+                  {/* 좌측 45%: 세로형 3:4 이미지 영역 (원본 비율 유지 및 두루마리 전체 표시) */}
                   <div className="lg:col-span-5 w-full flex flex-col items-center">
-                    <div className="group relative w-full aspect-[4/5] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/40">
+                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/40">
                       <Image
                         src={DISCOVERY_STORY_IMAGE_CONFIG.src}
                         alt={DISCOVERY_STORY_IMAGE_CONFIG.alt}
                         width={DISCOVERY_STORY_IMAGE_CONFIG.width}
                         height={DISCOVERY_STORY_IMAGE_CONFIG.height}
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-contain object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                        priority
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none" />
                     </div>
                   </div>
 
