@@ -51,7 +51,8 @@ export default function RelationshipPatternFlow() {
             {/* 하단 카드(01, 02, 03) 연결 브릿지 */}
             <div className="pt-2 pb-2 text-center max-w-2xl mx-auto space-y-2">
               <p className="text-[#FAF7F2] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
-                이제 감정에 휩쓸리는 당사자가 아니라, 내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.
+                이제 감정에 휩쓸리는 당사자가 아니라, 내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.<br className="hidden sm:inline" />
+                반복의 고리를 과감하게 끊어내십시오.
               </p>
               <p className="text-sm md:text-base text-[#D9A8A7] font-light break-keep">
                 아래 3가지 핵심 축을 통해, 당신을 가두던 반복의 알고리즘을 투명하게 해부합니다.

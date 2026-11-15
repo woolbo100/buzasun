@@ -442,11 +442,11 @@ export default function BaekdohwaReportPage() {
                     </div>
                   </div>
 
-                  {/* 우측 55%: 라벨 + 제목 + 소름 돋는 발견과 선천코드 처방 스토리 */}
+                  {/* 우측 55%: 라벨 + 제목 + 본문 및 선천코드 알고리즘 서사 */}
                   <div className="lg:col-span-7 space-y-6 text-left break-keep">
                     <div>
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                        STEP 02 · DISCOVERY
+                        THE HIDDEN CODE
                       </span>
                       <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.3] break-keep">
                         &ldquo;사주를 들여다보니,<br className="sm:hidden" />
@@ -454,56 +454,34 @@ export default function BaekdohwaReportPage() {
                       </h2>
                     </div>
 
-                    {/* [1단계: 공감과 깨달음 (짧은 서사)] */}
-                    <div className="space-y-3 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
-                      <p>
-                        그땐 단순히 우연이거나 내 부족함 탓이라 생각했습니다.
-                      </p>
+                    {/* 본문 서사 */}
+                    <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-light break-keep">
                       <p className="text-[#FAF7F2] font-medium">
-                        하지만 서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 일정한 패턴으로 읽히는 순간, 누구나 깊은 소름과 마주하게 됩니다.
+                        서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 일정한 패턴으로 읽히는 순간, 누구나 깊은 소름과 마주하게 됩니다.
+                      </p>
+                      <p>
+                        우연이라 믿었던 이별의 타이밍도, 늘 비슷한 결의 사람에게 무너지던 순간도—<br className="hidden sm:inline" />
+                        모두 당신의 선천코드 속에 촘촘히 새겨져 있던 <span className="text-[#D9A8A7] font-semibold">반복의 알고리즘</span>이었습니다.
                       </p>
                     </div>
 
-                    {/* [2단계: 강조 박스 (유저의 속마음 직격)] */}
-                    <div className="p-5 md:p-6 rounded-2xl bg-black/25 border border-[#D9A8A7]/30 backdrop-blur-sm space-y-2.5">
-                      <p className="text-[#EDE6DA] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
-                        &ldquo;어째서 늘 비슷한 결의 사람에게만 마음을 빼앗겼을까?&rdquo;
-                      </p>
-                      <p className="text-[#EDE6DA] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
-                        &ldquo;왜 이별의 타이밍과 상처의 모양결은 늘 소름 돋을 만큼 닮아 있었을까?&rdquo;
-                      </p>
-                    </div>
-
-                    {/* [3단계: 팩트 폭행 및 본질 정의] */}
-                    <div className="space-y-2 text-[17px] md:text-[18px] break-keep">
-                      <p className="text-white font-medium">
-                        이것은 단순한 불운도, 우연도 아닙니다.
-                      </p>
-                      <p className="font-elegant font-medium text-[18px] md:text-[19px] text-[#FAF7F2] leading-relaxed">
-                        당신의 사주와 선천코드 속에 이미 촘촘하게 새겨져 있던 <span className="text-[#D9A8A7] font-semibold">반복의 알고리즘</span>이었습니다.
-                      </p>
-                    </div>
-
-                    {/* 구분선 */}
-                    <div className="pt-2 border-t border-[#B49A70]/25" />
-
-                    {/* [4단계: 솔루션 제안 및 마무리 훅] */}
-                    <div className="space-y-4 text-[17px] md:text-[18px] leading-[1.8] break-keep">
+                    {/* 솔루션 제안 및 해부 */}
+                    <div className="space-y-4 text-[17px] md:text-[18px] leading-[1.8] break-keep pt-1">
                       <p className="text-[#FAF7F2] font-semibold">
                         가볍고 뜬구름 잡는 연애운 풀이는 더 이상 의미가 없습니다.
                       </p>
 
-                      <div className="border-l-2 border-[#D9A8A7] pl-4 py-1.5 my-2 bg-white/[0.02] rounded-r-lg">
+                      <div className="border-l-2 border-[#D9A8A7] pl-4 py-2 my-2 bg-white/[0.02] rounded-r-lg">
                         <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.7]">
-                          내가 누구에게 무너지며,<br className="hidden sm:inline" />
+                          내가 누구에게 끌리고,<br className="hidden sm:inline" />
                           <span className="text-[#D9A8A7]"> 왜 같은 선택을 반복하는지 그 근본을 해부하는 일.</span>
                         </p>
                       </div>
 
                       {/* 마무리 훅 */}
                       <div className="pt-3 border-t border-[#B49A70]/20">
-                        <p className="font-elegant font-bold text-[19px] md:text-[21px] text-[#FAF7F2] leading-[1.75] break-keep">
-                          &ldquo;<span className="text-[#D9A8A7] font-semibold">다음 연애까지 똑같은 상처를 반복할 필요는 없습니다.</span>&rdquo;
+                        <p className="font-elegant font-bold text-[19px] md:text-[22px] text-[#FAF7F2] leading-[1.7] break-keep">
+                          &ldquo;<span className="text-[#D9A8A7] font-semibold">그것이 반복의 알고리즘을 끊는 일입니다.</span>&rdquo;
                         </p>
                       </div>
                     </div>
