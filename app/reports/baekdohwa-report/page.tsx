@@ -15,6 +15,7 @@ import RecommendedForCards from '@/components/RecommendedForCards'
 
 // 새로 추가된 18개 설득 블록 독립 컴포넌트들
 import LoveCoreDifferentiation from '@/components/reports/baekdohwa-report/LoveCoreDifferentiation'
+import WhySeoncheonReport from '@/components/reports/baekdohwa-report/WhySeoncheonReport'
 import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
 import LovePrescriptionSample from '@/components/reports/baekdohwa-report/LovePrescriptionSample'
 import LovePatternChecklist from '@/components/reports/baekdohwa-report/LovePatternChecklist'
@@ -316,7 +317,7 @@ export default function BaekdohwaReportPage() {
             <section className="mb-24 md:mb-32">
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-                  {/* 좌측 55%: 라벨 + 제목 + 설명 문단 + 강조 문구 */}
+                  {/* 좌측 55%: 라벨 + 제목 + 본문 공감 & 통합 핵심 문구 */}
                   <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1">
                     <div>
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
@@ -328,7 +329,8 @@ export default function BaekdohwaReportPage() {
                       </h2>
                     </div>
 
-                    <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
+                    {/* 1. 상단 공감 문구 */}
+                    <div className="space-y-3.5 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
                       <p>
                         상대의 말 한마디에 하루의 기분이 달라지고,<br />
                         답장 하나에 안도했다가 다시 불안해지는 마음.
@@ -339,11 +341,31 @@ export default function BaekdohwaReportPage() {
                       </p>
                     </div>
 
-                    <div className="pt-6 border-t border-[#B49A70]/25 mt-6">
-                      <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
-                        어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
-                        더 사랑받기 위해 애쓰는 방법이 아니라<br />
-                        <span className="text-[#D9A8A7] font-semibold">내가 가진 매력의 중심을 되찾고</span>, 사랑의 흐름을 바꾸는 일인지도 모릅니다.
+                    {/* 2. 구분선 */}
+                    <div className="pt-2 border-t border-[#B49A70]/25" />
+
+                    {/* 3. 통합된 핵심 분석 및 처방 문구 */}
+                    <div className="space-y-4 text-[17px] md:text-[18px] leading-[1.8] break-keep">
+                      <p className="text-[#FAF7F2] font-semibold">
+                        당신에게 필요한 것은 또 하나의 가벼운 연애운 풀이가 아닙니다.
+                      </p>
+
+                      <div className="border-l-2 border-[#D9A8A7] pl-4 py-1.5 my-2 bg-white/[0.02] rounded-r-lg">
+                        <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.7]">
+                          &ldquo;내가 누구에게 끌리고, 어떤 순간에 무너지며,<br className="hidden sm:inline" />
+                          <span className="text-[#D9A8A7]"> 왜 같은 선택을 반복하는지 읽어내는 일.</span>&rdquo;
+                        </p>
+                      </div>
+
+                      <p className="text-[#EDE6DA] opacity-85 font-light">
+                        선천코드 연애 리포트는 타고난 기질을 바탕으로 관계에서 반복되는 패턴을 살펴보고, 나에게 필요한 사랑의 기준과 실천 방향을 제안합니다.
+                      </p>
+                    </div>
+
+                    {/* 4. 마지막 강조 문구 */}
+                    <div className="pt-4 border-t border-[#B49A70]/20">
+                      <p className="font-elegant font-medium text-[18px] md:text-[19px] text-[#FAF7F2] leading-[1.75] break-keep">
+                        &ldquo;<span className="text-[#D9A8A7] font-semibold">다음 연애까지 똑같은 상처를 반복할 필요는 없습니다.</span>&rdquo;
                       </p>
                     </div>
                   </div>
@@ -419,6 +441,11 @@ export default function BaekdohwaReportPage() {
 
             {/* 패러다임 전환: 상대의 마음이 아니라 나의 선택을 묻다 */}
             <QuestionShiftComparison theme="love" />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 신규 섹션: 왜, 선천코드 연애 리포트인가? (차별점 & 처방전 철학) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WhySeoncheonReport />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* STEP 04. 선천코드 소개 — 선천코드란 무엇이며, 왜 나를 이해하는 데 도움이 되는가? */}

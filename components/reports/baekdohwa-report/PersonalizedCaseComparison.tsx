@@ -24,49 +24,58 @@ export default function PersonalizedCaseComparison() {
           {personalizedCaseData.cases.map((c, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-white/10 hover:border-[#B7788D]/40 transition-all duration-300 relative overflow-hidden flex flex-col justify-between group"
+              className="p-8 md:p-10 rounded-[32px] transition-all duration-300 relative overflow-hidden flex flex-col justify-between group shadow-2xl hover:border-[rgba(245,218,226,0.35)]"
+              style={{
+                background: 'rgba(125, 76, 100, 0.22)',
+                border: '1px solid rgba(215, 170, 185, 0.20)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+              }}
             >
+              {/* 은은한 배경 광채 효과 */}
+              <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#B7788D]/10 rounded-full blur-[60px] pointer-events-none" />
+
               {/* 상단 뱃지 & 선천코드 */}
-              <div>
+              <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
-                  <span className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider bg-[#B7788D] text-[#1A0514]">
+                  <span className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider bg-[#B7788D] text-[#1A0514] shadow-sm">
                     {c.badge}
                   </span>
-                  <div className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-[#E6BFA9]">
-                    선천코드: <span className="font-semibold">{c.code}</span>
+                  <div className="px-3 py-1 rounded-lg bg-black/25 border border-white/15 text-xs text-[#E6BFA9]">
+                    선천코드: <span className="font-semibold text-white">{c.code}</span>
                   </div>
                 </div>
 
-                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-8 group-hover:text-[#E6BFA9] transition-colors leading-snug break-keep">
+                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-8 group-hover:text-[#F3D6DE] transition-colors leading-snug break-keep">
                   {c.typeName}
                 </h3>
 
-                <div className="space-y-6">
-                  {/* 반복 행동 */}
-                  <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                    <span className="text-xs font-bold text-white/50 block mb-1">
+                <div className="space-y-5">
+                  {/* 반복 행동 (중간 톤 일반 정보 카드) */}
+                  <div className="p-4 md:p-5 rounded-2xl bg-black/25 border border-white/10 backdrop-blur-sm">
+                    <span className="text-xs font-bold text-white/60 block mb-1.5">
                       {c.behaviorTitle}
                     </span>
-                    <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
+                    <p className="text-sm md:text-base text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
                       {c.behaviorDesc}
                     </p>
                   </div>
 
-                  {/* 관계의 결과 */}
-                  <div className="p-4 rounded-2xl bg-rose-950/20 border border-rose-900/30">
-                    <span className="text-xs font-bold text-rose-300/70 block mb-1">
+                  {/* 관계의 결과 (버건디/딥로즈 강조 카드) */}
+                  <div className="p-4 md:p-5 rounded-2xl bg-[#5C1D2E]/40 border border-[#B7788D]/35 backdrop-blur-sm">
+                    <span className="text-xs font-bold text-[#F8B4C4] block mb-1.5">
                       {c.resultTitle}
                     </span>
-                    <p className="text-sm md:text-base text-rose-100/85 font-light leading-relaxed break-keep">
+                    <p className="text-sm md:text-base text-[#FFF0F3]/95 font-light leading-relaxed break-keep">
                       {c.resultDesc}
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* 처방 방향 (하단 강조) */}
-              <div className="mt-8 pt-6 border-t border-[#B7788D]/25 p-4 rounded-2xl bg-[#B7788D]/10">
-                <span className="text-xs font-bold text-[#D9A8A7] block mb-1">
+              {/* 처방 방향 (하단 강조 박스) */}
+              <div className="mt-8 pt-6 border-t border-[#B7788D]/30 p-4 md:p-5 rounded-2xl bg-[#B7788D]/15 border border-[#B7788D]/25 relative z-10 backdrop-blur-sm">
+                <span className="text-xs font-bold text-[#F3C4D1] block mb-1.5">
                   ✨ {c.solutionTitle}
                 </span>
                 <p className="text-sm md:text-base text-white font-medium leading-relaxed break-keep">
