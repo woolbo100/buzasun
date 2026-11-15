@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import { MessageSquareOff, HeartCrack, RefreshCw } from 'lucide-react'
@@ -33,7 +33,7 @@ export default function CompatibilityCoreDifferentiation() {
             &ldquo;궁합이 좋다는 말보다 중요한 것은,<br className="sm:hidden" />
             <span className="gradient-text-reunion"> 왜 우리가 부딪히는지 아는 것이다.</span>&rdquo;
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             좋은 궁합, 나쁜 궁합이라는 단순한 이분법으로는 관계를 구할 수 없습니다.<br className="hidden sm:inline" />
             사랑이 부족해서가 아니라, <span className="text-[#D8BB94] font-medium">서로의 반응 방식이 충돌하고 있을 뿐</span>입니다.
           </p>

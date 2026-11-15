@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import Reveal from '@/components/Reveal'
@@ -27,7 +27,7 @@ export default function CompatibilityReportTableOfContents() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {compatibilityTableOfContentsData.title}
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {compatibilityTableOfContentsData.subTitle}
           </p>
         </div>
@@ -126,7 +126,7 @@ export default function CompatibilityReportTableOfContents() {
             <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-4 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
               {compatibilityTableOfContentsData.part7Highlight.title}
             </h3>
-            <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto font-light leading-relaxed break-keep">
+            <p className="text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto font-light leading-relaxed break-keep">
               {compatibilityTableOfContentsData.part7Highlight.subTitle}
             </p>
           </div>

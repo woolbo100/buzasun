@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -164,7 +164,7 @@ export default function AbundanceReportPage() {
                 </div>
 
                 {/* 2. 보조 카피 */}
-                <p className="text-[16px] md:text-[18px] text-[#8FB4A4] font-medium tracking-wide mb-4">
+                <p className="text-[18px] text-[#8FB4A4] font-medium tracking-wide mb-4">
                   선천코드로 읽는 나의 풍요 설계도
                 </p>
 
@@ -187,7 +187,7 @@ export default function AbundanceReportPage() {
                 </div>
 
                 {/* 5. 메인 이미지 하단 기울어진 감성 문구 */}
-                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
+                <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
                   나의 타고난 재능과 돈을 대하는 성향을 이해할 때, 나에게 맞는 풍요의 방향이 보입니다.
                 </p>
 
@@ -209,7 +209,7 @@ export default function AbundanceReportPage() {
                     &ldquo;남들보다 열심히 사는데,<br className="hidden sm:inline" />
                     왜 내 통장은 <span className="gradient-text-abundance">늘 제자리</span>일까?&rdquo;
                   </p>
-                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+                  <div className="text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
                     <p>돈을 벌 기회가 없었던 것도 아니다. 분명 수입은 있었고, 누구보다 부지런히 움직였다.</p>
                     <p>그런데 정작 내 손에 남은 것은 생각보다 적다.</p>
                     <p className="pt-2 text-[#C6A477] font-medium leading-relaxed">
@@ -276,7 +276,7 @@ export default function AbundanceReportPage() {
                       나에게 맞는 풍요의 길은 <br />
                       <span className="gradient-text-abundance">나를 아는 것에서 시작됩니다</span>
                     </h2>
-                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 풍요 리포트는 막연한 요행을 바라는 운세 풀이가 아닙니다. 내가 타고난 재능과 강점이 무엇인지, 돈을 대할 때 어떤 태도와 기준이 작동하는지, 그리고 일상에서 왜 비슷한 수입·소비 패턴이 반복되는지를 차분하게 짚어보고 현실에서 실천할 방향을 함께 모색하는 리포트입니다.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -407,7 +407,7 @@ export default function AbundanceReportPage() {
                       나만의 기준을 세우는 <br />
                       <span className="text-[#8FB4A4]">프리미엄</span> <span className="text-[#E6BE8A]">풍요 리포트</span>
                     </h2>
-                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 풍요 리포트는 타인의 기준을 무작정 따라가는 대신, 나의 기질과 생활의 리듬에 어울리는 풍요의 방향을 차분히 정리해 보는 맞춤형 리포트입니다.{"\n\n"}
                       백도화만의 깊이 있는 해석과 정갈한 문체로, 내 안의 강점과 일상의 재정 습관을 돌아보고 현실에서 단단하게 걸어갈 방향을 함께 그려봅니다.
                     </p>
@@ -441,7 +441,7 @@ export default function AbundanceReportPage() {
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
                         당신의 흐름에 맞춘 <span className="text-[#8FB4A4]">오행 에너지</span> <span className="text-[#E6BE8A]">카드</span>
                       </h2>
-                      <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep font-light">
+                      <p className="text-[18px] text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep font-light">
                         ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 기질과 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
                       </p>
                     </div>
@@ -449,7 +449,7 @@ export default function AbundanceReportPage() {
 
                   <Reveal>
                     <div className="gungjung-glass p-8 md:p-12 max-w-4xl mx-auto mb-16 text-center border-[#8FD3B6]/15 relative overflow-hidden">
-                      <div className="text-[16px] md:text-[18px] text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
+                      <div className="text-[18px] text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
                         <span className="block text-white font-medium">
                           백도화 선천코드 리포트 이용 시, 고객님의 선천적 기질과 흐름에 어울리는 오행 에너지 카드가 함께 안내됩니다.
                         </span>
@@ -513,7 +513,7 @@ export default function AbundanceReportPage() {
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
                         리포트는 <span className="text-[#8FB4A4]">이렇게</span> <span className="text-[#E6BE8A]">준비됩니다</span>
                       </h2>
-                      <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light">
+                      <p className="text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light">
                         백도화의 선천코드 리포트는 신청자분의 선천 정보를 바탕으로 정성스럽게 분석하여 작성되는 디지털 리포트입니다.
                       </p>
                     </div>
@@ -630,7 +630,7 @@ export default function AbundanceReportPage() {
                     &ldquo;내 안의 풍요를 읽는 첫 장을 펼치십시오.&rdquo;
                   </p>
                   
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
+                  <p className="text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
                     남의 성공 공식이 아니라, 나의 기질과 반복되는 선택에서 출발하십시오.<br />
                     돈의 흐름을 이해하고, 나에게 맞는 풍요의 방식을 설계할 시간입니다.
                   </p>

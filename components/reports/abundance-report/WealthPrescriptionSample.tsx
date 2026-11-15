@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import { CheckCircle2, FileText, ArrowRight } from 'lucide-react'
@@ -15,7 +15,7 @@ export default function WealthPrescriptionSample() {
             막연한 부자 마인드셋이 아닌, <br className="sm:hidden" />
             <span className="gradient-text-abundance">현실적인 행동 처방전</span>
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             백도화 선천코드 풍요 리포트의 핵심인 PART 07에서는 비현실적인 요행 대신,<br className="hidden sm:inline" />
             돈 앞에서의 위축과 누수를 즉시 차단할 실제 행동 가이드를 처방합니다.
           </p>

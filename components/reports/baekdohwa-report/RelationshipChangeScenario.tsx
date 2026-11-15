@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import { scenarioData } from './data'
@@ -15,7 +15,7 @@ export default function RelationshipChangeScenario() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {scenarioData.mainCopy}
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {scenarioData.subCopy}
           </p>
         </div>

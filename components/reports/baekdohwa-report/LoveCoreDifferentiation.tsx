@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import { AlertCircle, ShieldAlert, HeartCrack, CheckCircle2 } from 'lucide-react'
@@ -33,7 +33,7 @@ export default function LoveCoreDifferentiation() {
             &ldquo;사람을 바꾸는 것만으로는,<br className="sm:hidden" />
             <span className="gradient-text-love"> 같은 연애가 끝나지 않는다.</span>&rdquo;
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             새로운 사람을 만나도 몇 달 뒤 똑같은 외로움과 불안을 겪고 있다면,<br className="hidden sm:inline" />
             이제는 바깥이 아니라 <span className="text-[#E6BFA9] font-medium">내 안의 사랑의 작동 방식</span>을 들여다봐야 합니다.
           </p>

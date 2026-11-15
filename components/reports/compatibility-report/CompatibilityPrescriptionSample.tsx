@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import { CheckCircle2, FileText, ArrowRight } from 'lucide-react'
@@ -15,7 +15,7 @@ export default function CompatibilityPrescriptionSample() {
             단순한 성격 차이 설명이 아닌, <br className="sm:hidden" />
             <span className="gradient-text-reunion">관계 조율 대화 처방전</span>
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             백도화 프리미엄 궁합 리포트의 핵심인 PART 07에서는 비난과 방어 대신,<br className="hidden sm:inline" />
             갈등의 고리를 즉시 끊어낼 실제 대화법과 소통 행동 가이드를 처방합니다.
           </p>

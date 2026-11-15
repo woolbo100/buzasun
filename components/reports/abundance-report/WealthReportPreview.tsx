@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import Image from 'next/image'
@@ -46,7 +46,7 @@ export default function WealthReportPreview() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {wealthPreviewData.mainCopy}
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {wealthPreviewData.subCopy}
           </p>
         </div>

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import { philosophyData } from './data'
@@ -26,7 +26,7 @@ export default function BaekdohwaPhilosophy() {
               </h2>
             </div>
 
-            <div className="max-w-2xl mx-auto space-y-6 text-center text-[#EDE6DA] text-[16px] md:text-[18px] leading-relaxed font-light break-keep whitespace-pre-line">
+            <div className="max-w-2xl mx-auto space-y-6 text-center text-[#EDE6DA] text-[18px] leading-relaxed font-light break-keep whitespace-pre-line">
               {philosophyData.letter}
             </div>
 

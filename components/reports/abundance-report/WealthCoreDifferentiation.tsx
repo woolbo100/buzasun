@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import { TrendingDown, Scale, DollarSign } from 'lucide-react'
@@ -33,7 +33,7 @@ export default function WealthCoreDifferentiation() {
             &ldquo;돈이 부족한 이유를,<br className="sm:hidden" />
             <span className="gradient-text-abundance"> 수입에서만 찾지 마라.</span>&rdquo;
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             남들보다 적게 벌어서가 아닙니다.<br className="hidden sm:inline" />
             재테크 지식이 부족해서가 아니라, <span className="text-[#C6A477] font-medium">돈 앞에서 반복되는 판단·감정·관계의 습관</span> 때문입니다.
           </p>

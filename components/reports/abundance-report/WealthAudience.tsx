@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import Image from 'next/image'
@@ -16,7 +16,7 @@ export default function WealthAudience() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             당신을 위한 <span className="text-[#8FB4A4]">풍요 리포트</span>인가요?
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             솔직하고 명확한 안내를 통해 진정한 경제적 자기 이해를 전해드립니다.
           </p>
         </div>

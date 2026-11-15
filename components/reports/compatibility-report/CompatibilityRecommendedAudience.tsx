@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import Image from 'next/image'
@@ -16,7 +16,7 @@ export default function CompatibilityRecommendedAudience() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             두 분을 위한 <span className="text-[#D8BB94]">리포트인가요?</span>
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             진솔한 안내를 통해 두 사람의 인연에 가장 깊은 울림을 전해드립니다.
           </p>
         </div>

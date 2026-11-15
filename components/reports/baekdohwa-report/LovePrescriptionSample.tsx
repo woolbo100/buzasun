@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Reveal from '@/components/Reveal'
 import { Sparkles, CheckCircle2, FileText, ArrowRight } from 'lucide-react'
@@ -15,7 +15,7 @@ export default function LovePrescriptionSample() {
             단순한 조언이 아닌, <br className="sm:hidden" />
             <span className="gradient-text-love">구체적인 행동 처방전</span>
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             백도화 선천코드 리포트의 핵심인 PART 07에서는 모호한 위로 대신,<br className="hidden sm:inline" />
             위기의 순간 당신의 중심을 지켜줄 실제 실천 가이드를 처방합니다.
           </p>

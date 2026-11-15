@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import Navigation from '@/components/Navigation'
@@ -162,7 +162,7 @@ export default function PremiumCompatibilityReportPage() {
                 </div>
 
                 {/* 2. 보조 카피 */}
-                <p className="text-[16px] md:text-[18px] text-[#D8BB94] font-medium tracking-wide mb-4">
+                <p className="text-[18px] text-[#D8BB94] font-medium tracking-wide mb-4">
                   두 사람의 선천코드와 관계 패턴을 함께 읽는 1:1 프리미엄 궁합 설계도
                 </p>
 
@@ -185,7 +185,7 @@ export default function PremiumCompatibilityReportPage() {
                 </div>
 
                 {/* 5. 메인 이미지 하단 기울어진 감성 문구 */}
-                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
+                <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
                   두 사람의 인연은 우연이 아니라 흐름입니다.
                 </p>
 
@@ -211,7 +211,7 @@ export default function PremiumCompatibilityReportPage() {
                     &ldquo;분명 사랑하는데,<br className="hidden sm:inline" />
                     왜 우리는 같은 이유로 <span className="gradient-text-reunion">계속 상처를 주고받을까?</span>&rdquo;
                   </p>
-                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+                  <div className="text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
                     <p>한 사람은 대화를 원하고, 다른 사람은 입을 닫는다.</p>
                     <p>한 사람은 확인받고 싶어 하고, 다른 사람은 간섭받는다고 느낀다.</p>
                     <p>같은 사건인데 서로가 받아들이는 의미는 전혀 다르다.</p>
@@ -277,7 +277,7 @@ export default function PremiumCompatibilityReportPage() {
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       사랑은 감정이지만,<br /> <span className="text-[var(--accent-gold)]">관계는 흐름입니다</span>
                     </h2>
-                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       프리미엄 궁합 리포트는 단순한 궁합 점수가 아니라,{"\n\n"}
                       두 사람이 왜 끌리는지, 왜 자꾸 부딪히는지, 어떤 방식으로 함께 성장할 수 있는지를 섬세하게 해석하는 프리미엄 관계 분석 리포트입니다.
                     </p>
@@ -338,7 +338,7 @@ export default function PremiumCompatibilityReportPage() {
                     ))}
                   </div>
                   <div className="mt-16 pt-16 border-t border-white/5 text-center">
-                    <p className="text-[#EDE6DA] opacity-75 italic font-elegant text-[16px] md:text-[18px] break-keep">
+                    <p className="text-[#EDE6DA] opacity-75 italic font-elegant text-[18px] break-keep">
                       &ldquo;이 리포트는 단순한 궁합 점수가 아니라, 관계의 흐름을 이해하고 더 건강한 사랑을 선택하기 위한 프리미엄 자기이해 리포트입니다.&rdquo;
                     </p>
                   </div>
@@ -415,7 +415,7 @@ export default function PremiumCompatibilityReportPage() {
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       소장하고 싶은 <br /> <span className="gradient-text-reunion">프리미엄 궁합 리포트</span>
                     </h2>
-                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       프리미엄 궁합 리포트는 한 번 읽고 끝나는 결과지가 아니라, 두 사람의 관계를 다시 바라보게 만드는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
                       서로의 성향, 반복되는 관계 패턴, 끌림과 거리감의 이유, 그리고 더 나은 사랑을 위한 방향성을 백도화만의 언어로 정리해드립니다.
                     </p>
@@ -480,7 +480,7 @@ export default function PremiumCompatibilityReportPage() {
                     관계의 새로운 선택이 시작됩니다.&rdquo;
                   </p>
                   
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
+                  <p className="text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
                     우리의 관계를 단순한 점수로 판단하지 마십시오.<br />
                     서로의 기질과 반복되는 관계 패턴을 이해하고, 앞으로의 선택을 위한 두 사람만의 설계도를 펼쳐보십시오.
                   </p>

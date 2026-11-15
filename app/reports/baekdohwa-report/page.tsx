@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import Navigation from '@/components/Navigation'
@@ -161,17 +161,12 @@ export default function BaekdohwaReportPage() {
                   </span>
                 </div>
 
-                {/* 2. 보조 카피 */}
-                <p className="text-[16px] md:text-[18px] text-[#D9A8A7] font-medium tracking-wide mb-4">
-                  선천코드로 읽는 나의 사랑 설계도
-                </p>
-
-                {/* 3. 메인 제품명 제목 */}
+                {/* 2. 메인 제품명 제목 */}
                 <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-10 text-white leading-[1.25] md:leading-[1.3] break-keep">
                   선천코드 <span className="gradient-text-love">연애 리포트</span>
                 </h1>
 
-                {/* 4. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
+                {/* 3. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
                 <div className="relative w-full max-w-[1280px] mx-auto mb-6 md:mb-8 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
                   <Image 
                     src={HERO_IMAGE_CONFIG.src} 
@@ -184,8 +179,11 @@ export default function BaekdohwaReportPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
-                {/* 5. 메인 이미지 하단 기울어진 감성 문구 */}
-                <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
+                {/* 4. 메인 이미지 하단 감성 문구 */}
+                <p className="text-[18px] text-[#D9A8A7] font-medium tracking-wide mb-2">
+                  선천코드로 읽는 나의 사랑 설계도
+                </p>
+                <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
                   나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
                 </p>
 
@@ -211,7 +209,7 @@ export default function BaekdohwaReportPage() {
                     &ldquo;상대만 바뀌었을 뿐,<br className="hidden sm:inline" />
                     당신의 연애는 왜 <span className="gradient-text-love">매번 같은 결말</span>을 맞을까?&rdquo;
                   </p>
-                  <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
+                  <div className="text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
                     <p>처음에는 다정했다. 이번만큼은 다를 거라 믿었다.</p>
                     <p>그런데 어느 순간부터 또 내가 기다리고, 내가 불안해하고, 내가 관계를 붙잡고 있다.</p>
                     <p className="pt-2 text-[#E6BFA9] font-medium leading-relaxed">
@@ -277,7 +275,7 @@ export default function BaekdohwaReportPage() {
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       당신의 사랑은 <br /> <span className="gradient-text-love">우연이 아닙니다</span>
                     </h2>
-                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 연애 리포트는 단순한 연애운 풀이가 아니라, 당신이 어떤 사람에게 끌리고, 왜 비슷한 관계 패턴을 반복하는지, 그리고 어떤 방식으로 사랑을 회복하고 성장시킬 수 있는지를 섬세하게 해석하는 프리미엄 연애 리포트입니다.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -402,7 +400,7 @@ export default function BaekdohwaReportPage() {
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       소장하고 싶은 <br /> <span className="gradient-text-love">프리미엄 리포트</span>
                     </h2>
-                    <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 연애 리포트는 한 번 읽고 끝나는 결과지가 아니라, 당신의 사랑을 다시 바라보게 하는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
                       백도화만의 깊이 있는 해석과 우아한 문체로 당신의 사랑 이야기를 새롭게 정의해 드립니다.
                     </p>
@@ -460,7 +458,7 @@ export default function BaekdohwaReportPage() {
                     &ldquo;반복을 끊는 첫 장을 펼치십시오.&rdquo;
                   </h2>
                   
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
+                  <p className="text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
                     사랑의 답을 바깥에서만 찾지 마십시오.<br />
                     나의 관계 구조를 이해하는 것에서 새로운 선택이 시작됩니다.
                   </p>
