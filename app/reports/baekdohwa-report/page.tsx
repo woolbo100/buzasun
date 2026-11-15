@@ -205,8 +205,9 @@ export default function BaekdohwaReportPage() {
                     &ldquo;혹시 내가 만나는 사람이 <span className="gradient-text-love">우연이라고 믿고 있나요?</span>&rdquo;
                   </h2>
                   <p className="text-base sm:text-lg md:text-[21px] font-elegant text-[#FAF7F2] leading-[1.7] md:leading-[1.75] break-keep max-w-2xl mx-auto opacity-95 font-light">
-                    완전히 다른 사람을 만났다고 생각했지만,<br className="hidden sm:inline" />
-                    돌아보면 그 사랑의 흔적이 기묘할 만큼 닮아 있다고 느낀 적은 없으신가요.
+                    완전히 다른 사람을 만났다고 생각했지만,<br />
+                    돌아보면 그 사랑의 흔적이 기묘할 만큼 닮아 있다고<br />
+                    느낀 적은 없으신가요.
                   </p>
                 </div>
 
@@ -332,11 +333,12 @@ export default function BaekdohwaReportPage() {
                     <span className="gradient-text-love">놀라울 만큼 닮아</span> 있을까요?&rdquo;
                   </p>
                   <div className="text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
-                    <p>처음에는 다정했다. 이번만큼은 다를 거라 믿었다.</p>
-                    <p>그런데 어느 순간부터 또 내가 기다리고, 내가 불안해하고, 내가 관계를 붙잡고 있다.</p>
-                    <p className="pt-2 text-[#E6BFA9] font-medium leading-relaxed">
-                      문제는 이번에 만난 상대 한 사람만이 아닐 수 있습니다.<br className="hidden sm:inline" />
-                      상대만 바뀌었을 뿐, 끝나는 이유와 상처의 궤적이 매번 익숙하다면...
+                    <h3 className="text-xl sm:text-2xl md:text-[25px] font-elegant font-bold text-white tracking-wide pb-1">
+                      이번 만큼은 다를 거라 믿었지만...
+                    </h3>
+                    <p className="text-[#E6BFA9] font-medium leading-relaxed">
+                      상대만 바뀌었을 뿐, 헤어지는 이유와 상처의 흔적이 매번 익숙하다면...<br className="hidden sm:inline" />
+                      문제는 이번에 만난 상대 한 사람만이 아닐 수 있습니다.
                     </p>
                   </div>
                 </div>
