@@ -450,7 +450,8 @@ export default function BaekdohwaReportPage() {
                       </span>
                       <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
                         &ldquo;내 사주를 제대로 들여다보는 순간,<br />
-                        <span className="gradient-text-love">지나온 사랑의 퍼즐이 다르게</span> 보이기 시작합니다.&rdquo;
+                        <span className="gradient-text-love">지나온 사랑의 퍼즐이 다르게</span><br />
+                        보이기 시작합니다.&rdquo;
                       </h2>
                     </div>
 
@@ -461,7 +462,6 @@ export default function BaekdohwaReportPage() {
                         누구나 깊은 소름과 마주하게 됩니다.
                       </p>
                       <p>
-                        <span className="text-[#FAF7F2] font-medium">이것은 우연도, 단순한 불운도 아닙니다.</span><br />
                         우연이라 믿었던 이별의 타이밍도, 늘 비슷한 결의 사람에게 무너지던 순간도<br className="hidden sm:inline" />
                         모두 당신의 선천코드 속에 촘촘히 새겨져 있던 <span className="text-[#E6BFA9] font-semibold">반복의 알고리즘</span>이었습니다.
                       </p>
