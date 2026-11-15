@@ -261,34 +261,49 @@ export default function BaekdohwaReportPage() {
             <section className="mb-24 md:mb-32">
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-                  {/* 좌측 55%: 라벨 + 제목 + 아픔과 공감 문구 */}
+                  {/* 좌측 55%: 라벨 + 제목 + 본문 및 마지막 핵심 후킹 */}
                   <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1">
                     <div>
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
                         THE MOMENT OF AWAKENING
                       </span>
-                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.3] break-keep">
-                        왜 나는 사랑할수록,<br />
-                        <span className="gradient-text-love">나 자신을 잃어버리게 될까요?</span>
+                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold mb-6 leading-[1.3] break-keep">
+                        <span className="text-[#FAF7F2]">끌림만 믿고 시작한 사랑,</span><br />
+                        <span className="gradient-text-love">왜 늘 같은 미로에 갇혔을까요?</span>
                       </h2>
                     </div>
 
+                    {/* 본문 서사 */}
                     <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
                       <p>
-                        상대의 말 한마디에 하루의 기분이 달라지고,<br />
-                        답장 하나에 안도했다가 다시 불안해지는 마음.
+                        그냥 끌려서 시작한 사랑.
+                      </p>
+                      <p className="text-[#FAF7F2] font-semibold">
+                        강렬하게 끌린다고, 나에게 맞는 사람이라는 뜻은 아닙니다.
                       </p>
                       <p>
-                        사랑받고 싶어서 더 많이 맞춰주고 더 많이 이해했지만,<br />
-                        어느 순간 관계의 중심에는 상대만 남아 있었습니다.
+                        설렘을 운명이라 믿었던 순간,<br />
+                        우리는 가장 중요한 질문을 놓쳤습니다.
+                      </p>
+                      <div className="pl-4 border-l-2 border-[#D9A8A7]/40 py-1 space-y-1 text-[#F3E5E9]/90">
+                        <p>내가 어떤 사람에게 끌리는지,</p>
+                        <p>어떤 관계에서 나의 매력이 빛나는지,</p>
+                        <p>어떤 순간에 나의 기준이 무너지는지.</p>
+                      </div>
+                      <p>
+                        정작 나의 사랑 설계도는 모른 채,<br />
+                        우리는 상대의 마음부터 알아내려 했습니다.
                       </p>
                     </div>
 
-                    <div className="pt-6 border-t border-[#B49A70]/25 mt-6">
-                      <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
-                        어쩌면 지금 우리에게 필요한 것은,<br className="hidden sm:inline" />
-                        더 사랑받기 위해 애쓰는 방법이 아니라<br />
-                        <span className="text-[#D9A8A7] font-semibold">나 자신의 중심을 되찾는 일</span>인지도 모릅니다.
+                    {/* 구분선 및 마지막 핵심 후킹 */}
+                    <div className="pt-6 border-t border-[#B49A70]/25 mt-6 space-y-2">
+                      <p className="font-elegant font-bold text-[19px] md:text-[22px] leading-[1.6] break-keep text-white">
+                        &ldquo;내 사랑의 설계도도 모르면서,<br className="sm:hidden" />
+                        <span className="gradient-text-love"> 왜 상대의 마음부터 읽습니까?</span>&rdquo;
+                      </p>
+                      <p className="text-[#FAF7F2] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep pt-1">
+                        이제는 끌림을 따라가기 전에, 나의 선천코드부터 읽어야 할 차례입니다.
                       </p>
                     </div>
                   </div>
