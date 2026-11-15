@@ -33,7 +33,7 @@ export default function LoveReportTableOfContents() {
         </div>
 
         {/* 7개 PART 아코디언 목록 */}
-        <div className="max-w-7xl mx-auto space-y-4 mb-16">
+        <div className="max-w-7xl mx-auto space-y-3 md:space-y-3.5 mb-16">
           {tableOfContentsData.parts.map((part) => {
             const isOpen = openParts.includes(part.id)
             const isSpecial = part.isSpecial
@@ -41,23 +41,24 @@ export default function LoveReportTableOfContents() {
             return (
               <div
                 key={part.id}
-                className={`rounded-[24px] border transition-all duration-300 overflow-hidden ${
+                className={`rounded-[18px] md:rounded-[20px] border transition-all duration-300 overflow-hidden ${
                   isSpecial
                     ? 'bg-gradient-to-r from-[var(--accent-gold)]/15 via-[#2D0A1E]/80 to-[var(--accent-gold)]/10 border-[#B7788D]/50 shadow-[0_0_30px_rgba(183, 120, 141, 0.15)]'
                     : 'gungjung-glass border-white/10 hover:border-white/20'
                 }`}
               >
-                {/* 아코디언 헤더 버튼 */}
+                {/* 아코디언 헤더 버튼 (슬림화: min-height 78~84px 및 상하 패딩 축소) */}
                 <button
                   type="button"
                   onClick={() => togglePart(part.id)}
-                  className="w-full p-6 md:p-8 flex items-center justify-between text-left gap-4 focus:outline-none"
+                  className="w-full px-5 py-3.5 md:px-8 md:py-4 flex items-center justify-between text-left gap-4 focus:outline-none min-h-[74px] md:min-h-[82px]"
                   aria-expanded={isOpen}
                 >
-                  <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 flex-1">
-                    <div className="flex items-center gap-3">
+                  <div className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-5 flex-1 min-w-0">
+                    {/* 좌측: PART 번호 + 핵심 실천 처방 뱃지 + 명조체 제목 */}
+                    <div className="flex items-center gap-3 md:gap-4 shrink-0">
                       <span
-                        className={`text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-md ${
+                        className={`text-xs font-mono font-bold tracking-widest px-2.5 py-0.5 md:px-3 md:py-1 rounded-md shrink-0 ${
                           isSpecial
                             ? 'bg-[#B7788D] text-[#1A0514]'
                             : 'bg-white/10 text-[#E6BFA9]'
@@ -66,22 +67,28 @@ export default function LoveReportTableOfContents() {
                         {part.number}
                       </span>
                       {isSpecial && (
-                        <span className="flex items-center gap-1 text-[11px] text-[#E6BFA9] font-bold">
+                        <span className="inline-flex items-center gap-1 text-[11px] text-[#E6BFA9] font-bold shrink-0">
                           <Sparkles className="w-3.5 h-3.5 text-[#D9A8A7]" />
                           핵심 실천 처방
                         </span>
                       )}
+                      <h3 
+                        className="text-[17px] md:text-[20px] font-semibold text-white break-keep tracking-tight leading-snug"
+                        style={{ fontFamily: "'Noto Serif KR', serif" }}
+                      >
+                        {part.title}
+                      </h3>
                     </div>
-                    <h3 className="text-[20px] md:text-[24px] font-bold text-white break-keep">
-                      {part.title}
-                    </h3>
-                    <p className="text-xs md:text-sm text-[#EDE6DA]/60 font-light break-keep md:ml-auto">
+
+                    {/* 우측: 장별 간단 설명 (기존 고딕체 유지, 수직 중앙 정렬) */}
+                    <p className="text-xs md:text-[13.5px] text-[#EDE6DA]/65 font-light break-keep md:ml-auto md:text-right pr-2 leading-relaxed">
                       {part.summary}
                     </p>
                   </div>
 
+                  {/* 펼침 화살표 아이콘 (수직 중앙 정렬) */}
                   <div
-                    className={`w-9 h-9 rounded-full flex items-center justify-center border shrink-0 transition-transform duration-300 ${
+                    className={`w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center border shrink-0 transition-transform duration-300 ${
                       isOpen
                         ? 'rotate-180 bg-[#B7788D]/20 border-[#B7788D]/50 text-[#D9A8A7]'
                         : 'border-white/10 bg-white/5 text-white/50'
@@ -93,7 +100,7 @@ export default function LoveReportTableOfContents() {
 
                 {/* 세부 항목 리스트 */}
                 {isOpen && (
-                  <div className="px-6 pb-8 md:px-8 border-t border-white/5 pt-6 bg-black/20">
+                  <div className="px-5 pb-6 md:px-8 md:pb-7 border-t border-white/5 pt-5 bg-black/20">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                       {part.items.map((item, itemIdx) => (
                         <div

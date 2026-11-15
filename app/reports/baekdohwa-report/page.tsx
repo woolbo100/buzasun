@@ -559,6 +559,21 @@ export default function BaekdohwaReportPage() {
                   </div>
                 </div>
 
+                {/* THE SIX KEYS TO YOUR LOVE CODE 영역 헤더 */}
+                <div className="max-w-4xl mx-auto mb-14 text-center pt-8 border-t border-[#D9A8A7]/20 space-y-4">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
+                    THE SIX KEYS TO YOUR LOVE CODE
+                  </span>
+                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white leading-[1.3] break-keep">
+                    당신의 사랑을 움직이는<br className="sm:hidden" />
+                    <span className="gradient-text-love"> 숨겨진 코드</span>
+                  </h3>
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                    타고난 매력부터 반복되는 끌림, 관계의 그림자와 인연의 선택까지.<br className="hidden sm:inline" />
+                    당신도 몰랐던 사랑의 설계도를 여섯 가지 관점으로 풀어냅니다.
+                  </p>
+                </div>
+
                 <div className="max-w-7xl mx-auto mb-20">
                   <Image 
                     src="/image/lovereport/p4.webp" 
