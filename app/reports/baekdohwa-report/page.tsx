@@ -186,8 +186,8 @@ export default function BaekdohwaReportPage() {
                   선천코드 <span className="gradient-text-love">연애 리포트</span>
                 </h1>
 
-                {/* 3. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-6 md:mb-8 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
+                {/* 3. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌 - 하단 여백 충분히 확대) */}
+                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
                   <Image 
                     src={HERO_IMAGE_CONFIG.src} 
                     alt={HERO_IMAGE_CONFIG.alt}
@@ -199,15 +199,37 @@ export default function BaekdohwaReportPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
-                {/* 3-1. 메인 히어로 하단 질문 카피 (제목 크기 및 줄간격 적용) */}
-                <div className="max-w-4xl mx-auto mb-12 text-center px-4 space-y-4">
+                {/* 3-1. 메인 히어로 하단 공감 문구 블록 (충분한 숨 공간과 몰입감 확보) */}
+                <div className="max-w-4xl mx-auto text-center px-4 space-y-4 md:space-y-5">
                   <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] md:leading-[1.35] break-keep">
                     &ldquo;혹시 내가 만나는 사람이 <span className="gradient-text-love">우연이라고 믿고 있나요?</span>&rdquo;
                   </h2>
-                  <p className="text-lg sm:text-xl md:text-[22px] font-elegant text-[#FAF7F2] leading-[1.6] md:leading-[1.65] break-keep max-w-3xl mx-auto opacity-95 font-medium">
+                  <p className="text-base sm:text-lg md:text-[21px] font-elegant text-[#FAF7F2] leading-[1.7] md:leading-[1.75] break-keep max-w-2xl mx-auto opacity-95 font-light">
                     완전히 다른 사람을 만났다고 생각했지만,<br className="hidden sm:inline" />
-                    돌아보면 그 사랑의 흔적이 기묘할 만큼 닮아 있다고 느낀적은 없으신가요.
+                    돌아보면 그 사랑의 흔적이 기묘할 만큼 닮아 있다고 느낀 적은 없으신가요.
                   </p>
+                </div>
+
+                {/* 3-2. 구간 전환용 백도화 아이콘 + 얇은 장식선 (공감 문구 ➔ 상품 소개 완충 전환) */}
+                <div className="flex items-center justify-center my-10 sm:my-14 md:my-16 max-w-xs sm:max-w-sm mx-auto px-4" aria-hidden="true">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#D5AFAD]/35 to-transparent" />
+                  <div className="mx-4 flex items-center justify-center">
+                    <svg viewBox="0 0 32 32" fill="none" className="w-7 h-7 sm:w-8 sm:h-8 text-[#D7AD9B] opacity-90 drop-shadow-[0_0_8px_rgba(215,173,155,0.4)]">
+                      {/* 상단 꽃잎 */}
+                      <path d="M16 16 C13.5 11 13 6 16 4 C19 6 18.5 11 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      {/* 우상단 꽃잎 */}
+                      <path d="M16 16 C20 13 24.5 12.5 26 15.5 C25 18.8 20.5 18 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      {/* 우하단 꽃잎 */}
+                      <path d="M16 16 C19.5 19.5 21.5 24 18.5 26 C16 24.5 16.2 20 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      {/* 좌하단 꽃잎 */}
+                      <path d="M16 16 C15.8 20 16 24.5 13.5 26 C10.5 24 12.5 19.5 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      {/* 좌상단 꽃잎 */}
+                      <path d="M16 16 C11.5 18 7 18.8 6 15.5 C7.5 12.5 12 13 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      {/* 중심 꽃술 원 */}
+                      <circle cx="16" cy="16" r="1.6" stroke="currentColor" strokeWidth="1" />
+                    </svg>
+                  </div>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#D5AFAD]/35 to-transparent" />
                 </div>
 
                 {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (재회비방 패키지 카드 구조) */}
@@ -225,25 +247,25 @@ export default function BaekdohwaReportPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
                       {/* 좌측 (약 58%): 라벨 + 메인 카피 + 설명 + 가격 + 버튼 */}
                       <div className="lg:col-span-7 space-y-5 md:space-y-6">
-                        {/* 상단 라벨 */}
+                        {/* 1. 상단 라벨 */}
                         <div>
                           <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#87465B]/60 border border-[#D5AFAD]/60 text-[#FFF1E9] text-xs font-bold tracking-wider whitespace-nowrap">
                             선천코드 연애 리포트
                           </span>
                         </div>
 
-                        {/* 메인 카피 (2~3줄의 강한 카피) */}
+                        {/* 2. 메인 카피 (2~3줄의 강한 카피) */}
                         <h3 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-white leading-[1.35] md:leading-[1.4] break-keep">
                           비슷한 사랑이 반복되는 이유,<br />
                           <span className="gradient-text-love">당신의 선천코드 안에 이미 적혀 있습니다.</span>
                         </h3>
 
-                        {/* 설명 문구 */}
+                        {/* 3. 설명 문구 */}
                         <p className="text-[16px] md:text-[17px] text-[#EDE6DA]/85 leading-[1.8] font-light break-keep max-w-xl">
                           당신의 연애 기질, 반복되는 끌림의 패턴, 잘 맞는 인연과 피해야 할 관계 흐름까지 선천코드 기반으로 정리한 1:1 맞춤 PDF 리포트입니다.
                         </p>
 
-                        {/* 가격 영역 */}
+                        {/* 4. 가격 영역 & 5. 상품 정보 */}
                         <div className="pt-2">
                           <div className="flex flex-wrap items-baseline gap-3">
                             <span className="text-3xl sm:text-4xl md:text-[42px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
@@ -258,7 +280,7 @@ export default function BaekdohwaReportPage() {
                           </p>
                         </div>
 
-                        {/* 버튼 영역 */}
+                        {/* 6. 구매 버튼 2개 */}
                         <div className="flex flex-col sm:flex-row gap-3.5 pt-2 items-stretch sm:items-center">
                           <button
                             type="button"
