@@ -51,6 +51,23 @@ const EMPATHY_IMAGE_CONFIG = {
   height: 941,
 }
 
+// ══════════════════════════════════════════════════════════════════════
+// 스토리 교차 레이아웃 이미지 설정 (언제든 경로만 교체 가능)
+// ══════════════════════════════════════════════════════════════════════
+const DISCOVERY_STORY_IMAGE_CONFIG = {
+  src: '/image/lovereport/p7.webp', // 추후 지정할 4:5 세로형 이미지 경로 (플레이스홀더 / 기존 에셋)
+  alt: '사주를 들여다보니 지나온 사랑이 다르게 보이기 시작했다',
+  width: 800,
+  height: 1000,
+}
+
+const AWAKENING_STORY_IMAGE_CONFIG = {
+  src: '/image/love-secret/love-secret-mirror.webp', // 거울을 바라보는 여성 이미지
+  alt: '왜 나는 사랑할수록 나 자신을 잃어버릴까 - 사랑의 불안과 관계 심리',
+  width: 800,
+  height: 1000,
+}
+
 export default function BaekdohwaReportPage() {
   useScrollAnimation()
   const router = useRouter()
@@ -238,22 +255,137 @@ export default function BaekdohwaReportPage() {
             <LoveCoreDifferentiation />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* STEP 02. 발견 — 사주를 들여다보니 지나온 연애가 다르게 보이기 시작했다 */}
+            {/* [교차 스토리 1] STEP 02. DISCOVERY (좌측 이미지 + 우측 텍스트) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-20 text-center">
+            <section className="mb-24 md:mb-32">
               <Reveal>
-                <div className="max-w-4xl mx-auto">
-                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                    STEP 02 · DISCOVERY
-                  </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    &ldquo;사주를 들여다보니,<br className="sm:hidden" />
-                    <span className="gradient-text-love"> 지나온 사랑이 다르게</span> 보이기 시작했습니다.&rdquo;
-                  </h2>
-                  <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    어긋난 관계의 원인은 내 부족함이나 상대의 변덕 때문만은 아니었습니다.<br className="hidden sm:inline" />
-                    내가 타고난 기질과 감정의 에너지 흐름을 알지 못했을 뿐입니다.
-                  </p>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                  {/* 좌측 45%: 세로형 4:5 이미지 영역 (언제든 경로만 교체 가능한 구조) */}
+                  <div className="lg:col-span-5 w-full flex flex-col items-center">
+                    <div className="group relative w-full aspect-[4/5] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/40">
+                      <Image
+                        src={DISCOVERY_STORY_IMAGE_CONFIG.src}
+                        alt={DISCOVERY_STORY_IMAGE_CONFIG.alt}
+                        width={DISCOVERY_STORY_IMAGE_CONFIG.width}
+                        height={DISCOVERY_STORY_IMAGE_CONFIG.height}
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none" />
+                    </div>
+                  </div>
+
+                  {/* 우측 55%: 라벨 + 제목 + 본문 스토리 (외곽 카드 배경 없이 페이지 배경에 자연스럽게 배치) */}
+                  <div className="lg:col-span-7 space-y-6 text-left break-keep">
+                    <div>
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+                        STEP 02 · DISCOVERY
+                      </span>
+                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.3] break-keep">
+                        &ldquo;사주를 들여다보니,<br className="sm:hidden" />
+                        <span className="gradient-text-love"> 지나온 사랑이 다르게</span> 보이기 시작했습니다.&rdquo;
+                      </h2>
+                    </div>
+
+                    <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
+                      <p>
+                        어긋난 관계의 원인은 내 부족함이나 상대의 변덕 때문만은 아니었습니다.<br className="hidden sm:inline" />
+                        내가 타고난 기질과 감정의 에너지 흐름을 알지 못했을 뿐입니다.
+                      </p>
+                      <p>
+                        당신에게 필요한 것은 또 하나의 가벼운 연애운 풀이가 아닐 수 있습니다.<br />
+                        내가 누구에게 끌리고, 어떤 순간에 무너지며, 왜 같은 선택을 반복하는지 읽어내는 일.
+                      </p>
+                      <p>
+                        선천코드 연애 리포트는 타고난 기질을 바탕으로 당신의 관계 반복 패턴을 정밀하게 탐색하고, 스스로 지켜야 할 관계의 기준과 실천할 수 있는 행동 방향을 명확하게 제시합니다.
+                      </p>
+                    </div>
+
+                    <div className="pt-6 border-t border-[#B49A70]/25 mt-6">
+                      <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
+                        &ldquo;다음 연애까지 <span className="text-[#D9A8A7] font-semibold">똑같은 상처를 반복할 필요는 없습니다.</span>&rdquo;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [교차 스토리 2] THE MOMENT OF AWAKENING (좌측 텍스트 + 우측 거울 이미지) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-24 md:mb-32">
+              <Reveal>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                  {/* 좌측 55%: 라벨 + 제목 + 설명 문단 + 강조 문구 */}
+                  <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1">
+                    <div>
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+                        THE MOMENT OF AWAKENING
+                      </span>
+                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.3] break-keep">
+                        왜 나는 사랑할수록,<br />
+                        <span className="gradient-text-love">나 자신을 잃어버리게 될까요?</span>
+                      </h2>
+                    </div>
+
+                    <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
+                      <p>
+                        상대의 말 한마디에 하루의 기분이 달라지고,<br />
+                        답장 하나에 안도했다가 다시 불안해지는 마음.
+                      </p>
+                      <p>
+                        사랑받고 싶어서 더 많이 맞춰주고 더 많이 이해했지만,<br />
+                        어느 순간 관계의 중심에는 상대만 남아 있었습니다.
+                      </p>
+                    </div>
+
+                    <div className="pt-6 border-t border-[#B49A70]/25 mt-6">
+                      <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
+                        어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
+                        더 사랑받기 위해 애쓰는 방법이 아니라<br />
+                        <span className="text-[#D9A8A7] font-semibold">내가 가진 매력의 중심을 되찾고</span>, 사랑의 흐름을 바꾸는 일인지도 모릅니다.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 우측 45%: 연애비급 거울 이미지 (4:5 비율로 첫 번째 영역과 통일) */}
+                  <div className="lg:col-span-5 w-full flex flex-col items-center order-1 lg:order-2">
+                    <div className="group relative w-full aspect-[4/5] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-black/40 flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/40">
+                      <Image
+                        src={AWAKENING_STORY_IMAGE_CONFIG.src}
+                        alt={AWAKENING_STORY_IMAGE_CONFIG.alt}
+                        width={AWAKENING_STORY_IMAGE_CONFIG.width}
+                        height={AWAKENING_STORY_IMAGE_CONFIG.height}
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                      />
+
+                      {/* 상/하단 은은한 그라데이션 오버레이 (중앙 인물 영역 투명도 유지) */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/75 pointer-events-none" />
+
+                      {/* 이미지 위 오버레이 텍스트 */}
+                      <div className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-between pointer-events-none z-10">
+                        {/* 상단: 작은 배지 & 큰 제목 */}
+                        <div className="text-center space-y-2">
+                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B]/90 border border-[#D5AFAD]/60 text-[#FFF1E9] text-xs font-bold tracking-wider whitespace-nowrap shadow-md backdrop-blur-sm">
+                            사랑의 불안과 관계 심리
+                          </span>
+                          <h4 className="text-[18px] sm:text-[20px] font-elegant font-bold text-[#FAF7F2] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] tracking-wide">
+                            사랑할수록 작아지는 나
+                          </h4>
+                        </div>
+
+                        {/* 하단: 감성 문구 & 강조 문구 */}
+                        <div className="p-3.5 sm:p-4 rounded-xl bg-black/60 border border-[#B49A70]/30 text-center space-y-1 backdrop-blur-sm shadow-lg">
+                          <p className="text-xs sm:text-[13px] text-[#D5AFAD] font-medium drop-shadow-sm">
+                            &ldquo;그에게 더 사랑받고 싶었을 뿐인데&hellip;&rdquo;
+                          </p>
+                          <p className="text-xs sm:text-sm text-[#FAF7F2] font-semibold drop-shadow-sm break-keep">
+                            사랑받으려 애쓸수록, 나의 중심은 흔들립니다.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>

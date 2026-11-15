@@ -53,7 +53,7 @@ export default function LoveCoreDifferentiation() {
         </div>
 
         {/* 3대 날카로운 질문 카드 */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {painQuestions.map((item, idx) => {
             const Icon = item.icon
             return (
@@ -75,29 +75,6 @@ export default function LoveCoreDifferentiation() {
               </div>
             )
           })}
-        </div>
-
-        {/* 본문 설명 및 백도화 연애 리포트 정의 */}
-        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#B7788D]/35 bg-gradient-to-r from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 text-center relative overflow-hidden">
-          <div className="max-w-2xl mx-auto space-y-6">
-            <p className="text-base md:text-lg text-[#EDE6DA] leading-relaxed font-light break-keep">
-              당신에게 필요한 것은 또 하나의 가벼운 연애운 풀이가 아닐 수 있습니다.
-            </p>
-            <p className="text-lg md:text-xl text-white font-elegant font-bold break-keep">
-              &ldquo;내가 누구에게 끌리고, 어떤 순간에 무너지며,<br className="hidden sm:inline" />
-              왜 같은 선택을 반복하는지 읽어내는 일.&rdquo;
-            </p>
-            <p className="text-sm md:text-base text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
-              선천코드 연애 리포트는 타고난 기질을 바탕으로 당신의 관계 반복 패턴을 정밀하게 탐색하고,<br className="hidden sm:inline" />
-              스스로 지켜야 할 관계의 기준과 실천할 수 있는 행동 방향을 명확하게 제시합니다.
-            </p>
-
-            <div className="pt-6 border-t border-[#B7788D]/25">
-              <p className="text-lg md:text-2xl font-elegant font-bold text-[#E6BFA9] break-keep">
-                &ldquo;다음 연애까지 똑같은 상처를 반복할 필요는 없습니다.&rdquo;
-              </p>
-            </div>
-          </div>
         </div>
       </Reveal>
     </section>
