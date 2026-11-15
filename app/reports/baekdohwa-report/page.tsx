@@ -150,7 +150,7 @@ export default function BaekdohwaReportPage() {
           <div className="container-premium">
             
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 01. 히어로 — 제목 → 16:9 메인 이미지 → 버튼 → 공감 문구 → 공감 16:9 이미지 */}
+            {/* INTRO & STEP 01. 공감 — 왜 비슷한 결의 사람에게만 상처받을까? */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
@@ -187,7 +187,7 @@ export default function BaekdohwaReportPage() {
                   나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
                 </p>
 
-                {/* 6. 구매 버튼 영역 */}
+                {/* 5. 구매 버튼 영역 */}
                 <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center mb-24 md:mb-28">
                   <button 
                     onClick={handleAddToCart}
@@ -203,23 +203,23 @@ export default function BaekdohwaReportPage() {
                   </button>
                 </div>
 
-                {/* 7. 기존 공감 문구 (구매 버튼 아래로 이동) */}
+                {/* 6. 공감 문구 (핵심 카피 1: 왜 이별의 타이밍도, 상처받는 방식도 놀라울 만큼 닮아 있을까요?) */}
                 <div className="max-w-3xl mx-auto mb-14 text-center">
                   <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
-                    &ldquo;상대만 바뀌었을 뿐,<br className="hidden sm:inline" />
-                    당신의 연애는 왜 <span className="gradient-text-love">매번 같은 결말</span>을 맞을까?&rdquo;
+                    &ldquo;왜 이별의 타이밍도, 상처받는 방식도<br className="hidden sm:inline" />
+                    <span className="gradient-text-love">놀라울 만큼 닮아</span> 있을까요?&rdquo;
                   </p>
                   <div className="text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
                     <p>처음에는 다정했다. 이번만큼은 다를 거라 믿었다.</p>
                     <p>그런데 어느 순간부터 또 내가 기다리고, 내가 불안해하고, 내가 관계를 붙잡고 있다.</p>
                     <p className="pt-2 text-[#E6BFA9] font-medium leading-relaxed">
                       문제는 이번에 만난 상대 한 사람만이 아닐 수 있습니다.<br className="hidden sm:inline" />
-                      당신이 사랑을 선택하고 반응하는 방식에도 반복되는 패턴이 있을지 모릅니다.
+                      상대만 바뀌었을 뿐, 끝나는 이유와 상처의 궤적이 매번 익숙하다면...
                     </p>
                   </div>
                 </div>
 
-                {/* 8. 공감 문구 아래 추가 가로 이미지 (16:9, 교체 가능 구조) */}
+                {/* 7. 공감 문구 아래 16:9 가로 이미지 (love-pattern-window.webp) */}
                 <div className="relative w-full max-w-[1280px] mx-auto rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#130917]">
                   <Image 
                     src={EMPATHY_IMAGE_CONFIG.src} 
@@ -233,50 +233,85 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 02. 반복되는 연애 패턴 체크리스트 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 1단계 심화. 반복되는 연애 패턴 체크리스트 & 근본 원인 질문 카드 */}
             <LovePatternChecklist />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. 사람을 바꾸는 것만으로는 같은 연애가 끝나지 않는다 (차별화 섹션) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             <LoveCoreDifferentiation />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 03. 일반적인 연애 조언이 맞지 않았던 이유 */}
+            {/* STEP 02. 발견 — 사주를 들여다보니 지나온 연애가 다르게 보이기 시작했다 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <GeneralAdviceComparison />
+            <section className="mb-20 text-center">
+              <Reveal>
+                <div className="max-w-4xl mx-auto">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+                    STEP 02 · DISCOVERY
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+                    &ldquo;사주를 들여다보니,<br className="sm:hidden" />
+                    <span className="gradient-text-love"> 지나온 사랑이 다르게</span> 보이기 시작했습니다.&rdquo;
+                  </h2>
+                  <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                    어긋난 관계의 원인은 내 부족함이나 상대의 변덕 때문만은 아니었습니다.<br className="hidden sm:inline" />
+                    내가 타고난 기질과 감정의 에너지 흐름을 알지 못했을 뿐입니다.
+                  </p>
+                </div>
+              </Reveal>
+            </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 04. 반복되는 사랑의 구조 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 3단계 도식 (핵심 카피 4: 끌림은 본능입니다. 그러나 사랑은 선택입니다.) */}
             <RelationshipPatternFlow />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 05. 선천코드 리포트의 분석 방식 (기존 Overview & 6대 카드 통합) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <PersonalAnalysisMethod />
+            {/* 같은 선천코드, 다른 사랑의 이야기 (CASE A vs CASE B) */}
+            <PersonalizedCaseComparison />
 
-            {/* 기존 Overview 섹션 (p2.webp 에셋 보존) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* STEP 03. 필요성 — 내 사랑의 설계도도 모르면서 왜 상대의 마음부터 읽는가? */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-12 text-center">
+              <Reveal>
+                <div className="max-w-4xl mx-auto">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+                    STEP 03 · THE REAL NEED
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+                    &ldquo;내 사랑의 설계도도 모르면서,<br className="sm:hidden" />
+                    <span className="gradient-text-love"> 왜 상대의 마음부터</span> 읽습니까?&rdquo;
+                  </h2>
+                  <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                    상대의 카톡 하나, 표정 하나에 밤새 불안해하면서도 정작 내가 어떤 사람에게 무너지고 어떤 사랑을 원하는지는 묻지 않았습니다.<br className="hidden sm:inline" />
+                    상대를 파악하기 전에, 먼저 내 안의 &lsquo;사랑 설계도&rsquo;를 손에 쥐어야 합니다.
+                  </p>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 패러다임 전환: 상대의 마음이 아니라 나의 선택을 묻다 */}
+            <QuestionShiftComparison theme="love" />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* STEP 04. 선천코드 소개 — 선천코드란 무엇이며, 왜 나를 이해하는 데 도움이 되는가? */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
                     <Image 
                       src="/image/lovereport/p2.webp" 
-                      alt="Overview" 
+                      alt="선천코드 소개" 
                       width={800}
                       height={600}
                       className="w-full h-auto object-cover" 
                     />
                   </div>
                   <div className="space-y-10">
+                    <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
+                      STEP 04 · WHAT IS SEONCHEON CODE
+                    </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      당신의 사랑은 <br /> <span className="gradient-text-love">우연이 아닙니다</span>
+                      선천코드: 타고난 사랑의 기질과 <br /> <span className="gradient-text-love">인연의 지도</span>
                     </h2>
                     <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      선천코드 연애 리포트는 단순한 연애운 풀이가 아니라, 당신이 어떤 사람에게 끌리고, 왜 비슷한 관계 패턴을 반복하는지, 그리고 어떤 방식으로 사랑을 회복하고 성장시킬 수 있는지를 섬세하게 해석하는 프리미엄 연애 리포트입니다.
+                      선천코드 연애 리포트는 단순한 연애운 풀이가 아니라, 당신이 어떤 사람에게 끌리고, 왜 비슷한 관계 패턴을 반복하는지, 그리고 어떤 방식으로 사랑을 회복하고 선택할 수 있는지를 섬세하게 해석하는 프리미엄 연애 리포트입니다.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {["타고난 연애 기질", "무의식적 끌림 패턴", "관계 유지 전략", "매력 에너지 활용법"].map((item, idx) => (
@@ -291,16 +326,32 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* 기존 6대 분석 내용 카드 및 이미지 (p4.webp 에셋 보존) */}
+            {/* 선천코드 3대 분석 방식 (명리 뼈대 + 현실 관계 기록 교차 분석) */}
+            <PersonalAnalysisMethod />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* STEP 05. 매력 발견 — 나의 3대 매력 무기, 숨겨진 강점, 그림자, 잘 맞는 유형과 피해야 할 유형 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40 text-center">
               <Reveal>
-                <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
-                  리포트 <span className="gradient-text-love">주요 분석</span> 내용
-                </h2>
+                <div className="max-w-4xl mx-auto mb-16">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+                    STEP 05 · ATTRACTION & WEAPONS
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+                    &ldquo;당신에게는 아직 꺼내지 않은<br className="sm:hidden" />
+                    <span className="gradient-text-love"> 치명적인 매력의 무기</span>가 있습니다.&rdquo;
+                  </h2>
+                  <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                    남들의 기준에 나를 억지로 맞추지 않아도 됩니다.<br className="hidden sm:inline" />
+                    내가 가진 고유한 매력의 결을 알고 드러낼 때, 비로소 나에게 꼭 맞는 인연이 알아봅니다.
+                  </p>
+                </div>
+
                 <div className="max-w-7xl mx-auto mb-20">
                   <Image 
                     src="/image/lovereport/p4.webp" 
-                    alt="Analysis Detail" 
+                    alt="매력 분석 상세" 
                     width={1200}
                     height={800}
                     className="w-full h-auto rounded-[50px] shadow-2xl border border-white/10" 
@@ -309,12 +360,12 @@ export default function BaekdohwaReportPage() {
                 <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                      { t: "선천적 연애 기질", d: "당신이 타고난 사랑의 에너지 분석", i: "fa-heart" },
-                      { t: "무의식적 끌림", d: "반복적으로 끌리는 이성 유형 해독", i: "fa-bolt" },
-                      { t: "관계 방어기제", d: "연애를 방해하는 무의식적 장벽 탐색", i: "fa-shield-halved" },
-                      { t: "최적의 파트너", d: "에너지를 보충해줄 파트너 유형 제안", i: "fa-user-group" },
-                      { t: "매력 에너지", d: "가장 나다운 모습으로 사랑받는 법", i: "fa-wand-magic-sparkles" },
-                      { t: "이별 솔루션", d: "갈등의 고리를 끊어낼 실질적 변화", i: "fa-key" }
+                      { t: "나의 3대 매력 무기", d: "가장 나다운 모습으로 온전히 존중받는 법", i: "fa-wand-magic-sparkles" },
+                      { t: "무의식적 끌림 패턴", d: "반복적으로 빠져드는 위험한 매혹과 끌림의 원인", i: "fa-bolt" },
+                      { t: "숨겨진 그림자와 방어기제", d: "불안할 때 스스로 관계를 닫는 무의식 장벽", i: "fa-shield-halved" },
+                      { t: "잘 맞는 파트너 vs 피할 유형", d: "나를 채워주는 인연과 소모시키는 인연의 분별", i: "fa-user-group" },
+                      { t: "타고난 사랑의 본질", d: "동양 명리학으로 읽는 고유한 감정 에너지", i: "fa-heart" },
+                      { t: "관계 전환 솔루션", d: "상처의 고리를 끊어낼 실질적인 변화의 시작", i: "fa-key" }
                     ].map((item, idx) => (
                       <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group">
                         <div className="w-16 h-16 rounded-2xl bg-[#2D0A1E] flex items-center justify-center border border-[#B7788D]/35 text-[#D9A8A7] shadow-lg group-hover:scale-110 transition-transform">
@@ -331,68 +382,64 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 06. 같은 선천코드, 다른 사랑의 이야기 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <PersonalizedCaseComparison />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 07. 기존 사주·AI 리포트와의 차별점 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <ReportComparisonTable />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. 당신은 아직도 미래가 어떻게 될지만 묻고 있습니까? (패러다임 전환) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <QuestionShiftComparison theme="love" />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 08. 목차 공개 — 가장 중요한 핵심 영역 (7 PART & PART 07 강조) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 7개의 장 목차 공개 */}
             <LoveReportTableOfContents />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. PART 07 실제 행동 처방전 샘플 영역 (구체적 실천 솔루션) */}
+            {/* STEP 06. 차별화와 실전 처방 — 1:1 맞춤 분석, 구체적인 실천 처방 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 일반 연애 조언과의 차이점 (핵심 카피 6: 연애 조언은 넘쳐납니다. 당신만의 처방전은 없었습니다.) */}
+            <GeneralAdviceComparison />
+
+            {/* 기존 사주·AI 리포트와의 3대 비교표 */}
+            <ReportComparisonTable />
+
+            {/* PART 07 실제 행동 처방전 샘플 영역 */}
             <LovePrescriptionSample />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 09. 맞춤 리포트 제작 과정 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 맞춤 리포트 제작 과정 (STEP 01~04) */}
             <ReportProductionTimeline />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 10. 리포트 샘플 미리보기 (확대 라이트박스 지원) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 리포트 샘플 미리보기 (확대 라이트박스 지원) */}
             <ReportSamplePreview />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 11. 리포트를 읽은 뒤 달라질 수 있는 선택 */}
+            {/* STEP 07. 각성 — 사랑받기 위해 애쓰는 연애에서 벗어나 나의 매력과 기준을 알고 사랑을 선택한다 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-20 text-center">
+              <Reveal>
+                <div className="max-w-4xl mx-auto">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+                    STEP 07 · AWAKENING
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+                    &ldquo;당신은 사랑받기 위해<br className="sm:hidden" />
+                    <span className="gradient-text-love"> 더 애써야 하는 사람</span>이 아닙니다.&rdquo;
+                  </h2>
+                  <p className="text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                    이제는 당신에게 이미 있는 매력을 알고,<br className="hidden sm:inline" />
+                    누구에게 어떻게 마음을 내어줄지 당당하게 선택할 차례입니다.
+                  </p>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* 리포트를 읽은 뒤 달라질 수 있는 선택 (BEFORE -> AWARENESS -> AFTER) */}
             <RelationshipChangeScenario />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 12. 추천 대상과 맞지 않는 대상 (p3.webp & 추천 카드 보존) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 추천 대상과 맞지 않는 대상 */}
             <RecommendedAudience />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 13. 고객 후기 (검증된 후기 등록 시 활성화) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 고객 후기 (검증된 후기 등록 시 활성화) */}
             <ReportTestimonials />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 14. 백도화의 분석 철학 (궁중 서신 편지 형태) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 백도화의 분석 철학 (궁중 서신 편지 형태) */}
             <BaekdohwaPhilosophy />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 15. 소장 가치와 오행 에너지 카드 (p5.webp 및 ReportCommonInfo 보존) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* 15-1. 소장 가치 6대 요소 요약 */}
+            {/* 소장 가치 6대 요소 요약 */}
             <ReportValueSummary />
 
-            {/* 15-2. 기존 프리미엄 섹션 (p5.webp 에셋 보존) */}
+            {/* 소장하고 싶은 프리미엄 리포트 (p5.webp) */}
             <section className="mb-40">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -419,24 +466,18 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* 15-3. 기존 오행 에너지 카드 5종 및 제작/수령 안내 (ReportCommonInfo 보존) */}
+            {/* 오행 에너지 카드 5종 및 제작/수령 안내 */}
             <section className="mb-40">
               <ReportCommonInfo isCompatibility={false} />
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 16. 자주 묻는 질문 FAQ (10개 항목 아코디언) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 자주 묻는 질문 FAQ (10개 항목 아코디언) */}
             <ReportFAQ />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 17. 구매 전 안내 (6대 중요 안내 사항) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 구매 전 안내 (6대 중요 안내 사항) */}
             <PurchaseNotice />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 18. 최종 구매 CTA (p6.webp 및 기존 구매 버튼 보존) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 최종 구매 CTA (핵심 카피 7 반영) */}
             <section className="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group w-full max-w-[1280px] mx-auto border border-white/10 shadow-2xl">
               <div className="absolute inset-0 z-0">
                 <Image 
@@ -459,8 +500,8 @@ export default function BaekdohwaReportPage() {
                   </h2>
                   
                   <p className="text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
-                    사랑의 답을 바깥에서만 찾지 마십시오.<br />
-                    나의 관계 구조를 이해하는 것에서 새로운 선택이 시작됩니다.
+                    당신은 사랑받기 위해 더 애써야 하는 사람이 아닙니다.<br />
+                    이제는 당신에게 이미 있는 매력을 알고, 누구에게 어떻게 마음을 내어줄지 선택할 차례입니다.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto relative z-10 justify-center">

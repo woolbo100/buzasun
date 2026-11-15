@@ -21,10 +21,10 @@ export const checklistData = {
   disclaimer: "※ 본 체크리스트는 진단 도구가 아니며, 관계 속 자기 인식을 돕기 위한 공감 콘텐츠입니다."
 }
 
-// 2. 일반 조언과의 차이점 공감 카드 (SECTION 03)
+// 2. 일반 조언과의 차이점 공감 카드 (SECTION 03 / STEP 06)
 export const generalAdviceData = {
-  mainCopy: "정답이 틀린 것이 아니라,\n주소가 달랐습니다.",
-  subCopy: "수많은 연애 팁과 이론이 왜 나에게는 적용되지 않았을까요?",
+  mainCopy: "연애 조언은 넘쳐납니다.\n당신만의 처방전은 없었습니다.",
+  subCopy: "세상의 평균적인 팁과 남의 성공 공식이 왜 나에게는 상처로만 돌아왔을까요?",
   cards: [
     {
       num: "CARD 01",
@@ -47,10 +47,10 @@ export const generalAdviceData = {
   ]
 }
 
-// 3. 반복되는 사랑의 구조 도식 (SECTION 04)
+// 3. 반복되는 사랑의 구조 도식 (SECTION 04 / STEP 02)
 export const patternFlowData = {
-  mainCopy: "반복은 운명이 아니라,\n같은 설계가 같은 방식으로 쓰인 결과입니다.",
-  subCopy: "사랑이 어긋나는 과정에는 명확한 연결 고리가 존재합니다.",
+  mainCopy: "끌림은 본능입니다.\n그러나 사랑은 선택입니다.",
+  subCopy: "반복은 운명이 아니라, 타고난 설계가 무의식중에 같은 방식으로 쓰인 결과입니다.",
   quote: "명(命)은 바꾸는 것이 아니라 쓰는 것입니다.\n쓰는 법은 사람마다 다릅니다.",
   steps: [
     {
