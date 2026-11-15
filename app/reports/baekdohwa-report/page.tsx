@@ -63,10 +63,10 @@ const DISCOVERY_STORY_IMAGE_CONFIG = {
 }
 
 const AWAKENING_STORY_IMAGE_CONFIG = {
-  src: '/image/love-secret/love-secret-mirror.webp', // 거울을 바라보는 여성 이미지
-  alt: '왜 나는 사랑할수록 나 자신을 잃어버릴까 - 사랑의 불안과 관계 심리',
-  width: 800,
-  height: 1000,
+  src: '/image/lovereport/lost%20in%20love.webp', // 새로운 lost in love 3:4 세로 이미지
+  alt: '왜 나는 사랑할수록 나 자신을 잃어버릴까 - lost in love',
+  width: 1086,
+  height: 1448,
 }
 
 export default function BaekdohwaReportPage() {
@@ -370,42 +370,17 @@ export default function BaekdohwaReportPage() {
                     </div>
                   </div>
 
-                  {/* 우측 45%: 연애비급 거울 이미지 (4:5 비율로 첫 번째 영역과 통일) */}
+                  {/* 우측 45%: 새 이미지 (lost in love.webp, 원본 3:4 세로 비율 유지) */}
                   <div className="lg:col-span-5 w-full flex flex-col items-center order-1 lg:order-2">
-                    <div className="group relative w-full aspect-[4/5] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-black/40 flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/40">
+                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/40">
                       <Image
                         src={AWAKENING_STORY_IMAGE_CONFIG.src}
                         alt={AWAKENING_STORY_IMAGE_CONFIG.alt}
                         width={AWAKENING_STORY_IMAGE_CONFIG.width}
                         height={AWAKENING_STORY_IMAGE_CONFIG.height}
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        className="w-full h-full object-contain object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                        priority
                       />
-
-                      {/* 상/하단 은은한 그라데이션 오버레이 (중앙 인물 영역 투명도 유지) */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/75 pointer-events-none" />
-
-                      {/* 이미지 위 오버레이 텍스트 */}
-                      <div className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-between pointer-events-none z-10">
-                        {/* 상단: 작은 배지 & 큰 제목 */}
-                        <div className="text-center space-y-2">
-                          <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] bg-[#87465B]/90 border border-[#D5AFAD]/60 text-[#FFF1E9] text-xs font-bold tracking-wider whitespace-nowrap shadow-md backdrop-blur-sm">
-                            사랑의 불안과 관계 심리
-                          </span>
-                          <h4 className="text-[18px] sm:text-[20px] font-elegant font-bold text-[#FAF7F2] drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] tracking-wide">
-                            사랑할수록 작아지는 나
-                          </h4>
-                        </div>
-
-                        {/* 하단: 감성 문구 & 강조 문구 */}
-                        <div className="p-3.5 sm:p-4 rounded-xl bg-black/60 border border-[#B49A70]/30 text-center space-y-1 backdrop-blur-sm shadow-lg">
-                          <p className="text-xs sm:text-[13px] text-[#D5AFAD] font-medium drop-shadow-sm">
-                            &ldquo;그에게 더 사랑받고 싶었을 뿐인데&hellip;&rdquo;
-                          </p>
-                          <p className="text-xs sm:text-sm text-[#FAF7F2] font-semibold drop-shadow-sm break-keep">
-                            사랑받으려 애쓸수록, 나의 중심은 흔들립니다.
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

@@ -30,9 +30,14 @@ export default function LoveCoreDifferentiation() {
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             ROOT CAUSE ANALYSIS
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-            &ldquo;사람을 바꾸는 것만으로는,<br className="sm:hidden" />
-            <span className="gradient-text-love"> 같은 연애가 끝나지 않는다.</span>&rdquo;
+          <h2 className="font-elegant font-bold text-center mb-6 leading-[1.35] md:leading-[1.4] break-keep text-[22px] sm:text-2xl md:text-[36px]">
+            <span className="text-[#FAF7F2]">
+              &ldquo;사람을 바꾸는 것만으로는,
+            </span>
+            <br />
+            <span className="gradient-text-love">
+              같은 연애가 끝나지 않는다.&rdquo;
+            </span>
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             새로운 사람을 만나도 몇 달 뒤 똑같은 외로움과 불안을 겪고 있다면,<br className="hidden sm:inline" />
