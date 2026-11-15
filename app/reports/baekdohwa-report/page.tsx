@@ -358,74 +358,58 @@ export default function BaekdohwaReportPage() {
                       </h2>
                     </div>
 
-                    {/* 발견의 서사 */}
-                    <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
+                    {/* [1단계: 공감과 깨달음 (짧은 서사)] */}
+                    <div className="space-y-3 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
                       <p>
-                        그때는 우연인 줄 알았습니다.
-                      </p>
-                      <p>
-                        왜 비슷한 결의 사람에게 마음을 빼앗겼는지,<br className="hidden sm:inline" />
-                        왜 이별의 순간과 상처받는 방식이 놀라울 만큼 닮아 있었는지.
-                      </p>
-                      <p>
-                        사주를 깊이 들여다보면 지나온 선택과 관계를 새로운 관점으로 이해하게 되는 순간이 있습니다.
+                        그땐 단순히 우연이거나 내 부족함 탓이라 생각했습니다.
                       </p>
                       <p className="text-[#FAF7F2] font-medium">
-                        서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 패턴으로 읽히기 시작하는 순간입니다.
+                        하지만 서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 일정한 패턴으로 읽히는 순간, 누구나 깊은 소름과 마주하게 됩니다.
                       </p>
+                    </div>
 
-                      {/* 추가된 소름 돋는 순간과 반복의 알고리즘 서사 */}
-                      <div className="pt-3 space-y-4">
-                        <p className="text-[#F3C4D1] font-medium text-[16px] md:text-[17px]">
-                          &ldquo;사주를 조금이라도 깊이 들여다본 분들이라면, 누구나 한 번쯤 이런 소름 돋는 순간을 마주합니다.&rdquo;
-                        </p>
+                    {/* [2단계: 강조 박스 (유저의 속마음 직격)] */}
+                    <div className="p-5 md:p-6 rounded-2xl bg-black/25 border border-[#D9A8A7]/30 backdrop-blur-sm space-y-2.5">
+                      <p className="text-[#EDE6DA] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
+                        &ldquo;어째서 늘 비슷한 결의 사람에게만 마음을 빼앗겼을까?&rdquo;
+                      </p>
+                      <p className="text-[#EDE6DA] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
+                        &ldquo;왜 이별의 타이밍과 상처의 모양결은 늘 소름 돋을 만큼 닮아 있었을까?&rdquo;
+                      </p>
+                    </div>
 
-                        <div className="p-4 md:p-5 rounded-2xl bg-black/25 border border-[#D9A8A7]/25 backdrop-blur-sm space-y-2">
-                          <p className="text-[#EDE6DA] font-light text-[15px] md:text-[16px]">
-                            &lsquo;어째서 늘 비슷한 결의 사람에게만 마음을 빼앗겼을까&rsquo;
-                          </p>
-                          <p className="text-[#EDE6DA] font-light text-[15px] md:text-[16px]">
-                            &lsquo;왜 이별의 타이밍과 아픔의 모양결은 늘 신기할 정도로 닮아 있었을까&rsquo;
-                          </p>
-                        </div>
-
-                        <div className="space-y-1.5 pt-1">
-                          <p className="text-white font-medium">
-                            이것은 우연도, 단순한 불운도 아닙니다.
-                          </p>
-                          <p className="font-elegant font-medium text-[17px] md:text-[18px] text-[#FAF7F2] leading-relaxed">
-                            당신의 사주와 선천코드 속에 이미 촘촘하게 새겨져 있던 <span className="text-[#D9A8A7] font-semibold">반복의 알고리즘</span>이었습니다.
-                          </p>
-                        </div>
-                      </div>
+                    {/* [3단계: 팩트 폭행 및 본질 정의] */}
+                    <div className="space-y-2 text-[17px] md:text-[18px] break-keep">
+                      <p className="text-white font-medium">
+                        이것은 단순한 불운도, 우연도 아닙니다.
+                      </p>
+                      <p className="font-elegant font-medium text-[18px] md:text-[19px] text-[#FAF7F2] leading-relaxed">
+                        당신의 사주와 선천코드 속에 이미 촘촘하게 새겨져 있던 <span className="text-[#D9A8A7] font-semibold">반복의 알고리즘</span>이었습니다.
+                      </p>
                     </div>
 
                     {/* 구분선 */}
                     <div className="pt-2 border-t border-[#B49A70]/25" />
 
-                    {/* 선천코드의 필요성과 핵심 처방 */}
+                    {/* [4단계: 솔루션 제안 및 마무리 훅] */}
                     <div className="space-y-4 text-[17px] md:text-[18px] leading-[1.8] break-keep">
                       <p className="text-[#FAF7F2] font-semibold">
-                        당신에게 필요한 것은 또 하나의 가벼운 연애운 풀이가 아닙니다.
+                        가볍고 뜬구름 잡는 연애운 풀이는 더 이상 의미가 없습니다.
                       </p>
 
                       <div className="border-l-2 border-[#D9A8A7] pl-4 py-1.5 my-2 bg-white/[0.02] rounded-r-lg">
                         <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.7]">
-                          &ldquo;내가 누구에게 끌리고, 어떤 순간에 무너지며,<br className="hidden sm:inline" />
-                          <span className="text-[#D9A8A7]"> 왜 같은 선택을 반복하는지 읽어내는 일.</span>&rdquo;
+                          내가 누구에게 무너지며,<br className="hidden sm:inline" />
+                          <span className="text-[#D9A8A7]"> 왜 같은 선택을 반복하는지 그 근본을 해부하는 일.</span>
                         </p>
                       </div>
 
-                      <p className="text-[#EDE6DA] opacity-85 font-light">
-                        백도화 선천코드 연애 리포트는 타고난 기질을 바탕으로 나의 관계 성향과 반복되는 선택을 살펴보고, 앞으로의 사랑에서 지켜야 할 기준과 실천 방향을 제안합니다.
-                      </p>
-                    </div>
-
-                    {/* 마지막 핵심 강조 문구 */}
-                    <div className="pt-4 border-t border-[#B49A70]/20">
-                      <p className="font-elegant font-medium text-[18px] md:text-[19px] text-[#FAF7F2] leading-[1.75] break-keep">
-                        &ldquo;<span className="text-[#D9A8A7] font-semibold">다음 연애까지 똑같은 상처를 반복할 필요는 없습니다.</span>&rdquo;
-                      </p>
+                      {/* 마무리 훅 */}
+                      <div className="pt-3 border-t border-[#B49A70]/20">
+                        <p className="font-elegant font-bold text-[19px] md:text-[21px] text-[#FAF7F2] leading-[1.75] break-keep">
+                          &ldquo;<span className="text-[#D9A8A7] font-semibold">다음 연애까지 똑같은 상처를 반복할 필요는 없습니다.</span>&rdquo;
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
