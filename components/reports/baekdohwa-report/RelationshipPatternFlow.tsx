@@ -8,16 +8,49 @@ export default function RelationshipPatternFlow() {
   return (
     <section className="mb-40">
       <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             RELATIONSHIP STRUCTURE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {patternFlowData.mainCopy}
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light break-keep leading-relaxed">
             {patternFlowData.subCopy}
           </p>
+
+          {/* 추가된 끌림과 설계도 서사 블록 */}
+          <div className="pt-4 space-y-5 max-w-3xl mx-auto">
+            <p className="text-sm md:text-base text-[#D9A8A7] font-medium tracking-wide">
+              감정적 끌림에만 의존하던 연애가 왜 자꾸 상처로 끝났는지, 그 근본적인 원인을 짚어줍니다.
+            </p>
+
+            <div className="space-y-3 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
+              <p>
+                그동안 우리는 사랑이라는 이름 아래, 무방비로 감정적 &lsquo;끌림&rsquo;에 몸을 맡겨왔습니다.
+              </p>
+              <p>
+                내 안의 진짜 무기가 무엇인지도 모른 채, 상대의 비위를 맞추고 관계의 을(乙)이 되기를 자처했지요.
+              </p>
+            </div>
+
+            {/* 하지만 기억하십시오 & 핵심 경각심 강조 박스 */}
+            <div 
+              className="p-6 md:p-8 rounded-2xl border text-center space-y-3 backdrop-blur-sm"
+              style={{
+                background: 'rgba(125, 76, 100, 0.20)',
+                borderColor: 'rgba(215, 170, 185, 0.20)',
+              }}
+            >
+              <span className="inline-block text-xs md:text-sm font-bold tracking-widest text-[#F3C4D1] uppercase">
+                하지만 기억하십시오
+              </span>
+              <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
+                &ldquo;끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.<br className="hidden sm:inline" />
+                <span className="text-[#D9A8A7] font-semibold"> 내 설계도를 모른 채 달리는 연애는, 언제나 같은 벽에 부딪히게 되어있습니다.</span>&rdquo;
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* 3단계 도식 컨테이너 */}

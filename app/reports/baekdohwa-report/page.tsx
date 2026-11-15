@@ -487,7 +487,7 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40 text-center">
               <Reveal>
-                <div className="max-w-4xl mx-auto mb-16">
+                <div className="max-w-4xl mx-auto mb-16 space-y-6">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
                     STEP 05 · ATTRACTION & WEAPONS
                   </span>
@@ -495,10 +495,43 @@ export default function BaekdohwaReportPage() {
                     &ldquo;당신에게는 아직 꺼내지 않은<br className="sm:hidden" />
                     <span className="gradient-text-love"> 치명적인 매력의 무기</span>가 있습니다.&rdquo;
                   </h2>
-                  <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                  <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
                     남들의 기준에 나를 억지로 맞추지 않아도 됩니다.<br className="hidden sm:inline" />
                     내가 가진 고유한 매력의 결을 알고 드러낼 때, 비로소 나에게 꼭 맞는 인연이 알아봅니다.
                   </p>
+
+                  {/* 추가된 무기와 연애 판도 전환 서사 블록 */}
+                  <div className="pt-4 space-y-5 max-w-3xl mx-auto text-center">
+                    <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-relaxed break-keep">
+                      자신의 사주를 읽고, 선천코드 속 <span className="text-[#F3C4D1] font-semibold">&lsquo;치명적인 무기&rsquo;</span>를 정확히 꿰뚫은 여자는 연애의 판도가 완전히 달라집니다.
+                    </p>
+
+                    <div className="space-y-3 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
+                      <p className="text-white font-medium">
+                        남자의 마음을 얻기 위해 애쓰지 않습니다.
+                      </p>
+                      <p>
+                        내 코드가 정렬되는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#D9A8A7] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
+                      </p>
+                    </div>
+
+                    {/* 전환 강조 박스 */}
+                    <div 
+                      className="p-6 md:p-8 rounded-2xl border text-center space-y-2 backdrop-blur-sm"
+                      style={{
+                        background: 'rgba(125, 76, 100, 0.20)',
+                        borderColor: 'rgba(215, 170, 185, 0.20)',
+                      }}
+                    >
+                      <p className="text-sm md:text-base text-[#F3C4D1] font-bold tracking-wide">
+                        이제 감정에 휘둘리며 닳아버리는 연애는 끝내세요.
+                      </p>
+                      <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
+                        당신의 연애 판도를 완전히 뒤바꿀 단 하나의 설계도,<br className="hidden sm:inline" />
+                        <span className="text-[#D9A8A7] font-semibold">백도화 《연애비급》 선천코드 리포트가 당신의 진짜 매력을 깨워드립니다.</span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="max-w-7xl mx-auto mb-20">
