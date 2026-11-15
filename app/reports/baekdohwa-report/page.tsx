@@ -7,6 +7,7 @@ import Reveal from '@/components/Reveal'
 import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import Image from 'next/image'
+import { ChevronRight } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import ReportCommonInfo from '@/components/ReportCommonInfo'
 import { useRouter } from 'next/navigation'
@@ -199,7 +200,7 @@ export default function BaekdohwaReportPage() {
                 </div>
 
                 {/* 3-1. 메인 히어로 하단 질문 카피 (제목 크기 및 줄간격 적용) */}
-                <div className="max-w-4xl mx-auto mb-10 text-center px-4 space-y-4">
+                <div className="max-w-4xl mx-auto mb-12 text-center px-4 space-y-4">
                   <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] md:leading-[1.35] break-keep">
                     &ldquo;혹시 내가 만나는 사람이 <span className="gradient-text-love">우연이라고 믿고 있나요?</span>&rdquo;
                   </h2>
@@ -209,38 +210,98 @@ export default function BaekdohwaReportPage() {
                   </p>
                 </div>
 
-                {/* 4. 메인 이미지 하단 감성 문구 */}
-                <p className="text-[18px] text-[#D9A8A7] font-medium tracking-wide mb-2">
-                  선천코드로 읽는 나의 사랑 설계도
-                </p>
-                <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
-                  나를 아는 것에서부터, 당신의 진짜 연애는 시작됩니다.
-                </p>
+                {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (재회비방 패키지 카드 구조) */}
+                <div className="max-w-[1280px] mx-auto mb-24 md:mb-28 text-left">
+                  <div 
+                    className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#D5AFAD]/35 overflow-hidden shadow-2xl"
+                    style={{
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
+                      boxShadow: '0 0 60px rgba(183, 120, 141, 0.22)'
+                    }}
+                  >
+                    {/* 은은한 배경 오라 */}
+                    <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#B7788D]/15 rounded-full blur-[90px] pointer-events-none" />
 
-                {/* 5-1. 가격 및 혜택 표시 */}
-                <div className="mb-6 flex flex-col items-center">
-                  <div className="text-3xl md:text-4xl font-bold font-elegant text-white tracking-tight mb-2">
-                    39,000원
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 설명 + 가격 + 버튼 */}
+                      <div className="lg:col-span-7 space-y-5 md:space-y-6">
+                        {/* 상단 라벨 */}
+                        <div>
+                          <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#87465B]/60 border border-[#D5AFAD]/60 text-[#FFF1E9] text-xs font-bold tracking-wider whitespace-nowrap">
+                            선천코드 연애 리포트
+                          </span>
+                        </div>
+
+                        {/* 메인 카피 (2~3줄의 강한 카피) */}
+                        <h3 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-white leading-[1.35] md:leading-[1.4] break-keep">
+                          비슷한 사랑이 반복되는 이유,<br />
+                          <span className="gradient-text-love">당신의 선천코드 안에 이미 적혀 있습니다.</span>
+                        </h3>
+
+                        {/* 설명 문구 */}
+                        <p className="text-[16px] md:text-[17px] text-[#EDE6DA]/85 leading-[1.8] font-light break-keep max-w-xl">
+                          당신의 연애 기질, 반복되는 끌림의 패턴, 잘 맞는 인연과 피해야 할 관계 흐름까지 선천코드 기반으로 정리한 1:1 맞춤 PDF 리포트입니다.
+                        </p>
+
+                        {/* 가격 영역 */}
+                        <div className="pt-2">
+                          <div className="flex flex-wrap items-baseline gap-3">
+                            <span className="text-3xl sm:text-4xl md:text-[42px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
+                              39,000원
+                            </span>
+                            <span className="text-xs sm:text-sm text-[#D9A8A7] font-medium tracking-wide">
+                              1:1 맞춤 PDF 리포트 · 오행 에너지 카드 1종 증정
+                            </span>
+                          </div>
+                          <p className="text-xs text-[#EDE6DA]/50 font-light mt-1.5">
+                            ※ 주문 접수 후 고객님의 사주 정보를 바탕으로 순차 제작되는 디지털 맞춤 리포트입니다.
+                          </p>
+                        </div>
+
+                        {/* 버튼 영역 */}
+                        <div className="flex flex-col sm:flex-row gap-3.5 pt-2 items-stretch sm:items-center">
+                          <button
+                            type="button"
+                            onClick={handleAddToCart}
+                            className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#B7788D]/45 text-[#E6BFA9] hover:bg-[#B7788D]/15 hover:border-[#B7788D]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                          >
+                            장바구니 담기
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handlePurchase}
+                            className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                            style={{
+                              background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
+                              border: '1px solid rgba(229, 196, 187, 0.5)',
+                            }}
+                          >
+                            <span>바로 신청하기</span>
+                            <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* 우측 (약 42%): 프리미엄 리포트 대표 목업 이미지 */}
+                      <div className="lg:col-span-5 w-full flex justify-center">
+                        <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/30 group">
+                          <Image
+                            src="/image/lovereport/p5.webp"
+                            alt="선천코드 연애 리포트 프리미엄 패키지"
+                            fill
+                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                            sizes="(max-width: 1024px) 100vw, 420px"
+                            priority
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                          <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] font-mono text-[#E6BFA9]/80 backdrop-blur-md bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
+                            <span>DIGITAL PDF + ENERGY CARD</span>
+                            <span>A4 28~30P</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-xs md:text-sm text-[#D9A8A7] font-medium tracking-wide">
-                    1:1 맞춤 PDF 리포트 · 오행 에너지 카드 1종 증정
-                  </p>
-                </div>
-
-                {/* 5-2. 구매 버튼 영역 */}
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center mb-24 md:mb-28">
-                  <button 
-                    onClick={handleAddToCart}
-                    className="w-full sm:w-1/2 py-5 px-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#B7788D]/40 text-[#E6BFA9] hover:bg-[#B7788D]/10 bg-transparent text-center"
-                  >
-                    장바구니 담기
-                  </button>
-                  <button 
-                    onClick={handlePurchase}
-                    className="w-full sm:w-1/2 py-5 px-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_25px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
-                  >
-                    바로 신청하기
-                  </button>
                 </div>
 
                 {/* 6. 공감 문구 (핵심 카피 1: 왜 이별의 타이밍도, 상처받는 방식도 놀라울 만큼 닮아 있을까요?) */}
