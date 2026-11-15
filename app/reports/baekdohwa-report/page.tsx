@@ -38,17 +38,17 @@ import PurchaseNotice from '@/components/reports/baekdohwa-report/PurchaseNotice
 // 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
 // ══════════════════════════════════════════════════════════════════════
 const HERO_IMAGE_CONFIG = {
-  src: '/image/lovereport/p1.webp',
+  src: '/image/lovereport/love-report-hero.webp',
   alt: '선천코드 연애 리포트 메인 히어로 16:9',
-  width: 1440,
-  height: 810,
+  width: 1672,
+  height: 941,
 }
 
 const EMPATHY_IMAGE_CONFIG = {
-  src: '/image/lovereport/p2.webp',
+  src: '/image/lovereport/love-pattern-window.webp',
   alt: '선천코드 연애 리포트 공감 가로 비주얼 16:9',
-  width: 1440,
-  height: 810,
+  width: 1672,
+  height: 941,
 }
 
 export default function BaekdohwaReportPage() {
