@@ -23,7 +23,7 @@ export default function PersonalizedCaseComparison() {
               타고난 선천코드가 같아도, 내가 어떤 인연을 만나고 어떤 상호작용을 하느냐에 따라 사랑의 결말은 완전히 달라집니다.
             </p>
             <p className="font-elegant font-medium text-[17px] md:text-[19px] text-[#FAF7F2] leading-relaxed break-keep pt-1">
-              &ldquo;<span className="text-[#D9A8A7] font-semibold">중요한 것은 내 안의 코드뿐만 아니라, 내 곁에 오는 상대와의 에너지가 어떻게 맞물리느냐를 아는 것입니다.</span>&rdquo;
+              &ldquo;<span className="text-[#E6BFA9] font-semibold">중요한 것은 내 안의 코드뿐만 아니라, 내 곁에 오는 상대와의 에너지가 어떻게 맞물리느냐를 아는 것입니다.</span>&rdquo;
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function PersonalizedCaseComparison() {
 
                   {/* 관계의 결과 (버건디/딥로즈 강조 카드) */}
                   <div className="p-4 md:p-5 rounded-2xl bg-[#5C1D2E]/40 border border-[#B7788D]/35 backdrop-blur-sm">
-                    <span className="text-xs font-bold text-[#F8B4C4] block mb-1.5">
+                    <span className="text-xs font-bold text-[#E6BFA9] block mb-1.5">
                       {c.resultTitle}
                     </span>
                     <p className="text-sm md:text-base text-[#FFF0F3]/95 font-light leading-relaxed break-keep">
@@ -84,7 +84,7 @@ export default function PersonalizedCaseComparison() {
 
               {/* 처방 방향 (하단 강조 박스) */}
               <div className="mt-8 pt-6 border-t border-[#B7788D]/30 p-4 md:p-5 rounded-2xl bg-[#B7788D]/15 border border-[#B7788D]/25 relative z-10 backdrop-blur-sm">
-                <span className="text-xs font-bold text-[#F3C4D1] block mb-1.5">
+                <span className="text-xs font-bold text-[#E6BFA9] block mb-1.5">
                   ✨ {c.solutionTitle}
                 </span>
                 <p className="text-sm md:text-base text-white font-medium leading-relaxed break-keep">

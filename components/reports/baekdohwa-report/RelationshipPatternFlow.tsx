@@ -39,12 +39,12 @@ export default function RelationshipPatternFlow() {
                 borderColor: 'rgba(215, 170, 185, 0.20)',
               }}
             >
-              <span className="inline-block text-xs md:text-sm font-bold tracking-widest text-[#F3C4D1] uppercase">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-widest text-[#E6BFA9] uppercase">
                 하지만 기억하십시오.
               </span>
               <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
                 &ldquo;끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.<br className="hidden sm:inline" />
-                <span className="text-[#D9A8A7] font-semibold"> 내 설계도를 모른 채 달리는 연애는, 언제나 같은 벽에 부딪히게 되어 있습니다.</span>&rdquo;
+                <span className="text-[#E6BFA9] font-semibold"> 내 설계도를 모른 채 달리는 연애는, 언제나 같은 벽에 부딪히게 되어 있습니다.</span>&rdquo;
               </p>
             </div>
 
@@ -54,7 +54,7 @@ export default function RelationshipPatternFlow() {
                 이제 감정에 휩쓸리는 당사자가 아니라, 내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.<br className="hidden sm:inline" />
                 반복의 고리를 과감하게 끊어내십시오.
               </p>
-              <p className="text-sm md:text-base text-[#D9A8A7] font-light break-keep">
+              <p className="text-sm md:text-base text-[#E6BFA9] font-light break-keep">
                 아래 3가지 핵심 축을 통해, 당신을 가두던 반복의 알고리즘을 투명하게 해부합니다.
               </p>
             </div>
