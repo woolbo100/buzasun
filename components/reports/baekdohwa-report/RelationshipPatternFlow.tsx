@@ -20,15 +20,13 @@ export default function RelationshipPatternFlow() {
             </h2>
           </div>
 
-          {/* 서사 본문 블록 (일정한 설명 문구 간격으로 자연스럽게 연결) */}
-          <div className="space-y-3.5 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep max-w-4xl mx-auto">
-            <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80">
-              {patternFlowData.subCopy}
+          {/* 서사 본문 블록 (2줄씩 문단으로 묶어 빈 줄 없이 정돈된 줄간격 유지) */}
+          <div className="space-y-4 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep max-w-4xl mx-auto">
+            <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 leading-relaxed">
+              {patternFlowData.subCopy}<br />
+              <span className="lg:whitespace-nowrap">그동안 우리는 뜨거운 감정의 한복판에 갇혀, 내가 왜 또 같은 상처를 향해 걸어가고 있는지조차 보지 못했습니다.</span>
             </p>
-            <p className="lg:whitespace-nowrap">
-              그동안 우리는 뜨거운 감정의 한복판에 갇혀, 내가 왜 또 같은 상처를 향해 걸어가고 있는지조차 보지 못했습니다.
-            </p>
-            <p className="text-[#FAF7F2] font-medium leading-relaxed pt-0.5">
+            <p className="text-[#FAF7F2] font-medium leading-relaxed">
               나를 제3자의 시선으로 바라볼 때 비로소 집착에서 깨어나듯,<br className="hidden sm:inline" />
               내 연애 역시 선천코드라는 객관적인 지도 위에서 내려다볼 때 비로소 무의식의 쳇바퀴를 멈출 수 있습니다.
             </p>
@@ -51,8 +49,8 @@ export default function RelationshipPatternFlow() {
         </div>
 
         {/* 하단 카드(01, 02, 03) 연결 브릿지 */}
-        <div className="pt-2 pb-2 text-center max-w-2xl mx-auto space-y-4 mb-16">
-          <p className="text-[#FAF7F2] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
+        <div className="pt-2 pb-2 text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <p className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#FAF7F2] leading-[1.6] break-keep">
             이제 감정에 휩쓸리는 당사자가 아니라,<br />
             내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.<br />
             반복의 고리를 과감하게 끊어내십시오.
