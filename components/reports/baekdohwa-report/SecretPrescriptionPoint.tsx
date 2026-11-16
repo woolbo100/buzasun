@@ -8,7 +8,7 @@ interface SecretPrescriptionPointProps {
 }
 
 export default function SecretPrescriptionPoint({
-  imageSrc = '/image/lovereport/discover%20your%20love%20code.webp'
+  imageSrc = '/image/lovereport/personal%20love%20code%20seal.webp'
 }: SecretPrescriptionPointProps) {
   return (
     <section id="point-04-secret" className="mb-32 md:mb-40 scroll-mt-28 md:scroll-mt-36">
@@ -75,10 +75,10 @@ export default function SecretPrescriptionPoint({
             <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
               <Image 
                 src={imageSrc} 
-                alt="POINT 04 시크릿 처방전 — 당신만을 위해 봉인된 단 하나의 선천코드 처방전" 
+                alt="POINT 04 개인 맞춤형 리포트 봉인 도장 — 당신만을 위해 봉인된 단 하나의 선천코드 처방전" 
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]" 
+                className="object-contain transition-transform duration-700 group-hover:scale-[1.01]" 
               />
             </div>
           </div>
