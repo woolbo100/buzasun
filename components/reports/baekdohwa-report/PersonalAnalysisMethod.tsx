@@ -44,25 +44,20 @@ export default function PersonalAnalysisMethod() {
             </p>
           </div>
 
-          {/* 상단 핵심 공식 엠블럼 (중앙 정렬 샴페인 골드 라인 뱃지 박스) */}
+          {/* 상단 3단계 프로세스 엠블럼 (중앙 정렬 포인트 핑크 라인 뱃지 박스) */}
           <div className="pt-3 md:pt-5 flex justify-center">
-            <div className="px-5 py-3 sm:px-6 sm:py-3.5 rounded-2xl sm:rounded-full border border-[#E2C499]/40 bg-gradient-to-r from-[#240F1E]/60 via-[#180816]/70 to-[#240F1E]/60 backdrop-blur-sm shadow-[0_4px_24px_rgba(0,0,0,0.3)] inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
-              <div className="flex items-center justify-center gap-1.5 sm:gap-2.5 text-[13px] sm:text-[14.5px] md:text-[15px] font-medium text-[#FAF7F2] tracking-wide break-keep">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E2C499] shrink-0 shadow-[0_0_8px_rgba(226,196,153,0.6)]"></span>
-                <span className="text-[#F5E6D3] font-semibold">동양 명리학</span>
-                <span className="text-[#E2C499]/60 text-xs">×</span>
-                <span className="text-[#F5E6D3] font-semibold">심리학</span>
-                <span className="text-[#E2C499]/60 text-xs">×</span>
-                <span className="text-[#F5E6D3] font-semibold">뇌과학</span>
-                <span className="text-[#E2C499]/80 font-mono font-bold text-sm hidden sm:inline">=</span>
-                <span className="text-[#E2C499] font-bold hidden sm:inline">입체적 연애 설계</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-xs sm:text-[12.5px] text-[#D9A8A7] tracking-wider">
-                <span className="sm:hidden text-[#E2C499] font-bold">= 입체적 연애 설계</span>
-                <span className="text-[11px] sm:text-xs text-[#EDE6DA]/60 font-light">
-                  (백도화 입체 분석 시스템)
-                </span>
-              </div>
+            <div className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-[#B7788D]/45 bg-gradient-to-r from-[#2D0A1E]/60 via-[#180816]/75 to-[#2D0A1E]/60 backdrop-blur-md shadow-[0_4px_25px_rgba(183,120,141,0.2)] inline-flex items-center justify-center gap-2 sm:gap-3.5 text-center flex-wrap">
+              <span className="text-[13px] sm:text-[14px] md:text-[15px] font-semibold text-[#FAF7F2] tracking-wide break-keep">
+                선천 기질 해독
+              </span>
+              <span className="text-[#D9A8A7] text-xs sm:text-sm font-bold select-none">➔</span>
+              <span className="text-[13px] sm:text-[14px] md:text-[15px] font-semibold text-[#FAF7F2] tracking-wide break-keep">
+                무의식 패턴 분석
+              </span>
+              <span className="text-[#D9A8A7] text-xs sm:text-sm font-bold select-none">➔</span>
+              <span className="text-[13px] sm:text-[14px] md:text-[15px] font-semibold text-[#D9A8A7] tracking-wide break-keep">
+                실전 행동 설계
+              </span>
             </div>
           </div>
         </div>
