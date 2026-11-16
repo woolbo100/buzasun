@@ -86,8 +86,10 @@ export default function QuestionShiftComparison({
         {/* 2단 비교 카드 (모바일 세로, 데스크톱 가로) */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-12">
           
-          {/* CARD 01 — 기존의 운세 중심 질문 */}
-          <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-white/10 bg-white/[0.02] flex flex-col justify-between relative overflow-hidden">
+          {/* CARD 01 — 기존의 운세 중심 질문 (연애 리포트: 어둡고 차분한 퍼플플럼 배경) */}
+          <div 
+            className={`gungjung-glass ${theme === 'love' ? 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35' : 'bg-white/[0.02]'} p-8 md:p-10 rounded-[32px] border border-white/10 flex flex-col justify-between relative overflow-hidden`}
+          >
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50">
@@ -122,8 +124,11 @@ export default function QuestionShiftComparison({
             </div>
           </div>
 
-          {/* CARD 02 — 백도화 선천코드의 질문 */}
-          <div className={`gungjung-glass point-box p-8 md:p-10 rounded-[32px] border ${themeConfig.cardBorder} ${themeConfig.shadowClass} flex flex-col justify-between relative overflow-hidden bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35`}>
+          {/* CARD 02 — 백도화 선천코드의 질문 (연애 리포트: 따뜻하고 부드러운 로즈플럼 배경) */}
+          <div 
+            className={`gungjung-glass ${theme === 'love' ? '' : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35'} p-8 md:p-10 rounded-[32px] border ${themeConfig.cardBorder} ${themeConfig.shadowClass} flex flex-col justify-between relative overflow-hidden`}
+            style={theme === 'love' ? { backgroundColor: 'rgba(166, 91, 128, 0.18)' } : undefined}
+          >
             {/* 배경 은은한 광채 */}
             <div className={`absolute -top-20 -right-20 w-60 h-60 ${themeConfig.glowBg} rounded-full blur-[80px] pointer-events-none`}></div>
 
