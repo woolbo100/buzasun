@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { Crown, Sparkles, ShieldCheck } from 'lucide-react'
 
@@ -87,6 +88,19 @@ export default function TransformationThreeChanges() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* 3개 변화 카드 바로 아래 16:9 가로형 이미지 */}
+        <div className="w-full max-w-7xl mx-auto mt-8 md:mt-10">
+          <div className="relative aspect-[16/9] w-full rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] group">
+            <Image 
+              src="/image/lovereport/love%20transformation.webp" 
+              alt="리포트를 열어보는 순간 당신의 연애에 생기는 3가지 변화" 
+              fill
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.01]" 
+            />
+          </div>
         </div>
       </Reveal>
     </section>
