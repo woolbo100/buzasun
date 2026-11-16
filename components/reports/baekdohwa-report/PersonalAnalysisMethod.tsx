@@ -42,7 +42,7 @@ export default function PersonalAnalysisMethod() {
             <span className="gradient-text-love"> 심리와 뇌과학</span>으로{' '}
             <span className="gradient-text-love">사랑의 습관</span>을 바꿉니다.&rdquo;
           </h2>
-          <div className="max-w-3xl mx-auto text-[16px] md:text-[17px] text-[#EDE6DA] opacity-85 leading-[1.8] break-keep font-light space-y-2 pt-1">
+          <div className="max-w-3xl mx-auto text-[17px] md:text-[18px] text-[#EDE6DA] opacity-90 leading-[1.8] break-keep font-light space-y-2 pt-1">
             <p>
               단순한 만세력 해석이나 자동 조합 운세와는 설계부터 다릅니다.
             </p>
@@ -70,7 +70,7 @@ export default function PersonalAnalysisMethod() {
                       {phase.title}
                     </h3>
                   </div>
-                  <p className="text-[14px] sm:text-[15px] md:text-[15.5px] text-[#EDE6DA]/80 font-light leading-relaxed break-keep pl-7 sm:pl-7.5">
+                  <p className="text-[15px] sm:text-[16px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep pl-7 sm:pl-7.5">
                     {phase.desc}
                   </p>
                 </div>
