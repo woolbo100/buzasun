@@ -4,9 +4,10 @@ import Reveal from './Reveal'
 
 interface ReportCommonInfoProps {
   isCompatibility?: boolean
+  showFiveElements?: boolean
 }
 
-export default function ReportCommonInfo({ isCompatibility = false }: ReportCommonInfoProps) {
+export default function ReportCommonInfo({ isCompatibility = false, showFiveElements = true }: ReportCommonInfoProps) {
   // 오행 카드 정보 정의
   const fiveElements = [
     {
@@ -62,93 +63,95 @@ export default function ReportCommonInfo({ isCompatibility = false }: ReportComm
   ]
 
   return (
-    <div className="space-y-40">
+    <div className={showFiveElements ? 'space-y-40' : ''}>
       
       {/* 1. 오행 에너지 카드 제공 안내 섹션 */}
-      <section className="relative">
-        {/* 은은한 배경 자개 오로라 효과 */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gradient-to-r from-purple-900/10 via-pink-900/5 to-blue-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
-        
-        <Reveal>
-          <div className="text-center mb-16 space-y-4">
-            <span className="inline-block px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase">
-              Digital Ritual Gift
-            </span>
-            <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-wide">
-              당신의 흐름에 맞춘 <span className="text-[var(--accent-gold)]">오행 에너지 카드</span> 제공
-            </h2>
-            <p className="text-sm md:text-base text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep">
-              ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
-            </p>
-          </div>
-        </Reveal>
-
-        {/* 오행 소개 본문 문구 */}
-        <Reveal>
-          <div className="gungjung-glass p-8 md:p-12 max-w-4xl mx-auto mb-16 text-center border-white/[0.04] relative overflow-hidden">
-            {/* 자개 무늬 느낌의 오버레이 광채 */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-pink-500/3 to-transparent pointer-events-none"></div>
-            
-            <p className="text-lg md:text-xl text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
-              <span className="block text-white font-medium">
-                백도화 선천코드 리포트 구매 시, 고객님의 선천적 흐름에 어울리는 오행 에너지 카드 1종이 함께 제공됩니다.
+      {showFiveElements && (
+        <section className="relative">
+          {/* 은은한 배경 자개 오로라 효과 */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gradient-to-r from-purple-900/10 via-pink-900/5 to-blue-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+          
+          <Reveal>
+            <div className="text-center mb-16 space-y-4">
+              <span className="inline-block px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase">
+                Digital Ritual Gift
               </span>
-              <span className="block text-base opacity-75">
-                오행 에너지 카드는 목·화·토·금·수의 상징을 한국적 자개 무드로 표현한 디지털 리추얼 이미지입니다. <br className="hidden md:inline" />
-                부족하거나 보완이 필요한 기운을 시각적으로 바라보고, 마음의 균형을 정리하는 감성 카드로 활용하실 수 있습니다.
-              </span>
-              <span className="block text-sm text-[var(--accent-gold-light)] opacity-90 border-t border-white/5 pt-6 mt-6">
-                ✨ 휴대폰 배경화면, 잠금화면, 개인 노트 표지, 감정 정리 리추얼 이미지 등으로 자유롭게 사용하실 수 있습니다.
-              </span>
-            </p>
-          </div>
-        </Reveal>
+              <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-wide">
+                당신의 흐름에 맞춘 <span className="text-[var(--accent-gold)]">오행 에너지 카드</span> 제공
+              </h2>
+              <p className="text-sm md:text-base text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep">
+                ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
+              </p>
+            </div>
+          </Reveal>
 
-        {/* 5종 카드 그리드 배치 */}
-        <Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
-            {fiveElements.map((item, idx) => (
-              <div
-                key={idx}
-                className={`gungjung-glass point-box p-8 border ${item.borderClass} bg-gradient-to-b ${item.gradientClass} relative overflow-hidden group flex flex-col items-center justify-between text-center transition-all duration-500 hover:-translate-y-2`}
-              >
-                {/* 카드 내 펄 광채 효과 백그라운드 */}
-                <div className={`absolute -inset-10 ${item.bgGlow} blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
-                
-                {/* 얇은 프레임 라인 (자개 카드 느낌) */}
-                <div className="absolute inset-2 border border-white/[0.03] group-hover:border-[var(--accent-gold)]/20 rounded-xl pointer-events-none transition-colors duration-500"></div>
+          {/* 오행 소개 본문 문구 */}
+          <Reveal>
+            <div className="gungjung-glass p-8 md:p-12 max-w-4xl mx-auto mb-16 text-center border-white/[0.04] relative overflow-hidden">
+              {/* 자개 무늬 느낌의 오버레이 광채 */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-pink-500/3 to-transparent pointer-events-none"></div>
+              
+              <p className="text-lg md:text-xl text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
+                <span className="block text-white font-medium">
+                  백도화 선천코드 리포트 구매 시, 고객님의 선천적 흐름에 어울리는 오행 에너지 카드 1종이 함께 제공됩니다.
+                </span>
+                <span className="block text-base opacity-75">
+                  오행 에너지 카드는 목·화·토·금·수의 상징을 한국적 자개 무드로 표현한 디지털 리추얼 이미지입니다. <br className="hidden md:inline" />
+                  부족하거나 보완이 필요한 기운을 시각적으로 바라보고, 마음의 균형을 정리하는 감성 카드로 활용하실 수 있습니다.
+                </span>
+                <span className="block text-sm text-[var(--accent-gold-light)] opacity-90 border-t border-white/5 pt-6 mt-6">
+                  ✨ 휴대폰 배경화면, 잠금화면, 개인 노트 표지, 감정 정리 리추얼 이미지 등으로 자유롭게 사용하실 수 있습니다.
+                </span>
+              </p>
+            </div>
+          </Reveal>
 
-                <div className="w-full relative z-10 flex flex-col items-center">
-                  {/* 한자 마크 (동양적 느낌 극대화) */}
-                  <div className="w-20 h-28 mb-6 border border-[var(--accent-gold)]/30 rounded-lg flex items-center justify-center bg-black/40 relative shadow-inner group-hover:scale-105 transition-transform duration-500">
-                    <span className="text-4xl md:text-5xl font-elegant font-bold text-[var(--accent-gold-light)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                      {item.hanja}
+          {/* 5종 카드 그리드 배치 */}
+          <Reveal>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+              {fiveElements.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`gungjung-glass point-box p-8 border ${item.borderClass} bg-gradient-to-b ${item.gradientClass} relative overflow-hidden group flex flex-col items-center justify-between text-center transition-all duration-500 hover:-translate-y-2`}
+                >
+                  {/* 카드 내 펄 광채 효과 백그라운드 */}
+                  <div className={`absolute -inset-10 ${item.bgGlow} blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+                  
+                  {/* 얇은 프레임 라인 (자개 카드 느낌) */}
+                  <div className="absolute inset-2 border border-white/[0.03] group-hover:border-[var(--accent-gold)]/20 rounded-xl pointer-events-none transition-colors duration-500"></div>
+
+                  <div className="w-full relative z-10 flex flex-col items-center">
+                    {/* 한자 마크 (동양적 느낌 극대화) */}
+                    <div className="w-20 h-28 mb-6 border border-[var(--accent-gold)]/30 rounded-lg flex items-center justify-center bg-black/40 relative shadow-inner group-hover:scale-105 transition-transform duration-500">
+                      <span className="text-4xl md:text-5xl font-elegant font-bold text-[var(--accent-gold-light)] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                        {item.hanja}
+                      </span>
+                      {/* 카드 네 모서리 장식선 */}
+                      <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-[var(--accent-gold)]/40"></div>
+                      <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-[var(--accent-gold)]/40"></div>
+                      <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-[var(--accent-gold)]/40"></div>
+                      <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-[var(--accent-gold)]/40"></div>
+                    </div>
+
+                    {/* 한글 타이틀 & 설명 */}
+                    <span className={`inline-block px-3 py-1 rounded-md text-xs font-semibold mb-3 ${item.tagColor}`}>
+                      {item.hangul}
                     </span>
-                    {/* 카드 네 모서리 장식선 */}
-                    <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-[var(--accent-gold)]/40"></div>
-                    <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-[var(--accent-gold)]/40"></div>
-                    <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-[var(--accent-gold)]/40"></div>
-                    <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-[var(--accent-gold)]/40"></div>
+                    
+                    <h4 className="text-base font-bold text-white mb-4 break-keep">
+                      {item.keyword}
+                    </h4>
+                    
+                    <p className="text-xs text-[#EDE6DA]/60 leading-relaxed break-keep font-light">
+                      {item.desc}
+                    </p>
                   </div>
-
-                  {/* 한글 타이틀 & 설명 */}
-                  <span className={`inline-block px-3 py-1 rounded-md text-xs font-semibold mb-3 ${item.tagColor}`}>
-                    {item.hangul}
-                  </span>
-                  
-                  <h4 className="text-base font-bold text-white mb-4 break-keep">
-                    {item.keyword}
-                  </h4>
-                  
-                  <p className="text-xs text-[#EDE6DA]/60 leading-relaxed break-keep font-light">
-                    {item.desc}
-                  </p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-      </section>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       {/* 2. 리포트 제작 및 수령 안내 섹션 */}
       <section className="relative">

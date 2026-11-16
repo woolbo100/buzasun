@@ -37,6 +37,7 @@ import ReportTestimonials from '@/components/reports/baekdohwa-report/ReportTest
 // import ReportValueSummary from '@/components/reports/baekdohwa-report/ReportValueSummary' (BEHIND THE REPORT로 통합)
 import ReportFAQ from '@/components/reports/baekdohwa-report/ReportFAQ'
 import PurchaseNotice from '@/components/reports/baekdohwa-report/PurchaseNotice'
+import FiveElementsSpecialGift from '@/components/reports/baekdohwa-report/FiveElementsSpecialGift'
 
 // ══════════════════════════════════════════════════════════════════════
 // 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
@@ -882,9 +883,9 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* 오행 에너지 카드 5종 및 제작/수령 안내 */}
+            {/* 리포트 제작 및 수령 안내 ('리포트는 이렇게 만들어집니다') */}
             <section className="mb-40">
-              <ReportCommonInfo isCompatibility={false} />
+              <ReportCommonInfo isCompatibility={false} showFiveElements={false} />
             </section>
 
             {/* 자주 묻는 질문 FAQ (10개 항목 아코디언) */}
@@ -892,6 +893,9 @@ export default function BaekdohwaReportPage() {
 
             {/* 구매 전 안내 (6대 중요 안내 사항) */}
             <PurchaseNotice />
+
+            {/* 오행 에너지 카드 1종 사은품 안내 (SPECIAL GIFT) */}
+            <FiveElementsSpecialGift />
 
             {/* 최종 구매 CTA (이미지와 텍스트·버튼 분리 구조) */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">
