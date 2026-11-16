@@ -35,19 +35,19 @@ export default function PersonalAnalysisMethod() {
         {/* 1. 상단 전체 폭 헤더: 영문 라벨, 메인 제목, 도입 설명 (데스크톱/모바일 공통 최상단) */}
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16 space-y-4 md:space-y-5 px-4">
           <span className="inline-block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
-            POINT 02 · CONVERGENCE
+            POINT 02 · THE CONVERGENCE
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white leading-[1.3] md:leading-[1.32] break-keep">
-            사주로 타고난 코드를 읽고,<br className="hidden sm:inline" />
-            <span className="gradient-text-love"> 심리와 무의식의 관점</span>으로{' '}
-            <span className="gradient-text-love">사랑의 습관</span>을 이해합니다.
+            &ldquo;사주로 타고난 코드를 읽고,<br className="hidden sm:inline" />
+            <span className="gradient-text-love"> 심리와 무의식 설계</span>로{' '}
+            <span className="gradient-text-love">사랑의 습관</span>을 바꿉니다.&rdquo;
           </h2>
           <div className="max-w-3xl mx-auto text-[16px] md:text-[17px] text-[#EDE6DA] opacity-85 leading-[1.8] break-keep font-light space-y-2 pt-1">
             <p>
-              단순한 만세력 해석이나 자동 조합 운세와는 분석의 설계부터 다릅니다.
+              단순한 만세력 해석이나 자동 조합 운세와는 설계부터 다릅니다.
             </p>
             <p>
-              동양 명리학을 바탕으로 심리학, NLP·최면 상담, 두뇌 습관 코칭에서 다루는 자기 이해의 관점까지 연결해, 당신의 연애를 더욱 입체적으로 살펴봅니다.
+              동양 명리학, 심리학, NLP·최면 상담, 두뇌 습관 코칭까지—마음과 행동을 다루는 모든 영역을 하나로 통합해 당신의 연애를 입체적으로 해부합니다.
             </p>
           </div>
         </div>
