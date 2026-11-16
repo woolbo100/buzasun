@@ -529,7 +529,7 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* STEP 03. 필요성 — 내 사랑의 설계도도 모르면서 왜 상대의 마음부터 읽는가? */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-12 text-center">
+            <section className="mb-24 md:mb-32 text-center">
               <Reveal>
                 <div className="max-w-4xl mx-auto">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
@@ -544,9 +544,14 @@ export default function BaekdohwaReportPage() {
                     상대를 파악하기 전에, 먼저 내 안의 &lsquo;사랑 설계도&rsquo;를 손에 쥐어야 합니다.
                   </p>
                 </div>
+              </Reveal>
+            </section>
 
-                {/* 내 사랑의 설계도 16:9 배너 이미지 (최대 1280px, 좌우 문구/인물 잘림 없는 원본 비율) */}
-                <div className="mx-auto mt-10 md:mt-12 w-full max-w-[1280px]">
+            {/* 패러다임 전환: 상대의 마음이 아니라 나의 선택을 묻다 */}
+            <QuestionShiftComparison 
+              theme="love" 
+              banner={
+                <div className="mx-auto w-full max-w-[1280px]">
                   <Image
                     src="/image/lovereport/know%20your%20love%20blueprint.webp"
                     alt="내 사랑의 설계도를 알아야 하는 이유를 시각화한 백도화 일러스트"
@@ -555,11 +560,8 @@ export default function BaekdohwaReportPage() {
                     className="block h-auto w-full rounded-2xl md:rounded-[28px] border border-white/10 shadow-2xl"
                   />
                 </div>
-              </Reveal>
-            </section>
-
-            {/* 패러다임 전환: 상대의 마음이 아니라 나의 선택을 묻다 */}
-            <QuestionShiftComparison theme="love" />
+              }
+            />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 신규 섹션: 왜, 선천코드 연애 리포트인가? (차별점 & 처방전 철학) */}

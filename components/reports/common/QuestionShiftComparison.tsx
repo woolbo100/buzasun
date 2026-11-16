@@ -5,9 +5,10 @@ import { HelpCircle, Compass, ArrowRight } from 'lucide-react'
 
 interface QuestionShiftComparisonProps {
   theme: 'love' | 'abundance' | 'compatibility'
+  banner?: React.ReactNode
 }
 
-export default function QuestionShiftComparison({ theme }: QuestionShiftComparisonProps) {
+export default function QuestionShiftComparison({ theme, banner }: QuestionShiftComparisonProps) {
   // 테마별 컬러 및 뱃지 설정
   const themeConfig = {
     love: {
@@ -55,6 +56,13 @@ export default function QuestionShiftComparison({ theme }: QuestionShiftComparis
             <span className={`${themeConfig.highlightText} font-medium`}>같은 상황에서 반복되는 나의 선택</span>일지도 모릅니다.
           </p>
         </div>
+
+        {/* 글자 바로 아래 배너 이미지 슬롯 */}
+        {banner && (
+          <div className="mb-14 md:mb-16">
+            {banner}
+          </div>
+        )}
 
         {/* 2단 비교 카드 (모바일 세로, 데스크톱 가로) */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-12">
