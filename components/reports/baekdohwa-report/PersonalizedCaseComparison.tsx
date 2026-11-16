@@ -20,10 +20,12 @@ export default function PersonalizedCaseComparison() {
 
           <div className="pt-3 space-y-3 max-w-3xl mx-auto">
             <p className="text-[16px] md:text-[17px] text-[#EDE6DA] opacity-90 font-light leading-relaxed break-keep">
-              타고난 선천코드가 같아도, 내가 어떤 인연을 만나고 어떤 상호작용을 하느냐에 따라 사랑의 결말은 완전히 달라집니다.
+              타고난 선천코드가 같아도, 내가 어떤 인연을 만나고 어떤 상호작용을 하느냐에 따라<br />
+              사랑의 결말은 완전히 달라집니다.
             </p>
             <p className="font-elegant font-medium text-[17px] md:text-[19px] text-[#FAF7F2] leading-relaxed break-keep pt-1">
-              &ldquo;<span className="text-[#E6BFA9] font-semibold">중요한 것은 내 안의 코드뿐만 아니라, 내 곁에 오는 상대와의 에너지가 어떻게 맞물리느냐를 아는 것입니다.</span>&rdquo;
+              &ldquo;<span className="text-[#E6BFA9] font-semibold">중요한 것은 내 안의 코드뿐만 아니라, 그 코드가 발현될 때<br />
+              내가 어떻게 반응하는지를 아는 것입니다.</span>&rdquo;
             </p>
           </div>
         </div>

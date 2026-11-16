@@ -131,7 +131,7 @@ export const personalizedCaseData = {
       resultTitle: "관계의 결과",
       resultDesc: "사소한 불일치에도 통제와 실망이 반복되며, 상대방도 나 자신도 숨이 막혀 지치게 됩니다.",
       solutionTitle: "처방 방향",
-      solutionDesc: "심리적 독립 경계 설정과 상대의 다름을 허용하는 '자기 조절 루틴' 적용"
+      solutionDesc: "상대방과의 거리조절과 다름을 허용하는 '자기 조절 루틴' 적용"
     }
   ]
 }

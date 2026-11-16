@@ -22,13 +22,13 @@ export default function RelationshipPatternFlow() {
           </p>
 
           {/* 추가된 끌림과 설계도 서사 블록 */}
-          <div className="pt-4 space-y-5 max-w-3xl mx-auto">
+          <div className="pt-4 space-y-5 max-w-4xl mx-auto">
             <div className="space-y-4 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
-              <p>
+              <p className="lg:whitespace-nowrap">
                 그동안 우리는 뜨거운 감정의 한복판에 갇혀, 내가 왜 또 같은 상처를 향해 걸어가고 있는지조차 보지 못했습니다.
               </p>
               <p className="text-[#FAF7F2] font-medium leading-relaxed">
-                마음공부에서 나를 제3자의 시선으로 바라볼 때 비로소 집착에서 깨어나듯,<br className="hidden sm:inline" />
+                나를 제3자의 시선으로 바라볼 때 비로소 집착에서 깨어나듯,<br className="hidden sm:inline" />
                 내 연애 역시 선천코드라는 객관적인 지도 위에서 내려다볼 때 비로소 무의식의 쳇바퀴를 멈출 수 있습니다.
               </p>
             </div>
@@ -53,7 +53,8 @@ export default function RelationshipPatternFlow() {
         {/* 하단 카드(01, 02, 03) 연결 브릿지 */}
         <div className="pt-2 pb-2 text-center max-w-2xl mx-auto space-y-2 mb-16">
           <p className="text-[#FAF7F2] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
-            이제 감정에 휩쓸리는 당사자가 아니라, 내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.<br className="hidden sm:inline" />
+            이제 감정에 휩쓸리는 당사자가 아니라,<br />
+            내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.<br />
             반복의 고리를 과감하게 끊어내십시오.
           </p>
           <p className="text-sm md:text-base text-[#E6BFA9] font-light break-keep">
@@ -72,7 +73,7 @@ export default function RelationshipPatternFlow() {
                       <span className="text-2xl font-elegant font-bold text-[#D9A8A7]">
                         {step.step}
                       </span>
-                      <span className="text-[11px] px-2.5 py-1 rounded-md bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] border border-[#B7788D]/25 font-medium">
+                      <span className="text-[13px] md:text-[14px] px-3.5 py-1.5 rounded-lg bg-[#B7788D]/15 border border-[#B7788D]/35 text-[#D9A8A7] font-semibold tracking-wide">
                         {step.tag}
                       </span>
                     </div>
@@ -80,7 +81,7 @@ export default function RelationshipPatternFlow() {
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-sm md:text-base text-[#EDE6DA]/70 font-light leading-relaxed break-keep mt-4 pt-4 border-t border-white/5">
+                  <p className="text-[16px] text-[#EDE6DA]/85 font-light leading-[1.75] break-keep mt-4 pt-4 border-t border-white/10">
                     {step.desc}
                   </p>
                 </div>

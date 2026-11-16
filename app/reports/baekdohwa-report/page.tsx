@@ -315,11 +315,6 @@ export default function BaekdohwaReportPage() {
                             sizes="(max-width: 1024px) 100vw, 420px"
                             priority
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-                          <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] font-mono text-[#E6BFA9]/80 backdrop-blur-md bg-black/40 px-3 py-1.5 rounded-lg border border-white/10">
-                            <span>DIGITAL PDF + ENERGY CARD</span>
-                            <span>A4 28~30P</span>
-                          </div>
                         </div>
                       </div>
                     </div>
