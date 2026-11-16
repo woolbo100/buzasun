@@ -4,21 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { samplePreviewData } from './data'
-import { ZoomIn, X, FileText } from 'lucide-react'
-
-// 실제 리포트 원고 1페이지 추가 슬롯 (원고 제공 시 경로 지정, 미제공 시 null)
-// 예: '/image/lovereport/manuscript-sample-page-1.webp'
-const FEATURED_MANUSCRIPT_PAGE: {
-  src: string | null
-  title: string
-  desc: string
-  badge: string
-} = {
-  src: null, // 원고 제공 시 이미지 경로 입력 (임의의 가짜 본문 미게시)
-  title: '실제 리포트 본문 발췌 페이지',
-  desc: '실제 발행되는 1:1 맞춤 PDF 리포트의 본문 페이지 발췌본입니다. 원본 A4 규격으로 구성되어 있습니다.',
-  badge: 'A4 ORIGINAL'
-}
+import { ZoomIn, X } from 'lucide-react'
 
 export default function ReportSamplePreview() {
   const [activeModalImage, setActiveModalImage] = useState<{
@@ -86,75 +72,7 @@ export default function ReportSamplePreview() {
           ))}
         </div>
 
-        {/* 실제 리포트 본문 1페이지 미리보기 슬롯 (A4 규격 · 모바일 확대 지원) */}
-        <div className="max-w-2xl mx-auto mb-10">
-          <div className="gungjung-glass p-6 md:p-8 rounded-[32px] border border-[#B7788D]/30 bg-gradient-to-b from-[#1C0D1E]/60 to-[#0F0712]/70">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
-              <div>
-                <span className="text-[11px] font-mono font-semibold tracking-wider text-[#D9A8A7] uppercase block mb-1">
-                  REPORT EXCERPT · A4 PREVIEW
-                </span>
-                <h3 className="text-lg md:text-xl font-bold text-white">
-                  실제 리포트 본문 발췌 페이지
-                </h3>
-              </div>
-              <span className="text-xs px-3 py-1 rounded-full bg-[#B7788D]/20 border border-[#B7788D]/40 text-[#D9A8A7] font-medium">
-                A4 규격 (210 × 297mm)
-              </span>
-            </div>
-
-            {FEATURED_MANUSCRIPT_PAGE.src ? (
-              /* 원고 이미지가 등록된 경우: 원본 A4 비율 유지 및 탭/클릭 확대 지원 */
-              <div
-                onClick={() =>
-                  setActiveModalImage({
-                    src: FEATURED_MANUSCRIPT_PAGE.src!,
-                    title: FEATURED_MANUSCRIPT_PAGE.title,
-                    desc: FEATURED_MANUSCRIPT_PAGE.desc
-                  })
-                }
-                className="relative w-full max-w-md mx-auto aspect-[210/297] rounded-2xl overflow-hidden border border-white/15 bg-black/50 shadow-2xl group cursor-pointer"
-              >
-                <Image
-                  src={FEATURED_MANUSCRIPT_PAGE.src}
-                  alt={FEATURED_MANUSCRIPT_PAGE.title}
-                  fill
-                  className="object-contain transition-transform duration-700 group-hover:scale-102"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-black/70 backdrop-blur-md border border-[#B7788D]/40 text-[#D9A8A7] text-sm font-medium shadow-xl">
-                    <ZoomIn className="w-4 h-4" />
-                    <span>크게 보기</span>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              /* 원고 등록 전: 가짜 본문 없이 규격과 슬롯 구조를 보존하는 단정한 플레이스홀더 */
-              <div className="relative w-full max-w-md mx-auto aspect-[210/297] rounded-2xl border-2 border-dashed border-[#B7788D]/30 bg-[#140816]/50 flex flex-col items-center justify-center p-8 text-center">
-                <div className="w-16 h-16 rounded-2xl bg-[#2D0A1E] border border-[#B7788D]/40 flex items-center justify-center text-[#D9A8A7] mb-4 shadow-lg">
-                  <FileText className="w-8 h-8" />
-                </div>
-                <h4 className="text-base md:text-lg font-bold text-white mb-2">
-                  본문 발췌 페이지 준비 중
-                </h4>
-                <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light leading-relaxed break-keep max-w-xs">
-                  실제 발행되는 맞춤 리포트의 A4 원본 페이지 발췌본이 검수 완료 후 본 슬롯에 순차적으로 공개됩니다.
-                </p>
-                <span className="mt-4 text-[11px] font-mono text-[#D9A8A7]/60">
-                  SLOT: A4 RATIO (210 × 297)
-                </span>
-              </div>
-            )}
-
-            <div className="mt-6 pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-[#EDE6DA]/60 gap-2">
-              <span>※ 개인 맞춤 제작 리포트로 고객마다 세부 구성과 처방이 다르게 기재됩니다.</span>
-              <span className="text-[#D9A8A7]">모바일 터치 시 전체화면 확대 지원</span>
-            </div>
-          </div>
-        </div>
-
-        <p className="text-center text-xs text-white/40">
+        <p className="text-center text-xs text-white/40 mt-10">
           {samplePreviewData.disclaimer}
         </p>
       </Reveal>

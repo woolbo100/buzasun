@@ -33,7 +33,7 @@ import TransformationThreeChanges from '@/components/reports/baekdohwa-report/Tr
 import RelationshipChangeScenario from '@/components/reports/baekdohwa-report/RelationshipChangeScenario'
 import RecommendedAudience from '@/components/reports/baekdohwa-report/RecommendedAudience'
 import ReportTestimonials from '@/components/reports/baekdohwa-report/ReportTestimonials'
-import BaekdohwaPhilosophy from '@/components/reports/baekdohwa-report/BaekdohwaPhilosophy'
+// import BaekdohwaPhilosophy from '@/components/reports/baekdohwa-report/BaekdohwaPhilosophy' (POINT 02로 통합)
 import ReportValueSummary from '@/components/reports/baekdohwa-report/ReportValueSummary'
 import ReportFAQ from '@/components/reports/baekdohwa-report/ReportFAQ'
 import PurchaseNotice from '@/components/reports/baekdohwa-report/PurchaseNotice'
@@ -851,8 +851,7 @@ export default function BaekdohwaReportPage() {
             {/* 고객 후기 (검증된 후기 등록 시 활성화) */}
             <ReportTestimonials />
 
-            {/* 백도화의 분석 철학 (궁중 서신 편지 형태) */}
-            <BaekdohwaPhilosophy />
+            {/* 백도화의 분석 철학은 POINT 02(동양 명리 × 관계 심리)로 통합 정리됨 */}
 
             {/* 소장 가치 6대 요소 요약 */}
             <ReportValueSummary />
