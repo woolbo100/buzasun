@@ -60,7 +60,7 @@ export default function WhySeoncheonReport() {
   ]
 
   return (
-    <section className="mb-20 md:mb-28 lg:mb-32">
+    <section className="mb-10 md:mb-14 lg:mb-16">
       <Reveal>
         <div className="max-w-[1280px] mx-auto text-center">
           {/* 구분선 도화꽃 아이콘 + 양옆 가로선 */}

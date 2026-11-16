@@ -132,7 +132,8 @@ export default function PersonalAnalysisMethod() {
                 &ldquo;명리학의 해석과 심리·무의식에 대한 자기 이해, 뇌 습관 코칭의 관점을 함께 익혀온 경험을 바탕으로 설계했습니다.
               </p>
               <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#D9A8A7] leading-relaxed break-keep">
-                단편적인 운세 설명을 넘어, 당신의 연애를 여러 각도에서 이해할 수 있도록 돕는 심층 분석서입니다.&rdquo;
+                단편적인 운세 설명을 넘어, 당신의 연애를 여러 각도에서 이해할 수 있도록 돕는<br />
+                심층 분석서입니다.&rdquo;
               </p>
             </div>
           </div>
