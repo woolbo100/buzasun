@@ -100,7 +100,7 @@ export default function QuestionShiftComparison({
                   <h3 className="text-lg md:text-xl font-bold text-white/70">기존의 운세 중심 질문</h3>
                 </div>
               </div>
-              <p className="text-sm text-[#EDE6DA]/50 font-light mb-6 break-keep">
+              <p className="text-[16px] text-[#EDE6DA]/60 font-light mb-6 break-keep">
                 미래를 수동적으로 묻고 결과를 기다리는 익숙한 시선
               </p>
 
@@ -119,7 +119,7 @@ export default function QuestionShiftComparison({
               </div>
             </div>
 
-            <div className="pt-6 border-t border-white/5 text-xs text-white/40 text-center font-light">
+            <div className="pt-6 border-t border-white/5 text-sm md:text-[15px] text-white/50 text-center font-light">
               단순한 결과 풀이는 내 행동을 바꾸지 못합니다.
             </div>
           </div>
@@ -142,14 +142,14 @@ export default function QuestionShiftComparison({
                   <h3 className="text-lg md:text-xl font-bold text-white">백도화 선천코드의 질문</h3>
                 </div>
               </div>
-              <p className="text-sm text-[#EDE6DA]/85 font-light mb-6 break-keep">
+              <p className="text-[16px] text-[#EDE6DA]/85 font-light mb-6 break-keep">
                 선택의 뿌리를 분석하고 행동을 바꾸는 능동적인 설계
               </p>
 
               <div className="space-y-3.5">
                 {[
                   '나는 왜 비슷한 연애에서 상처받을까?',
-                  '돈 앞에서 반복되는 나의 선택은 무엇일까?',
+                  theme === 'abundance' ? '돈 앞에서 반복되는 나의 선택은 무엇일까?' : '사랑 앞에서 반복되는 나의 선택은 무엇일까?',
                   '우리는 어떤 순간에 서로를 자극할까?',
                   '앞으로 무엇을 다르게 선택할 수 있을까?'
                 ].map((q, idx) => (
@@ -161,7 +161,7 @@ export default function QuestionShiftComparison({
               </div>
             </div>
 
-            <div className="pt-6 border-t border-white/10 text-xs text-[#EDE6DA]/75 text-center font-light relative z-10">
+            <div className="pt-6 border-t border-white/10 text-sm md:text-[15px] text-[#EDE6DA]/90 text-center font-light relative z-10">
               구조를 알면, 마침내 다른 선택을 시작할 수 있습니다.
             </div>
           </div>
