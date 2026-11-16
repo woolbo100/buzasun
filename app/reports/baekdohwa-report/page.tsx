@@ -873,7 +873,7 @@ export default function BaekdohwaReportPage() {
                 {/* ① 기존 배경 이미지 단독 표시 (필터 및 오버레이 완전 제거) */}
                 <div className="relative w-full rounded-[40px] overflow-hidden border border-white/10 shadow-2xl aspect-[16/9] bg-[#130917] mb-14 md:mb-16 group">
                   <Image 
-                    src="/image/lovereport/p6.webp" 
+                    src="/image/lovereport/two%20love.webp" 
                     alt="Final CTA Journey" 
                     width={1672}
                     height={941}
