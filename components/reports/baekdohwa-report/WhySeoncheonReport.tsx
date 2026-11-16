@@ -77,19 +77,15 @@ export default function WhySeoncheonReport() {
           </h2>
 
           {/* 3. 설명 본문 */}
-          <div className="max-w-3xl mx-auto space-y-6 md:space-y-7 mb-10 md:mb-12">
+          <div className="max-w-3xl mx-auto space-y-5 md:space-y-6 mb-10 md:mb-12">
             {/* 첫 번째 설명 문단 */}
-            <div className="space-y-2.5 md:space-y-3">
-              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
-                연애가 힘든 건 운이 나빠서도, 사람 보는 눈이 없어서도 아니었습니다.
-              </p>
-              <p className="font-elegant font-semibold text-[20px] sm:text-[21px] md:text-[23px] lg:text-[24px] text-[#D9A8A7] leading-[1.5] break-keep">
-                나에게 이미 쓰여 있는 코드를 모른 채 같은 문을 계속 두드렸기 때문입니다.
-              </p>
-            </div>
+            <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
+              연애가 힘든 건 운이 나빠서도, 사람 보는 눈이 없어서도 아니었습니다.<br className="hidden sm:inline" />
+              <span className="sm:inline-block">나에게 이미 쓰여 있는 코드를 모른 채 같은 문을 계속 두드렸기 때문입니다.</span>
+            </p>
 
             {/* 두 번째 설명 문단 */}
-            <div className="space-y-2 md:space-y-2.5 pt-1">
+            <div className="space-y-2 md:space-y-2.5">
               <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
                 수많은 명리 고전과 심리학 이론 사이에서 길을 찾다,<br />
                 <span className="text-[#D9A8A7] font-medium opacity-100">
