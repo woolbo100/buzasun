@@ -7,18 +7,20 @@ export default function PersonalizedCaseComparison() {
   return (
     <section className="mb-40">
       <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-16 space-y-5">
-          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-            DIFFERENT CHOICES, DIFFERENT LOVE
-          </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {personalizedCaseData.mainCopy}
-          </h2>
-          <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light break-keep leading-relaxed">
-            {personalizedCaseData.subCopy}
-          </p>
+        <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
+          <div>
+            <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+              DIFFERENT CHOICES, DIFFERENT LOVE
+            </span>
+            <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
+              {personalizedCaseData.mainCopy}
+            </h2>
+          </div>
 
-          <div className="pt-3 space-y-3 max-w-3xl mx-auto">
+          <div className="space-y-3.5 max-w-3xl mx-auto">
+            <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light break-keep leading-relaxed">
+              {personalizedCaseData.subCopy}
+            </p>
             <p className="text-[16px] md:text-[17px] text-[#EDE6DA] opacity-90 font-light leading-relaxed break-keep">
               타고난 선천코드가 같아도, 내가 어떤 인연을 만나고 어떤 상호작용을 하느냐에 따라<br />
               사랑의 결말은 완전히 달라집니다.

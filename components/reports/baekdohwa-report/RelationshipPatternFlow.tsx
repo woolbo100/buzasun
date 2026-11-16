@@ -10,28 +10,28 @@ export default function RelationshipPatternFlow() {
     <section className="mb-40">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-10 space-y-6">
-          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-            RELATIONSHIP STRUCTURE
-          </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-            끌림은 본능입니다.<br />
-            그러나 <span className="gradient-text-love">사랑은 선택</span>입니다.
-          </h2>
-          <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light break-keep leading-relaxed">
-            {patternFlowData.subCopy}
-          </p>
+          <div>
+            <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+              RELATIONSHIP STRUCTURE
+            </span>
+            <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+              끌림은 본능입니다.<br />
+              그러나 <span className="gradient-text-love">사랑은 선택</span>입니다.
+            </h2>
+          </div>
 
-          {/* 추가된 끌림과 설계도 서사 블록 */}
-          <div className="pt-4 space-y-5 max-w-4xl mx-auto">
-            <div className="space-y-4 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
-              <p className="lg:whitespace-nowrap">
-                그동안 우리는 뜨거운 감정의 한복판에 갇혀, 내가 왜 또 같은 상처를 향해 걸어가고 있는지조차 보지 못했습니다.
-              </p>
-              <p className="text-[#FAF7F2] font-medium leading-relaxed">
-                나를 제3자의 시선으로 바라볼 때 비로소 집착에서 깨어나듯,<br className="hidden sm:inline" />
-                내 연애 역시 선천코드라는 객관적인 지도 위에서 내려다볼 때 비로소 무의식의 쳇바퀴를 멈출 수 있습니다.
-              </p>
-            </div>
+          {/* 서사 본문 블록 (일정한 설명 문구 간격으로 자연스럽게 연결) */}
+          <div className="space-y-3.5 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep max-w-4xl mx-auto">
+            <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80">
+              {patternFlowData.subCopy}
+            </p>
+            <p className="lg:whitespace-nowrap">
+              그동안 우리는 뜨거운 감정의 한복판에 갇혀, 내가 왜 또 같은 상처를 향해 걸어가고 있는지조차 보지 못했습니다.
+            </p>
+            <p className="text-[#FAF7F2] font-medium leading-relaxed pt-0.5">
+              나를 제3자의 시선으로 바라볼 때 비로소 집착에서 깨어나듯,<br className="hidden sm:inline" />
+              내 연애 역시 선천코드라는 객관적인 지도 위에서 내려다볼 때 비로소 무의식의 쳇바퀴를 멈출 수 있습니다.
+            </p>
           </div>
         </div>
 
@@ -51,13 +51,13 @@ export default function RelationshipPatternFlow() {
         </div>
 
         {/* 하단 카드(01, 02, 03) 연결 브릿지 */}
-        <div className="pt-2 pb-2 text-center max-w-2xl mx-auto space-y-2 mb-16">
+        <div className="pt-2 pb-2 text-center max-w-2xl mx-auto space-y-4 mb-16">
           <p className="text-[#FAF7F2] font-medium text-[16px] md:text-[17px] leading-relaxed break-keep">
             이제 감정에 휩쓸리는 당사자가 아니라,<br />
             내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.<br />
             반복의 고리를 과감하게 끊어내십시오.
           </p>
-          <p className="text-sm md:text-base text-[#E6BFA9] font-light break-keep">
+          <p className="text-sm md:text-base text-[#E6BFA9] font-light break-keep pt-1">
             아래 3가지 핵심 축을 통해, 당신을 가두던 반복의 알고리즘을 투명하게 해부합니다.
           </p>
         </div>
@@ -102,9 +102,9 @@ export default function RelationshipPatternFlow() {
           </div>
         </div>
 
-        {/* 핵심 인용 강조 배너 */}
-        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[var(--accent-gold)]/10 via-purple-950/20 to-[var(--accent-gold)]/10 border border-[#B7788D]/30 text-center shadow-xl">
-          <p className="text-xl md:text-2xl font-elegant font-bold text-[#E6BFA9] leading-relaxed whitespace-pre-line">
+        {/* 핵심 인용 각성 메시지 카드 (왕실 비급 프리미엄 호버 효과) */}
+        <div className="awakening-quote-card max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[var(--accent-gold)]/10 via-purple-950/20 to-[var(--accent-gold)]/10 border border-[#B7788D]/30 text-center shadow-xl">
+          <p className="relative z-10 text-xl md:text-2xl font-elegant font-bold text-[#E6BFA9] leading-relaxed whitespace-pre-line">
             &ldquo;{patternFlowData.quote}&rdquo;
           </p>
         </div>
