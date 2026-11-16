@@ -627,7 +627,7 @@ export default function BaekdohwaReportPage() {
                       {["타고난 사랑의 기질", "무의식적 끌림 코드", "배우자 코드와 이상형", "관계 회복을 위한 솔루션"].map((item, idx) => (
                         <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl">
                           <div className="w-2 h-2 rounded-full bg-[#B7788D] shadow-[0_0_10px_rgba(183,120,141,0.5)]"></div>
-                          <span className="text-white/80">{item}</span>
+                          <span className="text-white/90 font-semibold">{item}</span>
                         </div>
                       ))}
                     </div>
