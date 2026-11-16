@@ -527,29 +527,27 @@ export default function BaekdohwaReportPage() {
             <PersonalizedCaseComparison />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* STEP 03. 필요성 — 내 사랑의 설계도도 모르면서 왜 상대의 마음부터 읽는가? */}
+            {/* PARADIGM SHIFT (STEP 03 통합 섹션: 내 사랑의 설계도 & 패러다임 전환) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-24 md:mb-32 text-center">
-              <Reveal>
-                <div className="max-w-4xl mx-auto">
-                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                    STEP 03 · THE REAL NEED
-                  </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    &ldquo;내 사랑의 설계도도 모르면서,<br className="sm:hidden" />
-                    <span className="gradient-text-love"> 왜 상대의 마음부터</span> 읽습니까?&rdquo;
-                  </h2>
-                  <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    상대의 카톡 하나, 표정 하나에 밤새 불안해하면서도 정작 내가 어떤 사람에게 무너지고 어떤 사랑을 원하는지는 묻지 않았습니다.<br className="hidden sm:inline" />
-                    상대를 파악하기 전에, 먼저 내 안의 &lsquo;사랑 설계도&rsquo;를 손에 쥐어야 합니다.
-                  </p>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 패러다임 전환: 상대의 마음이 아니라 나의 선택을 묻다 */}
             <QuestionShiftComparison 
               theme="love" 
+              title={
+                <>
+                  &ldquo;내 사랑의 설계도도 모르면서,<br className="hidden sm:inline" />
+                  <span className="gradient-text-love"> 왜 상대의 마음과 미래부터</span> 묻습니까?&rdquo;
+                </>
+              }
+              description={
+                <>
+                  <p>
+                    상대의 표정과 카톡 하나에 밤새 흔들리고, 정해진 연애운만 점치려 애쓰는 동안 정작 내가 어떤 사람에게 무너지는지는 한 번도 묻지 않았습니다.
+                  </p>
+                  <p>
+                    진짜 바꿔야 할 것은 막연한 미래의 운세가 아니라, 같은 상황에서 매번 반복되는{' '}
+                    <span className="text-[#D9A8A7] font-semibold">나의 선택과 기준</span>입니다.
+                  </p>
+                </>
+              }
               banner={
                 <div className="mx-auto w-full max-w-[1280px]">
                   <Image

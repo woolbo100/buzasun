@@ -6,9 +6,16 @@ import { HelpCircle, Compass, ArrowRight } from 'lucide-react'
 interface QuestionShiftComparisonProps {
   theme: 'love' | 'abundance' | 'compatibility'
   banner?: React.ReactNode
+  title?: React.ReactNode
+  description?: React.ReactNode
 }
 
-export default function QuestionShiftComparison({ theme, banner }: QuestionShiftComparisonProps) {
+export default function QuestionShiftComparison({
+  theme,
+  banner,
+  title,
+  description,
+}: QuestionShiftComparisonProps) {
   // 테마별 컬러 및 뱃지 설정
   const themeConfig = {
     love: {
@@ -43,18 +50,30 @@ export default function QuestionShiftComparison({ theme, banner }: QuestionShift
   return (
     <section className="mb-40">
       <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-14 md:mb-16">
           <span className={`block font-elegant text-[12pt] font-semibold tracking-[0.2em] ${themeConfig.activeText} uppercase mb-4`}>
             PARADIGM SHIFT
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-            당신은 아직도 <br className="sm:hidden" />
-            <span className={themeConfig.gradientClass}>미래가 어떻게 될지만</span> 묻고 있습니까?
-          </h2>
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-            진짜 바꿔야 할 것은 정해진 운세가 아니라,<br className="hidden sm:inline" />
-            <span className={`${themeConfig.highlightText} font-medium`}>같은 상황에서 반복되는 나의 선택</span>일지도 모릅니다.
-          </p>
+          {title ? (
+            <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+              {title}
+            </h2>
+          ) : (
+            <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+              당신은 아직도 <br className="sm:hidden" />
+              <span className={themeConfig.gradientClass}>미래가 어떻게 될지만</span> 묻고 있습니까?
+            </h2>
+          )}
+          {description ? (
+            <div className="space-y-3 md:space-y-3.5 text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-3xl mx-auto break-keep">
+              {description}
+            </div>
+          ) : (
+            <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+              진짜 바꿔야 할 것은 정해진 운세가 아니라,<br className="hidden sm:inline" />
+              <span className={`${themeConfig.highlightText} font-medium`}>같은 상황에서 반복되는 나의 선택</span>일지도 모릅니다.
+            </p>
+          )}
         </div>
 
         {/* 글자 바로 아래 배너 이미지 슬롯 */}
