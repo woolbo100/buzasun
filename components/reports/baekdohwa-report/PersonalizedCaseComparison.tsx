@@ -24,8 +24,8 @@ export default function PersonalizedCaseComparison() {
               사랑의 결말은 완전히 달라집니다.
             </p>
             <p className="font-elegant font-medium text-[17px] md:text-[19px] text-[#FAF7F2] leading-relaxed break-keep pt-1">
-              &ldquo;<span className="text-[#D9A8A7] font-semibold">중요한 것은 내 안의 코드뿐만 아니라, 그 코드가 발현될 때<br />
-              내가 어떻게 반응하는지를 아는 것입니다.</span>&rdquo;
+              <span className="text-[#D9A8A7] font-semibold">중요한 것은 내 안의 코드뿐만 아니라, 그 코드가 발현될 때<br />
+              내가 어떻게 반응하는지를 아는 것입니다.</span>
             </p>
           </div>
         </div>

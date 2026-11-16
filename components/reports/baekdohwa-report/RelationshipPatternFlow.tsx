@@ -30,7 +30,7 @@ export default function RelationshipPatternFlow() {
             </p>
             <p className="text-[#FAF7F2] font-medium leading-relaxed">
               나를 제3자의 시선으로 바라볼 때 비로소 집착에서 깨어나듯,<br className="hidden sm:inline" />
-              내 연애 역시 선천코드라는 객관적인 지도 위에서 내려다볼 때 비로소 무의식의 쳇바퀴를 멈출 수 있습니다.
+              내 연애 역시 <span className="text-[#D9A8A7] font-semibold">선천코드라는 객관적인 지도 위에서 내려다볼 때</span> 비로소 무의식의 쳇바퀴를 멈출 수 있습니다.
             </p>
           </div>
         </div>
