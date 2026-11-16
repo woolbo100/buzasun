@@ -34,7 +34,7 @@ import RelationshipChangeScenario from '@/components/reports/baekdohwa-report/Re
 import RecommendedAudience from '@/components/reports/baekdohwa-report/RecommendedAudience'
 import ReportTestimonials from '@/components/reports/baekdohwa-report/ReportTestimonials'
 // import BaekdohwaPhilosophy from '@/components/reports/baekdohwa-report/BaekdohwaPhilosophy' (POINT 02로 통합)
-import ReportValueSummary from '@/components/reports/baekdohwa-report/ReportValueSummary'
+// import ReportValueSummary from '@/components/reports/baekdohwa-report/ReportValueSummary' (BEHIND THE REPORT로 통합)
 import ReportFAQ from '@/components/reports/baekdohwa-report/ReportFAQ'
 import PurchaseNotice from '@/components/reports/baekdohwa-report/PurchaseNotice'
 
@@ -842,7 +842,7 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* 맞춤 리포트 제작 과정 (STEP 01~04) */}
+            {/* BEHIND THE REPORT: 제작 철학 및 분석 기준 구축 과정 (STUDY 01~04) */}
             <ReportProductionTimeline />
 
             {/* 추천 대상과 맞지 않는 대상 */}
@@ -853,8 +853,7 @@ export default function BaekdohwaReportPage() {
 
             {/* 백도화의 분석 철학은 POINT 02(동양 명리 × 관계 심리)로 통합 정리됨 */}
 
-            {/* 소장 가치 6대 요소 요약 */}
-            <ReportValueSummary />
+            {/* LIFELONG COMPASS(소장 가치 6대 요소 요약)는 BEHIND THE REPORT로 통합 정리됨 */}
 
             {/* 소장하고 싶은 프리미엄 리포트 (p5.webp) */}
             <section className="mb-40">
