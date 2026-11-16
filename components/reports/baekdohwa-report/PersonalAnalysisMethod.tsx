@@ -8,17 +8,17 @@ export default function PersonalAnalysisMethod() {
     {
       num: '01',
       title: '동양 명리학 — 선천 기질 해독',
-      desc: '일간과 십성, 지장간과 배우자궁을 살펴 타고난 연애 기질과 끌림의 특징을 해석합니다.'
+      desc: '일간과 십성, 지장간과 배우자궁을 정밀 분석해 타고난 연애 성향과 끌림의 원형을 읽어냅니다.'
     },
     {
       num: '02',
-      title: '심리학 · NLP · 무의식 — 관계 패턴 이해',
-      desc: '애착, 방어기제, 감정 반응과 무의식적인 관계 습관을 심리적 자기 이해의 관점에서 함께 살펴봅니다.'
+      title: '심리학 · NLP · 무의식 — 반복 패턴 분석',
+      desc: '기질 너머에 숨겨진 애착 유형, 방어기제, 무의식적 선택과 뇌에 각인된 감정 습관을 찾아냅니다.'
     },
     {
       num: '03',
-      title: '행동 설계 · 자기 이해 — 실전 관계 처방',
-      desc: '분석을 통해 발견한 특징을 일상에서 활용할 수 있도록 관계의 선택 기준과 구체적인 행동 루틴으로 연결합니다.'
+      title: '행동 설계 · 자기계발 — 실전 관계 처방',
+      desc: '원인 분석에서 멈추지 않고, 익숙한 본능적 반응을 멈추고 새로운 선택을 내리는 구체적 행동 루틴을 제시합니다.'
     }
   ]
 
@@ -64,10 +64,11 @@ export default function PersonalAnalysisMethod() {
                   key={idx}
                   className="gungjung-glass p-4 sm:p-5 rounded-2xl border border-white/10 hover:border-[#B7788D]/40 transition-all duration-300"
                 >
-                  <div className="flex items-center gap-3 mb-1.5">
+                  <div className="flex items-center gap-2 sm:gap-2.5 mb-1.5">
                     <span className="text-xs font-mono font-bold tracking-widest text-[#D9A8A7] shrink-0">
                       {phase.num}
                     </span>
+                    <span className="text-[#D9A8A7]/70 text-xs">·</span>
                     <h3 className="text-base md:text-[17px] font-bold text-white leading-snug break-keep">
                       {phase.title}
                     </h3>
