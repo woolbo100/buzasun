@@ -589,7 +589,7 @@ export default function BaekdohwaReportPage() {
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       두루뭉술한 인생 총운이 아닙니다.<br />
-                      오직 당신의 <span className="gradient-text-love">‘연애와 사랑’에만 집중</span>합니다.
+                      오직 당신의 <span className="gradient-text-love">‘사랑’ 하나만 깊이 해부</span>합니다.
                     </h2>
                     <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       사주 전체를 훑는 수박 겉핥기식 운세 풀이로는 사랑의 갈등을 해결할 수 없습니다. 백도화 선천코드 연애 리포트는 오행과 십성의 에너지를 철저히 ‘관계와 애정’의 관점으로 좁혀, 당신이 사랑에 빠지는 순간부터 관계가 흔들리는 위기까지 모든 애정의 역학을 섬세하게 분해합니다.
