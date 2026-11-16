@@ -41,7 +41,7 @@ export default function PersonalAnalysisMethod() {
                   PHASE {card.num}
                 </span>
                 <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-2 leading-snug break-keep">{card.title}</h3>
-                <span className="text-xs text-[#E6BFA9]/80 font-medium mb-4 block">
+                <span className="text-xs text-[#D9A8A7]/80 font-medium mb-4 block">
                   {card.subtitle}
                 </span>
                 <p className="text-sm md:text-base text-[#EDE6DA]/70 font-light leading-relaxed break-keep">

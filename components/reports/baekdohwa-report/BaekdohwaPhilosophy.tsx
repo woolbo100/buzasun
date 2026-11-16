@@ -39,7 +39,7 @@ export default function BaekdohwaPhilosophy() {
                 <h3 className="text-xl md:text-2xl font-elegant font-bold text-white mb-2 leading-snug">
                   사주를 읽고, 마음의 결을 함께 살핍니다.
                 </h3>
-                <p className="text-xs md:text-sm text-[#E6BFA9] font-medium mb-5">
+                <p className="text-xs md:text-sm text-[#D9A8A7] font-medium mb-5">
                   백도화 | 선천코드 연애 리포트 기획·분석
                 </p>
                 <div className="space-y-3.5 text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
@@ -54,7 +54,7 @@ export default function BaekdohwaPhilosophy() {
             </div>
 
             <div className="mt-10 pt-6 border-t border-[#B7788D]/20 text-center">
-              <span className="text-xs tracking-[0.3em] uppercase text-[#E6BFA9]/70 font-mono">
+              <span className="text-xs tracking-[0.3em] uppercase text-[#D9A8A7]/70 font-mono">
                 BAEKDOHWA RELATIONSHIP INSTITUTE
               </span>
             </div>

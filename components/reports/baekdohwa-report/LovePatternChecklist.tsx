@@ -110,7 +110,7 @@ export default function LovePatternChecklist() {
             className="p-6 md:p-8 rounded-2xl text-center relative z-10 transition-all duration-500 shadow-xl"
           >
             <div className="mb-3">
-              <span className="inline-block px-4 py-2 rounded-full text-[16px] font-semibold bg-white/5 text-[#E6BFA9] border border-white/10">
+              <span className="inline-block px-4 py-2 rounded-full text-[16px] font-semibold bg-white/5 text-[#D9A8A7] border border-white/10">
                 체크한 항목 수 · {selectedCount} / {checklistData.items.length}
               </span>
             </div>

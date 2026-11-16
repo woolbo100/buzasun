@@ -34,7 +34,7 @@ export default function GeneralAdviceComparison() {
                     {card.tag}
                   </span>
                 </div>
-                <h3 className="text-[20px] md:text-[24px] font-elegant font-bold text-white mb-4 leading-snug break-keep group-hover:text-[#E6BFA9] transition-colors">
+                <h3 className="text-[20px] md:text-[24px] font-elegant font-bold text-white mb-4 leading-snug break-keep group-hover:text-[#D9A8A7] transition-colors">
                   &ldquo;{card.content}&rdquo;
                 </h3>
               </div>

@@ -62,7 +62,7 @@ export default function TransformationThreeChanges() {
                   <div className="w-12 h-12 rounded-2xl bg-[#2D0A1E] border border-[#B7788D]/40 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
                     {item.icon}
                   </div>
-                  <span className="text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-full bg-[#B7788D]/15 border border-[#B7788D]/30 text-[#E6BFA9]">
+                  <span className="text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-full bg-[#B7788D]/15 border border-[#B7788D]/30 text-[#D9A8A7]">
                     {item.tag}
                   </span>
                 </div>
@@ -81,7 +81,7 @@ export default function TransformationThreeChanges() {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#E6BFA9]/60">
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-[#D9A8A7]/60">
                 <span className="font-mono tracking-wider">CHANGE {item.num}</span>
                 <span className="text-[#D9A8A7]/70">선천코드 실천 변화</span>
               </div>

@@ -17,56 +17,58 @@ export default function PersonalizedCaseComparison() {
             </h2>
           </div>
 
-          <div className="space-y-3.5 max-w-3xl mx-auto">
-            <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light break-keep leading-relaxed">
-              {personalizedCaseData.subCopy}
-            </p>
-            <p className="text-[16px] md:text-[17px] text-[#EDE6DA] opacity-90 font-light leading-relaxed break-keep">
-              타고난 선천코드가 같아도, 내가 어떤 인연을 만나고 어떤 상호작용을 하느냐에 따라<br />
+          <div className="space-y-4 max-w-3xl mx-auto">
+            <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed break-keep">
+              {personalizedCaseData.subCopy}<br />
+              타고난 선천코드가 같아도, 내가 어떤 인연을 만나고 어떤 상호작용을 하느냐에 따라<br className="hidden sm:inline" />
               사랑의 결말은 완전히 달라집니다.
             </p>
             <p className="font-elegant font-medium text-[17px] md:text-[19px] text-[#FAF7F2] leading-relaxed break-keep pt-1">
-              &ldquo;<span className="text-[#E6BFA9] font-semibold">중요한 것은 내 안의 코드뿐만 아니라, 그 코드가 발현될 때<br />
+              &ldquo;<span className="text-[#D9A8A7] font-semibold">중요한 것은 내 안의 코드뿐만 아니라, 그 코드가 발현될 때<br />
               내가 어떻게 반응하는지를 아는 것입니다.</span>&rdquo;
             </p>
           </div>
         </div>
 
         {/* CASE A & B 비교 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-7xl mx-auto mb-12">
           {personalizedCaseData.cases.map((c, idx) => (
             <div
               key={idx}
-              className="p-8 md:p-10 rounded-[32px] transition-all duration-300 relative overflow-hidden flex flex-col justify-between group shadow-2xl hover:border-[rgba(245,218,226,0.35)]"
+              className="p-7 md:p-9 rounded-[28px] md:rounded-[32px] transition-all duration-300 relative overflow-hidden flex flex-col justify-between group shadow-2xl hover:border-[rgba(245,218,226,0.30)]"
               style={{
-                background: 'rgba(125, 76, 100, 0.22)',
-                border: '1px solid rgba(215, 170, 185, 0.20)',
-                backdropFilter: 'blur(8px)',
-                WebkitBackdropFilter: 'blur(8px)',
+                background: 'rgba(110, 62, 85, 0.16)',
+                border: '1px solid rgba(215, 170, 185, 0.18)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
               }}
             >
               {/* 은은한 배경 광채 효과 */}
               <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#B7788D]/10 rounded-full blur-[60px] pointer-events-none" />
 
-              {/* 상단 뱃지 & 선천코드 */}
               <div className="relative z-10">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider bg-[#B7788D] text-[#1A0514] shadow-sm">
+                {/* 상단 뱃지 & 선천코드 보조 라벨 */}
+                <div className="flex items-center justify-between mb-5">
+                  {/* CASE 메인 라벨 (현실의 패턴과 동일한 로즈플럼 pill 스타일) */}
+                  <span className="px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider bg-[#B7788D]/20 border border-[#B7788D]/40 text-[#FAF7F2] shadow-sm">
                     {c.badge}
                   </span>
-                  <div className="px-3 py-1 rounded-lg bg-black/25 border border-white/15 text-xs text-[#E6BFA9]">
-                    선천코드: <span className="font-semibold text-white">{c.code}</span>
+                  {/* 선천코드 보조 라벨 (한 단계 은은한 보조 표시) */}
+                  <div className="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/10 text-[11px] text-[#EDE6DA]/60">
+                    선천코드 · <span className="text-[#EDE6DA]/85 font-medium">{c.code}</span>
                   </div>
                 </div>
 
-                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-8 group-hover:text-[#F3D6DE] transition-colors leading-snug break-keep">
+                {/* 카드 제목 */}
+                <h3 className="text-[20px] md:text-[23px] font-bold text-white mb-6 leading-snug break-keep tracking-tight">
                   {c.typeName}
                 </h3>
 
-                <div className="space-y-5">
-                  {/* 반복 행동 (중간 톤 일반 정보 카드) */}
-                  <div className="p-4 md:p-5 rounded-2xl bg-black/25 border border-white/10 backdrop-blur-sm">
-                    <span className="text-xs font-bold text-white/60 block mb-1.5">
+                {/* 3개 정보 박스 (한 세트의 통일된 반투명 정보 블록) */}
+                <div className="space-y-3.5">
+                  {/* 1. 반복 행동 */}
+                  <div className="p-4 md:p-4.5 rounded-2xl bg-black/20 border border-white/10 backdrop-blur-sm">
+                    <span className="text-xs font-medium text-white/50 block mb-1.5">
                       {c.behaviorTitle}
                     </span>
                     <p className="text-sm md:text-base text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
@@ -74,26 +76,26 @@ export default function PersonalizedCaseComparison() {
                     </p>
                   </div>
 
-                  {/* 관계의 결과 (버건디/딥로즈 강조 카드) */}
-                  <div className="p-4 md:p-5 rounded-2xl bg-[#5C1D2E]/40 border border-[#B7788D]/35 backdrop-blur-sm">
-                    <span className="text-xs font-bold text-[#E6BFA9] block mb-1.5">
+                  {/* 2. 관계의 결과 (미세한 로즈플럼 틴트) */}
+                  <div className="p-4 md:p-4.5 rounded-2xl bg-[#4A1D2C]/20 border border-[#B7788D]/20 backdrop-blur-sm">
+                    <span className="text-xs font-semibold text-[#D9A8A7] block mb-1.5">
                       {c.resultTitle}
                     </span>
-                    <p className="text-sm md:text-base text-[#FFF0F3]/95 font-light leading-relaxed break-keep">
+                    <p className="text-sm md:text-base text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
                       {c.resultDesc}
                     </p>
                   </div>
-                </div>
-              </div>
 
-              {/* 처방 방향 (하단 강조 박스) */}
-              <div className="mt-8 pt-6 border-t border-[#B7788D]/30 p-4 md:p-5 rounded-2xl bg-[#B7788D]/15 border border-[#B7788D]/25 relative z-10 backdrop-blur-sm">
-                <span className="text-xs font-bold text-[#E6BFA9] block mb-1.5">
-                  ✨ {c.solutionTitle}
-                </span>
-                <p className="text-sm md:text-base text-white font-medium leading-relaxed break-keep">
-                  {c.solutionDesc}
-                </p>
+                  {/* 3. 처방 방향 (소프트 더스티 로즈 틴트) */}
+                  <div className="p-4 md:p-4.5 rounded-2xl bg-[#B7788D]/10 border border-[#B7788D]/25 backdrop-blur-sm">
+                    <span className="text-xs font-semibold text-[#D9A8A7] block mb-1.5">
+                      ✦ {c.solutionTitle}
+                    </span>
+                    <p className="text-sm md:text-base text-[#FAF7F2] font-medium leading-relaxed break-keep">
+                      {c.solutionDesc}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -101,7 +103,7 @@ export default function PersonalizedCaseComparison() {
 
         {/* 결론 요약 & 면책 고지 */}
         <div className="max-w-3xl mx-auto text-center space-y-3">
-          <p className="text-base md:text-lg text-[#E6BFA9] font-elegant leading-relaxed whitespace-pre-line font-medium">
+          <p className="text-base md:text-lg text-[#D9A8A7] font-elegant leading-relaxed whitespace-pre-line font-medium">
             {personalizedCaseData.conclusion}
           </p>
           <p className="text-xs text-white/40">

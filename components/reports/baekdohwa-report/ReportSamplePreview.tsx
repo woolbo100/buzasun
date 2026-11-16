@@ -64,7 +64,7 @@ export default function ReportSamplePreview() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#E6BFA9]">
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#D9A8A7]">
                   {sample.badge}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -75,7 +75,7 @@ export default function ReportSamplePreview() {
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#E6BFA9] transition-colors">
+                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#D9A8A7] transition-colors">
                   {sample.title}
                 </h4>
                 <p className="text-xs text-[#EDE6DA]/60 font-light break-keep">
@@ -98,7 +98,7 @@ export default function ReportSamplePreview() {
                   실제 리포트 본문 발췌 페이지
                 </h3>
               </div>
-              <span className="text-xs px-3 py-1 rounded-full bg-[#B7788D]/20 border border-[#B7788D]/40 text-[#E6BFA9] font-medium">
+              <span className="text-xs px-3 py-1 rounded-full bg-[#B7788D]/20 border border-[#B7788D]/40 text-[#D9A8A7] font-medium">
                 A4 규격 (210 × 297mm)
               </span>
             </div>
@@ -141,7 +141,7 @@ export default function ReportSamplePreview() {
                 <p className="text-xs md:text-sm text-[#EDE6DA]/70 font-light leading-relaxed break-keep max-w-xs">
                   실제 발행되는 맞춤 리포트의 A4 원본 페이지 발췌본이 검수 완료 후 본 슬롯에 순차적으로 공개됩니다.
                 </p>
-                <span className="mt-4 text-[11px] font-mono text-[#E6BFA9]/60">
+                <span className="mt-4 text-[11px] font-mono text-[#D9A8A7]/60">
                   SLOT: A4 RATIO (210 × 297)
                 </span>
               </div>

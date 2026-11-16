@@ -335,7 +335,7 @@ export default function BaekdohwaReportPage() {
                     <h3 className="text-xl sm:text-2xl md:text-[25px] font-elegant font-bold text-white tracking-wide pb-1">
                       이번 만큼은 다를 거라 믿었지만...
                     </h3>
-                    <p className="text-[#E6BFA9] font-medium leading-relaxed">
+                    <p className="text-[#D9A8A7] font-medium leading-relaxed">
                       상대만 바뀌었을 뿐, 헤어지는 이유와 상처의 흔적이 매번 익숙하다면...<br className="hidden sm:inline" />
                       문제는 이번에 만난 상대 한 사람만이 아닐 수 있습니다.
                     </p>
@@ -397,13 +397,13 @@ export default function BaekdohwaReportPage() {
                         }}
                       >
                         <div className="font-elegant text-[16px] md:text-[18px] leading-[1.75] break-keep">
-                          <p className="font-bold text-[#E6BFA9]">
+                          <p className="font-bold text-[#D9A8A7]">
                             하지만 기억하십시오.
                           </p>
                           <p className="text-white font-medium">
                             끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.
                           </p>
-                          <p className="text-[#E6BFA9] font-semibold">
+                          <p className="text-[#D9A8A7] font-semibold">
                             내 설계도를 모른 채 달리는 연애는 언제나 같은 벽에 부딪히게 되어 있습니다.
                           </p>
                         </div>
@@ -483,7 +483,7 @@ export default function BaekdohwaReportPage() {
                         </p>
                         <p>
                           우연이라 믿었던 이별의 타이밍도, 늘 비슷한 결의 사람에게 무너지던 순간도<br className="hidden sm:inline" />
-                          모두 당신의 선천코드 속에 촘촘히 새겨져 있던 <span className="text-[#E6BFA9] font-semibold">반복의 알고리즘</span>이었습니다.
+                          모두 당신의 선천코드 속에 촘촘히 새겨져 있던 <span className="text-[#D9A8A7] font-semibold">반복의 알고리즘</span>이었습니다.
                         </p>
                       </div>
                     </div>
@@ -504,14 +504,14 @@ export default function BaekdohwaReportPage() {
                       >
                         <p className="text-[#FAF7F2] font-elegant font-medium text-[17px] sm:text-[18px] md:text-[19px] leading-[1.7]">
                           내가 누구에게 끌리고,<br className="hidden sm:inline" />
-                          <span className="text-[#E6BFA9]"> 왜 같은 선택을 반복하는지 그 근본을 해부하는 일.</span>
+                          <span className="text-[#D9A8A7]"> 왜 같은 선택을 반복하는지 그 근본을 해부하는 일.</span>
                         </p>
                       </div>
 
                       {/* 마무리 훅: 가로선 없이 자연스러운 간격으로 이어지는 요약 문장 */}
                       <div className="pt-2">
                         <p className="font-elegant font-bold text-[19px] md:text-[22px] text-[#FAF7F2] leading-[1.7] break-keep">
-                          <span className="text-[#E6BFA9] font-semibold">그것이 반복의 알고리즘을 끊는 일입니다.</span>
+                          <span className="text-[#D9A8A7] font-semibold">그것이 반복의 알고리즘을 끊는 일입니다.</span>
                         </p>
                       </div>
                     </div>
@@ -628,7 +628,7 @@ export default function BaekdohwaReportPage() {
                   {/* 추가된 무기와 연애 판도 전환 서사 블록 */}
                   <div className="pt-4 space-y-5 max-w-3xl mx-auto text-center">
                     <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-relaxed break-keep">
-                      자신의 사주를 읽고, 선천코드 속 <span className="text-[#E6BFA9] font-semibold">&lsquo;치명적인 무기&rsquo;</span>를 정확히 꿰뚫은 여자는 연애의 판도가 완전히 달라집니다.
+                      자신의 사주를 읽고, 선천코드 속 <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 무기&rsquo;</span>를 정확히 꿰뚫은 여자는 연애의 판도가 완전히 달라집니다.
                     </p>
 
                     <div className="space-y-3 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
@@ -636,7 +636,7 @@ export default function BaekdohwaReportPage() {
                         남자의 마음을 얻기 위해 애쓰지 않습니다.
                       </p>
                       <p>
-                        내 코드가 정렬되는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#E6BFA9] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
+                        내 코드가 정렬되는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#D9A8A7] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
                       </p>
                     </div>
                   </div>
@@ -662,12 +662,12 @@ export default function BaekdohwaReportPage() {
                       borderColor: 'rgba(215, 170, 185, 0.20)',
                     }}
                   >
-                    <p className="text-sm md:text-base text-[#E6BFA9] font-bold tracking-wide">
+                    <p className="text-sm md:text-base text-[#D9A8A7] font-bold tracking-wide">
                       이제 감정에 휘둘리며 닳아버리는 연애는 끝내세요.
                     </p>
                     <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
                       당신의 연애 판도를 완전히 뒤바꿀 단 하나의 설계도,<br className="hidden sm:inline" />
-                      <span className="text-[#E6BFA9] font-semibold">백도화 《연애비급》 선천코드 리포트가 당신의 진짜 매력을 깨워드립니다.</span>
+                      <span className="text-[#D9A8A7] font-semibold">백도화 《연애비급》 선천코드 리포트가 당신의 진짜 매력을 깨워드립니다.</span>
                     </p>
                   </div>
                 </div>
@@ -791,7 +791,7 @@ export default function BaekdohwaReportPage() {
                     끌림의 이유부터 나만의 관계 처방까지. 이제 당신의 선천코드를 펼쳐보세요.
                   </p>
 
-                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#B7788D]/15 border border-[#B7788D]/35 text-xs md:text-sm text-[#E6BFA9] font-medium mb-8">
+                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#B7788D]/15 border border-[#B7788D]/35 text-xs md:text-sm text-[#D9A8A7] font-medium mb-8">
                     39,000원 · 맞춤 PDF · 오행 카드 1종 포함
                   </div>
 

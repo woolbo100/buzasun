@@ -25,8 +25,8 @@ export default function RelationshipPatternFlow() {
           {/* 서사 본문 블록 (2줄씩 문단으로 묶어 빈 줄 없이 정돈된 줄간격 유지) */}
           <div className="space-y-4 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep max-w-4xl mx-auto">
             <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 leading-relaxed">
-              {patternFlowData.subCopy}<br />
-              <span className="lg:whitespace-nowrap">그동안 우리는 뜨거운 감정의 한복판에 갇혀, 내가 왜 또 같은 상처를 향해 걸어가고 있는지조차 보지 못했습니다.</span>
+              감정의 소용돌이 속에서 한 걸음 물러나 내 설계도를 객관적으로 바라보는 순간,<br />
+              상처를 향해 걸어가던 반복의 고리는 끊어집니다.
             </p>
             <p className="text-[#FAF7F2] font-medium leading-relaxed">
               나를 제3자의 시선으로 바라볼 때 비로소 집착에서 깨어나듯,<br className="hidden sm:inline" />
@@ -55,9 +55,9 @@ export default function RelationshipPatternFlow() {
           <p className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#FAF7F2] leading-[1.6] break-keep">
             이제 감정에 휩쓸리는 당사자가 아니라,<br />
             내 연애의 판을 내려다보는 깨어있는 관찰자가 되십시오.<br />
-            반복의 고리를 과감하게 끊어내십시오.
+            <span className="gradient-text-love">반복의 고리를 과감하게 끊어내십시오.</span>
           </p>
-          <p className="text-sm md:text-base text-[#E6BFA9] font-light break-keep pt-1">
+          <p className="text-sm md:text-base text-[#D9A8A7] font-light break-keep pt-1">
             아래 3가지 핵심 축을 통해, 당신을 가두던 반복의 알고리즘을 투명하게 해부합니다.
           </p>
         </div>

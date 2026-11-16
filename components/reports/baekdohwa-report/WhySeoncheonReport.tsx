@@ -61,7 +61,7 @@ export default function WhySeoncheonReport() {
               </span>
               <p className="text-[15px] md:text-[16px] text-[#FAF7F2] font-medium leading-relaxed">
                 백도화는 묻습니다.<br />
-                <span className="text-[#E6BFA9] font-bold text-[17px] md:text-[18px]">&ldquo;왜 당신은 그런 사랑을 선택했을까요?&rdquo;</span>
+                <span className="text-[#D9A8A7] font-bold text-[17px] md:text-[18px]">&ldquo;왜 당신은 그런 사랑을 선택했을까요?&rdquo;</span>
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function WhySeoncheonReport() {
             <div className="pt-2">
               <p className="font-elegant font-semibold text-[17px] md:text-[19px] text-[#FAF7F2] leading-[1.7] break-keep">
                 &ldquo;찍어낸 듯 똑같은 사주 풀이는 이제 그만.<br className="hidden sm:inline" />
-                <span className="text-[#E6BFA9]"> 당신의 만세력 여섯 글자(또는 여덟 글자)로 빚어낸 45~50페이지 분량의 1:1 맞춤형 왕실 비급 처방서</span>&rdquo;
+                <span className="text-[#D9A8A7]"> 당신의 만세력 여섯 글자(또는 여덟 글자)로 빚어낸 45~50페이지 분량의 1:1 맞춤형 왕실 비급 처방서</span>&rdquo;
               </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function WhySeoncheonReport() {
           {/* 6-1. 브랜드 해석 관점 라벨 */}
           <div className="text-center max-w-xl mx-auto mb-12 md:mb-16">
             <div className="inline-flex flex-col items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#B7788D]/10 border border-[#B7788D]/25">
-              <span className="text-[12px] md:text-[13px] font-medium tracking-[0.12em] text-[#E6BFA9] break-keep leading-relaxed">
+              <span className="text-[12px] md:text-[13px] font-medium tracking-[0.12em] text-[#D9A8A7] break-keep leading-relaxed">
                 동양 명리학 <span className="text-[#D9A8A7]/70 mx-1">✦</span> 관계 심리학 <span className="text-[#D9A8A7]/70 mx-1">✦</span> 뇌과학적 통찰
               </span>
               <span className="text-[10px] md:text-[11px] font-mono tracking-[0.18em] uppercase text-[#D9A8A7]/60">
@@ -146,7 +146,7 @@ export default function WhySeoncheonReport() {
           <div className="max-w-3xl mx-auto pt-4">
             <p className="font-elegant font-medium text-[18px] md:text-[21px] text-[#FAF7F2] leading-relaxed break-keep">
               &ldquo;언제 사랑받을지를 묻지 마세요.<br className="sm:hidden" />
-              <span className="text-[#E6BFA9] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;
+              <span className="text-[#D9A8A7] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;
             </p>
           </div>
         </div>

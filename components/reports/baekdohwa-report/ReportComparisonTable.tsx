@@ -52,7 +52,7 @@ export default function ReportComparisonTable() {
                       {row.traditional}
                     </td>
                     <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#B7788D]/10 border-x border-[#B7788D]/25 shadow-inner">
-                      <span className="text-[#E6BFA9] font-bold">
+                      <span className="text-[#D9A8A7] font-bold">
                         {row.baekdohwa}
                       </span>
                     </td>

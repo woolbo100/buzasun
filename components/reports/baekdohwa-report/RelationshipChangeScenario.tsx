@@ -32,7 +32,7 @@ export default function RelationshipChangeScenario() {
                     <span className="text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-md bg-white/10 text-white">
                       {stage.stage}
                     </span>
-                    <span className="text-xs text-[#E6BFA9] font-semibold">
+                    <span className="text-xs text-[#D9A8A7] font-semibold">
                       {stage.tag}
                     </span>
                   </div>

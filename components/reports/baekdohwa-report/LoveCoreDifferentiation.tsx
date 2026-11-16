@@ -41,7 +41,7 @@ export default function LoveCoreDifferentiation() {
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             새로운 사람을 만나도 몇 달 뒤 똑같은 외로움과 불안을 겪고 있다면,<br className="hidden sm:inline" />
-            이제는 바깥이 아니라 <span className="text-[#E6BFA9] font-medium">내 안의 사랑의 작동 방식</span>을 들여다봐야 합니다.
+            이제는 바깥이 아니라 <span className="text-[#D9A8A7] font-medium">내 안의 사랑의 작동 방식</span>을 들여다봐야 합니다.
           </p>
         </div>
 

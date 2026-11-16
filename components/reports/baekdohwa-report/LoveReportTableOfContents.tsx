@@ -61,13 +61,13 @@ export default function LoveReportTableOfContents() {
                         className={`text-xs font-mono font-bold tracking-widest px-2.5 py-0.5 md:px-3 md:py-1 rounded-md shrink-0 ${
                           isSpecial
                             ? 'bg-[#B7788D] text-[#1A0514]'
-                            : 'bg-white/10 text-[#E6BFA9]'
+                            : 'bg-white/10 text-[#D9A8A7]'
                         }`}
                       >
                         {part.number}
                       </span>
                       {isSpecial && (
-                        <span className="inline-flex items-center gap-1 text-[11px] text-[#E6BFA9] font-bold shrink-0">
+                        <span className="inline-flex items-center gap-1 text-[11px] text-[#D9A8A7] font-bold shrink-0">
                           <Sparkles className="w-3.5 h-3.5 text-[#D9A8A7]" />
                           핵심 실천 처방
                         </span>

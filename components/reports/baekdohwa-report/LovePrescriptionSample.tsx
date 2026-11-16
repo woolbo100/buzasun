@@ -36,12 +36,12 @@ export default function LovePrescriptionSample() {
 
           {/* 처방 질문 헤드라인 */}
           <div className="mb-8">
-            <span className="text-xs font-mono font-bold text-[#E6BFA9] tracking-wider uppercase block mb-3">
+            <span className="text-xs font-mono font-bold text-[#D9A8A7] tracking-wider uppercase block mb-3">
               [진단 질문] 불안 반응 패턴
             </span>
             <h3 className="text-xl md:text-2xl font-elegant font-bold text-white leading-snug break-keep">
               &ldquo;답장이 늦어지는 순간, 당신은 상대의 마음보다 먼저 <br className="hidden sm:inline" />
-              <span className="text-[#E6BFA9]">자신의 가치를 의심</span>하고 있지 않은가?&rdquo;
+              <span className="text-[#D9A8A7]">자신의 가치를 의심</span>하고 있지 않은가?&rdquo;
             </h3>
           </div>
 
@@ -53,9 +53,9 @@ export default function LovePrescriptionSample() {
             </div>
             <p className="text-base md:text-lg text-[#EDE6DA] font-medium leading-relaxed break-keep">
               불안한 마음에 쫓겨 장문의 메시지를 보내거나 상대를 추궁하기 전,<br className="hidden sm:inline" />
-              <span className="text-[#E6BFA9] underline underline-offset-4 decoration-[#B7788D]">
+              <span className="text-[#D9A8A7] underline underline-offset-4 decoration-[#B7788D]">
                 지금 확인된 객관적 사실
-              </span>과 <span className="text-[#E6BFA9] underline underline-offset-4 decoration-[#B7788D]">
+              </span>과 <span className="text-[#D9A8A7] underline underline-offset-4 decoration-[#B7788D]">
                 내 불안이 상상해낸 이야기
               </span>를 메모장에 두 줄로 분리해 기록하십시오.
             </p>
