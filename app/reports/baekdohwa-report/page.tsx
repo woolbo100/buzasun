@@ -569,7 +569,7 @@ export default function BaekdohwaReportPage() {
             <WhySeoncheonReport />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* STEP 04. 선천코드 소개 — 선천코드란 무엇이며, 왜 나를 이해하는 데 도움이 되는가? */}
+            {/* STEP 04. 연애 특화 심층 분석 — 두루뭉술한 인생 총운이 아닌 연애·사랑 집중 분석 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40">
               <Reveal>
@@ -577,7 +577,7 @@ export default function BaekdohwaReportPage() {
                   <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
                     <Image 
                       src="/image/lovereport/p2.webp" 
-                      alt="선천코드 소개" 
+                      alt="연애 특화 심층 분석" 
                       width={800}
                       height={600}
                       className="w-full h-auto object-cover" 
@@ -585,16 +585,17 @@ export default function BaekdohwaReportPage() {
                   </div>
                   <div className="space-y-10">
                     <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
-                      STEP 04 · WHAT IS SEONCHEON CODE
+                      DEEP RELATIONSHIP ANALYSIS
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      선천코드: 타고난 사랑의 기질과 <br /> <span className="gradient-text-love">인연의 지도</span>
+                      두루뭉술한 인생 총운이 아닙니다.<br />
+                      오직 당신의 <span className="gradient-text-love">‘연애와 사랑’에만 집중</span>합니다.
                     </h2>
                     <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      선천코드 연애 리포트는 단순한 연애운 풀이가 아니라, 당신이 어떤 사람에게 끌리고, 왜 비슷한 관계 패턴을 반복하는지, 그리고 어떤 방식으로 사랑을 회복하고 선택할 수 있는지를 섬세하게 해석하는 프리미엄 연애 리포트입니다.
+                      사주 전체를 훑는 수박 겉핥기식 운세 풀이로는 사랑의 갈등을 해결할 수 없습니다. 백도화 선천코드 연애 리포트는 오행과 십성의 에너지를 철저히 ‘관계와 애정’의 관점으로 좁혀, 당신이 사랑에 빠지는 순간부터 관계가 흔들리는 위기까지 모든 애정의 역학을 섬세하게 분해합니다.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {["타고난 연애 기질", "무의식적 끌림 패턴", "관계 유지 전략", "매력 에너지 활용법"].map((item, idx) => (
+                      {["타고난 사랑의 기질", "무의식적 끌림 코드", "반복되는 갈등 원인", "선천적 매력 에너지"].map((item, idx) => (
                         <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl">
                           <div className="w-2 h-2 rounded-full bg-[#B7788D] shadow-[0_0_10px_rgba(183,120,141,0.5)]"></div>
                           <span className="text-white/80">{item}</span>
@@ -610,21 +611,21 @@ export default function BaekdohwaReportPage() {
             <PersonalAnalysisMethod />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* STEP 05. 매력 발견 — 나의 3대 매력 무기, 숨겨진 강점, 그림자, 잘 맞는 유형과 피해야 할 유형 */}
+            {/* STEP 05. 매력무기·이상형·남편복·피해야 할 인연 등 6대 핵심 심층 분석 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40 text-center">
               <Reveal>
                 <div className="max-w-4xl mx-auto mb-16 space-y-6">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                    STEP 05 · ATTRACTION & WEAPONS
+                    CORE RELATIONSHIP CODES
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    &ldquo;당신에게는 아직 꺼내지 않은<br className="sm:hidden" />
-                    <span className="gradient-text-love"> 치명적인 매력의 무기</span>가 있습니다.&rdquo;
+                    &ldquo;남에게 맞추는 연애는 끝났습니다.<br className="sm:hidden" />
+                    <span className="gradient-text-love"> 내 안의 무기부터 파트너의 기준까지</span> 밝힙니다.&rdquo;
                   </h2>
                   <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    남들의 기준에 나를 억지로 맞추지 않아도 됩니다.<br className="hidden sm:inline" />
-                    내가 가진 고유한 매력의 결을 알고 드러낼 때, 비로소 나에게 꼭 맞는 인연이 알아봅니다.
+                    남들의 기준에 나를 억지로 맞추며 사랑받으려 애쓰지 않아도 됩니다.<br className="hidden sm:inline" />
+                    내 사주에 새겨진 치명적인 매력의 무기를 꿰뚫고, 나를 살리는 인연과 해치는 인연의 기준을 세울 때 비로소 내가 선택하는 사랑이 시작됩니다.
                   </p>
 
                   {/* 추가된 무기와 연애 판도 전환 서사 블록 */}
@@ -668,7 +669,7 @@ export default function BaekdohwaReportPage() {
                       이제 감정에 휘둘리며 닳아버리는 연애는 끝내세요.
                     </p>
                     <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
-                      당신의 연애 판도를 완전히 뒤바꿀 단 하나의 설계도,<br className="hidden sm:inline" />
+                      당신의 연애 판도를 완전히 뒤바꿀 단 하나의 비급,<br className="hidden sm:inline" />
                       <span className="text-[#D9A8A7] font-semibold">백도화 《연애비급》 선천코드 리포트가 당신의 진짜 매력을 깨워드립니다.</span>
                     </p>
                   </div>
@@ -678,15 +679,15 @@ export default function BaekdohwaReportPage() {
                 <div className="max-w-4xl mx-auto mb-14 text-center pt-10 md:pt-14 space-y-4">
                   <BaekdohwaDivider className="mb-6 md:mb-7" />
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
-                    THE SIX KEYS TO YOUR LOVE CODE
+                    THE SIX PERSPECTIVES OF LOVE
                   </span>
                   <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white leading-[1.3] break-keep">
                     당신의 사랑을 움직이는<br className="sm:hidden" />
-                    <span className="gradient-text-love"> 숨겨진 코드</span>
+                    <span className="gradient-text-love"> 6가지 핵심 분석 축</span>
                   </h3>
                   <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    타고난 매력부터 반복되는 끌림, 관계의 그림자와 인연의 선택까지.<br className="hidden sm:inline" />
-                    당신도 몰랐던 사랑의 설계도를 여섯 가지 관점으로 풀어냅니다.
+                    나만의 매력 무기부터 이상형, 남편복, 피해야 할 인연까지.<br className="hidden sm:inline" />
+                    리포트가 실제로 짚어내는 6가지 심층 분석 영역입니다.
                   </p>
                 </div>
 
@@ -702,12 +703,12 @@ export default function BaekdohwaReportPage() {
                 <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                      { t: "나의 3대 매력 무기", d: "가장 나다운 모습으로 온전히 존중받는 법", i: "fa-wand-magic-sparkles" },
-                      { t: "무의식적 끌림 패턴", d: "반복적으로 빠져드는 위험한 매혹과 끌림의 원인", i: "fa-bolt" },
-                      { t: "숨겨진 그림자와 방어기제", d: "불안할 때 스스로 관계를 닫는 무의식 장벽", i: "fa-shield-halved" },
-                      { t: "잘 맞는 파트너 vs 피할 유형", d: "나를 채워주는 인연과 소모시키는 인연의 분별", i: "fa-user-group" },
-                      { t: "타고난 사랑의 본질", d: "동양 명리학으로 읽는 고유한 감정 에너지", i: "fa-heart" },
-                      { t: "관계 전환 솔루션", d: "상처의 고리를 끊어낼 실질적인 변화의 시작", i: "fa-key" }
+                      { t: "나만의 3대 매력 무기", d: "남을 흉내 내지 않고도 상대가 깊이 빠져들게 만드는 선천적 매력의 결", i: "fa-wand-magic-sparkles" },
+                      { t: "무의식적 위험한 끌림", d: "나쁜 남자, 회피형에게 번번이 마음을 빼앗기고 휘둘리던 근원적 원인", i: "fa-bolt" },
+                      { t: "내면의 방어기제와 그림자", d: "불안하거나 서운할 때 스스로 관계를 닫아버리는 무의식 장벽", i: "fa-shield-halved" },
+                      { t: "나를 살리는 인연 vs 피할 유형", d: "함께할수록 안정감을 주는 파트너와 나를 소모시키는 유형의 명확한 분별", i: "fa-user-group" },
+                      { t: "배우자 코드와 결혼 운", d: "동양 명리학으로 짚어내는 내 사주 속 남편복과 평생을 함께할 인연의 특성", i: "fa-heart" },
+                      { t: "관계 주도권 회복 솔루션", d: "상대의 표정에 일희일비하지 않고 내 감정의 중심을 단단히 지키는 법", i: "fa-key" }
                     ].map((item, idx) => (
                       <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group">
                         <div className="w-16 h-16 rounded-2xl bg-[#2D0A1E] flex items-center justify-center border border-[#B7788D]/35 text-[#D9A8A7] shadow-lg group-hover:scale-110 transition-transform">

@@ -9,15 +9,16 @@ export default function LovePrescriptionSample() {
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-12">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-            ACTIONABLE PRESCRIPTION SAMPLE
+            ACTIONABLE PRESCRIPTION
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-            단순한 조언이 아닌, <br className="sm:hidden" />
-            <span className="gradient-text-love">구체적인 행동 처방전</span>
+            단순한 운명 감상이 아닌, <br className="sm:hidden" />
+            내일 당장 쓸 수 있는 <span className="gradient-text-love">현실적인 행동 처방전</span>
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-            백도화 선천코드 리포트의 핵심인 PART 07에서는 모호한 위로 대신,<br className="hidden sm:inline" />
-            위기의 순간 당신의 중심을 지켜줄 실제 실천 가이드를 처방합니다.
+            &ldquo;올해는 남자를 조심하라&rdquo;는 식의 공허한 말은 하지 않습니다.<br className="hidden sm:inline" />
+            백도화 선천코드 리포트의 마지막 장(PART 07)에서는 모호한 위로 대신,<br className="hidden sm:inline" />
+            갈등이 시작되거나 불안이 차오를 때 중심을 지켜줄 실제 행동 가이드를 처방합니다.
           </p>
         </div>
 
