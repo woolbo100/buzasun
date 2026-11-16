@@ -66,58 +66,27 @@ export default function WhySeoncheonReport() {
           </span>
 
           {/* 2. 메인 제목 */}
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-10 md:mb-14 leading-[1.3] break-keep">
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-8 md:mb-10 leading-[1.3] break-keep">
             왜, <span className="gradient-text-love">선천코드 연애 리포트</span>인가?
           </h2>
 
-          {/* 3. 운세와 백도화의 질문 대비 블록 */}
-          <div className="max-w-4xl mx-auto mb-10 md:mb-12 grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
-            {/* 일반 운세의 질문 */}
-            <div className="p-6 md:p-8 rounded-2xl bg-black/25 border border-white/10 backdrop-blur-sm flex flex-col justify-between">
-              <span className="text-xs font-semibold text-white/50 tracking-wider uppercase mb-2">
-                일반 운세의 질문
-              </span>
-              <p className="text-[15px] md:text-[16px] text-white/70 font-light leading-relaxed">
-                운세는 묻습니다.<br />
-                <span className="text-white/90 font-medium">&ldquo;언제 사랑이 찾아올까요?&rdquo;</span>
-              </p>
-            </div>
-
-            {/* 백도화의 질문 */}
-            <div 
-              className="p-6 md:p-8 rounded-2xl border backdrop-blur-sm flex flex-col justify-between"
-              style={{
-                background: 'rgba(125, 76, 100, 0.28)',
-                borderColor: 'rgba(215, 170, 185, 0.28)',
-              }}
-            >
-              <span className="text-xs font-semibold text-[#D9A8A7] tracking-wider uppercase mb-2">
-                백도화의 본질적인 질문
-              </span>
-              <p className="text-[15px] md:text-[16px] text-[#FAF7F2] font-medium leading-relaxed">
-                백도화는 묻습니다.<br />
-                <span className="text-[#D9A8A7] font-bold text-[17px] md:text-[18px]">&ldquo;왜 당신은 그런 사랑을 선택했을까요?&rdquo;</span>
-              </p>
-            </div>
-          </div>
-
-          {/* 4. 설명 본문 */}
-          <div className="max-w-3xl mx-auto space-y-3 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-12">
+          {/* 3. 설명 본문 */}
+          <div className="max-w-3xl mx-auto space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-12">
             <p>
-              누군가를 언제 만날지보다 중요한 것은,<br className="hidden sm:inline" />
-              그 사람 앞에서 내가 어떤 모습이 되는가입니다.
+              연애가 힘든 건 운이 나빠서도, 사람 보는 눈이 없어서도 아니었습니다.<br className="hidden sm:inline" />
+              나에게 이미 쓰여 있는 코드를 모른 채 같은 문을 계속 두드렸기 때문입니다.
             </p>
             <p>
-              나의 매력은 어디에서 빛나고, 어떤 끌림 앞에서 판단이 흐려지며,<br className="hidden sm:inline" />
-              어떤 관계에서 나를 잃기 쉬운가.
+              수많은 명리 고전과 심리학 이론 사이에서 길을 찾다, 비로소 내 명식과 무의식의 패턴을 한 책상 위에 나란히 펼쳐 놓던 밤.<br className="hidden sm:inline" />
+              그날 처음으로 지나온 연애들이 하나의 선명한 줄로 이어져 보였습니다.
             </p>
           </div>
 
-          {/* 5. 가장 강조할 문장 (충분한 상하 여백과 큰 타이포그래피) */}
+          {/* 4. 가장 강조할 문장 (충분한 상하 여백과 큰 타이포그래피) */}
           <div className="my-10 md:my-14 py-8 md:py-10 border-y border-[#B49A70]/25 max-w-4xl mx-auto">
             <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[28px] text-white leading-relaxed break-keep">
-              &ldquo;연애 조언은 넘쳐납니다.<br className="sm:hidden" />
-              <span className="gradient-text-love"> 당신만의 처방전은 없었습니다.</span>&rdquo;
+              &ldquo;그 명쾌한 각성을 당신의 사랑에도 똑같이 건네기 위해,<br className="hidden sm:inline" />
+              <span className="gradient-text-love"> 이 리포트는 태어났습니다.</span>&rdquo;
             </p>
           </div>
 
