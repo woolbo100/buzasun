@@ -118,7 +118,7 @@ export default function PersonalAnalysisMethod() {
                         {phase.title}
                       </h3>
                     </div>
-                    <p className="text-[15px] sm:text-[16px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep pl-7 sm:pl-7.5">
+                    <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep pl-7 sm:pl-7.5">
                       {phase.desc}
                     </p>
                   </div>
