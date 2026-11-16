@@ -569,7 +569,7 @@ export default function BaekdohwaReportPage() {
             <WhySeoncheonReport />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION A. 연애 특화 심층 분석 — 두루뭉술한 인생 총운이 아닌 연애·사랑 집중 분석 */}
+            {/* POINT 01. 연애 특화 심층 분석 — 두루뭉술한 인생 총운이 아닌 연애·사랑 집중 분석 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40">
               <Reveal>
@@ -585,7 +585,7 @@ export default function BaekdohwaReportPage() {
                   </div>
                   <div className="space-y-10">
                     <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
-                      SECTION A · SPECIALIZED RELATIONSHIP ANALYSIS
+                      POINT 01 · SPECIALIZED RELATIONSHIP ANALYSIS
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                       두루뭉술한 인생 총운이 아닙니다.<br />
@@ -607,17 +607,17 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* SECTION B: 선천코드 3대 분석 방식 (명리 뼈대 + 현실 관계 기록 교차 분석) */}
+            {/* POINT 02: 선천코드 3대 분석 방식 (명리 뼈대 + 현실 관계 기록 교차 분석) */}
             <PersonalAnalysisMethod />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION C. 나만의 숨겨진 연애 코드 — 매력무기·이상형·남편복·피해야 할 인연 등 6대 핵심 심층 분석 */}
+            {/* POINT 03. 나만의 숨겨진 연애 코드 — 매력무기·이상형·남편복·피해야 할 인연 등 6대 핵심 심층 분석 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40 text-center">
               <Reveal>
                 <div className="max-w-4xl mx-auto mb-16 space-y-6">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                    SECTION C · HIDDEN RELATIONSHIP CODES
+                    POINT 03 · HIDDEN RELATIONSHIP CODES
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
                     &ldquo;나도 몰랐던 매력,<br className="sm:hidden" />
@@ -725,14 +725,14 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* SECTION D: 실제 리포트 분석 목차 (7개의 장 목차 공개) */}
+            {/* POINT 04: 실제 리포트 분석 목차 (7개의 장 목차 공개) */}
             <LoveReportTableOfContents />
 
-            {/* SECTION E: 개인 맞춤 실천 처방 샘플 (PART 07 실제 행동 처방전 샘플) */}
+            {/* POINT 05: 개인 맞춤 실천 처방 샘플 (PART 07 실제 행동 처방전 샘플) */}
             <LovePrescriptionSample />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION F: 백도화의 차별점 비교 — 일반 조언 vs 선천코드 처방전, 3대 비교표 */}
+            {/* POINT 06: 백도화의 차별점 비교 — 일반 조언 vs 선천코드 처방전, 3대 비교표 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 일반 연애 조언과의 차이점 */}
             <GeneralAdviceComparison />
@@ -740,17 +740,17 @@ export default function BaekdohwaReportPage() {
             {/* 기존 사주·AI 리포트와의 3대 비교표 */}
             <ReportComparisonTable />
 
-            {/* SECTION G: 프리미엄 결과물과 소장 가치 (리포트 샘플 미리보기, 라이트박스 지원) */}
+            {/* POINT 07: 프리미엄 결과물과 소장 가치 (리포트 샘플 미리보기, 라이트박스 지원) */}
             <ReportSamplePreview />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION H: 실질적인 선택의 변화 — 사랑받기 위해 애쓰는 연애에서 나다운 사랑으로 */}
+            {/* POINT 08: 실질적인 선택의 변화 — 사랑받기 위해 애쓰는 연애에서 나다운 사랑으로 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-20 text-center">
               <Reveal>
                 <div className="max-w-4xl mx-auto">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                    SECTION H · REAL TRANSFORMATION
+                    POINT 08 · REAL TRANSFORMATION
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
                     &ldquo;이제 사랑 앞에서,<br className="sm:hidden" />
@@ -771,7 +771,7 @@ export default function BaekdohwaReportPage() {
             <RelationshipChangeScenario />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* 중간 CTA: SECTION H 직후 배치 */}
+            {/* 중간 CTA: POINT 08 직후 배치 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40 max-w-4xl mx-auto px-4">
               <Reveal>

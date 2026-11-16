@@ -9,7 +9,7 @@ export default function LovePrescriptionSample() {
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-12">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-            SECTION E · ACTIONABLE PRESCRIPTION
+            POINT 05 · ACTIONABLE PRESCRIPTION
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             해석에서 끝나지 않습니다.<br className="sm:hidden" />
