@@ -1,9 +1,32 @@
 ﻿'use client'
 
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 
 export default function PersonalAnalysisMethod() {
+  const [activeStep, setActiveStep] = useState(0)
+
+  useEffect(() => {
+    // prefers-reduced-motion 환경에서는 애니메이션 실행하지 않고 정적 표시
+    if (typeof window !== 'undefined') {
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+      if (mediaQuery.matches) return
+    }
+
+    const timer = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % 3)
+    }, 2000)
+
+    return () => clearInterval(timer)
+  }, [])
+
+  const steps = [
+    '선천 기질 해독',
+    '무의식 패턴 분석',
+    '실전 행동 설계'
+  ]
+
   const analysisPhases = [
     {
       num: '01',
@@ -44,20 +67,27 @@ export default function PersonalAnalysisMethod() {
             </p>
           </div>
 
-          {/* 상단 3단계 프로세스 엠블럼 (중앙 정렬 포인트 핑크 라인 뱃지 박스) */}
-          <div className="pt-3 md:pt-5 flex justify-center">
-            <div className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full border border-[#B7788D]/45 bg-gradient-to-r from-[#2D0A1E]/60 via-[#180816]/75 to-[#2D0A1E]/60 backdrop-blur-md shadow-[0_4px_25px_rgba(183,120,141,0.2)] inline-flex items-center justify-center gap-2 sm:gap-3.5 text-center flex-wrap">
-              <span className="text-[13px] sm:text-[14px] md:text-[15px] font-semibold text-[#FAF7F2] tracking-wide break-keep">
-                선천 기질 해독
-              </span>
-              <span className="text-[#D9A8A7] text-xs sm:text-sm font-bold select-none">➔</span>
-              <span className="text-[13px] sm:text-[14px] md:text-[15px] font-semibold text-[#FAF7F2] tracking-wide break-keep">
-                무의식 패턴 분석
-              </span>
-              <span className="text-[#D9A8A7] text-xs sm:text-sm font-bold select-none">➔</span>
-              <span className="text-[13px] sm:text-[14px] md:text-[15px] font-semibold text-[#D9A8A7] tracking-wide break-keep">
-                실전 행동 설계
-              </span>
+          {/* 상단 3단계 프로세스 엠블럼 (중앙 정렬 톤다운 로즈핑크플럼 라인 뱃지 박스) */}
+          <div className="pt-3 md:pt-5 flex justify-center px-2">
+            <div className="px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full border border-[#B57987]/35 bg-gradient-to-r from-[#2D0A1E]/60 via-[#180816]/75 to-[#2D0A1E]/60 backdrop-blur-md shadow-[0_4px_14px_rgba(181,121,135,0.1)] inline-flex items-center justify-center gap-1.5 sm:gap-3 md:gap-3.5 text-center">
+              {steps.map((step, idx) => (
+                <div key={idx} className="inline-flex items-center gap-1.5 sm:gap-3 md:gap-3.5">
+                  <span
+                    className={`text-[13px] sm:text-[14px] md:text-[16px] font-semibold tracking-wide break-keep transition-colors duration-500 ease-in-out ${
+                      activeStep === idx
+                        ? 'text-[#E5A8B6]'
+                        : 'text-[#FAF7F2]/75'
+                    }`}
+                  >
+                    {step}
+                  </span>
+                  {idx < steps.length - 1 && (
+                    <span className="text-[#D9A8A7]/70 text-xs sm:text-sm font-bold select-none">
+                      ➔
+                    </span>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
