@@ -84,11 +84,16 @@ export default function WhySeoncheonReport() {
 
           {/* 4. 가장 강조할 문장 (충분한 상하 여백과 큰 타이포그래피) */}
           <div className="my-10 md:my-14 py-8 md:py-10 border-y border-[#B49A70]/25 max-w-4xl mx-auto">
-            <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[28px] text-white leading-relaxed break-keep">
-              &ldquo;그 명쾌한 각성을 당신의 사랑에도 똑같이 건네기 위해,<br className="hidden sm:inline" />
-              <span className="gradient-text-love"> 이 리포트는 태어났습니다.</span>&rdquo;
+            <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[28px] text-white leading-[1.85] md:leading-[2.1] break-keep">
+              그 명쾌한 각성을 당신의 사랑에도 똑같이 건네기 위해,<br className="hidden sm:inline" />
+              <span className="gradient-text-love"> 이 리포트는 태어났습니다.</span>
             </p>
           </div>
+
+          {/* 5. 6대 가치 카드 안내 문구 */}
+          <p className="font-elegant font-medium text-[17px] sm:text-[18px] md:text-[20px] text-[#D9A8A7] text-center mb-6 md:mb-8 break-keep">
+            백도화가 당신의 사랑을 위해 준비한 여섯 가지 특별한 가치
+          </p>
 
           {/* 6. 6대 차별화 핵심 가치 요약 카드 (PC: 3열×2행, 모바일: 2열×3행/1열) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 md:gap-5 text-left w-full max-w-[1280px] mx-auto mb-6">
@@ -111,9 +116,9 @@ export default function WhySeoncheonReport() {
                     borderWidth: '1px',
                   }}
                 >
-                  <div className="flex items-center justify-between w-full mb-3">
-                    <span className={`font-mono text-xs font-bold tracking-widest ${isSelected ? 'text-[#D9A8A7]' : 'text-[#D9A8A7]/70'}`}>
-                      CARD {card.num}
+                  <div className="flex items-center justify-between w-full mb-2.5">
+                    <span className={`font-mono text-[13px] md:text-[14px] font-semibold tracking-widest ${isSelected ? 'text-[#D9A8A7]' : 'text-[#D9A8A7]/70'}`}>
+                      POINT {card.num}
                     </span>
                     <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${
                       isSelected ? 'bg-[#D9A8A7]/20 text-[#D9A8A7]' : 'bg-white/5 text-white/50 group-hover:text-white/70'
