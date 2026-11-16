@@ -392,21 +392,25 @@ export default function BaekdohwaReportPage() {
                         관계의 을(乙)이 되기를 자처했던 시간들.
                       </p>
 
-                      {/* 하지만 기억하십시오 & 핵심 경각심 강조 카드 (기준 카드와 100% 동일한 디자인 적용) */}
+                      {/* 하지만 기억하십시오 & 핵심 경각심 강조 카드 (왼쪽 정렬, 일정한 3줄 간격, 콤팩트한 세로 높이, 따옴표 제거) */}
                       <div 
-                        className="love-report-highlight-card p-6 md:p-7 rounded-2xl border text-center space-y-3 backdrop-blur-sm my-4"
+                        className="love-report-highlight-card px-5 py-3.5 sm:px-6 sm:py-4 rounded-2xl border text-left backdrop-blur-sm my-3"
                         style={{
                           background: 'rgba(125, 76, 100, 0.20)',
                           borderColor: 'rgba(215, 170, 185, 0.20)',
                         }}
                       >
-                        <p className="font-elegant font-bold text-[16px] md:text-[18px] text-[#E6BFA9]">
-                          하지만 기억하십시오.
-                        </p>
-                        <p className="font-elegant font-medium text-[16px] md:text-[18px] text-white leading-relaxed break-keep">
-                          &ldquo;끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.<br className="hidden sm:inline" />
-                          <span className="text-[#E6BFA9] font-semibold"> 내 설계도를 모른 채 달리는 연애는 언제나 같은 벽에 부딪히게 되어 있습니다.</span>&rdquo;
-                        </p>
+                        <div className="font-elegant text-[16px] md:text-[18px] leading-[1.75] break-keep">
+                          <p className="font-bold text-[#E6BFA9]">
+                            하지만 기억하십시오.
+                          </p>
+                          <p className="text-white font-medium">
+                            끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.
+                          </p>
+                          <p className="text-[#E6BFA9] font-semibold">
+                            내 설계도를 모른 채 달리는 연애는 언제나 같은 벽에 부딪히게 되어 있습니다.
+                          </p>
+                        </div>
                       </div>
 
                       <p>
