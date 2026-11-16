@@ -72,20 +72,34 @@ export default function WhySeoncheonReport() {
           </span>
 
           {/* 2. 메인 제목 */}
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-8 md:mb-10 leading-[1.3] break-keep">
+          <h2 className="text-[26px] sm:text-[28px] md:text-[38px] font-elegant font-bold text-white mb-8 md:mb-10 leading-[1.3] break-keep">
             왜, <span className="gradient-text-love">선천코드 연애 리포트</span>인가?
           </h2>
 
           {/* 3. 설명 본문 */}
-          <div className="max-w-3xl mx-auto space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep mb-12">
-            <p>
-              연애가 힘든 건 운이 나빠서도, 사람 보는 눈이 없어서도 아니었습니다.<br className="hidden sm:inline" />
-              나에게 이미 쓰여 있는 코드를 모른 채 같은 문을 계속 두드렸기 때문입니다.
-            </p>
-            <p>
-              수많은 명리 고전과 심리학 이론 사이에서 길을 찾다, 비로소 내 명식과 무의식의 패턴을 한 책상 위에 나란히 펼쳐 놓던 밤.<br className="hidden sm:inline" />
-              그날 처음으로 지나온 연애들이 하나의 선명한 줄로 이어져 보였습니다.
-            </p>
+          <div className="max-w-3xl mx-auto space-y-6 md:space-y-7 mb-10 md:mb-12">
+            {/* 첫 번째 설명 문단 */}
+            <div className="space-y-2.5 md:space-y-3">
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
+                연애가 힘든 건 운이 나빠서도, 사람 보는 눈이 없어서도 아니었습니다.
+              </p>
+              <p className="font-elegant font-semibold text-[20px] sm:text-[21px] md:text-[23px] lg:text-[24px] text-[#D9A8A7] leading-[1.5] break-keep">
+                나에게 이미 쓰여 있는 코드를 모른 채 같은 문을 계속 두드렸기 때문입니다.
+              </p>
+            </div>
+
+            {/* 두 번째 설명 문단 */}
+            <div className="space-y-2 md:space-y-2.5 pt-1">
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
+                수많은 명리 고전과 심리학 이론 사이에서 길을 찾다,<br />
+                <span className="text-[#D9A8A7] font-medium opacity-100">
+                  비로소 내 명식과 무의식의 패턴을 한 책상 위에 나란히 펼쳐 놓던 밤.
+                </span>
+              </p>
+              <p className="text-[17px] sm:text-[18px] md:text-[18.5px] text-[#EDE6DA] font-medium opacity-95 leading-[1.75] break-keep">
+                그날 처음으로 지나온 연애들이 하나의 선명한 줄로 이어져 보였습니다.
+              </p>
+            </div>
           </div>
 
           {/* 4. 가장 강조할 문장 (충분한 상하 여백과 큰 타이포그래피) */}

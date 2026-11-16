@@ -573,29 +573,51 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40">
               <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
-                    <Image 
-                      src="/image/lovereport/p2.webp" 
-                      alt="연애 특화 심층 분석" 
-                      width={800}
-                      height={600}
-                      className="w-full h-auto object-cover" 
-                    />
+                {/* 모바일 표시 순서 1: 섹션 제목 및 헤드카피 */}
+                <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
+                    POINT 01 · LOVE ANALYSIS
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.2] break-keep">
+                    두루뭉술한 인생 총운이 아닙니다.<br />
+                    오직 당신의 <span className="gradient-text-love">‘사랑’ 하나만 깊이 해부</span>합니다.
+                  </h2>
+                </div>
+
+                <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+                  {/* 왼쪽 이미지: 권장 42% (12단 중 5단 = 41.67%) / 모바일 표시 순서 2 */}
+                  <div className="lg:col-span-5 relative group">
+                    <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
+                      <Image 
+                        src="/image/lovereport/love%20code%20deep%20analysis.webp" 
+                        alt="선천코드 연애 특화 심층 분석" 
+                        width={1086}
+                        height={1448}
+                        sizes="(max-width: 1024px) 100vw, 42vw"
+                        className="w-full h-full object-contain" 
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-10">
-                    <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
-                      POINT 01 · SPECIALIZED RELATIONSHIP ANALYSIS
-                    </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      두루뭉술한 인생 총운이 아닙니다.<br />
-                      오직 당신의 <span className="gradient-text-love">‘사랑’ 하나만 깊이 해부</span>합니다.
-                    </h2>
-                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+
+                  {/* 오른쪽 텍스트: 권장 58% (12단 중 7단 = 58.33%) / 모바일 표시 순서 3 */}
+                  <div className="lg:col-span-7 space-y-6 lg:space-y-8">
+                    {/* 데스크톱 전용 헤드카피 (모바일에서는 이미지 상단에 표시) */}
+                    <div className="hidden lg:block space-y-2.5">
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
+                        POINT 01 · LOVE ANALYSIS
+                      </span>
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.2] md:leading-[1.22] break-keep">
+                        두루뭉술한 인생 총운이 아닙니다.<br />
+                        오직 당신의 <span className="gradient-text-love">‘사랑’ 하나만 깊이 해부</span>합니다.
+                      </h2>
+                    </div>
+
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       사주 전체를 훑는 수박 겉핥기식 운세 풀이로는 사랑의 갈등을 해결할 수 없습니다. 단순한 연애운이나 뻔한 텍스트 조합과는 출발선부터 다릅니다. 당신이 사랑에 빠지는 순간부터 관계가 흔들리는 위기까지 모든 사랑의 역학을 섬세하게 분해합니다. 동양 명리학으로 타고난 기질을 읽고, 심리학과 무의식 탐색의 시선으로 반복되는 애착과 방어기제까지 입체적으로 분석해 행동의 변화를 이끕니다.
                     </p>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {["타고난 사랑의 기질", "무의식적 끌림 코드", "배우자 코드와 이상형", "관계 회복 및 선택 기준"].map((item, idx) => (
+                      {["타고난 사랑의 기질", "무의식적 끌림 코드", "배우자 코드와 이상형", "관계 회복을 위한 솔루션"].map((item, idx) => (
                         <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl">
                           <div className="w-2 h-2 rounded-full bg-[#B7788D] shadow-[0_0_10px_rgba(183,120,141,0.5)]"></div>
                           <span className="text-white/80">{item}</span>
