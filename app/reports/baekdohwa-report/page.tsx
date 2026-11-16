@@ -592,7 +592,7 @@ export default function BaekdohwaReportPage() {
                       오직 당신의 <span className="gradient-text-love">‘사랑’ 하나만 깊이 해부</span>합니다.
                     </h2>
                     <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      사주 전체를 훑는 수박 겉핥기식 운세 풀이로는 사랑의 갈등을 해결할 수 없습니다. 백도화 선천코드 연애 리포트는 오행과 십성의 에너지를 철저히 ‘관계와 애정’의 관점으로 좁혀, 당신이 사랑에 빠지는 순간부터 관계가 흔들리는 위기까지 모든 애정의 역학을 섬세하게 분해합니다.
+                      사주 전체를 훑는 수박 겉핥기식 운세 풀이로는 사랑의 갈등을 해결할 수 없습니다. 단순한 연애운이나 뻔한 텍스트 조합과는 출발선부터 다릅니다. 당신이 사랑에 빠지는 순간부터 관계가 흔들리는 위기까지 모든 사랑의 역학을 섬세하게 분해합니다. 동양 명리학으로 타고난 기질을 읽고, 심리학과 무의식 탐색의 시선으로 반복되는 애착과 방어기제까지 입체적으로 분석해 행동의 변화를 이끕니다.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {["타고난 사랑의 기질", "무의식적 끌림 코드", "반복되는 갈등 원인", "선천적 매력 에너지"].map((item, idx) => (
