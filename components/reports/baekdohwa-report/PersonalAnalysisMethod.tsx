@@ -67,6 +67,11 @@ export default function PersonalAnalysisMethod() {
           
           {/* 왼쪽 텍스트 그룹 (데스크톱 7단 / 모바일 순서 2: 이미지 뒤에 표시) */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-7 order-2 lg:order-1">
+            {/* 프로세스 명조체 소제목 */}
+            <h3 className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#D9A8A7] leading-snug break-keep">
+              당신의 사랑을 해부하는 3단계 입체 프로세스
+            </h3>
+
             {/* 3단계 통합 해독 텍스트 리스트 (네모 상자 제거) */}
             <div className="space-y-5 md:space-y-6 py-1">
               {analysisPhases.map((phase, idx) => (
