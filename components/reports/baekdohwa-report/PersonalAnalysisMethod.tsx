@@ -94,39 +94,42 @@ export default function PersonalAnalysisMethod() {
         </div>
 
         {/* 2. 본문 2단 구성: 데스크톱 [왼쪽: 설명 텍스트] | [오른쪽: 상단과 동일한 규격의 3:4 이미지] */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center lg:items-stretch">
           
-          {/* 왼쪽 텍스트 그룹 (데스크톱 7단 / 모바일 순서 2: 이미지 뒤에 표시) */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-7 order-2 lg:order-1">
-            {/* 프로세스 명조체 소제목 */}
-            <h3 className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#D9A8A7] leading-snug break-keep">
-              당신의 사랑을 해부하는 3단계 입체 프로세스
-            </h3>
+          {/* 왼쪽 텍스트 그룹 (데스크톱 7단 / 모바일 순서 2: 이미지 뒤에 표시 / 데스크톱 세로 균형 정렬) */}
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-0 order-2 lg:order-1 h-full py-0.5">
+            {/* 상단 그룹: 프로세스 소제목 + 3단계 해독 리스트 */}
+            <div className="space-y-6 lg:space-y-7">
+              {/* 프로세스 명조체 소제목 (목록과의 간격 8~12px 여유 확보) */}
+              <h3 className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#D9A8A7] leading-snug break-keep mb-2 sm:mb-2.5">
+                당신의 사랑을 해부하는 3단계 입체 프로세스
+              </h3>
 
-            {/* 3단계 통합 해독 텍스트 리스트 (네모 상자 제거) */}
-            <div className="space-y-5 md:space-y-6 py-1">
-              {analysisPhases.map((phase, idx) => (
-                <div key={idx} className="space-y-1.5">
-                  <div className="flex items-center gap-2 sm:gap-2.5">
-                    <span className="text-xs sm:text-[13px] font-mono font-bold tracking-widest text-[#D9A8A7] shrink-0">
-                      {phase.num}
-                    </span>
-                    <span className="text-[#D9A8A7]/70 text-xs">·</span>
-                    <h3 className="text-base sm:text-[17px] md:text-[18px] font-bold text-white leading-snug break-keep">
-                      {phase.title}
-                    </h3>
+              {/* 3단계 통합 해독 텍스트 리스트 */}
+              <div className="space-y-5 md:space-y-6 py-1">
+                {analysisPhases.map((phase, idx) => (
+                  <div key={idx} className="space-y-1.5">
+                    <div className="flex items-center gap-2 sm:gap-2.5">
+                      <span className="text-[12.5px] sm:text-[13px] font-mono font-bold tracking-wider text-[#D9A8A7] shrink-0">
+                        {phase.num}
+                      </span>
+                      <span className="text-[#D9A8A7]/70 text-xs">·</span>
+                      <h3 className="text-base sm:text-[17px] md:text-[18px] font-bold text-white leading-snug break-keep">
+                        {phase.title}
+                      </h3>
+                    </div>
+                    <p className="text-[15px] sm:text-[16px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep pl-7 sm:pl-7.5">
+                      {phase.desc}
+                    </p>
                   </div>
-                  <p className="text-[15px] sm:text-[16px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep pl-7 sm:pl-7.5">
-                    {phase.desc}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
-            {/* 하단 강조 문구 박스 */}
-            <div className="p-5 md:p-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm space-y-2">
+            {/* 하단 강조 문구 박스 (데스크톱에서 이미지 하단과 시각적 정렬) */}
+            <div className="p-5 md:p-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm space-y-2 mt-6 lg:mt-6">
               <p className="font-elegant font-medium text-[15px] md:text-[16px] text-[#FAF7F2] leading-relaxed break-keep">
-                &ldquo;명리학의 해석과 심리·무의식에 대한 자기 이해, 두뇌 습관 코칭의 관점을 함께 익혀온 경험을 바탕으로 설계했습니다.
+                &ldquo;명리학의 해석과 심리·무의식에 대한 자기 이해, 뇌 습관 코칭의 관점을 함께 익혀온 경험을 바탕으로 설계했습니다.
               </p>
               <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#D9A8A7] leading-relaxed break-keep">
                 단편적인 운세 설명을 넘어, 당신의 연애를 여러 각도에서 이해할 수 있도록 돕는 심층 분석서입니다.&rdquo;
@@ -135,7 +138,7 @@ export default function PersonalAnalysisMethod() {
           </div>
 
           {/* 오른쪽 3:4 세로 이미지 (데스크톱 5단 / 모바일 순서 1: 상단 POINT 01과 동일한 크기 규격 적용) */}
-          <div className="lg:col-span-5 relative group flex flex-col order-1 lg:order-2 mb-8 lg:mb-0">
+          <div className="lg:col-span-5 relative group flex flex-col order-1 lg:order-2 mb-8 lg:mb-0 justify-start">
             <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
               <Image 
                 src="/image/lovereport/love%20code%20mind%20connection.webp" 
