@@ -1,6 +1,7 @@
 'use client'
 
 import Reveal from '@/components/Reveal'
+import BaekdohwaDivider from './BaekdohwaDivider'
 
 export default function WhySeoncheonReport() {
   const differentiators = [
@@ -25,6 +26,9 @@ export default function WhySeoncheonReport() {
     <section className="mb-28 md:mb-36">
       <Reveal>
         <div className="max-w-[1280px] mx-auto text-center">
+          {/* 구분선 도화꽃 아이콘 + 양옆 가로선 */}
+          <BaekdohwaDivider className="mb-6 md:mb-7" />
+
           {/* 1. 작은 섹션 라벨 */}
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             WHY SEONCHEON CODE
