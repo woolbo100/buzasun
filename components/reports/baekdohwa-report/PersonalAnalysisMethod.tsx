@@ -22,13 +22,6 @@ export default function PersonalAnalysisMethod() {
     }
   ]
 
-  const tags = [
-    '선천코드 해독',
-    '무의식 · NLP',
-    '감정 습관 이해',
-    '실전 행동 처방'
-  ]
-
   return (
     <section id="point-02" className="mb-32 md:mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
       <Reveal>
@@ -107,16 +100,6 @@ export default function PersonalAnalysisMethod() {
               <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#D9A8A7] leading-relaxed break-keep">
                 단편적인 운세 설명을 넘어, 당신의 연애를 여러 각도에서 이해할 수 있도록 돕는 심층 분석서입니다.&rdquo;
               </p>
-            </div>
-
-            {/* 하단 4개 태그 배지 */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-              {tags.map((tag, idx) => (
-                <div key={idx} className="detail-glass-card flex items-center justify-center gap-2 p-3 rounded-2xl text-center">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#B7788D] shadow-[0_0_10px_rgba(183,120,141,0.5)] shrink-0"></div>
-                  <span className="text-xs sm:text-sm text-white/85 font-medium">{tag}</span>
-                </div>
-              ))}
             </div>
           </div>
 
