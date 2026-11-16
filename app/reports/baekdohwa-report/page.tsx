@@ -28,6 +28,7 @@ import ReportComparisonTable from '@/components/reports/baekdohwa-report/ReportC
 import LoveReportTableOfContents from '@/components/reports/baekdohwa-report/LoveReportTableOfContents'
 import ReportProductionTimeline from '@/components/reports/baekdohwa-report/ReportProductionTimeline'
 import ReportSamplePreview from '@/components/reports/baekdohwa-report/ReportSamplePreview'
+import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
 import TransformationThreeChanges from '@/components/reports/baekdohwa-report/TransformationThreeChanges'
 import RelationshipChangeScenario from '@/components/reports/baekdohwa-report/RelationshipChangeScenario'
 import RecommendedAudience from '@/components/reports/baekdohwa-report/RecommendedAudience'
@@ -543,6 +544,17 @@ export default function BaekdohwaReportPage() {
                     상대를 파악하기 전에, 먼저 내 안의 &lsquo;사랑 설계도&rsquo;를 손에 쥐어야 합니다.
                   </p>
                 </div>
+
+                {/* 내 사랑의 설계도 16:9 배너 이미지 (최대 1280px, 좌우 문구/인물 잘림 없는 원본 비율) */}
+                <div className="mx-auto mt-10 md:mt-12 w-full max-w-[1280px]">
+                  <Image
+                    src="/image/lovereport/know%20your%20love%20blueprint.webp"
+                    alt="내 사랑의 설계도를 알아야 하는 이유를 시각화한 백도화 일러스트"
+                    width={1672}
+                    height={941}
+                    className="block h-auto w-full rounded-2xl md:rounded-[28px] border border-white/10 shadow-2xl"
+                  />
+                </div>
               </Reveal>
             </section>
 
@@ -661,7 +673,8 @@ export default function BaekdohwaReportPage() {
                 </div>
 
                 {/* THE SIX KEYS TO YOUR LOVE CODE 영역 헤더 */}
-                <div className="max-w-4xl mx-auto mb-14 text-center pt-8 border-t border-[#D9A8A7]/20 space-y-4">
+                <div className="max-w-4xl mx-auto mb-14 text-center pt-10 md:pt-14 space-y-4">
+                  <BaekdohwaDivider className="mb-6 md:mb-7" />
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
                     THE SIX KEYS TO YOUR LOVE CODE
                   </span>

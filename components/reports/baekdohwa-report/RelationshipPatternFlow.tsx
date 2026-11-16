@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { patternFlowData } from './data'
 import { ArrowRight, ArrowDown } from 'lucide-react'
+import BaekdohwaDivider from './BaekdohwaDivider'
 
 export default function RelationshipPatternFlow() {
   return (
@@ -11,6 +12,7 @@ export default function RelationshipPatternFlow() {
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-10 space-y-6">
           <div>
+            <BaekdohwaDivider className="mb-6 md:mb-7" />
             <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
               RELATIONSHIP STRUCTURE
             </span>
