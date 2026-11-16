@@ -34,7 +34,7 @@ export default function RelationshipPatternFlow() {
             </div>
 
             {/* 연애의 반복 패턴을 객관적으로 내려다보는 관찰자 시점 이미지 (16:9 가로형) */}
-            <div className="w-full mt-10 mb-12 overflow-hidden rounded-[20px] border border-white/10 shadow-2xl bg-[#130917]">
+            <div className="w-full mt-10 mb-10 overflow-hidden rounded-[20px] border border-white/10 shadow-2xl bg-[#130917]">
               <div className="relative w-full aspect-[16/9]">
                 <Image
                   src="/image/lovereport/love-blueprint-observer.webp"
@@ -44,23 +44,6 @@ export default function RelationshipPatternFlow() {
                   className="object-cover object-center"
                 />
               </div>
-            </div>
-
-            {/* 하지만 기억하십시오 & 핵심 경각심 강조 박스 */}
-            <div 
-              className="love-report-highlight-card p-6 md:p-8 rounded-2xl border text-center space-y-3 backdrop-blur-sm my-6"
-              style={{
-                background: 'rgba(125, 76, 100, 0.20)',
-                borderColor: 'rgba(215, 170, 185, 0.20)',
-              }}
-            >
-              <p className="font-elegant font-bold text-[17px] md:text-[19px] text-[#E6BFA9]">
-                하지만 기억하십시오.
-              </p>
-              <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
-                &ldquo;끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.<br className="hidden sm:inline" />
-                <span className="text-[#E6BFA9] font-semibold"> 내 설계도를 모른 채 달리는 연애는, 언제나 같은 벽에 부딪히게 되어 있습니다.</span>&rdquo;
-              </p>
             </div>
 
             {/* 하단 카드(01, 02, 03) 연결 브릿지 */}
