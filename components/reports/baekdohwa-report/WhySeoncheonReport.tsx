@@ -60,7 +60,7 @@ export default function WhySeoncheonReport() {
   ]
 
   return (
-    <section className="mb-28 md:mb-36 lg:mb-44">
+    <section className="mb-36 md:mb-52 lg:mb-64">
       <Reveal>
         <div className="max-w-[1280px] mx-auto text-center">
           {/* 구분선 도화꽃 아이콘 + 양옆 가로선 */}
@@ -172,7 +172,7 @@ export default function WhySeoncheonReport() {
           </div>
 
           {/* 8. 마지막 핵심 카피 */}
-          <div className="max-w-3xl mx-auto pt-4 md:pt-6">
+          <div className="max-w-3xl mx-auto pt-6 md:pt-10">
             <p className="font-elegant font-medium text-[18px] md:text-[21px] text-[#FAF7F2] leading-relaxed break-keep">
               &ldquo;언제 사랑받을지를 묻지 마세요.<br className="sm:hidden" />
               <span className="text-[#D9A8A7] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;

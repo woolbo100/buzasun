@@ -572,7 +572,7 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* POINT 01. 연애 특화 심층 분석 — 두루뭉술한 인생 총운이 아닌 연애·사랑 집중 분석 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-40">
+            <section className="mb-40 pt-4 md:pt-8">
               <Reveal>
                 {/* 모바일 표시 순서 1: 섹션 제목 및 헤드카피 */}
                 <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5">
