@@ -76,29 +76,29 @@ export const patternFlowData = {
 
 // 4. 선천코드 리포트의 분석 방식 (SECTION 05)
 export const analysisMethodData = {
-  title: "수천 년의 동양 명리학과\n현대 관계 심리학의 정밀한 융합",
-  subTitle: "사주가 타고난 감정의 밑바탕을 보여준다면, 심리학은 현실의 방어기제를 밝혀냅니다.",
-  highlight: "단순한 한 줄 명리 풀이가 아닌, 선천적 기질과 현실의 관계 경험을 입체적으로 교차 분석하는 독보적인 분석 체계입니다.",
+  title: "사주로 기질을 읽고,\n심리로 관계의 이면을 살핍니다.",
+  subTitle: "동양 명리학으로 개인의 타고난 성향을 해석하고, 관계 심리와 감정·행동 습관의 관점을 결합해 입체적인 해석을 제공합니다.",
+  highlight: "동양 명리학과 관계 심리학의 융합으로, 누구도 흉내 낼 수 없는 입체적인 관계 진단을 완성합니다.",
   cards: [
     {
       num: "01",
       title: "선천적 기질 판독",
       subtitle: "동양 명리학 분석 체계",
-      desc: "일간, 오행, 십성의 엄밀한 명리학 체계를 통해 당신이 타고난 사랑의 에너지와 인연의 기본 그릇을 면밀히 분석합니다.",
+      desc: "일간, 오행, 십성의 엄밀한 명리학 체계를 통해 당신이 타고난 사랑의 기질과 인연의 기본 그릇을 면밀히 분석합니다.",
       icon: "fa-compass"
     },
     {
       num: "02",
-      title: "현실 방어기제 추적",
-      subtitle: "관계 심리 및 질문지 교차",
-      desc: "불안이나 갈등 앞에서 무의식적으로 튀어나오는 회피·집착의 방어기제를 심리학적 관점으로 교차 분석합니다.",
+      title: "관계 심리와 감정 습관",
+      subtitle: "관계 경험 및 방어기제 교차",
+      desc: "위기나 갈등 앞에서 무의식적으로 튀어나오는 회피·불안의 방어기제를 심리학적 관점으로 추적합니다.",
       icon: "fa-feather"
     },
     {
       num: "03",
-      title: "입체적 솔루션 도출",
-      subtitle: "현실 행동 루틴 처방",
-      desc: "단순한 운명 단정이 아닌, 내 기질의 그림자를 다스리고 고유한 매력을 살려낼 실질적인 관계 루틴을 처방합니다.",
+      title: "실전 관계 처방",
+      subtitle: "행동 조정 및 관계 루틴 제안",
+      desc: "단순한 운명 단정이 아닌, 내 기질의 그림자를 다스리고 고유한 매력을 살려낼 실질적인 행동 가이드를 처방합니다.",
       icon: "fa-seedling"
     }
   ]
@@ -138,8 +138,8 @@ export const personalizedCaseData = {
 
 // 6. 기존 사주·AI 리포트와의 차별점 비교표 (SECTION 07)
 export const comparisonTableData = {
-  title: "흔한 인터넷 사주나 AI 생성 운세와는\n출발선부터 다릅니다.",
-  subTitle: "단순 텍스트 조합이나 수백 년 전 한자 풀이로는 내밀한 연애의 상처와 갈등을 해결할 수 없습니다.",
+  title: "같은 연애 질문에도,\n분석의 깊이와 방향은 다릅니다.",
+  subTitle: "단순 텍스트 조합이나 일반 사주 풀이와 비교할 수 없는 분석 범위와 개인화 깊이입니다.",
   columns: [
     { id: "ai", name: "자동 생성형 운세", isTarget: false },
     { id: "traditional", name: "일반적인 사주 풀이", isTarget: false },
@@ -187,8 +187,8 @@ export const comparisonTableData = {
 
 // 7. 목차 공개 — 7개의 장 & 28개 항목 (SECTION 08)
 export const tableOfContentsData = {
-  title: "총 7개 PART, 30개 상세 항목에 걸친\n압도적인 분석 밀도",
-  subTitle: "한두 장짜리 요약본이나 겉핥기식 해설이 아닙니다. 당신의 사랑을 처음부터 끝까지 집요하게 파고드는 체계적인 목차 구조를 투명하게 공개합니다.",
+  title: "당신의 사랑을 해독하는\n심층 분석의 모든 장",
+  subTitle: "한두 장짜리 요약본이 아닙니다. 타고난 기질부터 무의식적 끌림, 배우자 코드, 그리고 실전 처방까지 전 7개 PART 30개 상세 항목으로 구성된 목차입니다.",
   parts: [
     {
       id: "part-1",
@@ -322,8 +322,8 @@ export const productionTimelineData = {
 
 // 9. 리포트 샘플 미리보기 (SECTION 10)
 export const samplePreviewData = {
-  mainCopy: "설명이 아니라,\n당신이 받아볼 리포트의 모습을 확인하십시오.",
-  subCopy: "약 28~30페이지 내외로 정성껏 구성되는 고품격 PDF 디지털 리포트입니다.",
+  mainCopy: "당신의 사랑을 담아 완성하는\n한 권의 비급",
+  subCopy: "휘발되는 모바일 화면이 아닌, 한국 전통 왕실 도감의 미감을 현대적으로 재해석한 약 28~30페이지 분량의 영구 소장용 PDF 리포트입니다.",
   disclaimer: "※ 예시 이미지이며 실제 리포트의 구성과 개인별 분석 내용은 달라질 수 있습니다.",
   samples: [
     {
