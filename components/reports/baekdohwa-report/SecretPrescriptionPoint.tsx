@@ -94,14 +94,8 @@ export default function SecretPrescriptionPoint({
               </div>
             </div>
 
-            {/* 하단 강조 문구 박스 (CONFIDENTIAL PRESCRIPTION) */}
-            <div className="p-4 sm:p-5 md:p-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm space-y-1.5 sm:space-y-2 mt-5 lg:mt-6">
-              <div className="flex items-center gap-2 mb-0.5 sm:mb-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#D9A8A7] animate-pulse" />
-                <span className="text-xs font-mono font-semibold tracking-wider text-[#D9A8A7] uppercase">
-                  CONFIDENTIAL PRESCRIPTION
-                </span>
-              </div>
+            {/* 하단 강조 문구 박스 (슬림 버전) */}
+            <div className="py-3.5 px-5 sm:py-4 sm:px-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm mt-5 lg:mt-6">
               <p className="font-elegant font-semibold text-[15.5px] md:text-[17px] text-[#D9A8A7] leading-relaxed break-keep">
                 &ldquo;당신의 연애를 구원할 단 하나의 시크릿 리포트가 마침내 펼쳐집니다.&rdquo;
               </p>
