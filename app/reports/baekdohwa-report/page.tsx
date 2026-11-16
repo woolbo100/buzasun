@@ -308,8 +308,8 @@ export default function BaekdohwaReportPage() {
                       <div className="lg:col-span-5 w-full flex justify-center">
                         <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/30 group">
                           <Image
-                            src="/image/lovereport/p5.webp"
-                            alt="선천코드 연애 리포트 프리미엄 패키지"
+                            src="/image/lovereport/the%20secret%20love%20map.webp"
+                            alt="선천코드로 읽는 나의 사랑 설계도"
                             fill
                             className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                             sizes="(max-width: 1024px) 100vw, 420px"
@@ -632,23 +632,36 @@ export default function BaekdohwaReportPage() {
                         내 코드가 정렬되는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#E6BFA9] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
                       </p>
                     </div>
+                  </div>
+                </div>
 
-                    {/* 전환 강조 박스 */}
-                    <div 
-                      className="p-6 md:p-8 rounded-2xl border text-center space-y-2 backdrop-blur-sm"
-                      style={{
-                        background: 'rgba(125, 76, 100, 0.20)',
-                        borderColor: 'rgba(215, 170, 185, 0.20)',
-                      }}
-                    >
-                      <p className="text-sm md:text-base text-[#E6BFA9] font-bold tracking-wide">
-                        이제 감정에 휘둘리며 닳아버리는 연애는 끝내세요.
-                      </p>
-                      <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
-                        당신의 연애 판도를 완전히 뒤바꿀 단 하나의 설계도,<br className="hidden sm:inline" />
-                        <span className="text-[#E6BFA9] font-semibold">백도화 《연애비급》 선천코드 리포트가 당신의 진짜 매력을 깨워드립니다.</span>
-                      </p>
-                    </div>
+                {/* 주도권 회복 16:9 풀사이즈 배너 이미지 (최대 1280px) */}
+                <div className="mx-auto mt-10 mb-12 w-full max-w-[1280px]">
+                  <Image
+                    src="/image/lovereport/the%20power%20of%20my%20love%20code.webp"
+                    alt="선천코드의 매력을 이해하고 연애의 주도권을 되찾는 백도화 이미지"
+                    width={1280}
+                    height={720}
+                    className="block h-auto w-full rounded-2xl border border-white/10 shadow-2xl"
+                  />
+                </div>
+
+                {/* 전환 강조 박스 */}
+                <div className="max-w-3xl mx-auto mb-16 text-center">
+                  <div 
+                    className="love-report-highlight-card p-6 md:p-8 rounded-2xl border text-center space-y-2 backdrop-blur-sm"
+                    style={{
+                      background: 'rgba(125, 76, 100, 0.20)',
+                      borderColor: 'rgba(215, 170, 185, 0.20)',
+                    }}
+                  >
+                    <p className="text-sm md:text-base text-[#E6BFA9] font-bold tracking-wide">
+                      이제 감정에 휘둘리며 닳아버리는 연애는 끝내세요.
+                    </p>
+                    <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
+                      당신의 연애 판도를 완전히 뒤바꿀 단 하나의 설계도,<br className="hidden sm:inline" />
+                      <span className="text-[#E6BFA9] font-semibold">백도화 《연애비급》 선천코드 리포트가 당신의 진짜 매력을 깨워드립니다.</span>
+                    </p>
                   </div>
                 </div>
 
@@ -671,9 +684,9 @@ export default function BaekdohwaReportPage() {
                   <Image 
                     src="/image/lovereport/p4.webp" 
                     alt="매력 분석 상세" 
-                    width={1200}
-                    height={800}
-                    className="w-full h-auto rounded-[50px] shadow-2xl border border-white/10" 
+                    width={1672}
+                    height={941}
+                    className="w-full h-auto rounded-2xl md:rounded-[32px] shadow-2xl border border-white/10" 
                   />
                 </div>
                 <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden">
@@ -821,11 +834,11 @@ export default function BaekdohwaReportPage() {
                   <div className="order-1 lg:order-2 relative group">
                     <div className="absolute -inset-10 bg-[#B7788D]/10 blur-[60px] rounded-full"></div>
                     <Image 
-                      src="/image/lovereport/p5.webp" 
-                      alt="Premium Design" 
-                      width={800}
-                      height={600}
-                      className="relative z-10 w-full h-auto rounded-[60px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.03]" 
+                      src="/image/lovereport/the%20hidden%20love%20report.webp" 
+                      alt="소장하고 싶은 프리미엄 리포트" 
+                      width={1086}
+                      height={1448}
+                      className="relative z-10 w-full h-auto rounded-[32px] md:rounded-[44px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.03]" 
                     />
                   </div>
                 </div>

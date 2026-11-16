@@ -21,16 +21,16 @@ export default function RecommendedAudience() {
           </p>
         </div>
 
-        {/* 상단: 기존 p3.webp 이미지와 추천 대상의 조화로운 배치 */}
+        {/* 상단: 대표 이미지와 추천 대상의 조화로운 배치 */}
         <div className="grid lg:grid-cols-12 gap-10 items-center max-w-7xl mx-auto mb-16">
           <div className="lg:col-span-5 relative group">
             <div className="absolute -inset-4 bg-[#B7788D]/15 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <Image
-              src="/image/lovereport/p3.webp"
-              alt="Recommended Audience"
-              width={600}
-              height={900}
-              className="relative z-10 w-full h-auto rounded-[40px] shadow-2xl border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]"
+              src="/image/lovereport/the%20hidden%20love%20report.webp"
+              alt="당신을 위한 리포트인가요?"
+              width={1086}
+              height={1448}
+              className="relative z-10 w-full h-auto rounded-[32px] md:rounded-[40px] shadow-2xl border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]"
             />
           </div>
 
