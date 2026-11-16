@@ -105,11 +105,11 @@ export default function PersonalAnalysisMethod() {
           <div className="lg:col-span-5 w-full flex justify-center items-center order-1 lg:order-2 mb-6 lg:mb-0">
             <div className="relative aspect-[3/4] w-full max-w-[360px] sm:max-w-[380px] lg:max-w-[400px] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] group">
               <Image 
-                src="/image/lovereport/p2.webp" 
-                alt="사주와 심리로 사랑의 이면을 들여다보는 백도화 선천코드 연애 리포트" 
+                src="/image/lovereport/love%20code%20mind%20connection.webp" 
+                alt="POINT 02 융합 분석 — 동양명리학, 심리학, 뇌과학" 
                 fill
                 sizes="(max-width: 640px) 360px, (max-width: 1024px) 380px, 400px"
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]" 
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]" 
               />
             </div>
           </div>
