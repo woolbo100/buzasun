@@ -50,6 +50,28 @@ export default function PersonalAnalysisMethod() {
               동양 명리학으로 선천코드를 읽고, 심리학과 NLP·최면 상담, 뇌과학 기반의 습관 코칭까지, 마음과 행동을 다루는 핵심 영역을 하나로 통합해 당신의 연애를 입체적으로 해부합니다.
             </p>
           </div>
+
+          {/* 상단 핵심 공식 엠블럼 (중앙 정렬 샴페인 골드 라인 뱃지 박스) */}
+          <div className="pt-3 md:pt-5 flex justify-center">
+            <div className="px-5 py-3 sm:px-6 sm:py-3.5 rounded-2xl sm:rounded-full border border-[#E2C499]/40 bg-gradient-to-r from-[#240F1E]/60 via-[#180816]/70 to-[#240F1E]/60 backdrop-blur-sm shadow-[0_4px_24px_rgba(0,0,0,0.3)] inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+              <div className="flex items-center justify-center gap-1.5 sm:gap-2.5 text-[13px] sm:text-[14.5px] md:text-[15px] font-medium text-[#FAF7F2] tracking-wide break-keep">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#E2C499] shrink-0 shadow-[0_0_8px_rgba(226,196,153,0.6)]"></span>
+                <span className="text-[#F5E6D3] font-semibold">동양 명리학</span>
+                <span className="text-[#E2C499]/60 text-xs">×</span>
+                <span className="text-[#F5E6D3] font-semibold">심리학</span>
+                <span className="text-[#E2C499]/60 text-xs">×</span>
+                <span className="text-[#F5E6D3] font-semibold">뇌과학</span>
+                <span className="text-[#E2C499]/80 font-mono font-bold text-sm hidden sm:inline">=</span>
+                <span className="text-[#E2C499] font-bold hidden sm:inline">입체적 연애 설계</span>
+              </div>
+              <div className="flex items-center justify-center gap-2 text-xs sm:text-[12.5px] text-[#D9A8A7] tracking-wider">
+                <span className="sm:hidden text-[#E2C499] font-bold">= 입체적 연애 설계</span>
+                <span className="text-[11px] sm:text-xs text-[#EDE6DA]/60 font-light">
+                  (백도화 입체 분석 시스템)
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* 2. 본문 2단 구성: 데스크톱 [왼쪽: 설명 텍스트] | [오른쪽: 상단과 동일한 규격의 3:4 이미지] */}
@@ -57,28 +79,6 @@ export default function PersonalAnalysisMethod() {
           
           {/* 왼쪽 텍스트 그룹 (데스크톱 7단 / 모바일 순서 2: 이미지 뒤에 표시) */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-7 order-2 lg:order-1">
-            {/* 상단 핵심 공식 엠블럼 (샴페인 골드 라인 뱃지 박스) */}
-            <div className="mb-6 md:mb-8 px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl md:rounded-2xl border border-[#E2C499]/40 bg-gradient-to-r from-[#240F1E]/50 via-[#180816]/60 to-[#240F1E]/50 backdrop-blur-sm shadow-[0_4px_24px_rgba(0,0,0,0.3)]">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-4 text-center sm:text-left">
-                <div className="flex items-center gap-1.5 sm:gap-2 text-[13px] sm:text-[14.5px] md:text-[15px] font-medium text-[#FAF7F2] tracking-wide break-keep">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E2C499] shrink-0 shadow-[0_0_8px_rgba(226,196,153,0.6)]"></span>
-                  <span className="text-[#F5E6D3] font-semibold">동양 명리학</span>
-                  <span className="text-[#E2C499]/60 text-xs">×</span>
-                  <span className="text-[#F5E6D3] font-semibold">심리학</span>
-                  <span className="text-[#E2C499]/60 text-xs">×</span>
-                  <span className="text-[#F5E6D3] font-semibold">뇌과학</span>
-                  <span className="text-[#E2C499]/80 font-mono font-bold text-sm hidden sm:inline">=</span>
-                  <span className="text-[#E2C499] font-bold hidden sm:inline">입체적 연애 설계</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs sm:text-[12.5px] text-[#D9A8A7] tracking-wider">
-                  <span className="sm:hidden text-[#E2C499] font-bold">= 입체적 연애 설계</span>
-                  <span className="text-[11px] sm:text-xs text-[#EDE6DA]/60 font-light">
-                    백도화 입체 분석 시스템
-                  </span>
-                </div>
-              </div>
-            </div>
-
             {/* 3단계 통합 해독 텍스트 리스트 (네모 상자 제거) */}
             <div className="space-y-5 md:space-y-6 py-1">
               {analysisPhases.map((phase, idx) => (
