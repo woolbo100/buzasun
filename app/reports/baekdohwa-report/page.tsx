@@ -391,6 +391,15 @@ export default function BaekdohwaReportPage() {
                         내 안의 진짜 무기가 무엇인지도 모른 채 남자의 비위를 맞추고,<br />
                         관계의 을(乙)이 되기를 자처했던 시간들.
                       </p>
+                      <div className="space-y-1.5 pt-1.5">
+                        <p className="text-sm md:text-base font-semibold tracking-wider text-[#E6BFA9]">
+                          하지만 기억하십시오.
+                        </p>
+                        <p className="text-[#FAF7F2] font-medium leading-[1.8]">
+                          끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.<br />
+                          <span className="text-[#E6BFA9] font-semibold">내 설계도를 모른 채 달리는 연애는, 언제나 같은 벽에 부딪히게 되어 있습니다.</span>
+                        </p>
+                      </div>
                       <p>
                         내 사랑의 지도조차 없었기에, 늘 낯선 길에서 길을 잃었던 것입니다.
                       </p>
@@ -427,9 +436,9 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-24 md:mb-32">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-16 items-stretch">
                   {/* 좌측 45%: 세로형 3:4 이미지 영역 (좌측 정렬 및 간격 확보) */}
-                  <div className="lg:col-span-5 w-full max-w-[420px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start">
+                  <div className="lg:col-span-5 w-full max-w-[420px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start justify-center">
                     <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] flex items-center justify-center transition-all duration-300 hover:border-[#D4B2A7]/40">
                       <Image
                         src={DISCOVERY_STORY_IMAGE_CONFIG.src}
@@ -442,46 +451,50 @@ export default function BaekdohwaReportPage() {
                     </div>
                   </div>
 
-                  {/* 우측 55%: 라벨 + 제목 + 본문 (간격 확대 및 우측 끝선 상단 이미지와 정렬) */}
-                  <div className="lg:col-span-7 space-y-6 text-left break-keep lg:pl-6 xl:pl-10">
-                    <div>
-                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                        THE HIDDEN CODE
-                      </span>
-                      <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                        &ldquo;내 사주를 제대로 들여다보는 순간,<br />
-                        <span className="gradient-text-love">지나온 사랑의 퍼즐이 다르게</span><br />
-                        보이기 시작합니다.&rdquo;
-                      </h2>
+                  {/* 우측 55%: 라벨 + 제목 + 본문 (상하 시작/끝 라인이 좌측 이미지와 단정하게 정렬) */}
+                  <div className="lg:col-span-7 flex flex-col justify-between text-left break-keep lg:pl-6 xl:pl-8 py-1 lg:py-2 space-y-7 lg:space-y-0">
+                    {/* 상단 그룹: 라벨 + 메인 제목 + 본문 서사 */}
+                    <div className="space-y-5">
+                      <div>
+                        <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+                          THE HIDDEN CODE
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mb-5 leading-[1.25] md:leading-[1.3] break-keep">
+                          &ldquo;내 사주를 제대로 들여다보는 순간,<br />
+                          <span className="gradient-text-love">지나온 사랑의 퍼즐이 다르게</span><br />
+                          보이기 시작합니다.&rdquo;
+                        </h2>
+                      </div>
+
+                      {/* 본문 서사 */}
+                      <div className="space-y-3.5 text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-light break-keep">
+                        <p className="text-[#FAF7F2] font-medium">
+                          서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 일정한 패턴으로 읽히는 순간,<br />
+                          누구나 깊은 소름과 마주하게 됩니다.
+                        </p>
+                        <p>
+                          우연이라 믿었던 이별의 타이밍도, 늘 비슷한 결의 사람에게 무너지던 순간도<br className="hidden sm:inline" />
+                          모두 당신의 선천코드 속에 촘촘히 새겨져 있던 <span className="text-[#E6BFA9] font-semibold">반복의 알고리즘</span>이었습니다.
+                        </p>
+                      </div>
                     </div>
 
-                    {/* 본문 서사 */}
-                    <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-light break-keep">
-                      <p className="text-[#FAF7F2] font-medium">
-                        서로 다른 사랑 속에서 반복되던 나의 모습이 하나의 일정한 패턴으로 읽히는 순간,<br />
-                        누구나 깊은 소름과 마주하게 됩니다.
-                      </p>
-                      <p>
-                        우연이라 믿었던 이별의 타이밍도, 늘 비슷한 결의 사람에게 무너지던 순간도<br className="hidden sm:inline" />
-                        모두 당신의 선천코드 속에 촘촘히 새겨져 있던 <span className="text-[#E6BFA9] font-semibold">반복의 알고리즘</span>이었습니다.
-                      </p>
-                    </div>
-
-                    {/* 솔루션 제안 및 해부 */}
-                    <div className="space-y-4 text-[17px] md:text-[18px] leading-[1.8] break-keep pt-1">
+                    {/* 하단 그룹: 솔루션 제안 + 은은한 로즈 플럼 하이라이트 박스 + 마무리 훅 */}
+                    <div className="space-y-3.5 text-[17px] md:text-[18px] leading-[1.8] break-keep">
                       <p className="text-[#FAF7F2] font-semibold">
                         가볍고 뜬구름 잡는 연애운 풀이는 더 이상 의미가 없습니다.
                       </p>
 
-                      <div className="border-l-2 border-[#D9A8A7] pl-4 py-2 my-2 bg-white/[0.02] rounded-r-lg">
-                        <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.7]">
+                      {/* 강조 박스: 세로 막대 없이 은은한 로즈 플럼 안개빛 음영만 가볍게 적용 */}
+                      <div className="rounded-2xl px-5 py-3.5 sm:px-6 sm:py-4 bg-[#631B32]/20">
+                        <p className="text-[#FAF7F2] font-elegant font-medium text-[17px] sm:text-[18px] md:text-[19px] leading-[1.7]">
                           내가 누구에게 끌리고,<br className="hidden sm:inline" />
                           <span className="text-[#E6BFA9]"> 왜 같은 선택을 반복하는지 그 근본을 해부하는 일.</span>
                         </p>
                       </div>
 
-                      {/* 마무리 훅 */}
-                      <div className="pt-3 border-t border-[#B49A70]/20">
+                      {/* 마무리 훅: 가로선 없이 자연스러운 간격으로 이어지는 요약 문장 */}
+                      <div className="pt-2">
                         <p className="font-elegant font-bold text-[19px] md:text-[22px] text-[#FAF7F2] leading-[1.7] break-keep">
                           &ldquo;<span className="text-[#E6BFA9] font-semibold">그것이 반복의 알고리즘을 끊는 일입니다.</span>&rdquo;
                         </p>

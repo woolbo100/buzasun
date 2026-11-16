@@ -12,8 +12,9 @@ export default function RelationshipPatternFlow() {
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             RELATIONSHIP STRUCTURE
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {patternFlowData.mainCopy}
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+            끌림은 본능입니다.<br />
+            그러나 <span className="gradient-text-love">사랑은 선택</span>입니다.
           </h2>
           <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light break-keep leading-relaxed">
             {patternFlowData.subCopy}
