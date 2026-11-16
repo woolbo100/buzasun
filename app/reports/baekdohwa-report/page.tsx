@@ -391,15 +391,24 @@ export default function BaekdohwaReportPage() {
                         내 안의 진짜 무기가 무엇인지도 모른 채 남자의 비위를 맞추고,<br />
                         관계의 을(乙)이 되기를 자처했던 시간들.
                       </p>
-                      <div className="space-y-1.5 pt-1.5">
-                        <p className="text-sm md:text-base font-semibold tracking-wider text-[#E6BFA9]">
+
+                      {/* 하지만 기억하십시오 & 핵심 경각심 강조 카드 (기준 카드와 100% 동일한 디자인 적용) */}
+                      <div 
+                        className="love-report-highlight-card p-6 md:p-7 rounded-2xl border text-center space-y-3 backdrop-blur-sm my-4"
+                        style={{
+                          background: 'rgba(125, 76, 100, 0.20)',
+                          borderColor: 'rgba(215, 170, 185, 0.20)',
+                        }}
+                      >
+                        <p className="font-elegant font-bold text-[16px] md:text-[18px] text-[#E6BFA9]">
                           하지만 기억하십시오.
                         </p>
-                        <p className="text-[#FAF7F2] font-medium leading-[1.8]">
-                          끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.<br />
-                          <span className="text-[#E6BFA9] font-semibold">내 설계도를 모른 채 달리는 연애는, 언제나 같은 벽에 부딪히게 되어 있습니다.</span>
+                        <p className="font-elegant font-medium text-[16px] md:text-[18px] text-white leading-relaxed break-keep">
+                          &ldquo;끌림에만 의존하는 연애는 정답 없는 미로를 맨발로 헤매는 것과 같습니다.<br className="hidden sm:inline" />
+                          <span className="text-[#E6BFA9] font-semibold"> 내 설계도를 모른 채 달리는 연애는 언제나 같은 벽에 부딪히게 되어 있습니다.</span>&rdquo;
                         </p>
                       </div>
+
                       <p>
                         내 사랑의 지도조차 없었기에, 늘 낯선 길에서 길을 잃었던 것입니다.
                       </p>
@@ -460,9 +469,9 @@ export default function BaekdohwaReportPage() {
                           THE HIDDEN CODE
                         </span>
                         <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mb-5 leading-[1.25] md:leading-[1.3] break-keep">
-                          &ldquo;내 사주를 제대로 들여다보는 순간,<br />
+                          내 사주를 제대로 들여다보는 순간,<br />
                           <span className="gradient-text-love">지나온 사랑의 퍼즐이 다르게</span><br />
-                          보이기 시작합니다.&rdquo;
+                          보이기 시작합니다.
                         </h2>
                       </div>
 
@@ -485,8 +494,14 @@ export default function BaekdohwaReportPage() {
                         가볍고 뜬구름 잡는 연애운 풀이는 더 이상 의미가 없습니다.
                       </p>
 
-                      {/* 강조 박스: 세로 막대 없이 은은한 로즈 플럼 안개빛 음영만 가볍게 적용 */}
-                      <div className="rounded-2xl px-5 py-3.5 sm:px-6 sm:py-4 bg-[#631B32]/20">
+                      {/* 강조 박스: 기준 '하지만 기억하십시오.' 카드와 100% 동일한 디자인 적용 */}
+                      <div 
+                        className="love-report-highlight-card p-5 md:p-6 rounded-2xl border backdrop-blur-sm"
+                        style={{
+                          background: 'rgba(125, 76, 100, 0.20)',
+                          borderColor: 'rgba(215, 170, 185, 0.20)',
+                        }}
+                      >
                         <p className="text-[#FAF7F2] font-elegant font-medium text-[17px] sm:text-[18px] md:text-[19px] leading-[1.7]">
                           내가 누구에게 끌리고,<br className="hidden sm:inline" />
                           <span className="text-[#E6BFA9]"> 왜 같은 선택을 반복하는지 그 근본을 해부하는 일.</span>
@@ -496,7 +511,7 @@ export default function BaekdohwaReportPage() {
                       {/* 마무리 훅: 가로선 없이 자연스러운 간격으로 이어지는 요약 문장 */}
                       <div className="pt-2">
                         <p className="font-elegant font-bold text-[19px] md:text-[22px] text-[#FAF7F2] leading-[1.7] break-keep">
-                          &ldquo;<span className="text-[#E6BFA9] font-semibold">그것이 반복의 알고리즘을 끊는 일입니다.</span>&rdquo;
+                          <span className="text-[#E6BFA9] font-semibold">그것이 반복의 알고리즘을 끊는 일입니다.</span>
                         </p>
                       </div>
                     </div>

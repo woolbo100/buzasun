@@ -51,7 +51,7 @@ export const generalAdviceData = {
 export const patternFlowData = {
   mainCopy: "끌림은 본능입니다.\n그러나 사랑은 선택입니다.",
   subCopy: "감정의 소용돌이 속에서 한 걸음 물러나 내 설계도를 객관적으로 바라보는 순간, 반복의 고리는 끊어집니다.",
-  quote: "명(命)은 바꾸는 것이 아니라 쓰는 것입니다.\n쓰는 법은 사람마다 다릅니다.",
+  quote: "명(命)은 바꾸는 것이 아니라 쓰는 것입니다.\n이제는 익숙한 본능대로 반응하지 말고, 전혀 다르게 써야 할 때입니다.",
   steps: [
     {
       step: "01",

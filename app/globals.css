@@ -304,6 +304,15 @@
     display: inline-block;
   }
 
+  /* 백도화 연애 리포트 — 시그니처 강조 카드 통일 스타일 (기준: '하지만 기억하십시오.' 상자) */
+  .love-report-highlight-card {
+    background-color: rgba(125, 76, 100, 0.20);
+    border: 1px solid rgba(215, 170, 185, 0.20);
+    border-radius: 1rem; /* rounded-2xl */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
   @keyframes gradientText {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
