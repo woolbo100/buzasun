@@ -166,7 +166,7 @@ export default function WhySeoncheonReport() {
             <p className="font-elegant font-bold text-[18px] md:text-[21px] text-white mb-2.5 leading-snug break-keep">
               {cards[activeCardIndex].hook}
             </p>
-            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
+            <p className="text-[16px] text-[#EDE6DA] font-light leading-[1.75] break-keep">
               {cards[activeCardIndex].desc}
             </p>
           </div>
