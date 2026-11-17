@@ -82,7 +82,7 @@ export default function FiveElementsSpecialGift() {
               {/* 간결한 설명문 */}
               <p className="text-[14.5px] sm:text-[15.5px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
                 개인 1:1 맞춤형 선천코드 분석 결과를 바탕으로 나에게 부족한 오행을 보완해주는<br />
-                나의 오행 아트카드와 나의 오행 수호자 카드 2종을 함께 제공합니다.
+                나의 오행 아트 카드와 나의 오행 수호자 카드 2종을 함께 제공합니다.
               </p>
 
               {/* 하단 작은 안내 문구 */}
