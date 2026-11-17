@@ -44,7 +44,7 @@ export default function WhySeoncheonReport() {
     {
       num: '05',
       label: 'POINT 05',
-      title: '실전 관계 처방',
+      title: '실전 관계 행동 처방',
       hook: '“읽고 나서 고개만 끄덕이고 끝나는 분석은 아무 의미가 없습니다.”',
       desc: '타고난 성향을 아는 것에서 멈추지 않고, 실제 연애의 갈등과 선택의 순간에 바로 적용할 수 있는 구체적인 행동 지침을 제시합니다. 내 안의 오래된 연애 습관을 끊어내고 관계의 흐름을 바꾸는 현실적인 처방전입니다.',
       icon: <Compass className="w-4 h-4" />,

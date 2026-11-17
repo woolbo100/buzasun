@@ -658,7 +658,8 @@ export default function BaekdohwaReportPage() {
                   </h2>
                   <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
                     겉으로 드러난 연애 성향 너머, 당신의 깊은 무의식과 내면의 그림자, 설명할 수 없이 반복되는 끌림의 뿌리까지 낱낱이 해독합니다.<br className="hidden sm:inline" />
-                    의식적으로는 다짐하면서도 결국 같은 자리에서 흔들렸던 진짜 이유를 찾아내어, 스스로도 몰랐던 깊은 내면을 투명하게 들여다보게 돕습니다.
+                    의식적으로는 다짐하면서도 결국 같은 자리에서 흔들렸던 진짜 이유를 찾아내어,<br className="hidden sm:inline" />
+                    <span className="text-[#D9A8A7] font-medium opacity-100">스스로도 몰랐던 깊은 내면을 투명하게 들여다보게 돕습니다.</span>
                   </p>
                 </div>
 
@@ -699,17 +700,17 @@ export default function BaekdohwaReportPage() {
                       { t: "03 · 반복되는 관계의 그림자", d: "사람이 바뀌어도 늘 같은 불안과 오해로 사랑을 멈추게 하는 방어기제", i: "fa-shield-halved" },
                       { t: "04 · 반드시 피해야 할 악연 코드", d: "강렬한 끌림 뒤에 내 자존감과 에너지를 고갈시키는 위험한 관계의 신호", i: "fa-user-group" },
                       { t: "05 · 뇌에 각인된 감정 반응 회로", d: "서운함과 갈등의 순간, 나도 모르게 튀어나오는 자동화된 감정 습관", i: "fa-heart" },
-                      { t: "06 · 사랑의 에너지 소진과 충전 회로", d: "연애할수록 지치는 원인을 짚어내고 다시 나를 채우는 건강한 회복 기준", i: "fa-key" }
+                      { t: "06 · 연애 에너지 소진과 충전 회로", d: "연애할수록 지치는 원인을 짚어내고 다시 나를 채우는 건강한 회복 기준", i: "fa-key" }
                     ].map((item, idx) => (
                       <div 
                         key={idx} 
-                        className="detail-glass-card flex flex-col items-center text-center py-6 px-5 md:py-6 md:px-6 rounded-[22px] md:rounded-[26px] group transition-all duration-300"
+                        className="detail-glass-card flex flex-col items-center text-center py-6 px-4 sm:px-5 md:px-5 rounded-[22px] md:rounded-[26px] group transition-all duration-300"
                       >
                         <div className="w-[52px] h-[52px] rounded-2xl bg-[#B7788D]/15 flex items-center justify-center border border-[#B7788D]/35 text-[#D9A8A7] shadow-sm mb-3.5 group-hover:scale-105 group-hover:bg-[#B7788D]/25 transition-all duration-300">
                           <i className={`fas ${item.i} text-lg md:text-[19px]`}></i>
                         </div>
                         <div className="w-full flex flex-col items-center flex-1 justify-center">
-                          <h4 className="text-[19px] md:text-[21px] font-bold text-white mb-2.5 leading-snug break-keep text-center">
+                          <h4 className="text-[17px] sm:text-[18.5px] lg:text-[19.5px] font-bold text-white mb-2.5 leading-snug tracking-tight text-center whitespace-nowrap">
                             {item.t}
                           </h4>
                           <p className="text-[14.5px] md:text-[15.5px] text-[#EDE6DA]/75 font-light leading-[1.65] break-keep text-center">
