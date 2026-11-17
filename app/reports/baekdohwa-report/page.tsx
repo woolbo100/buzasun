@@ -645,7 +645,9 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40 text-center">
               <Reveal>
-                <div className="max-w-4xl mx-auto mb-16 space-y-6">
+                <div className="max-w-4xl mx-auto mb-10 md:mb-12 space-y-6">
+                  {/* 구분선 도화꽃 아이콘 + 양옆 가로선 */}
+                  <BaekdohwaDivider className="mb-8 md:mb-10" />
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
                     POINT 03 · HIDDEN RELATIONSHIP CODES
                   </span>
@@ -660,8 +662,7 @@ export default function BaekdohwaReportPage() {
                 </div>
 
                 {/* THE SIX PERSPECTIVES OF LOVE 영역 헤더 */}
-                <div className="max-w-4xl mx-auto mb-14 text-center pt-10 md:pt-14 space-y-4">
-                  <BaekdohwaDivider className="mb-6 md:mb-7" />
+                <div className="max-w-4xl mx-auto mb-14 text-center pt-4 md:pt-6 space-y-4">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
                     THE SIX PERSPECTIVES OF LOVE
                   </span>
@@ -678,7 +679,7 @@ export default function BaekdohwaReportPage() {
                 <div className="max-w-7xl mx-auto mb-20">
                   <Image 
                     src="/image/lovereport/p4.webp" 
-                    alt="매력 분석 상세" 
+                    alt="선천코드 연애 리포트의 6가지 핵심 분석 축 이미지" 
                     width={1672}
                     height={941}
                     className="w-full h-auto rounded-2xl md:rounded-[32px] shadow-2xl border border-white/10" 
