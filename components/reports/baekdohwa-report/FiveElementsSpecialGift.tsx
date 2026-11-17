@@ -57,7 +57,7 @@ export default function FiveElementsSpecialGift() {
   ]
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 mt-0 mb-32 md:mb-40">
+    <div className="w-full max-w-7xl mx-auto mt-0 mb-32 md:mb-40">
       <Reveal>
         <div className="gungjung-glass p-7 sm:p-8 md:p-9 lg:p-10 rounded-[28px] md:rounded-[36px] border border-[#B7788D]/25 bg-gradient-to-r from-[#1C0D1E]/75 via-[#130816]/70 to-[#1C0D1E]/75 shadow-xl relative overflow-hidden">
           {/* 은은한 배경 오라 */}
