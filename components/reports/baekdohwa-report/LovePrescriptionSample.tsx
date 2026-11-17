@@ -1,7 +1,6 @@
 ﻿'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import Reveal from '@/components/Reveal'
 import { generalAdviceData } from './data'
 
@@ -66,133 +65,20 @@ export default function LovePrescriptionSample() {
         {/* ══════════════════════════════════════════════════════════════════ */}
         {/* [PART B] 하단 대표 비주얼 (소통 / 행동 / 오행 개운 3처방 연결 이미지) */}
         {/* ══════════════════════════════════════════════════════════════════ */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 sm:mt-12 md:mt-14 max-w-7xl mx-auto"
-        >
-          <div className="group relative rounded-[22px] sm:rounded-[26px] md:rounded-[28px] overflow-hidden border border-white/10 hover:border-[#B7788D]/35 bg-[#170619]/60 shadow-[0_12px_40px_rgba(18,0,20,0.5)] hover:shadow-[0_18px_50px_rgba(183,120,141,0.18)] transition-all duration-500 hover:scale-[1.01]">
-            {/* 좌·중·우 3분할 순차 조명 하이라이트 오버레이 */}
-            <div className="absolute inset-0 grid grid-cols-3 pointer-events-none z-10">
-              {/* 1. 소통 처방 조명 영역 (좌측 1/3) */}
-              <div
-                className="prescription-spotlight prescription-spotlight-left rounded-l-[22px] sm:rounded-l-[26px] md:rounded-l-[28px]"
-                aria-hidden="true"
-              />
-
-              {/* 2. 행동 처방 조명 영역 (중앙 1/3) */}
-              <div
-                className="prescription-spotlight prescription-spotlight-center"
-                aria-hidden="true"
-              />
-
-              {/* 3. 오행 개운 처방 조명 영역 (우측 1/3) */}
-              <div
-                className="prescription-spotlight prescription-spotlight-right rounded-r-[22px] sm:rounded-r-[26px] md:rounded-r-[28px]"
-                aria-hidden="true"
-              />
-            </div>
-
-            {/* 원본 비율/색감 그대로 유지하는 가로형 3분할 비주얼 */}
+        <div className="mt-10 sm:mt-12 md:mt-14 max-w-7xl mx-auto">
+          <div className="relative rounded-[22px] sm:rounded-[26px] md:rounded-[28px] overflow-hidden border border-white/10 bg-[#170619]/60 shadow-[0_12px_40px_rgba(18,0,20,0.5)]">
+            {/* 원본 비율/색감 그대로 유지하는 정적 가로형 3분할 비주얼 */}
             <Image
               src="/image/lovereport/three love prescriptions.webp"
               alt="백도화 3대 실전 관계 처방 비주얼 (소통 처방 · 행동 처방 · 오행 개운 처방)"
               width={2170}
               height={725}
-              className="w-full h-auto block transform-gpu"
+              className="w-full h-auto block"
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1280px"
               priority={false}
             />
-
-            {/* 순차 조명 애니메이션 스타일 (피치로즈 & 샴페인 골드 순차 강조) */}
-            <style jsx>{`
-              .prescription-spotlight {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                will-change: opacity, transform;
-                backdrop-filter: brightness(1.15) contrast(1.04);
-                -webkit-backdrop-filter: brightness(1.15) contrast(1.04);
-                background: radial-gradient(
-                  ellipse 85% 75% at 50% 50%,
-                  rgba(232, 197, 190, 0.3) 0%,
-                  rgba(229, 195, 166, 0.18) 45%,
-                  rgba(183, 120, 141, 0.08) 75%,
-                  transparent 100%
-                );
-                mix-blend-mode: screen;
-              }
-
-              .prescription-spotlight::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 12%;
-                right: 12%;
-                height: 1.5px;
-                background: linear-gradient(
-                  90deg,
-                  transparent,
-                  rgba(232, 197, 190, 0.55),
-                  transparent
-                );
-                box-shadow: 0 0 10px rgba(229, 195, 166, 0.35);
-              }
-
-              @keyframes prescriptionSpotlightKeyframes {
-                0% {
-                  opacity: 0;
-                  transform: scale(0.985);
-                }
-                10% {
-                  opacity: 1;
-                  transform: scale(1);
-                }
-                25% {
-                  opacity: 1;
-                  transform: scale(1);
-                }
-                35% {
-                  opacity: 0;
-                  transform: scale(0.985);
-                }
-                100% {
-                  opacity: 0;
-                  transform: scale(0.985);
-                }
-              }
-
-              .prescription-spotlight-left {
-                animation: prescriptionSpotlightKeyframes 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-                animation-delay: 0s;
-              }
-
-              .prescription-spotlight-center {
-                animation: prescriptionSpotlightKeyframes 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-                animation-delay: 2s;
-              }
-
-              .prescription-spotlight-right {
-                animation: prescriptionSpotlightKeyframes 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-                animation-delay: 4s;
-              }
-
-              @media (prefers-reduced-motion: reduce) {
-                .prescription-spotlight,
-                .prescription-spotlight-left,
-                .prescription-spotlight-center,
-                .prescription-spotlight-right {
-                  animation: none !important;
-                  opacity: 0 !important;
-                  display: none !important;
-                }
-              }
-            `}</style>
           </div>
-        </motion.div>
+        </div>
       </Reveal>
     </section>
   )
