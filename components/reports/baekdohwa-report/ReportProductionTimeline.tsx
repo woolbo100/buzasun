@@ -8,25 +8,25 @@ export default function ReportProductionTimeline() {
     {
       num: 'STUDY 01',
       title: '명리 원국 정밀 연구',
-      desc: '일간·십성·지장간·배우자궁과 12운성까지, 명리학의 핵심 요소를 입체적으로 교차 분석하여 연애의 타고난 기질과 흐름을 읽는 정통 명리 기준을 세웠습니다.',
+      desc: '일간·십성·지장간부터 배우자궁과 12운성까지, 명리의 핵심 요소를 입체 교차하여 타고난 연애 기질을 읽는 정통 기준을 세웠습니다.',
       icon: <BookOpen className="w-6 h-6 text-[#D9A8A7]" />
     },
     {
       num: 'STUDY 02',
       title: '심리·뇌과학 회로 탐구',
-      desc: '애착 유형과 방어기제라는 심리학적 통찰에, 갈등 순간 자동 작동하는 뇌과학적 감정 반응 회로를 결합해 반복되는 연애 습관의 뿌리를 규명했습니다.',
+      desc: '애착 유형과 방어기제에 뇌과학적 감정 반응 회로를 결합해, 갈등 순간 반복되는 연애 습관의 무의식적 뿌리를 규명했습니다.',
       icon: <Compass className="w-6 h-6 text-[#D9A8A7]" />
     },
     {
       num: 'STUDY 03',
-      title: '연애 특화 분석 기준서 구축',
-      desc: '매력 무기, 무의식적 끌림, 배우자 코드, 관계의 그림자까지 오직 사랑과 관계에만 집중한 8개 장·30여 개 심층 질문 체계를 정교하게 구조화했습니다.',
+      title: '연애 특화 분석 기준서',
+      desc: '매력 무기부터 무의식적 끌림, 배우자 코드, 관계의 그림자까지 오직 사랑에만 집중한 8개 장·30여 개 심층 질문 체계를 설계했습니다.',
       icon: <ClipboardCheck className="w-6 h-6 text-[#D9A8A7]" />
     },
     {
       num: 'STUDY 04',
       title: '실전 행동 처방 설계',
-      desc: '단순한 운명 감상에서 끝나지 않도록 소통 화법, 감정 경계선, 오행 개운 루틴 등 당장 내일의 연애를 바꾸는 실전 처방 프로토콜을 완성했습니다.',
+      desc: '단순한 운명 감상에서 끝나지 않도록 소통 화법, 감정 경계선, 오행 개운 루틴 등 내일의 연애를 바꾸는 실전 처방을 완성했습니다.',
       icon: <Shuffle className="w-6 h-6 text-[#D9A8A7]" />
     }
   ]
@@ -42,15 +42,15 @@ export default function ReportProductionTimeline() {
             한 권의 리포트가 완성되기까지,<br />
             <span className="gradient-text-love">수많은 질문과 정밀한 연구</span>가 있었습니다.
           </h2>
-          <div className="max-w-3xl mx-auto text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed break-keep space-y-3.5">
+          <div className="max-w-3xl mx-auto text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed break-keep space-y-3 md:space-y-3.5">
             <p>
-              백도화의 선천코드 연애 리포트는 시중의 운세 문장을 적당히 짜깁기해 만든 결과물이 아닙니다.
+              백도화의 선천코드 연애 리포트는 시중의 운세 문장을 짜깁기한 결과물이 아닙니다.
             </p>
             <p>
-              동양명리학의 방대한 원국 해석 체계를 깊이 탐구하고, <strong className="text-[#D9A8A7] font-semibold">심리학과 뇌과학의 관점</strong>에서 사랑과 관계에 관한 본질적인 질문을 다시 설계했습니다.
+              동양명리학의 정밀한 원국 해석에 <strong className="text-[#D9A8A7] font-semibold">심리학과 뇌과학의 통찰</strong>을 더해, 사랑과 관계의 본질적인 질문을 다시 설계했습니다.
             </p>
             <p>
-              그 과정에서 <strong className="text-[#D9A8A7] font-semibold">연애에 특화된 핵심 분석 축</strong>을 세우고, <strong className="text-[#D9A8A7] font-semibold">사람마다 다른 선천코드를 일관되고 정밀한 기준으로 해독하기 위한 독자적인 분석 시스템</strong>을 구축했습니다.
+              이를 바탕으로 <strong className="text-[#D9A8A7] font-semibold">오직 연애에만 집중한 핵심 분석 축</strong>과 <strong className="text-[#D9A8A7] font-semibold">일관된 정밀 해독 시스템</strong>을 구축했습니다.
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function ReportProductionTimeline() {
                   {item.title}
                 </h3>
               </div>
-              <p className="text-sm text-[#EDE6DA]/70 font-light leading-relaxed break-keep mt-4 pt-4 border-t border-white/5">
+              <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/75 font-light leading-[1.68] md:leading-[1.72] break-keep mt-4 pt-4 border-t border-white/5">
                 {item.desc}
               </p>
             </div>
