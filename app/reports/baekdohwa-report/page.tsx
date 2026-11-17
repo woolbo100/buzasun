@@ -33,6 +33,7 @@ import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDiv
 import TransformationThreeChanges from '@/components/reports/baekdohwa-report/TransformationThreeChanges'
 import RelationshipChangeScenario from '@/components/reports/baekdohwa-report/RelationshipChangeScenario'
 import RecommendedAudience from '@/components/reports/baekdohwa-report/RecommendedAudience'
+import SixPerspectivesPanoramaBanner from '@/components/reports/baekdohwa-report/SixPerspectivesPanoramaBanner'
 import ReportTestimonials from '@/components/reports/baekdohwa-report/ReportTestimonials'
 // import BaekdohwaPhilosophy from '@/components/reports/baekdohwa-report/BaekdohwaPhilosophy' (POINT 02로 통합)
 // import ReportValueSummary from '@/components/reports/baekdohwa-report/ReportValueSummary' (BEHIND THE REPORT로 통합)
@@ -673,7 +674,7 @@ export default function BaekdohwaReportPage() {
                 </div>
 
                 {/* THE SIX PERSPECTIVES OF LOVE 영역 헤더 */}
-                <div className="max-w-4xl mx-auto mb-10 md:mb-12 text-center space-y-4">
+                <div className="max-w-4xl mx-auto mb-8 text-center space-y-4">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
                     THE SIX PERSPECTIVES OF LOVE
                   </span>
@@ -686,6 +687,9 @@ export default function BaekdohwaReportPage() {
                     리포트가 실제로 짚어내는 6가지 심층 분석 영역입니다.
                   </p>
                 </div>
+
+                {/* 6대 핵심 분석 축 자개 지도 파노라마 배너 (순차 강조 애니메이션) */}
+                <SixPerspectivesPanoramaBanner />
 
                 <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
