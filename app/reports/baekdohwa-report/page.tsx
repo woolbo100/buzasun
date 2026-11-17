@@ -663,7 +663,7 @@ export default function BaekdohwaReportPage() {
                 </div>
 
                 {/* 이동한 POINT 03 대표 분석 이미지 */}
-                <div className="max-w-7xl mx-auto mb-12 md:mb-[72px]">
+                <div className="max-w-7xl mx-auto mb-16 md:mb-28">
                   <Image 
                     src="/image/lovereport/p4.webp" 
                     alt="선천코드 연애 리포트의 6가지 핵심 분석 축 이미지" 
