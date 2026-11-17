@@ -50,12 +50,12 @@ export default function LoveReportTableOfContents() {
         {/* 심층 분석 목차 파노라마 미디어 영역 (추후 책장 넘김 영상으로 교체 가능) */}
         <TableOfContentsMedia />
 
-        {/* 세부 분석 목차 안내 패널 (간결화) */}
+        {/* 세부 분석 목차 안내 패널 (여백 및 간격 최적화) */}
         <div className="max-w-7xl mx-auto mt-7 md:mt-9 mb-5 md:mb-6">
-          <div className="py-4.5 md:py-5.5 px-5 md:px-8 rounded-[18px] md:rounded-[20px] border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 via-[#140816]/45 to-[#2D0A1E]/25 backdrop-blur-sm shadow-sm text-center flex flex-col items-center justify-center">
+          <div className="py-[22px] md:py-[28px] px-5 md:px-8 rounded-[18px] md:rounded-[20px] border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 via-[#140816]/45 to-[#2D0A1E]/25 backdrop-blur-sm shadow-sm text-center flex flex-col items-center justify-center">
             {/* 메인 제목 (로즈핑크플럼 단색 강조) */}
             <h3 
-              className="text-[20px] md:text-[23px] font-bold text-[#D9A8A7] tracking-tight leading-snug mb-2 md:mb-2.5"
+              className="text-[20px] md:text-[23px] font-bold text-[#D9A8A7] tracking-tight leading-snug mb-[11px] md:mb-[13px]"
               style={{ fontFamily: "'Noto Serif KR', serif" }}
             >
               세부 분석 목차
