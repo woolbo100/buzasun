@@ -4,10 +4,11 @@ import { useState } from 'react'
 import Reveal from '@/components/Reveal'
 import { tableOfContentsData } from './data'
 import { ChevronDown, Sparkles, MousePointerClick } from 'lucide-react'
+import TableOfContentsMedia from './TableOfContentsMedia'
 
 export default function LoveReportTableOfContents() {
-  // 기본적으로 PART 01을 펼친 상태로 시작
-  const [openParts, setOpenParts] = useState<string[]>(['part-1'])
+  // 기본적으로 CHAPTER 01을 펼친 상태로 시작
+  const [openParts, setOpenParts] = useState<string[]>(['chapter-1'])
 
   const togglePart = (partId: string) => {
     if (openParts.includes(partId)) {
@@ -20,38 +21,39 @@ export default function LoveReportTableOfContents() {
   return (
     <section className="mb-40" id="table-of-contents">
       <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-12">
+        {/* 헤더 텍스트: 상단 영문 라벨 + 메인 제목 + 서브 설명문 */}
+        <div className="max-w-4xl mx-auto text-center">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             DETAILED STRUCTURE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {tableOfContentsData.title}
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep mb-5 md:mb-6">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {tableOfContentsData.subTitle}
           </p>
+        </div>
 
-          {/* 각 PART 클릭 안내 문구 */}
+        {/* 심층 분석 목차 파노라마 미디어 영역 (추후 책장 넘김 영상으로 교체 가능) */}
+        <TableOfContentsMedia />
+
+        {/* 각 PART 클릭 안내 문구 */}
+        <div className="text-center mb-8 md:mb-10">
           <div className="inline-flex items-center justify-center gap-2 text-[15px] md:text-[16.5px] text-[#EDE6DA]/90 font-medium">
             <MousePointerClick className="w-4 h-4 md:w-[18px] md:h-[18px] text-[#D9A8A7] shrink-0" />
             <span>각 PART를 클릭하면 세부 분석 목차가 펼쳐집니다.</span>
           </div>
         </div>
 
-        {/* 7개 PART 아코디언 목록 */}
+        {/* 8개 장 아코디언 목록 */}
         <div className="max-w-7xl mx-auto space-y-3 md:space-y-3.5 mb-16">
           {tableOfContentsData.parts.map((part) => {
             const isOpen = openParts.includes(part.id)
-            const isSpecial = part.isSpecial
 
             return (
               <div
                 key={part.id}
-                className={`rounded-[18px] md:rounded-[20px] border transition-all duration-300 overflow-hidden ${
-                  isSpecial
-                    ? 'bg-gradient-to-r from-[var(--accent-gold)]/15 via-[#2D0A1E]/80 to-[var(--accent-gold)]/10 border-[#B7788D]/50 shadow-[0_0_30px_rgba(183, 120, 141, 0.15)]'
-                    : 'gungjung-glass border-white/10 hover:border-white/20'
-                }`}
+                className="rounded-[18px] md:rounded-[20px] border transition-all duration-300 overflow-hidden gungjung-glass border-white/10 hover:border-white/20"
               >
                 {/* 아코디언 헤더 버튼 (슬림화: min-height 78~84px 및 상하 패딩 축소) */}
                 <button
@@ -61,23 +63,11 @@ export default function LoveReportTableOfContents() {
                   aria-expanded={isOpen}
                 >
                   <div className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-5 flex-1 min-w-0">
-                    {/* 좌측: PART 번호 + 핵심 실천 처방 뱃지 + 명조체 제목 */}
+                    {/* 좌측: CHAPTER 번호 + 명조체 제목 */}
                     <div className="flex items-center gap-3 md:gap-4 shrink-0">
-                      <span
-                        className={`text-xs font-mono font-bold tracking-widest px-2.5 py-0.5 md:px-3 md:py-1 rounded-md shrink-0 ${
-                          isSpecial
-                            ? 'bg-[#B7788D] text-[#1A0514]'
-                            : 'bg-white/10 text-[#D9A8A7]'
-                        }`}
-                      >
+                      <span className="text-xs font-mono font-bold tracking-widest px-2.5 py-0.5 md:px-3 md:py-1 rounded-md shrink-0 bg-white/10 text-[#D9A8A7]">
                         {part.number}
                       </span>
-                      {isSpecial && (
-                        <span className="inline-flex items-center gap-1 text-[11px] text-[#D9A8A7] font-bold shrink-0">
-                          <Sparkles className="w-3.5 h-3.5 text-[#D9A8A7]" />
-                          핵심 실천 처방
-                        </span>
-                      )}
                       <h3 
                         className="text-[17px] md:text-[20px] font-semibold text-white break-keep tracking-tight leading-snug"
                         style={{ fontFamily: "'Noto Serif KR', serif" }}
@@ -87,9 +77,11 @@ export default function LoveReportTableOfContents() {
                     </div>
 
                     {/* 우측: 장별 간단 설명 (기존 고딕체 유지, 수직 중앙 정렬) */}
-                    <p className="text-xs md:text-[13.5px] text-[#EDE6DA]/65 font-light break-keep md:ml-auto md:text-right pr-2 leading-relaxed">
-                      {part.summary}
-                    </p>
+                    {part.summary ? (
+                      <p className="text-xs md:text-[13.5px] text-[#EDE6DA]/65 font-light break-keep md:ml-auto md:text-right pr-2 leading-relaxed">
+                        {part.summary}
+                      </p>
+                    ) : null}
                   </div>
 
                   {/* 펼침 화살표 아이콘 (수직 중앙 정렬) */}
@@ -134,7 +126,7 @@ export default function LoveReportTableOfContents() {
           <div className="relative z-10 text-center mb-10">
             <span className="inline-flex items-center gap-2 font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] mb-4 uppercase">
               <Sparkles className="w-3.5 h-3.5" />
-              PART 07 SPECIAL EMPHASIS
+              CHAPTER 08 · SPECIAL PRESCRIPTION
             </span>
             <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-4 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
               {tableOfContentsData.part7Highlight.title}
@@ -151,7 +143,7 @@ export default function LoveReportTableOfContents() {
                 className="p-6 rounded-2xl bg-black/40 border border-[#B7788D]/25 hover:border-[#B7788D]/60 transition-colors"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-base font-bold font-mono text-[#D9A8A7] px-2.5 py-0.5 rounded-md bg-[#B7788D]/15">
+                  <span className="text-base font-bold font-mono text-[#D9A8A7] px-2.5 py-0.5 rounded-md bg-[#B7788D]/15 shrink-0">
                     NO. {feat.num}
                   </span>
                   <h4 className="text-lg font-bold text-white break-keep">
