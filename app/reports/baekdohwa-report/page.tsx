@@ -645,7 +645,7 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-40 text-center">
               <Reveal>
-                <div className="max-w-4xl mx-auto mb-10 md:mb-12 space-y-6">
+                <div className="max-w-4xl mx-auto mb-7 md:mb-11 space-y-6">
                   {/* 구분선 도화꽃 아이콘 + 양옆 가로선 */}
                   <BaekdohwaDivider className="mb-8 md:mb-10" />
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
@@ -661,22 +661,8 @@ export default function BaekdohwaReportPage() {
                   </p>
                 </div>
 
-                {/* THE SIX PERSPECTIVES OF LOVE 영역 헤더 */}
-                <div className="max-w-4xl mx-auto mb-14 text-center pt-4 md:pt-6 space-y-4">
-                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
-                    THE SIX PERSPECTIVES OF LOVE
-                  </span>
-                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white leading-[1.3] break-keep">
-                    당신의 사랑을 움직이는<br className="sm:hidden" />
-                    <span className="gradient-text-love"> 6가지 핵심 분석 축</span>
-                  </h3>
-                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    나만의 매력 무기부터 이상형, 남편복, 피해야 할 인연까지.<br className="hidden sm:inline" />
-                    리포트가 실제로 짚어내는 6가지 심층 분석 영역입니다.
-                  </p>
-                </div>
-
-                <div className="max-w-7xl mx-auto mb-20">
+                {/* 이동한 POINT 03 대표 분석 이미지 */}
+                <div className="max-w-7xl mx-auto mb-12 md:mb-[72px]">
                   <Image 
                     src="/image/lovereport/p4.webp" 
                     alt="선천코드 연애 리포트의 6가지 핵심 분석 축 이미지" 
@@ -685,6 +671,22 @@ export default function BaekdohwaReportPage() {
                     className="w-full h-auto rounded-2xl md:rounded-[32px] shadow-2xl border border-white/10" 
                   />
                 </div>
+
+                {/* THE SIX PERSPECTIVES OF LOVE 영역 헤더 */}
+                <div className="max-w-4xl mx-auto mb-10 md:mb-12 text-center space-y-4">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
+                    THE SIX PERSPECTIVES OF LOVE
+                  </span>
+                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white leading-[1.3] break-keep">
+                    당신의 사랑을 움직이는 <br className="sm:hidden" />
+                    <span className="gradient-text-love">6가지 핵심 분석 축</span>
+                  </h3>
+                  <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                    나만의 매력 무기부터 무의식적 끌림, 반복되는 관계의 그림자와 피해야 할 악연까지,<br className="hidden sm:inline" />
+                    리포트가 실제로 짚어내는 6가지 심층 분석 영역입니다.
+                  </p>
+                </div>
+
                 <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
                     {[
