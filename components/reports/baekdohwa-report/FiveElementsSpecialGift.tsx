@@ -57,9 +57,9 @@ export default function FiveElementsSpecialGift() {
   ]
 
   return (
-    <div className="w-full max-w-[1280px] mx-auto px-4 mt-8 md:mt-12 mb-28 md:mb-36">
+    <div className="w-full max-w-7xl mx-auto px-4 mt-0 mb-32 md:mb-40">
       <Reveal>
-        <div className="gungjung-glass p-6 sm:p-7 md:p-8 lg:p-9 rounded-[26px] md:rounded-[32px] border border-[#B7788D]/25 bg-gradient-to-r from-[#1C0D1E]/75 via-[#130816]/70 to-[#1C0D1E]/75 shadow-xl relative overflow-hidden">
+        <div className="gungjung-glass p-7 sm:p-8 md:p-9 lg:p-10 rounded-[28px] md:rounded-[36px] border border-[#B7788D]/25 bg-gradient-to-r from-[#1C0D1E]/75 via-[#130816]/70 to-[#1C0D1E]/75 shadow-xl relative overflow-hidden">
           {/* 은은한 배경 오라 */}
           <div className="absolute top-0 right-1/4 w-72 h-72 bg-[#B7788D]/10 rounded-full blur-[80px] pointer-events-none" />
 
@@ -81,7 +81,8 @@ export default function FiveElementsSpecialGift() {
 
               {/* 간결한 설명문 */}
               <p className="text-[14.5px] sm:text-[15.5px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
-                개인별 선천코드 분석 결과를 바탕으로 보완이 필요한 오행에 맞는 디지털 카드를 1종 함께 제공합니다.
+                개인 1:1 맞춤형 선천코드 분석 결과를 바탕으로 나에게 부족한 오행을 보완해주는<br />
+                디지털 카드를 1종 함께 제공합니다.
               </p>
 
               {/* 하단 작은 안내 문구 */}

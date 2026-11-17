@@ -29,7 +29,7 @@ export default function SecretPrescriptionPoint({
   ]
 
   return (
-    <section id="point-04-secret" className="mb-32 md:mb-40 scroll-mt-28 md:scroll-mt-36">
+    <section id="point-04-secret" className="mb-14 md:mb-18 scroll-mt-28 md:scroll-mt-36">
       <Reveal>
         {/* 모바일 전용 상단 헤드카피 (데스크톱에서는 숨김) */}
         <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5 max-w-7xl mx-auto">
