@@ -69,7 +69,7 @@ export default function SecretPrescriptionPoint({
 
                 {/* 문장 2 */}
                 <p className="text-[15.5px] sm:text-[16.5px] md:text-[17px] text-[#EDE6DA]/85 font-light leading-[1.75] break-keep">
-                  오직 당신의 생년월시 속에 숨겨진 고유한 선천코드와 마음의 설계를 해독하여,<br />
+                  오직 당신의 생년월시 속에 숨겨진 고유한 선천코드와 마음의 설계를 깊이 해독하여,<br />
                   가장 은밀하고 비밀스럽게 봉인된 맞춤형 연애 처방을 내립니다.
                 </p>
               </div>
