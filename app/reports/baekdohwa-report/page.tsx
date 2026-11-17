@@ -657,7 +657,8 @@ export default function BaekdohwaReportPage() {
                     <span className="gradient-text-love"> 선천코드에 숨겨진 무의식</span>을 마주합니다.&rdquo;
                   </h2>
                   <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    겉으로 드러난 연애 성향 너머, 당신의 깊은 무의식과 내면의 그림자, 설명할 수 없이 반복되는 끌림의 뿌리까지 낱낱이 해독합니다.<br className="hidden sm:inline" />
+                    겉으로 드러난 연애 성향 너머, 당신의 깊은 무의식과 내면의 그림자,<br className="hidden sm:inline" />
+                    설명할 수 없이 반복되는 끌림의 뿌리까지 낱낱이 해독합니다.<br className="hidden sm:inline" />
                     의식적으로는 다짐하면서도 결국 같은 자리에서 흔들렸던 진짜 이유를 찾아내어,<br className="hidden sm:inline" />
                     <span className="text-[#D9A8A7] font-medium opacity-100">스스로도 몰랐던 깊은 내면을 투명하게 들여다보게 돕습니다.</span>
                   </p>
@@ -666,7 +667,7 @@ export default function BaekdohwaReportPage() {
                 {/* 이동한 POINT 03 대표 분석 이미지 */}
                 <div className="max-w-7xl mx-auto mb-16 md:mb-28">
                   <Image 
-                    src="/image/lovereport/p4.webp" 
+                    src="/image/lovereport/p4.webp?v=173411" 
                     alt="선천코드 연애 리포트의 6가지 핵심 분석 축 이미지" 
                     width={1672}
                     height={941}
