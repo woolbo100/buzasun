@@ -14,7 +14,7 @@ export default function WhySeoncheonReport() {
       label: 'POINT 01',
       title: '연애 특화 심층 분석',
       hook: '“인생 전체를 묻는 사주가 아니라, 당신의 사랑을 깊이 들여다봅니다.”',
-      desc: '재물, 직업, 건강 등 인생 전반을 폭넓게 살펴보는 종합 풀이와 달리, 백도화 연애 리포트는 연애라는 한 가지 주제에 집중합니다. 매력과 이상형부터 배우자 코드, 관계의 흐름까지 입체적으로 해부하여 분석합니다.',
+      desc: '재물, 직업, 건강 등 인생 전반을 폭넓게 살펴보는 종합 풀이와 달리, 백도화 연애 리포트는 연애라는 한 가지 주제에 집중합니다. 매력과 이상형부터 배우자 코드, 관계의 흐름까지 입체적으로 해부하여 분석합니다. 하나의 주제를 깊이 읽어내는 선천코드 기반 개인 맞춤 정밀 분석서입니다.',
       icon: <Heart className="w-4 h-4" />,
     },
     {
@@ -60,7 +60,7 @@ export default function WhySeoncheonReport() {
   ]
 
   return (
-    <section className="mb-16 md:mb-28">
+    <section className="mb-24 md:mb-36 lg:mb-40">
       <Reveal>
         <div className="max-w-[1280px] mx-auto text-center">
           {/* 구분선 도화꽃 아이콘 + 양옆 가로선 */}
@@ -171,16 +171,13 @@ export default function WhySeoncheonReport() {
             </p>
           </div>
 
-          {/* 8. 섹션 마무리 3단 핵심 메시지 */}
+          {/* 8. 섹션 마무리 2단 핵심 메시지 */}
           <div className="max-w-3xl mx-auto mt-8 md:mt-10 text-center space-y-2 md:space-y-2.5">
             <h3 className="font-elegant font-bold text-[20px] md:text-[24px] text-white leading-snug break-keep">
               지금껏 이런 리포트는 없었습니다.
             </h3>
             <p className="font-elegant font-medium text-[16px] md:text-[18px] text-[#D9A8A7] leading-relaxed break-keep">
               하나의 선천코드, 세 겹의 통찰, 오직 당신만의 해답
-            </p>
-            <p className="text-[14.5px] md:text-[16px] text-[#EDE6DA]/75 font-light leading-relaxed break-keep">
-              하나의 주제를 깊이 읽어내는 선천코드 기반 개인 맞춤 정밀 분석
             </p>
           </div>
         </div>
