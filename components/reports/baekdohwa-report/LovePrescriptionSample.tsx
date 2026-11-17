@@ -66,18 +66,73 @@ export default function LovePrescriptionSample() {
         {/* [PART B] 하단 대표 비주얼 (소통 / 행동 / 오행 개운 3처방 연결 이미지) */}
         {/* ══════════════════════════════════════════════════════════════════ */}
         <div className="mt-10 sm:mt-12 md:mt-14 max-w-7xl mx-auto">
-          <div className="relative rounded-[22px] sm:rounded-[26px] md:rounded-[28px] overflow-hidden border border-white/10 bg-[#170619]/60 shadow-[0_12px_40px_rgba(18,0,20,0.5)]">
-            {/* 원본 비율/색감 그대로 유지하는 정적 가로형 3분할 비주얼 */}
-            <Image
-              src="/image/lovereport/three love prescriptions.webp"
-              alt="백도화 3대 실전 관계 처방 비주얼 (소통 처방 · 행동 처방 · 오행 개운 처방)"
-              width={2170}
-              height={725}
-              className="w-full h-auto block"
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1280px"
-              priority={false}
-            />
-          </div>
+          <Reveal delayMs={120}>
+            <div className="prescription-visual-wrapper relative rounded-[22px] sm:rounded-[26px] md:rounded-[28px] overflow-hidden border border-white/10 bg-[#170619]/60 shadow-[0_12px_40px_rgba(18,0,20,0.5)]">
+              {/* 소프트 쉬머(빛 흐름) 오버레이 - 과하지 않은 아주 은은한 실크 광택 */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden z-10" aria-hidden="true">
+                <div className="prescription-shimmer" />
+              </div>
+
+              {/* 원본 비율/색감 그대로 유지하는 가로형 3분할 비주얼 */}
+              <Image
+                src="/image/lovereport/three love prescriptions.webp"
+                alt="백도화 3대 실전 관계 처방 비주얼 (소통 처방 · 행동 처방 · 오행 개운 처방)"
+                width={2170}
+                height={725}
+                className="w-full h-auto block"
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1280px"
+                priority={false}
+              />
+            </div>
+          </Reveal>
+
+          {/* 상시 마이크로 애니메이션: 미세 float 부유 & 은은한 소프트 쉬머 */}
+          <style jsx>{`
+            .prescription-visual-wrapper {
+              animation: prescriptionGentleFloat 5.5s ease-in-out infinite;
+              will-change: transform;
+            }
+
+            @keyframes prescriptionGentleFloat {
+              0%, 100% {
+                transform: translateY(0px);
+              }
+              50% {
+                transform: translateY(-5px);
+              }
+            }
+
+            .prescription-shimmer {
+              width: 50%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.04) 50%,
+                transparent 100%
+              );
+              transform: skewX(-20deg);
+              animation: prescriptionShimmerSweep 7s ease-in-out infinite;
+              will-change: transform;
+            }
+
+            @keyframes prescriptionShimmerSweep {
+              0% {
+                transform: translateX(-150%) skewX(-20deg);
+              }
+              35%, 100% {
+                transform: translateX(250%) skewX(-20deg);
+              }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              .prescription-visual-wrapper,
+              .prescription-shimmer {
+                animation: none !important;
+                transform: none !important;
+              }
+            }
+          `}</style>
         </div>
       </Reveal>
     </section>
