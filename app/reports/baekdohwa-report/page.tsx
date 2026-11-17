@@ -728,7 +728,7 @@ export default function BaekdohwaReportPage() {
             {/* POINT 04: 실제 리포트 분석 목차 (7개의 장 목차 공개) */}
             <LoveReportTableOfContents />
 
-            {/* 신규 섹션: POINT 04. SECRET PRESCRIPTION — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 처방전 */}
+            {/* 신규 섹션: POINT 04. PERSONALIZED REPORT — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 처방전 */}
             <SecretPrescriptionPoint />
 
             {/* POINT 05: 개인 맞춤 실천 처방 샘플 (PART 07 실제 행동 처방전 샘플) */}

@@ -10,7 +10,7 @@ import Image from 'next/image'
  */
 export default function TableOfContentsMedia() {
   return (
-    <div className="w-full max-w-7xl mx-auto mt-8 mb-5 md:mb-6">
+    <div className="w-full max-w-7xl mx-auto mt-8">
       <div className="relative w-full overflow-hidden rounded-2xl md:rounded-[28px] border border-white/10 shadow-2xl bg-[#140816]">
         <Image
           src="/image/lovereport/love%20secret%20chapters.webp"

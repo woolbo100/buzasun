@@ -34,7 +34,7 @@ export default function SecretPrescriptionPoint({
         {/* 모바일 전용 상단 헤드카피 (데스크톱에서는 숨김) */}
         <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5 max-w-7xl mx-auto">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
-            POINT 04 · SECRET PRESCRIPTION
+            POINT 04 · PERSONALIZED REPORT
           </span>
           <h2 className="text-2xl sm:text-3xl font-elegant font-bold text-white leading-[1.3] break-keep">
             당신만을 위해 봉인된<br className="sm:hidden" />
@@ -52,7 +52,7 @@ export default function SecretPrescriptionPoint({
               {/* 데스크톱 전용 헤드카피 */}
               <div className="hidden lg:block space-y-3">
                 <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase">
-                  POINT 04 · SECRET PRESCRIPTION
+                  POINT 04 · PERSONALIZED REPORT
                 </span>
                 <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                   당신만을 위해 봉인된<br />
