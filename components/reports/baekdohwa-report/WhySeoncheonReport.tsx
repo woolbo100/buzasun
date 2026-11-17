@@ -149,7 +149,7 @@ export default function WhySeoncheonReport() {
 
           {/* 7. 공통 설명 패널 (클릭 시 페이드 전환 & 레이아웃 안정성 유지) */}
           <div 
-            className="max-w-[1280px] mx-auto p-6 md:p-8 rounded-[26px] border border-[#B7788D]/40 text-left relative overflow-hidden transition-all duration-300 shadow-2xl mb-6 md:mb-8"
+            className="max-w-[1280px] mx-auto p-6 md:p-8 rounded-[26px] border border-[#B7788D]/40 text-left relative overflow-hidden transition-all duration-300 shadow-2xl"
             style={{
               background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.25) 0%, rgba(30, 12, 25, 0.65) 100%)',
               boxShadow: '0 10px 40px rgba(0, 0, 0, 0.35)',
@@ -171,11 +171,16 @@ export default function WhySeoncheonReport() {
             </p>
           </div>
 
-          {/* 8. 마지막 핵심 카피 */}
-          <div className="max-w-3xl mx-auto">
-            <p className="font-elegant font-medium text-[18px] md:text-[21px] text-[#FAF7F2] leading-relaxed break-keep">
-              &ldquo;언제 사랑받을지를 묻지 마세요.<br className="sm:hidden" />
-              <span className="text-[#D9A8A7] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;
+          {/* 8. 섹션 마무리 3단 핵심 메시지 */}
+          <div className="max-w-3xl mx-auto mt-8 md:mt-10 text-center space-y-2 md:space-y-2.5">
+            <h3 className="font-elegant font-bold text-[20px] md:text-[24px] text-white leading-snug break-keep">
+              지금껏 이런 리포트는 없었습니다.
+            </h3>
+            <p className="font-elegant font-medium text-[16px] md:text-[18px] text-[#D9A8A7] leading-relaxed break-keep">
+              하나의 선천코드, 세 겹의 통찰, 오직 당신만의 해답
+            </p>
+            <p className="text-[14.5px] md:text-[16px] text-[#EDE6DA]/75 font-light leading-relaxed break-keep">
+              하나의 주제를 깊이 읽어내는 선천코드 기반 개인 맞춤 정밀 분석
             </p>
           </div>
         </div>

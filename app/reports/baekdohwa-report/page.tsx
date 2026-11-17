@@ -619,7 +619,7 @@ export default function BaekdohwaReportPage() {
                     <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 leading-[1.8] break-keep font-light">
                       사주 전체를 훑는 수박 겉핥기식 운세 풀이로는 사랑의 갈등을 해결할 수 없습니다.<br />
                       단순한 연애운이나 뻔한 텍스트 조합과는 출발선부터 다릅니다.<br />
-                      <span className="text-[#D9A8A7] font-medium opacity-100">당신이 사랑에 빠지는 순간부터 관계가 흔들리는 위기까지</span><br />
+                      <span className="text-[#D9A8A7] font-medium opacity-100">당신이 사랑에 빠지는 순간부터 관계가 흔들리는 위기까지 정밀분석</span><br />
                       모든 사랑의 역학을 섬세하게 분해합니다. 동양 명리학으로 타고난 기질을 읽고,<br />
                       심리학과 무의식 탐색의 시선으로 반복되는<br />
                       <span className="text-[#D9A8A7] font-medium opacity-100">애착과 방어기제까지 입체적으로 분석해 행동의 변화를 이끕니다.</span>

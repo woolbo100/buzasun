@@ -34,6 +34,12 @@ export default function GeneralAdviceComparison() {
                 내 코드가 정렬되는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#D9A8A7] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
               </p>
             </div>
+
+            {/* 이동한 핵심 카피 */}
+            <p className="font-elegant font-medium text-[17px] md:text-[20px] text-[#FAF7F2] leading-relaxed break-keep pt-3">
+              &ldquo;언제 사랑받을지를 묻지 마세요.<br className="sm:hidden" />
+              <span className="text-[#D9A8A7] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;
+            </p>
           </div>
         </div>
 
