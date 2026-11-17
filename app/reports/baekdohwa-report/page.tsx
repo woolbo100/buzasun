@@ -641,6 +641,9 @@ export default function BaekdohwaReportPage() {
             {/* POINT 02: 선천코드 3대 분석 방식 (명리 뼈대 + 현실 관계 기록 교차 분석) */}
             <PersonalAnalysisMethod />
 
+            {/* BEHIND THE REPORT: 연구 및 분석 기준서 구축 과정 (STUDY 01~04) */}
+            <ReportProductionTimeline />
+
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* POINT 03. 나만의 숨겨진 연애 코드 — 매력무기·이상형·남편복·피해야 할 인연 등 6대 핵심 심층 분석 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
@@ -739,6 +742,33 @@ export default function BaekdohwaReportPage() {
             {/* POINT 06: 프리미엄 결과물과 소장 가치 (리포트 샘플 미리보기, 라이트박스 지원) */}
             <ReportSamplePreview />
 
+            {/* 소장하고 싶은 프리미엄 리포트 (대형 세로 이미지 및 설명) */}
+            <section className="mb-40">
+              <Reveal>
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
+                  <div className="space-y-10 order-2 lg:order-1">
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
+                      소장하고 싶은 <br /> <span className="gradient-text-love">프리미엄 리포트</span>
+                    </h2>
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
+                      선천코드 연애 리포트는 한 번 읽고 끝나는 결과지가 아니라, 당신의 사랑을 다시 바라보게 하는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
+                      백도화만의 깊이 있는 해석과 우아한 문체로 당신의 사랑 이야기를 새롭게 정의해 드립니다.
+                    </p>
+                  </div>
+                  <div className="order-1 lg:order-2 relative group">
+                    <div className="absolute -inset-10 bg-[#B7788D]/10 blur-[60px] rounded-full"></div>
+                    <Image 
+                      src="/image/lovereport/the%20hidden%20love%20report.webp" 
+                      alt="소장하고 싶은 프리미엄 리포트" 
+                      width={1086}
+                      height={1448}
+                      className="relative z-10 w-full h-auto rounded-[32px] md:rounded-[44px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.03]" 
+                    />
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
             {/* 사주·AI 리포트와의 3대 비교표: 같은 연애 질문에도, 분석의 깊이와 방향은 다릅니다. */}
             <ReportComparisonTable />
 
@@ -813,9 +843,6 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* BEHIND THE REPORT: 제작 철학 및 분석 기준 구축 과정 (STUDY 01~04) */}
-            <ReportProductionTimeline />
-
             {/* 추천 대상과 맞지 않는 대상 */}
             <RecommendedAudience />
 
@@ -825,33 +852,6 @@ export default function BaekdohwaReportPage() {
             {/* 백도화의 분석 철학은 POINT 02(동양 명리 × 관계 심리)로 통합 정리됨 */}
 
             {/* LIFELONG COMPASS(소장 가치 6대 요소 요약)는 BEHIND THE REPORT로 통합 정리됨 */}
-
-            {/* 소장하고 싶은 프리미엄 리포트 (p5.webp) */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="space-y-10 order-2 lg:order-1">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      소장하고 싶은 <br /> <span className="gradient-text-love">프리미엄 리포트</span>
-                    </h2>
-                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      선천코드 연애 리포트는 한 번 읽고 끝나는 결과지가 아니라, 당신의 사랑을 다시 바라보게 하는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
-                      백도화만의 깊이 있는 해석과 우아한 문체로 당신의 사랑 이야기를 새롭게 정의해 드립니다.
-                    </p>
-                  </div>
-                  <div className="order-1 lg:order-2 relative group">
-                    <div className="absolute -inset-10 bg-[#B7788D]/10 blur-[60px] rounded-full"></div>
-                    <Image 
-                      src="/image/lovereport/the%20hidden%20love%20report.webp" 
-                      alt="소장하고 싶은 프리미엄 리포트" 
-                      width={1086}
-                      height={1448}
-                      className="relative z-10 w-full h-auto rounded-[32px] md:rounded-[44px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.03]" 
-                    />
-                  </div>
-                </div>
-              </Reveal>
-            </section>
 
             {/* 리포트 제작 및 수령 안내 ('리포트는 이렇게 만들어집니다') */}
             <section className="mb-40">

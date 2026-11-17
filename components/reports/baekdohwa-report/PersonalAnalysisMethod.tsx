@@ -46,7 +46,7 @@ export default function PersonalAnalysisMethod() {
   ]
 
   return (
-    <section id="point-02" className="mb-32 md:mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
+    <section id="point-02" className="mb-20 md:mb-28 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
       <Reveal>
         {/* 1. 상단 전체 폭 헤더: 영문 라벨, 메인 제목, 도입 설명 (데스크톱/모바일 공통 최상단) */}
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16 space-y-4 md:space-y-5 px-4">
