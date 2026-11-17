@@ -20,7 +20,7 @@ export default function ReportProductionTimeline() {
     {
       num: 'STUDY 03',
       title: '연애 특화 분석 기준서',
-      desc: '매력 무기부터 무의식적 끌림, 배우자 코드, 관계의 그림자까지 오직 사랑에만 집중한 8개 장·30여 개 심층 질문 체계를 설계했습니다.',
+      desc: '매력 무기부터 무의식적 끌림, 배우자 코드, 관계의 그림자까지 오직 사랑에만 집중한 8개 장, 30여 개 심층 질문 체계를 설계했습니다.',
       icon: <ClipboardCheck className="w-6 h-6 text-[#D9A8A7]" />
     },
     {
@@ -47,7 +47,8 @@ export default function ReportProductionTimeline() {
               백도화의 선천코드 연애 리포트는 시중의 운세 문장을 짜깁기한 결과물이 아닙니다.
             </p>
             <p>
-              동양명리학의 정밀한 원국 해석에 <strong className="text-[#D9A8A7] font-semibold">심리학과 뇌과학의 통찰</strong>을 더해, 사랑과 관계의 본질적인 질문을 다시 설계했습니다.
+              동양명리학의 정밀한 원국 해석에 <strong className="text-[#D9A8A7] font-semibold">심리학과 뇌과학의 통찰</strong>을 더해,<br />
+              사랑과 관계의 본질적인 질문을 다시 설계했습니다.
             </p>
             <p>
               이를 바탕으로 <strong className="text-[#D9A8A7] font-semibold">오직 연애에만 집중한 핵심 분석 축</strong>과 <strong className="text-[#D9A8A7] font-semibold">일관된 정밀 해독 시스템</strong>을 구축했습니다.

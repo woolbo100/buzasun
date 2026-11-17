@@ -734,6 +734,9 @@ export default function BaekdohwaReportPage() {
             {/* 신규 섹션: POINT 04. PERSONALIZED REPORT — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 분석서 */}
             <SecretPrescriptionPoint />
 
+            {/* POINT 04 하위 혜택: 오행 에너지 카드 1종 증정 (컴팩트 가로형 혜택 카드) */}
+            <FiveElementsSpecialGift />
+
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* POINT 05: 실전 관계 처방 (PART A ~ PART D 4단계 통합 판매 스토리) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
@@ -863,9 +866,6 @@ export default function BaekdohwaReportPage() {
 
             {/* 구매 전 안내 (6대 중요 안내 사항) */}
             <PurchaseNotice />
-
-            {/* 오행 에너지 카드 1종 사은품 안내 (SPECIAL GIFT) */}
-            <FiveElementsSpecialGift />
 
             {/* 최종 구매 CTA (이미지와 텍스트·버튼 분리 구조) */}
             <section className="mb-28 w-full max-w-[1280px] mx-auto">

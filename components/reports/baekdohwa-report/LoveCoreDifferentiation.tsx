@@ -19,7 +19,7 @@ export default function LoveCoreDifferentiation() {
     {
       icon: AlertCircle,
       question: "나는 왜 늘 똑같은 결말의 상처만 반복될까?",
-      desc: "사람도 상황도 많은 것이 달라졌는데 이별의 모양결도, 아픔의 크기도 신기할 정도로 닮아 있는 이유"
+      desc: "사람도 상황도 많은 것이 달라졌는데 이별의 모양새도, 아픔의 크기도 신기할 정도로 닮아 있는 이유"
     }
   ]
 
