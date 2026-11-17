@@ -188,14 +188,14 @@ export const comparisonTableData = {
 // 7. 목차 공개 — 7개의 장 & 28개 항목 (SECTION 08)
 export const tableOfContentsData = {
   title: "당신의 사랑을 해독하는\n심층 분석의 모든 장",
-  subTitle: "인생 총운의 일부로 연애를 두루뭉술하게 훑고 지나가는 일반 사주가 아닙니다. 오직 ‘연애’라는 한 분야만을 끝까지 파고들어 정밀 해독한 전체 구성입니다.\n\n타고난 매력 무기와 무의식적 끌림부터 배우자 코드, 재회, 시기 흐름, 실전 비책까지 제1장~제8장 · 30개 심층 분석 항목으로 구성된 전체 목차를 확인해 보세요.",
+  subTitle: "인생 총운의 일부로 연애를 두루뭉술하게 훑고 지나가는 일반 사주가 아닙니다. 오직 ‘연애’라는 한 분야만을 끝까지 파고들어 정밀 해독한 전체 구성입니다.\n\n타고난 매력 무기와 무의식적 끌림부터 배우자 코드, 재회, 시기 흐름, 실전 비책까지 제1장~제8장 · 30여개 심층 분석 항목으로 구성된 전체 목차를 확인해 보세요.",
   parts: [
     {
       id: "chapter-1",
       number: "CHAPTER 01",
       title: "나의 매력무기",
       subTitle: "선천코드가 말해주는 연애기질",
-      description: "선천 연애코드와 은밀한 본성, 시선을 앗아가는 나만의 도화 매력과 사랑 방식 분석",
+      description: "선천 연애코드, 은밀한 본성, 나만의 도화 매력 분석",
       items: [
         "1. 도화의 첫 장 — 당신을 움직이는 선천 연애코드",
         "2. 사랑이 시작될 때 드러나는 은밀한 본성",
@@ -208,7 +208,7 @@ export const tableOfContentsData = {
       number: "CHAPTER 02",
       title: "나의 이상형과 연애패턴",
       subTitle: "왜 늘 이런 사람에게 끌리는가",
-      description: "반복되는 끌림의 심리적 이유와 이상형의 비밀, 관계를 무너뜨리는 내면의 그림자 해독",
+      description: "무의식적 끌림의 뿌리와 반복되는 관계의 그림자 해독",
       items: [
         "1. 마음이 먼저 향하는 사람 — 이상형의 비밀",
         "2. 끌리는 자와 결국 행복해질 자의 간극",
@@ -222,7 +222,7 @@ export const tableOfContentsData = {
       number: "CHAPTER 03",
       title: "나의 남편복",
       subTitle: "어울리는 사람과 피해야 할 사람",
-      description: "배우자 자리와 남자의 그릇으로 살펴보는 나에게 맞는 귀인, 그리고 경계해야 할 악연의 기미",
+      description: "배우자 자리와 남자의 그릇, 귀인과 악연의 기미 감별",
       items: [
         "1. 내 선천코드에 숨겨진 남자복",
         "2. 선천코드에 새겨진 남자의 그릇과 배우자의 자리",
@@ -235,7 +235,7 @@ export const tableOfContentsData = {
       number: "CHAPTER 04",
       title: "관계가 깊어질 때",
       subTitle: "궁합과 관계유지 전략",
-      description: "썸에서 균열의 순간까지 꺼내 드는 본능, 시들지 않는 관계 유지를 위한 인연의 균형 전략",
+      description: "썸부터 균열의 순간까지, 시들지 않는 관계 유지 전략",
       items: [
         "1. 썸의 순간, 가장 빛나는 당신의 매혹",
         "2. 균열의 순간, 당신이 꺼내 드는 본능",
@@ -247,8 +247,8 @@ export const tableOfContentsData = {
       id: "chapter-5",
       number: "CHAPTER 05",
       title: "나의 오행 결핍과 연애운 처방",
-      subTitle: "",
-      description: "부족한 오행 기운이 사랑에 남기는 흔적을 읽고, 결핍을 채워 연애운을 되살리는 맞춤 처방",
+      subTitle: "나에게 필요한 오행과 맞춤 개운법",
+      description: "부족한 오행 기운 진단과 연애운을 살리는 개운 처방",
       items: [
         "1. 부족한 기운이 사랑에 남기는 흔적",
         "2. 당신의 연애운을 살리는 오행 처방",
@@ -260,7 +260,7 @@ export const tableOfContentsData = {
       number: "CHAPTER 06",
       title: "재회 가능성 판단",
       subTitle: "미련인가 운명인가",
-      description: "끝난 인연의 재회 가능성과 감정의 굴레 진단, 다시 연락해야 할 때와 놓아주어야 할 타이밍 판별",
+      description: "끝난 인연의 재회 가능성과 연락·정리 타이밍 판별",
       items: [
         "1. 끝난 사랑, 다시 이어질 수 있을까",
         "2. 재회를 가로막는 감정의 굴레",
@@ -272,7 +272,7 @@ export const tableOfContentsData = {
       number: "CHAPTER 07",
       title: "다가올 인연의 시기",
       subTitle: "나의 연애운 흐름",
-      description: "지금 사랑의 계절과 변화의 시기, 다가오는 인연의 궤적과 판이 뒤집히는 결정적 변곡점 포착",
+      description: "현재 대운의 흐름과 인연이 열리는 결정적 변곡점 포착",
       items: [
         "1. 지금 당신의 사랑은 어느 계절에 있는가",
         "2. 다가오는 인연이 그려낼 사랑의 궤적",
@@ -283,8 +283,8 @@ export const tableOfContentsData = {
       id: "chapter-8",
       number: "CHAPTER 08",
       title: "나의 선천코드 맞춤 실천전략",
-      subTitle: "",
-      description: "막힌 연애운을 뚫어낼 은밀한 비방과 도화운 실천법, 사람을 보는 기준과 1:1 관계 처방전",
+      subTitle: "나의 사랑을 바꾸는 맞춤형 실전 전략",
+      description: "막힌 연애운을 여는 실전 비방과 1:1 맞춤 행동 처방",
       items: [
         "1. 막힌 연애운을 뚫어낼 은밀한 비방",
         "2. 도화운을 여는 현실적인 실천법",

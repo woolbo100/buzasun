@@ -21,7 +21,7 @@ import QuestionShiftComparison from '@/components/reports/common/QuestionShiftCo
 import LovePrescriptionSample from '@/components/reports/baekdohwa-report/LovePrescriptionSample'
 import SecretPrescriptionPoint from '@/components/reports/baekdohwa-report/SecretPrescriptionPoint'
 import LovePatternChecklist from '@/components/reports/baekdohwa-report/LovePatternChecklist'
-import GeneralAdviceComparison from '@/components/reports/baekdohwa-report/GeneralAdviceComparison'
+// import GeneralAdviceComparison from '@/components/reports/baekdohwa-report/GeneralAdviceComparison' (POINT 05로 통합)
 import RelationshipPatternFlow from '@/components/reports/baekdohwa-report/RelationshipPatternFlow'
 import PersonalAnalysisMethod from '@/components/reports/baekdohwa-report/PersonalAnalysisMethod'
 import PersonalizedCaseComparison from '@/components/reports/baekdohwa-report/PersonalizedCaseComparison'
@@ -725,20 +725,16 @@ export default function BaekdohwaReportPage() {
               </Reveal>
             </section>
 
-            {/* POINT 04: 실제 리포트 분석 목차 (7개의 장 목차 공개) */}
+            {/* POINT 04: 실제 리포트 분석 목차 (8개 장 목차 공개) */}
             <LoveReportTableOfContents />
 
-            {/* 신규 섹션: POINT 04. PERSONALIZED REPORT — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 처방전 */}
+            {/* 신규 섹션: POINT 04. PERSONALIZED REPORT — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 분석서 */}
             <SecretPrescriptionPoint />
 
-            {/* POINT 05: 개인 맞춤 실천 처방 샘플 (PART 07 실제 행동 처방전 샘플) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 05: 실전 관계 처방 (PART A ~ PART D 4단계 통합 판매 스토리) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             <LovePrescriptionSample />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 06: 백도화의 차별점 비교 — 일반 조언 vs 선천코드 처방전, 3대 비교표 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* 일반 연애 조언과의 차이점 */}
-            <GeneralAdviceComparison />
 
             {/* 기존 사주·AI 리포트와의 3대 비교표 */}
             <ReportComparisonTable />

@@ -42,7 +42,7 @@ export default function LoveReportTableOfContents() {
             {/* 두 번째 문단 */}
             <p className="text-[16.5px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.75] md:leading-[1.85] break-keep">
               타고난 매력 무기와 무의식적 끌림부터 배우자 코드, 재회, 시기 흐름, 실전 비책까지<br className="hidden md:inline" />
-              <strong className="text-[#D9A8A7] font-semibold">제1장~제8장 · 30개 심층 분석 항목</strong>으로 구성된 전체 목차를 확인해 보세요.
+              <strong className="text-[#D9A8A7] font-semibold">제1장~제8장 · 30여개 심층 분석 항목</strong>으로 구성된 전체 목차를 확인해 보세요.
             </p>
           </div>
         </div>
@@ -50,26 +50,21 @@ export default function LoveReportTableOfContents() {
         {/* 심층 분석 목차 파노라마 미디어 영역 (추후 책장 넘김 영상으로 교체 가능) */}
         <TableOfContentsMedia />
 
-        {/* 신규: 세부 분석 목차 안내 패널 (소개 박스) */}
+        {/* 세부 분석 목차 안내 패널 (간결화) */}
         <div className="max-w-7xl mx-auto mt-7 md:mt-9 mb-5 md:mb-6">
-          <div className="py-4 md:py-4.5 px-5 md:px-8 rounded-[18px] md:rounded-[20px] border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 via-[#140816]/45 to-[#2D0A1E]/25 backdrop-blur-sm shadow-sm text-center flex flex-col items-center justify-center">
-            {/* 상단 영문 라벨 */}
-            <span className="block font-mono text-[11px] md:text-xs font-semibold tracking-[0.22em] text-[#D9A8A7] uppercase mb-1">
-              TABLE OF CONTENTS
-            </span>
-
-            {/* 메인 제목 */}
+          <div className="py-4.5 md:py-5.5 px-5 md:px-8 rounded-[18px] md:rounded-[20px] border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 via-[#140816]/45 to-[#2D0A1E]/25 backdrop-blur-sm shadow-sm text-center flex flex-col items-center justify-center">
+            {/* 메인 제목 (로즈핑크플럼 단색 강조) */}
             <h3 
-              className="text-[18px] md:text-[21px] font-bold text-[#FAF7F2] tracking-tight leading-snug mb-1"
+              className="text-[20px] md:text-[23px] font-bold text-[#D9A8A7] tracking-tight leading-snug mb-2 md:mb-2.5"
               style={{ fontFamily: "'Noto Serif KR', serif" }}
             >
               세부 분석 목차
             </h3>
 
-            {/* 보조 안내 문구 */}
-            <p className="text-[13px] md:text-[14.5px] text-[#EDE6DA]/75 font-light leading-relaxed break-keep inline-flex items-center justify-center gap-1.5">
-              <MousePointerClick className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#D9A8A7]/85 shrink-0" />
-              <span>각 PART를 클릭하면 해당 장의 세부 분석 항목이 펼쳐집니다.</span>
+            {/* 보조 안내 문구 (확대 및 CHAPTER로 변경) */}
+            <p className="text-[14px] md:text-[15.5px] text-[#EDE6DA]/85 font-normal leading-relaxed break-keep inline-flex items-center justify-center gap-2">
+              <MousePointerClick className="w-4 h-4 text-[#D9A8A7] shrink-0" />
+              <span>각 CHAPTER를 클릭하면 세부 분석 항목이 펼쳐집니다.</span>
             </p>
           </div>
         </div>
@@ -112,9 +107,9 @@ export default function LoveReportTableOfContents() {
                       </div>
                     </div>
 
-                    {/* 우측 그룹: 각 장별 상세 설명 (PC에서는 오른쪽 정렬, 모바일에서는 자연스럽게 아래 정렬) */}
+                    {/* 우측 그룹: 각 장별 상세 설명 (PC에서는 한 줄로 여유 있게 정렬, 모바일에서는 자연스럽게 아래 정렬) */}
                     {part.description ? (
-                      <p className="text-xs md:text-[13px] lg:text-[13.5px] text-[#EDE6DA]/70 font-light break-keep leading-relaxed lg:text-right lg:max-w-md xl:max-w-lg lg:ml-auto">
+                      <p className="text-xs md:text-[13px] lg:text-[13.5px] text-[#EDE6DA]/75 font-light break-keep leading-relaxed lg:whitespace-nowrap lg:text-right lg:ml-auto shrink-0">
                         {part.description}
                       </p>
                     ) : null}

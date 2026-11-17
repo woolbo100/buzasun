@@ -23,7 +23,7 @@ export default function SecretPrescriptionPoint({
     },
     {
       num: '03',
-      title: '내 연애의 치명적인 약점을 메우는 실전 처방전',
+      title: '내 연애의 치명적인 약점을 메우는 실전 전략 추천',
       desc: '가장 흔들리는 결정적 순간을 찾아내고, 그 빈틈을 채워줄 나만의 행동 처방을 건냅니다.'
     }
   ]
@@ -38,7 +38,7 @@ export default function SecretPrescriptionPoint({
           </span>
           <h2 className="text-2xl sm:text-3xl font-elegant font-bold text-white leading-[1.3] break-keep">
             당신만을 위해 봉인된<br className="sm:hidden" />
-            <span className="gradient-text-love"> 단 하나의 선천코드 1:1 처방전</span>
+            <span className="gradient-text-love"> 단 하나의 선천코드 1:1 분석서</span>
           </h2>
         </div>
 
@@ -56,7 +56,7 @@ export default function SecretPrescriptionPoint({
                 </span>
                 <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                   당신만을 위해 봉인된<br />
-                  <span className="gradient-text-love">단 하나의 선천코드 1:1 처방전</span>
+                  <span className="gradient-text-love">단 하나의 선천코드 1:1 분석서</span>
                 </h2>
               </div>
 
@@ -107,7 +107,7 @@ export default function SecretPrescriptionPoint({
             <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
               <Image 
                 src={imageSrc} 
-                alt="POINT 04 개인 맞춤형 리포트 봉인 도장 — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 처방전" 
+                alt="POINT 04 개인 맞춤형 리포트 봉인 도장 — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 분석서" 
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-contain transition-transform duration-700 group-hover:scale-[1.01]" 
