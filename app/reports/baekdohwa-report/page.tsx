@@ -40,6 +40,7 @@ import ReportTestimonials from '@/components/reports/baekdohwa-report/ReportTest
 import ReportFAQ from '@/components/reports/baekdohwa-report/ReportFAQ'
 import PurchaseNotice from '@/components/reports/baekdohwa-report/PurchaseNotice'
 import FiveElementsSpecialGift from '@/components/reports/baekdohwa-report/FiveElementsSpecialGift'
+import RoyalArchivePoint from '@/components/reports/baekdohwa-report/RoyalArchivePoint'
 
 // ══════════════════════════════════════════════════════════════════════
 // 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
@@ -745,32 +746,8 @@ export default function BaekdohwaReportPage() {
             {/* POINT 06: 프리미엄 결과물과 소장 가치 (리포트 샘플 미리보기, 라이트박스 지원) */}
             <ReportSamplePreview />
 
-            {/* 소장하고 싶은 프리미엄 리포트 (대형 세로 이미지 및 설명) */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="space-y-10 order-2 lg:order-1">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      소장하고 싶은 <br /> <span className="gradient-text-love">프리미엄 리포트</span>
-                    </h2>
-                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      선천코드 연애 리포트는 한 번 읽고 끝나는 결과지가 아니라, 당신의 사랑을 다시 바라보게 하는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
-                      백도화만의 깊이 있는 해석과 우아한 문체로 당신의 사랑 이야기를 새롭게 정의해 드립니다.
-                    </p>
-                  </div>
-                  <div className="order-1 lg:order-2 relative group">
-                    <div className="absolute -inset-10 bg-[#B7788D]/10 blur-[60px] rounded-full"></div>
-                    <Image 
-                      src="/image/lovereport/the%20hidden%20love%20report.webp" 
-                      alt="소장하고 싶은 프리미엄 리포트" 
-                      width={1086}
-                      height={1448}
-                      className="relative z-10 w-full h-auto rounded-[32px] md:rounded-[44px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.03]" 
-                    />
-                  </div>
-                </div>
-              </Reveal>
-            </section>
+            {/* POINT 06 하위 영역: 프리미엄 소장용 궁중 비급 (2열 정보 밀도 최적화 및 3:4 규격 이미지) */}
+            <RoyalArchivePoint />
 
             {/* 사주·AI 리포트와의 3대 비교표: 같은 연애 질문에도, 분석의 깊이와 방향은 다릅니다. */}
             <ReportComparisonTable />
