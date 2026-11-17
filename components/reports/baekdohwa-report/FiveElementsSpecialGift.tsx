@@ -76,19 +76,19 @@ export default function FiveElementsSpecialGift() {
               {/* 메인 제목 (2줄) */}
               <h3 className="text-[21px] sm:text-2xl md:text-[27px] font-elegant font-bold text-white leading-[1.3] break-keep">
                 나의 선천코드에 맞춘<br />
-                <span className="text-[#D9A8A7]">오행 에너지 카드 1종 증정</span>
+                <span className="text-[#D9A8A7]">오행 에너지 카드 2종 증정</span>
               </h3>
 
               {/* 간결한 설명문 */}
               <p className="text-[14.5px] sm:text-[15.5px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
                 개인 1:1 맞춤형 선천코드 분석 결과를 바탕으로 나에게 부족한 오행을 보완해주는<br />
-                디지털 카드를 1종 함께 제공합니다.
+                나의 오행 아트카드와 나의 오행 수호자 카드 2종을 함께 제공합니다.
               </p>
 
               {/* 하단 작은 안내 문구 */}
               <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
                 <p className="text-[11.5px] sm:text-xs text-[#D9A8A7]/80 font-medium tracking-tight">
-                  ※ 5종 중 개인별 1종 제공 · 디지털 이미지
+                  ※ 5종 중 개인별 2종 제공 · 디지털 이미지
                 </p>
                 <span className="hidden sm:inline text-white/20">|</span>
                 <p className="text-[11px] text-white/40 font-light">
