@@ -31,8 +31,7 @@ export default function RoyalArchivePoint() {
             PREMIUM ROYAL ARCHIVE
           </span>
           <h2 className="text-2xl sm:text-3xl font-elegant font-bold text-white leading-[1.3] break-keep">
-            프리미엄 소장용<br />
-            <span className="gradient-text-love">궁중 비급</span>
+            프리미엄 소장용 <span className="gradient-text-love">궁중 비급</span>
           </h2>
         </div>
 
@@ -49,8 +48,7 @@ export default function RoyalArchivePoint() {
                   PREMIUM ROYAL ARCHIVE
                 </span>
                 <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                  프리미엄 소장용<br />
-                  <span className="gradient-text-love">궁중 비급</span>
+                  프리미엄 소장용 <span className="gradient-text-love">궁중 비급</span>
                 </h2>
               </div>
 
@@ -85,8 +83,8 @@ export default function RoyalArchivePoint() {
               </div>
             </div>
 
-            {/* 하단 강조 문구 박스 (슬림 버전) */}
-            <div className="py-3.5 px-5 sm:py-4 sm:px-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm mt-5 lg:mt-6">
+            {/* 하단 강조 문구 박스 (슬림 버전, 상단과의 여백을 기존보다 자연스럽게 확장) */}
+            <div className="py-3.5 px-5 sm:py-4 sm:px-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm mt-7 sm:mt-8 lg:mt-9">
               <p className="font-elegant font-semibold text-[15.5px] md:text-[17px] text-[#D9A8A7] leading-relaxed break-keep">
                 &ldquo;당신의 사랑은 한 번 읽고 사라질 운세가 아니라, 오래 간직할 한 권의 이야기입니다.&rdquo;
               </p>

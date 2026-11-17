@@ -41,6 +41,7 @@ import ReportFAQ from '@/components/reports/baekdohwa-report/ReportFAQ'
 import PurchaseNotice from '@/components/reports/baekdohwa-report/PurchaseNotice'
 import FiveElementsSpecialGift from '@/components/reports/baekdohwa-report/FiveElementsSpecialGift'
 import RoyalArchivePoint from '@/components/reports/baekdohwa-report/RoyalArchivePoint'
+import RealTransformationBanner from '@/components/reports/baekdohwa-report/RealTransformationBanner'
 
 // ══════════════════════════════════════════════════════════════════════
 // 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
@@ -671,7 +672,7 @@ export default function BaekdohwaReportPage() {
                 {/* 이동한 POINT 03 대표 분석 이미지 */}
                 <div className="max-w-7xl mx-auto mb-16 md:mb-28">
                   <Image 
-                    src="/image/lovereport/p4.webp?v=173411" 
+                    src="/image/lovereport/p4.webp?v=point03_update" 
                     alt="선천코드 연애 리포트의 6가지 핵심 분석 축 이미지" 
                     width={1672}
                     height={941}
@@ -772,6 +773,9 @@ export default function BaekdohwaReportPage() {
                 </div>
               </Reveal>
             </section>
+
+            {/* 연애의 주도권을 되찾는 한복 여성 비급 이미지 및 매력 선언문 배너 */}
+            <RealTransformationBanner />
 
             {/* 리포트를 열어보는 순간, 당신의 연애에 생기는 3가지 변화 */}
             <TransformationThreeChanges />
