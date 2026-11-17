@@ -28,39 +28,39 @@ export default function WhySeoncheonReport() {
     {
       num: '03',
       label: 'POINT 03',
-      title: '숨겨진 매력과 무의식 코드',
-      hook: '“당신도 몰랐던 매력, 설명할 수 없었던 끌림의 이유.”',
-      desc: '나만의 타고난 매력무기부터 무의식적 이상형, 반복되는 관계의 그림자와 반드시 피해야 할 인연까지. 선천코드를 단서로 당신의 사랑 속에 숨겨진 결정적 단서들을 정밀하게 해독합니다.',
+      title: '숨겨진 무의식 코드 정밀 해독',
+      hook: '“나조차 알지 못했던 내 마음의 심연, 선천코드에 숨겨진 무의식을 마주합니다.”',
+      desc: '겉으로 드러난 연애 성향 너머, 나도 모르게 반복하던 방어기제와 무의식적 선택의 뿌리까지 깊게 파고듭니다. 선천코드에 새겨진 깊은 내면의 지도를 읽어내어 스스로도 몰랐던 진짜 나를 선명하게 마주하게 돕습니다.',
       icon: <Sparkles className="w-4 h-4" />,
     },
     {
       num: '04',
       label: 'POINT 04',
-      title: '1:1 개인 맞춤 분석',
-      hook: '“같은 사랑은 없습니다. 당신의 선천코드도 그러합니다.”',
-      desc: '개인별 명리 데이터를 바탕으로 연애 기질과 관계 특징을 분석합니다. 일반적인 성격 유형 설명을 넘어 개인의 강점과 주의할 지점, 관계의 선택 기준을 정리합니다.',
+      title: '1:1 개인 맞춤형 리포트',
+      hook: '“누구에게나 똑같이 열려 있는 뻔한 조언은 담지 않았습니다.”',
+      desc: '생년월일만 넣고 기계적으로 찍어내는 자동 조합 풀이가 아닙니다. 타고난 성향의 결부터 겉과 다른 내면의 온도, 반복되는 연애의 약점까지 정밀하게 엮어 오직 당신 한 사람만을 위한 맞춤 처방전을 완성합니다.',
       icon: <UserCheck className="w-4 h-4" />,
     },
     {
       num: '05',
       label: 'POINT 05',
       title: '실전 관계 처방',
-      hook: '“무엇을 타고났는가보다, 이제 무엇을 선택할 것인가.”',
-      desc: '분석을 이해에서 끝내지 않고 실제 관계에 적용할 수 있는 선택 기준과 행동 가이드를 제시합니다. 개인별 관계 처방과 부족 오행에 맞춘 에너지 카드도 함께 제공합니다.',
+      hook: '“읽고 나서 고개만 끄덕이고 끝나는 분석은 아무 의미가 없습니다.”',
+      desc: '타고난 성향을 아는 것에서 멈추지 않고, 실제 연애의 갈등과 선택의 순간에 바로 적용할 수 있는 구체적인 행동 지침을 제시합니다. 내 안의 오래된 연애 습관을 끊어내고 관계의 흐름을 바꾸는 현실적인 처방전입니다.',
       icon: <Compass className="w-4 h-4" />,
     },
     {
       num: '06',
       label: 'POINT 06',
-      title: '프리미엄 궁중 비급',
-      hook: '“한 번 읽고 잊는 운세가 아닌, 오래 펼쳐볼 나만의 사랑 비급.”',
-      desc: '한국 전통 왕실 도감의 미감을 현대적으로 재해석한 프리미엄 PDF 리포트입니다. 한지와 비단의 감성, 아름다운 간지, 인포그래픽을 더해 읽는 경험과 소장 가치까지 고려합니다.',
+      title: '프리미엄 소장용 궁중 비급',
+      hook: '“한 번 읽고 덮어버리는 가벼운 운세가 아닙니다. 평생 곁에 두고 펼쳐볼 당신만의 연애 비급입니다.”',
+      desc: '수십 페이지에 걸친 밀도 높은 해독과 정제된 문장, 한 권의 화보집을 닮은 품격 있는 구성까지 모든 디테일을 장인정신으로 빚어냈습니다. 사랑의 방향을 잃을 때마다 언제든 꺼내어 나침반처럼 삼을 수 있는 하이엔드 소장용 분석서입니다.',
       icon: <Crown className="w-4 h-4" />,
     },
   ]
 
   return (
-    <section className="mb-10 md:mb-14 lg:mb-16">
+    <section className="mb-16 md:mb-28">
       <Reveal>
         <div className="max-w-[1280px] mx-auto text-center">
           {/* 구분선 도화꽃 아이콘 + 양옆 가로선 */}
@@ -149,7 +149,7 @@ export default function WhySeoncheonReport() {
 
           {/* 7. 공통 설명 패널 (클릭 시 페이드 전환 & 레이아웃 안정성 유지) */}
           <div 
-            className="max-w-[1280px] mx-auto p-6 md:p-8 rounded-[26px] border border-[#B7788D]/40 text-left relative overflow-hidden transition-all duration-300 shadow-2xl mb-12"
+            className="max-w-[1280px] mx-auto p-6 md:p-8 rounded-[26px] border border-[#B7788D]/40 text-left relative overflow-hidden transition-all duration-300 shadow-2xl mb-6 md:mb-8"
             style={{
               background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.25) 0%, rgba(30, 12, 25, 0.65) 100%)',
               boxShadow: '0 10px 40px rgba(0, 0, 0, 0.35)',
@@ -172,7 +172,7 @@ export default function WhySeoncheonReport() {
           </div>
 
           {/* 8. 마지막 핵심 카피 */}
-          <div className="max-w-3xl mx-auto pt-6 md:pt-10">
+          <div className="max-w-3xl mx-auto">
             <p className="font-elegant font-medium text-[18px] md:text-[21px] text-[#FAF7F2] leading-relaxed break-keep">
               &ldquo;언제 사랑받을지를 묻지 마세요.<br className="sm:hidden" />
               <span className="text-[#D9A8A7] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;

@@ -133,7 +133,7 @@ export default function PersonalAnalysisMethod() {
               </p>
               <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#D9A8A7] leading-relaxed break-keep">
                 단편적인 운세 설명을 넘어, 당신의 연애를 여러 각도에서 이해할 수 있도록 돕는<br />
-                심층 분석서입니다.&rdquo;
+                융합형 심층 분석서입니다.&rdquo;
               </p>
             </div>
           </div>

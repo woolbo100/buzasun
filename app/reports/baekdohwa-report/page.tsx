@@ -650,59 +650,13 @@ export default function BaekdohwaReportPage() {
                     POINT 03 · HIDDEN RELATIONSHIP CODES
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    &ldquo;나도 몰랐던 매력,<br className="sm:hidden" />
-                    <span className="gradient-text-love"> 알아야 할 인연의 조건</span>을 밝힙니다.&rdquo;
+                    &ldquo;나조차 알지 못했던 내 마음의 심연,<br className="sm:hidden" />
+                    <span className="gradient-text-love"> 선천코드에 숨겨진 무의식</span>을 마주합니다.&rdquo;
                   </h2>
                   <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    남들의 기준에 나를 억지로 맞추며 사랑받으려 애쓰지 않아도 됩니다.<br className="hidden sm:inline" />
-                    내 사주에 새겨진 치명적인 매력의 무기를 꿰뚫고, 나를 살리는 인연과 해치는 인연의 기준을 세울 때 비로소 내가 선택하는 사랑이 시작됩니다.
+                    겉으로 드러난 연애 성향 너머, 당신의 깊은 무의식과 내면의 그림자, 설명할 수 없이 반복되는 끌림의 뿌리까지 낱낱이 해독합니다.<br className="hidden sm:inline" />
+                    의식적으로는 다짐하면서도 결국 같은 자리에서 흔들렸던 진짜 이유를 찾아내어, 스스로도 몰랐던 깊은 내면을 투명하게 들여다보게 돕습니다.
                   </p>
-
-                  {/* 추가된 무기와 연애 판도 전환 서사 블록 */}
-                  <div className="pt-4 space-y-5 max-w-3xl mx-auto text-center">
-                    <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-relaxed break-keep">
-                      자신의 사주를 읽고, 선천코드 속 <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 무기&rsquo;</span>를 정확히 꿰뚫은 여자는 연애의 판도가 완전히 달라집니다.
-                    </p>
-
-                    <div className="space-y-3 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
-                      <p className="text-white font-medium">
-                        남자의 마음을 얻기 위해 애쓰지 않습니다.
-                      </p>
-                      <p>
-                        내 코드가 정렬되는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#D9A8A7] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 주도권 회복 16:9 풀사이즈 배너 이미지 (최대 1280px) */}
-                <div className="mx-auto mt-10 mb-12 w-full max-w-[1280px]">
-                  <Image
-                    src="/image/lovereport/the%20power%20of%20my%20love%20code.webp"
-                    alt="선천코드의 매력을 이해하고 연애의 주도권을 되찾는 백도화 이미지"
-                    width={1280}
-                    height={720}
-                    className="block h-auto w-full rounded-2xl border border-white/10 shadow-2xl"
-                  />
-                </div>
-
-                {/* 전환 강조 박스 */}
-                <div className="max-w-3xl mx-auto mb-16 text-center">
-                  <div 
-                    className="love-report-highlight-card p-6 md:p-8 rounded-2xl border text-center space-y-2 backdrop-blur-sm"
-                    style={{
-                      background: 'rgba(125, 76, 100, 0.20)',
-                      borderColor: 'rgba(215, 170, 185, 0.20)',
-                    }}
-                  >
-                    <p className="text-sm md:text-base text-[#D9A8A7] font-bold tracking-wide">
-                      이제 감정에 휘둘리며 닳아버리는 연애는 끝내세요.
-                    </p>
-                    <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
-                      당신의 연애 판도를 완전히 뒤바꿀 단 하나의 비급,<br className="hidden sm:inline" />
-                      <span className="text-[#D9A8A7] font-semibold">백도화 《연애비급》 선천코드 리포트가 당신의 진짜 매력을 깨워드립니다.</span>
-                    </p>
-                  </div>
                 </div>
 
                 {/* THE SIX PERSPECTIVES OF LOVE 영역 헤더 */}
@@ -730,23 +684,30 @@ export default function BaekdohwaReportPage() {
                     className="w-full h-auto rounded-2xl md:rounded-[32px] shadow-2xl border border-white/10" 
                   />
                 </div>
-                <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
                     {[
-                      { t: "나만의 3대 매력 무기", d: "남을 흉내 내지 않고도 상대가 깊이 빠져들게 만드는 선천적 매력의 결", i: "fa-wand-magic-sparkles" },
-                      { t: "무의식적 위험한 끌림", d: "나쁜 남자, 회피형에게 번번이 마음을 빼앗기고 휘둘리던 근원적 원인", i: "fa-bolt" },
-                      { t: "내면의 방어기제와 그림자", d: "불안하거나 서운할 때 스스로 관계를 닫아버리는 무의식 장벽", i: "fa-shield-halved" },
-                      { t: "나를 살리는 인연 vs 피할 유형", d: "함께할수록 안정감을 주는 파트너와 나를 소모시키는 유형의 명확한 분별", i: "fa-user-group" },
-                      { t: "배우자 코드와 결혼 운", d: "동양 명리학으로 짚어내는 내 사주 속 남편복과 평생을 함께할 인연의 특성", i: "fa-heart" },
-                      { t: "관계 주도권 회복 솔루션", d: "상대의 표정에 일희일비하지 않고 내 감정의 중심을 단단히 지키는 법", i: "fa-key" }
+                      { t: "01 · 나만의 타고난 매력 무기", d: "남을 흉내 내지 않고도 상대가 깊이 빠져드는 고유한 매력의 결", i: "fa-wand-magic-sparkles" },
+                      { t: "02 · 무의식적 끌림의 기준", d: "이성보다 먼저 반응하며 특정한 사람에게 마음이 열리는 숨은 취향", i: "fa-bolt" },
+                      { t: "03 · 반복되는 관계의 그림자", d: "사람이 바뀌어도 늘 같은 불안과 오해로 사랑을 멈추게 하는 방어기제", i: "fa-shield-halved" },
+                      { t: "04 · 반드시 피해야 할 악연 코드", d: "강렬한 끌림 뒤에 내 자존감과 에너지를 고갈시키는 위험한 관계의 신호", i: "fa-user-group" },
+                      { t: "05 · 뇌에 각인된 감정 반응 회로", d: "서운함과 갈등의 순간, 나도 모르게 튀어나오는 자동화된 감정 습관", i: "fa-heart" },
+                      { t: "06 · 사랑의 에너지 소진과 충전 회로", d: "연애할수록 지치는 원인을 짚어내고 다시 나를 채우는 건강한 회복 기준", i: "fa-key" }
                     ].map((item, idx) => (
-                      <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group">
-                        <div className="w-16 h-16 rounded-2xl bg-[#2D0A1E] flex items-center justify-center border border-[#B7788D]/35 text-[#D9A8A7] shadow-lg group-hover:scale-110 transition-transform">
-                          <i className={`fas ${item.i} text-2xl`}></i>
+                      <div 
+                        key={idx} 
+                        className="detail-glass-card flex flex-col items-center text-center py-6 px-5 md:py-6 md:px-6 rounded-[22px] md:rounded-[26px] group transition-all duration-300"
+                      >
+                        <div className="w-[52px] h-[52px] rounded-2xl bg-[#B7788D]/15 flex items-center justify-center border border-[#B7788D]/35 text-[#D9A8A7] shadow-sm mb-3.5 group-hover:scale-105 group-hover:bg-[#B7788D]/25 transition-all duration-300">
+                          <i className={`fas ${item.i} text-lg md:text-[19px]`}></i>
                         </div>
-                        <div>
-                          <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 leading-snug break-keep">{item.t}</h3>
-                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA] opacity-60 font-light break-keep">{item.d}</p>
+                        <div className="w-full flex flex-col items-center flex-1 justify-center">
+                          <h4 className="text-[19px] md:text-[21px] font-bold text-white mb-2.5 leading-snug break-keep text-center">
+                            {item.t}
+                          </h4>
+                          <p className="text-[14.5px] md:text-[15.5px] text-[#EDE6DA]/75 font-light leading-[1.65] break-keep text-center">
+                            {item.d}
+                          </p>
                         </div>
                       </div>
                     ))}

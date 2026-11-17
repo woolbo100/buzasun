@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Reveal from '@/components/Reveal'
 import { tableOfContentsData } from './data'
-import { ChevronDown, Sparkles } from 'lucide-react'
+import { ChevronDown, Sparkles, MousePointerClick } from 'lucide-react'
 
 export default function LoveReportTableOfContents() {
   // 기본적으로 PART 01을 펼친 상태로 시작
@@ -20,16 +20,22 @@ export default function LoveReportTableOfContents() {
   return (
     <section className="mb-40" id="table-of-contents">
       <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-12">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             POINT 04 · FULL CURRICULUM
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {tableOfContentsData.title}
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep mb-5 md:mb-6">
             {tableOfContentsData.subTitle}
           </p>
+
+          {/* 각 PART 클릭 안내 문구 */}
+          <div className="inline-flex items-center justify-center gap-2 text-[13.5px] md:text-[14.5px] text-[#EDE6DA]/85 font-normal">
+            <MousePointerClick className="w-4 h-4 text-[#D9A8A7] shrink-0" />
+            <span>각 PART를 클릭하면 세부 분석 목차가 펼쳐집니다.</span>
+          </div>
         </div>
 
         {/* 7개 PART 아코디언 목록 */}
