@@ -759,21 +759,21 @@ export default function BaekdohwaReportPage() {
             <ReportTestimonials />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 08: 실질적인 선택의 변화 — 사랑받기 위해 애쓰는 연애에서 나다운 사랑으로 */}
+            {/* FINAL AWAKENING: 마지막 각성 — 이제 사랑 앞에서, 나만의 기준과 매력을 완성합니다 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-20 text-center">
               <Reveal>
                 <div className="max-w-4xl mx-auto">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                    POINT 08 · REAL TRANSFORMATION
+                    FINAL AWAKENING
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
                     &ldquo;이제 사랑 앞에서,<br className="sm:hidden" />
-                    <span className="gradient-text-love"> 나만의 기준을 갖게 됩니다.</span>&rdquo;
+                    <span className="gradient-text-love"> 나만의 기준과 매력을 완성합니다.</span>&rdquo;
                   </h2>
                   <p className="text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    사랑받기 위해 애쓰는 관계에서 벗어나,<br className="hidden sm:inline" />
-                    온전한 나로서 누구에게 마음을 내어줄지 당당하게 선택합니다.
+                    사랑받기 위해 애쓰는 관계는 끝났습니다.<br className="hidden sm:inline" />
+                    나만의 고유한 매력을 선명히 깨우고, 누구에게 마음을 내어줄지 당당하게 선택합니다.
                   </p>
                 </div>
               </Reveal>
@@ -781,21 +781,6 @@ export default function BaekdohwaReportPage() {
 
             {/* 연애의 주도권을 되찾는 한복 여성 비급 이미지 및 매력 선언문 배너 */}
             <RealTransformationBanner />
-
-            {/* 중앙의 love transformation.webp 가로형 이미지 */}
-            <div className="w-full max-w-7xl mx-auto mb-24 md:mb-32">
-              <Reveal>
-                <div className="relative aspect-[16/9] w-full rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] group">
-                  <Image 
-                    src="/image/lovereport/love%20transformation.webp" 
-                    alt="리포트를 열어보는 순간 당신의 연애에 생기는 3가지 변화" 
-                    fill
-                    sizes="(max-width: 1280px) 100vw, 1280px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.01]" 
-                  />
-                </div>
-              </Reveal>
-            </div>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 중간 CTA: POINT 08 직후 배치 */}

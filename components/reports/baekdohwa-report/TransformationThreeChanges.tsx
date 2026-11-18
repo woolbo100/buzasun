@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { Crown, Sparkles, ShieldCheck } from 'lucide-react'
 
@@ -89,25 +90,25 @@ function TransformationTimeline() {
   }, [isVisible])
 
   const steps = [
-    { num: '01', text: '반복' },
-    { num: '02', text: '자각' },
-    { num: '03', text: '선택' },
+    { num: '01', text: '반복되는 패턴 장면' },
+    { num: '02', text: '패턴을 알아차리는 순간' },
+    { num: '03', text: '다른 선택의 시작' },
   ]
 
   return (
-    <div ref={containerRef} className="w-full max-w-2xl mx-auto mb-10 md:mb-12 px-4">
+    <div ref={containerRef} className="w-full max-w-4xl mx-auto mb-10 md:mb-12 px-3 sm:px-4">
       {/* 3단계 가로형 슬림 타임라인 (모바일/PC 모두 깔끔한 가로 흐름) */}
       <div className="flex items-center justify-between">
-        {/* Step 01: 반복 */}
-        <div className={`flex items-center gap-2 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
-          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold transition-all duration-500 ${
+        {/* Step 01: 반복되는 패턴 장면 */}
+        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 transition-all duration-500 ${
             animStep >= 1 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[0].num}
           </div>
-          <span className={`text-[14px] sm:text-[15px] font-medium transition-colors duration-500 break-keep ${
+          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal transition-colors duration-500 break-keep ${
             animStep >= 1 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[0].text}
@@ -115,23 +116,23 @@ function TransformationTimeline() {
         </div>
 
         {/* 연결선 01 */}
-        <div className="flex-1 mx-2.5 sm:mx-4 md:mx-6 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
+        <div className="flex-1 min-w-[12px] mx-1.5 sm:mx-3 md:mx-5 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
           <div 
             className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#D9A8A7] via-[#C48B9F] to-[#D9A8A7] transition-all duration-700 ease-out"
             style={{ width: animStep >= 2 ? '100%' : '0%' }}
           />
         </div>
 
-        {/* Step 02: 자각 */}
-        <div className={`flex items-center gap-2 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 3 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
-          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold transition-all duration-500 ${
+        {/* Step 02: 패턴을 알아차리는 순간 */}
+        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 3 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 transition-all duration-500 ${
             animStep >= 3 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[1].num}
           </div>
-          <span className={`text-[14px] sm:text-[15px] font-medium transition-colors duration-500 break-keep ${
+          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal transition-colors duration-500 break-keep ${
             animStep >= 3 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[1].text}
@@ -139,23 +140,23 @@ function TransformationTimeline() {
         </div>
 
         {/* 연결선 02 */}
-        <div className="flex-1 mx-2.5 sm:mx-4 md:mx-6 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
+        <div className="flex-1 min-w-[12px] mx-1.5 sm:mx-3 md:mx-5 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
           <div 
             className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#D9A8A7] via-[#C48B9F] to-[#D9A8A7] transition-all duration-700 ease-out"
             style={{ width: animStep >= 4 ? '100%' : '0%' }}
           />
         </div>
 
-        {/* Step 03: 선택 */}
-        <div className={`flex items-center gap-2 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 5 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
-          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold transition-all duration-500 ${
+        {/* Step 03: 다른 선택의 시작 */}
+        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 5 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 transition-all duration-500 ${
             animStep >= 5 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[2].num}
           </div>
-          <span className={`text-[14px] sm:text-[15px] font-medium transition-colors duration-500 break-keep ${
+          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal transition-colors duration-500 break-keep ${
             animStep >= 5 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[2].text}
@@ -198,14 +199,14 @@ export default function TransformationThreeChanges() {
     <section className="mb-32">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-10 md:mb-12">
-          <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D9A8A7] uppercase mb-4">
+          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             TRANSFORMATION SCENARIO
           </span>
           <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-4 leading-[1.3] break-keep">
             리포트를 여는 순간 시작되는,<br />
             <span className="gradient-text-love">연애의 3단계 변화</span>
           </h2>
-          <p className="text-sm md:text-base text-[#EDE6DA]/75 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             같은 사랑을 반복하지 않으려면 먼저 나의 선택부터 알아야 합니다.<br />
             단순한 성향 풀이를 넘어 스스로를 깊게 이해하고,<br />
             당신의 미래 연애 청사진을 명확하고 당당하게 바꿔놓습니다.
@@ -214,6 +215,19 @@ export default function TransformationThreeChanges() {
 
         {/* 3단계 순차 애니메이션 슬림 타임라인 */}
         <TransformationTimeline />
+
+        {/* 01 반복 → 02 자각 → 03 선택 애니메이션 바로 아래 16:9 가로형 이미지 */}
+        <div className="w-full max-w-7xl mx-auto mb-10 md:mb-12">
+          <div className="relative aspect-[16/9] w-full rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] group">
+            <Image 
+              src="/image/lovereport/love%20transformation.webp" 
+              alt="리포트를 열어보는 순간 당신의 연애에 생기는 3가지 변화" 
+              fill
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.01]" 
+            />
+          </div>
+        </div>
 
         {/* 3가지 변화 카드 그리드 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">

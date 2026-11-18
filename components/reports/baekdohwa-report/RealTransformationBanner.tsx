@@ -7,7 +7,7 @@ export default function RealTransformationBanner() {
   return (
     <section className="mb-24 md:mb-32">
       <Reveal>
-        {/* 1. 이미지 위 상단 강조 카피 */}
+        {/* 1. 이미지 위 상단 강조 카피 — 본문 핵심 3줄 리듬 */}
         <div className="pt-2 space-y-5 max-w-3xl mx-auto text-center mb-10 md:mb-12">
           <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-relaxed break-keep">
             자신의 사주를 읽고, 선천코드 속 <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 무기&rsquo;</span>를 정확히 꿰뚫은 여자는 연애의 판도가 완전히 달라집니다.
@@ -15,10 +15,10 @@ export default function RealTransformationBanner() {
 
           <div className="space-y-3 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
             <p className="text-white font-medium">
-              남자의 마음을 얻기 위해 애쓰지 않습니다.
+              더 이상 남자의 마음을 얻기 위해 애쓰지 않습니다.
             </p>
             <p>
-              내 코드가 정렬되는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#D9A8A7] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
+              내 매력의 결이 정렬되고 기준이 세워지는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#D9A8A7] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
             </p>
           </div>
 
@@ -32,11 +32,11 @@ export default function RealTransformationBanner() {
         {/* 2. 한복 여성과 궁중 비급 가로형 대표 이미지 */}
         <div className="mx-auto mb-10 md:mb-14 w-full max-w-[1280px]">
           <Image
-            src="/image/lovereport/the%20power%20of%20my%20love%20code.webp"
+            src="/image/lovereport/love-charm-discovery.webp"
             alt="선천코드의 매력을 이해하고 연애의 주도권을 되찾는 백도화 이미지"
             width={1280}
             height={720}
-            className="block h-auto w-full rounded-2xl border border-white/10 shadow-2xl"
+            className="block h-auto w-full rounded-2xl md:rounded-[28px] border border-white/10 shadow-2xl"
           />
         </div>
 
