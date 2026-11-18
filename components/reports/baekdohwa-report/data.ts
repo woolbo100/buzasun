@@ -106,7 +106,7 @@ export const analysisMethodData = {
 
 // 5. 같은 선천코드, 다른 사랑의 이야기 (SECTION 06)
 export const personalizedCaseData = {
-  mainCopy: "같은 사주를 가졌다고,\n같은 사랑을 살아가는 것은 아닙니다.",
+  mainCopy: "같은 사주를 가졌다고,\n사랑의 방식까지 같지는 않습니다.",
   subCopy: "타고난 코드는 같아도, 살아온 환경과 반응 방식에 따라 사랑의 전개는 완전히 달라집니다.",
   disclaimer: "※ 이해를 돕기 위한 가상 사례입니다.",
   conclusion: "선천코드는 출발점을 보여줍니다.\n삶의 기록은 그 코드가 실제로 어떻게 쓰이고 있는지 이해하는 단서가 됩니다.",
@@ -355,8 +355,8 @@ export const productionTimelineData = {
 
 // 9. 리포트 샘플 미리보기 (SECTION 10)
 export const samplePreviewData = {
-  mainCopy: "당신의 사랑을 담아 완성하는\n한 권의 비급",
-  subCopy: "휘발되는 모바일 화면이 아닌, 한국 전통 왕실 도감의 미감을 현대적으로 재해석한 약 28~30페이지 분량의 영구 소장용 PDF 리포트입니다.",
+  mainCopy: "오래도록 간직하고 싶은,\n단 한 권의 비급",
+  subCopy: "한 번 보고 사라지는 가벼운 모바일 운세가 아닙니다.\n한국 전통 왕실 도감의 기품과 미감을 현대적으로 재해석한, 오래도록 곁에 두고 펼쳐볼 수 있는 소장용 프리미엄 디지털 비급서입니다.",
   disclaimer: "※ 예시 이미지이며 실제 리포트의 구성과 개인별 분석 내용은 달라질 수 있습니다.",
   samples: [
     {

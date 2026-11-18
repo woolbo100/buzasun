@@ -23,7 +23,7 @@ export default function ReportSamplePreview() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {samplePreviewData.mainCopy}
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep whitespace-pre-line">
             {samplePreviewData.subCopy}
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function ReportSamplePreview() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#D9A8A7]">
+                <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1.5 rounded-md bg-[#1B0A1A]/80 backdrop-blur-md border border-[#B7788D]/30 text-[11px] sm:text-[12px] font-mono font-bold tracking-wider text-[#FAF7F2] inline-flex items-center justify-center leading-none">
                   {sample.badge}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -61,10 +61,10 @@ export default function ReportSamplePreview() {
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#D9A8A7] transition-colors">
+                <h4 className="text-[17px] md:text-[18px] font-bold text-white mb-2 group-hover:text-[#D9A8A7] transition-colors">
                   {sample.title}
                 </h4>
-                <p className="text-xs text-[#EDE6DA]/60 font-light break-keep">
+                <p className="text-[14px] leading-[1.5] text-[#EDE6DA]/85 font-light break-keep">
                   {sample.desc}
                 </p>
               </div>
@@ -72,7 +72,7 @@ export default function ReportSamplePreview() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-white/40 mt-10">
+        <p className="text-center text-xs text-[#EDE6DA]/70 mt-10">
           {samplePreviewData.disclaimer}
         </p>
       </Reveal>
