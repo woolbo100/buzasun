@@ -752,6 +752,12 @@ export default function BaekdohwaReportPage() {
             {/* 사주·AI 리포트와의 3대 비교표: 같은 연애 질문에도, 분석의 깊이와 방향은 다릅니다. */}
             <ReportComparisonTable />
 
+            {/* 리포트를 여는 순간 시작되는, 연애의 3단계 변화 */}
+            <TransformationThreeChanges />
+
+            {/* 실제 구매자들의 3단계 변화 후기 */}
+            <ReportTestimonials />
+
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* POINT 08: 실질적인 선택의 변화 — 사랑받기 위해 애쓰는 연애에서 나다운 사랑으로 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
@@ -776,11 +782,20 @@ export default function BaekdohwaReportPage() {
             {/* 연애의 주도권을 되찾는 한복 여성 비급 이미지 및 매력 선언문 배너 */}
             <RealTransformationBanner />
 
-            {/* 리포트를 여는 순간 시작되는, 연애의 3단계 변화 */}
-            <TransformationThreeChanges />
-
-            {/* 실제 구매자들의 3단계 변화 후기 */}
-            <ReportTestimonials />
+            {/* 중앙의 love transformation.webp 가로형 이미지 */}
+            <div className="w-full max-w-7xl mx-auto mb-24 md:mb-32">
+              <Reveal>
+                <div className="relative aspect-[16/9] w-full rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] group">
+                  <Image 
+                    src="/image/lovereport/love%20transformation.webp" 
+                    alt="리포트를 열어보는 순간 당신의 연애에 생기는 3가지 변화" 
+                    fill
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.01]" 
+                  />
+                </div>
+              </Reveal>
+            </div>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 중간 CTA: POINT 08 직후 배치 */}

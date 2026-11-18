@@ -1,195 +1,162 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { Crown, Sparkles, ShieldCheck } from 'lucide-react'
 
 // TRANSFORMATION 3단계 순차 애니메이션 타임라인 컴포넌트
 function TransformationTimeline() {
   const containerRef = useRef<HTMLDivElement | null>(null)
-  // animStep: 0=초기, 1=01강조, 2=선1그리기, 3=02강조, 4=선2그리기, 5=03강조(최종고정)
-  const [animStep, setAnimStep] = useState(0)
+  // animStep: 0=리셋, 1=01강조, 2=선1그리기, 3=02강조, 4=선2그리기, 5=03강조(완성 상태 유지)
+  const [animStep, setAnimStep] = useState(1)
+  const [isVisible, setIsVisible] = useState(false)
+  const isReducedMotion = useRef(false)
 
+  // 1. 화면 노출 제어 (IntersectionObserver: 화면에 보일 때만 실행)
   useEffect(() => {
-    const el = containerRef.current
-    if (!el) return
-
-    // 사용자의 모션 감소 설정(prefers-reduced-motion) 지원
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReduced) {
+    isReducedMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (isReducedMotion.current) {
       setAnimStep(5)
       return
     }
 
-    const timeouts: NodeJS.Timeout[] = []
+    const el = containerRef.current
+    if (!el) return
 
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0]
-        if (entry?.isIntersecting) {
-          // 화면 진입 시 한 번만 실행
-          observer.disconnect()
-
-          // 1단계: 01 페이드인 & 은은한 강조 (0.15초)
-          timeouts.push(setTimeout(() => setAnimStep(1), 150))
-          // 2단계: 첫 번째 연결선 드로잉 (0.8초)
-          timeouts.push(setTimeout(() => setAnimStep(2), 800))
-          // 3단계: 02 페이드인 & 은은한 강조 (1.55초)
-          timeouts.push(setTimeout(() => setAnimStep(3), 1550))
-          // 4단계: 두 번째 연결선 드로잉 (2.2초)
-          timeouts.push(setTimeout(() => setAnimStep(4), 2200))
-          // 5단계: 03 페이드인 & 최종 상태 고정 (2.95초)
-          timeouts.push(setTimeout(() => setAnimStep(5), 2950))
-        }
+        setIsVisible(entry?.isIntersecting ?? false)
       },
-      { threshold: 0.25, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.2, rootMargin: '0px 0px -20px 0px' }
     )
 
     observer.observe(el)
-
-    return () => {
-      observer.disconnect()
-      timeouts.forEach(clearTimeout)
-    }
+    return () => observer.disconnect()
   }, [])
 
+  // 2. 부드러운 무한 반복 애니메이션 제어
+  useEffect(() => {
+    if (isReducedMotion.current) return
+    if (!isVisible) return
+
+    const timeouts: NodeJS.Timeout[] = []
+    let isCancelled = false
+
+    const runCycle = () => {
+      if (isCancelled) return
+
+      // T=0ms: 01 반복 강조 (약 1.1초)
+      setAnimStep(1)
+
+      // T=400ms: 첫 번째 연결선 드로잉 시작
+      timeouts.push(setTimeout(() => {
+        if (!isCancelled) setAnimStep(2)
+      }, 400))
+
+      // T=1100ms: 02 자각 강조 (약 1.1초)
+      timeouts.push(setTimeout(() => {
+        if (!isCancelled) setAnimStep(3)
+      }, 1100))
+
+      // T=1500ms: 두 번째 연결선 드로잉 시작
+      timeouts.push(setTimeout(() => {
+        if (!isCancelled) setAnimStep(4)
+      }, 1500))
+
+      // T=2200ms: 03 선택 강조 (3단계 모두 완성 상태)
+      timeouts.push(setTimeout(() => {
+        if (!isCancelled) setAnimStep(5)
+      }, 2200))
+
+      // T=3700ms: 1.5초간 완성 상태 유지 후, 자연스럽게 01부터 무한 반복
+      timeouts.push(setTimeout(() => {
+        if (!isCancelled) {
+          setAnimStep(0)
+          timeouts.push(setTimeout(() => {
+            if (!isCancelled) runCycle()
+          }, 250))
+        }
+      }, 3700))
+    }
+
+    runCycle()
+
+    return () => {
+      isCancelled = true
+      timeouts.forEach(clearTimeout)
+    }
+  }, [isVisible])
+
   const steps = [
-    { num: '01', text: '반복되는 패턴 장면' },
-    { num: '02', text: '패턴을 알아차리는 순간' },
-    { num: '03', text: '다른 선택의 시작' },
+    { num: '01', text: '반복' },
+    { num: '02', text: '자각' },
+    { num: '03', text: '선택' },
   ]
 
   return (
-    <div ref={containerRef} className="w-full max-w-4xl mx-auto mb-10 md:mb-12 px-4">
-      {/* 1. 데스크톱/태블릿 가로형 타임라인 (sm 이상) */}
-      <div className="hidden sm:flex items-center justify-between">
-        {/* Step 01 */}
-        <div className={`flex items-center gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-1'}`}>
-          <div className={`w-7 h-7 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-500 ${
+    <div ref={containerRef} className="w-full max-w-2xl mx-auto mb-10 md:mb-12 px-4">
+      {/* 3단계 가로형 슬림 타임라인 (모바일/PC 모두 깔끔한 가로 흐름) */}
+      <div className="flex items-center justify-between">
+        {/* Step 01: 반복 */}
+        <div className={`flex items-center gap-2 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold transition-all duration-500 ${
             animStep >= 1 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[0].num}
           </div>
-          <span className={`text-[14px] md:text-[15px] transition-colors duration-500 break-keep ${
-            animStep >= 1 ? 'text-white font-medium' : 'text-[#EDE6DA]/50'
+          <span className={`text-[14px] sm:text-[15px] font-medium transition-colors duration-500 break-keep ${
+            animStep >= 1 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[0].text}
           </span>
         </div>
 
         {/* 연결선 01 */}
-        <div className="flex-1 mx-3 md:mx-5 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
+        <div className="flex-1 mx-2.5 sm:mx-4 md:mx-6 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
           <div 
             className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#D9A8A7] via-[#C48B9F] to-[#D9A8A7] transition-all duration-700 ease-out"
             style={{ width: animStep >= 2 ? '100%' : '0%' }}
           />
         </div>
 
-        {/* Step 02 */}
-        <div className={`flex items-center gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 3 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-1'}`}>
-          <div className={`w-7 h-7 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-500 ${
+        {/* Step 02: 자각 */}
+        <div className={`flex items-center gap-2 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 3 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold transition-all duration-500 ${
             animStep >= 3 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[1].num}
           </div>
-          <span className={`text-[14px] md:text-[15px] transition-colors duration-500 break-keep ${
-            animStep >= 3 ? 'text-white font-medium' : 'text-[#EDE6DA]/50'
+          <span className={`text-[14px] sm:text-[15px] font-medium transition-colors duration-500 break-keep ${
+            animStep >= 3 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[1].text}
           </span>
         </div>
 
         {/* 연결선 02 */}
-        <div className="flex-1 mx-3 md:mx-5 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
+        <div className="flex-1 mx-2.5 sm:mx-4 md:mx-6 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
           <div 
             className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#D9A8A7] via-[#C48B9F] to-[#D9A8A7] transition-all duration-700 ease-out"
             style={{ width: animStep >= 4 ? '100%' : '0%' }}
           />
         </div>
 
-        {/* Step 03 */}
-        <div className={`flex items-center gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 5 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-1'}`}>
-          <div className={`w-7 h-7 rounded-full flex items-center justify-center font-mono text-xs font-bold transition-all duration-500 ${
+        {/* Step 03: 선택 */}
+        <div className={`flex items-center gap-2 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 5 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold transition-all duration-500 ${
             animStep >= 5 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[2].num}
           </div>
-          <span className={`text-[14px] md:text-[15px] transition-colors duration-500 break-keep ${
-            animStep >= 5 ? 'text-white font-medium' : 'text-[#EDE6DA]/50'
-          }`}>
-            {steps[2].text}
-          </span>
-        </div>
-      </div>
-
-      {/* 2. 모바일 세로형 타임라인 (sm 미만) */}
-      <div className="sm:hidden flex flex-col gap-2 max-w-[260px] mx-auto py-1">
-        {/* Step 01 */}
-        <div className={`flex items-center gap-3 transition-all duration-500 ${animStep >= 1 ? 'opacity-100 translate-x-0' : 'opacity-40 -translate-x-1'}`}>
-          <div className={`w-7 h-7 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 transition-all duration-500 ${
-            animStep >= 1 
-              ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_10px_rgba(217,168,167,0.3)]' 
-              : 'bg-white/5 border border-white/15 text-white/40'
-          }`}>
-            {steps[0].num}
-          </div>
-          <span className={`text-[14px] transition-colors duration-500 ${
-            animStep >= 1 ? 'text-white font-medium' : 'text-[#EDE6DA]/50'
-          }`}>
-            {steps[0].text}
-          </span>
-        </div>
-
-        {/* 연결선 01 (세로) */}
-        <div className="w-[1.5px] h-4 ml-3.5 bg-white/10 relative overflow-hidden rounded-full">
-          <div 
-            className="w-full bg-gradient-to-b from-[#D9A8A7] to-[#B7788D] transition-all duration-700 ease-out"
-            style={{ height: animStep >= 2 ? '100%' : '0%' }}
-          />
-        </div>
-
-        {/* Step 02 */}
-        <div className={`flex items-center gap-3 transition-all duration-500 ${animStep >= 3 ? 'opacity-100 translate-x-0' : 'opacity-40 -translate-x-1'}`}>
-          <div className={`w-7 h-7 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 transition-all duration-500 ${
-            animStep >= 3 
-              ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_10px_rgba(217,168,167,0.3)]' 
-              : 'bg-white/5 border border-white/15 text-white/40'
-          }`}>
-            {steps[1].num}
-          </div>
-          <span className={`text-[14px] transition-colors duration-500 ${
-            animStep >= 3 ? 'text-white font-medium' : 'text-[#EDE6DA]/50'
-          }`}>
-            {steps[1].text}
-          </span>
-        </div>
-
-        {/* 연결선 02 (세로) */}
-        <div className="w-[1.5px] h-4 ml-3.5 bg-white/10 relative overflow-hidden rounded-full">
-          <div 
-            className="w-full bg-gradient-to-b from-[#D9A8A7] to-[#B7788D] transition-all duration-700 ease-out"
-            style={{ height: animStep >= 4 ? '100%' : '0%' }}
-          />
-        </div>
-
-        {/* Step 03 */}
-        <div className={`flex items-center gap-3 transition-all duration-500 ${animStep >= 5 ? 'opacity-100 translate-x-0' : 'opacity-40 -translate-x-1'}`}>
-          <div className={`w-7 h-7 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 transition-all duration-500 ${
-            animStep >= 5 
-              ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_10px_rgba(217,168,167,0.3)]' 
-              : 'bg-white/5 border border-white/15 text-white/40'
-          }`}>
-            {steps[2].num}
-          </div>
-          <span className={`text-[14px] transition-colors duration-500 ${
-            animStep >= 5 ? 'text-white font-medium' : 'text-[#EDE6DA]/50'
+          <span className={`text-[14px] sm:text-[15px] font-medium transition-colors duration-500 break-keep ${
+            animStep >= 5 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[2].text}
           </span>
@@ -235,11 +202,13 @@ export default function TransformationThreeChanges() {
             TRANSFORMATION SCENARIO
           </span>
           <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-4 leading-[1.3] break-keep">
-            리포트를 여는 순간 시작되는,<br className="sm:hidden" />
-            <span className="gradient-text-love"> 연애의 3단계 변화</span>
+            리포트를 여는 순간 시작되는,<br />
+            <span className="gradient-text-love">연애의 3단계 변화</span>
           </h2>
           <p className="text-sm md:text-base text-[#EDE6DA]/75 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-            같은 사랑을 반복하지 않으려면 먼저 나의 선택부터 알아야 합니다.<br className="hidden sm:inline" /> 단순한 성향 풀이를 넘어 스스로를 깊게 이해하고, 당신의 미래 연애 청사진을 명확하고 당당하게 바꿔놓습니다.
+            같은 사랑을 반복하지 않으려면 먼저 나의 선택부터 알아야 합니다.<br />
+            단순한 성향 풀이를 넘어 스스로를 깊게 이해하고,<br />
+            당신의 미래 연애 청사진을 명확하고 당당하게 바꿔놓습니다.
           </p>
         </div>
 
@@ -286,19 +255,6 @@ export default function TransformationThreeChanges() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* 3개 변화 카드 바로 아래 16:9 가로형 이미지 */}
-        <div className="w-full max-w-7xl mx-auto mt-8 md:mt-10">
-          <div className="relative aspect-[16/9] w-full rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] group">
-            <Image 
-              src="/image/lovereport/love%20transformation.webp" 
-              alt="리포트를 열어보는 순간 당신의 연애에 생기는 3가지 변화" 
-              fill
-              sizes="(max-width: 1280px) 100vw, 1280px"
-              className="object-cover transition-transform duration-700 group-hover:scale-[1.01]" 
-            />
-          </div>
         </div>
       </Reveal>
     </section>
