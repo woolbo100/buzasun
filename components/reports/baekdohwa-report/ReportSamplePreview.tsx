@@ -24,9 +24,14 @@ export default function ReportSamplePreview() {
             왕실의 비급처럼 귀하게,<br />
             <span className="gradient-text-love">당신의 사랑을 한 권에 담다</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep whitespace-pre-line">
-            {samplePreviewData.subCopy}
-          </p>
+          <div className="space-y-2.5">
+            <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep leading-relaxed whitespace-pre-line">
+              {samplePreviewData.subCopy}
+            </p>
+            <p className="text-[16px] md:text-[17.5px] text-[#F5DAE2] font-medium break-keep tracking-tight">
+              {samplePreviewData.leadMessage}
+            </p>
+          </div>
         </div>
 
         {/* 4개 샘플 프리뷰 그리드 */}
@@ -65,7 +70,7 @@ export default function ReportSamplePreview() {
                 <h4 className="text-[18px] font-bold text-white mb-2 group-hover:text-[#D9A8A7] transition-colors">
                   {sample.title}
                 </h4>
-                <p className="text-[16px] leading-[1.5] text-[#EDE6DA]/85 font-light break-keep">
+                <p className="text-[16px] leading-[1.5] text-[#EDE6DA]/85 font-light break-keep whitespace-pre-line min-h-[48px]">
                   {sample.desc}
                 </p>
               </div>

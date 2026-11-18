@@ -356,34 +356,35 @@ export const productionTimelineData = {
 // 9. 리포트 샘플 미리보기 (SECTION 10)
 export const samplePreviewData = {
   mainCopy: "왕실의 비급처럼 귀하게,\n당신의 사랑을 한 권에 담다",
-  subCopy: "한국 전통 왕실 도감의 기품과 미감을 현대적으로 재해석한,\n오래도록 곁에 두고 펼쳐볼 수 있는 소장용 프리미엄 디지털 비급서\n한 권의 비급에 담긴 사랑의 비밀을 미리 펼쳐보세요.",
+  subCopy: "한국 전통 왕실 도감의 기품과 미감을 현대적으로 재해석한,\n오래도록 곁에 두고 펼쳐볼 수 있는 프리미엄 디지털 비급서입니다.",
+  leadMessage: "한 권의 비급에 담긴 사랑의 비밀을 미리 펼쳐보세요.",
   disclaimer: "※ 예시 이미지이며 실제 리포트의 구성과 개인별 분석 내용은 달라질 수 있습니다.",
   samples: [
     {
       id: "cover",
       title: "리포트 표지",
-      desc: "나만의 고유 코드가 새겨진 프리미엄 커버",
+      desc: "나만의 고유 코드가 새겨진\n품격 있는 프리미엄 커버",
       src: "/image/lovereport/baekdohwa-love-report-cover.webp",
       badge: "COVER"
     },
     {
       id: "nature",
       title: "선천 기질 분석",
-      desc: "타고난 연애 에너지와 오행 구조 분석",
+      desc: "타고난 연애 기질과 오행 구조를\n깊이 있게 읽어내는 해석",
       src: "/image/lovereport/p4.webp",
       badge: "PART 01"
     },
     {
       id: "pattern",
       title: "반복 패턴 해독",
-      desc: "사랑이 꼬이던 무의식적 원인 추적",
+      desc: "사랑이 꼬이던 무의식적 원인과\n반복되는 관계 패턴 추적",
       src: "/image/lovereport/p2.webp",
       badge: "PART 04"
     },
     {
       id: "prescription",
       title: "맞춤 실천 처방",
-      desc: "앞으로의 선택을 바꾸는 현실적 솔루션",
+      desc: "앞으로의 선택을 바꾸는\n현실적인 관계 행동 지침",
       src: "/image/lovereport/p3.webp",
       badge: "PART 07"
     }
