@@ -39,7 +39,7 @@ export default function RoyalArchivePoint() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center lg:items-stretch">
           
           {/* 왼쪽 텍스트 그룹 (데스크톱 7단 / 모바일 순서 2: 이미지 뒤에 표시) */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-0 order-2 lg:order-1 h-full py-0.5">
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-0 order-2 lg:order-1 h-full">
             {/* 상단 그룹: 데스크톱 헤드카피 + 도입 설명 문단 + 3가지 핵심 소구점 리스트 */}
             <div className="space-y-5 lg:space-y-6">
               {/* 데스크톱 전용 헤드카피 */}
@@ -83,17 +83,17 @@ export default function RoyalArchivePoint() {
               </div>
             </div>
 
-            {/* 하단 강조 문구 박스 (슬림 버전, 상단과의 여백을 40~48px 수준으로 시원하게 띄움) */}
-            <div className="py-3.5 px-5 sm:py-4 sm:px-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm mt-6 sm:mt-7 lg:mt-11">
+            {/* 하단 강조 문구 박스 (데스크톱에서 mt-auto로 우측 이미지 하단 라인과 정렬) */}
+            <div className="py-3.5 px-5 sm:py-4 sm:px-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm mt-6 sm:mt-7 lg:mt-auto">
               <p className="font-elegant font-semibold text-[15.5px] md:text-[17px] text-[#D9A8A7] leading-relaxed break-keep">
                 &ldquo;당신의 사랑은 한 번 읽고 사라질 운세가 아니라, 오래 간직할 한 권의 이야기입니다.&rdquo;
               </p>
             </div>
           </div>
 
-          {/* 오른쪽 3:4 세로 이미지 (데스크톱 5단 / 모바일 순서 1: POINT 04와 동일한 비율 및 규격 적용, h-full과 justify-between 연동) */}
-          <div className="lg:col-span-5 relative group flex flex-col order-1 lg:order-2 mb-8 lg:mb-0 justify-between">
-            <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917] h-full">
+          {/* 오른쪽 3:4 세로 이미지 (데스크톱 5단 / 모바일 순서 1: 3:4 규격 유지) */}
+          <div className="lg:col-span-5 relative group flex flex-col order-1 lg:order-2 mb-8 lg:mb-0 justify-start">
+            <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
               {/* 은은한 배경 오라 */}
               <div className="absolute -inset-10 bg-[#B7788D]/10 blur-[60px] rounded-full pointer-events-none"></div>
               <Image 

@@ -32,7 +32,7 @@ export default function ReportComparisonTable() {
                     자동 생성형 운세
                   </th>
                   <th className="py-5 px-6 text-sm font-semibold text-white/60 w-1/4 text-center">
-                    일반 사주 풀이
+                    전통 명리 · 구두 상담
                   </th>
                   <th className="py-5 px-6 text-base font-bold text-[#D9A8A7] w-1/4 text-center bg-[#B7788D]/15 rounded-t-2xl border-t border-x border-[#B7788D]/30">
                     백도화 선천코드 리포트
@@ -63,7 +63,7 @@ export default function ReportComparisonTable() {
           </div>
         </div>
 
-        <p className="text-center text-xs text-white/35 mt-6">
+        <p className="text-center text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 mt-6 break-keep">
           ※ 타 서비스를 폄하하려는 목적이 아니며, 각 분석 방식의 일반적 특성과 백도화가 지향하는 깊이의 차이를 객관적으로 안내해 드립니다.
         </p>
       </Reveal>

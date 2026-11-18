@@ -64,7 +64,7 @@ export default function RelationshipChangeScenario() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-white/35">
+        <p className="text-center text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 mt-4 break-keep">
           {scenarioData.disclaimer}
         </p>
       </Reveal>

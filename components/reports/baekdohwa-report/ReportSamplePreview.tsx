@@ -61,10 +61,10 @@ export default function ReportSamplePreview() {
               </div>
 
               <div>
-                <h4 className="text-[17px] md:text-[18px] font-bold text-white mb-2 group-hover:text-[#D9A8A7] transition-colors">
+                <h4 className="text-[18px] font-bold text-white mb-2 group-hover:text-[#D9A8A7] transition-colors">
                   {sample.title}
                 </h4>
-                <p className="text-[14px] leading-[1.5] text-[#EDE6DA]/85 font-light break-keep">
+                <p className="text-[16px] leading-[1.5] text-[#EDE6DA]/85 font-light break-keep">
                   {sample.desc}
                 </p>
               </div>
@@ -72,7 +72,7 @@ export default function ReportSamplePreview() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-[#EDE6DA]/70 mt-10">
+        <p className="text-center text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/80 mt-10 break-keep">
           {samplePreviewData.disclaimer}
         </p>
       </Reveal>

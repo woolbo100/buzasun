@@ -281,7 +281,7 @@ export default function BaekdohwaReportPage() {
                               1:1 맞춤 PDF 리포트 · 오행 에너지 카드 1종 증정
                             </span>
                           </div>
-                          <p className="text-xs text-[#EDE6DA]/50 font-light mt-1.5">
+                          <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 font-light mt-1.5 break-keep">
                             ※ 주문 접수 후 고객님의 사주 정보를 바탕으로 순차 제작되는 디지털 맞춤 리포트입니다.
                           </p>
                         </div>

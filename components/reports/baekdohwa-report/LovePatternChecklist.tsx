@@ -129,7 +129,7 @@ export default function LovePatternChecklist() {
               정답을 고르는 체크가 아니라, 반복되는 패턴을 살펴보기 위한 체크입니다.
             </p>
 
-            <p className="text-[13px] md:text-[14px] text-white/50 mt-5 break-keep">
+            <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 mt-5 break-keep">
               {checklistData.disclaimer}
             </p>
           </div>

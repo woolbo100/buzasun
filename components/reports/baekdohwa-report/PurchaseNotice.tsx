@@ -58,7 +58,7 @@ export default function PurchaseNotice() {
           </div>
 
           <div className="mt-8 pt-6 border-t border-white/10 text-center relative z-10">
-            <p className="text-xs text-white/50">
+            <p className="text-[12px] sm:text-[13px] leading-[1.5] text-white/75 break-keep">
               ※ 백도화 매력학당의 모든 리포트는 전자상거래 등에서의 소비자보호에 관한 법률 및 사이트의 기본 이용약관을 철저히 준수합니다.
             </p>
           </div>

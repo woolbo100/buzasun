@@ -87,7 +87,7 @@ export default function FiveElementsSpecialGift() {
 
               {/* 하단 작은 안내 문구 */}
               <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
-                <p className="text-[11.5px] sm:text-xs text-[#D9A8A7]/80 font-medium tracking-tight">
+                <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#D9A8A7]/85 font-medium tracking-tight">
                   ※ 5종 중 개인별 2종 제공 · 디지털 이미지
                 </p>
                 <span className="hidden sm:inline text-white/20">|</span>

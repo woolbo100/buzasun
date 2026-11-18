@@ -106,7 +106,7 @@ export default function PersonalizedCaseComparison() {
           <p className="text-base md:text-lg text-[#D9A8A7] font-elegant leading-relaxed whitespace-pre-line font-medium">
             {personalizedCaseData.conclusion}
           </p>
-          <p className="text-xs text-white/40">
+          <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 mt-4 break-keep">
             {personalizedCaseData.disclaimer}
           </p>
         </div>

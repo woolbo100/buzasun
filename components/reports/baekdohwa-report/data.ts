@@ -139,48 +139,48 @@ export const personalizedCaseData = {
 // 6. 기존 사주·AI 리포트와의 차별점 비교표 (SECTION 07)
 export const comparisonTableData = {
   title: "같은 연애 질문에도,\n분석의 깊이와 방향은 다릅니다.",
-  subTitle: "단순 텍스트 조합이나 일반 사주 풀이와 비교할 수 없는 분석 범위와 개인화 깊이입니다.",
+  subTitle: "운세의 길흉을 점치는 기존 풀이와는 바라보는 초점과 깊이부터 다릅니다.",
   columns: [
     { id: "ai", name: "자동 생성형 운세", isTarget: false },
-    { id: "traditional", name: "일반적인 사주 풀이", isTarget: false },
+    { id: "traditional", name: "전통 명리 · 구두 상담", isTarget: false },
     { id: "baekdohwa", name: "백도화 선천코드 리포트", isTarget: true }
   ],
   rows: [
     {
       feature: "01. 분석의 출발점",
-      ai: "단순 생년월일 텍스트 조합",
-      traditional: "사주 원국의 길흉화복 해석",
-      baekdohwa: "선천코드 + 현실 관계 기록 교차 분석"
+      ai: "생년월일 기본 텍스트 조합",
+      traditional: "사주 원국의 길흉과 흐름 해석",
+      baekdohwa: "선천코드 + 현실 연애 패턴 교차 분석"
     },
     {
-      feature: "02. 실제 관계 경험 반영",
-      ai: "개인별 고민 반영 불가",
-      traditional: "구두 상담 시 단편적 전달",
-      baekdohwa: "고객 질문지 및 연애 고민 집중 반영"
+      feature: "02. 개인 고민 반영",
+      ai: "공통 유형별 일괄 안내",
+      traditional: "제한된 시간 내 핵심 위주 상담",
+      baekdohwa: "사전 질문지 및 현재 관계 고민 밀착 반영"
     },
     {
-      feature: "03. 반복되는 행동 패턴 분석",
-      ai: "표면적 성격 키워드 나열",
-      traditional: "타고난 성향 중심의 서술",
-      baekdohwa: "무의식적 방어기제와 선택 패턴 추적"
+      feature: "03. 반복 패턴 해독",
+      ai: "표면적인 성격 키워드 나열",
+      traditional: "타고난 기질과 성향 중심 설명",
+      baekdohwa: "무의식적 방어기제와 선택 패턴 정밀 추적"
     },
     {
-      feature: "04. 동양학과 심리 관점의 결합",
+      feature: "04. 해석의 관점",
       ai: "단순 운세 알고리즘",
-      traditional: "전통 명리학 중심",
-      baekdohwa: "동양 선천코드 + 심리적 자기 관찰 기법"
+      traditional: "전통 명리학 이론 중심",
+      baekdohwa: "동양 명리 + 심리·뇌과학적 자기 관찰 결합"
     },
     {
-      feature: "05. 실천을 위한 구체적 제안",
-      ai: "일반적인 덕담 수준",
-      traditional: "조심할 시기 위주 조언",
-      baekdohwa: "상황별 행동 조정 및 현실 처방 제공"
+      feature: "05. 실천 가이드",
+      ai: "일반적인 덕담·조언 수준",
+      traditional: "시기별 주의점 및 방향 제시",
+      baekdohwa: "갈등·위기 상황별 맞춤 소통 및 행동 처방"
     },
     {
-      feature: "06. 다시 펼쳐보는 소장 형태",
+      feature: "06. 소장 및 활용",
       ai: "휘발성 모바일 화면",
-      traditional: "구두 상담(기억에 의존)",
-      baekdohwa: "28~30P 분량의 영구 소장 디지털 리포트"
+      traditional: "대화 중심의 일회성 기록",
+      baekdohwa: "언제든 다시 꺼내 읽는 영구 소장 PDF 비급서"
     }
   ]
 }
@@ -356,7 +356,7 @@ export const productionTimelineData = {
 // 9. 리포트 샘플 미리보기 (SECTION 10)
 export const samplePreviewData = {
   mainCopy: "오래도록 간직하고 싶은,\n단 한 권의 비급",
-  subCopy: "한 번 보고 사라지는 가벼운 모바일 운세가 아닙니다.\n한국 전통 왕실 도감의 기품과 미감을 현대적으로 재해석한, 오래도록 곁에 두고 펼쳐볼 수 있는 소장용 프리미엄 디지털 비급서입니다.",
+  subCopy: "한국 전통 왕실 도감의 기품과 미감을 현대적으로 재해석한, 오래도록 곁에 두고 펼쳐볼 수 있는 소장용 프리미엄 디지털 비급서입니다. 한 권의 비급에 담긴 사랑의 비밀을 미리 펼쳐보세요.",
   disclaimer: "※ 예시 이미지이며 실제 리포트의 구성과 개인별 분석 내용은 달라질 수 있습니다.",
   samples: [
     {
