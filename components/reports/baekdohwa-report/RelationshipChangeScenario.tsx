@@ -36,7 +36,7 @@ export default function RelationshipChangeScenario() {
                       {stage.tag}
                     </span>
                   </div>
-                  <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-4 leading-snug break-keep">
+                  <h3 className="text-[17.5px] sm:text-[19px] md:text-[20px] font-bold text-white mb-4 leading-snug break-keep">
                     &ldquo;{stage.desc}&rdquo;
                   </h3>
                 </div>
@@ -63,6 +63,16 @@ export default function RelationshipChangeScenario() {
             </div>
           ))}
         </div>
+
+        {/* 세 카드 아래 마무리 문구 */}
+        {scenarioData.conclusion && (
+          <div className="text-center my-10 md:my-12">
+            <p className="font-elegant font-semibold text-lg sm:text-xl md:text-[22px] text-[#D9A8A7] leading-relaxed break-keep">
+              &ldquo;사랑의 주도권은,<br className="sm:hidden" />
+              {' '}다시 나의 선택에서 시작됩니다.&rdquo;
+            </p>
+          </div>
+        )}
 
         <p className="text-center text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 mt-4 break-keep">
           {scenarioData.disclaimer}

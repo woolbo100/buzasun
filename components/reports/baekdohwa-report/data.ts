@@ -395,29 +395,30 @@ export const samplePreviewData = {
 export const scenarioData = {
   mainCopy: "같은 사랑을 반복하지 않으려면,\n먼저 나의 선택을 알아야 합니다.",
   subCopy: "선천코드 리포트를 통해 얻게 되는 자기 이해와 변화의 3단계 흐름입니다.",
+  conclusion: "사랑의 주도권은,\n다시 나의 선택에서 시작됩니다.",
   disclaimer: "※ 실제 고객의 후기가 아닌 활용 예시 시나리오입니다.",
   stages: [
     {
       stage: "BEFORE",
       tag: "반복되는 장면",
-      desc: "서운해도 표현하지 못하고 오래 참다가, 사소한 일에 감정이 폭발해 관계를 정리합니다.",
-      state: "상대의 눈치만 보거나 내 감정을 억누르며 상처를 되풀이하던 상태",
+      desc: "서운해도 표현하지 못하고 오래 참다가, 사소한 일에 감정이 폭발하는 관계를 반복합니다.",
+      state: "상대의 눈치를 보며 내 감정을 억누르고, 결국 상처를 되풀이하던 상태",
       color: "from-rose-950/30 to-purple-950/20",
       borderColor: "border-rose-900/30"
     },
     {
       stage: "AWARENESS",
       tag: "패턴을 알아차리는 순간",
-      desc: "내가 언제 침묵을 택하고, 어떤 상황에서 방어적으로 닫히는지 나의 기질적 원인을 객관적으로 이해합니다.",
-      state: "내 탓이나 남 탓이 아닌, '나의 코드가 오작동하던 순간'을 알아차림",
+      desc: "내가 왜 침묵을 택하고, 어떤 사람에게 끌리며, 언제 방어적으로 닫히는지 그 반복의 원인을 이해합니다.",
+      state: "선천 기질과 무의식적 관계 패턴을 살펴보며 나의 반응을 객관적으로 이해하는 단계",
       color: "from-purple-950/35 to-pink-950/25",
       borderColor: "border-[var(--accent-gold)]/40"
     },
     {
       stage: "AFTER",
       tag: "다른 선택의 시작",
-      desc: "상대가 알아서 알아주기를 기다리기보다, 감정을 명확하고 안전하게 표현하는 실천을 시작합니다.",
-      state: "불안에 휘둘리지 않고 나다운 주관으로 관계를 건강하게 이끌어가는 상태",
+      desc: "상대가 알아주기만을 기다리지 않고, 감정을 분명하게 표현하며 나만의 연애 기준으로 관계를 선택하기 시작합니다.",
+      state: "나의 감정과 경계를 존중하며 사랑의 주도권을 되찾아가는 단계",
       color: "from-[var(--accent-gold)]/10 to-purple-900/20",
       borderColor: "border-[var(--accent-gold)]"
     }
