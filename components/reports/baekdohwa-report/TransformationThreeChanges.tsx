@@ -213,7 +213,7 @@ export default function TransformationThreeChanges() {
       num: '02',
       symbol: '②',
       title: '소모적인 반복의 종결',
-      desc: '선천 기질과 무의식적 관계 패턴을 살펴보며 나의 반응을 객관적으로 이해하고 내가 늘 그런 사람에게 끌렸는지 원인을 알기에, 다음 연애부터는 함정에 빠지지 않습니다.',
+      desc: '선천 기질과 무의식적 관계 패턴을 살펴보며 나의 반응을 객관적으로 이해하고 내가 왜 늘 그런 사람에게 끌렸는지 원인을 알기에, 다음 연애부터는 함정에 빠지지 않습니다.',
       icon: <Sparkles className="w-5 h-5 text-[#D9A8A7]" />,
       tag: '패턴의 해방'
     },
@@ -221,7 +221,7 @@ export default function TransformationThreeChanges() {
       num: '03',
       symbol: '③',
       title: '나만의 연애 기준(필터) 정립',
-      desc: '나의 감정과 경계를 존중하며 사랑의 주도권을 되찾았기 때문에 흔들리지 않고 나를 온전히 지켜줄 진짜 인연을 알아보는 눈이 생깁니다.',
+      desc: '나의 감정과 경계를 먼저 존중하며 사랑의 주도권을 되찾았기 때문에, 타인의 기준에 휘둘리지 않고 나를 온전히 아끼고 지켜줄 진짜 인연을 단번에 알아보는 단단한 눈이 생깁니다.',
       icon: <ShieldCheck className="w-5 h-5 text-[#D9A8A7]" />,
       tag: '진짜 인연의 분별'
     }
@@ -232,14 +232,14 @@ export default function TransformationThreeChanges() {
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-10 md:mb-12">
           <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D9A8A7] uppercase mb-4">
-            TRANSFORMATION
+            TRANSFORMATION SCENARIO
           </span>
           <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-4 leading-[1.3] break-keep">
-            리포트를 열어보는 순간,<br className="sm:hidden" />
-            <span className="gradient-text-love"> 당신의 연애에 생기는 3가지 변화</span>
+            리포트를 여는 순간 시작되는,<br className="sm:hidden" />
+            <span className="gradient-text-love"> 연애의 3단계 변화</span>
           </h2>
-          <p className="text-sm md:text-base text-[#EDE6DA]/75 font-light leading-relaxed max-w-xl mx-auto break-keep">
-            단순한 성향 분석을 넘어, 당신의 미래 연애 청사진을 명확하고 당당하게 바꿔놓습니다.
+          <p className="text-sm md:text-base text-[#EDE6DA]/75 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+            같은 사랑을 반복하지 않으려면 먼저 나의 선택부터 알아야 합니다.<br className="hidden sm:inline" /> 단순한 성향 풀이를 넘어 스스로를 깊게 이해하고, 당신의 미래 연애 청사진을 명확하고 당당하게 바꿔놓습니다.
           </p>
         </div>
 

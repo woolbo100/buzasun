@@ -21,13 +21,13 @@ export default function RecommendedAudience() {
           </p>
         </div>
 
-        {/* 데스크톱 기준 좌우 2단 레이아웃 (왼쪽 이미지 42% : 오른쪽 설명 58%) */}
+        {/* 데스크톱 기준 좌우 2단 레이아웃 (왼쪽 이미지 5열 : 오른쪽 설명 7열) */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start max-w-7xl mx-auto mb-16">
-          {/* 데스크톱 왼쪽 이미지 (3:4 세로형, 상단 오른쪽 첫 번째 제목과 자연스럽게 정렬) */}
-          <div className="hidden lg:block lg:col-span-5 relative group">
-            <div className="relative aspect-[3/4] w-full rounded-[32px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
+          {/* 세로형 대표 이미지 (PC: 왼쪽 / 모바일: 상단 배치) */}
+          <div className="lg:col-span-5 relative group">
+            <div className="relative aspect-[3/4] w-full rounded-[28px] md:rounded-[36px] lg:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
               <Image
-                src="/image/lovereport/discover%20your%20love%20code.webp"
+                src="/image/lovereport/love-secret-discovery.webp"
                 alt="선천코드 연애 리포트 추천 대상"
                 width={1086}
                 height={1448}
@@ -50,18 +50,7 @@ export default function RecommendedAudience() {
                 </h3>
               </div>
 
-              {/* 2. 모바일 전용 신규 이미지 (모바일 표시 순서: 1.제목 -> 2.신규 이미지 -> 3.체크리스트) */}
-              <div className="lg:hidden mb-6 rounded-[24px] overflow-hidden border border-white/10 shadow-xl aspect-[3/4] w-full relative bg-[#130917]">
-                <Image
-                  src="/image/lovereport/discover%20your%20love%20code.webp"
-                  alt="선천코드 연애 리포트 추천 대상"
-                  width={1086}
-                  height={1448}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* 3. 기존 추천 대상 체크리스트 */}
+              {/* 2. 추천 대상 체크리스트 */}
               <ul className="space-y-3.5">
                 {targetAudienceData.recommended.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3.5 text-sm md:text-base text-[#EDE6DA]/90 font-medium">

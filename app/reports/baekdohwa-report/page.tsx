@@ -31,7 +31,6 @@ import ReportProductionTimeline from '@/components/reports/baekdohwa-report/Repo
 import ReportSamplePreview from '@/components/reports/baekdohwa-report/ReportSamplePreview'
 import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
 import TransformationThreeChanges from '@/components/reports/baekdohwa-report/TransformationThreeChanges'
-import RelationshipChangeScenario from '@/components/reports/baekdohwa-report/RelationshipChangeScenario'
 import RecommendedAudience from '@/components/reports/baekdohwa-report/RecommendedAudience'
 import SixPerspectivesPanoramaBanner from '@/components/reports/baekdohwa-report/SixPerspectivesPanoramaBanner'
 import ReportTestimonials from '@/components/reports/baekdohwa-report/ReportTestimonials'
@@ -777,11 +776,11 @@ export default function BaekdohwaReportPage() {
             {/* 연애의 주도권을 되찾는 한복 여성 비급 이미지 및 매력 선언문 배너 */}
             <RealTransformationBanner />
 
-            {/* 리포트를 열어보는 순간, 당신의 연애에 생기는 3가지 변화 */}
+            {/* 리포트를 여는 순간 시작되는, 연애의 3단계 변화 */}
             <TransformationThreeChanges />
 
-            {/* 리포트를 읽은 뒤 달라질 수 있는 선택 (BEFORE -> AWARENESS -> AFTER) */}
-            <RelationshipChangeScenario />
+            {/* 실제 구매자들의 3단계 변화 후기 */}
+            <ReportTestimonials />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 중간 CTA: POINT 08 직후 배치 */}
@@ -829,9 +828,6 @@ export default function BaekdohwaReportPage() {
 
             {/* 추천 대상과 맞지 않는 대상 */}
             <RecommendedAudience />
-
-            {/* 고객 후기 (검증된 후기 등록 시 활성화) */}
-            <ReportTestimonials />
 
             {/* 백도화의 분석 철학은 POINT 02(동양 명리 × 관계 심리)로 통합 정리됨 */}
 
