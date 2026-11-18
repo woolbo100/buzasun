@@ -275,7 +275,7 @@ export default function TransformationThreeChanges() {
                   </h3>
                 </div>
 
-                <p className="text-[16px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep mt-2.5">
+                <p className="text-[16px] text-[#EDE6DA]/85 font-light leading-[1.65] break-keep mt-2.5">
                   {item.desc}
                 </p>
               </div>
