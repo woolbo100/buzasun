@@ -809,7 +809,7 @@ export default function BaekdohwaReportPage() {
                   </h2>
                   <p className="text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
                     사랑받기 위해 애쓰는 관계는 끝났습니다.<br className="hidden sm:inline" />
-                    나만의 고유한 매력을 선명히 깨우고, 누구에게 마음을 내어줄지 당당하게 선택합니다.
+                    이제는 나만의 고유한 매력을 깨우고, 누구에게 마음을 내어줄지 당당하게 선택할 차례입니다.
                   </p>
                 </div>
               </Reveal>

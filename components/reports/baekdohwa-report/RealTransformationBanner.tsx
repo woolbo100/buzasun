@@ -7,26 +7,29 @@ export default function RealTransformationBanner() {
   return (
     <section className="mb-24 md:mb-32">
       <Reveal>
-        {/* 1. 이미지 위 상단 강조 카피 — 본문 핵심 3줄 리듬 */}
-        <div className="pt-2 space-y-5 max-w-3xl mx-auto text-center mb-10 md:mb-12">
-          <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-relaxed break-keep">
-            자신의 사주를 읽고, 선천코드 속 <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 무기&rsquo;</span>를 정확히 꿰뚫은 여자는 연애의 판도가 완전히 달라집니다.
+        {/* 1. 이미지 위 메인 메시지 본문 (나의 매력 발견 → 사랑의 주도권 → 마지막 각성) */}
+        <div className="pt-2 space-y-6 max-w-3xl mx-auto text-center mb-10 md:mb-12">
+          {/* 첫 번째 메시지 — 나의 매력 발견 */}
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-[1.8] break-keep">
+            자신의 선천코드를 읽고,<br className="hidden sm:inline" />
+            그 안에 숨겨진 <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 매력의 무기&rsquo;</span>를 정확히 꿰뚫는 순간,<br />
+            사랑의 판도는 달라지기 시작합니다.
           </p>
 
-          <div className="space-y-3 text-[16px] md:text-[17px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
-            <p className="text-white font-medium">
-              더 이상 남자의 마음을 얻기 위해 애쓰지 않습니다.
-            </p>
-            <p>
-              내 매력의 결이 정렬되고 기준이 세워지는 순간, 남자가 먼저 알아서 스며들고 헌신하는 <span className="text-[#D9A8A7] font-semibold">&lsquo;선택받는 판&rsquo;</span>이 만들어지기 때문입니다.
+          {/* 두 번째 메시지 — 사랑의 주도권 */}
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-[1.8] break-keep">
+            더 이상 누군가의 마음을 얻기 위해 나를 소모하지 않습니다.<br className="hidden sm:inline" />
+            내 매력의 결이 선명해지고 선택의 기준이 세워질 때,<br />
+            나는 비로소 <span className="text-[#D9A8A7] font-semibold">사랑의 주도권</span>을 쥐게 됩니다.
+          </p>
+
+          {/* 세 번째 메시지 — 마지막 각성 문장 (독립된 인용문) */}
+          <div className="pt-2">
+            <p className="font-elegant font-medium text-[18px] sm:text-[20px] md:text-[22px] text-[#FAF7F2] leading-relaxed break-keep">
+              &ldquo;언제 사랑받을지를 묻지 마세요.<br className="sm:hidden" />
+              <span className="text-[#D9A8A7] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;
             </p>
           </div>
-
-          {/* 핵심 카피 */}
-          <p className="font-elegant font-medium text-[17px] md:text-[20px] text-[#FAF7F2] leading-relaxed break-keep pt-3">
-            &ldquo;언제 사랑받을지를 묻지 마세요.<br className="sm:hidden" />
-            <span className="text-[#D9A8A7] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;
-          </p>
         </div>
 
         {/* 2. 한복 여성과 궁중 비급 가로형 대표 이미지 */}
@@ -40,21 +43,20 @@ export default function RealTransformationBanner() {
           />
         </div>
 
-        {/* 3. 하단 글라스 선언문 */}
-        <div className="max-w-3xl mx-auto text-center">
+        {/* 3. 이미지 아래 마지막 짧은 결심 문구 상자 */}
+        <div className="max-w-2xl mx-auto text-center">
           <div 
-            className="love-report-highlight-card p-6 md:p-8 rounded-2xl border text-center space-y-2 backdrop-blur-sm"
+            className="love-report-highlight-card p-6 sm:p-7 rounded-2xl border text-center backdrop-blur-sm shadow-lg"
             style={{
               background: 'rgba(125, 76, 100, 0.20)',
               borderColor: 'rgba(215, 170, 185, 0.20)',
             }}
           >
-            <p className="text-sm md:text-base text-[#D9A8A7] font-bold tracking-wide">
-              이제 감정에 휘둘리며 닳아버리는 연애는 끝내세요.
+            <p className="text-sm sm:text-base text-[#D9A8A7] font-medium tracking-wide">
+              당신의 사랑을 바꿀 첫 번째 선택,
             </p>
-            <p className="font-elegant font-medium text-[17px] md:text-[19px] text-white leading-relaxed break-keep">
-              당신의 연애 판도를 완전히 뒤바꿀 단 하나의 비급,<br className="hidden sm:inline" />
-              <span className="text-[#D9A8A7] font-semibold">백도화 《연애비급》 선천코드 리포트가 당신의 진짜 매력을 깨워드립니다.</span>
+            <p className="font-elegant font-bold text-lg sm:text-[21px] text-[#FAF7F2] leading-relaxed break-keep mt-1.5">
+              나만의 선천코드를 읽는 것에서 시작됩니다.
             </p>
           </div>
         </div>
