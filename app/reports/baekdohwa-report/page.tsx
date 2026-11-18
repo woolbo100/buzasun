@@ -30,6 +30,7 @@ import LoveReportTableOfContents from '@/components/reports/baekdohwa-report/Lov
 import ReportProductionTimeline from '@/components/reports/baekdohwa-report/ReportProductionTimeline'
 import ReportSamplePreview from '@/components/reports/baekdohwa-report/ReportSamplePreview'
 import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
+import TransformationThreeChanges from '@/components/reports/baekdohwa-report/TransformationThreeChanges'
 import RelationshipChangeScenario from '@/components/reports/baekdohwa-report/RelationshipChangeScenario'
 import RecommendedAudience from '@/components/reports/baekdohwa-report/RecommendedAudience'
 import SixPerspectivesPanoramaBanner from '@/components/reports/baekdohwa-report/SixPerspectivesPanoramaBanner'
@@ -775,6 +776,9 @@ export default function BaekdohwaReportPage() {
 
             {/* 연애의 주도권을 되찾는 한복 여성 비급 이미지 및 매력 선언문 배너 */}
             <RealTransformationBanner />
+
+            {/* 리포트를 열어보는 순간, 당신의 연애에 생기는 3가지 변화 */}
+            <TransformationThreeChanges />
 
             {/* 리포트를 읽은 뒤 달라질 수 있는 선택 (BEFORE -> AWARENESS -> AFTER) */}
             <RelationshipChangeScenario />
