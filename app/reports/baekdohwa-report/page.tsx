@@ -277,7 +277,7 @@ export default function BaekdohwaReportPage() {
                               39,000원
                             </span>
                             <span className="text-xs sm:text-sm text-[#D9A8A7] font-medium tracking-wide">
-                              1:1 맞춤 PDF 리포트 · 오행 에너지 카드 1종 증정
+                              1:1 맞춤 PDF 리포트 · 오행 아트카드 + 오행 수호자 카드 증정
                             </span>
                           </div>
                           <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 font-light mt-1.5 break-keep">
@@ -735,7 +735,7 @@ export default function BaekdohwaReportPage() {
             {/* 신규 섹션: POINT 04. PERSONALIZED REPORT — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 분석서 */}
             <SecretPrescriptionPoint />
 
-            {/* POINT 04 하위 혜택: 오행 에너지 카드 1종 증정 (컴팩트 가로형 혜택 카드) */}
+            {/* POINT 04 하위 혜택: 오행 아트카드 + 수호자 카드 2종 증정 (컴팩트 가로형 혜택 카드) */}
             <FiveElementsSpecialGift />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
@@ -804,7 +804,7 @@ export default function BaekdohwaReportPage() {
                   </p>
 
                   <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#B7788D]/15 border border-[#B7788D]/35 text-xs md:text-sm text-[#D9A8A7] font-medium mb-8">
-                    39,000원 · 맞춤 PDF · 오행 카드 1종 포함
+                    39,000원 · 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 포함
                   </div>
 
                   {/* 구매 버튼 (기존 상단/하단 동작 재사용) */}

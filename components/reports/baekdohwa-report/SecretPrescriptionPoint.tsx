@@ -24,7 +24,7 @@ export default function SecretPrescriptionPoint({
     {
       num: '03',
       title: '내 연애의 치명적인 약점을 메우는 실전 전략 추천',
-      desc: '가장 흔들리는 결정적 순간을 찾아내고, 그 빈틈을 채워줄 나만의 행동 처방을 건냅니다.'
+      desc: '가장 흔들리는 결정적 순간을 찾아내고, 그 빈틈을 채워줄 나만의 행동 처방을 건넵니다.'
     }
   ]
 
