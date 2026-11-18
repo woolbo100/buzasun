@@ -21,43 +21,50 @@ export default function ReportComparisonTable() {
 
         {/* 데스크톱/태블릿 비교표 (가로 스크롤 완벽 대응) */}
         <div className="max-w-7xl mx-auto overflow-x-auto pb-4">
-          <div className="min-w-[680px]">
-            <table className="w-full border-collapse text-left">
+          <div className="min-w-[720px]">
+            <table className="w-full border-separate border-spacing-0 text-left">
               <thead>
-                <tr className="border-b border-white/10">
-                  <th className="py-5 px-6 text-sm font-semibold text-white/50 w-1/4">
+                <tr>
+                  <th className="py-5 px-5 md:px-6 text-sm font-semibold text-white/50 w-1/4 border-b border-white/10">
                     비교 항목
                   </th>
-                  <th className="py-5 px-6 text-sm font-semibold text-white/60 w-1/4 text-center">
+                  <th className="py-5 px-5 md:px-6 text-sm md:text-[15px] font-semibold text-white/70 w-1/4 text-center border-b border-white/10">
                     자동 생성형 운세
                   </th>
-                  <th className="py-5 px-6 text-sm font-semibold text-white/60 w-1/4 text-center">
+                  <th className="py-5 px-5 md:px-6 text-sm md:text-[15px] font-semibold text-white/70 w-1/4 text-center border-b border-white/10">
                     전통 명리 · 구두 상담
                   </th>
-                  <th className="py-5 px-6 text-base font-bold text-[#D9A8A7] w-1/4 text-center bg-[#B7788D]/15 rounded-t-2xl border-t border-x border-[#B7788D]/30">
+                  <th className="py-5 px-5 md:px-6 text-base font-bold text-[#D9A8A7] w-1/4 text-center bg-[#B7788D]/15 rounded-t-2xl border-t border-x border-[#B7788D]/30 border-b border-[#B7788D]/20">
                     백도화 선천코드 리포트
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/5">
-                {comparisonTableData.rows.map((row, idx) => (
-                  <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
-                    <td className="py-5 px-6 text-sm md:text-base font-bold text-white break-keep">
-                      {row.feature}
-                    </td>
-                    <td className="py-5 px-6 text-sm text-[#EDE6DA]/50 text-center break-keep">
-                      {row.ai}
-                    </td>
-                    <td className="py-5 px-6 text-sm text-[#EDE6DA]/60 text-center break-keep">
-                      {row.traditional}
-                    </td>
-                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#B7788D]/10 border-x border-[#B7788D]/25 shadow-inner">
-                      <span className="text-[#D9A8A7] font-bold">
-                        {row.baekdohwa}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
+              <tbody>
+                {comparisonTableData.rows.map((row, idx) => {
+                  const isLast = idx === comparisonTableData.rows.length - 1
+                  return (
+                    <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
+                      <td className={`py-5 px-5 md:px-6 text-sm md:text-base font-bold text-white break-keep ${!isLast ? 'border-b border-white/5' : ''}`}>
+                        {row.feature}
+                      </td>
+                      <td className={`py-5 px-5 md:px-6 text-[14px] md:text-[16px] leading-[1.5] text-[#EDE6DA]/78 text-center break-keep ${!isLast ? 'border-b border-white/5' : ''}`}>
+                        {row.ai}
+                      </td>
+                      <td className={`py-5 px-5 md:px-6 text-[14px] md:text-[16px] leading-[1.5] text-[#EDE6DA]/78 text-center break-keep ${!isLast ? 'border-b border-white/5' : ''}`}>
+                        {row.traditional}
+                      </td>
+                      <td className={`py-5 px-4 md:px-5 lg:px-6 text-sm md:text-base font-medium text-white text-center align-middle break-keep bg-[#B7788D]/10 border-x border-[#B7788D]/25 shadow-inner ${
+                        isLast 
+                          ? 'rounded-b-2xl border-b border-[#B7788D]/30' 
+                          : 'border-b border-[#B7788D]/15'
+                      }`}>
+                        <span className="text-[#D9A8A7] font-bold leading-[1.48] inline-block">
+                          {row.baekdohwa}
+                        </span>
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>

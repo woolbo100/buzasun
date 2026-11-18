@@ -28,7 +28,7 @@ export default function ReportSamplePreview() {
             <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep leading-relaxed whitespace-pre-line">
               {samplePreviewData.subCopy}
             </p>
-            <p className="text-[16px] md:text-[17.5px] text-[#F5DAE2] font-medium break-keep tracking-tight">
+            <p className="text-[16px] md:text-[17.5px] text-[#D9A8A7] font-medium break-keep tracking-tight">
               {samplePreviewData.leadMessage}
             </p>
           </div>

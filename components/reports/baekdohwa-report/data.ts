@@ -150,37 +150,37 @@ export const comparisonTableData = {
       feature: "01. 분석의 출발점",
       ai: "생년월일 기본 텍스트 조합",
       traditional: "사주 원국의 길흉과 흐름 해석",
-      baekdohwa: "선천코드 + 현실 연애 패턴 교차 분석"
+      baekdohwa: "선천코드와 현실 연애 패턴의 교차 분석"
     },
     {
       feature: "02. 개인 고민 반영",
       ai: "공통 유형별 일괄 안내",
       traditional: "제한된 시간 내 핵심 위주 상담",
-      baekdohwa: "사전 질문지 및 현재 관계 고민 밀착 반영"
+      baekdohwa: "사전 질문과 현재 연애 고민 밀착 반영"
     },
     {
       feature: "03. 반복 패턴 해독",
       ai: "표면적인 성격 키워드 나열",
       traditional: "타고난 기질과 성향 중심 설명",
-      baekdohwa: "무의식적 방어기제와 선택 패턴 정밀 추적"
+      baekdohwa: "무의식적 방어기제와 선택 패턴 추적"
     },
     {
       feature: "04. 해석의 관점",
       ai: "단순 운세 알고리즘",
       traditional: "전통 명리학 이론 중심",
-      baekdohwa: "동양 명리 + 심리·뇌과학적 자기 관찰 결합"
+      baekdohwa: "동양 명리·심리·뇌과학 관점 결합"
     },
     {
       feature: "05. 실천 가이드",
       ai: "일반적인 덕담·조언 수준",
       traditional: "시기별 주의점 및 방향 제시",
-      baekdohwa: "갈등·위기 상황별 맞춤 소통 및 행동 처방"
+      baekdohwa: "상황별 맞춤 소통법과 행동 처방"
     },
     {
       feature: "06. 소장 및 활용",
       ai: "휘발성 모바일 화면",
       traditional: "대화 중심의 일회성 기록",
-      baekdohwa: "언제든 다시 꺼내 읽는 영구 소장 PDF 비급서"
+      baekdohwa: "다시 펼쳐보는 영구 소장용 PDF 비급서"
     }
   ]
 }
