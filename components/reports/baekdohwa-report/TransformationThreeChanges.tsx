@@ -8,8 +8,10 @@ import { Crown, Sparkles, ShieldCheck } from 'lucide-react'
 // TRANSFORMATION 3단계 순차 애니메이션 타임라인 컴포넌트
 function TransformationTimeline() {
   const containerRef = useRef<HTMLDivElement | null>(null)
-  // animStep: 0=리셋, 1=01강조, 2=선1그리기, 3=02강조, 4=선2그리기, 5=03강조(완성 상태 유지)
+  // animStep: 0=초기화, 1=01강조, 2=선1그리기, 3=02강조, 4=선2그리기, 5=03강조(완성 상태 유지)
   const [animStep, setAnimStep] = useState(1)
+  // isTransitionEnabled: 초기화 순간에 transition을 일시 비활성화하여 역방향 애니메이션 제거
+  const [isTransitionEnabled, setIsTransitionEnabled] = useState(true)
   const [isVisible, setIsVisible] = useState(false)
   const isReducedMotion = useRef(false)
 
@@ -36,7 +38,7 @@ function TransformationTimeline() {
     return () => observer.disconnect()
   }, [])
 
-  // 2. 부드러운 무한 반복 애니메이션 제어
+  // 2. 단방향 정순 무한 반복 애니메이션 제어 (역방향 잔상 완전 차단)
   useEffect(() => {
     if (isReducedMotion.current) return
     if (!isVisible) return
@@ -47,37 +49,44 @@ function TransformationTimeline() {
     const runCycle = () => {
       if (isCancelled) return
 
-      // T=0ms: 01 반복 강조 (약 1.1초)
+      // 트랜지션 활성화 후 01 단계부터 정순 진행 시작
+      setIsTransitionEnabled(true)
       setAnimStep(1)
 
-      // T=400ms: 첫 번째 연결선 드로잉 시작
+      // T=400ms: 첫 번째 연결선(01 → 02) 왼쪽에서 오른쪽으로 진행
       timeouts.push(setTimeout(() => {
         if (!isCancelled) setAnimStep(2)
       }, 400))
 
-      // T=1100ms: 02 자각 강조 (약 1.1초)
+      // T=1100ms: 02 '패턴을 알아차리는 순간' 강조
       timeouts.push(setTimeout(() => {
         if (!isCancelled) setAnimStep(3)
       }, 1100))
 
-      // T=1500ms: 두 번째 연결선 드로잉 시작
+      // T=1500ms: 두 번째 연결선(02 → 03) 왼쪽에서 오른쪽으로 진행
       timeouts.push(setTimeout(() => {
         if (!isCancelled) setAnimStep(4)
       }, 1500))
 
-      // T=2200ms: 03 선택 강조 (3단계 모두 완성 상태)
+      // T=2200ms: 03 '다른 선택의 시작' 강조 (01, 02, 03 모두 완성 상태)
       timeouts.push(setTimeout(() => {
         if (!isCancelled) setAnimStep(5)
       }, 2200))
 
-      // T=3700ms: 1.5초간 완성 상태 유지 후, 자연스럽게 01부터 무한 반복
+      // T=3700ms: 완성 상태를 약 1.5초 유지한 뒤 즉각 초기화 (역방향 애니메이션 방지)
       timeouts.push(setTimeout(() => {
-        if (!isCancelled) {
-          setAnimStep(0)
-          timeouts.push(setTimeout(() => {
-            if (!isCancelled) runCycle()
-          }, 250))
-        }
+        if (isCancelled) return
+
+        // ★ 핵심: CSS transition을 끄고 순식간에 0으로 리셋 (되감기는 잔상 100% 제거)
+        setIsTransitionEnabled(false)
+        setAnimStep(0)
+
+        // 브라우저 렌더링 프레임 확보 후 다음 주기를 01부터 깨끗하게 시작
+        timeouts.push(setTimeout(() => {
+          if (!isCancelled) {
+            runCycle()
+          }
+        }, 80))
       }, 3700))
     }
 
@@ -95,68 +104,76 @@ function TransformationTimeline() {
     { num: '03', text: '다른 선택의 시작' },
   ]
 
+  // 트랜지션 활성화 여부에 따른 transition 클래스
+  const nodeTransClass = isTransitionEnabled 
+    ? 'transition-all duration-500 ease-out' 
+    : 'transition-none'
+  const lineTransClass = isTransitionEnabled 
+    ? 'transition-all duration-700 ease-out' 
+    : 'transition-none'
+
   return (
     <div ref={containerRef} className="w-full max-w-4xl mx-auto mb-10 md:mb-12 px-3 sm:px-4">
       {/* 3단계 가로형 슬림 타임라인 (모바일/PC 모두 깔끔한 가로 흐름) */}
       <div className="flex items-center justify-between">
         {/* Step 01: 반복되는 패턴 장면 */}
-        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
-          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 transition-all duration-500 ${
+        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 ${nodeTransClass} ${animStep >= 1 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 ${nodeTransClass} ${
             animStep >= 1 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[0].num}
           </div>
-          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal transition-colors duration-500 break-keep ${
+          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal break-keep ${nodeTransClass} ${
             animStep >= 1 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[0].text}
           </span>
         </div>
 
-        {/* 연결선 01 */}
+        {/* 연결선 01 (01 → 02) */}
         <div className="flex-1 min-w-[12px] mx-1.5 sm:mx-3 md:mx-5 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
           <div 
-            className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#D9A8A7] via-[#C48B9F] to-[#D9A8A7] transition-all duration-700 ease-out"
+            className={`absolute inset-y-0 left-0 bg-gradient-to-r from-[#D9A8A7] via-[#C48B9F] to-[#D9A8A7] ${lineTransClass}`}
             style={{ width: animStep >= 2 ? '100%' : '0%' }}
           />
         </div>
 
         {/* Step 02: 패턴을 알아차리는 순간 */}
-        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 3 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
-          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 transition-all duration-500 ${
+        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 ${nodeTransClass} ${animStep >= 3 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 ${nodeTransClass} ${
             animStep >= 3 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[1].num}
           </div>
-          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal transition-colors duration-500 break-keep ${
+          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal break-keep ${nodeTransClass} ${
             animStep >= 3 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[1].text}
           </span>
         </div>
 
-        {/* 연결선 02 */}
+        {/* 연결선 02 (02 → 03) */}
         <div className="flex-1 min-w-[12px] mx-1.5 sm:mx-3 md:mx-5 h-[1.5px] bg-white/10 relative overflow-hidden rounded-full">
           <div 
-            className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#D9A8A7] via-[#C48B9F] to-[#D9A8A7] transition-all duration-700 ease-out"
+            className={`absolute inset-y-0 left-0 bg-gradient-to-r from-[#D9A8A7] via-[#C48B9F] to-[#D9A8A7] ${lineTransClass}`}
             style={{ width: animStep >= 4 ? '100%' : '0%' }}
           />
         </div>
 
         {/* Step 03: 다른 선택의 시작 */}
-        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 transition-all duration-500 ${animStep >= 5 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
-          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 transition-all duration-500 ${
+        <div className={`flex items-center gap-1.5 sm:gap-2.5 shrink-0 ${nodeTransClass} ${animStep >= 5 ? 'opacity-100 translate-y-0' : 'opacity-40 translate-y-0.5'}`}>
+          <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-mono text-[11px] sm:text-xs font-bold shrink-0 ${nodeTransClass} ${
             animStep >= 5 
               ? 'bg-[#2D0A1E] border border-[#B7788D] text-[#D9A8A7] shadow-[0_0_12px_rgba(217,168,167,0.35)]' 
               : 'bg-white/5 border border-white/15 text-white/40'
           }`}>
             {steps[2].num}
           </div>
-          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal transition-colors duration-500 break-keep ${
+          <span className={`text-[12px] sm:text-[14px] md:text-[15px] font-medium leading-tight sm:leading-normal break-keep ${nodeTransClass} ${
             animStep >= 5 ? 'text-white' : 'text-[#EDE6DA]/50'
           }`}>
             {steps[2].text}
@@ -189,7 +206,7 @@ export default function TransformationThreeChanges() {
       num: '03',
       symbol: '③',
       title: '나만의 연애 기준(필터) 정립',
-      desc: '나의 감정과 경계를 먼저 존중하며 사랑의 주도권을 되찾았기 때문에, 타인의 기준에 휘둘리지 않고 나를 온전히 아끼고 지켜줄 진짜 인연을 단번에 알아보는 단단한 눈이 생깁니다.',
+      desc: '나의 감정과 경계를 먼저 존중하며 사랑의 주도권을 되찾았기에, 타인의 기준에 휘둘리지 않고 나를 온전히 아껴줄 진짜 인연을 단번에 알아보는 단단한 눈이 생깁니다.',
       icon: <ShieldCheck className="w-5 h-5 text-[#D9A8A7]" />,
       tag: '진짜 인연의 분별'
     }
