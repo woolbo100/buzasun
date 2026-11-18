@@ -22,23 +22,23 @@ export default function RecommendedAudience() {
           </p>
         </div>
 
-        {/* 데스크톱 기준 좌우 2단 레이아웃 (왼쪽 이미지 5열 : 오른쪽 설명 7열) */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start max-w-7xl mx-auto mb-16">
-          {/* 세로형 대표 이미지 (PC: 왼쪽 / 모바일: 상단 배치) */}
-          <div className="lg:col-span-5 relative group">
-            <div className="relative aspect-[3/4] w-full rounded-[28px] md:rounded-[36px] lg:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
+        {/* 데스크톱 기준 좌우 2단 레이아웃 (왼쪽 이미지 5열 : 오른쪽 설명 7열, 상하 높이 정렬) */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch max-w-7xl mx-auto mb-16">
+          {/* 세로형 대표 이미지 (PC: 왼쪽 / 모바일: 상단 배치 - 오른쪽 카드 그룹 높이에 상하 끝선 완벽 정렬) */}
+          <div className="lg:col-span-5 relative group flex flex-col h-full">
+            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-full w-full rounded-[28px] md:rounded-[36px] lg:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-[#130917]">
               <Image
                 src="/image/lovereport/love-secret-discovery.webp"
                 alt="선천코드 연애 리포트 추천 대상"
-                width={1086}
-                height={1448}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover object-[60%_center] transition-transform duration-700 group-hover:scale-[1.02]"
               />
             </div>
           </div>
 
           {/* 오른쪽: '이런 분께 추천합니다' 및 '이런 기대에는 맞지 않습니다' 영역 */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 flex flex-col justify-between gap-6">
             {/* 추천하는 분 카드 */}
             <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-[#B7788D]/40 bg-gradient-to-b from-[var(--accent-gold)]/10 via-purple-950/20 to-black/30">
               {/* 1. '이런 분께 추천합니다' 제목 */}

@@ -5,10 +5,10 @@ import Reveal from '@/components/Reveal'
 
 export default function RealTransformationBanner() {
   return (
-    <section className="mb-24 md:mb-32">
+    <section className="mb-10 md:mb-14">
       <Reveal>
         {/* 1. 이미지 위 메인 메시지 본문 (나의 매력 발견 → 사랑의 주도권 → 마지막 각성) */}
-        <div className="pt-2 space-y-6 max-w-3xl mx-auto text-center mb-10 md:mb-12">
+        <div className="space-y-6 max-w-3xl mx-auto text-center mb-10 md:mb-12">
           {/* 첫 번째 메시지 — 나의 매력 발견 */}
           <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-[1.8] break-keep">
             자신의 선천코드를 읽고,<br className="hidden sm:inline" />
@@ -43,22 +43,14 @@ export default function RealTransformationBanner() {
           />
         </div>
 
-        {/* 3. 이미지 아래 마지막 짧은 결심 문구 상자 */}
+        {/* 3. 이미지 아래 마지막 짧은 결심 문구 (상자 형태 제거, 순수 텍스트 중앙 정렬) */}
         <div className="max-w-2xl mx-auto text-center">
-          <div 
-            className="love-report-highlight-card p-6 sm:p-7 rounded-2xl border text-center backdrop-blur-sm shadow-lg"
-            style={{
-              background: 'rgba(125, 76, 100, 0.20)',
-              borderColor: 'rgba(215, 170, 185, 0.20)',
-            }}
-          >
-            <p className="text-sm sm:text-base text-[#D9A8A7] font-medium tracking-wide">
-              당신의 사랑을 바꿀 첫 번째 선택,
-            </p>
-            <p className="font-elegant font-bold text-lg sm:text-[21px] text-[#FAF7F2] leading-relaxed break-keep mt-1.5">
-              나만의 선천코드를 읽는 것에서 시작됩니다.
-            </p>
-          </div>
+          <p className="text-sm sm:text-base text-[#D9A8A7] font-medium tracking-wide">
+            당신의 사랑을 바꿀 첫 번째 선택,
+          </p>
+          <p className="font-elegant font-bold text-lg sm:text-[21px] text-[#FAF7F2] leading-relaxed break-keep mt-2.5">
+            나만의 선천코드를 읽는 것에서 시작됩니다.
+          </p>
         </div>
       </Reveal>
     </section>
