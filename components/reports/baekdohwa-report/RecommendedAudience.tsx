@@ -16,8 +16,9 @@ export default function RecommendedAudience() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             당신을 위한 <span className="text-[#D9A8A7]">리포트인가요?</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
-            솔직하고 명확한 안내를 통해 최상의 통찰을 전해드립니다.
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-3xl mx-auto break-keep">
+            사랑에 지치고 상처받았지만, 여전히 더 나은 관계를 꿈꾸는 당신에게<br className="hidden sm:inline" />
+            이 리포트는 나를 이해하고 사랑의 방향을 새롭게 세우는 시작점이 되어줄 수 있습니다.
           </p>
         </div>
 
@@ -51,10 +52,10 @@ export default function RecommendedAudience() {
               </div>
 
               {/* 2. 추천 대상 체크리스트 */}
-              <ul className="space-y-3.5">
+              <ul className="space-y-4">
                 {targetAudienceData.recommended.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3.5 text-sm md:text-base text-[#EDE6DA]/90 font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#B7788D] mt-2 shrink-0"></span>
+                  <li key={idx} className="flex items-start gap-3.5 text-[18px] leading-[1.6] text-[#EDE6DA]/90 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#B7788D] mt-2.5 shrink-0"></span>
                     <span className="break-keep">{item}</span>
                   </li>
                 ))}
@@ -71,10 +72,10 @@ export default function RecommendedAudience() {
                   {targetAudienceData.notRecommended.title}
                 </h3>
               </div>
-              <ul className="space-y-3.5">
+              <ul className="space-y-4">
                 {targetAudienceData.notRecommended.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3.5 text-sm md:text-base text-[#EDE6DA]/60 font-light">
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/30 mt-2 shrink-0"></span>
+                  <li key={idx} className="flex items-start gap-3.5 text-[18px] leading-[1.6] text-[#EDE6DA]/60 font-light">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/30 mt-2.5 shrink-0"></span>
                     <span className="break-keep">{item}</span>
                   </li>
                 ))}
