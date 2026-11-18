@@ -158,15 +158,16 @@ export default function ReportCommonInfo({ isCompatibility = false, showFiveElem
         
         <Reveal>
           <div className="text-center mb-16 space-y-4">
-            <span className="inline-block px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase">
-              Process & Info
+            <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
+              PROCESS & INFO
             </span>
             <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-wide">
-              리포트는 <span className="text-[var(--accent-gold)]">이렇게 제작됩니다</span>
+              리포트는 <span className="gradient-text-love">이렇게 제작됩니다</span>
             </h2>
-            <p className="text-base text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light">
+            <p className="text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light leading-relaxed">
               백도화 리포트는 입력해주신 정보를 바탕으로 순차적으로 제작됩니다.<br />
-              주문 후 제작되는 디지털 리포트 특성상, 결제 완료 후 바로 자동 발송되는 상품이 아니라 제작 시간이 소요될 수 있습니다.
+              주문 후 제작되는 디지털 리포트 특성상, 결제 완료 후 바로 자동 발송되는 상품이 아니라<br />
+              제작 시간이 소요될 수 있습니다.
             </p>
           </div>
         </Reveal>

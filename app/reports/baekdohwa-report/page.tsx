@@ -732,6 +732,42 @@ export default function BaekdohwaReportPage() {
             {/* POINT 04: 실제 리포트 분석 목차 (8개 장 목차 공개) */}
             <LoveReportTableOfContents />
 
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 목차 및 실전 비책 직후 슬림형 중간 CTA */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 md:mb-36 max-w-2xl mx-auto px-4 text-center">
+              <Reveal>
+                <div className="gungjung-glass py-9 px-6 sm:py-11 sm:px-10 rounded-[30px] border border-[#B7788D]/35 bg-gradient-to-b from-[#250F22]/70 via-[#180A1A]/60 to-[#100612]/75 relative overflow-hidden shadow-xl backdrop-blur-md">
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-[#B7788D]/15 rounded-full blur-[70px] pointer-events-none" />
+
+                  <div className="relative z-10 space-y-3.5">
+                    <h3 className="text-xl sm:text-2xl md:text-[28px] font-elegant font-bold text-white leading-snug break-keep">
+                      이제 당신의 사랑을,<br className="sm:hidden" />
+                      <span className="gradient-text-love"> 한 권의 비급으로 펼쳐보세요.</span>
+                    </h3>
+
+                    <p className="text-[15px] sm:text-[16px] text-[#EDE6DA]/80 font-light leading-relaxed break-keep pb-2">
+                      8개 장의 심층 분석부터 나만의 실전 처방까지
+                    </p>
+
+                    <div className="pt-1">
+                      <button 
+                        onClick={handlePurchase}
+                        className="w-full sm:w-auto min-w-[280px] sm:min-w-[340px] py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(125,73,84,0.3)] hover:shadow-[0_0_22px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
+                      >
+                        나의 선천코드 리포트 신청하기 · 39,000원
+                      </button>
+                    </div>
+
+                    <p className="text-[12px] sm:text-[13px] text-[#D9A8A7]/80 font-light tracking-wide pt-1">
+                      1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 증정
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
             {/* 신규 섹션: POINT 04. PERSONALIZED REPORT — 당신만을 위해 봉인된 단 하나의 선천코드 1:1 분석서 */}
             <SecretPrescriptionPoint />
 
@@ -870,23 +906,30 @@ export default function BaekdohwaReportPage() {
                   
                   <p className="text-[18px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep max-w-2xl mx-auto">
                     당신은 사랑받기 위해 더 애써야 하는 사람이 아닙니다.<br className="hidden sm:inline" />
-                    이제는 당신에게 이미 있는 매력을 알고, 누구에게 어떻게 마음을 내어줄지 선택할 차례입니다.
+                    이제는 당신에게 이미 있는 매력을 알고, 누구에게 어떻게 마음을 내어줄지<br />
+                    선택할 차례입니다.
                   </p>
                 </div>
 
                 {/* ③ 최종 컴팩트 슬림형 프리미엄 구매 카드 */}
-                <div className="gungjung-glass max-w-2xl mx-auto py-7 px-6 sm:py-8 sm:px-10 rounded-[30px] border border-[#B7788D]/35 bg-gradient-to-b from-[#250F22]/75 via-[#180A1A]/70 to-[#100612]/85 backdrop-blur-md text-center relative overflow-hidden shadow-xl">
+                <div 
+                  className="max-w-2xl mx-auto py-8 px-6 sm:py-10 sm:px-10 rounded-[32px] sm:rounded-[36px] border border-[#D5AFAD]/35 text-center relative overflow-hidden backdrop-blur-md"
+                  style={{
+                    background: 'radial-gradient(ellipse at 50% 0%, rgba(139, 38, 62, 0.35) 0%, rgba(74, 35, 43, 0.3) 50%, rgba(10, 5, 20, 0.95) 100%)',
+                    boxShadow: '0 0 50px rgba(183, 120, 141, 0.20)'
+                  }}
+                >
                   {/* 은은한 배경 오라 */}
-                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#B7788D]/10 rounded-full blur-[70px] pointer-events-none" />
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#B7788D]/15 rounded-full blur-[80px] pointer-events-none" />
 
                   <div className="relative z-10">
                     {/* 1. 상품명 */}
-                    <h3 className="font-elegant font-bold text-xl sm:text-[22px] text-white tracking-tight mb-2 break-keep">
+                    <h3 className="font-elegant font-bold text-xl sm:text-[22px] text-[#FAF7F2] tracking-tight mb-2 break-keep">
                       백도화 선천코드 연애 리포트
                     </h3>
 
                     {/* 2. 상품 구성 한 줄 표시 (모바일 자연스러운 줄바꿈) */}
-                    <p className="text-[13.5px] sm:text-[14.5px] text-[#EDE6DA]/80 font-light mb-4 break-keep">
+                    <p className="text-[13.5px] sm:text-[14.5px] text-[#EDE6DA]/90 font-light mb-4 break-keep">
                       프리미엄 소장용 PDF 비급 · 오행 아트카드 1장 + 수호자 카드 1장
                     </p>
 
@@ -901,13 +944,17 @@ export default function BaekdohwaReportPage() {
                     <div className="w-full max-w-md mx-auto">
                       <button 
                         onClick={handlePurchase}
-                        className="w-full py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(125,73,84,0.3)] hover:shadow-[0_0_22px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
+                        className="w-full py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-300 text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_30px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
+                        style={{
+                          background: 'linear-gradient(135deg, #B57987 0%, #7D4954 100%)',
+                          border: '1px solid rgba(229, 196, 187, 0.5)',
+                        }}
                       >
                         나의 연애 리포트 신청하기
                       </button>
 
                       {/* 5. 상품 제공 안내 */}
-                      <p className="text-[12px] sm:text-[12.5px] text-[#EDE6DA]/65 font-light mt-3 break-keep">
+                      <p className="text-[12px] sm:text-[12.5px] text-[#EDE6DA]/70 font-light mt-3 break-keep">
                         PDF 디지털 상품 · 온라인 제공 · 실물 배송 없음
                       </p>
                     </div>
