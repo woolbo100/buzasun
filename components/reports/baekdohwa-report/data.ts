@@ -355,15 +355,15 @@ export const productionTimelineData = {
 
 // 9. 리포트 샘플 미리보기 (SECTION 10)
 export const samplePreviewData = {
-  mainCopy: "오래도록 간직하고 싶은,\n단 한 권의 비급",
-  subCopy: "한국 전통 왕실 도감의 기품과 미감을 현대적으로 재해석한, 오래도록 곁에 두고 펼쳐볼 수 있는 소장용 프리미엄 디지털 비급서입니다. 한 권의 비급에 담긴 사랑의 비밀을 미리 펼쳐보세요.",
+  mainCopy: "왕실의 비급처럼 귀하게,\n당신의 사랑을 한 권에 담다",
+  subCopy: "한국 전통 왕실 도감의 기품과 미감을 현대적으로 재해석한,\n오래도록 곁에 두고 펼쳐볼 수 있는 소장용 프리미엄 디지털 비급서\n한 권의 비급에 담긴 사랑의 비밀을 미리 펼쳐보세요.",
   disclaimer: "※ 예시 이미지이며 실제 리포트의 구성과 개인별 분석 내용은 달라질 수 있습니다.",
   samples: [
     {
       id: "cover",
       title: "리포트 표지",
       desc: "나만의 고유 코드가 새겨진 프리미엄 커버",
-      src: "/image/lovereport/p5.webp",
+      src: "/image/lovereport/baekdohwa-love-report-cover.webp",
       badge: "COVER"
     },
     {

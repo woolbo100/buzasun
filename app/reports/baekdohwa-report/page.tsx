@@ -878,20 +878,44 @@ export default function BaekdohwaReportPage() {
                   </p>
                 </div>
 
-                {/* ③ 구매 버튼 영역 (중앙 정렬) */}
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto justify-center items-center">
-                  <button 
-                    onClick={handleAddToCart}
-                    className="w-full sm:flex-1 py-5 md:py-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#B7788D]/40 text-[#E6BFA9] hover:bg-[#B7788D]/10 bg-transparent text-center"
-                  >
-                    장바구니 담기
-                  </button>
-                  <button 
-                    onClick={handlePurchase}
-                    className="w-full sm:flex-grow-[1.4] py-5 md:py-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_20px_rgba(125,73,84,0.35)] hover:shadow-[0_0_25px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
-                  >
-                    바로 신청하기
-                  </button>
+                {/* ③ 최종 컴팩트 슬림형 프리미엄 구매 카드 */}
+                <div className="gungjung-glass max-w-2xl mx-auto py-7 px-6 sm:py-8 sm:px-10 rounded-[30px] border border-[#B7788D]/35 bg-gradient-to-b from-[#250F22]/75 via-[#180A1A]/70 to-[#100612]/85 backdrop-blur-md text-center relative overflow-hidden shadow-xl">
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#B7788D]/10 rounded-full blur-[70px] pointer-events-none" />
+
+                  <div className="relative z-10">
+                    {/* 1. 상품명 */}
+                    <h3 className="font-elegant font-bold text-xl sm:text-[22px] text-white tracking-tight mb-2 break-keep">
+                      백도화 선천코드 연애 리포트
+                    </h3>
+
+                    {/* 2. 상품 구성 한 줄 표시 (모바일 자연스러운 줄바꿈) */}
+                    <p className="text-[13.5px] sm:text-[14.5px] text-[#EDE6DA]/80 font-light mb-4 break-keep">
+                      프리미엄 소장용 PDF 비급 · 오행 아트카드 1장 + 수호자 카드 1장
+                    </p>
+
+                    {/* 3. 가격 (중앙 강조) */}
+                    <div className="mb-5">
+                      <span className="text-3xl sm:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
+                        39,000<span className="text-2xl sm:text-[28px] font-medium ml-1">원</span>
+                      </span>
+                    </div>
+
+                    {/* 4. 구매 버튼 */}
+                    <div className="w-full max-w-md mx-auto">
+                      <button 
+                        onClick={handlePurchase}
+                        className="w-full py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(125,73,84,0.3)] hover:shadow-[0_0_22px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
+                      >
+                        나의 연애 리포트 신청하기
+                      </button>
+
+                      {/* 5. 상품 제공 안내 */}
+                      <p className="text-[12px] sm:text-[12.5px] text-[#EDE6DA]/65 font-light mt-3 break-keep">
+                        PDF 디지털 상품 · 온라인 제공 · 실물 배송 없음
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>

@@ -20,8 +20,9 @@ export default function ReportSamplePreview() {
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             POINT 06 · PREMIUM ARTIFACT & ARCHIVE
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {samplePreviewData.mainCopy}
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+            왕실의 비급처럼 귀하게,<br />
+            <span className="gradient-text-love">당신의 사랑을 한 권에 담다</span>
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep whitespace-pre-line">
             {samplePreviewData.subCopy}
@@ -47,7 +48,7 @@ export default function ReportSamplePreview() {
                   src={sample.src}
                   alt={sample.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
                 <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1.5 rounded-md bg-[#1B0A1A]/80 backdrop-blur-md border border-[#B7788D]/30 text-[11px] sm:text-[12px] font-mono font-bold tracking-wider text-[#FAF7F2] inline-flex items-center justify-center leading-none">

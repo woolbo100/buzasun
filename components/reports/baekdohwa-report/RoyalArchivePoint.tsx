@@ -86,7 +86,8 @@ export default function RoyalArchivePoint() {
             {/* 하단 강조 문구 박스 (데스크톱에서 mt-auto로 우측 이미지 하단 라인과 정렬) */}
             <div className="py-3.5 px-5 sm:py-4 sm:px-6 rounded-2xl border border-[#B7788D]/25 bg-gradient-to-r from-[#2D0A1E]/30 to-[#140816]/40 backdrop-blur-sm mt-6 sm:mt-7 lg:mt-auto">
               <p className="font-elegant font-semibold text-[15.5px] md:text-[17px] text-[#D9A8A7] leading-relaxed break-keep">
-                &ldquo;당신의 사랑은 한 번 읽고 사라질 운세가 아니라, 오래 간직할 한 권의 이야기입니다.&rdquo;
+                &ldquo;당신의 사랑은 한 번 읽고 사라질 운세가 아니라,<br />
+                오래 간직할 한 권의 이야기입니다.&rdquo;
               </p>
             </div>
           </div>
