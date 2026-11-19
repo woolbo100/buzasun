@@ -71,8 +71,35 @@ export default function RealTransformationBanner() {
 
         </div>
 
+        {/* 2. 신규 섹션: THE SECRET CODE 와이드 풀 사이즈 이미지 배너 */}
+        <div className="mt-20 md:mt-28">
+          {/* 위쪽 텍스트 블록 (라벨 + 제목 + 문구, 중앙 정렬) */}
+          <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
+            <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D9A8A7] uppercase mb-3 md:mb-4">
+              THE SECRET CODE
+            </span>
+            <h3 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-white mb-3 md:mb-4 leading-snug break-keep">
+              타고난 기질의 결을 읽으며
+            </h3>
+            <p className="text-[16px] sm:text-[17.5px] md:text-[19px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
+              사랑을 부르는 기적을 봅니다.
+            </p>
+          </div>
+
+          {/* 아래쪽 가로 컨텐츠 풀 사이즈 이미지 (기존 한복 입은 여성 가로 와이드 이미지 그대로 배치) */}
+          <div className="w-full max-w-[1280px] mx-auto mb-12 md:mb-16">
+            <Image
+              src="/image/lovereport/love-charm-discovery.webp"
+              alt="선천코드의 기질을 읽고 사랑의 기적을 마주하는 백도화 비급 이미지"
+              width={1280}
+              height={720}
+              className="block h-auto w-full rounded-2xl md:rounded-[28px] border border-white/10 shadow-2xl"
+            />
+          </div>
+        </div>
+
         {/* 3. 이미지 아래 마지막 짧은 결심 문구 (배너 하단 중앙 정렬 브릿지) */}
-        <div className="max-w-2xl mx-auto text-center mt-14 md:mt-20">
+        <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm sm:text-base text-[#D9A8A7] font-medium tracking-wide">
             당신의 사랑을 바꿀 첫 번째 선택,
           </p>
