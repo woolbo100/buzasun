@@ -911,8 +911,8 @@ export default function BaekdohwaReportPage() {
                   
                   <p className="text-[18px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep max-w-2xl mx-auto">
                     당신은 사랑받기 위해 더 애써야 하는 사람이 아닙니다.<br className="hidden sm:inline" />
-                    이제는 당신에게 이미 있는 매력을 알고, 누구에게 어떻게 마음을 내어줄지<br />
-                    선택할 차례입니다.
+                    이제는 당신에게 이미 있는 매력을 알고,<br className="hidden sm:inline" />
+                    누구에게 어떻게 마음을 내어줄지 선택할 차례입니다.
                   </p>
                 </div>
 
