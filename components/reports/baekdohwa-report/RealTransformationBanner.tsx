@@ -8,9 +8,9 @@ export default function RealTransformationBanner() {
     <section className="mb-10 md:mb-14">
       <Reveal>
         {/* 1. 이미지 위 메인 메시지 본문 (나의 매력 발견 → 사랑의 주도권 → 마지막 각성) */}
-        <div className="space-y-6 max-w-3xl mx-auto text-center mb-10 md:mb-12">
+        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
           {/* 첫 번째 메시지 — 나의 매력 발견 */}
-          <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-[1.8] break-keep">
+          <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-[1.8] break-keep mb-7 md:mb-8">
             자신의 선천코드를 읽고,<br className="hidden sm:inline" />
             그 안에 숨겨진 <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 매력의 무기&rsquo;</span>를 정확히 꿰뚫는 순간,<br />
             사랑의 판도는 달라지기 시작합니다.
@@ -23,11 +23,16 @@ export default function RealTransformationBanner() {
             나는 비로소 <span className="text-[#D9A8A7] font-semibold">사랑의 주도권</span>을 쥐게 됩니다.
           </p>
 
-          {/* 세 번째 메시지 — 마지막 각성 문장 (독립된 인용문) */}
-          <div className="pt-2">
-            <p className="font-elegant font-medium text-[18px] sm:text-[20px] md:text-[22px] text-[#FAF7F2] leading-relaxed break-keep">
-              &ldquo;언제 사랑받을지를 묻지 마세요.<br className="sm:hidden" />
-              <span className="text-[#D9A8A7] font-semibold"> 왜 그런 사랑을 선택해 왔는지부터 읽으세요.</span>&rdquo;
+          {/* 세 번째 메시지 — 마지막 각성 문장 (독립된 인용문 2줄 배치) */}
+          <div className="mt-8 md:mt-10">
+            <p className="font-elegant text-[18px] sm:text-[20px] md:text-[22px] leading-[1.5] md:leading-[1.55] break-keep">
+              <span className="text-[#FAF7F2] font-medium">
+                &ldquo;언제 사랑받을지를 묻지 마세요.
+              </span>
+              <br />
+              <span className="text-[#D9A8A7] font-semibold">
+                왜 그런 사랑을 선택해 왔는지부터 읽으세요.&rdquo;
+              </span>
             </p>
           </div>
         </div>

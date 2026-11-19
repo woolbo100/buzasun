@@ -807,13 +807,14 @@ export default function BaekdohwaReportPage() {
                     FINAL AWAKENING
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    &ldquo;이제 사랑 앞에서,<br className="sm:hidden" />
-                    <span className="gradient-text-love"> 나만의 기준과 매력을 완성합니다.</span>&rdquo;
+                    &ldquo;이제 사랑 앞에서,{' '}
+                    <br className="sm:hidden" />
+                    <span className="gradient-text-love">나만의 기준과 매력을 완성합니다.</span>&rdquo;
                   </h2>
                   <p className="text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
                     사랑받기 위해 애쓰는 관계는 끝났습니다.<br className="hidden sm:inline" />
-                    이제는 나만의 고유한 매력을 깨우고, 누구에게 마음을 내어줄지<br />
-                    당당하게 선택할 차례입니다.
+                    이제는 나만의 고유한 매력을 깨우고,<br className="hidden sm:inline" />
+                    누구에게 마음을 내어줄지 당당하게 선택할 차례입니다.
                   </p>
                 </div>
               </Reveal>
@@ -885,7 +886,7 @@ export default function BaekdohwaReportPage() {
             <PurchaseNotice />
 
             {/* 최종 구매 CTA (이미지와 텍스트·버튼 분리 구조) */}
-            <section className="mb-12 md:mb-16 w-full max-w-[1280px] mx-auto">
+            <section className="mb-20 md:mb-24 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 {/* ① 기존 배경 이미지 단독 표시 (필터 및 오버레이 완전 제거) */}
                 <div className="relative w-full rounded-[40px] overflow-hidden border border-white/10 shadow-2xl aspect-[16/9] bg-[#130917] mb-14 md:mb-16 group">
@@ -969,15 +970,6 @@ export default function BaekdohwaReportPage() {
 
             {/* 브랜드 시그니처 엔딩 섹션 (최종 구매 CTA 아래, 공통 푸터 위) */}
             <BrandSignatureEnding theme="love" />
-
-            {/* 기존 정책 링크 보존 */}
-            <section className="pt-8 md:pt-10 pb-10 md:pb-14 text-center">
-              <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
-                <Link href="/terms" className="hover:text-[#D9A8A7] transition-colors">이용약관</Link>
-                <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>
-                <Link href="/refund" className="hover:text-[var(--accent-gold)] transition-colors">환불정책</Link>
-              </div>
-            </section>
 
           </div>
         </div>
