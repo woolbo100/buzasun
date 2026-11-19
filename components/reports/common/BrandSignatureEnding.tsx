@@ -51,7 +51,7 @@ export default function BrandSignatureEnding({
   return (
     <section 
       aria-label="브랜드 시그니처 엔딩"
-      className={`w-full max-w-[960px] mx-auto px-4 sm:px-6 text-center select-none pb-10 md:pb-14 ${className}`}
+      className={`w-full max-w-[960px] mx-auto px-4 sm:px-6 text-center select-none pb-5 md:pb-8 ${className}`}
     >
       <Reveal>
         <div className="w-full flex flex-col items-center">
