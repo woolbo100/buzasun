@@ -798,28 +798,8 @@ export default function BaekdohwaReportPage() {
             <ReportTestimonials />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* FINAL AWAKENING: 마지막 각성 — 내 매력의 결을 세우고, 사랑의 기준을 다시 씁니다 */}
+            {/* FINAL AWAKENING: 마지막 각성 (좌측 3:4 이미지 + 우측 텍스트 2단 가로 배치) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-7 md:mb-10 text-center">
-              <Reveal>
-                <div className="max-w-4xl mx-auto">
-                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
-                    FINAL AWAKENING
-                  </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    내 매력의 결을 세우고,
-                    <br />
-                    <span className="gradient-text-love">사랑의 기준을 다시 씁니다.</span>
-                  </h2>
-                  <p className="text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-                    사랑받기 위해 애쓰는 관계는 끝났습니다.<br className="hidden sm:inline" />
-                    나만의 고유한 매력을 깨우고, 누구에게 마음을 내어줄지 당당하게 선택할 차례입니다.
-                  </p>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 연애의 주도권을 되찾는 한복 여성 비급 이미지 및 매력 선언문 배너 */}
             <RealTransformationBanner />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
