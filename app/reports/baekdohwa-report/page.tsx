@@ -41,6 +41,7 @@ import PurchaseNotice from '@/components/reports/baekdohwa-report/PurchaseNotice
 import FiveElementsSpecialGift from '@/components/reports/baekdohwa-report/FiveElementsSpecialGift'
 import RoyalArchivePoint from '@/components/reports/baekdohwa-report/RoyalArchivePoint'
 import RealTransformationBanner from '@/components/reports/baekdohwa-report/RealTransformationBanner'
+import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEnding'
 
 // ══════════════════════════════════════════════════════════════════════
 // 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
@@ -963,6 +964,9 @@ export default function BaekdohwaReportPage() {
                 </div>
               </Reveal>
             </section>
+
+            {/* 브랜드 시그니처 엔딩 섹션 (최종 구매 CTA 아래, 공통 푸터 위) */}
+            <BrandSignatureEnding theme="love" />
 
             {/* 기존 정책 링크 보존 */}
             <section className="pb-20 text-center">
