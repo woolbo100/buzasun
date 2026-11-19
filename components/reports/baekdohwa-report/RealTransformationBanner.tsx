@@ -11,16 +11,14 @@ export default function RealTransformationBanner() {
         <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
           {/* 첫 번째 메시지 — 나의 매력 발견 */}
           <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-[1.8] break-keep mb-7 md:mb-8">
-            자신의 선천코드를 읽고,<br className="hidden sm:inline" />
-            그 안에 숨겨진 <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 매력의 무기&rsquo;</span>를 정확히 꿰뚫는 순간,<br />
-            사랑의 판도는 달라지기 시작합니다.
+            자신의 선천코드를 읽고 숨겨진 <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 매력의 무기&rsquo;</span>를 꿰뚫는 순간,<br className="hidden sm:inline" />
+            사랑의 판도는 달라집니다.
           </p>
 
           {/* 두 번째 메시지 — 사랑의 주도권 */}
           <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-[1.8] break-keep">
-            더 이상 누군가의 마음을 얻기 위해 나를 소모하지 않습니다.<br className="hidden sm:inline" />
-            내 매력의 결이 선명해지고 선택의 기준이 세워질 때,<br />
-            나는 비로소 <span className="text-[#D9A8A7] font-semibold">사랑의 주도권</span>을 쥐게 됩니다.
+            나를 소모하던 자리에서 내려와 선택의 기준이 세워질 때,<br className="hidden sm:inline" />
+            비로소 <span className="text-[#D9A8A7] font-semibold">사랑의 주도권</span>을 쥐게 됩니다.
           </p>
 
           {/* 세 번째 메시지 — 마지막 각성 문장 (독립된 인용문 2줄 배치) */}
