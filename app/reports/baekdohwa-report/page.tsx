@@ -798,7 +798,7 @@ export default function BaekdohwaReportPage() {
             <ReportTestimonials />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* FINAL AWAKENING: 마지막 각성 — 이제 사랑 앞에서, 나만의 기준과 매력을 완성합니다 */}
+            {/* FINAL AWAKENING: 마지막 각성 — 내 매력의 결을 세우고, 사랑의 기준을 다시 씁니다 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-7 md:mb-10 text-center">
               <Reveal>
@@ -807,9 +807,9 @@ export default function BaekdohwaReportPage() {
                     FINAL AWAKENING
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    &ldquo;이제 사랑 앞에서,{' '}
+                    &ldquo;내 매력의 결을 세우고,{' '}
                     <br className="sm:hidden" />
-                    <span className="gradient-text-love">나만의 기준과 매력을 완성합니다.</span>&rdquo;
+                    <span className="gradient-text-love">사랑의 기준을 다시 씁니다.</span>&rdquo;
                   </h2>
                   <p className="text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
                     사랑받기 위해 애쓰는 관계는 끝났습니다.<br className="hidden sm:inline" />
