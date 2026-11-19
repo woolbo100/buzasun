@@ -734,36 +734,38 @@ export default function BaekdohwaReportPage() {
             <LoveReportTableOfContents />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* 목차 및 실전 비책 직후 슬림형 중간 CTA */}
+            {/* 목차 및 실전 비책 직후 슬림형 중간 CTA (CHAPTER 08 가로폭 맞춤 패널) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 md:mb-36 max-w-2xl mx-auto px-4 text-center">
+            <section className="mb-28 md:mb-36 max-w-7xl mx-auto px-4">
               <Reveal>
-                <div className="gungjung-glass py-9 px-6 sm:py-11 sm:px-10 rounded-[30px] border border-[#B7788D]/35 bg-gradient-to-b from-[#250F22]/70 via-[#180A1A]/60 to-[#100612]/75 relative overflow-hidden shadow-xl backdrop-blur-md">
+                <div className="gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#B7788D]/35 bg-gradient-to-r from-[#280B1F]/70 via-[#180A1A]/60 to-[#280B1F]/70 relative overflow-hidden shadow-xl backdrop-blur-md">
                   {/* 은은한 배경 오라 */}
-                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-[#B7788D]/15 rounded-full blur-[70px] pointer-events-none" />
+                  <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#B7788D]/10 rounded-full blur-[90px] pointer-events-none" />
 
-                  <div className="relative z-10 space-y-3.5">
-                    <h3 className="text-xl sm:text-2xl md:text-[28px] font-elegant font-bold text-white leading-snug break-keep">
-                      이제 당신의 사랑을,<br className="sm:hidden" />
-                      <span className="gradient-text-love"> 한 권의 비급으로 펼쳐보세요.</span>
-                    </h3>
+                  <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
+                    {/* 좌측 (약 60%): 메인 제목 + 설명 */}
+                    <div className="w-full lg:w-[62%] text-center lg:text-left">
+                      <h3 className="text-xl sm:text-2xl md:text-[26px] lg:text-[28px] font-elegant font-bold text-white leading-snug break-keep">
+                        이제, <span className="gradient-text-love">당신의 이야기를 펼쳐볼 차례입니다.</span>
+                      </h3>
+                      <p className="mt-2.5 sm:mt-3 text-[14.5px] sm:text-[15.5px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
+                        타고난 기질부터 무의식에 숨겨진 연애 패턴, 나만의 실천 처방까지.<br className="hidden sm:inline" />{' '}
+                        오직 당신의 선천코드로 완성되는 특별한 비급을 만나보세요.
+                      </p>
+                    </div>
 
-                    <p className="text-[15px] sm:text-[16px] text-[#EDE6DA]/80 font-light leading-relaxed break-keep pb-2">
-                      8개 장의 심층 분석부터 나만의 실전 처방까지
-                    </p>
-
-                    <div className="pt-1">
+                    {/* 우측 (약 40%): 구매 버튼 + 구성 안내 */}
+                    <div className="w-full lg:w-[38%] flex flex-col items-center lg:items-end justify-center shrink-0">
                       <button 
                         onClick={handlePurchase}
-                        className="w-full sm:w-auto min-w-[280px] sm:min-w-[340px] py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-500 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(125,73,84,0.3)] hover:shadow-[0_0_22px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
+                        className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] py-4 sm:py-4.5 px-7 sm:px-8 rounded-2xl font-bold text-base sm:text-[16.5px] hover:scale-[1.01] active:scale-95 transition-all duration-300 bg-gradient-to-br from-[#B57987] to-[#7D4954] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(125,73,84,0.3)] hover:shadow-[0_0_22px_rgba(181,121,135,0.45)] hover:brightness-110 text-center"
                       >
                         나의 선천코드 리포트 신청하기 · 39,000원
                       </button>
+                      <p className="mt-2.5 text-[12px] sm:text-[13px] text-[#D9A8A7]/80 font-light tracking-wide text-center lg:text-right">
+                        1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 증정
+                      </p>
                     </div>
-
-                    <p className="text-[12px] sm:text-[13px] text-[#D9A8A7]/80 font-light tracking-wide pt-1">
-                      1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 증정
-                    </p>
                   </div>
                 </div>
               </Reveal>
@@ -883,7 +885,7 @@ export default function BaekdohwaReportPage() {
             <PurchaseNotice />
 
             {/* 최종 구매 CTA (이미지와 텍스트·버튼 분리 구조) */}
-            <section className="mb-28 w-full max-w-[1280px] mx-auto">
+            <section className="mb-12 md:mb-16 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 {/* ① 기존 배경 이미지 단독 표시 (필터 및 오버레이 완전 제거) */}
                 <div className="relative w-full rounded-[40px] overflow-hidden border border-white/10 shadow-2xl aspect-[16/9] bg-[#130917] mb-14 md:mb-16 group">
@@ -969,7 +971,7 @@ export default function BaekdohwaReportPage() {
             <BrandSignatureEnding theme="love" />
 
             {/* 기존 정책 링크 보존 */}
-            <section className="pb-20 text-center">
+            <section className="pt-8 md:pt-10 pb-10 md:pb-14 text-center">
               <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
                 <Link href="/terms" className="hover:text-[#D9A8A7] transition-colors">이용약관</Link>
                 <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>

@@ -19,7 +19,7 @@ export default function LoveReportTableOfContents() {
   }
 
   return (
-    <section className="mb-40" id="table-of-contents">
+    <section className="mb-6 md:mb-7" id="table-of-contents">
       <Reveal>
         {/* 헤더 텍스트: 상단 영문 라벨 + 메인 제목(두 번째 줄 그라데이션) + 2단 설명문(부분 강조) */}
         <div className="max-w-4xl mx-auto text-center">
