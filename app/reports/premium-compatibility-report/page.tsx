@@ -11,7 +11,9 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import ReportCommonInfo from '@/components/ReportCommonInfo'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
+import { ChevronRight } from 'lucide-react'
 import RecommendedForCards from '@/components/RecommendedForCards'
+import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEnding'
 
 // 새로 추가된 궁합 전용 18개 설득 블록 독립 컴포넌트들
 import CompatibilityCoreDifferentiation from '@/components/reports/compatibility-report/CompatibilityCoreDifferentiation'
@@ -33,6 +35,9 @@ import CompatibilityPhilosophy from '@/components/reports/compatibility-report/C
 import CompatibilityValueSummary from '@/components/reports/compatibility-report/CompatibilityValueSummary'
 import CompatibilityFAQ from '@/components/reports/compatibility-report/CompatibilityFAQ'
 import CompatibilityPurchaseNotice from '@/components/reports/compatibility-report/CompatibilityPurchaseNotice'
+import CompatibilitySixPerspectivesBanner from '@/components/reports/compatibility-report/CompatibilitySixPerspectivesBanner'
+import CompatibilitySpecialGift from '@/components/reports/compatibility-report/CompatibilitySpecialGift'
+import CompatibilityRealTransformationBanner from '@/components/reports/compatibility-report/CompatibilityRealTransformationBanner'
 
 // ══════════════════════════════════════════════════════════════════════
 // 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
@@ -49,6 +54,21 @@ const EMPATHY_IMAGE_CONFIG = {
   alt: '프리미엄 궁합 리포트 공감 가로 비주얼 16:9',
   width: 1440,
   height: 810,
+}
+
+// 교차 스토리 1 & 2 세로 3:4 이미지 설정
+const COMPATIBILITY_STORY_IMAGE_1 = {
+  src: '/image/compatibility/p3.webp',
+  alt: '프리미엄 궁합 리포트 첫 번째 스토리 - 이해의 순간',
+  width: 900,
+  height: 1200,
+}
+
+const COMPATIBILITY_STORY_IMAGE_2 = {
+  src: '/image/compatibility/p4.webp',
+  alt: '프리미엄 궁합 리포트 두 번째 스토리 - 숨겨진 인연의 연결',
+  width: 900,
+  height: 1200,
 }
 
 export default function PremiumCompatibilityReportPage() {
@@ -189,20 +209,92 @@ export default function PremiumCompatibilityReportPage() {
                   두 사람의 인연은 우연이 아니라 흐름입니다.
                 </p>
 
-                {/* 6. 구매 버튼 영역 */}
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto justify-center items-center mb-24 md:mb-28">
-                  <button 
-                    onClick={handleAddToCart}
-                    className="w-full sm:w-1/2 py-5 px-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/20 bg-transparent text-center"
+                {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (하단 공감 문구와의 여유로운 숨 공간 확보) */}
+                <div className="max-w-[1280px] mx-auto mb-36 md:mb-48 lg:mb-52 text-left">
+                  <div 
+                    className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#935C6B]/40 overflow-hidden shadow-2xl"
+                    style={{
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(85, 35, 52, 0.40) 0%, rgba(42, 18, 28, 0.35) 50%, rgba(14, 6, 12, 0.95) 100%)',
+                      boxShadow: '0 0 60px rgba(147, 92, 107, 0.22)'
+                    }}
                   >
-                    장바구니 담기
-                  </button>
-                  <button 
-                    onClick={handlePurchase}
-                    className="w-full sm:w-1/2 py-5 px-6 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-[linear-gradient(110deg,#552334_0%,#431a2a_55%,#32141f_100%)] hover:bg-[linear-gradient(110deg,#64293d_0%,#522034_55%,#3e1927_100%)] border border-[rgba(229,196,187,0.6)] hover:border-[rgba(229,196,187,0.85)] text-[#FAF7F2] shadow-[0_4px_16px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4),0_0_20px_rgba(229,196,187,0.32)] hover:brightness-105 text-center"
-                  >
-                    바로 신청하기
-                  </button>
+                    {/* 은은한 배경 오라 */}
+                    <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#935C6B]/15 rounded-full blur-[90px] pointer-events-none" />
+
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 설명 + 가격 + 버튼 */}
+                      <div className="lg:col-span-7 space-y-5 md:space-y-6">
+                        {/* 1. 상단 라벨 */}
+                        <div>
+                          <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#663244]/60 border border-[#935C6B]/60 text-[#FAF7F2] text-xs font-bold tracking-wider whitespace-nowrap">
+                            선천코드 프리미엄 궁합 리포트
+                          </span>
+                        </div>
+
+                        {/* 2. 메인 카피 */}
+                        <h3 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-white leading-[1.35] md:leading-[1.4] break-keep">
+                          선천코드로 읽는 <span className="gradient-text-reunion">두 사람의 인연 설계도</span>
+                        </h3>
+
+                        {/* 3. 설명 문구 */}
+                        <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.7] font-light break-keep max-w-xl">
+                          두 사람의 선천코드와 관계 패턴을 함께 읽는 1:1 프리미엄 궁합 설계도. 서로의 다름을 이해하는 순간 소모적인 오해는 멈추고 온전한 신뢰가 시작됩니다.
+                        </p>
+
+                        {/* 4. 가격 영역 & 5. 상품 정보 */}
+                        <div className="pt-2">
+                          <div className="flex flex-wrap items-baseline gap-3">
+                            <span className="text-3xl sm:text-4xl md:text-[42px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
+                              69,000원
+                            </span>
+                            <span className="text-xs sm:text-sm text-[#D8BB94] font-medium tracking-wide">
+                              1:1 맞춤 PDF 리포트 · 두 사람의 선천코드 정밀 분석
+                            </span>
+                          </div>
+                          <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 font-light mt-1.5 break-keep">
+                            ※ 주문 접수 후 두 분의 사주 정보를 바탕으로 순차 제작되는 디지털 맞춤 리포트입니다.
+                          </p>
+                        </div>
+
+                        {/* 6. 구매 버튼 2개 */}
+                        <div className="flex flex-col sm:flex-row gap-3.5 pt-2 items-stretch sm:items-center">
+                          <button
+                            type="button"
+                            onClick={handleAddToCart}
+                            className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/25 hover:border-[#935C6B]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                          >
+                            장바구니 담기
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handlePurchase}
+                            className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(85,35,52,0.4)] hover:shadow-[0_0_30px_rgba(147,92,107,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                            style={{
+                              background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
+                              border: '1px solid rgba(229, 196, 187, 0.5)',
+                            }}
+                          >
+                            <span>바로 신청하기</span>
+                            <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* 우측 (약 42%): 프리미엄 리포트 대표 목업 이미지 */}
+                      <div className="lg:col-span-5 w-full flex justify-center">
+                        <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/30 group">
+                          <Image
+                            src="/image/compatibility/p2.webp"
+                            alt="선천코드로 읽는 두 사람의 인연 설계도"
+                            fill
+                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                            sizes="(max-width: 1024px) 100vw, 420px"
+                            priority
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 {/* 7. 기존 공감 문구 (구매 버튼 아래로 이동) */}
@@ -246,6 +338,164 @@ export default function PremiumCompatibilityReportPage() {
             <CompatibilityCoreDifferentiation />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [교차 스토리 1] THE MOMENT OF UNDERSTANDING (좌측 텍스트 + 우측 이미지) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-24 md:mb-32">
+              <Reveal>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-20 items-center">
+                  {/* 좌측 55%: 라벨 + 제목 + 본문 및 마지막 핵심 후킹 */}
+                  <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1">
+                    <div>
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
+                        THE MOMENT OF UNDERSTANDING
+                      </span>
+                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold mb-6 leading-[1.3] break-keep">
+                        <span className="text-[#FAF7F2]">우리는 왜 같은 사랑을</span><br />
+                        <span className="gradient-text-reunion">서로 다른 방식으로 표현할까요?</span>
+                      </h2>
+                    </div>
+
+                    {/* 본문 서사 */}
+                    <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
+                      <p>
+                        한 사람은 끊임없는 대화와 표현으로 사랑을 확인하려 하고, 다른 한 사람은 묵묵한 신뢰와 혼자만의 시간으로 관계를 지키려 합니다.
+                      </p>
+                      <p className="text-[#FAF7F2] font-semibold">
+                        서로의 사랑 언어가 다르다는 사실을 모른 채 상대의 방식을 의심하고,<br />
+                        맞추기만을 강요하며 지쳐갔던 시간들.
+                      </p>
+
+                      {/* 핵심 경각심 강조 카드 */}
+                      <div 
+                        className="px-5 py-3.5 sm:px-6 sm:py-4 rounded-2xl border text-left backdrop-blur-sm my-3"
+                        style={{
+                          background: 'rgba(85, 35, 52, 0.25)',
+                          borderColor: 'rgba(147, 92, 107, 0.25)',
+                        }}
+                      >
+                        <div className="font-elegant text-[16px] md:text-[18px] leading-[1.75] break-keep">
+                          <p className="font-bold text-[#D8BB94]">
+                            하지만 기억하십시오.
+                          </p>
+                          <p className="text-white font-medium">
+                            상대의 마음을 내 방식대로만 짐작하는 것은 짙은 안개 속에서 길을 찾는 것과 같습니다.
+                          </p>
+                          <p className="text-[#D8BB94] font-semibold">
+                            서로의 선천코드를 모른 채 나누는 대화는 언제나 같은 오해의 벽에 부딪히게 되어 있습니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      <p>
+                        내 감정의 결조차 온전히 이해받지 못했다고 느꼈기에, 늘 익숙한 관계 안에서도 외로웠던 것입니다.
+                      </p>
+                    </div>
+
+                    {/* 구분선 및 마지막 핵심 메시지 */}
+                    <div className="pt-6 border-t border-[#935C6B]/25 mt-6">
+                      <p className="font-elegant font-bold text-[18px] sm:text-[20px] md:text-[22px] leading-[1.6] break-keep text-white">
+                        이제 상대방을 탓하기 전에,<br className="hidden sm:inline" />
+                        <span className="gradient-text-reunion"> 두 사람 사이에 흐르는 선천코드의 결을 먼저 펼쳐볼 때입니다.</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* 우측 45%: 세로 3:4 이미지 영역 */}
+                  <div className="lg:col-span-5 w-full flex flex-col items-center order-1 lg:order-2">
+                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#14080E] flex items-center justify-center transition-all duration-300 hover:border-[#D8BB94]/40">
+                      <Image
+                        src={COMPATIBILITY_STORY_IMAGE_1.src}
+                        alt={COMPATIBILITY_STORY_IMAGE_1.alt}
+                        width={COMPATIBILITY_STORY_IMAGE_1.width}
+                        height={COMPATIBILITY_STORY_IMAGE_1.height}
+                        className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [교차 스토리 2] THE HIDDEN CONNECTION (좌측 이미지 + 우측 텍스트) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-24 md:mb-32">
+              <Reveal>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-16 items-stretch">
+                  {/* 좌측 45%: 세로형 3:4 이미지 영역 */}
+                  <div className="lg:col-span-5 w-full max-w-[420px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start justify-center">
+                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#14080E] flex items-center justify-center transition-all duration-300 hover:border-[#D8BB94]/40">
+                      <Image
+                        src={COMPATIBILITY_STORY_IMAGE_2.src}
+                        alt={COMPATIBILITY_STORY_IMAGE_2.alt}
+                        width={COMPATIBILITY_STORY_IMAGE_2.width}
+                        height={COMPATIBILITY_STORY_IMAGE_2.height}
+                        className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                        priority
+                      />
+                    </div>
+                  </div>
+
+                  {/* 우측 55%: 라벨 + 제목 + 본문 */}
+                  <div className="lg:col-span-7 flex flex-col justify-between text-left break-keep lg:pl-6 xl:pl-8 py-1 lg:py-2 space-y-7 lg:space-y-0">
+                    {/* 상단 그룹: 라벨 + 메인 제목 + 본문 서사 */}
+                    <div className="space-y-5">
+                      <div>
+                        <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
+                          THE HIDDEN CONNECTION
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mb-5 leading-[1.25] md:leading-[1.3] break-keep">
+                          두 사람의 사주를 함께 들여다보는 순간,<br />
+                          <span className="gradient-text-reunion">풀리지 않던 관계의 수수께끼가</span><br />
+                          풀리기 시작합니다.
+                        </h2>
+                      </div>
+
+                      {/* 본문 서사 */}
+                      <div className="space-y-3.5 text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-light break-keep">
+                        <p className="text-[#FAF7F2] font-medium">
+                          왜 한 사람은 갈등 앞에서 침묵을 택하고, 왜 다른 한 사람은 즉각적인 대답을 원했는지.
+                        </p>
+                        <p>
+                          우연이라 생각했던 부딪힘도, 상처가 되었던 대화의 방식도 모두 두 사람의 선천코드 속에 새겨진 <span className="text-[#D8BB94] font-semibold">반복되는 에너지의 상호작용</span>이었습니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* 하단 그룹: 솔루션 제안 + 하이라이트 박스 + 마무리 훅 */}
+                    <div className="space-y-3.5 text-[17px] md:text-[18px] leading-[1.8] break-keep">
+                      <p className="text-[#FAF7F2] font-semibold">
+                        겉으로 드러난 갈등의 표면만 붙잡고 씨름하는 것은 더 이상 의미가 없습니다.
+                      </p>
+
+                      {/* 강조 박스 */}
+                      <div 
+                        className="p-5 md:p-6 rounded-2xl border backdrop-blur-sm"
+                        style={{
+                          background: 'rgba(85, 35, 52, 0.25)',
+                          borderColor: 'rgba(147, 92, 107, 0.25)',
+                        }}
+                      >
+                        <p className="text-[#FAF7F2] font-elegant font-medium text-[17px] sm:text-[18px] md:text-[19px] leading-[1.7]">
+                          상대가 왜 그렇게 반응할 수밖에 없었는지,<br className="hidden sm:inline" />
+                          <span className="text-[#D8BB94]"> 그 고유한 결을 있는 그대로 읽어내는 일.</span>
+                        </p>
+                      </div>
+
+                      {/* 마무리 훅 */}
+                      <div className="pt-2">
+                        <p className="font-elegant font-bold text-[19px] md:text-[22px] text-[#FAF7F2] leading-[1.7] break-keep">
+                          <span className="text-[#D8BB94] font-semibold">그것이 소모적인 감정 싸움을 끝내고 온전한 신뢰로 나아가는 시작점입니다.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 03. 일반적인 연애 조언이 충분하지 않은 이유 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityAdviceComparison />
@@ -254,6 +504,57 @@ export default function PremiumCompatibilityReportPage() {
             {/* SECTION 04. 두 사람의 관계 구조 재정의 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityRelationshipDiagram />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [중간 구매 CTA 1차] BEGIN YOUR JOURNEY (와이드형 프리미엄 CTA) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-36 md:mb-40 max-w-4xl mx-auto px-4">
+              <Reveal>
+                <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#935C6B]/40 bg-gradient-to-b from-[#250F1E]/80 via-[#180A1A]/70 to-[#100612]/90 text-center relative overflow-hidden shadow-2xl">
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#935C6B]/15 rounded-full blur-[80px] pointer-events-none" />
+
+                  <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D8BB94] uppercase mb-4">
+                    BEGIN YOUR JOURNEY
+                  </span>
+
+                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white mb-4 leading-snug break-keep">
+                    두 사람의 인연을 <span className="gradient-text-reunion">다시 읽을 준비가 되셨나요?</span>
+                  </h3>
+
+                  <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed max-w-xl mx-auto break-keep mb-6">
+                    서로의 차이를 이해하고 우리 관계의 방향을 새롭게 바라보는 맞춤 궁합 리포트를 만나보세요.
+                  </p>
+
+                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#663244]/30 border border-[#935C6B]/40 text-xs md:text-sm text-[#D8BB94] font-medium mb-8">
+                    69,000원 · 1:1 맞춤 PDF · 두 사람의 선천코드 정밀 분석
+                  </div>
+
+                  {/* 구매 버튼 (기존 상단/하단 동작 재사용) */}
+                  <div className="flex flex-col sm:flex-row gap-3.5 max-w-md mx-auto items-stretch sm:items-center">
+                    <button
+                      type="button"
+                      onClick={handleAddToCart}
+                      className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/25 hover:border-[#935C6B]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                    >
+                      장바구니 담기
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handlePurchase}
+                      className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(85,35,52,0.4)] hover:shadow-[0_0_30px_rgba(147,92,107,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                      style={{
+                        background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
+                        border: '1px solid rgba(229, 196, 187, 0.5)',
+                      }}
+                    >
+                      <span>바로 신청하기</span>
+                      <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
+                    </button>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 05. 선천코드 궁합 리포트 분석 방법 (기존 Overview & 6대 카드 통합) */}
@@ -362,6 +663,16 @@ export default function PremiumCompatibilityReportPage() {
             <QuestionShiftComparison theme="compatibility" />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [특별 증정품 안내 독립 섹션] THE SPECIAL GIFT */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <CompatibilitySpecialGift />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [6대 관점 파노라마 와이드 배너] SIX PERSPECTIVES */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <CompatibilitySixPerspectivesBanner />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 08. 프리미엄 궁합 리포트 목차 공개 (7 PART & PART 07 강조) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityReportTableOfContents />
@@ -370,6 +681,44 @@ export default function PremiumCompatibilityReportPage() {
             {/* NEW. PART 07 실제 행동 대화 처방전 샘플 영역 (구체적 소통 솔루션) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityPrescriptionSample />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [목차 및 실전 처방 이후 슬림형 중간 CTA] 가로폭 맞춤 패널 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 md:mb-36 max-w-7xl mx-auto px-4">
+              <Reveal>
+                <div className="gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#935C6B]/35 bg-gradient-to-r from-[#2A0F1E]/75 via-[#180A1A]/65 to-[#2A0F1E]/75 relative overflow-hidden shadow-xl backdrop-blur-md">
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#935C6B]/10 rounded-full blur-[90px] pointer-events-none" />
+
+                  <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
+                    {/* 좌측 (약 62%): 메인 제목 + 설명 */}
+                    <div className="w-full lg:w-[62%] text-center lg:text-left">
+                      <h3 className="text-xl sm:text-2xl md:text-[26px] lg:text-[28px] font-elegant font-bold text-white leading-snug break-keep">
+                        이제, <span className="gradient-text-reunion">두 사람의 이야기를 펼쳐볼 차례입니다.</span>
+                      </h3>
+                      <p className="mt-2.5 sm:mt-3 text-[14.5px] sm:text-[15.5px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
+                        서로의 선천 기질부터 끌림과 갈등의 구조, 우리 관계에 필요한 실천의 방향까지.<br className="hidden sm:inline" />{' '}
+                        두 사람의 코드를 함께 읽는 프리미엄 궁합 리포트를 만나보세요.
+                      </p>
+                    </div>
+
+                    {/* 우측 (약 38%): 구매 버튼 + 구성 안내 */}
+                    <div className="w-full lg:w-[38%] flex flex-col items-center lg:items-end justify-center shrink-0">
+                      <button 
+                        onClick={handlePurchase}
+                        className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] py-4 sm:py-4.5 px-7 sm:px-8 rounded-2xl font-bold text-base sm:text-[16.5px] hover:scale-[1.01] active:scale-95 transition-all duration-300 bg-gradient-to-br from-[#663244] to-[#431a2a] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(85,35,52,0.35)] hover:shadow-[0_0_22px_rgba(147,92,107,0.45)] hover:brightness-110 text-center"
+                      >
+                        나의 선천코드 궁합 리포트 신청하기 · 69,000원
+                      </button>
+                      <p className="mt-2.5 text-[12px] sm:text-[13px] text-[#D8BB94]/85 font-light tracking-wide text-center lg:text-right">
+                        1:1 맞춤 PDF · 두 사람 맞춤 오행 디지털 카드 증정
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 09. 맞춤 리포트 제작 과정 */}
@@ -392,12 +741,17 @@ export default function PremiumCompatibilityReportPage() {
             <CompatibilityRecommendedAudience />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 13. 고객 후기 (실제 검증된 후기 등록 시 활성화) */}
+            {/* SECTION 13. 가상 활용 시나리오 (4차 개편 완료) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityTestimonials />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 14. 백도화의 궁합 분석 철학 (궁중 서신 편지 형태) */}
+            {/* FINAL AWAKENING: 피날레 에디토리얼 와이드 배너 (5차 신규 추가) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <CompatibilityRealTransformationBanner />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 14. 백도화의 궁합 분석 철학 (궁중 서신 편지 형태 보존) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityPhilosophy />
 
@@ -450,67 +804,108 @@ export default function PremiumCompatibilityReportPage() {
             <CompatibilityPurchaseNotice />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 18. 최종 CTA (p6.webp 및 기존 구매 버튼 보존) */}
+            {/* SECTION 18. 최종 구매 CTA (이미지와 텍스트·구매 카드 분리 구조) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="relative min-h-[640px] flex flex-col items-center justify-center overflow-hidden rounded-[60px] mb-20 group w-full max-w-[1280px] mx-auto border border-white/10 shadow-2xl">
-              <div className="absolute inset-0 z-0">
-                <Image 
-                  src="/image/compatibility/p6.webp" 
-                  alt="Final CTA Background" 
-                  fill
-                  className="object-cover transition-transform duration-[15000ms] group-hover:scale-125" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514] via-[#0a0514]/75 to-transparent"></div>
-              </div>
+            <section className="mb-20 md:mb-24 w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                {/* ① 16:9 와이드 단독 대표 이미지 (오버레이 제거) */}
+                <div className="relative w-full rounded-[40px] overflow-hidden border border-white/10 shadow-2xl aspect-[16/9] bg-[#14080E] mb-14 md:mb-16 group">
+                  <Image 
+                    src="/image/compatibility/p6.webp" 
+                    alt="Final CTA Journey" 
+                    width={1672}
+                    height={941}
+                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105" 
+                  />
+                </div>
 
-              <div className="relative z-10 text-center px-6 md:px-10 py-16">
-                <Reveal>
+                {/* ② 이미지 아래 텍스트 영역 (중앙 정렬) */}
+                <div className="text-center max-w-3xl mx-auto px-4 mb-10 md:mb-12">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase text-[#D8BB94] mb-6">
-                    HARMONY FOR TWO
+                    BEGIN YOUR JOURNEY
                   </span>
                   
-                  {/* 기존 메인 카피 보존 */}
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    사랑의 방향을 <span className="text-[var(--accent-gold)]">결정하는 순간</span>
+                    &ldquo;두 사람의 인연을, 이제 더 깊이 읽어보세요.&rdquo;
                   </h2>
-
-                  {/* 새로운 보조 강조 문구 추가 */}
-                  <p className="text-[18px] md:text-[22px] text-[var(--accent-gold-light)] font-medium mb-6 max-w-2xl mx-auto break-keep font-elegant leading-[1.3]">
-                    &ldquo;두 사람의 차이를 이해하는 순간,<br />
-                    관계의 새로운 선택이 시작됩니다.&rdquo;
-                  </p>
                   
-                  <p className="text-[18px] text-[#EDE6DA]/85 max-w-2xl mx-auto mb-12 font-light leading-relaxed break-keep">
-                    우리의 관계를 단순한 점수로 판단하지 마십시오.<br />
-                    서로의 기질과 반복되는 관계 패턴을 이해하고, 앞으로의 선택을 위한 두 사람만의 설계도를 펼쳐보십시오.
+                  <p className="text-[18px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep max-w-2xl mx-auto">
+                    서로의 기질과 끌림, 갈등과 소통의 패턴을 함께 살펴보고<br className="hidden sm:inline" />
+                    우리 관계에 필요한 이해의 방향을 프리미엄 궁합 리포트로 만나보세요.
                   </p>
+                </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4 w-full max-w-lg mx-auto relative z-10 justify-center">
-                    <button 
-                      onClick={handleAddToCart}
-                      className="flex-1 py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/20 bg-transparent"
-                    >
-                      장바구니 담기
-                    </button>
-                    <button 
-                      onClick={handlePurchase}
-                      className="flex-grow-[1.5] py-6 rounded-2xl font-bold text-lg md:text-xl hover:scale-[1.02] active:scale-95 transition-all duration-500 bg-[linear-gradient(110deg,#552334_0%,#431a2a_55%,#32141f_100%)] hover:bg-[linear-gradient(110deg,#64293d_0%,#522034_55%,#3e1927_100%)] border border-[rgba(229,196,187,0.6)] hover:border-[rgba(229,196,187,0.85)] text-[#FAF7F2] shadow-[0_4px_16px_rgba(0,0,0,0.35)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.4),0_0_20px_rgba(229,196,187,0.32)] hover:brightness-105"
-                    >
-                      바로 신청하기
-                    </button>
+                {/* ③ 독립 슬림 프리미엄 구매 카드 */}
+                <div 
+                  className="max-w-2xl mx-auto py-8 px-6 sm:py-10 sm:px-10 rounded-[32px] sm:rounded-[36px] border border-[#935C6B]/40 text-center relative overflow-hidden backdrop-blur-md"
+                  style={{
+                    background: 'radial-gradient(ellipse at 50% 0%, rgba(85, 35, 52, 0.40) 0%, rgba(42, 18, 28, 0.35) 50%, rgba(14, 6, 12, 0.95) 100%)',
+                    boxShadow: '0 0 50px rgba(147, 92, 107, 0.20)'
+                  }}
+                >
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#935C6B]/15 rounded-full blur-[80px] pointer-events-none" />
+
+                  <div className="relative z-10">
+                    {/* 1. 상품명 */}
+                    <h3 className="font-elegant font-bold text-xl sm:text-[22px] text-[#FAF7F2] tracking-tight mb-2 break-keep">
+                      백도화 선천코드 프리미엄 궁합 리포트
+                    </h3>
+
+                    {/* 2. 상품 구성 한 줄 표시 */}
+                    <p className="text-[13.5px] sm:text-[14.5px] text-[#EDE6DA]/90 font-light mb-4 break-keep">
+                      프리미엄 소장용 1:1 맞춤 PDF 비급 · 두 사람 맞춤 오행 디지털 카드 증정
+                    </p>
+
+                    {/* 3. 가격 */}
+                    <div className="mb-5">
+                      <span className="text-3xl sm:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
+                        69,000<span className="text-2xl sm:text-[28px] font-medium ml-1">원</span>
+                      </span>
+                    </div>
+
+                    {/* 4. 구매 버튼 (장바구니 담기 + 바로 신청하기) */}
+                    <div className="w-full max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                      <button
+                        type="button"
+                        onClick={handleAddToCart}
+                        className="py-3.5 sm:py-4 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/25 hover:border-[#935C6B]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                      >
+                        장바구니 담기
+                      </button>
+                      <button 
+                        type="button"
+                        onClick={handlePurchase}
+                        className="py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-300 flex-1 text-[#FAF6EE] shadow-[0_4px_20px_rgba(85,35,52,0.4)] hover:shadow-[0_0_30px_rgba(147,92,107,0.45)] hover:brightness-110 text-center order-1 sm:order-2"
+                        style={{
+                          background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
+                          border: '1px solid rgba(229, 196, 187, 0.5)',
+                        }}
+                      >
+                        나의 궁합 리포트 신청하기
+                      </button>
+                    </div>
+
+                    {/* 5. 상품 제공 안내 */}
+                    <p className="text-[12px] sm:text-[13px] text-[#EDE6DA]/75 font-light mt-4 break-keep">
+                      ※ 주문 접수 후 두 분의 사주 정보를 바탕으로 순차 제작되는 디지털 맞춤 리포트입니다.
+                    </p>
                   </div>
-                </Reveal>
-              </div>
+                </div>
+              </Reveal>
             </section>
 
             {/* 기존 정책 링크 보존 */}
-            <section className="pb-20 text-center">
+            <section className="pb-16 text-center">
               <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
                 <Link href="/terms" className="hover:text-[#D8BB94] transition-colors">이용약관</Link>
                 <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>
                 <Link href="/refund" className="hover:text-[var(--accent-gold)] transition-colors">환불정책</Link>
               </div>
             </section>
+
+            {/* 브랜드 시그니처 엔딩 섹션 (최종 구매 CTA 및 정책 안내 아래, 공통 푸터 위) */}
+            <BrandSignatureEnding theme="compatibility" />
 
           </div>
         </div>
