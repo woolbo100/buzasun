@@ -6,11 +6,11 @@ import Reveal from '@/components/Reveal'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 // ══════════════════════════════════════════════════════════════════════
-// 대표 이미지 설정 (추후 정식 이미지 파일로 손쉽게 교체 가능)
+// 대표 이미지 설정: 선천코드 비급 + 사랑의 선택 열쇠 키 비주얼 (3:4 비율)
 // ══════════════════════════════════════════════════════════════════════
 const SCENARIOS_IMAGE_CONFIG = {
-  src: '/image/lovereport/the hidden love report.webp',
-  alt: '백도화 선천코드 관계 활용 시나리오 대표 비주얼',
+  src: '/image/lovereport/seoncheon-code-love-choice-key-visual.webp',
+  alt: '선천코드 비급과 사랑의 선택을 상징하는 열쇠, 자개 소품이 담긴 프리미엄 대표 비주얼',
   width: 1086,
   height: 1448,
 }
@@ -62,7 +62,7 @@ export default function ReportTestimonials() {
       <Reveal>
         {/* 1. 섹션 헤더 (타이틀 영역) */}
         <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mb-12 md:mb-16">
-          <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D9A8A7] uppercase">
+          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
             RELATIONSHIP SCENARIOS
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] break-keep">
@@ -78,7 +78,7 @@ export default function ReportTestimonials() {
         {/* 2. 2열 레이아웃: 좌측 대표 이미지 1장 (42%) + 우측 사례 카드 2개 (58%) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
-          {/* 좌측: 세로형 대표 이미지 슬롯 (비단·한지 궁중 비급 무드) */}
+          {/* 좌측: 세로형 대표 이미지 슬롯 (비단·한지 궁중 비급 무드, 3:4 세로 비율) */}
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div className="group relative w-full aspect-[3/4] rounded-3xl md:rounded-[32px] overflow-hidden border border-[#D5AFAD]/30 shadow-2xl bg-[#1a0b1c] flex items-center justify-center">
               <Image
@@ -89,13 +89,6 @@ export default function ReportTestimonials() {
                 className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                 priority
               />
-              {/* 은은한 톤다운 비네팅 오버레이 */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#130917]/80 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-5 left-5 right-5 text-center">
-                <span className="inline-block px-3.5 py-1 rounded-full text-[11px] md:text-xs font-elegant font-medium tracking-[0.2em] bg-[#130917]/70 backdrop-blur-md border border-[#D5AFAD]/40 text-[#FAF6EE]">
-                  SEONCHEON CODE SCENARIO
-                </span>
-              </div>
             </div>
           </div>
 

@@ -11,7 +11,7 @@ export default function RealTransformationBanner() {
         <div>
           <div className="text-center">
             {/* (1) 상단 영어 라벨 */}
-            <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D9A8A7] uppercase mb-4">
+            <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D9A8A7] uppercase mb-4">
               FINAL AWAKENING
             </span>
 
@@ -35,11 +35,11 @@ export default function RealTransformationBanner() {
             <div className="max-w-3xl mx-auto space-y-5 md:space-y-6 mb-10 md:mb-14">
               <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.75] md:leading-[1.8] break-keep">
                 자신의 선천코드를 읽고, 그 안에 숨겨진{' '}
-                <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 매력의 무기&rsquo;</span>를 정확히 꿰뚫는 순간,
+                <span className="text-[#D9A8A7] font-semibold">&lsquo;치명적인 매력의 무기&rsquo;</span>를 정확히 꿰뚫는 순간,<br />
                 사랑의 판도는 달라지기 시작합니다.
               </p>
               <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.75] md:leading-[1.8] break-keep">
-                더 이상 누군가의 마음을 얻기 위해 나를 소모하지 않습니다.{' '}
+                더 이상 누군가의 마음을 얻기 위해 나를 소모하지 않습니다.<br />
                 내 매력의 결이 선명해지고 선택의 기준이 세워질 때,
                 나는 비로소 <span className="text-[#D9A8A7] font-semibold">사랑의 주도권</span>을 쥐게 됩니다.
               </p>
