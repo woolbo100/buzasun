@@ -20,11 +20,11 @@ export default function CompatibilityPurchaseNotice() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-white/10 max-w-7xl mx-auto bg-gradient-to-b from-[#2D0A1E]/25 via-black/30 to-black/35">
+        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#B78C86]/25 max-w-7xl mx-auto bg-gradient-to-b from-[#4A1F2D]/30 via-[#3A1623]/25 to-[#180A14]/40 backdrop-blur-md">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {compatibilityNoticeData.notices.map((notice, idx) => (
-              <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
-                <div className="w-8 h-8 rounded-lg bg-[#3B0F1B] border border-[#935C6B]/40 flex items-center justify-center text-[#D8BB94] shrink-0 mt-0.5">
+              <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-[#3A1623]/25 border border-[#B78C86]/20">
+                <div className="w-8 h-8 rounded-lg bg-[#5A2638] border border-[#B78C86]/40 flex items-center justify-center text-[#D8BB94] shrink-0 mt-0.5">
                   <Info className="w-4 h-4" />
                 </div>
                 <div>

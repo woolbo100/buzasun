@@ -483,25 +483,23 @@
     box-shadow: 0 0 50px rgba(166, 91, 128, 0.22) !important;
   }
 
-  /* ② 프리미엄 궁합 리포트 상세페이지 (.compatibility-report-page) — 앤티크 브라운 버건디 글라스 + 차분한 브라운 버건디 테두리 */
+  /* ② 프리미엄 궁합 리포트 상세페이지 (.compatibility-report-page) — 딥 버건디-플럼 반투명 글라스 + 은은한 샴페인/버건디 테두리 */
   .detail-page.compatibility-report-page .gungjung-glass:not(.point-box),
   .detail-page.compatibility-report-page .detail-glass-card:not(.point-box),
   .detail-page.compatibility-report-page .detail-glass-box:not(.point-box) {
-    background-color: rgba(113, 60, 67, 0.18) !important;
-    background-image: none !important;
+    background-color: rgba(74, 31, 45, 0.22) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(113, 60, 67, 0.25) !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25) !important;
+    border: 1px solid rgba(183, 140, 134, 0.22) !important;
+    box-shadow: 0 8px 32px rgba(45, 15, 25, 0.20) !important;
   }
 
   .detail-page.compatibility-report-page .gungjung-glass:not(.point-box):hover,
   .detail-page.compatibility-report-page .detail-glass-card:not(.point-box):hover,
   .detail-page.compatibility-report-page .detail-glass-box:not(.point-box):hover {
-    background-color: rgba(113, 60, 67, 0.22) !important;
-    background-image: none !important;
-    border-color: rgba(113, 60, 67, 0.4) !important;
-    box-shadow: 0 0 50px rgba(113, 60, 67, 0.22) !important;
+    background-color: rgba(90, 38, 56, 0.30) !important;
+    border-color: rgba(199, 169, 122, 0.35) !important;
+    box-shadow: 0 0 40px rgba(90, 38, 56, 0.25) !important;
   }
 
   /* ③ 선천코드 풍요 리포트 상세페이지 (.abundance-report-page) — 옥색 글라스 + 은은한 청옥빛 테두리 */

@@ -25,13 +25,13 @@ export default function CompatibilityRelationshipDiagram() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative items-stretch">
             {compatibilityDiagramData.steps.map((step, idx) => (
               <div key={idx} className="relative flex flex-col">
-                <div className="gungjung-glass p-7 md:p-8 rounded-[28px] border border-white/10 hover:border-[#935C6B]/50 bg-gradient-to-b from-[#2D0A1E]/30 via-transparent to-black/40 transition-all duration-300 h-full flex flex-col justify-between group">
+                <div className="gungjung-glass p-7 md:p-8 rounded-[28px] border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 transition-all duration-300 h-full flex flex-col justify-between group backdrop-blur-md">
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-elegant font-bold text-[#D8BB94]">
                         {step.step}
                       </span>
-                      <span className="text-[11px] px-2.5 py-1 rounded-md bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94] border border-[#935C6B]/30 font-medium">
+                      <span className="text-[11px] px-2.5 py-1 rounded-md bg-[#5A2638]/40 border border-[#B78C86]/35 text-[#D8BB94] font-medium">
                         {step.tag}
                       </span>
                     </div>
@@ -47,7 +47,7 @@ export default function CompatibilityRelationshipDiagram() {
                 {/* 연결 화살표 (데스크톱: 우측 / 모바일: 하단) */}
                 {idx < compatibilityDiagramData.steps.length - 1 && (
                   <>
-                    <div className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#1A0514] border border-[#935C6B]/50 items-center justify-center text-[#D8BB94] shadow-md">
+                    <div className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 z-20 w-7 h-7 rounded-full bg-[#240C18] border border-[#B78C86]/40 items-center justify-center text-[#D8BB94] shadow-md">
                       <ArrowRight className="w-3.5 h-3.5" />
                     </div>
                     <div className="flex lg:hidden justify-center my-2 text-[#D8BB94]">
@@ -61,7 +61,7 @@ export default function CompatibilityRelationshipDiagram() {
         </div>
 
         {/* 핵심 인용 강조 배너 (버건디 & 앤티크 골드) */}
-        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#3B0F1B]/25 via-[#2D0A1E]/35 to-[#3B0F1B]/25 border border-[#935C6B]/40 text-center shadow-xl">
+        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#4A1F2D]/35 via-[#5A2638]/25 to-[#4A1F2D]/35 border border-[#B78C86]/35 text-center shadow-xl backdrop-blur-md">
           <p className="text-lg md:text-2xl font-elegant font-bold text-[#C19B83] leading-relaxed whitespace-pre-line">
             &ldquo;{compatibilityDiagramData.quote}&rdquo;
           </p>

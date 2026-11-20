@@ -32,12 +32,12 @@ export default function CompatibilityProductionTimeline() {
           {compatibilityTimelineData.steps.map((step, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-8 rounded-[28px] border border-white/10 hover:border-[#935C6B]/50 bg-gradient-to-b from-[#2D0A1E]/30 via-transparent to-black/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+              className="gungjung-glass p-8 rounded-[28px] border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden backdrop-blur-md"
             >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#3B0F1B]/20 rounded-bl-full pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#5A2638]/20 rounded-bl-full pointer-events-none"></div>
 
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-[#3B0F1B] border border-[#935C6B]/40 flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-2xl bg-[#5A2638]/45 border border-[#B78C86]/40 flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
                   {stepIcons[idx]}
                 </div>
                 <span className="text-xs font-mono font-bold tracking-widest text-[#D8BB94] mb-2 block">

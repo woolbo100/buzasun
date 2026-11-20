@@ -81,7 +81,7 @@ export default function CompatibilityTestimonials() {
           
           {/* 좌측: 세로형 대표 이미지 슬롯 (비단·한지 궁중 비급 무드, 3:4 세로 비율) */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="group relative w-full aspect-[3/4] rounded-3xl md:rounded-[32px] overflow-hidden border border-[#935C6B]/40 shadow-2xl bg-[#14080E] flex items-center justify-center">
+            <div className="group relative w-full aspect-[3/4] rounded-3xl md:rounded-[32px] overflow-hidden border border-[#B78C86]/35 shadow-2xl bg-[#14080E] flex items-center justify-center">
               <Image
                 src={COMPATIBILITY_SCENARIOS_IMAGE_CONFIG.src}
                 alt={COMPATIBILITY_SCENARIOS_IMAGE_CONFIG.alt}
@@ -101,15 +101,15 @@ export default function CompatibilityTestimonials() {
               
               {/* 카드 1 (모바일 & PC 공통 표시) */}
               <div
-                className="flex-1 gungjung-glass p-6 sm:p-7 md:p-8 rounded-3xl border border-[#935C6B]/35 relative overflow-hidden flex flex-col justify-between space-y-4 transition-all duration-300 min-h-[180px] md:min-h-[200px]"
+                className="flex-1 gungjung-glass p-6 sm:p-7 md:p-8 rounded-3xl border border-[#B78C86]/30 relative overflow-hidden flex flex-col justify-between space-y-4 transition-all duration-300 min-h-[180px] md:min-h-[200px] backdrop-blur-md"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(85, 35, 52, 0.35) 0%, rgba(20, 8, 14, 0.90) 100%)',
-                  boxShadow: '0 8px 32px rgba(85, 35, 52, 0.15)',
+                  background: 'linear-gradient(135deg, rgba(90, 38, 56, 0.40) 0%, rgba(58, 22, 35, 0.45) 100%)',
+                  boxShadow: '0 8px 32px rgba(74, 31, 45, 0.20)',
                 }}
               >
                 {/* 상단 라벨 및 태그 */}
                 <div className="flex items-center justify-between gap-2">
-                  <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold text-[#FAF7F2] bg-[#663244] border border-[#935C6B]/70 whitespace-nowrap">
+                  <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold text-[#FAF7F2] bg-[#5A2638] border border-[#B78C86]/60 whitespace-nowrap">
                     {currentCard.badge}
                   </span>
                   <span className="text-xs text-[#D8BB94]/75 font-mono">
@@ -130,15 +130,15 @@ export default function CompatibilityTestimonials() {
 
               {/* 카드 2 (PC 화면 전용 세로 2번째 카드) */}
               <div
-                className="hidden lg:flex flex-1 gungjung-glass p-6 sm:p-7 md:p-8 rounded-3xl border border-[#935C6B]/35 relative overflow-hidden flex-col justify-between space-y-4 transition-all duration-300 min-h-[180px] md:min-h-[200px]"
+                className="hidden lg:flex flex-1 gungjung-glass p-6 sm:p-7 md:p-8 rounded-3xl border border-[#B78C86]/30 relative overflow-hidden flex-col justify-between space-y-4 transition-all duration-300 min-h-[180px] md:min-h-[200px] backdrop-blur-md"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(85, 35, 52, 0.35) 0%, rgba(20, 8, 14, 0.90) 100%)',
-                  boxShadow: '0 8px 32px rgba(85, 35, 52, 0.15)',
+                  background: 'linear-gradient(135deg, rgba(90, 38, 56, 0.40) 0%, rgba(58, 22, 35, 0.45) 100%)',
+                  boxShadow: '0 8px 32px rgba(74, 31, 45, 0.20)',
                 }}
               >
                 {/* 상단 라벨 및 태그 */}
                 <div className="flex items-center justify-between gap-2">
-                  <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold text-[#FAF7F2] bg-[#663244] border border-[#935C6B]/70 whitespace-nowrap">
+                  <span className="inline-flex items-center justify-center py-[5px] px-[12px] rounded-[6px] text-xs font-bold text-[#FAF7F2] bg-[#5A2638] border border-[#B78C86]/60 whitespace-nowrap">
                     {nextCard.badge}
                   </span>
                   <span className="text-xs text-[#D8BB94]/75 font-mono">

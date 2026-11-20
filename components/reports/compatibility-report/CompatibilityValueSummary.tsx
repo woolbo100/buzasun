@@ -24,9 +24,9 @@ export default function CompatibilityValueSummary() {
           {compatibilityValueData.elements.map((el, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-5 rounded-2xl border border-white/10 hover:border-[#935C6B]/50 bg-gradient-to-b from-[#2D0A1E]/30 via-transparent to-black/40 text-center flex flex-col justify-center items-center transition-all duration-300 hover:-translate-y-1 group"
+              className="gungjung-glass p-5 rounded-2xl border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 text-center flex flex-col justify-center items-center transition-all duration-300 hover:-translate-y-1 group backdrop-blur-md"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#663244] mb-3 group-hover:scale-150 transition-transform"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B78C86] mb-3 group-hover:scale-150 transition-transform"></span>
               <h4 className="text-sm md:text-base font-bold text-white mb-1.5 break-keep">
                 {el.title}
               </h4>

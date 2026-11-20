@@ -37,14 +37,14 @@ export default function CompatibilityReportPreview() {
       : null
 
   return (
-    <section className="mb-40" id="sample-preview">
+    <section id="point-06" className="mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-            DIGITAL REPORT PREVIEW
+            POINT 06 · DIGITAL REPORT PREVIEW
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {compatibilityPreviewData.mainCopy}
+            프리미엄 궁합 리포트 미리보기
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {compatibilityPreviewData.subCopy}
@@ -57,7 +57,7 @@ export default function CompatibilityReportPreview() {
             <div
               key={sample.id}
               onClick={() => setActiveModalIndex(idx)}
-              className="gungjung-glass p-5 rounded-[28px] border border-white/10 hover:border-[#935C6B]/50 bg-gradient-to-b from-[#2D0A1E]/30 via-transparent to-black/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
+              className="gungjung-glass p-5 rounded-[28px] border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 transition-all duration-300 group cursor-pointer flex flex-col justify-between backdrop-blur-md"
             >
               <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4 bg-black/40 border border-white/5">
                 <Image
@@ -101,13 +101,13 @@ export default function CompatibilityReportPreview() {
           onClick={() => setActiveModalIndex(null)}
         >
           <div
-            className="relative max-w-4xl w-full max-h-[90vh] bg-[#1a0514] rounded-3xl border border-[#935C6B]/50 p-6 md:p-8 flex flex-col items-center overflow-hidden shadow-2xl"
+            className="relative max-w-4xl w-full max-h-[90vh] bg-[#240C18] rounded-3xl border border-[#B78C86]/40 p-6 md:p-8 flex flex-col items-center overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* 닫기 버튼 */}
             <button
               onClick={() => setActiveModalIndex(null)}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#663244] hover:text-black transition-colors z-20"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#5A2638] hover:text-[#FAF7F2] transition-colors z-20"
               aria-label="모달 닫기"
             >
               <X className="w-5 h-5" />
@@ -116,7 +116,7 @@ export default function CompatibilityReportPreview() {
             {/* 이전 버튼 */}
             <button
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#663244] hover:text-black transition-colors z-20"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#5A2638] hover:text-[#FAF7F2] transition-colors z-20"
               aria-label="이전 샘플"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -125,14 +125,14 @@ export default function CompatibilityReportPreview() {
             {/* 다음 버튼 */}
             <button
               onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#663244] hover:text-black transition-colors z-20"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white hover:bg-[#5A2638] hover:text-[#FAF7F2] transition-colors z-20"
               aria-label="다음 샘플"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
 
             <div className="text-center mb-4 z-10">
-              <span className="text-xs font-mono text-[#D8BB94] px-2.5 py-0.5 rounded bg-[#663244]/20 mb-2 inline-block">
+              <span className="text-xs font-mono text-[#D8BB94] px-2.5 py-0.5 rounded bg-[#5A2638]/40 border border-[#B78C86]/40 mb-2 inline-block">
                 {currentSample.badge}
               </span>
               <h3 className="text-xl md:text-2xl font-bold text-white">

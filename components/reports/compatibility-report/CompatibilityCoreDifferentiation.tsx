@@ -46,10 +46,10 @@ export default function CompatibilityCoreDifferentiation() {
             return (
               <div
                 key={idx}
-                className="gungjung-glass p-8 rounded-[28px] border border-[#935C6B]/30 bg-gradient-to-b from-[#3B0F1B]/20 to-[#1A0514]/35 hover:border-[#935C6B]/70 transition-all duration-300 flex flex-col justify-between"
+                className="gungjung-glass p-8 rounded-[28px] border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 transition-all duration-300 flex flex-col justify-between backdrop-blur-md"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#663244]/20 border border-[#935C6B]/40 flex items-center justify-center text-[#D8BB94] mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-[#5A2638]/40 border border-[#B78C86]/35 flex items-center justify-center text-[#D8BB94] mb-6">
                     <Icon className="w-6 h-6 stroke-[1.8]" />
                   </div>
                   <h3 className="text-lg md:text-[19px] font-bold text-white mb-4 leading-snug break-keep">
@@ -65,7 +65,7 @@ export default function CompatibilityCoreDifferentiation() {
         </div>
 
         {/* 본문 설명 및 궁합 리포트 정의 */}
-        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#935C6B]/40 bg-gradient-to-r from-[#2D0A1E]/35 via-[#3B0F1B]/20 to-[#0A0514]/35 text-center relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass p-8 md:p-12 rounded-[32px] border border-[#B78C86]/30 bg-gradient-to-r from-[#4A1F2D]/35 via-[#5A2638]/25 to-[#3A1623]/35 text-center relative overflow-hidden backdrop-blur-md">
           <div className="max-w-2xl mx-auto space-y-6">
             <p className="text-base md:text-lg text-[#EDE6DA] leading-relaxed font-light break-keep">
               &lsquo;천생연분&rsquo;이라는 점괘를 믿고 방심하거나, &lsquo;상극&rsquo;이라는 말에 미리 체념할 필요가 없습니다.
@@ -79,7 +79,7 @@ export default function CompatibilityCoreDifferentiation() {
               어떤 소통 방식이 서로를 다치지 않게 하는지 명확한 관계 조율 지침을 제시합니다.
             </p>
 
-            <div className="pt-6 border-t border-[#935C6B]/30">
+            <div className="pt-6 border-t border-[#B78C86]/30">
               <p className="text-lg md:text-2xl font-elegant font-bold text-[#D8BB94] break-keep">
                 &ldquo;사랑의 크기를 확인하기 전에, 충돌의 구조부터 읽어라.&rdquo;
               </p>

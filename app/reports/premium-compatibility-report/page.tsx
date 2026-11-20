@@ -17,6 +17,7 @@ import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEndi
 
 // 새로 추가된 궁합 전용 18개 설득 블록 독립 컴포넌트들
 import CompatibilityCoreDifferentiation from '@/components/reports/compatibility-report/CompatibilityCoreDifferentiation'
+import WhyCompatibilityReport from '@/components/reports/compatibility-report/WhyCompatibilityReport'
 import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
 import CompatibilityPrescriptionSample from '@/components/reports/compatibility-report/CompatibilityPrescriptionSample'
 import CompatibilityPatternChecklist from '@/components/reports/compatibility-report/CompatibilityPatternChecklist'
@@ -176,7 +177,7 @@ export default function PremiumCompatibilityReportPage() {
               <Reveal delayMs={100}>
                 {/* 1. 상단 배지 */}
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] uppercase bg-[#663244]/20 border border-[#935C6B]/40 text-[#D8BB94]">
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] uppercase bg-[#5A2638]/30 border border-[#B78C86]/40 text-[#D8BB94]">
                     BAEKDOHWA PREMIUM COMPATIBILITY REPORT
                   </span>
                 </div>
@@ -212,21 +213,21 @@ export default function PremiumCompatibilityReportPage() {
                 {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (하단 공감 문구와의 여유로운 숨 공간 확보) */}
                 <div className="max-w-[1280px] mx-auto mb-36 md:mb-48 lg:mb-52 text-left">
                   <div 
-                    className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#935C6B]/40 overflow-hidden shadow-2xl"
+                    className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#B78C86]/35 overflow-hidden shadow-2xl backdrop-blur-md"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 0%, rgba(85, 35, 52, 0.40) 0%, rgba(42, 18, 28, 0.35) 50%, rgba(14, 6, 12, 0.95) 100%)',
-                      boxShadow: '0 0 60px rgba(147, 92, 107, 0.22)'
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(90, 38, 56, 0.45) 0%, rgba(74, 31, 45, 0.35) 50%, rgba(58, 22, 35, 0.45) 100%)',
+                      boxShadow: '0 10px 40px rgba(74, 31, 45, 0.20)'
                     }}
                   >
                     {/* 은은한 배경 오라 */}
-                    <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#935C6B]/15 rounded-full blur-[90px] pointer-events-none" />
+                    <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#5A2638]/20 rounded-full blur-[90px] pointer-events-none" />
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
                       {/* 좌측 (약 58%): 라벨 + 메인 카피 + 설명 + 가격 + 버튼 */}
                       <div className="lg:col-span-7 space-y-5 md:space-y-6">
                         {/* 1. 상단 라벨 */}
                         <div>
-                          <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#663244]/60 border border-[#935C6B]/60 text-[#FAF7F2] text-xs font-bold tracking-wider whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#5A2638]/70 border border-[#B78C86]/60 text-[#FAF7F2] text-xs font-bold tracking-wider whitespace-nowrap">
                             선천코드 프리미엄 궁합 리포트
                           </span>
                         </div>
@@ -261,17 +262,17 @@ export default function PremiumCompatibilityReportPage() {
                           <button
                             type="button"
                             onClick={handleAddToCart}
-                            className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/25 hover:border-[#935C6B]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                            className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#B78C86]/40 text-[#D8BB94] hover:bg-[#5A2638]/30 hover:border-[#B78C86]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
                           >
                             장바구니 담기
                           </button>
                           <button
                             type="button"
                             onClick={handlePurchase}
-                            className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(85,35,52,0.4)] hover:shadow-[0_0_30px_rgba(147,92,107,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                            className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(90,38,56,0.4)] hover:shadow-[0_0_30px_rgba(183,140,134,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
                             style={{
-                              background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
-                              border: '1px solid rgba(229, 196, 187, 0.5)',
+                              background: 'linear-gradient(135deg, #5A2638 0%, #4A1F2D 100%)',
+                              border: '1px solid rgba(199, 169, 122, 0.45)',
                             }}
                           >
                             <span>바로 신청하기</span>
@@ -369,8 +370,8 @@ export default function PremiumCompatibilityReportPage() {
                       <div 
                         className="px-5 py-3.5 sm:px-6 sm:py-4 rounded-2xl border text-left backdrop-blur-sm my-3"
                         style={{
-                          background: 'rgba(85, 35, 52, 0.25)',
-                          borderColor: 'rgba(147, 92, 107, 0.25)',
+                          background: 'rgba(90, 38, 56, 0.35)',
+                          borderColor: 'rgba(183, 140, 134, 0.30)',
                         }}
                       >
                         <div className="font-elegant text-[16px] md:text-[18px] leading-[1.75] break-keep">
@@ -473,8 +474,8 @@ export default function PremiumCompatibilityReportPage() {
                       <div 
                         className="p-5 md:p-6 rounded-2xl border backdrop-blur-sm"
                         style={{
-                          background: 'rgba(85, 35, 52, 0.25)',
-                          borderColor: 'rgba(147, 92, 107, 0.25)',
+                          background: 'rgba(90, 38, 56, 0.35)',
+                          borderColor: 'rgba(183, 140, 134, 0.30)',
                         }}
                       >
                         <p className="text-[#FAF7F2] font-elegant font-medium text-[17px] sm:text-[18px] md:text-[19px] leading-[1.7]">
@@ -510,9 +511,9 @@ export default function PremiumCompatibilityReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-36 md:mb-40 max-w-4xl mx-auto px-4">
               <Reveal>
-                <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#935C6B]/40 bg-gradient-to-b from-[#250F1E]/80 via-[#180A1A]/70 to-[#100612]/90 text-center relative overflow-hidden shadow-2xl">
+                <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#B78C86]/35 bg-gradient-to-b from-[#4A1F2D]/40 via-[#3A1623]/35 to-[#1A0A14]/45 text-center relative overflow-hidden shadow-2xl backdrop-blur-md">
                   {/* 은은한 배경 오라 */}
-                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#935C6B]/15 rounded-full blur-[80px] pointer-events-none" />
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#5A2638]/20 rounded-full blur-[80px] pointer-events-none" />
 
                   <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D8BB94] uppercase mb-4">
                     BEGIN YOUR JOURNEY
@@ -526,7 +527,7 @@ export default function PremiumCompatibilityReportPage() {
                     서로의 차이를 이해하고 우리 관계의 방향을 새롭게 바라보는 맞춤 궁합 리포트를 만나보세요.
                   </p>
 
-                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#663244]/30 border border-[#935C6B]/40 text-xs md:text-sm text-[#D8BB94] font-medium mb-8">
+                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#5A2638]/40 border border-[#B78C86]/40 text-xs md:text-sm text-[#D8BB94] font-medium mb-8">
                     69,000원 · 1:1 맞춤 PDF · 두 사람의 선천코드 정밀 분석
                   </div>
 
@@ -535,17 +536,17 @@ export default function PremiumCompatibilityReportPage() {
                     <button
                       type="button"
                       onClick={handleAddToCart}
-                      className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/25 hover:border-[#935C6B]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                      className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#B78C86]/40 text-[#D8BB94] hover:bg-[#5A2638]/30 hover:border-[#B78C86]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
                     >
                       장바구니 담기
                     </button>
                     <button
                       type="button"
                       onClick={handlePurchase}
-                      className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(85,35,52,0.4)] hover:shadow-[0_0_30px_rgba(147,92,107,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                      className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(90,38,56,0.4)] hover:shadow-[0_0_30px_rgba(183,140,134,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
                       style={{
-                        background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
-                        border: '1px solid rgba(229, 196, 187, 0.5)',
+                        background: 'linear-gradient(135deg, #5A2638 0%, #4A1F2D 100%)',
+                        border: '1px solid rgba(199, 169, 122, 0.45)',
                       }}
                     >
                       <span>바로 신청하기</span>
@@ -557,27 +558,34 @@ export default function PremiumCompatibilityReportPage() {
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 05. 선천코드 궁합 리포트 분석 방법 (기존 Overview & 6대 카드 통합) */}
+            {/* 신규 섹션: 왜, 선천코드 궁합 리포트인가? (차별점 & 처방전 철학) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilityAnalysisMethod />
+            <WhyCompatibilityReport />
 
-            {/* 기존 Overview 섹션 (p2.webp 에셋 보존) */}
-            <section className="mb-40">
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 01. 관계 특화 심층 분석 — 두 사람의 선천코드와 관계 흐름 집중 분석 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
                     <Image 
                       src="/image/compatibility/p2.webp" 
-                      alt="Overview" 
+                      alt="선천코드 궁합 리포트 개요" 
                       width={800}
                       height={600}
                       className="w-full h-auto object-cover" 
                     />
                   </div>
-                  <div className="space-y-10">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      사랑은 감정이지만,<br /> <span className="text-[var(--accent-gold)]">관계는 흐름입니다</span>
-                    </h2>
+                  <div className="space-y-8">
+                    <div className="space-y-3">
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
+                        POINT 01 · RELATIONSHIP ANALYSIS
+                      </span>
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
+                        사랑은 감정이지만,<br /> <span className="gradient-text-reunion">관계는 흐름입니다</span>
+                      </h2>
+                    </div>
                     <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       프리미엄 궁합 리포트는 단순한 궁합 점수가 아니라,{"\n\n"}
                       두 사람이 왜 끌리는지, 왜 자꾸 부딪히는지, 어떤 방식으로 함께 성장할 수 있는지를 섬세하게 해석하는 프리미엄 관계 분석 리포트입니다.
@@ -602,12 +610,24 @@ export default function PremiumCompatibilityReportPage() {
               </Reveal>
             </section>
 
-            {/* 기존 6대 분석 내용 카드 및 이미지 (p4.webp 에셋 보존) */}
-            <section className="mb-40 text-center">
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 02: 선천코드 궁합 분석 방식 (명리 뼈대 + 관계 심리 교차 분석) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <CompatibilityAnalysisMethod />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 03. 두 사람만의 맞춤 궁합 해독 — 6가지 핵심 분석 축 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36">
               <Reveal>
-                <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
-                  리포트 <span className="gradient-text-reunion">주요 분석 내용</span>
-                </h2>
+                <div className="space-y-4 mb-16">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
+                    POINT 03 · DYNAMICS & SIX PERSPECTIVES
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.05em] leading-[1.25] md:leading-[1.3] break-keep">
+                    두 사람만의 맞춤 궁합 해독 — <span className="gradient-text-reunion">6가지 핵심 분석 축</span>
+                  </h2>
+                </div>
                 <div className="max-w-7xl mx-auto mb-20">
                   <Image 
                     src="/image/compatibility/p4.webp" 
@@ -617,7 +637,7 @@ export default function PremiumCompatibilityReportPage() {
                     className="w-full h-auto rounded-[50px] shadow-2xl border border-white/10" 
                   />
                 </div>
-                <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden">
+                <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden rounded-[36px] border border-[#B78C86]/30 bg-gradient-to-b from-[#4A1F2D]/30 via-[#3A1623]/25 to-[#180A14]/35 backdrop-blur-md">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
                       { t: "선천적 기질 궁합", d: "두 사람의 타고난 에너지 조화 분석", i: "fa-yin-yang" },
@@ -627,8 +647,8 @@ export default function PremiumCompatibilityReportPage() {
                       { t: "미래 관계 해석", d: "결혼 및 장기적 인연의 가능성 탐색", i: "fa-ring" },
                       { t: "성장 방향 제안", d: "함께 더 행복해질 수 있는 실질적 가이드", i: "fa-seedling" }
                     ].map((item, idx) => (
-                      <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group">
-                        <div className="w-16 h-16 rounded-2xl bg-[#1A0514] flex items-center justify-center border border-[#935C6B]/40 text-[#D8BB94] shadow-lg group-hover:scale-110 transition-transform">
+                      <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group border border-[#B78C86]/25 hover:border-[#C7A97A]/45 bg-gradient-to-b from-[#5A2638]/35 to-[#3A1623]/35 transition-all duration-300 backdrop-blur-sm">
+                        <div className="w-16 h-16 rounded-2xl bg-[#4A1F2D]/60 flex items-center justify-center border border-[#B78C86]/40 text-[#D8BB94] shadow-lg group-hover:scale-110 transition-transform">
                           <i className={`fas ${item.i} text-2xl`}></i>
                         </div>
                         <div>
@@ -687,9 +707,9 @@ export default function PremiumCompatibilityReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-28 md:mb-36 max-w-7xl mx-auto px-4">
               <Reveal>
-                <div className="gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#935C6B]/35 bg-gradient-to-r from-[#2A0F1E]/75 via-[#180A1A]/65 to-[#2A0F1E]/75 relative overflow-hidden shadow-xl backdrop-blur-md">
+                <div className="gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#B78C86]/30 bg-gradient-to-r from-[#4A1F2D]/40 via-[#3A1623]/30 to-[#4A1F2D]/40 relative overflow-hidden shadow-xl backdrop-blur-md">
                   {/* 은은한 배경 오라 */}
-                  <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#935C6B]/10 rounded-full blur-[90px] pointer-events-none" />
+                  <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#5A2638]/15 rounded-full blur-[90px] pointer-events-none" />
 
                   <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
                     {/* 좌측 (약 62%): 메인 제목 + 설명 */}
@@ -707,7 +727,7 @@ export default function PremiumCompatibilityReportPage() {
                     <div className="w-full lg:w-[38%] flex flex-col items-center lg:items-end justify-center shrink-0">
                       <button 
                         onClick={handlePurchase}
-                        className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] py-4 sm:py-4.5 px-7 sm:px-8 rounded-2xl font-bold text-base sm:text-[16.5px] hover:scale-[1.01] active:scale-95 transition-all duration-300 bg-gradient-to-br from-[#663244] to-[#431a2a] border border-[rgba(229,196,187,0.5)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(85,35,52,0.35)] hover:shadow-[0_0_22px_rgba(147,92,107,0.45)] hover:brightness-110 text-center"
+                        className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] py-4 sm:py-4.5 px-7 sm:px-8 rounded-2xl font-bold text-base sm:text-[16.5px] hover:scale-[1.01] active:scale-95 transition-all duration-300 bg-gradient-to-br from-[#5A2638] to-[#4A1F2D] border border-[rgba(199,169,122,0.45)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(90,38,56,0.35)] hover:shadow-[0_0_22px_rgba(183,140,134,0.45)] hover:brightness-110 text-center"
                       >
                         나의 선천코드 궁합 리포트 신청하기 · 69,000원
                       </button>
@@ -837,14 +857,14 @@ export default function PremiumCompatibilityReportPage() {
 
                 {/* ③ 독립 슬림 프리미엄 구매 카드 */}
                 <div 
-                  className="max-w-2xl mx-auto py-8 px-6 sm:py-10 sm:px-10 rounded-[32px] sm:rounded-[36px] border border-[#935C6B]/40 text-center relative overflow-hidden backdrop-blur-md"
+                  className="max-w-2xl mx-auto py-8 px-6 sm:py-10 sm:px-10 rounded-[32px] sm:rounded-[36px] border border-[#B78C86]/35 text-center relative overflow-hidden backdrop-blur-md"
                   style={{
-                    background: 'radial-gradient(ellipse at 50% 0%, rgba(85, 35, 52, 0.40) 0%, rgba(42, 18, 28, 0.35) 50%, rgba(14, 6, 12, 0.95) 100%)',
-                    boxShadow: '0 0 50px rgba(147, 92, 107, 0.20)'
+                    background: 'radial-gradient(ellipse at 50% 0%, rgba(90, 38, 56, 0.45) 0%, rgba(74, 31, 45, 0.35) 50%, rgba(58, 22, 35, 0.45) 100%)',
+                    boxShadow: '0 10px 40px rgba(74, 31, 45, 0.20)'
                   }}
                 >
                   {/* 은은한 배경 오라 */}
-                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#935C6B]/15 rounded-full blur-[80px] pointer-events-none" />
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#5A2638]/20 rounded-full blur-[80px] pointer-events-none" />
 
                   <div className="relative z-10">
                     {/* 1. 상품명 */}
@@ -869,17 +889,17 @@ export default function PremiumCompatibilityReportPage() {
                       <button
                         type="button"
                         onClick={handleAddToCart}
-                        className="py-3.5 sm:py-4 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#935C6B]/40 text-[#D8BB94] hover:bg-[#663244]/25 hover:border-[#935C6B]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                        className="py-3.5 sm:py-4 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#B78C86]/40 text-[#D8BB94] hover:bg-[#5A2638]/30 hover:border-[#B78C86]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
                       >
                         장바구니 담기
                       </button>
                       <button 
                         type="button"
                         onClick={handlePurchase}
-                        className="py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-300 flex-1 text-[#FAF6EE] shadow-[0_4px_20px_rgba(85,35,52,0.4)] hover:shadow-[0_0_30px_rgba(147,92,107,0.45)] hover:brightness-110 text-center order-1 sm:order-2"
+                        className="py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-300 flex-1 text-[#FAF6EE] shadow-[0_4px_20px_rgba(90,38,56,0.4)] hover:shadow-[0_0_30px_rgba(183,140,134,0.45)] hover:brightness-110 text-center order-1 sm:order-2"
                         style={{
-                          background: 'linear-gradient(135deg, #663244 0%, #431a2a 100%)',
-                          border: '1px solid rgba(229, 196, 187, 0.5)',
+                          background: 'linear-gradient(135deg, #5A2638 0%, #4A1F2D 100%)',
+                          border: '1px solid rgba(199, 169, 122, 0.45)',
                         }}
                       >
                         나의 궁합 리포트 신청하기

@@ -12,11 +12,11 @@ export default function WealthAnalysisMethod() {
   ]
 
   return (
-    <section className="mb-40">
+    <section id="point-02" className="mb-40 scroll-mt-28 md:scroll-mt-36">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
-            DUAL-TRACK ANALYSIS
+          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase mb-4">
+            POINT 02 · BEHAVIORAL METHODOLOGY
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             {wealthAnalysisMethodData.title}

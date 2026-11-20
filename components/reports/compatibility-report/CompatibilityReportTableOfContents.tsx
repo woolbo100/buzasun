@@ -18,14 +18,14 @@ export default function CompatibilityReportTableOfContents() {
   }
 
   return (
-    <section className="mb-40" id="table-of-contents">
+    <section id="point-04" className="mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-            CHAPTERS & CURRICULUM
+            POINT 04 · TABLE OF CONTENTS & SPECIAL GIFT
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {compatibilityTableOfContentsData.title}
+            프리미엄 궁합 비급의 상세 구성
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {compatibilityTableOfContentsData.subTitle}
@@ -43,8 +43,8 @@ export default function CompatibilityReportTableOfContents() {
                 key={part.id}
                 className={`rounded-[24px] border transition-all duration-300 overflow-hidden ${
                   isSpecial
-                    ? 'bg-gradient-to-r from-[#3B0F1B]/90 via-[#2D0A1E]/80 to-[#1A0514]/90 border-[#935C6B]/50 shadow-[0_0_30px_rgba(147, 92, 107, 0.15)]'
-                    : 'gungjung-glass border-white/10 hover:border-white/20 bg-gradient-to-b from-[#2D0A1E]/20 via-black/30 to-black/50'
+                    ? 'bg-gradient-to-r from-[#5A2638]/70 via-[#4A1F2D]/60 to-[#3A1623]/70 border-[#B78C86]/50 shadow-[0_0_30px_rgba(90,38,56,0.25)] backdrop-blur-md'
+                    : 'gungjung-glass border-[#B78C86]/20 hover:border-[#B78C86]/40 bg-gradient-to-b from-[#4A1F2D]/30 to-[#3A1623]/25 backdrop-blur-md'
                 }`}
               >
                 {/* 아코디언 헤더 버튼 */}
@@ -59,14 +59,14 @@ export default function CompatibilityReportTableOfContents() {
                       <span
                         className={`text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-md ${
                           isSpecial
-                            ? 'bg-[#663244] text-[#1A0514]'
-                            : 'bg-white/10 text-[#C19B83]'
+                            ? 'bg-[#5A2638] text-[#FAF7F2] border border-[#B78C86]/50'
+                            : 'bg-[#5A2638]/40 border border-[#B78C86]/30 text-[#D8BB94]'
                         }`}
                       >
                         {part.number}
                       </span>
                       {isSpecial && (
-                        <span className="flex items-center gap-1 text-[11px] text-[#C19B83] font-bold">
+                        <span className="flex items-center gap-1 text-[11px] text-[#D8BB94] font-bold">
                           <Sparkles className="w-3.5 h-3.5 text-[#D8BB94]" />
                           핵심 관계 처방
                         </span>
@@ -83,7 +83,7 @@ export default function CompatibilityReportTableOfContents() {
                   <div
                     className={`w-9 h-9 rounded-full flex items-center justify-center border shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'rotate-180 bg-[#663244]/30 border-[#935C6B]/50 text-[#D8BB94]'
+                        ? 'rotate-180 bg-[#5A2638]/50 border-[#B78C86]/50 text-[#D8BB94]'
                         : 'border-white/10 bg-white/5 text-white/50'
                     }`}
                   >
@@ -93,14 +93,14 @@ export default function CompatibilityReportTableOfContents() {
 
                 {/* 세부 항목 리스트 */}
                 {isOpen && (
-                  <div className="px-6 pb-8 md:px-8 border-t border-white/5 pt-6 bg-black/30">
+                  <div className="px-6 pb-8 md:px-8 border-t border-white/5 pt-6 bg-[#1A0A14]/30">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                       {part.items.map((item, itemIdx) => (
                         <div
                           key={itemIdx}
-                          className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-[#935C6B]/40 transition-colors"
+                          className="flex items-start gap-3 p-3.5 rounded-xl bg-[#3A1623]/25 border border-[#B78C86]/20 hover:border-[#B78C86]/40 transition-colors"
                         >
-                          <span className="w-2 h-2 rounded-full bg-[#663244] mt-2 shrink-0"></span>
+                          <span className="w-2 h-2 rounded-full bg-[#B78C86] mt-2 shrink-0"></span>
                           <span className="text-sm md:text-base text-[#EDE6DA]/90 font-medium break-keep">
                             {item}
                           </span>
@@ -115,8 +115,8 @@ export default function CompatibilityReportTableOfContents() {
         </div>
 
         {/* PART 07 별도 프리미엄 독립 강조 카드 (딥 버건디 & 앤티크 골드) */}
-        <div className="max-w-7xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#3B0F1B]/35 via-[#2D0A1E]/25 to-[#120014]/35 border-2 border-[#935C6B]/50 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#663244]/20 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#4A1F2D]/40 via-[#3A1623]/35 to-[#180A14]/40 border border-[#B78C86]/40 shadow-2xl relative overflow-hidden backdrop-blur-md">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#5A2638]/25 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10 text-center mb-10">
             <span className="inline-flex items-center gap-2 font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] mb-4 uppercase">
@@ -135,10 +135,10 @@ export default function CompatibilityReportTableOfContents() {
             {compatibilityTableOfContentsData.part7Highlight.features.map((feat, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-black/50 border border-[#935C6B]/30 hover:border-[#935C6B]/70 transition-colors"
+                className="p-6 rounded-2xl bg-[#3A1623]/45 border border-[#B78C86]/30 hover:border-[#C7A97A]/50 transition-colors backdrop-blur-sm"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-base font-bold font-mono text-[#D8BB94] px-2.5 py-0.5 rounded-md bg-[#663244]/20">
+                  <span className="text-base font-bold font-mono text-[#D8BB94] px-2.5 py-0.5 rounded-md bg-[#5A2638]/40 border border-[#B78C86]/30">
                     NO. {feat.num}
                   </span>
                   <h4 className="text-lg font-bold text-white break-keep">

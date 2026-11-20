@@ -24,19 +24,19 @@ export default function CompatibilityCaseComparison() {
           {compatibilityCaseData.cases.map((c, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-white/10 hover:border-[#935C6B]/50 bg-gradient-to-b from-[#2D0A1E]/25 via-black/30 to-black/35 transition-all duration-300 relative overflow-hidden flex flex-col justify-between group"
+              className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 transition-all duration-300 relative overflow-hidden flex flex-col justify-between group backdrop-blur-md"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider bg-[#663244] text-[#1A0514]">
+                  <span className="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider bg-[#5A2638] text-[#FAF7F2] border border-[#B78C86]/50">
                     {c.badge}
                   </span>
-                  <div className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-[#C19B83]">
+                  <div className="px-3 py-1 rounded-lg bg-[#3A1623]/40 border border-[#B78C86]/20 text-xs text-[#D8BB94]">
                     선천 관계 기질: <span className="font-semibold">{c.code}</span>
                   </div>
                 </div>
 
-                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 group-hover:text-[#C19B83] transition-colors leading-snug break-keep">
+                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 group-hover:text-[#D8BB94] transition-colors leading-snug break-keep">
                   {c.typeName}
                 </h3>
                 <p className="text-xs text-[#EDE6DA]/60 mb-6 font-light break-keep">
@@ -45,7 +45,7 @@ export default function CompatibilityCaseComparison() {
 
                 <div className="space-y-4">
                   {/* 실제 관계 기록 */}
-                  <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+                  <div className="p-4 rounded-2xl bg-[#3A1623]/25 border border-[#B78C86]/20">
                     <span className="text-xs font-bold text-white/50 block mb-1">
                       {c.behaviorTitle}
                     </span>
@@ -55,7 +55,7 @@ export default function CompatibilityCaseComparison() {
                   </div>
 
                   {/* 반복되는 갈등 */}
-                  <div className="p-4 rounded-2xl bg-[#3B0F1B]/30 border border-rose-900/30">
+                  <div className="p-4 rounded-2xl bg-[#4A1F2D]/35 border border-[#B78C86]/30">
                     <span className="text-xs font-bold text-rose-300/80 block mb-1">
                       {c.conflictTitle}
                     </span>
@@ -67,7 +67,7 @@ export default function CompatibilityCaseComparison() {
               </div>
 
               {/* 실천 처방 (하단 강조) */}
-              <div className="mt-8 pt-6 border-t border-[#935C6B]/30 p-4 rounded-2xl bg-[#663244]/20">
+              <div className="mt-8 pt-6 border-t border-[#B78C86]/30 p-4 rounded-2xl bg-[#5A2638]/40 border border-[#B78C86]/35">
                 <span className="text-xs font-bold text-[#D8BB94] block mb-1">
                   ✨ {c.solutionTitle}
                 </span>

@@ -5,15 +5,15 @@ import { CheckCircle2, FileText, ArrowRight } from 'lucide-react'
 
 export default function CompatibilityPrescriptionSample() {
   return (
-    <section className="mb-40">
+    <section id="point-05" className="mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-12">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-            ACTIONABLE DIALOGUE PRESCRIPTION [SAMPLE]
+            POINT 05 · ACTIONABLE PRESCRIPTION
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             단순한 성격 차이 설명이 아닌, <br className="sm:hidden" />
-            <span className="gradient-text-reunion">관계 조율 대화 처방전</span>
+            <span className="gradient-text-reunion">두 사람을 위한 실전 관계 처방</span>
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             백도화 프리미엄 궁합 리포트의 핵심인 PART 07에서는 비난과 방어 대신,<br className="hidden sm:inline" />
@@ -22,7 +22,7 @@ export default function CompatibilityPrescriptionSample() {
         </div>
 
         {/* 실제 처방전 형태의 프리미엄 샘플 카드 */}
-        <div className="max-w-7xl mx-auto gungjung-glass point-box p-8 md:p-12 rounded-[36px] border-2 border-[#935C6B]/40 bg-gradient-to-b from-[#2D0A1E]/35 via-[#3B0F1B]/20 to-[#0A0514]/35 shadow-2xl relative overflow-hidden">
+        <div className="max-w-7xl mx-auto gungjung-glass point-box p-8 md:p-12 rounded-[36px] border border-[#B78C86]/35 bg-gradient-to-b from-[#4A1F2D]/35 via-[#3A1623]/30 to-[#180A14]/40 shadow-2xl relative overflow-hidden backdrop-blur-md">
           {/* 상단 샘플 알림 뱃지 */}
           <div className="flex items-center justify-between pb-6 mb-8 border-b border-white/10">
             <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-[#D8BB94] font-bold">
@@ -36,7 +36,7 @@ export default function CompatibilityPrescriptionSample() {
 
           {/* 처방 질문 헤드라인 */}
           <div className="mb-8">
-            <span className="text-xs font-mono font-bold text-[#C19B83] tracking-wider uppercase block mb-3">
+            <span className="text-xs font-mono font-bold text-[#D8BB94] tracking-wider uppercase block mb-3">
               [진단 질문] 갈등 대화 악순환 패턴
             </span>
             <h3 className="text-xl md:text-2xl font-elegant font-bold text-white leading-snug break-keep">
@@ -46,18 +46,18 @@ export default function CompatibilityPrescriptionSample() {
           </div>
 
           {/* 구체적인 행동 실천 가이드 */}
-          <div className="p-6 md:p-8 rounded-2xl bg-black/60 border border-[#935C6B]/30 space-y-4">
+          <div className="p-6 md:p-8 rounded-2xl bg-[#3A1623]/50 border border-[#B78C86]/30 space-y-4 backdrop-blur-sm">
             <div className="flex items-center gap-2 text-sm font-bold text-[#D8BB94]">
-              <CheckCircle2 className="w-4 h-4 text-[#935C6B]" />
+              <CheckCircle2 className="w-4 h-4 text-[#D8BB94]" />
               백도화 맞춤 실천 행동 처방
             </div>
             <p className="text-base md:text-lg text-[#EDE6DA] font-medium leading-relaxed break-keep">
               &ldquo;넌 항상 왜 그래?&rdquo;처럼 상대를 단정하고 평가하는 표현 대신,<br className="hidden sm:inline" />
-              <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#935C6B]">
+              <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#B78C86]">
                 ① 눈에 보인 구체적 사실(행동)
-              </span>, <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#935C6B]">
+              </span>, <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#B78C86]">
                 ② 그때 내가 느낀 주관적 감정
-              </span>, <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#935C6B]">
+              </span>, <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#B78C86]">
                 ③ 구체적으로 원하는 요청 사항
               </span>을 세 단계로 분리하여 말하십시오.
             </p>

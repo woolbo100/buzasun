@@ -54,9 +54,9 @@ export default function CompatibilitySpecialGift() {
   return (
     <div className="w-full max-w-7xl mx-auto mb-28 md:mb-36">
       <Reveal>
-        <div className="gungjung-glass p-7 sm:p-8 md:p-9 lg:p-10 rounded-[28px] md:rounded-[36px] border border-[#935C6B]/35 bg-gradient-to-r from-[#2A0F1E]/75 via-[#180A1A]/70 to-[#2A0F1E]/75 shadow-xl relative overflow-hidden">
+        <div className="gungjung-glass p-7 sm:p-8 md:p-9 lg:p-10 rounded-[28px] md:rounded-[36px] border border-[#B78C86]/30 bg-gradient-to-r from-[#4A1F2D]/35 via-[#3A1623]/30 to-[#4A1F2D]/35 shadow-xl relative overflow-hidden backdrop-blur-md">
           {/* 은은한 배경 오라 */}
-          <div className="absolute top-0 right-1/4 w-72 h-72 bg-[#935C6B]/15 rounded-full blur-[80px] pointer-events-none" />
+          <div className="absolute top-0 right-1/4 w-72 h-72 bg-[#5A2638]/20 rounded-full blur-[80px] pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
             {/* 좌측: 텍스트 안내 영역 */}

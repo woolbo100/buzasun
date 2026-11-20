@@ -44,7 +44,7 @@ export default function CompatibilityRealTransformationBanner() {
             </div>
 
             {/* (5) 마지막 각성 인용문 (데스크톱 정확히 2줄, 상하 가로 구분선) */}
-            <div className="my-10 md:my-14 py-8 md:py-10 border-y border-[#935C6B]/25 max-w-4xl mx-auto">
+            <div className="my-10 md:my-14 py-8 md:py-10 border-y border-[#B78C86]/30 max-w-4xl mx-auto">
               <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[26px] leading-[1.5] break-keep">
                 <span className="text-[#FAF7F2] block">&ldquo;누가 맞고 틀렸는지를 따지지 마세요.</span>
                 <span className="text-[#D8BB94] block mt-1.5 md:mt-2">두 사람 사이에 흐르는 관계의 결부터 읽으세요.&rdquo;</span>

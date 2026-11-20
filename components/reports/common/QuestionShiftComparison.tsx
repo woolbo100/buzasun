@@ -37,13 +37,13 @@ export default function QuestionShiftComparison({
       shadowClass: 'shadow-[0_0_30px_rgba(96,143,130,0.18)]',
     },
     compatibility: {
-      badgeBg: 'bg-[#663244]/20 border-[#935C6B]/40 text-[#D8BB94]',
-      cardBorder: 'border-[#935C6B]/40',
-      glowBg: 'bg-[#663244]/20',
+      badgeBg: 'bg-[#5A2638]/40 border-[#B78C86]/50 text-[#D8BB94]',
+      cardBorder: 'border-[#B78C86]/40',
+      glowBg: 'bg-[#5A2638]/30',
       activeText: 'text-[#D8BB94]',
       highlightText: 'text-[#C19B83]',
       gradientClass: 'gradient-text-reunion',
-      shadowClass: 'shadow-[0_0_30px_rgba(102,50,68,0.25)]',
+      shadowClass: 'shadow-[0_0_35px_rgba(90,38,56,0.3)]',
     },
   }[theme]
 
@@ -126,7 +126,13 @@ export default function QuestionShiftComparison({
 
           {/* CARD 02 — 백도화 선천코드의 질문 (연애 리포트: 따뜻하고 부드러운 로즈플럼 배경) */}
           <div 
-            className={`gungjung-glass ${theme === 'love' ? '' : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35'} p-8 md:p-10 rounded-[32px] border ${themeConfig.cardBorder} ${themeConfig.shadowClass} flex flex-col justify-between relative overflow-hidden`}
+            className={`gungjung-glass ${
+              theme === 'love' 
+                ? '' 
+                : theme === 'compatibility'
+                ? 'point-box bg-gradient-to-b from-[#4A1F2D]/40 via-[#3A1623]/30 to-[#180A14]/35'
+                : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35'
+            } p-8 md:p-10 rounded-[32px] border ${themeConfig.cardBorder} ${themeConfig.shadowClass} flex flex-col justify-between relative overflow-hidden`}
             style={theme === 'love' ? { backgroundColor: 'rgba(166, 91, 128, 0.18)' } : undefined}
           >
             {/* 배경 은은한 광채 */}

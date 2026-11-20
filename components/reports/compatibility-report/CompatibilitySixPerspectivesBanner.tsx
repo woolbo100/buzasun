@@ -42,7 +42,7 @@ export default function CompatibilitySixPerspectivesBanner() {
       </div>
 
       {/* 1. 와이드 파노라마 비주얼 배너 */}
-      <div className="relative w-full overflow-hidden rounded-2xl md:rounded-[32px] border border-[#935C6B]/40 shadow-2xl bg-[#14080E] aspect-[16/7] sm:aspect-[16/6] md:aspect-[21/7]">
+      <div className="relative w-full overflow-hidden rounded-2xl md:rounded-[32px] border border-[#B78C86]/35 shadow-2xl bg-[#14080E] aspect-[16/7] sm:aspect-[16/6] md:aspect-[21/7]">
         <Image
           src="/image/compatibility/p4.webp"
           alt="선천코드 프리미엄 궁합 리포트 6가지 핵심 분석 축 배너"
@@ -51,7 +51,7 @@ export default function CompatibilitySixPerspectivesBanner() {
           priority={false}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#14080E]/90 via-[#14080E]/40 to-transparent pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#552334]/30 via-transparent to-[#552334]/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#5A2638]/40 via-transparent to-[#5A2638]/40 pointer-events-none" />
       </div>
 
       {/* 2. 6개 분석 축 키워드 리스트 */}

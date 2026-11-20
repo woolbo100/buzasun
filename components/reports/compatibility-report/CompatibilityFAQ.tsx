@@ -33,7 +33,7 @@ export default function CompatibilityFAQ() {
             return (
               <div
                 key={idx}
-                className="gungjung-glass rounded-2xl border border-white/10 overflow-hidden transition-colors hover:border-white/20 bg-gradient-to-b from-[#2D0A1E]/20 via-transparent to-black/40"
+                className="gungjung-glass rounded-2xl border border-[#B78C86]/20 overflow-hidden transition-all hover:border-[#B78C86]/40 bg-gradient-to-b from-[#4A1F2D]/30 to-[#3A1623]/25 backdrop-blur-md"
               >
                 <button
                   type="button"
@@ -50,7 +50,7 @@ export default function CompatibilityFAQ() {
                   <div
                     className={`w-8 h-8 rounded-full border border-white/10 flex items-center justify-center shrink-0 transition-transform duration-300 ${
                       isOpen
-                        ? 'rotate-180 bg-[#663244]/30 text-[#D8BB94] border-[#935C6B]/50'
+                        ? 'rotate-180 bg-[#5A2638]/50 text-[#D8BB94] border-[#B78C86]/50'
                         : 'text-white/50 bg-white/5'
                     }`}
                   >

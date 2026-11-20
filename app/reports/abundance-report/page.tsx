@@ -12,6 +12,7 @@ import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEndi
 
 // 새로 추가된 풍요 리포트 전용 18개 설득 블록 독립 컴포넌트들
 import WealthCoreDifferentiation from '@/components/reports/abundance-report/WealthCoreDifferentiation'
+import WhyWealthReport from '@/components/reports/abundance-report/WhyWealthReport'
 import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
 import WealthPrescriptionSample from '@/components/reports/abundance-report/WealthPrescriptionSample'
 import WealthPatternChecklist from '@/components/reports/abundance-report/WealthPatternChecklist'
@@ -536,12 +537,14 @@ export default function AbundanceReportPage() {
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 05. 선천코드 풍요 리포트 분석 체계 (기존 Overview & 6대 주제 통합) */}
+            {/* 신규 섹션: 왜, 선천코드 풍요 리포트인가? (차별점 & 처방전 철학) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthAnalysisMethod />
+            <WhyWealthReport />
 
-            {/* 기존 Overview 섹션 (a2.webp 에셋 보존) */}
-            <section className="mb-40">
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 01. 풍요 구조 집중 분석 — 타고난 재능과 돈을 대하는 태도 정밀 분석 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
                   <div className="relative overflow-hidden rounded-[40px] border border-[#608F82]/25 shadow-2xl">
@@ -553,11 +556,16 @@ export default function AbundanceReportPage() {
                       className="w-full h-auto object-cover" 
                     />
                   </div>
-                  <div className="space-y-10">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      나에게 맞는 풍요의 길은 <br />
-                      <span className="gradient-text-abundance">나를 아는 것에서 시작됩니다</span>
-                    </h2>
+                  <div className="space-y-8">
+                    <div className="space-y-3">
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase">
+                        POINT 01 · WEALTH STRUCTURE ANALYSIS
+                      </span>
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
+                        나에게 맞는 풍요의 길은 <br />
+                        <span className="gradient-text-abundance">나를 아는 것에서 시작됩니다</span>
+                      </h2>
+                    </div>
                     <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
                       선천코드 풍요 리포트는 막연한 요행을 바라는 운세 풀이가 아닙니다. 내가 타고난 재능과 강점이 무엇인지, 돈을 대할 때 어떤 태도와 기준이 작동하는지, 그리고 일상에서 왜 비슷한 수입·소비 패턴이 반복되는지를 차분하게 짚어보고 현실에서 실천할 방향을 함께 모색하는 리포트입니다.
                     </p>
@@ -579,12 +587,24 @@ export default function AbundanceReportPage() {
               </Reveal>
             </section>
 
-            {/* 기존 6대 핵심 탐구 주제 및 이미지 (a4.webp 에셋 보존) */}
-            <section className="mb-40 text-center">
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 02: 선천코드 풍요 분석 체계 (명리 뼈대 + 재정 행동 패턴 교차 분석) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthAnalysisMethod />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 03. 돈과 선택 패턴의 개인 맞춤 해독 — 6가지 핵심 탐구 축 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36">
               <Reveal>
-                <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.1em] mb-16 leading-[1.25] md:leading-[1.3] break-keep">
-                  리포트 <span className="text-[#8FB4A4]">핵심</span> <span className="text-[#E6BE8A]">탐구 주제</span>
-                </h2>
+                <div className="space-y-4 mb-16">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase">
+                    POINT 03 · DYNAMICS & SIX PERSPECTIVES
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.05em] leading-[1.25] md:leading-[1.3] break-keep">
+                    돈과 선택 패턴의 개인 맞춤 해독 — <span className="gradient-text-abundance">6가지 핵심 탐구 축</span>
+                  </h2>
+                </div>
                 <div className="w-full max-w-[1280px] mx-auto mb-20">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.analysis} 

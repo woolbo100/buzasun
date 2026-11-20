@@ -34,7 +34,7 @@ export default function CompatibilityComparisonTable() {
                   <th className="py-5 px-6 text-sm font-semibold text-white/60 w-1/4 text-center">
                     일반 사주 궁합
                   </th>
-                  <th className="py-5 px-6 text-base font-bold text-[#D8BB94] w-1/4 text-center bg-[#3B0F1B]/40 rounded-t-2xl border-t border-x border-[#935C6B]/40">
+                  <th className="py-5 px-6 text-base font-bold text-[#D8BB94] w-1/4 text-center bg-gradient-to-b from-[#5A2638]/50 to-[#4A1F2D]/40 rounded-t-2xl border-t border-x border-[#B78C86]/35">
                     백도화 프리미엄 궁합
                   </th>
                 </tr>
@@ -51,8 +51,8 @@ export default function CompatibilityComparisonTable() {
                     <td className="py-5 px-6 text-sm text-[#EDE6DA]/60 text-center break-keep">
                       {row.traditional}
                     </td>
-                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#2D0A1E]/30 border-x border-[#935C6B]/30 shadow-inner">
-                      <span className="text-[#C19B83] font-bold">
+                    <td className="py-5 px-6 text-sm md:text-base font-medium text-white text-center break-keep bg-[#4A1F2D]/35 border-x border-[#B78C86]/25 shadow-inner">
+                      <span className="text-[#D8BB94] font-bold">
                         {row.baekdohwa}
                       </span>
                     </td>
