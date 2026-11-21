@@ -194,7 +194,7 @@ export default function AbundanceReportPage() {
                 </h1>
 
                 {/* 4. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-6 md:mb-8 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl group aspect-[16/9] bg-[#0B1514]">
+                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl group aspect-[16/9] bg-[#0B1514]">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.hero} 
                     alt="선천코드 풍요 리포트 메인 히어로 16:9" 
@@ -206,15 +206,38 @@ export default function AbundanceReportPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
-                {/* 5. 메인 이미지 하단 기울어진 감성 문구 */}
-                <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
-                  나의 타고난 재능과 돈을 대하는 성향을 이해할 때, 나에게 맞는 풍요의 방향이 보입니다.
-                </p>
+                {/* 4-1. 메인 히어로 하단 문제 제기형 인트로 섹션 (연애 리포트와 동일한 구조) */}
+                <div className="max-w-4xl mx-auto text-center px-4 space-y-4 md:space-y-5">
+                  <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] md:leading-[1.35] break-keep">
+                    &ldquo;왜 어떤 노력은 쌓이는데도, <span className="gradient-text-abundance">풍요는 늘 제자리일까요?</span>&rdquo;
+                  </h2>
+                  <p className="text-base sm:text-lg md:text-[20px] font-elegant text-[#FAF7F2] leading-[1.75] md:leading-[1.8] break-keep max-w-2xl mx-auto opacity-95 font-light">
+                    열심히 산다고 모두 같은 결과를 얻는 것은 아닙니다.<br />
+                    재능을 쓰는 방식, 돈을 대하는 습관, 무의식의 선택이 어긋나면<br />
+                    풍요는 들어와도 머물지 못한 채 다시 흩어집니다.
+                  </p>
+                </div>
 
-                {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (오픈 예정 상태 보존) */}
+                {/* 4-2. 구간 전환용 얇은 장식선 + 백도화 풍요 문양 */}
+                <div className="flex items-center justify-center my-10 sm:my-14 md:my-16 max-w-xs sm:max-w-sm mx-auto px-4" aria-hidden="true">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#608F82]/35 to-transparent" />
+                  <div className="mx-4 flex items-center justify-center">
+                    <svg viewBox="0 0 32 32" fill="none" className="w-7 h-7 sm:w-8 sm:h-8 text-[#C6A477] opacity-90 drop-shadow-[0_0_8px_rgba(198,164,119,0.4)]">
+                      <path d="M16 16 C13.5 11 13 6 16 4 C19 6 18.5 11 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16 16 C20 13 24.5 12.5 26 15.5 C25 18.8 20.5 18 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16 16 C19.5 19.5 21.5 24 18.5 26 C16 24.5 16.2 20 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16 16 C15.8 20 16 24.5 13.5 26 C10.5 24 12.5 19.5 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16 16 C11.5 18 7 18.8 6 15.5 C7.5 12.5 12 13 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="16" cy="16" r="1.6" stroke="currentColor" strokeWidth="1" />
+                    </svg>
+                  </div>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#608F82]/35 to-transparent" />
+                </div>
+
+                {/* 5. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (오픈 예정 상태 보존, 얇고 심플한 카드 형태) */}
                 <div className="max-w-[1280px] mx-auto mb-36 md:mb-48 lg:mb-52 text-left">
                   <div 
-                    className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#608F82]/35 overflow-hidden shadow-2xl"
+                    className="relative rounded-[32px] md:rounded-[40px] p-6 sm:p-8 lg:p-10 border border-[#608F82]/35 overflow-hidden shadow-2xl"
                     style={{
                       background: 'radial-gradient(ellipse at 50% 0%, rgba(37, 68, 59, 0.45) 0%, rgba(15, 36, 31, 0.40) 50%, rgba(11, 21, 20, 0.95) 100%)',
                       boxShadow: '0 0 60px rgba(96, 143, 130, 0.22)'
@@ -223,9 +246,9 @@ export default function AbundanceReportPage() {
                     {/* 은은한 배경 오라 */}
                     <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#608F82]/15 rounded-full blur-[90px] pointer-events-none" />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 설명 + 가격 + 오픈 예정 버튼 */}
-                      <div className="lg:col-span-7 space-y-5 md:space-y-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
+                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 기울어진 핵심 문구 + 가격 + 오픈 예정 버튼 */}
+                      <div className="lg:col-span-7 space-y-4 md:space-y-5">
                         {/* 1. 상단 라벨 */}
                         <div>
                           <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#608F82]/20 border border-[#608F82]/40 text-[#8FB4A4] text-xs font-bold tracking-wider whitespace-nowrap">
@@ -238,13 +261,13 @@ export default function AbundanceReportPage() {
                           선천코드로 읽는 <span className="gradient-text-abundance">나의 풍요 설계도</span>
                         </h3>
 
-                        {/* 3. 설명 문구 */}
-                        <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.7] font-light break-keep max-w-xl">
-                          나의 타고난 재능과 돈을 대하는 성향을 이해할 때, 나에게 맞는 풍요의 방향이 보입니다. 반복되던 금전 패턴을 멈추고 온전한 부의 흐름을 설계하세요.
+                        {/* 3. 제목 아래 기울어진 핵심 문구 */}
+                        <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] font-elegant italic opacity-95 leading-[1.6] break-keep">
+                          나에게 맞는 풍요는, 내 타고난 흐름을 읽는 것에서 시작됩니다.
                         </p>
 
                         {/* 4. 가격 영역 & 5. 상품 정보 */}
-                        <div className="pt-2">
+                        <div className="pt-1">
                           <div className="flex flex-wrap items-baseline gap-3">
                             <span className="text-3xl sm:text-4xl md:text-[42px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
                               오픈 준비 중
@@ -259,7 +282,7 @@ export default function AbundanceReportPage() {
                         </div>
 
                         {/* 6. 오픈 예정 버튼 (disabled 상태 보존) */}
-                        <div className="pt-2">
+                        <div className="pt-1">
                           <button
                             type="button"
                             disabled
@@ -614,8 +637,8 @@ export default function AbundanceReportPage() {
                     className="w-full h-auto rounded-[50px] shadow-2xl border border-[#608F82]/25" 
                   />
                 </div>
-                <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden border border-[#8FD3B6]/15">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden rounded-[36px] border border-[#8FD3B6]/15">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
                     {[
                       { t: "타고난 재능과 강점", d: "내가 억지로 애쓰지 않아도 자연스럽게 발휘할 수 있는 고유한 강점과 잠재력을 읽어냅니다.", i: "fa-gem" },
                       { t: "수익 활동 성향", d: "자율적 환경, 협업, 전문 분야 몰입 등 나에게 잘 맞는 일의 방식과 수익 활동 성향을 살펴봅니다.", i: "fa-compass" },
@@ -624,13 +647,20 @@ export default function AbundanceReportPage() {
                       { t: "소비 습관과 균형", d: "감정적 지출이나 습관적 소비가 일어나는 맥락을 이해하고 나에게 만족을 주는 소비 기준을 세웁니다.", i: "fa-seedling" },
                       { t: "현실 실천 방향", d: "일상에서 부담 없이 시작하고 꾸준히 이어갈 수 있는 현실적인 정돈과 실천 방향을 제안합니다.", i: "fa-route" }
                     ].map((item, idx) => (
-                      <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group border border-[#8FD3B6]/15">
-                        <div className="w-16 h-16 rounded-2xl bg-[#0f241f] flex items-center justify-center border border-[#8FD3B6]/35 text-[#E6BE8A] shadow-lg group-hover:scale-110 transition-transform">
-                          <i className={`fas ${item.i} text-2xl text-[#8FB4A4]`}></i>
+                      <div 
+                        key={idx} 
+                        className="detail-glass-card flex flex-col items-center text-center py-6 px-4 sm:px-5 md:px-5 rounded-[22px] md:rounded-[26px] group transition-all duration-300 border border-[#8FD3B6]/15 hover:border-[#8FD3B6]/35"
+                      >
+                        <div className="w-[52px] h-[52px] rounded-2xl bg-[#0f241f] flex items-center justify-center border border-[#8FD3B6]/35 text-[#E6BE8A] shadow-sm mb-3.5 group-hover:scale-105 group-hover:bg-[#152e27] transition-all duration-300">
+                          <i className={`fas ${item.i} text-lg md:text-[19px] text-[#8FB4A4]`}></i>
                         </div>
-                        <div>
-                          <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 group-hover:text-[#E6BE8A] transition-colors leading-snug break-keep">{item.t}</h3>
-                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA] opacity-65 font-light break-keep leading-relaxed">{item.d}</p>
+                        <div className="w-full flex flex-col items-center flex-1 justify-center">
+                          <h4 className="text-[17px] sm:text-[18.5px] lg:text-[19.5px] font-bold text-white mb-2.5 group-hover:text-[#E6BE8A] transition-colors leading-snug tracking-tight text-center break-keep">
+                            {item.t}
+                          </h4>
+                          <p className="text-[14.5px] md:text-[15.5px] text-[#EDE6DA]/75 font-light leading-[1.65] break-keep text-center">
+                            {item.d}
+                          </p>
                         </div>
                       </div>
                     ))}

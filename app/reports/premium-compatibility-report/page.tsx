@@ -193,7 +193,7 @@ export default function PremiumCompatibilityReportPage() {
                 </h1>
 
                 {/* 4. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-6 md:mb-8 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#14080E]">
+                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#14080E]">
                   <Image 
                     src={HERO_IMAGE_CONFIG.src} 
                     alt={HERO_IMAGE_CONFIG.alt}
@@ -205,15 +205,38 @@ export default function PremiumCompatibilityReportPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
-                {/* 5. 메인 이미지 하단 기울어진 감성 문구 */}
-                <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-relaxed max-w-2xl mx-auto break-keep font-elegant italic mb-6 md:mb-7">
-                  두 사람의 인연은 우연이 아니라 흐름입니다.
-                </p>
+                {/* 4-1. 메인 히어로 하단 문제 제기형 인트로 섹션 (연애 리포트와 동일한 구조) */}
+                <div className="max-w-4xl mx-auto text-center px-4 space-y-4 md:space-y-5">
+                  <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] md:leading-[1.35] break-keep">
+                    &ldquo;두 사람의 만남이 정말 <span className="gradient-text-reunion">우연이라고 생각하시나요?</span>&rdquo;
+                  </h2>
+                  <p className="text-base sm:text-lg md:text-[20px] font-elegant text-[#FAF7F2] leading-[1.75] md:leading-[1.8] break-keep max-w-2xl mx-auto opacity-95 font-light">
+                    처음엔 전혀 다른 사람을 만난 것 같아도,<br />
+                    돌아보면 늘 비슷한 갈등과 익숙한 상처가 반복되곤 합니다.<br />
+                    궁합은 사랑의 크기보다, 두 사람이 어떤 흐름으로 부딪히는지를 먼저 보여줍니다.
+                  </p>
+                </div>
 
-                {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (하단 공감 문구와의 여유로운 숨 공간 확보) */}
+                {/* 4-2. 구간 전환용 얇은 장식선 + 백도화 인연 문양 */}
+                <div className="flex items-center justify-center my-10 sm:my-14 md:my-16 max-w-xs sm:max-w-sm mx-auto px-4" aria-hidden="true">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#B78C86]/35 to-transparent" />
+                  <div className="mx-4 flex items-center justify-center">
+                    <svg viewBox="0 0 32 32" fill="none" className="w-7 h-7 sm:w-8 sm:h-8 text-[#D8BB94] opacity-90 drop-shadow-[0_0_8px_rgba(216,187,148,0.4)]">
+                      <path d="M16 16 C13.5 11 13 6 16 4 C19 6 18.5 11 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16 16 C20 13 24.5 12.5 26 15.5 C25 18.8 20.5 18 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16 16 C19.5 19.5 21.5 24 18.5 26 C16 24.5 16.2 20 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16 16 C15.8 20 16 24.5 13.5 26 C10.5 24 12.5 19.5 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M16 16 C11.5 18 7 18.8 6 15.5 C7.5 12.5 12 13 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="16" cy="16" r="1.6" stroke="currentColor" strokeWidth="1" />
+                    </svg>
+                  </div>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#B78C86]/35 to-transparent" />
+                </div>
+
+                {/* 5. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (얇고 심플한 프리미엄 소개 카드) */}
                 <div className="max-w-[1280px] mx-auto mb-36 md:mb-48 lg:mb-52 text-left">
                   <div 
-                    className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#B78C86]/35 overflow-hidden shadow-2xl backdrop-blur-md"
+                    className="relative rounded-[32px] md:rounded-[40px] p-6 sm:p-8 lg:p-10 border border-[#B78C86]/35 overflow-hidden shadow-2xl backdrop-blur-md"
                     style={{
                       background: 'radial-gradient(ellipse at 50% 0%, rgba(90, 38, 56, 0.45) 0%, rgba(74, 31, 45, 0.35) 50%, rgba(58, 22, 35, 0.45) 100%)',
                       boxShadow: '0 10px 40px rgba(74, 31, 45, 0.20)'
@@ -222,9 +245,9 @@ export default function PremiumCompatibilityReportPage() {
                     {/* 은은한 배경 오라 */}
                     <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#5A2638]/20 rounded-full blur-[90px] pointer-events-none" />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 설명 + 가격 + 버튼 */}
-                      <div className="lg:col-span-7 space-y-5 md:space-y-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
+                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 기울어진 핵심 문구 + 가격 + 버튼 */}
+                      <div className="lg:col-span-7 space-y-4 md:space-y-5">
                         {/* 1. 상단 라벨 */}
                         <div>
                           <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#5A2638]/70 border border-[#B78C86]/60 text-[#FAF7F2] text-xs font-bold tracking-wider whitespace-nowrap">
@@ -237,13 +260,13 @@ export default function PremiumCompatibilityReportPage() {
                           선천코드로 읽는 <span className="gradient-text-reunion">두 사람의 인연 설계도</span>
                         </h3>
 
-                        {/* 3. 설명 문구 */}
-                        <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.7] font-light break-keep max-w-xl">
-                          두 사람의 선천코드와 관계 패턴을 함께 읽는 1:1 프리미엄 궁합 설계도. 서로의 다름을 이해하는 순간 소모적인 오해는 멈추고 온전한 신뢰가 시작됩니다.
+                        {/* 3. 제목 아래 기울어진 핵심 문구 */}
+                        <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] font-elegant italic opacity-95 leading-[1.6] break-keep">
+                          두 사람의 인연은 우연이 아니라 흐름입니다.
                         </p>
 
                         {/* 4. 가격 영역 & 5. 상품 정보 */}
-                        <div className="pt-2">
+                        <div className="pt-1">
                           <div className="flex flex-wrap items-baseline gap-3">
                             <span className="text-3xl sm:text-4xl md:text-[42px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
                               69,000원
@@ -258,7 +281,7 @@ export default function PremiumCompatibilityReportPage() {
                         </div>
 
                         {/* 6. 구매 버튼 2개 */}
-                        <div className="flex flex-col sm:flex-row gap-3.5 pt-2 items-stretch sm:items-center">
+                        <div className="flex flex-col sm:flex-row gap-3.5 pt-1 items-stretch sm:items-center">
                           <button
                             type="button"
                             onClick={handleAddToCart}
@@ -637,8 +660,8 @@ export default function PremiumCompatibilityReportPage() {
                     className="w-full h-auto rounded-[50px] shadow-2xl border border-white/10" 
                   />
                 </div>
-                <div className="gungjung-glass p-12 md:p-24 relative overflow-hidden rounded-[36px] border border-[#B78C86]/30 bg-gradient-to-b from-[#4A1F2D]/30 via-[#3A1623]/25 to-[#180A14]/35 backdrop-blur-md">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden rounded-[36px] border border-[#B78C86]/30 bg-gradient-to-b from-[#4A1F2D]/30 via-[#3A1623]/25 to-[#180A14]/35 backdrop-blur-md">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
                     {[
                       { t: "선천적 기질 궁합", d: "두 사람의 타고난 에너지 조화 분석", i: "fa-yin-yang" },
                       { t: "핵심 끌림 이유", d: "서로에게 강력하게 끌리는 근본 원인 해독", i: "fa-magnet" },
@@ -647,19 +670,26 @@ export default function PremiumCompatibilityReportPage() {
                       { t: "미래 관계 해석", d: "결혼 및 장기적 인연의 가능성 탐색", i: "fa-ring" },
                       { t: "성장 방향 제안", d: "함께 더 행복해질 수 있는 실질적 가이드", i: "fa-seedling" }
                     ].map((item, idx) => (
-                      <div key={idx} className="detail-glass-card flex flex-col items-center gap-6 p-8 rounded-3xl group border border-[#B78C86]/25 hover:border-[#C7A97A]/45 bg-gradient-to-b from-[#5A2638]/35 to-[#3A1623]/35 transition-all duration-300 backdrop-blur-sm">
-                        <div className="w-16 h-16 rounded-2xl bg-[#4A1F2D]/60 flex items-center justify-center border border-[#B78C86]/40 text-[#D8BB94] shadow-lg group-hover:scale-110 transition-transform">
-                          <i className={`fas ${item.i} text-2xl`}></i>
+                      <div 
+                        key={idx} 
+                        className="detail-glass-card flex flex-col items-center text-center py-6 px-4 sm:px-5 md:px-5 rounded-[22px] md:rounded-[26px] group transition-all duration-300 border border-[#B78C86]/25 hover:border-[#C7A97A]/45 bg-gradient-to-b from-[#5A2638]/35 to-[#3A1623]/35 backdrop-blur-sm"
+                      >
+                        <div className="w-[52px] h-[52px] rounded-2xl bg-[#4A1F2D]/60 flex items-center justify-center border border-[#B78C86]/40 text-[#D8BB94] shadow-sm mb-3.5 group-hover:scale-105 group-hover:bg-[#5A2638]/60 transition-all duration-300">
+                          <i className={`fas ${item.i} text-lg md:text-[19px]`}></i>
                         </div>
-                        <div>
-                          <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-3 leading-snug break-keep">{item.t}</h3>
-                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA] opacity-60 font-light break-keep">{item.d}</p>
+                        <div className="w-full flex flex-col items-center flex-1 justify-center">
+                          <h4 className="text-[17px] sm:text-[18.5px] lg:text-[19.5px] font-bold text-white mb-2.5 leading-snug tracking-tight text-center break-keep">
+                            {item.t}
+                          </h4>
+                          <p className="text-[14.5px] md:text-[15.5px] text-[#EDE6DA]/75 font-light leading-[1.65] break-keep text-center">
+                            {item.d}
+                          </p>
                         </div>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-16 pt-16 border-t border-white/5 text-center">
-                    <p className="text-[#EDE6DA] opacity-75 italic font-elegant text-[18px] break-keep">
+                  <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 md:pt-10 border-t border-[#B78C86]/20 text-center">
+                    <p className="text-[#EDE6DA] opacity-85 italic font-elegant text-[16px] md:text-[18px] leading-relaxed break-keep">
                       &ldquo;이 리포트는 단순한 궁합 점수가 아니라, 관계의 흐름을 이해하고 더 건강한 사랑을 선택하기 위한 프리미엄 자기이해 리포트입니다.&rdquo;
                     </p>
                   </div>

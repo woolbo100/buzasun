@@ -1,7 +1,19 @@
 ﻿'use client'
 
 import Reveal from '@/components/Reveal'
+import Image from 'next/image'
 import { MessageSquareOff, HeartCrack, RefreshCw } from 'lucide-react'
+
+// ══════════════════════════════════════════════════════════════════════
+// 갈등 구조 분석(CONFLICT STRUCTURE ANALYSIS) 16:9 가로형 비주얼 설정
+// 향후 실제 이미지 파일 생성 시 src 경로만 입력하면 즉시 교체 적용됩니다.
+// ══════════════════════════════════════════════════════════════════════
+const COMPATIBILITY_CONFLICT_VISUAL = {
+  src: '', // 예: '/image/compatibility/conflict-structure.webp'
+  alt: '선천코드 프리미엄 궁합 리포트 갈등 구조 분석 16:9',
+  width: 1600,
+  height: 900,
+}
 
 export default function CompatibilityCoreDifferentiation() {
   const painQuestions = [
@@ -25,7 +37,7 @@ export default function CompatibilityCoreDifferentiation() {
   return (
     <section className="mb-40">
       <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-12">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             CONFLICT STRUCTURE ANALYSIS
           </span>
@@ -37,6 +49,26 @@ export default function CompatibilityCoreDifferentiation() {
             좋은 궁합, 나쁜 궁합이라는 단순한 이분법으로는 관계를 구할 수 없습니다.<br className="hidden sm:inline" />
             사랑이 부족해서가 아니라, <span className="text-[#D8BB94] font-medium">서로의 반응 방식이 충돌하고 있을 뿐</span>입니다.
           </p>
+        </div>
+
+        {/* 신규 16:9 가로형 이미지 슬롯 (compatibilityConflictVisual) */}
+        <div className="max-w-7xl mx-auto mb-10 md:mb-12">
+          <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[36px] md:rounded-[40px] overflow-hidden border border-[#B78C86]/30 bg-gradient-to-b from-[#4A1F2D]/35 via-[#3A1623]/25 to-[#180A14]/50 shadow-2xl backdrop-blur-md flex items-center justify-center group">
+            {COMPATIBILITY_CONFLICT_VISUAL.src ? (
+              <Image
+                src={COMPATIBILITY_CONFLICT_VISUAL.src}
+                alt={COMPATIBILITY_CONFLICT_VISUAL.alt}
+                fill
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
+            ) : (
+              <div className="flex flex-col items-center justify-center gap-2.5 p-6 text-center select-none">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5A2638]/40 border border-[#B78C86]/40 text-xs sm:text-sm font-mono tracking-wider text-[#D8BB94] shadow-sm">
+                  궁합 분석 이미지 교체 예정 · 16:9
+                </span>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* 3대 날카로운 질문 카드 */}

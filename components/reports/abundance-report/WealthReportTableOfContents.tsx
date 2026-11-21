@@ -33,8 +33,8 @@ export default function WealthReportTableOfContents() {
           </p>
         </div>
 
-        {/* 7개 PART 아코디언 목록 */}
-        <div className="max-w-7xl mx-auto space-y-4 mb-16">
+        {/* 7개 PART 아코디언 목록 (연애 리포트 기준 높이/패딩 통일) */}
+        <div className="max-w-7xl mx-auto space-y-3 md:space-y-3.5 mb-16">
           {wealthTableOfContentsData.parts.map((part) => {
             const isOpen = openParts.includes(part.id)
             const isSpecial = part.isSpecial
@@ -42,7 +42,7 @@ export default function WealthReportTableOfContents() {
             return (
               <div
                 key={part.id}
-                className={`rounded-[24px] border transition-all duration-300 overflow-hidden ${
+                className={`rounded-[18px] md:rounded-[20px] border transition-all duration-300 overflow-hidden ${
                   isSpecial
                     ? 'bg-gradient-to-r from-[#0f241f]/95 via-[#152e27]/90 to-[#0a0514]/95 border-[#608F82]/60 shadow-[0_0_30px_rgba(96, 143, 130, 0.18)]'
                     : 'gungjung-glass border-white/10 hover:border-[#608F82]/30 bg-gradient-to-b from-[#0f241f]/20 via-black/30 to-black/50'
@@ -52,13 +52,14 @@ export default function WealthReportTableOfContents() {
                 <button
                   type="button"
                   onClick={() => togglePart(part.id)}
-                  className="w-full p-6 md:p-8 flex items-center justify-between text-left gap-4 focus:outline-none"
+                  className="w-full px-5 py-4 md:px-8 md:py-4.5 flex items-center justify-between text-left gap-4 focus:outline-none min-h-[76px] md:min-h-[84px]"
                   aria-expanded={isOpen}
                 >
-                  <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 flex-1">
-                    <div className="flex items-center gap-3">
+                  <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-2.5 lg:gap-6 flex-1 min-w-0 pr-1 md:pr-3">
+                    {/* 좌측 그룹: PART 배지 + 메인 제목 */}
+                    <div className="flex items-start sm:items-center gap-3 md:gap-4 shrink-0">
                       <span
-                        className={`text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-md ${
+                        className={`text-xs font-mono font-bold tracking-widest px-2.5 py-0.5 md:px-3 md:py-1 rounded-md shrink-0 mt-0.5 sm:mt-0 ${
                           isSpecial
                             ? 'bg-[#608F82] text-[#0f241f]'
                             : 'bg-white/10 text-[#E6BE8A]'
@@ -66,23 +67,33 @@ export default function WealthReportTableOfContents() {
                       >
                         {part.number}
                       </span>
-                      {isSpecial && (
-                        <span className="flex items-center gap-1 text-[11px] text-[#8FB4A4] font-bold">
-                          <Sparkles className="w-3.5 h-3.5 text-[#E6BE8A]" />
-                          핵심 실천 처방
-                        </span>
-                      )}
+                      <div className="flex items-center gap-2.5">
+                        <h3 
+                          className="text-[17px] md:text-[20px] font-semibold text-white break-keep tracking-tight leading-snug"
+                          style={{ fontFamily: "'Noto Serif KR', serif" }}
+                        >
+                          {part.title}
+                        </h3>
+                        {isSpecial && (
+                          <span className="inline-flex items-center gap-1 text-[11px] text-[#8FB4A4] font-bold shrink-0">
+                            <Sparkles className="w-3.5 h-3.5 text-[#E6BE8A]" />
+                            핵심 실천 처방
+                          </span>
+                        )}
+                      </div>
                     </div>
-                    <h3 className="text-[20px] md:text-[24px] font-bold text-white break-keep">
-                      {part.title}
-                    </h3>
-                    <p className="text-xs md:text-sm text-[#EDE6DA]/60 font-light break-keep md:ml-auto">
-                      {part.summary}
-                    </p>
+
+                    {/* 우측 그룹: 각 장별 상세 설명문 */}
+                    {part.summary ? (
+                      <p className="text-xs md:text-[13px] lg:text-[13.5px] text-[#EDE6DA]/75 font-light break-keep leading-relaxed lg:whitespace-nowrap lg:text-right lg:ml-auto shrink-0">
+                        {part.summary}
+                      </p>
+                    ) : null}
                   </div>
 
+                  {/* 맨 우측: 펼침 화살표 아이콘 */}
                   <div
-                    className={`w-9 h-9 rounded-full flex items-center justify-center border shrink-0 transition-transform duration-300 ${
+                    className={`w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center border shrink-0 transition-transform duration-300 ${
                       isOpen
                         ? 'rotate-180 bg-[#608F82]/20 border-[#608F82]/50 text-[#8FB4A4]'
                         : 'border-white/10 bg-white/5 text-white/50'
@@ -94,7 +105,7 @@ export default function WealthReportTableOfContents() {
 
                 {/* 세부 항목 리스트 */}
                 {isOpen && (
-                  <div className="px-6 pb-8 md:px-8 border-t border-white/5 pt-6 bg-black/30">
+                  <div className="px-5 pb-6 md:px-8 md:pb-7 border-t border-white/5 pt-5 bg-black/30">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                       {part.items.map((item, itemIdx) => (
                         <div
