@@ -32,7 +32,7 @@ export default function QuestionShiftComparison({
       cardBorder: 'border-[#608F82]/40',
       glowBg: 'bg-[#608F82]/10',
       activeText: 'text-[#8FB4A4]',
-      highlightText: 'text-[#C6A477]',
+      highlightText: 'text-[#C2A477]',
       gradientClass: 'gradient-text-abundance',
       shadowClass: 'shadow-[0_0_30px_rgba(96,143,130,0.18)]',
     },

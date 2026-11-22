@@ -50,7 +50,7 @@ export default function WealthConvergenceMethod() {
       <Reveal>
         {/* 1. 상단 전체 폭 헤더: 영문 라벨, 메인 제목, 도입 설명 (데스크톱/모바일 공통 최상단) */}
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16 space-y-4 md:space-y-5 px-4">
-          <span className="inline-block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase">
+          <span className="inline-block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase">
             POINT 02 · THE CONVERGENCE
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white leading-[1.3] md:leading-[1.32] break-keep">
@@ -64,7 +64,8 @@ export default function WealthConvergenceMethod() {
             </p>
             <p>
               동양 명리학으로 선천적인 재물 성향을 읽고,<br className="hidden sm:inline" />
-              돈 앞에서 반복되는 심리적 반응과 현실의 행동 습관을 함께 살펴보며 나에게 맞는 풍요의 방향을 탐색합니다.
+              돈 앞에서 반복되는 심리적 반응과 현실의 행동 습관을 함께 살펴보며<br />
+              나에게 맞는 풍요의 방향을 탐색합니다.
             </p>
           </div>
 
@@ -76,14 +77,14 @@ export default function WealthConvergenceMethod() {
                   <span
                     className={`text-[13px] sm:text-[14px] md:text-[16px] font-semibold tracking-wide break-keep transition-colors duration-500 ease-in-out ${
                       activeStep === idx
-                        ? 'text-[#8FD3B6]'
+                        ? 'text-[#8FB4A4]'
                         : 'text-[#FAF7F2]/75'
                     }`}
                   >
                     {step}
                   </span>
                   {idx < steps.length - 1 && (
-                    <span className="text-[#8FD3B6]/70 text-xs sm:text-sm font-bold select-none">
+                    <span className="text-[#8FB4A4]/70 text-xs sm:text-sm font-bold select-none">
                       ➔
                     </span>
                   )}
@@ -101,7 +102,7 @@ export default function WealthConvergenceMethod() {
             {/* 상단 그룹: 프로세스 소제목 + 3단계 해독 리스트 */}
             <div className="space-y-6 lg:space-y-7">
               {/* 프로세스 소제목 */}
-              <h3 className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#E5C378] leading-snug break-keep mb-2 sm:mb-2.5">
+              <h3 className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#C2A477] leading-snug break-keep mb-2 sm:mb-2.5">
                 당신의 풍요를 해부하는 3단계 입체 프로세스
               </h3>
 
@@ -110,10 +111,10 @@ export default function WealthConvergenceMethod() {
                 {analysisPhases.map((phase, idx) => (
                   <div key={idx} className="space-y-1.5">
                     <div className="flex items-center gap-2 sm:gap-2.5">
-                      <span className="text-[12.5px] sm:text-[13px] font-mono font-bold tracking-wider text-[#E5C378] shrink-0">
+                      <span className="text-[12.5px] sm:text-[13px] font-mono font-bold tracking-wider text-[#C2A477] shrink-0">
                         {phase.num}
                       </span>
-                      <span className="text-[#8FD3B6]/70 text-xs">·</span>
+                      <span className="text-[#8FB4A4]/70 text-xs">·</span>
                       <h4 className="text-base sm:text-[17px] md:text-[18px] font-bold text-white leading-snug break-keep">
                         {phase.title}
                       </h4>
@@ -131,7 +132,7 @@ export default function WealthConvergenceMethod() {
               <p className="font-elegant font-medium text-[15px] md:text-[16px] text-[#FAF7F2] leading-relaxed break-keep">
                 &ldquo;명리학의 선천 기질 해석과 돈 앞의 심리·행동 패턴을 함께 살펴보는 통합 분석입니다.
               </p>
-              <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#E5C378] leading-relaxed break-keep">
+              <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#C2A477] leading-relaxed break-keep">
                 단편적인 재물운 풀이를 넘어, 나의 재물 성향과 반복되는 선택을 여러 관점에서 입체적으로 이해하도록 돕습니다.&rdquo;
               </p>
               <p className="text-[12.5px] sm:text-[13px] text-[#8FB4A4]/75 font-light leading-relaxed break-keep pt-2.5 mt-2 border-t border-[#608F82]/20">

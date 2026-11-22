@@ -64,7 +64,7 @@ export default function WealthIntroPhilosophy() {
 
           {/* 7. 이미지 아래 브릿지 결심 문구 (연애 리포트와 동일한 글자 크기 & 디자인) */}
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-sm sm:text-base text-[#E5C378] font-medium tracking-wide">
+            <p className="text-sm sm:text-base text-[#C2A477] font-medium tracking-wide">
               당신의 풍요를 바꿀 첫 번째 선택,
             </p>
             <p className="font-elegant font-bold text-lg sm:text-[21px] text-[#FAF7F2] leading-relaxed break-keep mt-2.5">

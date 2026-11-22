@@ -15,7 +15,7 @@ export default function WealthAnalysisMethod() {
     <section id="point-02" className="mb-40 scroll-mt-28 md:scroll-mt-36">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase mb-4">
+          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             POINT 02 · BEHAVIORAL METHODOLOGY
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
@@ -37,7 +37,7 @@ export default function WealthAnalysisMethod() {
                 <div className="w-14 h-14 rounded-2xl bg-[#0f241f] border border-[#608F82]/40 flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform">
                   {icons[idx]}
                 </div>
-                <span className="text-xs font-mono font-bold tracking-widest text-[#E6BE8A] mb-2 block">
+                <span className="text-xs font-mono font-bold tracking-widest text-[#C2A477] mb-2 block">
                   PHASE {card.num}
                 </span>
                 <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-2 leading-snug break-keep">{card.title}</h3>

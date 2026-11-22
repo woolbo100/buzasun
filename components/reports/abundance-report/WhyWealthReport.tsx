@@ -86,7 +86,7 @@ export default function WhyWealthReport() {
             <div className="space-y-2 md:space-y-2.5">
               <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
                 명리의 구조와 마음의 무의식적 습관을 함께 들여다보며,<br />
-                <span className="text-[#E5C378] font-medium opacity-100">
+                <span className="text-[#C2A477] font-medium opacity-100">
                   돈 앞에서 망설이고 흘려보내던 나만의 패턴을 한눈에 그려내던 순간.
                 </span>
               </p>
@@ -113,10 +113,10 @@ export default function WhyWealthReport() {
                   key={idx}
                   type="button"
                   onClick={() => setActiveCardIndex(idx)}
-                  className={`p-5 md:p-6 rounded-[22px] md:rounded-[26px] text-left transition-all duration-300 relative overflow-hidden flex flex-col justify-between group cursor-pointer focus:outline-none focus:ring-1 focus:ring-[#E5C378] ${
+                  className={`p-5 md:p-6 rounded-[22px] md:rounded-[26px] text-left transition-all duration-300 relative overflow-hidden flex flex-col justify-between group cursor-pointer focus:outline-none focus:ring-1 focus:ring-[#C2A477] ${
                     isSelected
-                      ? 'border-[#E5C378] shadow-[0_0_25px_rgba(143,211,182,0.25)]'
-                      : 'border-[#608F82]/20 hover:border-[#8FD3B6]/40 hover:bg-[#142B24]/40'
+                      ? 'border-[#C2A477] shadow-[0_0_25px_rgba(143,211,182,0.25)]'
+                      : 'border-[#608F82]/20 hover:border-[#8FB4A4]/40 hover:bg-[#142B24]/40'
                   }`}
                   style={{
                     background: isSelected ? 'rgba(29, 61, 51, 0.60)' : 'rgba(20, 43, 36, 0.25)',
@@ -126,11 +126,11 @@ export default function WhyWealthReport() {
                   }}
                 >
                   <div className="flex items-center justify-between w-full mb-2.5">
-                    <span className={`font-mono text-[13px] md:text-[14px] font-semibold tracking-widest ${isSelected ? 'text-[#8FD3B6]' : 'text-[#8FB4A4]/70'}`}>
+                    <span className={`font-mono text-[13px] md:text-[14px] font-semibold tracking-widest ${isSelected ? 'text-[#8FB4A4]' : 'text-[#8FB4A4]/70'}`}>
                       {card.label}
                     </span>
                     <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${
-                      isSelected ? 'bg-[#1D3D33] text-[#8FD3B6] border border-[#8FD3B6]/60' : 'bg-white/5 text-white/50 group-hover:text-white/70'
+                      isSelected ? 'bg-[#1D3D33] text-[#8FB4A4] border border-[#8FB4A4]/60' : 'bg-white/5 text-white/50 group-hover:text-white/70'
                     }`}>
                       {card.icon}
                     </div>
@@ -154,7 +154,7 @@ export default function WhyWealthReport() {
             }}
           >
             <div className="flex items-center gap-3 mb-3">
-              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-[#1D3D33]/80 border border-[#608F82]/50 text-[#8FD3B6]">
+              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-[#1D3D33]/80 border border-[#608F82]/50 text-[#8FB4A4]">
                 {cards[activeCardIndex].label} 핵심 가치
               </span>
               <span className="text-xs text-[#EDE6DA]/60 hidden sm:inline">
@@ -176,7 +176,7 @@ export default function WhyWealthReport() {
             <h3 className="font-elegant font-bold text-[20px] md:text-[24px] text-white leading-snug break-keep">
               지금껏 이런 풍요 리포트는 없었습니다.
             </h3>
-            <p className="font-elegant font-medium text-[16px] md:text-[18px] text-[#E5C378] leading-relaxed break-keep">
+            <p className="font-elegant font-medium text-[16px] md:text-[18px] text-[#C2A477] leading-relaxed break-keep">
               하나의 선천코드, 세 겹의 통찰, 오직 당신만을 위한 1:1 재정 나침반
             </p>
           </div>
