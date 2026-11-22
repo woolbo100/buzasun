@@ -59,8 +59,8 @@ export default function WealthTestimonials() {
   const nextCard = SCENARIOS[(currentIndex + 1) % SCENARIOS.length]
 
   return (
-    <section className="mb-28 md:mb-36 text-left w-full max-w-[1280px] mx-auto px-4 sm:px-6">
-      <Reveal>
+    <section className="mb-28 md:mb-36 text-left w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         {/* 1. 섹션 헤더 (타이틀 영역) */}
         <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mb-12 md:mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">

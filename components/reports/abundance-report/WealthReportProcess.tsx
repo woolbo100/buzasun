@@ -32,15 +32,15 @@ export default function WealthReportProcess() {
   ]
 
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-14">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             PRECISION & RESEARCH
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.28] md:leading-[1.32] break-keep">
             한 권의 풍요 리포트가 완성되기까지,<br />
-            <span className="text-[#C2A477]">수많은 질문과 정밀한 연구</span>가 있었습니다.
+            <span className="gradient-text-abundance">수많은 질문과 정밀한 연구</span>가 있었습니다.
           </h2>
           <div className="max-w-3xl mx-auto text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed break-keep space-y-3 md:space-y-3.5">
             <p>
@@ -57,7 +57,7 @@ export default function WealthReportProcess() {
         </div>
 
         {/* 4단계 연구 및 분석 기준 그리드 (동일 높이 flex-col 및 내부 위치 완벽 일치) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-[1280px] mx-auto">
           {studies.map((item, idx) => (
             <div
               key={idx}

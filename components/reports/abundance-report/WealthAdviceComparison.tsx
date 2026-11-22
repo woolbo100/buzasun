@@ -5,8 +5,8 @@ import { wealthAdviceData } from './data'
 
 export default function WealthAdviceComparison() {
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             BEYOND STANDARD FORMULAS
@@ -19,7 +19,7 @@ export default function WealthAdviceComparison() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-[1280px] mx-auto mb-12">
           {wealthAdviceData.cards.map((card, idx) => (
             <div
               key={idx}

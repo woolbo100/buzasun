@@ -6,8 +6,8 @@ import { Info } from 'lucide-react'
 
 export default function WealthPurchaseNotice() {
   return (
-    <section className="mb-40" id="notice">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto" id="notice">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             PURCHASE NOTICE
@@ -20,7 +20,7 @@ export default function WealthPurchaseNotice() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-white/10 max-w-7xl mx-auto bg-gradient-to-b from-[#0f241f]/25 via-black/30 to-black/35">
+        <div className="gungjung-glass p-8 md:p-12 rounded-[32px] border border-white/10 w-full max-w-[1280px] mx-auto bg-gradient-to-b from-[#0f241f]/25 via-black/30 to-black/35">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {wealthNoticeData.notices.map((notice, idx) => (
               <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">

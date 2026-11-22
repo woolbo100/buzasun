@@ -10,7 +10,7 @@ import Image from 'next/image'
  */
 export default function WealthDetailedStructureMedia() {
   return (
-    <div className="w-full max-w-7xl mx-auto mt-8 md:mt-9">
+    <div className="w-full max-w-[1280px] mx-auto mt-8 md:mt-9">
       <div className="relative w-full overflow-hidden rounded-2xl md:rounded-[28px] border border-[#608F82]/30 shadow-2xl bg-[#0d221c]">
         <Image
           src="/images/abundance/wealth-detailed-structure-banner.webp"

@@ -58,7 +58,7 @@ export default function WealthSixPerspectivesBanner() {
   }, [])
 
   return (
-    <div className="w-full max-w-7xl mx-auto mb-16 md:mb-20">
+    <div className="w-full max-w-[1280px] mx-auto mb-16 md:mb-20">
       {/* 영역 헤더: 영문 라벨 + 2개 제목 묶음 + 설명 문구 */}
       <div className="max-w-4xl mx-auto mb-10 md:mb-12 text-center space-y-4">
         {/* ① 영문 라벨 (단독 표시) */}
@@ -73,7 +73,7 @@ export default function WealthSixPerspectivesBanner() {
             <span className="gradient-text-abundance">나만의 풍요 설계도</span>
           </h3>
           <h4 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-            돈과 선택 패턴의 개인 맞춤 해독 — <span className="text-[#C2A477]">6가지 핵심 탐구 축</span>
+            돈과 선택 패턴의 <span className="gradient-text-abundance">6가지 핵심 탐구 축</span> 개인 맞춤 해독
           </h4>
         </div>
 

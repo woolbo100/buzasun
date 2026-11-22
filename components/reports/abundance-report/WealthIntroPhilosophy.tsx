@@ -14,9 +14,9 @@ const INTRO_PHILOSOPHY_VISUAL = {
 
 export default function WealthIntroPhilosophy() {
   return (
-    <section className="mb-14 md:mb-20">
-      <Reveal>
-        <div className="max-w-[1280px] mx-auto text-center">
+    <section className="mb-14 md:mb-20 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
+        <div className="w-full max-w-[1280px] mx-auto text-center">
           {/* 1. 상단 장식 영역: 좌우 얇은 라인 + 중앙 작은 선화 도화꽃 심볼 */}
           <BaekdohwaDivider className="mb-6 md:mb-7" theme="abundance" />
 
@@ -47,7 +47,7 @@ export default function WealthIntroPhilosophy() {
           </div>
 
           {/* 6. 가로 풀사이즈 16:9 이미지 */}
-          <div className="w-full max-w-7xl mx-auto mt-10 md:mt-14 mb-12 md:mb-16">
+          <div className="w-full max-w-[1280px] mx-auto mt-10 md:mt-14 mb-12 md:mb-16">
             <div className="w-full overflow-hidden rounded-[24px] md:rounded-[36px] border border-[#608F82]/30 shadow-2xl bg-[#0B1514] relative group">
               <div className="relative w-full aspect-[16/9]">
                 <Image

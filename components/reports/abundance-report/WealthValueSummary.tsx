@@ -7,8 +7,8 @@ import { BookOpen, ArrowRight } from 'lucide-react'
 
 export default function WealthValueSummary() {
   return (
-    <div className="mb-20">
-      <Reveal>
+    <div className="mb-20 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             LIFELONG COMPASS FOR WEALTH
@@ -22,7 +22,7 @@ export default function WealthValueSummary() {
         </div>
 
         {/* 6가지 핵심 가치 요소 그리드 */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-7xl mx-auto mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-[1280px] mx-auto mb-14">
           {wealthValueData.elements.map((el, idx) => (
             <div
               key={idx}

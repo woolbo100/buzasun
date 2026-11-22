@@ -17,37 +17,37 @@ export default function WealthPersonalizedReportPoint({
   const secretFeatures = [
     {
       num: '01',
-      title: '남들과 똑같은 재테크 공식을 적용하지 않습니다',
-      desc: '타고난 재물 성향과 일하는 기질, 현실의 여건에 따라 각자에게 맞는 수익 방식과 관리 기준이 다르기 때문입니다.'
+      title: '남들과 똑같은 재테크 공식은 쓰지 않습니다',
+      desc: '타고난 재물 기질과 여건에 따라 맞는 수익 방식이 다르기 때문입니다.'
     },
     {
       num: '02',
-      title: '돈 앞에서 반복되는 나만의 선택을 함께 봅니다',
-      desc: '선천 구조와 질문지 응답을 함께 살펴 불안과 망설임, 소비와 수입의 반복 패턴을 여러 관점에서 이해하도록 돕습니다.'
+      title: '돈 앞의 무의식과 반복 선택을 함께 봅니다',
+      desc: '선천 구조와 질문지 응답으로 돈 앞의 두려움과 선택 습관을 짚습니다.'
     },
     {
       num: '03',
-      title: '나에게 맞는 풍요의 실천 기준을 제안합니다',
-      desc: '나의 강점과 재물 흐름을 바탕으로 돈을 벌고 지키는 현실적 기준과 일상에서 시작할 행동 방향을 정리합니다.'
+      title: '돈이 새는 구멍을 막는 실전 전략 추천',
+      desc: '재물 흐름에 맞춰 돈을 벌고 지키는 현실 기준과 행동 방향을 정합니다.'
     }
   ]
 
   return (
-    <section id="point-04-personalized" className="mb-14 md:mb-18 scroll-mt-28 md:scroll-mt-36">
-      <Reveal>
+    <section id="point-04-personalized" className="mt-[60px] sm:mt-20 lg:mt-[104px] mb-14 md:mb-18 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         {/* 모바일 전용 상단 헤드카피 (데스크톱에서는 숨김) */}
-        <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5 w-full max-w-[1280px] mx-auto">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase">
             POINT 04 · PERSONALIZED REPORT
           </span>
           <h2 className="text-2xl sm:text-3xl font-elegant font-bold text-white leading-[1.3] break-keep">
             당신만을 위해 완성되는<br className="sm:hidden" />
-            <span className="text-[#C2A477]"> 단 하나의 선천코드 1:1 풍요 분석서</span>
+            <span className="gradient-text-abundance"> 단 하나의 선천코드 1:1 풍요 분석서</span>
           </h2>
         </div>
 
-        {/* 2단 구성: 데스크톱 [왼쪽: 설명 텍스트 7단] | [오른쪽: 3:4 세로 이미지 5단] */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center lg:items-stretch">
+        {/* 2단 구성: 데스크톱 [왼쪽: 설명 텍스트 7단] | [오른쪽: 3:4 세로 이미지 5단] (1280px 풀 위드 정렬) */}
+        <div className="w-full max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center lg:items-stretch">
           
           {/* 왼쪽 텍스트 그룹 (데스크톱 7단 / 모바일 순서 2: 이미지 뒤에 표시 / 데스크톱 세로 균형 정렬) */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-0 order-2 lg:order-1 h-full py-0.5">
@@ -60,7 +60,7 @@ export default function WealthPersonalizedReportPoint({
                 </span>
                 <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
                   당신만을 위해 완성되는<br />
-                  <span className="text-[#C2A477]">단 하나의 선천코드 1:1 풍요 분석서</span>
+                  <span className="gradient-text-abundance">단 하나의 선천코드 1:1 풍요 분석서</span>
                 </h2>
               </div>
 
@@ -87,7 +87,7 @@ export default function WealthPersonalizedReportPoint({
                         {item.num}
                       </span>
                       <span className="text-[#C2A477]/70 text-xs">·</span>
-                      <h4 className="text-[15.5px] sm:text-[16.5px] md:text-[17.5px] font-bold text-white leading-snug break-keep">
+                      <h4 className="text-[15.5px] sm:text-[16.5px] md:text-[17.5px] font-bold text-white leading-snug break-keep lg:whitespace-nowrap">
                         {item.title}
                       </h4>
                     </div>

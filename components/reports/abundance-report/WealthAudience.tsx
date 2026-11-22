@@ -7,8 +7,8 @@ import { Check, X } from 'lucide-react'
 
 export default function WealthAudience() {
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             TARGET AUDIENCE
@@ -22,7 +22,7 @@ export default function WealthAudience() {
         </div>
 
         {/* 상단: 기존 a3.webp 이미지와 추천/비추천 대상의 조화로운 배치 */}
-        <div className="grid lg:grid-cols-12 gap-10 items-center max-w-7xl mx-auto mb-16">
+        <div className="grid lg:grid-cols-12 gap-10 items-center w-full max-w-[1280px] mx-auto mb-16">
           <div className="lg:col-span-5 relative group">
             <div className="absolute -inset-4 bg-[#608F82]/15 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <Image

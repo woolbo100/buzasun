@@ -20,8 +20,8 @@ export default function WealthPatternChecklist() {
   const isHighPattern = selectedCount >= 3
 
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             WEALTH PATTERN CHECKLIST
@@ -34,7 +34,7 @@ export default function WealthPatternChecklist() {
           </p>
         </div>
 
-        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] max-w-7xl mx-auto border border-[#608F82]/25 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#0f241f]/25 via-black/30 to-black/35">
+        <div className="gungjung-glass p-8 md:p-14 rounded-[32px] w-full max-w-[1280px] mx-auto border border-[#608F82]/25 shadow-2xl relative overflow-hidden bg-gradient-to-b from-[#0f241f]/25 via-black/30 to-black/35">
           {/* 연옥빛 은은한 배경 광채 */}
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#608F82]/15 rounded-full blur-[90px] pointer-events-none"></div>
 

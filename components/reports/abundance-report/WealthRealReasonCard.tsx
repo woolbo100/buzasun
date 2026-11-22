@@ -4,8 +4,8 @@ import Reveal from '@/components/Reveal'
 
 export default function WealthRealReasonCard() {
   return (
-    <section className="mb-20 md:mb-28 max-w-7xl mx-auto px-4 sm:px-6">
-      <Reveal>
+    <section className="mb-20 md:mb-28 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="gungjung-glass p-8 sm:p-10 md:p-14 rounded-[32px] md:rounded-[40px] border border-[#608F82]/35 bg-gradient-to-b from-[#0f241f]/40 via-[#152e27]/25 to-[#0a0514]/45 text-center relative overflow-hidden shadow-2xl backdrop-blur-md">
           {/* 은은한 배경 광채 */}
           <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#608F82]/15 rounded-full blur-[90px] pointer-events-none" />

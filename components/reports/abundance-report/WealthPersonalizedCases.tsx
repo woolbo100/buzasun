@@ -5,8 +5,8 @@ import { wealthCaseData } from './data'
 
 export default function WealthPersonalizedCases() {
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
           <div>
             <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
@@ -36,7 +36,7 @@ export default function WealthPersonalizedCases() {
         </div>
 
         {/* CASE A & B 비교 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[1280px] mx-auto mb-12">
           {wealthCaseData.cases.map((c, idx) => (
             <div
               key={idx}

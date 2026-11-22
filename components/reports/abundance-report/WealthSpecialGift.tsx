@@ -52,7 +52,7 @@ export default function WealthSpecialGift() {
   ]
 
   return (
-    <div className="w-full max-w-7xl mx-auto mt-0 mb-32 md:mb-40">
+    <div className="w-full max-w-[1280px] mx-auto mt-0 mb-28 md:mb-36">
       <Reveal>
         <div className="gungjung-glass p-7 sm:p-8 md:p-9 lg:p-10 rounded-[28px] md:rounded-[36px] border border-[#608F82]/35 bg-gradient-to-r from-[#142B24]/80 via-[#0B1514]/75 to-[#142B24]/80 shadow-xl relative overflow-hidden backdrop-blur-md">
           {/* 은은한 배경 오라 */}
@@ -71,7 +71,7 @@ export default function WealthSpecialGift() {
               {/* 메인 제목 (2줄) */}
               <h3 className="text-[21px] sm:text-2xl md:text-[27px] font-elegant font-bold text-white leading-[1.3] break-keep">
                 나의 선천코드에 맞춘<br />
-                <span className="text-[#C2A477]">오행 아트카드 1장 + 나의 오행 수호자 카드 1장</span>
+                <span className="gradient-text-abundance">오행 아트카드 1장 + 나의 오행 수호자 카드 1장</span>
               </h3>
 
               {/* 간결한 설명문 (2줄) */}

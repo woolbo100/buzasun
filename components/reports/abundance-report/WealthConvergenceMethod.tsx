@@ -46,8 +46,8 @@ export default function WealthConvergenceMethod() {
   ]
 
   return (
-    <section id="point-02-convergence" className="mb-20 md:mb-28 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
-      <Reveal>
+    <section id="point-02-convergence" className="mb-20 md:mb-28 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         {/* 1. 상단 전체 폭 헤더: 영문 라벨, 메인 제목, 도입 설명 (데스크톱/모바일 공통 최상단) */}
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16 space-y-4 md:space-y-5 px-4">
           <span className="inline-block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase">
@@ -95,7 +95,7 @@ export default function WealthConvergenceMethod() {
         </div>
 
         {/* 2. 본문 2단 구성: 데스크톱 [왼쪽: 설명 텍스트] | [오른쪽: 3:4 세로 이미지] */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center lg:items-stretch">
+        <div className="w-full max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-center lg:items-stretch">
           
           {/* 왼쪽 텍스트 그룹 (데스크톱 7단 / 모바일 순서 2: 이미지 뒤에 표시) */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 lg:space-y-0 order-2 lg:order-1 h-full py-0.5">

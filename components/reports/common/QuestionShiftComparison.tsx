@@ -132,8 +132,8 @@ export default function QuestionShiftComparison({
   }[theme]
 
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-14 md:mb-16">
           <span className={`block font-elegant text-[12pt] font-semibold tracking-[0.2em] ${themeConfig.activeText} uppercase mb-4`}>
             PARADIGM SHIFT
@@ -168,7 +168,7 @@ export default function QuestionShiftComparison({
         )}
 
         {/* 2단 비교 카드 (모바일 세로, 데스크톱 가로) */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-12">
+        <div className="w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-12">
           
           {/* CARD 01 — 기존의 운세 중심 질문 */}
           <div 

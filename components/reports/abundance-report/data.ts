@@ -153,44 +153,44 @@ export const wealthComparisonTableData = {
   columns: [
     { id: "ai", name: "자동 생성형 운세", isTarget: false },
     { id: "traditional", name: "일반 재물 사주", isTarget: false },
-    { id: "baekdohwa", name: "백도화 선천코드 풍요 리포트", isTarget: true }
+    { id: "baekdohwa", name: "백도화 풍요 리포트", isTarget: true }
   ],
   rows: [
     {
       feature: "01. 선천 재물 성향 분석",
       ai: "단순 생년월일 키워드 나열",
-      traditional: "재다신약, 신강 등 길흉 중심",
-      baekdohwa: "오행과 십성을 통한 고유한 일과 재물 에너지 해독"
+      traditional: "재다신약·신강 등 길흉 중심",
+      baekdohwa: "오행과 현실을 연결한 재물 성향 해석"
     },
     {
       feature: "02. 현실의 돈 습관 반영",
-      ai: "현실적 상황 반영 불가",
-      traditional: "상담자 단편 대화 의존",
-      baekdohwa: "상세 질문지를 통해 현재 소비·수입 고민 집중 반영"
+      ai: "현실 상황 반영 부족",
+      traditional: "상담자 설명 의존",
+      baekdohwa: "질문지 기반 소비·수입 고민 반영"
     },
     {
-      feature: "03. 반복되는 소비·수익 패턴",
+      feature: "03. 반복되는 소비·수입 패턴",
       ai: "오늘의 금전운 수준",
-      traditional: "조심할 시기 위주 서술",
-      baekdohwa: "돈이 새는 지점과 무의식적 판단의 취약점 정밀 추적"
+      traditional: "시기 위주 해석",
+      baekdohwa: "반복 패턴과 돈 누수 지점 추적"
     },
     {
       feature: "04. 돈과 일의 관계 자기 이해",
-      ai: "부재",
-      traditional: "직업 적성 단순 나열",
-      baekdohwa: "나만의 재물 원형(주형·부형·도형·정형) 기반 자기 객관화"
+      ai: "자기 이해 구조 부족",
+      traditional: "직업·재물 적성 나열",
+      baekdohwa: "나만의 재물 원형 기반 자기 이해"
     },
     {
       feature: "05. 맞춤형 행동 가이드",
-      ai: "추상적인 덕담",
-      traditional: "부적이나 개운법 권유",
-      baekdohwa: "일상에서 바로 실천하는 재정 기준과 습관 루틴 제안"
+      ai: "추상적 조언 중심",
+      traditional: "개론적 조언 중심",
+      baekdohwa: "실천 가능한 재정 기준과 행동 제안"
     },
     {
       feature: "06. 소장 가능한 개인 분석서",
       ai: "휘발성 모바일 화면",
-      traditional: "구두 상담 (기억에서 소멸)",
-      baekdohwa: "언제든 다시 펼쳐보는 28~30P 고품격 디지털 리포트"
+      traditional: "구두 상담 중심 기록",
+      baekdohwa: "다시 펼쳐보는 디지털 개인 리포트"
     }
   ]
 }
@@ -355,15 +355,16 @@ export const wealthProcessData = {
 
 // 9. 리포트 샘플 미리보기 (SECTION 10)
 export const wealthPreviewData = {
-  mainCopy: "나만을 위해 기록되는\n풍요 설계도의 모습을 확인하십시오.",
-  subCopy: "연옥빛 제이드와 앤티크 골드 감성의 약 28~30페이지 내외 고품격 PDF 디지털 리포트입니다.",
+  mainCopy: "왕실의 비급처럼 귀하게,\n당신의 풍요를 한 권에 담다",
+  subCopy: "한국 전통 왕실 도감의 기품과 옥빛 비단의 아름다움을 현대적으로 재해석한,\n오래도록 곁에 두고 펼쳐볼 수 있는 프리미엄 디지털 풍요비책입니다.",
+  leadMessage: "한 권의 비급에 담긴 당신만의 풍요 설계도를 미리 펼쳐보세요.",
   disclaimer: "※ 위 내용은 이해를 돕기 위한 샘플이며 실제 분석 내용은 개인의 선천 정보와 질문지 응답에 따라 달라질 수 있습니다.",
   samples: [
     {
       id: "cover",
       title: "풍요 리포트 표지",
       desc: "연옥빛 비단과 앤티크 샴페인 골드 무드의 품격 있는 커버",
-      src: "/image/abundance/a5.webp",
+      src: "/images/abundance/wealth-report-cover-premium-mockup.webp",
       badge: "COVER"
     },
     {

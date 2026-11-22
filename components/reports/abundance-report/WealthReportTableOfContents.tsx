@@ -19,9 +19,9 @@ export default function WealthReportTableOfContents() {
   }
 
   return (
-    <section className="mb-6 md:mb-7 scroll-mt-28 md:scroll-mt-36" id="point-04">
+    <section className="mb-6 md:mb-7 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto" id="point-04">
       <span id="table-of-contents" className="block -mt-28 pt-28" />
-      <Reveal>
+      <Reveal className="w-full">
         {/* 헤더 텍스트: 상단 영문 라벨 + 메인 제목 2줄 + 2개 단락 설명문(풍요비책 앤티크 골드 부분 강조) */}
         <div className="max-w-4xl mx-auto text-center">
           {/* ① 영문 라벨 */}
@@ -32,7 +32,7 @@ export default function WealthReportTableOfContents() {
           {/* ② 메인 제목 2줄 */}
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-7 md:mb-8 leading-[1.28] md:leading-[1.32] break-keep">
             당신의 풍요를 해독하는<br />
-            <span className="text-[#C2A477]">정밀 분석의 모든 장</span>
+            <span className="gradient-text-abundance">정밀 분석의 모든 장</span>
           </h2>
 
           {/* ③ 설명 문구 2개 단락 */}
@@ -55,7 +55,7 @@ export default function WealthReportTableOfContents() {
         <WealthDetailedStructureMedia />
 
         {/* ⑤ 세부 분석 목차 안내 패널 (연애 리포트와 동일한 구조 & 풍요 전용 컬러) */}
-        <div className="max-w-7xl mx-auto mt-7 md:mt-9 mb-5 md:mb-6">
+        <div className="w-full max-w-[1280px] mx-auto mt-7 md:mt-9 mb-5 md:mb-6">
           <div className="py-[22px] md:py-[28px] px-5 md:px-8 rounded-[18px] md:rounded-[20px] border border-[#608F82]/30 bg-gradient-to-r from-[#142B24]/40 via-[#0B1514]/65 to-[#142B24]/40 backdrop-blur-sm shadow-sm text-center flex flex-col items-center justify-center">
             {/* 메인 제목 (풍요비책 앤티크 샴페인 골드 강조) */}
             <h3 
@@ -74,7 +74,7 @@ export default function WealthReportTableOfContents() {
         </div>
 
         {/* ⑥ 기존 7개 CHAPTER 아코디언 목록 */}
-        <div className="max-w-7xl mx-auto space-y-3 md:space-y-3.5 mb-16">
+        <div className="w-full max-w-[1280px] mx-auto space-y-3 md:space-y-3.5 mb-16">
           {wealthTableOfContentsData.parts.map((part) => {
             const isOpen = openParts.includes(part.id)
             const isSpecial = part.isSpecial
@@ -174,7 +174,7 @@ export default function WealthReportTableOfContents() {
         </div>
 
         {/* PART 07 별도 프리미엄 독립 강조 카드 (연옥 & 앤티크 골드) */}
-        <div className="max-w-7xl mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#0f241f]/35 via-[#152e27]/25 to-[#0a0514]/35 border-2 border-[#608F82]/50 shadow-2xl relative overflow-hidden">
+        <div className="w-full max-w-[1280px] mx-auto p-8 md:p-14 rounded-[36px] bg-gradient-to-b from-[#0f241f]/35 via-[#152e27]/25 to-[#0a0514]/35 border-2 border-[#608F82]/50 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#608F82]/15 rounded-full blur-[100px] pointer-events-none"></div>
 
           <div className="relative z-10 text-center mb-10">

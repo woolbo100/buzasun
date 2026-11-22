@@ -40,8 +40,8 @@ export default function WealthPrescriptionSample({
   ]
 
   return (
-    <section id="point-05-prescription" className="mb-32 md:mb-40 scroll-mt-28 md:scroll-mt-36">
-      <Reveal>
+    <section id="point-05-prescription" className="mb-32 md:mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         {/* ══════════════════════════════════════════════════════════════════ */}
         {/* [PART A] 헤더 카피 + 3개 실전 처방 카드 */}
         {/* ══════════════════════════════════════════════════════════════════ */}
@@ -53,20 +53,17 @@ export default function WealthPrescriptionSample({
 
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             이런 풍요 처방전은 없었습니다.<br />
-            막연한 부자 마인드셋이 아닌,<br className="hidden sm:inline" />{' '}
-            <span className="text-[#C2A477]">현실적인 행동 처방전</span>
+            막연한 부자 마인드셋이 아닌, <span className="gradient-text-abundance">현실적인 행동 처방전</span>
           </h2>
 
-          <p className="text-[17px] md:text-[18px] text-[#FAF7F2]/90 font-light break-keep max-w-2xl mx-auto leading-relaxed">
-            백도화 선천코드 풍요 리포트의 핵심인 PART 07에서는<br className="hidden sm:inline" />
-            비현실적인 요행이나 추상적인 부자 조언 대신,<br className="hidden sm:inline" />
-            돈 앞에서의 위축과 누수, 흔들리는 선택을 바로잡을<br className="hidden sm:inline" />
-            실제 행동 가이드를 처방합니다.
+          <p className="text-[17px] md:text-[18px] text-[#FAF7F2]/90 font-light break-keep max-w-3xl mx-auto leading-relaxed">
+            선천코드 풍요 리포트에서는 비현실적 요행이나 추상적 부자 조언 대신,<br className="hidden sm:inline" />
+            돈 앞의 위축과 누수, 흔들리는 선택을 바로잡는 실제 행동 가이드를 처방합니다.
           </p>
         </div>
 
-        {/* 3개 처방 카드 (심리 처방 / 행동 처방 / 풍요 루틴 처방) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto px-4 sm:px-6">
+        {/* 3개 처방 카드 (심리 처방 / 행동 처방 / 풍요 루틴 처방) (1280px 풀 위드 정렬) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 w-full max-w-[1280px] mx-auto">
           {prescriptionCards.map((card, idx) => (
             <div
               key={idx}
@@ -93,9 +90,9 @@ export default function WealthPrescriptionSample({
         </div>
 
         {/* ══════════════════════════════════════════════════════════════════ */}
-        {/* [PART B] 하단 대표 비주얼 (가로형 풍요 처방전 배너) */}
+        {/* [PART B] 하단 대표 비주얼 (가로형 풍요 처방전 배너 1280px 풀 위드) */}
         {/* ══════════════════════════════════════════════════════════════════ */}
-        <div className="mt-10 sm:mt-12 md:mt-14 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="mt-10 sm:mt-12 md:mt-14 w-full max-w-[1280px] mx-auto">
           <Reveal delayMs={120}>
             <div className="prescription-visual-wrapper relative rounded-[22px] sm:rounded-[26px] md:rounded-[28px] overflow-hidden border border-[#608F82]/30 bg-[#071714]/80 shadow-[0_12px_40px_rgba(5,20,16,0.5)]">
               {/* 소프트 쉬머(빛 흐름) 오버레이 - 은은한 실크 광택 */}

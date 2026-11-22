@@ -12,14 +12,15 @@ export default function WealthAnalysisMethod() {
   ]
 
   return (
-    <section id="point-02" className="mb-40 scroll-mt-28 md:scroll-mt-36">
-      <Reveal>
+    <section id="point-02" className="mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             POINT 02 · BEHAVIORAL METHODOLOGY
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {wealthAnalysisMethodData.title}
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+            재물운만 읽지 않습니다.<br />
+            <span className="gradient-text-abundance">돈 앞에서 반복되는 나의 선택까지 함께 살펴봅니다.</span>
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {wealthAnalysisMethodData.subTitle}
@@ -27,7 +28,7 @@ export default function WealthAnalysisMethod() {
         </div>
 
         {/* 3대 분석 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-[1280px] mx-auto mb-16">
           {wealthAnalysisMethodData.cards.map((card, idx) => (
             <div
               key={idx}
@@ -53,7 +54,7 @@ export default function WealthAnalysisMethod() {
         </div>
 
         {/* 강조 문구 배너 */}
-        <div className="max-w-7xl mx-auto p-6 md:p-8 rounded-2xl bg-gradient-to-r from-[#0f241f]/30 via-white/[0.02] to-[#0f241f]/30 border border-[#608F82]/25 text-center">
+        <div className="w-full max-w-[1280px] mx-auto p-6 md:p-8 rounded-2xl bg-gradient-to-r from-[#0f241f]/30 via-white/[0.02] to-[#0f241f]/30 border border-[#608F82]/25 text-center">
           <p className="text-base md:text-lg text-[#EDE6DA] font-light leading-relaxed break-keep">
             ✨ {wealthAnalysisMethodData.highlight}
           </p>

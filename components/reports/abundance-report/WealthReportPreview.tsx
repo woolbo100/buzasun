@@ -37,23 +37,29 @@ export default function WealthReportPreview() {
       : null
 
   return (
-    <section className="mb-40 scroll-mt-28 md:scroll-mt-36" id="point-06">
+    <section className="mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto" id="point-06">
       <span id="sample-preview" className="block -mt-28 pt-28" />
-      <Reveal>
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
-            POINT 06 · DIGITAL REPORT PREVIEW
+            POINT 06 · PREMIUM ARTIFACT & ARCHIVE
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {wealthPreviewData.mainCopy}
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+            왕실의 비급처럼 귀하게,<br />
+            <span className="gradient-text-abundance">당신의 풍요를 한 권에 담다</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
-            {wealthPreviewData.subCopy}
-          </p>
+          <div className="space-y-2.5">
+            <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep leading-relaxed whitespace-pre-line">
+              {wealthPreviewData.subCopy}
+            </p>
+            <p className="text-[16px] md:text-[17.5px] text-[#C2A477] font-medium break-keep tracking-tight">
+              {wealthPreviewData.leadMessage}
+            </p>
+          </div>
         </div>
 
         {/* 4개 샘플 프리뷰 그리드 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-[1280px] mx-auto mb-10">
           {wealthPreviewData.samples.map((sample, idx) => (
             <div
               key={sample.id}

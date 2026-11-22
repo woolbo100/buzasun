@@ -34,8 +34,8 @@ export default function WealthCoreDifferentiation() {
   ]
 
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-10 md:mb-12">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             WEALTH DYNAMICS ANALYSIS
@@ -52,7 +52,7 @@ export default function WealthCoreDifferentiation() {
         </div>
 
         {/* 16:9 가로형 이미지 슬롯 (재물 누수와 반복 패턴) */}
-        <div className="max-w-7xl mx-auto mb-10 md:mb-12">
+        <div className="w-full max-w-[1280px] mx-auto mb-10 md:mb-12">
           <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[36px] md:rounded-[40px] overflow-hidden border border-[#608F82]/30 bg-[#0B1514] shadow-2xl backdrop-blur-md flex items-center justify-center">
             <Image
               src={ABUNDANCE_WEALTH_DYNAMICS_VISUAL.src}
@@ -65,7 +65,7 @@ export default function WealthCoreDifferentiation() {
         </div>
 
         {/* 3대 날카로운 질문 카드 */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {painQuestions.map((item, idx) => {
             const Icon = item.icon
             return (

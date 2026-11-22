@@ -36,8 +36,8 @@ const WEALTH_AXIS_STEPS = [
 
 export default function WealthPatternFlow() {
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         {/* 1. 상단 제목 & 설명 문구 */}
         <div className="max-w-4xl mx-auto text-center mb-12 space-y-6">
           <div>
@@ -64,7 +64,7 @@ export default function WealthPatternFlow() {
         </div>
 
         {/* 2. 16:9 신규 비주얼 이미지 (자체 타이포그래피 포함으로 오버레이 텍스트 없음) */}
-        <div className="max-w-7xl mx-auto mb-14">
+        <div className="w-full max-w-[1280px] mx-auto mb-14">
           <div className="w-full overflow-hidden rounded-[24px] md:rounded-[36px] border border-[#608F82]/30 shadow-2xl bg-[#0B1514] relative group">
             <div className="relative w-full aspect-[16/9]">
               <Image
@@ -94,7 +94,7 @@ export default function WealthPatternFlow() {
         </div>
 
         {/* 4. 3단 카드 (3개의 핵심 축) */}
-        <div className="max-w-7xl mx-auto mb-16">
+        <div className="w-full max-w-[1280px] mx-auto mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative items-stretch">
             {WEALTH_AXIS_STEPS.map((step, idx) => (
               <div key={idx} className="relative flex flex-col">
@@ -134,7 +134,7 @@ export default function WealthPatternFlow() {
         </div>
 
         {/* 5. 하단 인용 박스 (각성 메시지 카드 전용 프리미엄 호버 효과) */}
-        <div className="awakening-quote-card-wealth max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#0f241f]/30 via-[#152e27]/45 to-[#0f241f]/30 border border-[#608F82]/35 text-center shadow-xl backdrop-blur-md">
+        <div className="awakening-quote-card-wealth w-full max-w-[1280px] mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#0f241f]/30 via-[#152e27]/45 to-[#0f241f]/30 border border-[#608F82]/35 text-center shadow-xl backdrop-blur-md">
           <p className="relative z-10 text-lg sm:text-xl md:text-2xl font-elegant font-bold text-[#E6BE8A] leading-relaxed whitespace-pre-line drop-shadow-sm">
             &ldquo;명(命)은 바꾸는 것이 아니라 쓰는 것입니다.{"\n"}
             이제는 익숙한 본능대로 반응하지 말고, 내 기질과 구조에 맞게 써야 할 때입니다.&rdquo;

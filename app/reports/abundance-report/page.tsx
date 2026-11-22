@@ -39,6 +39,7 @@ import WealthPurchaseNotice from '@/components/reports/abundance-report/WealthPu
 import WealthSixPerspectivesBanner from '@/components/reports/abundance-report/WealthSixPerspectivesBanner'
 import WealthSpecialGift from '@/components/reports/abundance-report/WealthSpecialGift'
 import WealthPersonalizedReportPoint from '@/components/reports/abundance-report/WealthPersonalizedReportPoint'
+import WealthRoyalArchivePoint from '@/components/reports/abundance-report/WealthRoyalArchivePoint'
 import WealthRealTransformationBanner from '@/components/reports/abundance-report/WealthRealTransformationBanner'
 import WealthRealReasonCard from '@/components/reports/abundance-report/WealthRealReasonCard'
 
@@ -387,8 +388,8 @@ export default function AbundanceReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [교차 스토리 1] THE MOMENT OF AWARENESS (좌측 텍스트 + 우측 이미지) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-24 md:mb-32">
-              <Reveal>
+            <section className="mb-24 md:mb-32 w-full max-w-[1280px] mx-auto">
+              <Reveal className="w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-18 items-stretch">
                   {/* 좌측 55%: 라벨 + 제목 + 본문 및 마지막 핵심 후킹 */}
                   <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1 flex flex-col justify-between py-1 lg:py-2">
@@ -467,8 +468,8 @@ export default function AbundanceReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [교차 스토리 2] THE HIDDEN FLOW (좌측 이미지 + 우측 텍스트) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-24 md:mb-32">
-              <Reveal>
+            <section className="mb-24 md:mb-32 w-full max-w-[1280px] mx-auto">
+              <Reveal className="w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-16 items-stretch">
                   {/* 좌측 45%: 세로형 3:4 이미지 영역 (데스크톱에서는 우측 텍스트 전체 높이와 상하단 균형 정렬) */}
                   <div className="lg:col-span-5 w-full max-w-[420px] lg:max-w-[450px] xl:max-w-[460px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start justify-start lg:py-2">
@@ -599,8 +600,8 @@ export default function AbundanceReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* POINT 01. 풍요 특화 심층 분석 (수박 겉핥기식 운세 풀이와의 차별화) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36">
-              <Reveal>
+            <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+              <Reveal className="w-full">
                 {/* 모바일 표시 순서 1: 섹션 제목 및 헤드카피 */}
                 <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase">
@@ -679,10 +680,10 @@ export default function AbundanceReportPage() {
             <WealthReportProcess />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 03. 돈과 선택 패턴의 개인 맞춤 해독 — 6가지 핵심 탐구 축 */}
+            {/* POINT 03. 돈과 선택 패턴의 6가지 핵심 탐구 축 개인 맞춤 해독 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36">
-              <Reveal>
+            <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+              <Reveal className="w-full">
                 {/* 1. 상단 전환 영역: 꽃 장식 구분선 + POINT 03 헤더 카피 + 설명 문구 */}
                 <div className="max-w-4xl mx-auto mb-10 md:mb-14 space-y-6">
                   {/* 중앙 꽃 장식 및 좌우 가로 구분선 */}
@@ -719,7 +720,7 @@ export default function AbundanceReportPage() {
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.analysis} 
                     alt="백도화 선천코드 풍요 리포트의 6가지 핵심 탐구 축을 표현한 옥빛과 샴페인 골드 금박의 원형 설계도" 
-                    width={1672}
+                    width={1671}
                     height={941}
                     className="w-full h-auto rounded-[32px] md:rounded-[40px] shadow-2xl border border-[#608F82]/25 object-contain" 
                   />
@@ -738,9 +739,9 @@ export default function AbundanceReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [목차 및 실전 처방 직후 가로형 구매 CTA] (PART 07 대형 카드 바로 아래) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-20 md:mb-28 max-w-7xl mx-auto px-4">
-              <Reveal>
-                <div className="gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#608F82]/35 bg-gradient-to-r from-[#142B24]/75 via-[#0B1514]/65 to-[#142B24]/75 relative overflow-hidden shadow-xl backdrop-blur-md">
+            <section className="mb-0 w-full max-w-[1280px] mx-auto">
+              <Reveal className="w-full">
+                <div className="w-full gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#608F82]/35 bg-gradient-to-r from-[#142B24]/75 via-[#0B1514]/65 to-[#142B24]/75 relative overflow-hidden shadow-xl backdrop-blur-md">
                   {/* 은은한 배경 오라 */}
                   <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#608F82]/10 rounded-full blur-[90px] pointer-events-none" />
 
@@ -790,19 +791,24 @@ export default function AbundanceReportPage() {
             <WealthPrescriptionSample />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 02: 선천코드 풍요 분석 체계 (명리 뼈대 + 재정 행동 패턴 교차 분석) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthAnalysisMethod />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 10. 리포트 샘플 미리보기 (확대 라이트박스 지원) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthReportPreview />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* PREMIUM WEALTH ARCHIVE: 프리미엄 소장용 풍요비책 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthRoyalArchivePoint />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 07. 일반 재물운 풀이와의 차별점 (비교표) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthComparisonTable />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 02: 선천코드 풍요 분석 체계 (명리 뼈대 + 재정 행동 패턴 교차 분석) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthAnalysisMethod />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 11. 리포트를 읽은 뒤 달라질 수 있는 선택 */}
@@ -896,35 +902,7 @@ export default function AbundanceReportPage() {
             {/* 15-1. 소장 가치 6대 핵심 요소 요약 및 《풍요비책》 전자책 연결 카드 */}
             <WealthValueSummary />
 
-            {/* 15-2. 기존 프리미엄 섹션 (a5.webp 에셋 보존) */}
-            <section className="mb-40">
-              <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="space-y-10 order-2 lg:order-1">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      나만의 기준을 세우는 <br />
-                      <span className="text-[#8FB4A4]">프리미엄</span> <span className="text-[#E6BE8A]">풍요 리포트</span>
-                    </h2>
-                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      선천코드 풍요 리포트는 타인의 기준을 무작정 따라가는 대신, 나의 기질과 생활의 리듬에 어울리는 풍요의 방향을 차분히 정리해 보는 맞춤형 리포트입니다.{"\n\n"}
-                      백도화만의 깊이 있는 해석과 정갈한 문체로, 내 안의 강점과 일상의 재정 습관을 돌아보고 현실에서 단단하게 걸어갈 방향을 함께 그려봅니다.
-                    </p>
-                  </div>
-                  <div className="order-1 lg:order-2 relative group">
-                    <div className="absolute -inset-10 bg-[#608F82]/10 blur-[60px] rounded-full"></div>
-                    <Image 
-                      src={ABUNDANCE_REPORT_IMAGES.premium} 
-                      alt="선천코드 풍요 리포트 프리미엄 디자인 이미지" 
-                      width={800}
-                      height={600}
-                      className="relative z-10 w-full h-auto rounded-[60px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-[#608F82]/25 transition-transform duration-1000 group-hover:scale-[1.03]" 
-                    />
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* 15-3. 기존 오행 에너지 카드 5종 및 제작/수령 안내 보존 */}
+            {/* 15-2. 기존 오행 에너지 카드 5종 및 제작/수령 안내 보존 */}
             <section className="mb-40">
               <div className="space-y-40">
                 {/* 오행 에너지 카드 안내 */}
@@ -937,7 +915,7 @@ export default function AbundanceReportPage() {
                         Digital Ritual Gift
                       </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
-                        당신의 흐름에 맞춘 <span className="text-[#8FB4A4]">오행 에너지</span> <span className="text-[#E6BE8A]">카드</span>
+                        당신의 흐름에 맞춘 <span className="text-[#8FB4A4]">오행 에너지</span> <span className="gradient-text-abundance">카드</span>
                       </h2>
                       <p className="text-[18px] text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep font-light">
                         ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 기질과 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
@@ -992,7 +970,7 @@ export default function AbundanceReportPage() {
                         Process & Info
                       </span>
                       <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
-                        리포트는 <span className="text-[#8FB4A4]">이렇게</span> <span className="text-[#E6BE8A]">준비됩니다</span>
+                        리포트는 <span className="text-[#8FB4A4]">이렇게</span> <span className="gradient-text-abundance">준비됩니다</span>
                       </h2>
                       <p className="text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light">
                         백도화의 선천코드 리포트는 신청자분의 선천 정보를 바탕으로 정성스럽게 분석하여 작성되는 디지털 리포트입니다.

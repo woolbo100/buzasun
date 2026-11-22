@@ -5,8 +5,8 @@ import Reveal from '@/components/Reveal'
 
 export default function WealthRealTransformationBanner() {
   return (
-    <section className="mb-20 md:mb-28 max-w-7xl mx-auto px-4 sm:px-6">
-      <Reveal>
+    <section className="mb-20 md:mb-28 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         {/* FINAL AWAKENING: 통합 와이드 레이아웃 에디토리얼 디자인 */}
         <div>
           <div className="text-center">
