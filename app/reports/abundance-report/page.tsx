@@ -38,6 +38,7 @@ import WealthReportFAQ from '@/components/reports/abundance-report/WealthReportF
 import WealthPurchaseNotice from '@/components/reports/abundance-report/WealthPurchaseNotice'
 import WealthSixPerspectivesBanner from '@/components/reports/abundance-report/WealthSixPerspectivesBanner'
 import WealthSpecialGift from '@/components/reports/abundance-report/WealthSpecialGift'
+import WealthPersonalizedReportPoint from '@/components/reports/abundance-report/WealthPersonalizedReportPoint'
 import WealthRealTransformationBanner from '@/components/reports/abundance-report/WealthRealTransformationBanner'
 import WealthRealReasonCard from '@/components/reports/abundance-report/WealthRealReasonCard'
 
@@ -735,24 +736,9 @@ export default function AbundanceReportPage() {
             <WealthReportTableOfContents />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [특별 증정품 안내] 나의 오행으로 만나는 풍요의 상징 (오행 아트카드 + 수호자 카드 2종 증정) */}
+            {/* [목차 및 실전 처방 직후 가로형 구매 CTA] (PART 07 대형 카드 바로 아래) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthSpecialGift />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. PART 07 실제 행동 처방전 샘플 영역 (구체적 실천 솔루션) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthPrescriptionSample />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 02: 선천코드 풍요 분석 체계 (명리 뼈대 + 재정 행동 패턴 교차 분석) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthAnalysisMethod />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [목차 및 실전 처방 이후 슬림형 중간 CTA] 가로폭 맞춤 패널 (오픈 예정 보존) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 md:mb-36 max-w-7xl mx-auto px-4">
+            <section className="mb-20 md:mb-28 max-w-7xl mx-auto px-4">
               <Reveal>
                 <div className="gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#608F82]/35 bg-gradient-to-r from-[#142B24]/75 via-[#0B1514]/65 to-[#142B24]/75 relative overflow-hidden shadow-xl backdrop-blur-md">
                   {/* 은은한 배경 오라 */}
@@ -787,6 +773,26 @@ export default function AbundanceReportPage() {
                 </div>
               </Reveal>
             </section>
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 04. PERSONALIZED REPORT — 당신만을 위해 완성되는 단 하나의 선천코드 1:1 풍요 분석서 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPersonalizedReportPoint />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 04 하위 혜택: 오행 아트카드 + 수호자 카드 2종 증정 (PERSONALIZED SPECIAL GIFT) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthSpecialGift />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* NEW. PART 07 실제 행동 처방전 샘플 영역 (구체적 실천 솔루션) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPrescriptionSample />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 02: 선천코드 풍요 분석 체계 (명리 뼈대 + 재정 행동 패턴 교차 분석) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthAnalysisMethod />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 10. 리포트 샘플 미리보기 (확대 라이트박스 지원) */}

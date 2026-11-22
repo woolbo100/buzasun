@@ -19,7 +19,7 @@ export default function WealthReportTableOfContents() {
   }
 
   return (
-    <section className="mb-40 scroll-mt-28 md:scroll-mt-36" id="point-04">
+    <section className="mb-6 md:mb-7 scroll-mt-28 md:scroll-mt-36" id="point-04">
       <span id="table-of-contents" className="block -mt-28 pt-28" />
       <Reveal>
         {/* 헤더 텍스트: 상단 영문 라벨 + 메인 제목 2줄 + 2개 단락 설명문(풍요비책 앤티크 골드 부분 강조) */}

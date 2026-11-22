@@ -7,26 +7,26 @@ export default function WealthReportProcess() {
   const studies = [
     {
       num: 'STUDY 01',
-      title: '명리 재물 구조 정밀 연구',
-      desc: '일간·십성·오행 등 전통 명리학의 관점에서 재물 기질과 자원 활용 성향을 해석하는 기준을 체계적으로 정리했습니다.',
+      title: '명리 재물 구조 연구',
+      desc: '일간·십성과 오행의 구성까지 명리의 핵심 요소를 입체 교차하여, 타고난 재물 기질과 자원 활용 성향을 읽는 정통 기준을 세웠습니다.',
       icon: <BookOpen className="w-6 h-6 text-[#8FB4A4]" />
     },
     {
       num: 'STUDY 02',
-      title: '돈의 심리·행동 패턴 탐구',
-      desc: '결핍감, 가격 결정의 두려움, 시작을 미루는 습관과 반복되는 소비 등 돈 앞에서 나타나는 심리적 반응과 행동 패턴을 살펴보는 관점을 정리했습니다.',
+      title: '돈의 심리·행동 탐구',
+      desc: '결핍감과 가격 책정의 두려움, 시작을 미루는 습관까지 더해 돈 앞에서 반복되는 선택과 소비의 무의식적 뿌리를 규명했습니다.',
       icon: <Compass className="w-6 h-6 text-[#8FB4A4]" />
     },
     {
       num: 'STUDY 03',
       title: '풍요 특화 분석 기준서',
-      desc: '타고난 재능과 수익 활동 성향, 재정적 선택과 소비 패턴까지 풍요라는 한 가지 주제에 집중할 수 있도록 분석 항목과 질문 체계를 설계했습니다.',
+      desc: '재물 기질부터 수익 활동 성향, 소비 패턴과 금전적 경계선까지 오직 풍요에만 집중한 분석 체계와 심층 질문 구조를 설계했습니다.',
       icon: <ClipboardCheck className="w-6 h-6 text-[#8FB4A4]" />
     },
     {
       num: 'STUDY 04',
-      title: '실전 풍요 행동 처방 설계',
-      desc: '단순한 재물운 해석에서 끝나지 않고, 개인의 선천 기질과 현실적 조건을 연결하여 일상에서 점검할 수 있는 판단 기준과 실천 방향을 구성했습니다.',
+      title: '실전 풍요 행동 처방',
+      desc: '막연한 재물운 풀이에 그치지 않고, 선천 기질과 현실 여건을 연결해 일상의 돈 흐름과 선택 습관을 바꾸는 구체적 행동 처방을 완성했습니다.',
       icon: <Shuffle className="w-6 h-6 text-[#8FB4A4]" />
     }
   ]
@@ -56,27 +56,32 @@ export default function WealthReportProcess() {
           </div>
         </div>
 
-        {/* 4단계 연구 및 분석 기준 그리드 */}
+        {/* 4단계 연구 및 분석 기준 그리드 (동일 높이 flex-col 및 내부 위치 완벽 일치) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {studies.map((item, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-8 rounded-[28px] border border-white/10 hover:border-[#608F82]/40 bg-gradient-to-b from-[#0f241f]/30 via-transparent to-black/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+              className="gungjung-glass p-7 sm:p-8 rounded-[28px] border border-white/10 hover:border-[#608F82]/40 bg-gradient-to-b from-[#0f241f]/30 via-transparent to-black/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#608F82]/15 rounded-bl-full pointer-events-none"></div>
 
               <div>
+                {/* ① 상단 아이콘 */}
                 <div className="w-12 h-12 rounded-2xl bg-[#0f241f] border border-[#608F82]/30 flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
+                {/* ② STUDY 번호 */}
                 <span className="text-xs font-mono font-bold tracking-widest text-[#C2A477] mb-2 block">
                   {item.num}
                 </span>
-                <h3 className="text-[20px] md:text-[22px] font-bold text-white mb-3 leading-snug break-keep">
+                {/* ③ 카드 제목 (데스크톱 1줄 통일) */}
+                <h3 className="text-[20px] sm:text-[21px] lg:text-[21px] font-bold text-white mb-3 leading-snug break-keep">
                   {item.title}
                 </h3>
               </div>
-              <p className="text-sm text-[#EDE6DA]/70 font-light leading-relaxed break-keep mt-4 pt-4 border-t border-white/5">
+
+              {/* ④ 구분선 및 ⑤ 설명 문구 (데스크톱 약 4줄 정렬 & 시작 높이 통일) */}
+              <p className="text-[14.5px] sm:text-[15px] text-[#EDE6DA]/75 font-light leading-[1.68] md:leading-[1.72] break-keep mt-4 pt-4 border-t border-white/5">
                 {item.desc}
               </p>
             </div>

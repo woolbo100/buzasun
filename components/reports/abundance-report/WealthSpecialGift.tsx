@@ -60,7 +60,7 @@ export default function WealthSpecialGift() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
             {/* 좌측: 텍스트 안내 영역 (12단 중 7단) */}
-            <div className="lg:col-span-7 space-y-3.5 md:space-y-4 text-left">
+            <div className="lg:col-span-7 space-y-3 md:space-y-3.5 text-left">
               {/* 작은 영문 라벨 */}
               <div>
                 <span className="font-elegant text-[11px] sm:text-xs font-semibold tracking-[0.22em] text-[#8FB4A4] uppercase block">
@@ -68,57 +68,26 @@ export default function WealthSpecialGift() {
                 </span>
               </div>
 
-              {/* 메인 제목 */}
+              {/* 메인 제목 (2줄) */}
               <h3 className="text-[21px] sm:text-2xl md:text-[27px] font-elegant font-bold text-white leading-[1.3] break-keep">
-                나의 오행으로 만나는 풍요의 상징<br />
-                <span className="text-[#E6BE8A]">나의 오행 아트카드 1장 + 나의 오행 수호자 카드 1장</span>
+                나의 선천코드에 맞춘<br />
+                <span className="text-[#C2A477]">오행 아트카드 1장 + 나의 오행 수호자 카드 1장</span>
               </h3>
 
-              {/* 설명문 */}
+              {/* 간결한 설명문 (2줄) */}
               <p className="text-[14.5px] sm:text-[15.5px] md:text-[16px] text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
-                나의 기질과 선택을 이해하는 여정에, 스스로의 방향을 되새길 수 있도록<br className="hidden sm:inline" />{' '}
-                개인별 오행 디지털 카드 2종을 함께 제공합니다.
+                개인 1:1 맞춤형 선천코드 분석 결과를 바탕으로 나에게 필요한 오행을 상징하는<br className="hidden sm:inline" />{' '}
+                아트카드 1장과 나의 오행 수호자 카드 1장을 함께 제공합니다.
               </p>
 
-              {/* 증정품 2종 구성 시각화 박스 */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                <div className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-[#1A3830]/50 border border-[#608F82]/35 backdrop-blur-sm">
-                  <span className="w-5 h-5 rounded-full bg-[#E6BE8A]/20 border border-[#E6BE8A]/40 flex items-center justify-center text-[11px] font-bold text-[#E6BE8A] shrink-0">
-                    1
-                  </span>
-                  <div className="text-left">
-                    <span className="text-[13.5px] font-medium text-white block">
-                      나의 오행 아트카드 <strong className="text-[#E6BE8A]">1장</strong>
-                    </span>
-                    <span className="text-[11px] text-[#EDE6DA]/60 font-light block">
-                      나만의 타고난 기질과 풍요 에너지를 시각화한 아트 이미지
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-[#1A3830]/50 border border-[#608F82]/35 backdrop-blur-sm">
-                  <span className="w-5 h-5 rounded-full bg-[#E6BE8A]/20 border border-[#E6BE8A]/40 flex items-center justify-center text-[11px] font-bold text-[#E6BE8A] shrink-0">
-                    2
-                  </span>
-                  <div className="text-left">
-                    <span className="text-[13.5px] font-medium text-white block">
-                      나의 오행 수호자 카드 <strong className="text-[#E6BE8A]">1장</strong>
-                    </span>
-                    <span className="text-[11px] text-[#EDE6DA]/60 font-light block">
-                      재정 중심과 균형을 지켜주는 상징적 수호 이미지
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* 하단 안내 및 강조 문구 (주의: 성과 보장이 아닌 감성 리추얼 명시) */}
-              <div className="pt-2 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
-                <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#8FD3B6] font-medium tracking-tight">
-                  ※ 개인별 선정된 동일 오행으로 구성된 디지털 이미지 2종 제공
+              {/* 하단 구분선 및 안내 문구 (좌우 분리 구조) */}
+              <div className="pt-2.5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#8FB4A4] font-medium tracking-tight">
+                  ※ 개인별 선정된 동일 오행의 아트카드와 수호자 카드를 각각 1장씩 디지털 이미지로 제공합니다.
                 </p>
                 <span className="hidden sm:inline text-white/20">|</span>
-                <p className="text-[11px] text-white/40 font-light">
-                  특정 결과를 보장하는 것이 아닌, 기질과 방향을 상징적으로 되새기는 감성 리추얼 혜택입니다.
+                <p className="text-[11px] text-[#EDE6DA]/50 font-light">
+                  자기 이해와 풍요의 방향을 되새기는 상징적 감성 이미지입니다.
                 </p>
               </div>
             </div>
@@ -142,7 +111,7 @@ export default function WealthSpecialGift() {
                       <div className="absolute bottom-0.5 left-0.5 sm:bottom-1 sm:left-1 w-1 h-1 border-b border-l border-[#608F82]/50"></div>
                       <div className="absolute bottom-0.5 right-0.5 sm:bottom-1 sm:right-1 w-1 h-1 border-b border-r border-[#608F82]/50"></div>
 
-                      <span className={`text-lg sm:text-xl md:text-2xl font-elegant font-bold text-[#E6BE8A] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]`}>
+                      <span className={`text-lg sm:text-xl md:text-2xl font-elegant font-bold text-[#C2A477] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]`}>
                         {card.hanja}
                       </span>
                     </div>
@@ -159,9 +128,6 @@ export default function WealthSpecialGift() {
                   </div>
                 ))}
               </div>
-              <p className="text-center text-[11px] text-[#EDE6DA]/60 mt-2.5 font-light">
-                개인별 선정 동일 오행 기준 · 디지털 이미지 총 2종 제공
-              </p>
             </div>
           </div>
         </div>

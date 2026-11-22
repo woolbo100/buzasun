@@ -78,7 +78,7 @@ export default function WealthConvergenceMethod() {
                     className={`text-[13px] sm:text-[14px] md:text-[16px] font-semibold tracking-wide break-keep transition-colors duration-500 ease-in-out ${
                       activeStep === idx
                         ? 'text-[#8FB4A4]'
-                        : 'text-[#FAF7F2]/75'
+                        : 'text-white/80'
                     }`}
                   >
                     {step}
@@ -127,16 +127,15 @@ export default function WealthConvergenceMethod() {
               </div>
             </div>
 
-            {/* 하단 강조 문구 박스 */}
-            <div className="p-5 md:p-6 rounded-2xl border border-[#608F82]/30 bg-gradient-to-r from-[#142B24]/40 to-[#0B1514]/55 backdrop-blur-sm space-y-2 mt-6 lg:mt-6">
+            {/* 하단 강조 문구 박스 (데스크톱에서 이미지 하단과 시각적 정렬 및 여백 약 32px 확보) */}
+            <div className="p-5 md:p-6 rounded-2xl border border-[#608F82]/30 bg-gradient-to-r from-[#142B24]/40 to-[#0B1514]/55 backdrop-blur-sm space-y-2 mt-7 md:mt-8 lg:mt-8">
               <p className="font-elegant font-medium text-[15px] md:text-[16px] text-[#FAF7F2] leading-relaxed break-keep">
-                &ldquo;명리학의 선천 기질 해석과 돈 앞의 심리·행동 패턴을 함께 살펴보는 통합 분석입니다.
+                &ldquo;명리학의 선천 재물 해석과 돈 앞의 심리·무의식에 대한<br className="hidden md:inline" />{' '}
+                자기 이해, 풍요 습관 코칭의 관점을 함께 녹여 설계했습니다.
               </p>
               <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#C2A477] leading-relaxed break-keep">
-                단편적인 재물운 풀이를 넘어, 나의 재물 성향과 반복되는 선택을 여러 관점에서 입체적으로 이해하도록 돕습니다.&rdquo;
-              </p>
-              <p className="text-[12.5px] sm:text-[13px] text-[#8FB4A4]/75 font-light leading-relaxed break-keep pt-2.5 mt-2 border-t border-[#608F82]/20">
-                ※ 심리·행동 분석은 고객의 실제 입력 정보와 리포트에서 제공하는 분석 범위 안에서 표현합니다. 임상적 진단이나 과학적으로 검증된 개인 심리 측정이라고 주장하지 않습니다.
+                단편적인 재물운 풀이를 넘어, 나의 재물 성향과<br className="hidden md:inline" />{' '}
+                반복되는 선택을 여러 각도에서 입체적으로 이해하도록 돕는 통합 심층 분석서입니다.&rdquo;
               </p>
             </div>
           </div>
