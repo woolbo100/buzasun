@@ -46,7 +46,7 @@ export default function WhyWealthReport() {
       label: 'POINT 05',
       title: '나를 위한 실전 풍요 행동 처방',
       hook: '“추상적인 부의 조언이 아닌, 일상에서 즉시 실천하는 재정 행동 처방”',
-      desc: '나의 자원과 현실적 여건을 고려하여 일상에서 실천할 수 있는 선택과 행동의 방향을 제안합니다. 새어나가는 에너지를 막고 풍요를 축적하는 구체적 실천 지침을 제공합니다.',
+      desc: '나의 자원과 현실적 여건을 고려하여 일상에서 바로 실천할 수 있는 선택과 행동의 방향을 제안합니다. 막연한 다짐이나 남의 방식이 아닌, 내 생활 리듬과 그릇에 맞는 현실적인 기준을 세우도록 돕습니다. 이를 통해 새어나가는 에너지와 불필요한 소모를 막고, 풍요를 차곡차곡 축적하는 구체적 실천 지침을 제공합니다.',
       icon: <CheckCircle2 className="w-4 h-4" />,
     },
     {
@@ -99,8 +99,8 @@ export default function WhyWealthReport() {
           {/* 4. 중간 구분선 + 하단 강조 문구 2줄 + 하단 구분선 */}
           <div className="my-8 md:my-12 py-8 md:py-10 border-y border-[#608F82]/30 max-w-4xl mx-auto">
             <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[28px] text-white leading-[1.85] md:leading-[2.1] break-keep">
-              남의 방식을 흉내 내지 마세요.<br className="hidden sm:inline" />
-              <span className="gradient-text-abundance"> 나만의 고유한 풍요의 결부터 읽으세요.</span>
+              그 명쾌한 각성을 당신의 부와 흐름에도 고스란히 건네기 위해,<br className="hidden sm:inline" />
+              <span className="gradient-text-abundance"> 이 리포트는 태어났습니다.</span>
             </p>
           </div>
 
@@ -177,7 +177,7 @@ export default function WhyWealthReport() {
               지금껏 이런 풍요 리포트는 없었습니다.
             </h3>
             <p className="font-elegant font-medium text-[16px] md:text-[18px] text-[#8FB4A4] leading-relaxed break-keep">
-              하나의 선천코드, 여섯 겹의 통찰, 오직 당신만을 위한 1:1 재정 나침반
+              하나의 선천코드, 세 겹의 통찰, 오직 당신만을 위한 1:1 재정 나침반
             </p>
           </div>
         </div>

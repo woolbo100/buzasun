@@ -86,21 +86,27 @@ export default function QuestionShiftComparison({
         {/* 2단 비교 카드 (모바일 세로, 데스크톱 가로) */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-12">
           
-          {/* CARD 01 — 기존의 운세 중심 질문 (연애 리포트: 어둡고 차분한 퍼플플럼 배경) */}
+          {/* CARD 01 — 기존의 운세 중심 질문 */}
           <div 
-            className={`gungjung-glass ${theme === 'love' ? 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35' : 'bg-white/[0.02]'} p-8 md:p-10 rounded-[32px] border border-white/10 flex flex-col justify-between relative overflow-hidden`}
+            className={`gungjung-glass ${
+              theme === 'abundance'
+                ? 'bg-[#222D36]/75 border-[#3A4A54]/50 shadow-xl'
+                : theme === 'love' 
+                ? 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 border-white/10' 
+                : 'bg-white/[0.02] border-white/10'
+            } p-8 md:p-10 rounded-[32px] border flex flex-col justify-between relative overflow-hidden`}
           >
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/50">
+                <div className={`w-10 h-10 rounded-xl ${theme === 'abundance' ? 'bg-[#171F29] border border-[#3A4A54]/60 text-[#9CA8AD]' : 'bg-white/5 border border-white/10 text-white/50'} flex items-center justify-center`}>
                   <HelpCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs font-mono tracking-widest text-white/40 uppercase block">CARD 01</span>
-                  <h3 className="text-lg md:text-xl font-bold text-white/70">기존의 운세 중심 질문</h3>
+                  <span className={`text-xs font-mono tracking-widest ${theme === 'abundance' ? 'text-[#9CA8AD]' : 'text-white/40'} uppercase block`}>CARD 01</span>
+                  <h3 className={`text-lg md:text-xl font-bold ${theme === 'abundance' ? 'text-[#E4EBEF]' : 'text-white/70'}`}>기존의 운세 중심 질문</h3>
                 </div>
               </div>
-              <p className="text-[16px] text-[#EDE6DA]/60 font-light mb-6 break-keep">
+              <p className={`text-[16px] ${theme === 'abundance' ? 'text-[#9CA8AD]' : 'text-[#EDE6DA]/60'} font-light mb-6 break-keep`}>
                 미래를 수동적으로 묻고 결과를 기다리는 익숙한 시선
               </p>
 
@@ -111,44 +117,46 @@ export default function QuestionShiftComparison({
                   '우리는 천생연분일까?',
                   '앞으로 좋은 일이 생길까?'
                 ].map((q, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-black/30 border border-white/5 flex items-center gap-3 text-white/60">
-                    <span className="w-1.5 h-1.5 rounded-full bg-white/30 shrink-0"></span>
+                  <div key={idx} className={`p-4 rounded-xl ${theme === 'abundance' ? 'bg-[#171F29]/90 border border-[#2E3C46]/60 text-[#9CA8AD]' : 'bg-black/30 border border-white/5 flex items-center gap-3 text-white/60'} flex items-center gap-3`}>
+                    <span className={`w-1.5 h-1.5 rounded-full ${theme === 'abundance' ? 'bg-[#9CA8AD]/40' : 'bg-white/30'} shrink-0`}></span>
                     <span className="text-sm md:text-base line-through opacity-70 break-keep">{q}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="pt-6 border-t border-white/5 text-sm md:text-[15px] text-white/50 text-center font-light">
+            <div className={`pt-6 border-t ${theme === 'abundance' ? 'border-[#3A4A54]/40 text-[#9CA8AD]' : 'border-white/5 text-white/50'} text-sm md:text-[15px] text-center font-light`}>
               단순한 결과 풀이는 내 행동을 바꾸지 못합니다.
             </div>
           </div>
 
-          {/* CARD 02 — 백도화 선천코드의 질문 (연애 리포트: 따뜻하고 부드러운 로즈플럼 배경) */}
+          {/* CARD 02 — 백도화 선천코드의 질문 */}
           <div 
             className={`gungjung-glass ${
-              theme === 'love' 
-                ? '' 
+              theme === 'abundance'
+                ? 'bg-gradient-to-b from-[#30464A]/85 via-[#25393D]/80 to-[#1A282B]/90 border-[#5A787A]/50 hover:border-[#C7A97A]/50 shadow-[0_10px_35px_rgba(35,55,58,0.35)]'
+                : theme === 'love' 
+                ? 'border-[#B7788D]/40 shadow-[0_0_30px_rgba(183,120,141,0.15)]' 
                 : theme === 'compatibility'
-                ? 'point-box bg-gradient-to-b from-[#4A1F2D]/40 via-[#3A1623]/30 to-[#180A14]/35'
-                : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35'
-            } p-8 md:p-10 rounded-[32px] border ${themeConfig.cardBorder} ${themeConfig.shadowClass} flex flex-col justify-between relative overflow-hidden`}
+                ? 'point-box bg-gradient-to-b from-[#4A1F2D]/40 via-[#3A1623]/30 to-[#180A14]/35 border-[#B78C86]/40 shadow-[0_0_35px_rgba(90,38,56,0.3)]'
+                : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 border-[#608F82]/40 shadow-[0_0_30px_rgba(96,143,130,0.18)]'
+            } p-8 md:p-10 rounded-[32px] border transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
             style={theme === 'love' ? { backgroundColor: 'rgba(166, 91, 128, 0.18)' } : undefined}
           >
             {/* 배경 은은한 광채 */}
-            <div className={`absolute -top-20 -right-20 w-60 h-60 ${themeConfig.glowBg} rounded-full blur-[80px] pointer-events-none`}></div>
+            <div className={`absolute -top-20 -right-20 w-60 h-60 ${theme === 'abundance' ? 'bg-[#4B6B6F]/20' : themeConfig.glowBg} rounded-full blur-[80px] pointer-events-none`}></div>
 
             <div className="mb-6 relative z-10">
               <div className="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 rounded-xl ${themeConfig.badgeBg} flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-xl ${theme === 'abundance' ? 'bg-[#1D3035] border border-[#5A787A]/60 text-[#A4BAB5]' : themeConfig.badgeBg} flex items-center justify-center`}>
                   <Compass className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className={`text-xs font-mono tracking-widest ${themeConfig.activeText} uppercase block font-bold`}>CARD 02</span>
+                  <span className={`text-xs font-mono tracking-widest ${theme === 'abundance' ? 'text-[#A4BAB5]' : themeConfig.activeText} uppercase block font-bold`}>CARD 02</span>
                   <h3 className="text-lg md:text-xl font-bold text-white">백도화 선천코드의 질문</h3>
                 </div>
               </div>
-              <p className="text-[16px] text-[#EDE6DA]/85 font-light mb-6 break-keep">
+              <p className={`text-[16px] ${theme === 'abundance' ? 'text-[#EDE6DA]' : 'text-[#EDE6DA]/85'} font-light mb-6 break-keep`}>
                 선택의 뿌리를 분석하고 행동을 바꾸는 능동적인 설계
               </p>
 
@@ -159,15 +167,15 @@ export default function QuestionShiftComparison({
                   '우리는 어떤 순간에 서로를 자극할까?',
                   '앞으로 무엇을 다르게 선택할 수 있을까?'
                 ].map((q, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-black/50 border border-white/10 flex items-center gap-3 text-white shadow-sm">
-                    <ArrowRight className={`w-4 h-4 ${themeConfig.activeText} shrink-0`} />
+                  <div key={idx} className={`p-4 rounded-xl ${theme === 'abundance' ? 'bg-[#1D3035]/90 border border-[#3A5358]/60 text-[#F2ECE3]' : 'bg-black/50 border border-white/10 text-white'} flex items-center gap-3 shadow-sm`}>
+                    <ArrowRight className={`w-4 h-4 ${theme === 'abundance' ? 'text-[#A4BAB5]' : themeConfig.activeText} shrink-0`} />
                     <span className="text-sm md:text-base font-medium break-keep">{q}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="pt-6 border-t border-white/10 text-sm md:text-[15px] text-[#EDE6DA]/90 text-center font-light relative z-10">
+            <div className={`pt-6 border-t ${theme === 'abundance' ? 'border-[#5A787A]/30 text-[#EDE6DA]' : 'border-white/10 text-[#EDE6DA]/90'} text-sm md:text-[15px] text-center font-light relative z-10`}>
               구조를 알면, 마침내 다른 선택을 시작할 수 있습니다.
             </div>
           </div>

@@ -14,7 +14,7 @@ const INTRO_PHILOSOPHY_VISUAL = {
 
 export default function WealthIntroPhilosophy() {
   return (
-    <section className="mb-28 md:mb-36 lg:mb-40">
+    <section className="mb-14 md:mb-20">
       <Reveal>
         <div className="max-w-[1280px] mx-auto text-center">
           {/* 1. 상단 장식 영역: 좌우 얇은 라인 + 중앙 작은 선화 도화꽃 심볼 */}
@@ -47,7 +47,7 @@ export default function WealthIntroPhilosophy() {
           </div>
 
           {/* 6. 가로 풀사이즈 16:9 이미지 */}
-          <div className="w-full max-w-7xl mx-auto mt-10 md:mt-14">
+          <div className="w-full max-w-7xl mx-auto mt-10 md:mt-14 mb-12 md:mb-16">
             <div className="w-full overflow-hidden rounded-[24px] md:rounded-[36px] border border-[#608F82]/30 shadow-2xl bg-[#0B1514] relative group">
               <div className="relative w-full aspect-[16/9]">
                 <Image
@@ -60,6 +60,16 @@ export default function WealthIntroPhilosophy() {
                 />
               </div>
             </div>
+          </div>
+
+          {/* 7. 이미지 아래 브릿지 결심 문구 (연애 리포트와 동일한 글자 크기 & 디자인) */}
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-sm sm:text-base text-[#8FB4A4] font-medium tracking-wide">
+              당신의 풍요를 바꿀 첫 번째 선택,
+            </p>
+            <p className="font-elegant font-bold text-lg sm:text-[21px] text-[#FAF7F2] leading-relaxed break-keep mt-2.5">
+              나만의 선천코드를 읽는 것에서 시작됩니다.
+            </p>
           </div>
         </div>
       </Reveal>

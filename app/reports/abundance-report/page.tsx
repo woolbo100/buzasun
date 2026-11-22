@@ -21,6 +21,7 @@ import WealthPrescriptionSample from '@/components/reports/abundance-report/Weal
 import WealthPatternChecklist from '@/components/reports/abundance-report/WealthPatternChecklist'
 import WealthPatternFlow from '@/components/reports/abundance-report/WealthPatternFlow'
 import WealthAnalysisMethod from '@/components/reports/abundance-report/WealthAnalysisMethod'
+import WealthConvergenceMethod from '@/components/reports/abundance-report/WealthConvergenceMethod'
 import WealthPersonalizedCases from '@/components/reports/abundance-report/WealthPersonalizedCases'
 import WealthComparisonTable from '@/components/reports/abundance-report/WealthComparisonTable'
 import WealthReportTableOfContents from '@/components/reports/abundance-report/WealthReportTableOfContents'
@@ -589,99 +590,89 @@ export default function AbundanceReportPage() {
             />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [중간 구매 CTA 1차] BEGIN YOUR JOURNEY (와이드형 프리미엄 CTA) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-36 md:mb-40 max-w-4xl mx-auto px-4">
-              <Reveal>
-                <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#608F82]/40 bg-gradient-to-b from-[#142B24]/80 via-[#0B1514]/70 to-[#050D0C]/90 text-center relative overflow-hidden shadow-2xl">
-                  {/* 은은한 배경 오라 */}
-                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#608F82]/15 rounded-full blur-[80px] pointer-events-none" />
-
-                  <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#8FB4A4] uppercase mb-4">
-                    BEGIN YOUR JOURNEY
-                  </span>
-
-                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white mb-4 leading-snug break-keep">
-                    나의 풍요를 <span className="gradient-text-abundance">새롭게 읽을 준비가 되셨나요?</span>
-                  </h3>
-
-                  <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed max-w-xl mx-auto break-keep mb-6">
-                    돈에 대한 익숙한 생각과 선택을 돌아보고 나에게 맞는 풍요의 방향을 탐색해 보세요.
-                  </p>
-
-                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#1A3830]/60 border border-[#608F82]/40 text-xs md:text-sm text-[#8FD3B6] font-medium mb-8">
-                    39,000원 · 1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 포함
-                  </div>
-
-                  {/* 구매 버튼 2개 (장바구니 담기 + 바로 신청하기) */}
-                  <div className="flex flex-col sm:flex-row gap-3.5 max-w-md mx-auto items-stretch sm:items-center">
-                    <button
-                      type="button"
-                      onClick={handleAddToCart}
-                      className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#608F82]/40 text-[#8FD3B6] hover:bg-[#608F82]/20 hover:border-[#608F82]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
-                    >
-                      장바구니 담기
-                    </button>
-                    <button
-                      type="button"
-                      onClick={handlePurchase}
-                      className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(20,43,36,0.5)] hover:shadow-[0_0_30px_rgba(96,143,130,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
-                      style={{
-                        background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
-                        border: '1px solid rgba(229, 195, 120, 0.6)',
-                      }}
-                    >
-                      <span>바로 신청하기</span>
-                      <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
-                    </button>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 신규 섹션: 왜, 선천코드 풍요 리포트인가? (차별점 & 처방전 철학) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WhyWealthReport />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 01. 풍요 구조 집중 분석 — 타고난 재능과 돈을 대하는 태도 정밀 분석 */}
+            {/* POINT 01. 풍요 특화 심층 분석 (수박 겉핥기식 운세 풀이와의 차별화) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36">
               <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="relative overflow-hidden rounded-[40px] border border-[#608F82]/25 shadow-2xl">
-                    <Image 
-                      src={ABUNDANCE_REPORT_IMAGES.overview} 
-                      alt="선천코드 풍요 리포트 소개 이미지" 
-                      width={800}
-                      height={600}
-                      className="w-full h-auto object-cover" 
-                    />
+                {/* 모바일 표시 순서 1: 섹션 제목 및 헤드카피 */}
+                <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase">
+                    POINT 01 · WEALTH ANALYSIS
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.2] break-keep">
+                    두루뭉술한 인생 총운이 아닙니다.<br />
+                    오직 당신의 <span className="gradient-text-abundance">‘풍요’ 하나만</span><br />
+                    <span className="gradient-text-abundance">깊이 해부</span>합니다.
+                  </h2>
+                </div>
+
+                <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-stretch">
+                  {/* 왼쪽 이미지: 3:4 세로형 비율 (12단 중 5단 = 41.67%) / 모바일 표시 순서 2 */}
+                  <div className="lg:col-span-5 relative group flex flex-col justify-center">
+                    <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[32px] md:rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl bg-[#0F201B]">
+                      <Image 
+                        src={ABUNDANCE_REPORT_IMAGES.overview} 
+                        alt="선천코드 풍요 특화 심층 분석" 
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 42vw"
+                        className="object-cover object-[38%_center] transition-transform duration-700 group-hover:scale-[1.02]" 
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-8">
-                    <div className="space-y-3">
+
+                  {/* 오른쪽 텍스트: 12단 중 7단 (58.33%) / 모바일 표시 순서 3 */}
+                  <div className="lg:col-span-7 lg:pl-2 xl:pl-6 flex flex-col justify-between space-y-6 lg:space-y-7">
+                    {/* 데스크톱 전용 헤드카피 (모바일에서는 이미지 상단에 표시) */}
+                    <div className="hidden lg:block space-y-2.5">
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase">
-                        POINT 01 · WEALTH STRUCTURE ANALYSIS
+                        POINT 01 · WEALTH ANALYSIS
                       </span>
-                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                        나에게 맞는 풍요의 길은 <br />
-                        <span className="gradient-text-abundance">나를 아는 것에서 시작됩니다</span>
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.2] md:leading-[1.22] break-keep">
+                        두루뭉술한 인생 총운이 아닙니다.<br />
+                        오직 당신의 <span className="gradient-text-abundance">‘풍요’ 하나만</span><br />
+                        <span className="gradient-text-abundance">깊이 해부</span>합니다.
                       </h2>
                     </div>
-                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      선천코드 풍요 리포트는 막연한 요행을 바라는 운세 풀이가 아닙니다. 내가 타고난 재능과 강점이 무엇인지, 돈을 대할 때 어떤 태도와 기준이 작동하는지, 그리고 일상에서 왜 비슷한 수입·소비 패턴이 반복되는지를 차분하게 짚어보고 현실에서 실천할 방향을 함께 모색하는 리포트입니다.
-                    </p>
+
+                    <div className="space-y-3.5 md:space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 leading-[1.75] md:leading-[1.8] break-keep font-light">
+                      <p>
+                        사주 전체를 훑는 수박 겉핥기식 운세 풀이로는<br className="hidden sm:inline" />
+                        돈 앞에서 반복되는 선택의 이유를 알 수 없습니다.<br />
+                        단순한 재물운이나 뻔한 재테크 조언과는 출발점부터 다릅니다.
+                      </p>
+                      <p>
+                        <span className="text-[#8FD3B6] font-medium opacity-100">
+                          당신이 돈을 벌고, 쓰고, 지키는 과정에서<br className="hidden sm:inline" />
+                          반복되는 패턴을 정밀하게 분석합니다.
+                        </span>
+                      </p>
+                      <p>
+                        동양 명리학으로 타고난 재물 성향과 일하는 기질을 읽고,<br className="hidden sm:inline" />
+                        심리와 무의식적 반응의 관점에서<br className="hidden sm:inline" />
+                        돈 앞에서 반복되는 두려움과 선택의 습관까지<br className="hidden sm:inline" />
+                        <span className="text-[#E5C378] font-medium opacity-100">입체적으로 살펴봅니다.</span>
+                      </p>
+                      <p>
+                        그리고 자신의 기질과 현실적 조건에 맞는<br className="hidden sm:inline" />
+                        풍요의 기준을 세우고 실천 방향을 모색합니다.
+                      </p>
+                    </div>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {[
-                        "타고난 재능과 강점",
-                        "나에게 맞는 수익 활동 성향",
-                        "돈을 대하는 태도",
-                        "반복되는 수입·소비 패턴"
+                        "타고난 재물 성향과 기질",
+                        "돈 앞의 무의식적 반응",
+                        "수입·소비의 반복 패턴",
+                        "나에게 맞는 풍요 실천 기준"
                       ].map((item, idx) => (
-                        <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl border border-[#8FD3B6]/15">
+                        <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl border border-[#8FD3B6]/15 hover:border-[#8FD3B6]/35 transition-all">
                           <div className="w-2 h-2 rounded-full bg-[#8FD3B6] shadow-[0_0_10px_#8FD3B6]"></div>
-                          <span className="text-white/85">{item}</span>
+                          <span className="text-white/90 font-semibold">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -691,9 +682,14 @@ export default function AbundanceReportPage() {
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 02: 선천코드 풍요 분석 체계 (명리 뼈대 + 재정 행동 패턴 교차 분석) */}
+            {/* POINT 02. 동양명리학 × 심리·행동 분석 융합 심층 프로세스 (THE CONVERGENCE) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthAnalysisMethod />
+            <WealthConvergenceMethod />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* PRECISE PROCESS: 개인 맞춤 리포트 제작 과정 (STEP 01~04) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthReportProcess />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* POINT 03. 돈과 선택 패턴의 개인 맞춤 해독 — 6가지 핵심 탐구 축 */}
@@ -750,11 +746,6 @@ export default function AbundanceReportPage() {
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 07. 일반 재물운 풀이와의 차별점 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthComparisonTable />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [6대 관점 파노라마 와이드 배너] SIX PERSPECTIVES */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthSixPerspectivesBanner />
@@ -773,6 +764,11 @@ export default function AbundanceReportPage() {
             {/* NEW. PART 07 실제 행동 처방전 샘플 영역 (구체적 실천 솔루션) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthPrescriptionSample />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* POINT 02: 선천코드 풍요 분석 체계 (명리 뼈대 + 재정 행동 패턴 교차 분석) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthAnalysisMethod />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [목차 및 실전 처방 이후 슬림형 중간 CTA] 가로폭 맞춤 패널 (오픈 예정 보존) */}
@@ -814,14 +810,14 @@ export default function AbundanceReportPage() {
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 09. 개인 맞춤 리포트 제작 과정 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthReportProcess />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 10. 리포트 샘플 미리보기 (확대 라이트박스 지원) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthReportPreview />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* SECTION 07. 일반 재물운 풀이와의 차별점 (비교표) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthComparisonTable />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 11. 리포트를 읽은 뒤 달라질 수 있는 선택 */}
@@ -832,6 +828,57 @@ export default function AbundanceReportPage() {
             {/* 신규 소개 섹션: WHY BAEKDOHWA ABUNDANCE REPORT & 16:9 풀사이즈 이미지 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthIntroPhilosophy />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 중간 구매 CTA: BEGIN YOUR JOURNEY (나의 풍요를 새롭게 읽을 준비가 되셨나요?) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <section className="mb-36 md:mb-40 max-w-4xl mx-auto px-4">
+              <Reveal>
+                <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#608F82]/40 bg-gradient-to-b from-[#142B24]/80 via-[#0B1514]/70 to-[#050D0C]/90 text-center relative overflow-hidden shadow-2xl">
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#608F82]/15 rounded-full blur-[80px] pointer-events-none" />
+
+                  <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#8FB4A4] uppercase mb-4">
+                    BEGIN YOUR JOURNEY
+                  </span>
+
+                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white mb-4 leading-snug break-keep">
+                    나의 풍요를 <span className="gradient-text-abundance">새롭게 읽을 준비가 되셨나요?</span>
+                  </h3>
+
+                  <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed max-w-xl mx-auto break-keep mb-6">
+                    돈에 대한 익숙한 생각과 선택을 돌아보고 나에게 맞는 풍요의 방향을 탐색해 보세요.
+                  </p>
+
+                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#1A3830]/60 border border-[#608F82]/40 text-xs md:text-sm text-[#8FD3B6] font-medium mb-8">
+                    39,000원 · 1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 포함
+                  </div>
+
+                  {/* 구매 버튼 2개 (장바구니 담기 + 바로 신청하기) */}
+                  <div className="flex flex-col sm:flex-row gap-3.5 max-w-md mx-auto items-stretch sm:items-center">
+                    <button
+                      type="button"
+                      onClick={handleAddToCart}
+                      className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#608F82]/40 text-[#8FD3B6] hover:bg-[#608F82]/20 hover:border-[#608F82]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                    >
+                      장바구니 담기
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handlePurchase}
+                      className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(20,43,36,0.5)] hover:shadow-[0_0_30px_rgba(96,143,130,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                      style={{
+                        background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
+                        border: '1px solid rgba(229, 195, 120, 0.6)',
+                      }}
+                    >
+                      <span>바로 신청하기</span>
+                      <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
+                    </button>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 12. 추천 대상과 맞지 않는 대상 (a3.webp & 추천 카드 보존) */}
