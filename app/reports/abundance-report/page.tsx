@@ -37,6 +37,7 @@ import WealthPurchaseNotice from '@/components/reports/abundance-report/WealthPu
 import WealthSixPerspectivesBanner from '@/components/reports/abundance-report/WealthSixPerspectivesBanner'
 import WealthSpecialGift from '@/components/reports/abundance-report/WealthSpecialGift'
 import WealthRealTransformationBanner from '@/components/reports/abundance-report/WealthRealTransformationBanner'
+import WealthRealReasonCard from '@/components/reports/abundance-report/WealthRealReasonCard'
 
 // 추후 개별 이미지 교체 시 아래 경로만 수정하면 각 섹션에 즉시 반영됩니다.
 const ABUNDANCE_REPORT_IMAGES = {
@@ -377,7 +378,7 @@ export default function AbundanceReportPage() {
             <WealthPatternChecklist />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. 돈이 부족한 이유를 수입에서만 찾지 마라 (차별화 섹션) */}
+            {/* NEW. 돈이 부족한 이유를 수입에서만 찾지 마세요 (차별화 섹션) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthCoreDifferentiation />
 
@@ -808,6 +809,11 @@ export default function AbundanceReportPage() {
             {/* SECTION 13. 가상 활용 시나리오 (4차 개편 완료) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthTestimonials />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* THE REAL REASON · 풍요의 진짜 구조 (후반부 통합 카드) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthRealReasonCard />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* FINAL AWAKENING: 피날레 에디토리얼 와이드 배너 (5차 신규 추가) */}

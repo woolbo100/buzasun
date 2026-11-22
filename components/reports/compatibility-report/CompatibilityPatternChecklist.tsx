@@ -39,16 +39,13 @@ export default function CompatibilityPatternChecklist() {
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#5A2638]/25 rounded-full blur-[90px] pointer-events-none"></div>
 
           {/* 체크리스트 직접 체험 인터랙션 안내 문구 */}
-          <div className="mb-6 pb-6 border-b border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left relative z-10">
+          <div className="mb-6 pb-6 border-b border-white/10 flex items-center justify-center text-center relative z-10">
             <div className="flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-[#B78C86] animate-pulse"></span>
-              <p className="text-[14px] md:text-[15px] text-[#EDE6DA] font-medium break-keep">
+              <p className="text-[15px] md:text-[16px] text-[#EDE6DA] font-medium break-keep">
                 아래 항목 중 내 이야기처럼 느껴지는 것이 있다면 체크해보세요.
               </p>
             </div>
-            <span className="text-[12px] text-[#EDE6DA]/50 font-light shrink-0">
-              * 항목을 직접 탭(클릭)하여 선택할 수 있습니다
-            </span>
           </div>
 
           <div className="space-y-4 mb-8 relative z-10">
@@ -82,30 +79,30 @@ export default function CompatibilityPatternChecklist() {
           </div>
 
           {/* 결과 안내 카드 */}
-          <div className="p-6 rounded-2xl bg-[#3A1623]/40 border border-[#B78C86]/30 text-center relative z-10 transition-all duration-500 backdrop-blur-sm">
-            <div className="mb-2">
-              <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/5 text-[#C19B83] border border-white/10">
+          <div className="p-6 md:p-8 rounded-2xl bg-[#3A1623]/40 border border-[#B78C86]/30 text-center relative z-10 transition-all duration-500 backdrop-blur-sm shadow-xl">
+            <div className="mb-3">
+              <span className="inline-block px-4 py-2 rounded-full text-[16px] font-semibold bg-white/5 text-[#C19B83] border border-white/10">
                 체크한 항목 수 · {selectedCount} / {compatibilityChecklistData.items.length}
               </span>
             </div>
 
-            <p className="text-[12px] md:text-[13px] text-[#EDE6DA]/60 font-light mb-4 break-keep">
-              정답을 고르는 체크가 아니라, 반복되는 패턴을 살펴보기 위한 체크입니다.
-            </p>
-
             {isHighPattern && (
-              <p className="text-[#D8BB94] font-bold text-base md:text-lg mb-2">
+              <p className="text-[#D8BB94] font-bold text-[20px] md:text-[22px] mb-2 break-keep">
                 {compatibilityChecklistData.highlight}
               </p>
             )}
 
-            <p className="text-sm md:text-base text-[#EDE6DA]/90 break-keep font-light">
+            <p className="text-[18px] text-[#EDE6DA] break-keep font-medium leading-relaxed mb-3">
               {isHighPattern
                 ? compatibilityChecklistData.feedbackHigh
                 : compatibilityChecklistData.feedbackLow}
             </p>
 
-            <p className="text-[11px] text-white/35 mt-4 break-keep">
+            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/75 font-light mb-2 break-keep">
+              정답을 고르는 체크가 아니라, 반복되는 패턴을 살펴보기 위한 체크입니다.
+            </p>
+
+            <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 mt-5 break-keep">
               {compatibilityChecklistData.disclaimer}
             </p>
           </div>
