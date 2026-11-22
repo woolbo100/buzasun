@@ -27,6 +27,7 @@ import WealthReportTableOfContents from '@/components/reports/abundance-report/W
 import WealthReportProcess from '@/components/reports/abundance-report/WealthReportProcess'
 import WealthReportPreview from '@/components/reports/abundance-report/WealthReportPreview'
 import WealthChangeScenario from '@/components/reports/abundance-report/WealthChangeScenario'
+import WealthIntroPhilosophy from '@/components/reports/abundance-report/WealthIntroPhilosophy'
 import WealthAudience from '@/components/reports/abundance-report/WealthAudience'
 import WealthTestimonials from '@/components/reports/abundance-report/WealthTestimonials'
 import WealthPhilosophy from '@/components/reports/abundance-report/WealthPhilosophy'
@@ -699,14 +700,6 @@ export default function AbundanceReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36">
               <Reveal>
-                <div className="space-y-4 mb-16">
-                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase">
-                    POINT 03 · DYNAMICS & SIX PERSPECTIVES
-                  </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.05em] leading-[1.25] md:leading-[1.3] break-keep">
-                    돈과 선택 패턴의 개인 맞춤 해독 — <span className="gradient-text-abundance">6가지 핵심 탐구 축</span>
-                  </h2>
-                </div>
                 <div className="w-full max-w-[1280px] mx-auto mb-16 md:mb-20">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.analysis} 
@@ -715,6 +708,14 @@ export default function AbundanceReportPage() {
                     height={941}
                     className="w-full h-auto rounded-[32px] md:rounded-[40px] shadow-2xl border border-[#608F82]/25 object-contain" 
                   />
+                </div>
+                <div className="space-y-4 mb-12 md:mb-16">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase">
+                    POINT 03 · DYNAMICS & SIX PERSPECTIVES
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.05em] leading-[1.25] md:leading-[1.3] break-keep">
+                    돈과 선택 패턴의 개인 맞춤 해독 — <span className="gradient-text-abundance">6가지 핵심 탐구 축</span>
+                  </h2>
                 </div>
                 <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden rounded-[36px] border border-[#8FD3B6]/15">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
@@ -826,6 +827,11 @@ export default function AbundanceReportPage() {
             {/* SECTION 11. 리포트를 읽은 뒤 달라질 수 있는 선택 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthChangeScenario />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 신규 소개 섹션: WHY BAEKDOHWA ABUNDANCE REPORT & 16:9 풀사이즈 이미지 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthIntroPhilosophy />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 12. 추천 대상과 맞지 않는 대상 (a3.webp & 추천 카드 보존) */}

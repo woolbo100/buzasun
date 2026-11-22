@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Reveal from '@/components/Reveal'
 import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
-import { Coins, Scale, Sparkles, BookOpen, CheckCircle2, Crown, ArrowDown } from 'lucide-react'
+import { Coins, Scale, Sparkles, BookOpen, CheckCircle2, Crown } from 'lucide-react'
 
 export default function WhyWealthReport() {
   const [activeCardIndex, setActiveCardIndex] = useState(0)
@@ -12,37 +12,33 @@ export default function WhyWealthReport() {
     {
       num: '01',
       label: 'POINT 01',
-      title: '나만의 풍요 구조 집중 분석',
-      hook: '“단순한 재물운 예측이 아닌, 타고난 그릇과 풍요의 결을 해부합니다.”',
-      desc: '단순한 재물운 예측이 아니라 타고난 자원 활용 성향과 돈을 대하는 나의 방식을 집중적으로 살펴봅니다. 내 손을 스쳐 지나가는 돈의 흐름을 멈추고 온전한 그릇을 세우는 1:1 맞춤 분석입니다.',
-      anchorId: 'point-01',
+      title: '풍요 특화 심층 분석',
+      hook: '“인생 전체를 묻는 사주가 아니라, 당신의 풍요를 깊이 들여다봅니다.”',
+      desc: '재물, 직업, 건강 등 인생 전반을 폭넓게 살펴보는 종합 풀이와 달리, 백도화 풍요 리포트는 풍요라는 한 가지 주제에 집중합니다. 타고난 재물 성향부터 수익 활동의 기질, 돈을 대하는 무의식적 반응, 반복되는 소비와 선택의 패턴까지 입체적으로 살펴보는 선천코드 기반 개인 맞춤 분석서입니다.',
       icon: <Coins className="w-4 h-4" />,
     },
     {
       num: '02',
       label: 'POINT 02',
-      title: '선천 기질과 재정 행동 교차 분석',
-      hook: '“명리로 타고난 재정 코드를 읽고, 행동심리로 돈을 대하는 습관을 바꿉니다.”',
-      desc: '선천 기질과 실제 돈을 다루는 경험 및 행동을 함께 살펴보며 선택의 패턴을 이해하도록 돕습니다. 무의식적으로 돈을 쓰거나 잃게 만드는 내면의 습관을 객관적으로 마주합니다.',
-      anchorId: 'point-02',
+      title: '동양명리학 × 심리학 × 뇌과학',
+      hook: '“타고난 선천코드를 읽고, 돈 앞에서 반복되는 생각과 습관의 회로를 바꿉니다.”',
+      desc: '동양 명리학으로 선천적인 재물 기질과 오행의 흐름을 해독하고, 인지심리학과 습관 뇌과학적 관점을 접목해 돈 앞에서 무의식적으로 작동하는 결핍감과 소비 회로를 입체적으로 살펴봅니다. 타고난 성향이 실제 경제적 선택에서 어떻게 작동하는지 정확히 짚어내고, 건강한 재정 행동 습관을 형성할 수 있도록 이끕니다.',
       icon: <Scale className="w-4 h-4" />,
     },
     {
       num: '03',
       label: 'POINT 03',
-      title: '돈과 선택 패턴의 개인 맞춤 해독',
-      hook: '“남들의 투자 성공 방식이 내게 맞지 않았던 진짜 이유를 찾습니다.”',
-      desc: '재정적 선택에는 각자의 경험과 감정, 우선순위가 반영됩니다. 나의 기질과 현실적 상황을 바탕으로 반복되는 선택을 분석하고, 6가지 핵심 탐구 축을 통해 풍요의 방향을 짚어냅니다.',
-      anchorId: 'point-03',
+      title: '숨겨진 무의식 코드 정밀 해독',
+      hook: '“나조차 알지 못했던 돈에 대한 결핍과 두려움, 선천코드에 숨겨진 무의식을 마주합니다.”',
+      desc: '겉으로 드러난 소비 습관 너머, 돈 앞에서 무의식적으로 튀어나오는 가격 책정의 두려움, 준비만 하다 시작을 미루는 방어기제, 목돈이 생기면 흘려보내는 결핍의 뿌리까지 깊게 파고듭니다. 선천코드에 새겨진 내면의 재물 지도를 읽어내어 제자리를 맴돌던 선택의 고리를 끊어내도록 돕습니다.',
       icon: <Sparkles className="w-4 h-4" />,
     },
     {
       num: '04',
       label: 'POINT 04',
-      title: '프리미엄 풍요 비급의 상세 구성',
-      hook: '“나만의 풍요 흐름을 단계별로 풀어낸 심층 목차와 특별 증정품”',
-      desc: '풍요 리포트의 심층 분석 목차와 실제 제공되는 결과물의 구성을 구체적으로 살펴볼 수 있습니다. 나만의 수호 에너지와 오행을 시각화한 맞춤 디지털 카드 증정 혜택을 함께 담았습니다.',
-      anchorId: 'point-04',
+      title: '1:1 개인 맞춤형 리포트',
+      hook: '“누구에게나 똑같이 열려 있는 뻔한 재테크 조언은 담지 않았습니다.”',
+      desc: '생년월일만 넣고 기계적으로 찍어내는 자동 조합 풀이가 아닙니다. 개인의 고유한 사주 명식과 선천적 그릇부터 현실에서 반복되는 재정 행동 패턴까지 정밀하게 교차 분석하여, 오직 당신 한 사람만을 위한 1:1 맞춤형 풍요 처방전 PDF를 완성합니다.',
       icon: <BookOpen className="w-4 h-4" />,
     },
     {
@@ -51,16 +47,14 @@ export default function WhyWealthReport() {
       title: '나를 위한 실전 풍요 행동 처방',
       hook: '“추상적인 부의 조언이 아닌, 일상에서 즉시 실천하는 재정 행동 처방”',
       desc: '나의 자원과 현실적 여건을 고려하여 일상에서 실천할 수 있는 선택과 행동의 방향을 제안합니다. 새어나가는 에너지를 막고 풍요를 축적하는 구체적 실천 지침을 제공합니다.',
-      anchorId: 'point-05',
       icon: <CheckCircle2 className="w-4 h-4" />,
     },
     {
       num: '06',
       label: 'POINT 06',
-      title: '프리미엄 풍요 리포트 미리보기',
-      hook: '“평생 곁에 두고 꺼내볼 나만의 재정 나침반, 프리미엄 소장용 비급”',
-      desc: '실제 리포트의 분석 방식과 프리미엄 PDF 결과물의 구성, 시각적 완성도를 미리 확인할 수 있습니다. 장인의 손길로 정성스럽게 엮어낸 고품격 리포트 샘플을 확인하세요.',
-      anchorId: 'point-06',
+      title: '프리미엄 소장용 궁중 비급',
+      hook: '“한 번 읽고 덮어버리는 가벼운 운세가 아닙니다. 평생 곁에 두고 펼쳐볼 당신만의 풍요 비급입니다.”',
+      desc: '수십 페이지에 걸친 깊이 있는 해독과 정갈한 문체, 은은한 옥빛과 샴페인 골드 금박을 품은 품격 있는 디지털 구성까지 모든 디테일을 장인정신으로 엮었습니다. 돈의 흐름 앞에서 판단이 흔들릴 때마다 언제든 꺼내어 나침반처럼 삼을 수 있는 프리미엄 소장용 맞춤 디지털 비급입니다.',
       icon: <Crown className="w-4 h-4" />,
     },
   ]
@@ -74,23 +68,35 @@ export default function WhyWealthReport() {
 
           {/* 1. 상단 섹션 라벨 */}
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
-            WHY BAEKDOHWA ABUNDANCE REPORT
+            WHY SEONCHEON CODE
           </span>
 
           {/* 2. 메인 헤드카피 */}
-          <h2 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-white mb-6 leading-[1.3] md:leading-[1.35] break-keep max-w-4xl mx-auto">
-            &ldquo;막연한 부의 예측이 아닙니다.&rdquo;<br />
-            나만의 풍요 그릇을 세우고,{' '}
-            <span className="gradient-text-abundance">돈의 흐름을 다시 쓰는</span> 6대 핵심 소구점
+          <h2 className="text-[26px] sm:text-[28px] md:text-[38px] font-elegant font-bold text-white mb-8 md:mb-10 leading-[1.3] break-keep max-w-4xl mx-auto">
+            왜, <span className="gradient-text-abundance">선천코드 풍요 리포트</span>인가?
           </h2>
 
-          {/* 3. 본문 도입 설명 */}
-          <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] max-w-3xl mx-auto mb-10 md:mb-14 break-keep">
-            남들의 재테크 성공 방식과 조언을 무작정 쫓던 불안을 멈추고,<br className="hidden sm:inline" />
-            내가 타고난 자원과 현실적 재정 행동의 패턴을 정밀하게 읽어냅니다.
-          </p>
+          {/* 3. 본문 설명 문구 */}
+          <div className="max-w-3xl mx-auto space-y-5 md:space-y-6 mb-10 md:mb-12">
+            <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
+              통장이 늘 제자리였던 건 남들보다 덜 노력해서도, 요행이 없어서도 아니었습니다.<br className="hidden sm:inline" />
+              <span className="sm:inline-block">내 안의 풍요 작동 방식을 읽지 못한 채 늘 같은 자리에서 멈춰 섰기 때문입니다.</span>
+            </p>
 
-          {/* 4. 중앙 핵심 각성 인용문 */}
+            <div className="space-y-2 md:space-y-2.5">
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
+                명리의 구조와 마음의 무의식적 습관을 함께 들여다보며,<br />
+                <span className="text-[#8FD3B6] font-medium opacity-100">
+                  돈 앞에서 망설이고 흘려보내던 나만의 패턴을 한눈에 그려내던 순간.
+                </span>
+              </p>
+              <p className="text-[17px] sm:text-[18px] md:text-[18.5px] text-[#EDE6DA] font-medium opacity-95 leading-[1.75] break-keep">
+                비로소 왜 그 기회들이 내 손에 머물지 않았는지 그 이유가 선명히 드러났습니다.
+              </p>
+            </div>
+          </div>
+
+          {/* 4. 중간 구분선 + 하단 강조 문구 2줄 + 하단 구분선 */}
           <div className="my-8 md:my-12 py-8 md:py-10 border-y border-[#608F82]/30 max-w-4xl mx-auto">
             <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[28px] text-white leading-[1.85] md:leading-[2.1] break-keep">
               남의 방식을 흉내 내지 마세요.<br className="hidden sm:inline" />
@@ -139,7 +145,7 @@ export default function WhyWealthReport() {
             })}
           </div>
 
-          {/* 6. 공통 상세 설명 패널 (클릭 시 내용 전환 및 하단 상세 섹션 이동 링크 제공) */}
+          {/* 6. 공통 상세 설명 패널 (클릭 시 내용 전환) */}
           <div 
             className="max-w-[1280px] mx-auto p-6 md:p-8 rounded-[26px] border border-[#608F82]/35 text-left relative overflow-hidden transition-all duration-300 shadow-2xl backdrop-blur-md"
             style={{
@@ -149,10 +155,10 @@ export default function WhyWealthReport() {
           >
             <div className="flex items-center gap-3 mb-3">
               <span className="px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-[#1D3D33]/80 border border-[#608F82]/50 text-[#8FD3B6]">
-                {cards[activeCardIndex].label} 핵심 소구점
+                {cards[activeCardIndex].label} 핵심 가치
               </span>
-              <span className="text-xs text-[#EDE6DA]/50 hidden sm:inline">
-                * 카드를 클릭하시면 각 소구점의 상세 설명을 확인하실 수 있습니다.
+              <span className="text-xs text-[#EDE6DA]/60 hidden sm:inline">
+                위 카드를 클릭하시면 각 차별화 가치의 상세 설명을 확인하실 수 있습니다.
               </span>
             </div>
             
@@ -160,23 +166,9 @@ export default function WhyWealthReport() {
               {cards[activeCardIndex].hook}
             </p>
             
-            <p className="text-[16px] text-[#EDE6DA]/90 font-light leading-[1.75] break-keep mb-4">
+            <p className="text-[16px] text-[#EDE6DA]/90 font-light leading-[1.75] break-keep">
               {cards[activeCardIndex].desc}
             </p>
-
-            {/* 해당 POINT 상세 영역 이동 링크 */}
-            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <a 
-                href={`#${cards[activeCardIndex].anchorId}`}
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#8FD3B6] hover:text-white transition-colors duration-200 group/link"
-              >
-                <span>{cards[activeCardIndex].label} 상세 분석 영역 바로보기</span>
-                <ArrowDown className="w-3.5 h-3.5 group-hover/link:translate-y-0.5 transition-transform text-[#8FD3B6]" />
-              </a>
-              <span className="text-[11px] text-[#EDE6DA]/50 font-light">
-                페이지 아래 해당 상세 분석 섹션으로 부드럽게 이동합니다
-              </span>
-            </div>
           </div>
 
           {/* 7. 섹션 마무리 2줄 핵심 메시지 */}

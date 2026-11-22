@@ -12,8 +12,9 @@ export default function WealthPersonalizedCases() {
             <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
               DIFFERENT CHOICES, DIFFERENT WEALTH
             </span>
-            <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-              {wealthCaseData.mainCopy}
+            <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+              같은 재물 성향이라도,<br />
+              <span className="gradient-text-abundance">돈을 다루는 방식</span>은 다를 수 있습니다.
             </h2>
           </div>
 
@@ -27,7 +28,8 @@ export default function WealthPersonalizedCases() {
               타고난 재물 코드가 같아도, 내가 어떤 기회와 환경을 만나고 어떤 판단을 내리느냐에 따라 현실의 결과는 완전히 달라집니다.
             </p>
             <p className="text-[#FAF7F2] font-medium pt-1">
-              중요한 것은 내 안의 코드뿐만 아니라, 그 코드가 발현될 때 <span className="text-[#8FB4A4] font-semibold">내가 돈 앞에서 어떻게 반응하고 선택하는지를 아는 것</span>입니다.
+              중요한 것은 내 안의 코드뿐만 아니라, 그 코드가 발현될 때<br />
+              <span className="text-[#8FB4A4] font-semibold">내가 돈 앞에서 어떻게 반응하고 선택하는지를 아는 것</span>입니다.
             </p>
           </div>
         </div>
