@@ -19,7 +19,6 @@ import WhyWealthReport from '@/components/reports/abundance-report/WhyWealthRepo
 import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
 import WealthPrescriptionSample from '@/components/reports/abundance-report/WealthPrescriptionSample'
 import WealthPatternChecklist from '@/components/reports/abundance-report/WealthPatternChecklist'
-import WealthAdviceComparison from '@/components/reports/abundance-report/WealthAdviceComparison'
 import WealthPatternFlow from '@/components/reports/abundance-report/WealthPatternFlow'
 import WealthAnalysisMethod from '@/components/reports/abundance-report/WealthAnalysisMethod'
 import WealthPersonalizedCases from '@/components/reports/abundance-report/WealthPersonalizedCases'
@@ -46,7 +45,7 @@ const ABUNDANCE_REPORT_IMAGES = {
   empathy: '/image/abundance/wealth-money-pattern-awareness.webp', // 문제 제기 공감 문구 아래 가로 16:9 이미지
   overview: '/image/abundance/a2.webp',
   recommended: '/image/abundance/a3.webp',
-  analysis: '/image/abundance/a4.webp',
+  analysis: '/image/abundance/wealth-six-core-pillars.webp', // 6가지 핵심 탐구 축 16:9 설계도 비주얼
   premium: '/image/abundance/a5.webp',
   finalCta: '/image/abundance/a6.webp',
 }
@@ -539,14 +538,35 @@ export default function AbundanceReportPage() {
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 03. 왜 일반적인 성공 공식이 맞지 않았을까? */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthAdviceComparison />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 04. 반복되는 돈의 흐름을 재정의하다 */}
+            {/* ① WEALTH DYNAMICS · 기준은 본능이 아니라 구조입니다 (통합 리디자인) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthPatternFlow />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* ② DIFFERENT CHOICES, DIFFERENT WEALTH · 같은 재물 성향이라도, 돈을 다루는 방식은 다를 수 있습니다 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthPersonalizedCases />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* ③ PARADIGM SHIFT · 당신은 아직도 미래가 어떻게 될지만 묻고 있습니까? */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <QuestionShiftComparison 
+              theme="abundance" 
+              banner={
+                <div className="mx-auto w-full max-w-[1280px]">
+                  <div className="w-full overflow-hidden rounded-[24px] md:rounded-[32px] border border-[#608F82]/30 shadow-2xl bg-[#0B1514]">
+                    <Image
+                      src="/image/abundance/wealth-paradigm-shift.webp"
+                      alt="미래의 재물운만 묻는 사람과 자신의 재물 구조를 읽고 풍요를 설계하는 사람을 대비한 백도화 풍요 리포트 이미지"
+                      width={1672}
+                      height={941}
+                      className="block h-auto w-full object-contain"
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                    />
+                  </div>
+                </div>
+              }
+            />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [중간 구매 CTA 1차] BEGIN YOUR JOURNEY (와이드형 프리미엄 CTA) */}
@@ -668,13 +688,13 @@ export default function AbundanceReportPage() {
                     돈과 선택 패턴의 개인 맞춤 해독 — <span className="gradient-text-abundance">6가지 핵심 탐구 축</span>
                   </h2>
                 </div>
-                <div className="w-full max-w-[1280px] mx-auto mb-20">
+                <div className="w-full max-w-[1280px] mx-auto mb-16 md:mb-20">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.analysis} 
-                    alt="선천코드 풍요 리포트 핵심 탐구 주제 이미지" 
-                    width={1200}
-                    height={800}
-                    className="w-full h-auto rounded-[50px] shadow-2xl border border-[#608F82]/25" 
+                    alt="백도화 선천코드 풍요 리포트의 6가지 핵심 탐구 축을 표현한 옥빛과 샴페인 골드 금박의 원형 설계도" 
+                    width={1672}
+                    height={941}
+                    className="w-full h-auto rounded-[32px] md:rounded-[40px] shadow-2xl border border-[#608F82]/25 object-contain" 
                   />
                 </div>
                 <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden rounded-[36px] border border-[#8FD3B6]/15">
@@ -710,19 +730,9 @@ export default function AbundanceReportPage() {
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 06. 같은 선천코드, 다른 돈의 선택 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthPersonalizedCases />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 07. 일반 재물운 풀이와의 차별점 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthComparisonTable />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. 당신은 아직도 미래가 어떻게 될지만 묻고 있습니까? (패러다임 전환) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <QuestionShiftComparison theme="abundance" />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [6대 관점 파노라마 와이드 배너] SIX PERSPECTIVES */}
