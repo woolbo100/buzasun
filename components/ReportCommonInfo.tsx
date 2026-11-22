@@ -72,7 +72,7 @@ export default function ReportCommonInfo({ isCompatibility = false, showFiveElem
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gradient-to-r from-purple-900/10 via-pink-900/5 to-blue-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
           
           <Reveal>
-            <div className="text-center mb-16 space-y-4">
+            <div className="text-center mb-10 md:mb-14 space-y-4">
               <span className="inline-block px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] bg-[var(--accent-gold)]/10 border border-[var(--accent-gold)]/20 text-[var(--accent-gold-light)] uppercase">
                 Digital Ritual Gift
               </span>
@@ -81,27 +81,6 @@ export default function ReportCommonInfo({ isCompatibility = false, showFiveElem
               </h2>
               <p className="text-sm md:text-base text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep">
                 ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
-              </p>
-            </div>
-          </Reveal>
-
-          {/* 오행 소개 본문 문구 */}
-          <Reveal>
-            <div className="gungjung-glass p-8 md:p-12 max-w-4xl mx-auto mb-16 text-center border-white/[0.04] relative overflow-hidden">
-              {/* 자개 무늬 느낌의 오버레이 광채 */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/5 via-pink-500/3 to-transparent pointer-events-none"></div>
-              
-              <p className="text-lg md:text-xl text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
-                <span className="block text-white font-medium">
-                  백도화 선천코드 리포트 구매 시, 고객님의 선천적 흐름에 어울리는 오행 에너지 카드 1종이 함께 제공됩니다.
-                </span>
-                <span className="block text-base opacity-75">
-                  오행 에너지 카드는 목·화·토·금·수의 상징을 한국적 자개 무드로 표현한 디지털 리추얼 이미지입니다. <br className="hidden md:inline" />
-                  부족하거나 보완이 필요한 기운을 시각적으로 바라보고, 마음의 균형을 정리하는 감성 카드로 활용하실 수 있습니다.
-                </span>
-                <span className="block text-sm text-[var(--accent-gold-light)] opacity-90 border-t border-white/5 pt-6 mt-6">
-                  ✨ 휴대폰 배경화면, 잠금화면, 개인 노트 표지, 감정 정리 리추얼 이미지 등으로 자유롭게 사용하실 수 있습니다.
-                </span>
               </p>
             </div>
           </Reveal>

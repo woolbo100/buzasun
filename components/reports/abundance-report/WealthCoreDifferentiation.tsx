@@ -6,13 +6,12 @@ import { TrendingDown, Scale, DollarSign } from 'lucide-react'
 
 // ══════════════════════════════════════════════════════════════════════
 // 재물 동역학 분석(WEALTH DYNAMICS ANALYSIS) 16:9 가로형 비주얼 설정
-// 향후 실제 이미지 파일 생성 시 src 경로만 입력하면 즉시 교체 적용됩니다.
 // ══════════════════════════════════════════════════════════════════════
 const ABUNDANCE_WEALTH_DYNAMICS_VISUAL = {
-  src: '', // 예: '/image/abundance/wealth-dynamics.webp'
-  alt: '선천코드 풍요 리포트 재물 동역학 분석 16:9',
-  width: 1600,
-  height: 900,
+  src: '/image/abundance/wealth-money-leakage-pattern.webp',
+  alt: '선천코드 풍요 리포트 재물 누수와 반복 패턴 16:9',
+  width: 1672,
+  height: 941,
 }
 
 export default function WealthCoreDifferentiation() {
@@ -52,23 +51,16 @@ export default function WealthCoreDifferentiation() {
           </p>
         </div>
 
-        {/* 신규 16:9 가로형 이미지 슬롯 (abundanceWealthDynamicsVisual) */}
+        {/* 16:9 가로형 이미지 슬롯 (재물 누수와 반복 패턴) */}
         <div className="max-w-7xl mx-auto mb-10 md:mb-12">
-          <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[36px] md:rounded-[40px] overflow-hidden border border-[#608F82]/30 bg-gradient-to-b from-[#0f241f]/40 via-[#152e27]/25 to-[#0a0514]/50 shadow-2xl backdrop-blur-md flex items-center justify-center group">
-            {ABUNDANCE_WEALTH_DYNAMICS_VISUAL.src ? (
-              <Image
-                src={ABUNDANCE_WEALTH_DYNAMICS_VISUAL.src}
-                alt={ABUNDANCE_WEALTH_DYNAMICS_VISUAL.alt}
-                fill
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              />
-            ) : (
-              <div className="flex flex-col items-center justify-center gap-2.5 p-6 text-center select-none">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#608F82]/25 border border-[#608F82]/40 text-xs sm:text-sm font-mono tracking-wider text-[#8FB4A4] shadow-sm">
-                  풍요 분석 이미지 교체 예정 · 16:9
-                </span>
-              </div>
-            )}
+          <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[36px] md:rounded-[40px] overflow-hidden border border-[#608F82]/30 bg-[#0B1514] shadow-2xl backdrop-blur-md flex items-center justify-center">
+            <Image
+              src={ABUNDANCE_WEALTH_DYNAMICS_VISUAL.src}
+              alt={ABUNDANCE_WEALTH_DYNAMICS_VISUAL.alt}
+              fill
+              className="object-contain"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+            />
           </div>
         </div>
 

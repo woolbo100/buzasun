@@ -41,8 +41,9 @@ import WealthRealReasonCard from '@/components/reports/abundance-report/WealthRe
 
 // 추후 개별 이미지 교체 시 아래 경로만 수정하면 각 섹션에 즉시 반영됩니다.
 const ABUNDANCE_REPORT_IMAGES = {
-  hero: '/image/abundance/a1.webp',
-  empathy: '/image/abundance/a2.webp', // 공감 문구 아래 가로 16:9 이미지 (추후 손쉽게 교체 가능)
+  hero: '/image/abundance/baekdohwa-wealth-code-hero.webp',
+  card: '/image/abundance/wealth-blueprint-lotus-card.webp', // 메인 구매 카드 영역 우측 재물 설계도 이미지
+  empathy: '/image/abundance/wealth-money-pattern-awareness.webp', // 문제 제기 공감 문구 아래 가로 16:9 이미지
   overview: '/image/abundance/a2.webp',
   recommended: '/image/abundance/a3.webp',
   analysis: '/image/abundance/a4.webp',
@@ -52,17 +53,17 @@ const ABUNDANCE_REPORT_IMAGES = {
 
 // 교차 스토리 1 & 2 세로 3:4 이미지 설정
 const ABUNDANCE_STORY_IMAGE_1 = {
-  src: '/image/abundance/a3.webp',
-  alt: '선천코드 풍요 리포트 첫 번째 스토리 - 각성의 순간',
-  width: 900,
-  height: 1200,
+  src: '/image/abundance/quiet-night-of-abundance.webp',
+  alt: '풍요를 기다리는 고요한 밤, 전통 서재에서 생각에 잠긴 여성의 3:4 감성 이미지',
+  width: 1088,
+  height: 1448,
 }
 
 const ABUNDANCE_STORY_IMAGE_2 = {
-  src: '/image/abundance/a4.webp',
-  alt: '선천코드 풍요 리포트 두 번째 스토리 - 숨겨진 부의 흐름',
-  width: 900,
-  height: 1200,
+  src: '/image/abundance/wealth-hidden-flow-scroll.webp',
+  alt: '선천코드 풍요 리포트의 재물 구조를 상징하는 옥빛 두루마리와 샴페인 골드 금박 설계도',
+  width: 1086,
+  height: 1448,
 }
 
 export default function AbundanceReportPage() {
@@ -213,17 +214,16 @@ export default function AbundanceReportPage() {
                   선천코드 <span className="gradient-text-abundance">풍요 리포트</span>
                 </h1>
 
-                {/* 4. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl group aspect-[16/9] bg-[#0B1514]">
+                {/* 4. 메인 가로 이미지 (16:9 비율 유지 · 글자 잘림 없는 contain 렌더링) */}
+                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl aspect-[16/9] bg-[#0B1514] flex items-center justify-center">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.hero} 
                     alt="선천코드 풍요 리포트 메인 히어로 16:9" 
-                    width={1440}
-                    height={810}
+                    width={1672}
+                    height={941}
                     priority
-                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+                    className="w-full h-full object-contain"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
                 {/* 4-1. 메인 히어로 하단 문제 제기형 인트로 섹션 (연애 리포트와 동일한 구조) */}
@@ -329,8 +329,8 @@ export default function AbundanceReportPage() {
                       <div className="lg:col-span-5 w-full flex justify-center">
                         <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-[#608F82]/35 shadow-2xl bg-black/30 group">
                           <Image
-                            src={ABUNDANCE_REPORT_IMAGES.overview}
-                            alt="선천코드로 읽는 나의 풍요 설계도"
+                            src={ABUNDANCE_REPORT_IMAGES.card}
+                            alt="선천코드 풍요 리포트 재물 설계도 이미지"
                             fill
                             className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                             sizes="(max-width: 1024px) 100vw, 420px"
@@ -358,16 +358,15 @@ export default function AbundanceReportPage() {
                   </div>
                 </div>
 
-                {/* 8. 공감 문구 아래 추가 가로 이미지 (16:9, 교체 가능 구조) */}
-                <div className="relative w-full max-w-[1280px] mx-auto rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl group aspect-[16/9] bg-[#0B1514]">
+                {/* 8. 공감 문구 아래 추가 가로 이미지 (16:9 비율 유지 · 글자 잘림 없는 contain 렌더링) */}
+                <div className="relative w-full max-w-[1280px] mx-auto rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl aspect-[16/9] bg-[#0B1514] flex items-center justify-center">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.empathy} 
-                    alt="선천코드 풍요 리포트 공감 가로 비주얼 16:9" 
-                    width={1440}
-                    height={810}
-                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+                    alt="선천코드 풍요 리포트 돈의 반복 패턴 인식 16:9" 
+                    width={1672}
+                    height={941}
+                    className="w-full h-full object-contain"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               </Reveal>
             </section>
@@ -387,9 +386,9 @@ export default function AbundanceReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-24 md:mb-32">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-18 items-stretch">
                   {/* 좌측 55%: 라벨 + 제목 + 본문 및 마지막 핵심 후킹 */}
-                  <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1">
+                  <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1 flex flex-col justify-between py-1 lg:py-2">
                     <div>
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#C6A477] uppercase mb-4">
                         THE MOMENT OF AWARENESS
@@ -445,15 +444,15 @@ export default function AbundanceReportPage() {
                     </div>
                   </div>
 
-                  {/* 우측 45%: 세로 3:4 이미지 영역 */}
-                  <div className="lg:col-span-5 w-full flex flex-col items-center order-1 lg:order-2">
-                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#608F82]/35 shadow-2xl bg-[#0B1514] flex items-center justify-center transition-all duration-300 hover:border-[#8FB4A4]/50">
+                  {/* 우측 45%: 세로 이미지 영역 (데스크톱에서는 좌측 텍스트 전체 높이와 상하단 균형 정렬) */}
+                  <div className="lg:col-span-5 w-full max-w-[420px] lg:max-w-[450px] xl:max-w-[460px] mx-auto lg:mx-0 flex flex-col items-center lg:items-end justify-start order-1 lg:order-2 lg:py-2">
+                    <div className="group relative w-full aspect-[3/4] lg:aspect-auto lg:h-full rounded-[28px] md:rounded-[36px] overflow-hidden shadow-2xl bg-[#0B1514] flex items-center justify-center">
                       <Image
                         src={ABUNDANCE_STORY_IMAGE_1.src}
                         alt={ABUNDANCE_STORY_IMAGE_1.alt}
                         width={ABUNDANCE_STORY_IMAGE_1.width}
                         height={ABUNDANCE_STORY_IMAGE_1.height}
-                        className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover object-[center_20%] group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                         priority
                       />
                     </div>
@@ -866,7 +865,7 @@ export default function AbundanceReportPage() {
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gradient-to-r from-emerald-900/10 via-amber-900/5 to-teal-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
                   <Reveal>
-                    <div className="text-center mb-16 space-y-4">
+                    <div className="text-center mb-10 md:mb-14 space-y-4">
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
                         Digital Ritual Gift
                       </span>
@@ -876,23 +875,6 @@ export default function AbundanceReportPage() {
                       <p className="text-[18px] text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep font-light">
                         ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 기질과 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
                       </p>
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div className="gungjung-glass p-8 md:p-12 max-w-4xl mx-auto mb-16 text-center border-[#8FD3B6]/15 relative overflow-hidden">
-                      <div className="text-[18px] text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
-                        <span className="block text-white font-medium">
-                          백도화 선천코드 리포트 이용 시, 고객님의 선천적 기질과 흐름에 맞춘 나의 오행 아트카드 1장과 수호자 카드 1장(총 2종)이 함께 제공됩니다.
-                        </span>
-                        <span className="block text-[15px] md:text-[16px] opacity-75">
-                          오행 에너지 카드는 목·화·토·금·수의 상징을 한국적 자개 무드로 표현한 디지털 리추얼 이미지입니다. <br className="hidden md:inline" />
-                          나에게 필요한 균형과 태도를 시각적으로 되새기며 일상의 중심을 다잡는 카드로 활용하실 수 있습니다.
-                        </span>
-                        <span className="block text-sm text-[#E6BE8A] opacity-90 border-t border-white/5 pt-6 mt-6">
-                          ✨ 휴대폰 배경화면, 잠금화면, 개인 노트 표지, 일상 다짐 리추얼 이미지 등으로 자유롭게 활용하실 수 있습니다.
-                        </span>
-                      </div>
                     </div>
                   </Reveal>
 
@@ -1124,16 +1106,7 @@ export default function AbundanceReportPage() {
               </Reveal>
             </section>
 
-            {/* 기존 정책 링크 보존 */}
-            <section className="pb-16 text-center">
-              <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
-                <Link href="/terms" className="hover:text-[#E6BE8A] transition-colors">이용약관</Link>
-                <Link href="/privacy" className="hover:text-[#E6BE8A] transition-colors">개인정보처리방침</Link>
-                <Link href="/refund" className="hover:text-[#E6BE8A] transition-colors">환불정책</Link>
-              </div>
-            </section>
-
-            {/* 브랜드 시그니처 엔딩 섹션 (최종 구매 CTA 및 정책 안내 아래, 공통 푸터 위) */}
+            {/* 브랜드 시그니처 엔딩 섹션 (최종 구매 CTA 아래, 공통 푸터 위) */}
             <BrandSignatureEnding theme="abundance" />
 
           </div>

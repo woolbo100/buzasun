@@ -945,16 +945,7 @@ export default function PremiumCompatibilityReportPage() {
               </Reveal>
             </section>
 
-            {/* 기존 정책 링크 보존 */}
-            <section className="pb-16 text-center">
-              <div className="flex justify-center gap-10 text-[10px] tracking-[0.3em] uppercase text-white/30">
-                <Link href="/terms" className="hover:text-[#D8BB94] transition-colors">이용약관</Link>
-                <Link href="/privacy" className="hover:text-[var(--accent-gold)] transition-colors">개인정보처리방침</Link>
-                <Link href="/refund" className="hover:text-[var(--accent-gold)] transition-colors">환불정책</Link>
-              </div>
-            </section>
-
-            {/* 브랜드 시그니처 엔딩 섹션 (최종 구매 CTA 및 정책 안내 아래, 공통 푸터 위) */}
+            {/* 브랜드 시그니처 엔딩 섹션 (최종 구매 CTA 아래, 공통 푸터 위) */}
             <BrandSignatureEnding theme="compatibility" />
 
           </div>
