@@ -548,10 +548,29 @@ export default function AbundanceReportPage() {
             <WealthPersonalizedCases />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* ③ PARADIGM SHIFT · 당신은 아직도 미래가 어떻게 될지만 묻고 있습니까? */}
+            {/* ③ PARADIGM SHIFT · 내 재물의 설계도도 모르면서, 왜 올해 재물운과 미래부터 묻습니까? */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <QuestionShiftComparison 
               theme="abundance" 
+              title={
+                <>
+                  “내 재물의 설계도도 모르면서,<br className="hidden sm:inline" />
+                  <span className="gradient-text-abundance"> 왜 올해 재물운과 미래부터 묻습니까?</span>”
+                </>
+              }
+              description={
+                <>
+                  <p>
+                    올해 운이 풀릴지, 언제 돈이 들어올지만 점치며 애쓰는 동안<br className="hidden sm:inline" />
+                    정작 내가 돈 앞에서 어떤 선택을 미루고 어떤 흐름에서 새어나가는지는 한 번도 묻지 않았습니다.
+                  </p>
+                  <p>
+                    진짜 바꿔야 할 것은 막연한 미래의 재물운이 아니라,<br className="hidden sm:inline" />
+                    같은 기회와 위기 앞에서 매번 반복되는{' '}
+                    <span className="text-[#C6A477] font-semibold">나의 판단과 기준</span>입니다.
+                  </p>
+                </>
+              }
               banner={
                 <div className="mx-auto w-full max-w-[1280px]">
                   <div className="w-full overflow-hidden rounded-[24px] md:rounded-[32px] border border-[#608F82]/30 shadow-2xl bg-[#0B1514]">

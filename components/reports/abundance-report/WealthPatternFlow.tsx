@@ -4,10 +4,10 @@ import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { ArrowRight, ArrowDown } from 'lucide-react'
 
-// 16:9 통합 비주얼 이미지 설정 (풍요 리포트 전용 옥빛 비주얼, 추후 교체 가능)
+// 16:9 통합 비주얼 이미지 설정 (풍요 리포트 전용 재물 지형도 비주얼)
 const WEALTH_DYNAMICS_VISUAL = {
-  src: '/image/abundance/a2.webp',
-  alt: '선천코드 풍요 리포트 재물 구조와 흐름 관찰자 시점 16:9',
+  src: '/image/abundance/wealth-structure-over-instinct.webp',
+  alt: '선천코드 풍요 리포트 재물 구조와 지형도 16:9 비주얼',
   width: 1672,
   height: 941,
 }
@@ -63,7 +63,7 @@ export default function WealthPatternFlow() {
           </div>
         </div>
 
-        {/* 2. 16:9 이미지 및 오버레이 문구 */}
+        {/* 2. 16:9 신규 비주얼 이미지 (자체 타이포그래피 포함으로 오버레이 텍스트 없음) */}
         <div className="max-w-7xl mx-auto mb-14">
           <div className="w-full overflow-hidden rounded-[24px] md:rounded-[36px] border border-[#608F82]/30 shadow-2xl bg-[#0B1514] relative group">
             <div className="relative w-full aspect-[16/9]">
@@ -72,21 +72,9 @@ export default function WealthPatternFlow() {
                 alt={WEALTH_DYNAMICS_VISUAL.alt}
                 fill
                 sizes="(max-width: 1280px) 100vw, 1280px"
-                className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-1000 ease-out"
+                className="object-contain object-center group-hover:scale-[1.01] transition-transform duration-700 ease-out"
                 priority
               />
-              {/* 이미지 내부 오버레이 문구 */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/35 flex flex-col items-center justify-center p-6 text-center">
-                <div className="max-w-3xl mx-auto space-y-3">
-                  <span className="inline-block px-3.5 py-1 rounded-full text-xs font-mono tracking-[0.2em] uppercase bg-[#608F82]/20 border border-[#608F82]/40 text-[#8FB4A4] mb-2">
-                    STRUCTURE OVER INSTINCT
-                  </span>
-                  <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-white leading-[1.4] md:leading-[1.45] drop-shadow-lg break-keep">
-                    돈의 흐름에 끌려갈 것인가,<br />
-                    <span className="text-[#E6BE8A] drop-shadow-[0_2px_8px_rgba(230,190,138,0.35)]">구조 위에서 내려다볼 것인가.</span>
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -145,9 +133,9 @@ export default function WealthPatternFlow() {
           </div>
         </div>
 
-        {/* 5. 하단 인용 박스 */}
-        <div className="max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#0f241f]/30 via-[#152e27]/45 to-[#0f241f]/30 border border-[#608F82]/35 text-center shadow-xl backdrop-blur-md">
-          <p className="text-lg sm:text-xl md:text-2xl font-elegant font-bold text-[#E6BE8A] leading-relaxed whitespace-pre-line drop-shadow-sm">
+        {/* 5. 하단 인용 박스 (각성 메시지 카드 전용 프리미엄 호버 효과) */}
+        <div className="awakening-quote-card-wealth max-w-7xl mx-auto p-8 md:p-12 rounded-[28px] bg-gradient-to-r from-[#0f241f]/30 via-[#152e27]/45 to-[#0f241f]/30 border border-[#608F82]/35 text-center shadow-xl backdrop-blur-md">
+          <p className="relative z-10 text-lg sm:text-xl md:text-2xl font-elegant font-bold text-[#E6BE8A] leading-relaxed whitespace-pre-line drop-shadow-sm">
             &ldquo;명(命)은 바꾸는 것이 아니라 쓰는 것입니다.{"\n"}
             이제는 익숙한 본능대로 반응하지 말고, 내 기질과 구조에 맞게 써야 할 때입니다.&rdquo;
           </p>

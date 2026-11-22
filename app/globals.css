@@ -348,6 +348,48 @@
     }
   }
 
+  /* 백도화 풍요 리포트 — 각성 인용 메시지 카드 전용 프리미엄 호버 효과 */
+  .awakening-quote-card-wealth {
+    position: relative;
+    overflow: hidden;
+    transition: border-color 500ms ease-out, box-shadow 500ms ease-out;
+  }
+
+  .awakening-quote-card-wealth::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* 은은한 톤다운 연옥빛(#829D92)과 차분한 샴페인 골드(#C7A97A) 및 딥 옥색(#24443D)의 부드러운 방사형 그라데이션 */
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(199, 169, 122, 0.12) 0%,
+      rgba(130, 157, 146, 0.14) 40%,
+      rgba(36, 68, 61, 0.20) 75%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .awakening-quote-card-wealth:hover {
+      border-color: rgba(199, 169, 122, 0.60);
+      box-shadow: 0 0 40px rgba(96, 143, 130, 0.25), 0 0 15px rgba(199, 169, 122, 0.15);
+    }
+    .awakening-quote-card-wealth:hover::before {
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .awakening-quote-card-wealth,
+    .awakening-quote-card-wealth::before {
+      transition: none;
+    }
+  }
+
   @keyframes gradientText {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
