@@ -490,10 +490,9 @@ export default function AbundanceReportPage() {
                         <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#C6A477] uppercase mb-4">
                           THE HIDDEN FLOW
                         </span>
-                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mb-5 leading-[1.25] md:leading-[1.3] break-keep">
-                          내 사주 속 재물 구조를 들여다보는 순간,<br />
-                          <span className="gradient-text-abundance">반복되던 돈의 흐름이 다르게</span><br />
-                          보이기 시작합니다.
+                        <h2 className="text-[20px] sm:text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-5 leading-[1.3] md:leading-[1.35] break-keep">
+                          <span className="block">사주 속 재물 구조를 마주하는 순간,</span>
+                          <span className="gradient-text-abundance">반복되던 돈의 흐름이 다르게</span> 보이기 시작합니다.
                         </h2>
                       </div>
 
