@@ -431,8 +431,8 @@ export default function AbundanceReportPage() {
                         </div>
                       </div>
 
-                      <p>
-                        내 타고난 부의 흐름조차 읽지 못했기에, 늘 기회의 문턱에서 제자리걸음을 했던 것입니다.
+                      <p className="xl:whitespace-nowrap tracking-[-0.015em] lg:tracking-[-0.01em]">
+                        타고난 부의 흐름조차 읽지 못했기에, 늘 기회의 문턱에서 제자리걸음을 했던 것입니다.
                       </p>
                     </div>
 
@@ -468,9 +468,9 @@ export default function AbundanceReportPage() {
             <section className="mb-24 md:mb-32">
               <Reveal>
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-16 items-stretch">
-                  {/* 좌측 45%: 세로형 3:4 이미지 영역 */}
-                  <div className="lg:col-span-5 w-full max-w-[420px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start justify-center">
-                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#608F82]/35 shadow-2xl bg-[#0B1514] flex items-center justify-center transition-all duration-300 hover:border-[#8FB4A4]/50">
+                  {/* 좌측 45%: 세로형 3:4 이미지 영역 (데스크톱에서는 우측 텍스트 전체 높이와 상하단 균형 정렬) */}
+                  <div className="lg:col-span-5 w-full max-w-[420px] lg:max-w-[450px] xl:max-w-[460px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start justify-start lg:py-2">
+                    <div className="group relative w-full aspect-[3/4] lg:aspect-auto lg:h-full rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#608F82]/35 shadow-2xl bg-[#0B1514] flex items-center justify-center transition-all duration-300 hover:border-[#8FB4A4]/50">
                       <Image
                         src={ABUNDANCE_STORY_IMAGE_2.src}
                         alt={ABUNDANCE_STORY_IMAGE_2.alt}

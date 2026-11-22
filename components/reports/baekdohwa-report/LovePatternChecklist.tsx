@@ -109,29 +109,32 @@ export default function LovePatternChecklist() {
             }}
             className="p-6 md:p-8 rounded-2xl text-center relative z-10 transition-all duration-500 shadow-xl"
           >
-            <div className="mb-3">
+            <div className="mb-4 md:mb-5">
               <span className="inline-block px-4 py-2 rounded-full text-[16px] font-semibold bg-white/5 text-[#D9A8A7] border border-white/10">
                 체크한 항목 수 · {selectedCount} / {checklistData.items.length}
               </span>
             </div>
 
-            {isHighPattern && (
-              <p className="text-[#D9A8A7] font-bold text-[20px] md:text-[22px] mb-2 break-keep">
-                {checklistData.highlight}
+            {/* 메인 안내 문구, 설명 문구, 주의 문구 통합 그룹 */}
+            <div>
+              {isHighPattern && (
+                <p className="text-[#D9A8A7] font-bold text-[20px] md:text-[22px] mb-1.5 break-keep">
+                  {checklistData.highlight}
+                </p>
+              )}
+
+              <p className="text-[18px] text-[#EDE6DA] break-keep font-medium leading-relaxed mb-2">
+                {isHighPattern ? checklistData.feedbackHigh : checklistData.feedbackLow}
               </p>
-            )}
 
-            <p className="text-[18px] text-[#EDE6DA] break-keep font-medium leading-relaxed mb-3">
-              {isHighPattern ? checklistData.feedbackHigh : checklistData.feedbackLow}
-            </p>
+              <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/75 font-light leading-relaxed break-keep">
+                정답을 고르는 체크가 아니라, 반복되는 패턴을 살펴보기 위한 체크입니다.
+              </p>
 
-            <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/75 font-light mb-2 break-keep">
-              정답을 고르는 체크가 아니라, 반복되는 패턴을 살펴보기 위한 체크입니다.
-            </p>
-
-            <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 mt-5 break-keep">
-              {checklistData.disclaimer}
-            </p>
+              <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 mt-2 md:mt-2.5 break-keep">
+                {checklistData.disclaimer}
+              </p>
+            </div>
           </div>
         </div>
       </Reveal>
