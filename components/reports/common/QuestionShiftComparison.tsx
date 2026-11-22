@@ -47,6 +47,90 @@ export default function QuestionShiftComparison({
     },
   }[theme]
 
+  // 테마별 카드 문구 설정 (풍요 리포트 전용 문구 vs 연애/궁합 문구)
+  const contentConfig = {
+    abundance: {
+      card1: {
+        title: '기존의 운세 중심 질문',
+        description: '미래의 결과를 묻고 기다리는 익숙한 시선',
+        questions: [
+          '올해 재물운이 좋을까?',
+          '언제 큰돈이 들어올까?',
+          '나는 부자가 될 사주일까?',
+          '앞으로 돈 벌 기회가 찾아올까?',
+        ],
+        bottomText: (
+          <>
+            결과를 기다리는 질문만으로는<br className="hidden sm:inline" /> 돈을 다루는 습관이 달라지지 않습니다.
+          </>
+        ),
+      },
+      card2: {
+        title: '백도화 선천코드의 질문',
+        description: '재물 구조를 이해하고 선택을 바꾸는 능동적인 시선',
+        questions: [
+          '나는 어떤 방식으로 돈을 벌 때 강점이 드러날까?',
+          '왜 돈이 들어와도 비슷한 지출이 반복될까?',
+          '나는 어떤 기회 앞에서 망설이거나 서두를까?',
+          '앞으로 돈을 다루는 어떤 기준을 바꿀 수 있을까?',
+        ],
+        bottomText: (
+          <>
+            나의 재물 구조를 이해하면,<br className="hidden sm:inline" /> 선택의 기준을 새롭게 세울 수 있습니다.
+          </>
+        ),
+      },
+    },
+    love: {
+      card1: {
+        title: '기존의 운세 중심 질문',
+        description: '미래를 수동적으로 묻고 결과를 기다리는 익숙한 시선',
+        questions: [
+          '올해 연애운이 좋을까?',
+          '나에게 재물복이 있을까?',
+          '우리는 천생연분일까?',
+          '앞으로 좋은 일이 생길까?',
+        ],
+        bottomText: '단순한 결과 풀이는 내 행동을 바꾸지 못합니다.',
+      },
+      card2: {
+        title: '백도화 선천코드의 질문',
+        description: '선택의 뿌리를 분석하고 행동을 바꾸는 능동적인 설계',
+        questions: [
+          '나는 왜 비슷한 연애에서 상처받을까?',
+          '사랑 앞에서 반복되는 나의 선택은 무엇일까?',
+          '우리는 어떤 순간에 서로를 자극할까?',
+          '앞으로 무엇을 다르게 선택할 수 있을까?',
+        ],
+        bottomText: '구조를 알면, 마침내 다른 선택을 시작할 수 있습니다.',
+      },
+    },
+    compatibility: {
+      card1: {
+        title: '기존의 운세 중심 질문',
+        description: '미래를 수동적으로 묻고 결과를 기다리는 익숙한 시선',
+        questions: [
+          '올해 연애운이 좋을까?',
+          '나에게 재물복이 있을까?',
+          '우리는 천생연분일까?',
+          '앞으로 좋은 일이 생길까?',
+        ],
+        bottomText: '단순한 결과 풀이는 내 행동을 바꾸지 못합니다.',
+      },
+      card2: {
+        title: '백도화 선천코드의 질문',
+        description: '선택의 뿌리를 분석하고 행동을 바꾸는 능동적인 설계',
+        questions: [
+          '나는 왜 비슷한 연애에서 상처받을까?',
+          '사랑 앞에서 반복되는 나의 선택은 무엇일까?',
+          '우리는 어떤 순간에 서로를 자극할까?',
+          '앞으로 무엇을 다르게 선택할 수 있을까?',
+        ],
+        bottomText: '구조를 알면, 마침내 다른 선택을 시작할 수 있습니다.',
+      },
+    },
+  }[theme]
+
   return (
     <section className="mb-40">
       <Reveal>
@@ -103,20 +187,15 @@ export default function QuestionShiftComparison({
                 </div>
                 <div>
                   <span className={`text-xs font-mono tracking-widest ${theme === 'abundance' ? 'text-[#9CA8AD]' : 'text-white/40'} uppercase block`}>CARD 01</span>
-                  <h3 className={`text-lg md:text-xl font-bold ${theme === 'abundance' ? 'text-[#E4EBEF]' : 'text-white/70'}`}>기존의 운세 중심 질문</h3>
+                  <h3 className={`text-lg md:text-xl font-bold ${theme === 'abundance' ? 'text-[#E4EBEF]' : 'text-white/70'}`}>{contentConfig.card1.title}</h3>
                 </div>
               </div>
               <p className={`text-[16px] ${theme === 'abundance' ? 'text-[#9CA8AD]' : 'text-[#EDE6DA]/60'} font-light mb-6 break-keep`}>
-                미래를 수동적으로 묻고 결과를 기다리는 익숙한 시선
+                {contentConfig.card1.description}
               </p>
 
               <div className="space-y-3.5">
-                {[
-                  '올해 연애운이 좋을까?',
-                  '나에게 재물복이 있을까?',
-                  '우리는 천생연분일까?',
-                  '앞으로 좋은 일이 생길까?'
-                ].map((q, idx) => (
+                {contentConfig.card1.questions.map((q, idx) => (
                   <div key={idx} className={`p-4 rounded-xl ${theme === 'abundance' ? 'bg-[#171F29]/90 border border-[#2E3C46]/60 text-[#9CA8AD]' : 'bg-black/30 border border-white/5 flex items-center gap-3 text-white/60'} flex items-center gap-3`}>
                     <span className={`w-1.5 h-1.5 rounded-full ${theme === 'abundance' ? 'bg-[#9CA8AD]/40' : 'bg-white/30'} shrink-0`}></span>
                     <span className="text-sm md:text-base line-through opacity-70 break-keep">{q}</span>
@@ -125,8 +204,8 @@ export default function QuestionShiftComparison({
               </div>
             </div>
 
-            <div className={`pt-6 border-t ${theme === 'abundance' ? 'border-[#3A4A54]/40 text-[#9CA8AD]' : 'border-white/5 text-white/50'} text-sm md:text-[15px] text-center font-light`}>
-              단순한 결과 풀이는 내 행동을 바꾸지 못합니다.
+            <div className={`pt-6 border-t ${theme === 'abundance' ? 'border-[#3A4A54]/40 text-[#9CA8AD]' : 'border-white/5 text-white/50'} text-sm md:text-[15px] text-center font-light leading-relaxed break-keep`}>
+              {contentConfig.card1.bottomText}
             </div>
           </div>
 
@@ -153,20 +232,15 @@ export default function QuestionShiftComparison({
                 </div>
                 <div>
                   <span className={`text-xs font-mono tracking-widest ${theme === 'abundance' ? 'text-[#A4BAB5]' : themeConfig.activeText} uppercase block font-bold`}>CARD 02</span>
-                  <h3 className="text-lg md:text-xl font-bold text-white">백도화 선천코드의 질문</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-white">{contentConfig.card2.title}</h3>
                 </div>
               </div>
               <p className={`text-[16px] ${theme === 'abundance' ? 'text-[#EDE6DA]' : 'text-[#EDE6DA]/85'} font-light mb-6 break-keep`}>
-                선택의 뿌리를 분석하고 행동을 바꾸는 능동적인 설계
+                {contentConfig.card2.description}
               </p>
 
               <div className="space-y-3.5">
-                {[
-                  '나는 왜 비슷한 연애에서 상처받을까?',
-                  theme === 'abundance' ? '돈 앞에서 반복되는 나의 선택은 무엇일까?' : '사랑 앞에서 반복되는 나의 선택은 무엇일까?',
-                  '우리는 어떤 순간에 서로를 자극할까?',
-                  '앞으로 무엇을 다르게 선택할 수 있을까?'
-                ].map((q, idx) => (
+                {contentConfig.card2.questions.map((q, idx) => (
                   <div key={idx} className={`p-4 rounded-xl ${theme === 'abundance' ? 'bg-[#1D3035]/90 border border-[#3A5358]/60 text-[#F2ECE3]' : 'bg-black/50 border border-white/10 text-white'} flex items-center gap-3 shadow-sm`}>
                     <ArrowRight className={`w-4 h-4 ${theme === 'abundance' ? 'text-[#A4BAB5]' : themeConfig.activeText} shrink-0`} />
                     <span className="text-sm md:text-base font-medium break-keep">{q}</span>
@@ -175,8 +249,8 @@ export default function QuestionShiftComparison({
               </div>
             </div>
 
-            <div className={`pt-6 border-t ${theme === 'abundance' ? 'border-[#5A787A]/30 text-[#EDE6DA]' : 'border-white/10 text-[#EDE6DA]/90'} text-sm md:text-[15px] text-center font-light relative z-10`}>
-              구조를 알면, 마침내 다른 선택을 시작할 수 있습니다.
+            <div className={`pt-6 border-t ${theme === 'abundance' ? 'border-[#5A787A]/30 text-[#EDE6DA]' : 'border-white/10 text-[#EDE6DA]/90'} text-sm md:text-[15px] text-center font-light leading-relaxed break-keep relative z-10`}>
+              {contentConfig.card2.bottomText}
             </div>
           </div>
 

@@ -31,17 +31,17 @@ export default function WealthConvergenceMethod() {
     {
       num: '01',
       title: '동양 명리학 — 선천 재물 기질 해독',
-      desc: '일간과 십성, 오행의 구성 등 동양 명리학의 관점에서 타고난 재물 성향과 일하는 방식, 자원을 활용하는 기질을 살펴봅니다. 어떤 환경에서 강점이 발휘되는지, 나에게 자연스러운 수익 활동 방식은 무엇인지 자기이해의 기초를 마련합니다.'
+      desc: '일간과 십성, 오행으로 타고난 재물 성향과 자원을 활용하는 기질을 읽고, 나에게 맞는 수익 방식의 기초를 세웁니다.'
     },
     {
       num: '02',
       title: '심리와 무의식 — 반복 패턴 분석',
-      desc: '돈을 벌거나 사용할 때 반복되는 불안, 죄책감, 결핍감, 가격 결정에 대한 두려움 등 심리적 반응을 함께 살펴봅니다. 수입이 생겨도 쉽게 흘려보내거나 기회 앞에서 시작을 미루는 행동 등 반복되는 선택의 배경을 이해하도록 돕습니다.'
+      desc: '돈 앞에서 반복되는 불안과 결핍감, 기회를 미루거나 흘려보내는 무의식적 반응의 진짜 원인을 짚어냅니다.'
     },
     {
       num: '03',
       title: '현실 행동 분석 — 풍요 습관 재설계',
-      desc: '앞서 살펴본 선천적 기질과 심리적 반응을 현실의 수입·소비·선택 패턴과 연결합니다. 나에게 맞는 판단 기준과 일상에서 실천할 수 있는 행동 방향을 정리해 막연한 기대를 현실적인 변화의 출발점으로 연결하도록 돕습니다.'
+      desc: '선천 기질과 심리 패턴을 현실의 수입·지출과 연결해, 일상에 바로 적용할 나만의 풍요 기준과 실천 방향을 잡습니다.'
     }
   ]
 
@@ -101,7 +101,7 @@ export default function WealthConvergenceMethod() {
             {/* 상단 그룹: 프로세스 소제목 + 3단계 해독 리스트 */}
             <div className="space-y-6 lg:space-y-7">
               {/* 프로세스 소제목 */}
-              <h3 className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#8FD3B6] leading-snug break-keep mb-2 sm:mb-2.5">
+              <h3 className="font-elegant font-bold text-[20px] sm:text-[22px] md:text-[24px] text-[#E5C378] leading-snug break-keep mb-2 sm:mb-2.5">
                 당신의 풍요를 해부하는 3단계 입체 프로세스
               </h3>
 
@@ -127,14 +127,14 @@ export default function WealthConvergenceMethod() {
             </div>
 
             {/* 하단 강조 문구 박스 */}
-            <div className="p-5 md:p-6 rounded-2xl border border-[#608F82]/30 bg-gradient-to-r from-[#142B24]/40 to-[#0B1514]/55 backdrop-blur-sm space-y-2.5 mt-6 lg:mt-6">
+            <div className="p-5 md:p-6 rounded-2xl border border-[#608F82]/30 bg-gradient-to-r from-[#142B24]/40 to-[#0B1514]/55 backdrop-blur-sm space-y-2 mt-6 lg:mt-6">
               <p className="font-elegant font-medium text-[15px] md:text-[16px] text-[#FAF7F2] leading-relaxed break-keep">
-                &ldquo;명리학의 선천 기질 해석과 돈을 대하는 심리·행동 패턴을 함께 살펴보는 경험 기반의 통합 분석입니다.
+                &ldquo;명리학의 선천 기질 해석과 돈 앞의 심리·행동 패턴을 함께 살펴보는 통합 분석입니다.
               </p>
-              <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#8FD3B6] leading-relaxed break-keep">
-                단편적인 재물운 풀이를 넘어, 나의 재물 성향과 반복되는 선택을 여러 관점에서 이해하도록 돕습니다.&rdquo;
+              <p className="font-elegant font-semibold text-[15px] md:text-[16px] text-[#E5C378] leading-relaxed break-keep">
+                단편적인 재물운 풀이를 넘어, 나의 재물 성향과 반복되는 선택을 여러 관점에서 입체적으로 이해하도록 돕습니다.&rdquo;
               </p>
-              <p className="text-[12.5px] sm:text-[13px] text-[#8FB4A4]/75 font-light leading-relaxed break-keep pt-1 border-t border-[#608F82]/20">
+              <p className="text-[12.5px] sm:text-[13px] text-[#8FB4A4]/75 font-light leading-relaxed break-keep pt-2.5 mt-2 border-t border-[#608F82]/20">
                 ※ 심리·행동 분석은 고객의 실제 입력 정보와 리포트에서 제공하는 분석 범위 안에서 표현합니다. 임상적 진단이나 과학적으로 검증된 개인 심리 측정이라고 주장하지 않습니다.
               </p>
             </div>
@@ -144,11 +144,11 @@ export default function WealthConvergenceMethod() {
           <div className="lg:col-span-5 relative group flex flex-col order-1 lg:order-2 mb-8 lg:mb-0 justify-start">
             <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#608F82]/25 shadow-2xl bg-[#0F201B]">
               <Image 
-                src="/image/abundance/a5.webp" 
-                alt="POINT 02 융합 분석 — 동양명리학, 심리와 무의식, 현실 행동 분석" 
+                src="/images/abundance/wealth-point-02-integrated-analysis.webp" 
+                alt="POINT 02 융합 분석 — 동양명리학 + 심리학 + 뇌과학" 
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]" 
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]" 
               />
             </div>
           </div>

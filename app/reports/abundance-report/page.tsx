@@ -29,6 +29,7 @@ import WealthReportProcess from '@/components/reports/abundance-report/WealthRep
 import WealthReportPreview from '@/components/reports/abundance-report/WealthReportPreview'
 import WealthChangeScenario from '@/components/reports/abundance-report/WealthChangeScenario'
 import WealthIntroPhilosophy from '@/components/reports/abundance-report/WealthIntroPhilosophy'
+import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
 import WealthAudience from '@/components/reports/abundance-report/WealthAudience'
 import WealthTestimonials from '@/components/reports/abundance-report/WealthTestimonials'
 import WealthPhilosophy from '@/components/reports/abundance-report/WealthPhilosophy'
@@ -45,7 +46,7 @@ const ABUNDANCE_REPORT_IMAGES = {
   hero: '/image/abundance/baekdohwa-wealth-code-hero.webp',
   card: '/image/abundance/wealth-blueprint-lotus-card.webp', // 메인 구매 카드 영역 우측 재물 설계도 이미지
   empathy: '/image/abundance/wealth-money-pattern-awareness.webp', // 문제 제기 공감 문구 아래 가로 16:9 이미지
-  overview: '/image/abundance/a2.webp',
+  overview: '/images/abundance/wealth-point-01-deep-analysis.webp',
   recommended: '/image/abundance/a3.webp',
   analysis: '/image/abundance/wealth-six-core-pillars.webp', // 6가지 핵심 탐구 축 16:9 설계도 비주얼
   premium: '/image/abundance/a5.webp',
@@ -620,7 +621,7 @@ export default function AbundanceReportPage() {
                         alt="선천코드 풍요 특화 심층 분석" 
                         fill
                         sizes="(max-width: 1024px) 100vw, 42vw"
-                        className="object-cover object-[38%_center] transition-transform duration-700 group-hover:scale-[1.02]" 
+                        className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]" 
                       />
                     </div>
                   </div>
@@ -639,29 +640,14 @@ export default function AbundanceReportPage() {
                       </h2>
                     </div>
 
-                    <div className="space-y-3.5 md:space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 leading-[1.75] md:leading-[1.8] break-keep font-light">
-                      <p>
-                        사주 전체를 훑는 수박 겉핥기식 운세 풀이로는<br className="hidden sm:inline" />
-                        돈 앞에서 반복되는 선택의 이유를 알 수 없습니다.<br />
-                        단순한 재물운이나 뻔한 재테크 조언과는 출발점부터 다릅니다.
-                      </p>
-                      <p>
-                        <span className="text-[#8FD3B6] font-medium opacity-100">
-                          당신이 돈을 벌고, 쓰고, 지키는 과정에서<br className="hidden sm:inline" />
-                          반복되는 패턴을 정밀하게 분석합니다.
-                        </span>
-                      </p>
-                      <p>
-                        동양 명리학으로 타고난 재물 성향과 일하는 기질을 읽고,<br className="hidden sm:inline" />
-                        심리와 무의식적 반응의 관점에서<br className="hidden sm:inline" />
-                        돈 앞에서 반복되는 두려움과 선택의 습관까지<br className="hidden sm:inline" />
-                        <span className="text-[#E5C378] font-medium opacity-100">입체적으로 살펴봅니다.</span>
-                      </p>
-                      <p>
-                        그리고 자신의 기질과 현실적 조건에 맞는<br className="hidden sm:inline" />
-                        풍요의 기준을 세우고 실천 방향을 모색합니다.
-                      </p>
-                    </div>
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 leading-[1.8] break-keep font-light">
+                      사주 전체를 훑는 수박 겉핥기식 운세 풀이로는 돈 앞에서 반복되는 선택의 이유를 알 수 없습니다.{' '}
+                      단순한 재물운이나 뻔한 재테크 조언과는 출발점부터 다릅니다.{' '}
+                      <span className="text-[#E5C378] font-medium opacity-100">
+                        당신이 돈을 벌고, 쓰고, 지키는 과정에서 반복되는 패턴을 정밀하게 분석합니다.
+                      </span>{' '}
+                      동양 명리학으로 타고난 재물 성향과 일하는 기질을 읽고, 심리와 무의식적 반응의 시선으로 돈 앞의 두려움과 선택의 습관까지 입체적으로 살펴 나만의 풍요 기준과 실천 방향을 세웁니다.
+                    </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {[
@@ -687,7 +673,7 @@ export default function AbundanceReportPage() {
             <WealthConvergenceMethod />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* PRECISE PROCESS: 개인 맞춤 리포트 제작 과정 (STEP 01~04) */}
+            {/* PRECISION & RESEARCH: 전문성 및 연구 기준 소개 (STUDY 01~04) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthReportProcess />
 
@@ -696,6 +682,38 @@ export default function AbundanceReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36">
               <Reveal>
+                {/* 1. 상단 전환 영역: 꽃 장식 구분선 + POINT 03 헤더 카피 + 설명 문구 */}
+                <div className="max-w-4xl mx-auto mb-10 md:mb-14 space-y-6">
+                  {/* 중앙 꽃 장식 및 좌우 가로 구분선 */}
+                  <BaekdohwaDivider className="mb-8 md:mb-10" theme="abundance" />
+                  
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase mb-4">
+                    POINT 03 · HIDDEN WEALTH CODES
+                  </span>
+                  
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+                    &ldquo;나조차 알아채지 못했던 돈 앞의 마음,<br className="sm:hidden" />
+                    <span className="gradient-text-abundance"> 반복되는 선택 속 숨겨진 무의식</span>을 마주합니다.&rdquo;
+                  </h2>
+                  
+                  <div className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep space-y-3">
+                    <p>
+                      돈을 벌고 쓰는 습관 너머에는<br className="hidden sm:inline" />
+                      나도 모르게 반복하는 판단과 감정의 패턴이 있습니다.
+                    </p>
+                    <p>
+                      기회 앞에서 망설이고, 돈이 들어와도 쉽게 흘려보내던 선택의 배경을<br className="hidden sm:inline" />
+                      <span className="text-[#E5C378] font-medium opacity-100">선천적 기질과 심리적 반응의 관점에서 살펴봅니다.</span>
+                    </p>
+                    <p>
+                      내가 왜 특정 상황에서 같은 판단을 반복하는지,<br className="hidden sm:inline" />
+                      그 이면의 두려움과 익숙한 방어기제를 이해하면서<br className="hidden sm:inline" />
+                      <span className="text-[#E5C378] font-medium opacity-100">나에게 필요한 새로운 선택의 기준을 찾아갑니다.</span>
+                    </p>
+                  </div>
+                </div>
+
+                {/* 2. 기존 16:9 대표 분석 이미지 */}
                 <div className="w-full max-w-[1280px] mx-auto mb-16 md:mb-20">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.analysis} 
@@ -705,6 +723,11 @@ export default function AbundanceReportPage() {
                     className="w-full h-auto rounded-[32px] md:rounded-[40px] shadow-2xl border border-[#608F82]/25 object-contain" 
                   />
                 </div>
+
+                {/* 3. [6대 관점 파노라마 와이드 배너] SIX PERSPECTIVES */}
+                <WealthSixPerspectivesBanner />
+
+                {/* 4. POINT 03 · DYNAMICS & SIX PERSPECTIVES 제목 및 6개 핵심 탐구 카드 */}
                 <div className="space-y-4 mb-12 md:mb-16">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FD3B6] uppercase">
                     POINT 03 · DYNAMICS & SIX PERSPECTIVES
@@ -744,11 +767,6 @@ export default function AbundanceReportPage() {
                 </div>
               </Reveal>
             </section>
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [6대 관점 파노라마 와이드 배너] SIX PERSPECTIVES */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthSixPerspectivesBanner />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* SECTION 08. 풍요 리포트 목차 공개 (7 PART & PART 07 강조) */}

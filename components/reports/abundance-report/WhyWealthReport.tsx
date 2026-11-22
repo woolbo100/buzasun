@@ -86,7 +86,7 @@ export default function WhyWealthReport() {
             <div className="space-y-2 md:space-y-2.5">
               <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
                 명리의 구조와 마음의 무의식적 습관을 함께 들여다보며,<br />
-                <span className="text-[#8FD3B6] font-medium opacity-100">
+                <span className="text-[#E5C378] font-medium opacity-100">
                   돈 앞에서 망설이고 흘려보내던 나만의 패턴을 한눈에 그려내던 순간.
                 </span>
               </p>
@@ -176,7 +176,7 @@ export default function WhyWealthReport() {
             <h3 className="font-elegant font-bold text-[20px] md:text-[24px] text-white leading-snug break-keep">
               지금껏 이런 풍요 리포트는 없었습니다.
             </h3>
-            <p className="font-elegant font-medium text-[16px] md:text-[18px] text-[#8FB4A4] leading-relaxed break-keep">
+            <p className="font-elegant font-medium text-[16px] md:text-[18px] text-[#E5C378] leading-relaxed break-keep">
               하나의 선천코드, 세 겹의 통찰, 오직 당신만을 위한 1:1 재정 나침반
             </p>
           </div>
