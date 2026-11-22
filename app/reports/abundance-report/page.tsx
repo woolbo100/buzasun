@@ -6,6 +6,9 @@ import Reveal from '@/components/Reveal'
 import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import { addToCart } from '@/hooks/useCart'
+import { ChevronRight } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import RecommendedForCards from '@/components/RecommendedForCards'
 import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEnding'
@@ -62,7 +65,28 @@ const ABUNDANCE_STORY_IMAGE_2 = {
 }
 
 export default function AbundanceReportPage() {
+  const router = useRouter()
   useScrollAnimation()
+
+  // 1. 바로 신청하기 로직 (풍요 리포트 결제 페이지 이동)
+  const handlePurchase = (e: React.MouseEvent) => {
+    e.preventDefault()
+    router.push('/checkout?productId=abundance-report')
+  }
+
+  // 2. 장바구니 담기 로직
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    addToCart({
+      id: 'abundance-report',
+      slug: 'abundance-report',
+      name: '선천코드 풍요 리포트',
+      price: 39000,
+      image: '/image/baekdohwa-wealth-destiny.webp',
+      type: 'digital_report',
+      category: 'PREMIUM REPORT'
+    }, 1)
+  }
 
   // 리포트 샘플 미리보기 스크롤 보조 함수
   const scrollToSample = (e: React.MouseEvent) => {
@@ -183,12 +207,7 @@ export default function AbundanceReportPage() {
                   </span>
                 </div>
 
-                {/* 2. 보조 카피 */}
-                <p className="text-[18px] text-[#8FB4A4] font-medium tracking-wide mb-4">
-                  선천코드로 읽는 나의 풍요 설계도
-                </p>
-
-                {/* 3. 메인 제품명 제목 */}
+                {/* 2. 메인 제품명 제목 */}
                 <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-10 text-white leading-[1.25] md:leading-[1.3] break-keep">
                   선천코드 <span className="gradient-text-abundance">풍요 리포트</span>
                 </h1>
@@ -234,10 +253,10 @@ export default function AbundanceReportPage() {
                   <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#608F82]/35 to-transparent" />
                 </div>
 
-                {/* 5. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (오픈 예정 상태 보존, 얇고 심플한 카드 형태) */}
+                {/* 4. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (판매형 전환) */}
                 <div className="max-w-[1280px] mx-auto mb-36 md:mb-48 lg:mb-52 text-left">
                   <div 
-                    className="relative rounded-[32px] md:rounded-[40px] p-6 sm:p-8 lg:p-10 border border-[#608F82]/35 overflow-hidden shadow-2xl"
+                    className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#608F82]/35 overflow-hidden shadow-2xl"
                     style={{
                       background: 'radial-gradient(ellipse at 50% 0%, rgba(37, 68, 59, 0.45) 0%, rgba(15, 36, 31, 0.40) 50%, rgba(11, 21, 20, 0.95) 100%)',
                       boxShadow: '0 0 60px rgba(96, 143, 130, 0.22)'
@@ -246,12 +265,12 @@ export default function AbundanceReportPage() {
                     {/* 은은한 배경 오라 */}
                     <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#608F82]/15 rounded-full blur-[90px] pointer-events-none" />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
-                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 기울어진 핵심 문구 + 가격 + 오픈 예정 버튼 */}
-                      <div className="lg:col-span-7 space-y-4 md:space-y-5">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 설명 + 가격 + 버튼 */}
+                      <div className="lg:col-span-7 space-y-5 md:space-y-6">
                         {/* 1. 상단 라벨 */}
                         <div>
-                          <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#608F82]/20 border border-[#608F82]/40 text-[#8FB4A4] text-xs font-bold tracking-wider whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#1A3830]/80 border border-[#608F82]/50 text-[#8FD3B6] text-xs font-bold tracking-wider whitespace-nowrap">
                             선천코드 풍요 리포트
                           </span>
                         </div>
@@ -261,35 +280,46 @@ export default function AbundanceReportPage() {
                           선천코드로 읽는 <span className="gradient-text-abundance">나의 풍요 설계도</span>
                         </h3>
 
-                        {/* 3. 제목 아래 기울어진 핵심 문구 */}
-                        <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] font-elegant italic opacity-95 leading-[1.6] break-keep">
+                        {/* 3. 설명 문구 */}
+                        <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.7] font-light break-keep max-w-xl">
                           나에게 맞는 풍요는, 내 타고난 흐름을 읽는 것에서 시작됩니다.
                         </p>
 
                         {/* 4. 가격 영역 & 5. 상품 정보 */}
-                        <div className="pt-1">
+                        <div className="pt-2">
                           <div className="flex flex-wrap items-baseline gap-3">
                             <span className="text-3xl sm:text-4xl md:text-[42px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
-                              오픈 준비 중
+                              39,000원
                             </span>
-                            <span className="text-xs sm:text-sm text-[#C6A477] font-medium tracking-wide">
-                              1:1 맞춤 PDF 리포트 · 나만의 재물 그릇과 재능 분석
+                            <span className="text-xs sm:text-sm text-[#8FD3B6] font-medium tracking-wide">
+                              1:1 맞춤 PDF 리포트 · 오행 아트카드 + 오행 수호자 카드 증정
                             </span>
                           </div>
                           <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 font-light mt-1.5 break-keep">
-                            ※ 정식 오픈 시 순차적으로 신청 접수가 시작되는 프리미엄 맞춤 리포트입니다.
+                            ※ 주문 접수 후 고객님의 사주 정보를 바탕으로 순차 제작되는 디지털 맞춤 리포트입니다.
                           </p>
                         </div>
 
-                        {/* 6. 오픈 예정 버튼 (disabled 상태 보존) */}
-                        <div className="pt-1">
+                        {/* 6. 구매 버튼 2개 */}
+                        <div className="flex flex-col sm:flex-row gap-3.5 pt-2 items-stretch sm:items-center">
                           <button
                             type="button"
-                            disabled
-                            aria-disabled="true"
-                            className="w-full sm:w-auto py-4 px-10 rounded-2xl font-bold text-base md:text-lg cursor-not-allowed tracking-widest bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] opacity-90 text-center"
+                            onClick={handleAddToCart}
+                            className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#608F82]/45 text-[#8FD3B6] hover:bg-[#608F82]/15 hover:border-[#608F82]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
                           >
-                            오픈 예정
+                            장바구니 담기
+                          </button>
+                          <button
+                            type="button"
+                            onClick={handlePurchase}
+                            className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(20,43,36,0.5)] hover:shadow-[0_0_30px_rgba(96,143,130,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                            style={{
+                              background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
+                              border: '1px solid rgba(229, 195, 120, 0.6)',
+                            }}
+                          >
+                            <span>바로 신청하기</span>
+                            <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
                           </button>
                         </div>
                       </div>
@@ -520,7 +550,7 @@ export default function AbundanceReportPage() {
             <WealthPatternFlow />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [중간 구매 CTA 1차] BEGIN YOUR JOURNEY (와이드형 프리미엄 CTA - 오픈 예정 보존) */}
+            {/* [중간 구매 CTA 1차] BEGIN YOUR JOURNEY (와이드형 프리미엄 CTA) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-36 md:mb-40 max-w-4xl mx-auto px-4">
               <Reveal>
@@ -540,19 +570,30 @@ export default function AbundanceReportPage() {
                     돈에 대한 익숙한 생각과 선택을 돌아보고 나에게 맞는 풍요의 방향을 탐색해 보세요.
                   </p>
 
-                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#608F82]/20 border border-[#608F82]/40 text-xs md:text-sm text-[#C6A477] font-medium mb-8">
-                    오픈 준비 중 · 1:1 맞춤 PDF · 나만의 재물 그릇과 재능 분석
+                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#1A3830]/60 border border-[#608F82]/40 text-xs md:text-sm text-[#8FD3B6] font-medium mb-8">
+                    39,000원 · 1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 포함
                   </div>
 
-                  {/* 오픈 예정 버튼 (disabled 상태 100% 보존) */}
-                  <div className="max-w-xs mx-auto">
+                  {/* 구매 버튼 2개 (장바구니 담기 + 바로 신청하기) */}
+                  <div className="flex flex-col sm:flex-row gap-3.5 max-w-md mx-auto items-stretch sm:items-center">
                     <button
                       type="button"
-                      disabled
-                      aria-disabled="true"
-                      className="w-full py-4 px-10 rounded-2xl font-bold text-base md:text-lg cursor-not-allowed tracking-widest bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] opacity-90 text-center"
+                      onClick={handleAddToCart}
+                      className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#608F82]/40 text-[#8FD3B6] hover:bg-[#608F82]/20 hover:border-[#608F82]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
                     >
-                      오픈 예정
+                      장바구니 담기
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handlePurchase}
+                      className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(20,43,36,0.5)] hover:shadow-[0_0_30px_rgba(96,143,130,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                      style={{
+                        background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
+                        border: '1px solid rgba(229, 195, 120, 0.6)',
+                      }}
+                    >
+                      <span>바로 신청하기</span>
+                      <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
                     </button>
                   </div>
                 </div>
@@ -685,11 +726,6 @@ export default function AbundanceReportPage() {
             <QuestionShiftComparison theme="abundance" />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [특별 증정품 안내 독립 섹션] THE SPECIAL GIFT */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthSpecialGift />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [6대 관점 파노라마 와이드 배너] SIX PERSPECTIVES */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthSixPerspectivesBanner />
@@ -698,6 +734,11 @@ export default function AbundanceReportPage() {
             {/* SECTION 08. 풍요 리포트 목차 공개 (7 PART & PART 07 강조) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthReportTableOfContents />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [특별 증정품 안내] 나의 오행으로 만나는 풍요의 상징 (오행 아트카드 + 수호자 카드 2종 증정) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <WealthSpecialGift />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* NEW. PART 07 실제 행동 처방전 샘플 영역 (구체적 실천 솔루션) */}
@@ -725,18 +766,17 @@ export default function AbundanceReportPage() {
                       </p>
                     </div>
 
-                    {/* 우측 (약 38%): 오픈 예정 버튼 + 구성 안내 (disabled 보존) */}
+                    {/* 우측 (약 38%): 구매 버튼 + 구성 안내 */}
                     <div className="w-full lg:w-[38%] flex flex-col items-center lg:items-end justify-center shrink-0">
                       <button 
                         type="button"
-                        disabled
-                        aria-disabled="true"
-                        className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] py-4 sm:py-4.5 px-7 sm:px-8 rounded-2xl font-bold text-base sm:text-[16.5px] cursor-not-allowed tracking-widest bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] opacity-90 text-center"
+                        onClick={handlePurchase}
+                        className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] py-4 sm:py-4.5 px-7 sm:px-8 rounded-2xl font-bold text-base sm:text-[16.5px] hover:scale-[1.01] active:scale-95 transition-all duration-300 bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_4px_18px_rgba(20,43,36,0.35)] hover:shadow-[0_0_22px_rgba(96,143,130,0.45)] hover:brightness-110 text-center"
                       >
-                        오픈 예정
+                        나의 선천코드 풍요 리포트 신청하기 · 39,000원
                       </button>
                       <p className="mt-2.5 text-[12px] sm:text-[13px] text-[#8FB4A4]/85 font-light tracking-wide text-center lg:text-right">
-                        1:1 맞춤 PDF · 나만의 재물 그릇과 재능 분석 리포트
+                        1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 증정
                       </p>
                     </div>
                   </div>
@@ -838,7 +878,7 @@ export default function AbundanceReportPage() {
                     <div className="gungjung-glass p-8 md:p-12 max-w-4xl mx-auto mb-16 text-center border-[#8FD3B6]/15 relative overflow-hidden">
                       <div className="text-[18px] text-[#EDE6DA] leading-relaxed break-keep font-light space-y-4">
                         <span className="block text-white font-medium">
-                          백도화 선천코드 리포트 이용 시, 고객님의 선천적 기질과 흐름에 어울리는 오행 에너지 카드가 함께 안내됩니다.
+                          백도화 선천코드 리포트 이용 시, 고객님의 선천적 기질과 흐름에 맞춘 나의 오행 아트카드 1장과 수호자 카드 1장(총 2종)이 함께 제공됩니다.
                         </span>
                         <span className="block text-[15px] md:text-[16px] opacity-75">
                           오행 에너지 카드는 목·화·토·금·수의 상징을 한국적 자개 무드로 표현한 디지털 리추얼 이미지입니다. <br className="hidden md:inline" />
@@ -1038,31 +1078,41 @@ export default function AbundanceReportPage() {
 
                     {/* 2. 상품 구성 한 줄 표시 */}
                     <p className="text-[13.5px] sm:text-[14.5px] text-[#EDE6DA]/90 font-light mb-4 break-keep">
-                      프리미엄 소장용 1:1 맞춤 PDF 비급 · 나만의 재물 그릇과 재능 분석
+                      프리미엄 소장용 1:1 맞춤 PDF 비급 · 오행 아트카드 1장 + 수호자 카드 1장 증정
                     </p>
 
-                    {/* 3. 가격 / 상태 */}
+                    {/* 3. 가격 */}
                     <div className="mb-5">
                       <span className="text-3xl sm:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
-                        오픈 준비 중
+                        39,000<span className="text-2xl sm:text-[28px] font-medium ml-1">원</span>
                       </span>
                     </div>
 
-                    {/* 4. 구매 버튼 (오픈 예정 disabled 100% 보존) */}
-                    <div className="w-full max-w-md mx-auto">
+                    {/* 4. 구매 버튼 2개 */}
+                    <div className="w-full max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                      <button
+                        type="button"
+                        onClick={handleAddToCart}
+                        className="py-3.5 sm:py-4 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#608F82]/40 text-[#8FD3B6] hover:bg-[#608F82]/20 hover:border-[#608F82]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                      >
+                        장바구니 담기
+                      </button>
                       <button 
                         type="button"
-                        disabled
-                        aria-disabled="true"
-                        className="w-full py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] cursor-not-allowed tracking-widest bg-gradient-to-br from-[#3A5F53] to-[#25443B] border border-[#E5C378]/90 text-[#FAF7F2] shadow-[0_0_10px_rgba(194,164,119,0.35),0_3px_10px_rgba(0,0,0,0.3)] opacity-90 text-center"
+                        onClick={handlePurchase}
+                        className="py-4 sm:py-4.5 px-8 rounded-2xl font-bold text-base sm:text-[17px] hover:scale-[1.01] active:scale-95 transition-all duration-300 flex-1 text-[#FAF7F2] shadow-[0_4px_20px_rgba(20,43,36,0.5)] hover:shadow-[0_0_30px_rgba(96,143,130,0.45)] hover:brightness-110 text-center order-1 sm:order-2"
+                        style={{
+                          background: 'linear-gradient(135deg, #3A5F53 0%, #25443B 100%)',
+                          border: '1px solid rgba(229, 195, 120, 0.6)',
+                        }}
                       >
-                        오픈 예정
+                        나의 풍요 리포트 신청하기
                       </button>
                     </div>
 
                     {/* 5. 상품 제공 안내 */}
                     <p className="text-[12px] sm:text-[13px] text-[#EDE6DA]/75 font-light mt-4 break-keep">
-                      ※ 정식 오픈 시 순차적으로 신청 접수가 시작되는 프리미엄 맞춤 리포트입니다.
+                      ※ 주문 접수 후 고객님의 사주 정보를 바탕으로 순차 제작되는 디지털 맞춤 리포트입니다.
                     </p>
                   </div>
                 </div>

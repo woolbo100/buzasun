@@ -27,6 +27,7 @@ const PRODUCT_UUID_MAP: Record<string, string> = {
   'reunion-secret': '5594bf01-0b83-443d-8a33-1235b4053d82',
   'abundance-secret-guide': '10898351-7c14-4912-a970-f079dd477b1a',
   'abundance-secret': '10898351-7c14-4912-a970-f079dd477b1a',
+  'abundance-report': 'c8928351-7c14-4912-a970-f079dd477b2c',
   'baekdohwa-report': '631a5aa2-5f39-4f13-9a40-32d1cf3570f5',
   'premium-compatibility-report': 'ad001df4-9a69-4f29-8cd3-6378b512c531',
   'pink-lady': '6472fa45-4657-4c71-a79f-6979ffad1dac',

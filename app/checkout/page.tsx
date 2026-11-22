@@ -103,11 +103,18 @@ function CheckoutContent() {
       image: "/image/love-code-bg.png"
     },
     "premium-compatibility-report": {
-      name: "프리미엄 궁합 리포트",
+      name: "선천코드 프리미엄 궁합 리포트",
       type: "digital_report",
       price: 59000,
       category: "PREMIUM REPORT",
       image: "/image/premium_compatibility_bg.png"
+    },
+    "abundance-report": {
+      name: "선천코드 풍요 리포트",
+      type: "digital_report",
+      price: 39000,
+      category: "PREMIUM REPORT",
+      image: "/image/baekdohwa-wealth-destiny.webp"
     },
     "love-secret-ebook": {
       name: "연애비급",

@@ -88,7 +88,7 @@ export default function PremiumCompatibilityReportPage() {
     addToCart({
       id: 'premium-compatibility-report',
       slug: 'premium-compatibility-report',
-      name: '프리미엄 궁합 리포트',
+      name: '선천코드 프리미엄 궁합 리포트',
       price: 59000,
       image: '/image/premium_compatibility_bg.png',
       type: 'digital_report',
@@ -269,10 +269,10 @@ export default function PremiumCompatibilityReportPage() {
                         <div className="pt-1">
                           <div className="flex flex-wrap items-baseline gap-3">
                             <span className="text-3xl sm:text-4xl md:text-[42px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
-                              69,000원
+                              59,000원
                             </span>
                             <span className="text-xs sm:text-sm text-[#D8BB94] font-medium tracking-wide">
-                              1:1 맞춤 PDF 리포트 · 두 사람의 선천코드 정밀 분석
+                              1:1 맞춤 PDF 리포트 · 오행 아트카드 + 오행 수호자 카드 증정
                             </span>
                           </div>
                           <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 font-light mt-1.5 break-keep">
@@ -551,7 +551,7 @@ export default function PremiumCompatibilityReportPage() {
                   </p>
 
                   <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#5A2638]/40 border border-[#B78C86]/40 text-xs md:text-sm text-[#D8BB94] font-medium mb-8">
-                    69,000원 · 1:1 맞춤 PDF · 두 사람의 선천코드 정밀 분석
+                    59,000원 · 1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 포함
                   </div>
 
                   {/* 구매 버튼 (기존 상단/하단 동작 재사용) */}
@@ -713,11 +713,6 @@ export default function PremiumCompatibilityReportPage() {
             <QuestionShiftComparison theme="compatibility" />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [특별 증정품 안내 독립 섹션] THE SPECIAL GIFT */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilitySpecialGift />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* [6대 관점 파노라마 와이드 배너] SIX PERSPECTIVES */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilitySixPerspectivesBanner />
@@ -726,6 +721,11 @@ export default function PremiumCompatibilityReportPage() {
             {/* SECTION 08. 프리미엄 궁합 리포트 목차 공개 (7 PART & PART 07 강조) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <CompatibilityReportTableOfContents />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [특별 증정품 안내] 나의 오행을 담은 특별한 선물 (오행 아트카드 + 수호자 카드 2종 증정) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <CompatibilitySpecialGift />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* NEW. PART 07 실제 행동 대화 처방전 샘플 영역 (구체적 소통 솔루션) */}
@@ -759,10 +759,10 @@ export default function PremiumCompatibilityReportPage() {
                         onClick={handlePurchase}
                         className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] py-4 sm:py-4.5 px-7 sm:px-8 rounded-2xl font-bold text-base sm:text-[16.5px] hover:scale-[1.01] active:scale-95 transition-all duration-300 bg-gradient-to-br from-[#5A2638] to-[#4A1F2D] border border-[rgba(199,169,122,0.45)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(90,38,56,0.35)] hover:shadow-[0_0_22px_rgba(183,140,134,0.45)] hover:brightness-110 text-center"
                       >
-                        나의 선천코드 궁합 리포트 신청하기 · 69,000원
+                        나의 선천코드 궁합 리포트 신청하기 · 59,000원
                       </button>
                       <p className="mt-2.5 text-[12px] sm:text-[13px] text-[#D8BB94]/85 font-light tracking-wide text-center lg:text-right">
-                        1:1 맞춤 PDF · 두 사람 맞춤 오행 디지털 카드 증정
+                        1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 증정
                       </p>
                     </div>
                   </div>
@@ -904,13 +904,13 @@ export default function PremiumCompatibilityReportPage() {
 
                     {/* 2. 상품 구성 한 줄 표시 */}
                     <p className="text-[13.5px] sm:text-[14.5px] text-[#EDE6DA]/90 font-light mb-4 break-keep">
-                      프리미엄 소장용 1:1 맞춤 PDF 비급 · 두 사람 맞춤 오행 디지털 카드 증정
+                      프리미엄 소장용 1:1 맞춤 PDF 비급 · 오행 아트카드 1장 + 수호자 카드 1장 증정
                     </p>
 
                     {/* 3. 가격 */}
                     <div className="mb-5">
                       <span className="text-3xl sm:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
-                        69,000<span className="text-2xl sm:text-[28px] font-medium ml-1">원</span>
+                        59,000<span className="text-2xl sm:text-[28px] font-medium ml-1">원</span>
                       </span>
                     </div>
 
