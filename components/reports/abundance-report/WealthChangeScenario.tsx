@@ -194,7 +194,7 @@ interface WealthChangeScenarioProps {
 // TRANSFORMATION SCENARIO — 풍요를 향한 3단계 변화 섹션 (전면 개편)
 // ══════════════════════════════════════════════════════════════════════
 export default function WealthChangeScenario({
-  imageSrc = '/image/abundance/wealth-paradigm-shift.webp'
+  imageSrc = '/images/abundance/baekdohwa-wealth-transformation-scenario.webp'
 }: WealthChangeScenarioProps) {
   const [imageError, setImageError] = useState(false)
 
@@ -202,7 +202,7 @@ export default function WealthChangeScenario({
     {
       num: '01',
       symbol: '①',
-      title: '돈 앞에서 흔들리던 나의 기준 회복',
+      title: '돈 앞에서 흔들리던 기준 회복',
       desc: '작은 소비에도 불안해하고, 다른 사람의 수익과 나를 비교하던 습관에서 벗어나 나에게 중요한 금전 기준을 다시 세웁니다.',
       icon: <ShieldCheck className="w-5 h-5 text-[#8FB4A4]" />,
       tag: '기준의 회복'
@@ -226,7 +226,7 @@ export default function WealthChangeScenario({
   ]
 
   return (
-    <section id="transformation-scenario" className="mb-28 md:mb-36 w-full max-w-[1280px] mx-auto scroll-mt-28 md:scroll-mt-36">
+    <section id="transformation-scenario" className="mb-0 w-full max-w-[1280px] mx-auto scroll-mt-28 md:scroll-mt-36">
       <Reveal className="w-full">
         {/* 상단 라벨 / 메인 제목 (36px) / 3줄 설명 문구 */}
         <div className="max-w-4xl mx-auto text-center mb-10 md:mb-12 px-4">
@@ -256,7 +256,7 @@ export default function WealthChangeScenario({
                 alt="리포트를 펼치는 순간 시작되는, 풍요를 향한 3단계 변화" 
                 fill
                 sizes="(max-width: 1280px) 100vw, 1280px"
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.01]" 
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.01]" 
                 onError={() => setImageError(true)}
               />
             ) : (

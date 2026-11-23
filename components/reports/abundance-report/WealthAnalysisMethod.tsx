@@ -12,7 +12,7 @@ export default function WealthAnalysisMethod() {
   ]
 
   return (
-    <section id="point-02" className="mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+    <section id="point-02" className="mt-[56px] sm:mt-[80px] lg:mt-[104px] mb-36 md:mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
       <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">

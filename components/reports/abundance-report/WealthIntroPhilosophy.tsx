@@ -14,7 +14,7 @@ const INTRO_PHILOSOPHY_VISUAL = {
 
 export default function WealthIntroPhilosophy() {
   return (
-    <section className="mb-14 md:mb-20 w-full max-w-[1280px] mx-auto">
+    <section className="mb-0 w-full max-w-[1280px] mx-auto">
       <Reveal className="w-full">
         <div className="w-full max-w-[1280px] mx-auto text-center">
           {/* 1. 상단 장식 영역: 좌우 얇은 라인 + 중앙 작은 선화 도화꽃 심볼 */}
