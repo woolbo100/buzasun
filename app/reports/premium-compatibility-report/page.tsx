@@ -354,11 +354,11 @@ export default function PremiumCompatibilityReportPage() {
                   <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1 flex flex-col justify-between py-1 lg:py-2">
                     <div>
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-                        THE MOMENT OF AWARENESS
+                        THE MOMENT OF UNDERSTANDING
                       </span>
                       <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold mb-6 leading-[1.3] break-keep">
-                        <span className="text-[#FAF7F2]">왜 우리는 사랑하면서도</span><br />
-                        <span className="gradient-text-reunion">늘 비슷한 상처를 반복해 왔을까요?</span>
+                        <span className="text-[#FAF7F2]">우리는 왜 같은 사랑을</span><br />
+                        <span className="gradient-text-reunion">서로 다른 방식으로 표현할까요?</span>
                       </h2>
                     </div>
 
@@ -447,7 +447,7 @@ export default function PremiumCompatibilityReportPage() {
                     <div className="space-y-5">
                       <div>
                         <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-                          THE HIDDEN FLOW
+                          THE HIDDEN CONNECTION
                         </span>
                         <h2 className="text-[20px] sm:text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-5 leading-[1.3] md:leading-[1.35] break-keep">
                           <span className="block">사주 속 인연의 구조를 마주하는 순간,</span>
@@ -773,8 +773,8 @@ export default function PremiumCompatibilityReportPage() {
                       리포트는 <span className="gradient-text-reunion">이렇게</span> <span className="text-[#D8BB94]">준비됩니다</span>
                     </h2>
                     <p className="text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light leading-relaxed">
-                      백도화의 선천코드 프리미엄 궁합 리포트는 신청자 두 분의 선천 정보를 바탕으로<br />
-                      정성스럽게 분석하여 작성되는 디지털 리포트입니다.
+                      백도화 프리미엄 궁합 리포트는 두 분의 선천 정보를 바탕으로<br />
+                      관계의 특성과 상호작용을 분석하여 작성되는 디지털 맞춤 리포트입니다.
                     </p>
                   </div>
                 </Reveal>

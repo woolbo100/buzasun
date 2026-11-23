@@ -14,8 +14,8 @@ export default function CompatibilityValueSummary() {
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             한 번 읽고 끝나는 궁합 풀이가 아니라,<br />
-            관계 앞에서 흔들릴 때{' '}
-            <span className="gradient-text-reunion">다시 펼쳐보는 두 사람의 설계도</span>
+            관계가 흔들릴 때{' '}
+            <span className="gradient-text-reunion">다시 펼쳐보는 두 사람의 설계도.</span>
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {compatibilityValueData.subCopy}

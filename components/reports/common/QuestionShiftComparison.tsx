@@ -107,26 +107,26 @@ export default function QuestionShiftComparison({
     },
     compatibility: {
       card1: {
-        title: '기존의 운세 중심 질문',
-        description: '미래를 수동적으로 묻고 결과를 기다리는 익숙한 시선',
+        title: '기존의 궁합 중심 질문',
+        description: '미래의 결과를 묻고 답을 기다리는 익숙한 시선',
         questions: [
-          '올해 연애운이 좋을까?',
-          '나에게 재물복이 있을까?',
           '우리는 천생연분일까?',
-          '앞으로 좋은 일이 생길까?',
+          '두 사람의 궁합 점수는 몇 점일까?',
+          '이 사람과 결혼해도 괜찮을까?',
+          '우리는 결국 헤어지게 될까?',
         ],
-        bottomText: '단순한 결과 풀이는 내 행동을 바꾸지 못합니다.',
+        bottomText: '궁합의 결과만 확인해서는 반복되는 갈등의 이유를 알기 어렵습니다.',
       },
       card2: {
         title: '백도화 선천코드의 질문',
-        description: '선택의 뿌리를 분석하고 행동을 바꾸는 능동적인 설계',
+        description: '관계의 구조를 이해하고 선택을 바꾸는 능동적인 시선',
         questions: [
-          '나는 왜 비슷한 연애에서 상처받을까?',
-          '사랑 앞에서 반복되는 나의 선택은 무엇일까?',
-          '우리는 어떤 순간에 서로를 자극할까?',
-          '앞으로 무엇을 다르게 선택할 수 있을까?',
+          '우리는 왜 서로에게 끌렸을까?',
+          '같은 상황에서 왜 다르게 반응할까?',
+          '반복되는 갈등은 어디에서 시작될까?',
+          '서로를 위해 무엇을 다르게 선택할 수 있을까?',
         ],
-        bottomText: '구조를 알면, 마침내 다른 선택을 시작할 수 있습니다.',
+        bottomText: '관계의 작동 구조를 이해하면 두 사람에게 맞는 새로운 선택의 기준을 세울 수 있습니다.',
       },
     },
   }[theme]
@@ -142,6 +142,11 @@ export default function QuestionShiftComparison({
             <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
               {title}
             </h2>
+          ) : theme === 'compatibility' ? (
+            <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+              우리가 잘 맞는지 묻기 전에,<br className="hidden sm:inline" />
+              <span className={themeConfig.gradientClass}> 왜 같은 문제로 부딪히는지</span> 먼저 알아야 합니다.
+            </h2>
           ) : (
             <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
               당신은 아직도 <br className="sm:hidden" />
@@ -152,6 +157,11 @@ export default function QuestionShiftComparison({
             <div className="space-y-3 md:space-y-3.5 text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-3xl mx-auto break-keep">
               {description}
             </div>
+          ) : theme === 'compatibility' ? (
+            <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+              궁합이 좋다는 결과만으로 관계의 갈등이 사라지지는 않습니다.<br className="hidden sm:inline" />
+              중요한 것은 두 사람이 어떤 순간에 서로를 자극하고, 어떤 선택으로 관계를 이어가는지 이해하는 것입니다.
+            </p>
           ) : (
             <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
               진짜 바꿔야 할 것은 정해진 운세가 아니라,<br className="hidden sm:inline" />
@@ -259,7 +269,17 @@ export default function QuestionShiftComparison({
         {/* 하단 강조 문구 박스 */}
         <div className="max-w-3xl mx-auto text-center p-6 md:p-8 rounded-2xl gungjung-glass border border-white/10 bg-black/40">
           <p className="text-lg md:text-xl font-elegant font-bold text-white break-keep">
-            &ldquo;미래를 듣고 기다릴 것인가. <span className={themeConfig.highlightText}>나를 이해하고 선택을 바꿀 것인가.</span>&rdquo;
+            {theme === 'compatibility' ? (
+              <>
+                &ldquo;좋은 궁합을 기다릴 것인가.{' '}
+                <span className={themeConfig.highlightText}>서로를 이해하고 관계를 조율할 것인가.</span>&rdquo;
+              </>
+            ) : (
+              <>
+                &ldquo;미래를 듣고 기다릴 것인가.{' '}
+                <span className={themeConfig.highlightText}>나를 이해하고 선택을 바꿀 것인가.</span>&rdquo;
+              </>
+            )}
           </p>
         </div>
       </Reveal>

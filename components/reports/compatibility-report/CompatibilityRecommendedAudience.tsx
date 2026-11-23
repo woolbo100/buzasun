@@ -11,13 +11,13 @@ export default function CompatibilityRecommendedAudience() {
       <Reveal>
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-            TARGET COUPLES
+            TARGET AUDIENCE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-            두 분을 위한 <span className="text-[#D8BB94]">리포트인가요?</span>
+            당신을 위한 <span className="text-[#D8BB94]">궁합 리포트인가요?</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
-            진솔한 안내를 통해 두 사람의 인연에 가장 깊은 울림을 전해드립니다.
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light leading-relaxed break-keep max-w-2xl mx-auto whitespace-pre-line">
+            {compatibilityAudienceData.subCopy}
           </p>
         </div>
 

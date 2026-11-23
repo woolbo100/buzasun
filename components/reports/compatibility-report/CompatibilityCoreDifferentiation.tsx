@@ -43,7 +43,7 @@ export default function CompatibilityCoreDifferentiation() {
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             &ldquo;궁합이 좋다는 말보다 중요한 것은,<br className="sm:hidden" />
-            <span className="gradient-text-reunion"> 왜 우리가 부딪히는지 아는 것이다.</span>&rdquo;
+            <span className="gradient-text-reunion"> 왜 우리가 부딪히는지 아는 것입니다.</span>&rdquo;
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
             좋은 궁합, 나쁜 궁합이라는 단순한 이분법으로는 관계를 구할 수 없습니다.<br className="hidden sm:inline" />
