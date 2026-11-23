@@ -16,10 +16,11 @@ export default function ReportValueSummary() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             한 번 읽고 끝나는 연애운 풀이가 아니라,<br />
             사랑 앞에서 흔들릴 때{' '}
-            <span className="gradient-text-love">다시 펼쳐보는 나만의 설계도.</span>
+            <span className="gradient-text-love">다시 펼쳐보는 나만의 설계도</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
-            {valueSummaryData.subCopy}
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep leading-relaxed">
+            반복되는 끌림과 상처의 이유를 이해하고, 나다운 사랑의 기준을 세워주는<br />
+            오래도록 곁에 둘 관계 나침반이 되어 드립니다.
           </p>
         </div>
 
