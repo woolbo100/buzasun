@@ -83,7 +83,7 @@ export default function CompatibilityAnalysisMethod() {
           <span className="inline-block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
             POINT 02 · THE CONVERGENCE
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[35px] font-elegant font-bold text-white leading-[1.35] break-keep max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep max-w-5xl mx-auto">
             명리로 두 사람의 <span className="gradient-text-reunion">선천 기질</span>을 읽고,<br className="hidden sm:inline" />
             <span className="lg:whitespace-nowrap">
               <span className="gradient-text-reunion">관계심리와 행동 분석</span>으로{' '}
@@ -194,9 +194,10 @@ export default function CompatibilityAnalysisMethod() {
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             PRECISION & RESEARCH
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-[28px] lg:text-[31px] xl:text-[33px] font-elegant font-bold text-white mb-6 leading-[1.35] break-keep max-w-5xl mx-auto lg:whitespace-nowrap">
+          <h2 className="text-2xl sm:text-3xl md:text-[28px] lg:text-[31px] xl:text-[33px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep max-w-5xl mx-auto">
             한 권의 궁합 리포트가 완성되기까지,{' '}
-            <span className="gradient-text-reunion">두 사람의 관계를 이해하기 위한 수많은 질문</span>을 담았습니다.
+            <span className="gradient-text-reunion">두 사람의 관계를</span><br />
+            <span className="gradient-text-reunion">이해하기 위한 수많은 질문</span>을 담았습니다.
           </h2>
           <div className="max-w-3xl mx-auto text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed break-keep space-y-3 md:space-y-3.5">
             <p>
