@@ -7,7 +7,7 @@ import { Check, X } from 'lucide-react'
 
 export default function WealthAudience() {
   return (
-    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+    <section className="mb-28 md:mb-36 w-full max-w-[1280px] mx-auto">
       <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">

@@ -1,13 +1,11 @@
 ﻿'use client'
 
 import Reveal from '@/components/Reveal'
-import Link from 'next/link'
-import { wealthValueData, wealthEbookLinkData } from './data'
-import { BookOpen, ArrowRight } from 'lucide-react'
+import { wealthValueData } from './data'
 
 export default function WealthValueSummary() {
   return (
-    <div className="mb-20 w-full max-w-[1280px] mx-auto">
+    <div className="mb-28 md:mb-36 w-full max-w-[1280px] mx-auto">
       <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
@@ -22,7 +20,7 @@ export default function WealthValueSummary() {
         </div>
 
         {/* 6가지 핵심 가치 요소 그리드 */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-[1280px] mx-auto mb-14">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full max-w-[1280px] mx-auto">
           {wealthValueData.elements.map((el, idx) => (
             <div
               key={idx}
@@ -37,34 +35,6 @@ export default function WealthValueSummary() {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* 《풍요비책》 전자책 함께 보기 소형 안내 카드 */}
-        <div className="max-w-4xl mx-auto p-6 md:p-8 rounded-3xl bg-gradient-to-r from-[#0f241f]/35 via-[#152e27]/25 to-[#0f241f]/35 border border-[#608F82]/35 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div className="flex items-center gap-4 text-left">
-            <div className="w-12 h-12 rounded-2xl bg-[#0f241f] border border-[#608F82]/40 flex items-center justify-center text-[#8FB4A4] shrink-0">
-              <BookOpen className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="text-[10px] font-mono font-bold tracking-widest text-[#E6BE8A] uppercase block mb-1">
-                {wealthEbookLinkData.badge}
-              </span>
-              <h4 className="text-lg font-bold text-white mb-1">
-                {wealthEbookLinkData.title}
-              </h4>
-              <p className="text-xs md:text-sm text-[#EDE6DA]/75 font-light leading-relaxed break-keep whitespace-pre-line">
-                {wealthEbookLinkData.copy}
-              </p>
-            </div>
-          </div>
-
-          <Link
-            href={wealthEbookLinkData.href}
-            className="shrink-0 px-6 py-3.5 rounded-xl border border-[#608F82]/50 text-[#8FB4A4] hover:bg-[#608F82]/15 hover:border-[#608F82] transition-all text-sm font-semibold flex items-center gap-2 group"
-          >
-            <span>{wealthEbookLinkData.btnText}</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </div>
       </Reveal>
     </div>

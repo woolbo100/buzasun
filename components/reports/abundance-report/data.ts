@@ -444,10 +444,8 @@ export const wealthAudienceData = {
   notRecommended: {
     title: "이런 기대에는 맞지 않습니다",
     items: [
-      "로또 당첨 번호나 특정 급등 주식, 코인 종목을 찍어주길 바라는 분",
       "정확한 미래 수입 금액이나 자산 규모를 점쟁이처럼 예언받고 싶은 분",
       "단기간 안에 무조건 부자가 될 수 있다는 기적이나 결과를 보장받고 싶은 분",
-      "개인별 세무, 법률, 금융 투자에 관한 전문 자문(컨설팅)을 기대하는 분",
       "자신의 소비 행동과 선택을 돌아보지 않고 요행수만 바라시는 분"
     ]
   }
@@ -493,15 +491,6 @@ export const wealthValueData = {
     { title: "개인 맞춤 풍요 처방", desc: "내일부터 바꿀 수 있는 현실 루틴" },
     { title: "소장형 디지털 리포트", desc: "언제든 다시 꺼내 읽는 28~30P PDF" }
   ]
-}
-
-// 15. 전자책 《풍요비책》 연결 데이터 (SECTION 15 하단)
-export const wealthEbookLinkData = {
-  title: "《풍요비책》 전자책 함께 보기",
-  badge: "COMPANION EBOOK",
-  copy: "나에게 필요한 방향을 알고 싶다면 풍요 리포트,\n일상에서 활용할 풍요 마인드와 실천 도구를 더 배우고 싶다면 《풍요비책》.",
-  btnText: "《풍요비책》 살펴보기",
-  href: "/reports/abundance-secret"
 }
 
 // 16. 자주 묻는 질문 FAQ (SECTION 16)

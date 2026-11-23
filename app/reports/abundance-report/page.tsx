@@ -27,11 +27,9 @@ import WealthReportTableOfContents from '@/components/reports/abundance-report/W
 import WealthReportProcess from '@/components/reports/abundance-report/WealthReportProcess'
 import WealthReportPreview from '@/components/reports/abundance-report/WealthReportPreview'
 import WealthChangeScenario from '@/components/reports/abundance-report/WealthChangeScenario'
-import WealthIntroPhilosophy from '@/components/reports/abundance-report/WealthIntroPhilosophy'
 import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
 import WealthAudience from '@/components/reports/abundance-report/WealthAudience'
 import WealthTestimonials from '@/components/reports/abundance-report/WealthTestimonials'
-import WealthPhilosophy from '@/components/reports/abundance-report/WealthPhilosophy'
 import WealthValueSummary from '@/components/reports/abundance-report/WealthValueSummary'
 import WealthReportFAQ from '@/components/reports/abundance-report/WealthReportFAQ'
 import WealthPurchaseNotice from '@/components/reports/abundance-report/WealthPurchaseNotice'
@@ -40,7 +38,6 @@ import WealthSpecialGift from '@/components/reports/abundance-report/WealthSpeci
 import WealthPersonalizedReportPoint from '@/components/reports/abundance-report/WealthPersonalizedReportPoint'
 import WealthRoyalArchivePoint from '@/components/reports/abundance-report/WealthRoyalArchivePoint'
 import WealthRealTransformationBanner from '@/components/reports/abundance-report/WealthRealTransformationBanner'
-import WealthRealReasonCard from '@/components/reports/abundance-report/WealthRealReasonCard'
 
 // 추후 개별 이미지 교체 시 아래 경로만 수정하면 각 섹션에 즉시 반영됩니다.
 const ABUNDANCE_REPORT_IMAGES = {
@@ -761,9 +758,9 @@ export default function AbundanceReportPage() {
             <WealthTestimonials />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* 신규 소개 섹션: WHY BAEKDOHWA ABUNDANCE REPORT & 16:9 풀사이즈 이미지 */}
+            {/* FINAL AWAKENING: 각성 에디토리얼 와이드 배너 + PHASE 카드 3개 + 마무리 문구 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthIntroPhilosophy />
+            <WealthRealTransformationBanner />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 중간 구매 CTA: BEGIN YOUR JOURNEY (나의 풍요를 새롭게 읽을 준비가 되셨나요?) */}
@@ -822,24 +819,8 @@ export default function AbundanceReportPage() {
             <WealthAudience />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* THE REAL REASON · 풍요의 진짜 구조 (후반부 통합 카드) */}
+            {/* SECTION 15. 소장 가치 6대 핵심 요소 요약 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthRealReasonCard />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* FINAL AWAKENING: 피날레 에디토리얼 와이드 배너 (5차 신규 추가) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthRealTransformationBanner />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 14. 백도화의 풍요 분석 철학 (궁중 서신 편지 형태 보존) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthPhilosophy />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 15. 소장 가치와 오행 에너지 카드 & 전자책 연결 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* 15-1. 소장 가치 6대 핵심 요소 요약 및 《풍요비책》 전자책 연결 카드 */}
             <WealthValueSummary />
 
             {/* 15-2. 리포트 제작 및 전달 과정 / 필요 정보 안내 */}

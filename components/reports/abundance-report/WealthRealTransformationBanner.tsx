@@ -6,7 +6,7 @@ import WealthAnalysisMethod from './WealthAnalysisMethod'
 
 export default function WealthRealTransformationBanner() {
   return (
-    <section className="mb-28 md:mb-36 w-full max-w-[1280px] mx-auto">
+    <section className="mb-[56px] sm:mb-[80px] md:mb-[96px] lg:mb-[120px] w-full max-w-[1280px] mx-auto">
       <Reveal className="w-full">
         {/* FINAL AWAKENING: 통합 와이드 레이아웃 에디토리얼 디자인 */}
         <div>
@@ -62,7 +62,7 @@ export default function WealthRealTransformationBanner() {
           </div>
 
           {/* (6) PHASE 카드 3개 */}
-          <div className="mt-[40px] sm:mt-[48px] md:mt-[64px] lg:mt-[80px]">
+          <div className="mt-[28px] sm:mt-[36px] lg:mt-[48px]">
             <WealthAnalysisMethod />
           </div>
 
