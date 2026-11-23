@@ -169,13 +169,13 @@ export const wealthComparisonTableData = {
       baekdohwa: "질문지 기반 소비·수입 고민 반영"
     },
     {
-      feature: "03. 반복되는 소비·수입 패턴",
+      feature: "03. 소비·수입 반복 패턴",
       ai: "오늘의 금전운 수준",
       traditional: "시기 위주 해석",
       baekdohwa: "반복 패턴과 돈 누수 지점 추적"
     },
     {
-      feature: "04. 돈과 일의 관계 자기 이해",
+      feature: "04. 돈·일 관계 자기 이해",
       ai: "자기 이해 구조 부족",
       traditional: "직업·재물 적성 나열",
       baekdohwa: "나만의 재물 원형 기반 자기 이해"
@@ -187,7 +187,7 @@ export const wealthComparisonTableData = {
       baekdohwa: "실천 가능한 재정 기준과 행동 제안"
     },
     {
-      feature: "06. 소장 가능한 개인 분석서",
+      feature: "06. 소장용 개인 분석서",
       ai: "휘발성 모바일 화면",
       traditional: "구두 상담 중심 기록",
       baekdohwa: "다시 펼쳐보는 디지털 개인 리포트"

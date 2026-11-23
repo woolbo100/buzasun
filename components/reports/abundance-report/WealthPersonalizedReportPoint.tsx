@@ -10,7 +10,7 @@ interface WealthPersonalizedReportPointProps {
 }
 
 export default function WealthPersonalizedReportPoint({
-  imageSrc = '/images/abundance/wealth-point04-personalized-report.webp'
+  imageSrc = '/images/abundance/wealth-report-point04-personalized.webp'
 }: WealthPersonalizedReportPointProps) {
   const [imageError, setImageError] = useState(false)
 
@@ -33,7 +33,7 @@ export default function WealthPersonalizedReportPoint({
   ]
 
   return (
-    <section id="point-04-personalized" className="mt-[60px] sm:mt-20 lg:mt-[104px] mb-14 md:mb-18 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+    <section id="point-04-personalized" className="mt-[64px] sm:mt-[88px] lg:mt-[120px] mb-14 md:mb-18 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
       <Reveal className="w-full">
         {/* 모바일 전용 상단 헤드카피 (데스크톱에서는 숨김) */}
         <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5 w-full max-w-[1280px] mx-auto">
@@ -116,7 +116,7 @@ export default function WealthPersonalizedReportPoint({
                   alt="POINT 04 개인 맞춤형 리포트 — 당신만을 위해 완성되는 단 하나의 선천코드 1:1 풍요 분석서" 
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-contain transition-transform duration-700 group-hover:scale-[1.01]" 
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.01]" 
                   onError={() => setImageError(true)}
                 />
               ) : (

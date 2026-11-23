@@ -76,10 +76,10 @@ export default function LovePrescriptionSample() {
               {/* 원본 비율/색감 그대로 유지하는 가로형 3분할 비주얼 */}
               <Image
                 src="/image/lovereport/three love prescriptions.webp"
-                alt="백도화 3대 실전 관계 처방 비주얼 (소통 처방 · 행동 처방 · 오행 개운 처방)"
+                alt="포인트 5 연애 처방전 배너 이미지"
                 width={2170}
                 height={725}
-                className="w-full h-auto block"
+                className="w-full h-auto block object-cover object-center"
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1280px"
                 priority={false}
               />

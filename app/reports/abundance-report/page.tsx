@@ -218,15 +218,15 @@ export default function AbundanceReportPage() {
                   선천코드 <span className="gradient-text-abundance">풍요 리포트</span>
                 </h1>
 
-                {/* 4. 메인 가로 이미지 (16:9 비율 유지 · 글자 잘림 없는 contain 렌더링) */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl aspect-[16/9] bg-[#0B1514] flex items-center justify-center">
+                {/* 4. 메인 가로 이미지 (16:9 비율 유지 · 1280 영역에 꽉 차는 object-cover 렌더링) */}
+                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl aspect-[16/9] bg-[#0B1514]">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.hero} 
-                    alt="선천코드 풍요 리포트 메인 히어로 16:9" 
+                    alt="백도화 선천코드 풍요 리포트 히어로 이미지" 
                     width={1672}
                     height={941}
                     priority
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
