@@ -10,10 +10,10 @@ import { compatibilityTestimonialConfig } from './data'
 // 대표 이미지 설정: 두 사람의 기질과 인연을 읽는 궁합 비급 키 비주얼 (3:4 비율 교체 슬롯)
 // ══════════════════════════════════════════════════════════════════════
 const COMPATIBILITY_SCENARIOS_IMAGE_CONFIG = {
-  src: '/image/compatibility/p5.webp',
-  alt: '서로 다른 두 사람의 기질을 읽는 인연의 비급 대표 비주얼',
-  width: 1086,
-  height: 1448,
+  src: '/image/compatibility/compatibility-new-relationship-chapter.webp',
+  alt: '궁합 분석서와 모란 금사 장식 — 관계의 새로운 장면 대표 비주얼',
+  width: 1087,
+  height: 1447,
 }
 
 // ══════════════════════════════════════════════════════════════════════
@@ -66,8 +66,8 @@ export default function CompatibilityTestimonials() {
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             RELATIONSHIP SCENARIOS
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] break-keep">
-            서로의 다름을 이해하며 시작되는,<br className="sm:hidden" />{' '}
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+            서로의 다름을 이해하며 시작되는,<br />
             <span className="gradient-text-reunion">관계의 새로운 장면</span>
           </h2>
           <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/80 leading-[1.8] font-light break-keep">

@@ -46,25 +46,19 @@ export default function CompatibilityRealTransformationBanner() {
               <span className="gradient-text-reunion">사랑의 깊이를 다시 선택합니다.</span>
             </h2>
 
-            {/* (3) 제목 아래 설명 */}
-            <div className="max-w-3xl mx-auto mb-6 md:mb-8">
-              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep">
-                사랑한다고 해서 서로의 마음을 저절로 이해하게 되는 것은 아닙니다.<br />
+            {/* (3) 설명 문구 3단락 (균일한 간격과 안정된 2줄 구성) */}
+            <div className="max-w-3xl mx-auto space-y-6 md:space-y-7 mb-10 md:mb-14">
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.7] break-keep">
+                사랑한다고 해서 서로의 마음을 저절로 이해하게 되는 것은 아닙니다.<br className="hidden sm:inline" />{' '}
                 같은 관계 안에서도 두 사람은 서로 다른 방식으로 기대하고, 표현하고, 상처받습니다.
               </p>
-            </div>
-
-            {/* (4) 중간 핵심 메시지 (본문 간 간격 28~32px, line-height 1.6) */}
-            <div className="max-w-3xl mx-auto space-y-7 md:space-y-8 mb-10 md:mb-14">
-              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep">
-                두 사람의 선천코드를 함께 읽는다는 것은 누가 더 옳은지를 가리는 일이 아닙니다.<br />
-                서로의 기질과 반응의 차이를 알아차리고, 반복되는 오해와 갈등의 구조를{' '}
-                <span className="text-[#D8BB94] font-semibold">새로운 관점에서 바라보는 일</span>입니다.
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.7] break-keep">
+                두 사람의 선천코드를 함께 읽는다는 것은 누가 더 옳은지를 가리는 일이 아닙니다.<br className="hidden sm:inline" />{' '}
+                서로의 기질과 반응을 이해하고, 반복되는 갈등을 새로운 관점에서 바라보는 일입니다.
               </p>
-              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep">
-                상대를 나와 같은 사람으로 바꾸는 대신 우리 사이에 필요한 대화와 거리, 서로 존중해야 할 기준을 다시 세워봅니다.<br />
-                관계의 방향은 두 사람이 서로의 다름을{' '}
-                <span className="text-[#D8BB94] font-semibold">어떻게 다루느냐에 따라</span> 달라질 수 있습니다.
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.7] break-keep">
+                상대를 나와 같은 사람으로 바꾸려 하기보다,<br className="hidden sm:inline" />{' '}
+                서로에게 필요한 대화와 거리, 존중의 기준을 새롭게 세웁니다.
               </p>
             </div>
 
@@ -80,11 +74,11 @@ export default function CompatibilityRealTransformationBanner() {
           {/* (6) 아래쪽 대형 가로 이미지 슬롯 (16:9 와이드) */}
           <div className="w-full max-w-[1280px] mx-auto mb-10 md:mb-12">
             <Image
-              src="/image/compatibility/p1.webp"
-              alt="선천코드 궁합 비급을 읽으며 서로의 다름을 이해하는 장면"
-              width={1280}
-              height={720}
-              className="block h-auto w-full rounded-2xl md:rounded-[28px] border border-white/10 shadow-2xl"
+              src="/image/compatibility/compatibility-final-awakening-banner.webp"
+              alt="선천코드 프리미엄 궁합 리포트 파이널 각성 배너"
+              width={1671}
+              height={941}
+              className="block h-auto w-full rounded-2xl md:rounded-[28px] border border-[#B78C86]/30 shadow-2xl"
             />
           </div>
 
