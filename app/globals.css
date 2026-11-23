@@ -390,6 +390,48 @@
     }
   }
 
+  /* 백도화 프리미엄 궁합 리포트 — 각성 인용 메시지 카드 전용 프리미엄 호버 효과 (풍요 리포트 규격 동일 적용) */
+  .awakening-quote-card-compatibility {
+    position: relative;
+    overflow: hidden;
+    transition: border-color 500ms ease-out, box-shadow 500ms ease-out;
+  }
+
+  .awakening-quote-card-compatibility::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* 은은한 샴페인 골드(#D8BB94)와 차분한 와인 버건디(#5A2638) 및 딥 버건디(#2D0F19)의 부드러운 방사형 그라데이션 */
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(216, 187, 148, 0.14) 0%,
+      rgba(90, 38, 56, 0.20) 45%,
+      rgba(45, 15, 25, 0.28) 75%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .awakening-quote-card-compatibility:hover {
+      border-color: rgba(216, 187, 148, 0.60);
+      box-shadow: 0 0 40px rgba(90, 38, 56, 0.30), 0 0 15px rgba(216, 187, 148, 0.15);
+    }
+    .awakening-quote-card-compatibility:hover::before {
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .awakening-quote-card-compatibility,
+    .awakening-quote-card-compatibility::before {
+      transition: none;
+    }
+  }
+
   @keyframes gradientText {
     0%, 100% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }

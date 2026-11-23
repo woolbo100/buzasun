@@ -1,7 +1,18 @@
 'use client'
 
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { HelpCircle, Compass, ArrowRight } from 'lucide-react'
+
+// 16:9 가로형 비주얼 이미지 설정 (궁합 리포트 패러다임 시프트 슬롯)
+const COMPATIBILITY_PARADIGM_SHIFT_VISUAL = {
+  src: '/image/compatibility/compatibility-paradigm-shift-banner.webp',
+  alt: '백도화 프리미엄 궁합 리포트 패러다임 시프트 16:9 비주얼',
+  width: 1672,
+  height: 941,
+  // 실제 파일 준비 시 true로 전환하여 활성화 (미제작 상태에서 깨진 엑스박스 이미지 방지)
+  isReady: false,
+}
 
 interface QuestionShiftComparisonProps {
   theme: 'love' | 'abundance' | 'compatibility'
@@ -37,11 +48,11 @@ export default function QuestionShiftComparison({
       shadowClass: 'shadow-[0_0_30px_rgba(96,143,130,0.18)]',
     },
     compatibility: {
-      badgeBg: 'bg-[#5A2638]/40 border-[#B78C86]/50 text-[#D8BB94]',
+      badgeBg: 'bg-[#5A2638]/50 border-[#B78C86]/50 text-[#D8BB94]',
       cardBorder: 'border-[#B78C86]/40',
       glowBg: 'bg-[#5A2638]/30',
       activeText: 'text-[#D8BB94]',
-      highlightText: 'text-[#C19B83]',
+      highlightText: 'text-[#D8BB94]',
       gradientClass: 'gradient-text-reunion',
       shadowClass: 'shadow-[0_0_35px_rgba(90,38,56,0.3)]',
     },
@@ -145,7 +156,7 @@ export default function QuestionShiftComparison({
           ) : theme === 'compatibility' ? (
             <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
               우리가 잘 맞는지 묻기 전에,<br className="hidden sm:inline" />
-              <span className={themeConfig.gradientClass}> 왜 같은 문제로 부딪히는지</span> 먼저 알아야 합니다.
+              <span className={themeConfig.gradientClass}>왜 같은 문제로 부딪히는지 먼저 알아야 합니다.</span>
             </h2>
           ) : (
             <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
@@ -158,10 +169,19 @@ export default function QuestionShiftComparison({
               {description}
             </div>
           ) : theme === 'compatibility' ? (
-            <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-              궁합이 좋다는 결과만으로 관계의 갈등이 사라지지는 않습니다.<br className="hidden sm:inline" />
-              중요한 것은 두 사람이 어떤 순간에 서로를 자극하고, 어떤 선택으로 관계를 이어가는지 이해하는 것입니다.
-            </p>
+            <div className="space-y-3.5 md:space-y-4 text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-relaxed max-w-3xl mx-auto break-keep">
+              {/* 일반 설명 문단 01 */}
+              <p className="opacity-85">
+                궁합이 좋다는 결과만으로 관계의 갈등이 사라지지는 않습니다.<br className="hidden sm:inline" />
+                같은 사랑을 나누면서도 두 사람은 서로 다른 방식으로 기대하고, 표현하고, 상처받을 수 있습니다.
+              </p>
+              {/* 강조 설명 문단 02 */}
+              <p className="text-[#FAF7F2] font-medium">
+                중요한 것은 궁합의 점수나 정해진 미래가 아니라,<br className="hidden sm:inline" />
+                두 사람이 어떤 순간에 서로를 자극하고,{' '}
+                <span className="text-[#D8BB94] font-semibold">어떤 선택으로 관계를 이어가는지</span> 이해하는 것입니다.
+              </p>
+            </div>
           ) : (
             <p className="text-[16px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed max-w-2xl mx-auto break-keep">
               진짜 바꿔야 할 것은 정해진 운세가 아니라,<br className="hidden sm:inline" />
@@ -170,51 +190,144 @@ export default function QuestionShiftComparison({
           )}
         </div>
 
-        {/* 글자 바로 아래 배너 이미지 슬롯 */}
-        {banner && (
+        {/* 16:9 와이드 가로형 이미지 슬롯 */}
+        {banner ? (
           <div className="mb-14 md:mb-16">
             {banner}
+          </div>
+        ) : theme === 'compatibility' ? (
+          <div className="w-full max-w-[1280px] mx-auto mb-14 md:mb-16">
+            <div className="w-full overflow-hidden rounded-[24px] md:rounded-[36px] border border-[#B78C86]/30 shadow-2xl bg-[#14080E] relative group">
+              <div className="relative w-full aspect-[16/9]">
+                {COMPATIBILITY_PARADIGM_SHIFT_VISUAL.isReady ? (
+                  <Image
+                    src={COMPATIBILITY_PARADIGM_SHIFT_VISUAL.src}
+                    alt={COMPATIBILITY_PARADIGM_SHIFT_VISUAL.alt}
+                    fill
+                    sizes="(max-width: 1280px) 100vw, 1280px"
+                    className="object-contain object-center group-hover:scale-[1.01] transition-transform duration-700 ease-out"
+                    priority
+                  />
+                ) : (
+                  /* 이미지 파일 준비 중일 때 조화로운 궁중 버건디 프레임 (깨진 엑스박스 이미지 방지) */
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#2D121C]/80 via-[#1F0A14]/90 to-[#14080E]"
+                    aria-label="궁합 패러다임 시프트 이미지 영역"
+                  >
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#5A2638]/25 via-transparent to-transparent pointer-events-none" />
+                    <div className="w-16 h-16 rounded-full border border-[#D8BB94]/20 flex items-center justify-center opacity-40">
+                      <div className="w-8 h-8 rounded-full bg-[#D8BB94]/10" />
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        ) : null}
+
+        {/* [신규] 이미지 아래 연결 메시지 3단 (theme === 'compatibility' 전용) */}
+        {theme === 'compatibility' && (
+          <div className="pt-2 pb-2 text-center max-w-3xl mx-auto space-y-3 md:space-y-4 mb-14 md:mb-16 px-4">
+            {/* 첫 번째 메시지: 아이보리, Semibold */}
+            <p className="font-elegant font-bold text-[18px] sm:text-[20px] md:text-[22px] text-[#FAF7F2] leading-[1.6] break-keep">
+              이제는 좋은 궁합이라는 답을 기다리기보다,<br className="hidden sm:inline" />
+              두 사람의 관계가 어떻게 움직이는지 이해할 때입니다.
+            </p>
+
+            {/* 두 번째 메시지: 웜그레이 */}
+            <p className="text-base sm:text-lg text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
+              반복되는 갈등에는 서로 다른 기질과 감정의 반응이 숨어 있을 수 있습니다.
+            </p>
+
+            {/* 세 번째 메시지: 샴페인 골드 */}
+            <p className="text-sm md:text-base text-[#D8BB94] font-semibold tracking-wide break-keep pt-1">
+              아래 두 가지 질문의 차이를 통해, 궁합의 결과를 묻는 시선에서 관계의 구조를 읽는 시선으로 전환해 보세요.
+            </p>
           </div>
         )}
 
         {/* 2단 비교 카드 (모바일 세로, 데스크톱 가로) */}
         <div className="w-full max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch mb-12">
           
-          {/* CARD 01 — 기존의 운세 중심 질문 */}
+          {/* CARD 01 — 기존의 운세/궁합 중심 질문 */}
           <div 
             className={`gungjung-glass ${
               theme === 'abundance'
                 ? 'bg-[#222D36]/75 border-[#3A4A54]/50 shadow-xl'
                 : theme === 'love' 
                 ? 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 border-white/10' 
+                : theme === 'compatibility'
+                ? 'bg-[#24141B]/85 border-[#5A2D3A]/45 shadow-xl'
                 : 'bg-white/[0.02] border-white/10'
             } p-8 md:p-10 rounded-[32px] border flex flex-col justify-between relative overflow-hidden`}
           >
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 rounded-xl ${theme === 'abundance' ? 'bg-[#171F29] border border-[#3A4A54]/60 text-[#9CA8AD]' : 'bg-white/5 border border-white/10 text-white/50'} flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-xl ${
+                  theme === 'abundance' 
+                    ? 'bg-[#171F29] border border-[#3A4A54]/60 text-[#9CA8AD]' 
+                    : theme === 'compatibility'
+                    ? 'bg-[#1D1017] border border-[#5A2D3A]/50 text-[#C19B83]'
+                    : 'bg-white/5 border border-white/10 text-white/50'
+                } flex items-center justify-center`}>
                   <HelpCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className={`text-xs font-mono tracking-widest ${theme === 'abundance' ? 'text-[#9CA8AD]' : 'text-white/40'} uppercase block`}>CARD 01</span>
-                  <h3 className={`text-lg md:text-xl font-bold ${theme === 'abundance' ? 'text-[#E4EBEF]' : 'text-white/70'}`}>{contentConfig.card1.title}</h3>
+                  <span className={`text-xs font-mono tracking-widest ${
+                    theme === 'abundance' 
+                      ? 'text-[#9CA8AD]' 
+                      : theme === 'compatibility'
+                      ? 'text-[#C19B83]/70'
+                      : 'text-white/40'
+                  } uppercase block font-medium`}>CARD 01</span>
+                  <h3 className={`text-lg md:text-xl font-bold ${
+                    theme === 'abundance' 
+                      ? 'text-[#E4EBEF]' 
+                      : theme === 'compatibility'
+                      ? 'text-[#FAF7F2]/90'
+                      : 'text-white/70'
+                  }`}>{contentConfig.card1.title}</h3>
                 </div>
               </div>
-              <p className={`text-[16px] ${theme === 'abundance' ? 'text-[#9CA8AD]' : 'text-[#EDE6DA]/60'} font-light mb-6 break-keep`}>
+              <p className={`text-[16px] ${
+                theme === 'abundance' 
+                  ? 'text-[#9CA8AD]' 
+                  : theme === 'compatibility'
+                  ? 'text-[#EDE6DA]/60'
+                  : 'text-[#EDE6DA]/60'
+              } font-light mb-6 break-keep`}>
                 {contentConfig.card1.description}
               </p>
 
               <div className="space-y-3.5">
                 {contentConfig.card1.questions.map((q, idx) => (
-                  <div key={idx} className={`p-4 rounded-xl ${theme === 'abundance' ? 'bg-[#171F29]/90 border border-[#2E3C46]/60 text-[#9CA8AD]' : 'bg-black/30 border border-white/5 flex items-center gap-3 text-white/60'} flex items-center gap-3`}>
-                    <span className={`w-1.5 h-1.5 rounded-full ${theme === 'abundance' ? 'bg-[#9CA8AD]/40' : 'bg-white/30'} shrink-0`}></span>
+                  <div key={idx} className={`p-4 rounded-xl ${
+                    theme === 'abundance' 
+                      ? 'bg-[#171F29]/90 border border-[#2E3C46]/60 text-[#9CA8AD]' 
+                      : theme === 'compatibility'
+                      ? 'bg-[#1D1017]/90 border border-[#4A2430]/40 text-[#EDE6DA]/60'
+                      : 'bg-black/30 border border-white/5 text-white/60'
+                  } flex items-center gap-3`}>
+                    <span className={`w-1.5 h-1.5 rounded-full ${
+                      theme === 'abundance' 
+                        ? 'bg-[#9CA8AD]/40' 
+                        : theme === 'compatibility'
+                        ? 'bg-[#C19B83]/30'
+                        : 'bg-white/30'
+                    } shrink-0`}></span>
                     <span className="text-sm md:text-base line-through opacity-70 break-keep">{q}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className={`pt-6 border-t ${theme === 'abundance' ? 'border-[#3A4A54]/40 text-[#9CA8AD]' : 'border-white/5 text-white/50'} text-sm md:text-[15px] text-center font-light leading-relaxed break-keep`}>
+            <div className={`pt-6 border-t ${
+              theme === 'abundance' 
+                ? 'border-[#3A4A54]/40 text-[#9CA8AD]' 
+                : theme === 'compatibility'
+                ? 'border-[#5A2D3A]/30 text-[#EDE6DA]/60'
+                : 'border-white/5 text-white/50'
+            } text-sm md:text-[15px] text-center font-light leading-relaxed break-keep`}>
               {contentConfig.card1.bottomText}
             </div>
           </div>
@@ -227,39 +340,81 @@ export default function QuestionShiftComparison({
                 : theme === 'love' 
                 ? 'border-[#B7788D]/40 shadow-[0_0_30px_rgba(183,120,141,0.15)]' 
                 : theme === 'compatibility'
-                ? 'point-box bg-gradient-to-b from-[#4A1F2D]/40 via-[#3A1623]/30 to-[#180A14]/35 border-[#B78C86]/40 shadow-[0_0_35px_rgba(90,38,56,0.3)]'
+                ? 'point-box bg-gradient-to-b from-[#4A1F2D]/60 via-[#3A1623]/50 to-[#240C18]/65 border-[#B78C86]/50 hover:border-[#D8BB94]/60 shadow-[0_0_40px_rgba(90,38,56,0.35)]'
                 : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 border-[#608F82]/40 shadow-[0_0_30px_rgba(96,143,130,0.18)]'
             } p-8 md:p-10 rounded-[32px] border transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
             style={theme === 'love' ? { backgroundColor: 'rgba(166, 91, 128, 0.18)' } : undefined}
           >
             {/* 배경 은은한 광채 */}
-            <div className={`absolute -top-20 -right-20 w-60 h-60 ${theme === 'abundance' ? 'bg-[#4B6B6F]/20' : themeConfig.glowBg} rounded-full blur-[80px] pointer-events-none`}></div>
+            <div className={`absolute -top-20 -right-20 w-60 h-60 ${
+              theme === 'abundance' 
+                ? 'bg-[#4B6B6F]/20' 
+                : theme === 'compatibility'
+                ? 'bg-[#5A2638]/25'
+                : themeConfig.glowBg
+            } rounded-full blur-[80px] pointer-events-none`}></div>
 
             <div className="mb-6 relative z-10">
               <div className="flex items-center gap-3 mb-4">
-                <div className={`w-10 h-10 rounded-xl ${theme === 'abundance' ? 'bg-[#1D3035] border border-[#5A787A]/60 text-[#A4BAB5]' : themeConfig.badgeBg} flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-xl ${
+                  theme === 'abundance' 
+                    ? 'bg-[#1D3035] border border-[#5A787A]/60 text-[#A4BAB5]' 
+                    : theme === 'compatibility'
+                    ? 'bg-[#5A2638]/60 border border-[#B78C86]/50 text-[#D8BB94]'
+                    : themeConfig.badgeBg
+                } flex items-center justify-center`}>
                   <Compass className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className={`text-xs font-mono tracking-widest ${theme === 'abundance' ? 'text-[#A4BAB5]' : themeConfig.activeText} uppercase block font-bold`}>CARD 02</span>
+                  <span className={`text-xs font-mono tracking-widest ${
+                    theme === 'abundance' 
+                      ? 'text-[#A4BAB5]' 
+                      : theme === 'compatibility'
+                      ? 'text-[#D8BB94]'
+                      : themeConfig.activeText
+                  } uppercase block font-bold`}>CARD 02</span>
                   <h3 className="text-lg md:text-xl font-bold text-white">{contentConfig.card2.title}</h3>
                 </div>
               </div>
-              <p className={`text-[16px] ${theme === 'abundance' ? 'text-[#EDE6DA]' : 'text-[#EDE6DA]/85'} font-light mb-6 break-keep`}>
+              <p className={`text-[16px] ${
+                theme === 'abundance' 
+                  ? 'text-[#EDE6DA]' 
+                  : theme === 'compatibility'
+                  ? 'text-[#EDE6DA]/85'
+                  : 'text-[#EDE6DA]/85'
+              } font-light mb-6 break-keep`}>
                 {contentConfig.card2.description}
               </p>
 
               <div className="space-y-3.5">
                 {contentConfig.card2.questions.map((q, idx) => (
-                  <div key={idx} className={`p-4 rounded-xl ${theme === 'abundance' ? 'bg-[#1D3035]/90 border border-[#3A5358]/60 text-[#F2ECE3]' : 'bg-black/50 border border-white/10 text-white'} flex items-center gap-3 shadow-sm`}>
-                    <ArrowRight className={`w-4 h-4 ${theme === 'abundance' ? 'text-[#A4BAB5]' : themeConfig.activeText} shrink-0`} />
+                  <div key={idx} className={`p-4 rounded-xl ${
+                    theme === 'abundance' 
+                      ? 'bg-[#1D3035]/90 border border-[#3A5358]/60 text-[#F2ECE3]' 
+                      : theme === 'compatibility'
+                      ? 'bg-[#2B0F1A]/80 border border-[#B78C86]/30 text-white'
+                      : 'bg-black/50 border border-white/10 text-white'
+                  } flex items-center gap-3 shadow-sm`}>
+                    <ArrowRight className={`w-4 h-4 ${
+                      theme === 'abundance' 
+                        ? 'text-[#A4BAB5]' 
+                        : theme === 'compatibility'
+                        ? 'text-[#D8BB94]'
+                        : themeConfig.activeText
+                    } shrink-0`} />
                     <span className="text-sm md:text-base font-medium break-keep">{q}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className={`pt-6 border-t ${theme === 'abundance' ? 'border-[#5A787A]/30 text-[#EDE6DA]' : 'border-white/10 text-[#EDE6DA]/90'} text-sm md:text-[15px] text-center font-light leading-relaxed break-keep relative z-10`}>
+            <div className={`pt-6 border-t ${
+              theme === 'abundance' 
+                ? 'border-[#5A787A]/30 text-[#EDE6DA]' 
+                : theme === 'compatibility'
+                ? 'border-[#B78C86]/30 text-[#EDE6DA]/90'
+                : 'border-white/10 text-[#EDE6DA]/90'
+            } text-sm md:text-[15px] text-center font-light leading-relaxed break-keep relative z-10`}>
               {contentConfig.card2.bottomText}
             </div>
           </div>
@@ -267,7 +422,7 @@ export default function QuestionShiftComparison({
         </div>
 
         {/* 하단 강조 문구 박스 */}
-        <div className="max-w-3xl mx-auto text-center p-6 md:p-8 rounded-2xl gungjung-glass border border-white/10 bg-black/40">
+        <div className="max-w-3xl mx-auto text-center p-6 md:p-8 rounded-2xl gungjung-glass border border-[#B78C86]/25 bg-black/40">
           <p className="text-lg md:text-xl font-elegant font-bold text-white break-keep">
             {theme === 'compatibility' ? (
               <>

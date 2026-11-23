@@ -5,22 +5,39 @@ import { compatibilityCaseData } from './data'
 
 export default function CompatibilityCaseComparison() {
   return (
-    <section className="mb-40">
-      <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-            DIFFERENT CHOICES, DIFFERENT BONDS
-          </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {compatibilityCaseData.mainCopy}
-          </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
-            {compatibilityCaseData.subCopy}
-          </p>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
+        {/* 상단 헤더: 영문 라벨, 메인 제목 2줄, 설명 2문단, 하단 강조 문구 (풍요 리포트 규격 동일 적용) */}
+        <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
+          <div>
+            <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
+              DIFFERENT CHOICES, DIFFERENT BONDS
+            </span>
+            <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+              같은 궁합 구조라도,<br />
+              <span className="gradient-text-reunion">관계의 모습은 달라질 수 있습니다.</span>
+            </h2>
+          </div>
+
+          {/* 3개 문단 설명 문구 블록 (일반 설명 2문단 + 하단 강조 문구) */}
+          <div className="space-y-3.5 md:space-y-4 max-w-3xl mx-auto text-[16px] md:text-[18px] text-[#EDE6DA]/90 font-light leading-relaxed break-keep">
+            <p>
+              반복되는 갈등에는 두 사람만의 반응과 선택의 패턴이 숨어 있습니다.<br className="hidden sm:inline" />
+              같은 상황에서도 누군가는 다가가고, 누군가는 침묵하며 서로 다른 방식으로 관계를 지키려 합니다.
+            </p>
+            <p>
+              같은 선천 기질의 조합이라도 서로의 차이를 어떻게 이해하고 대화하느냐에 따라<br className="hidden sm:inline" />
+              두 사람이 만들어 가는 관계의 모습은 달라질 수 있습니다.
+            </p>
+            <p className="text-[#FAF7F2] font-medium pt-1">
+              중요한 것은 두 사람의 궁합이 좋고 나쁜지가 아니라,<br className="hidden sm:inline" />
+              <span className="text-[#D8BB94] font-semibold">서로의 반응을 이해하고 어떤 선택으로 관계를 이어가는지</span> 아는 것입니다.
+            </p>
+          </div>
         </div>
 
         {/* CASE A & B 비교 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[1280px] mx-auto mb-12">
           {compatibilityCaseData.cases.map((c, idx) => (
             <div
               key={idx}
