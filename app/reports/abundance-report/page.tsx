@@ -811,7 +811,7 @@ export default function AbundanceReportPage() {
             <WealthAnalysisMethod />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 11. 리포트를 읽은 뒤 달라질 수 있는 선택 */}
+            {/* TRANSFORMATION SCENARIO: 리포트를 펼치는 순간 시작되는, 풍요를 향한 3단계 변화 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <WealthChangeScenario />
 

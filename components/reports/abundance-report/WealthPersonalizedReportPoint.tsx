@@ -33,7 +33,7 @@ export default function WealthPersonalizedReportPoint({
   ]
 
   return (
-    <section id="point-04-personalized" className="mt-[64px] sm:mt-[88px] lg:mt-[120px] mb-14 md:mb-18 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+    <section id="point-04-personalized" className="mt-[72px] sm:mt-[104px] lg:mt-[160px] mb-14 md:mb-18 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
       <Reveal className="w-full">
         {/* 모바일 전용 상단 헤드카피 (데스크톱에서는 숨김) */}
         <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5 w-full max-w-[1280px] mx-auto">
