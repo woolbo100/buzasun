@@ -1,118 +1,166 @@
 ﻿'use client'
 
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
-import { compatibilityAnalysisMethodData } from './data'
-import { Disc3, MessageSquareText, Handshake, CheckCircle2, FileText, ArrowRight } from 'lucide-react'
 
-export default function CompatibilityPrescriptionSample() {
-  const icons = [
-    <Disc3 key="disc" className="w-6 h-6 text-[#D8BB94]" />,
-    <MessageSquareText key="chat" className="w-6 h-6 text-[#D8BB94]" />,
-    <Handshake key="shake" className="w-6 h-6 text-[#D8BB94]" />
+interface CompatibilityPrescriptionSampleProps {
+  imageSrc?: string
+}
+
+/**
+ * ══════════════════════════════════════════════════════════════════════
+ * POINT 05 · ACTIONABLE PRESCRIPTION (실전 관계 행동 처방)
+ * ──────────────────────────────────────────────────────────────────────
+ * [PART A] 맞춤 처방의 필요성 (문제 제기 + 3개 처방 카드: 심리 / 소통 행동 / 관계 루틴)
+ * [PART B] 하단 대표 비주얼 (가로형 궁합 처방전 배너 3:1 비율)
+ * ══════════════════════════════════════════════════════════════════════
+ */
+export default function CompatibilityPrescriptionSample({
+  imageSrc = '/image/compatibility/compatibility-point05-prescription-banner.webp'
+}: CompatibilityPrescriptionSampleProps) {
+  const prescriptionCards = [
+    {
+      num: 'CARD 01',
+      tag: '심리 처방',
+      content: '같은 갈등이 반복될 때,\n상대의 반응 뒤에 숨은\n감정부터 읽어냅니다.',
+      desc: '서로 다른 기대와 방어 반응, 반복되는 오해의 지점을 살펴보고 비난보다 이해를 선택할 수 있는 관계의 기준을 제안합니다.'
+    },
+    {
+      num: 'CARD 02',
+      tag: '소통 행동 처방',
+      content: '말이 상처가 되는 순간,\n다르게 표현하고 듣는\n대화의 기준을 처방합니다.',
+      desc: '침묵과 방어, 감정적 충돌을 줄이기 위해 서로의 마음을 전달하는 방식과 갈등 후 다시 연결되는 소통 행동을 안내합니다.'
+    },
+    {
+      num: 'CARD 03',
+      tag: '관계 루틴 처방',
+      content: '서로의 다름을 존중하며,\n두 사람에게 맞는 일상의\n관계 습관을 설계합니다.',
+      desc: '친밀함과 개인 시간의 균형, 감사 표현과 관계 약속 등 함께 지속할 수 있는 맞춤형 실천 방향을 정리합니다.'
+    }
   ]
 
   return (
-    <section id="point-05" className="mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
-      <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-12">
+    <section id="point-05-prescription" className="mb-32 md:mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
+      <span id="point-05" className="block -mt-28 pt-28" />
+      <Reveal className="w-full">
+        {/* ══════════════════════════════════════════════════════════════════ */}
+        {/* [PART A] 헤더 카피 + 3개 실전 처방 카드 */}
+        {/* ══════════════════════════════════════════════════════════════════ */}
+        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-14 px-4">
+          {/* 전체 POINT 05의 시작을 알리는 단일 상단 라벨 */}
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             POINT 05 · ACTIONABLE PRESCRIPTION
           </span>
+
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-            단순한 성격 차이 설명이 아닌, <br className="sm:hidden" />
-            <span className="gradient-text-reunion">두 사람을 위한 실전 관계 처방</span>
+            이런 궁합 처방전은 없었습니다.<br />
+            막연한 관계 조언이 아닌, <span className="gradient-text-reunion">두 사람을 위한 현실적인 행동 처방전</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep">
-            백도화 프리미엄 궁합 리포트의 핵심인 PART 07에서는 비난과 방어 대신,<br className="hidden sm:inline" />
-            갈등의 고리를 즉시 끊어낼 실제 대화법과 소통 행동 가이드를 처방합니다.
+
+          <p className="text-[17px] md:text-[18px] text-[#FAF7F2]/90 font-light break-keep max-w-3xl mx-auto leading-relaxed">
+            백도화 프리미엄 궁합 리포트는 단순한 성격 차이 설명을 넘어,<br className="hidden sm:inline" />{' '}
+            반복되는 갈등과 감정의 엇갈림을 줄이고, 서로를 이해하는 대화법과 일상의 실천 방향을 제안합니다.
           </p>
         </div>
 
-        {/* 4. PHASE 01~03 카드 3개 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-8 md:mb-10">
-          {compatibilityAnalysisMethodData.cards.map((card, idx) => (
+        {/* 3개 처방 카드 (심리 처방 / 소통 행동 처방 / 관계 루틴 처방) (1280px 풀 위드 정렬) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 w-full max-w-[1280px] mx-auto">
+          {prescriptionCards.map((card, idx) => (
             <div
               key={idx}
-              className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 transition-all duration-300 flex flex-col justify-between group backdrop-blur-md"
+              className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-[#B78C86]/25 hover:border-[#D8BB94]/45 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(90,38,56,0.25)] flex flex-col justify-between group h-full bg-gradient-to-b from-[#4A1F2D]/35 via-[#2A0C1A]/25 to-[#180A14]/45"
             >
               <div>
-                <div className="w-14 h-14 rounded-2xl bg-[#5A2638]/50 border border-[#B78C86]/40 flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform">
-                  {icons[idx]}
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-[12.5px] sm:text-[13px] font-mono font-bold tracking-widest text-[#D8BB94]">
+                    {card.num}
+                  </span>
+                  <span className="text-[12px] sm:text-[12.5px] px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#5A2638]/70 border border-[#B78C86]/40 text-[#D8BB94] font-medium tracking-tight shadow-sm">
+                    {card.tag}
+                  </span>
                 </div>
-                <span className="text-xs font-mono font-bold tracking-widest text-[#D8BB94] mb-2 block">
-                  PHASE {card.num}
-                </span>
-                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-2 leading-snug break-keep">{card.title}</h3>
-                <span className="text-xs text-[#C19B83]/80 font-medium mb-4 block">
-                  {card.subtitle}
-                </span>
-                <p className="text-sm md:text-base text-[#EDE6DA]/70 font-light leading-relaxed break-keep">
-                  {card.desc}
-                </p>
+                <h3 className="text-[19px] md:text-[21px] lg:text-[22px] font-elegant font-bold text-white mb-4 leading-snug break-keep group-hover:text-[#D8BB94] transition-colors whitespace-pre-line">
+                  &ldquo;{card.content}&rdquo;
+                </h3>
               </div>
+              <p className="text-[14.5px] md:text-[15.5px] text-[#EDE6DA]/85 leading-[1.68] md:leading-[1.72] font-light break-keep pt-4 border-t border-white/5">
+                {card.desc}
+              </p>
             </div>
           ))}
         </div>
 
-        {/* 5. 하단 가로 메시지 박스 */}
-        <div className="max-w-7xl mx-auto p-6 md:p-8 rounded-2xl bg-gradient-to-r from-[#4A1F2D]/35 via-[#3A1623]/25 to-[#4A1F2D]/35 border border-[#B78C86]/25 text-center backdrop-blur-sm mb-14 md:mb-16">
-          <p className="text-base md:text-lg text-[#EDE6DA] font-light leading-relaxed break-keep">
-            ✨ {compatibilityAnalysisMethodData.highlight}
-          </p>
-        </div>
+        {/* ══════════════════════════════════════════════════════════════════ */}
+        {/* [PART B] 하단 대표 비주얼 (가로형 궁합 처방전 배너 1280px 풀 위드) */}
+        {/* ══════════════════════════════════════════════════════════════════ */}
+        <div className="mt-10 sm:mt-12 md:mt-14 w-full max-w-[1280px] mx-auto">
+          <Reveal delayMs={120}>
+            <div className="prescription-visual-wrapper relative rounded-[22px] sm:rounded-[26px] md:rounded-[28px] overflow-hidden border border-[#B78C86]/35 bg-[#14080E]/90 shadow-[0_12px_40px_rgba(40,15,25,0.45)]">
+              {/* 소프트 쉬머(빛 흐름) 오버레이 - 은은한 실크 광택 */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden z-10" aria-hidden="true">
+                <div className="prescription-shimmer" />
+              </div>
 
-        {/* 6. 기존 POINT 05의 나머지 콘텐츠: 실제 처방전 형태의 프리미엄 샘플 카드 */}
-        <div className="max-w-7xl mx-auto gungjung-glass point-box p-8 md:p-12 rounded-[36px] border border-[#B78C86]/35 bg-gradient-to-b from-[#4A1F2D]/35 via-[#3A1623]/30 to-[#180A14]/40 shadow-2xl relative overflow-hidden backdrop-blur-md">
-          {/* 상단 샘플 알림 뱃지 */}
-          <div className="flex items-center justify-between pb-6 mb-8 border-b border-white/10">
-            <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-[#D8BB94] font-bold">
-              <FileText className="w-4 h-4" />
-              PART 07 DIALOGUE PRESCRIPTION [SAMPLE]
+              {/* 가로형 배너 이미지 (2172 x 724 원본 3:1 비율 100% 유지, 왜곡 없음) */}
+              <Image
+                src={imageSrc}
+                alt="백도화 POINT 05 실전 관계 처방전 가로형 배너 — 포인트 5 관계 처방전"
+                width={2172}
+                height={724}
+                className="w-full h-auto block object-contain"
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1280px"
+                priority={false}
+              />
             </div>
-            <span className="text-[11px] text-white/50 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
-              * 실제 고객 진단 결과가 아닌 샘플 예시입니다.
-            </span>
-          </div>
+          </Reveal>
 
-          {/* 처방 질문 헤드라인 */}
-          <div className="mb-8">
-            <span className="text-xs font-mono font-bold text-[#D8BB94] tracking-wider uppercase block mb-3">
-              [진단 질문] 갈등 대화 악순환 패턴
-            </span>
-            <h3 className="text-xl md:text-2xl font-elegant font-bold text-white leading-snug break-keep">
-              &ldquo;상대는 공격받았다고 느끼고, 나는 무시당했다고 느낀다.<br className="hidden sm:inline" />
-              <span className="text-[#D8BB94]">이 대화는 어디서부터 어긋났을까?</span>&rdquo;
-            </h3>
-          </div>
+          {/* 상시 마이크로 애니메이션: 미세 float 부유 & 은은한 소프트 쉬머 */}
+          <style jsx>{`
+            .prescription-visual-wrapper {
+              animation: prescriptionGentleFloat 5.5s ease-in-out infinite;
+              will-change: transform;
+            }
 
-          {/* 구체적인 행동 실천 가이드 */}
-          <div className="p-6 md:p-8 rounded-2xl bg-[#3A1623]/50 border border-[#B78C86]/30 space-y-4 backdrop-blur-sm">
-            <div className="flex items-center gap-2 text-sm font-bold text-[#D8BB94]">
-              <CheckCircle2 className="w-4 h-4 text-[#D8BB94]" />
-              백도화 맞춤 실천 행동 처방
-            </div>
-            <p className="text-base md:text-lg text-[#EDE6DA] font-medium leading-relaxed break-keep">
-              &ldquo;넌 항상 왜 그래?&rdquo;처럼 상대를 단정하고 평가하는 표현 대신,<br className="hidden sm:inline" />
-              <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#B78C86]">
-                ① 눈에 보인 구체적 사실(행동)
-              </span>, <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#B78C86]">
-                ② 그때 내가 느낀 주관적 감정
-              </span>, <span className="text-[#D8BB94] underline underline-offset-4 decoration-[#B78C86]">
-                ③ 구체적으로 원하는 요청 사항
-              </span>을 세 단계로 분리하여 말하십시오.
-            </p>
-            <p className="text-xs md:text-sm text-[#EDE6DA]/60 font-light leading-relaxed break-keep pt-2">
-              한 사람은 문제를 해결하고자 서둘러 몰아붙이고, 다른 사람은 비난을 피하고자 입을 닫아버립니다. 평가를 걷어내고 구체적 사실과 요청만 전달할 때, 비로소 상대의 방어벽이 내려갑니다.
-            </p>
-          </div>
+            @keyframes prescriptionGentleFloat {
+              0%, 100% {
+                transform: translateY(0px);
+              }
+              50% {
+                transform: translateY(-5px);
+              }
+            }
 
-          {/* 하단 리포트 안내 */}
-          <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EDE6DA]/70 font-light">
-            <span>실제 리포트에서는 두 분의 상호 선천코드 조합에 맞춘 관계 조율 및 소통 처방이 제공됩니다.</span>
-            <span className="text-[#D8BB94] font-medium flex items-center gap-1">
-              두 사람 맞춤형 솔루션 <ArrowRight className="w-3.5 h-3.5" />
-            </span>
-          </div>
+            .prescription-shimmer {
+              width: 50%;
+              height: 100%;
+              background: linear-gradient(
+                90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.04) 50%,
+                transparent 100%
+              );
+              transform: skewX(-20deg);
+              animation: prescriptionShimmerSweep 7s ease-in-out infinite;
+              will-change: transform;
+            }
+
+            @keyframes prescriptionShimmerSweep {
+              0% {
+                transform: translateX(-150%) skewX(-20deg);
+              }
+              35%, 100% {
+                transform: translateX(250%) skewX(-20deg);
+              }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              .prescription-visual-wrapper,
+              .prescription-shimmer {
+                animation: none !important;
+                transform: none !important;
+              }
+            }
+          `}</style>
         </div>
       </Reveal>
     </section>

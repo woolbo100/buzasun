@@ -149,7 +149,7 @@ export const compatibilityCaseData = {
 
 // 6. 일반 궁합 풀이와의 차별점 (SECTION 07)
 export const compatibilityComparisonTableData = {
-  title: "궁합 점수에서 끝나지 않는\n관계 분석.",
+  title: "궁합 점수에서 끝나지 않는\n깊이있는 관계 분석",
   subTitle: "단순한 길흉 판정과 백도화 프리미엄 궁합 리포트가 지향하는 깊이의 차이입니다.",
   columns: [
     { id: "ai", name: "자동 생성형 궁합", isTarget: false },
@@ -356,15 +356,16 @@ export const compatibilityTimelineData = {
 
 // 9. 궁합 리포트 샘플 미리보기 (SECTION 10)
 export const compatibilityPreviewData = {
-  mainCopy: "두 사람의 관계가,\n하나의 기록으로 펼쳐집니다.",
-  subCopy: "두 사람의 관계를 깊이 있게 담아낸 고품격 맞춤형 디지털 리포트입니다.",
+  mainCopy: "한 권의 비급처럼 귀하게,\n두 사람의 관계를 한 권에 담다",
+  subCopy: "한국 전통 왕실 도감의 품격과 버건디 비단의 깊이를 현대적으로 재해석한,\n오래도록 함께 펼쳐볼 수 있는 프리미엄 디지털 궁합 리포트입니다.",
+  leadMessage: "두 사람의 인연과 관계 설계도가 담긴 비급을 미리 펼쳐보세요.",
   disclaimer: "※ 위 이미지는 이해를 돕기 위한 샘플입니다. 실제 리포트의 내용은 두 사람의 정보와 관계 기록에 따라 달라집니다.",
   samples: [
     {
       id: "cover",
       title: "궁합 리포트 표지",
       desc: "딥 버건디 실크와 중앙 청동판 무드의 품격 있는 커버",
-      src: "/image/compatibility/p5.webp",
+      src: "/image/compatibility/compatibility-report-cover-topview.webp",
       badge: "COVER"
     },
     {

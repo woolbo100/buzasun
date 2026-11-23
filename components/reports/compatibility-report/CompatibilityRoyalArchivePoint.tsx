@@ -10,7 +10,7 @@ interface CompatibilityRoyalArchivePointProps {
 }
 
 export default function CompatibilityRoyalArchivePoint({
-  imageSrc = '/image/compatibility/p5.webp'
+  imageSrc = '/image/compatibility/compatibility-point06-premium-keepsake.webp'
 }: CompatibilityRoyalArchivePointProps) {
   const [imageError, setImageError] = useState(false)
 
@@ -110,7 +110,7 @@ export default function CompatibilityRoyalArchivePoint({
               {!imageError ? (
                 <Image 
                   src={imageSrc} 
-                  alt="프리미엄 소장용 관계 비급 — 두 사람을 위한 궁합 아카이브" 
+                  alt="프리미엄 소장용 관계 비급 — 두 사람을 위한 프리미엄 소장용 궁합 리포트" 
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.01]" 

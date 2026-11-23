@@ -37,51 +37,57 @@ export default function CompatibilityReportPreview() {
       : null
 
   return (
-    <section id="point-06" className="mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
-      <Reveal>
-        <div className="max-w-4xl mx-auto text-center mb-16">
+    <section className="mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto" id="point-06">
+      <span id="sample-preview" className="block -mt-28 pt-28" />
+      <Reveal className="w-full">
+        <div className="max-w-4xl mx-auto text-center mb-16 px-4">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-            POINT 06 · DIGITAL REPORT PREVIEW
+            POINT 06 · PREMIUM ARCHIVE & PREVIEW
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            프리미엄 궁합 리포트 미리보기
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+            한 권의 비급처럼 귀하게,<br />
+            <span className="gradient-text-reunion">두 사람의 관계를 한 권에 담다</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
-            {compatibilityPreviewData.subCopy}
-          </p>
+          <div className="space-y-2.5 max-w-3xl mx-auto">
+            <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/80 font-light break-keep leading-relaxed whitespace-pre-line">
+              {compatibilityPreviewData.subCopy}
+            </p>
+            <p className="text-[16px] md:text-[17.5px] text-[#D8BB94] font-medium break-keep tracking-tight">
+              {compatibilityPreviewData.leadMessage}
+            </p>
+          </div>
         </div>
 
         {/* 4개 샘플 프리뷰 그리드 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-[1280px] mx-auto mb-10">
           {compatibilityPreviewData.samples.map((sample, idx) => (
             <div
               key={sample.id}
               onClick={() => setActiveModalIndex(idx)}
-              className="gungjung-glass p-5 rounded-[28px] border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 transition-all duration-300 group cursor-pointer flex flex-col justify-between backdrop-blur-md"
+              className="gungjung-glass p-5 rounded-[28px] border border-[#B78C86]/25 hover:border-[#D8BB94]/50 bg-gradient-to-b from-[#4A1F2D]/35 via-[#2A0C1A]/25 to-[#180A14]/40 transition-all duration-300 group cursor-pointer flex flex-col justify-between backdrop-blur-md"
             >
-              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4 bg-black/40 border border-white/5">
+              <div className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden mb-4 bg-[#14080E] border border-white/5">
                 <Image
                   src={sample.src}
                   alt={sample.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#C19B83]">
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono font-bold text-[#D8BB94]">
                   {sample.badge}
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-[#935C6B]/50 flex items-center justify-center text-[#D8BB94] shadow-xl">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20">
+                  <div className="w-10 h-10 rounded-full bg-black/70 backdrop-blur-md border border-[#B78C86]/50 flex items-center justify-center text-[#D8BB94] shadow-xl">
                     <ZoomIn className="w-5 h-5" />
                   </div>
                 </div>
               </div>
 
               <div>
-                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#C19B83] transition-colors">
+                <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#D8BB94] transition-colors">
                   {sample.title}
                 </h4>
-                <p className="text-xs text-[#EDE6DA]/60 font-light break-keep">
+                <p className="text-xs text-[#EDE6DA]/70 font-light break-keep">
                   {sample.desc}
                 </p>
               </div>

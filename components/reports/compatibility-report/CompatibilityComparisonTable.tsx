@@ -11,8 +11,9 @@ export default function CompatibilityComparisonTable() {
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             DIFFERENCE IN DEPTH
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
-            {compatibilityComparisonTableData.title}
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+            궁합 점수에서 끝나지 않는<br />
+            <span className="gradient-text-reunion">깊이있는 관계 분석</span>
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             {compatibilityComparisonTableData.subTitle}
