@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Reveal from '@/components/Reveal'
 import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
-import { HeartHandshake, Scale, Sparkles, BookOpen, MessageSquareHeart, Crown, ArrowDown } from 'lucide-react'
+import { HeartHandshake, Scale, Sparkles, BookOpen, MessageSquareHeart, Crown } from 'lucide-react'
 
 export default function WhyCompatibilityReport() {
   const [activeCardIndex, setActiveCardIndex] = useState(0)
@@ -12,55 +12,55 @@ export default function WhyCompatibilityReport() {
     {
       num: '01',
       label: 'POINT 01',
-      title: '두 사람의 관계 집중 분석',
-      hook: '“개인의 운세를 따로 보는 것이 아닌, 두 사람의 관계를 집중 해부합니다.”',
-      desc: '개인의 운세를 따로 읽는 데 그치지 않고 두 사람의 기질, 끌림, 갈등과 관계의 상호작용을 집중적으로 살펴봅니다. 서로의 차이를 입체적으로 이해하여 소모적인 오해를 멈추는 선천코드 기반 1:1 맞춤형 궁합 설계도입니다.',
-      anchorId: 'point-01',
+      title: '두 사람의 관계 특화 심층 분석',
+      detailLabel: 'POINT 01 핵심 가치',
+      hook: '개인의 운세를 따로 보는 것이 아니라, 두 사람의 관계가 움직이는 방식을 깊이 들여다봅니다.',
+      desc: '재물과 직업, 건강 등 인생 전반을 폭넓게 살펴보는 종합 풀이와 달리, 백도화 궁합 리포트는 두 사람의 관계에 집중합니다. 서로 다른 기질과 애정 표현, 갈등 반응과 관계의 반복 패턴을 함께 살펴보는 선천코드 기반 맞춤형 관계 분석입니다.',
       icon: <HeartHandshake className="w-4 h-4" />,
     },
     {
       num: '02',
       label: 'POINT 02',
-      title: '선천 기질과 관계심리 교차 분석',
-      hook: '“명리로 타고난 코드를 읽고, 관계심리로 부딪힘의 원인을 이해합니다.”',
-      desc: '선천코드의 기질 정보와 실제 관계에서 나타나는 반응 패턴을 함께 살펴보며 다름이 충돌하는 지점을 객관적으로 이해하도록 돕습니다. 상대를 탓하기 전에 왜 그렇게 반응할 수밖에 없었는지 그 심층 구조를 밝혀냅니다.',
-      anchorId: 'point-02',
+      title: '동양명리학 × 관계심리학 × 감정 패턴 분석',
+      detailLabel: 'POINT 02 분석 방법',
+      hook: '타고난 기질을 읽고, 서로의 심리가 부딪히는 순간을 함께 이해합니다.',
+      desc: '동양명리학의 선천 기질 분석에 관계심리학의 관점과 감정 반응 패턴을 결합해 두 사람의 차이를 입체적으로 살펴봅니다. 누가 옳고 그른지를 판단하기보다, 같은 상황에서도 기대와 표현, 상처받는 방식이 달라지는 이유를 이해하도록 돕습니다.',
       icon: <Scale className="w-4 h-4" />,
     },
     {
       num: '03',
       label: 'POINT 03',
-      title: '두 사람만의 맞춤 궁합 해독',
-      hook: '“같은 갈등을 겪어도 두 사람이 부딪히는 방식은 다릅니다.”',
-      desc: '같은 문제를 겪어도 두 사람이 충돌하는 방식은 다를 수 있습니다. 각자의 선천 기질과 관계 특성을 바탕으로 두 사람의 상호작용을 분석하고, 6가지 핵심 분석 축을 통해 관계의 역학을 정밀하게 풀어냅니다.',
-      anchorId: 'point-03',
+      title: '반복되는 관계의 무의식 코드 정밀 해독',
+      detailLabel: 'POINT 03 정밀 해독',
+      hook: '사랑하는 마음은 그대로인데, 왜 같은 갈등이 반복되는지 그 구조를 살펴봅니다.',
+      desc: '관계에서 반복적으로 나타나는 기대, 방어 반응, 감정적 거리두기와 충돌의 흐름을 분석합니다. 겉으로 드러난 말과 행동만이 아니라, 두 사람의 선천적 성향과 익숙한 반응 패턴이 어떤 방식으로 맞물리는지 해석합니다.',
       icon: <Sparkles className="w-4 h-4" />,
     },
     {
       num: '04',
       label: 'POINT 04',
-      title: '프리미엄 궁합 비급의 상세 구성',
-      hook: '“두 사람의 인연을 위해 섬세하게 짜인 7개 파트와 특별 증정품”',
-      desc: '두 사람의 관계를 다양한 관점에서 살펴보는 분석 목차와 실제 제공되는 리포트 구성을 투명하고 자세하게 공개합니다. 두 사람 맞춤 오행 디지털 카드 증정 혜택까지 함께 정성껏 담았습니다.',
-      anchorId: 'point-04',
+      title: '두 사람만을 위한 1:1 맞춤형 궁합 리포트',
+      detailLabel: 'POINT 04 맞춤 보고서',
+      hook: '누구에게나 적용되는 궁합 풀이가 아닌, 오직 두 사람의 관계를 위한 해설입니다.',
+      desc: '두 사람의 선천코드 조합과 상호작용을 바탕으로 관계의 강점, 갈등 요소, 정서적 요구와 조율 방향을 정리합니다. 일반적인 궁합 점수나 정형화된 해석을 넘어, 해당 관계에서 특히 중요하게 살펴볼 지점을 중심으로 구성합니다.',
       icon: <BookOpen className="w-4 h-4" />,
     },
     {
       num: '05',
       label: 'POINT 05',
-      title: '두 사람을 위한 실전 관계 처방',
-      hook: '“단순한 길흉 풀이를 넘어, 실제 관계에서 적용하는 구체적 대화 처방”',
-      desc: '서로 다른 기질을 이해하고 실제 관계에서 적용해 볼 수 있는 대화와 관계 조율의 방향을 제안합니다. 갈등의 순간 방어벽을 내리는 3단계 소통 솔루션을 통해 반복되는 싸움의 굴레를 끊어냅니다.',
-      anchorId: 'point-05',
+      title: '두 사람을 위한 실전 관계 행동 처방',
+      detailLabel: 'POINT 05 실전 행동 처방',
+      hook: '상대를 바꾸려는 노력보다, 서로의 차이를 이해하는 새로운 선택이 필요합니다.',
+      desc: '반복되는 갈등 속에서 자신의 반응을 돌아보고, 서로에게 필요한 대화와 감정 표현, 거리 조절 방법을 구체적으로 제안합니다. 관계의 방향을 운명에 맡기기보다 일상에서 실천할 수 있는 선택과 행동에 초점을 맞춥니다.',
       icon: <MessageSquareHeart className="w-4 h-4" />,
     },
     {
       num: '06',
       label: 'POINT 06',
-      title: '프리미엄 궁합 리포트 미리보기',
-      hook: '“평생 서랍에 간직할 두 사람만의 품격 있는 프리미엄 비급”',
-      desc: '리포트에 담기는 분석 결과의 구성과 표현 방식을 미리 살펴보고 프리미엄 결과물의 특징을 확인할 수 있습니다. 수십 페이지에 걸친 고밀도 해독과 감각적인 시각화가 결합된 소장용 리포트입니다.',
-      anchorId: 'point-06',
+      title: '프리미엄 소장용 궁중 인연 비급',
+      detailLabel: 'POINT 06 프리미엄 소장 가치',
+      hook: '한 번 읽고 끝나는 궁합 풀이가 아니라, 관계를 돌아볼 때 다시 펼치는 두 사람의 비급입니다.',
+      desc: '한국 왕실 도감에서 영감을 받은 버건디 비단과 금사 모란의 시각적 품격에 두 사람의 관계 해설을 담았습니다. 서로의 차이를 잊거나 같은 문제에 부딪힐 때 다시 읽으며 관계를 돌아볼 수 있도록 구성한 프리미엄 디지털 리포트입니다.',
       icon: <Crown className="w-4 h-4" />,
     },
   ]
@@ -78,23 +78,37 @@ export default function WhyCompatibilityReport() {
           </span>
 
           {/* 2. 메인 헤드카피 */}
-          <h2 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-white mb-6 leading-[1.3] md:leading-[1.35] break-keep max-w-4xl mx-auto">
-            &ldquo;단순한 궁합 점수가 아닙니다.&rdquo;<br />
-            두 사람의 다름을 이해하고,{' '}
-            <span className="gradient-text-reunion">관계의 깊이를 다시 쓰는</span> 6대 핵심 소구점
+          <h2 className="text-[26px] sm:text-[28px] md:text-[38px] font-elegant font-bold text-white mb-8 md:mb-10 leading-[1.3] break-keep max-w-4xl mx-auto">
+            왜, <span className="gradient-text-reunion">선천코드 궁합 리포트</span>인가?
           </h2>
 
-          {/* 3. 본문 도입 설명 */}
-          <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] max-w-3xl mx-auto mb-10 md:mb-14 break-keep">
-            상대의 마음을 내 방식대로만 짐작하던 소모적인 오해를 멈추고,<br className="hidden sm:inline" />
-            두 사람 사이에 흐르는 선천코드와 상호작용의 결을 정밀하게 읽어냅니다.
-          </p>
+          {/* 3. 본문 설명 문구 (풍요 리포트 대응 3단 서사 구조) */}
+          <div className="max-w-3xl mx-auto space-y-5 md:space-y-6 mb-10 md:mb-12">
+            {/* 첫 번째 문단 */}
+            <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
+              서로 사랑하는 마음이 같다고 해서, 관계를 풀어가는 방식까지 같은 것은 아닙니다.<br className="hidden sm:inline" />
+              <span className="sm:inline-block">같은 상황에서도 서로 다르게 기대하고, 표현하고, 상처받기 때문입니다.</span>
+            </p>
 
-          {/* 4. 중앙 핵심 각성 인용문 */}
+            {/* 두 번째 문단 + 세 번째 문단(결론 강조) */}
+            <div className="space-y-2 md:space-y-2.5">
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] break-keep">
+                두 사람의 선천 기질과 반복되는 반응 구조를 함께 들여다보며,<br />
+                <span className="text-[#D8BB94] font-medium opacity-100">
+                  사랑하면서도 자꾸 엇갈렸던 관계의 패턴을 선명하게 마주하는 순간.
+                </span>
+              </p>
+              <p className="text-[17px] sm:text-[18px] md:text-[18.5px] text-[#EDE6DA] font-medium opacity-95 leading-[1.75] break-keep">
+                비로소 왜 같은 갈등이 반복되었는지, 그 이유가 보이기 시작합니다.
+              </p>
+            </div>
+          </div>
+
+          {/* 4. 중간 구분선 + 하단 선언문 2줄 + 하단 구분선 */}
           <div className="my-8 md:my-12 py-8 md:py-10 border-y border-[#B78C86]/30 max-w-4xl mx-auto">
             <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[28px] text-white leading-[1.85] md:leading-[2.1] break-keep">
-              상대를 억지로 바꾸려 하지 마세요.<br className="hidden sm:inline" />
-              <span className="gradient-text-reunion"> 두 사람 사이에 흐르는 관계의 결부터 읽으세요.</span>
+              서로의 다름을 이해하고, 관계의 방향을 다시 선택할 수 있도록,<br className="hidden sm:inline" />
+              <span className="gradient-text-reunion text-[#D8BB94]"> 이 리포트는 태어났습니다.</span>
             </p>
           </div>
 
@@ -139,7 +153,7 @@ export default function WhyCompatibilityReport() {
             })}
           </div>
 
-          {/* 6. 공통 상세 설명 패널 (클릭 시 내용 전환 및 하단 상세 섹션 이동 링크 제공) */}
+          {/* 6. 공통 상세 설명 패널 (클릭 시 내용 전환) */}
           <div 
             className="max-w-[1280px] mx-auto p-6 md:p-8 rounded-[26px] border border-[#B78C86]/35 text-left relative overflow-hidden transition-all duration-300 shadow-2xl backdrop-blur-md"
             style={{
@@ -149,10 +163,10 @@ export default function WhyCompatibilityReport() {
           >
             <div className="flex items-center gap-3 mb-3">
               <span className="px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-[#5A2638]/70 border border-[#B78C86]/50 text-[#D8BB94]">
-                {cards[activeCardIndex].label} 핵심 소구점
+                {cards[activeCardIndex].detailLabel}
               </span>
               <span className="text-xs text-[#EDE6DA]/50 hidden sm:inline">
-                * 카드를 클릭하시면 각 소구점의 상세 설명을 확인하실 수 있습니다.
+                위 카드를 클릭하시면 각 차별화 가치의 상세 설명을 확인하실 수 있습니다.
               </span>
             </div>
             
@@ -160,23 +174,9 @@ export default function WhyCompatibilityReport() {
               {cards[activeCardIndex].hook}
             </p>
             
-            <p className="text-[16px] text-[#EDE6DA]/90 font-light leading-[1.75] break-keep mb-4">
+            <p className="text-[16px] text-[#EDE6DA]/90 font-light leading-[1.75] break-keep">
               {cards[activeCardIndex].desc}
             </p>
-
-            {/* 해당 POINT 상세 영역 이동 링크 */}
-            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <a 
-                href={`#${cards[activeCardIndex].anchorId}`}
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#D8BB94] hover:text-white transition-colors duration-200 group/link"
-              >
-                <span>{cards[activeCardIndex].label} 상세 분석 영역 바로보기</span>
-                <ArrowDown className="w-3.5 h-3.5 group-hover/link:translate-y-0.5 transition-transform text-[#D8BB94]" />
-              </a>
-              <span className="text-[11px] text-[#EDE6DA]/50 font-light">
-                페이지 아래 해당 상세 분석 섹션으로 부드럽게 이동합니다
-              </span>
-            </div>
           </div>
 
           {/* 7. 섹션 마무리 2줄 핵심 메시지 */}
@@ -185,7 +185,7 @@ export default function WhyCompatibilityReport() {
               지금껏 이런 궁합 리포트는 없었습니다.
             </h3>
             <p className="font-elegant font-medium text-[16px] md:text-[18px] text-[#D8BB94] leading-relaxed break-keep">
-              두 사람의 선천코드, 여섯 겹의 통찰, 오직 두 분만을 위한 1:1 관계 비급
+              두 사람의 선천코드, 세 겹의 통찰, 오직 두 분만을 위한 1:1 관계 비급
             </p>
           </div>
         </div>

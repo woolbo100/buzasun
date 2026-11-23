@@ -80,6 +80,14 @@ const COMPATIBILITY_STORY_IMAGE_2 = {
   height: 1448,
 }
 
+// POINT 01. 관계 특화 심층 분석 세로 3:4 이미지 설정
+const POINT01_IMAGE_CONFIG = {
+  src: '/image/compatibility/point01-relationship-analysis.webp',
+  alt: '두 사람의 관계 흐름과 감정 구조를 상징적으로 표현한 궁합 리포트 분석 이미지',
+  width: 1086,
+  height: 1448,
+}
+
 // POINT 03. 6가지 핵심 분석 축 대표 16:9 이미지 설정
 const SIX_PILLARS_IMAGE_CONFIG = {
   src: '/image/compatibility/compatibility-six-analysis-pillars.webp',
@@ -370,14 +378,14 @@ export default function PremiumCompatibilityReportPage() {
                       </h2>
                     </div>
 
-                    {/* 본문 서사 (제목과 첫 번째 설명 사이: PC 기준 약 24~28px) */}
-                    <div className="mt-6 md:mt-7 space-y-3.5 md:space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] md:leading-[1.8] break-keep">
+                    {/* 본문 서사 (줄 띄움 삭제: 하나의 서사로 바로 연결) */}
+                    <div className="mt-5 md:mt-6 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] md:leading-[1.8] break-keep">
                       <p>
-                        누구보다 서로를 아끼고, 갈등이 생길 때마다 대화로 풀기 위해 노력했습니다.
-                      </p>
-                      <p className="text-[#FAF7F2] font-semibold">
-                        하지만 정작 상대가 무엇에 상처받고 왜 문을 닫아버리는지 모른 채,<br className="hidden sm:inline" />{' '}
-                        나만의 방식으로만 다가가며 서로를 지치게 했던 시간들.
+                        누구보다 서로를 아끼고, 갈등이 생길 때마다 대화로 풀기 위해 노력했습니다.<br />
+                        <span className="text-[#FAF7F2] font-semibold">
+                          하지만 정작 상대가 무엇에 상처받고 왜 문을 닫아버리는지 모른 채,<br className="hidden sm:inline" />{' '}
+                          나만의 방식으로만 다가가며 서로를 지치게 했던 시간들.
+                        </span>
                       </p>
                     </div>
 
@@ -526,13 +534,14 @@ export default function PremiumCompatibilityReportPage() {
             <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl bg-[#14080E]">
+                  <div className="group relative overflow-hidden rounded-[40px] border border-[#B78C86]/30 shadow-2xl bg-[#14080E]">
                     <Image 
-                      src="/image/compatibility/p2.webp" 
-                      alt="선천코드 궁합 리포트 개요" 
-                      width={800}
-                      height={600}
-                      className="w-full h-auto object-cover" 
+                      src={POINT01_IMAGE_CONFIG.src} 
+                      alt={POINT01_IMAGE_CONFIG.alt} 
+                      width={POINT01_IMAGE_CONFIG.width}
+                      height={POINT01_IMAGE_CONFIG.height}
+                      className="w-full h-auto object-cover object-center group-hover:scale-[1.01] transition-transform duration-700 ease-out" 
+                      priority
                     />
                   </div>
                   <div className="space-y-8">
@@ -574,13 +583,20 @@ export default function PremiumCompatibilityReportPage() {
             {/* 13. POINT 03 — 무의식적 관계 패턴 및 6가지 핵심 분석 축 */}
             <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="space-y-4 mb-16">
+                <div className="space-y-5 md:space-y-6 mb-14 md:mb-16">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
                     POINT 03 · DYNAMICS & SIX PERSPECTIVES
                   </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-[0.05em] leading-[1.25] md:leading-[1.3] break-keep">
-                    두 사람만의 맞춤 궁합 해독 — <span className="gradient-text-reunion">6가지 핵심 분석 축</span>
+                  {/* ① 6대 핵심 소구점 메인 타이틀 */}
+                  <h2 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-white leading-[1.3] md:leading-[1.35] break-keep max-w-4xl mx-auto">
+                    &ldquo;단순한 궁합 점수가 아닙니다.&rdquo;<br />
+                    두 사람의 다름을 이해하고,{' '}
+                    <span className="gradient-text-reunion">관계의 깊이를 다시 쓰는</span> 6대 핵심 소구점
                   </h2>
+                  {/* ② 기준 제목 (맞춤 궁합 해독 6가지 핵심 분석 축) */}
+                  <p className="text-xl sm:text-2xl md:text-[26px] font-elegant font-bold text-[#FAF7F2] tracking-[0.03em] leading-[1.3] break-keep pt-1">
+                    두 사람만의 맞춤 궁합 해독 — <span className="gradient-text-reunion">6가지 핵심 분석 축</span>
+                  </p>
                 </div>
                 <div className="w-full max-w-[1280px] mx-auto mb-20">
                   <Image 

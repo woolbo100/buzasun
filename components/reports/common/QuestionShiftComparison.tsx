@@ -339,7 +339,7 @@ export default function QuestionShiftComparison({
                 : theme === 'love' 
                 ? 'border-[#B7788D]/40 shadow-[0_0_30px_rgba(183,120,141,0.15)]' 
                 : theme === 'compatibility'
-                ? 'point-box bg-gradient-to-b from-[#4A1F2D]/60 via-[#3A1623]/50 to-[#240C18]/65 border-[#B78C86]/50 hover:border-[#D8BB94]/60 shadow-[0_0_40px_rgba(90,38,56,0.35)]'
+                ? 'point-box bg-gradient-to-b from-[#442A30]/80 via-[#321E23]/75 to-[#1C1014]/90 border-[#8A636A]/50 hover:border-[#C7A97A]/60 shadow-[0_10px_35px_rgba(68,42,48,0.25)]'
                 : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 border-[#608F82]/40 shadow-[0_0_30px_rgba(96,143,130,0.18)]'
             } p-8 md:p-10 rounded-[32px] border transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
             style={theme === 'love' ? { backgroundColor: 'rgba(166, 91, 128, 0.18)' } : undefined}
@@ -349,7 +349,7 @@ export default function QuestionShiftComparison({
               theme === 'abundance' 
                 ? 'bg-[#4B6B6F]/20' 
                 : theme === 'compatibility'
-                ? 'bg-[#5A2638]/25'
+                ? 'bg-[#442A30]/20'
                 : themeConfig.glowBg
             } rounded-full blur-[80px] pointer-events-none`}></div>
 
@@ -359,7 +359,7 @@ export default function QuestionShiftComparison({
                   theme === 'abundance' 
                     ? 'bg-[#1D3035] border border-[#5A787A]/60 text-[#A4BAB5]' 
                     : theme === 'compatibility'
-                    ? 'bg-[#5A2638]/60 border border-[#B78C86]/50 text-[#D8BB94]'
+                    ? 'bg-[#442A30]/70 border border-[#8A636A]/50 text-[#C7A97A]'
                     : themeConfig.badgeBg
                 } flex items-center justify-center`}>
                   <Compass className="w-5 h-5" />
@@ -369,7 +369,7 @@ export default function QuestionShiftComparison({
                     theme === 'abundance' 
                       ? 'text-[#A4BAB5]' 
                       : theme === 'compatibility'
-                      ? 'text-[#D8BB94]'
+                      ? 'text-[#C7A97A]'
                       : themeConfig.activeText
                   } uppercase block font-bold`}>CARD 02</span>
                   <h3 className="text-lg md:text-xl font-bold text-white">{contentConfig.card2.title}</h3>
@@ -391,14 +391,14 @@ export default function QuestionShiftComparison({
                     theme === 'abundance' 
                       ? 'bg-[#1D3035]/90 border border-[#3A5358]/60 text-[#F2ECE3]' 
                       : theme === 'compatibility'
-                      ? 'bg-[#2B0F1A]/80 border border-[#B78C86]/30 text-white'
+                      ? 'bg-[#2E1B20]/85 border border-[#8A636A]/35 text-white'
                       : 'bg-black/50 border border-white/10 text-white'
                   } flex items-center gap-3 shadow-sm`}>
                     <ArrowRight className={`w-4 h-4 ${
                       theme === 'abundance' 
                         ? 'text-[#A4BAB5]' 
                         : theme === 'compatibility'
-                        ? 'text-[#D8BB94]'
+                        ? 'text-[#C7A97A]'
                         : themeConfig.activeText
                     } shrink-0`} />
                     <span className="text-sm md:text-base font-medium break-keep">{q}</span>
@@ -411,7 +411,7 @@ export default function QuestionShiftComparison({
               theme === 'abundance' 
                 ? 'border-[#5A787A]/30 text-[#EDE6DA]' 
                 : theme === 'compatibility'
-                ? 'border-[#B78C86]/30 text-[#EDE6DA]/90'
+                ? 'border-[#8A636A]/30 text-[#EDE6DA]/90'
                 : 'border-white/10 text-[#EDE6DA]/90'
             } text-sm md:text-[14px] lg:text-[14px] xl:text-[15px] tracking-tight xl:whitespace-nowrap text-center font-light leading-relaxed break-keep relative z-10`}>
               {contentConfig.card2.bottomText}

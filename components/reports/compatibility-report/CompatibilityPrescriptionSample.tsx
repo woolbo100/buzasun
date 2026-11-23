@@ -1,9 +1,16 @@
 ﻿'use client'
 
 import Reveal from '@/components/Reveal'
-import { CheckCircle2, FileText, ArrowRight } from 'lucide-react'
+import { compatibilityAnalysisMethodData } from './data'
+import { Disc3, MessageSquareText, Handshake, CheckCircle2, FileText, ArrowRight } from 'lucide-react'
 
 export default function CompatibilityPrescriptionSample() {
+  const icons = [
+    <Disc3 key="disc" className="w-6 h-6 text-[#D8BB94]" />,
+    <MessageSquareText key="chat" className="w-6 h-6 text-[#D8BB94]" />,
+    <Handshake key="shake" className="w-6 h-6 text-[#D8BB94]" />
+  ]
+
   return (
     <section id="point-05" className="mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
       <Reveal>
@@ -21,7 +28,40 @@ export default function CompatibilityPrescriptionSample() {
           </p>
         </div>
 
-        {/* 실제 처방전 형태의 프리미엄 샘플 카드 */}
+        {/* 4. PHASE 01~03 카드 3개 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-8 md:mb-10">
+          {compatibilityAnalysisMethodData.cards.map((card, idx) => (
+            <div
+              key={idx}
+              className="gungjung-glass p-8 md:p-10 rounded-[28px] border border-[#B78C86]/25 hover:border-[#C7A97A]/50 bg-gradient-to-b from-[#4A1F2D]/35 to-[#3A1623]/35 transition-all duration-300 flex flex-col justify-between group backdrop-blur-md"
+            >
+              <div>
+                <div className="w-14 h-14 rounded-2xl bg-[#5A2638]/50 border border-[#B78C86]/40 flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform">
+                  {icons[idx]}
+                </div>
+                <span className="text-xs font-mono font-bold tracking-widest text-[#D8BB94] mb-2 block">
+                  PHASE {card.num}
+                </span>
+                <h3 className="text-[20px] md:text-[24px] font-bold text-white mb-2 leading-snug break-keep">{card.title}</h3>
+                <span className="text-xs text-[#C19B83]/80 font-medium mb-4 block">
+                  {card.subtitle}
+                </span>
+                <p className="text-sm md:text-base text-[#EDE6DA]/70 font-light leading-relaxed break-keep">
+                  {card.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 5. 하단 가로 메시지 박스 */}
+        <div className="max-w-7xl mx-auto p-6 md:p-8 rounded-2xl bg-gradient-to-r from-[#4A1F2D]/35 via-[#3A1623]/25 to-[#4A1F2D]/35 border border-[#B78C86]/25 text-center backdrop-blur-sm mb-14 md:mb-16">
+          <p className="text-base md:text-lg text-[#EDE6DA] font-light leading-relaxed break-keep">
+            ✨ {compatibilityAnalysisMethodData.highlight}
+          </p>
+        </div>
+
+        {/* 6. 기존 POINT 05의 나머지 콘텐츠: 실제 처방전 형태의 프리미엄 샘플 카드 */}
         <div className="max-w-7xl mx-auto gungjung-glass point-box p-8 md:p-12 rounded-[36px] border border-[#B78C86]/35 bg-gradient-to-b from-[#4A1F2D]/35 via-[#3A1623]/30 to-[#180A14]/40 shadow-2xl relative overflow-hidden backdrop-blur-md">
           {/* 상단 샘플 알림 뱃지 */}
           <div className="flex items-center justify-between pb-6 mb-8 border-b border-white/10">
