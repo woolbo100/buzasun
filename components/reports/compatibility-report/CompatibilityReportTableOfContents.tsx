@@ -18,11 +18,11 @@ export default function CompatibilityReportTableOfContents() {
   }
 
   return (
-    <section id="point-04" className="mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8">
-      <Reveal>
+    <section id="table-of-contents" className="mb-40 scroll-mt-28 md:scroll-mt-36 pt-4 md:pt-8 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-            POINT 04 · TABLE OF CONTENTS & SPECIAL GIFT
+            DETAILED STRUCTURE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep whitespace-pre-line">
             프리미엄 궁합 비급의 상세 구성
