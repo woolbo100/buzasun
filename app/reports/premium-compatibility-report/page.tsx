@@ -8,51 +8,59 @@ import GlobalBackground from '@/components/GlobalBackground'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
-import ReportCommonInfo from '@/components/ReportCommonInfo'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
 import { ChevronRight } from 'lucide-react'
-import RecommendedForCards from '@/components/RecommendedForCards'
 import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEnding'
 
-// 새로 추가된 궁합 전용 18개 설득 블록 독립 컴포넌트들
-import CompatibilityCoreDifferentiation from '@/components/reports/compatibility-report/CompatibilityCoreDifferentiation'
-import WhyCompatibilityReport from '@/components/reports/compatibility-report/WhyCompatibilityReport'
-import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
-import CompatibilityPrescriptionSample from '@/components/reports/compatibility-report/CompatibilityPrescriptionSample'
+// ══════════════════════════════════════════════════════════════════════
+// 풍요 리포트 마스터 템플릿 1:1 매핑 궁합 전용 컴포넌트 목록
+// ══════════════════════════════════════════════════════════════════════
+// A. 도입 및 공감 영역
 import CompatibilityPatternChecklist from '@/components/reports/compatibility-report/CompatibilityPatternChecklist'
-import CompatibilityAdviceComparison from '@/components/reports/compatibility-report/CompatibilityAdviceComparison'
+import CompatibilityCoreDifferentiation from '@/components/reports/compatibility-report/CompatibilityCoreDifferentiation'
 import CompatibilityRelationshipDiagram from '@/components/reports/compatibility-report/CompatibilityRelationshipDiagram'
-import CompatibilityAnalysisMethod from '@/components/reports/compatibility-report/CompatibilityAnalysisMethod'
 import CompatibilityCaseComparison from '@/components/reports/compatibility-report/CompatibilityCaseComparison'
-import CompatibilityComparisonTable from '@/components/reports/compatibility-report/CompatibilityComparisonTable'
+import QuestionShiftComparison from '@/components/reports/common/QuestionShiftComparison'
+
+// B. 차별성 및 심층 분석 영역
+import WhyCompatibilityReport from '@/components/reports/compatibility-report/WhyCompatibilityReport'
+import CompatibilityAnalysisMethod from '@/components/reports/compatibility-report/CompatibilityAnalysisMethod'
+import CompatibilitySixPerspectivesBanner from '@/components/reports/compatibility-report/CompatibilitySixPerspectivesBanner'
 import CompatibilityReportTableOfContents from '@/components/reports/compatibility-report/CompatibilityReportTableOfContents'
-import CompatibilityProductionTimeline from '@/components/reports/compatibility-report/CompatibilityProductionTimeline'
+
+// C. 개인 맞춤 상품 구성 영역
+import CompatibilityPersonalizedReportPoint from '@/components/reports/compatibility-report/CompatibilityPersonalizedReportPoint'
+import CompatibilitySpecialGift from '@/components/reports/compatibility-report/CompatibilitySpecialGift'
+import CompatibilityPrescriptionSample from '@/components/reports/compatibility-report/CompatibilityPrescriptionSample'
 import CompatibilityReportPreview from '@/components/reports/compatibility-report/CompatibilityReportPreview'
+import CompatibilityRoyalArchivePoint from '@/components/reports/compatibility-report/CompatibilityRoyalArchivePoint'
+import CompatibilityComparisonTable from '@/components/reports/compatibility-report/CompatibilityComparisonTable'
+
+// D. 변화와 감정적 설득 영역
 import CompatibilityChangeScenario from '@/components/reports/compatibility-report/CompatibilityChangeScenario'
-import CompatibilityRecommendedAudience from '@/components/reports/compatibility-report/CompatibilityRecommendedAudience'
 import CompatibilityTestimonials from '@/components/reports/compatibility-report/CompatibilityTestimonials'
-import CompatibilityPhilosophy from '@/components/reports/compatibility-report/CompatibilityPhilosophy'
+import CompatibilityRealTransformationBanner from '@/components/reports/compatibility-report/CompatibilityRealTransformationBanner'
+
+// E. 추천 대상 및 정보 안내 영역
+import CompatibilityRecommendedAudience from '@/components/reports/compatibility-report/CompatibilityRecommendedAudience'
 import CompatibilityValueSummary from '@/components/reports/compatibility-report/CompatibilityValueSummary'
 import CompatibilityFAQ from '@/components/reports/compatibility-report/CompatibilityFAQ'
 import CompatibilityPurchaseNotice from '@/components/reports/compatibility-report/CompatibilityPurchaseNotice'
-import CompatibilitySixPerspectivesBanner from '@/components/reports/compatibility-report/CompatibilitySixPerspectivesBanner'
-import CompatibilitySpecialGift from '@/components/reports/compatibility-report/CompatibilitySpecialGift'
-import CompatibilityRealTransformationBanner from '@/components/reports/compatibility-report/CompatibilityRealTransformationBanner'
 
 // ══════════════════════════════════════════════════════════════════════
 // 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
 // ══════════════════════════════════════════════════════════════════════
 const HERO_IMAGE_CONFIG = {
   src: '/image/compatibility/p1.webp',
-  alt: '프리미엄 궁합 리포트 메인 히어로 16:9',
+  alt: '선천코드 프리미엄 궁합 리포트 메인 히어로 16:9',
   width: 1440,
   height: 810,
 }
 
 const EMPATHY_IMAGE_CONFIG = {
   src: '/image/compatibility/p2.webp',
-  alt: '프리미엄 궁합 리포트 공감 가로 비주얼 16:9',
+  alt: '선천코드 프리미엄 궁합 리포트 관계의 반복 패턴 공감 16:9',
   width: 1440,
   height: 810,
 }
@@ -76,7 +84,7 @@ export default function PremiumCompatibilityReportPage() {
   useScrollAnimation()
   const router = useRouter()
 
-  // 1. 기존 바로 결제 로직 보존
+  // 1. 기존 바로 결제 로직 보존 (59,000원 상품 결제 연결)
   const handlePurchase = (e: React.MouseEvent) => {
     e.preventDefault()
     router.push('/checkout?productId=premium-compatibility-report')
@@ -97,24 +105,15 @@ export default function PremiumCompatibilityReportPage() {
     alert("장바구니에 담았습니다.")
   }
 
-  // 3. 리포트 샘플 미리보기 스크롤 보조 함수
-  const scrollToSample = (e: React.MouseEvent) => {
-    e.preventDefault()
-    const element = document.getElementById('sample-preview')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <main className="detail-page compatibility-report-page relative min-h-screen bg-[#0D0709]">
-      {/* 재회비방 전용 딥 다크 플럼 x 버건디 그라데이션 배경 시스템 동일 적용 */}
+      {/* 프리미엄 궁합 전용 딥 다크 플럼 x 버건디 그라데이션 배경 시스템 적용 */}
       <GlobalBackground
         src="/image/main4.png"
         brightCenter={false}
         customBaseOverlay={
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            {/* 1. 우측 은은한 딥 플럼 버건디 라이트 오라 (오른쪽 입체감 및 비침 효과 강화) */}
+            {/* 1. 우측 은은한 딥 플럼 버건디 라이트 오라 */}
             <div
               className="absolute inset-0"
               style={{
@@ -125,7 +124,7 @@ export default function PremiumCompatibilityReportPage() {
               }}
             />
 
-            {/* 2. 메인 가로 그라데이션 (왼쪽은 딥 다크 플럼으로 배경 차단, 오른쪽만 살짝 투명도를 주어 은은하게 비침) */}
+            {/* 2. 메인 가로 그라데이션 */}
             <div
               className="absolute inset-0"
               style={{
@@ -171,86 +170,76 @@ export default function PremiumCompatibilityReportPage() {
           <div className="container-premium">
             
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 01. 히어로 — 제목 → 16:9 메인 이미지 → 버튼 → 공감 문구 → 공감 16:9 이미지 */}
+            {/* A. 도입 및 공감 영역 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
+
+            {/* 1. HERO — 메인 히어로 및 상품 소개 & 2. 공감 서사 */}
             <section className="text-center mb-36">
               <Reveal delayMs={100}>
                 {/* 1. 상단 배지 */}
                 <div className="mb-6">
-                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] uppercase bg-[#5A2638]/30 border border-[#B78C86]/40 text-[#D8BB94]">
-                    BAEKDOHWA PREMIUM COMPATIBILITY REPORT
+                  <span className="inline-block px-5 py-1.5 rounded-full text-[12pt] font-elegant font-semibold tracking-[0.25em] uppercase bg-[#5A2638]/25 border border-[#B78C86]/40 text-[#D8BB94]">
+                    PREMIUM COMPATIBILITY REPORT
                   </span>
                 </div>
 
-                {/* 2. 보조 카피 */}
-                <p className="text-[18px] text-[#D8BB94] font-medium tracking-wide mb-4">
-                  두 사람의 선천코드와 관계 패턴을 함께 읽는 1:1 프리미엄 궁합 설계도
-                </p>
-
-                {/* 3. 메인 제품명 제목 */}
+                {/* 2. 메인 제품명 제목 */}
                 <h1 className="text-3xl md:text-6xl font-elegant font-bold mb-10 text-white leading-[1.25] md:leading-[1.3] break-keep">
-                  프리미엄 <span className="gradient-text-reunion">궁합 리포트</span>
+                  선천코드 <span className="gradient-text-reunion">프리미엄 궁합 리포트</span>
                 </h1>
 
-                {/* 4. 메인 가로 이미지 (16:9 비율 풀사이즈 느낌) */}
-                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#14080E]">
+                {/* 3. 메인 가로 이미지 (16:9 비율 유지 · 1280 영역에 꽉 차는 object-cover 렌더링) */}
+                <div className="relative w-full max-w-[1280px] mx-auto mb-12 sm:mb-16 md:mb-20 rounded-[40px] overflow-hidden border border-[#B78C86]/25 shadow-2xl aspect-[16/9] bg-[#14080E]">
                   <Image 
                     src={HERO_IMAGE_CONFIG.src} 
                     alt={HERO_IMAGE_CONFIG.alt}
                     width={HERO_IMAGE_CONFIG.width}
                     height={HERO_IMAGE_CONFIG.height}
                     priority
-                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+                    className="w-full h-full object-cover" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
-                {/* 4-1. 메인 히어로 하단 문제 제기형 인트로 섹션 (연애 리포트와 동일한 구조) */}
+                {/* 4. 메인 히어로 하단 문제 제기형 인트로 섹션 (풍요 리포트와 동일한 구조) */}
                 <div className="max-w-4xl mx-auto text-center px-4 space-y-4 md:space-y-5">
                   <h2 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] md:leading-[1.35] break-keep">
-                    &ldquo;두 사람의 만남이 정말 <span className="gradient-text-reunion">우연이라고 생각하시나요?</span>&rdquo;
+                    &ldquo;왜 우리는 사랑하면서도, <span className="gradient-text-reunion">늘 같은 이유로 다투게 될까요?</span>&rdquo;
                   </h2>
                   <p className="text-base sm:text-lg md:text-[20px] font-elegant text-[#FAF7F2] leading-[1.75] md:leading-[1.8] break-keep max-w-2xl mx-auto opacity-95 font-light">
-                    처음엔 전혀 다른 사람을 만난 것 같아도,<br />
-                    돌아보면 늘 비슷한 갈등과 익숙한 상처가 반복되곤 합니다.<br />
-                    궁합은 사랑의 크기보다, 두 사람이 어떤 흐름으로 부딪히는지를 먼저 보여줍니다.
+                    사랑하는 마음이 부족해서가 아닙니다.<br />
+                    타고난 기질의 속도, 감정을 표현하는 언어, 상처받았을 때 닫히는 무의식의 방식이 다를 뿐입니다.<br />
+                    서로의 코드를 읽지 못하면, 사랑은 깊어질수록 더 큰 외로움이 됩니다.
                   </p>
                 </div>
 
-                {/* 4-2. 구간 전환용 얇은 장식선 + 백도화 인연 문양 */}
+                {/* 구간 전환용 얇은 장식선 */}
                 <div className="flex items-center justify-center my-10 sm:my-14 md:my-16 max-w-xs sm:max-w-sm mx-auto px-4" aria-hidden="true">
                   <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#B78C86]/35 to-transparent" />
-                  <div className="mx-4 flex items-center justify-center">
-                    <svg viewBox="0 0 32 32" fill="none" className="w-7 h-7 sm:w-8 sm:h-8 text-[#D8BB94] opacity-90 drop-shadow-[0_0_8px_rgba(216,187,148,0.4)]">
-                      <path d="M16 16 C13.5 11 13 6 16 4 C19 6 18.5 11 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M16 16 C20 13 24.5 12.5 26 15.5 C25 18.8 20.5 18 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M16 16 C19.5 19.5 21.5 24 18.5 26 C16 24.5 16.2 20 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M16 16 C15.8 20 16 24.5 13.5 26 C10.5 24 12.5 19.5 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M16 16 C11.5 18 7 18.8 6 15.5 C7.5 12.5 12 13 16 16 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                      <circle cx="16" cy="16" r="1.6" stroke="currentColor" strokeWidth="1" />
-                    </svg>
+                  <div className="mx-4 flex items-center justify-center text-[#D8BB94] opacity-80">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D8BB94]/60"></span>
                   </div>
                   <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#B78C86]/35 to-transparent" />
                 </div>
 
-                {/* 5. 메인 프리미엄 상품 소개 & 구매 CTA 상자 (얇고 심플한 프리미엄 소개 카드) */}
+                {/* 메인 프리미엄 상품 소개 & 구매 CTA 상자 (풍요 리포트 규격 일치화) */}
                 <div className="max-w-[1280px] mx-auto mb-36 md:mb-48 lg:mb-52 text-left">
                   <div 
-                    className="relative rounded-[32px] md:rounded-[40px] p-6 sm:p-8 lg:p-10 border border-[#B78C86]/35 overflow-hidden shadow-2xl backdrop-blur-md"
+                    className="relative rounded-[32px] md:rounded-[40px] p-7 sm:p-10 lg:p-12 border border-[#B78C86]/35 overflow-hidden shadow-2xl"
                     style={{
-                      background: 'radial-gradient(ellipse at 50% 0%, rgba(90, 38, 56, 0.45) 0%, rgba(74, 31, 45, 0.35) 50%, rgba(58, 22, 35, 0.45) 100%)',
-                      boxShadow: '0 10px 40px rgba(74, 31, 45, 0.20)'
+                      background: 'radial-gradient(ellipse at 50% 0%, rgba(90, 38, 56, 0.45) 0%, rgba(58, 22, 35, 0.40) 50%, rgba(20, 8, 14, 0.95) 100%)',
+                      boxShadow: '0 0 60px rgba(90, 38, 56, 0.22)'
                     }}
                   >
                     {/* 은은한 배경 오라 */}
                     <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#5A2638]/20 rounded-full blur-[90px] pointer-events-none" />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
-                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 기울어진 핵심 문구 + 가격 + 버튼 */}
-                      <div className="lg:col-span-7 space-y-4 md:space-y-5">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+                      {/* 좌측 (약 58%): 라벨 + 메인 카피 + 설명 + 가격 + 버튼 */}
+                      <div className="lg:col-span-7 space-y-5 md:space-y-6">
                         {/* 1. 상단 라벨 */}
                         <div>
-                          <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#5A2638]/70 border border-[#B78C86]/60 text-[#FAF7F2] text-xs font-bold tracking-wider whitespace-nowrap">
+                          <span className="inline-flex items-center justify-center py-1.5 px-3.5 rounded-full bg-[#3D1825]/80 border border-[#B78C86]/50 text-[#D8BB94] text-xs font-bold tracking-wider whitespace-nowrap">
                             선천코드 프리미엄 궁합 리포트
                           </span>
                         </div>
@@ -260,19 +249,19 @@ export default function PremiumCompatibilityReportPage() {
                           선천코드로 읽는 <span className="gradient-text-reunion">두 사람의 인연 설계도</span>
                         </h3>
 
-                        {/* 3. 제목 아래 기울어진 핵심 문구 */}
-                        <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA] font-elegant italic opacity-95 leading-[1.6] break-keep">
-                          두 사람의 인연은 우연이 아니라 흐름입니다.
+                        {/* 3. 설명 문구 */}
+                        <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.7] font-light break-keep max-w-xl">
+                          서로를 있는 그대로 이해하는 순간, 소모적인 갈등은 멈추고 온전한 신뢰가 시작됩니다.
                         </p>
 
                         {/* 4. 가격 영역 & 5. 상품 정보 */}
-                        <div className="pt-1">
+                        <div className="pt-2">
                           <div className="flex flex-wrap items-baseline gap-3">
                             <span className="text-3xl sm:text-4xl md:text-[42px] font-elegant font-bold text-[#FAF7F2] tracking-tight">
                               59,000원
                             </span>
                             <span className="text-xs sm:text-sm text-[#D8BB94] font-medium tracking-wide">
-                              1:1 맞춤 PDF 리포트 · 오행 아트카드 + 오행 수호자 카드 증정
+                              1:1 맞춤 PDF 리포트 · 오행 아트카드 + 수호자 카드 2종 증정
                             </span>
                           </div>
                           <p className="text-[12px] sm:text-[13px] leading-[1.5] text-[#EDE6DA]/75 font-light mt-1.5 break-keep">
@@ -281,18 +270,18 @@ export default function PremiumCompatibilityReportPage() {
                         </div>
 
                         {/* 6. 구매 버튼 2개 */}
-                        <div className="flex flex-col sm:flex-row gap-3.5 pt-1 items-stretch sm:items-center">
+                        <div className="flex flex-col sm:flex-row gap-3.5 pt-2 items-stretch sm:items-center">
                           <button
                             type="button"
                             onClick={handleAddToCart}
-                            className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#B78C86]/40 text-[#D8BB94] hover:bg-[#5A2638]/30 hover:border-[#B78C86]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                            className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#B78C86]/45 text-[#D8BB94] hover:bg-[#5A2638]/25 hover:border-[#B78C86]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
                           >
                             장바구니 담기
                           </button>
                           <button
                             type="button"
                             onClick={handlePurchase}
-                            className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(90,38,56,0.4)] hover:shadow-[0_0_30px_rgba(183,140,134,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                            className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(90,38,56,0.5)] hover:shadow-[0_0_30px_rgba(183,140,134,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
                             style={{
                               background: 'linear-gradient(135deg, #5A2638 0%, #4A1F2D 100%)',
                               border: '1px solid rgba(199, 169, 122, 0.45)',
@@ -306,10 +295,10 @@ export default function PremiumCompatibilityReportPage() {
 
                       {/* 우측 (약 42%): 프리미엄 리포트 대표 목업 이미지 */}
                       <div className="lg:col-span-5 w-full flex justify-center">
-                        <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/30 group">
+                        <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B78C86]/35 shadow-2xl bg-black/30 group">
                           <Image
                             src="/image/compatibility/p2.webp"
-                            alt="선천코드로 읽는 두 사람의 인연 설계도"
+                            alt="선천코드 프리미엄 궁합 리포트 대표 이미지"
                             fill
                             className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                             sizes="(max-width: 1024px) 100vw, 420px"
@@ -321,72 +310,66 @@ export default function PremiumCompatibilityReportPage() {
                   </div>
                 </div>
 
-                {/* 7. 기존 공감 문구 (구매 버튼 아래로 이동) */}
+                {/* 2. 공감 서사 — 두 사람 사이에서 반복되는 고민 */}
                 <div className="max-w-3xl mx-auto mb-14 text-center">
                   <p className="text-2xl md:text-[34px] lg:text-[38px] text-white font-elegant font-bold leading-[1.3] break-keep mb-6">
-                    &ldquo;분명 사랑하는데,<br className="hidden sm:inline" />
-                    왜 우리는 같은 이유로 <span className="gradient-text-reunion">계속 상처를 주고받을까?</span>&rdquo;
+                    &ldquo;서로 사랑해서 시작했는데,<br className="hidden sm:inline" />
+                    왜 대화는 <span className="gradient-text-reunion">늘 벽에 부딪힐까요?</span>&rdquo;
                   </p>
                   <div className="text-[18px] text-[#EDE6DA]/90 space-y-3 font-light leading-relaxed break-keep max-w-2xl mx-auto">
-                    <p>한 사람은 대화를 원하고, 다른 사람은 입을 닫는다.</p>
-                    <p>한 사람은 확인받고 싶어 하고, 다른 사람은 간섭받는다고 느낀다.</p>
-                    <p>같은 사건인데 서로가 받아들이는 의미는 전혀 다르다.</p>
+                    <p>누구보다 가까워지고 싶어서 마음을 쏟았고, 서로에게 가장 좋은 사람이 되고 싶었습니다.</p>
+                    <p>하지만 사소한 말 한마디에 상처가 번지고, 풀리지 않는 감정의 침묵이 반복됩니다.</p>
                     <p className="pt-2 text-[#D8BB94] font-medium leading-relaxed">
-                      사랑이 부족해서가 아니라, 서로의 반응 방식이 충돌하고 있을 수 있습니다.
+                      혹시 두 사람은 서로를 사랑하는 마음만 앞섰지,<br className="hidden sm:inline" />
+                      서로의 타고난 기질과 관계의 작동 구조는 한 번도 제대로 들여다보지 못했던 것은 아닐까요?
                     </p>
                   </div>
                 </div>
 
-                {/* 8. 공감 문구 아래 추가 가로 이미지 (16:9, 교체 가능 구조) */}
-                <div className="relative w-full max-w-[1280px] mx-auto rounded-[40px] overflow-hidden border border-white/10 shadow-2xl group aspect-[16/9] bg-[#14080E]">
+                {/* 공감 가로 이미지 (16:9 비율 유지) */}
+                <div className="relative w-full max-w-[1280px] mx-auto rounded-[40px] overflow-hidden border border-[#B78C86]/25 shadow-2xl aspect-[16/9] bg-[#14080E] flex items-center justify-center">
                   <Image 
                     src={EMPATHY_IMAGE_CONFIG.src} 
                     alt={EMPATHY_IMAGE_CONFIG.alt}
                     width={EMPATHY_IMAGE_CONFIG.width}
                     height={EMPATHY_IMAGE_CONFIG.height}
-                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               </Reveal>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 02. 관계 반복 패턴 체크리스트 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 3. CHECKLIST — 관계 패턴 자가 점검 */}
             <CompatibilityPatternChecklist />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. 궁합이 좋다는 말보다 중요한 것은 왜 부딪히는지 아는 것 (차별화) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 4. 문제 분석 — 갈등 구조와 반복되는 반응 */}
             <CompatibilityCoreDifferentiation />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [교차 스토리 1] THE MOMENT OF UNDERSTANDING (좌측 텍스트 + 우측 이미지) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-24 md:mb-32">
-              <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 xl:gap-20 items-center">
-                  {/* 좌측 55%: 라벨 + 제목 + 본문 및 마지막 핵심 후킹 */}
-                  <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1">
+            {/* 5. THE MOMENT OF AWARENESS — 관계에 대한 각성 (교차 스토리 1) */}
+            <section className="mb-24 md:mb-32 w-full max-w-[1280px] mx-auto">
+              <Reveal className="w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-18 items-stretch">
+                  {/* 좌측 55%: 라벨 + 제목 + 본문 */}
+                  <div className="lg:col-span-7 space-y-6 text-left break-keep order-2 lg:order-1 flex flex-col justify-between py-1 lg:py-2">
                     <div>
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-                        THE MOMENT OF UNDERSTANDING
+                        THE MOMENT OF AWARENESS
                       </span>
                       <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold mb-6 leading-[1.3] break-keep">
-                        <span className="text-[#FAF7F2]">우리는 왜 같은 사랑을</span><br />
-                        <span className="gradient-text-reunion">서로 다른 방식으로 표현할까요?</span>
+                        <span className="text-[#FAF7F2]">왜 우리는 사랑하면서도</span><br />
+                        <span className="gradient-text-reunion">늘 비슷한 상처를 반복해 왔을까요?</span>
                       </h2>
                     </div>
 
                     {/* 본문 서사 */}
                     <div className="space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
                       <p>
-                        한 사람은 끊임없는 대화와 표현으로 사랑을 확인하려 하고, 다른 한 사람은 묵묵한 신뢰와 혼자만의 시간으로 관계를 지키려 합니다.
+                        누구보다 서로를 아끼고, 갈등이 생길 때마다 대화로 풀기 위해 노력했습니다.
                       </p>
                       <p className="text-[#FAF7F2] font-semibold">
-                        서로의 사랑 언어가 다르다는 사실을 모른 채 상대의 방식을 의심하고,<br />
-                        맞추기만을 강요하며 지쳐갔던 시간들.
+                        하지만 정작 상대가 무엇에 상처받고 왜 문을 닫아버리는지 모른 채,<br />
+                        나만의 방식으로만 다가가며 서로를 지치게 했던 시간들.
                       </p>
 
                       {/* 핵심 경각심 강조 카드 */}
@@ -402,37 +385,37 @@ export default function PremiumCompatibilityReportPage() {
                             하지만 기억하십시오.
                           </p>
                           <p className="text-white font-medium">
-                            상대의 마음을 내 방식대로만 짐작하는 것은 짙은 안개 속에서 길을 찾는 것과 같습니다.
+                            상대의 고유한 선천 기질과 감정의 결을 모른 채 쏟아붓는 노력은 오히려 상대의 숨을 막히게 할 수 있습니다.
                           </p>
                           <p className="text-[#D8BB94] font-semibold">
-                            서로의 선천코드를 모른 채 나누는 대화는 언제나 같은 오해의 벽에 부딪히게 되어 있습니다.
+                            두 사람의 선천코드를 모른 채 내리는 감정적 반응은 언제나 같은 갈등의 벽에 부딪히게 되어 있습니다.
                           </p>
                         </div>
                       </div>
 
-                      <p>
-                        내 감정의 결조차 온전히 이해받지 못했다고 느꼈기에, 늘 익숙한 관계 안에서도 외로웠던 것입니다.
+                      <p className="xl:whitespace-nowrap tracking-[-0.015em] lg:tracking-[-0.01em]">
+                        타고난 인연의 흐름을 읽지 못했기에, 늘 가장 가까운 곳에서 가장 외로웠던 것입니다.
                       </p>
                     </div>
 
                     {/* 구분선 및 마지막 핵심 메시지 */}
-                    <div className="pt-6 border-t border-[#935C6B]/25 mt-6">
+                    <div className="pt-6 border-t border-[#B78C86]/30 mt-6">
                       <p className="font-elegant font-bold text-[18px] sm:text-[20px] md:text-[22px] leading-[1.6] break-keep text-white">
-                        이제 상대방을 탓하기 전에,<br className="hidden sm:inline" />
-                        <span className="gradient-text-reunion"> 두 사람 사이에 흐르는 선천코드의 결을 먼저 펼쳐볼 때입니다.</span>
+                        이제 무작정 감정을 쏟아붓기 전에,<br className="hidden sm:inline" />
+                        <span className="gradient-text-reunion"> 두 사람 내면에 새겨진 인연의 선천코드를 먼저 펼쳐볼 때입니다.</span>
                       </p>
                     </div>
                   </div>
 
                   {/* 우측 45%: 세로 3:4 이미지 영역 */}
-                  <div className="lg:col-span-5 w-full flex flex-col items-center order-1 lg:order-2">
-                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#14080E] flex items-center justify-center transition-all duration-300 hover:border-[#D8BB94]/40">
+                  <div className="lg:col-span-5 w-full max-w-[420px] lg:max-w-[450px] xl:max-w-[460px] mx-auto lg:mx-0 flex flex-col items-center lg:items-end justify-start order-1 lg:order-2 lg:py-2">
+                    <div className="group relative w-full aspect-[3/4] lg:aspect-auto lg:h-full rounded-[28px] md:rounded-[36px] overflow-hidden shadow-2xl bg-[#14080E] flex items-center justify-center border border-[#B78C86]/25">
                       <Image
                         src={COMPATIBILITY_STORY_IMAGE_1.src}
                         alt={COMPATIBILITY_STORY_IMAGE_1.alt}
                         width={COMPATIBILITY_STORY_IMAGE_1.width}
                         height={COMPATIBILITY_STORY_IMAGE_1.height}
-                        className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover object-[center_20%] group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                         priority
                       />
                     </div>
@@ -441,15 +424,13 @@ export default function PremiumCompatibilityReportPage() {
               </Reveal>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [교차 스토리 2] THE HIDDEN CONNECTION (좌측 이미지 + 우측 텍스트) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-24 md:mb-32">
-              <Reveal>
+            {/* 6. THE HIDDEN FLOW — 두 사람의 선천코드에 숨은 관계 구조 (교차 스토리 2) */}
+            <section className="mb-24 md:mb-32 w-full max-w-[1280px] mx-auto">
+              <Reveal className="w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-16 items-stretch">
-                  {/* 좌측 45%: 세로형 3:4 이미지 영역 */}
-                  <div className="lg:col-span-5 w-full max-w-[420px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start justify-center">
-                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-white/10 shadow-2xl bg-[#14080E] flex items-center justify-center transition-all duration-300 hover:border-[#D8BB94]/40">
+                  {/* 좌측 45%: 세로 3:4 이미지 영역 */}
+                  <div className="lg:col-span-5 w-full max-w-[420px] lg:max-w-[450px] xl:max-w-[460px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start justify-start lg:py-2">
+                    <div className="group relative w-full aspect-[3/4] lg:aspect-auto lg:h-full rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#B78C86]/35 shadow-2xl bg-[#14080E] flex items-center justify-center transition-all duration-300 hover:border-[#D8BB94]/50">
                       <Image
                         src={COMPATIBILITY_STORY_IMAGE_2.src}
                         alt={COMPATIBILITY_STORY_IMAGE_2.alt}
@@ -463,37 +444,34 @@ export default function PremiumCompatibilityReportPage() {
 
                   {/* 우측 55%: 라벨 + 제목 + 본문 */}
                   <div className="lg:col-span-7 flex flex-col justify-between text-left break-keep lg:pl-6 xl:pl-8 py-1 lg:py-2 space-y-7 lg:space-y-0">
-                    {/* 상단 그룹: 라벨 + 메인 제목 + 본문 서사 */}
                     <div className="space-y-5">
                       <div>
                         <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
-                          THE HIDDEN CONNECTION
+                          THE HIDDEN FLOW
                         </span>
-                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mb-5 leading-[1.25] md:leading-[1.3] break-keep">
-                          두 사람의 사주를 함께 들여다보는 순간,<br />
-                          <span className="gradient-text-reunion">풀리지 않던 관계의 수수께끼가</span><br />
-                          풀리기 시작합니다.
+                        <h2 className="text-[20px] sm:text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white mb-5 leading-[1.3] md:leading-[1.35] break-keep">
+                          <span className="block">사주 속 인연의 구조를 마주하는 순간,</span>
+                          <span className="gradient-text-reunion">반복되던 갈등의 고리가 다르게</span> 보이기 시작합니다.
                         </h2>
                       </div>
 
                       {/* 본문 서사 */}
                       <div className="space-y-3.5 text-[17px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-light break-keep">
                         <p className="text-[#FAF7F2] font-medium">
-                          왜 한 사람은 갈등 앞에서 침묵을 택하고, 왜 다른 한 사람은 즉각적인 대답을 원했는지.
+                          왜 그 사람의 차가운 침묵이 나를 견딜 수 없게 했는지, 왜 나의 절박한 호소가 상대를 도망치게 했는지.
                         </p>
                         <p>
-                          우연이라 생각했던 부딪힘도, 상처가 되었던 대화의 방식도 모두 두 사람의 선천코드 속에 새겨진 <span className="text-[#D8BB94] font-semibold">반복되는 에너지의 상호작용</span>이었습니다.
+                          마음이 식어서도, 인연이 아니어서도 아니었습니다. 모두 두 사람의 선천코드 속에 자리 잡고 있던 <span className="text-[#D8BB94] font-semibold">관계 에너지의 충돌 알고리즘</span>이었습니다.
                         </p>
                       </div>
                     </div>
 
-                    {/* 하단 그룹: 솔루션 제안 + 하이라이트 박스 + 마무리 훅 */}
+                    {/* 하단 그룹: 강조 박스 + 마무리 훅 */}
                     <div className="space-y-3.5 text-[17px] md:text-[18px] leading-[1.8] break-keep">
                       <p className="text-[#FAF7F2] font-semibold">
-                        겉으로 드러난 갈등의 표면만 붙잡고 씨름하는 것은 더 이상 의미가 없습니다.
+                        단순한 궁합 점수나 단편적인 띠 맞추기는 더 이상 의미가 없습니다.
                       </p>
 
-                      {/* 강조 박스 */}
                       <div 
                         className="p-5 md:p-6 rounded-2xl border backdrop-blur-sm"
                         style={{
@@ -507,7 +485,6 @@ export default function PremiumCompatibilityReportPage() {
                         </p>
                       </div>
 
-                      {/* 마무리 훅 */}
                       <div className="pt-2">
                         <p className="font-elegant font-bold text-[19px] md:text-[22px] text-[#FAF7F2] leading-[1.7] break-keep">
                           <span className="text-[#D8BB94] font-semibold">그것이 소모적인 감정 싸움을 끝내고 온전한 신뢰로 나아가는 시작점입니다.</span>
@@ -519,79 +496,28 @@ export default function PremiumCompatibilityReportPage() {
               </Reveal>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 03. 일반적인 연애 조언이 충분하지 않은 이유 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilityAdviceComparison />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 04. 두 사람의 관계 구조 재정의 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 7. 관계 작동 구조와 3가지 핵심 분석 축 (INTERACTION DYNAMICS) */}
             <CompatibilityRelationshipDiagram />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [중간 구매 CTA 1차] BEGIN YOUR JOURNEY (와이드형 프리미엄 CTA) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-36 md:mb-40 max-w-4xl mx-auto px-4">
-              <Reveal>
-                <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#B78C86]/35 bg-gradient-to-b from-[#4A1F2D]/40 via-[#3A1623]/35 to-[#1A0A14]/45 text-center relative overflow-hidden shadow-2xl backdrop-blur-md">
-                  {/* 은은한 배경 오라 */}
-                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#5A2638]/20 rounded-full blur-[80px] pointer-events-none" />
+            {/* 8. DIFFERENT CHOICES — 같은 궁합 구조, 다른 관계 선택 사례 */}
+            <CompatibilityCaseComparison />
 
-                  <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D8BB94] uppercase mb-4">
-                    BEGIN YOUR JOURNEY
-                  </span>
+            {/* 9. PARADIGM SHIFT — 일반 궁합 질문과 백도화의 질문 비교 */}
+            <QuestionShiftComparison theme="compatibility" />
 
-                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white mb-4 leading-snug break-keep">
-                    두 사람의 인연을 <span className="gradient-text-reunion">다시 읽을 준비가 되셨나요?</span>
-                  </h3>
-
-                  <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed max-w-xl mx-auto break-keep mb-6">
-                    서로의 차이를 이해하고 우리 관계의 방향을 새롭게 바라보는 맞춤 궁합 리포트를 만나보세요.
-                  </p>
-
-                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#5A2638]/40 border border-[#B78C86]/40 text-xs md:text-sm text-[#D8BB94] font-medium mb-8">
-                    59,000원 · 1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 포함
-                  </div>
-
-                  {/* 구매 버튼 (기존 상단/하단 동작 재사용) */}
-                  <div className="flex flex-col sm:flex-row gap-3.5 max-w-md mx-auto items-stretch sm:items-center">
-                    <button
-                      type="button"
-                      onClick={handleAddToCart}
-                      className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#B78C86]/40 text-[#D8BB94] hover:bg-[#5A2638]/30 hover:border-[#B78C86]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
-                    >
-                      장바구니 담기
-                    </button>
-                    <button
-                      type="button"
-                      onClick={handlePurchase}
-                      className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(90,38,56,0.4)] hover:shadow-[0_0_30px_rgba(183,140,134,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
-                      style={{
-                        background: 'linear-gradient(135deg, #5A2638 0%, #4A1F2D 100%)',
-                        border: '1px solid rgba(199, 169, 122, 0.45)',
-                      }}
-                    >
-                      <span>바로 신청하기</span>
-                      <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
-                    </button>
-                  </div>
-                </div>
-              </Reveal>
-            </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* 신규 섹션: 왜, 선천코드 궁합 리포트인가? (차별점 & 처방전 철학) */}
+            {/* B. 차별성 및 심층 분석 영역 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
+
+            {/* 10. WHY SEONCHEON CODE — 궁합 리포트 차별성 소개 */}
             <WhyCompatibilityReport />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 01. 관계 특화 심층 분석 — 두 사람의 선천코드와 관계 흐름 집중 분석 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36">
+            {/* 11. POINT 01 — 두 사람의 관계 특화 심층 분석 */}
+            <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl">
+                  <div className="relative overflow-hidden rounded-[40px] border border-white/10 shadow-2xl bg-[#14080E]">
                     <Image 
                       src="/image/compatibility/p2.webp" 
                       alt="선천코드 궁합 리포트 개요" 
@@ -622,7 +548,7 @@ export default function PremiumCompatibilityReportPage() {
                         "오래가는 관계의 방향성",
                         "결혼/장기 관계 가능성"
                       ].map((item, idx) => (
-                        <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl">
+                        <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl border border-[#B78C86]/20 bg-gradient-to-b from-[#4A1F2D]/25 to-[#240C18]/30">
                           <div className="w-2 h-2 rounded-full bg-[#D8BB94] shadow-[0_0_10px_rgba(216,187,148,0.5)]"></div>
                           <span className="text-white/80">{item}</span>
                         </div>
@@ -633,15 +559,11 @@ export default function PremiumCompatibilityReportPage() {
               </Reveal>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 02: 선천코드 궁합 분석 방식 (명리 뼈대 + 관계 심리 교차 분석) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 12. POINT 02 — 선천코드와 관계심리 교차 분석 */}
             <CompatibilityAnalysisMethod />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 03. 두 사람만의 맞춤 궁합 해독 — 6가지 핵심 분석 축 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36">
+            {/* 13. POINT 03 — 무의식적 관계 패턴 및 6가지 핵심 분석 축 */}
+            <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="space-y-4 mb-16">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
@@ -672,7 +594,7 @@ export default function PremiumCompatibilityReportPage() {
                     ].map((item, idx) => (
                       <div 
                         key={idx} 
-                        className="detail-glass-card flex flex-col items-center text-center py-6 px-4 sm:px-5 md:px-5 rounded-[22px] md:rounded-[26px] group transition-all duration-300 border border-[#B78C86]/25 hover:border-[#C7A97A]/45 bg-gradient-to-b from-[#5A2638]/35 to-[#3A1623]/35 backdrop-blur-sm"
+                        className="detail-glass-card flex flex-col items-center text-center py-6 px-4 sm:px-5 md:px-5 rounded-[22px] md:rounded-[26px] group transition-all duration-300 border border-[#B78C86]/25 hover:border-[#D8BB94]/45 bg-gradient-to-b from-[#5A2638]/35 to-[#3A1623]/35 backdrop-blur-sm"
                       >
                         <div className="w-[52px] h-[52px] rounded-2xl bg-[#4A1F2D]/60 flex items-center justify-center border border-[#B78C86]/40 text-[#D8BB94] shadow-sm mb-3.5 group-hover:scale-105 group-hover:bg-[#5A2638]/60 transition-all duration-300">
                           <i className={`fas ${item.i} text-lg md:text-[19px]`}></i>
@@ -694,50 +616,21 @@ export default function PremiumCompatibilityReportPage() {
                     </p>
                   </div>
                 </div>
+
+                {/* 6대 관점 와이드 배너 */}
+                <div className="mt-16">
+                  <CompatibilitySixPerspectivesBanner />
+                </div>
               </Reveal>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 06. 같은 궁합도 다른 관계가 되는 이유 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilityCaseComparison />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 07. 일반 궁합 풀이와의 차별점 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilityComparisonTable />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. 당신은 아직도 미래가 어떻게 될지만 묻고 있습니까? (패러다임 전환) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <QuestionShiftComparison theme="compatibility" />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [6대 관점 파노라마 와이드 배너] SIX PERSPECTIVES */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilitySixPerspectivesBanner />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 08. 프리미엄 궁합 리포트 목차 공개 (7 PART & PART 07 강조) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 14. 7개 장의 궁합 리포트 목차 */}
             <CompatibilityReportTableOfContents />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [특별 증정품 안내] 나의 오행을 담은 특별한 선물 (오행 아트카드 + 수호자 카드 2종 증정) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilitySpecialGift />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* NEW. PART 07 실제 행동 대화 처방전 샘플 영역 (구체적 소통 솔루션) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilityPrescriptionSample />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* [목차 및 실전 처방 이후 슬림형 중간 CTA] 가로폭 맞춤 패널 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 md:mb-36 max-w-7xl mx-auto px-4">
-              <Reveal>
-                <div className="gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#B78C86]/30 bg-gradient-to-r from-[#4A1F2D]/40 via-[#3A1623]/30 to-[#4A1F2D]/40 relative overflow-hidden shadow-xl backdrop-blur-md">
+            {/* 15. PART 07 — 백도화 궁합 실천 처방 (목차 뒤 슬림형 중간 CTA 패널) */}
+            <section className="mb-0 w-full max-w-[1280px] mx-auto">
+              <Reveal className="w-full">
+                <div className="w-full gungjung-glass py-7 md:py-8 px-6 sm:px-8 md:px-10 lg:px-12 rounded-[24px] md:rounded-[30px] border border-[#B78C86]/35 bg-gradient-to-r from-[#4A1F2D]/50 via-[#2A0C1A]/60 to-[#4A1F2D]/50 relative overflow-hidden shadow-xl backdrop-blur-md">
                   {/* 은은한 배경 오라 */}
                   <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#5A2638]/15 rounded-full blur-[90px] pointer-events-none" />
 
@@ -756,6 +649,7 @@ export default function PremiumCompatibilityReportPage() {
                     {/* 우측 (약 38%): 구매 버튼 + 구성 안내 */}
                     <div className="w-full lg:w-[38%] flex flex-col items-center lg:items-end justify-center shrink-0">
                       <button 
+                        type="button"
                         onClick={handlePurchase}
                         className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] py-4 sm:py-4.5 px-7 sm:px-8 rounded-2xl font-bold text-base sm:text-[16.5px] hover:scale-[1.01] active:scale-95 transition-all duration-300 bg-gradient-to-br from-[#5A2638] to-[#4A1F2D] border border-[rgba(199,169,122,0.45)] text-[#FAF6EE] shadow-[0_4px_18px_rgba(90,38,56,0.35)] hover:shadow-[0_0_22px_rgba(183,140,134,0.45)] hover:brightness-110 text-center"
                       >
@@ -770,95 +664,210 @@ export default function PremiumCompatibilityReportPage() {
               </Reveal>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 09. 맞춤 리포트 제작 과정 */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilityProductionTimeline />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 10. 궁합 리포트 샘플 미리보기 (확대 라이트박스 및 이전/다음 지원) */}
+            {/* C. 개인 맞춤 상품 구성 영역 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
+
+            {/* 16. POINT 04 — 두 사람을 위한 1:1 맞춤 궁합 분석서 */}
+            <CompatibilityPersonalizedReportPoint />
+
+            {/* 17. PERSONALIZED SPECIAL GIFT — 오행 아트카드·수호자 카드 */}
+            <CompatibilitySpecialGift />
+
+            {/* 18. POINT 05 — 두 사람을 위한 실전 관계 처방 */}
+            <CompatibilityPrescriptionSample />
+
+            {/* 19. POINT 06 — 프리미엄 궁합 리포트 미리보기 */}
             <CompatibilityReportPreview />
 
+            {/* 20. PREMIUM COMPATIBILITY ARCHIVE — 프리미엄 소장용 관계 비급 */}
+            <CompatibilityRoyalArchivePoint />
+
+            {/* 21. COMPARISON MATRIX — 일반 궁합과 백도화 리포트 비교 */}
+            <CompatibilityComparisonTable />
+
+
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 11. 관계를 이해한 뒤 달라질 수 있는 선택 */}
+            {/* D. 변화와 감정적 설득 영역 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
+
+            {/* 22. 3단계 관계 변화 소개 & 23. 번호형 3개 변화 카드 */}
             <CompatibilityChangeScenario />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 12. 추천 대상과 맞지 않는 대상 (p3.webp & 추천 카드 보존) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilityRecommendedAudience />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 13. 가상 활용 시나리오 (4차 개편 완료) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 24. RELATIONSHIP SCENARIOS — 가상 관계 변화 사례 */}
             <CompatibilityTestimonials />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* FINAL AWAKENING: 피날레 에디토리얼 와이드 배너 (5차 신규 추가) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 25. FINAL AWAKENING — 서로의 다름을 이해하고 관계의 기준을 세우는 메시지 */}
             <CompatibilityRealTransformationBanner />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 14. 백도화의 궁합 분석 철학 (궁중 서신 편지 형태 보존) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <CompatibilityPhilosophy />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 15. 소장 가치와 오행 에너지 카드 (p5.webp 및 ReportCommonInfo 보존) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* 15-1. 소장 가치 6대 핵심 요소 요약 */}
-            <CompatibilityValueSummary />
-
-            {/* 15-2. 기존 프리미엄 섹션 (p5.webp 에셋 보존) */}
-            <section className="mb-40">
+            {/* 26. BEGIN YOUR JOURNEY — 중간 신청 유도 CTA */}
+            <section className="mb-36 md:mb-40 max-w-4xl mx-auto px-4">
               <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="space-y-10 order-2 lg:order-1">
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                      소장하고 싶은 <br /> <span className="gradient-text-reunion">프리미엄 궁합 리포트</span>
-                    </h2>
-                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      프리미엄 궁합 리포트는 한 번 읽고 끝나는 결과지가 아니라, 두 사람의 관계를 다시 바라보게 만드는 개인 맞춤형 감성 리포트입니다.{"\n\n"}
-                      서로의 성향, 반복되는 관계 패턴, 끌림과 거리감의 이유, 그리고 더 나은 사랑을 위한 방향성을 백도화만의 언어로 정리해드립니다.
-                    </p>
+                <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#B78C86]/35 bg-gradient-to-b from-[#4A1F2D]/40 via-[#3A1623]/35 to-[#1A0A14]/45 text-center relative overflow-hidden shadow-2xl backdrop-blur-md">
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#5A2638]/20 rounded-full blur-[80px] pointer-events-none" />
+
+                  <span className="block font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] text-[#D8BB94] uppercase mb-4">
+                    BEGIN YOUR JOURNEY
+                  </span>
+
+                  <h3 className="text-2xl md:text-[34px] font-elegant font-bold text-white mb-4 leading-snug break-keep">
+                    두 사람의 인연을 <span className="gradient-text-reunion">다시 읽을 준비가 되셨나요?</span>
+                  </h3>
+
+                  <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed max-w-xl mx-auto break-keep mb-6">
+                    서로의 차이를 이해하고 우리 관계의 방향을 새롭게 바라보는 맞춤 궁합 리포트를 만나보세요.
+                  </p>
+
+                  <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#5A2638]/40 border border-[#B78C86]/40 text-xs md:text-sm text-[#D8BB94] font-medium mb-8">
+                    59,000원 · 1:1 맞춤 PDF · 오행 아트카드 + 수호자 카드 2종 포함
                   </div>
-                  <div className="order-1 lg:order-2 relative group">
-                    <div className="absolute -inset-10 bg-[#663244]/15 blur-[60px] rounded-full"></div>
-                    <Image 
-                      src="/image/compatibility/p5.webp" 
-                      alt="Premium Design" 
-                      width={800}
-                      height={600}
-                      className="relative z-10 w-full h-auto rounded-[60px] shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10 transition-transform duration-1000 group-hover:scale-[1.03]" 
-                    />
+
+                  {/* 구매 버튼 */}
+                  <div className="flex flex-col sm:flex-row gap-3.5 max-w-md mx-auto items-stretch sm:items-center">
+                    <button
+                      type="button"
+                      onClick={handleAddToCart}
+                      className="py-3.5 px-6 rounded-2xl font-bold text-sm md:text-base border border-[#B78C86]/40 text-[#D8BB94] hover:bg-[#5A2638]/30 hover:border-[#B78C86]/70 transition-all duration-300 text-center shrink-0 order-2 sm:order-1"
+                    >
+                      장바구니 담기
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handlePurchase}
+                      className="py-4 px-8 rounded-2xl font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] shadow-[0_4px_20px_rgba(90,38,56,0.4)] hover:shadow-[0_0_30px_rgba(183,140,134,0.45)] hover:brightness-110 flex-1 order-1 sm:order-2"
+                      style={{
+                        background: 'linear-gradient(135deg, #5A2638 0%, #4A1F2D 100%)',
+                        border: '1px solid rgba(199, 169, 122, 0.45)',
+                      }}
+                    >
+                      <span>바로 신청하기</span>
+                      <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
+                    </button>
                   </div>
                 </div>
               </Reveal>
             </section>
 
-            {/* 15-3. 기존 오행 에너지 카드 5종 및 제작/수령 안내 (ReportCommonInfo 보존, isCompatibility={true}) */}
-            <section className="mb-40">
-              <ReportCommonInfo isCompatibility={true} />
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* E. 추천 대상 및 정보 안내 영역 */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+
+            {/* 27. TARGET AUDIENCE — 두 분을 위한 리포트인가요? */}
+            <CompatibilityRecommendedAudience />
+
+            {/* 28. LIFELONG COMPASS FOR TWO — 다시 펼쳐보는 관계 설계도 */}
+            <CompatibilityValueSummary />
+
+            {/* 29. PROCESS & INFO — 제작 및 전달 과정 (풍요 2단 그리드 완벽 일치) */}
+            <section className="mb-32 md:mb-40">
+              <div className="relative">
+                <Reveal>
+                  <div className="text-center mb-16 space-y-4">
+                    <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
+                      PROCESS & INFO
+                    </span>
+                    <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-wide">
+                      리포트는 <span className="gradient-text-reunion">이렇게</span> <span className="text-[#D8BB94]">준비됩니다</span>
+                    </h2>
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light leading-relaxed">
+                      백도화의 선천코드 프리미엄 궁합 리포트는 신청자 두 분의 선천 정보를 바탕으로<br />
+                      정성스럽게 분석하여 작성되는 디지털 리포트입니다.
+                    </p>
+                  </div>
+                </Reveal>
+
+                <div className="grid lg:grid-cols-12 gap-8 w-full max-w-[1280px] mx-auto items-stretch">
+                  {/* 리포트 분석 및 전달 과정 (좌측 7칸) */}
+                  <div className="lg:col-span-7 h-full">
+                    <Reveal className="h-full">
+                      <div className="gungjung-glass p-8 border-[#B78C86]/20 h-full flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                            <span className="w-1.5 h-6 bg-[#D8BB94] rounded-full"></span>
+                            리포트 분석 및 전달 과정
+                          </h3>
+
+                          <div className="space-y-8 relative pl-6 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-white/10">
+                            {[
+                              { title: "STEP 01. 두 분의 선천 정보 입력 및 신청", desc: "신청 시 작성해주신 본인 및 상대방의 생년월일시 등 선천 정보를 기준으로 분석 준비가 시작됩니다." },
+                              { title: "STEP 02. 선천 기질 및 상호작용 정밀 해석", desc: "두 분의 타고난 기질 조화, 무의식적 끌림의 이유, 반복되는 갈등의 뿌리와 현실적 소통 방식을 종합 분석합니다." },
+                              { title: "STEP 03. 맞춤형 디지털 리포트 전달", desc: "완성된 리포트는 언제든 다시 펼쳐보며 관계를 점검하실 수 있도록 디지털 문서(PDF) 형태로 전달됩니다." },
+                              { title: "STEP 04. 정보 확인 안내", desc: "두 분의 생년월일시 등 입력 정보에 따라 해석 방향이 달라질 수 있으므로 신청 전 정보를 정확히 확인해 주세요." }
+                            ].map((step, idx) => (
+                              <div key={idx} className="relative group">
+                                <div className="absolute -left-[22px] top-1.5 w-3 h-3 rounded-full bg-[#1A0A14] border-2 border-[#D8BB94] group-hover:bg-[#D8BB94] transition-colors duration-300"></div>
+                                <h4 className="text-base font-bold text-white mb-2">{step.title}</h4>
+                                <p className="text-sm text-[#EDE6DA]/60 break-keep font-light">{step.desc}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </Reveal>
+                  </div>
+
+                  {/* 정확한 분석을 위해 필요한 정보 (우측 5칸) */}
+                  <div className="lg:col-span-5 h-full">
+                    <Reveal className="h-full">
+                      <div className="gungjung-glass p-8 border-[#B78C86]/20 h-full flex flex-col justify-between bg-gradient-to-b from-white/[0.02] to-transparent">
+                        <div>
+                          <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                            <span className="w-1.5 h-6 bg-[#D8BB94] rounded-full"></span>
+                            정확한 분석을 위해 필요한 정보
+                          </h3>
+                          <p className="text-sm text-[#EDE6DA]/50 mb-8 break-keep font-light">
+                            두 분의 정밀한 궁합 분석을 위해 아래의 기본 정보가 필요합니다.
+                          </p>
+
+                          <div className="grid grid-cols-2 gap-3 mb-6">
+                            {[
+                              { label: "신청자 및 상대방 이름", icon: "fa-user-group" },
+                              { label: "두 분의 생년월일", icon: "fa-calendar-days" },
+                              { label: "두 분의 태어난 시간", icon: "fa-clock" },
+                              { label: "양력/음력 구분", icon: "fa-circle-half-stroke" },
+                              { label: "성별 및 관계 상태", icon: "fa-heart" },
+                              { label: "리포트 수령 이메일", icon: "fa-envelope" }
+                            ].map((info, idx) => (
+                              <div key={idx} className="flex items-center gap-3 p-3 bg-white/[0.02] rounded-xl border border-white/5">
+                                <div className="w-8 h-8 rounded-lg bg-[#5A2638]/30 flex items-center justify-center text-[#D8BB94] shrink-0">
+                                  <i className={`fas ${info.icon} text-xs`}></i>
+                                </div>
+                                <span className="text-xs text-[#EDE6DA]/80 font-medium">{info.label}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* 출생시간 안내 박스 */}
+                        <div className="pt-5 border-t border-white/10 space-y-1.5">
+                          <p className="text-xs md:text-[13px] font-bold text-[#D8BB94] flex items-center gap-1.5 break-keep">
+                            <i className="fas fa-circle-info text-[11px] shrink-0 text-[#D8BB94]"></i>
+                            <span>출생시간을 모르셔도 신청하실 수 있습니다.</span>
+                          </p>
+                          <p className="text-xs text-[#EDE6DA]/75 leading-relaxed break-keep font-light pl-4">
+                            다만 한 분 또는 두 분의 출생시간이 확인되지 않으면 시주(時柱)를 포함한 일부 심층 궁합 분석이 제한될 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+                    </Reveal>
+                  </div>
+                </div>
+              </div>
             </section>
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 16. 자주 묻는 질문 FAQ (10개 항목 아코디언) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 30. FREQUENTLY ASKED QUESTIONS — FAQ */}
             <CompatibilityFAQ />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 17. 구매 전 안내 (6대 중요 안내 사항) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 31. PURCHASE NOTICE — 구매 전 확인사항 */}
             <CompatibilityPurchaseNotice />
 
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* SECTION 18. 최종 구매 CTA (이미지와 텍스트·구매 카드 분리 구조) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* 32. BEGIN YOUR JOURNEY — 최종 신청 CTA */}
             <section className="mb-20 md:mb-24 w-full max-w-[1280px] mx-auto">
               <Reveal>
-                {/* ① 16:9 와이드 단독 대표 이미지 (오버레이 제거) */}
+                {/* ① 16:9 와이드 단독 대표 이미지 */}
                 <div className="relative w-full rounded-[40px] overflow-hidden border border-white/10 shadow-2xl aspect-[16/9] bg-[#14080E] mb-14 md:mb-16 group">
                   <Image 
                     src="/image/compatibility/p6.webp" 
