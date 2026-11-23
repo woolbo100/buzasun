@@ -52,17 +52,17 @@ import CompatibilityPurchaseNotice from '@/components/reports/compatibility-repo
 // 히어로 & 공감 섹션 가로 16:9 이미지 설정 (교체 가능 구조)
 // ══════════════════════════════════════════════════════════════════════
 const HERO_IMAGE_CONFIG = {
-  src: '/image/compatibility/p1.webp',
-  alt: '선천코드 프리미엄 궁합 리포트 메인 히어로 16:9',
-  width: 1440,
-  height: 810,
+  src: '/image/compatibility/compatibility-royal-peony-hero.webp',
+  alt: '선천코드 프리미엄 궁합 리포트 메인 히어로 - 궁중 모란과 인연 설계도',
+  width: 1672,
+  height: 941,
 }
 
 const EMPATHY_IMAGE_CONFIG = {
-  src: '/image/compatibility/p2.webp',
-  alt: '선천코드 프리미엄 궁합 리포트 관계의 반복 패턴 공감 16:9',
-  width: 1440,
-  height: 810,
+  src: '/image/compatibility/compatibility-pattern-awakening-banner.webp',
+  alt: '서로 다른 감정과 관계 패턴을 암시하는 궁합 리포트 감성 이미지',
+  width: 1672,
+  height: 941,
 }
 
 // 교차 스토리 1 & 2 세로 3:4 이미지 설정
@@ -198,7 +198,6 @@ export default function PremiumCompatibilityReportPage() {
                     priority
                     className="w-full h-full object-cover" 
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 
                 {/* 4. 메인 히어로 하단 문제 제기형 인트로 섹션 (풍요 리포트와 동일한 구조) */}
@@ -251,8 +250,8 @@ export default function PremiumCompatibilityReportPage() {
                         </h3>
 
                         {/* 3. 설명 문구 */}
-                        <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.7] font-light break-keep max-w-2xl">
-                          서로를 있는 그대로 이해하는 순간, 소모적 갈등은 멈추고 온전한 신뢰가 시작됩니다.
+                        <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 leading-[1.7] font-light break-keep lg:whitespace-nowrap">
+                          서로를 있는 그대로 이해하는 순간, 소모적 갈등은 멈추고 깊은 신뢰가 시작됩니다.
                         </p>
 
                         {/* 4. 가격 영역 & 5. 상품 정보 */}
@@ -298,8 +297,8 @@ export default function PremiumCompatibilityReportPage() {
                       <div className="lg:col-span-5 w-full flex justify-center">
                         <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B78C86]/35 shadow-2xl bg-black/30 group">
                           <Image
-                            src="/image/compatibility/p2.webp"
-                            alt="선천코드 프리미엄 궁합 리포트 대표 이미지"
+                            src="/image/compatibility/compatibility-royal-bond-blueprint.webp"
+                            alt="선천코드 프리미엄 궁합 리포트 인연 설계도"
                             fill
                             className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                             sizes="(max-width: 1024px) 100vw, 420px"
@@ -337,7 +336,6 @@ export default function PremiumCompatibilityReportPage() {
                     height={EMPATHY_IMAGE_CONFIG.height}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0514]/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               </Reveal>
             </section>
@@ -355,17 +353,17 @@ export default function PremiumCompatibilityReportPage() {
                   {/* 좌측 55%: 라벨 + 제목 + 본문 (상단 정렬 및 자연스러운 흐름) */}
                   <div className="lg:col-span-7 text-left break-keep order-2 lg:order-1 flex flex-col justify-start py-1 lg:py-2">
                     <div>
-                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
+                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-3 md:mb-4">
                         THE MOMENT OF UNDERSTANDING
                       </span>
-                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold mb-6 leading-[1.3] break-keep">
+                      <h2 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold leading-[1.3] break-keep mb-0">
                         <span className="text-[#FAF7F2]">우리는 왜 같은 사랑을</span><br />
                         <span className="gradient-text-reunion">서로 다른 방식으로 표현할까요?</span>
                       </h2>
                     </div>
 
-                    {/* 본문 서사 */}
-                    <div className="mt-7 md:mt-8 space-y-4 md:space-y-4.5 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
+                    {/* 본문 서사 (제목과 첫 번째 설명 사이: PC 기준 약 24~28px) */}
+                    <div className="mt-6 md:mt-7 space-y-3.5 md:space-y-4 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] md:leading-[1.8] break-keep">
                       <p>
                         누구보다 서로를 아끼고, 갈등이 생길 때마다 대화로 풀기 위해 노력했습니다.
                       </p>
@@ -375,15 +373,15 @@ export default function PremiumCompatibilityReportPage() {
                       </p>
                     </div>
 
-                    {/* 핵심 경각심 강조 카드 */}
+                    {/* 핵심 경각심 강조 카드 (굵은 문구와 박스 간격: 약 20~24px) */}
                     <div 
-                      className="mt-6 md:mt-7 p-5 sm:p-6 rounded-2xl border text-left backdrop-blur-sm"
+                      className="mt-5 md:mt-6 p-4 sm:p-5 rounded-2xl border text-left backdrop-blur-sm"
                       style={{
                         background: 'rgba(90, 38, 56, 0.35)',
                         borderColor: 'rgba(183, 140, 134, 0.30)',
                       }}
                     >
-                      <div className="font-elegant text-[16px] md:text-[17.5px] leading-[1.7] break-keep space-y-2">
+                      <div className="font-elegant text-[16px] md:text-[17.5px] leading-[1.6] break-keep space-y-1.5 md:space-y-2">
                         <p className="font-bold text-[#D8BB94]">
                           하지만 기억하십시오.
                         </p>
@@ -396,12 +394,13 @@ export default function PremiumCompatibilityReportPage() {
                       </div>
                     </div>
 
-                    <p className="mt-6 md:mt-7 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.8] break-keep">
+                    {/* 박스 아래 설명 (간격: 약 18~22px) */}
+                    <p className="mt-[18px] md:mt-5 text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-[1.75] md:leading-[1.8] break-keep">
                       타고난 인연의 흐름을 읽지 못했기에, 늘 가장 가까운 곳에서 가장 외로웠던 것입니다.
                     </p>
 
-                    {/* 구분선 및 마지막 핵심 메시지 */}
-                    <div className="mt-6 md:mt-7 pt-6 md:pt-7 border-t border-[#B78C86]/30">
+                    {/* 구분선 및 마지막 핵심 메시지 (구분선 위 20~24px, 아래 20~24px) */}
+                    <div className="mt-5 md:mt-6 pt-5 md:pt-6 border-t border-[#B78C86]/30">
                       <p className="font-elegant font-bold text-[18px] sm:text-[20px] md:text-[22px] leading-[1.6] break-keep text-white">
                         이제 무작정 감정을 쏟아붓기 전에,<br className="hidden sm:inline" />
                         <span className="gradient-text-reunion"> 두 사람 내면에 새겨진 인연의 선천코드를 먼저 펼쳐볼 때입니다.</span>

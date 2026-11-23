@@ -6,13 +6,12 @@ import { MessageSquareOff, HeartCrack, RefreshCw } from 'lucide-react'
 
 // ══════════════════════════════════════════════════════════════════════
 // 갈등 구조 분석(CONFLICT STRUCTURE ANALYSIS) 16:9 가로형 비주얼 설정
-// 향후 실제 이미지 파일 생성 시 src 경로만 입력하면 즉시 교체 적용됩니다.
 // ══════════════════════════════════════════════════════════════════════
 const COMPATIBILITY_CONFLICT_VISUAL = {
-  src: '', // 예: '/image/compatibility/conflict-structure.webp'
-  alt: '선천코드 프리미엄 궁합 리포트 갈등 구조 분석 16:9',
-  width: 1600,
-  height: 900,
+  src: '/image/compatibility/compatibility-conflict-pattern-banner.webp',
+  alt: '선천코드 프리미엄 궁합 리포트 갈등 구조 분석 - 왜 우리는 계속 같은 자리를 맴돌까요?',
+  width: 1672,
+  height: 941,
 }
 
 export default function CompatibilityCoreDifferentiation() {
@@ -35,8 +34,8 @@ export default function CompatibilityCoreDifferentiation() {
   ]
 
   return (
-    <section className="mb-40">
-      <Reveal>
+    <section className="mb-40 w-full max-w-[1280px] mx-auto">
+      <Reveal className="w-full">
         <div className="max-w-4xl mx-auto text-center mb-10 md:mb-12">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             CONFLICT STRUCTURE ANALYSIS
