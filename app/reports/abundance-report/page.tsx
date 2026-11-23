@@ -836,7 +836,8 @@ export default function AbundanceReportPage() {
                       리포트는 <span className="text-[#8FB4A4]">이렇게</span> <span className="text-[#E6BE8A]">준비됩니다</span>
                     </h2>
                     <p className="text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light leading-relaxed">
-                      백도화의 선천코드 풍요 리포트는 신청자분의 선천 정보를 바탕으로 정성스럽게 분석하여 작성되는 디지털 리포트입니다.
+                      백도화의 선천코드 풍요 리포트는 신청자분의 선천 정보를 바탕으로<br />
+                      정성스럽게 분석하여 작성되는 디지털 리포트입니다.
                     </p>
                   </div>
                 </Reveal>
