@@ -10,7 +10,7 @@ interface CompatibilityPersonalizedReportPointProps {
 }
 
 export default function CompatibilityPersonalizedReportPoint({
-  imageSrc = '/image/compatibility/p4.webp'
+  imageSrc = '/image/compatibility/compatibility-point04-personalized-report.webp'
 }: CompatibilityPersonalizedReportPointProps) {
   const [imageError, setImageError] = useState(false)
 

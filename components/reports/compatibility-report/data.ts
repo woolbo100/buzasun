@@ -203,8 +203,9 @@ export const compatibilityTableOfContentsData = {
   parts: [
     {
       id: "part-1",
-      number: "PART 01",
-      title: "제1장. 우리의 매력코드 — 두 개의 선천코드가 말해주는 연애기질",
+      number: "CHAPTER 01",
+      title: "우리의 매력코드",
+      subtitle: "두 개의 선천코드가 말해주는 연애기질",
       summary: "각자의 선천 기질과 사랑할 때 드러나는 서로의 매력 및 연애 성향을 살펴보는 장.",
       items: [
         "01. 두 사람의 선천적 연애 성향",
@@ -215,8 +216,9 @@ export const compatibilityTableOfContentsData = {
     },
     {
       id: "part-2",
-      number: "PART 02",
-      title: "제2장. 서로를 끌어당기는 힘 — 왜 우리는 서로에게 끌렸을까",
+      number: "CHAPTER 02",
+      title: "서로를 끌어당기는 힘",
+      subtitle: "왜 우리는 서로에게 끌렸을까",
       summary: "서로에게 매료된 심리적·감각적 끌림의 원천과 관계 초반의 신호를 살펴보는 장.",
       items: [
         "05. 서로를 끌어당기는 힘",
@@ -227,8 +229,9 @@ export const compatibilityTableOfContentsData = {
     },
     {
       id: "part-3",
-      number: "PART 03",
-      title: "제3장. 우리의 인연 구조 — 배우자궁이 말하는 두 사람의 자리",
+      number: "CHAPTER 03",
+      title: "우리의 인연 구조",
+      subtitle: "배우자궁이 말하는 두 사람의 자리",
       summary: "배우자궁과 선천적 인연 강도를 통해 두 사람이 함께 만들어갈 관계의 구조를 살펴보는 장.",
       items: [
         "09. 두 사람의 인연 강도와 유형",
@@ -239,8 +242,9 @@ export const compatibilityTableOfContentsData = {
     },
     {
       id: "part-4",
-      number: "PART 04",
-      title: "제4장. 관계가 꼬이는 지점 — 반복되는 갈등과 기울어진 균형",
+      number: "CHAPTER 04",
+      title: "관계가 꼬이는 지점",
+      subtitle: "반복되는 갈등과 기울어진 균형",
       summary: "반복되는 다툼의 원인과 감정 표현·방어 방식의 차이에서 오는 마찰을 살펴보는 장.",
       items: [
         "13. 반복되는 갈등 패턴",
@@ -251,8 +255,9 @@ export const compatibilityTableOfContentsData = {
     },
     {
       id: "part-5",
-      number: "PART 05",
-      title: "제5장. 우리에게 맞는 사랑의 방식 — 서로의 결에 맞춘 관계의 기준",
+      number: "CHAPTER 05",
+      title: "우리에게 맞는 사랑의 방식",
+      subtitle: "서로의 결에 맞춘 관계의 기준",
       summary: "두 사람만의 소통 기준을 세우고 감정 소모를 줄이는 건강한 사랑의 포지션을 살펴보는 장.",
       items: [
         "17. 관계에서 지켜야 할 두 사람의 기준",
@@ -263,8 +268,9 @@ export const compatibilityTableOfContentsData = {
     },
     {
       id: "part-6",
-      number: "PART 06",
-      title: "제6장. 관계의 흐름과 타이밍 — 두 사람의 사랑이 흐르는 계절",
+      number: "CHAPTER 06",
+      title: "관계의 흐름과 타이밍",
+      subtitle: "두 사람의 사랑이 흐르는 계절",
       summary: "두 사람의 관계 주기와 사랑이 깊어지는 시기, 주의가 필요한 타이밍을 살펴보는 장.",
       items: [
         "21. 현재 두 사람의 관계 흐름",
@@ -275,8 +281,9 @@ export const compatibilityTableOfContentsData = {
     },
     {
       id: "part-7",
-      number: "PART 07",
-      title: "제7장. 백도화 궁합 처방 — 두 사람을 위한 맞춤 실천전략",
+      number: "CHAPTER 07",
+      title: "백도화 궁합 처방",
+      subtitle: "두 사람을 위한 맞춤 실천전략",
       summary: "반복되는 갈등을 줄이고 서로의 차이를 존중하기 위한 실질적인 행동 전략을 정리하는 장.",
       isSpecial: true,
       items: [
@@ -291,10 +298,26 @@ export const compatibilityTableOfContentsData = {
     title: "좋은 궁합을 기다리는 것보다,\n서로를 이해하는 방법을 아는 것이 중요합니다.",
     subTitle: "리포트의 결론은 단순한 길흉 판정이 아닌, 두 사람이 평화롭게 공존할 수 있는 실천적 조율 가이드입니다.",
     features: [
-      { num: "25", title: "지금 가장 먼저 바꿔야 할 관계 습관", desc: "매번 같은 지점에서 다툼이 번지던 무의식적 스위치를 식별하고 멈추는 법" },
-      { num: "26", title: "서로에게 필요한 심리적 조언", desc: "상대의 침묵이나 재촉이 공격이 아닌 방어였음을 깨닫고 포용하는 통찰" },
-      { num: "27", title: "반복 갈등을 줄이기 위한 현실적인 행동 가이드", desc: "서로의 심리적 안전거리를 침범하지 않으면서 진심을 전하는 소통 규칙" },
-      { num: "28", title: "두 사람을 위한 백도화 메시지", desc: "서로의 다름을 인정하고 더 깊은 신뢰로 나아가기 위한 백도화의 진솔한 조언" }
+      {
+        num: "25",
+        title: "두 사람의 이상적인 거리두기와 개인 영역 존중",
+        desc: "함께하는 친밀한 시간과 각자의 독립 시간을 조율하는 맞춤 관계 비율"
+      },
+      {
+        num: "26",
+        title: "두 사람을 위한 커플 개운 생활 습관",
+        desc: "따뜻한 차와 산책, 감사 표현으로 일상의 조화를 만드는 실천 루틴"
+      },
+      {
+        num: "27",
+        title: "평생의 파트너십을 위한 5대 관계 헌장",
+        desc: "침묵 대신 대화하고, 서로의 자율성과 존중을 지키는 다섯 가지 약속"
+      },
+      {
+        num: "28",
+        title: "두 사람에게 전하는 백도화의 마지막 메시지",
+        desc: "서로의 다름을 품고 함께 걸어갈 미래를 위한 맞춤형 축복과 관계 선언"
+      }
     ]
   }
 }
