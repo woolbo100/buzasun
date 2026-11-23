@@ -2,10 +2,11 @@
 
 import Image from 'next/image'
 import Reveal from '@/components/Reveal'
+import WealthAnalysisMethod from './WealthAnalysisMethod'
 
 export default function WealthRealTransformationBanner() {
   return (
-    <section className="mb-20 md:mb-28 w-full max-w-[1280px] mx-auto">
+    <section className="mb-28 md:mb-36 w-full max-w-[1280px] mx-auto">
       <Reveal className="w-full">
         {/* FINAL AWAKENING: 통합 와이드 레이아웃 에디토리얼 디자인 */}
         <div>
@@ -16,62 +17,64 @@ export default function WealthRealTransformationBanner() {
             </span>
 
             {/* (2) 메인 제목 */}
-            <h2 className="text-[26px] sm:text-[30px] md:text-[38px] lg:text-[40px] font-elegant font-bold text-white mb-6 md:mb-8 leading-[1.3] break-keep max-w-4xl mx-auto">
-              내 안의 풍요를 깨우고,<br className="hidden sm:inline" />{' '}
-              <span className="gradient-text-abundance">부의 흐름을 다시 읽습니다.</span>
+            <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] mb-6 md:mb-8 leading-[1.3] break-keep max-w-4xl mx-auto">
+              내 풍요의 결을 세우고,<br className="hidden sm:inline" />{' '}
+              <span className="gradient-text-abundance">돈의 기준을 다시 씁니다.</span>
             </h2>
 
-            {/* (3) 제목 아래 설명 */}
-            <div className="max-w-3xl mx-auto mb-6 md:mb-8">
+            {/* (3) 설명 문구 3단락 (연애 리포트와 동일한 3단락 구성, 단락 사이 여백 유지) */}
+            <div className="max-w-3xl mx-auto space-y-6 md:space-y-7 mb-10 md:mb-14">
               <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep">
-                풍요를 바란다고 해서 언제나 같은 방식으로 돈을 선택하는 것은 아닙니다.<br />
-                어떤 순간에는 기회를 붙잡고, 어떤 순간에는 익숙한 두려움이나 오래된 습관에 따라 움직이기도 합니다.
+                남의 성공 공식을 좇으며 조급해하던 시간은 끝났습니다.<br className="hidden sm:inline" />{' '}
+                이제는 나만의 고유한 재물 기질을 깨우고,<br className="hidden sm:inline" />{' '}
+                어디에 자원과 에너지를 흘려보낼지 당당하게 선택할 차례입니다.
+              </p>
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep">
+                자신의 선천코드를 읽고, 그 안에 숨겨진<br className="hidden sm:inline" />{' '}
+                <span className="text-[#8FB4A4] font-semibold">&lsquo;나만의 풍요 작동 방식&rsquo;</span>을 정확히 꿰뚫는 순간,<br className="hidden sm:inline" />{' '}
+                돈과 기회의 판도는 달라지기 시작합니다.
+              </p>
+              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep">
+                더 이상 막연한 재물운이나 불안한 기대로 나를 소모하지 않습니다.<br className="hidden sm:inline" />{' '}
+                내 풍요의 결이 선명해지고 선택의 기준이 세워질 때,<br className="hidden sm:inline" />{' '}
+                나는 비로소 돈의 흐름과 주도권을 쥐게 됩니다.
               </p>
             </div>
 
-            {/* (4) 중간 핵심 메시지 (본문 간 간격 28~32px, line-height 1.6) */}
-            <div className="max-w-3xl mx-auto space-y-7 md:space-y-8 mb-10 md:mb-14">
-              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep">
-                나의 선천코드와 실제 재정 경험을 함께 살펴보면, 돈 앞에서 반복해 온 생각과 감정, 선택의 방식이 조금씩 드러날 수 있습니다.<br />
-                중요한 것은 정해진 부의 운명을 기다리는 것이 아니라,{' '}
-                <span className="text-[#8FB4A4] font-semibold">나의 자원과 현실적 여건을 깊이 이해하는 일</span>입니다.
-              </p>
-              <p className="text-[16px] sm:text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-light leading-[1.6] break-keep">
-                나에게 맞지 않는 성공 공식을 무조건 따라갈 필요는 없습니다. 내가 가진 강점과 부족한 부분을 알아차리고, 현재의 조건 안에서 실천할 수 있는 작은 선택부터 다시 설계합니다.<br />
-                풍요는 막연한 기대가 아니라 나의 삶에서 지속할 수 있는{' '}
-                <span className="text-[#E6BE8A] font-semibold">선택과 행동을 통해 만들어갈 방향</span>입니다.
-              </p>
-            </div>
-
-            {/* (5) 마지막 각성 인용문 (데스크톱 정확히 2줄, 상하 가로 구분선) */}
+            {/* (4) 마지막 각성 인용문 (데스크톱 정확히 2줄, 상하 가로 구분선) */}
             <div className="my-10 md:my-14 py-8 md:py-10 border-y border-[#608F82]/25 max-w-4xl mx-auto">
               <p className="font-elegant font-bold text-xl sm:text-2xl md:text-[26px] leading-[1.5] break-keep">
-                <span className="text-[#FAF7F2] block">&ldquo;언제 부자가 될지를 묻지 마세요.</span>
-                <span className="text-[#8FB4A4] block mt-1.5 md:mt-2">돈 앞에서 반복해 온 나의 선택부터 읽으세요.&rdquo;</span>
+                <span className="text-[#FAF7F2] block">&ldquo;언제 돈이 들어올지를 묻지 마세요.</span>
+                <span className="gradient-text-abundance block mt-1.5 md:mt-2">왜 같은 흐름과 선택을 반복해 왔는지부터 읽으세요.&rdquo;</span>
               </p>
             </div>
           </div>
 
-          {/* (6) 아래쪽 대형 가로 이미지 슬롯 (16:9 와이드) */}
-          <div className="w-full max-w-[1280px] mx-auto mb-12 md:mb-16">
+          {/* (5) 아래쪽 대형 가로 이미지 슬롯 (16:9 와이드) */}
+          <div className="w-full max-w-[1280px] mx-auto">
             <Image
-              src="/image/abundance/a1.webp"
-              alt="선천코드 풍요 비급을 통해 부의 흐름을 읽어내는 장면"
-              width={1280}
-              height={720}
+              src="/images/abundance/baekdohwa-wealth-final-awakening.webp"
+              alt="선천코드 풍요 비급을 통해 부의 흐름과 기준을 세우는 백도화 파이널 각성 이미지"
+              width={1671}
+              height={941}
               className="block h-auto w-full rounded-2xl md:rounded-[28px] border border-[#608F82]/25 shadow-2xl"
             />
           </div>
-        </div>
 
-        {/* (7) 이미지 아래 마지막 짧은 결심 문구 */}
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-sm sm:text-base text-[#8FB4A4] font-medium tracking-wide">
-            나의 선택을 이해하는 순간,
-          </p>
-          <p className="font-elegant font-bold text-lg sm:text-[21px] text-[#FAF7F2] leading-relaxed break-keep mt-2.5">
-            풍요의 방향도 다시 세울 수 있습니다.
-          </p>
+          {/* (6) PHASE 카드 3개 */}
+          <div className="mt-[40px] sm:mt-[48px] md:mt-[64px] lg:mt-[80px]">
+            <WealthAnalysisMethod />
+          </div>
+
+          {/* (7) 하단 마무리 문구 */}
+          <div className="max-w-2xl mx-auto text-center mt-[40px] md:mt-[64px]">
+            <p className="text-sm sm:text-base text-[#C2A477] font-medium tracking-wide">
+              당신의 풍요를 바꿀 첫 번째 선택,
+            </p>
+            <p className="font-elegant font-bold text-lg sm:text-[21px] text-[#FAF7F2] leading-relaxed break-keep mt-2.5">
+              나만의 선천코드를 읽는 것에서 시작됩니다.
+            </p>
+          </div>
         </div>
       </Reveal>
     </section>

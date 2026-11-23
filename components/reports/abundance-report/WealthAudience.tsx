@@ -26,10 +26,10 @@ export default function WealthAudience() {
           <div className="lg:col-span-5 relative group">
             <div className="absolute -inset-4 bg-[#608F82]/15 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <Image
-              src="/image/abundance/a3.webp"
+              src="/images/abundance/baekdohwa-wealth-report-for-you.webp"
               alt="선천코드 풍요 리포트 추천 대상 이미지"
-              width={600}
-              height={900}
+              width={1086}
+              height={1448}
               className="relative z-10 w-full h-auto rounded-[40px] shadow-2xl border border-[#608F82]/25 transition-transform duration-700 group-hover:scale-[1.02]"
             />
           </div>

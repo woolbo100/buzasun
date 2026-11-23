@@ -20,7 +20,6 @@ import QuestionShiftComparison from '@/components/reports/common/QuestionShiftCo
 import WealthPrescriptionSample from '@/components/reports/abundance-report/WealthPrescriptionSample'
 import WealthPatternChecklist from '@/components/reports/abundance-report/WealthPatternChecklist'
 import WealthPatternFlow from '@/components/reports/abundance-report/WealthPatternFlow'
-import WealthAnalysisMethod from '@/components/reports/abundance-report/WealthAnalysisMethod'
 import WealthConvergenceMethod from '@/components/reports/abundance-report/WealthConvergenceMethod'
 import WealthPersonalizedCases from '@/components/reports/abundance-report/WealthPersonalizedCases'
 import WealthComparisonTable from '@/components/reports/abundance-report/WealthComparisonTable'
@@ -49,10 +48,10 @@ const ABUNDANCE_REPORT_IMAGES = {
   card: '/image/abundance/wealth-blueprint-lotus-card.webp', // 메인 구매 카드 영역 우측 재물 설계도 이미지
   empathy: '/image/abundance/wealth-money-pattern-awareness.webp', // 문제 제기 공감 문구 아래 가로 16:9 이미지
   overview: '/images/abundance/wealth-point-01-deep-analysis.webp',
-  recommended: '/image/abundance/a3.webp',
+  recommended: '/images/abundance/baekdohwa-wealth-report-for-you.webp',
   analysis: '/image/abundance/wealth-six-core-pillars.webp', // 6가지 핵심 탐구 축 16:9 설계도 비주얼
-  premium: '/image/abundance/a5.webp',
-  finalCta: '/image/abundance/a6.webp',
+  premium: '/image/abundance/baekdohwa-wealth-review-left-visual.webp',
+  finalCta: '/images/abundance/baekdohwa-wealth-final-cta-banner.webp',
 }
 
 // 교차 스토리 1 & 2 세로 3:4 이미지 설정
@@ -102,60 +101,6 @@ export default function AbundanceReportPage() {
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
-
-  // 오행 에너지 카드 정보 (기존 자산 보존)
-  const fiveElements = [
-    {
-      hanja: '木',
-      hangul: '목 (木)',
-      keyword: '성장, 기획, 시작의 기운',
-      desc: '새로운 가능성을 발견하고 나만의 재능을 밖으로 펼쳐 나가는 성장의 에너지를 상징합니다.',
-      gradientClass: 'from-[#052e16]/20 via-[#10b981]/5 to-transparent',
-      borderClass: 'border-emerald-500/20 hover:border-emerald-400/40',
-      tagColor: 'text-emerald-400 bg-emerald-950/40',
-      bgGlow: 'bg-emerald-500/5'
-    },
-    {
-      hanja: '火',
-      hangul: '화 (火)',
-      keyword: '표현, 확장, 전달의 기운',
-      desc: '나의 강점과 가치를 세상과 나누고, 사람들과 활발히 소통하며 흐름을 넓히는 에너지를 상징합니다.',
-      gradientClass: 'from-[#450a0a]/20 via-[#f43f5e]/5 to-transparent',
-      borderClass: 'border-rose-500/20 hover:border-rose-400/40',
-      tagColor: 'text-rose-400 bg-rose-950/40',
-      bgGlow: 'bg-rose-500/5'
-    },
-    {
-      hanja: '土',
-      hangul: '토 (土)',
-      keyword: '안정, 축적, 균형의 기운',
-      desc: '흔들리지 않는 생활의 중심을 잡고, 일상의 자원을 차분하게 정돈하며 지키는 에너지를 상징합니다.',
-      gradientClass: 'from-[#451a03]/20 via-[#f59e0b]/5 to-transparent',
-      borderClass: 'border-amber-500/20 hover:border-amber-400/40',
-      tagColor: 'text-amber-400 bg-amber-950/40',
-      bgGlow: 'bg-amber-500/5'
-    },
-    {
-      hanja: '金',
-      hangul: '금 (金)',
-      keyword: '결단, 분별, 완결의 기운',
-      desc: '불필요한 지출과 에너지 누수를 덜어내고, 우선순위를 명료하게 세우는 기준의 에너지를 상징합니다.',
-      gradientClass: 'from-[#1e293b]/20 via-[#94a3b8]/5 to-transparent',
-      borderClass: 'border-slate-400/20 hover:border-slate-300/40',
-      tagColor: 'text-slate-300 bg-slate-800/40',
-      bgGlow: 'bg-slate-400/5'
-    },
-    {
-      hanja: '水',
-      hangul: '수 (水)',
-      keyword: '통찰, 유연함, 지혜의 기운',
-      desc: '깊은 사유와 유연한 시선으로 흐름을 읽고, 나에게 맞는 방향을 차분히 준비하는 에너지를 상징합니다.',
-      gradientClass: 'from-[#172554]/20 via-[#3b82f6]/5 to-transparent',
-      borderClass: 'border-blue-500/20 hover:border-blue-400/40',
-      tagColor: 'text-blue-400 bg-blue-950/40',
-      bgGlow: 'bg-blue-500/5'
-    }
-  ]
 
   return (
     <main className="detail-page abundance-report-page relative min-h-screen bg-[#0a0514]">
@@ -821,11 +766,6 @@ export default function AbundanceReportPage() {
             <WealthIntroPhilosophy />
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            {/* POINT 02: 선천코드 풍요 분석 체계 (명리 뼈대 + 재정 행동 패턴 교차 분석) */}
-            {/* ══════════════════════════════════════════════════════════════════════ */}
-            <WealthAnalysisMethod />
-
-            {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 중간 구매 CTA: BEGIN YOUR JOURNEY (나의 풍요를 새롭게 읽을 준비가 되셨나요?) */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
             <section className="mb-36 md:mb-40 max-w-4xl mx-auto px-4">
@@ -902,68 +842,10 @@ export default function AbundanceReportPage() {
             {/* 15-1. 소장 가치 6대 핵심 요소 요약 및 《풍요비책》 전자책 연결 카드 */}
             <WealthValueSummary />
 
-            {/* 15-2. 기존 오행 에너지 카드 5종 및 제작/수령 안내 보존 */}
-            <section className="mb-40">
-              <div className="space-y-40">
-                {/* 오행 에너지 카드 안내 */}
-                <div className="relative">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] bg-gradient-to-r from-emerald-900/10 via-amber-900/5 to-teal-900/10 blur-[120px] rounded-full pointer-events-none -z-10"></div>
-
-                  <Reveal>
-                    <div className="text-center mb-10 md:mb-14 space-y-4">
-                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
-                        Digital Ritual Gift
-                      </span>
-                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
-                        당신의 흐름에 맞춘 <span className="text-[#8FB4A4]">오행 에너지</span> <span className="gradient-text-abundance">카드</span>
-                      </h2>
-                      <p className="text-[18px] text-[#EDE6DA] opacity-60 max-w-2xl mx-auto break-keep font-light">
-                        ※ 오행 에너지 카드는 특정 결과를 보장하는 부적이 아니라, 나의 기질과 흐름을 상징적으로 바라보기 위한 감성 리추얼 이미지입니다.
-                      </p>
-                    </div>
-                  </Reveal>
-
-                  <Reveal>
-                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full max-w-[1280px] mx-auto">
-                      {fiveElements.map((item, idx) => (
-                        <div
-                          key={idx}
-                          className={`gungjung-glass point-box p-8 border ${item.borderClass} bg-gradient-to-b ${item.gradientClass} relative overflow-hidden group flex flex-col items-center justify-between text-center transition-all duration-500 hover:-translate-y-2`}
-                        >
-                          <div className={`absolute -inset-10 ${item.bgGlow} blur-[30px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
-                          <div className="absolute inset-2 border border-white/[0.03] group-hover:border-[#E6BE8A]/25 rounded-xl pointer-events-none transition-colors duration-500"></div>
-
-                          <div className="w-full relative z-10 flex flex-col items-center">
-                            <div className="w-20 h-28 mb-6 border border-[#E6BE8A]/30 rounded-lg flex items-center justify-center bg-black/40 relative shadow-inner group-hover:scale-105 transition-transform duration-500">
-                              <span className="text-4xl md:text-5xl font-elegant font-bold text-[#E6BE8A] drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                                {item.hanja}
-                              </span>
-                              <div className="absolute top-1.5 left-1.5 w-1.5 h-1.5 border-t border-l border-[#608F82]/40"></div>
-                              <div className="absolute top-1.5 right-1.5 w-1.5 h-1.5 border-t border-r border-[#608F82]/40"></div>
-                              <div className="absolute bottom-1.5 left-1.5 w-1.5 h-1.5 border-b border-l border-[#608F82]/40"></div>
-                              <div className="absolute bottom-1.5 right-1.5 w-1.5 h-1.5 border-b border-r border-[#608F82]/40"></div>
-                            </div>
-
-                            <span className={`inline-block px-3 py-1 rounded-md text-xs font-semibold mb-3 ${item.tagColor}`}>
-                              {item.hangul}
-                            </span>
-
-                            <h4 className="text-base font-bold text-white mb-4 break-keep">
-                              {item.keyword}
-                            </h4>
-
-                            <p className="text-xs text-[#EDE6DA]/60 leading-relaxed break-keep font-light">
-                              {item.desc}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </Reveal>
-                </div>
-
-                {/* 리포트 준비 과정 및 필요 정보 안내 */}
-                <div className="relative">
+            {/* 15-2. 리포트 제작 및 전달 과정 / 필요 정보 안내 */}
+            <section className="mb-32 md:mb-40">
+              {/* 리포트 준비 과정 및 필요 정보 안내 */}
+              <div className="relative">
                   <Reveal>
                     <div className="text-center mb-16 space-y-4">
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
@@ -1046,7 +928,6 @@ export default function AbundanceReportPage() {
                     </div>
                   </div>
                 </div>
-              </div>
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
@@ -1068,10 +949,10 @@ export default function AbundanceReportPage() {
                 <div className="relative w-full rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl aspect-[16/9] bg-[#0B1514] mb-14 md:mb-16 group">
                   <Image 
                     src={ABUNDANCE_REPORT_IMAGES.finalCta} 
-                    alt="선천코드 풍요 리포트 하단 배너 이미지" 
-                    width={1672}
+                    alt="선천코드 풍요 리포트 - 풍요의 흐름을 바꾸는 시작" 
+                    width={1671}
                     height={941}
-                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105" 
+                    className="w-full h-full object-cover object-center transition-transform duration-[10000ms] group-hover:scale-105" 
                   />
                 </div>
 

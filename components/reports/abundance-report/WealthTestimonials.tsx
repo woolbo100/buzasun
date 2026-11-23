@@ -10,8 +10,8 @@ import { wealthTestimonialConfig } from './data'
 // 대표 이미지 설정: 나의 풍요와 선택의 흐름을 읽는 비급 키 비주얼 (3:4 비율 교체 슬롯)
 // ══════════════════════════════════════════════════════════════════════
 const WEALTH_SCENARIOS_IMAGE_CONFIG = {
-  src: '/image/abundance/a5.webp',
-  alt: '나의 풍요와 선택의 흐름을 읽는 비급 대표 비주얼',
+  src: '/image/abundance/baekdohwa-wealth-review-left-visual.webp',
+  alt: '백도화 선천코드 풍요 리포트 후기 대표 이미지',
   width: 1086,
   height: 1448,
 }
@@ -66,13 +66,14 @@ export default function WealthTestimonials() {
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             ABUNDANCE SCENARIOS
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] break-keep">
-            나의 선택을 이해하며 시작되는,<br className="sm:hidden" />{' '}
+          <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
+            나의 선택을 이해하며 시작되는,<br />
             <span className="gradient-text-abundance">풍요의 새로운 장면</span>
           </h2>
           <p className="text-[16px] md:text-[18px] text-[#EDE6DA]/80 leading-[1.8] font-light break-keep">
             막연한 금전운이나 수익 약속이 아니라,<br className="hidden sm:inline" />{' '}
-            돈을 대하는 태도와 반복되는 선택을 이해하기 시작할 때 어떤 변화의 가능성이 열리는지 세 가지 장면으로 살펴봅니다.
+            돈을 대하는 태도와 반복되는 선택을 이해하기 시작할 때<br className="hidden sm:inline" />{' '}
+            어떤 변화의 가능성이 열리는지 세 가지 장면으로 살펴봅니다.
           </p>
         </div>
 
