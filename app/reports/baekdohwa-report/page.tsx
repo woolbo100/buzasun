@@ -35,7 +35,7 @@ import RecommendedAudience from '@/components/reports/baekdohwa-report/Recommend
 import SixPerspectivesPanoramaBanner from '@/components/reports/baekdohwa-report/SixPerspectivesPanoramaBanner'
 import ReportTestimonials from '@/components/reports/baekdohwa-report/ReportTestimonials'
 // import BaekdohwaPhilosophy from '@/components/reports/baekdohwa-report/BaekdohwaPhilosophy' (POINT 02로 통합)
-// import ReportValueSummary from '@/components/reports/baekdohwa-report/ReportValueSummary' (BEHIND THE REPORT로 통합)
+import ReportValueSummary from '@/components/reports/baekdohwa-report/ReportValueSummary'
 import ReportFAQ from '@/components/reports/baekdohwa-report/ReportFAQ'
 import PurchaseNotice from '@/components/reports/baekdohwa-report/PurchaseNotice'
 import FiveElementsSpecialGift from '@/components/reports/baekdohwa-report/FiveElementsSpecialGift'
@@ -805,7 +805,7 @@ export default function BaekdohwaReportPage() {
             {/* ══════════════════════════════════════════════════════════════════════ */}
             {/* 중간 CTA: POINT 08 직후 배치 */}
             {/* ══════════════════════════════════════════════════════════════════════ */}
-            <section className="mb-40 max-w-4xl mx-auto px-4">
+            <section className="mb-28 md:mb-36 max-w-4xl mx-auto px-4">
               <Reveal>
                 <div className="gungjung-glass p-8 md:p-14 rounded-[36px] border border-[#B7788D]/40 bg-gradient-to-b from-[#250F22]/70 via-[#180A1A]/60 to-[#100612]/80 text-center relative overflow-hidden shadow-2xl">
                   {/* 은은한 배경 오라 */}
@@ -845,6 +845,11 @@ export default function BaekdohwaReportPage() {
                 </div>
               </Reveal>
             </section>
+
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            {/* [신규] LIFELONG COMPASS FOR LOVE (6대 핵심 가치 요소 및 사랑 설계도 배너) */}
+            {/* ══════════════════════════════════════════════════════════════════════ */}
+            <ReportValueSummary />
 
             {/* 추천 대상과 맞지 않는 대상 */}
             <RecommendedAudience />

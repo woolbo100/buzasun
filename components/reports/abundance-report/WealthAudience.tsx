@@ -16,8 +16,9 @@ export default function WealthAudience() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             당신을 위한 <span className="gradient-text-abundance">풍요 리포트</span>인가요?
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
-            솔직하고 명확한 안내를 통해 진정한 경제적 자기 이해를 전해드립니다.
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-3xl mx-auto break-keep">
+            남들의 방식에 지치고 흔들렸지만, 여전히 나다운 풍요를 꿈꾸는 당신에게<br className="hidden sm:inline" />{' '}
+            이 리포트는 나를 이해하고 돈의 기준을 새롭게 세우는 시작점이 되어줄 수 있습니다.
           </p>
         </div>
 
