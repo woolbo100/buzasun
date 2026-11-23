@@ -716,8 +716,8 @@ export default function PremiumCompatibilityReportPage() {
                     두 사람의 인연을 <span className="gradient-text-reunion">다시 읽을 준비가 되셨나요?</span>
                   </h3>
 
-                  <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed max-w-xl mx-auto break-keep mb-6">
-                    서로의 차이를 이해하고 우리 관계의 방향을 새롭게 바라보는 맞춤 궁합 리포트를 만나보세요.
+                  <p className="text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed max-w-2xl md:max-w-3xl mx-auto break-keep mb-6">
+                    서로의 차이를 이해하고 관계의 방향을 새롭게 바라보는 맞춤 궁합 리포트를 만나보세요.
                   </p>
 
                   <div className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[#5A2638]/40 border border-[#B78C86]/40 text-xs md:text-sm text-[#D8BB94] font-medium mb-8">
@@ -870,11 +870,11 @@ export default function PremiumCompatibilityReportPage() {
                 {/* ① 16:9 와이드 단독 대표 이미지 */}
                 <div className="relative w-full rounded-[40px] overflow-hidden border border-white/10 shadow-2xl aspect-[16/9] bg-[#14080E] mb-14 md:mb-16 group">
                   <Image 
-                    src="/image/compatibility/p6.webp" 
-                    alt="Final CTA Journey" 
-                    width={1672}
+                    src="/image/compatibility/compatibility-moonlit-destiny-cta.webp" 
+                    alt="선천코드 프리미엄 궁합 리포트 - 관계의 흐름을 바꾸는 시작" 
+                    width={1671}
                     height={941}
-                    className="w-full h-full object-cover transition-transform duration-[10000ms] group-hover:scale-105" 
+                    className="w-full h-full object-cover object-center transition-transform duration-[10000ms] group-hover:scale-105" 
                   />
                 </div>
 
@@ -885,12 +885,13 @@ export default function PremiumCompatibilityReportPage() {
                   </span>
                   
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    &ldquo;두 사람의 인연을, 이제 더 깊이 읽어보세요.&rdquo;
+                    &ldquo;관계의 흐름을 바꾸는 첫 장을 여십시오.&rdquo;
                   </h2>
                   
                   <p className="text-[18px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep max-w-2xl mx-auto">
-                    서로의 기질과 끌림, 갈등과 소통의 패턴을 함께 살펴보고<br className="hidden sm:inline" />
-                    우리 관계에 필요한 이해의 방향을 프리미엄 궁합 리포트로 만나보세요.
+                    상대의 눈치와 막연한 불안 속에서 헤매던 시간은 끝났습니다.<br />
+                    이제는 두 사람 사이의 관계 작동 방식을 읽고,<br className="hidden sm:inline" />
+                    나에게 맞는 사랑의 기준을 단단히 세울 차례입니다.
                   </p>
                 </div>
 

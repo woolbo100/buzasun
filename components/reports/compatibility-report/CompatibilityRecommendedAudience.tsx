@@ -16,25 +16,29 @@ export default function CompatibilityRecommendedAudience() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             당신을 위한 <span className="text-[#D8BB94]">궁합 리포트인가요?</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light leading-relaxed break-keep max-w-2xl mx-auto whitespace-pre-line">
-            {compatibilityAudienceData.subCopy}
+          <p className="text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-3xl mx-auto break-keep">
+            서로 사랑하지만 반복되는 갈등과 마음의 거리 때문에 고민하는 두 분에게<br className="hidden sm:inline" />{' '}
+            이 리포트는 서로의 차이를 이해하고 관계의 방향을 새롭게 세우는 시작점이 되어줄 수 있습니다.
           </p>
         </div>
 
-        {/* 상단: 기존 p3.webp 이미지와 추천/비추천 대상의 조화로운 배치 */}
-        <div className="grid lg:grid-cols-12 gap-10 items-center max-w-7xl mx-auto mb-16">
-          <div className="lg:col-span-5 relative group">
-            <div className="absolute -inset-4 bg-[#5A2638]/25 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <Image
-              src="/image/compatibility/p3.webp"
-              alt="Recommended Couples"
-              width={600}
-              height={900}
-              className="relative z-10 w-full h-auto rounded-[40px] shadow-2xl border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]"
-            />
+        {/* 데스크톱 기준 좌우 2단 레이아웃 (왼쪽 이미지 5열 : 오른쪽 카드 그룹 7열, 상하 높이 일치) */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch max-w-7xl mx-auto mb-16">
+          {/* 세로형 대표 이미지 (PC: 왼쪽 / 모바일: 상단 - 오른쪽 카드 그룹 높이에 상하 끝선 정렬) */}
+          <div className="lg:col-span-5 relative group flex flex-col h-full">
+            <div className="absolute -inset-4 bg-[#5A2638]/25 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-full w-full rounded-[28px] md:rounded-[36px] lg:rounded-[40px] overflow-hidden border border-[#B78C86]/30 shadow-2xl bg-[#14080E]">
+              <Image
+                src="/image/compatibility/compatibility-recommended-audience-visual.webp"
+                alt="궁합 리포트를 읽으며 관계를 차분히 돌아보는 여성 비주얼"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+            </div>
           </div>
 
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 flex flex-col justify-between gap-6">
             {/* 추천하는 분 카드 */}
             <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-[#B78C86]/35 bg-gradient-to-b from-[#5A2638]/40 via-[#4A1F2D]/35 to-[#3A1623]/35 shadow-xl backdrop-blur-md">
               <div className="flex items-center gap-3 mb-6">

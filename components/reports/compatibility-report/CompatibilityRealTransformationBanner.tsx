@@ -2,8 +2,33 @@
 
 import Image from 'next/image'
 import Reveal from '@/components/Reveal'
+import { HeartHandshake, GitCompareArrows, Gem } from 'lucide-react'
 
 export default function CompatibilityRealTransformationBanner() {
+  const transformationCards = [
+    {
+      tag: '기질의 이해',
+      title: '① 서로 다른 사랑의 방식 이해',
+      desc: '두 사람의 선천 기질과 감정 표현의 차이를 읽고, 서로의 반응을 오해하기보다 이해하는 기준을 세웁니다.',
+      changeNum: 'CHANGE 01',
+      icon: <HeartHandshake className="w-5 h-5 text-[#D8BB94]" />,
+    },
+    {
+      tag: '패턴의 발견',
+      title: '② 반복되는 관계 충돌 해독',
+      desc: '같은 문제로 부딪히는 이유와 감정의 방어 패턴을 살펴보고, 갈등이 반복되는 구조를 발견합니다.',
+      changeNum: 'CHANGE 02',
+      icon: <GitCompareArrows className="w-5 h-5 text-[#D8BB94]" />,
+    },
+    {
+      tag: '관계의 설계',
+      title: '③ 두 사람만의 관계 기준 세우기',
+      desc: '서로에게 맞는 소통과 행동 방식을 정리하고, 함께 지켜갈 관계의 기준과 실천 방향을 세웁니다.',
+      changeNum: 'CHANGE 03',
+      icon: <Gem className="w-5 h-5 text-[#D8BB94]" />,
+    },
+  ]
+
   return (
     <section className="mb-20 md:mb-28 max-w-7xl mx-auto px-4 sm:px-6">
       <Reveal>
@@ -53,7 +78,7 @@ export default function CompatibilityRealTransformationBanner() {
           </div>
 
           {/* (6) 아래쪽 대형 가로 이미지 슬롯 (16:9 와이드) */}
-          <div className="w-full max-w-[1280px] mx-auto mb-12 md:mb-16">
+          <div className="w-full max-w-[1280px] mx-auto mb-10 md:mb-12">
             <Image
               src="/image/compatibility/p1.webp"
               alt="선천코드 궁합 비급을 읽으며 서로의 다름을 이해하는 장면"
@@ -62,9 +87,56 @@ export default function CompatibilityRealTransformationBanner() {
               className="block h-auto w-full rounded-2xl md:rounded-[28px] border border-white/10 shadow-2xl"
             />
           </div>
+
+          {/* (7) [신규] 궁합 변화 카드 3개 */}
+          <div className="w-full max-w-[1280px] mx-auto mb-12 md:mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+              {transformationCards.map((card, idx) => (
+                <div
+                  key={idx}
+                  className="gungjung-glass p-7 sm:p-8 lg:p-9 rounded-[32px] border border-[#B78C86]/35 bg-gradient-to-b from-[#4A1F2D]/50 via-[#3A1623]/40 to-[#180A14]/60 flex flex-col justify-between group hover:border-[#D8BB94]/60 transition-all duration-300 hover:-translate-y-1 shadow-xl relative overflow-hidden h-full text-left"
+                >
+                  {/* 은은한 배경 오라 */}
+                  <div className="absolute top-0 right-0 w-28 h-28 bg-[#5A2638]/20 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform" />
+
+                  <div>
+                    {/* 상단: 좌측 컴팩트 아이콘 박스 + 우측 캡슐 라벨 */}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="w-12 h-12 rounded-2xl bg-[#3A1623] border border-[#B78C86]/40 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform text-[#D8BB94]">
+                        {card.icon}
+                      </div>
+                      <span className="text-xs font-mono font-bold tracking-widest px-3 py-1 rounded-full bg-[#5A2638]/40 border border-[#B78C86]/30 text-[#D8BB94]">
+                        {card.tag}
+                      </span>
+                    </div>
+
+                    {/* 본문 상단: 제목 */}
+                    <h3 className="text-[19px] md:text-[21px] font-bold text-[#FAF7F2] leading-snug break-keep group-hover:text-white transition-colors mb-3">
+                      {card.title}
+                    </h3>
+
+                    {/* 본문 설명 */}
+                    <p className="text-[16px] text-[#EDE6DA]/85 font-light leading-[1.7] break-keep">
+                      {card.desc}
+                    </p>
+                  </div>
+
+                  {/* 하단: 얇은 구분선 + 보조 텍스트 2개 */}
+                  <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between text-xs">
+                    <span className="font-mono tracking-wider font-semibold text-[#C7A97A]">
+                      {card.changeNum}
+                    </span>
+                    <span className="text-[#D8BB94]/80 font-medium">
+                      선천코드 관계 변화
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* (7) 이미지 아래 마지막 짧은 결심 문구 */}
+        {/* (8) 이미지 아래 마지막 짧은 결심 문구 */}
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm sm:text-base text-[#D8BB94] font-medium tracking-wide">
             서로를 바꾸는 대신,

@@ -1,6 +1,7 @@
 ﻿'use client'
 
 import Reveal from '@/components/Reveal'
+import Image from 'next/image'
 import { compatibilityValueData } from './data'
 
 export default function CompatibilityValueSummary() {
@@ -15,14 +16,25 @@ export default function CompatibilityValueSummary() {
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             한 번 읽고 끝나는 궁합 풀이가 아니라,<br />
             관계가 흔들릴 때{' '}
-            <span className="gradient-text-reunion">다시 펼쳐보는 두 사람의 설계도.</span>
+            <span className="gradient-text-reunion">다시 펼쳐보는 두 사람의 설계도</span>
           </h2>
-          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
+          <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep leading-relaxed whitespace-pre-line">
             {compatibilityValueData.subCopy}
           </p>
         </div>
 
-        {/* 2. 6가지 핵심 가치 요소 그리드 */}
+        {/* 2. [신규] 궁합 관계 설계도 가로형 이미지 (3:1 비율) */}
+        <div className="w-full max-w-[1280px] mx-auto mb-10 md:mb-12">
+          <Image
+            src="/image/compatibility/compatibility-relationship-blueprint-banner.webp"
+            alt="선천코드 프리미엄 궁합 리포트 관계 설계도"
+            width={2170}
+            height={725}
+            className="w-full h-auto block rounded-2xl sm:rounded-[28px] md:rounded-[36px] lg:rounded-[40px] border border-[#B78C86]/30 shadow-2xl"
+          />
+        </div>
+
+        {/* 3. 6가지 핵심 가치 요소 그리드 */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-3.5 xl:gap-4 w-full max-w-[1280px] mx-auto items-stretch">
           {compatibilityValueData.elements.map((el, idx) => (
             <div
