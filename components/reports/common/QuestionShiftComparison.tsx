@@ -339,17 +339,26 @@ export default function QuestionShiftComparison({
                 : theme === 'love' 
                 ? 'border-[#B7788D]/40 shadow-[0_0_30px_rgba(183,120,141,0.15)]' 
                 : theme === 'compatibility'
-                ? 'point-box bg-gradient-to-b from-[#442A30]/80 via-[#321E23]/75 to-[#1C1014]/90 border-[#8A636A]/50 hover:border-[#C7A97A]/60 shadow-[0_10px_35px_rgba(68,42,48,0.25)]'
+                ? 'point-box border-[#8A636A]/50 hover:border-[#C7A97A]/60'
                 : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 border-[#608F82]/40 shadow-[0_0_30px_rgba(96,143,130,0.18)]'
             } p-8 md:p-10 rounded-[32px] border transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
-            style={theme === 'love' ? { backgroundColor: 'rgba(166, 91, 128, 0.18)' } : undefined}
+            style={
+              theme === 'love'
+                ? { backgroundColor: 'rgba(166, 91, 128, 0.18)' }
+                : theme === 'compatibility'
+                ? {
+                    background: 'linear-gradient(180deg, rgba(68, 42, 48, 0.90) 0%, rgba(48, 28, 34, 0.82) 50%, rgba(26, 14, 18, 0.95) 100%)',
+                    boxShadow: '0 12px 40px rgba(68, 42, 48, 0.22)',
+                  }
+                : undefined
+            }
           >
-            {/* 배경 은은한 광채 */}
+            {/* 배경 은은한 광채 (퍼플 제거 -> 로즈 브라운 #442A30 계열) */}
             <div className={`absolute -top-20 -right-20 w-60 h-60 ${
               theme === 'abundance' 
                 ? 'bg-[#4B6B6F]/20' 
                 : theme === 'compatibility'
-                ? 'bg-[#442A30]/20'
+                ? 'bg-[#442A30]/25'
                 : themeConfig.glowBg
             } rounded-full blur-[80px] pointer-events-none`}></div>
 
@@ -359,7 +368,7 @@ export default function QuestionShiftComparison({
                   theme === 'abundance' 
                     ? 'bg-[#1D3035] border border-[#5A787A]/60 text-[#A4BAB5]' 
                     : theme === 'compatibility'
-                    ? 'bg-[#442A30]/70 border border-[#8A636A]/50 text-[#C7A97A]'
+                    ? 'bg-[#442A30]/75 border border-[#8A636A]/50 text-[#C7A97A]'
                     : themeConfig.badgeBg
                 } flex items-center justify-center`}>
                   <Compass className="w-5 h-5" />
@@ -372,7 +381,9 @@ export default function QuestionShiftComparison({
                       ? 'text-[#C7A97A]'
                       : themeConfig.activeText
                   } uppercase block font-bold`}>CARD 02</span>
-                  <h3 className="text-lg md:text-xl font-bold text-white">{contentConfig.card2.title}</h3>
+                  <h3 className={`text-lg md:text-xl font-bold ${
+                    theme === 'compatibility' ? 'text-[#FAF7F2]' : 'text-white'
+                  }`}>{contentConfig.card2.title}</h3>
                 </div>
               </div>
               <p className={`text-[16px] ${
@@ -391,7 +402,7 @@ export default function QuestionShiftComparison({
                     theme === 'abundance' 
                       ? 'bg-[#1D3035]/90 border border-[#3A5358]/60 text-[#F2ECE3]' 
                       : theme === 'compatibility'
-                      ? 'bg-[#2E1B20]/85 border border-[#8A636A]/35 text-white'
+                      ? 'bg-[#301E22]/90 border border-[#8A636A]/35 text-[#FAF7F2]'
                       : 'bg-black/50 border border-white/10 text-white'
                   } flex items-center gap-3 shadow-sm`}>
                     <ArrowRight className={`w-4 h-4 ${
@@ -411,7 +422,7 @@ export default function QuestionShiftComparison({
               theme === 'abundance' 
                 ? 'border-[#5A787A]/30 text-[#EDE6DA]' 
                 : theme === 'compatibility'
-                ? 'border-[#8A636A]/30 text-[#EDE6DA]/90'
+                ? 'border-[#8A636A]/35 text-[#EDE6DA]/90'
                 : 'border-white/10 text-[#EDE6DA]/90'
             } text-sm md:text-[14px] lg:text-[14px] xl:text-[15px] tracking-tight xl:whitespace-nowrap text-center font-light leading-relaxed break-keep relative z-10`}>
               {contentConfig.card2.bottomText}

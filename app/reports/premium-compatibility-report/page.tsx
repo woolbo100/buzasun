@@ -12,6 +12,7 @@ import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
 import { ChevronRight } from 'lucide-react'
 import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEnding'
+import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
 
 // ══════════════════════════════════════════════════════════════════════
 // 풍요 리포트 마스터 템플릿 1:1 매핑 궁합 전용 컴포넌트 목록
@@ -532,43 +533,66 @@ export default function PremiumCompatibilityReportPage() {
 
             {/* 11. POINT 01 — 두 사람의 관계 특화 심층 분석 */}
             <section id="point-01" className="mb-40 scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
-              <Reveal>
-                <div className="grid lg:grid-cols-2 gap-20 items-center">
-                  <div className="group relative overflow-hidden rounded-[40px] border border-[#B78C86]/30 shadow-2xl bg-[#14080E]">
-                    <Image 
-                      src={POINT01_IMAGE_CONFIG.src} 
-                      alt={POINT01_IMAGE_CONFIG.alt} 
-                      width={POINT01_IMAGE_CONFIG.width}
-                      height={POINT01_IMAGE_CONFIG.height}
-                      className="w-full h-auto object-cover object-center group-hover:scale-[1.01] transition-transform duration-700 ease-out" 
-                      priority
-                    />
+              <Reveal className="w-full">
+                {/* 모바일 표시 순서 1: 섹션 제목 및 헤드카피 */}
+                <div className="lg:hidden text-center sm:text-left mb-8 space-y-2.5">
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
+                    POINT 01 · RELATIONSHIP ANALYSIS
+                  </span>
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.2] break-keep">
+                    두 사람의 운세를 따로 보는 궁합이 아닙니다.<br />
+                    오직 두 사람의 <span className="gradient-text-reunion">‘관계’ 하나만</span><br />
+                    <span className="gradient-text-reunion">깊이 해부</span>합니다.
+                  </h2>
+                </div>
+
+                <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-20 items-stretch">
+                  {/* 왼쪽 이미지: 3:4 세로형 비율 (12단 중 5단 = 41.67%) / 모바일 표시 순서 2 */}
+                  <div className="lg:col-span-5 relative group flex flex-col justify-center">
+                    <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[32px] md:rounded-[40px] overflow-hidden border border-[#B78C86]/25 shadow-2xl bg-[#14080E]">
+                      <Image 
+                        src={POINT01_IMAGE_CONFIG.src} 
+                        alt={POINT01_IMAGE_CONFIG.alt} 
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 42vw"
+                        className="object-contain object-top transition-transform duration-700 group-hover:scale-[1.02]" 
+                        priority
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-8">
-                    <div className="space-y-3">
+
+                  {/* 오른쪽 텍스트: 12단 중 7단 (58.33%) / 모바일 표시 순서 3 */}
+                  <div className="lg:col-span-7 lg:pl-2 xl:pl-6 flex flex-col justify-between space-y-6 lg:space-y-7">
+                    {/* 데스크톱 전용 헤드카피 (모바일에서는 이미지 상단에 표시) */}
+                    <div className="hidden lg:block space-y-2.5">
                       <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
                         POINT 01 · RELATIONSHIP ANALYSIS
                       </span>
-                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.25] md:leading-[1.3] break-keep">
-                        사랑은 감정이지만,<br /> <span className="gradient-text-reunion">관계는 흐름입니다</span>
+                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.2] md:leading-[1.22] break-keep">
+                        두 사람의 운세를 따로 보는 궁합이 아닙니다.<br />
+                        오직 두 사람의 <span className="gradient-text-reunion">‘관계’ 하나만</span><br />
+                        <span className="gradient-text-reunion">깊이 해부</span>합니다.
                       </h2>
                     </div>
-                    <p className="text-[18px] text-[#EDE6DA] opacity-75 leading-relaxed break-keep font-light whitespace-pre-wrap">
-                      프리미엄 궁합 리포트는 단순한 궁합 점수가 아니라,{"\n\n"}
-                      두 사람이 왜 끌리는지, 왜 자꾸 부딪히는지, 어떤 방식으로 함께 성장할 수 있는지를 섬세하게 해석하는 프리미엄 관계 분석 리포트입니다.
+
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 leading-[1.8] break-keep font-light">
+                      일반적인 궁합 풀이로는 두 사람이 왜 서로에게 끌리고, 왜 같은 문제로 반복해서 부딪히는지 충분히 이해하기 어렵습니다.<br />
+                      <span className="text-[#D8BB94] font-medium opacity-100">
+                        두 사람의 선천 기질과 감정 반응, 반복되는 관계 패턴을 집중적으로 분석합니다.
+                      </span><br />
+                      각자의 타고난 성향을 살펴보는 데 그치지 않고, 서로의 기대와 표현 방식, 갈등이 생기는 지점까지 함께 읽어냅니다. 이를 통해 궁합의 좋고 나쁨을 넘어 <strong className="font-semibold text-white">두 사람의 관계를 이해하고 조율할 수 있는 기준</strong>을 제시합니다.
                     </p>
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {[
-                        "두 사람의 기본 기질 분석", 
-                        "감정 흐름과 관계 패턴", 
-                        "서로 끌리는 이유 분석", 
-                        "갈등이 반복되는 핵심 원인",
-                        "오래가는 관계의 방향성",
-                        "결혼/장기 관계 가능성"
+                        "두 사람의 선천 기질과 차이",
+                        "감정 표현과 상호작용 패턴",
+                        "반복되는 갈등의 핵심 구조",
+                        "관계의 강점과 조율 방향"
                       ].map((item, idx) => (
-                        <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl border border-[#B78C86]/20 bg-gradient-to-b from-[#4A1F2D]/25 to-[#240C18]/30">
-                          <div className="w-2 h-2 rounded-full bg-[#D8BB94] shadow-[0_0_10px_rgba(216,187,148,0.5)]"></div>
-                          <span className="text-white/80">{item}</span>
+                        <div key={idx} className="detail-glass-card flex items-center gap-4 p-4 rounded-2xl border border-[#B78C86]/20 hover:border-[#D8BB94]/40 bg-gradient-to-b from-[#4A1F2D]/25 to-[#240C18]/30 transition-all">
+                          <div className="w-2 h-2 rounded-full bg-[#D8BB94] shadow-[0_0_10px_rgba(216,187,148,0.6)]"></div>
+                          <span className="text-white/90 font-semibold">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -582,23 +606,44 @@ export default function PremiumCompatibilityReportPage() {
 
             {/* 13. POINT 03 — 무의식적 관계 패턴 및 6가지 핵심 분석 축 */}
             <section id="point-03" className="mb-40 text-center scroll-mt-28 md:scroll-mt-36 w-full max-w-[1280px] mx-auto">
-              <Reveal>
-                <div className="space-y-5 md:space-y-6 mb-14 md:mb-16">
-                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
-                    POINT 03 · DYNAMICS & SIX PERSPECTIVES
+              <Reveal className="w-full">
+                {/* 1. 상단 전환 영역: 꽃 장식 구분선 + POINT 03 헤더 카피 + 설명 문구 */}
+                <div className="max-w-4xl mx-auto mb-10 md:mb-14 space-y-6">
+                  {/* 중앙 꽃 장식 및 좌우 가로 구분선 */}
+                  <BaekdohwaDivider className="mb-8 md:mb-10" theme="compatibility" />
+
+                  <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
+                    POINT 03 · HIDDEN RELATIONSHIP CODES
                   </span>
-                  {/* ① 6대 핵심 소구점 메인 타이틀 */}
-                  <h2 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-white leading-[1.3] md:leading-[1.35] break-keep max-w-4xl mx-auto">
-                    &ldquo;단순한 궁합 점수가 아닙니다.&rdquo;<br />
-                    두 사람의 다름을 이해하고,{' '}
-                    <span className="gradient-text-reunion">관계의 깊이를 다시 쓰는</span> 6대 핵심 소구점
+
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
+                    &ldquo;사랑하는 마음은 같았지만,<br className="sm:hidden" />
+                    <span className="gradient-text-reunion"> 반복되는 갈등 속 숨겨진 관계의 패턴</span>을 마주합니다.&rdquo;
                   </h2>
-                  {/* ② 기준 제목 (맞춤 궁합 해독 6가지 핵심 분석 축) */}
-                  <p className="text-xl sm:text-2xl md:text-[26px] font-elegant font-bold text-[#FAF7F2] tracking-[0.03em] leading-[1.3] break-keep pt-1">
-                    두 사람만의 맞춤 궁합 해독 — <span className="gradient-text-reunion">6가지 핵심 분석 축</span>
-                  </p>
+
+                  <div className="text-[17px] md:text-[18px] text-[#EDE6DA] opacity-80 font-light leading-relaxed max-w-2xl mx-auto break-keep space-y-3">
+                    <p>
+                      서로를 사랑하면서도 같은 말에 상처받고,<br className="hidden sm:inline" />
+                      같은 문제로 부딪히는 순간이 있습니다.
+                    </p>
+                    <p>
+                      그 반복의 이면에는 서로 다른{' '}
+                      <span className="text-[#D8BB94] font-medium opacity-100">
+                        선천 기질과 익숙한 감정 반응의 패턴
+                      </span>이 숨어 있을 수 있습니다.
+                    </p>
+                    <p>
+                      두 사람이 왜 특정 상황에서 같은 반응을 반복하는지,<br className="hidden sm:inline" />
+                      그 이면의 기대와 방어 방식을 함께 살펴보며<br className="hidden sm:inline" />
+                      <span className="text-[#D8BB94] font-medium opacity-100">
+                        서로를 이해하기 위한 새로운 관계의 기준을 찾아갑니다.
+                      </span>
+                    </p>
+                  </div>
                 </div>
-                <div className="w-full max-w-[1280px] mx-auto mb-20">
+
+                {/* 2. 기존 16:9 대표 분석 이미지 */}
+                <div className="w-full max-w-[1280px] mx-auto mb-20 md:mb-28">
                   <Image 
                     src={SIX_PILLARS_IMAGE_CONFIG.src} 
                     alt={SIX_PILLARS_IMAGE_CONFIG.alt} 
@@ -607,45 +652,9 @@ export default function PremiumCompatibilityReportPage() {
                     className="w-full h-auto rounded-[32px] md:rounded-[40px] shadow-2xl border border-[#B78C86]/30 object-contain" 
                   />
                 </div>
-                <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden rounded-[36px] border border-[#B78C86]/30 bg-gradient-to-b from-[#4A1F2D]/30 via-[#3A1623]/25 to-[#180A14]/35 backdrop-blur-md">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
-                    {[
-                      { t: "선천적 기질 궁합", d: "두 사람의 타고난 에너지 조화 분석", i: "fa-yin-yang" },
-                      { t: "핵심 끌림 이유", d: "서로에게 강력하게 끌리는 근본 원인 해독", i: "fa-magnet" },
-                      { t: "갈등 근본 원인", d: "반복되는 다툼의 무의식적 배경 분석", i: "fa-triangle-exclamation" },
-                      { t: "소통 및 유지 전략", d: "서로를 이해하는 방식과 관계 유지법 제안", i: "fa-comments" },
-                      { t: "미래 관계 해석", d: "결혼 및 장기적 인연의 가능성 탐색", i: "fa-ring" },
-                      { t: "성장 방향 제안", d: "함께 더 행복해질 수 있는 실질적 가이드", i: "fa-seedling" }
-                    ].map((item, idx) => (
-                      <div 
-                        key={idx} 
-                        className="detail-glass-card flex flex-col items-center text-center py-6 px-4 sm:px-5 md:px-5 rounded-[22px] md:rounded-[26px] group transition-all duration-300 border border-[#B78C86]/25 hover:border-[#D8BB94]/45 bg-gradient-to-b from-[#5A2638]/35 to-[#3A1623]/35 backdrop-blur-sm"
-                      >
-                        <div className="w-[52px] h-[52px] rounded-2xl bg-[#4A1F2D]/60 flex items-center justify-center border border-[#B78C86]/40 text-[#D8BB94] shadow-sm mb-3.5 group-hover:scale-105 group-hover:bg-[#5A2638]/60 transition-all duration-300">
-                          <i className={`fas ${item.i} text-lg md:text-[19px]`}></i>
-                        </div>
-                        <div className="w-full flex flex-col items-center flex-1 justify-center">
-                          <h4 className="text-[17px] sm:text-[18.5px] lg:text-[19.5px] font-bold text-white mb-2.5 leading-snug tracking-tight text-center break-keep">
-                            {item.t}
-                          </h4>
-                          <p className="text-[14.5px] md:text-[15.5px] text-[#EDE6DA]/75 font-light leading-[1.65] break-keep text-center">
-                            {item.d}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 md:pt-10 border-t border-[#B78C86]/20 text-center">
-                    <p className="text-[#EDE6DA] opacity-85 italic font-elegant text-[16px] md:text-[18px] leading-relaxed break-keep">
-                      &ldquo;이 리포트는 단순한 궁합 점수가 아니라, 관계의 흐름을 이해하고 더 건강한 사랑을 선택하기 위한 프리미엄 자기이해 리포트입니다.&rdquo;
-                    </p>
-                  </div>
-                </div>
 
-                {/* 6대 관점 와이드 배너 */}
-                <div className="mt-16">
-                  <CompatibilitySixPerspectivesBanner />
-                </div>
+                {/* 3. [6대 관점 파노라마 와이드 배너 & 6개 분석 카드 통합] SIX PERSPECTIVES */}
+                <CompatibilitySixPerspectivesBanner />
               </Reveal>
             </section>
 

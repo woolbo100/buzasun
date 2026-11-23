@@ -49,25 +49,25 @@ export default function CompatibilityAnalysisMethod() {
     {
       num: 'STUDY 01',
       title: '선천 관계 구조 분석',
-      desc: '일간·오행·십성과 배우자궁 등 두 사람의 선천 요소를 함께 살펴보고, 관계에서 나타나는 기질적 차이와 상호작용의 기준을 정리합니다.',
+      desc: '두 사람의 일간과 오행, 십성, 배우자궁을 함께 살펴봅니다. 서로 다른 선천 기질이 관계에서 어떻게 맞물리는지 분석합니다.',
       icon: <BookOpen className="w-6 h-6 text-[#D8BB94]" />
     },
     {
       num: 'STUDY 02',
       title: '감정·갈등 패턴 탐구',
-      desc: '서로 다른 기대와 애정 표현, 방어 반응과 반복되는 갈등의 흐름을 관계심리의 관점에서 살펴봅니다.',
+      desc: '서로 다른 기대와 애정 표현, 방어 반응을 살펴봅니다. 반복되는 감정과 갈등이 어떤 방식으로 이어지는지 분석합니다.',
       icon: <Compass className="w-6 h-6 text-[#D8BB94]" />
     },
     {
       num: 'STUDY 03',
       title: '궁합 특화 분석 기준서',
-      desc: '일반적인 길흉 판단을 넘어 끌림, 충돌, 정서적 요구, 소통과 조율 등 관계에 집중한 분석 항목을 구성했습니다.',
+      desc: '단순한 길흉 판단을 넘어 끌림과 충돌, 정서적 요구를 살펴봅니다. 관계의 소통과 조율에 집중한 분석 기준을 담았습니다.',
       icon: <ClipboardCheck className="w-6 h-6 text-[#D8BB94]" />
     },
     {
       num: 'STUDY 04',
       title: '실전 관계 행동 처방',
-      desc: '분석 내용을 실제 대화와 갈등 조율, 감정 표현, 관계의 선택에 연결하여 일상에서 적용할 수 있는 행동 방향을 제안합니다.',
+      desc: '분석한 관계 패턴을 실제 대화와 감정 표현에 연결합니다. 갈등을 조율하고 서로를 이해하는 실천 방향을 제안합니다.',
       icon: <Shuffle className="w-6 h-6 text-[#D8BB94]" />
     }
   ]
@@ -79,14 +79,16 @@ export default function CompatibilityAnalysisMethod() {
       {/* ══════════════════════════════════════════════════════════════════ */}
       <Reveal className="w-full">
         {/* 1. 상단 전체 폭 헤더: 영문 라벨, 메인 제목, 도입 설명, 3단계 캡슐 애니메이션 */}
-        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16 space-y-4 md:space-y-5 px-4">
+        <div className="max-w-5xl mx-auto text-center mb-12 md:mb-16 space-y-4 md:space-y-5 px-4">
           <span className="inline-block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase">
             POINT 02 · THE CONVERGENCE
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white leading-[1.3] md:leading-[1.32] break-keep">
+          <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[35px] font-elegant font-bold text-white leading-[1.35] break-keep max-w-5xl mx-auto">
             명리로 두 사람의 <span className="gradient-text-reunion">선천 기질</span>을 읽고,<br className="hidden sm:inline" />
-            <span className="gradient-text-reunion">관계심리와 행동 분석</span>으로{' '}
-            <span className="gradient-text-reunion">서로의 반응 패턴</span>을 살펴봅니다.
+            <span className="lg:whitespace-nowrap">
+              <span className="gradient-text-reunion">관계심리와 행동 분석</span>으로{' '}
+              <span className="gradient-text-reunion">서로의 반응 패턴</span>을 살펴봅니다.
+            </span>
           </h2>
           <div className="max-w-3xl mx-auto text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 leading-[1.8] break-keep font-light space-y-2 pt-1">
             <p>
@@ -174,7 +176,7 @@ export default function CompatibilityAnalysisMethod() {
             <div className="relative aspect-[3/4] w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#B78C86]/30 shadow-2xl bg-[#14080E]">
               <Image 
                 src="/image/compatibility/compatibility-point02-convergence.webp" 
-                alt="선천코드 프리미엄 궁합 리포트 POINT 02 융합 분석 — 동양명리학 + 관계심리학 + 실전 관계 설계" 
+                alt="선천코드 프리미엄 궁합 리포트 POINT 02 융합 분석 — 동양명리학 + 관계심리학 + 뇌과학" 
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-contain object-top transition-transform duration-700 group-hover:scale-[1.02]" 
@@ -188,12 +190,12 @@ export default function CompatibilityAnalysisMethod() {
       {/* 영역 ③ PRECISION & RESEARCH (전문성 및 연구 기준 소개 STUDY 01~04) */}
       {/* ══════════════════════════════════════════════════════════════════ */}
       <Reveal className="w-full">
-        <div className="max-w-4xl mx-auto text-center mb-14">
+        <div className="max-w-5xl mx-auto text-center mb-14 px-4">
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#D8BB94] uppercase mb-4">
             PRECISION & RESEARCH
           </span>
-          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.28] md:leading-[1.32] break-keep">
-            한 권의 궁합 리포트가 완성되기까지,<br />
+          <h2 className="text-2xl sm:text-3xl md:text-[28px] lg:text-[31px] xl:text-[33px] font-elegant font-bold text-white mb-6 leading-[1.35] break-keep max-w-5xl mx-auto lg:whitespace-nowrap">
+            한 권의 궁합 리포트가 완성되기까지,{' '}
             <span className="gradient-text-reunion">두 사람의 관계를 이해하기 위한 수많은 질문</span>을 담았습니다.
           </h2>
           <div className="max-w-3xl mx-auto text-[17px] md:text-[18px] text-[#EDE6DA] opacity-85 font-light leading-relaxed break-keep space-y-3 md:space-y-3.5">
@@ -234,8 +236,8 @@ export default function CompatibilityAnalysisMethod() {
                 </h3>
               </div>
 
-              {/* ④ 구분선 및 ⑤ 설명 문구 */}
-              <p className="text-[14.5px] sm:text-[15px] text-[#EDE6DA]/75 font-light leading-[1.68] md:leading-[1.72] break-keep mt-4 pt-4 border-t border-white/5">
+              {/* ④ 구분선 및 ⑤ 설명 문구 (PC 4줄 정렬 & 시작 높이 통일) */}
+              <p className="text-[14.5px] sm:text-[15px] text-[#EDE6DA]/75 font-light leading-[1.68] md:leading-[1.72] break-keep mt-4 pt-4 border-t border-[#B78C86]/20 lg:min-h-[105px]">
                 {item.desc}
               </p>
             </div>
