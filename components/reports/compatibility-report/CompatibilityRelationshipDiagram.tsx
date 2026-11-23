@@ -6,14 +6,12 @@ import { compatibilityDiagramData } from './data'
 import { ArrowRight, ArrowDown } from 'lucide-react'
 
 // 16:9 가로형 비주얼 이미지 설정
-// (향후 compatibility-interaction-dynamics.webp 이미지가 public/image/compatibility/에 추가되면 isReady를 true로 설정하거나 src를 유지하면 됩니다)
 const INTERACTION_DYNAMICS_VISUAL = {
-  src: '/image/compatibility/compatibility-interaction-dynamics.webp',
-  alt: '백도화 프리미엄 궁합 리포트 상호작용 역학 16:9 비주얼',
+  src: '/image/compatibility/compatibility-two-worlds-one-bond.webp',
+  alt: '선천코드 프리미엄 궁합 리포트 - 서로 다른 두 개의 세계, 하나의 인연을 만들어 갑니다',
   width: 1672,
   height: 941,
-  // 실제 파일 준비 시 true로 전환하여 활성화 (미제작 상태에서 깨진 이미지 표시 방지)
-  isReady: false,
+  isReady: true,
 }
 
 export default function CompatibilityRelationshipDiagram() {
@@ -87,7 +85,8 @@ export default function CompatibilityRelationshipDiagram() {
 
           {/* 두 번째 — 원인 설명 */}
           <p className="text-base sm:text-lg text-[#EDE6DA]/85 font-light leading-relaxed break-keep">
-            서로의 선천적 기질과 감정의 흐름을 알지 못했기에, 같은 갈등 앞에서 반복해서 상처받았을 수 있습니다.
+            서로의 선천적 기질과 감정의 흐름을 알지 못했기에,<br />
+            같은 갈등 앞에서 반복해서 상처받았을 수 있습니다.
           </p>
 
           {/* 세 번째 — 카드 연결 문구 */}

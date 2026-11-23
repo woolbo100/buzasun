@@ -67,17 +67,25 @@ const EMPATHY_IMAGE_CONFIG = {
 
 // 교차 스토리 1 & 2 세로 3:4 이미지 설정
 const COMPATIBILITY_STORY_IMAGE_1 = {
-  src: '/image/compatibility/p3.webp',
-  alt: '프리미엄 궁합 리포트 첫 번째 스토리 - 이해의 순간',
-  width: 900,
-  height: 1200,
+  src: '/image/compatibility/compatibility-lonely-heart-moment.webp',
+  alt: '선천코드 프리미엄 궁합 리포트 - 누구보다 애썼지만 홀로 고민하고 있는 당신께',
+  width: 1086,
+  height: 1448,
 }
 
 const COMPATIBILITY_STORY_IMAGE_2 = {
-  src: '/image/compatibility/p4.webp',
-  alt: '프리미엄 궁합 리포트 두 번째 스토리 - 숨겨진 인연의 연결',
-  width: 900,
-  height: 1200,
+  src: '/image/compatibility/compatibility-destiny-structure-scroll.webp',
+  alt: '선천코드 프리미엄 궁합 리포트 - 사주 속 인연의 구조와 두루마리 설계도',
+  width: 1086,
+  height: 1448,
+}
+
+// POINT 03. 6가지 핵심 분석 축 대표 16:9 이미지 설정
+const SIX_PILLARS_IMAGE_CONFIG = {
+  src: '/image/compatibility/compatibility-six-analysis-pillars.webp',
+  alt: '선천코드 프리미엄 궁합 리포트의 6가지 핵심 분석 축과 무의식 관계 코드 정밀 해독 16:9 설계도',
+  width: 1672,
+  height: 941,
 }
 
 export default function PremiumCompatibilityReportPage() {
@@ -416,7 +424,7 @@ export default function PremiumCompatibilityReportPage() {
                         alt={COMPATIBILITY_STORY_IMAGE_1.alt}
                         width={COMPATIBILITY_STORY_IMAGE_1.width}
                         height={COMPATIBILITY_STORY_IMAGE_1.height}
-                        className="w-full h-full object-cover object-[center_20%] group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                        className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                         priority
                       />
                     </div>
@@ -428,10 +436,10 @@ export default function PremiumCompatibilityReportPage() {
             {/* 6. THE HIDDEN FLOW — 두 사람의 선천코드에 숨은 관계 구조 (교차 스토리 2) */}
             <section className="mb-24 md:mb-32 w-full max-w-[1280px] mx-auto">
               <Reveal className="w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-16 items-stretch">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-16 items-start">
                   {/* 좌측 45%: 세로 3:4 이미지 영역 */}
                   <div className="lg:col-span-5 w-full max-w-[420px] lg:max-w-[450px] xl:max-w-[460px] mx-auto lg:mx-0 flex flex-col items-center lg:items-start justify-start lg:py-2">
-                    <div className="group relative w-full aspect-[3/4] lg:aspect-auto lg:h-full rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#B78C86]/35 shadow-2xl bg-[#14080E] flex items-center justify-center transition-all duration-300 hover:border-[#D8BB94]/50">
+                    <div className="group relative w-full aspect-[3/4] rounded-[28px] md:rounded-[36px] overflow-hidden border border-[#B78C86]/35 shadow-2xl bg-[#14080E] flex items-center justify-center transition-all duration-300 hover:border-[#D8BB94]/50">
                       <Image
                         src={COMPATIBILITY_STORY_IMAGE_2.src}
                         alt={COMPATIBILITY_STORY_IMAGE_2.alt}
@@ -574,13 +582,13 @@ export default function PremiumCompatibilityReportPage() {
                     두 사람만의 맞춤 궁합 해독 — <span className="gradient-text-reunion">6가지 핵심 분석 축</span>
                   </h2>
                 </div>
-                <div className="max-w-7xl mx-auto mb-20">
+                <div className="w-full max-w-[1280px] mx-auto mb-20">
                   <Image 
-                    src="/image/compatibility/p4.webp" 
-                    alt="Analysis Detail" 
-                    width={1200}
-                    height={800}
-                    className="w-full h-auto rounded-[50px] shadow-2xl border border-white/10" 
+                    src={SIX_PILLARS_IMAGE_CONFIG.src} 
+                    alt={SIX_PILLARS_IMAGE_CONFIG.alt} 
+                    width={SIX_PILLARS_IMAGE_CONFIG.width}
+                    height={SIX_PILLARS_IMAGE_CONFIG.height}
+                    className="w-full h-auto rounded-[32px] md:rounded-[40px] shadow-2xl border border-[#B78C86]/30 object-contain" 
                   />
                 </div>
                 <div className="gungjung-glass px-6 py-10 md:px-10 md:py-14 lg:px-14 lg:py-16 relative overflow-hidden rounded-[36px] border border-[#B78C86]/30 bg-gradient-to-b from-[#4A1F2D]/30 via-[#3A1623]/25 to-[#180A14]/35 backdrop-blur-md">

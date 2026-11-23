@@ -6,12 +6,11 @@ import { HelpCircle, Compass, ArrowRight } from 'lucide-react'
 
 // 16:9 가로형 비주얼 이미지 설정 (궁합 리포트 패러다임 시프트 슬롯)
 const COMPATIBILITY_PARADIGM_SHIFT_VISUAL = {
-  src: '/image/compatibility/compatibility-paradigm-shift-banner.webp',
-  alt: '백도화 프리미엄 궁합 리포트 패러다임 시프트 16:9 비주얼',
+  src: '/image/compatibility/compatibility-paradigm-shift-couple-scene.webp',
+  alt: '선천코드 프리미엄 궁합 리포트 패러다임 시프트 - 우리가 잘 맞는지 묻기 전에, 왜 같은 문제로 부딪히는지 먼저 알아야 한다',
   width: 1672,
   height: 941,
-  // 실제 파일 준비 시 true로 전환하여 활성화 (미제작 상태에서 깨진 엑스박스 이미지 방지)
-  isReady: false,
+  isReady: true,
 }
 
 interface QuestionShiftComparisonProps {
@@ -137,7 +136,7 @@ export default function QuestionShiftComparison({
           '반복되는 갈등은 어디에서 시작될까?',
           '서로를 위해 무엇을 다르게 선택할 수 있을까?',
         ],
-        bottomText: '관계의 작동 구조를 이해하면 두 사람에게 맞는 새로운 선택의 기준을 세울 수 있습니다.',
+        bottomText: '관계의 작동 구조를 이해하면 두 사람에 맞는 새로운 선택 기준을 세울 수 있습니다.',
       },
     },
   }[theme]
@@ -327,7 +326,7 @@ export default function QuestionShiftComparison({
                 : theme === 'compatibility'
                 ? 'border-[#5A2D3A]/30 text-[#EDE6DA]/60'
                 : 'border-white/5 text-white/50'
-            } text-sm md:text-[15px] text-center font-light leading-relaxed break-keep`}>
+            } text-sm md:text-[14px] lg:text-[14px] xl:text-[15px] text-center font-light leading-relaxed break-keep`}>
               {contentConfig.card1.bottomText}
             </div>
           </div>
@@ -414,7 +413,7 @@ export default function QuestionShiftComparison({
                 : theme === 'compatibility'
                 ? 'border-[#B78C86]/30 text-[#EDE6DA]/90'
                 : 'border-white/10 text-[#EDE6DA]/90'
-            } text-sm md:text-[15px] text-center font-light leading-relaxed break-keep relative z-10`}>
+            } text-sm md:text-[14px] lg:text-[14px] xl:text-[15px] tracking-tight xl:whitespace-nowrap text-center font-light leading-relaxed break-keep relative z-10`}>
               {contentConfig.card2.bottomText}
             </div>
           </div>
