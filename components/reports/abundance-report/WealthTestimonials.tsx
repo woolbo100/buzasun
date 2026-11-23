@@ -66,7 +66,7 @@ export default function WealthTestimonials() {
           <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
             ABUNDANCE SCENARIOS
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
+          <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
             나의 선택을 이해하며 시작되는,<br />
             <span className="gradient-text-abundance">풍요의 새로운 장면</span>
           </h2>

@@ -17,8 +17,8 @@ export default function WealthRealTransformationBanner() {
             </span>
 
             {/* (2) 메인 제목 */}
-            <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] mb-6 md:mb-8 leading-[1.3] break-keep max-w-4xl mx-auto">
-              내 풍요의 결을 세우고,<br className="hidden sm:inline" />{' '}
+            <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep max-w-4xl mx-auto">
+              내 풍요의 결을 세우고,<br />
               <span className="gradient-text-abundance">돈의 기준을 다시 씁니다.</span>
             </h2>
 

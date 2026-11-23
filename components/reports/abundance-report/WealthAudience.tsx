@@ -14,27 +14,30 @@ export default function WealthAudience() {
             TARGET AUDIENCE
           </span>
           <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-            당신을 위한 <span className="text-[#8FB4A4]">풍요 리포트</span>인가요?
+            당신을 위한 <span className="gradient-text-abundance">풍요 리포트</span>인가요?
           </h2>
           <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light break-keep">
             솔직하고 명확한 안내를 통해 진정한 경제적 자기 이해를 전해드립니다.
           </p>
         </div>
 
-        {/* 상단: 기존 a3.webp 이미지와 추천/비추천 대상의 조화로운 배치 */}
-        <div className="grid lg:grid-cols-12 gap-10 items-center w-full max-w-[1280px] mx-auto mb-16">
-          <div className="lg:col-span-5 relative group">
-            <div className="absolute -inset-4 bg-[#608F82]/15 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-            <Image
-              src="/images/abundance/baekdohwa-wealth-report-for-you.webp"
-              alt="선천코드 풍요 리포트 추천 대상 이미지"
-              width={1086}
-              height={1448}
-              className="relative z-10 w-full h-auto rounded-[40px] shadow-2xl border border-[#608F82]/25 transition-transform duration-700 group-hover:scale-[1.02]"
-            />
+        {/* 데스크톱 기준 좌우 2단 레이아웃 (왼쪽 이미지 5열 : 오른쪽 카드 그룹 7열, 상하 높이 일치) */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch w-full max-w-[1280px] mx-auto mb-16">
+          {/* 세로형 대표 이미지 (PC: 왼쪽 / 모바일: 상단 - 오른쪽 카드 그룹 높이에 상하 끝선 완벽 정렬) */}
+          <div className="lg:col-span-5 relative group flex flex-col h-full">
+            <div className="absolute -inset-4 bg-[#608F82]/15 blur-[40px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-full w-full rounded-[28px] md:rounded-[36px] lg:rounded-[40px] overflow-hidden border border-[#608F82]/25 shadow-2xl bg-[#0a1a15]">
+              <Image
+                src="/images/abundance/baekdohwa-wealth-report-for-you.webp"
+                alt="선천코드 풍요 리포트 추천 대상 이미지"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.02]"
+              />
+            </div>
           </div>
 
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 flex flex-col justify-between gap-6">
             {/* 추천하는 분 카드 */}
             <div className="gungjung-glass p-8 md:p-10 rounded-[32px] border border-[#608F82]/40 bg-gradient-to-b from-[#0f241f]/35 via-[#152e27]/25 to-black/35">
               <div className="flex items-center gap-3 mb-6">

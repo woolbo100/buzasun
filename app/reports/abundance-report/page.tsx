@@ -827,88 +827,97 @@ export default function AbundanceReportPage() {
             <section className="mb-32 md:mb-40">
               {/* 리포트 준비 과정 및 필요 정보 안내 */}
               <div className="relative">
-                  <Reveal>
-                    <div className="text-center mb-16 space-y-4">
-                      <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
-                        Process & Info
-                      </span>
-                      <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.25] md:leading-[1.3] break-keep">
-                        리포트는 <span className="text-[#8FB4A4]">이렇게</span> <span className="gradient-text-abundance">준비됩니다</span>
-                      </h2>
-                      <p className="text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light">
-                        백도화의 선천코드 리포트는 신청자분의 선천 정보를 바탕으로 정성스럽게 분석하여 작성되는 디지털 리포트입니다.
-                      </p>
-                    </div>
-                  </Reveal>
+                <Reveal>
+                  <div className="text-center mb-16 space-y-4">
+                    <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] text-[#8FB4A4] uppercase mb-4">
+                      PROCESS & INFO
+                    </span>
+                    <h2 className="text-3xl md:text-5xl font-elegant font-bold text-white tracking-wide">
+                      리포트는 <span className="text-[#8FB4A4]">이렇게</span> <span className="text-[#E6BE8A]">준비됩니다</span>
+                    </h2>
+                    <p className="text-[18px] text-[#EDE6DA] opacity-75 max-w-3xl mx-auto break-keep font-light leading-relaxed">
+                      백도화의 선천코드 풍요 리포트는 신청자분의 선천 정보를 바탕으로 정성스럽게 분석하여 작성되는 디지털 리포트입니다.
+                    </p>
+                  </div>
+                </Reveal>
 
-                  <div className="grid lg:grid-cols-12 gap-8 w-full max-w-[1280px] mx-auto">
-                    <div className="lg:col-span-7 space-y-6">
-                      <Reveal>
-                        <div className="gungjung-glass p-8 border-[#8FD3B6]/15 h-full flex flex-col justify-between">
+                <div className="grid lg:grid-cols-12 gap-8 w-full max-w-[1280px] mx-auto items-stretch">
+                  {/* 리포트 분석 및 전달 과정 (좌측 7칸) */}
+                  <div className="lg:col-span-7 h-full">
+                    <Reveal className="h-full">
+                      <div className="gungjung-glass p-8 border-[#608F82]/20 h-full flex flex-col justify-between">
+                        <div>
                           <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
-                            <span className="w-1.5 h-6 bg-[#8FD3B6] rounded-full"></span>
+                            <span className="w-1.5 h-6 bg-[#8FB4A4] rounded-full"></span>
                             리포트 분석 및 전달 과정
                           </h3>
 
                           <div className="space-y-8 relative pl-6 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-white/10">
                             {[
-                              { title: "선천 정보 입력 및 신청", desc: "신청 시 작성해주신 생년월일시 등 기본 선천 정보를 기준으로 분석 준비가 시작됩니다." },
-                              { title: "성향 및 패턴 정밀 해석", desc: "타고난 재능과 강점, 돈을 대하는 태도, 수입·소비 흐름을 종합적으로 살펴 리포트를 구성합니다." },
-                              { title: "맞춤형 디지털 리포트 전달", desc: "완성된 리포트는 언제든 다시 펼쳐보며 점검하실 수 있도록 디지털 문서 형태로 전달됩니다." },
-                              { title: "정보 확인 안내", desc: "생년월일시 등 입력 정보에 따라 해석 방향이 달라질 수 있으므로 신청 전 정보를 정확히 확인해 주세요." }
+                              { title: "STEP 01. 선천 정보 입력 및 신청", desc: "신청 시 작성해주신 생년월일시 등 기본 선천 정보를 기준으로 분석 준비가 시작됩니다." },
+                              { title: "STEP 02. 풍요 성향 및 패턴 정밀 해석", desc: "타고난 재능과 강점, 돈을 대하는 태도, 수입·소비 흐름을 종합적으로 살펴 리포트를 구성합니다." },
+                              { title: "STEP 03. 맞춤형 디지털 리포트 전달", desc: "완성된 리포트는 언제든 다시 펼쳐보며 점검하실 수 있도록 디지털 문서 형태로 전달됩니다." },
+                              { title: "STEP 04. 정보 확인 안내", desc: "생년월일시 등 입력 정보에 따라 해석 방향이 달라질 수 있으므로 신청 전 정보를 정확히 확인해 주세요." }
                             ].map((step, idx) => (
                               <div key={idx} className="relative group">
-                                <div className="absolute -left-[22px] top-1.5 w-3 h-3 rounded-full bg-[#0f241f] border-2 border-[#8FD3B6] group-hover:bg-[#E6BE8A] transition-colors duration-300"></div>
+                                <div className="absolute -left-[22px] top-1.5 w-3 h-3 rounded-full bg-[#0f241f] border-2 border-[#8FB4A4] group-hover:bg-[#8FB4A4] transition-colors duration-300"></div>
                                 <h4 className="text-base font-bold text-white mb-2">{step.title}</h4>
                                 <p className="text-sm text-[#EDE6DA]/60 break-keep font-light">{step.desc}</p>
                               </div>
                             ))}
                           </div>
                         </div>
-                      </Reveal>
-                    </div>
+                      </div>
+                    </Reveal>
+                  </div>
 
-                    <div className="lg:col-span-5 space-y-6">
-                      <Reveal>
-                        <div className="gungjung-glass p-8 border-[#8FD3B6]/15 h-full flex flex-col justify-between bg-gradient-to-b from-white/[0.02] to-transparent">
-                          <div>
-                            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                              <span className="w-1.5 h-6 bg-[#E6BE8A] rounded-full"></span>
-                              정확한 분석을 위해 필요한 정보
-                            </h3>
-                            <p className="text-sm text-[#EDE6DA]/50 mb-8 break-keep font-light">
-                              선천코드 분석 리포트의 특성상 아래의 기본 정보가 필요합니다.
-                            </p>
+                  {/* 정확한 분석을 위해 필요한 정보 (우측 5칸) */}
+                  <div className="lg:col-span-5 h-full">
+                    <Reveal className="h-full">
+                      <div className="gungjung-glass p-8 border-[#608F82]/20 h-full flex flex-col justify-between bg-gradient-to-b from-white/[0.02] to-transparent">
+                        <div>
+                          <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                            <span className="w-1.5 h-6 bg-[#E6BE8A] rounded-full"></span>
+                            정확한 분석을 위해 필요한 정보
+                          </h3>
+                          <p className="text-sm text-[#EDE6DA]/50 mb-8 break-keep font-light">
+                            선천코드 풍요 리포트의 특성상 아래의 기본 정보가 필요합니다.
+                          </p>
 
-                            <div className="grid grid-cols-2 gap-3 mb-8">
-                              {[
-                                { label: "이름 또는 닉네임", icon: "fa-user" },
-                                { label: "생년월일", icon: "fa-calendar-days" },
-                                { label: "태어난 시간", icon: "fa-clock" },
-                                { label: "양력/음력 여부", icon: "fa-circle-half-stroke" },
-                                { label: "성별", icon: "fa-venus-mars" },
-                                { label: "리포트 수령 이메일", icon: "fa-envelope" }
-                              ].map((info, idx) => (
-                                <div key={idx} className="flex items-center gap-3 p-3 bg-white/[0.02] rounded-xl border border-white/5">
-                                  <div className="w-8 h-8 rounded-lg bg-[#608F82]/15 flex items-center justify-center text-[#8FB4A4] shrink-0">
-                                    <i className={`fas ${info.icon} text-xs`}></i>
-                                  </div>
-                                  <span className="text-xs text-[#EDE6DA]/80 font-medium">{info.label}</span>
+                          <div className="grid grid-cols-2 gap-3 mb-6">
+                            {[
+                              { label: "이름 또는 닉네임", icon: "fa-user" },
+                              { label: "생년월일", icon: "fa-calendar-days" },
+                              { label: "태어난 시간", icon: "fa-clock" },
+                              { label: "양력/음력 여부", icon: "fa-circle-half-stroke" },
+                              { label: "성별", icon: "fa-venus-mars" },
+                              { label: "리포트 수령 이메일", icon: "fa-envelope" }
+                            ].map((info, idx) => (
+                              <div key={idx} className="flex items-center gap-3 p-3 bg-white/[0.02] rounded-xl border border-white/5">
+                                <div className="w-8 h-8 rounded-lg bg-[#608F82]/15 flex items-center justify-center text-[#8FB4A4] shrink-0">
+                                  <i className={`fas ${info.icon} text-xs`}></i>
                                 </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div className="p-4 bg-[#608F82]/10 border border-[#608F82]/25 rounded-xl">
-                            <p className="text-xs text-[#EDE6DA]/70 leading-relaxed break-keep font-light">
-                              ※ 본 리포트는 개인의 선천적 기질과 재정적 습관을 성찰하고 현실적인 방향을 모색하기 위한 분석 콘텐츠이며, 특정 수익이나 재물의 증가를 보장하지 않습니다.
-                            </p>
+                                <span className="text-xs text-[#EDE6DA]/80 font-medium">{info.label}</span>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                      </Reveal>
-                    </div>
+
+                        {/* 출생시간 안내 박스 (연애 리포트와 동일한 구조) */}
+                        <div className="pt-5 border-t border-white/10 space-y-1.5">
+                          <p className="text-xs md:text-[13px] font-bold text-[#E6BE8A] flex items-center gap-1.5 break-keep">
+                            <i className="fas fa-circle-info text-[11px] shrink-0 text-[#8FB4A4]"></i>
+                            <span>출생시간을 모르셔도 신청하실 수 있습니다.</span>
+                          </p>
+                          <p className="text-xs text-[#EDE6DA]/75 leading-relaxed break-keep font-light pl-4">
+                            다만 출생시간이 확인되지 않으면 시주(時柱)를 포함한 일부 분석이 제한되며, 연애 리포트와 마찬가지로 해석의 구체성에 차이가 있을 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+                    </Reveal>
                   </div>
                 </div>
+              </div>
             </section>
 
             {/* ══════════════════════════════════════════════════════════════════════ */}
@@ -940,16 +949,17 @@ export default function AbundanceReportPage() {
                 {/* ② 이미지 아래 텍스트 영역 (중앙 정렬) */}
                 <div className="text-center max-w-3xl mx-auto px-4 mb-10 md:mb-12">
                   <span className="block font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase text-[#8FB4A4] mb-6">
-                    EMBRACE YOUR ABUNDANCE
+                    BEGIN YOUR JOURNEY
                   </span>
                   
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white mb-6 leading-[1.25] md:leading-[1.3] break-keep">
-                    &ldquo;나의 풍요를, 이제 새로운 시선으로 읽어보세요.&rdquo;
+                    &ldquo;돈의 흐름을 바꾸는 첫 장을 여십시오.&rdquo;
                   </h2>
                   
                   <p className="text-[18px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep max-w-2xl mx-auto">
-                    타고난 기질과 돈을 대하는 태도, 반복되는 선택과 자원 활용의 방향을<br className="hidden sm:inline" />
-                    나만의 선천코드로 살펴보는 프리미엄 풍요 리포트입니다.
+                    남의 성공 공식과 막연한 불안 속에서 헤매던 시간은 끝났습니다.<br />
+                    이제는 내 안의 풍요 작동 방식을 읽고,<br />
+                    나에게 맞는 재물 기준을 단단히 세울 차례입니다.
                   </p>
                 </div>
 
