@@ -333,33 +333,33 @@ export default function QuestionShiftComparison({
 
           {/* CARD 02 — 백도화 선천코드의 질문 */}
           <div 
-            className={`gungjung-glass ${
+            className={`${
               theme === 'abundance'
-                ? 'bg-gradient-to-b from-[#30464A]/85 via-[#25393D]/80 to-[#1A282B]/90 border-[#5A787A]/50 hover:border-[#C7A97A]/50 shadow-[0_10px_35px_rgba(35,55,58,0.35)]'
+                ? 'gungjung-glass bg-gradient-to-b from-[#30464A]/85 via-[#25393D]/80 to-[#1A282B]/90 border-[#5A787A]/50 hover:border-[#C7A97A]/50 shadow-[0_10px_35px_rgba(35,55,58,0.35)]'
                 : theme === 'love' 
-                ? 'border-[#B7788D]/40 shadow-[0_0_30px_rgba(183,120,141,0.15)]' 
+                ? 'gungjung-glass border-[#B7788D]/40 shadow-[0_0_30px_rgba(183,120,141,0.15)]' 
                 : theme === 'compatibility'
-                ? 'point-box border-[rgba(199,169,122,0.18)] hover:border-[rgba(199,169,122,0.35)]'
-                : 'point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 border-[#608F82]/40 shadow-[0_0_30px_rgba(96,143,130,0.18)]'
+                ? 'compatibility-question-shift-card2 border-[rgba(199,169,122,0.18)] hover:border-[rgba(199,169,122,0.35)] backdrop-blur-md'
+                : 'gungjung-glass point-box bg-gradient-to-b from-[#1A0514]/35 via-[#2D0A1E]/20 to-[#0A0514]/35 border-[#608F82]/40 shadow-[0_0_30px_rgba(96,143,130,0.18)]'
             } p-8 md:p-10 rounded-[32px] border transition-all duration-300 flex flex-col justify-between relative overflow-hidden`}
             style={
               theme === 'love'
                 ? { backgroundColor: 'rgba(166, 91, 128, 0.18)' }
                 : theme === 'compatibility'
                 ? {
-                    background: 'linear-gradient(180deg, #4A2832 0%, #3B2029 50%, #2A161D 100%)',
+                    background: 'linear-gradient(135deg, #321D23 0%, #3B242A 55%, #422A2E 100%)',
                     borderColor: 'rgba(199, 169, 122, 0.18)',
                     boxShadow: '0 12px 40px rgba(42, 22, 29, 0.35)',
                   }
                 : undefined
             }
           >
-            {/* 배경 은은한 광채 (퍼플 제거 -> 딥 버건디 플럼 브라운 #4A2832 계열) */}
+            {/* 배경 은은한 광채 (퍼플 제거 -> 차분한 딥 버건디 브라운 #3B242A 계열) */}
             <div className={`absolute -top-20 -right-20 w-60 h-60 ${
               theme === 'abundance' 
                 ? 'bg-[#4B6B6F]/20' 
                 : theme === 'compatibility'
-                ? 'bg-[#4A2832]/25'
+                ? 'bg-[#3B242A]/20'
                 : themeConfig.glowBg
             } rounded-full blur-[80px] pointer-events-none`}></div>
 
