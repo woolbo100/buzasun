@@ -2217,7 +2217,7 @@ export default function SeoncheonCodeBigiPage() {
                       <span className="inline-block px-3 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20 mb-3">
                         WHEN TO OPEN THIS BOOK
                       </span>
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[#FAF7F2] leading-tight break-keep">
+                      <h3 className="text-xl sm:text-2xl md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-tight break-keep">
                         사람이 궁금해지는 순간, 이 책을 펼쳐보세요.
                       </h3>
                     </div>
@@ -2544,10 +2544,10 @@ export default function SeoncheonCodeBigiPage() {
                     <span className="inline-block px-3 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20 mb-3">
                       INSIDE THE SECRET BOOK
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-elegant font-bold text-[#FAF7F2] tracking-wide leading-snug mb-3">
+                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide leading-snug mb-3">
                       캐릭터로 만나고, 그림으로 이해하는 선천코드의 세계
                     </h3>
-                    <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light leading-relaxed">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8]">
                       어렵게만 느껴졌던 사주와 명리학을 캐릭터, 도감, 인포그래픽으로 만나보세요.
                     </p>
                   </div>
@@ -3069,10 +3069,10 @@ export default function SeoncheonCodeBigiPage() {
                     <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-3.5">
                       WHY THIS BOOK IS DIFFERENT
                     </span>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-tight mb-3">
+                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-tight mb-3">
                       어려웠던 사주, 사랑을 만나 쉬워지다.
                     </h2>
-                    <p className="text-sm sm:text-base text-[#EDE6DA]/80 font-light leading-relaxed">
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8]">
                       이론과 암기 중심의 전통 명리학 학습서와, 필요한 순간 직접 찾아보는 &lsquo;선천코드 비기&rsquo;의 접근 방식 차이입니다.
                     </p>
                   </div>
@@ -3273,7 +3273,7 @@ export default function SeoncheonCodeBigiPage() {
                         <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-4">
                           THE ART OF READING PEOPLE
                         </span>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-tight">
                           사람이 궁금해질 때마다,<br />
                           펼쳐보는 관계 도감.
                         </h2>
@@ -3765,7 +3765,7 @@ export default function SeoncheonCodeBigiPage() {
                 <span className="text-[#B7A18A] font-elegant text-xs md:text-sm tracking-[0.25em] md:tracking-[0.3em] uppercase mb-2.5 md:mb-3 block font-semibold">
                   A WORD FOR YOUR HEART
                 </span>
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-[1.4] md:leading-[1.42] break-keep">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-elegant font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-[1.4] md:leading-[1.42] break-keep">
                   사람이 궁금해질 때마다<br />
                   <span className="text-[#FAF7F2]">언제든 다시 펼쳐보는 관계 도감</span>
                 </h3>
@@ -3799,11 +3799,11 @@ export default function SeoncheonCodeBigiPage() {
                   <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                     TIME TO RECLAIM YOUR POWER
                   </span>
-                  <h2 className="text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] font-elegant font-bold text-white leading-[1.6] md:leading-[1.65] break-keep mb-4">
+                  <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white leading-[1.6] md:leading-[1.65] break-keep mb-4">
                     나를 읽고, 상대를 이해하고,<br />
                     <span className="text-[#B7A18A]">인연을 선택하다.</span>
                   </h2>
-                  <div className="text-sm sm:text-base md:text-[18px] text-[#EDE6DA]/80 leading-relaxed font-light max-w-2xl mx-auto break-keep space-y-2">
+                  <div className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal max-w-2xl mx-auto break-keep space-y-2">
                     <p>
                       한 사람만을 위한 해설이 아닌, 앞으로 만날 수많은 인연을 이해하기 위한 소장용 관계 비서.
                     </p>
