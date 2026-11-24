@@ -919,21 +919,25 @@ export default function SeoncheonCodeBigiPage() {
                           THE MOMENT OF ANXIETY
                         </span>
                         <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                          같은 사랑을 하고 있어도,<br />
-                          <span className="text-[#B7A18A]">우리는 왜 서로 다른 마음을 가지고 있을까요?</span>
+                          같은 시간, 같은 공간에 있어도<br />
+                          <span className="text-[#B7A18A]">우리는 왜 늘 다른 곳을 바라볼까요?</span>
                         </h3>
                         <div className="space-y-3.5 text-[18px] text-[#F2EAE0] leading-[1.8] font-normal break-keep">
                           <p>
-                            어떤 사람은 사랑하면 모든 것을 표현하고, 어떤 사람은 마음이 깊어질수록 오히려 조심스러워집니다.
+                            나는 애정 표현이라 믿고 건넨 말이 상대에게는 숨 막히는 통제가 되고, 상대가 침묵으로 지킨 배려는 나에게 차가운 방관으로 꽂힙니다.
                           </p>
                           <p>
-                            어떤 사람에게는 따뜻한 말 한마디가 사랑이고, 또 다른 사람에게는 묵묵히 곁을 지켜주는 행동이 사랑입니다.
+                            사랑이 식어서도, 노력이 부족해서도 아닙니다.<br />
+                            <strong className="font-bold text-white">타고난 오행의 온도와 십성의 언어가 정반대인 두 사람이 서로의 암호를 모른 채 맨몸으로 부딪히고 있었기 때문입니다.</strong>
                           </p>
                         </div>
-                        <div className="pt-6 border-t border-[#B7A18A]/25 mt-6">
-                          <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
-                            나와 상대가 가진 서로 다른 기질을 이해하는 것<br />
-                            <span className="text-[#B7A18A] font-semibold">그것이 관계를 바라보는 새로운 시선의 시작입니다.</span>
+                        <div className="pt-6 border-t border-[#B7A18A]/25 mt-6 space-y-2">
+                          <p className="text-white font-elegant font-bold text-[18px] md:text-[19px] leading-[1.75] break-keep">
+                            상대를 내 방식대로 바꾸려 애쓰는 순간 관계는 무너집니다.
+                          </p>
+                          <p className="text-[#B7A18A] font-elegant font-bold text-[18px] md:text-[19px] leading-[1.75] break-keep">
+                            선천코드의 차이를 읽는 것,<br />
+                            그것이 엇갈린 인연을 바로잡는 첫 번째 열쇠입니다.
                           </p>
                         </div>
                       </div>
