@@ -58,17 +58,17 @@ const productData = {
 
   topBannerImage: '/image/seoncheon-code-bigi/hero-secret-code.webp',
   heroImage: '/image/seoncheon-code-bigi/book-purchase-mockup.webp',
-  overviewImage: '/image/seoncheon-code-secret-book.webp',
+  overviewImage: '/image/seoncheon-code-bigi/seoncheon-code-trilogy-package.webp',
   recommendedImage: '/image/seoncheon-code-secret-book.webp',
   formulaImage: '/image/seoncheon-code-secret-book.webp',
   bookIntroImage: '/image/seoncheon-code-secret-book.webp',
   premiumImage: '/image/seoncheon-code-secret-book.webp',
   ctaImage: '/image/seoncheon-code-secret-book.webp',
 
-  curriculumImage: '/image/seoncheon-code-secret-book.webp',
-  packageImage: '/image/seoncheon-code-secret-book.webp',
-  reunionLawImage: '/image/seoncheon-code-secret-book.webp',
-  sovereignImage: '/image/seoncheon-code-secret-book.webp',
+  curriculumImage: '/image/seoncheon-code-bigi/three-code-decoding-roadmap.webp',
+  packageImage: '/image/seoncheon-code-bigi/seoncheon-code-all-in-one-mockup.webp',
+  reunionLawImage: '/image/seoncheon-code-bigi/law-of-code-reading.webp',
+  sovereignImage: '/image/seoncheon-code-bigi/sovereign-of-relationship.webp',
   bookPreviewGuideImage: '/image/seoncheon-code-secret-book.webp',
   bookPreviewToolsImage: '/image/seoncheon-code-secret-book.webp',
   bookPreviewJourneyImage: '/image/seoncheon-code-secret-book.webp',
@@ -77,6 +77,9 @@ const productData = {
   whySecretCodeBg: '/image/seoncheon-code-bigi/why-secret-code-bg.webp',
   useTogetherRoadmap: '/image/seoncheon-code-bigi/use-together-roadmap.webp',
   authorIntroductionBg: '/image/seoncheon-code-bigi/author-introduction-bg.webp',
+  practicalUsageGuide: '/image/seoncheon-code-bigi/practical-usage-guide.webp',
+  readingPeopleGuide: '/image/seoncheon-code-bigi/seoncheon-code-bigi-reading-people-guide-4x3.webp',
+  heartBanner: '/image/seoncheon-code-bigi/final-heart-banner.webp',
 }
 
 // 🏷️ 통일된 묵자색 뱃지 컴포넌트 (배경 #493740 · 테두리 #B7A18A · 텍스트 #F2EAE0)
@@ -117,15 +120,16 @@ function SeoncheonCaseImageSlot({
   const [hasError, setHasError] = useState(false)
 
   return (
-    <div className={`relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B7A18A]/30 shadow-2xl bg-[#1C171D] transition-all duration-300 ${className}`}>
+    <div className={`relative w-full aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B7A18A]/30 shadow-2xl bg-[#1C171D] transition-all duration-300 flex items-center justify-center ${className}`}>
       {!hasError && src ? (
         <Image
           src={src}
           alt={alt}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-contain transition-opacity duration-300"
+          className="object-contain transition-opacity duration-300 block"
           onError={() => setHasError(true)}
+          priority
         />
       ) : (
         <div
@@ -496,7 +500,7 @@ export default function SeoncheonCodeBigiPage() {
     {
       id: 1,
       title: "반복되던 연애 갈등과 상처 극복",
-      image: "/image/seoncheon-code-secret-book.webp",
+      image: "/image/seoncheon-code-bigi/real-life-transformation.webp",
       imagePlaceholder: "선천코드 분석: 먹빛 수묵 서재, 은은한 등불, 나의 기운을 돌아보는 시간",
       cases: [
         {
@@ -514,7 +518,7 @@ export default function SeoncheonCodeBigiPage() {
     {
       id: 2,
       title: "상대의 무의식 심리와 대화법 변화",
-      image: "/image/seoncheon-code-secret-book.webp",
+      image: "/image/seoncheon-code-bigi/real-life-transformation.webp",
       imagePlaceholder: "십성 본능 해독: 오행의 균형을 맞추는 차분한 다도와 비첩",
       cases: [
         {
@@ -532,7 +536,7 @@ export default function SeoncheonCodeBigiPage() {
     {
       id: 3,
       title: "나만의 고유한 매혹과 인연의 주권 회복",
-      image: "/image/seoncheon-code-secret-book.webp",
+      image: "/image/seoncheon-code-bigi/real-life-transformation.webp",
       imagePlaceholder: "인연의 주권자: 단아하고 당당한 매혹을 깨운 여인의 모습",
       cases: [
         {
@@ -2187,7 +2191,7 @@ export default function SeoncheonCodeBigiPage() {
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 7: 책의 탄생 배경
+                Section 7: 책의 탄생 배경 (THE ONLY SECRET 단 하나의 관계 암호서)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
@@ -2203,38 +2207,63 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   {/* 오른쪽 본문 */}
-                  <div className="lg:col-span-7 space-y-6 break-keep">
+                  <div className="lg:col-span-7 space-y-7 sm:space-y-8 break-keep">
                     <div>
-                      <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.25em] uppercase block">
+                      {/* 1. 상단 영문 라벨 */}
+                      <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.25em] uppercase block mb-3 sm:mb-3.5">
                         THE ONLY SECRET
                       </span>
-                      <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mt-1 leading-[1.35]">
-                        어려웠던 사주를,<br />
-                        <span className="text-[#B7A18A]">가장 흥미로운 이야기로 풀어내다.</span>
+
+                      {/* 2. 상단 리드 문구 */}
+                      <p className="text-[18px] font-elegant font-light text-[#B7A18A] leading-[1.4] mb-2 sm:mb-2.5 break-keep">
+                        수많은 엇갈림과 임상 통찰 끝에,
+                      </p>
+
+                      {/* 3. 메인 헤드카피 & 4. 대형 상품 타이틀 */}
+                      <h2 className="text-[26px] sm:text-[30px] md:text-[34px] lg:text-[36px] font-elegant font-bold leading-[1.4] break-keep">
+                        <span className="text-[#FAF7F2] block">마침내 탄생한</span>
+                        <span className="text-[#B7A18A] block">단 하나의 관계 암호서(暗號書)</span>
+                        <span
+                          className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] font-extrabold mt-3 inline-block"
+                          style={{
+                            background: 'linear-gradient(110deg, #E2CEB9 0%, #B7A18A 35%, #9E7D8A 65%, #6B4E5D 100%)',
+                            backgroundClip: 'text',
+                            WebkitBackgroundClip: 'text',
+                            color: 'transparent',
+                            WebkitTextFillColor: 'transparent',
+                            opacity: 1
+                          }}
+                        >
+                          선천코드 비기
+                        </span>
                       </h2>
                     </div>
 
-                    <div className="space-y-4 text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
-                      <p>
-                        복잡한 한자와 명리학 이론 속에는 사람의 기질과 매력, 사랑과 인연에 관한 다양한 해석이 담겨 있습니다.
+                    {/* 5. 본문 문구 교체 (18px, 행간 1.8, 충분한 문단 간격) */}
+                    <div className="space-y-4 sm:space-y-5 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                      <p className="text-[#F0EBE2]">
+                        더 이상 남의 점괘에 휘둘리며 불안해하지 마십시오.
                       </p>
-                      <p className="text-white font-semibold">
-                        《선천코드 비기》는 이러한 내용을 캐릭터와 도감, 인포그래픽을 활용하여 누구나 이해하기 쉬운 언어로 풀어낸 책입니다.
+                      <p className="text-[#FAF7F2] font-bold">
+                        사랑은 운에 맡기는 것이 아니라, 나와 상대의 코드를 읽고 주도권을 쥐는 것입니다.
                       </p>
-                      <p>
-                        공부하기 위해 억지로 읽는 책이 아니라, 사람이 궁금해져 자연스럽게 펼쳐보는 책을 만들고자 했습니다.
+                      <p className="text-[#F0EBE2]">
+                        《선천코드 비기》는 난해한 한자 풀이와 뜬구름 잡는 사주 상담을 거부하고{' '}
+                        <strong className="text-[#B7A18A] font-bold">&lsquo;명리 심리 역학&rsquo;</strong>과{' '}
+                        <strong className="text-[#B7A18A] font-bold">&lsquo;오감 행동 처방&rsquo;</strong>을 집대성하여 오직 사랑과 인연의 판을 뒤집기 위해 탄생한{' '}
+                        <strong className="text-[#B7A18A] font-bold">실전 관계 도감</strong>입니다.
                       </p>
                     </div>
 
-                    {/* 핵심 콘텐츠 키워드 알약형 카드 */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    {/* 6. 핵심 키워드 카드 6종 수정 (2열 3행 알약형 카드) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
                       {[
-                        "만세력 3대 핵심 좌표 읽기",
-                        "십성 5대 본능 캐릭터",
-                        "10대 일간 매력 페르소나",
+                        "만세력 3초 핵심 좌표 판독",
+                        "십성 5대 본능 캐릭터 도감",
+                        "10대 일간 오감 매혹 무기",
                         "도화와 본능적 끌림의 비밀",
-                        "이상형과 배우자 프로필 도감",
-                        "궁합·관계 충돌·재회 해설"
+                        "이상형 vs 배우자 안방 감별",
+                        "파국 궁합 방어 & 재회 타이밍"
                       ].map((item, idx) => (
                         <div
                           key={idx}
@@ -2412,22 +2441,27 @@ export default function SeoncheonCodeBigiPage() {
                     <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       CURRICULUM &amp; ARCHITECTURE
                     </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
-                      나의 매력에서 인연의 비밀까지,<br />
-                      <span className="text-[#B7A18A]">사랑을 이해하는 7개의 선천코드</span>
+                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold leading-[1.4] break-keep">
+                      <span className="text-[#FAF7F2] block">사랑과 인연을 감(感)에 맡기지 마십시오.</span>
+                      <span className="text-[#B7A18A] block">《선천코드 비기》가 설계한 7단계 관계 해독 지도</span>
                     </h2>
-                    <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] max-w-3xl mx-auto font-normal leading-[1.8] break-keep">
-                      십성 캐릭터와 일간 페르소나에서 시작해 도화, 이상형, 배우자, 관계의 그림자, 재회와 궁합까지, 사랑과 인연을 바라보는 다양한 해석을 한 권에 담았습니다.
-                    </p>
+                    <div className="text-[#EDE6DA]/85 text-[18px] max-w-4xl mx-auto font-normal leading-[1.8] break-keep space-y-1 sm:space-y-1.5">
+                      <p>
+                        타고난 본능 캐릭터와 오감 매혹 무기부터 이상형 감별, 파국 궁합 방어, 재회 골든타임까지
+                      </p>
+                      <p className="font-bold text-[#FAF7F2]">
+                        한자 몰라도 3초 만에 나와 상대의 코드를 읽어내는 실전 해독 체계를 한 권에 집약했습니다.
+                      </p>
+                    </div>
                   </div>
 
                   <div className="mt-8 md:mt-10 relative w-full aspect-[16/9] md:aspect-[1672/941] rounded-2xl md:rounded-3xl overflow-hidden border border-[#B7A18A]/30 shadow-2xl bg-black/40 flex items-center justify-center">
                     <Image
-                      src={productData.topBannerImage}
-                      alt="선천코드 비기 커리큘럼 아키텍처 다이어그램"
+                      src={productData.curriculumImage}
+                      alt="사랑과 인연을 감에 맡기지 마십시오 - 선천코드 비기가 설계한 7단계 관계 해독 지도 인포그래픽"
                       fill
                       sizes="(max-width: 1280px) 100vw, 1280px"
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                 </div>
@@ -2574,18 +2608,19 @@ export default function SeoncheonCodeBigiPage() {
                     <span className="text-[#B7A18A]">인연의 암호를 해독하는 3단계 완성형 패키지</span>
                   </h3>
                   <p className="text-[#EDE6DA]/85 text-[18px] mt-3 leading-[1.8] font-normal break-keep">
-                    본편으로 원리를 꿰뚫고, 일간·십성 도감으로 상대를 분석하며, 도화·이상형 비책으로 인연을 완성합니다.
+                    본편으로 원리를 꿰뚫고, 일간·십성 도감으로 상대를 분석하며,<br className="hidden sm:inline" />
+                    {' '}도화·이상형 비책으로 인연을 완성합니다.
                   </p>
                 </div>
 
                 {/* 3종 올인원 세트 목업 이미지 */}
                 <div className="mb-10 md:mb-14">
-                  <div className="relative w-full rounded-[20px] overflow-hidden border border-[#B7A18A]/30 shadow-[0_12px_40px_rgba(0,0,0,0.45)]">
+                  <div className="relative w-full rounded-[20px] overflow-hidden border border-[#B7A18A]/30 shadow-[0_12px_40px_rgba(0,0,0,0.45)] bg-black/20 flex items-center justify-center">
                     <Image
-                      src={productData.topBannerImage}
-                      alt="선천코드 비기 본편과 실전 부록으로 구성된 3종 올인원 패키지"
-                      width={1600}
-                      height={900}
+                      src={productData.packageImage}
+                      alt="선천코드 비기 3종 올인원 세트 - 인연의 암호를 해독하는 3단계 완성형 패키지 와이드 목업"
+                      width={1536}
+                      height={1024}
                       sizes="(max-width: 1280px) 100vw, 1280px"
                       className="w-full h-auto object-contain block rounded-[20px]"
                       priority
@@ -2765,7 +2800,7 @@ export default function SeoncheonCodeBigiPage() {
                     <div className="lg:col-span-5 flex justify-center">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
-                          assetKey="book1"
+                          assetKey="bookMainMockup"
                           className="aspect-[3/4] shadow-2xl"
                         />
                         <div className="mt-4 md:mt-5 text-center space-y-1 text-[16px] md:text-[18px] leading-[1.5]">
@@ -2845,7 +2880,7 @@ export default function SeoncheonCodeBigiPage() {
                     <div className="lg:col-span-5 flex justify-center">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
-                          assetKey="book2"
+                          assetKey="bookAppendix01Mockup"
                           className="aspect-[3/4] shadow-2xl"
                         />
                         <div className="mt-4 md:mt-5 text-center space-y-1 text-[16px] md:text-[18px] leading-[1.5]">
@@ -2918,7 +2953,7 @@ export default function SeoncheonCodeBigiPage() {
                     <div className="lg:col-span-5 flex justify-center">
                       <div className="w-full max-w-[340px] lg:max-w-none">
                         <HybridImageSlot
-                          assetKey="book3"
+                          assetKey="bookAppendix02Mockup"
                           className="aspect-[3/4] shadow-2xl"
                         />
                         <div className="mt-4 md:mt-5 text-center space-y-1 text-[16px] md:text-[18px] leading-[1.5]">
@@ -2985,13 +3020,13 @@ export default function SeoncheonCodeBigiPage() {
               }}
             >
               <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-stretch break-keep">
-                <div className="lg:col-span-5 relative w-full min-h-[260px] sm:min-h-[320px] lg:min-h-full overflow-hidden flex items-center justify-center">
+                <div className="lg:col-span-5 relative w-full min-h-[280px] sm:min-h-[340px] lg:min-h-full overflow-hidden flex items-center justify-center p-3 sm:p-5 lg:p-6 bg-black/20">
                   <Image
-                    src={productData.heroImage}
-                    alt="선천코드 비기 3종 패키지 미리보기"
+                    src={productData.overviewImage}
+                    alt="선천코드 비기 3종 패키지 (본편 + 실전부록 1 + 실전부록 2) 세트 모형"
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"
-                    className="object-cover object-center"
+                    className="object-contain object-center"
                     priority
                   />
                 </div>
@@ -3302,8 +3337,8 @@ export default function SeoncheonCodeBigiPage() {
                   <div className="flex flex-col lg:justify-between w-full h-full">
                     <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[32px] md:rounded-[40px] border border-[#B7A18A]/30 shadow-2xl bg-black/40 flex items-center justify-center">
                       <Image
-                        src={productData.heroImage}
-                        alt="선천코드 비기 실전 200% 활용 가이드"
+                        src={productData.practicalUsageGuide}
+                        alt="선천코드 비기 실전 200% 활용 가이드 - 만세력 조회·해독·적용 4단계 로드맵 포스터"
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-contain"
@@ -3340,8 +3375,8 @@ export default function SeoncheonCodeBigiPage() {
 
                       <div className="pt-1">
                         <p className="text-[20px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] break-keep">
-                          어렵지 않습니다.<br className="hidden sm:inline" />
-                          {' '}이렇게 펼쳐보세요.
+                          한자를 몰라도 3초면 충분합니다.<br className="hidden sm:inline" />
+                          {' '}지금 당장 이렇게 펼쳐보세요.
                         </p>
                       </div>
 
@@ -3407,9 +3442,9 @@ export default function SeoncheonCodeBigiPage() {
                     boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
                   }}
                 >
-                  <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-                    {/* 감성 문구 영역 */}
-                    <div className="space-y-6 break-keep">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+                    {/* 감성 문구 영역 (좌측 약 45% 너비) */}
+                    <div className="lg:col-span-5 space-y-6 break-keep">
                       <div>
                         <span className="inline-block px-3.5 py-1 text-[12px] font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-4">
                           THE ART OF READING PEOPLE
@@ -3446,12 +3481,19 @@ export default function SeoncheonCodeBigiPage() {
                       </div>
                     </div>
 
-                    {/* 책을 펼쳐보는 감성 이미지 슬롯 */}
-                    <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#B7A18A]/30 shadow-2xl bg-[#1C171D]">
-                      <HybridImageSlot
-                        assetKey="artOfReadingPeople"
-                        className="w-full aspect-[4/3] md:aspect-[16/10]"
-                      />
+                    {/* 책을 펼쳐보는 감성 이미지 슬롯 (우측 약 55% 너비로 최대 확대, 4:3 원본 비율 유지) */}
+                    <div className="lg:col-span-7 w-full flex items-center justify-center">
+                      <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#B7A18A]/35 shadow-2xl bg-[#1C171D]">
+                        <Image
+                          src={productData.readingPeopleGuide}
+                          alt="사람이 궁금해질 때마다 펼쳐보는 관계 도감 - 펼쳐진 책과 오행 심리 해독 가이드"
+                          width={1448}
+                          height={1086}
+                          sizes="(max-width: 1024px) 100vw, 55vw"
+                          className="w-full h-auto object-contain block rounded-2xl md:rounded-3xl"
+                          priority
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3465,29 +3507,44 @@ export default function SeoncheonCodeBigiPage() {
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="space-y-12">
-                  <div className="text-center max-w-3xl mx-auto space-y-4 break-keep">
+                <div className="space-y-10 md:space-y-12">
+                  <div className="text-center max-w-4xl mx-auto space-y-4 md:space-y-5 mb-10 md:mb-14 break-keep">
+                    {/* 1. 영문 라벨 */}
                     <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       POSITION SHIFT
                     </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      사람을 이해하는 시선이 깊어질수록,<br />
-                      <span className="text-[#B7A18A]">인연을 선택하는 나의 기준도 선명해집니다.</span>
+
+                    {/* 2. 메인 헤드카피 */}
+                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold leading-[1.4] break-keep">
+                      <span className="text-[#FAF7F2] block">&ldquo;같은 연애를 반복했던 이유,</span>
+                      <span className="text-[#B7A18A] block">어쩌면 &lsquo;관계의 암호&rsquo;를 읽지 못했기 때문입니다.&rdquo;</span>
                     </h2>
+
+                    {/* 3. 신규 서브 설명 문구 */}
+                    <div className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep pt-2 space-y-4">
+                      <p>
+                        상대의 마음을 추측하며 불안해하는 동안,<br className="hidden sm:inline" />
+                        우리는 스스로가 가진 고유의 매력과 기준을 잃곤 합니다.
+                      </p>
+                      <p>
+                        막연한 운에 기대는 연애에서 벗어나,<br className="hidden sm:inline" />
+                        <strong className="text-[#B7A18A] font-bold">이제 상대를 꿰뚫어 보고 인연을 직접 선택하는 시선을 세워보세요.</strong>
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="relative w-full aspect-[16/9] md:aspect-[1672/941] rounded-2xl md:rounded-[20px] overflow-hidden shadow-2xl flex items-center justify-center border border-[#B7A18A]/30">
+                  <div className="relative w-full aspect-[16/9] md:aspect-[1672/941] rounded-2xl md:rounded-[20px] overflow-hidden shadow-2xl flex items-center justify-center border border-[#B7A18A]/30 bg-[#1C171D]">
                     <Image
-                      src={productData.topBannerImage}
-                      alt="선천코드 관계 역학 인포그래픽"
+                      src={productData.reunionLawImage}
+                      alt="인연 해독의 법칙 - 같은 연애를 반복했던 이유, 어쩌면 관계의 암호를 읽지 못했기 때문입니다"
                       fill
                       sizes="(max-width: 1280px) 100vw, 1280px"
-                      className="object-cover"
+                      className="object-contain"
                       priority
                     />
                   </div>
 
-                  <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-28 md:mt-40 break-keep">
+                  <div className="text-center max-w-4xl mx-auto space-y-4 md:space-y-5 mt-28 md:mt-40 break-keep">
                     <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       SOVEREIGN OF RELATIONSHIP
                     </span>
@@ -3500,7 +3557,7 @@ export default function SeoncheonCodeBigiPage() {
                     </h3>
 
                     <div className="space-y-3 text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep pt-2">
-                      <p>
+                      <p className="whitespace-normal md:whitespace-nowrap">
                         정해진 운명에 순응하는 것이 아니라, 나의 기질과 상대의 차이를 이해하며 관계를 주체적으로 바라보는 것
                       </p>
                       <p className="text-[#B7A18A] font-bold font-elegant text-[18px] md:text-[20px] pt-1">
@@ -3878,37 +3935,51 @@ export default function SeoncheonCodeBigiPage() {
                 Section 21: 구매 전 안내 이후 감성 배너 (A WORD FOR YOUR HEART)
                ═══════════════════════════════════════════════════════════════ */}
             <section
-              className="relative min-h-[320px] sm:min-h-[360px] md:min-h-0 aspect-auto md:aspect-[1672/941] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group shadow-2xl w-full max-w-[1280px] mx-auto bg-[#1C171D]"
+              className="relative min-h-[360px] sm:min-h-[420px] md:min-h-0 aspect-auto md:aspect-[1672/941] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group shadow-2xl w-full max-w-[1280px] mx-auto bg-[#1C171D]"
               style={{
                 border: '1px solid rgba(183, 161, 138, 0.45)',
                 boxShadow: '0 0 24px rgba(183, 161, 138, 0.08), 0 16px 45px rgba(0, 0, 0, 0.5)'
               }}
             >
-              {/* 배경 이미지 슬롯 */}
-              <div className="absolute inset-0 w-full h-full">
-                <HybridImageSlot
-                  assetKey="heartBanner"
-                  className="w-full h-full"
+              {/* 배경 이미지 (우측 남녀 인물과 달빛 소품이 잘리지 않도록 object-[75%_center] md:object-center 배치) */}
+              <div className="absolute inset-0 w-full h-full overflow-hidden">
+                <Image
+                  src={productData.heartBanner}
+                  alt="선천코드 비기 감성 배경 - 지금 필요한 것은 나를 소모하는 노력이 아닐 수 있습니다"
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                  className="object-cover object-[75%_center] md:object-center transition-transform duration-700 group-hover:scale-105"
+                  priority
                 />
               </div>
 
-              {/* 어두운 그라데이션 오버레이 */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#1C171D] via-[#1C171D]/80 to-transparent" />
+              {/* 좌측 텍스트 가독성을 위한 은은한 국한 그라데이션 (과도한 전체 암전 방지, 원본 묵자색·버건디·금박 색감 보존) */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#1C171D]/90 via-[#1C171D]/55 to-transparent sm:via-[#1C171D]/40 md:via-[#1C171D]/25" />
 
-              {/* 텍스트 영역 (좌측 배치) */}
-              <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-12 lg:p-16 text-left w-full max-w-[92%] sm:max-w-[70%] md:max-w-[50%] lg:max-w-[48%] z-10">
+              {/* 텍스트 영역 (좌측 약 45% 너비 배치, 수직 중앙 정렬, 우측 인물과 겹침 방지) */}
+              <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-12 lg:p-16 text-left w-full max-w-[95%] sm:max-w-[70%] md:max-w-[48%] lg:max-w-[45%] z-10">
                 <span className="text-[#B7A18A] font-elegant text-[12px] tracking-[0.25em] md:tracking-[0.3em] uppercase mb-2.5 md:mb-3 block font-semibold">
                   A WORD FOR YOUR HEART
                 </span>
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-elegant font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-[1.4] md:leading-[1.42] break-keep">
-                  사람이 궁금해질 때마다,<br />
-                  <span className="text-[#FAF7F2]">언제든 다시 펼쳐보는 관계 도감</span>
+                  지금 필요한 것은<br />
+                  <span className="text-[#FAF7F2]">나를 소모하는 노력이 아닐 수 있습니다.</span>
                 </h3>
-                <p className="text-xs sm:text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed mb-5 sm:mb-6 break-keep">
+                <p className="text-xs sm:text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed mb-6 break-keep">
                   새로운 인연을 만났을 때도,<br className="hidden sm:inline" />
                   사랑하는 사람을 더 이해하고 싶을 때도<br />
                   캐릭터로 만나고, 그림으로 이해하며, 나와 상대의 선천코드를 하나씩 찾아보세요.
                 </p>
+
+                {/* 신규 20px 볼드 강조 문구 */}
+                <div className="text-[17px] sm:text-[19px] md:text-[20px] font-elegant font-bold leading-[1.6] break-keep mb-5 sm:mb-6">
+                  <p className="text-[#FAF7F2]">
+                    운명에 휘둘리는 사랑을 끝내고,
+                  </p>
+                  <p className="text-[#B7A18A]">
+                    이제 당신만의 관계 기준을 세울 시간
+                  </p>
+                </div>
 
                 {/* 하단 앵커 링크 */}
                 <div className="pt-1 sm:pt-2">
@@ -3916,7 +3987,7 @@ export default function SeoncheonCodeBigiPage() {
                     href="#final-cta"
                     className="inline-flex items-center gap-2 text-sm sm:text-base md:text-lg text-[#B7A18A] hover:text-[#FAF7F2] font-elegant font-bold tracking-wide transition-all group/link cursor-pointer"
                   >
-                    <span>인연을 바라보는 새로운 시선 만나기</span>
+                    <span>《선천코드 비기》로 인연의 암호 해독하기</span>
                     <span className="text-xs transition-transform duration-300 group-hover/link:translate-x-1">→</span>
                   </a>
                 </div>

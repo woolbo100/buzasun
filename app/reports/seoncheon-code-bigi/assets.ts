@@ -76,6 +76,78 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     isPlaceholder: false,
   },
 
+  // 0-5. Trilogy Package: 패키지 소개 및 구매 CTA 3종 완성형 세트 모형
+  trilogyPackage: {
+    id: 'trilogyPackage',
+    src: '/image/seoncheon-code-bigi/seoncheon-code-trilogy-package.webp',
+    alt: '선천코드 비기 3종 올인원 패키지 (본편 + 실전부록 1 + 실전부록 2) 세트 모형',
+    aspectRatio: 'aspect-[4/3]',
+    objectFit: 'contain',
+    placeholderLabel: '선천코드 비기 3종 세트 모형 (PACKAGE OVERVIEW)',
+    description: '패키지 소개 및 중간 구매 CTA 카드 전용 3권 세트 모형 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 0-6. Practical Usage Guide: 실전 200% 활용 가이드 좌측 포스터 (3:4)
+  practicalUsageGuide: {
+    id: 'practicalUsageGuide',
+    src: '/image/seoncheon-code-bigi/practical-usage-guide.webp',
+    alt: '《선천코드 비기》 실전 200% 활용 가이드 - 만세력 조회·해독·적용 4단계 로드맵',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'contain',
+    placeholderLabel: '실전 200% 활용 가이드 포스터 (3:4)',
+    description: '실전 200% 활용 가이드 영역 좌측 3:4 전용 가이드 포스터 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 0-7. All In One Mockup: 3종 올인원 세트 소개 와이드 목업 (16:9)
+  allInOneMockup: {
+    id: 'allInOneMockup',
+    src: '/image/seoncheon-code-bigi/seoncheon-code-all-in-one-mockup.webp',
+    alt: '선천코드 비기 3종 올인원 세트 - 인연의 암호를 해독하는 3단계 완성형 패키지 와이드 목업',
+    aspectRatio: 'aspect-[16/9]',
+    objectFit: 'contain',
+    placeholderLabel: '3종 올인원 완성형 패키지 와이드 목업 (16:9)',
+    description: 'PACKAGE COMPOSITION 16:9 3종 도서 와이드 목업 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 0-8. Book Main Mockup: 3종 올인원 상세 해부 - 본편 양장본 목업 (3:4)
+  bookMainMockup: {
+    id: 'bookMainMockup',
+    src: '/image/seoncheon-code-bigi/book-main-mockup.webp',
+    alt: '선천코드 비기 완전판 양장본 목업',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'contain',
+    placeholderLabel: '선천코드 비기 완전판 양장본 목업 (3:4)',
+    description: '상세 해부 Book 1 본편 3:4 전용 목업 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 0-9. Book Appendix 01 Mockup: 3종 올인원 상세 해부 - 실전 부록 1 양장본 목업 (3:4)
+  bookAppendix01Mockup: {
+    id: 'bookAppendix01Mockup',
+    src: '/image/seoncheon-code-bigi/book-appendix-01-mockup.webp',
+    alt: '10대 일간 & 십성 심리 암호 해독 도감 양장본 목업',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'contain',
+    placeholderLabel: '실전 부록 1 양장본 목업 (3:4)',
+    description: '상세 해부 Book 2 실전 부록 1 3:4 전용 목업 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 0-10. Book Appendix 02 Mockup: 3종 올인원 상세 해부 - 실전 부록 2 양장본 목업 (3:4)
+  bookAppendix02Mockup: {
+    id: 'bookAppendix02Mockup',
+    src: '/image/seoncheon-code-bigi/book-appendix-02-mockup.webp',
+    alt: '도화·이상형·배우자 복덕 실전 판별 비책 양장본 목업',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'contain',
+    placeholderLabel: '실전 부록 2 양장본 목업 (3:4)',
+    description: '상세 해부 Book 3 실전 부록 2 3:4 전용 목업 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
   // 1. Hero: 패키지 전체 및 메인 표지 / 구매 카드 목업
   hero: {
     id: 'hero',
@@ -112,15 +184,15 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     isPlaceholder: false,
   },
 
-  // 3. Book 1: 본편 표지
+  // 3. Book 1: 본편 표지 (THE ONLY SECRET 영역 좌측 3:4 도서 포스터 목업)
   book1: {
     id: 'book1',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '선천코드 비기 [본편] 완전판 표지',
+    src: '/image/seoncheon-code-bigi/secret-code-book-poster.webp',
+    alt: '마침내 탄생한 단 하나의 관계 암호서 - 선천코드 비기 도서 포스터',
     aspectRatio: 'aspect-[3/4]',
-    objectFit: 'cover',
-    placeholderLabel: '선천코드 비기 본편 표지',
-    description: 'seoncheon-code-secret-book.webp',
+    objectFit: 'contain',
+    placeholderLabel: '선천코드 비기 도서 포스터 (3:4)',
+    description: 'THE ONLY SECRET 영역 좌측 3:4 도서 포스터 이미지 적용 완료',
     isPlaceholder: false,
   },
 
@@ -160,16 +232,16 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     isPlaceholder: true,
   },
 
-  // 7. Review: 독자 후기 및 변화
+  // 7. Review: 독자 후기 및 변화 (REAL LIFE TRANSFORMATIONS 실전 활용 예시 좌측 3:4 이미지)
   review: {
     id: 'review',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '선천코드 비기 독자 체감 후기',
-    aspectRatio: 'aspect-square',
-    objectFit: 'cover',
-    placeholderLabel: '선천코드 비기 독자 체감 후기',
-    description: '실전 적용 후 관계 변화 사례',
-    isPlaceholder: true,
+    src: '/image/seoncheon-code-bigi/real-life-transformation.webp',
+    alt: '선천코드 비기 실전 활용 예시 - 독자 체감 후기 및 관계 변화',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'contain',
+    placeholderLabel: '선천코드 비기 독자 체감 후기 (3:4)',
+    description: 'REAL LIFE TRANSFORMATIONS 실전 적용 후 관계 변화 사례 전용 3:4 비주얼 적용 완료',
+    isPlaceholder: false,
   },
 
   // 8. Anxiety: 관계의 불안과 자책
@@ -184,40 +256,40 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     isPlaceholder: false,
   },
 
-  // 9. Curriculum: 전체 아키텍처 인포그래픽
+  // 9. Curriculum: 전체 아키텍처 인포그래픽 (3단계 관계 해독 로드맵)
   curriculum: {
     id: 'curriculum',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '선천코드 비기 전체 커리큘럼 아키텍처',
-    aspectRatio: 'aspect-video',
+    src: '/image/seoncheon-code-bigi/three-code-decoding-roadmap.webp',
+    alt: '사랑과 인연을 감에 맡기지 마십시오 - 선천코드 비기가 설계한 7단계 관계 해독 지도 인포그래픽',
+    aspectRatio: 'aspect-[16/9]',
     objectFit: 'contain',
-    placeholderLabel: '선천코드 비기 커리큘럼 & 오행 아키텍처 다이어그램',
-    description: '10대 일간과 십성, 도화 심리 7단계 아키텍처',
-    isPlaceholder: true,
+    placeholderLabel: '7단계 관계 해독 지도 인포그래픽 (16:9)',
+    description: 'CURRICULUM & ARCHITECTURE 16:9 3단계 관계 해독 로드맵 이미지 적용 완료',
+    isPlaceholder: false,
   },
 
-  // 10. Relation Law: 관계 역전 및 오행 메커니즘
+  // 10. Relation Law: 관계 역전 및 오행 메커니즘 (POSITION SHIFT 인연 해독의 법칙 16:9 와이드 인포그래픽)
   reunionLaw: {
     id: 'reunionLaw',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '선천코드 관계 역학 - 오행의 끌림과 상호작용 법칙',
-    aspectRatio: 'aspect-video',
+    src: '/image/seoncheon-code-bigi/law-of-code-reading.webp',
+    alt: '인연 해독의 법칙 - 같은 연애를 반복했던 이유, 어쩌면 관계의 암호를 읽지 못했기 때문입니다',
+    aspectRatio: 'aspect-[16/9]',
     objectFit: 'contain',
-    placeholderLabel: '선천코드 관계 역학 인포그래픽',
-    description: '오행 상생상극과 관계 역학 다이어그램',
-    isPlaceholder: true,
+    placeholderLabel: '인연 해독의 법칙 와이드 인포그래픽 (16:9)',
+    description: 'POSITION SHIFT 좌우 비교형 16:9 인연 해독의 법칙 인포그래픽 이미지 적용 완료',
+    isPlaceholder: false,
   },
 
-  // 11. Sovereign: 인연의 주권자
+  // 11. Sovereign: 인연의 주권자 (POSITION SHIFT 하단 16:9 와이드 배너)
   sovereign: {
     id: 'sovereign',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '나만의 매혹과 고유한 본성을 회복하는 길 - 인연의 주권자',
-    aspectRatio: 'aspect-video',
+    src: '/image/seoncheon-code-bigi/sovereign-of-relationship.webp',
+    alt: '나를 읽고, 상대를 이해하고, 스스로 인연을 선택하는 사람 - 인연의 주권자 와이드 배너',
+    aspectRatio: 'aspect-[16/9]',
     objectFit: 'contain',
-    placeholderLabel: '나만의 본성을 회복하는 인연의 주권자 배너',
-    description: '선천코드로 깨우는 당당한 나만의 중심',
-    isPlaceholder: true,
+    placeholderLabel: '인연의 주권자 와이드 배너 (16:9)',
+    description: 'POSITION SHIFT 하단 16:9 인연의 주권자 와이드 배너 이미지 적용 완료',
+    isPlaceholder: false,
   },
 
   // 12. Final CTA: 최종 비첩
@@ -283,36 +355,36 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
   // 16. Heart Banner: 감성 배너 배경 (A WORD FOR YOUR HEART)
   heartBanner: {
     id: 'heartBanner',
-    src: '/image/seoncheon-code-secret-book.webp',
+    src: '/image/seoncheon-code-bigi/final-heart-banner.webp',
     alt: '선천코드 비기 감성 배경 - 지금 필요한 것은 나를 소모하는 노력이 아닐 수 있습니다',
     aspectRatio: 'aspect-[1672/941]',
     objectFit: 'cover',
     placeholderLabel: 'A WORD FOR YOUR HEART 감성 배너 배경',
-    description: '선천코드 비기 감성 와이드 배경 비주얼',
-    isPlaceholder: true,
+    description: '선천코드 비기 16:9 감성 와이드 배경 비주얼 적용 완료',
+    isPlaceholder: false,
   },
 
   // 17. Art of Reading People: 감성 브릿지 책 펼쳐보기 비주얼 (THE ART OF READING PEOPLE)
   artOfReadingPeople: {
     id: 'artOfReadingPeople',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '사람이 궁금해질 때마다 펼쳐보는 관계 도감 - THE ART OF READING PEOPLE',
+    src: '/image/seoncheon-code-bigi/seoncheon-code-bigi-reading-people-guide-4x3.webp',
+    alt: '사람이 궁금해질 때마다, 펼쳐보는 관계 도감 - THE ART OF READING PEOPLE',
     aspectRatio: 'aspect-[4/3]',
-    objectFit: 'cover',
-    placeholderLabel: '사람이 궁금해질 때마다 펼쳐보는 관계 도감 비주얼',
-    description: '책을 펼쳐보는 따뜻한 감성 오브제 또는 수묵 일러스트',
-    isPlaceholder: true,
+    objectFit: 'contain',
+    placeholderLabel: '사람이 궁금해질 때마다 펼쳐보는 관계 도감 비주얼 (4:3)',
+    description: 'THE ART OF READING PEOPLE 4:3 관계 도감 펼쳐보기 비주얼 이미지 적용 완료',
+    isPlaceholder: false,
   },
 
   // 18. When to Open: 실생활 활용 공감 세로형 포스터 (WHEN TO OPEN THIS BOOK)
   whenToOpen: {
     id: 'whenToOpen',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '사람이 궁금해지는 순간, 이 책을 펼쳐보세요 - 선천코드 비기',
+    src: '/image/seoncheon-code-bigi/practical-relationship-guide.webp',
+    alt: '사람이 궁금해지는 순간, 이 책을 펼쳐보세요 - 선천코드 비기 실전 관계 가이드 포스터',
     aspectRatio: 'aspect-[3/4]',
-    objectFit: 'cover',
-    placeholderLabel: '사람이 궁금해지는 순간 포스터 (WHEN TO OPEN)',
-    description: '관계의 고민과 궁금증이 생길 때 펼쳐보는 실전 관계 도감 세로형 비주얼 (권장 비율 3:4, 해상도 1200x1600px)',
-    isPlaceholder: true,
+    objectFit: 'contain',
+    placeholderLabel: '사람이 궁금해지는 순간 포스터 (3:4)',
+    description: 'WHEN TO OPEN THIS BOOK 좌측 3:4 실전 관계 가이드 포스터 이미지 적용 완료',
+    isPlaceholder: false,
   },
 }
