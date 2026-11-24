@@ -28,6 +28,54 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     isPlaceholder: false,
   },
 
+  // 0-1. Repeating Love Pattern: 인연의 역설 하단 와이드 브릿지 배너 (16:9)
+  repeatingLovePattern: {
+    id: 'repeatingLovePattern',
+    src: '/image/seoncheon-code-bigi/repeating-love-pattern.webp',
+    alt: '조건도 성격도 다 맞춰봤는데 왜 늘 같은 상처로 끝날까 - 반복되는 연애 패턴 해독 와이드 배너',
+    aspectRatio: 'aspect-[16/9]',
+    objectFit: 'cover',
+    placeholderLabel: '반복되는 연애 패턴 해독 와이드 배너 (16:9)',
+    description: '인연의 역설 하단 16:9 와이드 브릿지 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 0-2. Why Secret Code: 왜 선천코드 비기인가 한지 와이드 배경 (16:9)
+  whySecretCodeBg: {
+    id: 'whySecretCodeBg',
+    src: '/image/seoncheon-code-bigi/why-secret-code-bg.webp',
+    alt: '왜 선천코드 비기를 내 손에 두어야 할까요 - 한지 와이드 배경',
+    aspectRatio: 'aspect-[16/9]',
+    objectFit: 'cover',
+    placeholderLabel: '왜 선천코드 비기인가 한지 배경 (16:9)',
+    description: '한지 배경 및 우측 오행 나침반·금박 장식 와이드 배경 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 0-3. Use Together Roadmap: 비기와 리포트 함께 활용 로드맵 와이드 배너 (3:1)
+  useTogetherRoadmap: {
+    id: 'useTogetherRoadmap',
+    src: '/image/seoncheon-code-bigi/use-together-roadmap.webp',
+    alt: '원리를 이해하고 나의 구조를 더 깊이 살펴보는 방법 - 비기와 리포트 활용 로드맵',
+    aspectRatio: 'aspect-[3/1]',
+    objectFit: 'contain',
+    placeholderLabel: '비기 & 리포트 함께 활용 로드맵 (3:1)',
+    description: 'HOW TO USE TOGETHER 3단계 카드 하단 3:1 로드맵 배너 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 0-4. Author Introduction BG: 저자 소개 한지 비단 배경 (16:9)
+  authorIntroductionBg: {
+    id: 'authorIntroductionBg',
+    src: '/image/seoncheon-code-bigi/author-introduction-bg.webp',
+    alt: '백도화 저자 소개 한지 비단 배경',
+    aspectRatio: 'aspect-[16/9]',
+    objectFit: 'cover',
+    placeholderLabel: '저자 소개 한지 배경 (16:9)',
+    description: '저자 소개 영역 16:9 한지 비단 와이드 배경 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
   // 1. Hero: 패키지 전체 및 메인 표지 / 구매 카드 목업
   hero: {
     id: 'hero',
@@ -40,16 +88,28 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     isPlaceholder: false,
   },
 
-  // 2. Pain: 반복되는 인연의 상처와 엇갈림
+  // 2. Pain: 반복되는 인연의 상처와 엇갈림 (관계 진단 체크리스트 좌측 이미지)
   pain: {
     id: 'pain',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '반복되는 인연의 갈등과 결핍 - 공감 일러스트',
+    src: '/image/seoncheon-code-bigi/unconscious-relationship-pattern.webp',
+    alt: '사람의 마음이 궁금했던 순간, 당신에게도 이런 질문이 있었나요 - 무의식 관계 패턴',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'cover',
-    placeholderLabel: '인연의 갈등 및 결핍 공감 일러스트',
-    description: '한지와 먹빛 안개 질감 속 인연의 엇갈림을 표현한 수묵 추상화',
-    isPlaceholder: true,
+    placeholderLabel: '무의식 관계 패턴 체크리스트 비주얼 (3:4)',
+    description: '관계 진단 체크리스트 전용 3:4 일러스트 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
+  // 2-1. Compass: 엇갈린 인연 나침반 (관계 해독 나침반 비주얼 3:4)
+  compass: {
+    id: 'compass',
+    src: '/image/seoncheon-code-bigi/relationship-decoding-compass.webp',
+    alt: '엇갈린 인연 앞에서, 당신은 무엇을 탓하고 있었나요 - 관계 해독 오행 나침반',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'cover',
+    placeholderLabel: '관계 해독 오행 나침반 비주얼 (3:4)',
+    description: '엇갈린 인연 공감 영역 우측 3:4 나침반 비주얼 이미지 적용 완료',
+    isPlaceholder: false,
   },
 
   // 3. Book 1: 본편 표지

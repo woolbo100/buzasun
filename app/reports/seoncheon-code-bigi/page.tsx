@@ -73,6 +73,10 @@ const productData = {
   bookPreviewToolsImage: '/image/seoncheon-code-secret-book.webp',
   bookPreviewJourneyImage: '/image/seoncheon-code-secret-book.webp',
   anxietyImage: '/image/seoncheon-code-bigi/relationship-disconnection.webp',
+  repeatingPatternImage: '/image/seoncheon-code-bigi/repeating-love-pattern.webp',
+  whySecretCodeBg: '/image/seoncheon-code-bigi/why-secret-code-bg.webp',
+  useTogetherRoadmap: '/image/seoncheon-code-bigi/use-together-roadmap.webp',
+  authorIntroductionBg: '/image/seoncheon-code-bigi/author-introduction-bg.webp',
 }
 
 // 🏷️ 통일된 묵자색 뱃지 컴포넌트 (배경 #493740 · 테두리 #B7A18A · 텍스트 #F2EAE0)
@@ -268,7 +272,7 @@ function PreviewBookSlot({
           >
             {/* 상단 라벨 */}
             <div className="w-full flex justify-between items-center border-b border-[#B7A18A]/20 pb-3">
-              <span className="text-[11px] font-mono font-bold text-[#B7A18A] tracking-wider uppercase">
+              <span className="text-[12px] font-mono font-bold text-[#B7A18A] tracking-wider uppercase">
                 {previewNum}
               </span>
               <span
@@ -668,7 +672,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal delayMs={100}>
                 {/* 상단 라벨 */}
                 <div className="mb-8">
-                  <SeoncheonBadge className="text-xs md:text-[13px] py-1.5 px-5 tracking-[0.2em] uppercase font-elegant">
+                  <SeoncheonBadge className="text-[12px] py-1.5 px-5 tracking-[0.2em] uppercase font-elegant">
                     PREMIUM INNER CODE &amp; DESTINY PSYCHOLOGY EBOOK
                   </SeoncheonBadge>
                 </div>
@@ -822,7 +826,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 <div className="space-y-10">
                   <div className="text-center max-w-3xl mx-auto space-y-4">
-                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       PAIN POINT &amp; HOOK
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -915,7 +919,7 @@ export default function SeoncheonCodeBigiPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                       {/* 좌측 55% 공감 문구 */}
                       <div className="lg:col-span-7 space-y-5 text-left break-keep">
-                        <span className="text-[#B7A18A] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                        <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.25em] uppercase block">
                           THE MOMENT OF ANXIETY
                         </span>
                         <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -961,16 +965,19 @@ export default function SeoncheonCodeBigiPage() {
                   {/* ════ 인연의 역설 3대 공감 카드 (짙은 먹묵자색 글라스) ════ */}
                   <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
-                      <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                      <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                         THE PARADOX OF DESTINY
                       </span>
                       <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                        같은 사랑을 하고 있어도,<br />
-                        <span className="text-[#B7A18A]">우리는 왜 서로 다른 마음을 가지고 있을까요?</span>
+                        조건도 성격도 다 맞춰봤는데…<br />
+                        <span className="text-[#B7A18A]">왜 나는 늘 같은 상처로 끝나는 연애만 반복할까요?</span>
                       </h3>
-                      <p className="text-[17px] md:text-[18px] text-[#F2EAE0] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
-                        나와 상대가 가진 서로 다른 기질을 이해하는 것, 그것이 관계를 바라보는 새로운 시선의 시작입니다.
-                      </p>
+                      <div className="text-[17px] md:text-[18px] text-[#F2EAE0] mt-4 max-w-3xl mx-auto leading-[1.8] font-normal break-keep space-y-2">
+                        <p>당신의 눈이 낮아서도, 사랑이 부족해서도 아닙니다.</p>
+                        <p>
+                          <strong className="font-bold text-white">나와 상대의 &apos;선천코드 암호&apos;를 모른 채, 물과 불이 정면으로 부딪히는 인연에 맨몸으로 뛰어들었기 때문입니다.</strong>
+                        </p>
+                      </div>
                     </div>
 
                     {/* 3대 공감 카드 */}
@@ -990,12 +997,12 @@ export default function SeoncheonCodeBigiPage() {
                           <div className="text-[#B7A18A] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 카드 01
                           </div>
-                          <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                            “왜 하필 그 사람에게 끌릴까?”
+                          <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
+                            “나쁜 남자인 줄 알면서 또 끌렸어…”
                           </h4>
-                          <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3" />
-                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                            나의 이상형과 실제 마음이 향하는 상대는 왜 다를까요? 오행과 십성의 관점에서 본능적인 끌림의 이유를 살펴봅니다.
+                          <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3.5" />
+                          <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
+                            머리로는 피해야 할 사람인 줄 뻔히 알면서도 기어이 무장해제되던 순간들. 내 무의식의 이상형 좌표(월지)와 결핍 코드가 작동해, 가장 치명적인 함정으로 스스로 걸어 들어간 것입니다.
                           </p>
                         </div>
                         <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
@@ -1020,12 +1027,12 @@ export default function SeoncheonCodeBigiPage() {
                           <div className="text-[#B7A18A] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 카드 02
                           </div>
-                          <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                            “그 사람은 어떤 방식으로 사랑할까?”
+                          <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
+                            “내 진심이 왜 너에겐 집착이 될까”
                           </h4>
-                          <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3" />
-                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                            표현하는 사랑, 지켜주는 사랑, 자유를 존중하는 사랑. 각기 다른 기질이 만들어내는 사랑의 방식을 이해해 보세요.
+                          <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3.5" />
+                          <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
+                            나는 사랑을 증명하려 온 마음을 쏟았지만, 상대에겐 숨 막히는 통제와 간섭으로 꽂혔습니다. 타고난 오행의 온도와 십성의 언어가 정반대인 사람에게 내 방식의 사랑만 강요했기 때문입니다.
                           </p>
                         </div>
                         <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
@@ -1050,12 +1057,12 @@ export default function SeoncheonCodeBigiPage() {
                           <div className="text-[#B7A18A] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
                             공감 카드 03
                           </div>
-                          <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                            “우리는 왜 잘 맞다가도 부딪힐까?”
+                          <h4 className="text-[20px] md:text-[22px] lg:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
+                            “겉으론 완벽했는데 안방은 지옥이었어”
                           </h4>
-                          <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3" />
-                          <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                            서로에게 매력을 느끼는 지점과 갈등을 경험하는 지점을 살펴보고 관계를 이해하는 새로운 관점을 발견합니다.
+                          <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3.5" />
+                          <p className="text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
+                            남들 부러워하는 조건(성)만 보고 시작했지만, 막상 깊어질수록 숨이 막히던 관계. 두 사람의 가장 은밀한 본능이 부딪히는 배우자 자리(궁)의 파국 코드를 보지 못한 대가입니다.
                           </p>
                         </div>
                         <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
@@ -1066,19 +1073,21 @@ export default function SeoncheonCodeBigiPage() {
                       </div>
                     </div>
 
-                    {/* 하단 강조 텍스트 */}
-                    <div className="mt-14 text-center">
-                      <p className="text-[#FAF7F2] text-[19px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep sm:whitespace-nowrap">
-                        사람을 이해하는 시선이 넓어질수록,<br className="inline sm:hidden" />
-                        {' '}<span className="text-[#B7A18A] font-bold">인연을 바라보는 나만의 기준도 선명해집니다.</span>
+                    {/* 하단 강조 클로징 카피 (재회비방 공감 카드 하단 클로징 2줄 구조 차용) */}
+                    <div className="mt-14 md:mt-[65px] text-center max-w-[1050px] mx-auto px-4 break-keep">
+                      <p className="text-[#FAF7F2] text-[18px] font-elegant font-medium leading-[1.75] break-keep mb-3 sm:mb-4">
+                        운명이라는 변명 뒤에 숨어 상처받던 연애는 이제 끝내십시오,
+                      </p>
+                      <p className="text-[#B7A18A] text-[21px] sm:text-[24px] font-elegant font-bold leading-[1.6] break-keep">
+                        이제 사람의 본능과 인연의 암호를 직접 해독하는 ‘눈’을 뜰 때입니다.
                       </p>
                     </div>
 
                     {/* 16:9 와이드 브릿지 이미지 */}
                     <div className="mt-8 sm:mt-10 md:mt-12 w-full aspect-[16/9] md:aspect-[1672/941] relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#B7A18A]/30 shadow-2xl bg-black/40 flex items-center justify-center">
                       <Image
-                        src={productData.topBannerImage}
-                        alt="선천코드 비기 공감 브릿지 와이드 배너"
+                        src={productData.repeatingPatternImage}
+                        alt="선천코드 비기 반복되는 연애 패턴 해독 와이드 배너"
                         fill
                         sizes="(max-width: 1280px) 100vw, 1280px"
                         className="object-cover"
@@ -1167,7 +1176,7 @@ export default function SeoncheonCodeBigiPage() {
                   <div className="lg:col-span-5 order-2 flex justify-center">
                     <div className="w-full max-w-[420px]">
                       <HybridImageSlot
-                        assetKey="book1"
+                        assetKey="compass"
                         className="aspect-[3/4] shadow-2xl"
                       />
                     </div>
@@ -1185,38 +1194,108 @@ export default function SeoncheonCodeBigiPage() {
             <section className="mb-24 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="space-y-10 md:space-y-12">
-                  {/* 📜 메인 한지 카드: 왜 《선천코드 비기》를 내 손에 두어야 할까요? */}
+                  {/* 상단 라벨 및 메인 제목 (카드 외부 상단 중앙 정렬, 36px, 포인트 컬러) */}
+                  <div className="text-center max-w-3xl mx-auto space-y-3">
+                    <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
+                      WHY SEONCHEON CODE SECRET
+                    </span>
+                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
+                      왜 《<span className="text-[#B7A18A]">선천코드 비기</span>》를 내 손에 두어야 할까요?
+                    </h2>
+                  </div>
+
+                  {/* ════ 데스크톱 / 태블릿 (md 이상): 16:9 한지 배경 카드 ════ */}
                   <div
-                    className="w-full rounded-2xl md:rounded-3xl border border-[#B7A18A]/40 shadow-2xl overflow-hidden transition-all duration-300"
+                    className="hidden md:block w-full aspect-[16/9] rounded-2xl md:rounded-3xl border border-[#B7A18A]/40 shadow-2xl relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_24px_rgba(183,161,138,0.2)]"
+                    style={{
+                      backgroundImage: `url('${productData.whySecretCodeBg}')`,
+                      backgroundSize: '100% 100%',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
+                    }}
+                  >
+                    {/* 왼쪽 한지 영역 위에 배치되는 텍스트 컨테이너 (우측 오행 나침반·금박 장식 침범 방지: 폭 54%) */}
+                    <div className="w-full h-full flex flex-col justify-center text-left pl-[5.5%] lg:pl-[6.5%] pr-4 py-6">
+                      <div className="w-[54%] max-w-[56%] space-y-2.5 lg:space-y-3">
+                        <p className="text-[17px] lg:text-[20px] font-elegant font-bold text-[#493740] leading-[1.4] break-keep">
+                          &ldquo;누군가의 해석을 기다리는 대신, 이제 당신이 직접 관계의 코드를 읽어보세요.&rdquo;
+                        </p>
+
+                        <div className="text-[14.5px] lg:text-[16px] text-[#241E25] leading-[1.65] lg:leading-[1.72] font-normal space-y-2 lg:space-y-2.5 break-keep">
+                          <div className="space-y-1">
+                            <p className="font-semibold text-[#1C171D]">
+                              사람을 알아갈 때마다 같은 질문이 반복됩니다.
+                            </p>
+                            <div className="pl-3 border-l-2 border-[#B7A18A] space-y-0.5 text-[#493740] font-medium text-[13.5px] lg:text-[14.5px]">
+                              <p>&ldquo;왜 저 사람은 저렇게 행동할까?&rdquo;</p>
+                              <p>&ldquo;왜 나는 비슷한 관계에서 같은 문제를 겪을까?&rdquo;</p>
+                              <p>&ldquo;우리는 무엇이 닮았고, 어디에서 부딪히는 걸까?&rdquo;</p>
+                            </div>
+                          </div>
+
+                          <p>
+                            누군가에게 매번 물어볼 수도 있지만, 관계를 이해하는 기본 원리와 해석 방법을 익힌다면 스스로 살펴볼 수 있는 영역이 넓어집니다.
+                          </p>
+
+                          <p>
+                            <strong className="text-[#1C171D] font-bold">《선천코드 비기》</strong>는 어려운 명리학을 쉽고 재미있게 풀어낸 <span className="text-[#493740] font-semibold">연애·관계 특화 사주 해설서</span>이자, 나와 상대의 기질을 직접 찾아보고 이해할 수 있는 <strong className="text-[#493740] font-bold">소장용 관계 도감</strong>입니다.
+                          </p>
+
+                          <p>
+                            자신의 만세력뿐 아니라 상대방의 만세력 정보가 있을 때도 책의 해석 기준을 참고하여 성향과 관계 패턴을 비교해 볼 수 있습니다.
+                          </p>
+
+                          <p>
+                            한 번 읽고 덮어두는 책이 아니라, 궁금한 사람이 생기거나 관계에서 이해되지 않는 상황을 만날 때 다시 펼쳐보는 <strong className="text-[#493740] font-bold">평생의 실전 비서</strong>입니다.
+                          </p>
+                        </div>
+
+                        {/* 강조 카피 박스 */}
+                        <div
+                          className="p-2.5 lg:p-3 rounded-xl border border-[#B7A18A]/60 text-center"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(73, 55, 64, 0.08) 0%, rgba(183, 161, 138, 0.15) 100%)',
+                          }}
+                        >
+                          <p className="text-[14px] lg:text-[15.5px] font-elegant font-bold text-[#241E25] leading-snug break-keep">
+                            &ldquo;사주를 공부하는 책이 아니라, 사람과 사랑을 이해하기 위해 펼쳐보는 관계 도감&rdquo;
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ════ 모바일 (md 미만): 16:9 배경 이미지 + 하단 한지 텍스트 반응형 결합 ════ */}
+                  <div
+                    className="md:hidden w-full rounded-2xl border border-[#B7A18A]/40 shadow-2xl overflow-hidden transition-all duration-300"
                     style={{
                       backgroundColor: '#F2EAE0',
                       boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
                     }}
                   >
-                    <div className="p-7 sm:p-10 md:p-12 lg:p-14 text-left break-keep space-y-6 md:space-y-7">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[#493740]" />
-                        <span className="text-xs font-elegant font-semibold tracking-widest text-[#493740] uppercase">
-                          WHY SEONCHEON CODE SECRET
-                        </span>
-                      </div>
+                    {/* 상단 16:9 원본 이미지 (오행 나침반, 비단, 금박 장식 전체 노출) */}
+                    <div
+                      className="w-full aspect-[16/9] relative"
+                      style={{
+                        backgroundImage: `url('${productData.whySecretCodeBg}')`,
+                        backgroundSize: '100% 100%',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat'
+                      }}
+                    />
+                    {/* 하단 한지 텍스트 영역 (가독성 100% 확보) */}
+                    <div className="p-6 sm:p-7 text-left break-keep space-y-4">
+                      <p className="text-[18px] sm:text-[20px] font-elegant font-bold text-[#493740] leading-[1.45] break-keep">
+                        &ldquo;누군가의 해석을 기다리는 대신, 이제 당신이 직접 관계의 코드를 읽어보세요.&rdquo;
+                      </p>
 
-                      <div className="space-y-3">
-                        <h3 className="text-[22px] sm:text-[26px] md:text-[32px] lg:text-[34px] font-elegant font-bold text-[#241E25] leading-[1.38] break-keep">
-                          왜 《선천코드 비기》를 내 손에 두어야 할까요?
-                        </h3>
-                        <p className="text-[17px] sm:text-[19px] md:text-[22px] font-elegant font-bold text-[#493740] leading-[1.45] break-keep">
-                          &ldquo;누군가의 해석을 기다리는 대신, 이제 당신이 직접 관계의 코드를 읽어보세요.&rdquo;
-                        </p>
-                      </div>
-
-                      {/* 본문 설명 */}
-                      <div className="text-[15px] sm:text-[16px] md:text-[17px] text-[#30262F] leading-[1.85] font-normal space-y-4 break-keep border-t border-[#B7A18A]/30 pt-6">
-                        <div className="space-y-2">
-                          <p className="font-semibold text-[#241E25]">
+                      <div className="text-[15px] sm:text-[16px] text-[#241E25] leading-[1.8] font-normal space-y-3.5 break-keep border-t border-[#B7A18A]/30 pt-4">
+                        <div className="space-y-1.5">
+                          <p className="font-semibold text-[#1C171D]">
                             사람을 알아갈 때마다 같은 질문이 반복됩니다.
                           </p>
-                          <div className="pl-3 sm:pl-4 border-l-2 border-[#B7A18A] space-y-1.5 text-[#493740] font-medium text-[14px] sm:text-[15px]">
+                          <div className="pl-3 border-l-2 border-[#B7A18A] space-y-1 text-[#493740] font-medium text-[14px]">
                             <p>&ldquo;왜 저 사람은 저렇게 행동할까?&rdquo;</p>
                             <p>&ldquo;왜 나는 비슷한 관계에서 같은 문제를 겪을까?&rdquo;</p>
                             <p>&ldquo;우리는 무엇이 닮았고, 어디에서 부딪히는 걸까?&rdquo;</p>
@@ -1228,7 +1307,7 @@ export default function SeoncheonCodeBigiPage() {
                         </p>
 
                         <p>
-                          <strong className="text-[#241E25] font-bold">《선천코드 비기》</strong>는 어려운 명리학을 쉽고 재미있게 풀어낸 <span className="text-[#493740] font-semibold">연애·관계 특화 사주 해설서</span>이자, 나와 상대의 기질을 직접 찾아보고 이해할 수 있는 <strong className="text-[#493740] font-bold">소장용 관계 도감</strong>입니다.
+                          <strong className="text-[#1C171D] font-bold">《선천코드 비기》</strong>는 어려운 명리학을 쉽고 재미있게 풀어낸 <span className="text-[#493740] font-semibold">연애·관계 특화 사주 해설서</span>이자, 나와 상대의 기질을 직접 찾아보고 이해할 수 있는 <strong className="text-[#493740] font-bold">소장용 관계 도감</strong>입니다.
                         </p>
 
                         <p>
@@ -1242,13 +1321,13 @@ export default function SeoncheonCodeBigiPage() {
 
                       {/* 강조 카피 박스 */}
                       <div
-                        className="p-5 md:p-6 rounded-xl border border-[#B7A18A]/60 text-center"
+                        className="p-4 rounded-xl border border-[#B7A18A]/60 text-center"
                         style={{
                           background: 'linear-gradient(135deg, rgba(73, 55, 64, 0.08) 0%, rgba(183, 161, 138, 0.15) 100%)',
                         }}
                       >
-                        <p className="text-[16px] sm:text-[18px] md:text-[20px] font-elegant font-bold text-[#241E25] leading-relaxed break-keep">
-                          &ldquo;사주를 공부하는 책이 아니라,<br className="hidden sm:inline" /> 사람과 사랑을 이해하기 위해 펼쳐보는 관계 도감&rdquo;
+                        <p className="text-[16px] font-elegant font-bold text-[#241E25] leading-relaxed break-keep">
+                          &ldquo;사주를 공부하는 책이 아니라, 사람과 사랑을 이해하기 위해 펼쳐보는 관계 도감&rdquo;
                         </p>
                       </div>
                     </div>
@@ -1257,7 +1336,7 @@ export default function SeoncheonCodeBigiPage() {
                   {/* 🎴 4대 핵심 차별점 카드 */}
                   <div className="space-y-6">
                     <div className="text-center max-w-2xl mx-auto space-y-2">
-                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase">
+                      <span className="text-[12px] font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase">
                         CORE VALUES OF THE BOOK
                       </span>
                       <h4 className="text-[20px] sm:text-[24px] font-elegant font-bold text-[#FAF7F2]">
@@ -1273,7 +1352,7 @@ export default function SeoncheonCodeBigiPage() {
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
-                            <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                            <span className="text-[12px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
                               POINT 01
                             </span>
                             <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
@@ -1299,7 +1378,7 @@ export default function SeoncheonCodeBigiPage() {
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
-                            <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                            <span className="text-[12px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
                               POINT 02
                             </span>
                             <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
@@ -1325,7 +1404,7 @@ export default function SeoncheonCodeBigiPage() {
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
-                            <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                            <span className="text-[12px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
                               POINT 03
                             </span>
                             <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
@@ -1351,7 +1430,7 @@ export default function SeoncheonCodeBigiPage() {
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
-                            <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                            <span className="text-[12px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
                               POINT 04
                             </span>
                             <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
@@ -1392,7 +1471,7 @@ export default function SeoncheonCodeBigiPage() {
                 <div className="space-y-8 md:space-y-10">
                   {/* 헤더 */}
                   <div className="text-center max-w-3xl mx-auto space-y-3 break-keep">
-                    <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
+                    <span className="text-[12px] font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
                       PRODUCT COMPARISON
                     </span>
                     <h3 className="text-[24px] sm:text-[28px] md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.35]">
@@ -1602,7 +1681,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 <div className="space-y-8 md:space-y-10">
                   <div className="text-center max-w-2xl mx-auto space-y-2.5 break-keep">
-                    <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
+                    <span className="text-[12px] font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
                       SELECTION GUIDE
                     </span>
                     <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-elegant font-bold text-[#FAF7F2]">
@@ -1764,7 +1843,7 @@ export default function SeoncheonCodeBigiPage() {
                 <div className="space-y-8 md:space-y-10">
                   {/* 헤더 */}
                   <div className="text-center max-w-3xl mx-auto space-y-3 break-keep">
-                    <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
+                    <span className="text-[12px] font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase block">
                       HOW TO USE TOGETHER
                     </span>
                     <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-elegant font-bold text-[#FAF7F2] leading-[1.38]">
@@ -1782,7 +1861,7 @@ export default function SeoncheonCodeBigiPage() {
                       className="rounded-2xl p-6 sm:p-7 border border-[#B7A18A]/35 shadow-xl bg-[#241E25] space-y-3.5 relative overflow-hidden"
                     >
                       <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                        <span className="text-xs font-mono font-bold tracking-widest text-[#B7A18A]">
+                        <span className="text-[12px] font-mono font-bold tracking-widest text-[#B7A18A]">
                           STEP 01
                         </span>
                         <span className="text-xs font-elegant font-bold text-[#FAF7F2] px-2.5 py-0.5 rounded bg-white/5 border border-white/10">
@@ -1802,7 +1881,7 @@ export default function SeoncheonCodeBigiPage() {
                       className="rounded-2xl p-6 sm:p-7 border border-[#B7A18A]/35 shadow-xl bg-[#241E25] space-y-3.5 relative overflow-hidden"
                     >
                       <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                        <span className="text-xs font-mono font-bold tracking-widest text-[#82968F]">
+                        <span className="text-[12px] font-mono font-bold tracking-widest text-[#82968F]">
                           STEP 02
                         </span>
                         <span className="text-xs font-elegant font-bold text-[#FAF7F2] px-2.5 py-0.5 rounded bg-white/5 border border-white/10">
@@ -1822,7 +1901,7 @@ export default function SeoncheonCodeBigiPage() {
                       className="rounded-2xl p-6 sm:p-7 border border-[#B7A18A]/35 shadow-xl bg-[#241E25] space-y-3.5 relative overflow-hidden"
                     >
                       <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                        <span className="text-xs font-mono font-bold tracking-widest text-[#B7A18A]">
+                        <span className="text-[12px] font-mono font-bold tracking-widest text-[#B7A18A]">
                           STEP 03
                         </span>
                         <span className="text-xs font-elegant font-bold text-[#FAF7F2] px-2.5 py-0.5 rounded bg-white/5 border border-white/10">
@@ -1836,6 +1915,17 @@ export default function SeoncheonCodeBigiPage() {
                         배운 원리와 개인별 분석 내용을 참고하여 자신의 관계 패턴을 돌아보고 실천 방향을 정리합니다.
                       </p>
                     </div>
+                  </div>
+
+                  {/* 3:1 와이드 로드맵 배너 (2172x724 원본 비율 3:1 유지, 1280px 외곽선 정렬) */}
+                  <div className="w-full aspect-[3/1] relative rounded-2xl md:rounded-3xl overflow-hidden border border-[#B7A18A]/35 shadow-2xl bg-[#1C171D] flex items-center justify-center my-6 sm:my-8 md:my-10">
+                    <Image
+                      src={productData.useTogetherRoadmap}
+                      alt="원리를 이해하고, 나의 구조를 더 깊이 살펴보는 방법 - 선천코드 비기와 리포트 함께 활용하는 로드맵"
+                      fill
+                      sizes="(max-width: 1280px) 100vw, 1280px"
+                      className="object-contain"
+                    />
                   </div>
 
                   {/* 하단 카피 */}
@@ -1853,7 +1943,7 @@ export default function SeoncheonCodeBigiPage() {
                     }}
                   >
                     <div className="space-y-1">
-                      <span className="text-xs font-elegant font-semibold text-[#B7A18A] tracking-wider uppercase block">
+                      <span className="text-[12px] font-elegant font-semibold text-[#B7A18A] tracking-wider uppercase block">
                         BEGIN YOUR JOURNEY
                       </span>
                       <h4 className="text-[19px] sm:text-[22px] font-elegant font-bold text-[#FAF7F2]">
@@ -1906,7 +1996,7 @@ export default function SeoncheonCodeBigiPage() {
                   }}
                 >
                   <div className="text-center max-w-3xl mx-auto space-y-3 mb-10 md:mb-14 break-keep">
-                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       TRANSFORMATION
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -2006,19 +2096,23 @@ export default function SeoncheonCodeBigiPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 Section 6: 저자 소개 (AUTHOR & MASTER 백도화 - 한지 비단 배경 카드)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 w-full max-w-[1200px] mx-auto">
+            <section className="mb-28 w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div
                   className="rounded-xl sm:rounded-2xl border border-[#B7A18A]/30 pl-8 sm:pl-12 md:pl-20 lg:pl-28 xl:pl-32 pr-6 sm:pr-10 md:pr-14 lg:pr-20 py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden shadow-2xl text-left transition-all duration-300 hover:shadow-[0_0_24px_rgba(183,161,138,0.25)] min-h-[560px] md:min-h-[620px] flex flex-col justify-between"
                   style={{
-                    backgroundColor: '#F2EAE0',
-                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)'
+                    backgroundImage: `url(${productData.authorIntroductionBg})`,
+                    backgroundSize: '100% 100%',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    boxShadow: '0 12px 40px rgba(0, 0, 0, 0.45)',
                   }}
                 >
-                  <div className="max-w-2xl lg:max-w-3xl mr-auto space-y-6 sm:space-y-8 p-6 sm:p-8 lg:p-0 rounded-2xl lg:rounded-none">
+                  {/* 중앙~좌측 한지 영역 위에 안정적으로 배치되는 텍스트 컨테이너 (모바일 가독성 보호 및 우측 하단 모란꽃 겹침 방지) */}
+                  <div className="max-w-2xl lg:max-w-3xl mr-auto space-y-6 sm:space-y-8 bg-[#FAF7F2]/85 lg:bg-transparent backdrop-blur-[3px] lg:backdrop-blur-none p-6 sm:p-8 lg:p-0 rounded-2xl lg:rounded-none shadow-sm lg:shadow-none border border-[#B7A18A]/30 lg:border-none">
                     {/* 이름 & 타이틀 */}
                     <div className="space-y-2 border-b border-[#493740]/20 pb-5 sm:pb-6">
-                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#493740] uppercase block">
+                      <span className="text-[12px] font-elegant font-semibold tracking-widest text-[#493740] uppercase block">
                         AUTHOR &amp; MASTER
                       </span>
                       <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#241E25]">
@@ -2073,6 +2167,18 @@ export default function SeoncheonCodeBigiPage() {
                         《선천코드 비기》가 당신의 관계를 바라보는 새로운 시선이 되기를 바랍니다.
                       </p>
                     </div>
+
+                    {/* 백도화 올림 및 낙관 (왼쪽 정렬로 우측 하단 모란꽃 장식과 분리) */}
+                    <div className="pt-4 sm:pt-6 flex items-end justify-start gap-2.5 sm:gap-3">
+                      <span className="text-[16px] sm:text-[17px] font-elegant text-[#241E25] font-bold pb-1 tracking-wider">
+                        백도화 올림
+                      </span>
+                      <img
+                        src="/image/reunion-secret/baekdohwa-signature-seal.png"
+                        alt="백도화 낙관 인장"
+                        className="h-[42px] sm:h-[48px] md:h-[54px] w-auto object-contain select-none shrink-0"
+                      />
+                    </div>
                   </div>
                 </div>
               </Reveal>
@@ -2099,7 +2205,7 @@ export default function SeoncheonCodeBigiPage() {
                   {/* 오른쪽 본문 */}
                   <div className="lg:col-span-7 space-y-6 break-keep">
                     <div>
-                      <span className="text-[#B7A18A] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
+                      <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.25em] uppercase block">
                         THE ONLY SECRET
                       </span>
                       <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mt-1 leading-[1.35]">
@@ -2165,7 +2271,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 <div className="space-y-10 text-left">
                   <div className="text-center max-w-3xl mx-auto space-y-4">
-                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       RECOMMENDED FOR
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -2209,7 +2315,7 @@ export default function SeoncheonCodeBigiPage() {
                         }}
                       >
                         <div className="space-y-3">
-                          <span className="text-xs font-mono font-bold text-[#B7A18A] tracking-widest uppercase block">
+                          <span className="text-[12px] font-mono font-bold text-[#B7A18A] tracking-widest uppercase block">
                             TYPE {card.num}
                           </span>
                           <h3 className="text-lg font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
@@ -2244,7 +2350,7 @@ export default function SeoncheonCodeBigiPage() {
                       <div className="w-full lg:w-[53%] xl:w-[52%] space-y-5 md:space-y-6 text-left break-keep">
                         {/* 영문 라벨 및 메인 제목 (체크리스트 바로 위 좌측 정렬) */}
                         <div className="space-y-2.5">
-                          <span className="inline-block px-3 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20">
+                          <span className="inline-block px-3 py-1 text-[12px] font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20">
                             WHEN TO OPEN THIS BOOK
                           </span>
                           <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] md:leading-[1.4] break-keep">
@@ -2303,7 +2409,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 <div className="py-4">
                   <div className="text-center space-y-4 md:space-y-5 break-keep">
-                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       CURRICULUM &amp; ARCHITECTURE
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
@@ -2337,7 +2443,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 <div className="space-y-12">
                   <div className="text-center max-w-3xl mx-auto space-y-4">
-                    <span className="text-[#B7A18A] font-elegant tracking-[0.25em] text-xs uppercase font-bold">
+                    <span className="text-[#B7A18A] font-elegant tracking-[0.25em] text-[12px] uppercase font-bold">
                       THE SEONCHEON MECHANISM
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] md:leading-[1.5] break-keep">
@@ -2363,7 +2469,7 @@ export default function SeoncheonCodeBigiPage() {
                     >
                       <div className="space-y-5">
                         <div className="flex items-center justify-between border-b border-[#B7A18A]/30 pb-4">
-                          <span className="text-xs font-mono font-bold text-[#B7A18A] uppercase tracking-widest">
+                          <span className="text-[12px] font-mono font-bold text-[#B7A18A] uppercase tracking-widest">
                             STEP 01
                           </span>
                           <SeoncheonBadge>
@@ -2411,7 +2517,7 @@ export default function SeoncheonCodeBigiPage() {
                     >
                       <div className="space-y-5">
                         <div className="flex items-center justify-between border-b border-[#B7A18A]/30 pb-4">
-                          <span className="text-xs font-mono font-bold text-[#B7A18A] uppercase tracking-widest">
+                          <span className="text-[12px] font-mono font-bold text-[#B7A18A] uppercase tracking-widest">
                             STEP 02
                           </span>
                           <SeoncheonBadge>
@@ -2460,7 +2566,7 @@ export default function SeoncheonCodeBigiPage() {
             <section className="mb-14 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center mb-6 md:mb-8 max-w-3xl mx-auto break-keep">
-                  <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                     PACKAGE COMPOSITION
                   </span>
                   <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white mt-2 leading-[1.4] break-keep">
@@ -2579,7 +2685,7 @@ export default function SeoncheonCodeBigiPage() {
                    ───────────────────────────────────────────────────────────── */}
                 <div className="mt-16 pt-14 border-t border-[#B7A18A]/20">
                   <div className="text-center max-w-3xl mx-auto mb-10 break-keep">
-                    <span className="inline-block px-3 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20 mb-3">
+                    <span className="inline-block px-3 py-1 text-[12px] font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20 mb-3">
                       INSIDE THE SECRET BOOK
                     </span>
                     <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide leading-snug mb-3">
@@ -2621,7 +2727,7 @@ export default function SeoncheonCodeBigiPage() {
 
                 {/* 3종 세트 상세 서브헤더 */}
                 <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 pt-12 md:pt-16 lg:pt-20 break-keep">
-                  <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                  <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block mb-3">
                     3-in-1 All-in-One Package
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] mb-3">
@@ -2893,7 +2999,7 @@ export default function SeoncheonCodeBigiPage() {
                 <div className="lg:col-span-7 w-full flex flex-col justify-between space-y-5 sm:space-y-6 text-left p-6 sm:p-8 md:p-10 lg:py-10 lg:pr-10 lg:pl-12">
                   <div className="flex items-start justify-between gap-4">
                     <div className="space-y-1.5 flex-1">
-                      <span className="text-xs font-elegant font-semibold tracking-wider text-[#B7A18A] uppercase block">
+                      <span className="text-[12px] font-elegant font-semibold tracking-wider text-[#B7A18A] uppercase block">
                         PACKAGE OVERVIEW
                       </span>
                       <h4 className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
@@ -2953,7 +3059,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 <div className="space-y-10 md:space-y-14">
                   <div className="text-center max-w-3xl mx-auto space-y-4 break-keep">
-                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       CORE DIFFERENTIATION
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -2985,7 +3091,7 @@ export default function SeoncheonCodeBigiPage() {
                               <Sparkles className="w-5 h-5 text-[#B7A18A]" />
                             </div>
                             <div>
-                              <span className="text-[11px] font-mono tracking-widest text-[#B7A18A]/80 uppercase block">
+                              <span className="text-[12px] font-mono tracking-widest text-[#B7A18A]/80 uppercase block">
                                 CARD 01
                               </span>
                               <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
@@ -3024,7 +3130,7 @@ export default function SeoncheonCodeBigiPage() {
                               <Compass className="w-5 h-5 text-[#B7A18A]" />
                             </div>
                             <div>
-                              <span className="text-[11px] font-mono tracking-widest text-[#B7A18A]/80 uppercase block">
+                              <span className="text-[12px] font-mono tracking-widest text-[#B7A18A]/80 uppercase block">
                                 CARD 02
                               </span>
                               <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
@@ -3063,7 +3169,7 @@ export default function SeoncheonCodeBigiPage() {
                               <ShieldCheck className="w-5 h-5 text-[#B7A18A]" />
                             </div>
                             <div>
-                              <span className="text-[11px] font-mono tracking-widest text-[#B7A18A]/80 uppercase block">
+                              <span className="text-[12px] font-mono tracking-widest text-[#B7A18A]/80 uppercase block">
                                 CARD 03
                               </span>
                               <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
@@ -3101,7 +3207,7 @@ export default function SeoncheonCodeBigiPage() {
                   }}
                 >
                   <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12 break-keep">
-                    <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-3.5">
+                    <span className="inline-block px-3.5 py-1 text-[12px] font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-3.5">
                       WHY THIS BOOK IS DIFFERENT
                     </span>
                     <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-tight mb-3">
@@ -3168,7 +3274,7 @@ export default function SeoncheonCodeBigiPage() {
                         key={idx}
                         className="p-4 rounded-xl border border-[#B7A18A]/25 bg-[#241E26]/70 space-y-2.5"
                       >
-                        <span className="text-xs font-mono font-bold text-[#B7A18A] tracking-wider block">
+                        <span className="text-[12px] font-mono font-bold text-[#B7A18A] tracking-wider block">
                           {item.criteria}
                         </span>
                         <div className="text-xs text-[#EDE6DA]/60 line-through">
@@ -3305,7 +3411,7 @@ export default function SeoncheonCodeBigiPage() {
                     {/* 감성 문구 영역 */}
                     <div className="space-y-6 break-keep">
                       <div>
-                        <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-4">
+                        <span className="inline-block px-3.5 py-1 text-[12px] font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-4">
                           THE ART OF READING PEOPLE
                         </span>
                         <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-tight">
@@ -3361,7 +3467,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 <div className="space-y-12">
                   <div className="text-center max-w-3xl mx-auto space-y-4 break-keep">
-                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       POSITION SHIFT
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
@@ -3382,7 +3488,7 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-28 md:mt-40 break-keep">
-                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                       SOVEREIGN OF RELATIONSHIP
                     </span>
                     <h3
@@ -3422,7 +3528,7 @@ export default function SeoncheonCodeBigiPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 break-keep">
-                  <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                  <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block mb-3">
                     REAL LIFE TRANSFORMATIONS
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
@@ -3520,7 +3626,7 @@ export default function SeoncheonCodeBigiPage() {
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-14 break-keep">
-                  <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
+                  <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block mb-3">
                     Comparison Table
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
@@ -3633,7 +3739,7 @@ export default function SeoncheonCodeBigiPage() {
             <section id="faq" className="mb-28 text-left max-w-4xl mx-auto">
               <Reveal>
                 <div className="text-center space-y-4 mb-14">
-                  <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                     Frequently Asked Questions
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.45]">
@@ -3722,7 +3828,7 @@ export default function SeoncheonCodeBigiPage() {
                   }}
                 >
                   <div className="space-y-2 border-b border-white/10 pb-4">
-                    <span className="text-xs font-mono font-bold text-[#B7A18A] uppercase tracking-wider block">
+                    <span className="text-[12px] font-mono font-bold text-[#B7A18A] uppercase tracking-wider block">
                       NOTICE
                     </span>
                     <h3 className="text-xl sm:text-2xl font-elegant font-bold text-[#FAF7F2]">
@@ -3791,7 +3897,7 @@ export default function SeoncheonCodeBigiPage() {
 
               {/* 텍스트 영역 (좌측 배치) */}
               <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-12 lg:p-16 text-left w-full max-w-[92%] sm:max-w-[70%] md:max-w-[50%] lg:max-w-[48%] z-10">
-                <span className="text-[#B7A18A] font-elegant text-xs md:text-sm tracking-[0.25em] md:tracking-[0.3em] uppercase mb-2.5 md:mb-3 block font-semibold">
+                <span className="text-[#B7A18A] font-elegant text-[12px] tracking-[0.25em] md:tracking-[0.3em] uppercase mb-2.5 md:mb-3 block font-semibold">
                   A WORD FOR YOUR HEART
                 </span>
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-elegant font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-[1.4] md:leading-[1.42] break-keep">
@@ -3826,7 +3932,7 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 {/* TIME TO RECLAIM YOUR POWER 상단 헤드라인 및 최종 구매 유도 메시지 */}
                 <div className="text-center space-y-4 mb-10 md:mb-12">
-                  <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                  <span className="text-[#B7A18A] font-elegant text-[12px] font-semibold tracking-[0.2em] uppercase block">
                     TIME TO RECLAIM YOUR POWER
                   </span>
                   <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white leading-[1.6] md:leading-[1.65] break-keep mb-4">
