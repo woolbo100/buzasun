@@ -843,7 +843,7 @@ export default function SeoncheonCodeBigiPage() {
                           나와 상대의 마음을 읽는 새로운 시선
                         </p>
                         <p className="text-[16px] md:text-[18px] text-[#FAF7F2] font-elegant font-bold tracking-wide break-keep">
-                          하나라도 해당된다면, 당신에게는 이 책을 펼쳐볼 이유가 충분합니다.
+                          이 중 하나라도 당신의 이야기라면, 필요한 건 연애 조언이 아니라 내 무의식에 각인된 선천코드의 해독입니다.
                         </p>
                       </div>
                     </div>
