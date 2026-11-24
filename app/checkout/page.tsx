@@ -137,6 +137,14 @@ function CheckoutContent() {
       category: "SECRET METHOD",
       image: "/image/reunion-secret-thumb.png"
     },
+    "seoncheon-code-bigi": {
+      name: "선천코드 비기",
+      display_title: "선천코드 비기 3종 올인원 세트",
+      type: "digital_ebook",
+      price: 29000,
+      category: "SECRET METHOD",
+      image: "/image/seoncheon-code-secret-book.webp"
+    },
     "premium-bookmark": {
       name: "프리미엄 플라워 북마크 세트",
       display_title: "프리미엄 플라워 북마크 세트",

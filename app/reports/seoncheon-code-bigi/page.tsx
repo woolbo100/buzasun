@@ -10,6 +10,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import { useRouter } from 'next/navigation'
+import { addToCart } from '@/hooks/useCart'
 import {
   Check,
   BookOpen,
@@ -38,7 +39,7 @@ import MobileStickyBuyBar from '@/components/MobileStickyBuyBar'
 import { seoncheonCodeAssets } from './assets'
 
 // ═══════════════════════════════════════════════════════════════════════════
-// 📦 상품 기본 정보 및 출시 준비 설정
+// 📦 상품 기본 정보 및 결제 연동 설정
 // ═══════════════════════════════════════════════════════════════════════════
 const productData = {
   productId: 'seoncheon-code-bigi',
@@ -50,10 +51,10 @@ const productData = {
   type: 'digital_ebook',
   category: 'reports',
   path: '/reports/seoncheon-code-bigi',
-  checkoutUrl: '#',
-  price: 0,
-  regularPrice: 0,
-  discountRate: '출간 준비 중',
+  checkoutUrl: '/checkout?productId=seoncheon-code-bigi',
+  price: 29000,
+  regularPrice: 79000,
+  discountRate: '63% OFF',
 
   topBannerImage: '/image/seoncheon-code-secret-book.webp',
   heroImage: '/image/seoncheon-code-secret-book.webp',
@@ -552,16 +553,25 @@ export default function SeoncheonCodeBigiPage() {
     setCaseSlideIndex((prev) => (prev - 1 + transformationSlides.length) % transformationSlides.length)
   }
 
-  // 구매 버튼 클릭 핸들러 (출간 준비 중 안내 모달/알림)
+  // 구매 버튼 클릭 핸들러 (실제 결제 페이지 이동)
   const handlePurchase = (e: React.MouseEvent) => {
     e.preventDefault()
-    alert('《선천코드 비기》는 현재 정식 출간 준비 중입니다. 곧 만나보실 수 있습니다.')
+    router.push(productData.checkoutUrl)
   }
 
-  // 장바구니 추가 핸들러 (출간 준비 중 안내)
+  // 장바구니 추가 핸들러 (실제 장바구니 연동)
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault()
-    alert('《선천코드 비기》는 현재 정식 출간 준비 중입니다. 곧 오픈될 예정입니다.')
+    addToCart({
+      id: productData.productId,
+      slug: productData.slug,
+      name: productData.title + ' 3종 올인원 세트',
+      price: productData.price,
+      image: productData.heroImage,
+      type: productData.type,
+      category: 'SECRET METHOD'
+    }, 1)
+    alert("장바구니에 담았습니다.")
   }
 
   // 구매/상세 안내 영역으로 부드럽게 스크롤 이동
@@ -750,37 +760,35 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
                       </div>
 
-                      <div className="space-y-5 pt-2">
-                        <div className="border-b border-white/10 pb-4">
-                          <div className="flex items-baseline gap-3">
-                            <span className="text-2xl sm:text-3xl font-elegant font-bold text-[#B7A18A]">
-                              정식 출간 준비 중
-                            </span>
-                            <span className="text-sm text-[#F2EAE0]/70 font-sans">
-                              (COMING SOON)
-                            </span>
+                      <div className="pt-2 border-t border-white/10 space-y-4">
+                        {/* 가격 안내 */}
+                        <div className="space-y-1">
+                          <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
+                          <div className="text-2xl sm:text-3xl font-elegant font-bold text-[#B7A18A] leading-none">
+                            런칭 특가 29,000원 <span className="text-sm text-white/70 font-sans font-normal ml-1.5">(63% OFF)</span>
                           </div>
                         </div>
 
+                        {/* 구매/장바구니 버튼 */}
                         <div className="flex flex-col sm:flex-row gap-3 pt-1 items-stretch sm:items-center w-full">
                           <button
                             type="button"
                             onClick={handleAddToCart}
                             className="py-3.5 px-5 sm:px-6 rounded-xl font-elegant font-bold text-sm md:text-base border border-[#B7A18A]/60 text-[#B7A18A] hover:bg-[#493740]/40 hover:border-[#B7A18A]/80 transition-all duration-300 shrink-0 whitespace-nowrap text-center bg-transparent order-2 sm:order-1 cursor-pointer"
                           >
-                            출간 알림 예약
+                            장바구니 담기
                           </button>
                           <button
                             type="button"
                             onClick={handlePurchase}
-                            className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer opacity-90 hover:opacity-100"
+                            className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer shadow-lg"
                             style={{
                               background: 'linear-gradient(135deg, #493740 0%, #30262F 100%)',
                               border: '1px solid #B7A18A',
                               boxShadow: '0 4px 15px rgba(0, 0, 0, 0.4)'
                             }}
                           >
-                            <span>선천코드 비기 준비 중</span>
+                            <span>선천코드 비기 29,000원에 구매하기</span>
                             <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
                           </button>
                         </div>
@@ -1271,7 +1279,7 @@ export default function SeoncheonCodeBigiPage() {
                               어려운 사주를 쉽고 재미있게
                             </h5>
                           </div>
-                          <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                          <p className="text-[16px] text-[#30262F] leading-[1.7] break-keep font-normal">
                             복잡한 한자도, 어려운 명리학 이론도 외울 필요 없습니다. 만세력에서 나와 상대의 글자를 찾아보고, 캐릭터 도감과 인포그래픽을 통해 선천적 기질과 관계 성향을 쉽고 직관적으로 이해할 수 있습니다.
                           </p>
                         </div>
@@ -1297,7 +1305,7 @@ export default function SeoncheonCodeBigiPage() {
                               사랑과 인연에 특화된 관계 해설서
                             </h5>
                           </div>
-                          <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                          <p className="text-[16px] text-[#30262F] leading-[1.7] break-keep font-normal">
                             일반적인 사주책처럼 직업운, 재물운, 신년운세를 두루 다루는 책이 아닙니다. 타고난 매력, 이상형, 본능적 끌림, 배우자, 궁합, 관계 갈등, 재회까지 사랑과 인연에 집중한 실전 관계 해설서입니다.
                           </p>
                         </div>
@@ -1323,7 +1331,7 @@ export default function SeoncheonCodeBigiPage() {
                               나를 넘어 상대를 이해하는 관계 도감
                             </h5>
                           </div>
-                          <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                          <p className="text-[16px] text-[#30262F] leading-[1.7] break-keep font-normal">
                             나의 연애 성향뿐 아니라 현재 연인, 관심 있는 상대, 헤어진 연인, 배우자의 기질과 관계 성향까지 직접 찾아볼 수 있습니다. 사람과 인연을 이해하고 관계를 바라보는 나만의 기준을 세워갑니다.
                           </p>
                         </div>
@@ -1349,7 +1357,7 @@ export default function SeoncheonCodeBigiPage() {
                               인연이 바뀔 때마다 다시 펼쳐보는 소장용 비서
                             </h5>
                           </div>
-                          <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                          <p className="text-[16px] text-[#30262F] leading-[1.7] break-keep font-normal">
                             한 번 읽고 책장에 넣어두는 책이 아닙니다. 새로운 인연을 만날 때마다, 사랑이 궁금해질 때마다, 관계에서 고민이 생길 때마다 필요한 부분을 다시 찾아볼 수 있는 소장용 관계 도감입니다.
                           </p>
                         </div>
@@ -1430,7 +1438,7 @@ export default function SeoncheonCodeBigiPage() {
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-[#B7A18A]/15 text-sm text-[#EDE6DA]">
+                      <tbody className="divide-y divide-[#B7A18A]/15 text-[16px] text-[#EDE6DA]">
                         <tr className="hover:bg-white/[0.02] transition-colors">
                           <td className="py-4 px-6 font-semibold text-[#B7A18A] text-center bg-[#241E25]/50">핵심 역할</td>
                           <td className="py-4 px-6 font-bold text-[#FAF7F2] bg-[#493740]/15 border-l border-[#B7A18A]/20">스스로 읽는 해석 도감</td>
@@ -1489,7 +1497,7 @@ export default function SeoncheonCodeBigiPage() {
                         <SeoncheonBadge>학습·도감형</SeoncheonBadge>
                       </div>
 
-                      <div className="space-y-2.5 text-xs text-[#30262F]">
+                      <div className="space-y-2.5 text-[16px] text-[#30262F]">
                         <div className="flex justify-between py-1 border-b border-[#B7A18A]/20">
                           <span className="font-semibold text-[#493740] shrink-0">핵심 역할</span>
                           <span className="font-bold text-[#241E25] text-right">스스로 읽는 해석 도감</span>
@@ -1535,7 +1543,7 @@ export default function SeoncheonCodeBigiPage() {
                         </span>
                       </div>
 
-                      <div className="space-y-2.5 text-xs text-[#EDE6DA]">
+                      <div className="space-y-2.5 text-[16px] text-[#EDE6DA]">
                         <div className="flex justify-between py-1 border-b border-white/5">
                           <span className="text-[#B7A18A] shrink-0">핵심 역할</span>
                           <span className="font-semibold text-[#FAF7F2] text-right">개인 맞춤 분석서</span>
@@ -1632,7 +1640,7 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         {/* 체크리스트 */}
-                        <ul className="space-y-2.5 text-[14px] sm:text-[15px] text-[#30262F] font-medium pt-2 border-t border-[#B7A18A]/30">
+                        <ul className="space-y-2.5 text-[16px] text-[#30262F] font-medium pt-2 border-t border-[#B7A18A]/30">
                           <li className="flex items-start gap-2.5">
                             <CheckCircle2 className="w-5 h-5 text-[#493740] shrink-0 mt-0.5" />
                             <span>오행과 십성의 원리를 배우고 싶다.</span>
@@ -1697,7 +1705,7 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         {/* 체크리스트 */}
-                        <ul className="space-y-2.5 text-[14px] sm:text-[15px] text-[#EDE6DA] font-light pt-2 border-t border-white/10">
+                        <ul className="space-y-2.5 text-[16px] text-[#EDE6DA] font-light pt-2 border-t border-white/10">
                           <li className="flex items-start gap-2.5">
                             <Check className="w-5 h-5 text-[#82968F] shrink-0 mt-0.5" />
                             <span>내 사주 구조를 종합적으로 알고 싶다.</span>
@@ -1777,7 +1785,7 @@ export default function SeoncheonCodeBigiPage() {
                       <h4 className="text-[18px] font-elegant font-bold text-[#FAF7F2]">
                         해석의 기준을 세우다
                       </h4>
-                      <p className="text-sm text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
+                      <p className="text-[16px] text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
                         <strong className="text-[#FAF7F2] font-medium">《선천코드 비기》</strong>로 오행과 십성, 관계를 해석하는 기본 원리를 익힙니다.
                       </p>
                     </div>
@@ -1797,7 +1805,7 @@ export default function SeoncheonCodeBigiPage() {
                       <h4 className="text-[18px] font-elegant font-bold text-[#FAF7F2]">
                         나의 코드를 깊이 읽다
                       </h4>
-                      <p className="text-sm text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
+                      <p className="text-[16px] text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
                         <strong className="text-[#FAF7F2] font-medium">《선천코드 리포트》</strong>로 자신의 사주 구조와 개별적인 해석을 살펴봅니다.
                       </p>
                     </div>
@@ -1817,7 +1825,7 @@ export default function SeoncheonCodeBigiPage() {
                       <h4 className="text-[18px] font-elegant font-bold text-[#FAF7F2]">
                         관계의 중심을 잡다
                       </h4>
-                      <p className="text-sm text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
+                      <p className="text-[16px] text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
                         배운 원리와 개인별 분석 내용을 참고하여 자신의 관계 패턴을 돌아보고 실천 방향을 정리합니다.
                       </p>
                     </div>
@@ -2130,7 +2138,7 @@ export default function SeoncheonCodeBigiPage() {
                           >
                             ✦
                           </div>
-                          <span className="text-[14px] sm:text-[15px] text-[#FAF7F2] font-semibold tracking-wide break-keep">
+                          <span className="text-[16px] text-[#FAF7F2] font-semibold tracking-wide break-keep">
                             {item}
                           </span>
                         </div>
@@ -2201,7 +2209,7 @@ export default function SeoncheonCodeBigiPage() {
                             {card.title}
                           </h3>
                           <div className="h-[1px] w-full bg-[#B7A18A]/20" />
-                          <p className="text-sm text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
+                          <p className="text-[16px] text-[#EDE6DA]/80 leading-relaxed font-light break-keep">
                             {card.desc}
                           </p>
                         </div>
@@ -2240,7 +2248,7 @@ export default function SeoncheonCodeBigiPage() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <p className="text-sm sm:text-base text-[#EDE6DA]/90 leading-relaxed font-light break-keep">
+                          <p className="text-[16px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep">
                             {item}
                           </p>
                         </div>
@@ -2341,7 +2349,7 @@ export default function SeoncheonCodeBigiPage() {
                         <p className="text-sm md:text-base text-[#EDE6DA]/90 leading-relaxed font-light">
                           일간·일지·월지를 찾아보고 나의 매력, 관계 성향, 이상형에 대한 해설을 살펴봅니다.
                         </p>
-                        <ul className="space-y-2.5 text-xs sm:text-sm text-[#FAF7F2] pt-2">
+                        <ul className="space-y-2.5 text-[16px] text-[#FAF7F2] pt-2">
                           <li className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#B7A18A]" />
                             <span>만세력 핵심 3글자 확인</span>
@@ -2389,7 +2397,7 @@ export default function SeoncheonCodeBigiPage() {
                         <p className="text-sm md:text-base text-[#EDE6DA]/90 leading-relaxed font-light">
                           상대의 만세력 정보를 알고 있다면 동일한 방법으로 책의 캐릭터와 관계 해설을 참고할 수 있습니다.
                         </p>
-                        <ul className="space-y-2.5 text-xs sm:text-sm text-[#FAF7F2] pt-2">
+                        <ul className="space-y-2.5 text-[16px] text-[#FAF7F2] pt-2">
                           <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-[#B7A18A]" />
                             <span>상대의 일간 캐릭터 찾아보기</span>
@@ -2408,7 +2416,7 @@ export default function SeoncheonCodeBigiPage() {
                           </li>
                         </ul>
                       </div>
-                      <div className="p-4 rounded-xl bg-[#493740]/50 border border-[#B7A18A]/40 text-xs text-[#FAF7F2] font-medium">
+                      <div className="p-4 rounded-xl bg-[#493740]/50 border border-[#B7A18A]/40 text-[16px] text-[#FAF7F2] font-medium">
                         ✨ 나를 이해하는 즐거움에서, 상대를 이해하는 새로운 시선으로.
                       </div>
                     </div>
@@ -2591,7 +2599,7 @@ export default function SeoncheonCodeBigiPage() {
                       본편부터 실전 암호 도감, 도화·배우자 판별 비책까지
                     </p>
                     <p className="text-[18px] md:text-[20px] text-[#B7A18A] font-bold font-elegant tracking-wide leading-[1.5]">
-                      정식 출간 준비 중 (COMING SOON)
+                      선천코드 비기 3종 올인원 완성형 패키지
                     </p>
                   </div>
                 </div>
@@ -2626,7 +2634,7 @@ export default function SeoncheonCodeBigiPage() {
                             원리바이블-본편
                           </p>
                           <p className="text-[#EDE6DA] font-normal tracking-wide">
-                            PDF 전자책 · <strong className="font-bold">출간 예정</strong>
+                            PDF 전자책 · <strong className="font-bold">즉시 열람</strong>
                           </p>
                         </div>
                       </div>
@@ -2706,7 +2714,7 @@ export default function SeoncheonCodeBigiPage() {
                             실전 도감-부록 1
                           </p>
                           <p className="text-[#EDE6DA] font-normal tracking-wide">
-                            PDF 전자책 · <strong className="font-bold">출간 예정</strong>
+                            PDF 전자책 · <strong className="font-bold">즉시 열람</strong>
                           </p>
                         </div>
                       </div>
@@ -2779,7 +2787,7 @@ export default function SeoncheonCodeBigiPage() {
                             실전 비책-부록 2
                           </p>
                           <p className="text-[#EDE6DA] font-normal tracking-wide">
-                            PDF 전자책 · <strong className="font-bold">출간 예정</strong>
+                            PDF 전자책 · <strong className="font-bold">즉시 열람</strong>
                           </p>
                         </div>
                       </div>
@@ -2865,16 +2873,16 @@ export default function SeoncheonCodeBigiPage() {
                     </div>
 
                     <SeoncheonBadge className="shrink-0 mt-0.5">
-                      출간 준비 중
+                      올인원 패키지
                     </SeoncheonBadge>
                   </div>
 
                   <div className="border-b border-white/10" />
 
                   <div className="space-y-1">
-                    <span className="text-xs text-[#EDE6DA]/60">정식 발매 예정</span>
+                    <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
                     <div className="text-2xl sm:text-3xl font-elegant font-bold text-[#B7A18A] leading-none">
-                      출간 준비 중 <span className="text-sm text-white/70 font-sans font-normal ml-1.5">(COMING SOON)</span>
+                      런칭 특가 29,000원 <span className="text-sm text-white/70 font-sans font-normal ml-1.5">(63% OFF)</span>
                     </div>
                   </div>
 
@@ -2884,18 +2892,18 @@ export default function SeoncheonCodeBigiPage() {
                       onClick={handleAddToCart}
                       className="py-3.5 px-5 sm:px-6 rounded-xl font-elegant font-bold text-sm md:text-base border border-[#B7A18A]/60 text-[#B7A18A] hover:bg-[#493740]/30 transition-all duration-300 shrink-0 whitespace-nowrap text-center bg-transparent order-2 sm:order-1 cursor-pointer"
                     >
-                      출간 알림 예약
+                      장바구니 담기
                     </button>
                     <button
                       type="button"
                       onClick={handlePurchase}
-                      className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer"
+                      className="flex-1 py-3.5 px-6 rounded-xl font-elegant font-bold text-sm md:text-base hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer shadow-lg"
                       style={{
                         background: 'linear-gradient(135deg, #493740 0%, #30262F 100%)',
                         border: '1px solid #B7A18A'
                       }}
                     >
-                      <span>선천코드 비기 준비 중</span>
+                      <span>선천코드 비기 29,000원에 구매하기</span>
                       <ChevronRight className="w-4 h-4 text-[#FAF7F2] shrink-0" />
                     </button>
                   </div>
@@ -2955,7 +2963,7 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         <div className="space-y-4">
-                          <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
+                          <div className="space-y-3 text-[16px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
                             <p>
                               사랑 앞에서 드러나는 서로 다른 본능과 관계의 표현 방식을 개성 있는 캐릭터로 만나보세요.
                             </p>
@@ -2994,7 +3002,7 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         <div className="space-y-4">
-                          <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
+                          <div className="space-y-3 text-[16px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
                             <p>
                               거목의 수호자 갑목, 화초형 힐러 을목, 태양의 주인공 병화처럼 각 일간의 고유한 매력과 관계 성향을 흥미롭게 살펴봅니다.
                             </p>
@@ -3033,7 +3041,7 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         <div className="space-y-4">
-                          <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
+                          <div className="space-y-3 text-[16px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
                             <p>
                               도화, 이상형, 배우자, 궁합과 관계 충돌까지 복잡한 개념을 인포그래픽과 도감으로 이해하고 필요한 순간 다시 찾아볼 수 있습니다.
                             </p>
@@ -3097,13 +3105,13 @@ export default function SeoncheonCodeBigiPage() {
                           { criteria: "시각적 표현", traditional: "전문적인 설명 위주", secretBook: "인포그래픽과 시각적 해설" }
                         ].map((row, idx) => (
                           <tr key={idx} className="hover:bg-[#B7A18A]/5 transition-colors">
-                            <td className="py-4 px-6 text-sm font-medium text-[#EDE6DA]/80">
+                            <td className="py-4 px-6 text-[16px] font-medium text-[#EDE6DA]/80">
                               {row.criteria}
                             </td>
-                            <td className="py-4 px-6 text-sm text-[#EDE6DA]/70 font-light">
+                            <td className="py-4 px-6 text-[16px] text-[#EDE6DA]/70 font-light">
                               {row.traditional}
                             </td>
-                            <td className="py-4 px-6 text-sm text-[#FAF7F2] font-semibold bg-[#B7A18A]/5">
+                            <td className="py-4 px-6 text-[16px] text-[#FAF7F2] font-semibold bg-[#B7A18A]/5">
                               <span className="text-[#B7A18A] mr-2">✓</span>
                               {row.secretBook}
                             </td>
@@ -3133,7 +3141,7 @@ export default function SeoncheonCodeBigiPage() {
                         <div className="text-xs text-[#EDE6DA]/60 line-through">
                           기존: {item.traditional}
                         </div>
-                        <div className="text-sm font-semibold text-[#FAF7F2] flex items-start gap-1.5 pt-0.5">
+                        <div className="text-[16px] font-semibold text-[#FAF7F2] flex items-start gap-1.5 pt-0.5">
                           <span className="text-[#B7A18A] shrink-0">✓</span>
                           <span>{item.secretBook}</span>
                         </div>
@@ -3234,7 +3242,7 @@ export default function SeoncheonCodeBigiPage() {
                               <h4 className="text-[15px] sm:text-[16px] font-bold text-[#FAF7F2]">
                                 {guide.title}
                               </h4>
-                              <p className="text-xs sm:text-sm text-[#EDE6DA]/75 mt-0.5 leading-relaxed">
+                              <p className="text-[16px] text-[#EDE6DA]/75 mt-0.5 leading-relaxed">
                                 {guide.desc}
                               </p>
                             </div>
@@ -3516,7 +3524,7 @@ export default function SeoncheonCodeBigiPage() {
                         <span className="text-[14px] font-semibold text-white/50 block mb-1.5">
                           적용 범위
                         </span>
-                        <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.7] break-keep">
+                        <p className="text-[16px] text-white/70 leading-[1.7] break-keep">
                           신청한 대상과 주제에 집중
                         </p>
                       </div>
@@ -3525,7 +3533,7 @@ export default function SeoncheonCodeBigiPage() {
                         <span className="text-[14px] font-semibold text-white/50 block mb-1.5">
                           한계
                         </span>
-                        <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.7] break-keep">
+                        <p className="text-[16px] text-white/70 leading-[1.7] break-keep">
                           새로운 궁금증이 생기면 추가 해석이 필요할 수 있음
                         </p>
                       </div>
@@ -3631,7 +3639,7 @@ export default function SeoncheonCodeBigiPage() {
                     },
                     {
                       q: "구매 후 어떻게 열람하나요?",
-                      a: "정식 출간 후 결제 완료 즉시 마이페이지에서 PDF 파일로 즉시 다운로드하여 스마트폰, 태블릿, PC 등 모든 기기에서 평생 소장하며 열람하실 수 있습니다."
+                      a: "결제 완료 즉시 마이페이지에서 PDF 파일로 즉시 다운로드하여 스마트폰, 태블릿, PC 등 모든 기기에서 평생 소장하며 열람하실 수 있습니다."
                     },
                     {
                       q: "PDF 전자책은 영구 소장이 가능한가요?",
@@ -3655,7 +3663,7 @@ export default function SeoncheonCodeBigiPage() {
                         />
                       </button>
                       {openFaq === idx && (
-                        <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm sm:text-base text-[#EDE6DA]/85 leading-relaxed font-light border-t border-white/5 pt-4 break-keep">
+                        <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-[16px] text-[#EDE6DA]/85 leading-relaxed font-light border-t border-white/5 pt-4 break-keep">
                           {faq.a}
                         </div>
                       )}
@@ -3689,14 +3697,14 @@ export default function SeoncheonCodeBigiPage() {
                     </h3>
                   </div>
 
-                  <ul className="space-y-3.5 text-xs sm:text-sm md:text-[15px] text-[#EDE6DA]/85 leading-relaxed font-light break-keep">
+                  <ul className="space-y-3.5 text-[16px] text-[#EDE6DA]/85 leading-relaxed font-light break-keep">
                     <li className="flex items-start gap-2.5">
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#B7A18A] shrink-0" />
                       <span>본 상품은 실물 배송이 없는 디지털 전자책(PDF 파일) 상품입니다.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#B7A18A] shrink-0" />
-                      <span>현재 정식 출시 준비 중인 상품으로, 오픈 이후 즉시 다운로드해 확인하실 수 있습니다.</span>
+                      <span>결제 완료 후 안내된 방식(마이페이지 또는 등록된 이메일)에 따라 즉시 다운로드해 확인하실 수 있습니다.</span>
                     </li>
                     <li className="flex items-start gap-2.5">
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#B7A18A] shrink-0" />
@@ -3779,7 +3787,7 @@ export default function SeoncheonCodeBigiPage() {
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 22: 최종 구매 CTA (Final Purchase / 출간 준비 중 안내)
+                Section 22: 최종 구매 CTA (Final Purchase)
                ═══════════════════════════════════════════════════════════════ */}
             <section id="final-cta" className="mb-28 w-full max-w-4xl mx-auto scroll-mt-28 px-4">
               <Reveal>
@@ -3829,9 +3837,9 @@ export default function SeoncheonCodeBigiPage() {
                     </div>
 
                     <div className="py-4 border-y border-white/10 space-y-1 text-center">
-                      <span className="text-xs text-[#EDE6DA]/50">정식 출간 예정</span>
+                      <span className="text-xs text-[#EDE6DA]/60">정가 79,000원</span>
                       <div className="text-3xl sm:text-4xl font-elegant font-bold text-[#B7A18A]">
-                        출간 준비 중 <span className="text-sm text-white/70 font-sans font-normal ml-2">(COMING SOON)</span>
+                        런칭 특가 29,000원 <span className="text-sm text-white/70 font-sans font-normal ml-2">(63% OFF)</span>
                       </div>
                     </div>
 
@@ -3841,24 +3849,25 @@ export default function SeoncheonCodeBigiPage() {
                         onClick={handleAddToCart}
                         className="py-4 px-6 rounded-xl font-elegant font-bold text-sm md:text-base border border-[#B7A18A]/60 text-[#B7A18A] hover:bg-[#493740]/40 transition-all duration-300 shrink-0 whitespace-nowrap text-center bg-transparent order-2 sm:order-1 cursor-pointer"
                       >
-                        출간 알림 예약
+                        장바구니 담기
                       </button>
                       <button
                         type="button"
                         onClick={handlePurchase}
-                        className="flex-1 py-4 px-8 rounded-xl font-elegant font-bold text-base md:text-lg transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer"
+                        className="flex-1 py-4 px-8 rounded-xl font-elegant font-bold text-base md:text-lg hover:scale-[1.01] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2 text-[#FAF7F2] order-1 sm:order-2 cursor-pointer shadow-lg"
                         style={{
                           background: 'linear-gradient(135deg, #493740 0%, #30262F 100%)',
-                          border: '1px solid #B7A18A'
+                          border: '1px solid #B7A18A',
+                          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.4)'
                         }}
                       >
-                        <span>선천코드 비기 준비 중</span>
+                        <span>선천코드 비기 29,000원에 구매하기</span>
                         <ChevronRight className="w-5 h-5 text-[#FAF7F2] shrink-0" />
                       </button>
                     </div>
 
                     <p className="text-[11px] text-[#EDE6DA]/50 text-center font-light pt-1">
-                      오픈 즉시 마이페이지에서 다운로드 및 열람이 가능합니다.
+                      결제 즉시 마이페이지에서 다운로드 및 열람이 가능합니다.
                     </p>
                   </div>
                 </div>
@@ -3885,9 +3894,9 @@ export default function SeoncheonCodeBigiPage() {
 
         {/* 📱 모바일 화면 하단 고정 구매 바 */}
         <MobileStickyBuyBar
-          price={0}
+          price={productData.price}
           onPurchase={handlePurchase}
-          buttonText="선천코드 비기 준비 중 →"
+          buttonText="선천코드 비기 구매하기 →"
         />
 
         <Footer />
