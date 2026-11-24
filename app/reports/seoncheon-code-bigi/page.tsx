@@ -1363,25 +1363,28 @@ export default function SeoncheonCodeBigiPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                       {/* POINT 01 */}
                       <div
-                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
-                        style={{ backgroundColor: '#F2EAE0' }}
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px]"
+                        style={{
+                          background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
+                          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'
+                        }}
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                            <span className="text-xs font-mono font-bold tracking-wider px-2.5 py-0.5 rounded bg-[#493740] text-[#F2EAE0] border border-[#B7A18A]/60 shadow-sm">
                               POINT 01
                             </span>
-                            <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
+                            <div className="w-8 h-8 rounded-full bg-[#493740] border border-[#B7A18A]/60 flex items-center justify-center text-[#FAF7F2] shadow-sm">
                               <BookOpen className="w-4 h-4" />
                             </div>
                           </div>
                           <div>
-                            <span className="text-[11px] font-medium text-[#493740] block mb-1">직관적 해설</span>
-                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                            <span className="text-[11px] font-bold text-[#493740] tracking-wide block mb-1">직관적 해설</span>
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-tight">
                               어려운 사주를 쉽고 재미있게
                             </h5>
                           </div>
-                          <p className="text-[16px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                          <p className="text-[16px] text-[#4A3D39] leading-[1.7] break-keep font-normal">
                             복잡한 한자도, 어려운 명리학 이론도 외울 필요 없습니다. 만세력에서 나와 상대의 글자를 찾아보고, 캐릭터 도감과 인포그래픽을 통해 선천적 기질과 관계 성향을 쉽고 직관적으로 이해할 수 있습니다.
                           </p>
                         </div>
@@ -1389,25 +1392,28 @@ export default function SeoncheonCodeBigiPage() {
 
                       {/* POINT 02 */}
                       <div
-                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
-                        style={{ backgroundColor: '#F2EAE0' }}
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px]"
+                        style={{
+                          background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
+                          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'
+                        }}
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                            <span className="text-xs font-mono font-bold tracking-wider px-2.5 py-0.5 rounded bg-[#493740] text-[#F2EAE0] border border-[#B7A18A]/60 shadow-sm">
                               POINT 02
                             </span>
-                            <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
+                            <div className="w-8 h-8 rounded-full bg-[#493740] border border-[#B7A18A]/60 flex items-center justify-center text-[#FAF7F2] shadow-sm">
                               <Compass className="w-4 h-4" />
                             </div>
                           </div>
                           <div>
-                            <span className="text-[11px] font-medium text-[#493740] block mb-1">사랑·인연 특화</span>
-                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                            <span className="text-[11px] font-bold text-[#493740] tracking-wide block mb-1">사랑·인연 특화</span>
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-tight">
                               사랑과 인연에 특화된 관계 해설서
                             </h5>
                           </div>
-                          <p className="text-[16px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                          <p className="text-[16px] text-[#4A3D39] leading-[1.7] break-keep font-normal">
                             일반적인 사주책처럼 직업운, 재물운, 신년운세를 두루 다루는 책이 아닙니다. 타고난 매력, 이상형, 본능적 끌림, 배우자, 궁합, 관계 갈등, 재회까지 사랑과 인연에 집중한 실전 관계 해설서입니다.
                           </p>
                         </div>
@@ -1415,25 +1421,28 @@ export default function SeoncheonCodeBigiPage() {
 
                       {/* POINT 03 */}
                       <div
-                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
-                        style={{ backgroundColor: '#F2EAE0' }}
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px]"
+                        style={{
+                          background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
+                          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'
+                        }}
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                            <span className="text-xs font-mono font-bold tracking-wider px-2.5 py-0.5 rounded bg-[#493740] text-[#F2EAE0] border border-[#B7A18A]/60 shadow-sm">
                               POINT 03
                             </span>
-                            <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
+                            <div className="w-8 h-8 rounded-full bg-[#493740] border border-[#B7A18A]/60 flex items-center justify-center text-[#FAF7F2] shadow-sm">
                               <RotateCcw className="w-4 h-4" />
                             </div>
                           </div>
                           <div>
-                            <span className="text-[11px] font-medium text-[#493740] block mb-1">상대방 이해</span>
-                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                            <span className="text-[11px] font-bold text-[#493740] tracking-wide block mb-1">상대방 이해</span>
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-tight">
                               나를 넘어 상대를 이해하는 관계 도감
                             </h5>
                           </div>
-                          <p className="text-[16px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                          <p className="text-[16px] text-[#4A3D39] leading-[1.7] break-keep font-normal">
                             나의 연애 성향뿐 아니라 현재 연인, 관심 있는 상대, 헤어진 연인, 배우자의 기질과 관계 성향까지 직접 찾아볼 수 있습니다. 사람과 인연을 이해하고 관계를 바라보는 나만의 기준을 세워갑니다.
                           </p>
                         </div>
@@ -1441,25 +1450,28 @@ export default function SeoncheonCodeBigiPage() {
 
                       {/* POINT 04 */}
                       <div
-                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
-                        style={{ backgroundColor: '#F2EAE0' }}
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px]"
+                        style={{
+                          background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
+                          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'
+                        }}
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
+                            <span className="text-xs font-mono font-bold tracking-wider px-2.5 py-0.5 rounded bg-[#493740] text-[#F2EAE0] border border-[#B7A18A]/60 shadow-sm">
                               POINT 04
                             </span>
-                            <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
+                            <div className="w-8 h-8 rounded-full bg-[#493740] border border-[#B7A18A]/60 flex items-center justify-center text-[#FAF7F2] shadow-sm">
                               <Sparkles className="w-4 h-4" />
                             </div>
                           </div>
                           <div>
-                            <span className="text-[11px] font-medium text-[#493740] block mb-1">평생 소장 비서</span>
-                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                            <span className="text-[11px] font-bold text-[#493740] tracking-wide block mb-1">평생 소장 비서</span>
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-tight">
                               인연이 바뀔 때마다 다시 펼쳐보는 소장용 비서
                             </h5>
                           </div>
-                          <p className="text-[16px] text-[#30262F] leading-[1.7] break-keep font-normal">
+                          <p className="text-[16px] text-[#4A3D39] leading-[1.7] break-keep font-normal">
                             한 번 읽고 책장에 넣어두는 책이 아닙니다. 새로운 인연을 만날 때마다, 사랑이 궁금해질 때마다, 관계에서 고민이 생길 때마다 필요한 부분을 다시 찾아볼 수 있는 소장용 관계 도감입니다.
                           </p>
                         </div>
@@ -1711,16 +1723,16 @@ export default function SeoncheonCodeBigiPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
                     {/* 선택 카드 01 — 《선천코드 비기》 */}
                     <div
-                      className="rounded-3xl p-7 sm:p-9 flex flex-col justify-between border-2 border-[#B7A18A] shadow-2xl relative overflow-hidden transition-all duration-300"
+                      className="rounded-3xl p-7 sm:p-9 flex flex-col justify-between border-2 border-[#B7A18A]/60 relative overflow-hidden transition-all duration-300"
                       style={{
-                        backgroundColor: '#F2EAE0',
-                        boxShadow: '0 16px 44px rgba(0, 0, 0, 0.45)'
+                        background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
+                        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.22)'
                       }}
                     >
                       <div className="space-y-5">
                         <div className="flex items-center justify-between">
                           <span
-                            className="inline-flex items-center justify-center py-1 px-3 rounded text-xs font-semibold"
+                            className="inline-flex items-center justify-center py-1 px-3 rounded text-xs font-semibold shadow-sm"
                             style={{
                               background: '#493740',
                               color: '#F2EAE0',
@@ -1729,11 +1741,13 @@ export default function SeoncheonCodeBigiPage() {
                           >
                             스스로 읽는 해석 도감
                           </span>
-                          <span className="text-xs font-mono text-[#493740] font-bold">CHOICE 01</span>
+                          <span className="text-xs font-mono font-bold tracking-wider px-2.5 py-1 rounded bg-[#493740] text-[#F2EAE0] border border-[#B7A18A]/60 shadow-sm">
+                            CHOICE 01
+                          </span>
                         </div>
 
                         <div className="space-y-1.5">
-                          <h4 className="text-[22px] sm:text-[25px] font-elegant font-bold text-[#241E25] leading-[1.4]">
+                          <h4 className="text-[22px] sm:text-[25px] font-elegant font-bold text-[#2F2525] leading-[1.4]">
                             &ldquo;스스로 읽고 이해하고 싶다면&rdquo;
                           </h4>
                           <p className="text-xs sm:text-sm text-[#493740] font-medium">
@@ -1742,7 +1756,7 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         {/* 체크리스트 */}
-                        <ul className="space-y-2.5 text-[16px] text-[#30262F] font-medium pt-2 border-t border-[#B7A18A]/30">
+                        <ul className="space-y-2.5 text-[16px] text-[#4A3D39] font-medium pt-2 border-t border-[#B7A18A]/35">
                           <li className="flex items-start gap-2.5">
                             <CheckCircle2 className="w-5 h-5 text-[#493740] shrink-0 mt-0.5" />
                             <span>오행과 십성의 원리를 배우고 싶다.</span>
@@ -1762,10 +1776,10 @@ export default function SeoncheonCodeBigiPage() {
                         </ul>
                       </div>
 
-                      <div className="pt-6 space-y-4 border-t border-[#B7A18A]/30 mt-6">
+                      <div className="pt-6 space-y-4 border-t border-[#B7A18A]/35 mt-6">
                         <div className="text-center">
                           <span className="text-xs font-semibold text-[#493740] block mb-0.5">핵심 포지셔닝</span>
-                          <p className="text-[17px] font-elegant font-bold text-[#241E25]">
+                          <p className="text-[17px] font-elegant font-bold text-[#2F2525]">
                             &ldquo;내 손안의 선천코드 해석 도감&rdquo;
                           </p>
                         </div>
@@ -2219,28 +2233,30 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   {/* 오른쪽 본문 (가로폭 소폭 축소 및 오른쪽으로 살짝 이동) */}
-                  <div className="lg:col-span-7 space-y-7 sm:space-y-8 break-keep lg:pl-4 xl:pl-6">
+                  <div className="lg:col-span-7 break-keep lg:pl-4 xl:pl-6">
                     <div>
                       {/* 1. 상단 영문 라벨 (12px / 12pt 유지) */}
-                      <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3 sm:mb-3.5">
+                      <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-2.5 sm:mb-3">
                         THE ONLY SECRET
                       </span>
 
-                      {/* 2. 상단 리드 문구 */}
-                      <p className="text-[18px] font-elegant font-light text-[#B7A18A] leading-[1.4] mb-2 sm:mb-2.5 break-keep">
+                      {/* 2. 상단 리드 문구 (메인 제목과 8~12px 여백) */}
+                      <p className="text-[17px] sm:text-[18px] font-elegant font-light text-[#B7A18A] leading-[1.4] mb-2 sm:mb-2.5 break-keep">
                         수많은 엇갈림과 임상 통찰 끝에,
                       </p>
 
-                      {/* 3. 메인 헤드카피 (두 줄 메인 제목, 36px, 행간 1.4 통일) */}
+                      {/* 3. 메인 헤드카피 (두 줄 메인 제목, 36px, 기존 정상 행간 1.4 유지) */}
                       <h2 className="text-[26px] sm:text-[30px] md:text-[34px] lg:text-[36px] font-elegant font-bold leading-[1.4] break-keep">
                         <span className="text-[#FAF7F2] block">마침내 탄생한</span>
                         <span className="text-[#B7A18A] block mt-1">단 하나의 관계 암호서(暗號書)</span>
                       </h2>
 
-                      {/* 4. 대형 상품 타이틀 (자연스러운 상단 간격) */}
-                      <div className="mt-3 sm:mt-3.5">
+                      {/* 4. 대형 상품 타이틀
+                          - 메인 제목과 여백: 12~16px (mt-3 sm:mt-3.5 md:mt-4)
+                          - 기존 고풍스러운 세리프 서체(font-elegant font-extrabold) 완벽 복원 */}
+                      <div className="mt-3 sm:mt-3.5 md:mt-4">
                         <span
-                          className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] font-extrabold inline-block tracking-tight"
+                          className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] font-elegant font-extrabold inline-block tracking-tight"
                           style={{
                             background: 'linear-gradient(110deg, #E2CEB9 0%, #B7A18A 35%, #9E7D8A 65%, #6B4E5D 100%)',
                             backgroundClip: 'text',
@@ -2255,15 +2271,19 @@ export default function SeoncheonCodeBigiPage() {
                       </div>
                     </div>
 
-                    {/* 5. 본문 문구 (18px, 행간 1.8, 문단 간격 20~24px 통일) */}
-                    <div className="space-y-5 sm:space-y-6 text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
+                    {/* 5. 본문 설명 문구
+                        - 상품명 하단과의 최종 간격: 20~24px 축소 (mt-5 sm:mt-6)
+                        - 본문 자체 line-height: 1.7 유지, 글자 크기: 18px 유지
+                        - 문단 1 ↔ 문단 2 간격: 8~12px (mt-2 sm:mt-2.5)
+                        - 문단 2 ↔ 문단 3 간격: 12~16px (mt-3 sm:mt-3.5) */}
+                    <div className="text-[17px] sm:text-[18px] text-[#EDE6DA] leading-[1.7] font-normal break-keep mt-5 sm:mt-6">
                       <p className="text-[#F0EBE2]">
                         더 이상 남의 점괘에 휘둘리며 불안해하지 마십시오.
                       </p>
-                      <p className="text-[#FAF7F2] font-bold">
+                      <p className="text-[#FAF7F2] font-bold mt-2 sm:mt-2.5">
                         사랑은 운에 맡기는 것이 아니라, 나와 상대의 코드를 읽고 주도권을 쥐는 것입니다.
                       </p>
-                      <p className="text-[#F0EBE2]">
+                      <p className="text-[#F0EBE2] mt-3 sm:mt-3.5">
                         《선천코드 비기》는 난해한 한자 풀이와 뜬구름 잡는 사주 상담을 거부하고{' '}
                         <strong className="text-[#B7A18A] font-bold">&lsquo;명리 심리 역학&rsquo;</strong>과{' '}
                         <strong className="text-[#B7A18A] font-bold">&lsquo;오감 행동 처방&rsquo;</strong>을 집대성하여 오직 사랑과 인연의 판을 뒤집기 위해 탄생한{' '}
@@ -2271,8 +2291,10 @@ export default function SeoncheonCodeBigiPage() {
                       </p>
                     </div>
 
-                    {/* 6. 핵심 키워드 카드 6종 (2열 3행 구조 유지, 균일한 간격) */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 pt-1 sm:pt-2">
+                    {/* 6. 핵심 키워드 카드 6종
+                        - 마지막 설명 문구와의 여백: 24px (mt-6)
+                        - 기존 2열 3행 구조, 카드 크기/패딩/디자인 온전히 유지 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mt-6">
                       {[
                         "만세력 3초 핵심 좌표 판독",
                         "십성 5대 본능 캐릭터 도감",
@@ -3567,25 +3589,27 @@ export default function SeoncheonCodeBigiPage() {
                     />
                   </div>
 
-                  {/* 4. 인연의 주권자 브릿지 카피 (상단 이미지와 36~48px 여백 확보, 모바일 28~32px) */}
-                  <div className="text-center max-w-3xl mx-auto break-keep mt-7 sm:mt-8 md:mt-10 lg:mt-12">
-                    {/* 1) 영문 라벨 (12pt 유지, 메인 제목과 16~20px 간격) */}
-                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-4 md:mb-5">
+                  {/* 4. 인연의 주권자 브릿지 카피
+                      - 상단 이미지(reunionLawImage) 하단과의 거리: PC 128px, 태블릿 96px, 모바일 64~80px
+                      - 부모 space-y 및 마진 병합(margin collapsing) 방지를 위해 !mt-0과 padding-top으로 절대 여백 보장 */}
+                  <div className="text-center max-w-3xl mx-auto break-keep !mt-0 pt-16 sm:pt-20 md:pt-24 lg:pt-32">
+                    {/* 1) 영문 라벨 (12pt/12px, 메인 제목과 16~20px 간격 유지) */}
+                    <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-4 md:mb-4.5">
                       SOVEREIGN OF RELATIONSHIP
                     </span>
 
-                    {/* 2) 메인 제목 (line-height 1.32~1.35로 여유 있게 조정, 설명 문구와 20~24px 간격) */}
-                    <h3 className="text-[26px] sm:text-[30px] md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.32] md:leading-[1.35] break-keep mb-5 md:mb-6">
+                    {/* 2) 메인 제목 (36px, 기존 행간 유지, 설명 문구와 16~20px 간격으로 축소) */}
+                    <h3 className="text-[26px] sm:text-[30px] md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.32] md:leading-[1.35] break-keep mb-4 md:mb-5">
                       나를 읽고, 상대를 이해하고,<br />
                       스스로 <span className="text-[#B7A18A]">인연을 선택하는 사람</span>
                     </h3>
 
-                    {/* 3) 설명 문구 및 하단 강조 문구 (빈 줄 느낌 없이 14~18px 간격으로 자연스럽게 연결) */}
+                    {/* 3) 설명 문구 및 하단 강조 문구 (빈 줄 느낌 제거, 4~8px 간격으로 자연스럽게 결합) */}
                     <div className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.7] md:leading-[1.75] font-normal break-keep">
                       <p className="whitespace-normal md:whitespace-nowrap">
                         정해진 운명에 순응하는 것이 아니라, 나의 기질과 상대의 차이를 이해하며 관계를 주체적으로 바라보는 것
                       </p>
-                      <p className="text-[#B7A18A] font-bold font-elegant text-[18px] md:text-[20px] mt-3.5 md:mt-4 leading-[1.5]">
+                      <p className="text-[#B7A18A] font-bold font-elegant text-[18px] md:text-[20px] mt-1.5 md:mt-2 leading-[1.5]">
                         그것이 선천코드 비기가 전하고 싶은 인연의 지혜입니다.
                       </p>
                     </div>
