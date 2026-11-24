@@ -978,7 +978,7 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   {/* ════ 인연의 역설 3대 공감 카드 (짙은 먹묵자색 글라스) ════ */}
-                  <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
+                  <div className="!mt-24 sm:!mt-28 md:!mt-36 lg:!mt-44 w-full max-w-[1280px] mx-auto">
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
                       <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                           THE PARADOX OF DESTINY
@@ -990,7 +990,7 @@ export default function SeoncheonCodeBigiPage() {
                       <div className="text-[17px] md:text-[18px] text-[#F2EAE0] mt-4 max-w-3xl mx-auto leading-[1.8] font-normal break-keep space-y-2">
                         <p>당신의 눈이 낮아서도, 사랑이 부족해서도 아닙니다.</p>
                         <p>
-                          <strong className="font-bold text-white">나와 상대의 &apos;선천코드 암호&apos;를 모른 채, 물과 불이 정면으로 부딪히는 인연에 맨몸으로 뛰어들었기 때문입니다.</strong>
+                          <strong className="font-bold text-white">나와 상대의 &apos;선천코드 암호&apos;를 모른 채, 물과 불이 정면으로 부딪히는 인연에<br />맨몸으로 뛰어들었기 때문입니다.</strong>
                         </p>
                       </div>
                     </div>
@@ -1210,11 +1210,11 @@ export default function SeoncheonCodeBigiPage() {
               <Reveal>
                 <div className="space-y-10 md:space-y-12">
                   {/* 상단 라벨 및 메인 제목 (카드 외부 상단 중앙 정렬, 36px, 포인트 컬러) */}
-                  <div className="text-center max-w-3xl mx-auto space-y-3">
+                  <div className="text-center max-w-4xl mx-auto space-y-3">
                     <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       WHY SEONCHEON CODE SECRET
                     </span>
-                    <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
+                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep md:whitespace-nowrap">
                       왜 《<span className="text-[#B7A18A]">선천코드 비기</span>》를 내 손에 두어야 할까요?
                     </h2>
                   </div>
@@ -1350,13 +1350,13 @@ export default function SeoncheonCodeBigiPage() {
 
                   {/* 🎴 4대 핵심 차별점 카드 */}
                   <div className="space-y-6 !mt-16 sm:!mt-20 md:!mt-28">
-                    <div className="text-center max-w-2xl mx-auto space-y-2">
-                      <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase">
+                    <div className="text-center max-w-3xl mx-auto space-y-3">
+                      <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                         CORE VALUES OF THE BOOK
                       </span>
-                      <h4 className="text-[20px] sm:text-[24px] font-elegant font-bold text-[#FAF7F2]">
+                      <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide leading-[1.4] break-keep">
                         《선천코드 비기》 핵심 차별점 4가지
-                      </h4>
+                      </h3>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -1489,8 +1489,8 @@ export default function SeoncheonCodeBigiPage() {
                     <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       PRODUCT COMPARISON
                     </span>
-                    <h3 className="text-[24px] sm:text-[28px] md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.35]">
-                      《선천코드 비기》와 《선천코드 리포트》, 무엇이 다를까요?
+                    <h3 className="text-[24px] sm:text-[28px] md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                      《선천코드 비기》와 《선천코드 리포트》<br />무엇이 다를까요?
                     </h3>
                     <p className="text-[16px] sm:text-[18px] text-[#B7A18A] font-medium">
                       &ldquo;같은 선천코드에서 출발하지만, 역할과 쓰임새는 다릅니다.&rdquo;
@@ -2452,7 +2452,7 @@ export default function SeoncheonCodeBigiPage() {
                     <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       CURRICULUM &amp; ARCHITECTURE
                     </span>
-                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] md:leading-[1.65] break-keep">
                       사랑과 인연을 감(感)에 맡기지 마십시오.<br />
                       <span className="text-[#B7A18A]">《선천코드 비기》가 설계한 7단계 관계 해독 지도</span>
                     </h2>
@@ -2729,7 +2729,7 @@ export default function SeoncheonCodeBigiPage() {
                 {/* ─────────────────────────────────────────────────────────────
                     책 속 콘텐츠 미리보기: INSIDE THE SECRET BOOK
                    ───────────────────────────────────────────────────────────── */}
-                <div className="pt-16 md:pt-20 lg:pt-24 mb-14 md:mb-18 border-t border-[#B7A18A]/20">
+                <div className="!mt-24 sm:!mt-28 md:!mt-36 pt-16 md:pt-20 lg:pt-24 mb-14 md:mb-18 border-t border-[#B7A18A]/20">
                   <div className="text-center max-w-3xl mx-auto mb-10 break-keep">
                     <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                       INSIDE THE SECRET BOOK
@@ -3261,8 +3261,8 @@ export default function SeoncheonCodeBigiPage() {
                     <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] mb-3">
                       어려웠던 사주, 사랑을 만나 쉬워지다
                     </h2>
-                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8]">
-                      이론과 암기 중심의 전통 명리학 학습서와, 필요한 순간 직접 찾아보는 &lsquo;선천코드 비기&rsquo;의 접근 방식 차이입니다.
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8] break-keep">
+                      이론과 암기 중심의 전통 명리학 학습서와, 필요한 순간 직접 찾아보는<br />&lsquo;선천코드 비기&rsquo;의 접근 방식 차이입니다.
                     </p>
                   </div>
 
@@ -3464,7 +3464,7 @@ export default function SeoncheonCodeBigiPage() {
                         <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-4">
                           THE ART OF READING PEOPLE
                         </span>
-                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
+                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.5] md:leading-[1.55] break-keep">
                           사람이 궁금해질 때마다,<br />
                           펼쳐보는 관계 도감
                         </h2>
@@ -3530,7 +3530,7 @@ export default function SeoncheonCodeBigiPage() {
                     </span>
 
                     {/* 2. 메인 헤드카피 */}
-                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
+                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] md:leading-[1.65] break-keep">
                       &ldquo;같은 연애를 반복했던 이유,<br />
                       <span className="text-[#B7A18A]">어쩌면 &lsquo;관계의 암호&rsquo;를 읽지 못했기 때문입니다.&rdquo;</span>
                     </h2>
@@ -3559,7 +3559,8 @@ export default function SeoncheonCodeBigiPage() {
                     />
                   </div>
 
-                  <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-20 md:mt-28 lg:mt-36 break-keep">
+                  {/* 4. 인연의 주권자 브릿지 카피 (mt-28 md:mt-40) */}
+                  <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-28 md:mt-40 break-keep">
                     <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       SOVEREIGN OF RELATIONSHIP
                     </span>
