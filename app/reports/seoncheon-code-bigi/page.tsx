@@ -727,7 +727,7 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   <div className="text-[16px] md:text-[18px] text-[#F2EAE0] leading-[1.8] font-normal space-y-3.5 break-keep">
-                    <p className="text-[18px] sm:text-[20px] md:text-[22px] text-[#B7A18A] font-elegant font-bold leading-snug">
+                    <p className="text-[18px] sm:text-[20px] md:text-[22px] text-[#B7A18A] font-elegant font-bold leading-[1.4]">
                       사주를 공부하는 책이 아니라,<br />
                       사람과 사랑을 이해하기 위해 펼쳐보는 관계 도감
                     </p>
@@ -930,7 +930,7 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   {/* ════ 불안의 순간 공감 (좌측 55% + 우측 45% 이미지) ════ */}
-                  <div className="mt-6 md:mt-7 lg:mt-8 pt-4 md:pt-5 lg:pt-8 border-t border-[#B7A18A]/20">
+                  <div className="!mt-16 sm:!mt-20 md:!mt-28 pt-10 md:pt-14 border-t border-[#B7A18A]/20">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                       {/* 좌측 55% 공감 문구 */}
                       <div className="lg:col-span-7 space-y-5 text-left break-keep">
@@ -978,7 +978,7 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   {/* ════ 인연의 역설 3대 공감 카드 (짙은 먹묵자색 글라스) ════ */}
-                  <div className="mt-10 md:mt-12 lg:mt-16 w-full max-w-[1280px] mx-auto">
+                  <div className="!mt-[64px] sm:!mt-[72px] md:!mt-[120px] w-full max-w-[1280px] mx-auto">
                     <div className="text-center mb-10 md:mb-12 space-y-3 md:space-y-4 break-keep">
                       <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                           THE PARADOX OF DESTINY
@@ -1349,7 +1349,7 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   {/* 🎴 4대 핵심 차별점 카드 */}
-                  <div className="space-y-6 mt-10 md:mt-12 lg:mt-16">
+                  <div className="space-y-6 !mt-16 sm:!mt-20 md:!mt-28">
                     <div className="text-center max-w-2xl mx-auto space-y-2">
                       <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase">
                         CORE VALUES OF THE BOOK
@@ -1732,7 +1732,7 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         <div className="space-y-1.5">
-                          <h4 className="text-[22px] sm:text-[25px] font-elegant font-bold text-[#241E25] leading-tight">
+                          <h4 className="text-[22px] sm:text-[25px] font-elegant font-bold text-[#241E25] leading-[1.4]">
                             &ldquo;스스로 읽고 이해하고 싶다면&rdquo;
                           </h4>
                           <p className="text-xs sm:text-sm text-[#493740] font-medium">
@@ -1797,7 +1797,7 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         <div className="space-y-1.5">
-                          <h4 className="text-[22px] sm:text-[25px] font-elegant font-bold text-[#FAF7F2] leading-tight">
+                          <h4 className="text-[22px] sm:text-[25px] font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
                             &ldquo;나의 이야기를 개별적으로 분석받고 싶다면&rdquo;
                           </h4>
                           <p className="text-xs sm:text-sm text-[#82968F] font-medium">
@@ -1952,7 +1952,7 @@ export default function SeoncheonCodeBigiPage() {
 
                   {/* 🎯 전환 및 브릿지 CTA */}
                   <div
-                    className="rounded-2xl p-6 sm:p-8 text-center border border-[#B7A18A]/40 shadow-xl space-y-4 max-w-2xl mx-auto"
+                    className="rounded-2xl p-6 sm:p-8 text-center border border-[#B7A18A]/40 shadow-xl space-y-4 max-w-2xl mx-auto !mt-14 sm:!mt-16 md:!mt-20"
                     style={{
                       background: 'linear-gradient(135deg, rgba(73, 55, 64, 0.4) 0%, rgba(36, 30, 37, 0.8) 100%)',
                     }}
@@ -2729,12 +2729,12 @@ export default function SeoncheonCodeBigiPage() {
                 {/* ─────────────────────────────────────────────────────────────
                     책 속 콘텐츠 미리보기: INSIDE THE SECRET BOOK
                    ───────────────────────────────────────────────────────────── */}
-                <div className="mt-16 pt-14 border-t border-[#B7A18A]/20">
+                <div className="pt-16 md:pt-20 lg:pt-24 mb-14 md:mb-18 border-t border-[#B7A18A]/20">
                   <div className="text-center max-w-3xl mx-auto mb-10 break-keep">
                     <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                       INSIDE THE SECRET BOOK
                     </span>
-                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide leading-snug mb-3">
+                    <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] tracking-wide leading-[1.4] mb-3">
                       캐릭터로 만나고, 그림으로 이해하는 선천코드의 세계
                     </h3>
                     <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8]">
@@ -2772,11 +2772,11 @@ export default function SeoncheonCodeBigiPage() {
                 </div>
 
                 {/* 3종 세트 상세 서브헤더 */}
-                <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 pt-10 md:pt-12 lg:pt-16 break-keep">
+                <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 pt-12 md:pt-16 lg:pt-20 break-keep">
                   <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-3">
                     3-in-1 All-in-One Package
                   </span>
-                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.35] mb-3">
+                  <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] mb-3">
                     선천코드 비기 3종 올인원 세트 <span className="text-[#B7A18A]">상세 해부</span>
                   </h2>
                   <div className="space-y-1.5">
@@ -3258,7 +3258,7 @@ export default function SeoncheonCodeBigiPage() {
                     <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-3.5">
                       WHY THIS BOOK IS DIFFERENT
                     </span>
-                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-tight mb-3">
+                    <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] mb-3">
                       어려웠던 사주, 사랑을 만나 쉬워지다
                     </h2>
                     <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 font-normal leading-[1.8]">
@@ -3376,7 +3376,7 @@ export default function SeoncheonCodeBigiPage() {
                   <div className="flex flex-col lg:justify-between w-full h-full text-left break-keep">
                     <div className="space-y-6 md:space-y-7">
                       <div>
-                        <h2 className="font-elegant font-bold leading-[1.3] text-left">
+                        <h2 className="font-elegant font-bold leading-[1.4] text-left">
                           <span className="block text-2xl md:text-[28px] text-[#B7A18A]">
                             《선천코드 비기》
                           </span>
@@ -3464,7 +3464,7 @@ export default function SeoncheonCodeBigiPage() {
                         <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-4">
                           THE ART OF READING PEOPLE
                         </span>
-                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
                           사람이 궁금해질 때마다,<br />
                           펼쳐보는 관계 도감
                         </h2>
@@ -3559,13 +3559,12 @@ export default function SeoncheonCodeBigiPage() {
                     />
                   </div>
 
-                  <div className="text-center max-w-4xl mx-auto space-y-4 md:space-y-5 mt-10 md:mt-12 lg:mt-16 break-keep">
+                  <div className="text-center max-w-3xl mx-auto space-y-4 md:space-y-5 mt-20 md:mt-28 lg:mt-36 break-keep">
                     <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       SOVEREIGN OF RELATIONSHIP
                     </span>
                     <h3
-                      className="text-[26px] sm:text-[30px] md:text-[36px] font-elegant font-bold text-[#FAF7F2] break-keep"
-                      style={{ lineHeight: 1.4 }}
+                      className="text-[26px] sm:text-[30px] md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep"
                     >
                       나를 읽고, 상대를 이해하고,<br />
                       스스로 <span className="text-[#B7A18A]">인연을 선택하는 사람</span>
@@ -3726,7 +3725,7 @@ export default function SeoncheonCodeBigiPage() {
                         <span className="text-[14px] font-semibold text-white/50 block mb-1.5">
                           특징
                         </span>
-                        <div className="text-[20px] md:text-[22px] font-bold font-elegant text-white/80 leading-none mb-1">
+                        <div className="text-[20px] md:text-[22px] font-bold font-elegant text-white/80 leading-[1.4] mb-1">
                           특정 시점의 고민을 중심으로 해석
                         </div>
                       </div>
@@ -3775,7 +3774,7 @@ export default function SeoncheonCodeBigiPage() {
                         <span className="text-[14px] font-semibold text-[#B7A18A] block mb-1.5">
                           소장 가치
                         </span>
-                        <div className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2] leading-none mb-1">
+                        <div className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2] leading-[1.4] mb-1">
                           나와 다양한 사람의 성향을 살펴보는 참고서
                         </div>
                       </div>
