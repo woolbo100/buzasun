@@ -849,7 +849,8 @@ export default function SeoncheonCodeBigiPage() {
                       <span className="text-[#B7A18A]">당신에게도 이런 질문이 있었나요?</span>
                     </h2>
                     <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
-                      이름과 얼굴만 바뀌었을 뿐, 왜 내 연애는 늘 똑같은 비극으로 끝날까요? 머리로는 피해야 할 사람인 줄 알면서, 왜 가슴은 기어이 그 사람에게 무장해제될까요? 당신이 매번 비슷한 연애로 무너진 이유는 매력이 부족해서가 아닙니다. 나와 상대의 선천코드 암호를 몰라 맨몸으로 부딪혔기 때문입니다.
+                      이름과 얼굴만 바뀌었을 뿐, 왜 내 연애는 늘 똑같은 비극으로 끝날까요? 머리로는 피해야 할 사람인 줄 알면서 가슴은 기어이 무장해제되는 이유,<br className="hidden sm:inline" />
+                      나와 상대의 &apos;선천코드 암호&apos;를 몰라 맨몸으로 부딪혔기 때문입니다.
                     </p>
                   </div>
 
@@ -862,10 +863,10 @@ export default function SeoncheonCodeBigiPage() {
                       />
                       <div className="space-y-1.5 text-center">
                         <p className="text-xs md:text-sm text-[#B7A18A] font-medium tracking-wide">
-                          나와 상대의 마음을 읽는 새로운 시선
+                          보이지 않는 선천코드의 궤적
                         </p>
                         <p className="text-[16px] md:text-[18px] text-[#FAF7F2] font-elegant font-bold tracking-wide break-keep">
-                          이 중 하나라도 당신의 이야기라면, 필요한 건 연애 조언이 아니라 내 무의식에 각인된 선천코드의 해독입니다.
+                          내 무의식이 부르는 인연의 패턴을 읽지 못하면, 사랑은 늘 같은 자리에서 무너집니다.
                         </p>
                       </div>
                     </div>
@@ -880,13 +881,11 @@ export default function SeoncheonCodeBigiPage() {
                         }}
                       >
                         <p>
-                          사람마다 사랑을 표현하는 방식도, 마음을 여는 순간도, 편안함을 느끼는 관계도 다릅니다.
-                        </p>
-                        <p>
                           왜 우리는 특정 사람에게 끌리는지, 왜 같은 관계에서 서로 다른 감정을 느끼는지 궁금했던 적이 있나요?
                         </p>
-                        <p>
-                          선천코드 비기는 이러한 질문들을 전통 명리학의 관점에서 쉽고 흥미롭게 살펴볼 수 있도록 안내합니다.
+                        <p className="font-semibold text-white">
+                          아래 항목 중 단 하나라도 당신의 이야기라면,<br className="hidden sm:inline" />
+                          필요한 건 막연한 연애 조언이 아니라 내 선천코드의 정밀 해독입니다.
                         </p>
                       </div>
 
