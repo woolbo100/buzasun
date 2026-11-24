@@ -159,4 +159,64 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     description: '선천코드 비기 엔딩 비주얼',
     isPlaceholder: false,
   },
+
+  // 13. Book Preview 1: 나와 상대의 본능 캐릭터 도감
+  bookPreviewGuide: {
+    id: 'bookPreviewGuide',
+    src: '/image/seoncheon-code-secret-book.webp',
+    alt: '미리보기 01 - 나와 상대의 본능 캐릭터 도감',
+    aspectRatio: 'aspect-[440/661]',
+    objectFit: 'contain',
+    placeholderLabel: '미리보기 01: 본능 캐릭터 도감',
+    description: '십성으로 살펴보는 5대 본능 캐릭터와 관계 아키타입',
+    isPlaceholder: true,
+  },
+
+  // 14. Book Preview 2: 타고난 매력 페르소나 도감
+  bookPreviewTools: {
+    id: 'bookPreviewTools',
+    src: '/image/seoncheon-code-secret-book.webp',
+    alt: '미리보기 02 - 타고난 매력 페르소나 도감',
+    aspectRatio: 'aspect-[440/656]',
+    objectFit: 'contain',
+    placeholderLabel: '미리보기 02: 매력 페르소나 도감',
+    description: '10가지 일간을 통해 살펴보는 각자의 고유한 매력과 연애 성향',
+    isPlaceholder: true,
+  },
+
+  // 15. Book Preview 3: 사랑과 인연의 실전 해석 도감
+  bookPreviewJourney: {
+    id: 'bookPreviewJourney',
+    src: '/image/seoncheon-code-secret-book.webp',
+    alt: '미리보기 03 - 사랑과 인연의 실전 해석 도감',
+    aspectRatio: 'aspect-[440/658]',
+    objectFit: 'contain',
+    placeholderLabel: '미리보기 03: 실전 해석 도감',
+    description: '이상형, 본능적 끌림, 배우자, 궁합, 관계 충돌 등을 직관적으로 이해하는 인포그래픽과 해설',
+    isPlaceholder: true,
+  },
+
+  // 16. Heart Banner: 감성 배너 배경 (A WORD FOR YOUR HEART)
+  heartBanner: {
+    id: 'heartBanner',
+    src: '/image/seoncheon-code-secret-book.webp',
+    alt: '선천코드 비기 감성 배경 - 지금 필요한 것은 나를 소모하는 노력이 아닐 수 있습니다',
+    aspectRatio: 'aspect-[1672/941]',
+    objectFit: 'cover',
+    placeholderLabel: 'A WORD FOR YOUR HEART 감성 배너 배경',
+    description: '선천코드 비기 감성 와이드 배경 비주얼',
+    isPlaceholder: true,
+  },
+
+  // 17. Art of Reading People: 감성 브릿지 책 펼쳐보기 비주얼 (THE ART OF READING PEOPLE)
+  artOfReadingPeople: {
+    id: 'artOfReadingPeople',
+    src: '/image/seoncheon-code-secret-book.webp',
+    alt: '사람이 궁금해질 때마다 펼쳐보는 관계 도감 - THE ART OF READING PEOPLE',
+    aspectRatio: 'aspect-[4/3]',
+    objectFit: 'cover',
+    placeholderLabel: '사람이 궁금해질 때마다 펼쳐보는 관계 도감 비주얼',
+    description: '책을 펼쳐보는 따뜻한 감성 오브제 또는 수묵 일러스트',
+    isPlaceholder: true,
+  },
 }

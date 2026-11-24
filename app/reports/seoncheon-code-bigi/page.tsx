@@ -177,7 +177,7 @@ function HybridImageSlot({
     )
   }
 
-  const isRealImage = asset.src && asset.src.trim() !== '' && !hasError
+  const isRealImage = asset.src && asset.src.trim() !== '' && !hasError && !asset.isPlaceholder
 
   return (
     <div
@@ -225,6 +225,84 @@ function HybridImageSlot({
           </p>
         </div>
       )}
+    </div>
+  )
+}
+
+// 🖼️ 책 속에서 만날 내용(Inside The Secret Book) 3종 전용 미리보기 슬롯 컴포넌트
+function PreviewBookSlot({
+  assetKey,
+  previewNum,
+  title,
+  desc,
+}: {
+  assetKey: keyof typeof seoncheonCodeAssets
+  previewNum: string
+  title: string
+  desc: string
+}) {
+  const asset = seoncheonCodeAssets[assetKey]
+  const [hasError, setHasError] = useState(false)
+
+  const isReal = asset && asset.src && asset.src.trim() !== '' && !hasError && !asset.isPlaceholder
+
+  return (
+    <div className="w-full hover:-translate-y-1 transition-transform duration-300">
+      <div className="relative w-full aspect-[440/660] rounded-[14px] md:rounded-[18px] overflow-hidden border border-[#B7A18A]/30 shadow-lg bg-[#1C171D] flex flex-col justify-between">
+        {isReal ? (
+          <Image
+            src={asset.src}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="object-contain block"
+            onError={() => setHasError(true)}
+          />
+        ) : (
+          <div
+            className="w-full h-full flex flex-col items-center justify-between p-6 sm:p-7 text-center"
+            style={{
+              background: 'radial-gradient(ellipse at 50% 35%, rgba(73, 55, 64, 0.45) 0%, rgba(28, 23, 29, 0.95) 100%)',
+            }}
+          >
+            {/* 상단 라벨 */}
+            <div className="w-full flex justify-between items-center border-b border-[#B7A18A]/20 pb-3">
+              <span className="text-[11px] font-mono font-bold text-[#B7A18A] tracking-wider uppercase">
+                {previewNum}
+              </span>
+              <span
+                className="py-[3px] px-[8px] rounded-[6px] text-[10px] font-semibold text-[#F2EAE0]"
+                style={{
+                  background: '#493740',
+                  border: '1px solid #B7A18A',
+                }}
+              >
+                미리보기
+              </span>
+            </div>
+
+            {/* 중앙 아이콘 및 안내 */}
+            <div className="my-auto space-y-3">
+              <div className="w-12 h-12 mx-auto rounded-xl bg-[#30262F]/80 border border-[#B7A18A]/50 flex items-center justify-center text-[#B7A18A] shadow-md">
+                <ImageIcon className="w-6 h-6 text-[#B7A18A]" />
+              </div>
+              <div className="space-y-1.5 max-w-[220px]">
+                <h4 className="text-sm sm:text-base font-elegant font-bold text-[#FAF7F2] break-keep leading-snug">
+                  {title}
+                </h4>
+                <p className="text-[11px] sm:text-xs text-[#EDE6DA]/75 font-light leading-relaxed break-keep">
+                  {desc}
+                </p>
+              </div>
+            </div>
+
+            {/* 하단 캡션 */}
+            <p className="text-[10px] text-[#B7A18A]/60 tracking-wider pt-2 border-t border-white/10 w-full">
+              ※ 출간 시 고해상도 내지·도감이 적용됩니다
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
@@ -620,11 +698,15 @@ export default function SeoncheonCodeBigiPage() {
                   </div>
 
                   <div className="text-[16px] md:text-[18px] text-[#F2EAE0] leading-[1.8] font-normal space-y-3.5 break-keep">
+                    <p className="text-[18px] sm:text-[20px] md:text-[22px] text-[#B7A18A] font-elegant font-bold leading-snug">
+                      “사주를 공부하는 책이 아니라, 사람과 사랑을 이해하기 위해 펼쳐보는 관계 도감.”
+                    </p>
                     <p>
                       왜 우리는 특정 사람에게 이토록 강렬하게 끌리고, 매번 비슷한 상처 앞에서 무너질까요?
                     </p>
                     <p>
-                      그 해답은 감정이 아닌, 태어난 순간 새겨진 &lsquo;오행의 본능(선천코드)&rsquo;에 숨겨져 있습니다.
+                      어려운 명리학을 쉽고 재미있게 풀어낸 연애·관계 특화 사주 해설서.<br className="hidden md:inline" />
+                      나와 상대의 기질을 직접 찾아보고 이해할 수 있는 평생 소장용 관계 도감입니다.
                     </p>
                     <p className="font-semibold text-white">
                       오늘부터 《선천코드 비기》와 함께 나의 타고난 기운을 깨우고, 상대의 심리 암호를 해독하는 절대 비기를 장착하십시오.
@@ -1134,7 +1216,7 @@ export default function SeoncheonCodeBigiPage() {
                         </p>
 
                         <p>
-                          <strong className="text-[#241E25] font-bold">《선천코드 비기》</strong>는 사주 오행과 십성, 관계의 상호작용을 일상적인 언어로 풀어낸 <span className="text-[#493740] font-semibold">관계 해석 도감</span>입니다.
+                          <strong className="text-[#241E25] font-bold">《선천코드 비기》</strong>는 어려운 명리학을 쉽고 재미있게 풀어낸 <span className="text-[#493740] font-semibold">연애·관계 특화 사주 해설서</span>이자, 나와 상대의 기질을 직접 찾아보고 이해할 수 있는 <strong className="text-[#493740] font-bold">소장용 관계 도감</strong>입니다.
                         </p>
 
                         <p>
@@ -1142,7 +1224,7 @@ export default function SeoncheonCodeBigiPage() {
                         </p>
 
                         <p>
-                          한 번 읽고 덮어두는 책이 아니라, 궁금한 사람이 생기거나 관계에서 이해되지 않는 상황을 만날 때 다시 펼쳐보는 <strong className="text-[#493740] font-bold">실전 참고서</strong>입니다.
+                          한 번 읽고 덮어두는 책이 아니라, 궁금한 사람이 생기거나 관계에서 이해되지 않는 상황을 만날 때 다시 펼쳐보는 <strong className="text-[#493740] font-bold">평생의 실전 비서</strong>입니다.
                         </p>
                       </div>
 
@@ -1154,25 +1236,25 @@ export default function SeoncheonCodeBigiPage() {
                         }}
                       >
                         <p className="text-[16px] sm:text-[18px] md:text-[20px] font-elegant font-bold text-[#241E25] leading-relaxed break-keep">
-                          &ldquo;한 사람의 답을 알려주는 책이 아니라,<br className="hidden sm:inline" /> 여러 관계를 스스로 이해하는 기준을 길러주는 책.&rdquo;
+                          &ldquo;사주를 공부하는 책이 아니라,<br className="hidden sm:inline" /> 사람과 사랑을 이해하기 위해 펼쳐보는 관계 도감.&rdquo;
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* 🎴 4대 핵심 가치 카드 */}
+                  {/* 🎴 4대 핵심 차별점 카드 */}
                   <div className="space-y-6">
                     <div className="text-center max-w-2xl mx-auto space-y-2">
                       <span className="text-xs font-elegant font-semibold tracking-widest text-[#B7A18A] uppercase">
                         CORE VALUES OF THE BOOK
                       </span>
                       <h4 className="text-[20px] sm:text-[24px] font-elegant font-bold text-[#FAF7F2]">
-                        《선천코드 비기》가 전하는 4가지 본질적 가치
+                        《선천코드 비기》 핵심 차별점 4가지
                       </h4>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-                      {/* CARD 01 */}
+                      {/* POINT 01 */}
                       <div
                         className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
                         style={{ backgroundColor: '#F2EAE0' }}
@@ -1180,25 +1262,25 @@ export default function SeoncheonCodeBigiPage() {
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
                             <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
-                              CARD 01
+                              POINT 01
                             </span>
                             <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
                               <BookOpen className="w-4 h-4" />
                             </div>
                           </div>
                           <div>
-                            <span className="text-[11px] font-medium text-[#493740] block mb-1">자기주도 해석</span>
-                            <h5 className="text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
-                              스스로 읽는 힘
+                            <span className="text-[11px] font-medium text-[#493740] block mb-1">직관적 해설</span>
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                              어려운 사주를 쉽고 재미있게
                             </h5>
                           </div>
                           <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
-                            매번 누군가의 해석을 기다리지 않고, 오행과 십성의 기본 원리를 바탕으로 직접 살펴봅니다.
+                            복잡한 한자도, 어려운 명리학 이론도 외울 필요 없습니다. 만세력에서 나와 상대의 글자를 찾아보고, 캐릭터 도감과 인포그래픽을 통해 선천적 기질과 관계 성향을 쉽고 직관적으로 이해할 수 있습니다.
                           </p>
                         </div>
                       </div>
 
-                      {/* CARD 02 */}
+                      {/* POINT 02 */}
                       <div
                         className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
                         style={{ backgroundColor: '#F2EAE0' }}
@@ -1206,25 +1288,25 @@ export default function SeoncheonCodeBigiPage() {
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
                             <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
-                              CARD 02
+                              POINT 02
                             </span>
                             <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
                               <Compass className="w-4 h-4" />
                             </div>
                           </div>
                           <div>
-                            <span className="text-[11px] font-medium text-[#493740] block mb-1">관계 패턴 이해</span>
-                            <h5 className="text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
-                              관계를 비교하는 시선
+                            <span className="text-[11px] font-medium text-[#493740] block mb-1">사랑·인연 특화</span>
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                              사랑과 인연에 특화된 관계 해설서
                             </h5>
                           </div>
                           <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
-                            나와 상대의 성향, 표현 방식, 관계에서 부딪히기 쉬운 지점을 비교해 봅니다.
+                            일반적인 사주책처럼 직업운, 재물운, 신년운세를 두루 다루는 책이 아닙니다. 타고난 매력, 이상형, 본능적 끌림, 배우자, 궁합, 관계 갈등, 재회까지 사랑과 인연에 집중한 실전 관계 해설서입니다.
                           </p>
                         </div>
                       </div>
 
-                      {/* CARD 03 */}
+                      {/* POINT 03 */}
                       <div
                         className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
                         style={{ backgroundColor: '#F2EAE0' }}
@@ -1232,25 +1314,25 @@ export default function SeoncheonCodeBigiPage() {
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
                             <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
-                              CARD 03
+                              POINT 03
                             </span>
                             <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
                               <RotateCcw className="w-4 h-4" />
                             </div>
                           </div>
                           <div>
-                            <span className="text-[11px] font-medium text-[#493740] block mb-1">반복 활용</span>
-                            <h5 className="text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
-                              필요할 때 다시 펼치는 도감
+                            <span className="text-[11px] font-medium text-[#493740] block mb-1">상대방 이해</span>
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                              나를 넘어 상대를 이해하는 관계 도감
                             </h5>
                           </div>
                           <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
-                            썸, 연애, 배우자와의 관계 등 다양한 상황에서 필요한 해석 기준을 다시 찾아볼 수 있습니다.
+                            나의 연애 성향뿐 아니라 현재 연인, 관심 있는 상대, 헤어진 연인, 배우자의 기질과 관계 성향까지 직접 찾아볼 수 있습니다. 사람과 인연을 이해하고 관계를 바라보는 나만의 기준을 세워갑니다.
                           </p>
                         </div>
                       </div>
 
-                      {/* CARD 04 */}
+                      {/* POINT 04 */}
                       <div
                         className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 shadow-xl transition-all duration-300 hover:translate-y-[-2px]"
                         style={{ backgroundColor: '#F2EAE0' }}
@@ -1258,20 +1340,20 @@ export default function SeoncheonCodeBigiPage() {
                         <div className="space-y-3.5">
                           <div className="flex items-center justify-between">
                             <span className="text-[11px] font-mono font-bold tracking-wider text-[#493740] px-2 py-0.5 rounded bg-[#493740]/10 border border-[#B7A18A]/50">
-                              CARD 04
+                              POINT 04
                             </span>
                             <div className="w-8 h-8 rounded-full bg-[#493740]/10 border border-[#B7A18A]/60 flex items-center justify-center text-[#493740]">
                               <Sparkles className="w-4 h-4" />
                             </div>
                           </div>
                           <div>
-                            <span className="text-[11px] font-medium text-[#493740] block mb-1">해석 원리 학습</span>
-                            <h5 className="text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
-                              원리부터 익히는 관계 공부
+                            <span className="text-[11px] font-medium text-[#493740] block mb-1">평생 소장 비서</span>
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#241E25] leading-tight">
+                              인연이 바뀔 때마다 다시 펼쳐보는 소장용 비서
                             </h5>
                           </div>
                           <p className="text-[13px] sm:text-[14px] text-[#30262F] leading-[1.7] break-keep font-normal">
-                            단순한 운세 결과를 넘어, 오행과 십성이 어떤 의미로 해석되는지 그 구조를 이해합니다.
+                            한 번 읽고 책장에 넣어두는 책이 아닙니다. 새로운 인연을 만날 때마다, 사랑이 궁금해질 때마다, 관계에서 고민이 생길 때마다 필요한 부분을 다시 찾아볼 수 있는 소장용 관계 도감입니다.
                           </p>
                         </div>
                       </div>
@@ -2126,6 +2208,53 @@ export default function SeoncheonCodeBigiPage() {
                       </div>
                     ))}
                   </div>
+
+                  {/* ─────────────────────────────────────────────────────────────
+                      실생활 활용 공감: WHEN TO OPEN THIS BOOK
+                     ───────────────────────────────────────────────────────────── */}
+                  <div className="mt-14 pt-12 border-t border-[#B7A18A]/20">
+                    <div className="text-center mb-10">
+                      <span className="inline-block px-3 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20 mb-3">
+                        WHEN TO OPEN THIS BOOK
+                      </span>
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[#FAF7F2] leading-tight break-keep">
+                        사람이 궁금해지는 순간, 이 책을 펼쳐보세요.
+                      </h3>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                      {[
+                        "새로운 인연을 만났을 때, 그 사람의 연애 성향이 궁금하다면.",
+                        "좋아하는 사람이 어떤 유형에게 끌리는지 알고 싶다면.",
+                        "연인의 이해하기 어려운 행동을 다른 관점에서 바라보고 싶다면.",
+                        "강렬하게 끌리는 사람과 편안하게 지낼 수 있는 사람의 차이가 궁금하다면.",
+                        "나와 상대의 관계에서 반복되는 패턴을 이해하고 싶다면.",
+                        "어려운 사주를 공부하지 않고도 직접 찾아보고 싶다면."
+                      ].map((item, idx) => (
+                        <div
+                          key={idx}
+                          className="flex items-start gap-3 p-4 sm:p-5 rounded-xl border border-[#B7A18A]/20 bg-[#241E26]/60 backdrop-blur-sm"
+                        >
+                          <div className="w-5 h-5 rounded-full bg-[#B7A18A]/20 border border-[#B7A18A]/40 flex items-center justify-center shrink-0 mt-0.5 text-[#B7A18A]">
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <p className="text-sm sm:text-base text-[#EDE6DA]/90 leading-relaxed font-light break-keep">
+                            {item}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-8 text-center">
+                      <div className="inline-block px-6 py-3.5 rounded-full border border-[#B7A18A]/40 bg-gradient-to-r from-[#B7A18A]/15 via-[#B7A18A]/10 to-[#B7A18A]/15 backdrop-blur-sm">
+                        <p className="text-sm sm:text-base font-elegant font-semibold text-[#B7A18A] tracking-wide break-keep">
+                          당신의 인연이 달라질 때마다, 이 책의 쓰임도 달라집니다.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
             </section>
@@ -2404,6 +2533,45 @@ export default function SeoncheonCodeBigiPage() {
                         4대 도화 매혹 발현, 일지·월지 이상형 판별, 상생과 상극을 감별하는 평생 인연 판별 비책
                       </p>
                     </div>
+                  </div>
+                </div>
+
+                {/* ─────────────────────────────────────────────────────────────
+                    책 속 콘텐츠 미리보기: INSIDE THE SECRET BOOK
+                   ───────────────────────────────────────────────────────────── */}
+                <div className="mt-16 pt-14 border-t border-[#B7A18A]/20">
+                  <div className="text-center max-w-3xl mx-auto mb-10 break-keep">
+                    <span className="inline-block px-3 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20 mb-3">
+                      INSIDE THE SECRET BOOK
+                    </span>
+                    <h3 className="text-2xl md:text-3xl font-elegant font-bold text-[#FAF7F2] tracking-wide leading-snug mb-3">
+                      캐릭터로 만나고, 그림으로 이해하는 선천코드의 세계
+                    </h3>
+                    <p className="text-sm md:text-base text-[#EDE6DA]/80 font-light leading-relaxed">
+                      어렵게만 느껴졌던 사주와 명리학을 캐릭터, 도감, 인포그래픽으로 만나보세요.
+                    </p>
+                  </div>
+
+                  {/* 3열 책 속 이미지 슬롯 */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <PreviewBookSlot
+                      assetKey="bookPreviewGuide"
+                      previewNum="미리보기 01"
+                      title="나와 상대의 본능 캐릭터 도감"
+                      desc="십성으로 살펴보는 5대 본능 캐릭터와 관계 아키타입"
+                    />
+                    <PreviewBookSlot
+                      assetKey="bookPreviewTools"
+                      previewNum="미리보기 02"
+                      title="타고난 매력 페르소나 도감"
+                      desc="10가지 일간을 통해 살펴보는 각자의 고유한 매력과 연애 성향"
+                    />
+                    <PreviewBookSlot
+                      assetKey="bookPreviewJourney"
+                      previewNum="미리보기 03"
+                      title="사랑과 인연의 실전 해석 도감"
+                      desc="이상형, 본능적 끌림, 배우자, 궁합, 관계 충돌 등을 직관적으로 이해하는 인포그래픽과 해설"
+                    />
                   </div>
                 </div>
 
@@ -2884,6 +3052,104 @@ export default function SeoncheonCodeBigiPage() {
               </Reveal>
             </section>
 
+            {/* ═══════════════════════════════════════════════════════════════
+                Section 14-B: WHY THIS BOOK IS DIFFERENT (기존 사주 전문서와의 차별성)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div
+                  className="rounded-[32px] md:rounded-[40px] p-6 sm:p-10 md:p-14 relative overflow-hidden backdrop-blur-md"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(48, 38, 47, 0.75) 0%, rgba(28, 23, 29, 0.9) 100%)',
+                    border: '1px solid rgba(183, 161, 138, 0.35)',
+                    boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
+                  }}
+                >
+                  <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12 break-keep">
+                    <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-3.5">
+                      WHY THIS BOOK IS DIFFERENT
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-tight mb-3">
+                      어려웠던 사주, 사랑을 만나 쉬워지다.
+                    </h2>
+                    <p className="text-sm sm:text-base text-[#EDE6DA]/80 font-light leading-relaxed">
+                      이론과 암기 중심의 전통 명리학 학습서와, 필요한 순간 직접 찾아보는 &lsquo;선천코드 비기&rsquo;의 접근 방식 차이입니다.
+                    </p>
+                  </div>
+
+                  {/* Desktop Table View */}
+                  <div className="hidden md:block overflow-hidden rounded-2xl border border-[#B7A18A]/30">
+                    <table className="w-full text-left border-collapse">
+                      <thead>
+                        <tr className="bg-[#1C171D] border-b border-[#B7A18A]/30">
+                          <th className="py-4 px-6 text-sm font-mono text-[#EDE6DA]/60 uppercase tracking-wider w-1/4">
+                            비교 기준
+                          </th>
+                          <th className="py-4 px-6 text-sm font-elegant font-bold text-[#EDE6DA]/70 w-[37.5%]">
+                            기존 사주 전문서
+                          </th>
+                          <th className="py-4 px-6 text-sm font-elegant font-bold text-[#B7A18A] bg-[#B7A18A]/10 w-[37.5%]">
+                            선천코드 비기 (관계 도감)
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-[#B7A18A]/15 bg-[#241E26]/40">
+                        {[
+                          { criteria: "사용 언어", traditional: "복잡한 한자와 명리학 용어", secretBook: "쉽고 친근한 언어" },
+                          { criteria: "접근 방식", traditional: "이론과 학습 중심", secretBook: "캐릭터와 도감 중심" },
+                          { criteria: "해석 영역", traditional: "전반적인 운세 해석 (직업·재물 등)", secretBook: "연애·매력·인연·궁합 특화" },
+                          { criteria: "읽는 방식", traditional: "공부하고 외워야 하는 구성", secretBook: "필요한 부분을 찾아보는 구성" },
+                          { criteria: "습득 목표", traditional: "명리학적 지식 습득", secretBook: "나와 상대를 이해하는 관점" },
+                          { criteria: "시각적 표현", traditional: "전문적인 설명 위주", secretBook: "인포그래픽과 시각적 해설" }
+                        ].map((row, idx) => (
+                          <tr key={idx} className="hover:bg-[#B7A18A]/5 transition-colors">
+                            <td className="py-4 px-6 text-sm font-medium text-[#EDE6DA]/80">
+                              {row.criteria}
+                            </td>
+                            <td className="py-4 px-6 text-sm text-[#EDE6DA]/70 font-light">
+                              {row.traditional}
+                            </td>
+                            <td className="py-4 px-6 text-sm text-[#FAF7F2] font-semibold bg-[#B7A18A]/5">
+                              <span className="text-[#B7A18A] mr-2">✓</span>
+                              {row.secretBook}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* Mobile Card View */}
+                  <div className="md:hidden space-y-4">
+                    {[
+                      { criteria: "사용 언어", traditional: "복잡한 한자와 명리학 용어", secretBook: "쉽고 친근한 언어" },
+                      { criteria: "접근 방식", traditional: "이론과 학습 중심", secretBook: "캐릭터와 도감 중심" },
+                      { criteria: "해석 영역", traditional: "전반적인 운세 해석 (직업·재물 등)", secretBook: "연애·매력·인연·궁합 특화" },
+                      { criteria: "읽는 방식", traditional: "공부하고 외워야 하는 구성", secretBook: "필요한 부분을 찾아보는 구성" },
+                      { criteria: "습득 목표", traditional: "명리학적 지식 습득", secretBook: "나와 상대를 이해하는 관점" },
+                      { criteria: "시각적 표현", traditional: "전문적인 설명 위주", secretBook: "인포그래픽과 시각적 해설" }
+                    ].map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="p-4 rounded-xl border border-[#B7A18A]/25 bg-[#241E26]/70 space-y-2.5"
+                      >
+                        <span className="text-xs font-mono font-bold text-[#B7A18A] tracking-wider block">
+                          {item.criteria}
+                        </span>
+                        <div className="text-xs text-[#EDE6DA]/60 line-through">
+                          기존: {item.traditional}
+                        </div>
+                        <div className="text-sm font-semibold text-[#FAF7F2] flex items-start gap-1.5 pt-0.5">
+                          <span className="text-[#B7A18A] shrink-0">✓</span>
+                          <span>{item.secretBook}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
@@ -2987,6 +3253,70 @@ export default function SeoncheonCodeBigiPage() {
               </Reveal>
             </section>
 
+            {/* ═══════════════════════════════════════════════════════════════
+                Section 15-B: THE ART OF READING PEOPLE (감성 브릿지 영역)
+               ═══════════════════════════════════════════════════════════════ */}
+            <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
+              <Reveal>
+                <div
+                  className="rounded-[32px] md:rounded-[40px] p-8 sm:p-12 md:p-16 relative overflow-hidden backdrop-blur-md"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(48, 38, 47, 0.85) 0%, rgba(28, 23, 29, 0.95) 100%)',
+                    border: '1px solid rgba(183, 161, 138, 0.35)',
+                    boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
+                  }}
+                >
+                  <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                    {/* 감성 문구 영역 */}
+                    <div className="space-y-6 break-keep">
+                      <div>
+                        <span className="inline-block px-3.5 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/25 mb-4">
+                          THE ART OF READING PEOPLE
+                        </span>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[#FAF7F2] leading-tight">
+                          사람이 궁금해질 때마다,<br />
+                          펼쳐보는 관계 도감.
+                        </h2>
+                      </div>
+
+                      <div className="space-y-4 text-base sm:text-lg text-[#EDE6DA]/90 font-light leading-relaxed">
+                        <p>
+                          새로운 인연을 만났을 때도,<br />
+                          사랑하는 사람의 마음이 궁금할 때도,<br />
+                          이해하기 어려운 관계 앞에 서 있을 때도.
+                        </p>
+                        <p className="text-[#EDE6DA]/75">
+                          복잡한 한자를 외우지 않아도 좋습니다.<br />
+                          명리학을 깊이 공부하지 않아도 좋습니다.
+                        </p>
+                        <p>
+                          캐릭터로 만나고, 그림으로 이해하며,<br />
+                          나와 상대의 선천코드를 하나씩 읽어보세요.
+                        </p>
+                      </div>
+
+                      <div className="pt-2">
+                        <div className="p-4 rounded-xl border border-[#B7A18A]/30 bg-[#B7A18A]/10 backdrop-blur-sm inline-block">
+                          <p className="text-base sm:text-lg font-elegant font-bold text-[#B7A18A] tracking-wide">
+                            사랑을 이해하는 새로운 시선,<br />
+                            인연을 바라보는 나만의 기준.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 책을 펼쳐보는 감성 이미지 슬롯 */}
+                    <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#B7A18A]/30 shadow-2xl bg-[#1C171D]">
+                      <HybridImageSlot
+                        assetKey="artOfReadingPeople"
+                        className="w-full aspect-[4/3] md:aspect-[16/10]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </section>
+
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
@@ -3042,6 +3372,14 @@ export default function SeoncheonCodeBigiPage() {
                         선천코드를 아는 순간, 당신의 모든 인연이 새로워집니다.
                       </p>
                     </div>
+                  </div>
+
+                  {/* 인연의 주권자 하단 감성 배너 이미지 슬롯 */}
+                  <div className="relative w-full aspect-[16/9] md:aspect-[1672/941] rounded-2xl md:rounded-[24px] overflow-hidden shadow-2xl flex items-center justify-center border border-[#B7A18A]/30 mt-8">
+                    <HybridImageSlot
+                      assetKey="sovereign"
+                      className="w-full h-full"
+                    />
                   </div>
                 </div>
               </Reveal>
@@ -3402,19 +3740,51 @@ export default function SeoncheonCodeBigiPage() {
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 21: 관계 변화 메시지 및 감성 배너
+                Section 21: 구매 전 안내 이후 감성 배너 (A WORD FOR YOUR HEART)
                ═══════════════════════════════════════════════════════════════ */}
-            <section className="mb-28 text-center max-w-3xl mx-auto space-y-6">
-              <Reveal>
-                <div className="space-y-3">
-                  <p className="text-xl sm:text-2xl font-elegant font-bold text-[#FAF7F2]">
-                    “나를 아는 순간, 삶을 바라보는 시선이 달라집니다.”
-                  </p>
-                  <p className="text-sm sm:text-base text-[#EDE6DA]/70 font-light">
-                    선천코드 비기와 함께 평생 흔들리지 않는 나만의 기운을 되찾으세요.
-                  </p>
+            <section
+              className="relative min-h-[320px] sm:min-h-[360px] md:min-h-0 aspect-auto md:aspect-[1672/941] overflow-hidden rounded-[32px] md:rounded-[40px] mb-20 group shadow-2xl w-full max-w-[1280px] mx-auto bg-[#1C171D]"
+              style={{
+                border: '1px solid rgba(183, 161, 138, 0.45)',
+                boxShadow: '0 0 24px rgba(183, 161, 138, 0.08), 0 16px 45px rgba(0, 0, 0, 0.5)'
+              }}
+            >
+              {/* 배경 이미지 슬롯 */}
+              <div className="absolute inset-0 w-full h-full">
+                <HybridImageSlot
+                  assetKey="heartBanner"
+                  className="w-full h-full"
+                />
+              </div>
+
+              {/* 어두운 그라데이션 오버레이 */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#1C171D] via-[#1C171D]/80 to-transparent" />
+
+              {/* 텍스트 영역 (좌측 배치) */}
+              <div className="absolute inset-0 flex flex-col justify-center p-6 sm:p-10 md:p-12 lg:p-16 text-left w-full max-w-[92%] sm:max-w-[70%] md:max-w-[50%] lg:max-w-[48%] z-10">
+                <span className="text-[#B7A18A] font-elegant text-xs md:text-sm tracking-[0.25em] md:tracking-[0.3em] uppercase mb-2.5 md:mb-3 block font-semibold">
+                  A WORD FOR YOUR HEART
+                </span>
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-[1.4] md:leading-[1.42] break-keep">
+                  사람이 궁금해질 때마다<br />
+                  <span className="text-[#FAF7F2]">언제든 다시 펼쳐보는 관계 도감</span>
+                </h3>
+                <p className="text-xs sm:text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed mb-5 sm:mb-6 break-keep">
+                  이해하기 어려운 상대의 마음 앞에서 무너지지 마세요.<br className="hidden sm:inline" />
+                  선천코드를 아는 순간, 당신은 사람을 읽고 관계를 주도하는 온전한 주권자가 됩니다.
+                </p>
+
+                {/* 하단 앵커 링크 */}
+                <div className="pt-1 sm:pt-2">
+                  <a
+                    href="#final-cta"
+                    className="inline-flex items-center gap-2 text-sm sm:text-base md:text-lg text-[#B7A18A] hover:text-[#FAF7F2] font-elegant font-bold tracking-wide transition-all group/link cursor-pointer"
+                  >
+                    <span>인연의 주권자로 바로서기</span>
+                    <span className="text-xs transition-transform duration-300 group-hover/link:translate-x-1">→</span>
+                  </a>
                 </div>
-              </Reveal>
+              </div>
             </section>
 
             <AntiqueDivider />
@@ -3422,10 +3792,29 @@ export default function SeoncheonCodeBigiPage() {
             {/* ═══════════════════════════════════════════════════════════════
                 Section 22: 최종 구매 CTA (Final Purchase / 출간 준비 중 안내)
                ═══════════════════════════════════════════════════════════════ */}
-            <section id="final-cta" className="mb-28 w-full max-w-3xl mx-auto scroll-mt-28">
+            <section id="final-cta" className="mb-28 w-full max-w-4xl mx-auto scroll-mt-28 px-4">
               <Reveal>
+                {/* TIME TO RECLAIM YOUR POWER 상단 헤드라인 및 최종 구매 유도 메시지 */}
+                <div className="text-center space-y-4 mb-10 md:mb-12">
+                  <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
+                    TIME TO RECLAIM YOUR POWER
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] font-elegant font-bold text-white leading-[1.6] md:leading-[1.65] break-keep mb-4">
+                    나를 읽고, 상대를 이해하고,<br />
+                    <span className="text-[#B7A18A]">인연을 선택하다.</span>
+                  </h2>
+                  <div className="text-sm sm:text-base md:text-[18px] text-[#EDE6DA]/80 leading-relaxed font-light max-w-2xl mx-auto break-keep space-y-2">
+                    <p>
+                      한 사람만을 위한 해설이 아닌, 앞으로 만날 수많은 인연을 이해하기 위한 소장용 관계 비서.
+                    </p>
+                    <p className="text-[#B7A18A] font-medium pt-1">
+                      인연이 바뀔 때마다 다시 펼쳐보는 책. 선천코드 비기.
+                    </p>
+                  </div>
+                </div>
+
                 <div
-                  className="rounded-3xl p-8 sm:p-10 md:p-12 text-center shadow-2xl relative overflow-hidden"
+                  className="rounded-3xl p-8 sm:p-10 md:p-12 text-center shadow-2xl relative overflow-hidden max-w-[820px] mx-auto"
                   style={{
                     background: 'linear-gradient(180deg, #30262F 0%, #241E25 52%, #1C171D 100%)',
                     border: '1px solid rgba(183, 161, 138, 0.65)',
