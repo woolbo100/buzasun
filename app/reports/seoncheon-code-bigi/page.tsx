@@ -2253,12 +2253,12 @@ export default function SeoncheonCodeBigiPage() {
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 7: 책의 탄생 배경 (THE ONLY SECRET 단 하나의 관계 암호서)
+                Section 7: 책의 탄생 배경 (단 하나의 관계 암호서)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-14 items-center">
-                  {/* 왼쪽 책 이미지 (가로폭 약 20~25% 확대, 최대 500px, 3:4 비율 및 중앙 정렬 유지) */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-14 items-stretch">
+                  {/* 왼쪽 책 이미지 (가로폭 약 20~25% 확대, 최대 500px, 3:4 비율) */}
                   <div className="lg:col-span-5 flex justify-center lg:justify-start w-full">
                     <div className="w-full max-w-[480px] lg:max-w-[500px]">
                       <HybridImageSlot
@@ -2268,28 +2268,21 @@ export default function SeoncheonCodeBigiPage() {
                     </div>
                   </div>
 
-                  {/* 오른쪽 본문 (가로폭 소폭 축소 및 오른쪽으로 살짝 이동) */}
-                  <div className="lg:col-span-7 break-keep lg:pl-4 xl:pl-6">
+                  {/* 오른쪽 본문 (THE ONLY SECRET 삭제 및 좌측 이미지와 세로 높이 완벽 매칭) */}
+                  <div className="lg:col-span-7 break-keep lg:pl-4 xl:pl-6 flex flex-col lg:justify-between h-full">
                     <div>
-                      {/* 1. 상단 영문 라벨 (12px / 12pt 유지) */}
-                      <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block mb-2.5 sm:mb-3">
-                        THE ONLY SECRET
-                      </span>
-
-                      {/* 2. 상단 리드 문구 (메인 제목과 8~12px 여백) */}
-                      <p className="text-[17px] sm:text-[18px] font-elegant font-light text-[#B7A18A] leading-[1.4] mb-2 sm:mb-2.5 break-keep">
+                      {/* 1. 상단 리드 문구 (좌측 이미지 상단 라인과 수평 일치) */}
+                      <p className="text-[17px] sm:text-[18px] font-elegant font-light text-[#B7A18A] leading-[1.3] mb-2 sm:mb-2.5 break-keep">
                         수많은 엇갈림과 임상 통찰 끝에,
                       </p>
 
-                      {/* 3. 메인 헤드카피 (두 줄 메인 제목, 36px, 기존 정상 행간 1.4 유지) */}
+                      {/* 2. 메인 헤드카피 (두 줄 메인 제목, 36px, 행간 1.4 유지) */}
                       <h2 className="text-[26px] sm:text-[30px] md:text-[34px] lg:text-[36px] font-elegant font-bold leading-[1.4] break-keep">
                         <span className="text-[#FAF7F2] block">마침내 탄생한</span>
                         <span className="text-[#B7A18A] block mt-1">단 하나의 관계 암호서(暗號書)</span>
                       </h2>
 
-                      {/* 4. 대형 상품 타이틀
-                          - 메인 제목과 최종 여백: 8~12px (mt-2 sm:mt-2.5, leading-none으로 거대 폰트 상하 기본 여백 제거)
-                          - 기존 고풍스러운 세리프 서체(font-elegant font-extrabold) 및 그라데이션 유지 */}
+                      {/* 3. 대형 상품 타이틀 (세리프 고풍 서체 및 그라데이션) */}
                       <div className="mt-2 sm:mt-2.5">
                         <span
                           className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] xl:text-[52px] font-elegant font-extrabold inline-block tracking-tight leading-none"
@@ -2305,32 +2298,26 @@ export default function SeoncheonCodeBigiPage() {
                           선천코드 비기
                         </span>
                       </div>
+
+                      {/* 4. 본문 설명 문구 (12~16px 간격으로 자연스럽게 연결) */}
+                      <div className="text-[17px] sm:text-[18px] text-[#EDE6DA] leading-[1.7] font-normal break-keep mt-3 sm:mt-3.5">
+                        <p className="text-[#F0EBE2]">
+                          더 이상 남의 점괘에 휘둘리며 불안해하지 마십시오.
+                        </p>
+                        <p className="text-[#FAF7F2] font-bold mt-2 sm:mt-2.5">
+                          사랑은 운에 맡기는 것이 아니라, 나와 상대의 코드를 읽고 주도권을 쥐는 것입니다.
+                        </p>
+                        <p className="text-[#F0EBE2] mt-3 sm:mt-3.5">
+                          《선천코드 비기》는 난해한 한자 풀이와 뜬구름 잡는 사주 상담을 거부하고<br />
+                          <strong className="text-[#B7A18A] font-bold">&lsquo;명리 심리 역학&rsquo;</strong>과{' '}
+                          <strong className="text-[#B7A18A] font-bold">&lsquo;오감 행동 처방&rsquo;</strong>을 집대성하여 오직 사랑과 인연의 판을 뒤집기 위해 탄생한{' '}
+                          <strong className="text-[#B7A18A] font-bold">실전 관계 도감</strong>입니다.
+                        </p>
+                      </div>
                     </div>
 
-                    {/* 5. 본문 설명 문구
-                        - 상품명 하단과의 최종 간격: 12~16px 축소 (mt-3 sm:mt-3.5)
-                        - 본문 자체 line-height: 1.7 유지, 글자 크기: 18px 유지
-                        - 문단 1 ↔ 문단 2 간격: 8~12px (mt-2 sm:mt-2.5)
-                        - 문단 2 ↔ 문단 3 간격: 12~16px (mt-3 sm:mt-3.5) */}
-                    <div className="text-[17px] sm:text-[18px] text-[#EDE6DA] leading-[1.7] font-normal break-keep mt-3 sm:mt-3.5">
-                      <p className="text-[#F0EBE2]">
-                        더 이상 남의 점괘에 휘둘리며 불안해하지 마십시오.
-                      </p>
-                      <p className="text-[#FAF7F2] font-bold mt-2 sm:mt-2.5">
-                        사랑은 운에 맡기는 것이 아니라, 나와 상대의 코드를 읽고 주도권을 쥐는 것입니다.
-                      </p>
-                      <p className="text-[#F0EBE2] mt-3 sm:mt-3.5">
-                        《선천코드 비기》는 난해한 한자 풀이와 뜬구름 잡는 사주 상담을 거부하고<br />
-                        <strong className="text-[#B7A18A] font-bold">&lsquo;명리 심리 역학&rsquo;</strong>과{' '}
-                        <strong className="text-[#B7A18A] font-bold">&lsquo;오감 행동 처방&rsquo;</strong>을 집대성하여 오직 사랑과 인연의 판을 뒤집기 위해 탄생한{' '}
-                        <strong className="text-[#B7A18A] font-bold">실전 관계 도감</strong>입니다.
-                      </p>
-                    </div>
-
-                    {/* 6. 핵심 키워드 카드 6종
-                        - 마지막 설명 문구와의 여백: 24px (mt-6)
-                        - 기존 2열 3행 구조, 카드 크기/패딩/디자인 온전히 유지 */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mt-6">
+                    {/* 5. 핵심 키워드 카드 6종 (좌측 이미지 하단 라인과 수평 일치) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mt-6 lg:mt-0 pt-4 lg:pt-0">
                       {[
                         "만세력 3초 핵심 좌표 판독",
                         "십성 5대 본능 캐릭터 도감",
