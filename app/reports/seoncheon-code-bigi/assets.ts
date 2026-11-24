@@ -219,4 +219,16 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     description: '책을 펼쳐보는 따뜻한 감성 오브제 또는 수묵 일러스트',
     isPlaceholder: true,
   },
+
+  // 18. When to Open: 실생활 활용 공감 세로형 포스터 (WHEN TO OPEN THIS BOOK)
+  whenToOpen: {
+    id: 'whenToOpen',
+    src: '/image/seoncheon-code-secret-book.webp',
+    alt: '사람이 궁금해지는 순간, 이 책을 펼쳐보세요 - 선천코드 비기',
+    aspectRatio: 'aspect-[3/4]',
+    objectFit: 'cover',
+    placeholderLabel: '사람이 궁금해지는 순간 포스터 (WHEN TO OPEN)',
+    description: '관계의 고민과 궁금증이 생길 때 펼쳐보는 실전 관계 도감 세로형 비주얼 (권장 비율 3:4, 해상도 1200x1600px)',
+    isPlaceholder: true,
+  },
 }

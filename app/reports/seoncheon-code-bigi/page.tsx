@@ -2221,7 +2221,8 @@ export default function SeoncheonCodeBigiPage() {
                       실생활 활용 공감: WHEN TO OPEN THIS BOOK
                      ───────────────────────────────────────────────────────────── */}
                   <div className="mt-14 pt-12 border-t border-[#B7A18A]/20">
-                    <div className="text-center mb-10">
+                    {/* 상단 라벨 및 메인 제목 (중앙 정렬 유지) */}
+                    <div className="text-center mb-10 md:mb-12">
                       <span className="inline-block px-3 py-1 text-xs font-mono tracking-widest uppercase rounded-full bg-[#B7A18A]/10 text-[#B7A18A] border border-[#B7A18A]/20 mb-3">
                         WHEN TO OPEN THIS BOOK
                       </span>
@@ -2230,32 +2231,47 @@ export default function SeoncheonCodeBigiPage() {
                       </h3>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-                      {[
-                        "새로운 인연을 만났을 때, 그 사람의 연애 성향이 궁금하다면.",
-                        "좋아하는 사람이 어떤 유형에게 끌리는지 알고 싶다면.",
-                        "연인의 이해하기 어려운 행동을 다른 관점에서 바라보고 싶다면.",
-                        "강렬하게 끌리는 사람과 편안하게 지낼 수 있는 사람의 차이가 궁금하다면.",
-                        "나와 상대의 관계에서 반복되는 패턴을 이해하고 싶다면.",
-                        "어려운 사주를 공부하지 않고도 직접 찾아보고 싶다면."
-                      ].map((item, idx) => (
-                        <div
-                          key={idx}
-                          className="flex items-start gap-3 p-4 sm:p-5 rounded-xl border border-[#B7A18A]/20 bg-[#241E26]/60 backdrop-blur-sm"
-                        >
-                          <div className="w-5 h-5 rounded-full bg-[#B7A18A]/20 border border-[#B7A18A]/40 flex items-center justify-center shrink-0 mt-0.5 text-[#B7A18A]">
-                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                          <p className="text-[16px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep">
-                            {item}
-                          </p>
+                    {/* 좌측 세로형 이미지 + 우측 6개 체크리스트 카드 (2분할 레이아웃) */}
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-14 items-center">
+                      {/* 좌측: 3:4 세로형 이미지 삽입 공간 (모바일 위, 데스크톱 좌측 약 48% 너비) */}
+                      <div className="w-full lg:w-[47%] xl:w-[48%] flex justify-center items-center">
+                        <div className="relative w-full max-w-[440px] sm:max-w-[480px] lg:max-w-[500px] xl:max-w-[520px]">
+                          <HybridImageSlot
+                            assetKey="whenToOpen"
+                            className="aspect-[3/4] shadow-2xl"
+                          />
                         </div>
-                      ))}
+                      </div>
+
+                      {/* 우측: 6개 체크리스트 카드 1열 세로 배치 (모바일 아래, 데스크톱 우측 약 52% 너비) */}
+                      <div className="w-full lg:w-[53%] xl:w-[52%] space-y-3 sm:space-y-3.5">
+                        {[
+                          "새로운 인연을 만났을 때, 그 사람의 연애 성향이 궁금하다면.",
+                          "좋아하는 사람이 어떤 유형에게 끌리는지 알고 싶다면.",
+                          "연인의 이해하기 어려운 행동을 다른 관점에서 바라보고 싶다면.",
+                          "강렬하게 끌리는 사람과 편안하게 지낼 수 있는 사람의 차이가 궁금하다면.",
+                          "나와 상대의 관계에서 반복되는 패턴을 이해하고 싶다면.",
+                          "어려운 사주를 공부하지 않고도 직접 찾아보고 싶다면."
+                        ].map((item, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-start gap-3 p-4 sm:p-4.5 rounded-xl border border-[#B7A18A]/20 bg-[#241E26]/60 backdrop-blur-sm transition-all duration-300 hover:border-[#B7A18A]/50"
+                          >
+                            <div className="w-5 h-5 rounded-full bg-[#B7A18A]/20 border border-[#B7A18A]/40 flex items-center justify-center shrink-0 mt-0.5 text-[#B7A18A]">
+                              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                            <p className="text-[16px] text-[#EDE6DA]/90 leading-relaxed font-light break-keep">
+                              {item}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
 
-                    <div className="mt-8 text-center">
+                    {/* 하단 강조 문구 (2분할 영역 아래 중앙 정렬 유지) */}
+                    <div className="mt-10 md:mt-12 text-center">
                       <div className="inline-block px-6 py-3.5 rounded-full border border-[#B7A18A]/40 bg-gradient-to-r from-[#B7A18A]/15 via-[#B7A18A]/10 to-[#B7A18A]/15 backdrop-blur-sm">
                         <p className="text-sm sm:text-base font-elegant font-semibold text-[#B7A18A] tracking-wide break-keep">
                           당신의 인연이 달라질 때마다, 이 책의 쓰임도 달라집니다.
