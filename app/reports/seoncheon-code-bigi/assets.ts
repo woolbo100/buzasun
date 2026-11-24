@@ -189,10 +189,22 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
     id: 'bookPreviewJourney',
     src: '/image/seoncheon-code-secret-book.webp',
     alt: '미리보기 03 - 사랑과 인연의 실전 해석 도감',
-    aspectRatio: 'aspect-[440/658]',
+    aspectRatio: 'aspect-[440/660]',
     objectFit: 'contain',
     placeholderLabel: '미리보기 03: 실전 해석 도감',
     description: '이상형, 본능적 끌림, 배우자, 궁합, 관계 충돌 등을 직관적으로 이해하는 인포그래픽과 해설',
+    isPlaceholder: true,
+  },
+
+  // 15-B. Book Preview 4: 도화 & 궁합 프로필 도감
+  bookPreviewProfile: {
+    id: 'bookPreviewProfile',
+    src: '/image/seoncheon-code-secret-book.webp',
+    alt: '미리보기 04 - 도화 & 궁합 프로필 도감',
+    aspectRatio: 'aspect-[440/660]',
+    objectFit: 'contain',
+    placeholderLabel: '미리보기 04: 도화 & 궁합 프로필 도감',
+    description: '도화 매혹의 기제와 나와 상대의 인연 궁합을 한눈에 살펴보는 실전 프로필 도감',
     isPlaceholder: true,
   },
 

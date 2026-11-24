@@ -255,7 +255,7 @@ function PreviewBookSlot({
             src={asset.src}
             alt={title}
             fill
-            sizes="(max-width: 768px) 100vw, 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className="object-contain block"
             onError={() => setHasError(true)}
           />
@@ -2579,8 +2579,8 @@ export default function SeoncheonCodeBigiPage() {
                     </p>
                   </div>
 
-                  {/* 3열 책 속 이미지 슬롯 */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                  {/* 4열 책 속 이미지 슬롯 (최대 가로폭 1280px 전체 너비 정렬) */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                     <PreviewBookSlot
                       assetKey="bookPreviewGuide"
                       previewNum="미리보기 01"
@@ -2598,6 +2598,12 @@ export default function SeoncheonCodeBigiPage() {
                       previewNum="미리보기 03"
                       title="사랑과 인연의 실전 해석 도감"
                       desc="이상형, 본능적 끌림, 배우자, 궁합, 관계 충돌 등을 직관적으로 이해하는 인포그래픽과 해설"
+                    />
+                    <PreviewBookSlot
+                      assetKey="bookPreviewProfile"
+                      previewNum="미리보기 04"
+                      title="도화 &amp; 궁합 프로필 도감"
+                      desc="도화 매혹의 기제와 나와 상대의 인연 궁합을 한눈에 살펴보는 실전 프로필 도감"
                     />
                   </div>
                 </div>
