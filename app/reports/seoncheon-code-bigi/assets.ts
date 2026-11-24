@@ -16,15 +16,15 @@ export interface SeoncheonCodeAssetItem {
 }
 
 export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
-  // 1. Hero: 패키지 전체 및 메인 표지
+  // 1. Hero: 패키지 전체 및 메인 표지 / 구매 카드 목업
   hero: {
     id: 'hero',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '선천코드 비기(先天코드 祕記) 공식 전자책 표지',
-    aspectRatio: 'aspect-video',
+    src: '/image/seoncheon-code-bigi/book-purchase-mockup.webp',
+    alt: '선천코드 비기(先天코드 祕記) 공식 전자책 구매 목업',
+    aspectRatio: 'aspect-[3/4]',
     objectFit: 'contain',
-    placeholderLabel: '선천코드 비기 전체 패키지 목업 (Hero 3D)',
-    description: '공식 비첩 실물 이미지 적용 완료',
+    placeholderLabel: '선천코드 비기 상품 구매 책 목업 (3:4)',
+    description: '상품 구매 카드 전용 목업 이미지 적용 완료',
     isPlaceholder: false,
   },
 

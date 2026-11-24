@@ -57,7 +57,7 @@ const productData = {
   discountRate: '63% OFF',
 
   topBannerImage: '/image/seoncheon-code-secret-book.webp',
-  heroImage: '/image/seoncheon-code-secret-book.webp',
+  heroImage: '/image/seoncheon-code-bigi/book-purchase-mockup.webp',
   overviewImage: '/image/seoncheon-code-secret-book.webp',
   recommendedImage: '/image/seoncheon-code-secret-book.webp',
   formulaImage: '/image/seoncheon-code-secret-book.webp',
@@ -803,7 +803,7 @@ export default function SeoncheonCodeBigiPage() {
                           alt="선천코드 비기 책 표지"
                           fill
                           sizes="(max-width: 1024px) 100vw, 40vw"
-                          className="object-cover"
+                          className="object-contain"
                           priority
                         />
                       </div>
