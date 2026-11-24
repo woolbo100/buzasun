@@ -1360,10 +1360,10 @@ export default function SeoncheonCodeBigiPage() {
                       </h3>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch">
                       {/* POINT 01 */}
                       <div
-                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px]"
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px] h-full"
                         style={{
                           background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
                           boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'
@@ -1380,11 +1380,12 @@ export default function SeoncheonCodeBigiPage() {
                             </div>
                           </div>
 
-                          {/* 소제목 & 메인 제목 (2줄 기준 동일 높이로 구분선 수평 위치 일치) */}
-                          <div className="min-h-[66px] sm:min-h-[72px] flex flex-col justify-start">
+                          {/* 소제목 & 메인 제목 (2줄 구성, 4개 카드 동일 높이 정렬) */}
+                          <div className="min-h-[72px] sm:min-h-[76px] flex flex-col justify-start">
                             <span className="text-[11px] font-bold text-[#493740] tracking-wide block mb-1">직관적 해설</span>
-                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-snug">
-                              어려운 사주를 쉽고 재미있게
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-[1.4] md:leading-[1.45] break-keep">
+                              어려운 명리 이론 없이<br />
+                              3초 만에 읽는 직관 도감
                             </h5>
                           </div>
 
@@ -1393,14 +1394,14 @@ export default function SeoncheonCodeBigiPage() {
 
                           {/* 본문 설명 문구 */}
                           <p className="text-[16px] text-[#4A3D39] leading-[1.7] break-keep font-normal">
-                            복잡한 한자도, 어려운 명리학 이론도 외울 필요 없습니다. 만세력에서 나와 상대의 글자를 찾아보고, 캐릭터 도감과 인포그래픽을 통해 선천적 기질과 관계 성향을 쉽고 직관적으로 이해할 수 있습니다.
+                            복잡한 한자나 난해한 역학 용어를 외울 필요가 없습니다. 만세력에서 나와 상대의 글자만 찾으면, 캐릭터 도감과 인포그래픽을 통해 타고난 기질과 연애 본능을 누구나 직관적으로 해독할 수 있습니다.
                           </p>
                         </div>
                       </div>
 
                       {/* POINT 02 */}
                       <div
-                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px]"
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px] h-full"
                         style={{
                           background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
                           boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'
@@ -1417,11 +1418,12 @@ export default function SeoncheonCodeBigiPage() {
                             </div>
                           </div>
 
-                          {/* 소제목 & 메인 제목 (2줄 기준 동일 높이로 구분선 수평 위치 일치) */}
-                          <div className="min-h-[66px] sm:min-h-[72px] flex flex-col justify-start">
+                          {/* 소제목 & 메인 제목 (2줄 구성, 4개 카드 동일 높이 정렬) */}
+                          <div className="min-h-[72px] sm:min-h-[76px] flex flex-col justify-start">
                             <span className="text-[11px] font-bold text-[#493740] tracking-wide block mb-1">사랑·인연 특화</span>
-                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-snug">
-                              사랑과 인연에 특화된 관계 해설서
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-[1.4] md:leading-[1.45] break-keep">
+                              오직 사랑과 인연에만<br />
+                              집중한 실전 관계 해설서
                             </h5>
                           </div>
 
@@ -1430,14 +1432,14 @@ export default function SeoncheonCodeBigiPage() {
 
                           {/* 본문 설명 문구 */}
                           <p className="text-[16px] text-[#4A3D39] leading-[1.7] break-keep font-normal">
-                            일반적인 사주책처럼 직업운, 재물운, 신년운세를 두루 다루는 책이 아닙니다. 타고난 매력, 이상형, 본능적 끌림, 배우자, 궁합, 관계 갈등, 재회까지 사랑과 인연에 집중한 실전 관계 해설서입니다.
+                            직업운이나 신년운세를 두루 훑는 일반 사주책이 아닙니다. 타고난 도화 무기부터 이상형 좌표, 배우자 안방 감별, 파국 궁합 방어와 재회 타이밍까지 오직 관계의 승패를 가르는 핵심만 담았습니다.
                           </p>
                         </div>
                       </div>
 
                       {/* POINT 03 */}
                       <div
-                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px]"
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px] h-full"
                         style={{
                           background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
                           boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'
@@ -1454,11 +1456,12 @@ export default function SeoncheonCodeBigiPage() {
                             </div>
                           </div>
 
-                          {/* 소제목 & 메인 제목 (2줄 기준 동일 높이로 구분선 수평 위치 일치) */}
-                          <div className="min-h-[66px] sm:min-h-[72px] flex flex-col justify-start">
+                          {/* 소제목 & 메인 제목 (2줄 구성, 4개 카드 동일 높이 정렬) */}
+                          <div className="min-h-[72px] sm:min-h-[76px] flex flex-col justify-start">
                             <span className="text-[11px] font-bold text-[#493740] tracking-wide block mb-1">상대방 이해</span>
-                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-snug">
-                              나를 넘어 상대를 이해하는 관계 도감
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-[1.4] md:leading-[1.45] break-keep">
+                              나를 넘어 상대의 속마음까지<br />
+                              꿰뚫어 보는 심리 암호
                             </h5>
                           </div>
 
@@ -1467,14 +1470,14 @@ export default function SeoncheonCodeBigiPage() {
 
                           {/* 본문 설명 문구 */}
                           <p className="text-[16px] text-[#4A3D39] leading-[1.7] break-keep font-normal">
-                            나의 연애 성향뿐 아니라 현재 연인, 관심 있는 상대, 헤어진 연인, 배우자의 기질과 관계 성향까지 직접 찾아볼 수 있습니다. 사람과 인연을 이해하고 관계를 바라보는 나만의 기준을 세워갑니다.
+                            나의 연애 패턴은 물론 썸남, 현재 연인, 헤어진 상대, 배우자의 숨은 본능까지 직접 대조해 볼 수 있습니다. 상대의 행동을 추측하며 흔들리는 대신 관계를 바라보는 선명한 기준을 세우십시오.
                           </p>
                         </div>
                       </div>
 
                       {/* POINT 04 */}
                       <div
-                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px]"
+                        className="rounded-2xl p-6 flex flex-col justify-between border border-[#B7A18A]/45 transition-all duration-300 hover:translate-y-[-2px] h-full"
                         style={{
                           background: 'linear-gradient(160deg, #F2EAE0 0%, #EDE2D3 100%)',
                           boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'
@@ -1491,11 +1494,12 @@ export default function SeoncheonCodeBigiPage() {
                             </div>
                           </div>
 
-                          {/* 소제목 & 메인 제목 (2줄 기준 동일 높이로 구분선 수평 위치 일치) */}
-                          <div className="min-h-[66px] sm:min-h-[72px] flex flex-col justify-start">
+                          {/* 소제목 & 메인 제목 (2줄 구성, 4개 카드 동일 높이 정렬) */}
+                          <div className="min-h-[72px] sm:min-h-[76px] flex flex-col justify-start">
                             <span className="text-[11px] font-bold text-[#493740] tracking-wide block mb-1">평생 소장 비서</span>
-                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-snug">
-                              인연이 바뀔 때마다 다시 펼쳐보는 소장용 비서
+                            <h5 className="text-[17px] sm:text-[18px] font-elegant font-bold text-[#2F2525] leading-[1.4] md:leading-[1.45] break-keep">
+                              인연의 갈림길마다<br />
+                              다시 펼쳐보는 평생 비서
                             </h5>
                           </div>
 
@@ -1504,7 +1508,7 @@ export default function SeoncheonCodeBigiPage() {
 
                           {/* 본문 설명 문구 */}
                           <p className="text-[16px] text-[#4A3D39] leading-[1.7] break-keep font-normal">
-                            한 번 읽고 책장에 넣어두는 책이 아닙니다. 새로운 인연을 만날 때마다, 사랑이 궁금해질 때마다, 관계에서 고민이 생길 때마다 필요한 부분을 다시 찾아볼 수 있는 소장용 관계 도감입니다.
+                            한 번 읽고 책장에 꽂아두는 이론서가 아닙니다. 새로운 사람이 다가올 때마다, 관계의 엇갈림 앞에서 답이 필요할 때마다 꺼내어 바로 답을 찾는 당신만의 평생 소장용 실전 비기입니다.
                           </p>
                         </div>
                       </div>
@@ -2318,7 +2322,7 @@ export default function SeoncheonCodeBigiPage() {
                       <p className="text-[#F0EBE2] mt-3 sm:mt-3.5">
                         《선천코드 비기》는 난해한 한자 풀이와 뜬구름 잡는 사주 상담을 거부하고<br />
                         <strong className="text-[#B7A18A] font-bold">&lsquo;명리 심리 역학&rsquo;</strong>과{' '}
-                        <strong className="text-[#B7A18A] font-bold">&lsquo;오감 행동 처방&rsquo;</strong>을 집대성하여 오직 사랑과 인연의 판을 뒤집기 위해 탄생한<br />
+                        <strong className="text-[#B7A18A] font-bold">&lsquo;오감 행동 처방&rsquo;</strong>을 집대성하여 오직 사랑과 인연의 판을 뒤집기 위해 탄생한{' '}
                         <strong className="text-[#B7A18A] font-bold">실전 관계 도감</strong>입니다.
                       </p>
                     </div>
