@@ -699,17 +699,19 @@ export default function SeoncheonCodeBigiPage() {
 
                   <div className="text-[16px] md:text-[18px] text-[#F2EAE0] leading-[1.8] font-normal space-y-3.5 break-keep">
                     <p className="text-[18px] sm:text-[20px] md:text-[22px] text-[#B7A18A] font-elegant font-bold leading-snug">
-                      “사주를 공부하는 책이 아니라, 사람과 사랑을 이해하기 위해 펼쳐보는 관계 도감.”
+                      사주를 공부하는 책이 아니라,<br />
+                      사람과 사랑을 이해하기 위해 펼쳐보는 관계 도감.
                     </p>
                     <p>
-                      왜 우리는 특정 사람에게 이토록 강렬하게 끌리고, 매번 비슷한 상처 앞에서 무너질까요?
+                      왜 우리는 하필 그 사람에게 끌릴까요?<br />
+                      그 사람은 어떤 사랑을 원하고, 나는 어떤 인연 앞에서 마음을 열게 될까요?
                     </p>
                     <p>
-                      어려운 명리학을 쉽고 재미있게 풀어낸 연애·관계 특화 사주 해설서.<br className="hidden md:inline" />
-                      나와 상대의 기질을 직접 찾아보고 이해할 수 있는 평생 소장용 관계 도감입니다.
+                      복잡한 한자와 어려운 명리학을 캐릭터와 그림, 친근한 언어로 풀어낸 연애·관계 특화 사주 해설서.<br className="hidden md:inline" />
+                      나의 타고난 매력부터 상대의 연애 성향, 이상형, 궁합과 배우자 이야기까지.
                     </p>
                     <p className="font-semibold text-white">
-                      오늘부터 《선천코드 비기》와 함께 나의 타고난 기운을 깨우고, 상대의 심리 암호를 해독하는 절대 비기를 장착하십시오.
+                      이제 궁금한 사람이 생길 때마다 《선천코드 비기》를 펼쳐보세요.
                     </p>
                   </div>
                 </div>
@@ -734,16 +736,16 @@ export default function SeoncheonCodeBigiPage() {
                         </div>
 
                         <h2 className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] md:leading-[1.65] break-keep">
-                          반복되는 관계 패턴을 깨고,<br />
-                          나만의 고유한 매혹을 깨우는 <span className="text-[#B7A18A]">선천코드 비기</span>
+                          나의 매력부터 상대의 연애 성향까지,<br />
+                          한 권으로 만나보는 <span className="text-[#B7A18A]">선천코드 관계 도감</span>
                         </h2>
 
                         <div className="text-[16px] md:text-[18px] text-[#EDE6DA]/90 space-y-3 leading-[1.8] font-light">
                           <p>
-                            단순한 미신이나 통계가 아닙니다. 십성 5대 본능, 10대 일간 페르소나, 도화의 심리, 이상형 및 배우자 복덕 판별까지.
+                            십성 5대 본능 캐릭터, 10대 일간 매력 페르소나, 도화와 본능적 끌림, 이상형과 배우자, 궁합과 재회까지.
                           </p>
                           <p>
-                            나와 상대의 무의식을 지배하는 오행의 암호를 해독하여 평생 흔들리지 않는 인연의 주도권을 되찾으세요.
+                            어렵게만 느껴졌던 사주를 쉽고 재미있게 이해하고, 나와 상대의 관계를 새로운 시선으로 바라보세요.
                           </p>
                         </div>
                       </div>
@@ -816,8 +818,8 @@ export default function SeoncheonCodeBigiPage() {
                       PAIN POINT &amp; HOOK
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      당신의 인연이 왜 매번 비슷한<br />
-                      <span className="text-[#B7A18A]">&lsquo;상처&rsquo;와 &lsquo;갈등&rsquo;</span>으로 끝났을까?
+                      사람의 마음이 궁금했던 순간,<br />
+                      <span className="text-[#B7A18A]">당신에게도 이런 질문이 있었나요?</span>
                     </h2>
                   </div>
 
@@ -830,10 +832,10 @@ export default function SeoncheonCodeBigiPage() {
                       />
                       <div className="space-y-1.5 text-center">
                         <p className="text-xs md:text-sm text-[#B7A18A] font-medium tracking-wide">
-                          반복되는 어긋남, 나를 잃어버리는 인연의 고리
+                          나와 상대의 마음을 읽는 새로운 시선
                         </p>
                         <p className="text-[16px] md:text-[18px] text-[#FAF7F2] font-elegant font-bold tracking-wide break-keep">
-                          세 개 이상 해당된다면 지금 즉시 내 코드를 점검하십시오
+                          하나라도 해당된다면, 당신에게는 이 책을 펼쳐볼 이유가 충분합니다.
                         </p>
                       </div>
                     </div>
@@ -848,29 +850,31 @@ export default function SeoncheonCodeBigiPage() {
                         }}
                       >
                         <p>
-                          사람마다 타고난 체질이 다르듯, 인연을 맺고 사랑을 느끼는 심리적 메커니즘 또한 저마다 다릅니다.
+                          사람마다 사랑을 표현하는 방식도, 마음을 여는 순간도, 편안함을 느끼는 관계도 다릅니다.
                         </p>
                         <p>
-                          내 선천코드의 결핍을 알지 못하면, 늘 나를 갉아먹는 상대에게 끌리고 끝내 버림받을까 두려워하는 악순환을 반복하게 됩니다.
+                          왜 우리는 특정 사람에게 끌리는지, 왜 같은 관계에서 서로 다른 감정을 느끼는지 궁금했던 적이 있나요?
                         </p>
                         <p>
-                          그 굴레를 끊어내려면 상대의 마음에 매달리는 대신 <strong className="text-[#FAF7F2] font-semibold">&lsquo;나와 상대의 선천적 본능 암호&rsquo;</strong>를 명확히 해독해야 합니다.
+                          선천코드 비기는 이러한 질문들을 전통 명리학의 관점에서 쉽고 흥미롭게 살펴볼 수 있도록 안내합니다.
                         </p>
                       </div>
 
                       <div className="space-y-3">
                         <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-elegant font-bold text-[#B7A18A] leading-[1.4] flex items-center gap-2.5 break-keep">
                           <AlertTriangle className="w-6 h-6 text-[#B7A18A] shrink-0" />
-                          나의 인연 코드 위험도 자가진단 체크리스트
+                          나와 상대의 관계 코드 체크리스트
                         </h3>
 
                         <div className="space-y-2.5">
                           {[
-                            "처음에는 뜨겁게 타오르다 얼마 못 가 차갑게 식어버리는 연애가 반복된다",
-                            "상대방의 사소한 말투나 표정 하나에도 극심한 불안과 거절 공포를 느낀다",
-                            "나를 함부로 대하거나 감정적으로 무심한 사람에게 유독 더 강하게 집착한다",
-                            "‘내가 다 맞추면 변하겠지’라며 내 욕구와 감정을 억누르고 희생해왔다",
-                            "헤어진 뒤에도 ‘왜 매번 이런 사람만 만날까’ 자책하며 끝없는 후회에 빠진다"
+                            "좋아하는 사람의 타고난 성향과 연애 스타일이 궁금하다.",
+                            "그 사람이 어떤 유형에게 마음을 열고 끌리는지 알고 싶다.",
+                            "나만의 타고난 매력과 연애 성향을 발견하고 싶다.",
+                            "왜 매번 비슷한 유형의 사람에게 끌리는지 궁금하다.",
+                            "강렬하게 끌리는 사람과 편안하게 지낼 수 있는 사람의 차이를 알고 싶다.",
+                            "나와 상대가 왜 잘 맞거나 자주 부딪히는지 이해하고 싶다.",
+                            "어려운 사주 공부 없이도 직접 나와 상대의 성향을 찾아보고 싶다."
                           ].map((item, idx) => (
                             <div
                               key={idx}
@@ -904,24 +908,21 @@ export default function SeoncheonCodeBigiPage() {
                           THE MOMENT OF ANXIETY
                         </span>
                         <h3 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                          진심을 다해 마음을 주었는데,<br />
-                          <span className="text-[#B7A18A]">왜 관계는 늘 상처와 불안으로 끝났을까요?</span>
+                          같은 사랑을 하고 있어도,<br />
+                          <span className="text-[#B7A18A]">우리는 왜 서로 다른 마음을 가지고 있을까요?</span>
                         </h3>
                         <div className="space-y-3.5 text-[18px] text-[#F2EAE0] leading-[1.8] font-normal break-keep">
                           <p>
-                            상대의 마음을 얻기 위해 내 자존감을 깎아내리며 맞추던 날들.<br />
-                            작은 침묵 하나에도 심장이 덜컥 내려앉던 고통스러운 시간들.
+                            어떤 사람은 사랑하면 모든 것을 표현하고, 어떤 사람은 마음이 깊어질수록 오히려 조심스러워집니다.
                           </p>
                           <p>
-                            더 많이 사랑을 주고 더 헌신할수록,<br />
-                            어쩐지 상대는 나를 더 당연하게 여기며 멀어져만 갔습니다.
+                            어떤 사람에게는 따뜻한 말 한마디가 사랑이고, 또 다른 사람에게는 묵묵히 곁을 지켜주는 행동이 사랑입니다.
                           </p>
                         </div>
                         <div className="pt-6 border-t border-[#B7A18A]/25 mt-6">
                           <p className="text-[#FAF7F2] font-elegant font-medium text-[18px] md:text-[19px] leading-[1.75] break-keep">
-                            어쩌면 지금 우리에게 필요한 건,<br className="hidden sm:inline" />
-                            맹목적인 희생이나 자책이 아니라<br />
-                            <span className="text-[#B7A18A] font-semibold">태어난 순간 새겨진 나의 선천코드와 본능의 결핍부터 들여다보는 일</span>입니다.
+                            나와 상대가 가진 서로 다른 기질을 이해하는 것.<br />
+                            <span className="text-[#B7A18A] font-semibold">그것이 관계를 바라보는 새로운 시선의 시작입니다.</span>
                           </p>
                         </div>
                       </div>
@@ -949,12 +950,11 @@ export default function SeoncheonCodeBigiPage() {
                         THE PARADOX OF DESTINY
                       </span>
                       <h3 className="text-2xl md:text-[34px] lg:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                        상대에게 맞추고 노력할수록…<br />
-                        <span className="text-[#B7A18A]">왜 나의 매력과 가치는 흐려지고 상처만 깊어졌을까요?</span>
+                        같은 사랑을 하고 있어도,<br />
+                        <span className="text-[#B7A18A]">우리는 왜 서로 다른 마음을 가지고 있을까요?</span>
                       </h3>
                       <p className="text-[17px] md:text-[18px] text-[#F2EAE0] mt-4 max-w-2xl mx-auto leading-[1.8] font-normal break-keep">
-                        당신의 사랑이 부족해서가 아닙니다. 내 기운과 맞지 않는 방식으로 에너지를 소모하며<br className="hidden sm:inline" />
-                        &lsquo;본능적 불균형&rsquo;을 초래하여 관계의 균형이 무너졌기 때문입니다.
+                        나와 상대가 가진 서로 다른 기질을 이해하는 것, 그것이 관계를 바라보는 새로운 시선의 시작입니다.
                       </p>
                     </div>
 
@@ -973,14 +973,14 @@ export default function SeoncheonCodeBigiPage() {
                       >
                         <div>
                           <div className="text-[#B7A18A] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
-                            공감 01
+                            공감 카드 01
                           </div>
                           <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                            “왜 늘 비슷한 상처를 주는 사람만 만날까?”
+                            “왜 하필 그 사람에게 끌릴까?”
                           </h4>
                           <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3" />
                           <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                            나도 모르게 내 선천코드의 결핍을 채워줄 것 같은 사람에게 무의식적으로 끌려가며, 같은 이별과 고통의 패턴을 되풀이합니다.
+                            나의 이상형과 실제 마음이 향하는 상대는 왜 다를까요? 오행과 십성의 관점에서 본능적인 끌림의 이유를 살펴봅니다.
                           </p>
                         </div>
                         <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
@@ -1003,14 +1003,14 @@ export default function SeoncheonCodeBigiPage() {
                       >
                         <div>
                           <div className="text-[#B7A18A] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
-                            공감 02
+                            공감 카드 02
                           </div>
                           <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                            “상대에게 나를 맞출수록 멀어지는 마음”
+                            “그 사람은 어떤 방식으로 사랑할까?”
                           </h4>
                           <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3" />
                           <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                            내 고유한 매혹과 개성을 버리고 상대의 기준에 맞추는 순간, 나의 존재감은 희미해지고 상대의 무의식 속 가치는 추락합니다.
+                            표현하는 사랑, 지켜주는 사랑, 자유를 존중하는 사랑. 각기 다른 기질이 만들어내는 사랑의 방식을 이해해 보세요.
                           </p>
                         </div>
                         <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
@@ -1033,14 +1033,14 @@ export default function SeoncheonCodeBigiPage() {
                       >
                         <div>
                           <div className="text-[#B7A18A] font-elegant font-semibold text-[14px] md:text-[16px] tracking-wider mb-2.5">
-                            공감 03
+                            공감 카드 03
                           </div>
                           <h4 className="text-[19px] md:text-[20px] lg:text-[21px] font-elegant font-bold text-[#FAF7F2] leading-[1.35] break-keep">
-                            “상대의 속마음을 몰라 답답했던 시간”
+                            “우리는 왜 잘 맞다가도 부딪힐까?”
                           </h4>
                           <div className="h-[1px] w-full bg-[#B7A18A]/20 my-3" />
                           <p className="text-[15px] md:text-[16px] text-[#EDE6DA]/85 leading-[1.75] font-light break-keep">
-                            상대의 십성 본능과 성정을 모른 채 내 방식대로만 다가가다 오해와 갈등을 키우고 소중한 인연을 허무하게 놓쳤습니다.
+                            서로에게 매력을 느끼는 지점과 갈등을 경험하는 지점을 살펴보고 관계를 이해하는 새로운 관점을 발견합니다.
                           </p>
                         </div>
                         <div className="flex items-center justify-center gap-3 pt-6 mt-6" aria-hidden="true">
@@ -1054,7 +1054,8 @@ export default function SeoncheonCodeBigiPage() {
                     {/* 하단 강조 텍스트 */}
                     <div className="mt-14 text-center">
                       <p className="text-[#FAF7F2] text-[19px] sm:text-[22px] md:text-[25px] font-elegant font-semibold leading-[1.6] break-keep sm:whitespace-nowrap">
-                        이제 무의미한 자책을 멈추고, 당신의 <span className="text-[#B7A18A] font-bold">&lsquo;선천코드와 타고난 매혹&rsquo;부터 온전히 깨워야 할 때입니다.</span>
+                        사람을 이해하는 시선이 넓어질수록,<br className="inline sm:hidden" />
+                        {' '}<span className="text-[#B7A18A] font-bold">인연을 바라보는 나만의 기준도 선명해집니다.</span>
                       </p>
                     </div>
 
@@ -1084,7 +1085,7 @@ export default function SeoncheonCodeBigiPage() {
                   {/* 왼쪽: 01, 02 블록 */}
                   <div className="lg:col-span-7 order-1 flex flex-col justify-center">
                     <h3 className="text-center text-[22px] md:text-[28px] font-elegant font-bold text-[#B7A18A] leading-[1.4] mb-6 break-keep">
-                      상대를 맞추려 애쓰는 동안, 내 &lsquo;중심&rsquo;은 어디에 있었나요?
+                      서로의 다름을 이해하고, 나만의 코드를 발견하는 시간
                     </h3>
 
                     <div
@@ -1097,44 +1098,41 @@ export default function SeoncheonCodeBigiPage() {
                         WebkitBackdropFilter: 'blur(10px)'
                       }}
                     >
-                      {/* 01 · 자책하지 마세요 */}
+                      {/* 01 · 서로 다르다는 것을 이해하는 순간 */}
                       <div className="space-y-3.5">
                         <div className="flex items-center gap-2.5">
                           <SeoncheonBadge>
                             01
                           </SeoncheonBadge>
                           <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
-                            결코 당신의 탓이 아닙니다
+                            서로 다르다는 것을 이해하는 순간
                           </h3>
                         </div>
                         <div className="text-[17px] md:text-[18px] text-[#F2EAE0] leading-[1.8] font-normal space-y-2 break-keep">
                           <p>
-                            단 하나라도 내 이야기 같았다면,<br />
-                            <span className="text-[#B7A18A] font-medium">당신의 매력이 부족해서가 결코 아닙니다.</span>
+                            모든 사람이 나와 같은 방식으로 생각하고 사랑하는 것은 아닙니다.
                           </p>
                           <p className="text-[#FAF7F2]/90">
-                            서로의 타고난 기운과 본능의 코드가 맞지 않았을 뿐,<br />
-                            진심을 다해 사랑하고 인연을 지키려 했던 마음은 언제나 옳았습니다.
+                            서로의 기질과 표현 방식의 차이를 이해하면 관계를 바라보는 관점이 넓어집니다.
                           </p>
                         </div>
                       </div>
 
                       <div className="w-full h-[1px] bg-gradient-to-r from-[#B7A18A]/30 via-[#B7A18A]/10 to-transparent" />
 
-                      {/* 02 · 이제 나의 선천코드를 깨울 때 */}
+                      {/* 02 · 나만의 선천코드를 발견하는 순간 */}
                       <div className="space-y-3.5">
                         <div className="flex items-center gap-2.5">
                           <SeoncheonBadge>
                             02
                           </SeoncheonBadge>
                           <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
-                            이제, <span className="text-[#B7A18A]">나의 선천코드를 깨울 때</span>
+                            나만의 선천코드를 발견하는 순간
                           </h3>
                         </div>
                         <div className="text-[17px] md:text-[18px] text-[#F2EAE0] leading-[1.8] font-normal space-y-3 break-keep">
                           <p>
-                            상대의 변덕스러운 반응에 휘둘리는 동안,<br />
-                            정작 나의 고유한 빛과 에너지를 잃어버리지 않았나요?
+                            상대를 이해하는 것만큼 중요한 것은 나 자신을 이해하는 일입니다.
                           </p>
                           <div
                             className="p-4 sm:p-5 rounded-xl text-[#FAF7F2] font-normal leading-[1.75]"
@@ -1143,8 +1141,7 @@ export default function SeoncheonCodeBigiPage() {
                               border: '1px solid rgba(183, 161, 138, 0.25)'
                             }}
                           >
-                            《선천코드 비기》에서 말하는 ‘선천코드’는<br className="hidden sm:inline" />
-                            타인에게 구걸하지 않고 <span className="text-[#B7A18A] font-semibold">내 가치와 당당한 매혹을 스스로 발현하는 근원적 힘</span>입니다.
+                            나의 타고난 매력과 사랑의 방식을 발견하고, 관계 속에서도 나다운 모습을 지켜보세요.
                           </div>
                         </div>
                       </div>
@@ -1898,11 +1895,11 @@ export default function SeoncheonCodeBigiPage() {
                       TRANSFORMATION
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      《선천코드 비기》가 만드는<br />
-                      <span className="text-[#B7A18A]">관계와 삶의 극적인 변화</span>
+                      사람을 바라보는 시선이 달라지면,<br />
+                      <span className="text-[#B7A18A]">인연을 이해하는 기준도 달라집니다.</span>
                     </h2>
                     <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 mt-3 leading-[1.8] font-normal break-keep">
-                      상대에게 휘둘리던 피동적인 관계에서, 나와 상대의 암호를 꿰뚫어 주도하는 관계로.
+                      막연한 궁금증에서 스스로 찾아보고 이해하는 관계의 안목으로.
                     </p>
                   </div>
 
@@ -1921,26 +1918,26 @@ export default function SeoncheonCodeBigiPage() {
                             BEFORE
                           </span>
                           <h3 className="text-lg md:text-xl font-elegant font-bold text-white/80">
-                            선천코드를 모르던 지난날
+                            선천코드를 모르던 때
                           </h3>
                         </div>
 
                         <ul className="space-y-3.5 text-sm md:text-base text-white/70 font-light">
                           <li className="flex items-start gap-2.5">
                             <span className="text-red-400 font-bold shrink-0">✕</span>
-                            <span>왜 매번 비슷한 유형의 사람에게 상처받는지 이유를 모른 채 자책했다</span>
+                            <span>궁금한 사람이 생길 때마다 누군가의 해석에 의존했다.</span>
                           </li>
                           <li className="flex items-start gap-2.5">
                             <span className="text-red-400 font-bold shrink-0">✕</span>
-                            <span>상대의 기분과 반응에 하루 종일 감정이 롤러코스터처럼 요동쳤다</span>
+                            <span>복잡한 사주 용어와 한자 앞에서 공부를 포기하곤 했다.</span>
                           </li>
                           <li className="flex items-start gap-2.5">
                             <span className="text-red-400 font-bold shrink-0">✕</span>
-                            <span>내 매력을 모른 채 남들의 기준에 맞추려다 자존감만 깎여나갔다</span>
+                            <span>상대가 왜 그런 행동을 하는지 이해하기 어려웠다.</span>
                           </li>
                           <li className="flex items-start gap-2.5">
                             <span className="text-red-400 font-bold shrink-0">✕</span>
-                            <span>갈등이 생기면 어떻게 대처해야 할지 몰라 관계를 망치곤 했다</span>
+                            <span>끌림과 궁합, 이상형의 차이를 구분하기 어려웠다.</span>
                           </li>
                         </ul>
                       </div>
@@ -1960,26 +1957,26 @@ export default function SeoncheonCodeBigiPage() {
                             AFTER
                           </span>
                           <h3 className="text-lg md:text-xl font-elegant font-bold text-[#FAF7F2]">
-                            선천코드 비기를 장착한 후
+                            선천코드 비기를 만난 후
                           </h3>
                         </div>
 
                         <ul className="space-y-3.5 text-sm md:text-base text-[#FAF7F2] font-medium">
                           <li className="flex items-start gap-2.5">
                             <Check className="w-5 h-5 text-[#B7A18A] shrink-0 mt-0.5" />
-                            <span>나의 오행 결핍과 본능을 명확히 알아 불안과 자책의 고리를 완전히 끊어낸다</span>
+                            <span>나와 상대의 만세력을 직접 찾아보고 책의 해석을 참고할 수 있다.</span>
                           </li>
                           <li className="flex items-start gap-2.5">
                             <Check className="w-5 h-5 text-[#B7A18A] shrink-0 mt-0.5" />
-                            <span>상대의 일간과 십성을 판독하여 속마음과 무의식을 정확히 꿰뚫어본다</span>
+                            <span>캐릭터와 인포그래픽으로 명리학에 재미있게 접근한다.</span>
                           </li>
                           <li className="flex items-start gap-2.5">
                             <Check className="w-5 h-5 text-[#B7A18A] shrink-0 mt-0.5" />
-                            <span>나만의 고유한 도화 기운을 깨워 상대를 자연스럽게 끌어당긴다</span>
+                            <span>서로 다른 성향과 사랑의 표현 방식을 이해하는 관점이 넓어진다.</span>
                           </li>
                           <li className="flex items-start gap-2.5">
                             <Check className="w-5 h-5 text-[#B7A18A] shrink-0 mt-0.5" />
-                            <span>끌려다니는 관계가 아닌, 내가 선택하고 주도하는 인연의 주권자가 된다</span>
+                            <span>매력과 끌림, 관계의 조화를 살펴보며 나만의 선택 기준을 세워간다.</span>
                           </li>
                         </ul>
                       </div>
@@ -2049,13 +2046,16 @@ export default function SeoncheonCodeBigiPage() {
                     {/* 저자의 편지 본문 */}
                     <div className="text-[15px] sm:text-[16px] md:text-[18px] text-[#241E25] leading-[1.75] font-normal space-y-3.5 break-keep">
                       <p>
-                        수많은 상담 현장에서 제가 목격한 안타까운 진실은, 대부분의 사람들이 ‘상대의 마음’을 얻으려 애쓰느라 ‘자신의 타고난 기운’을 잃어버린다는 사실이었습니다.
+                        사주와 명리학은 사람을 이해하는 하나의 흥미로운 관점을 제공합니다. 하지만 복잡한 한자와 전문 용어는 많은 분들에게 높은 진입장벽이 되곤 합니다.
                       </p>
                       <p>
-                        사람은 저마다 고유한 선천코드를 가지고 태어납니다. 내 코드를 알고 상대의 코드를 이해하면, 더 이상 상처받지 않고 당당하게 사랑을 이끌어갈 수 있습니다.
+                        저는 어렵게만 느껴졌던 명리학을 누구나 쉽고 재미있게 접할 수 있도록, 사랑과 인연이라는 친숙한 주제로 풀어내고 싶었습니다.
+                      </p>
+                      <p>
+                        나와 상대의 기질을 이해하고, 새로운 인연을 만날 때마다 직접 찾아볼 수 있는 책.
                       </p>
                       <p className="font-semibold text-[#493740]">
-                        《선천코드 비기》가 당신의 인연을 밝히는 가장 밝은 등불이 되어드릴 것입니다.
+                        《선천코드 비기》가 당신의 관계를 바라보는 새로운 시선이 되기를 바랍니다.
                       </p>
                     </div>
                   </div>
@@ -2066,7 +2066,7 @@ export default function SeoncheonCodeBigiPage() {
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 7: 탄생 배경 (단 하나의 비방)
+                Section 7: 책의 탄생 배경
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
@@ -2087,33 +2087,33 @@ export default function SeoncheonCodeBigiPage() {
                       <span className="text-[#B7A18A] font-elegant text-xs md:text-sm font-semibold tracking-[0.25em] uppercase block">
                         THE ONLY SECRET
                       </span>
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-white mt-1 leading-[1.35]">
-                        오직 나와 상대의 심리 암호를 위해 탄생한<br />
-                        <span className="text-[#B7A18A]">단 하나의 비방(祕記)</span>
+                      <h2 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-white mt-1 leading-[1.35]">
+                        어려웠던 사주를,<br />
+                        <span className="text-[#B7A18A]">가장 흥미로운 이야기로 풀어내다.</span>
                       </h2>
                     </div>
 
                     <div className="space-y-4 text-[16px] md:text-[18px] text-[#EDE6DA] leading-[1.8] font-normal break-keep">
                       <p>
-                        더 이상 운명이라는 말 뒤에 숨어 자책하지 마십시오.
+                        복잡한 한자와 명리학 이론 속에는 사람의 기질과 매력, 사랑과 인연에 관한 다양한 해석이 담겨 있습니다.
                       </p>
                       <p className="text-white font-semibold">
-                        인연은 맹목적으로 믿는 것이 아니라, 선천코드를 판독하여 지혜롭게 다스리는 것입니다.
+                        《선천코드 비기》는 이러한 내용을 캐릭터와 도감, 인포그래픽을 활용하여 누구나 이해하기 쉬운 언어로 풀어낸 책입니다.
                       </p>
                       <p>
-                        《선천코드 비기》는 단순한 이론서가 아니라, 10대 일간과 십성의 본능, 도화의 매혹, 이상형 판별까지 실전에 즉각 적용할 수 있는 압축 도감입니다.
+                        공부하기 위해 억지로 읽는 책이 아니라, 사람이 궁금해져 자연스럽게 펼쳐보는 책을 만들고자 했습니다.
                       </p>
                     </div>
 
-                    {/* 6대 특징 알약형 카드 */}
+                    {/* 핵심 콘텐츠 키워드 알약형 카드 */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                       {[
-                        "사주 오행 심리 암호 해독",
-                        "십성 5대 무의식 본능 분석",
-                        "10대 일간 페르소나 도감",
-                        "도화와 매혹의 비밀 공식",
-                        "이상형 & 배우자 복덕 판별",
-                        "오행 조화 디지털 비첩 제공"
+                        "만세력 3대 핵심 좌표 읽기",
+                        "십성 5대 본능 캐릭터",
+                        "10대 일간 매력 페르소나",
+                        "도화와 본능적 끌림의 비밀",
+                        "이상형과 배우자 프로필 도감",
+                        "궁합·관계 충돌·재회 해설"
                       ].map((item, idx) => (
                         <div
                           key={idx}
@@ -2165,23 +2165,23 @@ export default function SeoncheonCodeBigiPage() {
                     {[
                       {
                         num: "01",
-                        title: "반복되는 연애 상처에 지친 분",
-                        desc: "늘 비슷한 패턴으로 상처받고 끝나버리는 관계의 근본 원인을 뿌리 뽑고 싶으신 분"
+                        title: "사주를 쉽고 재미있게 만나고 싶은 분",
+                        desc: "복잡한 한자와 어려운 전문 용어 때문에 사주 공부를 망설였던 분."
                       },
                       {
                         num: "02",
-                        title: "상대의 속마음이 답답한 분",
-                        desc: "도무지 알 수 없는 상대방의 태도와 방어기제를 심리학적으로 명쾌히 판독하고 싶으신 분"
+                        title: "좋아하는 사람을 더 이해하고 싶은 분",
+                        desc: "연인, 썸을 타는 상대, 관심 있는 사람의 기질과 연애 성향이 궁금한 분."
                       },
                       {
                         num: "03",
-                        title: "나만의 고유한 매력을 찾고 싶은 분",
-                        desc: "남들의 기준에 휘둘리지 않고 타고난 도화와 본능의 매혹을 당당하게 발현하고 싶으신 분"
+                        title: "나만의 매력과 연애 성향을 발견하고 싶은 분",
+                        desc: "타고난 기질과 도화의 특성, 본능적인 끌림과 이상형을 살펴보고 싶은 분."
                       },
                       {
                         num: "04",
-                        title: "운명적 인연을 알아보고 싶은 분",
-                        desc: "평생을 함께할 동반자의 기운을 분별하고, 악연을 걸러내어 행복한 관계를 주도하고 싶으신 분"
+                        title: "인연을 바라보는 나만의 기준을 세우고 싶은 분",
+                        desc: "궁합, 배우자, 관계의 갈등과 반복되는 패턴을 이해하며 지혜롭게 관계를 선택하고 싶은 분."
                       }
                     ].map((card, idx) => (
                       <div
@@ -2272,11 +2272,11 @@ export default function SeoncheonCodeBigiPage() {
                       CURRICULUM &amp; ARCHITECTURE
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-[#FAF7F2] leading-[1.4] break-keep">
-                      &ldquo;인연을 막연한 감에 맡기지 마십시오.<br />
-                      <span className="text-[#B7A18A]">《선천코드 비기》가 안내하는 오행 심리 설계도</span>&rdquo;
+                      나의 매력에서 인연의 비밀까지,<br />
+                      <span className="text-[#B7A18A]">사랑을 이해하는 7개의 선천코드</span>
                     </h2>
                     <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] max-w-3xl mx-auto font-normal leading-[1.8] break-keep">
-                      인간 본능의 지도부터 10대 일간 도감, 십성 분석, 도화 매혹의 원리까지 체계적으로 담았습니다.
+                      십성 캐릭터와 일간 페르소나에서 시작해 도화, 이상형, 배우자, 관계의 그림자, 재회와 궁합까지. 사랑과 인연을 바라보는 다양한 해석을 한 권에 담았습니다.
                     </p>
                   </div>
 
@@ -2306,14 +2306,13 @@ export default function SeoncheonCodeBigiPage() {
                       THE SEONCHEON MECHANISM
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] md:leading-[1.5] break-keep">
-                      인연의 갈등을 감정으로 풀지 마십시오.<br />
+                      만세력 속 작은 글자에서,<br />
                       <span className="text-[#B7A18A]">
-                        나의 선천코드를 파악하고,<br />
-                        상대의 본능을 꿰뚫습니다.
+                        사람과 사랑을 이해하는 새로운 세계로.
                       </span>
                     </h2>
                     <p className="text-sm md:text-base text-[#EDE6DA]/70 font-light">
-                      관계를 변화시키는 힘은 눈물이 아니라 &lsquo;오행의 조화와 본능의 암호 해독&rsquo;에서 나옵니다.
+                      복잡한 명리학을 모두 공부할 필요는 없습니다. 책에서 안내하는 핵심 좌표와 캐릭터 도감부터 차근차근 살펴보세요.
                     </p>
                   </div>
 
@@ -2333,36 +2332,36 @@ export default function SeoncheonCodeBigiPage() {
                             STEP 01
                           </span>
                           <SeoncheonBadge>
-                            선천코드 &amp; 오행 분석
+                            나의 선천코드
                           </SeoncheonBadge>
                         </div>
                         <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
-                          나의 결핍 파악 및 내면 중심 회복
+                          나의 선천코드를 발견하다
                         </h3>
                         <p className="text-sm md:text-base text-[#EDE6DA]/90 leading-relaxed font-light">
-                          내가 왜 특정 기운에 이토록 취약한지, 내 사주 오행의 과다와 결핍을 분석하여 감정의 불안을 멈춥니다.
+                          일간·일지·월지를 찾아보고 나의 매력, 관계 성향, 이상형에 대한 해설을 살펴봅니다.
                         </p>
                         <ul className="space-y-2.5 text-xs sm:text-sm text-[#FAF7F2] pt-2">
                           <li className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#B7A18A]" />
-                            <span>1단계: 만세력 핵심 3글자(일간·일지·월지) 확인</span>
+                            <span>만세력 핵심 3글자 확인</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#B7A18A]" />
-                            <span>2단계: 오행 불균형 진단(목화토금수 에너지 분포)</span>
+                            <span>오행과 십성의 기본 특성 이해</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#B7A18A]" />
-                            <span>3단계: 반복되던 관계 결핍의 심리적 기원 자각</span>
+                            <span>10대 일간 매력 페르소나 확인</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#B7A18A]" />
-                            <span>4단계: 내 고유한 도화 기운 점검 및 매혹 발현</span>
+                            <span>나의 도화와 고유한 매력 살펴보기</span>
                           </li>
                         </ul>
                       </div>
                       <div className="p-4 rounded-xl bg-black/40 border border-[#B7A18A]/20 text-xs text-[#B7A18A] font-light">
-                        💡 나를 먼저 아는 것이 상대를 움직이는 가장 빠른 지름길입니다.
+                        💡 나를 이해하는 즐거움에서, 상대를 이해하는 새로운 시선으로.
                       </div>
                     </div>
 
@@ -2381,32 +2380,36 @@ export default function SeoncheonCodeBigiPage() {
                             STEP 02
                           </span>
                           <SeoncheonBadge>
-                            십성 본능 &amp; 상생의 관계
+                            상대의 선천코드
                           </SeoncheonBadge>
                         </div>
                         <h3 className="text-xl md:text-2xl font-elegant font-bold text-[#FAF7F2] leading-[1.4]">
-                          상대의 본능 암호 해독 및 관계 주도
+                          상대의 선천코드를 이해하다
                         </h3>
                         <p className="text-sm md:text-base text-[#EDE6DA]/90 leading-relaxed font-light">
-                          상대의 십성 5대 본능(비겁·식상·재성·관성·인성)을 꿰뚫어 상대가 거부할 수 없는 대화와 매혹을 완성합니다.
+                          상대의 만세력 정보를 알고 있다면 동일한 방법으로 책의 캐릭터와 관계 해설을 참고할 수 있습니다.
                         </p>
                         <ul className="space-y-2.5 text-xs sm:text-sm text-[#FAF7F2] pt-2">
                           <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-[#B7A18A]" />
-                            <span>1단계: 상대 일간 캐릭터 및 핵심 방어기제 해독</span>
+                            <span>상대의 일간 캐릭터 찾아보기</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-[#B7A18A]" />
-                            <span>2단계: 상대 십성 본능에 맞춘 맞춤형 심리 접근</span>
+                            <span>십성으로 보는 사랑의 표현 방식 이해</span>
                           </li>
                           <li className="flex items-center gap-2">
                             <Check className="w-4 h-4 text-[#B7A18A]" />
-                            <span>3단계: 상극의 충돌을 피하고 상생의 조화 공식 실천</span>
+                            <span>나와 상대의 끌림과 차이점 살펴보기</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <Check className="w-4 h-4 text-[#B7A18A]" />
+                            <span>궁합과 관계의 조화에 대한 해설 참고하기</span>
                           </li>
                         </ul>
                       </div>
                       <div className="p-4 rounded-xl bg-[#493740]/50 border border-[#B7A18A]/40 text-xs text-[#FAF7F2] font-medium">
-                        ✨ 이때 상대방은 &lsquo;이 사람은 나를 정말 깊이 이해해주는구나&rsquo; 느끼며 자발적으로 다가옵니다.
+                        ✨ 나를 이해하는 즐거움에서, 상대를 이해하는 새로운 시선으로.
                       </div>
                     </div>
                   </div>
@@ -2913,11 +2916,11 @@ export default function SeoncheonCodeBigiPage() {
                       CORE DIFFERENTIATION
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      왜 《선천코드 비기》여야만 하는가?<br />
-                      <span className="text-[#B7A18A]">기존의 뻔한 사주·연애 상담과의 3대 결정적 차이</span>
+                      읽는 재미에, 찾아보는 재미까지.<br />
+                      <span className="text-[#B7A18A]">선천코드 비기만의 3대 실전 도감</span>
                     </h2>
                     <p className="text-[#EDE6DA]/85 text-[17px] md:text-[18px] mt-2 font-normal leading-[1.8] break-keep">
-                      두루뭉술한 미신이나 뜬구름 잡는 위로가 아닌, 오행 본능과 심리학이 결합된 실전 솔루션.
+                      두루뭉술한 미신이 아닌, 캐릭터와 도감으로 사람을 이해하고 관계의 지혜를 세우는 실전 해설서.
                     </p>
                   </div>
 
@@ -2945,19 +2948,16 @@ export default function SeoncheonCodeBigiPage() {
                                 CARD 01
                               </span>
                               <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
-                                미신이 아닌 인간 심리 본능
+                                십성 5대 본능 캐릭터
                               </h3>
                             </div>
                           </div>
                         </div>
 
                         <div className="space-y-4">
-                          <p className="text-[16px] md:text-[17px] font-bold text-[#B7A18A] leading-[1.55] break-keep">
-                            막연한 길흉화복 예언이 아닌 &lsquo;오행 심리 역학&rsquo;입니다.
-                          </p>
                           <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
                             <p>
-                              사주를 현대 관계 심리학의 언어로 완벽히 재해석하여, 왜 그런 행동을 하고 무엇을 두려워하는지 상대의 뇌 속 지도를 명쾌히 읽어냅니다.
+                              사랑 앞에서 드러나는 서로 다른 본능과 관계의 표현 방식을 개성 있는 캐릭터로 만나보세요.
                             </p>
                           </div>
                         </div>
@@ -2987,19 +2987,16 @@ export default function SeoncheonCodeBigiPage() {
                                 CARD 02
                               </span>
                               <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
-                                만세력 3분 판독 실전 도구
+                                10대 일간 매력 페르소나
                               </h3>
                             </div>
                           </div>
                         </div>
 
                         <div className="space-y-4">
-                          <p className="text-[16px] md:text-[17px] font-bold text-[#B7A18A] leading-[1.55] break-keep">
-                            어려운 한자 없이 누구나 따라 할 수 있는 직관적 도감입니다.
-                          </p>
                           <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
                             <p>
-                              스마트폰 무료 만세력 앱과 이 책 한 권이면, 나와 상대의 핵심 3글자만 찾아내어 관계의 본질을 즉시 파악할 수 있습니다.
+                              거목의 수호자 갑목, 화초형 힐러 을목, 태양의 주인공 병화처럼 각 일간의 고유한 매력과 관계 성향을 흥미롭게 살펴봅니다.
                             </p>
                           </div>
                         </div>
@@ -3029,19 +3026,16 @@ export default function SeoncheonCodeBigiPage() {
                                 CARD 03
                               </span>
                               <h3 className="text-[18px] md:text-[20px] font-bold font-elegant text-[#FAF7F2]">
-                                평생의 인연 주권 회복
+                                사랑과 인연의 시각적 해설
                               </h3>
                             </div>
                           </div>
                         </div>
 
                         <div className="space-y-4">
-                          <p className="text-[16px] md:text-[17px] font-bold text-[#B7A18A] leading-[1.55] break-keep">
-                            일회성 위로가 아닌 &lsquo;평생 내 삶을 지켜주는 안목&rsquo;입니다.
-                          </p>
                           <div className="space-y-3 text-[14px] sm:text-[15px] text-[#EDE6DA]/90 leading-[1.75] font-normal break-keep">
                             <p>
-                              내 매혹의 원천인 도화 기운을 회복하고, 악연을 걸러내어 나를 온전히 사랑해줄 귀인을 판별하는 평생의 지혜를 얻게 됩니다.
+                              도화, 이상형, 배우자, 궁합과 관계 충돌까지 복잡한 개념을 인포그래픽과 도감으로 이해하고 필요한 순간 다시 찾아볼 수 있습니다.
                             </p>
                           </div>
                         </div>
@@ -3199,8 +3193,8 @@ export default function SeoncheonCodeBigiPage() {
 
                       <div className="pt-1">
                         <p className="text-[20px] md:text-[24px] font-elegant font-bold text-[#FAF7F2] leading-[1.6] break-keep">
-                          “읽고 끝나는 책이 아니라,<br className="hidden sm:inline" />
-                          {' '}점검하고 적용하는 <span className="text-[#B7A18A]">‘실전 인연 분석 노트’</span>”
+                          어렵지 않습니다.<br className="hidden sm:inline" />
+                          {' '}이렇게 펼쳐보세요.
                         </p>
                       </div>
 
@@ -3213,20 +3207,20 @@ export default function SeoncheonCodeBigiPage() {
                       <div className="flex flex-col gap-2 md:gap-2.5 pt-1">
                         {[
                           {
-                            title: "1. 나와 상대의 선천코드를 판독하세요.",
-                            desc: "무료 만세력 앱으로 일간, 일지, 월지 3글자를 찾아내어 타고난 오행 분포를 확인합니다."
+                            title: "STEP 01. 만세력을 확인하세요.",
+                            desc: "스마트폰 만세력에서 일간, 일지, 월지의 위치를 확인합니다. 책에 수록된 만세력 판독법을 활용하면 초보자도 쉽게 따라갈 수 있습니다."
                           },
                           {
-                            title: "2. 십성 5대 본능과 방어기제를 분석하세요.",
-                            desc: "상대가 어떤 지점에서 불안을 느끼고 무엇을 갈망하는지 무의식 엔진을 해독합니다."
+                            title: "STEP 02. 나와 상대의 캐릭터를 찾아보세요.",
+                            desc: "10대 일간 페르소나와 십성 캐릭터 도감에서 각자의 기질과 매력에 관한 해설을 찾아봅니다."
                           },
                           {
-                            title: "3. 상생의 대화법과 도화 기운을 발현하세요.",
-                            desc: "상극의 충돌을 피하고 나만의 도화 매혹을 은은하게 피워내어 호감과 신뢰를 극대화합니다."
+                            title: "STEP 03. 궁금한 관계의 주제를 펼쳐보세요.",
+                            desc: "이상형, 본능적 끌림, 도화, 배우자, 궁합, 갈등, 재회 등 지금 궁금한 주제를 선택해 읽어보세요."
                           },
                           {
-                            title: "4. 평생의 귀인과 배우자 복덕을 확정하세요.",
-                            desc: "나를 진정으로 행복하게 해줄 인연인지, 상생과 상극의 지표로 관계의 미래를 점검합니다."
+                            title: "STEP 04. 나만의 관계 기준을 세워보세요.",
+                            desc: "책의 해석과 실제 관계에서 경험하는 행동과 감정을 함께 살펴보며 자신에게 맞는 관계와 선택의 기준을 정리합니다."
                           }
                         ].map((guide, idx) => (
                           <div
@@ -3330,15 +3324,9 @@ export default function SeoncheonCodeBigiPage() {
                       POSITION SHIFT
                     </span>
                     <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white leading-[1.4] break-keep">
-                      &ldquo;관계를 바꾸는 것은 상대의 눈치를 보는 것이 아니라,<br />
-                      <span className="text-[#B7A18A]">나의 중심과 기운을 온전히 세우는 일입니다.&rdquo;</span>
+                      사람을 이해하는 시선이 깊어질수록,<br />
+                      <span className="text-[#B7A18A]">인연을 선택하는 나의 기준도 선명해집니다.</span>
                     </h2>
-                    <div className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep space-y-2">
-                      <p>
-                        상대방의 마음에만 매달리며 불안해하던 순간들.<br />
-                        이제는 내 타고난 고유한 본성을 깨우고, 인연의 주권자로 당당히 서십시오.
-                      </p>
-                    </div>
                   </div>
 
                   <div className="relative w-full aspect-[16/9] md:aspect-[1672/941] rounded-2xl md:rounded-[20px] overflow-hidden shadow-2xl flex items-center justify-center border border-[#B7A18A]/30">
@@ -3360,16 +3348,16 @@ export default function SeoncheonCodeBigiPage() {
                       className="text-[26px] sm:text-[30px] md:text-[36px] font-elegant font-bold text-[#FAF7F2] break-keep"
                       style={{ lineHeight: 1.4 }}
                     >
-                      “을(乙)의 자리를 떠나,<br />
-                      이제 스스로 <span className="text-[#B7A18A]">‘인연의 주권자’</span>가 되십시오.”
+                      나를 읽고, 상대를 이해하고,<br />
+                      스스로 <span className="text-[#B7A18A]">인연을 선택하는 사람</span>
                     </h3>
 
                     <div className="space-y-3 text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep pt-2">
                       <p>
-                        매달리는 연애에서, 상대를 끌어당기는 사랑으로.
+                        정해진 운명에 순응하는 것이 아니라, 나의 기질과 상대의 차이를 이해하며 관계를 주체적으로 바라보는 것.
                       </p>
                       <p className="text-[#B7A18A] font-bold font-elegant text-[18px] md:text-[20px] pt-1">
-                        선천코드를 아는 순간, 당신의 모든 인연이 새로워집니다.
+                        그것이 선천코드 비기가 전하고 싶은 인연의 지혜입니다.
                       </p>
                     </div>
                   </div>
@@ -3388,7 +3376,7 @@ export default function SeoncheonCodeBigiPage() {
             <AntiqueDivider />
 
             {/* ═══════════════════════════════════════════════════════════════
-                Section 17: REAL LIFE TRANSFORMATIONS (실전 체감 사례)
+                Section 17: REAL LIFE TRANSFORMATIONS (선천코드 비기 실전 활용 예시)
                ═══════════════════════════════════════════════════════════════ */}
             <section className="mb-28 text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
@@ -3397,10 +3385,10 @@ export default function SeoncheonCodeBigiPage() {
                     REAL LIFE TRANSFORMATIONS
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
-                    실전 체감 사례
+                    선천코드 비기 실전 활용 예시
                   </h2>
                   <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
-                    선천코드를 통해 관계의 불안을 극복하고, 나만의 고유한 매혹을 깨운 생생한 변화를 살펴보세요.
+                    ※ 본 사례는 도서의 이해를 돕기 위해 구성된 가상의 실전 활용 예시입니다.
                   </p>
                 </div>
 
@@ -3495,13 +3483,13 @@ export default function SeoncheonCodeBigiPage() {
                     Comparison Table
                   </span>
                   <h2 className="text-2xl md:text-[36px] font-elegant font-bold text-white tracking-wide leading-[1.4] break-keep">
-                    단 한 권으로 끝내는<br />
-                    <span className="text-[#B7A18A]">압도적인 실전 가치</span>
+                    한 번의 궁금증을 넘어,<br />
+                    <span className="text-[#B7A18A]">새로운 인연마다 함께하는 소장 가치</span>
                   </h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
-                  {/* 일반 사주/타로 상담 */}
+                  {/* 일반적인 1회성 해석 서비스 */}
                   <div
                     className="p-7 sm:p-9 rounded-2xl md:rounded-3xl border border-white/10 text-left flex flex-col justify-between h-full relative"
                     style={{
@@ -3510,35 +3498,35 @@ export default function SeoncheonCodeBigiPage() {
                   >
                     <div className="pb-5 mb-6 border-b border-white/10 min-h-[48px] md:min-h-[56px] flex items-center">
                       <h3 className="text-[20px] md:text-[22px] font-bold font-elegant text-white/70">
-                        일반 사주·타로 상담
+                        일반적인 1회성 해석 서비스
                       </h3>
                     </div>
 
                     <div className="space-y-6 flex-1 flex flex-col justify-between">
                       <div>
                         <span className="text-[14px] font-semibold text-white/50 block mb-1.5">
-                          비용
+                          특징
                         </span>
-                        <div className="text-[24px] md:text-[28px] font-bold font-elegant text-white/80 leading-none mb-1">
-                          1회 5만 ~ 15만<span className="text-[16px] font-normal text-white/60 ml-1">원</span>
+                        <div className="text-[20px] md:text-[22px] font-bold font-elegant text-white/80 leading-none mb-1">
+                          특정 시점의 고민을 중심으로 해석
                         </div>
                       </div>
 
                       <div>
                         <span className="text-[14px] font-semibold text-white/50 block mb-1.5">
-                          내용
+                          적용 범위
                         </span>
                         <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.7] break-keep">
-                          단순 길흉화복 예언 및 일회성 소비, 돌아서면 잊혀짐
+                          신청한 대상과 주제에 집중
                         </p>
                       </div>
 
                       <div>
                         <span className="text-[14px] font-semibold text-white/50 block mb-1.5">
-                          실행 도구
+                          한계
                         </span>
                         <p className="text-[15px] md:text-[16px] text-white/70 leading-[1.7] break-keep">
-                          구체적 행동 지침 없음, 내담자의 불안만 가중
+                          새로운 궁금증이 생기면 추가 해석이 필요할 수 있음
                         </p>
                       </div>
                     </div>
@@ -3568,8 +3556,8 @@ export default function SeoncheonCodeBigiPage() {
                         <span className="text-[14px] font-semibold text-[#B7A18A] block mb-1.5">
                           소장 가치
                         </span>
-                        <div className="text-[28px] md:text-[32px] font-bold font-elegant text-[#FAF7F2] leading-none mb-1">
-                          평생 영구 소장<span className="text-[13px] md:text-[14px] font-normal text-[#FAF6EE]/80 ml-2 font-sans">(출간 예정)</span>
+                        <div className="text-[20px] md:text-[22px] font-bold font-elegant text-[#FAF7F2] leading-none mb-1">
+                          나와 다양한 사람의 성향을 살펴보는 참고서
                         </div>
                       </div>
 
@@ -3578,16 +3566,16 @@ export default function SeoncheonCodeBigiPage() {
                           내용
                         </span>
                         <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-[1.7] break-keep">
-                          <span className="text-[#B7A18A] font-bold">오행 심리 분석</span> + 십성 본능 해독 + 도화 매혹
+                          매력·이상형·궁합·배우자·재회 등 다양한 주제 수록
                         </p>
                       </div>
 
                       <div>
                         <span className="text-[14px] font-semibold text-[#B7A18A] block mb-1.5">
-                          실행 도구
+                          활용성
                         </span>
                         <p className="text-[16px] md:text-[17px] text-[#FAF7F2] font-medium leading-[1.7] break-keep">
-                          스마트폰 <span className="text-[#B7A18A] font-bold">3분 만세력 판독표</span> + 이상형·배우자 판별 워크시트
+                          궁금한 순간마다 반복 확인 및 관계를 이해하는 관점 확장
                         </p>
                       </div>
                     </div>
@@ -3766,12 +3754,13 @@ export default function SeoncheonCodeBigiPage() {
                   A WORD FOR YOUR HEART
                 </span>
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] font-elegant font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-[1.4] md:leading-[1.42] break-keep">
-                  사람이 궁금해질 때마다<br />
-                  <span className="text-[#FAF7F2]">언제든 다시 펼쳐보는 관계 도감</span>
+                  사람이 궁금해질 때마다,<br />
+                  <span className="text-[#FAF7F2]">언제든 다시 펼쳐보는 관계 도감.</span>
                 </h3>
                 <p className="text-xs sm:text-sm md:text-base text-[#EDE6DA]/85 font-light leading-relaxed mb-5 sm:mb-6 break-keep">
-                  이해하기 어려운 상대의 마음 앞에서 무너지지 마세요.<br className="hidden sm:inline" />
-                  선천코드를 아는 순간, 당신은 사람을 읽고 관계를 주도하는 온전한 주권자가 됩니다.
+                  새로운 인연을 만났을 때도,<br className="hidden sm:inline" />
+                  사랑하는 사람을 더 이해하고 싶을 때도.<br />
+                  캐릭터로 만나고, 그림으로 이해하며, 나와 상대의 선천코드를 하나씩 찾아보세요.
                 </p>
 
                 {/* 하단 앵커 링크 */}
@@ -3780,7 +3769,7 @@ export default function SeoncheonCodeBigiPage() {
                     href="#final-cta"
                     className="inline-flex items-center gap-2 text-sm sm:text-base md:text-lg text-[#B7A18A] hover:text-[#FAF7F2] font-elegant font-bold tracking-wide transition-all group/link cursor-pointer"
                   >
-                    <span>인연의 주권자로 바로서기</span>
+                    <span>인연을 바라보는 새로운 시선 만나기</span>
                     <span className="text-xs transition-transform duration-300 group-hover/link:translate-x-1">→</span>
                   </a>
                 </div>
