@@ -115,13 +115,13 @@ export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
   // 8. Anxiety: 관계의 불안과 자책
   anxiety: {
     id: 'anxiety',
-    src: '/image/seoncheon-code-secret-book.webp',
-    alt: '왜 매번 비슷한 상처 앞에서 무너질까 - 관계 불안 공감',
+    src: '/image/seoncheon-code-bigi/relationship-disconnection.webp',
+    alt: '같은 침대, 같은 공간에 있어도 우리는 왜 늘 다른 곳을 바라볼까요 - 관계 불안 공감',
     aspectRatio: 'aspect-[3/4]',
     objectFit: 'cover',
-    placeholderLabel: '관계 불안 및 반복되는 패턴 공감',
-    description: '불안과 자책의 순간을 다룬 공감 비주얼',
-    isPlaceholder: true,
+    placeholderLabel: '관계 불안 및 반복되는 패턴 공감 (3:4)',
+    description: '단절된 시선과 관계의 거리감을 다룬 3:4 비주얼 이미지 적용 완료',
+    isPlaceholder: false,
   },
 
   // 9. Curriculum: 전체 아키텍처 인포그래픽

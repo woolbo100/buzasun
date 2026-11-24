@@ -72,7 +72,7 @@ const productData = {
   bookPreviewGuideImage: '/image/seoncheon-code-secret-book.webp',
   bookPreviewToolsImage: '/image/seoncheon-code-secret-book.webp',
   bookPreviewJourneyImage: '/image/seoncheon-code-secret-book.webp',
-  anxietyImage: '/image/seoncheon-code-secret-book.webp',
+  anxietyImage: '/image/seoncheon-code-bigi/relationship-disconnection.webp',
 }
 
 // 🏷️ 통일된 묵자색 뱃지 컴포넌트 (배경 #493740 · 테두리 #B7A18A · 텍스트 #F2EAE0)
