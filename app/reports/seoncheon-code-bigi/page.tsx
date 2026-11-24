@@ -821,7 +821,7 @@ export default function SeoncheonCodeBigiPage() {
             <section className="mb-[64px] md:mb-[112px] text-left w-full max-w-[1280px] mx-auto">
               <Reveal>
                 <div className="space-y-10">
-                  <div className="text-center max-w-3xl mx-auto space-y-5">
+                  <div className="text-center max-w-3xl mx-auto space-y-4">
                     <span className="text-[#B7A18A] font-elegant text-[12pt] font-semibold tracking-[0.2em] uppercase block">
                       PAIN POINT &amp; HOOK
                     </span>
@@ -829,6 +829,9 @@ export default function SeoncheonCodeBigiPage() {
                       사람의 마음이 궁금했던 순간,<br />
                       <span className="text-[#B7A18A]">당신에게도 이런 질문이 있었나요?</span>
                     </h2>
+                    <p className="text-[17px] md:text-[18px] text-[#EDE6DA]/85 leading-[1.8] font-normal break-keep">
+                      이름과 얼굴만 바뀌었을 뿐, 왜 내 연애는 늘 똑같은 비극으로 끝날까요? 머리로는 피해야 할 사람인 줄 알면서, 왜 가슴은 기어이 그 사람에게 무장해제될까요? 당신이 매번 비슷한 연애로 무너진 이유는 매력이 부족해서가 아닙니다. 나와 상대의 선천코드 암호를 몰라 맨몸으로 부딪혔기 때문입니다.
+                    </p>
                   </div>
 
                   <div className="grid lg:grid-cols-12 gap-10 items-start">
