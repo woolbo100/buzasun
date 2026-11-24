@@ -16,6 +16,18 @@ export interface SeoncheonCodeAssetItem {
 }
 
 export const seoncheonCodeAssets: Record<string, SeoncheonCodeAssetItem> = {
+  // 0. Top Banner / Main Hero: 최상단 와이드 배너 (16:9)
+  topBanner: {
+    id: 'topBanner',
+    src: '/image/seoncheon-code-bigi/hero-secret-code.webp',
+    alt: '선천코드 비기(先天코드 祕記) 최상단 메인 히어로 배너',
+    aspectRatio: 'aspect-[16/9]',
+    objectFit: 'cover',
+    placeholderLabel: '선천코드 비기 메인 히어로 배너 (16:9)',
+    description: '최상단 16:9 와이드 메인 히어로 이미지 적용 완료',
+    isPlaceholder: false,
+  },
+
   // 1. Hero: 패키지 전체 및 메인 표지 / 구매 카드 목업
   hero: {
     id: 'hero',

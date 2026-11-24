@@ -56,7 +56,7 @@ const productData = {
   regularPrice: 79000,
   discountRate: '63% OFF',
 
-  topBannerImage: '/image/seoncheon-code-secret-book.webp',
+  topBannerImage: '/image/seoncheon-code-bigi/hero-secret-code.webp',
   heroImage: '/image/seoncheon-code-bigi/book-purchase-mockup.webp',
   overviewImage: '/image/seoncheon-code-secret-book.webp',
   recommendedImage: '/image/seoncheon-code-secret-book.webp',
