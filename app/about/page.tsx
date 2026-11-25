@@ -3,10 +3,12 @@ import Footer from '@/components/Footer'
 import GlobalBackground from '@/components/GlobalBackground'
 
 // 신규 및 확장 브랜드 소개 섹션 컴포넌트
+import CustomerQuestionSection from '@/components/about/CustomerQuestionSection'
 import PhilosophySection from '@/components/about/PhilosophySection'
 import BeyondRulesSection from '@/components/about/BeyondRulesSection'
 import LoveSecretCodeSection from '@/components/about/LoveSecretCodeSection'
 import LoveStrategyComparisonSection from '@/components/about/LoveStrategyComparisonSection'
+import FourWayComparisonSection from '@/components/about/FourWayComparisonSection'
 import QuestionsSection from '@/components/about/QuestionsSection'
 import NameMeaningSection from '@/components/about/NameMeaningSection'
 import OriginBackgroundSection from '@/components/about/OriginBackgroundSection'
@@ -56,18 +58,26 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* =========================================================================
+            [신규 도입부] 고객의 고민에서 시작하는 메시지 영역
+            ========================================================================= */}
+        <CustomerQuestionSection />
+
         {/* 01. 브랜드 핵심 철학 및 메인 메시지 */}
         <PhilosophySection />
 
-        {/* --- [선천코드 차별화 및 시각적 콘텐츠 추가 3개 영역] --- */}
+        {/* --- [선천코드 차별화 및 시각적 콘텐츠 영역] --- */}
         {/* NEW 01. 핵심 차별화 메시지 (BEYOND THE RULES OF LOVE) */}
         <BeyondRulesSection />
 
-        {/* NEW 02. 백도화의 선천코드 연애 설계 (THE SECRET CODE OF LOVE 인포그래픽) */}
+        {/* NEW 02. 백도화의 선천코드 연애 설계 (THE SECRET CODE OF LOVE 인포그래픽 - 절대 유지) */}
         <LoveSecretCodeSection />
 
-        {/* NEW 03. 보편적인 연애 공식과 선천코드 맞춤 전략 비교 (A DIFFERENT PERSPECTIVE) */}
+        {/* NEW 03. 보편적인 연애 공식과 선천코드 맞춤 전략 비교 (2자 비교 카드 유지) */}
         <LoveStrategyComparisonSection />
+
+        {/* NEW 04. 백도화의 4자 비교 영역 (연애 콘텐츠, 일반 상담, 전통 사주, 백도화 카드형 매트릭스) */}
+        <FourWayComparisonSection />
 
         {/* 02. 백도화가 세상에 던지는 질문 */}
         <QuestionsSection />

@@ -103,15 +103,14 @@ export default function LoveStrategyComparisonSection() {
           </Reveal>
         </div>
 
-        {/* 비교 카드 하단 핵심 메시지 (36~40px 기준 명조 계열) */}
+        {/* 비교 카드 하단 결론 문구 (신규 4자 비교 영역과의 문구 중복을 방지하고 2자 대비의 결론에 집중) */}
         <Reveal delayMs={450}>
-          <div className="mt-20 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-[var(--accent-gold)] mb-4 leading-tight">
-              사랑에도 나만의 방식이 있습니다.
+          <div className="mt-16 text-center max-w-3xl mx-auto">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-3 leading-tight">
+              보편적인 공식을 넘어, 나만의 맞춤 전략으로.
             </h3>
-            <p className="text-base sm:text-xl text-[#EDE6DA] opacity-85 font-light leading-relaxed">
-              누군가의 공식을 따라가는 사랑에서<br className="sm:hidden" />{' '}
-              나를 이해하고 선택하는 사랑으로.
+            <p className="text-sm sm:text-base md:text-lg text-[#EDE6DA] opacity-80 font-light leading-relaxed">
+              남을 흉내 내는 공식이 아닌, 나의 선천코드에 최적화된 사랑의 솔루션을 제시합니다.
             </p>
           </div>
         </Reveal>

@@ -27,7 +27,7 @@ export default function BeyondRulesSection() {
               <BaekdohwaFlowerMark size={480} watermark={true} />
             </div>
 
-            {/* 메인 제목 (PC 기준 42~48px 품격 있는 명조 계열) */}
+            {/* 메인 제목 (PC 기준 42~48px 품격 있는 명조 계열 - 핵심 차별화 메시지 유지) */}
             <h2 className="text-2xl sm:text-4xl md:text-[44px] lg:text-[48px] font-elegant font-bold leading-tight sm:leading-snug mb-8 text-[#F5F5F5]">
               모두에게 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">같은 연애 공식</span>이<br className="hidden sm:inline" />{' '}
               통할 수는 없습니다.
@@ -36,19 +36,21 @@ export default function BeyondRulesSection() {
             {/* 얇고 은은한 골드 구분선 */}
             <div className="gold-divider max-w-xs mx-auto my-8 opacity-40" />
 
-            {/* 설명 문구 */}
-            <div className="max-w-2xl mx-auto space-y-2 text-[#EDE6DA] text-base sm:text-lg md:text-xl font-light leading-relaxed opacity-85 mb-10">
+            {/* 백도화의 접근 방식 선언 (신규 도입부와의 중복 설명을 정돈하고 접근 방식 선언 역할로 전환) */}
+            <div className="max-w-2xl mx-auto space-y-4 text-[#EDE6DA] text-base sm:text-lg md:text-xl font-light leading-relaxed opacity-85 mb-10">
               <p>
-                타고난 기질도, 매력도,<br className="sm:hidden" />{' '}
-                사랑에 끌리는 이유도 다르니까요.
+                남들의 기준이나 획일화된 조언에 나를 맞추는 것이 아니라,<br className="hidden sm:inline" />{' '}
+                나의 고유한 기질을 기준으로 관계의 주체성을 회복하는 길.
+              </p>
+              <p className="text-sm sm:text-base text-[#A89BBF] opacity-80">
+                백도화가 제안하는 사랑과 관계의 새로운 접근법입니다.
               </p>
             </div>
 
-            {/* 마지막 핵심 문구 (28~32px 기준, 매트 샴페인 골드) */}
+            {/* 백도화 선언 강조 문구 */}
             <div className="pt-2">
-              <p className="text-xl sm:text-2xl md:text-[30px] font-elegant font-bold text-[#F5F5F5] leading-relaxed tracking-wide">
-                연애의 기술보다 먼저,<br className="sm:hidden" />{' '}
-                <span className="text-[var(--accent-gold)] drop-shadow-[0_0_10px_rgba(212,178,167,0.25)]">당신의 선천코드</span>를 읽으십시오.
+              <p className="text-xl sm:text-2xl md:text-[28px] font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed tracking-wide">
+                정해진 답을 따르는 연애에서, 나를 기준으로 선택하는 사랑으로.
               </p>
             </div>
           </div>
