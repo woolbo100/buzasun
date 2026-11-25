@@ -27,9 +27,9 @@ export default function PhilosophySection() {
               <BaekdohwaFlowerMark size={400} watermark={true} />
             </div>
 
-            {/* 메인 헤드라인 */}
-            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-elegant font-bold leading-tight mb-8 text-[#F5F5F5]">
-              <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">숙명</span>은 주어지지만,<br className="sm:hidden" />{' '}
+            {/* 메인 헤드라인 (모두에게 같은 연애 공식 영역과 크기 및 줄간격 기준 통일 + 명시적 2줄 줄바꿈 적용) */}
+            <h2 className="text-2xl sm:text-4xl md:text-[44px] lg:text-[48px] font-elegant font-bold leading-tight sm:leading-snug mb-8 text-[#F5F5F5] break-keep text-center">
+              <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">숙명</span>은 주어지지만,<br />
               <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">운명</span>은 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">선택</span>하는 것이다.
             </h2>
 
