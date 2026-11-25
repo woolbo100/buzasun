@@ -1,0 +1,128 @@
+'use client'
+
+import React from 'react'
+import Reveal from '@/components/Reveal'
+import { ChevronRight, ChevronDown } from 'lucide-react'
+
+const steps = [
+  {
+    step: 'STEP 01',
+    hanja: '解讀',
+    title: '해독',
+    subtitle: '타고난 나를 이해하다.',
+    desc: '선천코드를 통해 자신의 기질과 성향, 관계에서 나타나는 특성을 탐색합니다.'
+  },
+  {
+    step: 'STEP 02',
+    hanja: '發見',
+    title: '발견',
+    subtitle: '반복되는 패턴을 발견하다.',
+    desc: '지금까지 반복되어 온 감정, 관계 습관과 선택의 흐름을 돌아봅니다.'
+  },
+  {
+    step: 'STEP 03',
+    hanja: '覺醒',
+    title: '각성',
+    subtitle: '익숙한 신념과 선택을 돌아보다.',
+    desc: '자신을 제한하는 신념과 무의식적인 반응을 살피고, 자신과 관계를 바라보는 새로운 관점을 발견합니다.'
+  },
+  {
+    step: 'STEP 04',
+    hanja: '再設計',
+    title: '재설계',
+    subtitle: '새로운 삶의 방향을 선택하다.',
+    desc: '자신에 대한 이해를 바탕으로 보다 주체적인 관계와 삶을 위한 행동을 설계합니다.'
+  }
+]
+
+export default function MethodologySection() {
+  return (
+    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+      <div className="max-w-[1280px] mx-auto w-full">
+        {/* 영문 소제목 */}
+        <Reveal delayMs={100}>
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+              THE PATH TO SELF-MASTERY
+            </span>
+            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+          </div>
+        </Reveal>
+
+        {/* 헤드라인 */}
+        <Reveal delayMs={150}>
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+              선천코드 해독과 운명 재설계
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-[#EDE6DA] opacity-85 leading-relaxed font-light">
+              백도화는 자신을 이해하는 것에서 출발하여 반복되는 패턴을 돌아보고,<br className="hidden sm:inline" />{' '}
+              보다 주체적인 선택을 할 수 있도록 다음의 네 가지 과정을 제안합니다.
+            </p>
+          </div>
+        </Reveal>
+
+        {/* 4단계 카드 구조 (PC 가로 4열, 모바일 세로형 + 화살표 연결) */}
+        <div className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
+            {steps.map((item, idx) => (
+              <React.Fragment key={idx}>
+                <Reveal delayMs={200 + idx * 100}>
+                  <div className="gungjung-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between h-full border border-[rgba(216,191,163,0.2)] hover:border-[var(--accent-gold)] transition-colors duration-400 group">
+                    <div>
+                      {/* 스텝 라벨 및 한자 */}
+                      <div className="flex items-center justify-between mb-4 pb-3 border-b border-[rgba(216,191,163,0.15)]">
+                        <span className="text-xs font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
+                          {item.step}
+                        </span>
+                        <span className="text-sm font-elegant text-[var(--accent-gold)] opacity-60">
+                          {item.hanja}
+                        </span>
+                      </div>
+
+                      {/* 단계 제목 */}
+                      <div className="mb-4">
+                        <h3 className="text-2xl font-elegant font-bold text-[#F5F5F5] group-hover:text-[var(--accent-gold)] transition-colors">
+                          {item.title}{' '}
+                          <span className="text-base font-normal text-[var(--accent-gold)] opacity-80">
+                            {item.hanja}
+                          </span>
+                        </h3>
+                        <p className="text-xs sm:text-sm font-medium text-[var(--accent-gold-light)] mt-1">
+                          {item.subtitle}
+                        </p>
+                      </div>
+
+                      {/* 설명 */}
+                      <p className="text-xs sm:text-sm text-[#EDE6DA] opacity-80 leading-relaxed font-light">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    {/* 모바일용 하향 화살표 (마지막 카드 제외) */}
+                    {idx < 3 && (
+                      <div className="flex justify-center md:hidden pt-4 opacity-40 text-[var(--accent-gold)]">
+                        <ChevronDown size={20} />
+                      </div>
+                    )}
+                  </div>
+                </Reveal>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
+        {/* 하단 핵심 메시지 */}
+        <Reveal delayMs={600}>
+          <div className="mt-16 text-center gungjung-glass max-w-2xl mx-auto p-8 border border-[rgba(216,191,163,0.2)]">
+            <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed">
+              나를 읽고, 패턴을 발견하고,<br className="sm:hidden" />{' '}
+              내면을 깨우며, 운명을 다시 설계하다.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  )
+}

@@ -1,34 +1,51 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import About from '@/components/About'
-import Projects from '@/components/Projects'
 import GlobalBackground from '@/components/GlobalBackground'
+
+// 신규 및 확장 브랜드 소개 섹션 컴포넌트
+import PhilosophySection from '@/components/about/PhilosophySection'
+import QuestionsSection from '@/components/about/QuestionsSection'
+import NameMeaningSection from '@/components/about/NameMeaningSection'
+import OriginBackgroundSection from '@/components/about/OriginBackgroundSection'
+import ThreeLayersDiagram from '@/components/about/ThreeLayersDiagram'
+import MethodologySection from '@/components/about/MethodologySection'
+import PerspectiveComparisonSection from '@/components/about/PerspectiveComparisonSection'
+import ThreeRealmsSection from '@/components/about/ThreeRealmsSection'
+import KnowledgeArchiveSection from '@/components/about/KnowledgeArchiveSection'
+import BaekJangmiStorySection from '@/components/about/BaekJangmiStorySection'
+import IntegratedApproachSection from '@/components/about/IntegratedApproachSection'
+import PrinciplesSection from '@/components/about/PrinciplesSection'
+import TargetAudienceSection from '@/components/about/TargetAudienceSection'
+import ManifestoSection from '@/components/about/ManifestoSection'
+import ClosingCtaSection from '@/components/about/ClosingCtaSection'
 
 export default function AboutPage() {
   return (
     <main className="relative min-h-screen">
       <GlobalBackground src="/image/main4.png">
         <Navigation />
-        
-        {/* 백도화 히어로 소개 */}
-        <section className="pt-44 pb-20 px-6 relative">
-          <div className="container mx-auto max-w-4xl relative z-10">
+
+        {/* =========================================================================
+            [기존 히어로 섹션 완전 보존] 백도화 소개
+            ========================================================================= */}
+        <section className="pt-40 md:pt-48 pb-16 px-4 sm:px-6 relative">
+          <div className="max-w-[1280px] mx-auto w-full relative z-10">
             {/* Rule 5: 텍스트 및 UI 레이어 보호를 위한 궁중유리 카드 */}
-            <div className="gungjung-glass p-8 md:p-16">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-10 gradient-text">
+            <div className="gungjung-glass p-8 sm:p-12 md:p-16">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-8 gradient-text">
                 백도화 소개
               </h1>
-              
-              <div className="space-y-8">
-                <p className="text-lg md:text-xl leading-relaxed text-[#EDE6DA] opacity-90">
-                  백도화 매력학당은 선천코드 분석을 기반으로 한 연애·풍요 솔루션을 제공하는 공간입니다.<br />
+
+              <div className="space-y-6">
+                <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#EDE6DA] opacity-90 font-light">
+                  백도화 매력학당은 선천코드 분석을 기반으로 한 연애·풍요 솔루션을 제공하는 공간입니다.<br className="hidden sm:inline" />{' '}
                   각자의 고유한 에너지 패턴을 분석하여 매력 주파수를 발견하고, 이를 통해 진정한 관계와 풍요로운 삶을 만들어가는 여정을 함께합니다.
                 </p>
-                
-                <div className="gold-divider opacity-30" />
-                
-                <p className="text-lg md:text-xl leading-relaxed text-[#EDE6DA] opacity-80">
-                  청초하고 고급스러운 한국적 미학을 바탕으로, 과학적 접근과 세심한 분석을 통해 여러분의 선천코드를 해석합니다.<br />
+
+                <div className="gold-divider opacity-30 my-6" />
+
+                <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#EDE6DA] opacity-80 font-light">
+                  청초하고 고급스러운 한국적 미학을 바탕으로, 과학적 접근과 세심한 분석을 통해 여러분의 선천코드를 해석합니다.<br className="hidden sm:inline" />{' '}
                   이를 통해 개인의 고유한 매력을 극대화하고, 더 나은 관계와 풍요로운 삶을 실현할 수 있도록 돕는 것이 우리의 사명입니다.
                 </p>
               </div>
@@ -36,23 +53,50 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* 백도화 선언 */}
-        <About />
+        {/* 01. 브랜드 핵심 철학 및 메인 메시지 */}
+        <PhilosophySection />
 
-        {/* 우리가 설계하는 영역 */}
-        <Projects />
+        {/* 02. 백도화가 세상에 던지는 질문 */}
+        <QuestionsSection />
 
-        {/* 브랜드 엔딩 카피 */}
-        <section className="py-20 px-6 relative">
-          <div className="container mx-auto max-w-4xl text-center">
-            <div className="gungjung-glass p-10">
-              <p className="text-lg md:text-xl leading-relaxed text-[#EDE6DA] opacity-60">
-                백도화는 당신의 선천 코드를 해석하고,<br />
-                관계와 삶의 구조를 설계하는 전문 시스템입니다.
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* 03. 백도화라는 이름과 세계관 */}
+        <NameMeaningSection />
+
+        {/* 04. 백도화의 탄생 배경 */}
+        <OriginBackgroundSection />
+
+        {/* 05. 인간을 바라보는 세 가지 층위 (3층 동심원 인포그래픽) */}
+        <ThreeLayersDiagram />
+
+        {/* 06. 백도화의 고유 해석 방법론 (4단계 해독·발견·각성·재설계) */}
+        <MethodologySection />
+
+        {/* 07. 백도화가 다른 이유 (2열 비교 구조) */}
+        <PerspectiveComparisonSection />
+
+        {/* 08. 백도화의 세 가지 전문 영역 (사랑과 매력, 인연과 관계, 풍요와 자기실현) */}
+        <ThreeRealmsSection />
+
+        {/* 09. 백도화의 지식 자산 (비급 시리즈, 선천코드 비기, 프리미엄 리포트) */}
+        <KnowledgeArchiveSection />
+
+        {/* 10. 백장미의 이야기와 전문성 (연결 문구 + 기존 백도화 선언 및 전문분야 자격 완전 보존) */}
+        <BaekJangmiStorySection />
+
+        {/* 11. 통합적 연구와 해석 (6개 관점 + 기존 우리가 설계하는 영역 프로젝트 완전 보존) */}
+        <IntegratedApproachSection />
+
+        {/* 12. 백도화가 지키는 다섯 가지 원칙 */}
+        <PrinciplesSection />
+
+        {/* 13. 이런 분들에게 백도화를 권합니다 */}
+        <TargetAudienceSection />
+
+        {/* 14. 백도화 브랜드 선언문 (MANIFESTO) */}
+        <ManifestoSection />
+
+        {/* 15. 최종 클로징 및 CTA (기존 브랜드 엔딩 카피 완전 보존 + 3대 CTA) */}
+        <ClosingCtaSection />
 
         <Footer />
       </GlobalBackground>
