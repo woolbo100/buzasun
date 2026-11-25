@@ -6,7 +6,7 @@ import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
 export default function PhilosophySection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -19,9 +19,9 @@ export default function PhilosophySection() {
           </div>
         </Reveal>
 
-        {/* 메인 철학 카드 */}
+        {/* 메인 철학 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>
-          <div className="gungjung-glass p-8 sm:p-12 md:p-16 lg:p-20 text-center relative overflow-hidden">
+          <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 lg:p-20 text-center relative overflow-hidden">
             {/* 배경 은은한 꽃 워터마크 */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.03]">
               <BaekdohwaFlowerMark size={400} watermark={true} />
@@ -61,7 +61,7 @@ export default function PhilosophySection() {
             </div>
 
             {/* 가로형 16:9 브랜드 철학 이미지 슬롯 */}
-            <div className="mt-14 max-w-3xl mx-auto">
+            <div className="mt-14 max-w-3xl mx-auto w-full">
               <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.18)] bg-[rgba(26,15,46,0.35)] flex flex-col items-center justify-center p-6 text-center shadow-inner">
                 <BaekdohwaFlowerMark size={56} outlineGold={true} className="mb-4 opacity-70" />
                 <p className="text-xs sm:text-sm text-[var(--accent-gold)] font-elegant tracking-widest uppercase mb-1">

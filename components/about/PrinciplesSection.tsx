@@ -33,7 +33,7 @@ const principles = [
 
 export default function PrinciplesSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -55,12 +55,12 @@ export default function PrinciplesSection() {
           </div>
         </Reveal>
 
-        {/* 차분한 선언문 형식의 5대 원칙 리스트 */}
-        <div className="max-w-4xl mx-auto gungjung-glass p-8 sm:p-12 md:p-16 border border-[rgba(216,191,163,0.2)]">
+        {/* 차분한 선언문 형식의 5대 원칙 리스트 (1280px 기준선 정렬) */}
+        <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 border border-[rgba(216,191,163,0.2)]">
           <div className="space-y-10 sm:space-y-12">
             {principles.map((item, idx) => (
               <Reveal key={idx} delayMs={200 + idx * 80}>
-                <div className="relative group">
+                <div className="relative group w-full">
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 mb-3">
                     <span className="text-xl sm:text-2xl font-elegant font-bold text-[var(--accent-gold)] tracking-wider">
                       {item.num}.

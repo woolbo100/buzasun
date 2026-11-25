@@ -2,11 +2,10 @@
 
 import React from 'react'
 import Reveal from '@/components/Reveal'
-import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
 export default function ThreeLayersDiagram() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -35,10 +34,10 @@ export default function ThreeLayersDiagram() {
           </div>
         </Reveal>
 
-        {/* 3층 동심원 인포그래픽 SVG & 상세 설명 카드 */}
-        <div className="gungjung-glass p-6 sm:p-10 md:p-16">
+        {/* 3층 동심원 인포그래픽 SVG & 상세 설명 카드 (1280px 기준선 정렬) */}
+        <div className="gungjung-glass w-full p-6 sm:p-10 md:p-16">
           <Reveal delayMs={200}>
-            {/* SVG 다이어그램 */}
+            {/* SVG 다이어그램 (중앙 정렬 유지) */}
             <div className="relative w-full max-w-xl mx-auto aspect-square flex items-center justify-center my-6">
               <svg
                 viewBox="0 0 600 600"
@@ -194,8 +193,8 @@ export default function ThreeLayersDiagram() {
             </div>
           </Reveal>
 
-          {/* 다이어그램 하단 3개 층위 상세 카드 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {/* 다이어그램 하단 3개 층위 상세 카드 (동일한 3열 간격 및 1280px 경계 정렬) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-12 w-full">
             {/* 01. 선천코드 — 타고난 나 */}
             <Reveal delayMs={300}>
               <div className="p-6 sm:p-8 rounded-xl bg-[rgba(62,15,31,0.3)] border border-[rgba(216,191,163,0.2)] h-full flex flex-col justify-between">
@@ -283,7 +282,7 @@ export default function ThreeLayersDiagram() {
 
           {/* 하단 핵심 메시지 */}
           <Reveal delayMs={600}>
-            <div className="mt-12 text-center p-6 sm:p-8 rounded-xl bg-[rgba(26,15,46,0.5)] border border-[rgba(216,191,163,0.25)]">
+            <div className="mt-12 text-center p-6 sm:p-8 rounded-xl bg-[rgba(26,15,46,0.5)] border border-[rgba(216,191,163,0.25)] w-full">
               <p className="text-base sm:text-lg md:text-xl font-elegant font-medium text-[var(--accent-gold)] leading-relaxed">
                 선천적인 기질은 자기이해의 출발점이며,<br className="sm:hidden" />{' '}
                 앞으로의 삶은 자신의 선택과 실천으로 만들어 가는 영역입니다.

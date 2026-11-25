@@ -8,7 +8,7 @@ import { BookOpen, Compass, FileText, ArrowRight } from 'lucide-react'
 
 export default function KnowledgeArchiveSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -34,12 +34,12 @@ export default function KnowledgeArchiveSection() {
           </div>
         </Reveal>
 
-        {/* 3대 지식 자산 컬렉션 */}
-        <div className="space-y-12">
+        {/* 3대 지식 자산 컬렉션 (1280px 기준선 정렬) */}
+        <div className="space-y-12 w-full">
           {/* 01. 비급 시리즈 */}
           <Reveal delayMs={200}>
-            <div className="gungjung-glass p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="gungjung-glass w-full p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
                 <div className="lg:col-span-5 space-y-4">
                   <div className="flex items-center gap-2 text-xs font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
                     <BookOpen size={16} />
@@ -73,7 +73,7 @@ export default function KnowledgeArchiveSection() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-7 grid grid-cols-3 gap-3 sm:gap-4">
+                <div className="lg:col-span-7 grid grid-cols-3 gap-3 sm:gap-4 w-full">
                   <Link href="/reports/love-secret" className="group block">
                     <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-[rgba(216,191,163,0.2)] bg-[#1A0F2E]">
                       <Image
@@ -125,9 +125,9 @@ export default function KnowledgeArchiveSection() {
 
           {/* 02. 선천코드 비기 */}
           <Reveal delayMs={300}>
-            <div className="gungjung-glass p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-7 order-2 lg:order-1 flex justify-center">
+            <div className="gungjung-glass w-full p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
+                <div className="lg:col-span-7 order-2 lg:order-1 flex justify-center w-full">
                   <Link href="/reports/seoncheon-code-bigi" className="w-full max-w-md group block">
                     <div className="relative aspect-[16/10] sm:aspect-[16/9] rounded-xl overflow-hidden border border-[rgba(216,191,163,0.25)] bg-[#1A0F2E] shadow-lg">
                       <Image
@@ -171,8 +171,8 @@ export default function KnowledgeArchiveSection() {
 
           {/* 03. 선천코드 프리미엄 리포트 */}
           <Reveal delayMs={400}>
-            <div className="gungjung-glass p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="gungjung-glass w-full p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
                 <div className="lg:col-span-5 space-y-4">
                   <div className="flex items-center gap-2 text-xs font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
                     <FileText size={16} />
@@ -209,7 +209,7 @@ export default function KnowledgeArchiveSection() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full">
                   <Link href="/reports/baekdohwa-report" className="group block">
                     <div className="p-5 rounded-xl border border-[rgba(216,191,163,0.18)] bg-[rgba(26,15,46,0.3)] hover:border-[var(--accent-gold)] transition-colors h-full flex flex-col justify-between">
                       <div>

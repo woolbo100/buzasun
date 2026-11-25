@@ -45,7 +45,7 @@ const targetList = [
 
 export default function TargetAudienceSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -67,11 +67,11 @@ export default function TargetAudienceSection() {
           </div>
         </Reveal>
 
-        {/* 6개 카드 그리드 (PC 3열, 태블릿 2열, 모바일 1열) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 6개 카드 그리드 (PC 3열, 태블릿 2열, 모바일 1열, 1280px 기준선 정렬) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
           {targetList.map((item, idx) => (
             <Reveal key={idx} delayMs={200 + idx * 80}>
-              <div className="gungjung-glass p-8 rounded-2xl border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)] transition-all duration-400 h-full flex flex-col justify-between group">
+              <div className="gungjung-glass p-8 rounded-2xl border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)] transition-all duration-400 h-full flex flex-col justify-between group w-full">
                 <div>
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-10 h-10 rounded-xl bg-[rgba(216,191,163,0.1)] border border-[rgba(216,191,163,0.2)] flex items-center justify-center group-hover:scale-105 transition-transform">
@@ -93,9 +93,9 @@ export default function TargetAudienceSection() {
           ))}
         </div>
 
-        {/* 하단 핵심 메시지 */}
+        {/* 하단 핵심 메시지 (1280px 기준선 정렬) */}
         <Reveal delayMs={500}>
-          <div className="mt-16 text-center max-w-3xl mx-auto gungjung-glass p-8 sm:p-12 border border-[rgba(216,191,163,0.25)]">
+          <div className="mt-16 text-center w-full gungjung-glass p-8 sm:p-12 border border-[rgba(216,191,163,0.25)]">
             <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] mb-3 leading-relaxed">
               당신에게 필요한 것은<br className="sm:hidden" />{' '}
               더 많은 미래에 대한 답이 아니라,<br />

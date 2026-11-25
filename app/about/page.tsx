@@ -26,12 +26,12 @@ export default function AboutPage() {
         <Navigation />
 
         {/* =========================================================================
-            [기존 히어로 섹션 완전 보존] 백도화 소개
+            [기존 히어로 섹션 완전 보존] 백도화 소개 (1280px 기준선 정렬)
             ========================================================================= */}
-        <section className="pt-40 md:pt-48 pb-16 px-4 sm:px-6 relative">
+        <section className="pt-40 md:pt-48 pb-16 px-4 sm:px-6 lg:px-8 relative w-full">
           <div className="max-w-[1280px] mx-auto w-full relative z-10">
             {/* Rule 5: 텍스트 및 UI 레이어 보호를 위한 궁중유리 카드 */}
-            <div className="gungjung-glass p-8 sm:p-12 md:p-16">
+            <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-8 gradient-text">
                 백도화 소개
               </h1>

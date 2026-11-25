@@ -6,7 +6,7 @@ import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
 export default function ManifestoSection() {
   return (
-    <section className="py-24 md:py-36 px-4 sm:px-6 relative">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -19,9 +19,9 @@ export default function ManifestoSection() {
           </div>
         </Reveal>
 
-        {/* 메인 선언문 카드 (깊은 먹자색/흑자색 + 앤티크 샴페인 골드 얇은 금박 테두리) */}
+        {/* 메인 선언문 카드 (1280px 기준선 정렬, 깊은 먹자색/흑자색 + 앤티크 샴페인 골드 얇은 금박 테두리) */}
         <Reveal delayMs={200}>
-          <div className="relative max-w-4xl mx-auto rounded-3xl overflow-hidden border border-[rgba(216,191,163,0.3)] bg-gradient-to-b from-[#180A22] via-[#100619] to-[#0A0410] p-10 sm:p-16 md:p-24 text-center shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
+          <div className="relative w-full rounded-3xl overflow-hidden border border-[rgba(216,191,163,0.3)] bg-gradient-to-b from-[#180A22] via-[#100619] to-[#0A0410] p-10 sm:p-16 md:p-24 text-center shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
             {/* 은은한 배경 문양 */}
             <div className="absolute top-10 left-10 pointer-events-none opacity-20">
               <BaekdohwaFlowerMark size={48} outlineGold={true} />

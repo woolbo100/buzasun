@@ -7,7 +7,7 @@ import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
 export default function OriginBackgroundSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -27,10 +27,10 @@ export default function OriginBackgroundSection() {
           </h2>
         </Reveal>
 
-        {/* 본문 카드 */}
+        {/* 본문 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>
-          <div className="gungjung-glass p-8 sm:p-12 md:p-16 max-w-4xl mx-auto space-y-8 text-[#EDE6DA] leading-relaxed font-light">
-            <div className="space-y-4 text-base sm:text-lg opacity-90">
+          <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 space-y-8 text-[#EDE6DA] leading-relaxed font-light">
+            <div className="max-w-3xl mx-auto space-y-4 text-base sm:text-lg opacity-90 text-center sm:text-left">
               <p>
                 사람들은 사랑이 힘들어질 때 상대의 마음을 알고 싶어 합니다.
               </p>
@@ -40,7 +40,7 @@ export default function OriginBackgroundSection() {
             </div>
 
             {/* 핵심 질문 인용 상자 */}
-            <div className="my-8 p-6 sm:p-8 rounded-xl bg-[rgba(59,15,27,0.25)] border-l-2 border-[var(--accent-gold)]">
+            <div className="max-w-3xl mx-auto my-8 p-6 sm:p-8 rounded-xl bg-[rgba(59,15,27,0.25)] border-l-2 border-[var(--accent-gold)]">
               <p className="text-xs tracking-widest text-[var(--accent-gold)] uppercase mb-2 font-elegant opacity-75">
                 THE ESSENTIAL QUESTION
               </p>
@@ -50,7 +50,7 @@ export default function OriginBackgroundSection() {
               </p>
             </div>
 
-            <div className="space-y-4 text-base sm:text-lg opacity-90">
+            <div className="max-w-3xl mx-auto space-y-4 text-base sm:text-lg opacity-90 text-center sm:text-left">
               <p>
                 명리학이 전하는 인간의 기질에 대한 관점과 마음공부, 심리, 무의식에 대한 탐구를 연결하여 자신을 보다 입체적으로 이해하는 방법을 전하고자 합니다.
               </p>
@@ -60,7 +60,7 @@ export default function OriginBackgroundSection() {
             </div>
 
             {/* 가로형 16:9 이미지 슬롯 */}
-            <div className="pt-8">
+            <div className="pt-8 max-w-4xl mx-auto w-full">
               <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.2)] bg-[rgba(26,15,46,0.35)] shadow-md">
                 <Image
                   src="/image/baekdohwa-palace-bg.png"

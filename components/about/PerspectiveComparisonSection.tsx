@@ -32,7 +32,7 @@ const comparisons = [
 
 export default function PerspectiveComparisonSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -58,9 +58,9 @@ export default function PerspectiveComparisonSection() {
           </div>
         </Reveal>
 
-        {/* 2열 비교 테이블 구조 */}
+        {/* 2열 비교 테이블 구조 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>
-          <div className="gungjung-glass max-w-4xl mx-auto overflow-hidden border border-[rgba(216,191,163,0.2)]">
+          <div className="gungjung-glass w-full overflow-hidden border border-[rgba(216,191,163,0.2)]">
             {/* 테이블 헤더 */}
             <div className="grid grid-cols-1 md:grid-cols-2 border-b border-[rgba(216,191,163,0.2)] bg-[rgba(26,15,46,0.5)]">
               <div className="py-4 px-6 text-center md:text-left border-b md:border-b-0 md:border-r border-[rgba(216,191,163,0.2)]">

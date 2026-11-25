@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Reveal from '@/components/Reveal'
-import { ChevronRight, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 const steps = [
   {
@@ -37,7 +37,7 @@ const steps = [
 
 export default function MethodologySection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -63,13 +63,13 @@ export default function MethodologySection() {
           </div>
         </Reveal>
 
-        {/* 4단계 카드 구조 (PC 가로 4열, 모바일 세로형 + 화살표 연결) */}
-        <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
+        {/* 4단계 카드 구조 (PC 가로 4열, 모바일 세로형 + 화살표 연결, 1280px 기준선 정렬) */}
+        <div className="relative w-full">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch w-full">
             {steps.map((item, idx) => (
               <React.Fragment key={idx}>
                 <Reveal delayMs={200 + idx * 100}>
-                  <div className="gungjung-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between h-full border border-[rgba(216,191,163,0.2)] hover:border-[var(--accent-gold)] transition-colors duration-400 group">
+                  <div className="gungjung-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between h-full border border-[rgba(216,191,163,0.2)] hover:border-[var(--accent-gold)] transition-colors duration-400 group w-full">
                     <div>
                       {/* 스텝 라벨 및 한자 */}
                       <div className="flex items-center justify-between mb-4 pb-3 border-b border-[rgba(216,191,163,0.15)]">
@@ -113,9 +113,9 @@ export default function MethodologySection() {
           </div>
         </div>
 
-        {/* 하단 핵심 메시지 */}
+        {/* 하단 핵심 메시지 (1280px 기준선 정렬) */}
         <Reveal delayMs={600}>
-          <div className="mt-16 text-center gungjung-glass max-w-2xl mx-auto p-8 border border-[rgba(216,191,163,0.2)]">
+          <div className="mt-16 text-center gungjung-glass w-full p-8 border border-[rgba(216,191,163,0.2)]">
             <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed">
               나를 읽고, 패턴을 발견하고,<br className="sm:hidden" />{' '}
               내면을 깨우며, 운명을 다시 설계하다.

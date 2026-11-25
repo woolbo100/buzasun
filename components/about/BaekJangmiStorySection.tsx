@@ -1,12 +1,36 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Reveal from '@/components/Reveal'
-import About from '@/components/About'
+import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
+import { Brain, Compass, Building2 } from 'lucide-react'
+
+const credentials = [
+  {
+    icon: <Brain size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
+    title: '내면 설계',
+    subtitle: 'Inner Design',
+    items: ['심리상담', '연애관계심리', 'NLP기법', '최면심리']
+  },
+  {
+    icon: <Compass size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
+    title: '선천코드 분석',
+    subtitle: 'Code Analyzing',
+    items: ['명리심리', '타로심리', '풍수학, 성명학', '동양철학']
+  },
+  {
+    icon: <Building2 size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
+    title: '미래 설계',
+    subtitle: 'Future Architect',
+    items: ['AI 콘텐츠 제작', '퍼스널 브래딩', '디지털 자아 설계', '뇌과학 기반 설계']
+  }
+]
 
 export default function BaekJangmiStorySection() {
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null)
+
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -28,25 +52,111 @@ export default function BaekJangmiStorySection() {
           </div>
         </Reveal>
 
-        {/* 지침 공식 연결 문구 카드 */}
+        {/* 지침 공식 연결 문구 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>
-          <div className="gungjung-glass max-w-4xl mx-auto p-8 sm:p-12 mb-16 text-center border border-[rgba(216,191,163,0.2)]">
-            <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA] opacity-90 leading-relaxed font-light mb-6">
-              백도화는 인간의 기질과 마음, 사랑과 관계, 삶의 가능성에 대한 오랜 관심과 탐구에서 출발합니다.
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA] opacity-90 leading-relaxed font-light mb-6">
-              동양의 지혜와 마음공부, 인간의 심리와 무의식에 대한 이해를 연결하며, 자신을 보다 깊이 이해하고 주체적인 삶을 살아가는 방법을 연구합니다.
-            </p>
-            <div className="gold-divider max-w-xs mx-auto my-6 opacity-30" />
-            <p className="text-lg sm:text-xl font-elegant font-medium text-[var(--accent-gold)] leading-relaxed">
-              백장미는 이러한 연구와 탐구를 백도화의 콘텐츠, 전자책, 리포트에 담아 전합니다.
-            </p>
+          <div className="gungjung-glass w-full p-8 sm:p-12 mb-16 text-center border border-[rgba(216,191,163,0.2)]">
+            <div className="max-w-3xl mx-auto space-y-4">
+              <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA] opacity-90 leading-relaxed font-light">
+                백도화는 인간의 기질과 마음, 사랑과 관계, 삶의 가능성에 대한 오랜 관심과 탐구에서 출발합니다.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA] opacity-90 leading-relaxed font-light">
+                동양의 지혜와 마음공부, 인간의 심리와 무의식에 대한 이해를 연결하며, 자신을 보다 깊이 이해하고 주체적인 삶을 살아가는 방법을 연구합니다.
+              </p>
+              <div className="gold-divider max-w-xs mx-auto my-6 opacity-30" />
+              <p className="text-lg sm:text-xl font-elegant font-medium text-[var(--accent-gold)] leading-relaxed">
+                백장미는 이러한 연구와 탐구를 백도화의 콘텐츠, 전자책, 리포트에 담아 전합니다.
+              </p>
+            </div>
           </div>
         </Reveal>
 
-        {/* 기존 소개 페이지의 백도화 선언 & 자격/전문분야 (완전 보존) */}
-        <div className="relative">
-          <About />
+        {/* [기존 보존] 백도화 선언 타이틀 */}
+        <Reveal delayMs={250}>
+          <div className="flex items-center justify-center gap-4 md:gap-8 mb-16">
+            <div className="flex-shrink-0">
+              <BaekdohwaFlowerMark size={50} outlinePink={false} />
+            </div>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center text-[#F5F5F5]">
+              백도화 선언
+            </h3>
+            <div className="flex-shrink-0">
+              <BaekdohwaFlowerMark size={50} outlinePink={false} />
+            </div>
+          </div>
+        </Reveal>
+
+        {/* [기존 보존] 메인 선언문 상자 (1280px 기준선 정렬) */}
+        <Reveal delayMs={300}>
+          <div className="gungjung-glass w-full p-10 sm:p-14 md:p-16 text-center mb-16 border border-[rgba(216,191,163,0.2)]">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl leading-loose text-[#EDE6DA] font-light italic mb-8">
+                "백도화의 모든 분석과 설계는{" "}
+                <br className="hidden md:block" />
+                전문 자격과 실제 데이터를 기반으로 하는{" "}
+                <br className="hidden md:block" />
+                구조적 해석 공간입니다."
+              </p>
+              
+              <div className="gold-divider mb-8 max-w-sm mx-auto opacity-40" />
+              
+              <BaekdohwaFlowerMark 
+                size={72}
+                className="hidden md:block mx-auto mb-8"
+                outlineGold={true}
+              />
+              <BaekdohwaFlowerMark 
+                size={52}
+                className="block md:hidden mx-auto mb-8"
+                outlineGold={true}
+              />
+              
+              <p className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] leading-tight tracking-wider">
+                감이 아닌 이론<br />
+                직관이 아닌 구조<br />
+                위로가 아닌 설계
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* [기존 보존] 3대 자격증 그룹핑 (1280px 기준선 정렬, 3열 표준 간격) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 w-full">
+          {credentials.map((section, idx) => {
+            const isHovered = hoveredIdx === idx
+            return (
+              <Reveal key={idx} delayMs={400 + idx * 100}>
+                <div 
+                  className="gungjung-glass p-8 sm:p-10 h-full text-center flex flex-col items-center justify-between transition-all duration-400 w-full"
+                  style={{
+                    border: `1px solid ${isHovered ? 'var(--accent-gold)' : 'rgba(216, 191, 163, 0.2)'}`,
+                    borderRadius: '16px',
+                    boxShadow: isHovered 
+                      ? '0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-gold-soft)'
+                      : 'none',
+                  }}
+                  onMouseEnter={() => setHoveredIdx(idx)}
+                  onMouseLeave={() => setHoveredIdx(null)}
+                >
+                  <div className="flex flex-col items-center w-full">
+                    {section.icon}
+                    <h4 className="text-xl sm:text-2xl font-elegant font-bold mb-2 text-[#F5F5F5]">
+                      {section.title}
+                    </h4>
+                    <p className="text-xs tracking-widest text-[var(--accent-gold)] mb-6 opacity-70 uppercase font-elegant">
+                      {section.subtitle}
+                    </p>
+                    <div className="space-y-2.5 text-sm text-[#EDE6DA] opacity-85 font-light w-full">
+                      {section.items.map((item, i) => (
+                        <p key={i} style={{ color: 'var(--accent-gold)', opacity: 0.9 }}>
+                          {item}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            )
+          })}
         </div>
       </div>
     </section>

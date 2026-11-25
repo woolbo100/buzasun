@@ -5,7 +5,7 @@ import Reveal from '@/components/Reveal'
 
 export default function QuestionsSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -45,9 +45,9 @@ export default function QuestionsSection() {
           ))}
         </div>
 
-        {/* 하단 핵심 메시지 */}
+        {/* 하단 핵심 메시지 (1280px 기준선 정렬) */}
         <Reveal delayMs={600}>
-          <div className="mt-16 max-w-3xl mx-auto text-center gungjung-glass p-8 sm:p-12 border border-[rgba(216,191,163,0.2)]">
+          <div className="mt-16 w-full text-center gungjung-glass p-8 sm:p-12 border border-[rgba(216,191,163,0.2)]">
             <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] mb-4 leading-relaxed">
               백도화는 그 질문의 시작을 타인이 아닌 나 자신에게서 찾습니다.
             </p>

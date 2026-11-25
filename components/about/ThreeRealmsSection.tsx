@@ -84,7 +84,7 @@ const realms = [
 
 export default function ThreeRealmsSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -109,12 +109,12 @@ export default function ThreeRealmsSection() {
           </div>
         </Reveal>
 
-        {/* 3개 동일 규격 세로 카드 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* 3개 동일 규격 세로 카드 (1280px 기준선 정렬) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 w-full">
           {realms.map((realm, idx) => (
             <Reveal key={idx} delayMs={200 + idx * 100}>
               <div
-                className="gungjung-glass rounded-2xl overflow-hidden h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-1.5"
+                className="gungjung-glass rounded-2xl overflow-hidden h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-1.5 w-full"
                 style={{ borderColor: realm.accentBorder }}
               >
                 <div>

@@ -7,7 +7,7 @@ import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
 export default function NameMeaningSection() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -32,12 +32,12 @@ export default function NameMeaningSection() {
           </div>
         </Reveal>
 
-        {/* 에디토리얼 좌우 2열 배치 */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* 에디토리얼 좌우 2열 배치 (1280px 기준선 정렬) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
           {/* 좌측: 텍스트 컬럼 (7열) */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 w-full">
             <Reveal delayMs={200}>
-              <div className="gungjung-glass p-8 sm:p-12 md:p-14 space-y-6 text-[#EDE6DA] leading-relaxed font-light">
+              <div className="gungjung-glass w-full p-8 sm:p-12 md:p-14 space-y-6 text-[#EDE6DA] leading-relaxed font-light">
                 <p className="text-base sm:text-lg md:text-xl font-normal text-[var(--accent-gold)] opacity-95">
                   백도화에서 도화(桃花)는 단순히 누군가의 마음을 얻기 위한 매력만을 의미하지 않습니다.
                 </p>
@@ -65,16 +65,16 @@ export default function NameMeaningSection() {
           </div>
 
           {/* 우측: 3:4 에디토리얼 이미지 슬롯 (5열) */}
-          <div className="lg:col-span-5 flex justify-center">
+          <div className="lg:col-span-5 flex justify-center w-full">
             <Reveal delayMs={300}>
-              <div className="w-full max-w-sm sm:max-w-md aspect-[3/4] rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.25)] relative group shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+              <div className="w-full max-w-sm sm:max-w-md lg:max-w-none aspect-[3/4] rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.25)] relative group shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
                 {/* 배경 이미지: 백도화 시크릿 부티크 배경 */}
                 <Image
                   src="/image/baekdohwa-secret-boutique-bg.webp"
                   alt="백도화의 세계관"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-55"
-                  sizes="(max-width: 768px) 100vw, 400px"
+                  sizes="(max-width: 768px) 100vw, 500px"
                 />
                 
                 {/* 궁중 한지 비단 오버레이 */}

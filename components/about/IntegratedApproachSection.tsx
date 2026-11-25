@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Reveal from '@/components/Reveal'
-import Projects from '@/components/Projects'
 
 const perspectives = [
   {
@@ -31,9 +30,42 @@ const perspectives = [
   }
 ]
 
+const projects = [
+  {
+    icon: 'fas fa-sparkles',
+    title: '선천코드 분석',
+    description: '개인의 고유한 선천 코드를 분석해\n관계·매력·선택의 기준을 설계합니다.',
+  },
+  {
+    icon: 'fas fa-heart',
+    title: '연애 솔루션',
+    description: '반복되는 연애 패턴을\n감정이 아닌 구조로 해석하고 재설계합니다.',
+  },
+  {
+    icon: 'fas fa-star',
+    title: '풍요 솔루션',
+    description: '에너지 흐름과 선택 구조를 조정해\n삶의 방향성을 바로잡습니다.',
+  },
+  {
+    icon: 'fas fa-gem',
+    title: '매력 주파수 조정',
+    description: '개인의 매력 주파수를 분석해\n표현과 선택의 밀도를 높입니다.',
+  },
+  {
+    icon: 'fas fa-moon',
+    title: '에너지 패턴 워크샵',
+    description: '에너지 패턴을 이해하고\n현실에서 작동하는 방식으로 재정렬합니다.',
+  },
+  {
+    icon: 'fas fa-feather',
+    title: '한국적 미학 컨설팅',
+    description: '한국적 미학을 기반으로\n고유한 분위기와 인상을 설계합니다.',
+  },
+]
+
 export default function IntegratedApproachSection() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 relative">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* 영문 소제목 */}
         <Reveal delayMs={100}>
@@ -55,11 +87,11 @@ export default function IntegratedApproachSection() {
           </div>
         </Reveal>
 
-        {/* 6개 통합 관점 그리드 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* 6개 통합 관점 그리드 (1280px 기준선 정렬) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 w-full">
           {perspectives.map((item, idx) => (
             <Reveal key={idx} delayMs={200 + idx * 80}>
-              <div className="gungjung-glass p-6 sm:p-8 rounded-xl border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)] transition-colors h-full flex flex-col justify-between">
+              <div className="gungjung-glass p-6 sm:p-8 rounded-xl border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)] transition-colors h-full flex flex-col justify-between w-full">
                 <div>
                   <span className="text-[10px] font-mono tracking-widest text-[var(--accent-gold)] opacity-70 block mb-2">
                     PERSPECTIVE 0{idx + 1}
@@ -76,9 +108,9 @@ export default function IntegratedApproachSection() {
           ))}
         </div>
 
-        {/* 핵심 메시지 상자 */}
+        {/* 핵심 메시지 상자 (1280px 기준선 정렬) */}
         <Reveal delayMs={400}>
-          <div className="gungjung-glass max-w-4xl mx-auto p-8 sm:p-12 mb-16 text-center border border-[rgba(216,191,163,0.25)]">
+          <div className="gungjung-glass w-full p-8 sm:p-12 mb-20 text-center border border-[rgba(216,191,163,0.25)]">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-4">
               한 가지 관점만으로 인간을 단정하지 않습니다.
             </h3>
@@ -91,9 +123,31 @@ export default function IntegratedApproachSection() {
           </div>
         </Reveal>
 
-        {/* 기존 소개 페이지의 '우리가 설계하는 영역' 프로젝트 (완전 보존) */}
-        <div className="relative">
-          <Projects />
+        {/* [기존 보존] 우리가 설계하는 영역 (1280px 기준선 정렬) */}
+        <div className="w-full">
+          <Reveal delayMs={100}>
+            <h3 className="text-3xl md:text-5xl font-elegant font-bold text-center mb-16 gradient-text">
+              우리가 설계하는 영역
+            </h3>
+          </Reveal>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
+            {projects.map((project, index) => (
+              <Reveal key={index} delayMs={200 + index * 80}>
+                <div className="gungjung-glass p-8 h-full transition-all duration-500 group w-full border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)]">
+                  <div className="text-3xl mb-6 text-[var(--accent-gold)] opacity-80 group-hover:opacity-100 transition-opacity">
+                    <i className={project.icon}></i>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-elegant font-bold mb-4 text-bd-ivory group-hover:text-[var(--accent-gold)] transition-colors">
+                    {project.title}
+                  </h4>
+                  <p className="text-sm md:text-base leading-relaxed text-bd-gray group-hover:text-bd-ivory transition-colors whitespace-pre-line font-light">
+                    {project.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
