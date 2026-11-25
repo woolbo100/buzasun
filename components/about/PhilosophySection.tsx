@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
@@ -60,16 +61,16 @@ export default function PhilosophySection() {
               </p>
             </div>
 
-            {/* 가로형 16:9 브랜드 철학 이미지 슬롯 */}
+            {/* 가로형 16:9 브랜드 철학 이미지 (author-of-your-destiny.webp) */}
             <div className="mt-14 max-w-3xl mx-auto w-full">
-              <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.18)] bg-[rgba(26,15,46,0.35)] flex flex-col items-center justify-center p-6 text-center shadow-inner">
-                <BaekdohwaFlowerMark size={56} outlineGold={true} className="mb-4 opacity-70" />
-                <p className="text-xs sm:text-sm text-[var(--accent-gold)] font-elegant tracking-widest uppercase mb-1">
-                  Brand Philosophy Visual Slot
-                </p>
-                <p className="text-xs text-[#EDE6DA] opacity-60">
-                  고풍스러운 철학서의 첫 장처럼 깊이 있는 사색을 담는 비주얼 영역 (16:9)
-                </p>
+              <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.2)] shadow-md">
+                <Image
+                  src="/image/author-of-your-destiny.webp"
+                  alt="고풍스러운 한옥 서재에서 자신의 운명을 직접 써 내려가는 여성"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 768px"
+                />
               </div>
             </div>
           </div>
