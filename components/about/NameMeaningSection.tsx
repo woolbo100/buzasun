@@ -1,8 +1,8 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
-import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
 export default function NameMeaningSection() {
   return (
@@ -32,58 +32,30 @@ export default function NameMeaningSection() {
         </Reveal>
 
         {/* =========================================================================
-            좌우 2열 에디토리얼 레이아웃 (왼쪽 45% 이미지, 오른쪽 55% 글상자, 간격 32~40px)
+            좌우 2열 레이아웃 (왼쪽 45% 신규 이미지, 오른쪽 55% 기존 글상자, 간격 32~40px)
             모바일 순서: 제목 → 이미지 → 글상자
             ========================================================================= */}
-        <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-8 lg:gap-10 items-stretch w-full">
-          {/* 1. 왼쪽 45%: 신규 이미지 삽입 영역 (3:4 세로형 이미지 슬롯, 글상자와 상하 기준선 일치) */}
+        <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-8 lg:gap-10 items-center w-full">
+          {/* 1. 왼쪽 45%: 신규 이미지 (3:4 비율 유지, 오버레이/텍스트 없이 원본 색감 유지) */}
           <div className="w-full flex justify-center">
-            <Reveal delayMs={200} className="w-full h-full">
-              <div className="w-full h-full min-h-[380px] sm:min-h-[460px] lg:min-h-full aspect-[3/4] lg:aspect-auto rounded-[20px] overflow-hidden border border-[rgba(216,191,163,0.22)] bg-[rgba(26,15,35,0.4)] relative flex flex-col items-center justify-center p-8 text-center shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
-                {/* 배경 은은한 도화 워터마크 (과도한 발광 없이 단아한 절제미 유지) */}
-                <div className="absolute inset-0 pointer-events-none opacity-[0.04] flex items-center justify-center">
-                  <BaekdohwaFlowerMark size={320} watermark={true} />
-                </div>
-
-                {/* 앤티크 프레임 라인 (글상자와 조화로운 얇은 골드 내측 라인) */}
-                <div className="absolute inset-4 sm:inset-5 border border-[rgba(216,191,163,0.15)] rounded-[14px] pointer-events-none flex flex-col justify-between p-6">
-                  <div className="flex justify-between items-start">
-                    <span className="text-[10px] sm:text-xs tracking-widest text-[var(--accent-gold)] uppercase opacity-75 font-elegant">
-                      BAEKDOHWA IDENTITY
-                    </span>
-                    <BaekdohwaFlowerMark size={28} outlineGold={true} className="opacity-75" />
-                  </div>
-
-                  <div className="text-left">
-                    <span className="text-xl sm:text-2xl font-elegant text-[#F5F5F5] block font-bold mb-1">
-                      白桃花
-                    </span>
-                    <p className="text-xs text-[var(--accent-gold)] opacity-70 font-light">
-                      고유한 빛과 기질을 피워내는 도화의 상징
-                    </p>
-                  </div>
-                </div>
-
-                {/* 중앙 안내 및 추후 이미지 교체 슬롯 */}
-                <div className="relative z-10 flex flex-col items-center">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[rgba(212,178,167,0.08)] border border-[rgba(212,178,167,0.2)] flex items-center justify-center mb-4">
-                    <BaekdohwaFlowerMark size={36} outlineGold={true} className="opacity-80" />
-                  </div>
-                  <span className="text-xs sm:text-sm font-elegant tracking-[0.2em] text-[var(--accent-gold)] uppercase block mb-1 opacity-85">
-                    Brand Visual Slot
-                  </span>
-                  <p className="text-xs text-[#EDE6DA] opacity-60 font-light">
-                    3:4 세로형 백도화 브랜드 이미지 영역
-                  </p>
-                </div>
+            <Reveal delayMs={200} className="w-full">
+              <div className="relative w-full aspect-[3/4] rounded-[20px] overflow-hidden border border-[rgba(216,191,163,0.2)] shadow-[0_8px_32px_rgba(0,0,0,0.35)]">
+                <Image
+                  src="/image/bloom-in-your-own-light.webp"
+                  alt="백색 도화와 함께 자신만의 아름다움으로 피어나는 여성"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 550px"
+                  className="object-cover"
+                  priority
+                />
               </div>
             </Reveal>
           </div>
 
           {/* 2. 오른쪽 55%: 기존 글상자 (기존 내용, 글자 크기, 강조, 배경 100% 보존 + keep-all 적용) */}
           <div className="w-full">
-            <Reveal delayMs={280} className="w-full h-full">
-              <div className="gungjung-glass w-full h-full p-8 sm:p-12 md:p-14 space-y-6 text-[#EDE6DA] leading-relaxed font-light break-keep flex flex-col justify-between">
+            <Reveal delayMs={280} className="w-full">
+              <div className="gungjung-glass w-full p-8 sm:p-12 md:p-14 space-y-6 text-[#EDE6DA] leading-relaxed font-light break-keep flex flex-col justify-between">
                 <div className="space-y-6">
                   <p className="text-base sm:text-lg md:text-xl font-normal text-[var(--accent-gold)] opacity-95">
                     백도화에서 도화(桃花)는 단순히 누군가의 마음을 얻기 위한 매력만을 의미하지 않습니다.
