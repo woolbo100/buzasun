@@ -154,6 +154,72 @@ export default function BeyondRulesSection() {
               <rect width="100%" height="100%" fill="url(#hanji-beyond-fibers)" />
             </svg>
 
+            {/* 네 모서리 전통 한국식 격자 문양 (PC 36px, 모바일 22px, 앤티크 샴페인 골드) */}
+            {/* 좌상단 */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="#D4B2A7"
+              strokeWidth="1.2"
+              className="absolute top-3 left-3 sm:top-4 sm:left-4 md:top-5 md:left-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85"
+            >
+              <path d="M2 38V2H38" strokeOpacity="0.9" />
+              <path d="M7 34V7H34" strokeOpacity="0.55" />
+              <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+              <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+              <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+              <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
+            </svg>
+            {/* 우상단 */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="#D4B2A7"
+              strokeWidth="1.2"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 md:top-5 md:right-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 rotate-90"
+            >
+              <path d="M2 38V2H38" strokeOpacity="0.9" />
+              <path d="M7 34V7H34" strokeOpacity="0.55" />
+              <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+              <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+              <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+              <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
+            </svg>
+            {/* 우하단 */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="#D4B2A7"
+              strokeWidth="1.2"
+              className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 md:bottom-5 md:right-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 rotate-180"
+            >
+              <path d="M2 38V2H38" strokeOpacity="0.9" />
+              <path d="M7 34V7H34" strokeOpacity="0.55" />
+              <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+              <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+              <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+              <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
+            </svg>
+            {/* 좌하단 */}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 40 40"
+              fill="none"
+              stroke="#D4B2A7"
+              strokeWidth="1.2"
+              className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-5 md:left-5 w-[22px] h-[22px] sm:w-[28px] sm:h-[28px] md:w-[36px] md:h-[36px] pointer-events-none text-[#D4B2A7] opacity-85 -rotate-90"
+            >
+              <path d="M2 38V2H38" strokeOpacity="0.9" />
+              <path d="M7 34V7H34" strokeOpacity="0.55" />
+              <rect x="2" y="2" width="13" height="13" strokeOpacity="0.95" />
+              <rect x="6" y="6" width="5" height="5" strokeOpacity="0.65" />
+              <path d="M15 7H34M7 15V34" strokeOpacity="0.6" />
+              <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
+            </svg>
+
             {/* 추후 16:9 브랜드 이미지 오버레이 적용 슬롯 레이어 (은은한 백도화 꽃 워터마크 유지) */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.03] flex items-center justify-center">
               <BaekdohwaFlowerMark size={480} watermark={true} />
