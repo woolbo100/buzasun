@@ -3,7 +3,6 @@
 import React from 'react'
 import Image from 'next/image'
 import Reveal from '@/components/Reveal'
-import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
 export default function OriginBackgroundSection() {
   return (
@@ -59,26 +58,24 @@ export default function OriginBackgroundSection() {
               </p>
             </div>
 
-            {/* 가로형 16:9 이미지 슬롯 */}
+            {/* 가로형 16:9 신규 이미지 영역 (오버레이/텍스트 중첩 없이 원본 색감 유지) */}
             <div className="pt-8 max-w-4xl mx-auto w-full">
-              <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.2)] bg-[rgba(26,15,46,0.35)] shadow-md">
+              <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.2)] shadow-md">
                 <Image
-                  src="/image/baekdohwa-palace-bg.png"
-                  alt="백도화의 탄생 배경"
+                  src="/image/wisdom-within.webp"
+                  alt="동양의 지혜와 내면의 자기성찰을 상징하는 고서와 청동 거울, 백색 도화"
                   fill
-                  className="object-cover opacity-40"
+                  className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 896px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#140A1E] via-[rgba(20,10,35,0.4)] to-transparent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                  <BaekdohwaFlowerMark size={48} outlineGold={true} className="mb-3 opacity-80" />
-                  <p className="text-sm sm:text-base font-elegant text-[var(--accent-gold)] font-medium">
-                    정해진 운명의 답을 넘어, 스스로를 읽는 여정의 시작
-                  </p>
-                  <p className="text-xs text-[#EDE6DA] opacity-60 mt-1">
-                    동양의 지혜와 무의식의 만남 (16:9 슬롯)
-                  </p>
-                </div>
+              </div>
+
+              {/* 이미지 하단 핵심 카피 (독립된 텍스트, 24px 기준 명조 계열, 앤티크 샴페인 골드) */}
+              <div className="mt-8 sm:mt-10 text-center">
+                <p className="text-xl sm:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed tracking-wide">
+                  정해진 운명의 답을 넘어,<br className="sm:hidden" />{' '}
+                  스스로를 읽는 여정의 시작.
+                </p>
               </div>
             </div>
           </div>
