@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { ChevronDown } from 'lucide-react'
 
@@ -39,7 +40,7 @@ export default function MethodologySection() {
   return (
     <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
-        {/* 영문 소제목 */}
+        {/* 1. 영문 소제목 */}
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -50,9 +51,9 @@ export default function MethodologySection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 */}
+        {/* 2 & 3. 메인 제목 및 설명 문구 (간격 약 32px) */}
         <Reveal delayMs={150}>
-          <div className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
               선천코드 해독과 운명 재설계
             </h2>
@@ -63,7 +64,22 @@ export default function MethodologySection() {
           </div>
         </Reveal>
 
-        {/* 4단계 카드 구조 (PC 가로 4열, 모바일 세로형 + 화살표 연결, 1280px 기준선 정렬) */}
+        {/* 4. 신규 가로형 이미지 (1280px 기준선 정렬, 원본 3:1 와이드 가로형 비율 유지, 상하 간격 32px) */}
+        <Reveal delayMs={180}>
+          <div className="w-full mb-8">
+            <div className="relative w-full aspect-[2172/724] rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.2)] shadow-md">
+              <Image
+                src="/image/the-path-to-self-mastery.webp"
+                alt="고요한 궁궐 회랑을 지나 스스로 빛을 향해 나아가는 여성"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </div>
+          </div>
+        </Reveal>
+
+        {/* 5. 기존 4단계 카드 (PC 가로 4열, 모바일 세로형 + 화살표 연결, 1280px 기준선 정렬) */}
         <div className="relative w-full">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch w-full">
             {steps.map((item, idx) => (
@@ -113,7 +129,7 @@ export default function MethodologySection() {
           </div>
         </div>
 
-        {/* 하단 핵심 메시지 (1280px 기준선 정렬) */}
+        {/* 6. 하단 핵심 메시지 (1280px 기준선 정렬) */}
         <Reveal delayMs={600}>
           <div className="mt-16 text-center gungjung-glass w-full p-8 border border-[rgba(216,191,163,0.2)]">
             <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed">
