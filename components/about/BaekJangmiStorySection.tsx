@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 import { Brain, Compass, Target } from 'lucide-react'
@@ -70,9 +71,9 @@ export default function BaekJangmiStorySection() {
           </div>
         </Reveal>
 
-        {/* [기존 보존] 백도화 선언 타이틀 */}
+        {/* [기존 보존] 백도화 선언 타이틀 (신규 이미지 배너와 32px 간격: mb-8) */}
         <Reveal delayMs={250}>
-          <div className="flex items-center justify-center gap-4 md:gap-8 mb-16">
+          <div className="flex items-center justify-center gap-4 md:gap-8 mb-8">
             <div className="flex-shrink-0">
               <BaekdohwaFlowerMark size={50} outlinePink={false} />
             </div>
@@ -84,6 +85,25 @@ export default function BaekJangmiStorySection() {
             </div>
           </div>
         </Reveal>
+
+        {/* =========================================================================
+            [신규 상단 백도화 선언 배너 이미지] 4:1 와이드 배너 (1280px 기준선 정렬, 라운딩 16px)
+            '백도화 선언' 제목과 32px(mb-8), 하단 투명 선언문 카드와 40px(mb-10) 여백
+            ========================================================================= */}
+        <div className="w-full mb-10">
+          <Reveal delayMs={280}>
+            <div className="relative w-full aspect-[4/1] rounded-[16px] overflow-hidden">
+              <Image
+                src="/image/baekdohwa-declaration-top-banner.webp"
+                alt="백도화 선언 배너"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </div>
+          </Reveal>
+        </div>
 
         {/* [기존 보존] 메인 선언문 상자 (1280px 기준선 정렬) */}
         <Reveal delayMs={300}>
