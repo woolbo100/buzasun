@@ -29,18 +29,13 @@ export default function BrandOriginSection() {
           </div>
         </Reveal>
 
-        {/* 3. 브랜드 탄생 스토리 서책형 한지 카드 (최대 너비 1280px, origin-bg.webp 배경, 슬림 압축 여백) */}
+        {/* 3. 브랜드 탄생 스토리 서책형 한지 카드 (최대 너비 1280px, origin-hanji.webp 단일 카드 룩) */}
         <Reveal delayMs={200}>
-          <div 
-            className="relative w-full rounded-[16px] md:rounded-[24px] overflow-hidden shadow-2xl border border-[rgba(216,191,163,0.35)]"
-            style={{
-              backgroundColor: '#F6EFE3',
-            }}
-          >
-            {/* 3-1. 기본 확장 배경 (전체 높이에 맞춰 좌측 비단 제본과 한지 질감 유지) */}
+          <div className="relative w-full rounded-[14px] md:rounded-[18px] overflow-hidden">
+            {/* 3-1. 기본 확장 배경 (전체 높이에 맞춰 한지 질감 및 슬림 비단 제본 유지) */}
             <div className="absolute inset-0 z-0 pointer-events-none">
               <Image
-                src="/image/origin-bg.webp"
+                src="/image/origin-hanji.webp"
                 alt="왕실 서책 배경"
                 fill
                 priority
@@ -49,10 +44,10 @@ export default function BrandOriginSection() {
               />
             </div>
 
-            {/* 3-2. 상단 장식 레이어 (상단 금박 테두리, 모서리 문양, 매듭 테슬의 원본 비율 보존) */}
-            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[120px] md:h-[140px] overflow-hidden pointer-events-none z-0">
+            {/* 3-2. 상단 장식 레이어 (상단 금박 테두리, 모서리 문양, 매듭 장식의 원본 비율 보존) */}
+            <div className="absolute top-0 left-0 right-0 h-[70px] sm:h-[90px] md:h-[110px] overflow-hidden pointer-events-none z-0">
               <Image
-                src="/image/origin-bg.webp"
+                src="/image/origin-hanji.webp"
                 alt=""
                 fill
                 priority
@@ -61,10 +56,10 @@ export default function BrandOriginSection() {
               />
             </div>
 
-            {/* 3-3. 하단 장식 레이어 (수묵 산수화, 하얀 복숭아꽃, 하단 금박 테두리의 원본 비율 보존) */}
-            <div className="absolute bottom-0 left-0 right-0 h-[160px] sm:h-[200px] md:h-[230px] overflow-hidden pointer-events-none z-0">
+            {/* 3-3. 하단 장식 레이어 (하단 금박 테두리, 모서리 문양, 우측 하단 복숭아꽃 원본 비율 보존) */}
+            <div className="absolute bottom-0 left-0 right-0 h-[100px] sm:h-[130px] md:h-[150px] overflow-hidden pointer-events-none z-0">
               <Image
-                src="/image/origin-bg.webp"
+                src="/image/origin-hanji.webp"
                 alt=""
                 fill
                 className="object-cover object-bottom select-none pointer-events-none"
@@ -72,9 +67,9 @@ export default function BrandOriginSection() {
               />
             </div>
 
-            {/* 3-4. 카드 본문 콘텐츠 (z-10, 제본 장식 및 하단 산수화와의 겹침 방지 여백, 약 20% 세로 압축) */}
-            <div className="relative z-10 w-full pt-10 sm:pt-14 md:pt-16 lg:pt-20 pb-14 sm:pb-18 md:pb-22 lg:pb-26 pl-6 sm:pl-16 md:pl-28 lg:pl-36 pr-6 sm:pr-12 md:pr-16 lg:pr-24">
-              <div className="max-w-[880px] mx-auto">
+            {/* 3-4. 카드 본문 콘텐츠 (z-10, 가로 공간 최적 활용 및 상하 여백 슬림화) */}
+            <div className="relative z-10 w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14 pb-10 sm:pb-12 md:pb-16 lg:pb-20 pl-6 sm:pl-12 md:pl-20 lg:pl-24 pr-5 sm:pr-8 md:pr-12 lg:pr-16">
+              <div className="max-w-[1000px] mx-auto">
                 {/* 본문 에세이 (18px 유지, 줄간격 1.7 유지, 문단 간격 16~18px 압축, 좌측 정렬, 먹갈색 본문, 딥 버건디 강조) */}
                 <div className="space-y-4 sm:space-y-[18px] text-[17px] sm:text-[18px] leading-[1.7] text-[#493A35] font-normal break-keep text-left">
                   <p>
@@ -121,7 +116,7 @@ export default function BrandOriginSection() {
                 </div>
 
                 {/* 4. 하단 가로 구분선 (은은한 딥 버건디 라인, 여백 최적화) */}
-                <div className="w-24 sm:w-32 h-[1px] bg-[#6B2E3A] opacity-25 my-6 sm:my-8 mx-auto" />
+                <div className="w-24 sm:w-32 h-[1px] bg-[#6B2E3A] opacity-25 my-5 sm:my-6 mx-auto" />
 
                 {/* 5. 하단 브랜드 철학 강조 문구 (딥 버건디 #6B2E3A, 붓글씨, 중앙 정렬, 산수화 장식 위 최적 배치) */}
                 <div className="text-center space-y-2">
