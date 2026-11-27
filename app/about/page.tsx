@@ -31,28 +31,41 @@ export default function AboutPage() {
         <Navigation />
 
         {/* =========================================================================
-            [기존 히어로 섹션 완전 보존] 백도화 소개 (1280px 기준선 정렬)
+            [메인 소개 영역] 백도화 소개 — 운명을 설계하는 은밀한 비기 (1280px 기준선 정렬)
             ========================================================================= */}
         <section className="pt-40 md:pt-48 pb-16 px-4 sm:px-6 lg:px-8 relative w-full">
           <div className="max-w-[1280px] mx-auto w-full relative z-10">
             {/* Rule 5: 텍스트 및 UI 레이어 보호를 위한 궁중유리 카드 */}
-            <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-elegant font-bold mb-8 gradient-text">
-                백도화 소개
+            <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 text-left">
+              {/* 1. 상단 영어 라벨 신규 추가 (12px, 앤티크 샴페인 골드, 타이틀과의 간격 16px) */}
+              <div className="mb-4">
+                <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-85">
+                  ABOUT BAEKDOHWA · PRIVATE ARCHIVE
+                </span>
+              </div>
+
+              {/* 2. 메인 타이틀 변경 (36px, 앤티크 샴페인 골드 그라데이션, 줄간격 1.4, 좌측 정렬) */}
+              <h1 className="text-[26px] sm:text-[32px] md:text-[36px] font-elegant font-bold leading-[1.4] mb-8 gradient-text text-left break-keep">
+                백도화(白桃花),<br className="sm:hidden" /> 운명을 설계하는 은밀한 비기
               </h1>
 
-              <div className="space-y-6">
-                <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep">
-                  백도화 매력학당은 선천코드 분석을 기반으로 한 연애·풍요 솔루션을 제공하는 공간입니다.<br className="hidden sm:inline" />{' '}
-                  각자의 고유한 에너지 패턴을 분석하여 매력 주파수를 발견하고, 이를 통해 진정한 관계와 풍요로운 삶을 만들어가는 여정을 함께합니다.
+              {/* 3 & 4. 본문 문단 (18px, 줄간격 1.7, 문단 간격 24~28px, 좌측 정렬, break-keep) */}
+              <div className="space-y-6 md:space-y-7">
+                <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-left">
+                  붉게 들뜨는 도화가 아닌, 가장 고고하고 단단하게 피어나는 하얀 복숭아꽃(白桃花)의 기품. 백도화 매력학당은 타고난 사주의 껍질을 벗겨 당신만의 ‘선천코드’를 해독하고, 반복되는 사랑과 결핍의 판을 뒤집는 프라이빗 각성 공간입니다.
                 </p>
 
-                <div className="gold-divider opacity-30 my-6" />
-
-                <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 font-light break-keep">
-                  청초하고 고급스러운 한국적 미학을 바탕으로, 과학적 접근과 세심한 분석을 통해 여러분의 선천코드를 해석합니다.<br className="hidden sm:inline" />{' '}
-                  이를 통해 개인의 고유한 매력을 극대화하고, 더 나은 관계와 풍요로운 삶을 실현할 수 있도록 돕는 것이 우리의 사명입니다.
+                <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-left">
+                  왕실의 은밀한 비방(秘方)에서 비롯된 동양의 정통 통찰과 현대 심리 설계의 만남. 아무에게나 허락되지 않는 정교한 분석과 프리미엄 솔루션으로, 당신이 삶의 온전한 주권자로 서는 결정적 기준을 제시합니다.
                 </p>
+
+                {/* 5. 마지막 사명 문구 강조 (상단 은은한 구분선, 간격 24px, 18px, font-semibold 600, 앤티크 샴페인 골드) */}
+                <div className="pt-2">
+                  <div className="gold-divider opacity-30 mb-6" />
+                  <p className="text-[18px] leading-[1.7] font-semibold text-[var(--accent-gold)] break-keep text-left">
+                    타고난 고유한 매력의 결을 극대화하여 주도적인 사랑과 온전한 풍요의 삶을 실현하게 하는 것. 그것이 바로 백도화가 존재하는 이유이자 우리의 사명입니다.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
