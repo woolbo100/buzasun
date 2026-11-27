@@ -10,24 +10,43 @@ export default function ClosingCtaSection() {
   return (
     <section className="py-16 md:py-28 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
-        {/* 기존 브랜드 엔딩 카피 (1280px 기준선 정렬) */}
+        {/* =========================================================================
+            [신규 섹션 헤더] 라벨 · 메인 제목 · 설명 문구 (페이지 배경 위 직접 배치)
+            ========================================================================= */}
+        {/* 1. 라벨 */}
         <Reveal delayMs={100}>
-          <div className="w-full text-center mb-16">
-            <div className="gungjung-glass w-full p-8 sm:p-10 border border-[rgba(216,191,163,0.18)]">
-              <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-70 font-light break-keep">
-                백도화는 당신의 선천 코드를 해석하고,<br className="hidden sm:inline" />{' '}
-                관계와 삶의 구조를 설계하는 전문 시스템입니다.
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+              PRIVATE ARCHIVE · 주권자의 각성
+            </span>
+            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+          </div>
+        </Reveal>
+
+        {/* 2 & 3. 메인 제목 및 설명 문구 (이미지와 40px 여백) */}
+        <Reveal delayMs={150}>
+          <div className="text-center mb-10 max-w-4xl mx-auto">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 text-center leading-[1.4] break-keep">
+              운명을 묻는 자에서, 운명을 읽는 주권자로
+            </h2>
+            <div className="space-y-2 text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep text-center max-w-[1000px] mx-auto">
+              <p>
+                억지로 바꾸려 애쓰지 않아도, 본연의 결을 제자리에 정렬하면 사랑과 풍요는 저절로 피어납니다.
+              </p>
+              <p>
+                스스로의 판을 설계하기로 결단한 소수에게, 흔들리지 않을 가장 날카로운 기준을 건네드립니다.
               </p>
             </div>
           </div>
         </Reveal>
 
         {/* =========================================================================
-            [신규 최종 CTA 상단 이미지] 16:9 와이드 배너 (1280px 기준선 정렬, 라운딩 16px)
-            이전 영역과 64px(상단 mb-16과 연계), 하단 CTA 카드와 40px(mb-10) 여백
+            [기존 가로형 이미지] 16:9 와이드 배너 (1280px 기준선 정렬, 라운딩 16px)
+            상단 설명문과 40px(mb-10), 하단 CTA 카드와 40px(mb-10) 여백
             ========================================================================= */}
         <div className="w-full mb-10">
-          <Reveal delayMs={150}>
+          <Reveal delayMs={200}>
             <div className="relative w-full aspect-[16/9] rounded-[16px] overflow-hidden">
               <Image
                 src="/image/baekdohwa-destiny-guide.webp"
@@ -42,7 +61,7 @@ export default function ClosingCtaSection() {
         </div>
 
         {/* 최종 클로징 및 3대 CTA 카드 (1280px 기준선 정렬) */}
-        <Reveal delayMs={200}>
+        <Reveal delayMs={250}>
           <div className="gungjung-glass w-full p-10 sm:p-16 text-center border border-[rgba(216,191,163,0.25)]">
             {/* 1. 메인 헤드카피 (36px, 앤티크 샴페인 골드, PC 2줄 구성, 공통 line-height: 1.4 적용) */}
             <h2 

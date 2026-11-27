@@ -83,11 +83,12 @@ export default function AboutPage() {
                 <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
               </div>
 
-              {/* 2. 메인 타이틀 (수많은 조언과 공식을 따라도 제목과 동일한 text-2xl sm:text-4xl md:text-[40px] lg:text-[42px], 중앙 정렬, 공통 line-height: 1.4 적용) */}
+              {/* 2. 메인 타이틀 ('백도화(白桃花),' 화이트 텍스트 적용) */}
               <h1 
-                className="about-heading text-2xl sm:text-4xl md:text-[40px] lg:text-[42px] font-elegant font-bold mb-8 gradient-text text-center"
+                className="about-heading text-2xl sm:text-4xl md:text-[40px] lg:text-[42px] font-elegant font-bold mb-8 text-center"
               >
-                백도화(白桃花), 운명을 설계하는 은밀한 비기
+                <span className="text-[#F5F5F5]">백도화(白桃花),</span>{' '}
+                <span className="gradient-text">운명을 설계하는 은밀한 비기</span>
               </h1>
 
               {/* 3 & 4. 본문 문단 (18px, 줄간격 1.7, 문단 간격 24~28px, 최대 너비 960px, 중앙 정렬, break-keep) */}

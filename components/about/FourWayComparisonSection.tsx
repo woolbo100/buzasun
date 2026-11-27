@@ -12,7 +12,7 @@ interface ComparisonColumn {
   isHighlighted?: boolean
   startingPoint: string
   coreQuestion: string
-  mainValue: string
+  mainValue: React.ReactNode
 }
 
 const comparisonData: ComparisonColumn[] = [
@@ -34,7 +34,11 @@ const comparisonData: ComparisonColumn[] = [
     isHighlighted: false,
     startingPoint: '현재의 고민',
     coreQuestion: '지금 무엇이 힘든가?',
-    mainValue: '정서적 이해와 문제 해결'
+    mainValue: (
+      <>
+        정서적 이해와<br />문제 해결
+      </>
+    )
   },
   {
     id: 'traditional-saju',
@@ -54,7 +58,11 @@ const comparisonData: ComparisonColumn[] = [
     isHighlighted: true,
     startingPoint: '선천코드와 반복 패턴',
     coreQuestion: '나는 왜 이런 사랑과 삶의 패턴을 반복할까?',
-    mainValue: '선천코드 해독과 맞춤형 실전 전략'
+    mainValue: (
+      <>
+        선천코드 해독과<br />맞춤형 실전 전략
+      </>
+    )
   }
 ]
 

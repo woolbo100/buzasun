@@ -85,7 +85,7 @@ export default function LoveSecretCodeSection() {
             <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4">
               백도화의 선천코드 연애 설계
             </h2>
-            <p className="text-[18px] leading-[1.7] font-elegant text-[var(--accent-gold)] font-medium leading-[1.5]">
+            <p className="text-xl sm:text-2xl font-elegant text-[var(--accent-gold)] font-medium tracking-wide leading-relaxed">
               사랑의 시작은 나를 읽는 것
             </p>
           </div>

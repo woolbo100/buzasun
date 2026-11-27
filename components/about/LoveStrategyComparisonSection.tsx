@@ -32,12 +32,12 @@ export default function LoveStrategyComparisonSection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 (의미 단위 2줄 배치, 공통 line-height: 1.4 적용) */}
+        {/* 헤드라인 (의미 단위 2줄 배치, 공통 line-height: 1.4 적용, '나를 기준' 피치 포인트 컬러 강조) */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] text-center">
               남의 공식에 나를 맞출 것인가,<br />
-              나를 기준으로 판을 짤 것인가.
+              <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">나를 기준</span>으로 판을 짤 것인가
             </h2>
           </div>
         </Reveal>
