@@ -3,7 +3,6 @@ import Footer from '@/components/Footer'
 import GlobalBackground from '@/components/GlobalBackground'
 
 // 신규 및 확장 브랜드 소개 섹션 컴포넌트
-import CustomerQuestionSection from '@/components/about/CustomerQuestionSection'
 import PhilosophySection from '@/components/about/PhilosophySection'
 import BeyondRulesSection from '@/components/about/BeyondRulesSection'
 import LoveSecretCodeSection from '@/components/about/LoveSecretCodeSection'
@@ -72,11 +71,8 @@ export default function AboutPage() {
         </section>
 
         {/* =========================================================================
-            [신규 도입부] 고객의 고민에서 시작하는 메시지 영역
+            01. 브랜드 핵심 철학 및 메인 메시지 (단일 통합 카드)
             ========================================================================= */}
-        <CustomerQuestionSection />
-
-        {/* 01. 브랜드 핵심 철학 및 메인 메시지 */}
         <PhilosophySection />
 
         {/* --- [선천코드 차별화 및 시각적 콘텐츠 영역] --- */}
