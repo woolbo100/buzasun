@@ -304,6 +304,35 @@
     display: inline-block;
   }
 
+  /* =========================================================================
+     백도화 소개페이지 전용 카드 스타일 시스템 (카드 성격별 스타일 분리)
+     ========================================================================= */
+  /* 1. 중요 선언형 퍼플 한지 섹션 전용 (차분하고 묵직한 먹보라·남색 한지 그라데이션) */
+  .card--hanji-purple {
+    background: linear-gradient(to right, rgba(38, 17, 26, 0.85) 0%, rgba(26, 12, 25, 0.85) 40%, rgba(18, 9, 23, 0.85) 70%, rgba(10, 5, 20, 0.85) 100%) !important;
+    border: 1px solid rgba(212, 178, 167, 0.7) !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(212, 178, 167, 0.22) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* 2. 버건디 강조 카드 전용 (톤다운된 딥 버건디 플럼 반투명 — 붉은기/빨강/쨍함 배제, 은은한 샴페인 골드 테두리) */
+  .card--burgundy {
+    background: linear-gradient(135deg, rgba(102, 38, 59, 0.62) 0%, rgba(72, 27, 45, 0.56) 100%) !important;
+    border: 1px solid rgba(199, 169, 122, 0.35) !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* 3. 일반 투명 궁중유리 카드 */
+  .card--transparent-neutral {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(216, 191, 163, 0.15) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
   /* 백도화 연애 리포트 — 시그니처 강조 카드 통일 스타일 (기준: '하지만 기억하십시오.' 상자) */
   .love-report-highlight-card {
     background-color: rgba(125, 76, 100, 0.20);

@@ -38,8 +38,8 @@ export default function OriginBackgroundSection() {
               </p>
             </div>
 
-            {/* 핵심 질문 인용 상자 (통일된 버건디 카드 톤) */}
-            <div className="max-w-3xl mx-auto my-8 p-6 sm:p-8 rounded-xl bg-[rgba(107,46,58,0.75)] border-l-2 border-[var(--accent-gold)] border border-[rgba(199,169,122,0.35)]">
+            {/* 핵심 질문 인용 상자 (톤다운된 딥 버건디 플럼 반투명 박스) */}
+            <div className="card--burgundy max-w-3xl mx-auto my-8 p-6 sm:p-8 rounded-xl border-l-2 !border-l-[var(--accent-gold)]">
               <p className="text-[12px] tracking-widest text-[var(--accent-gold)] uppercase mb-2 font-elegant opacity-75">
                 THE ESSENTIAL QUESTION
               </p>

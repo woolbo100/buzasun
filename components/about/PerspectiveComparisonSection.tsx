@@ -68,7 +68,7 @@ export default function PerspectiveComparisonSection() {
                   일반적으로 궁금해하는 질문
                 </span>
               </div>
-              <div className="py-4 px-6 text-center md:text-left bg-[rgba(107,46,58,0.35)]">
+              <div className="py-4 px-6 text-center md:text-left bg-[rgba(95,36,56,0.3)]">
                 <span className="text-[12px] font-elegant tracking-widest text-[var(--accent-gold)] uppercase font-semibold">
                   백도화가 함께 탐색하는 질문
                 </span>
@@ -92,8 +92,8 @@ export default function PerspectiveComparisonSection() {
                     </p>
                   </div>
 
-                  {/* 우측: 백도화의 질문 (통일된 버건디 톤 & 앤티크 샴페인 골드) */}
-                  <div className="py-4 sm:py-5 px-6 flex items-center bg-[rgba(107,46,58,0.15)]">
+                  {/* 우측: 백도화의 질문 (톤다운된 딥 버건디 플럼 & 앤티크 샴페인 골드) */}
+                  <div className="py-4 sm:py-5 px-6 flex items-center bg-[rgba(95,36,56,0.12)]">
                     <span className="text-[12px] text-[var(--accent-gold)] mr-3 font-mono font-bold">
                       A{idx + 1}
                     </span>

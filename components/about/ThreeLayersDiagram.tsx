@@ -196,9 +196,9 @@ export default function ThreeLayersDiagram() {
 
         {/* 2. 하단 3개 층위 설명 카드 분리 (대형 투명 카드 외부, 3열 구조, 카드 간격 24px, 상단 간격 40px) */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          {/* 01. 선천코드 — 타고난 나 (통일된 버건디 카드 스타일) */}
+          {/* 01. 선천코드 — 타고난 나 (톤다운된 딥 버건디 플럼 반투명 카드) */}
           <Reveal delayMs={300} className="h-full">
-            <div className="p-6 sm:p-8 rounded-xl bg-[rgba(107,46,58,0.75)] border border-[rgba(199,169,122,0.35)] h-full flex flex-col justify-between">
+            <div className="card--burgundy p-6 sm:p-8 rounded-xl h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[12px] font-elegant font-bold tracking-widest text-[#B7788D] uppercase">

@@ -48,15 +48,16 @@ export default function ManifestoSection() {
           </Reveal>
         </div>
 
-        {/* 메인 선언문 카드 (1280px 기준선 정렬, 통일된 와인 버건디 한지 배경 + 네 모서리 전통 기하학 격자 문양) */}
+        {/* 메인 선언문 카드 (1280px 기준선 정렬, 원래의 퍼플·먹보라 한지 배경 복구 + 네 모서리 전통 기하학 격자 문양) */}
         <Reveal delayMs={200}>
           <div 
-            className="relative backdrop-blur-md w-full p-10 sm:p-16 md:p-20 lg:p-24 text-center overflow-hidden rounded-3xl border border-[rgba(199,169,122,0.35)] shadow-[0_16px_45px_rgba(0,0,0,0.65)] cursor-default"
+            className="card--hanji-purple relative backdrop-blur-md w-full p-10 sm:p-16 md:p-20 lg:p-24 text-center overflow-hidden rounded-3xl cursor-default"
             style={{
               background:
-                'linear-gradient(135deg, rgba(107, 46, 58, 0.78) 0%, rgba(92, 36, 49, 0.75) 50%, rgba(75, 28, 40, 0.78) 100%)',
+                'linear-gradient(to right, rgba(38, 17, 26, 0.85) 0%, rgba(26, 12, 25, 0.85) 40%, rgba(18, 9, 23, 0.85) 70%, rgba(10, 5, 20, 0.85) 100%)',
+              border: '1px solid rgba(212, 178, 167, 0.7)',
               boxShadow:
-                '0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(199, 169, 122, 0.2)'
+                '0 16px 45px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(212, 178, 167, 0.22)'
             }}
           >
             {/* 전통 닥종이 한지 질감 레이어 (짧고 가는 불규칙 섬유 + 은은한 펄프 얼룩 + 미세 종이 입자) */}

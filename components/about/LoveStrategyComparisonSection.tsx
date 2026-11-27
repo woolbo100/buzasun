@@ -73,9 +73,9 @@ export default function LoveStrategyComparisonSection() {
             </div>
           </Reveal>
 
-          {/* 오른쪽 카드: 백도화 선언 및 선천코드 맞춤 전략 (통일된 버건디 카드 스타일) */}
+          {/* 오른쪽 카드: 백도화 선언 및 선천코드 맞춤 전략 (톤다운된 딥 버건디 플럼 반투명 카드) */}
           <Reveal delayMs={300}>
-            <div className="gungjung-glass p-8 sm:p-12 rounded-3xl border border-[rgba(199,169,122,0.35)] bg-[rgba(107,46,58,0.75)] h-full flex flex-col justify-between w-full shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
+            <div className="card--burgundy p-8 sm:p-12 rounded-3xl h-full flex flex-col justify-between w-full">
               <div>
                 <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase block mb-2 opacity-90">
                   BAEKDOHWA

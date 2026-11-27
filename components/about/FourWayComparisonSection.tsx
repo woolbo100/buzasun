@@ -143,7 +143,7 @@ export default function FourWayComparisonSection() {
                   key={col.id}
                   className={`flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 relative ${
                     isBd
-                      ? 'bg-[rgba(107,46,58,0.75)] border-2 border-[var(--accent-gold)] shadow-[0_16px_48px_rgba(0,0,0,0.6)] lg:-translate-y-2'
+                      ? 'card--burgundy lg:-translate-y-2'
                       : 'bg-[rgba(32,22,30,0.55)] border border-[rgba(216,191,163,0.14)] hover:border-[rgba(216,191,163,0.25)]'
                   }`}
                 >
@@ -264,7 +264,7 @@ export default function FourWayComparisonSection() {
                 <div
                   className={`rounded-2xl p-6 sm:p-8 flex flex-col justify-between h-full relative ${
                     isBd
-                      ? 'bg-[rgba(107,46,58,0.75)] border border-[rgba(199,169,122,0.35)] shadow-[0_12px_36px_rgba(0,0,0,0.6)] backdrop-blur-md'
+                      ? 'card--burgundy'
                       : 'bg-[rgba(32,22,30,0.55)] border border-[rgba(216,191,163,0.15)]'
                   }`}
                 >
