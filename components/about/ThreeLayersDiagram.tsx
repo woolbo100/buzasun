@@ -28,7 +28,8 @@ export default function ThreeLayersDiagram() {
               타고난 나를 이해하고, 형성된 나를 돌아보며, 새로운 나를 선택하다
             </p>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 mt-6 font-light break-keep">
-              인간은 타고난 기질만으로 설명될 수 없으며, 살아오면서 형성된 경험과 신념, 감정과 행동, 그리고 앞으로의 선택을 함께 살펴볼 필요가 있습니다.<br className="hidden md:inline" />{' '}
+              인간은 타고난 기질만으로 설명될 수 없으며, 살아오면서 형성된 경험과 신념, 감정과 행동,<br />
+              그리고 앞으로의 선택을 함께 살펴볼 필요가 있습니다.<br className="hidden md:inline" />{' '}
               백도화는 인간을 선천코드, 무의식 패턴, 후천적 선택이라는 세 가지 층위에서 바라봅니다.
             </p>
           </div>
@@ -45,6 +46,11 @@ export default function ThreeLayersDiagram() {
                 aria-label="백도화의 세 가지 층위 동심원 다이어그램"
               >
                 <defs>
+                  {/* 텍스트 가독성 향상을 위한 미세 드롭 섀도우 */}
+                  <filter id="diagramTextShadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.75" />
+                  </filter>
+
                   {/* 동심원 그라데이션 */}
                   {/* 1. 바깥 원: 앤티크 샴페인 골드 */}
                   <radialGradient id="outerGrad" cx="50%" cy="50%" r="50%">
@@ -79,26 +85,31 @@ export default function ThreeLayersDiagram() {
                   strokeOpacity="0.35"
                   strokeDasharray="4 2"
                 />
-                {/* 바깥 원 텍스트 라벨 (상단) */}
+                {/* 바깥 원 텍스트 라벨 (상단 중앙 수평 정렬, 가독성 향상) */}
                 <text
                   x="300"
-                  y="62"
+                  y="66"
                   textAnchor="middle"
-                  fill="#D4B2A7"
-                  fontSize="15"
-                  fontFamily="Playfair Display, serif"
-                  letterSpacing="3"
-                  fontWeight="600"
+                  fill="#FFF9F2"
+                  fontSize="23"
+                  fontFamily="var(--font-nanum-myeongjo), serif"
+                  letterSpacing="2"
+                  fontWeight="700"
+                  filter="url(#diagramTextShadow)"
                 >
                   LAYER 03 · 후천적 선택
                 </text>
                 <text
                   x="300"
-                  y="84"
+                  y="92"
                   textAnchor="middle"
                   fill="#EDE6DA"
-                  fontSize="12"
-                  opacity="0.75"
+                  fontSize="15"
+                  fontFamily="var(--font-nanum-myeongjo), serif"
+                  letterSpacing="0.5"
+                  fontWeight="500"
+                  opacity="0.95"
+                  filter="url(#diagramTextShadow)"
                 >
                   스스로 만들어 가는 나
                 </text>
@@ -113,26 +124,31 @@ export default function ThreeLayersDiagram() {
                   strokeWidth="1.2"
                   strokeOpacity="0.45"
                 />
-                {/* 중간 원 텍스트 라벨 (상단) */}
+                {/* 중간 원 텍스트 라벨 (상단 중앙 수평 정렬, 가독성 향상) */}
                 <text
                   x="300"
-                  y="150"
+                  y="152"
                   textAnchor="middle"
-                  fill="#EBD5CD"
-                  fontSize="14"
-                  fontFamily="Playfair Display, serif"
+                  fill="#FFF9F2"
+                  fontSize="23"
+                  fontFamily="var(--font-nanum-myeongjo), serif"
                   letterSpacing="2"
-                  fontWeight="600"
+                  fontWeight="700"
+                  filter="url(#diagramTextShadow)"
                 >
                   LAYER 02 · 무의식 패턴
                 </text>
                 <text
                   x="300"
-                  y="170"
+                  y="178"
                   textAnchor="middle"
                   fill="#EDE6DA"
-                  fontSize="12"
-                  opacity="0.8"
+                  fontSize="15"
+                  fontFamily="var(--font-nanum-myeongjo), serif"
+                  letterSpacing="0.5"
+                  fontWeight="500"
+                  opacity="0.95"
+                  filter="url(#diagramTextShadow)"
                 >
                   살아오며 형성된 나
                 </text>
@@ -147,151 +163,147 @@ export default function ThreeLayersDiagram() {
                   strokeWidth="1.5"
                   strokeOpacity="0.7"
                 />
-                {/* 중심 원 내부 텍스트 */}
+                {/* 중심 원 내부 텍스트 3줄 (장식 점 제거, 세로 밸런스 균형 정렬) */}
                 <text
                   x="300"
-                  y="278"
+                  y="274"
                   textAnchor="middle"
-                  fill="#F5F5F5"
-                  fontSize="17"
-                  fontFamily="Playfair Display, serif"
-                  fontWeight="bold"
+                  fill="#FFFFFF"
+                  fontSize="32"
+                  fontFamily="var(--font-nanum-myeongjo), serif"
+                  fontWeight="700"
                   letterSpacing="1.5"
+                  filter="url(#diagramTextShadow)"
                 >
                   선천코드
                 </text>
                 <text
                   x="300"
-                  y="302"
+                  y="308"
                   textAnchor="middle"
-                  fill="#D4B2A7"
-                  fontSize="13"
-                  fontWeight="500"
+                  fill="var(--accent-gold)"
+                  fontSize="19"
+                  fontFamily="var(--font-nanum-myeongjo), serif"
+                  fontWeight="600"
+                  letterSpacing="1"
+                  filter="url(#diagramTextShadow)"
                 >
                   타고난 나
                 </text>
                 <text
                   x="300"
-                  y="324"
+                  y="338"
                   textAnchor="middle"
                   fill="#EDE6DA"
-                  fontSize="10"
-                  opacity="0.7"
+                  fontSize="15"
+                  fontFamily="var(--font-nanum-myeongjo), serif"
+                  fontWeight="500"
+                  letterSpacing="0.5"
+                  opacity="0.95"
+                  filter="url(#diagramTextShadow)"
                 >
                   오행과 기질의 원형
                 </text>
-
-                {/* 중심 꽃 심볼 워터마크 */}
-                <circle
-                  cx="300"
-                  cy="300"
-                  r="6"
-                  fill="#D4B2A7"
-                  opacity="0.8"
-                />
               </svg>
             </div>
           </div>
         </Reveal>
 
-        {/* 2. 하단 3개 층위 설명 카드 분리 (동등한 위계의 3단계 구조 — 동일 투명도, 동일 농도, 통일된 글라스 효과) */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          {/* 01. 선천코드 — 타고난 나 (깊은 버건디 틴트, 동일 투명도 및 명도 체감 통일) */}
+        {/* 2. 하단 3개 층위 설명 카드 분리 (동등한 위계의 3단계 구조 — 동일 배경, 동일 투명도, 동일 농도 통일) */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-stretch">
+          {/* 01. CENTER LAYER 01 — 선천코드 */}
           <Reveal delayMs={300} className="h-full">
             <div 
-              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300 w-full"
               style={{
                 background: 'linear-gradient(135deg, rgba(72, 24, 38, 0.52) 0%, rgba(48, 16, 26, 0.46) 100%)'
               }}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[12pt] font-elegant font-semibold tracking-widest text-[#B7788D] uppercase">
+                  <span className="text-[12px] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
                     CENTER LAYER 01
                   </span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#5E1528] border border-[var(--accent-gold)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent-gold)]/30 border border-[var(--accent-gold)]" />
                 </div>
-                <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-2">
+                <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-3 leading-snug">
                   01. 선천코드 — 타고난 나
                 </h3>
-                <p className="text-[12px] text-[var(--accent-gold)] mb-4 opacity-80">
-                  백도화의 깊은 버건디
-                </p>
-                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-4 break-keep">
+                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-6 break-keep min-h-[5.1em]">
                   명리학의 전통적 해석을 통해 자신의 기질과 성향을 탐색하고, 자신을 이해하기 위한 하나의 관점을 얻습니다.
                 </p>
               </div>
-              <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-75 space-y-2 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light break-keep">
-                <li>· 타고난 기질과 성향</li>
-                <li>· 오행과 명리학적 관점</li>
-                <li>· 관계에서 나타날 수 있는 성향과 특성</li>
-              </ul>
+              <div className="pt-5 border-t border-[rgba(216,191,163,0.2)] mt-auto">
+                <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 space-y-2.5 font-light break-keep">
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>타고난 기질과 성향</li>
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>오행과 명리학적 관점</li>
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>관계에서 나타날 수 있는 성향과 특성</li>
+                </ul>
+              </div>
             </div>
           </Reveal>
 
-          {/* 02. 무의식 패턴 — 형성된 나 (로즈핑크 플럼 틴트, 동일 투명도 및 명도 체감 통일) */}
+          {/* 02. MIDDLE LAYER 02 — 무의식 패턴 */}
           <Reveal delayMs={400} className="h-full">
             <div 
-              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300 w-full"
               style={{
-                background: 'linear-gradient(135deg, rgba(68, 26, 44, 0.52) 0%, rgba(46, 18, 30, 0.46) 100%)'
+                background: 'linear-gradient(135deg, rgba(72, 24, 38, 0.52) 0%, rgba(48, 16, 26, 0.46) 100%)'
               }}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[12pt] font-elegant font-semibold tracking-widest text-[#C58BA0] uppercase">
+                  <span className="text-[12px] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
                     MIDDLE LAYER 02
                   </span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#733249] border border-[var(--accent-gold)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent-gold)]/30 border border-[var(--accent-gold)]" />
                 </div>
-                <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-2">
+                <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-3 leading-snug">
                   02. 무의식 패턴 — 형성된 나
                 </h3>
-                <p className="text-[12px] text-[var(--accent-gold)] mb-4 opacity-80">
-                  채도가 낮은 로즈핑크플럼
-                </p>
-                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-4 break-keep">
+                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-6 break-keep min-h-[5.1em]">
                   살아오면서 형성된 신념과 경험, 감정 반응, 관계 습관을 돌아보며 반복되는 삶의 패턴을 이해합니다.
                 </p>
               </div>
-              <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-75 space-y-2 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light break-keep">
-                <li>· 신념과 감정 반응</li>
-                <li>· 애착과 관계 습관</li>
-                <li>· 과거의 경험과 반복되는 선택·행동</li>
-              </ul>
+              <div className="pt-5 border-t border-[rgba(216,191,163,0.2)] mt-auto">
+                <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 space-y-2.5 font-light break-keep">
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>신념과 감정 반응</li>
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>애착과 관계 습관</li>
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>과거의 경험과 반복되는 선택·행동</li>
+                </ul>
+              </div>
             </div>
           </Reveal>
 
-          {/* 03. 후천적 선택 — 만들어 가는 나 (샴페인 골드 브라운 틴트, 동일 투명도 및 명도 체감 통일) */}
+          {/* 03. OUTER LAYER 03 — 후천적 선택 */}
           <Reveal delayMs={500} className="h-full">
             <div 
-              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300 w-full"
               style={{
-                background: 'linear-gradient(135deg, rgba(64, 30, 36, 0.52) 0%, rgba(44, 20, 26, 0.46) 100%)'
+                background: 'linear-gradient(135deg, rgba(72, 24, 38, 0.52) 0%, rgba(48, 16, 26, 0.46) 100%)'
               }}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[12pt] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
+                  <span className="text-[12px] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
                     OUTER LAYER 03
                   </span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#BA8D7E] border border-[var(--accent-gold)]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent-gold)]/30 border border-[var(--accent-gold)]" />
                 </div>
-                <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-2">
+                <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-3 leading-snug">
                   03. 후천적 선택 — 만들어 가는 나
                 </h3>
-                <p className="text-[12px] text-[var(--accent-gold)] mb-4 opacity-80">
-                  은은한 앤티크 샴페인 골드
-                </p>
-                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-4 break-keep">
-                  자기인식과 새로운 관점, 의식적인 행동을 통해 앞으로의 삶과 관계의 방향을 설계합니다.
+                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-6 break-keep min-h-[5.1em]">
+                  자기인식과 새로운 관점, 의식적인 선택과 행동을 통해 자신만의 가능성을 발견하고, 앞으로의 삶과 관계의 방향을 설계합니다.
                 </p>
               </div>
-              <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-75 space-y-2 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light break-keep">
-                <li>· 자기인식과 성찰, 새로운 관점</li>
-                <li>· 의식적인 선택과 행동</li>
-                <li>· 삶의 방향과 관계의 실질적 변화</li>
-              </ul>
+              <div className="pt-5 border-t border-[rgba(216,191,163,0.2)] mt-auto">
+                <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 space-y-2.5 font-light break-keep">
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>자기인식과 성찰, 새로운 관점</li>
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>의식적인 선택과 행동</li>
+                  <li><span className="text-[var(--accent-gold)] mr-1.5 font-bold">·</span>삶의 방향과 관계의 실질적 변화</li>
+                </ul>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -301,7 +313,7 @@ export default function ThreeLayersDiagram() {
           <div 
             className="text-center p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] w-full"
             style={{
-              background: 'linear-gradient(135deg, rgba(58, 22, 34, 0.52) 0%, rgba(42, 16, 24, 0.46) 100%)'
+              background: 'linear-gradient(135deg, rgba(72, 24, 38, 0.52) 0%, rgba(48, 16, 26, 0.46) 100%)'
             }}
           >
             <p className="text-[18px] leading-[1.7] font-elegant font-medium text-[var(--accent-gold)] break-keep">

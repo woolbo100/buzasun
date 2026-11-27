@@ -33,53 +33,15 @@ export default function BaekJangmiStorySection() {
   return (
     <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
-        {/* 영문 소제목 */}
+        {/* [기존 보존] 백도화 선언 타이틀 */}
         <Reveal delayMs={100}>
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
-              THE STORY OF BAEK JANGMI
-            </span>
-            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-          </div>
-        </Reveal>
-
-        {/* 헤드라인 (공통 line-height: 1.4 적용) */}
-        <Reveal delayMs={150}>
-          <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4">
-              백도화의 철학을 만들어 가는 사람, 백장미
-            </h2>
-          </div>
-        </Reveal>
-
-        {/* 지침 공식 연결 문구 카드 (1280px 기준선 정렬) */}
-        <Reveal delayMs={200}>
-          <div className="gungjung-glass w-full p-8 sm:p-12 mb-16 text-center border border-[rgba(216,191,163,0.2)]">
-            <div className="max-w-3xl mx-auto space-y-4">
-              <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-[1.7] font-light break-keep">
-                백도화는 인간의 기질과 마음, 사랑과 관계, 삶의 가능성에 대한 오랜 관심과 탐구에서 출발합니다.
-              </p>
-              <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-[1.7] font-light break-keep">
-                동양의 지혜와 마음공부, 인간의 심리와 무의식에 대한 이해를 연결하며, 자신을 보다 깊이 이해하고 주체적인 삶을 살아가는 방법을 연구합니다.
-              </p>
-              <div className="gold-divider max-w-xs mx-auto my-6 opacity-30" />
-              <p className="text-[18px] leading-[1.7] font-elegant font-medium text-[var(--accent-gold)] break-keep">
-                백장미는 이러한 연구와 탐구를 백도화의 콘텐츠, 전자책, 리포트에 담아 전합니다.
-              </p>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* [기존 보존] 백도화 선언 타이틀 (신규 이미지 배너와 32px 간격: mb-8) */}
-        <Reveal delayMs={250}>
           <div className="flex items-center justify-center gap-4 md:gap-8 mb-8">
             <div className="flex-shrink-0">
               <BaekdohwaFlowerMark size={50} outlinePink={false} />
             </div>
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center text-[#F5F5F5]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center text-[#F5F5F5]">
               백도화 선언
-            </h3>
+            </h2>
             <div className="flex-shrink-0">
               <BaekdohwaFlowerMark size={50} outlinePink={false} />
             </div>
@@ -91,7 +53,7 @@ export default function BaekJangmiStorySection() {
             '백도화 선언' 제목과 32px(mb-8), 하단 투명 선언문 카드와 40px(mb-10) 여백
             ========================================================================= */}
         <div className="w-full mb-10">
-          <Reveal delayMs={280}>
+          <Reveal delayMs={150}>
             <div className="relative w-full aspect-[4/1] rounded-[16px] overflow-hidden">
               <Image
                 src="/image/baekdohwa-declaration-top-banner.webp"
@@ -106,7 +68,7 @@ export default function BaekJangmiStorySection() {
         </div>
 
         {/* [기존 보존] 메인 선언문 상자 (1280px 기준선 정렬) */}
-        <Reveal delayMs={300}>
+        <Reveal delayMs={200}>
           <div className="gungjung-glass w-full p-10 sm:p-14 md:p-16 text-center mb-16 border border-[rgba(216,191,163,0.2)]">
             <div className="max-w-3xl mx-auto">
               <p className="text-xl md:text-2xl leading-loose text-[#EDE6DA] font-light italic mb-8">
@@ -144,7 +106,7 @@ export default function BaekJangmiStorySection() {
           {credentials.map((section, idx) => {
             const isHovered = hoveredIdx === idx
             return (
-              <Reveal key={idx} delayMs={400 + idx * 100}>
+              <Reveal key={idx} delayMs={300 + idx * 100}>
                 <div 
                   className="gungjung-glass p-8 sm:p-10 h-full text-center flex flex-col items-center justify-between transition-all duration-400 w-full"
                   style={{

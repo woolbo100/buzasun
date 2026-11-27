@@ -376,21 +376,6 @@ export default function FourWayComparisonSection() {
             </p>
           </div>
         </Reveal>
-
-        {/* =========================================================================
-            비교 영역 하단 강조 카피 (36~40px 기준 명조 계열, 앤티크 샴페인 골드 강조)
-            ========================================================================= */}
-        <Reveal delayMs={500}>
-          <div className="mt-20 md:mt-24 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-[var(--accent-gold)] mb-5 leading-[1.5] tracking-tight">
-              사랑에도 나만의 방식이 있습니다.
-            </h3>
-            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep">
-              누군가의 공식을 따라가는 사랑에서<br className="sm:hidden" />{' '}
-              나를 이해하고 선택하는 사랑으로
-            </p>
-          </div>
-        </Reveal>
       </div>
     </section>
   )

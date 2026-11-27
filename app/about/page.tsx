@@ -11,7 +11,6 @@ import LoveSecretCodeSection from '@/components/about/LoveSecretCodeSection'
 import LoveStrategyComparisonSection from '@/components/about/LoveStrategyComparisonSection'
 import FourWayComparisonSection from '@/components/about/FourWayComparisonSection'
 import NameMeaningSection from '@/components/about/NameMeaningSection'
-import OriginBackgroundSection from '@/components/about/OriginBackgroundSection'
 import ThreeLayersDiagram from '@/components/about/ThreeLayersDiagram'
 import MethodologySection from '@/components/about/MethodologySection'
 import ThreeRealmsSection from '@/components/about/ThreeRealmsSection'
@@ -138,9 +137,6 @@ export default function AboutPage() {
 
         {/* 02. 백도화라는 이름과 세계관 */}
         <NameMeaningSection />
-
-        {/* 04. 백도화의 탄생 배경 */}
-        <OriginBackgroundSection />
 
         {/* 05. 인간을 바라보는 세 가지 층위 (3층 동심원 인포그래픽) */}
         <ThreeLayersDiagram />

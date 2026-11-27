@@ -1,6 +1,7 @@
 ﻿'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { Heart, HeartHandshake, Sparkles } from 'lucide-react'
 
@@ -79,14 +80,33 @@ export default function IntegratedApproachSection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 (공통 line-height: 1.4 적용, max-w-4xl 확장으로 '함께 바라보다' 단어 잘림 방지) */}
+        {/* 헤드라인 (공통 line-height: 1.4 적용, max-w-4xl 확장으로 '함께 바라보다' 단어 잘림 방지, 이미지와의 간격 40px) */}
         <Reveal delayMs={150}>
-          <div className="text-center mb-16 max-w-4xl mx-auto">
+          <div className="text-center mb-10 max-w-4xl mx-auto">
             <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4">
               동양의 지혜와 인간의 마음을 함께 바라보다
             </h2>
           </div>
         </Reveal>
+
+        {/* =========================================================================
+            [이동된 고서와 거울 가로형 이미지] (1280px 기준선 일치, 16:9 비율, 16px 라운딩)
+            제목과 40px(mb-10), 하단 6개 카드와 40px(mb-10) 간격
+            ========================================================================= */}
+        <div className="w-full mb-10">
+          <Reveal delayMs={180}>
+            <div className="relative aspect-[16/9] w-full rounded-[16px] overflow-hidden">
+              <Image
+                src="/image/wisdom-within.webp"
+                alt="동양의 지혜와 내면의 자기성찰을 상징하는 고서와 청동 거울, 백색 도화"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </div>
+          </Reveal>
+        </div>
 
         {/* 6개 통합 관점 그리드 (1280px 기준선 정렬) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 w-full">
