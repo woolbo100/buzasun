@@ -12,10 +12,11 @@ const realms = [
     hanja: '桃花',
     title: '사랑과 매력',
     eng: 'LOVE & ATTRACTION',
+    subtitle: '매혹과 사랑의 재설계',
+    desc: '반복되는 감정 소모와 관계의 패턴을 이해하고, 나만의 선천적 매력을 발견하여 자신을 잃지 않는 주도적인 사랑을 설계합니다.',
     colorName: '은은한 로즈핑크플럼',
     symbol: '도화, 복숭아꽃',
     image: '/image/baekdohwa-about-love.webp',
-    desc: '나의 매력을 발견하고, 사랑의 반복 패턴을 이해하며, 관계 속에서 나 자신을 잃지 않는 법을 함께 탐색합니다.',
     topics: [
       '선천적 매력과 연애 성향',
       '반복되는 연애 패턴',
@@ -37,10 +38,11 @@ const realms = [
     hanja: '因緣',
     title: '인연과 관계',
     eng: 'RELATIONSHIP & CONNECTION',
+    subtitle: '인연과 관계의 재해석',
+    desc: '두 사람의 선천적 기질과 관계의 상호작용을 이해하고, 서로의 다름을 존중하며 더 깊고 건강한 관계의 방향을 설계합니다.',
     colorName: '채도가 낮은 깊은 버건디',
     symbol: '모란',
     image: '/image/baekdohwa-about-relationship.webp',
-    desc: '서로의 기질과 차이를 이해하고, 사랑하는 사람과의 관계에서 나타나는 갈등과 상호작용을 새로운 관점에서 바라봅니다.',
     topics: [
       '두 사람의 기질과 성향',
       '관계의 상호작용',
@@ -61,10 +63,11 @@ const realms = [
     hanja: '豊饒',
     title: '풍요와 자기실현',
     eng: 'ABUNDANCE & SELF-REALIZATION',
+    subtitle: '결핍에서 순환으로의 전환',
+    desc: '타고난 재능과 가능성을 발견하고, 풍요를 제한하는 신념과 패턴을 이해하여 일과 재물, 자기실현의 방향을 설계합니다.',
     colorName: '옥색과 연옥색',
     symbol: '연꽃, 엽전',
     image: '/image/baekdohwa-about-abundance.webp',
-    desc: '자신의 가능성과 재능을 발견하고, 풍요를 대하는 신념과 태도를 돌아보며, 자신만의 삶을 설계하는 방법을 탐색합니다.',
     topics: [
       '타고난 재능과 가능성',
       '풍요를 대하는 태도와 신념',
@@ -97,15 +100,15 @@ export default function ThreeRealmsSection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 (공통 line-height: 1.4 적용, max-w-4xl 확장으로 '자신을 이해하다' 단어 잘림 방지) */}
+        {/* 헤드라인 및 설명 문구 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-4xl mx-auto">
-            <span className="text-lg sm:text-xl font-elegant tracking-widest text-[var(--accent-gold)] block mb-2">
-              사랑 · 인연 · 풍요
-            </span>
-            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5]">
-              삶의 중요한 순간마다 자신을 이해하다
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 text-center leading-[1.4]">
+              백도화가 설계하는 세 가지 삶의 영역
             </h2>
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep text-center max-w-2xl mx-auto">
+              나를 이해하는 것에서 시작하여 사랑과 관계, 풍요의 방향을 다시 설계합니다.
+            </p>
           </div>
         </Reveal>
 
@@ -142,16 +145,22 @@ export default function ThreeRealmsSection() {
 
                   {/* 카드 본문 설명 */}
                   <div className="p-6 sm:p-8 space-y-6">
-                    <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light break-keep min-h-[5.1em]">
-                      {realm.desc}
-                    </p>
+                    {/* 신규 소제목 및 설명 문구 */}
+                    <div>
+                      <h4 className="text-[22px] font-elegant font-bold text-[var(--accent-gold)] mb-4 text-left leading-snug">
+                        {realm.subtitle}
+                      </h4>
+                      <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light break-keep min-h-[5.1em] text-left">
+                        {realm.desc}
+                      </p>
+                    </div>
 
                     {/* 주요 주제 (16px 소제목) */}
                     <div>
-                      <p className="text-[16px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] mb-3 font-semibold">
+                      <p className="text-[16px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] mb-3 font-semibold text-left">
                         주요 주제
                       </p>
-                      <ul className="text-[18px] text-[#EDE6DA] opacity-80 space-y-2 font-light leading-[1.7] break-keep">
+                      <ul className="text-[18px] text-[#EDE6DA] opacity-80 space-y-2 font-light leading-[1.7] break-keep text-left">
                         {realm.topics.map((topic, tIdx) => (
                           <li key={tIdx} className="flex items-center gap-2">
                             <span className="w-1 h-1 rounded-full bg-[var(--accent-gold)] opacity-70 flex-shrink-0" />
@@ -165,7 +174,7 @@ export default function ThreeRealmsSection() {
 
                 {/* 관련 상품 링크 (16px 소제목) */}
                 <div className="p-6 sm:p-8 pt-0 border-t border-[rgba(216,191,163,0.12)] mt-auto">
-                  <p className="text-[16px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] mb-3 pt-4 opacity-80 font-semibold">
+                  <p className="text-[16px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] mb-3 pt-4 opacity-80 font-semibold text-left">
                     관련 상품 바로가기
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -185,6 +194,18 @@ export default function ThreeRealmsSection() {
             </Reveal>
           ))}
         </div>
+
+        {/* 하단 마무리 강조 문구 (배경 위 직접 배치, 중앙 정렬, 상단 여백 48px) */}
+        <Reveal delayMs={500}>
+          <div className="mt-12 text-center space-y-3">
+            <h3 className="text-xl sm:text-2xl md:text-[28px] font-elegant font-bold text-[var(--accent-gold)] leading-[1.4] tracking-wide break-keep">
+              사랑의 주권, 관계의 지혜, 풍요의 실천
+            </h3>
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
+              모든 변화는 나를 이해하는 것에서 시작됩니다.
+            </p>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Reveal from '@/components/Reveal'
-import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 import { Brain, Compass, Target } from 'lucide-react'
 
 const credentials = [
@@ -36,14 +35,28 @@ export default function BaekJangmiStorySection() {
         {/* [기존 보존] 백도화 선언 타이틀 */}
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-4 md:gap-8 mb-8">
-            <div className="flex-shrink-0">
-              <BaekdohwaFlowerMark size={50} outlinePink={false} />
+            <div className="flex-shrink-0 flex items-center justify-center">
+              <Image
+                src="/image/baekdohwa-flower-symbol.png"
+                alt="백도화 상징 꽃"
+                width={36}
+                height={36}
+                className="w-[36px] h-[36px] object-contain"
+                priority
+              />
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center text-[#F5F5F5]">
               백도화 선언
             </h2>
-            <div className="flex-shrink-0">
-              <BaekdohwaFlowerMark size={50} outlinePink={false} />
+            <div className="flex-shrink-0 flex items-center justify-center">
+              <Image
+                src="/image/baekdohwa-flower-symbol.png"
+                alt="백도화 상징 꽃"
+                width={36}
+                height={36}
+                className="w-[36px] h-[36px] object-contain"
+                priority
+              />
             </div>
           </div>
         </Reveal>
@@ -81,16 +94,15 @@ export default function BaekJangmiStorySection() {
               
               <div className="gold-divider mb-8 max-w-sm mx-auto opacity-40" />
               
-              <BaekdohwaFlowerMark 
-                size={72}
-                className="hidden md:block mx-auto mb-8"
-                outlineGold={true}
-              />
-              <BaekdohwaFlowerMark 
-                size={52}
-                className="block md:hidden mx-auto mb-8"
-                outlineGold={true}
-              />
+              <div className="flex justify-center mb-8">
+                <Image
+                  src="/image/baekdohwa-flower-symbol.png"
+                  alt="백도화 상징 꽃"
+                  width={52}
+                  height={52}
+                  className="w-[52px] h-[52px] object-contain"
+                />
+              </div>
               
               <p className="about-statement-heading text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] tracking-wider">
                 감이 아닌 이론<br />

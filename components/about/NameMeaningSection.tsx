@@ -55,16 +55,27 @@ export default function NameMeaningSection() {
           {/* 2. 오른쪽 55%: 글상자 (PC 세로 높이 왼쪽 이미지와 일치, 텍스트 세로 중앙 정렬) */}
           <div className="w-full lg:h-full flex flex-col">
             <Reveal delayMs={280} className="w-full lg:h-full flex flex-col flex-1">
-              <div className="gungjung-glass w-full lg:h-full flex-1 p-8 sm:p-12 md:p-14 text-[#EDE6DA] leading-[1.7] font-light break-keep flex flex-col justify-center">
-                <div className="space-y-6">
-                  <div className="space-y-6">
+              <div className="gungjung-glass w-full lg:h-full flex-1 p-8 sm:p-10 md:p-12 text-[#EDE6DA] leading-[1.7] font-light break-keep flex flex-col justify-center">
+                <div className="space-y-5">
+                  <div className="space-y-4">
+                    {/* 신규 추가: 브랜드명 탄생 의미 */}
+                    <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
+                      백도화(白桃花)는 순백을 상징하는 백(白)에 매력과 인연을 상징하는 도화(桃花)를 더한 이름입니다.
+                    </p>
+                    <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
+                      <strong className="font-semibold text-[var(--accent-gold)]">
+                        청초하면서도 단단하고, 우아하면서도 고고한 하얀 복숭아꽃의 기품
+                      </strong>을 담았습니다.
+                    </p>
+
+                    <div className="gold-divider opacity-25 my-4" />
+
                     <p className="text-[18px] leading-[1.7] font-normal text-[var(--accent-gold)] opacity-95 break-keep">
                       백도화에서 도화(桃花)는 단순히 누군가의 마음을 얻기 위한 매력만을 의미하지 않습니다.
                     </p>
                     <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
                       자신의 고유한 기질과 아름다움을 발견하고, 내면의 생명력과 존재감을 피워내는 상징입니다.
                     </p>
-                    <div className="gold-divider opacity-25 my-6" />
                     <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
                       진정한 매력은 누군가에게 선택받기 위해 자신을 바꾸는 것에서 시작되지 않습니다.
                     </p>
@@ -77,7 +88,7 @@ export default function NameMeaningSection() {
                   </div>
 
                   {/* 마지막 핵심 카피 (기존 강조 효과 100% 유지) */}
-                  <div className="pt-6 border-t border-[rgba(216,191,163,0.2)]">
+                  <div className="pt-5 border-t border-[rgba(216,191,163,0.2)]">
                     <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed">
                       누군가에게 선택받기 위한 아름다움이 아닌,<br />
                       스스로 피어나는 존재의 아름다움

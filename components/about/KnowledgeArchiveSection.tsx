@@ -66,7 +66,7 @@ export default function KnowledgeArchiveSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               THE ARCHIVE OF WISDOM
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -90,13 +90,17 @@ export default function KnowledgeArchiveSection() {
             ========================================================================= */}
         <div className="w-full">
           <Reveal delayMs={200}>
-            <div className="text-center mb-8">
-              <span className="text-[12px] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase block mb-2 opacity-90">
-                COLLECTION 01 · PRIVATE LIBRARY
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#F5F5F5]">
-                백도화 비첩(秘帖)
-              </h3>
+            <div className="text-center mb-8 sm:mb-10">
+              <div
+                className="inline-flex items-center justify-center py-4 px-10 rounded-[8px] border border-[rgba(216,191,163,0.35)] backdrop-blur-sm"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(72, 24, 38, 0.65) 0%, rgba(48, 16, 26, 0.6) 100%)'
+                }}
+              >
+                <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[var(--accent-gold)] tracking-wide">
+                  백도화 비첩(秘帖)
+                </h3>
+              </div>
             </div>
           </Reveal>
 
@@ -127,10 +131,10 @@ export default function KnowledgeArchiveSection() {
             <div className="text-center mt-8">
               <Link
                 href="/ebooks"
-                className="inline-flex items-center gap-2 text-[15px] font-elegant font-medium text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
+                className="inline-flex items-center gap-2 text-[18px] font-elegant font-semibold text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
               >
                 <span>비첩 전체 보기</span>
-                <ArrowRight size={15} />
+                <ArrowRight size={18} />
               </Link>
             </div>
           </Reveal>
@@ -144,13 +148,17 @@ export default function KnowledgeArchiveSection() {
             ========================================================================= */}
         <div className="w-full">
           <Reveal delayMs={500}>
-            <div className="text-center mb-8">
-              <span className="text-[12px] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase block mb-2 opacity-90">
-                COLLECTION 02 · PERSONALIZED REPORT
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#F5F5F5]">
-                선천코드 프리미엄 리포트
-              </h3>
+            <div className="text-center mb-8 sm:mb-10">
+              <div
+                className="inline-flex items-center justify-center py-4 px-10 rounded-[8px] border border-[rgba(216,191,163,0.35)] backdrop-blur-sm"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(72, 24, 38, 0.65) 0%, rgba(48, 16, 26, 0.6) 100%)'
+                }}
+              >
+                <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[var(--accent-gold)] tracking-wide">
+                  선천코드 프리미엄 리포트
+                </h3>
+              </div>
             </div>
           </Reveal>
 
@@ -181,10 +189,10 @@ export default function KnowledgeArchiveSection() {
             <div className="text-center mt-8">
               <Link
                 href="/reports"
-                className="inline-flex items-center gap-2 text-[15px] font-elegant font-medium text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
+                className="inline-flex items-center gap-2 text-[18px] font-elegant font-semibold text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
               >
                 <span>프리미엄 리포트 전체 보기</span>
-                <ArrowRight size={15} />
+                <ArrowRight size={18} />
               </Link>
             </div>
           </Reveal>
