@@ -53,8 +53,8 @@ const comparisonData: ComparisonColumn[] = [
     icon: <Sparkles size={26} className="text-[var(--accent-gold)]" />,
     isHighlighted: true,
     startingPoint: '선천코드와 반복 패턴',
-    coreQuestion: '나는 왜 이런 사랑을 반복할까?',
-    mainValue: '개인별 자기이해와 관계 전략'
+    coreQuestion: '나는 왜 이런 사랑과 삶의 패턴을 반복할까?',
+    mainValue: '선천코드 해독과 맞춤형 실전 전략'
   }
 ]
 
@@ -62,26 +62,27 @@ export default function FourWayComparisonSection() {
   return (
     <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
-        {/* 영문 소제목 */}
+        {/* 영문 소제목 (WHY BAEKDOHWA) */}
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
             <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
-              A DIFFERENT PERSPECTIVE
+              WHY BAEKDOHWA
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
           </div>
         </Reveal>
 
-        {/* 헤드라인 및 서브카피 (공통 line-height: 1.4 적용) */}
+        {/* 헤드라인 및 서브카피 (공통 line-height: 1.4 적용, 의미 단위 2줄 배치) */}
         <Reveal delayMs={150}>
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4">
-              같은 사랑, 서로 다른 접근법
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 text-center">
+              타고난 기질의 이해를 넘어,<br />
+              삶의 전략을 설계하다
             </h2>
-            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
-              사랑과 관계를 이해하는 다양한 방법<br className="sm:hidden" />{' '}
-              백도화는 나의 선천코드에서 시작합니다.
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep text-center max-w-3xl mx-auto">
+              연애 콘텐츠와 심리상담, 전통 명리는 저마다의 관점으로 사랑과 삶을 이해합니다.<br className="hidden md:inline" />{' '}
+              백도화는 <strong className="font-semibold text-[var(--accent-gold)]">선천코드와 무의식 패턴</strong>을 연결하여 나만의 매력과 관계, 삶의 방향을 설계합니다.
             </p>
           </div>
         </Reveal>

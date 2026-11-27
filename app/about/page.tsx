@@ -10,12 +10,10 @@ import BeyondRulesSection from '@/components/about/BeyondRulesSection'
 import LoveSecretCodeSection from '@/components/about/LoveSecretCodeSection'
 import LoveStrategyComparisonSection from '@/components/about/LoveStrategyComparisonSection'
 import FourWayComparisonSection from '@/components/about/FourWayComparisonSection'
-import QuestionsSection from '@/components/about/QuestionsSection'
 import NameMeaningSection from '@/components/about/NameMeaningSection'
 import OriginBackgroundSection from '@/components/about/OriginBackgroundSection'
 import ThreeLayersDiagram from '@/components/about/ThreeLayersDiagram'
 import MethodologySection from '@/components/about/MethodologySection'
-import PerspectiveComparisonSection from '@/components/about/PerspectiveComparisonSection'
 import ThreeRealmsSection from '@/components/about/ThreeRealmsSection'
 import KnowledgeArchiveSection from '@/components/about/KnowledgeArchiveSection'
 import BaekJangmiStorySection from '@/components/about/BaekJangmiStorySection'
@@ -128,19 +126,16 @@ export default function AboutPage() {
         {/* NEW 01. 핵심 차별화 메시지 (BEYOND THE RULES OF LOVE) */}
         <BeyondRulesSection />
 
-        {/* NEW 02. 백도화의 선천코드 연애 설계 (THE SECRET CODE OF LOVE 인포그래픽 - 절대 유지) */}
-        <LoveSecretCodeSection />
-
-        {/* NEW 03. 보편적인 연애 공식과 선천코드 맞춤 전략 비교 (2자 비교 카드 유지) */}
+        {/* 01. 2단 비교 카드 (보편적인 연애 공식 vs 선천코드 맞춤 전략: SHIFT OF STANDARD) */}
         <LoveStrategyComparisonSection />
 
-        {/* NEW 04. 백도화의 4자 비교 영역 (연애 콘텐츠, 일반 상담, 전통 사주, 백도화 카드형 매트릭스) */}
+        {/* 02. 선천코드 연애 설계 (THE SECRET CODE OF LOVE 인포그래픽) */}
+        <LoveSecretCodeSection />
+
+        {/* 03. 4단 비교 카드 (연애 콘텐츠, 일반 상담, 전통 사주, 백도화: WHY BAEKDOHWA) */}
         <FourWayComparisonSection />
 
-        {/* 02. 백도화가 세상에 던지는 질문 */}
-        <QuestionsSection />
-
-        {/* 03. 백도화라는 이름과 세계관 */}
+        {/* 02. 백도화라는 이름과 세계관 */}
         <NameMeaningSection />
 
         {/* 04. 백도화의 탄생 배경 */}
@@ -152,10 +147,7 @@ export default function AboutPage() {
         {/* 06. 백도화의 고유 해석 방법론 (4단계 해독·발견·각성·재설계) */}
         <MethodologySection />
 
-        {/* 07. 백도화가 다른 이유 (2열 비교 구조) */}
-        <PerspectiveComparisonSection />
-
-        {/* 08. 백도화의 세 가지 전문 영역 (사랑과 매력, 인연과 관계, 풍요와 자기실현) */}
+        {/* 07. 백도화의 세 가지 전문 영역 (사랑과 매력, 인연과 관계, 풍요와 자기실현) */}
         <ThreeRealmsSection />
 
         {/* 09. 백도화의 지식 자산 (비급 시리즈, 선천코드 비기, 프리미엄 리포트) */}
