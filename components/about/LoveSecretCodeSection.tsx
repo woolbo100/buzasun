@@ -91,9 +91,9 @@ export default function LoveSecretCodeSection() {
             인포그래픽 파이프라인 (상단 → 화살표 → 6개 코드 → 화살표 → 맞춤 전략)
             ========================================================================= */}
         <div className="flex flex-col items-center w-full">
-          {/* 상단: STEP 01 선천코드 해독 메인 카드 (중앙 독립 배치) */}
+          {/* 상단: STEP 01 선천코드 해독 메인 카드 (중앙 독립 배치, 통일된 버건디 카드 스타일) */}
           <Reveal delayMs={200}>
-            <div className="w-full max-w-lg mx-auto gungjung-glass p-8 sm:p-10 rounded-2xl border border-[rgba(216,191,163,0.3)] bg-gradient-to-b from-[rgba(78,20,36,0.45)] to-[rgba(45,15,25,0.45)] text-center shadow-[0_12px_36px_rgba(0,0,0,0.5)]">
+            <div className="w-full max-w-lg mx-auto gungjung-glass p-8 sm:p-10 rounded-2xl border border-[rgba(199,169,122,0.35)] bg-[rgba(107,46,58,0.75)] text-center shadow-[0_12px_36px_rgba(0,0,0,0.5)]">
               <div className="w-14 h-14 rounded-2xl bg-[rgba(216,191,163,0.1)] border border-[rgba(216,191,163,0.25)] flex items-center justify-center mx-auto mb-4">
                 <Compass size={32} className="text-[var(--accent-gold)]" />
               </div>
@@ -151,9 +151,9 @@ export default function LoveSecretCodeSection() {
             </div>
           </Reveal>
 
-          {/* 하단: 나만의 맞춤형 연애 전략 (인포그래픽 최종 결과, 시각적 강조) */}
+          {/* 하단: 나만의 맞춤형 연애 전략 (인포그래픽 최종 결과, 통일된 버건디 카드 스타일) */}
           <Reveal delayMs={500}>
-            <div className="w-full gungjung-glass p-8 sm:p-12 md:p-14 rounded-2xl border border-[rgba(216,191,163,0.35)] bg-gradient-to-r from-[rgba(62,15,31,0.65)] via-[rgba(78,20,36,0.75)] to-[rgba(62,15,31,0.65)] text-center shadow-[0_16px_48px_rgba(0,0,0,0.6)]">
+            <div className="w-full gungjung-glass p-8 sm:p-12 md:p-14 rounded-2xl border border-[rgba(199,169,122,0.35)] bg-[rgba(107,46,58,0.75)] text-center shadow-[0_16px_48px_rgba(0,0,0,0.6)]">
               <span className="text-[12px] font-elegant font-bold tracking-[0.2em] text-[var(--accent-gold)] uppercase block mb-2 opacity-85">
                 PERSONALIZED LOVE STRATEGY
               </span>
