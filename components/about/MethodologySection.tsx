@@ -44,7 +44,7 @@ export default function MethodologySection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE PATH TO SELF-MASTERY
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -57,7 +57,7 @@ export default function MethodologySection() {
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
               선천코드 해독과 운명 재설계
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#EDE6DA] opacity-85 leading-relaxed font-light">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
               백도화는 자신을 이해하는 것에서 출발하여 반복되는 패턴을 돌아보고,<br className="hidden sm:inline" />{' '}
               보다 주체적인 선택을 할 수 있도록 다음의 네 가지 과정을 제안합니다.
             </p>
@@ -89,7 +89,7 @@ export default function MethodologySection() {
                     <div>
                       {/* 스텝 라벨 및 한자 */}
                       <div className="flex items-center justify-between mb-4 pb-3 border-b border-[rgba(216,191,163,0.15)]">
-                        <span className="text-xs font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
+                        <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
                           {item.step}
                         </span>
                         <span className="text-sm font-elegant text-[var(--accent-gold)] opacity-60">
@@ -105,13 +105,13 @@ export default function MethodologySection() {
                             {item.hanja}
                           </span>
                         </h3>
-                        <p className="text-xs sm:text-sm font-medium text-[var(--accent-gold-light)] mt-1">
+                        <p className="text-[18px] leading-[1.7] font-medium text-[var(--accent-gold-light)] mt-1 break-keep">
                           {item.subtitle}
                         </p>
                       </div>
 
                       {/* 설명 */}
-                      <p className="text-xs sm:text-sm text-[#EDE6DA] opacity-80 leading-relaxed font-light">
+                      <p className="text-[18px] text-[#EDE6DA] opacity-80 leading-[1.7] font-light break-keep">
                         {item.desc}
                       </p>
                     </div>

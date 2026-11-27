@@ -11,7 +11,7 @@ export default function QuestionsSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE QUESTIONS OF OUR LIFE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -35,7 +35,7 @@ export default function QuestionsSection() {
             '운명이 나를 이끄는 것일까요,\n내가 익숙한 선택을 반복하고 있는 것일까요?'
           ].map((question, idx) => (
             <Reveal key={idx} delayMs={200 + idx * 80}>
-              <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA] opacity-85 leading-relaxed font-light whitespace-pre-line hover:text-[var(--accent-gold-light)] transition-colors duration-300">
+              <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light whitespace-pre-line break-keep hover:text-[var(--accent-gold-light)] transition-colors duration-300">
                 {question}
               </p>
               {idx < 4 && (
@@ -51,7 +51,7 @@ export default function QuestionsSection() {
             <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] mb-4 leading-relaxed">
               백도화는 그 질문의 시작을 타인이 아닌 나 자신에게서 찾습니다.
             </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#EDE6DA] opacity-80 leading-relaxed font-light">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 font-light break-keep">
               사랑의 문제도, 관계의 반복도, 풍요에 대한 갈망도<br className="hidden sm:inline" />{' '}
               자신을 이해하는 과정에서 새로운 관점으로 바라볼 수 있습니다.
             </p>

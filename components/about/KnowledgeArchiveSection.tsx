@@ -14,7 +14,7 @@ export default function KnowledgeArchiveSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE ARCHIVE OF WISDOM
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -27,7 +27,7 @@ export default function KnowledgeArchiveSection() {
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
               삶을 읽는 지혜를 한 권의 책과 리포트에 담다
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#EDE6DA] opacity-85 leading-relaxed font-light">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
               백도화의 전자책과 리포트는 단순히 운세에 대한 답을 제공하는 상품이 아닙니다.<br className="hidden sm:inline" />{' '}
               자신의 기질과 감정, 반복되는 관계의 흐름을 돌아보고, 사랑과 풍요에 대한 새로운 관점을 발견할 수 있도록 구성한 자기이해의 지식 자산입니다.
             </p>
@@ -41,7 +41,7 @@ export default function KnowledgeArchiveSection() {
             <div className="gungjung-glass w-full p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
                 <div className="lg:col-span-5 space-y-4">
-                  <div className="flex items-center gap-2 text-xs font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
+                  <div className="flex items-center gap-2 text-[12px] font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
                     <BookOpen size={16} />
                     <span>SERIES 01 · E-BOOK ARCHIVE</span>
                   </div>
@@ -49,23 +49,23 @@ export default function KnowledgeArchiveSection() {
                     비급 시리즈
                   </h3>
                   <div className="flex flex-wrap gap-2 pt-1 pb-2">
-                    <span className="px-2.5 py-1 rounded bg-[rgba(183,120,141,0.2)] text-[#E6BFA9] text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded bg-[rgba(183,120,141,0.2)] text-[#E6BFA9] text-[12px] font-medium">
                       연애비급
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-[rgba(102,50,68,0.25)] text-[#D8BB94] text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded bg-[rgba(102,50,68,0.25)] text-[#D8BB94] text-[12px] font-medium">
                       재회비방
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-[rgba(96,143,130,0.2)] text-[#C3C9AC] text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded bg-[rgba(96,143,130,0.2)] text-[#C3C9AC] text-[12px] font-medium">
                       풍요비책
                     </span>
                   </div>
-                  <p className="text-sm text-[#EDE6DA] opacity-85 leading-relaxed font-light">
+                  <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light break-keep">
                     사랑과 관계, 풍요에 대한 통찰과 실천 방향을 스스로 탐색할 수 있도록 구성한 백도화의 전자책 시리즈입니다.
                   </p>
                   <div className="pt-2">
                     <Link
                       href="/ebooks"
-                      className="inline-flex items-center gap-2 text-xs font-elegant tracking-wider uppercase text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
+                      className="inline-flex items-center gap-2 text-[12px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
                     >
                       <span>비급 시리즈 전체 보기</span>
                       <ArrowRight size={14} />
@@ -142,23 +142,23 @@ export default function KnowledgeArchiveSection() {
                 </div>
 
                 <div className="lg:col-span-5 order-1 lg:order-2 space-y-4">
-                  <div className="flex items-center gap-2 text-xs font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
+                  <div className="flex items-center gap-2 text-[12px] font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
                     <Compass size={16} />
                     <span>SERIES 02 · CODE ENCYCLOPEDIA</span>
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#F5F5F5]">
                     선천코드 비기
                   </h3>
-                  <p className="text-sm text-[#EDE6DA] opacity-85 leading-relaxed font-light">
+                  <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light break-keep">
                     동양의 명리학적 관점을 친근한 설명과 시각적인 구성으로 풀어낸 연애·관계 중심의 선천코드 해설 도감입니다.
                   </p>
-                  <p className="text-sm text-[#EDE6DA] opacity-80 leading-relaxed font-light">
+                  <p className="text-[18px] text-[#EDE6DA] opacity-80 leading-[1.7] font-light break-keep">
                     자신과 상대의 기질을 이해하고 관계의 특성을 살펴볼 수 있도록 돕습니다.
                   </p>
                   <div className="pt-2">
                     <Link
                       href="/reports/seoncheon-code-bigi"
-                      className="inline-flex items-center gap-2 text-xs font-elegant tracking-wider uppercase text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
+                      className="inline-flex items-center gap-2 text-[12px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
                     >
                       <span>선천코드 비기 도감 보기</span>
                       <ArrowRight size={14} />
@@ -174,7 +174,7 @@ export default function KnowledgeArchiveSection() {
             <div className="gungjung-glass w-full p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
                 <div className="lg:col-span-5 space-y-4">
-                  <div className="flex items-center gap-2 text-xs font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
+                  <div className="flex items-center gap-2 text-[12px] font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
                     <FileText size={16} />
                     <span>SERIES 03 · PERSONALIZED REPORT</span>
                   </div>
@@ -182,26 +182,26 @@ export default function KnowledgeArchiveSection() {
                     선천코드 프리미엄 리포트
                   </h3>
                   <div className="flex flex-wrap gap-2 pt-1 pb-2">
-                    <span className="px-2.5 py-1 rounded bg-[rgba(216,191,163,0.12)] text-[var(--accent-gold-light)] text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded bg-[rgba(216,191,163,0.12)] text-[var(--accent-gold-light)] text-[12px] font-medium">
                       연애 리포트
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-[rgba(216,191,163,0.12)] text-[var(--accent-gold-light)] text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded bg-[rgba(216,191,163,0.12)] text-[var(--accent-gold-light)] text-[12px] font-medium">
                       궁합 리포트
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-[rgba(216,191,163,0.12)] text-[var(--accent-gold-light)] text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded bg-[rgba(216,191,163,0.12)] text-[var(--accent-gold-light)] text-[12px] font-medium">
                       풍요 리포트
                     </span>
-                    <span className="px-2.5 py-1 rounded bg-[rgba(216,191,163,0.12)] text-[var(--accent-gold-light)] text-xs font-medium">
+                    <span className="px-2.5 py-1 rounded bg-[rgba(216,191,163,0.12)] text-[var(--accent-gold-light)] text-[12px] font-medium">
                       통합 리포트
                     </span>
                   </div>
-                  <p className="text-sm text-[#EDE6DA] opacity-85 leading-relaxed font-light">
+                  <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light break-keep">
                     개인의 입력 정보를 바탕으로 명리학적 해석과 자기성찰의 관점을 제공하는 1:1 맞춤형 리포트 컬렉션입니다.
                   </p>
                   <div className="pt-2">
                     <Link
                       href="/reports"
-                      className="inline-flex items-center gap-2 text-xs font-elegant tracking-wider uppercase text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
+                      className="inline-flex items-center gap-2 text-[12px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] hover:text-[#F5F5F5] transition-colors"
                     >
                       <span>맞춤 리포트 전체 보기</span>
                       <ArrowRight size={14} />
@@ -213,13 +213,13 @@ export default function KnowledgeArchiveSection() {
                   <Link href="/reports/baekdohwa-report" className="group block">
                     <div className="p-5 rounded-xl border border-[rgba(216,191,163,0.18)] bg-[rgba(26,15,46,0.3)] hover:border-[var(--accent-gold)] transition-colors h-full flex flex-col justify-between">
                       <div>
-                        <span className="text-[10px] text-[#E6BFA9] font-elegant tracking-wider uppercase block mb-1">
+                        <span className="text-[12px] text-[#E6BFA9] font-elegant tracking-wider uppercase block mb-1">
                           LOVE REPORT
                         </span>
                         <h4 className="text-base font-elegant font-bold text-[#F5F5F5] group-hover:text-[var(--accent-gold)] transition-colors mb-2">
                           연애 리포트
                         </h4>
-                        <p className="text-xs text-[#EDE6DA] opacity-75 font-light">
+                        <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light leading-[1.7] break-keep">
                           나의 고유한 도화 기질과 연애 패턴 심층 분석
                         </p>
                       </div>
@@ -233,13 +233,13 @@ export default function KnowledgeArchiveSection() {
                   <Link href="/reports/premium-compatibility-report" className="group block">
                     <div className="p-5 rounded-xl border border-[rgba(216,191,163,0.18)] bg-[rgba(26,15,46,0.3)] hover:border-[var(--accent-gold)] transition-colors h-full flex flex-col justify-between">
                       <div>
-                        <span className="text-[10px] text-[#D8BB94] font-elegant tracking-wider uppercase block mb-1">
+                        <span className="text-[12px] text-[#D8BB94] font-elegant tracking-wider uppercase block mb-1">
                           BOND REPORT
                         </span>
                         <h4 className="text-base font-elegant font-bold text-[#F5F5F5] group-hover:text-[var(--accent-gold)] transition-colors mb-2">
                           궁합 리포트
                         </h4>
-                        <p className="text-xs text-[#EDE6DA] opacity-75 font-light">
+                        <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light leading-[1.7] break-keep">
                           두 사람의 기질 상호작용과 갈등의 구조적 해법
                         </p>
                       </div>
@@ -253,13 +253,13 @@ export default function KnowledgeArchiveSection() {
                   <Link href="/reports/abundance-report" className="group block">
                     <div className="p-5 rounded-xl border border-[rgba(216,191,163,0.18)] bg-[rgba(26,15,46,0.3)] hover:border-[var(--accent-gold)] transition-colors h-full flex flex-col justify-between">
                       <div>
-                        <span className="text-[10px] text-[#C3C9AC] font-elegant tracking-wider uppercase block mb-1">
+                        <span className="text-[12px] text-[#C3C9AC] font-elegant tracking-wider uppercase block mb-1">
                           WEALTH REPORT
                         </span>
                         <h4 className="text-base font-elegant font-bold text-[#F5F5F5] group-hover:text-[var(--accent-gold)] transition-colors mb-2">
                           풍요 리포트
                         </h4>
-                        <p className="text-xs text-[#EDE6DA] opacity-75 font-light">
+                        <p className="text-[18px] text-[#EDE6DA] opacity-75 font-light leading-[1.7] break-keep">
                           타고난 재능과 부의 그릇을 여는 행동 지침
                         </p>
                       </div>

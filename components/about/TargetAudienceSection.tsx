@@ -51,7 +51,7 @@ export default function TargetAudienceSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               WHO BAEKDOHWA IS FOR
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -84,7 +84,7 @@ export default function TargetAudienceSection() {
                   <h3 className="text-lg sm:text-xl font-elegant font-bold text-[#F5F5F5] group-hover:text-[var(--accent-gold-light)] transition-colors mb-3 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#EDE6DA] opacity-80 leading-relaxed font-light">
+                  <p className="text-[18px] text-[#EDE6DA] opacity-80 leading-[1.7] font-light break-keep">
                     {item.desc}
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function TargetAudienceSection() {
               더 많은 미래에 대한 답이 아니라,<br />
               자신에 대한 더 깊은 이해일지도 모릅니다.
             </p>
-            <p className="text-sm sm:text-base text-[#EDE6DA] opacity-80 font-light">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 font-light break-keep">
               백도화는 자신을 읽고, 사랑과 삶의 방향을 다시 선택하는 여정에 함께합니다.
             </p>
           </div>

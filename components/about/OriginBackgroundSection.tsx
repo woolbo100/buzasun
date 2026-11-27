@@ -12,7 +12,7 @@ export default function OriginBackgroundSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               WHY BAEKDOHWA EXISTS
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -28,8 +28,8 @@ export default function OriginBackgroundSection() {
 
         {/* 본문 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>
-          <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 pb-12 sm:pb-14 md:pb-16 space-y-8 text-[#EDE6DA] leading-relaxed font-light">
-            <div className="max-w-3xl mx-auto space-y-4 text-base sm:text-lg opacity-90 text-center sm:text-left">
+          <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 pb-12 sm:pb-14 md:pb-16 space-y-8 text-[#EDE6DA] leading-[1.7] font-light">
+            <div className="max-w-3xl mx-auto space-y-4 text-[18px] leading-[1.7] opacity-90 text-center sm:text-left break-keep">
               <p>
                 사람들은 사랑이 힘들어질 때 상대의 마음을 알고 싶어 합니다.
               </p>
@@ -40,7 +40,7 @@ export default function OriginBackgroundSection() {
 
             {/* 핵심 질문 인용 상자 */}
             <div className="max-w-3xl mx-auto my-8 p-6 sm:p-8 rounded-xl bg-[rgba(59,15,27,0.25)] border-l-2 border-[var(--accent-gold)]">
-              <p className="text-xs tracking-widest text-[var(--accent-gold)] uppercase mb-2 font-elegant opacity-75">
+              <p className="text-[12px] tracking-widest text-[var(--accent-gold)] uppercase mb-2 font-elegant opacity-75">
                 THE ESSENTIAL QUESTION
               </p>
               <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[#F5F5F5] leading-snug">
@@ -49,7 +49,7 @@ export default function OriginBackgroundSection() {
               </p>
             </div>
 
-            <div className="max-w-3xl mx-auto space-y-4 text-base sm:text-lg opacity-90 text-center sm:text-left">
+            <div className="max-w-3xl mx-auto space-y-4 text-[18px] leading-[1.7] opacity-90 text-center sm:text-left break-keep">
               <p>
                 명리학이 전하는 인간의 기질에 대한 관점과 마음공부, 심리, 무의식에 대한 탐구를 연결하여 자신을 보다 입체적으로 이해하는 방법을 전하고자 합니다.
               </p>

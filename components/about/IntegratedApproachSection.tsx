@@ -71,7 +71,7 @@ export default function IntegratedApproachSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE INTEGRATED APPROACH
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -93,13 +93,13 @@ export default function IntegratedApproachSection() {
             <Reveal key={idx} delayMs={200 + idx * 80}>
               <div className="gungjung-glass p-6 sm:p-8 rounded-xl border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)] transition-colors h-full flex flex-col justify-between w-full">
                 <div>
-                  <span className="text-[10px] font-mono tracking-widest text-[var(--accent-gold)] opacity-70 block mb-2">
+                  <span className="text-[12px] font-mono tracking-widest text-[var(--accent-gold)] opacity-70 block mb-2">
                     PERSPECTIVE 0{idx + 1}
                   </span>
                   <h3 className="text-lg sm:text-xl font-elegant font-bold text-[#F5F5F5] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#EDE6DA] opacity-80 leading-relaxed font-light">
+                  <p className="text-[18px] text-[#EDE6DA] opacity-80 leading-[1.7] font-light break-keep">
                     {item.desc}
                   </p>
                 </div>
@@ -114,10 +114,10 @@ export default function IntegratedApproachSection() {
             <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-4">
               한 가지 관점만으로 인간을 단정하지 않습니다.
             </h3>
-            <p className="text-sm sm:text-base md:text-lg text-[#EDE6DA] opacity-85 leading-relaxed font-light max-w-2xl mx-auto">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light max-w-2xl mx-auto break-keep">
               타고난 기질과 살아온 경험, 내면의 신념, 현재의 감정과 앞으로의 선택을 함께 바라보며 자신을 입체적으로 이해하는 방향을 추구합니다.
             </p>
-            <p className="text-xs text-[#EDE6DA] opacity-50 mt-6 font-light">
+            <p className="text-[12px] text-[#EDE6DA] opacity-50 mt-6 font-light">
               * 명리학과 타로는 전통적·상징적 해석 체계이며, 백도화의 콘텐츠와 리포트는 자기이해와 성찰을 위한 안내서로 제공됩니다.
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function IntegratedApproachSection() {
                   <h4 className="text-xl md:text-2xl font-elegant font-bold mb-4 text-bd-ivory group-hover:text-[var(--accent-gold)] transition-colors">
                     {project.title}
                   </h4>
-                  <p className="text-sm md:text-base leading-relaxed text-bd-gray group-hover:text-bd-ivory transition-colors whitespace-pre-line font-light">
+                  <p className="text-[18px] leading-[1.7] text-bd-gray group-hover:text-bd-ivory transition-colors whitespace-pre-line font-light break-keep">
                     {project.description}
                   </p>
                 </div>

@@ -13,7 +13,7 @@ export default function PhilosophySection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE PHILOSOPHY OF BAEKDOHWA
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -36,35 +36,30 @@ export default function PhilosophySection() {
 
             <div className="gold-divider max-w-xs mx-auto mb-10 opacity-40" />
 
-            {/* 본문 설명 */}
-            <div className="max-w-3xl mx-auto space-y-6 text-[#EDE6DA] text-base sm:text-lg md:text-xl font-light leading-relaxed opacity-90">
+            {/* 본문 설명 (최대 너비 900px, 18px, 줄간격 1.7, 문단 간격 28~32px, 중앙 정렬, 단어 단위 줄바꿈) */}
+            <div className="max-w-[900px] mx-auto space-y-7 md:space-y-8 text-[#EDE6DA] text-[18px] font-light leading-[1.7] opacity-90 break-keep">
               <p>
-                우리는 태어날 때 각기 다른 기질과 성향을 가지고 태어납니다.
-              </p>
-              <p>
-                그러나 그것이 삶의 결말까지 결정하는 것은 아닙니다.
+                사람들은 흔히 타고난 사주와 기질을 바꿀 수 없는 숙명이라 말합니다. 하지만 태어날 때 부여받은 결이 삶의 결말까지 결정하는 것은 아닙니다.
               </p>
               <p>
-                타고난 나를 이해하고, 반복되는 무의식의 패턴을 발견하며, 새로운 선택을 하는 순간 우리는 삶의 방향을 다시 써 내려갈 수 있습니다.
-              </p>
-              <p className="pt-2">
-                백도화는 정해진 운명을 알려주는 데 머무르지 않습니다.
+                같은 유형의 사람에게 끌려 상처받고, 결정적인 순간마다 같은 자리에서 무너지는 데는 분명한 이유가 있습니다. 감정의 위로는 잠시뿐, 반복되는 무의식의 패턴을 해독하지 못하면 내일도 어제의 연장선일 뿐입니다.
               </p>
               <p>
-                자신을 이해하고, 사랑과 관계 속에서 주체성을 되찾으며, 자신만의 삶을 선택할 수 있도록 돕는 자기이해의 여정을 함께합니다.
-              </p>
-            </div>
-
-            <div className="mt-10 pt-4">
-              <p className="text-xl sm:text-2xl md:text-3xl font-elegant font-semibold text-[var(--accent-gold)] tracking-wide">
-                나를 읽고, 사랑의 방향을 다시 쓰다.
+                <strong className="font-semibold text-[var(--accent-gold)]">백도화(白桃花)는 정해진 운명을 점치는 곳이 아닙니다.</strong> 하얀 복숭아꽃이 바람에 흔들리지 않고 제 계절에 가장 고고하게 피어나듯, 당신 안에 잠든 고유한 <strong className="font-semibold text-[var(--accent-gold)]">선천코드</strong>와 <strong className="font-semibold text-[var(--accent-gold)]">무의식 패턴</strong>을 읽어내어 사랑과 결핍의 판을 스스로 통제하고 재설계하도록 돕는 &apos;각성과 주권의 공간&apos;입니다.
               </p>
             </div>
           </div>
         </Reveal>
 
-        {/* 독립된 와이드 이미지 영역 (1280px 기준선 일치, 16:9 비율, 16px 라운딩) */}
-        <Reveal delayMs={250} className="mt-6 md:mt-11">
+        {/* 하단 브랜드 슬로건 (투명 카드 외부와 와이드 이미지 사이 브릿지 배치: 카드 하단 간격 48px, 이미지 상단 간격 32px) */}
+        <Reveal delayMs={250} className="mt-12 text-center">
+          <p className="text-xl sm:text-2xl md:text-3xl font-elegant font-semibold text-[var(--accent-gold)] tracking-wide break-keep">
+            나를 읽고, 사랑과 풍요의 방향을 다시 쓰다.
+          </p>
+        </Reveal>
+
+        {/* 독립된 와이드 이미지 영역 (1280px 기준선 일치, 16:9 비율, 16px 라운딩, 상단 슬로건과의 간격 32px) */}
+        <Reveal delayMs={300} className="mt-8">
           <div className="relative aspect-[16/9] w-full rounded-[16px] overflow-hidden">
             <Image
               src="/image/author-of-your-destiny.webp"

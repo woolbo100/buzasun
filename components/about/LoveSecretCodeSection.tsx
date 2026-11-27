@@ -68,7 +68,7 @@ export default function LoveSecretCodeSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE SECRET CODE OF LOVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -97,13 +97,13 @@ export default function LoveSecretCodeSection() {
               <div className="w-14 h-14 rounded-2xl bg-[rgba(216,191,163,0.1)] border border-[rgba(216,191,163,0.25)] flex items-center justify-center mx-auto mb-4">
                 <Compass size={32} className="text-[var(--accent-gold)]" />
               </div>
-              <span className="text-xs font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase block mb-1.5 opacity-80">
+              <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase block mb-1.5 opacity-80">
                 STEP 01
               </span>
               <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-2">
                 선천코드 해독
               </h3>
-              <p className="text-sm sm:text-base text-[#EDE6DA] opacity-85 font-light">
+              <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
                 나의 고유한 기질과 성향
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function LoveSecretCodeSection() {
                     <h4 className="text-xl sm:text-2xl font-elegant font-bold text-[var(--accent-gold)] group-hover:text-[var(--accent-gold-light)] transition-colors mb-2 leading-snug">
                       {item.title}
                     </h4>
-                    <p className="text-sm sm:text-base md:text-[17px] text-[#EDE6DA] opacity-90 leading-relaxed font-light">
+                    <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-[1.7] font-light break-keep">
                       {item.question}
                     </p>
                   </div>
@@ -154,7 +154,7 @@ export default function LoveSecretCodeSection() {
           {/* 하단: 나만의 맞춤형 연애 전략 (인포그래픽 최종 결과, 시각적 강조) */}
           <Reveal delayMs={500}>
             <div className="w-full gungjung-glass p-8 sm:p-12 md:p-14 rounded-2xl border border-[rgba(216,191,163,0.35)] bg-gradient-to-r from-[rgba(62,15,31,0.65)] via-[rgba(78,20,36,0.75)] to-[rgba(62,15,31,0.65)] text-center shadow-[0_16px_48px_rgba(0,0,0,0.6)]">
-              <span className="text-xs font-elegant font-bold tracking-[0.2em] text-[var(--accent-gold)] uppercase block mb-2 opacity-85">
+              <span className="text-[12px] font-elegant font-bold tracking-[0.2em] text-[var(--accent-gold)] uppercase block mb-2 opacity-85">
                 PERSONALIZED LOVE STRATEGY
               </span>
               <h3 className="text-2xl sm:text-3xl md:text-[32px] font-elegant font-bold text-[#F5F5F5] mb-8">
@@ -169,7 +169,7 @@ export default function LoveSecretCodeSection() {
                     className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[rgba(255,255,255,0.05)] border border-[rgba(216,191,163,0.25)] text-[#EDE6DA] hover:border-[var(--accent-gold)] hover:text-[var(--accent-gold)] transition-colors"
                   >
                     <CheckCircle2 size={16} className="text-[var(--accent-gold)] flex-shrink-0" />
-                    <span className="text-xs sm:text-sm font-medium tracking-wide">
+                    <span className="text-[18px] leading-[1.7] font-medium tracking-wide">
                       {strat}
                     </span>
                   </div>

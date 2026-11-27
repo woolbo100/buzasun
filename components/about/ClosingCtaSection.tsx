@@ -13,7 +13,7 @@ export default function ClosingCtaSection() {
         <Reveal delayMs={100}>
           <div className="w-full text-center mb-16">
             <div className="gungjung-glass w-full p-8 sm:p-10 border border-[rgba(216,191,163,0.18)]">
-              <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#EDE6DA] opacity-70 font-light">
+              <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-70 font-light break-keep">
                 백도화는 당신의 선천 코드를 해석하고,<br className="hidden sm:inline" />{' '}
                 관계와 삶의 구조를 설계하는 전문 시스템입니다.
               </p>
@@ -28,13 +28,13 @@ export default function ClosingCtaSection() {
               나를 읽고, 사랑의 방향을 다시 쓰다.
             </h2>
 
-            <div className="space-y-3 text-base sm:text-lg text-[#EDE6DA] opacity-85 leading-relaxed font-light mb-10">
+            <div className="space-y-3 text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-10 break-keep">
               <p>
                 타고난 나를 이해하고,<br className="sm:hidden" />{' '}
                 반복되는 삶의 패턴을 돌아보며,<br />
                 스스로 선택하는 새로운 삶.
               </p>
-              <p className="text-sm sm:text-base text-[var(--accent-gold-light)] font-normal pt-2">
+              <p className="text-[18px] leading-[1.7] text-[var(--accent-gold-light)] font-normal pt-2 break-keep">
                 백도화와 함께 자기이해의 여정을 시작하세요.
               </p>
             </div>

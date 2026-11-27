@@ -25,7 +25,7 @@ export default function LoveStrategyComparisonSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               A DIFFERENT PERSPECTIVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -48,7 +48,7 @@ export default function LoveStrategyComparisonSection() {
           <Reveal delayMs={200}>
             <div className="gungjung-glass p-8 sm:p-12 rounded-3xl border border-[rgba(216,191,163,0.15)] bg-[rgba(35,25,32,0.45)] h-full flex flex-col justify-between w-full">
               <div>
-                <span className="text-xs font-elegant font-bold tracking-widest text-[#A89BBF] uppercase block mb-2 opacity-80">
+                <span className="text-[12px] font-elegant font-bold tracking-widest text-[#A89BBF] uppercase block mb-2 opacity-80">
                   GENERAL LOVE ADVICE
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[#EDE6DA] mb-8 pb-4 border-b border-[rgba(216,191,163,0.15)]">
@@ -62,7 +62,7 @@ export default function LoveStrategyComparisonSection() {
                         <span className="text-xs font-mono text-[#A89BBF] opacity-60">
                           0{idx + 1}
                         </span>
-                        <p className="text-base sm:text-lg text-[#CFC7DC] font-light">
+                        <p className="text-[18px] leading-[1.7] text-[#CFC7DC] font-light break-keep">
                           {item}
                         </p>
                       </div>
@@ -77,7 +77,7 @@ export default function LoveStrategyComparisonSection() {
           <Reveal delayMs={300}>
             <div className="gungjung-glass p-8 sm:p-12 rounded-3xl border border-[rgba(216,191,163,0.35)] bg-gradient-to-b from-[rgba(78,20,36,0.45)] via-[rgba(62,15,31,0.5)] to-[rgba(45,15,25,0.45)] h-full flex flex-col justify-between w-full shadow-[0_16px_48px_rgba(0,0,0,0.5)]">
               <div>
-                <span className="text-xs font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase block mb-2 opacity-90">
+                <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase block mb-2 opacity-90">
                   BAEKDOHWA
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-8 pb-4 border-b border-[rgba(216,191,163,0.3)]">
@@ -91,7 +91,7 @@ export default function LoveStrategyComparisonSection() {
                         <span className="text-xs font-mono text-[var(--accent-gold)] font-bold">
                           0{idx + 1}
                         </span>
-                        <p className="text-base sm:text-lg text-[var(--accent-gold-light)] font-medium">
+                        <p className="text-[18px] leading-[1.7] text-[var(--accent-gold-light)] font-medium break-keep">
                           {item}
                         </p>
                       </div>
@@ -109,7 +109,7 @@ export default function LoveStrategyComparisonSection() {
             <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-3 leading-tight">
               보편적인 공식을 넘어, 나만의 맞춤 전략으로.
             </h3>
-            <p className="text-sm sm:text-base md:text-lg text-[#EDE6DA] opacity-80 font-light leading-relaxed">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 font-light break-keep">
               남을 흉내 내는 공식이 아닌, 나의 선천코드에 최적화된 사랑의 솔루션을 제시합니다.
             </p>
           </div>

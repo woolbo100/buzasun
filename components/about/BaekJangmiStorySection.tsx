@@ -36,7 +36,7 @@ export default function BaekJangmiStorySection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE STORY OF BAEK JANGMI
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -56,14 +56,14 @@ export default function BaekJangmiStorySection() {
         <Reveal delayMs={200}>
           <div className="gungjung-glass w-full p-8 sm:p-12 mb-16 text-center border border-[rgba(216,191,163,0.2)]">
             <div className="max-w-3xl mx-auto space-y-4">
-              <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA] opacity-90 leading-relaxed font-light">
+              <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-[1.7] font-light break-keep">
                 백도화는 인간의 기질과 마음, 사랑과 관계, 삶의 가능성에 대한 오랜 관심과 탐구에서 출발합니다.
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA] opacity-90 leading-relaxed font-light">
+              <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-[1.7] font-light break-keep">
                 동양의 지혜와 마음공부, 인간의 심리와 무의식에 대한 이해를 연결하며, 자신을 보다 깊이 이해하고 주체적인 삶을 살아가는 방법을 연구합니다.
               </p>
               <div className="gold-divider max-w-xs mx-auto my-6 opacity-30" />
-              <p className="text-lg sm:text-xl font-elegant font-medium text-[var(--accent-gold)] leading-relaxed">
+              <p className="text-[18px] leading-[1.7] font-elegant font-medium text-[var(--accent-gold)] break-keep">
                 백장미는 이러한 연구와 탐구를 백도화의 콘텐츠, 전자책, 리포트에 담아 전합니다.
               </p>
             </div>
@@ -142,10 +142,10 @@ export default function BaekJangmiStorySection() {
                     <h4 className="text-xl sm:text-2xl font-elegant font-bold mb-2 text-[#F5F5F5]">
                       {section.title}
                     </h4>
-                    <p className="text-xs tracking-widest text-[var(--accent-gold)] mb-6 opacity-70 uppercase font-elegant">
+                    <p className="text-[12px] tracking-widest text-[var(--accent-gold)] mb-6 opacity-70 uppercase font-elegant">
                       {section.subtitle}
                     </p>
-                    <div className="space-y-2.5 text-sm text-[#EDE6DA] opacity-85 font-light w-full">
+                    <div className="space-y-2.5 text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light w-full break-keep">
                       {section.items.map((item, i) => (
                         <p key={i} style={{ color: 'var(--accent-gold)', opacity: 0.9 }}>
                           {item}

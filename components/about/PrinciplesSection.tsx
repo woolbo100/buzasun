@@ -39,7 +39,7 @@ export default function PrinciplesSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               OUR PRINCIPLES
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -70,7 +70,7 @@ export default function PrinciplesSection() {
                     </h3>
                   </div>
                   <div className="sm:pl-12">
-                    <p className="text-sm sm:text-base text-[#EDE6DA] opacity-80 leading-relaxed font-light">
+                    <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 font-light break-keep">
                       {item.desc}
                     </p>
                   </div>

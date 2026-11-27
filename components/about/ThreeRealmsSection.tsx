@@ -90,7 +90,7 @@ export default function ThreeRealmsSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE THREE REALMS OF LIFE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -144,7 +144,7 @@ export default function ThreeRealmsSection() {
 
                     {/* 이미지 하단 타이틀 오버레이 */}
                     <div className="absolute bottom-4 left-6 right-6">
-                      <p className="text-xs font-elegant tracking-widest uppercase opacity-80" style={{ color: realm.tagText }}>
+                      <p className="text-[12px] font-elegant tracking-widest uppercase opacity-80" style={{ color: realm.tagText }}>
                         {realm.eng}
                       </p>
                       <h3 className="text-2xl font-elegant font-bold text-[#F5F5F5] mt-0.5">
@@ -155,19 +155,19 @@ export default function ThreeRealmsSection() {
 
                   {/* 카드 본문 설명 */}
                   <div className="p-6 sm:p-8 space-y-6">
-                    <p className="text-xs sm:text-sm text-[#EDE6DA] opacity-85 leading-relaxed font-light">
+                    <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light break-keep">
                       {realm.desc}
                     </p>
 
                     {/* 주요 주제 */}
                     <div>
-                      <p className="text-xs font-elegant tracking-wider uppercase text-[var(--accent-gold)] mb-3 font-semibold">
+                      <p className="text-[12px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] mb-3 font-semibold">
                         주요 주제
                       </p>
-                      <ul className="text-xs text-[#EDE6DA] opacity-80 space-y-2 font-light">
+                      <ul className="text-[18px] text-[#EDE6DA] opacity-80 space-y-2 font-light leading-[1.7] break-keep">
                         {realm.topics.map((topic, tIdx) => (
                           <li key={tIdx} className="flex items-center gap-2">
-                            <span className="w-1 h-1 rounded-full bg-[var(--accent-gold)] opacity-70" />
+                            <span className="w-1 h-1 rounded-full bg-[var(--accent-gold)] opacity-70 flex-shrink-0" />
                             <span>{topic}</span>
                           </li>
                         ))}
@@ -178,7 +178,7 @@ export default function ThreeRealmsSection() {
 
                 {/* 관련 상품 링크 */}
                 <div className="p-6 sm:p-8 pt-0 border-t border-[rgba(216,191,163,0.12)] mt-4">
-                  <p className="text-[11px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] mb-3 pt-4 opacity-75 font-semibold">
+                  <p className="text-[12px] font-elegant tracking-wider uppercase text-[var(--accent-gold)] mb-3 pt-4 opacity-75 font-semibold">
                     관련 상품 바로가기
                   </p>
                   <div className="flex flex-wrap gap-2">

@@ -12,7 +12,7 @@ export default function BeyondRulesSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               BEYOND THE RULES OF LOVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -236,12 +236,12 @@ export default function BeyondRulesSection() {
               <div className="gold-divider max-w-xs mx-auto my-8 opacity-40" />
 
               {/* 백도화의 접근 방식 선언 (신규 도입부와의 중복 설명을 정돈하고 접근 방식 선언 역할로 전환) */}
-              <div className="max-w-2xl mx-auto space-y-4 text-[#EDE6DA] text-base sm:text-lg md:text-xl font-light leading-relaxed opacity-85 mb-10">
+              <div className="max-w-2xl mx-auto space-y-4 text-[#EDE6DA] text-[18px] font-light leading-[1.7] opacity-85 mb-10 break-keep">
                 <p>
                   남들의 기준이나 획일화된 조언에 나를 맞추는 것이 아니라,<br className="hidden sm:inline" />{' '}
                   나의 고유한 기질을 기준으로 관계의 주체성을 회복하는 길.
                 </p>
-                <p className="text-sm sm:text-base text-[#A89BBF] opacity-80">
+                <p className="text-[18px] leading-[1.7] text-[#A89BBF] opacity-80 break-keep">
                   백도화가 제안하는 사랑과 관계의 새로운 접근법입니다.
                 </p>
               </div>

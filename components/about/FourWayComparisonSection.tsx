@@ -66,7 +66,7 @@ export default function FourWayComparisonSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               A DIFFERENT PERSPECTIVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -79,7 +79,7 @@ export default function FourWayComparisonSection() {
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
               같은 사랑, 서로 다른 접근법
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#EDE6DA] opacity-85 font-light leading-relaxed">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
               사랑과 관계를 이해하는 다양한 방법.<br className="sm:hidden" />{' '}
               백도화는 나의 선천코드에서 시작합니다.
             </p>
@@ -95,40 +95,40 @@ export default function FourWayComparisonSection() {
             <div className="flex flex-col justify-between py-6 px-4 rounded-2xl bg-[rgba(26,15,35,0.3)] border border-[rgba(216,191,163,0.1)]">
               {/* 상단 헤더 빈 공간 맞춤 */}
               <div className="h-[120px] flex flex-col justify-end pb-4 border-b border-[rgba(216,191,163,0.12)]">
-                <span className="text-xs font-elegant font-bold tracking-widest text-[#A89BBF] uppercase opacity-70">
+                <span className="text-[12px] font-elegant font-bold tracking-widest text-[#A89BBF] uppercase opacity-70">
                   CRITERIA
                 </span>
-                <span className="text-lg font-elegant font-semibold text-[#EDE6DA]">
+                <span className="text-[18px] font-elegant font-semibold text-[#EDE6DA]">
                   구분 항목
                 </span>
               </div>
 
               {/* 구분 항목 1: 출발점 */}
               <div className="flex-1 flex flex-col justify-center py-6 border-b border-[rgba(216,191,163,0.12)]">
-                <span className="text-xs font-mono text-[#A89BBF] opacity-60 uppercase mb-1">
+                <span className="text-[12px] font-mono text-[#A89BBF] opacity-60 uppercase mb-1">
                   01
                 </span>
-                <span className="text-base font-medium text-[#EDE6DA]">
+                <span className="text-[18px] font-medium text-[#EDE6DA]">
                   출발점
                 </span>
               </div>
 
               {/* 구분 항목 2: 핵심 질문 */}
               <div className="flex-1 flex flex-col justify-center py-6 border-b border-[rgba(216,191,163,0.12)]">
-                <span className="text-xs font-mono text-[#A89BBF] opacity-60 uppercase mb-1">
+                <span className="text-[12px] font-mono text-[#A89BBF] opacity-60 uppercase mb-1">
                   02
                 </span>
-                <span className="text-base font-medium text-[#EDE6DA]">
+                <span className="text-[18px] font-medium text-[#EDE6DA]">
                   핵심 질문
                 </span>
               </div>
 
               {/* 구분 항목 3: 주요 가치 */}
               <div className="flex-1 flex flex-col justify-center py-6">
-                <span className="text-xs font-mono text-[#A89BBF] opacity-60 uppercase mb-1">
+                <span className="text-[12px] font-mono text-[#A89BBF] opacity-60 uppercase mb-1">
                   03
                 </span>
-                <span className="text-base font-medium text-[#EDE6DA]">
+                <span className="text-[18px] font-medium text-[#EDE6DA]">
                   주요 가치
                 </span>
               </div>
@@ -172,7 +172,7 @@ export default function FourWayComparisonSection() {
                       {col.icon}
                     </div>
                     <span
-                      className={`text-[10px] font-elegant font-semibold tracking-widest uppercase mb-0.5 ${
+                      className={`text-[12px] font-elegant font-semibold tracking-widest uppercase mb-0.5 ${
                         isBd ? 'text-[var(--accent-gold)]' : 'text-[#A89BBF]'
                       }`}
                     >
@@ -195,11 +195,11 @@ export default function FourWayComparisonSection() {
                         : 'border-[rgba(216,191,163,0.1)]'
                     }`}
                   >
-                    <span className="text-[11px] text-[#A89BBF] opacity-60 block lg:hidden mb-1">
+                    <span className="text-[12px] text-[#A89BBF] opacity-60 block lg:hidden mb-1">
                       출발점
                     </span>
                     <p
-                      className={`text-sm sm:text-base leading-snug ${
+                      className={`text-[18px] leading-[1.7] break-keep ${
                         isBd
                           ? 'text-[var(--accent-gold-light)] font-semibold'
                           : 'text-[#CFC7DC] font-light'
@@ -217,11 +217,11 @@ export default function FourWayComparisonSection() {
                         : 'border-[rgba(216,191,163,0.1)]'
                     }`}
                   >
-                    <span className="text-[11px] text-[#A89BBF] opacity-60 block lg:hidden mb-1">
+                    <span className="text-[12px] text-[#A89BBF] opacity-60 block lg:hidden mb-1">
                       핵심 질문
                     </span>
                     <p
-                      className={`text-sm sm:text-base leading-snug ${
+                      className={`text-[18px] leading-[1.7] break-keep ${
                         isBd
                           ? 'text-[var(--accent-gold)] font-bold'
                           : 'text-[#EDE6DA] font-light'
@@ -233,11 +233,11 @@ export default function FourWayComparisonSection() {
 
                   {/* 항목 3: 주요 가치 */}
                   <div className="flex-1 flex flex-col items-center justify-center text-center py-6 px-2">
-                    <span className="text-[11px] text-[#A89BBF] opacity-60 block lg:hidden mb-1">
+                    <span className="text-[12px] text-[#A89BBF] opacity-60 block lg:hidden mb-1">
                       주요 가치
                     </span>
                     <p
-                      className={`text-sm sm:text-base leading-snug ${
+                      className={`text-[18px] leading-[1.7] break-keep ${
                         isBd
                           ? 'text-[#F5F5F5] font-semibold'
                           : 'text-[#CFC7DC] font-light'
@@ -287,7 +287,7 @@ export default function FourWayComparisonSection() {
                     </div>
                     <div>
                       <span
-                        className={`text-[10px] font-elegant font-semibold tracking-widest uppercase block ${
+                        className={`text-[12px] font-elegant font-semibold tracking-widest uppercase block ${
                           isBd ? 'text-[var(--accent-gold)]' : 'text-[#A89BBF]'
                         }`}
                       >
@@ -307,11 +307,11 @@ export default function FourWayComparisonSection() {
                   <div className="space-y-4">
                     {/* 출발점 */}
                     <div className="pb-3 border-b border-[rgba(216,191,163,0.1)]">
-                      <span className="text-xs text-[#A89BBF] font-light block mb-1">
+                      <span className="text-[12px] text-[#A89BBF] font-light block mb-1">
                         출발점
                       </span>
                       <p
-                        className={`text-sm sm:text-base ${
+                        className={`text-[18px] leading-[1.7] break-keep ${
                           isBd
                             ? 'text-[var(--accent-gold-light)] font-medium'
                             : 'text-[#EDE6DA] font-light'
@@ -323,11 +323,11 @@ export default function FourWayComparisonSection() {
 
                     {/* 핵심 질문 */}
                     <div className="pb-3 border-b border-[rgba(216,191,163,0.1)]">
-                      <span className="text-xs text-[#A89BBF] font-light block mb-1">
+                      <span className="text-[12px] text-[#A89BBF] font-light block mb-1">
                         핵심 질문
                       </span>
                       <p
-                        className={`text-sm sm:text-base ${
+                        className={`text-[18px] leading-[1.7] break-keep ${
                           isBd
                             ? 'text-[var(--accent-gold)] font-bold'
                             : 'text-[#F5F5F5] font-light'
@@ -339,11 +339,11 @@ export default function FourWayComparisonSection() {
 
                     {/* 주요 가치 */}
                     <div className="pt-1">
-                      <span className="text-xs text-[#A89BBF] font-light block mb-1">
+                      <span className="text-[12px] text-[#A89BBF] font-light block mb-1">
                         주요 가치
                       </span>
                       <p
-                        className={`text-sm sm:text-base ${
+                        className={`text-[18px] leading-[1.7] break-keep ${
                           isBd
                             ? 'text-[#F5F5F5] font-medium'
                             : 'text-[#CFC7DC] font-light'
@@ -362,7 +362,7 @@ export default function FourWayComparisonSection() {
         {/* 하단 작은 안내 문구 */}
         <Reveal delayMs={400}>
           <div className="mt-8 text-center">
-            <p className="text-xs sm:text-sm text-[#A89BBF] opacity-70 font-light">
+            <p className="text-[12px] text-[#A89BBF] opacity-70 font-light">
               ※ 각 분야의 대표적인 접근 방향을 비교한 예시입니다.
             </p>
           </div>
@@ -376,7 +376,7 @@ export default function FourWayComparisonSection() {
             <h3 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-[var(--accent-gold)] mb-5 leading-tight tracking-tight">
               사랑에도 나만의 방식이 있습니다.
             </h3>
-            <p className="text-base sm:text-xl text-[#EDE6DA] opacity-90 font-light leading-relaxed">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep">
               누군가의 공식을 따라가는 사랑에서<br className="sm:hidden" />{' '}
               나를 이해하고 선택하는 사랑으로.
             </p>

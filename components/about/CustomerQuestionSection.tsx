@@ -226,8 +226,8 @@ export default function CustomerQuestionSection() {
               {/* 얇고 은은한 골드 구분선 */}
               <div className="gold-divider max-w-xs mx-auto my-8 opacity-40" />
 
-              {/* 서브카피 (20px 전후, 가독성 높은 폰트와 넉넉한 자간) */}
-              <p className="text-base sm:text-lg md:text-[20px] font-light text-[#EDE6DA] leading-relaxed opacity-90 max-w-2xl mx-auto">
+              {/* 서브카피 (18px, 줄간격 1.7, 단어 단위 줄바꿈) */}
+              <p className="text-[18px] leading-[1.7] font-light text-[#EDE6DA] opacity-90 max-w-2xl mx-auto break-keep">
                 사람마다 기질도, 매력도,<br className="sm:hidden" />{' '}
                 사랑에 끌리는 이유도 다르기 때문입니다.
               </p>
@@ -239,9 +239,9 @@ export default function CustomerQuestionSection() {
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-gold)]" />
               </div>
 
-              {/* 핵심 강조 메시지 (32~36px 기준, 선천코드 앤티크 샴페인 골드 강조) */}
+              {/* 핵심 강조 메시지 (줄간격 1.5 / 150%, 선천코드 앤티크 샴페인 골드 강조) */}
               <div className="space-y-4">
-                <p className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold leading-relaxed text-[#F5F5F5] tracking-wide">
+                <p className="text-2xl sm:text-3xl md:text-[34px] font-elegant font-bold leading-[1.5] text-[#F5F5F5] tracking-wide">
                   사랑의 공식을 배우기 전에,<br />
                   <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">
                     당신의 선천코드
@@ -251,7 +251,7 @@ export default function CustomerQuestionSection() {
 
                 {/* 백도화 브랜드 한자·한글 낙관 */}
                 <div className="pt-4">
-                  <span className="inline-block text-xs sm:text-sm font-elegant tracking-[0.35em] text-[var(--accent-gold)] opacity-75 uppercase">
+                  <span className="inline-block text-[12px] font-elegant tracking-[0.35em] text-[var(--accent-gold)] opacity-75 uppercase">
                     白桃花 · 백도화
                   </span>
                 </div>

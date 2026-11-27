@@ -11,7 +11,7 @@ export default function ThreeLayersDiagram() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE THREE LAYERS OF SELF
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -27,7 +27,7 @@ export default function ThreeLayersDiagram() {
             <p className="text-base sm:text-xl font-elegant text-[var(--accent-gold)] font-medium leading-relaxed">
               타고난 나를 이해하고, 형성된 나를 돌아보며, 새로운 나를 선택하다.
             </p>
-            <p className="text-sm sm:text-base text-[#EDE6DA] opacity-80 mt-6 font-light leading-relaxed">
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 mt-6 font-light break-keep">
               인간은 타고난 기질만으로 설명될 수 없으며, 살아오면서 형성된 경험과 신념, 감정과 행동, 그리고 앞으로의 선택을 함께 살펴볼 필요가 있습니다.<br className="hidden md:inline" />{' '}
               백도화는 인간을 선천코드, 무의식 패턴, 후천적 선택이라는 세 가지 층위에서 바라봅니다.
             </p>
@@ -201,7 +201,7 @@ export default function ThreeLayersDiagram() {
             <div className="p-6 sm:p-8 rounded-xl bg-[rgba(62,15,31,0.3)] border border-[rgba(216,191,163,0.2)] h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-elegant font-bold tracking-widest text-[#B7788D] uppercase">
+                  <span className="text-[12px] font-elegant font-bold tracking-widest text-[#B7788D] uppercase">
                     CENTER LAYER 01
                   </span>
                   <span className="w-2.5 h-2.5 rounded-full bg-[#5E1528] border border-[var(--accent-gold)]" />
@@ -209,14 +209,14 @@ export default function ThreeLayersDiagram() {
                 <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-2">
                   01. 선천코드 — 타고난 나
                 </h3>
-                <p className="text-xs text-[var(--accent-gold)] mb-4 opacity-80">
+                <p className="text-[12px] text-[var(--accent-gold)] mb-4 opacity-80">
                   백도화의 깊은 버건디
                 </p>
-                <p className="text-sm text-[#EDE6DA] opacity-85 leading-relaxed font-light mb-4">
+                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-4 break-keep">
                   명리학의 전통적 해석을 통해 자신의 기질과 성향을 탐색하고, 자신을 이해하기 위한 하나의 관점을 얻습니다.
                 </p>
               </div>
-              <ul className="text-xs text-[#EDE6DA] opacity-75 space-y-1.5 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light">
+              <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-75 space-y-2 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light break-keep">
                 <li>· 타고난 기질과 성향</li>
                 <li>· 오행과 명리학적 관점</li>
                 <li>· 관계에서 나타날 수 있는 성향과 특성</li>
@@ -229,7 +229,7 @@ export default function ThreeLayersDiagram() {
             <div className="p-6 sm:p-8 rounded-xl bg-[rgba(94,38,59,0.25)] border border-[rgba(216,191,163,0.2)] h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-elegant font-bold tracking-widest text-[#C58BA0] uppercase">
+                  <span className="text-[12px] font-elegant font-bold tracking-widest text-[#C58BA0] uppercase">
                     MIDDLE LAYER 02
                   </span>
                   <span className="w-2.5 h-2.5 rounded-full bg-[#733249] border border-[var(--accent-gold)]" />
@@ -237,14 +237,14 @@ export default function ThreeLayersDiagram() {
                 <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-2">
                   02. 무의식 패턴 — 형성된 나
                 </h3>
-                <p className="text-xs text-[var(--accent-gold)] mb-4 opacity-80">
+                <p className="text-[12px] text-[var(--accent-gold)] mb-4 opacity-80">
                   채도가 낮은 로즈핑크플럼
                 </p>
-                <p className="text-sm text-[#EDE6DA] opacity-85 leading-relaxed font-light mb-4">
+                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-4 break-keep">
                   살아오면서 형성된 신념과 경험, 감정 반응, 관계 습관을 돌아보며 반복되는 삶의 패턴을 이해합니다.
                 </p>
               </div>
-              <ul className="text-xs text-[#EDE6DA] opacity-75 space-y-1.5 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light">
+              <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-75 space-y-2 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light break-keep">
                 <li>· 신념과 감정 반응</li>
                 <li>· 애착과 관계 습관</li>
                 <li>· 과거의 경험과 반복되는 선택·행동</li>
@@ -257,7 +257,7 @@ export default function ThreeLayersDiagram() {
             <div className="p-6 sm:p-8 rounded-xl bg-[rgba(58,36,52,0.3)] border border-[rgba(216,191,163,0.2)] h-full flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
+                  <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
                     OUTER LAYER 03
                   </span>
                   <span className="w-2.5 h-2.5 rounded-full bg-[#BA8D7E] border border-[var(--accent-gold)]" />
@@ -265,14 +265,14 @@ export default function ThreeLayersDiagram() {
                 <h3 className="text-xl font-elegant font-bold text-[#F5F5F5] mb-2">
                   03. 후천적 선택 — 만들어 가는 나
                 </h3>
-                <p className="text-xs text-[var(--accent-gold)] mb-4 opacity-80">
+                <p className="text-[12px] text-[var(--accent-gold)] mb-4 opacity-80">
                   은은한 앤티크 샴페인 골드
                 </p>
-                <p className="text-sm text-[#EDE6DA] opacity-85 leading-relaxed font-light mb-4">
+                <p className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light mb-4 break-keep">
                   자기인식과 새로운 관점, 의식적인 행동을 통해 앞으로의 삶과 관계의 방향을 설계합니다.
                 </p>
               </div>
-              <ul className="text-xs text-[#EDE6DA] opacity-75 space-y-1.5 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light">
+              <ul className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-75 space-y-2 pt-4 border-t border-[rgba(216,191,163,0.15)] font-light break-keep">
                 <li>· 자기인식과 성찰, 새로운 관점</li>
                 <li>· 의식적인 선택과 행동</li>
                 <li>· 삶의 방향과 관계의 실질적 변화</li>
@@ -284,7 +284,7 @@ export default function ThreeLayersDiagram() {
         {/* 3. 하단 가로형 강조 카드 분리 (대형 투명 카드 외부, 상단 3개 카드와의 간격 32px, 1280px 기준선 일치) */}
         <Reveal delayMs={600} className="mt-8">
           <div className="text-center p-6 sm:p-8 rounded-xl bg-[rgba(26,15,46,0.5)] border border-[rgba(216,191,163,0.25)] w-full">
-            <p className="text-base sm:text-lg md:text-xl font-elegant font-medium text-[var(--accent-gold)] leading-relaxed">
+            <p className="text-[18px] leading-[1.7] font-elegant font-medium text-[var(--accent-gold)] break-keep">
               선천적인 기질은 자기이해의 출발점이며,<br className="sm:hidden" />{' '}
               앞으로의 삶은 자신의 선택과 실천으로 만들어 가는 영역입니다.
             </p>

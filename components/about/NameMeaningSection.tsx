@@ -12,7 +12,7 @@ export default function NameMeaningSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-xs md:text-sm font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
               THE MEANING OF BAEKDOHWA
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -55,22 +55,22 @@ export default function NameMeaningSection() {
           {/* 2. 오른쪽 55%: 기존 글상자 (기존 내용, 글자 크기, 강조, 배경 100% 보존 + keep-all 적용) */}
           <div className="w-full">
             <Reveal delayMs={280} className="w-full">
-              <div className="gungjung-glass w-full p-8 sm:p-12 md:p-14 space-y-6 text-[#EDE6DA] leading-relaxed font-light break-keep flex flex-col justify-between">
+              <div className="gungjung-glass w-full p-8 sm:p-12 md:p-14 space-y-6 text-[#EDE6DA] leading-[1.7] font-light break-keep flex flex-col justify-between">
                 <div className="space-y-6">
-                  <p className="text-base sm:text-lg md:text-xl font-normal text-[var(--accent-gold)] opacity-95">
+                  <p className="text-[18px] leading-[1.7] font-normal text-[var(--accent-gold)] opacity-95 break-keep">
                     백도화에서 도화(桃花)는 단순히 누군가의 마음을 얻기 위한 매력만을 의미하지 않습니다.
                   </p>
-                  <p className="text-base sm:text-lg opacity-85">
+                  <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
                     자신의 고유한 기질과 아름다움을 발견하고, 내면의 생명력과 존재감을 피워내는 상징입니다.
                   </p>
                   <div className="gold-divider opacity-25 my-6" />
-                  <p className="text-base sm:text-lg opacity-85">
+                  <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
                     진정한 매력은 누군가에게 선택받기 위해 자신을 바꾸는 것에서 시작되지 않습니다.
                   </p>
-                  <p className="text-base sm:text-lg opacity-85">
+                  <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
                     자신이 어떤 사람인지 이해하고, 자신의 가치를 인정하며, 자신만의 빛으로 살아가는 데서 시작됩니다.
                   </p>
-                  <p className="text-base sm:text-lg opacity-85">
+                  <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
                     백도화는 사랑을 통해 자신을 잃는 것이 아니라, 사랑을 통해 자신을 더욱 깊이 발견하는 삶을 지향합니다.
                   </p>
                 </div>
