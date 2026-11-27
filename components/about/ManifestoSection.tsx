@@ -14,18 +14,22 @@ export default function ManifestoSection() {
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
             <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
-              BAEKDOHWA MANIFESTO
+              THE FINAL SEAL
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
           </div>
         </Reveal>
 
-        {/* 한글 섹션 타이틀: 백도화 선언 */}
+        {/* 한글 섹션 타이틀 및 신규 설명 문구 */}
         <Reveal delayMs={120}>
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center text-[#F5F5F5] tracking-wide">
-              백도화 선언
+          <div className="text-center mb-10 max-w-3xl mx-auto">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-center text-[#F5F5F5] leading-[1.4] tracking-wide mb-6">
+              운명에 찍는 나만의 낙관
             </h2>
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep text-center">
+              타인의 기준이 아닌, 나만의 결로 삶을 설계하겠다는 다짐.<br className="hidden sm:inline" />{' '}
+              자신의 운명을 스스로 써 내려갈 당신에게 백도화의 인장을 건넵니다.
+            </p>
           </div>
         </Reveal>
 
