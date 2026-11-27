@@ -36,7 +36,7 @@ export default function BaekJangmiStorySection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               THE STORY OF BAEK JANGMI
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -142,7 +142,7 @@ export default function BaekJangmiStorySection() {
                     <h4 className="text-[24px] font-elegant font-bold mb-2 text-[#F5F5F5]">
                       {section.title}
                     </h4>
-                    <p className="text-[12px] tracking-widest text-[var(--accent-gold)] mb-6 opacity-85 uppercase font-elegant">
+                    <p className="text-[12pt] tracking-widest text-[var(--accent-gold)] mb-6 opacity-90 uppercase font-elegant font-semibold">
                       {section.subtitle}
                     </p>
                     <div className="space-y-2 text-[18px] leading-[1.7] text-[#EDE6DA] font-light w-full break-keep">

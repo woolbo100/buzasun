@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import { Sparkles, BookOpen, Compass } from 'lucide-react'
 
@@ -20,6 +21,25 @@ export default function ClosingCtaSection() {
             </div>
           </div>
         </Reveal>
+
+        {/* =========================================================================
+            [신규 최종 CTA 상단 이미지] 16:9 와이드 배너 (1280px 기준선 정렬, 라운딩 16px)
+            이전 영역과 64px(상단 mb-16과 연계), 하단 CTA 카드와 40px(mb-10) 여백
+            ========================================================================= */}
+        <div className="w-full mb-10">
+          <Reveal delayMs={150}>
+            <div className="relative w-full aspect-[16/9] rounded-[16px] overflow-hidden">
+              <Image
+                src="/image/baekdohwa-destiny-guide.webp"
+                alt="백도화 데스티니 가이드"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </div>
+          </Reveal>
+        </div>
 
         {/* 최종 클로징 및 3대 CTA 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>

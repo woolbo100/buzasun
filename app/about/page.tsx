@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import GlobalBackground from '@/components/GlobalBackground'
 import Reveal from '@/components/Reveal'
+import Image from 'next/image'
 
 // 신규 및 확장 브랜드 소개 섹션 컴포넌트
 import PhilosophySection from '@/components/about/PhilosophySection'
@@ -33,7 +34,7 @@ export default function AboutPage() {
         {/* =========================================================================
             [신규 페이지 상단 헤더] 선천코드 리포트 허브와 동일한 독립 헤더 영역
             ========================================================================= */}
-        <div className="relative z-10 pt-44 pb-12 sm:pb-16 text-center">
+        <div className="relative z-10 pt-44 text-center">
           <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
             <Reveal>
               <h1 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-8 tracking-widest">
@@ -48,15 +49,36 @@ export default function AboutPage() {
         </div>
 
         {/* =========================================================================
+            [신규 브랜드 시그니처 이미지] 3:1 와이드 배너 (1280px 기준선 정렬, 라운딩 16px)
+            상단 설명 문구와 48px, 하단 메인 소개 카드와 40px 여백
+            ========================================================================= */}
+        <div className="relative z-10 pt-12 pb-10 px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-[1280px] mx-auto w-full">
+            <Reveal delayMs={150}>
+              <div className="relative w-full aspect-[3/1] rounded-[16px] overflow-hidden">
+                <Image
+                  src="/image/baekdohwa-signature-blossom.webp"
+                  alt="백도화 시그니처 블라썸"
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(max-width: 1280px) 100vw, 1280px"
+                />
+              </div>
+            </Reveal>
+          </div>
+        </div>
+
+        {/* =========================================================================
             [메인 소개 영역] 백도화 소개 — 운명을 설계하는 은밀한 비기 (1280px 기준선 정렬)
             ========================================================================= */}
         <section className="pb-16 px-4 sm:px-6 lg:px-8 relative w-full">
           <div className="max-w-[1280px] mx-auto w-full relative z-10">
             {/* Rule 5: 텍스트 및 UI 레이어 보호를 위한 궁중유리 카드 */}
             <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 text-left">
-              {/* 1. 상단 영어 라벨 신규 추가 (12px, 앤티크 샴페인 골드, 타이틀과의 간격 16px) */}
+              {/* 1. 상단 영어 라벨 신규 추가 (비첩 상세페이지 기준 text-[12pt] font-semibold, 앤티크 샴페인 골드, 타이틀과의 간격 16px) */}
               <div className="mb-4">
-                <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-85">
+                <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
                   ABOUT BAEKDOHWA · PRIVATE ARCHIVE
                 </span>
               </div>

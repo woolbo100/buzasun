@@ -14,7 +14,7 @@ export default function KnowledgeArchiveSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               THE ARCHIVE OF WISDOM
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -41,7 +41,7 @@ export default function KnowledgeArchiveSection() {
             <div className="gungjung-glass w-full p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
                 <div className="lg:col-span-5 space-y-4">
-                  <div className="flex items-center gap-2 text-[12px] font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
+                  <div className="flex items-center gap-2 text-[12pt] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
                     <BookOpen size={16} />
                     <span>SERIES 01 · E-BOOK ARCHIVE</span>
                   </div>
@@ -142,7 +142,7 @@ export default function KnowledgeArchiveSection() {
                 </div>
 
                 <div className="lg:col-span-5 order-1 lg:order-2 space-y-4">
-                  <div className="flex items-center gap-2 text-[12px] font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
+                  <div className="flex items-center gap-2 text-[12pt] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
                     <Compass size={16} />
                     <span>SERIES 02 · CODE ENCYCLOPEDIA</span>
                   </div>
@@ -174,7 +174,7 @@ export default function KnowledgeArchiveSection() {
             <div className="gungjung-glass w-full p-8 sm:p-12 rounded-2xl border border-[rgba(216,191,163,0.2)]">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
                 <div className="lg:col-span-5 space-y-4">
-                  <div className="flex items-center gap-2 text-[12px] font-elegant tracking-widest text-[var(--accent-gold)] uppercase">
+                  <div className="flex items-center gap-2 text-[12pt] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
                     <FileText size={16} />
                     <span>SERIES 03 · PERSONALIZED REPORT</span>
                   </div>

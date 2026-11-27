@@ -3,6 +3,7 @@
 import React from 'react'
 import Reveal from '@/components/Reveal'
 import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
+import Image from 'next/image'
 
 export default function ManifestoSection() {
   return (
@@ -12,12 +13,40 @@ export default function ManifestoSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               BAEKDOHWA MANIFESTO
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
           </div>
         </Reveal>
+
+        {/* 한글 섹션 타이틀: 백도화 선언 */}
+        <Reveal delayMs={120}>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-elegant font-bold text-center text-[#F5F5F5] tracking-wide">
+              백도화 선언
+            </h2>
+          </div>
+        </Reveal>
+
+        {/* =========================================================================
+            [신규 백도화 선언 인장 이미지] 3:1 와이드 배너 (1280px 기준선 정렬, 라운딩 16px)
+            '백도화 선언' 제목과 32px(mb-8), 하단 철학 선언 카드와 40px(mb-10) 여백
+            ========================================================================= */}
+        <div className="w-full mb-10">
+          <Reveal delayMs={150}>
+            <div className="relative w-full aspect-[3/1] rounded-[16px] overflow-hidden">
+              <Image
+                src="/image/baekdohwa-signature-seal.webp"
+                alt="백도화 선언 인장"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+              />
+            </div>
+          </Reveal>
+        </div>
 
         {/* 메인 선언문 카드 (1280px 기준선 정렬, 한지 그라데이션 배경 + 네 모서리 전통 기하학 격자 문양) */}
         <Reveal delayMs={200}>
