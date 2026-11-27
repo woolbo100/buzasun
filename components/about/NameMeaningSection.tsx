@@ -60,30 +60,37 @@ export default function NameMeaningSection() {
                   <div className="space-y-4">
                     {/* 신규 추가: 브랜드명 탄생 의미 */}
                     <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
-                      백도화(白桃花)는 순백을 상징하는 백(白)에 매력과 인연을 상징하는 도화(桃花)를 더한 이름입니다.
+                      <span className="whitespace-nowrap">백도화(白桃花)</span>는 순백을 상징하는 <span className="whitespace-nowrap">백(白)</span>에<br className="hidden sm:inline" />{' '}
+                      매력과 인연을 상징하는 <span className="whitespace-nowrap">도화(桃花)</span>를 더한 이름입니다.
                     </p>
                     <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
                       <strong className="font-semibold text-[var(--accent-gold)]">
-                        청초하면서도 단단하고, 우아하면서도 고고한 하얀 복숭아꽃의 기품
+                        청초하면서도 단단하고, 우아하면서도 고고한<br className="hidden sm:inline" />{' '}
+                        하얀 복숭아꽃의 기품
                       </strong>을 담았습니다.
                     </p>
 
                     <div className="gold-divider opacity-25 my-4" />
 
                     <p className="text-[18px] leading-[1.7] font-normal text-[var(--accent-gold)] opacity-95 break-keep">
-                      백도화에서 도화(桃花)는 단순히 누군가의 마음을 얻기 위한 매력만을 의미하지 않습니다.
+                      백도화에서 <span className="whitespace-nowrap">도화(桃花)</span>는 단순히 누군가의 마음을 얻기 위한<br className="hidden sm:inline" />{' '}
+                      매력만을 의미하지 않습니다.
                     </p>
                     <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
-                      자신의 고유한 기질과 아름다움을 발견하고, 내면의 생명력과 존재감을 피워내는 상징입니다.
+                      자신의 고유한 기질과 아름다움을 발견하고,<br className="hidden sm:inline" />{' '}
+                      내면의 생명력과 존재감을 피워내는 상징입니다.
                     </p>
                     <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
-                      진정한 매력은 누군가에게 선택받기 위해 자신을 바꾸는 것에서 시작되지 않습니다.
+                      진정한 매력은 누군가에게 선택받기 위해<br className="hidden sm:inline" />{' '}
+                      자신을 바꾸는 것에서 시작되지 않습니다.
                     </p>
                     <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
-                      자신이 어떤 사람인지 이해하고, 자신의 가치를 인정하며, 자신만의 빛으로 살아가는 데서 시작됩니다.
+                      자신이 어떤 사람인지 이해하고, 자신의 가치를 인정하며,<br className="hidden sm:inline" />{' '}
+                      자신만의 빛으로 살아가는 데서 시작됩니다.
                     </p>
                     <p className="text-[18px] leading-[1.7] opacity-85 break-keep">
-                      백도화는 사랑을 통해 자신을 잃는 것이 아니라, 사랑을 통해 자신을 더욱 깊이 발견하는 삶을 지향합니다.
+                      백도화는 사랑을 통해 자신을 잃는 것이 아니라,<br className="hidden sm:inline" />{' '}
+                      사랑을 통해 자신을 더욱 깊이 발견하는 삶을 지향합니다.
                     </p>
                   </div>
 

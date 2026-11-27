@@ -13,7 +13,7 @@ const realms = [
     title: '사랑과 매력',
     eng: 'LOVE & ATTRACTION',
     subtitle: '매혹과 사랑의 재설계',
-    desc: '반복되는 감정 소모와 관계의 패턴을 이해하고, 나만의 선천적 매력을 발견하여 자신을 잃지 않는 주도적인 사랑을 설계합니다.',
+    desc: '반복되는 감정 소모와 관계 패턴을 이해하고, 나만의 선천적 매력을 발견해 자신을 잃지 않는 주도적 사랑을 설계합니다.',
     colorName: '은은한 로즈핑크플럼',
     symbol: '도화, 복숭아꽃',
     image: '/image/baekdohwa-about-love.webp',

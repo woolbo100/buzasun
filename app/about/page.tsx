@@ -15,6 +15,7 @@ import ThreeLayersDiagram from '@/components/about/ThreeLayersDiagram'
 import MethodologySection from '@/components/about/MethodologySection'
 import ThreeRealmsSection from '@/components/about/ThreeRealmsSection'
 import KnowledgeArchiveSection from '@/components/about/KnowledgeArchiveSection'
+import BrandOriginSection from '@/components/about/BrandOriginSection'
 import BaekJangmiStorySection from '@/components/about/BaekJangmiStorySection'
 import IntegratedApproachSection from '@/components/about/IntegratedApproachSection'
 import PrinciplesSection from '@/components/about/PrinciplesSection'
@@ -150,7 +151,10 @@ export default function AboutPage() {
         {/* 09. 백도화의 지식 자산 (비급 시리즈, 선천코드 비기, 프리미엄 리포트) */}
         <KnowledgeArchiveSection />
 
-        {/* 10. 백장미의 이야기와 전문성 (연결 문구 + 기존 백도화 선언 및 전문분야 자격 완전 보존) */}
+        {/* 10. 브랜드 탄생 스토리 (THE ORIGIN OF BAEKDOHWA) */}
+        <BrandOriginSection />
+
+        {/* 11. 백도화 선언 및 전문 자격 */}
         <BaekJangmiStorySection />
 
         {/* 11. 통합적 연구와 해석 (6개 관점 + 기존 우리가 설계하는 영역 프로젝트 완전 보존) */}

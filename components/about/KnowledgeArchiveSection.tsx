@@ -11,26 +11,26 @@ const bicheopItems = [
   {
     name: '연애비급',
     href: '/reports/love-secret',
-    image: '/image/love-secret-book-showcase.webp',
-    alt: '백도화 연애비급 전자책'
+    image: '/image/baekdohwa-gallery-love.webp',
+    alt: '백도화 연애비급'
   },
   {
     name: '재회비방',
     href: '/reports/reunion-secret',
-    image: '/image/reunion-secret-book-showcase.webp',
-    alt: '백도화 재회비방 전자책'
+    image: '/image/baekdohwa-gallery-reunion.webp',
+    alt: '백도화 재회비방'
   },
   {
     name: '풍요비책',
     href: '/reports/abundance-secret',
-    image: '/image/abundance-secret-book-showcase.webp',
-    alt: '백도화 풍요비책 전자책'
+    image: '/image/baekdohwa-gallery-wealth.webp',
+    alt: '백도화 풍요비책'
   },
   {
     name: '선천코드 비기',
     href: '/reports/seoncheon-code-bigi',
-    image: '/image/seoncheon-code-bigi/book-main-mockup.webp',
-    alt: '선천코드 비기 해설 도감'
+    image: '/image/baekdohwa-gallery-secret-code.webp',
+    alt: '선천코드 비기'
   }
 ]
 
@@ -39,19 +39,19 @@ const reportItems = [
   {
     name: '선천코드 연애 리포트',
     href: '/reports/baekdohwa-report',
-    image: '/image/baekdohwa-love-destiny.webp',
+    image: '/image/baekdohwa-gallery-report-love.webp',
     alt: '선천코드 연애 리포트'
   },
   {
     name: '선천코드 궁합 리포트',
     href: '/reports/premium-compatibility-report',
-    image: '/image/baekdohwa-romantic-compatibility.webp',
+    image: '/image/baekdohwa-gallery-report-bond.webp',
     alt: '선천코드 궁합 리포트'
   },
   {
     name: '선천코드 풍요 리포트',
     href: '/reports/abundance-report',
-    image: '/image/baekdohwa-wealth-destiny.webp',
+    image: '/image/baekdohwa-gallery-report-wealth.webp',
     alt: '선천코드 풍요 리포트'
   }
 ]

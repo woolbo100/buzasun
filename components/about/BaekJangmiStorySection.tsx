@@ -39,9 +39,9 @@ export default function BaekJangmiStorySection() {
               <Image
                 src="/image/baekdohwa-flower-symbol.png"
                 alt="백도화 상징 꽃"
-                width={36}
-                height={36}
-                className="w-[36px] h-[36px] object-contain"
+                width={70}
+                height={70}
+                className="w-[68px] sm:w-[70px] h-[68px] sm:h-[70px] object-contain"
                 priority
               />
             </div>
@@ -52,9 +52,9 @@ export default function BaekJangmiStorySection() {
               <Image
                 src="/image/baekdohwa-flower-symbol.png"
                 alt="백도화 상징 꽃"
-                width={36}
-                height={36}
-                className="w-[36px] h-[36px] object-contain"
+                width={70}
+                height={70}
+                className="w-[68px] sm:w-[70px] h-[68px] sm:h-[70px] object-contain"
                 priority
               />
             </div>
@@ -92,15 +92,15 @@ export default function BaekJangmiStorySection() {
                 구조적 해석 공간입니다."
               </p>
               
-              <div className="gold-divider mb-8 max-w-sm mx-auto opacity-40" />
+              <div className="gold-divider mb-6 max-w-sm mx-auto opacity-40" />
               
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-6">
                 <Image
                   src="/image/baekdohwa-flower-symbol.png"
                   alt="백도화 상징 꽃"
-                  width={52}
-                  height={52}
-                  className="w-[52px] h-[52px] object-contain"
+                  width={100}
+                  height={100}
+                  className="w-[98px] sm:w-[100px] h-[98px] sm:h-[100px] object-contain"
                 />
               </div>
               

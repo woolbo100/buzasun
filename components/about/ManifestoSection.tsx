@@ -251,46 +251,37 @@ export default function ManifestoSection() {
             </svg>
 
             {/* 선언문 헤드라인 (공통 line-height: 1.4 적용) */}
-            <div className="mb-12 md:mb-14 relative z-10">
+            <div className="mb-8 sm:mb-10 relative z-10">
               <h2 
-                className="about-statement-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-[#FDFBF7]"
+                className="about-statement-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-[#FDFBF7] leading-[1.4]"
               >
                 <span className="text-[var(--accent-gold)]">숙명</span>은 주어지지만,<br />
                 <span className="text-[var(--accent-gold)]">운명</span>은 선택하는 것이다.
               </h2>
             </div>
 
-            <div className="w-16 h-[1px] bg-[var(--accent-gold)] opacity-40 mx-auto mb-12 relative z-10" />
+            <div className="w-16 h-[1px] bg-[var(--accent-gold)] opacity-40 mx-auto mb-8 sm:mb-10 relative z-10" />
 
-            {/* 본문 선언문 구절들 (밝은 아이보리 계열 가독성 확보, 안정적인 간격) */}
-            <div className="space-y-6 sm:space-y-7 text-[18px] text-[#F4EFE6] leading-[1.7] font-light max-w-2xl mx-auto break-keep relative z-10">
-              <p>우리는 타고난 기질을 삶의 한계로 바라보지 않습니다.</p>
-              <p>반복되는 상처를 피할 수 없는 운명으로 단정하지 않습니다.</p>
-              <p>사랑받기 위해 자신을 잃어야 한다고 말하지 않습니다.</p>
-              <p>풍요가 오직 타고난 팔자에 의해 결정된다고 믿지 않습니다.</p>
-
-              <div className="py-4">
-                <div className="w-8 h-[1px] bg-[rgba(216,191,163,0.25)] mx-auto" />
-              </div>
-
+            {/* 본문 선언문 구절들 (밝은 아이보리 계열 가독성 확보, 중앙 정렬) */}
+            <div className="space-y-4 text-[18px] text-[#F4EFE6] leading-[1.7] font-light max-w-2xl mx-auto break-keep text-center relative z-10">
               <p className="leading-[1.7]">
                 자신을 깊이 이해하고,<br />
                 익숙한 무의식의 패턴을 돌아보며,<br />
                 새로운 선택을 하는 순간
               </p>
 
-              <p className="text-[18px] leading-[1.7] text-[var(--accent-gold-light)] font-normal pt-2 break-keep">
+              <p className="text-[18px] leading-[1.7] text-[var(--accent-gold-light)] font-semibold pt-1 break-keep">
                 우리는 삶의 방향을 다시 써 내려갈 수 있습니다.
               </p>
             </div>
 
-            {/* 클라이맥스 핵심 문구 (공통 line-height: 1.4 적용) */}
-            <div className="mt-16 pt-12 border-t border-[rgba(216,191,163,0.25)] relative z-10">
+            {/* 클라이맥스 핵심 인용구 (공통 line-height: 1.4 적용) */}
+            <div className="mt-10 pt-8 sm:mt-12 sm:pt-10 border-t border-[rgba(216,191,163,0.25)] relative z-10">
               <p 
-                className="about-statement-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-[var(--accent-gold)] tracking-wide"
+                className="about-statement-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-[var(--accent-gold)] tracking-wide leading-[1.4]"
               >
-                "당신은 운명의 관찰자가 아니라,<br />
-                자신의 삶을 선택하는 사람입니다."
+                “당신은 운명의 방관자가 아니라,<br />
+                자신의 삶을 설계하는 주권자입니다.”
               </p>
               <p className="text-[13px] font-elegant text-[#EDE6DA] opacity-65 tracking-[0.3em] mt-8 uppercase">
                 白桃花 · 백도화
