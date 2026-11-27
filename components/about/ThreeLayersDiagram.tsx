@@ -194,11 +194,16 @@ export default function ThreeLayersDiagram() {
           </div>
         </Reveal>
 
-        {/* 2. 하단 3개 층위 설명 카드 분리 (대형 투명 카드 외부, 3열 구조, 카드 간격 24px, 상단 간격 40px) */}
+        {/* 2. 하단 3개 층위 설명 카드 분리 (동등한 위계의 3단계 구조 — 동일 투명도 및 공통 글라스 스타일 적용) */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          {/* 01. 선천코드 — 타고난 나 (톤다운된 딥 버건디 플럼 반투명 카드) */}
+          {/* 01. 선천코드 — 타고난 나 (깊은 버건디, 투명도 0.42 동일 세트) */}
           <Reveal delayMs={300} className="h-full">
-            <div className="card--burgundy p-6 sm:p-8 rounded-xl h-full flex flex-col justify-between">
+            <div 
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(199,169,122,0.28)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(95, 36, 56, 0.45) 0%, rgba(80, 28, 46, 0.40) 100%)'
+              }}
+            >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[12px] font-elegant font-bold tracking-widest text-[#B7788D] uppercase">
@@ -224,9 +229,14 @@ export default function ThreeLayersDiagram() {
             </div>
           </Reveal>
 
-          {/* 02. 무의식 패턴 — 형성된 나 */}
+          {/* 02. 무의식 패턴 — 형성된 나 (로즈핑크 플럼, 투명도 0.42 동일 세트) */}
           <Reveal delayMs={400} className="h-full">
-            <div className="p-6 sm:p-8 rounded-xl bg-[rgba(94,38,59,0.25)] border border-[rgba(216,191,163,0.2)] h-full flex flex-col justify-between">
+            <div 
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(199,169,122,0.28)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(90, 42, 64, 0.45) 0%, rgba(76, 34, 54, 0.40) 100%)'
+              }}
+            >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[12px] font-elegant font-bold tracking-widest text-[#C58BA0] uppercase">
@@ -252,9 +262,14 @@ export default function ThreeLayersDiagram() {
             </div>
           </Reveal>
 
-          {/* 03. 후천적 선택 — 만들어 가는 나 */}
+          {/* 03. 후천적 선택 — 만들어 가는 나 (샴페인 골드 브라운 버건디, 투명도 0.42 동일 세트) */}
           <Reveal delayMs={500} className="h-full">
-            <div className="p-6 sm:p-8 rounded-xl bg-[rgba(58,36,52,0.3)] border border-[rgba(216,191,163,0.2)] h-full flex flex-col justify-between">
+            <div 
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(199,169,122,0.28)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              style={{
+                background: 'linear-gradient(135deg, rgba(85, 52, 58, 0.45) 0%, rgba(72, 42, 48, 0.40) 100%)'
+              }}
+            >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
@@ -281,9 +296,14 @@ export default function ThreeLayersDiagram() {
           </Reveal>
         </div>
 
-        {/* 3. 하단 가로형 강조 카드 분리 (대형 투명 카드 외부, 상단 3개 카드와의 간격 32px, 1280px 기준선 일치) */}
+        {/* 3. 하단 가로형 강조 카드 분리 (상단 3개 카드와 동일 투명도 세트 적용, 1280px 기준선 일치) */}
         <Reveal delayMs={600} className="mt-8">
-          <div className="text-center p-6 sm:p-8 rounded-xl bg-[rgba(26,15,46,0.5)] border border-[rgba(216,191,163,0.25)] w-full">
+          <div 
+            className="text-center p-6 sm:p-8 rounded-2xl border border-[rgba(199,169,122,0.28)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] w-full"
+            style={{
+              background: 'linear-gradient(135deg, rgba(75, 38, 52, 0.45) 0%, rgba(62, 30, 44, 0.40) 100%)'
+            }}
+          >
             <p className="text-[18px] leading-[1.7] font-elegant font-medium text-[var(--accent-gold)] break-keep">
               선천적인 기질은 자기이해의 출발점이며,<br className="sm:hidden" />{' '}
               앞으로의 삶은 자신의 선택과 실천으로 만들어 가는 영역입니다.
