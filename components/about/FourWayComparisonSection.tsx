@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import React from 'react'
 import Reveal from '@/components/Reveal'
@@ -66,7 +66,7 @@ export default function FourWayComparisonSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               A DIFFERENT PERSPECTIVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -95,7 +95,7 @@ export default function FourWayComparisonSection() {
             <div className="flex flex-col justify-between py-6 px-4 rounded-2xl bg-[rgba(26,15,35,0.3)] border border-[rgba(216,191,163,0.1)]">
               {/* 상단 헤더 빈 공간 맞춤 */}
               <div className="h-[120px] flex flex-col justify-end pb-4 border-b border-[rgba(216,191,163,0.12)]">
-                <span className="text-[12pt] font-elegant font-semibold tracking-widest text-[#A89BBF] uppercase opacity-85">
+                <span className="text-[12px] font-elegant font-semibold tracking-widest text-[#A89BBF] uppercase opacity-85">
                   CRITERIA
                 </span>
                 <span className="text-[18px] font-elegant font-semibold text-[#EDE6DA]">

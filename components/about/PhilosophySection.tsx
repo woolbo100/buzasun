@@ -39,13 +39,18 @@ export default function PhilosophySection() {
             {/* 본문 설명 (최대 너비 900px, 18px, 줄간격 1.7, 문단 간격 28~32px, 중앙 정렬, 단어 단위 줄바꿈) */}
             <div className="max-w-[900px] mx-auto space-y-7 md:space-y-8 text-[#EDE6DA] text-[18px] font-light leading-[1.7] opacity-90 break-keep">
               <p>
-                사람들은 흔히 타고난 사주와 기질을 바꿀 수 없는 숙명이라 말합니다. 하지만 태어날 때 부여받은 결이 삶의 결말까지 결정하는 것은 아닙니다.
+                사람들은 흔히 타고난 사주와 기질을 바꿀 수 없는 숙명이라 말합니다.<br />
+                하지만 태어날 때 부여받은 결이 삶의 결말까지 결정하는 것은 아닙니다.
               </p>
               <p>
-                같은 유형의 사람에게 끌려 상처받고, 결정적인 순간마다 같은 자리에서 무너지는 데는 분명한 이유가 있습니다. 감정의 위로는 잠시뿐, 반복되는 무의식의 패턴을 해독하지 못하면 내일도 어제의 연장선일 뿐입니다.
+                같은 유형의 사람에게 끌려 상처받고, 결정적인 순간마다 같은 자리에서 무너지는 데는 분명한 이유가 있습니다.<br />
+                감정의 위로는 잠시뿐, 반복되는 무의식의 패턴을 해독하지 못하면 내일도 어제의 연장선일 뿐입니다.
               </p>
               <p>
-                <strong className="font-semibold text-[var(--accent-gold)]">백도화(白桃花)는 정해진 운명을 점치는 곳이 아닙니다.</strong> 하얀 복숭아꽃이 바람에 흔들리지 않고 제 계절에 가장 고고하게 피어나듯, 당신 안에 잠든 고유한 <strong className="font-semibold text-[var(--accent-gold)]">선천코드</strong>와 <strong className="font-semibold text-[var(--accent-gold)]">무의식 패턴</strong>을 읽어내어 사랑과 결핍의 판을 스스로 통제하고 재설계하도록 돕는 &apos;각성과 주권의 공간&apos;입니다.
+                <strong className="font-semibold text-[var(--accent-gold)]">백도화(白桃花)는 정해진 운명을 점치는 곳이 아닙니다.</strong><br />
+                하얀 복숭아꽃이 바람에 흔들리지 않고 제 계절에 가장 고고하게 피어나듯,<br />
+                당신 안에 잠든 고유한 <strong className="font-semibold text-[var(--accent-gold)]">선천코드</strong>와 <strong className="font-semibold text-[var(--accent-gold)]">무의식 패턴</strong>을 읽어내어 사랑과 결핍의 판을 스스로 통제하고<br />
+                재설계하도록 돕는 &apos;각성과 주권의 공간&apos;입니다.
               </p>
             </div>
           </div>

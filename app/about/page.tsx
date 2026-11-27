@@ -96,11 +96,13 @@ export default function AboutPage() {
               <div className="max-w-[960px] mx-auto space-y-6 md:space-y-7 text-center">
                 <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-center">
                   붉게 들뜨는 도화가 아닌, 가장 고고하고 단단하게 피어나는 하얀 복숭아꽃(白桃花)의 기품.<br />
-                  백도화 매력학당은 타고난 사주의 껍질을 벗겨 당신만의 ‘선천코드’를 해독하고, 반복되는 사랑과 결핍의 판을 뒤집는 프라이빗 각성 공간입니다.
+                  백도화 매력학당은 타고난 사주의 껍질을 벗겨 당신만의 ‘선천코드’를 해독하고,<br />
+                  반복되는 사랑과 결핍의 판을 뒤집는 프라이빗 각성 공간입니다.
                 </p>
 
                 <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-center">
-                  왕실의 은밀한 비방(秘方)에서 비롯된 동양의 정통 통찰과 현대 심리 설계의 만남. 아무에게나 허락되지 않는 정교한 분석과 프리미엄 솔루션으로,<br />
+                  왕실의 은밀한 비방(秘方)에서 비롯된 동양의 정통 통찰과 현대 심리 설계의 만남.<br />
+                  아무에게나 허락되지 않는 정교한 분석과 프리미엄 솔루션으로,<br />
                   당신이 삶의 온전한 주권자로 서는 결정적 기준을 제시합니다.
                 </p>
 
