@@ -19,13 +19,13 @@ export default function NameMeaningSection() {
           </div>
         </Reveal>
 
-        {/* 메인 타이틀 (중앙 정렬 유지) */}
+        {/* 메인 타이틀 (중앙 정렬 유지, 공통 line-height: 1.4 적용) */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16">
             <span className="text-lg sm:text-xl font-elegant tracking-widest text-[var(--accent-gold)] block mb-2 opacity-80">
               白桃花
             </span>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-[1.5]">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5]">
               자신만의 아름다움으로 피어나는 삶
             </h2>
           </div>

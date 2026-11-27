@@ -19,9 +19,9 @@ export default function OriginBackgroundSection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 */}
+        {/* 헤드라인 (공통 line-height: 1.4 적용) */}
         <Reveal delayMs={150}>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-center mb-16 text-[#F5F5F5] leading-[1.5]">
+          <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-center mb-16 text-[#F5F5F5]">
             운명을 묻는 사람에게, 자신을 이해하는 법을 전하다
           </h2>
         </Reveal>
@@ -43,7 +43,7 @@ export default function OriginBackgroundSection() {
               <p className="text-[12px] tracking-widest text-[var(--accent-gold)] uppercase mb-2 font-elegant opacity-75">
                 THE ESSENTIAL QUESTION
               </p>
-              <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[#F5F5F5] leading-[1.5]">
+              <p className="about-heading text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[#F5F5F5]">
                 "나는 왜 이러한 감정을 느끼며,<br />
                 왜 이러한 관계와 선택을 반복하는가?"
               </p>

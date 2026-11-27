@@ -250,11 +250,10 @@ export default function ManifestoSection() {
               <path d="M2 20H7M20 2V7" strokeOpacity="0.8" />
             </svg>
 
-            {/* 선언문 헤드라인 */}
+            {/* 선언문 헤드라인 (공통 line-height: 1.4 적용) */}
             <div className="mb-12 md:mb-14 relative z-10">
               <h2 
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-[#FDFBF7]"
-                style={{ lineHeight: 1.8, letterSpacing: '0.04em' }}
+                className="about-statement-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-elegant font-bold text-[#FDFBF7]"
               >
                 <span className="text-[var(--accent-gold)]">숙명</span>은 주어지지만,<br />
                 <span className="text-[var(--accent-gold)]">운명</span>은 선택하는 것이다.
@@ -285,11 +284,10 @@ export default function ManifestoSection() {
               </p>
             </div>
 
-            {/* 클라이맥스 핵심 문구 */}
+            {/* 클라이맥스 핵심 문구 (공통 line-height: 1.4 적용) */}
             <div className="mt-16 pt-12 border-t border-[rgba(216,191,163,0.25)] relative z-10">
               <p 
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-[var(--accent-gold)] tracking-wide"
-                style={{ lineHeight: 1.8, letterSpacing: '0.04em' }}
+                className="about-statement-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-[var(--accent-gold)] tracking-wide"
               >
                 "당신은 운명의 관찰자가 아니라,<br />
                 자신의 삶을 선택하는 사람입니다."

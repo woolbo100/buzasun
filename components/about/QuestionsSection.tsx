@@ -18,9 +18,9 @@ export default function QuestionsSection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 */}
+        {/* 헤드라인 (공통 line-height: 1.4 적용) */}
         <Reveal delayMs={150}>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-center mb-16 text-[#F5F5F5] leading-[1.5]">
+          <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-center mb-16 text-[#F5F5F5]">
             왜 우리는 같은 사랑을 반복할까요?
           </h2>
         </Reveal>

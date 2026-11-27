@@ -9,18 +9,7 @@ export default function PhilosophySection() {
   return (
     <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
-        {/* 영문 소제목 */}
-        <Reveal delayMs={100}>
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
-              THE PHILOSOPHY OF BAEKDOHWA
-            </span>
-            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-          </div>
-        </Reveal>
-
-        {/* 메인 철학 카드 (1280px 기준선 정렬) */}
+        {/* 메인 철학 카드 (1280px 기준선 정렬, 내부 구조: 라벨 → 메인 제목 → 본문 통일) */}
         <Reveal delayMs={200}>
           <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 lg:p-20 pb-12 sm:pb-14 md:pb-16 lg:pb-16 text-center relative overflow-hidden">
             {/* 배경 은은한 꽃 워터마크 */}
@@ -28,10 +17,18 @@ export default function PhilosophySection() {
               <BaekdohwaFlowerMark size={400} watermark={true} />
             </div>
 
-            {/* 메인 헤드라인 (모두에게 같은 연애 공식 영역과 크기 및 줄간격 기준 통일 + 명시적 2줄 줄바꿈 적용) */}
+            {/* 1. 영문 소제목 라벨 (카드 내부 상단 중앙 이동) */}
+            <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8 relative z-10">
+              <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+              <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+                THE PHILOSOPHY OF BAEKDOHWA
+              </span>
+              <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+            </div>
+
+            {/* 2. 메인 헤드라인 (공통 line-height: 1.4 적용) */}
             <h2 
-              className="text-2xl sm:text-4xl md:text-[44px] lg:text-[48px] font-elegant font-bold mb-8 text-[#F5F5F5] break-keep text-center"
-              style={{ lineHeight: 1.8, letterSpacing: '0.04em' }}
+              className="about-heading text-2xl sm:text-4xl md:text-[44px] lg:text-[48px] font-elegant font-bold mb-8 text-[#F5F5F5] text-center relative z-10"
             >
               <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">숙명</span>은 주어지지만,<br />
               <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">운명</span>은 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">선택</span>하는 것이다.
@@ -54,15 +51,8 @@ export default function PhilosophySection() {
           </div>
         </Reveal>
 
-        {/* 하단 브랜드 슬로건 (투명 카드 외부와 와이드 이미지 사이 브릿지 배치: 카드 하단 간격 48px, 이미지 상단 간격 32px) */}
-        <Reveal delayMs={250} className="mt-12 text-center">
-          <p className="text-xl sm:text-2xl md:text-3xl font-elegant font-semibold text-[var(--accent-gold)] tracking-wide break-keep">
-            나를 읽고, 사랑과 풍요의 방향을 다시 쓰다.
-          </p>
-        </Reveal>
-
-        {/* 독립된 와이드 이미지 영역 (1280px 기준선 일치, 16:9 비율, 16px 라운딩, 상단 슬로건과의 간격 32px) */}
-        <Reveal delayMs={300} className="mt-8">
+        {/* 2. 독립된 와이드 이미지 영역 (1280px 기준선 일치, 16:9 비율, 16px 라운딩, 철학 카드 하단과의 간격 32px: mt-8) */}
+        <Reveal delayMs={250} className="mt-8">
           <div className="relative aspect-[16/9] w-full rounded-[16px] overflow-hidden">
             <Image
               src="/image/author-of-your-destiny.webp"
@@ -72,6 +62,13 @@ export default function PhilosophySection() {
               sizes="(max-width: 1280px) 100vw, 1280px"
             />
           </div>
+        </Reveal>
+
+        {/* 3. 브랜드 핵심 강조 문구 (이미지 하단과의 간격 32px: mt-8, 중앙 정렬 유지) */}
+        <Reveal delayMs={300} className="mt-8 text-center">
+          <p className="text-xl sm:text-2xl md:text-3xl font-elegant font-semibold text-[var(--accent-gold)] tracking-wide break-keep">
+            나를 읽고, 사랑과 풍요의 방향을 다시 쓰다.
+          </p>
         </Reveal>
       </div>
     </section>

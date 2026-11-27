@@ -97,13 +97,13 @@ export default function ThreeRealmsSection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 */}
+        {/* 헤드라인 (공통 line-height: 1.4 적용, max-w-4xl 확장으로 '자신을 이해하다' 단어 잘림 방지) */}
         <Reveal delayMs={150}>
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="text-lg sm:text-xl font-elegant tracking-widest text-[var(--accent-gold)] block mb-2 leading-[1.65]">
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <span className="text-lg sm:text-xl font-elegant tracking-widest text-[var(--accent-gold)] block mb-2">
               사랑 · 인연 · 풍요
             </span>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-[1.65]">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5]">
               삶의 중요한 순간마다 자신을 이해하다
             </h2>
           </div>

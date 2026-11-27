@@ -44,10 +44,10 @@ export default function BaekJangmiStorySection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 */}
+        {/* 헤드라인 (공통 line-height: 1.4 적용) */}
         <Reveal delayMs={150}>
           <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4">
               백도화의 철학을 만들어 가는 사람, 백장미
             </h2>
           </div>
@@ -130,7 +130,7 @@ export default function BaekJangmiStorySection() {
                 outlineGold={true}
               />
               
-              <p className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] leading-[1.65] tracking-wider">
+              <p className="about-statement-heading text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] tracking-wider">
                 감이 아닌 이론<br />
                 직관이 아닌 구조<br />
                 위로가 아닌 설계

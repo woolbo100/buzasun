@@ -8,18 +8,7 @@ export default function BeyondRulesSection() {
   return (
     <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative w-full">
       <div className="max-w-[1280px] mx-auto w-full">
-        {/* 영문 소제목 */}
-        <Reveal delayMs={100}>
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
-              BEYOND THE RULES · 선천코드의 원리
-            </span>
-            <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-          </div>
-        </Reveal>
-
-        {/* 1280px 독립적인 브랜드 차별화 메시지 카드 (원래의 퍼플·먹보라 한지 그라데이션 복구) */}
+        {/* 1280px 독립적인 브랜드 차별화 메시지 카드 (원래의 퍼플·먹보라 한지 그라데이션, 내부 구조: 라벨 → 메인 제목 → 본문 통일) */}
         <Reveal delayMs={200}>
           <div
             className="card--hanji-purple relative backdrop-blur-md w-full p-10 sm:p-16 md:p-20 lg:p-24 text-center overflow-hidden rounded-3xl cursor-default"
@@ -226,11 +215,19 @@ export default function BeyondRulesSection() {
               <BaekdohwaFlowerMark size={480} watermark={true} />
             </div>
 
-            {/* 통합 한지 카드 콘텐츠 (메인 헤드카피, 본문, 하단 핵심 선언, 낙관) */}
+            {/* 통합 한지 카드 콘텐츠 (라벨 → 메인 헤드카피 → 본문 → 하단 핵심 선언 → 낙관 순서 통일) */}
             <div className="relative z-10">
+              {/* 1. 영문 소제목 라벨 (카드 내부 상단 중앙 이동) */}
+              <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
+                <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+                <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+                  BEYOND THE RULES · 선천코드의 원리
+                </span>
+                <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+              </div>
+
               <h2 
-                className="text-2xl sm:text-4xl md:text-[40px] lg:text-[42px] font-elegant font-bold mb-8 text-[#F5F5F5] break-keep text-center"
-                style={{ lineHeight: 1.8, letterSpacing: '0.04em' }}
+                className="about-heading text-2xl sm:text-4xl md:text-[40px] lg:text-[42px] font-elegant font-bold mb-8 text-[#F5F5F5] text-center"
               >
                 수많은 조언과 공식을 따라도,<br />
                 왜 당신의 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">사랑</span>과 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">삶</span>은 달라지지 않습니까?
@@ -245,7 +242,8 @@ export default function BeyondRulesSection() {
                   사람마다 타고난 기질도, 매력이 발현되는 방식도, 결핍을 채우는 구조도 전혀 다르기 때문입니다.
                 </p>
                 <p>
-                  남들의 기준이나 획일화된 연애·성공 공식에 나를 억지로 끼워 맞출수록, 당신 고유의 힘은 흐려지고 같은 실패만 반복됩니다.
+                  남들의 기준이나 획일화된 연애·성공 공식에 나를 억지로 끼워 맞출수록,<br />
+                  당신 고유의 힘은 흐려지고 같은 실패만 반복됩니다.
                 </p>
               </div>
 

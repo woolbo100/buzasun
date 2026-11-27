@@ -51,10 +51,10 @@ export default function MethodologySection() {
           </div>
         </Reveal>
 
-        {/* 2 & 3. 메인 제목 및 설명 문구 (간격 약 32px) */}
+        {/* 2 & 3. 메인 제목 및 설명 문구 (공통 line-height: 1.4 적용) */}
         <Reveal delayMs={150}>
           <div className="text-center mb-8 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4">
               선천코드 해독과 운명 재설계
             </h2>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">

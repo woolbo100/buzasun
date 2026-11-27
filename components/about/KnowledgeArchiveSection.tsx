@@ -21,10 +21,10 @@ export default function KnowledgeArchiveSection() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 */}
+        {/* 헤드라인 (공통 line-height: 1.4 적용, max-w-4xl 확장으로 '리포트에 담다' 단어 잘림 방지) */}
         <Reveal delayMs={150}>
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4">
               삶을 읽는 지혜를 한 권의 책과 리포트에 담다
             </h2>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">

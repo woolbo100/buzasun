@@ -333,6 +333,16 @@
     -webkit-backdrop-filter: blur(12px);
   }
 
+  /* =========================================================================
+     백도화 소개페이지 전용 공통 제목 타이포그래피 스타일 (line-height: 1.4 표준화 및 단어 분리 방지)
+     ========================================================================= */
+  .about-heading,
+  .about-statement-heading {
+    line-height: 1.4 !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+  }
+
   /* 백도화 연애 리포트 — 시그니처 강조 카드 통일 스타일 (기준: '하지만 기억하십시오.' 상자) */
   .love-report-highlight-card {
     background-color: rgba(125, 76, 100, 0.20);

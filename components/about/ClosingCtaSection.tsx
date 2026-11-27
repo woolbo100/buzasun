@@ -44,10 +44,9 @@ export default function ClosingCtaSection() {
         {/* 최종 클로징 및 3대 CTA 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>
           <div className="gungjung-glass w-full p-10 sm:p-16 text-center border border-[rgba(216,191,163,0.25)]">
-            {/* 1. 메인 헤드카피 (36px, 앤티크 샴페인 골드, PC 2줄 구성, 여유 있는 간격) */}
+            {/* 1. 메인 헤드카피 (36px, 앤티크 샴페인 골드, PC 2줄 구성, 공통 line-height: 1.4 적용) */}
             <h2 
-              className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[var(--accent-gold)] mb-8 break-keep text-center"
-              style={{ lineHeight: 1.8, letterSpacing: '0.04em' }}
+              className="about-heading text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[var(--accent-gold)] mb-8 text-center"
             >
               당신은 고쳐야 할 부족한 존재가 아닙니다.<br className="hidden md:inline" />{' '}
               다만, 아직 당신만의 사용설명서를 읽지 못했을 뿐입니다.

@@ -18,10 +18,10 @@ export default function ThreeLayersDiagram() {
           </div>
         </Reveal>
 
-        {/* 헤드라인 */}
+        {/* 헤드라인 (공통 line-height: 1.4 적용) */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4">
               인간을 바라보는 세 가지 층위
             </h2>
             <p className="text-[18px] leading-[1.7] font-elegant text-[var(--accent-gold)] font-medium leading-[1.5]">
@@ -194,14 +194,14 @@ export default function ThreeLayersDiagram() {
           </div>
         </Reveal>
 
-        {/* 2. 하단 3개 층위 설명 카드 분리 (동등한 위계의 3단계 구조 — 동일 투명도 및 공통 글라스 스타일 적용) */}
+        {/* 2. 하단 3개 층위 설명 카드 분리 (동등한 위계의 3단계 구조 — 동일 투명도, 동일 농도, 통일된 글라스 효과) */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          {/* 01. 선천코드 — 타고난 나 (깊은 버건디, 투명도 0.42 동일 세트) */}
+          {/* 01. 선천코드 — 타고난 나 (깊은 버건디 틴트, 동일 투명도 및 명도 체감 통일) */}
           <Reveal delayMs={300} className="h-full">
             <div 
-              className="p-6 sm:p-8 rounded-2xl border border-[rgba(199,169,122,0.28)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
               style={{
-                background: 'linear-gradient(135deg, rgba(95, 36, 56, 0.45) 0%, rgba(80, 28, 46, 0.40) 100%)'
+                background: 'linear-gradient(135deg, rgba(72, 24, 38, 0.52) 0%, rgba(48, 16, 26, 0.46) 100%)'
               }}
             >
               <div>
@@ -229,12 +229,12 @@ export default function ThreeLayersDiagram() {
             </div>
           </Reveal>
 
-          {/* 02. 무의식 패턴 — 형성된 나 (로즈핑크 플럼, 투명도 0.42 동일 세트) */}
+          {/* 02. 무의식 패턴 — 형성된 나 (로즈핑크 플럼 틴트, 동일 투명도 및 명도 체감 통일) */}
           <Reveal delayMs={400} className="h-full">
             <div 
-              className="p-6 sm:p-8 rounded-2xl border border-[rgba(199,169,122,0.28)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
               style={{
-                background: 'linear-gradient(135deg, rgba(90, 42, 64, 0.45) 0%, rgba(76, 34, 54, 0.40) 100%)'
+                background: 'linear-gradient(135deg, rgba(68, 26, 44, 0.52) 0%, rgba(46, 18, 30, 0.46) 100%)'
               }}
             >
               <div>
@@ -262,12 +262,12 @@ export default function ThreeLayersDiagram() {
             </div>
           </Reveal>
 
-          {/* 03. 후천적 선택 — 만들어 가는 나 (샴페인 골드 브라운 버건디, 투명도 0.42 동일 세트) */}
+          {/* 03. 후천적 선택 — 만들어 가는 나 (샴페인 골드 브라운 틴트, 동일 투명도 및 명도 체감 통일) */}
           <Reveal delayMs={500} className="h-full">
             <div 
-              className="p-6 sm:p-8 rounded-2xl border border-[rgba(199,169,122,0.28)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
+              className="p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] h-full flex flex-col justify-between transition-all duration-300"
               style={{
-                background: 'linear-gradient(135deg, rgba(85, 52, 58, 0.45) 0%, rgba(72, 42, 48, 0.40) 100%)'
+                background: 'linear-gradient(135deg, rgba(64, 30, 36, 0.52) 0%, rgba(44, 20, 26, 0.46) 100%)'
               }}
             >
               <div>
@@ -299,9 +299,9 @@ export default function ThreeLayersDiagram() {
         {/* 3. 하단 가로형 강조 카드 분리 (상단 3개 카드와 동일 투명도 세트 적용, 1280px 기준선 일치) */}
         <Reveal delayMs={600} className="mt-8">
           <div 
-            className="text-center p-6 sm:p-8 rounded-2xl border border-[rgba(199,169,122,0.28)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] w-full"
+            className="text-center p-6 sm:p-8 rounded-2xl border border-[rgba(212,178,167,0.3)] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.35)] w-full"
             style={{
-              background: 'linear-gradient(135deg, rgba(75, 38, 52, 0.45) 0%, rgba(62, 30, 44, 0.40) 100%)'
+              background: 'linear-gradient(135deg, rgba(58, 22, 34, 0.52) 0%, rgba(42, 16, 24, 0.46) 100%)'
             }}
           >
             <p className="text-[18px] leading-[1.7] font-elegant font-medium text-[var(--accent-gold)] break-keep">

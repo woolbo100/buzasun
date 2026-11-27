@@ -70,42 +70,46 @@ export default function AboutPage() {
         </div>
 
         {/* =========================================================================
-            [메인 소개 영역] 백도화 소개 — 운명을 설계하는 은밀한 비기 (1280px 기준선 정렬)
+            [메인 소개 영역] 백도화 소개 — 운명을 설계하는 은밀한 비기 (1280px 기준선 정렬, 중앙 정렬 및 라벨 디자인 통일)
             ========================================================================= */}
         <section className="pb-16 px-4 sm:px-6 lg:px-8 relative w-full">
           <div className="max-w-[1280px] mx-auto w-full relative z-10">
             {/* Rule 5: 텍스트 및 UI 레이어 보호를 위한 궁중유리 카드 */}
-            <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 text-left">
-              {/* 1. 상단 영어 라벨 신규 추가 (비첩 상세페이지 기준 text-[12pt] font-semibold, 앤티크 샴페인 골드, 타이틀과의 간격 16px) */}
-              <div className="mb-4">
-                <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 text-center">
+              {/* 1. 상단 영어 라벨 (기존 다른 주요 섹션과 동일하게 양쪽 구분선 적용, 중앙 정렬) */}
+              <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
+                <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+                <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
                   ABOUT BAEKDOHWA · PRIVATE ARCHIVE
                 </span>
+                <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
               </div>
 
-              {/* 2. 메인 타이틀 변경 (36px, 앤티크 샴페인 골드 그라데이션, 좌측 정렬) */}
+              {/* 2. 메인 타이틀 (36px, 앤티크 샴페인 골드 그라데이션, 중앙 정렬, 공통 line-height: 1.4 적용) */}
               <h1 
-                className="text-[26px] sm:text-[32px] md:text-[36px] font-elegant font-bold mb-8 gradient-text text-left break-keep"
-                style={{ lineHeight: 1.8, letterSpacing: '0.04em' }}
+                className="about-heading text-[26px] sm:text-[32px] md:text-[36px] font-elegant font-bold mb-8 gradient-text text-center"
               >
-                백도화(白桃花),<br className="sm:hidden" /> 운명을 설계하는 은밀한 비기
+                백도화(白桃花), 운명을 설계하는 은밀한 비기
               </h1>
 
-              {/* 3 & 4. 본문 문단 (18px, 줄간격 1.7, 문단 간격 24~28px, 좌측 정렬, break-keep) */}
-              <div className="space-y-6 md:space-y-7">
-                <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-left">
-                  붉게 들뜨는 도화가 아닌, 가장 고고하고 단단하게 피어나는 하얀 복숭아꽃(白桃花)의 기품. 백도화 매력학당은 타고난 사주의 껍질을 벗겨 당신만의 ‘선천코드’를 해독하고, 반복되는 사랑과 결핍의 판을 뒤집는 프라이빗 각성 공간입니다.
+              {/* 3 & 4. 본문 문단 (18px, 줄간격 1.7, 문단 간격 24~28px, 최대 너비 960px, 중앙 정렬, break-keep) */}
+              <div className="max-w-[960px] mx-auto space-y-6 md:space-y-7 text-center">
+                <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-center">
+                  붉게 들뜨는 도화가 아닌, 가장 고고하고 단단하게 피어나는 하얀 복숭아꽃(白桃花)의 기품.<br />
+                  백도화 매력학당은 타고난 사주의 껍질을 벗겨 당신만의 ‘선천코드’를 해독하고, 반복되는 사랑과 결핍의 판을 뒤집는 프라이빗 각성 공간입니다.
                 </p>
 
-                <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-left">
-                  왕실의 은밀한 비방(秘方)에서 비롯된 동양의 정통 통찰과 현대 심리 설계의 만남. 아무에게나 허락되지 않는 정교한 분석과 프리미엄 솔루션으로, 당신이 삶의 온전한 주권자로 서는 결정적 기준을 제시합니다.
+                <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-center">
+                  왕실의 은밀한 비방(秘方)에서 비롯된 동양의 정통 통찰과 현대 심리 설계의 만남. 아무에게나 허락되지 않는 정교한 분석과 프리미엄 솔루션으로,<br />
+                  당신이 삶의 온전한 주권자로 서는 결정적 기준을 제시합니다.
                 </p>
 
-                {/* 5. 마지막 사명 문구 강조 (상단 은은한 구분선, 간격 24px, 18px, font-semibold 600, 앤티크 샴페인 골드) */}
+                {/* 5. 마지막 사명 문구 강조 (상단 은은한 구분선 중앙 정렬, 18px, font-semibold 600, 앤티크 샴페인 골드) */}
                 <div className="pt-2">
-                  <div className="gold-divider opacity-30 mb-6" />
-                  <p className="text-[18px] leading-[1.7] font-semibold text-[var(--accent-gold)] break-keep text-left">
-                    타고난 고유한 매력의 결을 극대화하여 주도적인 사랑과 온전한 풍요의 삶을 실현하게 하는 것. 그것이 바로 백도화가 존재하는 이유이자 우리의 사명입니다.
+                  <div className="gold-divider max-w-xs mx-auto opacity-30 mb-6" />
+                  <p className="text-[18px] leading-[1.7] font-semibold text-[var(--accent-gold)] break-keep text-center">
+                    타고난 고유한 매력의 결을 극대화하여 주도적인 사랑과 온전한 풍요의 삶을 실현하게 하는 것.<br />
+                    그것이 바로 백도화가 존재하는 이유이자 우리의 사명입니다.
                   </p>
                 </div>
               </div>
