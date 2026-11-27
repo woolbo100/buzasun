@@ -22,7 +22,7 @@ export default function PhilosophySection() {
 
         {/* 메인 철학 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>
-          <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 lg:p-20 text-center relative overflow-hidden">
+          <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 lg:p-20 pb-12 sm:pb-14 md:pb-16 lg:pb-16 text-center relative overflow-hidden">
             {/* 배경 은은한 꽃 워터마크 */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-[0.03]">
               <BaekdohwaFlowerMark size={400} watermark={true} />
@@ -55,24 +55,24 @@ export default function PhilosophySection() {
               </p>
             </div>
 
-            <div className="mt-10 pt-6">
+            <div className="mt-10 pt-4">
               <p className="text-xl sm:text-2xl md:text-3xl font-elegant font-semibold text-[var(--accent-gold)] tracking-wide">
                 나를 읽고, 사랑의 방향을 다시 쓰다.
               </p>
             </div>
+          </div>
+        </Reveal>
 
-            {/* 가로형 16:9 브랜드 철학 이미지 (author-of-your-destiny.webp) */}
-            <div className="mt-14 max-w-3xl mx-auto w-full">
-              <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.2)] shadow-md">
-                <Image
-                  src="/image/author-of-your-destiny.webp"
-                  alt="고풍스러운 한옥 서재에서 자신의 운명을 직접 써 내려가는 여성"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 768px"
-                />
-              </div>
-            </div>
+        {/* 독립된 와이드 이미지 영역 (1280px 기준선 일치, 16:9 비율, 16px 라운딩) */}
+        <Reveal delayMs={250} className="mt-6 md:mt-11">
+          <div className="relative aspect-[16/9] w-full rounded-[16px] overflow-hidden">
+            <Image
+              src="/image/author-of-your-destiny.webp"
+              alt="고풍스러운 한옥 서재에서 자신의 운명을 직접 써 내려가는 여성"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+            />
           </div>
         </Reveal>
       </div>

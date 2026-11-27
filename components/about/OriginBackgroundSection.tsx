@@ -28,7 +28,7 @@ export default function OriginBackgroundSection() {
 
         {/* 본문 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={200}>
-          <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 space-y-8 text-[#EDE6DA] leading-relaxed font-light">
+          <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 pb-12 sm:pb-14 md:pb-16 space-y-8 text-[#EDE6DA] leading-relaxed font-light">
             <div className="max-w-3xl mx-auto space-y-4 text-base sm:text-lg opacity-90 text-center sm:text-left">
               <p>
                 사람들은 사랑이 힘들어질 때 상대의 마음을 알고 싶어 합니다.
@@ -58,26 +58,26 @@ export default function OriginBackgroundSection() {
               </p>
             </div>
 
-            {/* 가로형 16:9 신규 이미지 영역 (오버레이/텍스트 중첩 없이 원본 색감 유지) */}
-            <div className="pt-8 max-w-4xl mx-auto w-full">
-              <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[rgba(216,191,163,0.2)] shadow-md">
-                <Image
-                  src="/image/wisdom-within.webp"
-                  alt="동양의 지혜와 내면의 자기성찰을 상징하는 고서와 청동 거울, 백색 도화"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 896px"
-                />
-              </div>
-
-              {/* 이미지 하단 핵심 카피 (독립된 텍스트, 24px 기준 명조 계열, 앤티크 샴페인 골드) */}
-              <div className="mt-8 sm:mt-10 text-center">
-                <p className="text-xl sm:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed tracking-wide">
-                  정해진 운명의 답을 넘어,<br className="sm:hidden" />{' '}
-                  스스로를 읽는 여정의 시작.
-                </p>
-              </div>
+            {/* 본문 하단 핵심 카피 */}
+            <div className="text-center pt-2">
+              <p className="text-xl sm:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed tracking-wide">
+                정해진 운명의 답을 넘어,<br className="sm:hidden" />{' '}
+                스스로를 읽는 여정의 시작.
+              </p>
             </div>
+          </div>
+        </Reveal>
+
+        {/* 독립된 와이드 이미지 영역 (1280px 기준선 일치, 16:9 비율, 16px 라운딩) */}
+        <Reveal delayMs={250} className="mt-6 md:mt-11">
+          <div className="relative aspect-[16/9] w-full rounded-[16px] overflow-hidden">
+            <Image
+              src="/image/wisdom-within.webp"
+              alt="동양의 지혜와 내면의 자기성찰을 상징하는 고서와 청동 거울, 백색 도화"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+            />
           </div>
         </Reveal>
       </div>
