@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'elegant': ['Playfair Display', 'serif'],
+        'elegant': ['Playfair Display', 'Noto Serif KR', 'serif'],
         'sans': ['Noto Sans KR', 'sans-serif'],
       },
       colors: {
