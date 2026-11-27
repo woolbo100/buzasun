@@ -10,28 +10,28 @@ const steps = [
     step: 'STEP 01',
     hanja: '解讀',
     title: '해독',
-    subtitle: '타고난 나를 이해하다.',
+    subtitle: '타고난 나를 이해하다',
     desc: '선천코드를 통해 자신의 기질과 성향, 관계에서 나타나는 특성을 탐색합니다.'
   },
   {
     step: 'STEP 02',
     hanja: '發見',
     title: '발견',
-    subtitle: '반복되는 패턴을 발견하다.',
+    subtitle: '반복되는 패턴을 발견하다',
     desc: '지금까지 반복되어 온 감정, 관계 습관과 선택의 흐름을 돌아봅니다.'
   },
   {
     step: 'STEP 03',
     hanja: '覺醒',
     title: '각성',
-    subtitle: '익숙한 신념과 선택을 돌아보다.',
+    subtitle: '익숙한 신념과 선택을 돌아보다',
     desc: '자신을 제한하는 신념과 무의식적인 반응을 살피고, 자신과 관계를 바라보는 새로운 관점을 발견합니다.'
   },
   {
     step: 'STEP 04',
     hanja: '再設計',
     title: '재설계',
-    subtitle: '새로운 삶의 방향을 선택하다.',
+    subtitle: '새로운 삶의 방향을 선택하다',
     desc: '자신에 대한 이해를 바탕으로 보다 주체적인 관계와 삶을 위한 행동을 설계합니다.'
   }
 ]
@@ -44,7 +44,7 @@ export default function MethodologySection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               THE PATH TO SELF-MASTERY
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -89,7 +89,7 @@ export default function MethodologySection() {
                     <div>
                       {/* 스텝 라벨 및 한자 */}
                       <div className="flex items-center justify-between mb-4 pb-3 border-b border-[rgba(216,191,163,0.15)]">
-                        <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
+                        <span className="text-[12pt] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
                           {item.step}
                         </span>
                         <span className="text-[12px] font-elegant text-[var(--accent-gold)] opacity-60">

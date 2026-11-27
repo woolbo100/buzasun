@@ -12,7 +12,7 @@ export default function OriginBackgroundSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               WHY BAEKDOHWA EXISTS
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -62,7 +62,7 @@ export default function OriginBackgroundSection() {
             <div className="text-center pt-2">
               <p className="text-xl sm:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed tracking-wide">
                 정해진 운명의 답을 넘어,<br className="sm:hidden" />{' '}
-                스스로를 읽는 여정의 시작.
+                스스로를 읽는 여정의 시작
               </p>
             </div>
           </div>

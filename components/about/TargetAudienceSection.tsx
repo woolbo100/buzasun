@@ -9,37 +9,37 @@ const targetList = [
     num: '01',
     icon: <Heart size={24} className="text-[var(--accent-gold)]" />,
     title: '사랑할 때마다 비슷한 상처를 반복하는 분',
-    desc: '만나는 사람은 달라져도 관계 속에서 비슷한 감정과 어려움을 반복하는 이유를 이해하고 싶은 분.'
+    desc: '만나는 사람은 달라져도 관계 속에서 비슷한 감정과 어려움을 반복하는 이유를 이해하고 싶은 분'
   },
   {
     num: '02',
     icon: <Search size={24} className="text-[var(--accent-gold)]" />,
     title: '상대의 마음을 알고 싶지만 정작 자신의 마음은 놓치고 있는 분',
-    desc: '사랑받기 위해 애쓰는 과정에서 자신이 원하는 사랑이 무엇인지 돌아보고 싶은 분.'
+    desc: '사랑받기 위해 애쓰는 과정에서 자신이 원하는 사랑이 무엇인지 돌아보고 싶은 분'
   },
   {
     num: '03',
     icon: <Compass size={24} className="text-[var(--accent-gold)]" />,
     title: '이별과 재회 사이에서 방향을 찾지 못하고 있는 분',
-    desc: '그 사람과 다시 만나는 것이 자신에게 어떤 의미인지, 앞으로 어떤 선택을 해야 할지 깊이 고민하고 있는 분.'
+    desc: '그 사람과 다시 만나는 것이 자신에게 어떤 의미인지, 앞으로 어떤 선택을 해야 할지 깊이 고민하고 있는 분'
   },
   {
     num: '04',
     icon: <Users size={24} className="text-[var(--accent-gold)]" />,
     title: '사랑하는 사람과의 차이를 이해하고 싶은 분',
-    desc: '서로 사랑하지만 반복되는 갈등과 다른 감정 표현 방식으로 어려움을 느끼는 분.'
+    desc: '서로 사랑하지만 반복되는 갈등과 다른 감정 표현 방식으로 어려움을 느끼는 분'
   },
   {
     num: '05',
     icon: <Sparkles size={24} className="text-[var(--accent-gold)]" />,
     title: '나의 매력과 고유한 가치를 발견하고 싶은 분',
-    desc: '타인의 평가와 선택에 의존하기보다 자신만의 아름다움과 존재감을 발견하고 싶은 분.'
+    desc: '타인의 평가와 선택에 의존하기보다 자신만의 아름다움과 존재감을 발견하고 싶은 분'
   },
   {
     num: '06',
     icon: <TrendingUp size={24} className="text-[var(--accent-gold)]" />,
     title: '풍요로운 삶을 원하지만 익숙한 신념과 두려움에 머무르는 분',
-    desc: '자신의 재능과 가능성을 이해하고, 정서적·경제적 풍요를 향한 새로운 방향을 설계하고 싶은 분.'
+    desc: '자신의 재능과 가능성을 이해하고, 정서적·경제적 풍요를 향한 새로운 방향을 설계하고 싶은 분'
   }
 ]
 
@@ -51,7 +51,7 @@ export default function TargetAudienceSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               WHO BAEKDOHWA IS FOR
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />

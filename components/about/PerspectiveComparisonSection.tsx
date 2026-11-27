@@ -38,7 +38,7 @@ export default function PerspectiveComparisonSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               A DIFFERENT PERSPECTIVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -112,7 +112,7 @@ export default function PerspectiveComparisonSection() {
           <div className="mt-14 text-center">
             <p className="text-base sm:text-lg md:text-xl font-elegant font-medium text-[var(--accent-gold)] leading-relaxed">
               미래에 대한 질문에서,<br className="sm:hidden" />{' '}
-              자신에 대한 이해와 새로운 선택으로.
+              자신에 대한 이해와 새로운 선택으로
             </p>
           </div>
         </Reveal>

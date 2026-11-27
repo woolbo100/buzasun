@@ -11,7 +11,7 @@ export default function ThreeLayersDiagram() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               THE THREE LAYERS OF SELF
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -25,7 +25,7 @@ export default function ThreeLayersDiagram() {
               인간을 바라보는 세 가지 층위
             </h2>
             <p className="text-[18px] leading-[1.7] font-elegant text-[var(--accent-gold)] font-medium leading-[1.5]">
-              타고난 나를 이해하고, 형성된 나를 돌아보며, 새로운 나를 선택하다.
+              타고난 나를 이해하고, 형성된 나를 돌아보며, 새로운 나를 선택하다
             </p>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 mt-6 font-light break-keep">
               인간은 타고난 기질만으로 설명될 수 없으며, 살아오면서 형성된 경험과 신념, 감정과 행동, 그리고 앞으로의 선택을 함께 살펴볼 필요가 있습니다.<br className="hidden md:inline" />{' '}
@@ -206,7 +206,7 @@ export default function ThreeLayersDiagram() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[12px] font-elegant font-bold tracking-widest text-[#B7788D] uppercase">
+                  <span className="text-[12pt] font-elegant font-semibold tracking-widest text-[#B7788D] uppercase">
                     CENTER LAYER 01
                   </span>
                   <span className="w-2.5 h-2.5 rounded-full bg-[#5E1528] border border-[var(--accent-gold)]" />
@@ -239,7 +239,7 @@ export default function ThreeLayersDiagram() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[12px] font-elegant font-bold tracking-widest text-[#C58BA0] uppercase">
+                  <span className="text-[12pt] font-elegant font-semibold tracking-widest text-[#C58BA0] uppercase">
                     MIDDLE LAYER 02
                   </span>
                   <span className="w-2.5 h-2.5 rounded-full bg-[#733249] border border-[var(--accent-gold)]" />
@@ -272,7 +272,7 @@ export default function ThreeLayersDiagram() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
+                  <span className="text-[12pt] font-elegant font-semibold tracking-widest text-[var(--accent-gold)] uppercase">
                     OUTER LAYER 03
                   </span>
                   <span className="w-2.5 h-2.5 rounded-full bg-[#BA8D7E] border border-[var(--accent-gold)]" />

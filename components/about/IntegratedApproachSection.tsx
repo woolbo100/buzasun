@@ -130,7 +130,7 @@ export default function IntegratedApproachSection() {
           <Reveal delayMs={100}>
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-              <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+              <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
                 THREE DOMAINS OF LIFE
               </span>
               <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -203,7 +203,7 @@ export default function IntegratedApproachSection() {
           <Reveal delayMs={400}>
             <div className="text-center space-y-3">
               <p className="text-xl sm:text-2xl md:text-[24px] font-elegant font-bold text-[var(--accent-gold)] tracking-wide break-keep">
-                사랑의 주권, 관계의 지혜, 풍요의 실천.
+                사랑의 주권, 관계의 지혜, 풍요의 실천
               </p>
               <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
                 모든 변화는 나를 이해하는 것에서 시작됩니다.

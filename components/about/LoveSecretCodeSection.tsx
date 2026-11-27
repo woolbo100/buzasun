@@ -30,7 +30,11 @@ const codes = [
   {
     code: 'CODE 03',
     title: '인연과 배우자복',
-    question: '나를 귀하게 여길 진짜 인연과 타고난 남자복·배우자운은?',
+    question: (
+      <>
+        나를 귀하게 여길 진짜 인연과 타고난<br />남자복·배우자운은?
+      </>
+    ),
     icon: <HeartHandshake size={28} className="text-[var(--accent-gold)]" />
   },
   {
@@ -68,7 +72,7 @@ export default function LoveSecretCodeSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               THE SECRET CODE OF LOVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -82,7 +86,7 @@ export default function LoveSecretCodeSection() {
               백도화의 선천코드 연애 설계
             </h2>
             <p className="text-[18px] leading-[1.7] font-elegant text-[var(--accent-gold)] font-medium leading-[1.5]">
-              사랑의 시작은 나를 읽는 것.
+              사랑의 시작은 나를 읽는 것
             </p>
           </div>
         </Reveal>
@@ -91,21 +95,20 @@ export default function LoveSecretCodeSection() {
             인포그래픽 파이프라인 (상단 → 화살표 → 6개 코드 → 화살표 → 맞춤 전략)
             ========================================================================= */}
         <div className="flex flex-col items-center w-full">
-          {/* 상단: STEP 01 선천코드 해독 메인 카드 (하단 결과 카드와 동일한 최대 너비 880px, 동일한 딥 버건디 스타일 적용) */}
+          {/* 상단: 선천코드 해독 슬림 가로형 배너 카드 (가로 폭 880px 유지, 슬림 가로형 배너 레이아웃) */}
           <Reveal delayMs={200} className="w-full">
-            <div className="card--burgundy w-full max-w-[880px] mx-auto p-8 sm:p-10 md:p-12 rounded-2xl text-center">
-              <div className="w-14 h-14 rounded-2xl bg-[rgba(216,191,163,0.1)] border border-[rgba(216,191,163,0.25)] flex items-center justify-center mx-auto mb-4">
-                <Compass size={32} className="text-[var(--accent-gold)]" />
+            <div className="card--burgundy w-full max-w-[880px] mx-auto py-5 sm:py-6 px-6 sm:px-10 rounded-2xl flex flex-row items-center justify-center gap-4 sm:gap-6">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[rgba(216,191,163,0.1)] border border-[rgba(216,191,163,0.25)] flex items-center justify-center flex-shrink-0">
+                <Compass size={28} className="text-[var(--accent-gold)] sm:w-8 sm:h-8" />
               </div>
-              <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase block mb-1.5 opacity-80">
-                STEP 01
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-2">
-                선천코드 해독
-              </h3>
-              <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
-                타고난 기질과 무의식의 설계도
-              </p>
+              <div className="text-left">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[var(--accent-gold)] leading-tight mb-1">
+                  선천코드 해독
+                </h3>
+                <p className="text-[16px] sm:text-[18px] leading-[1.6] text-[#EDE6DA] opacity-85 font-light break-keep">
+                  타고난 기질과 무의식의 설계도
+                </p>
+              </div>
             </div>
           </Reveal>
 
@@ -154,7 +157,7 @@ export default function LoveSecretCodeSection() {
           {/* 하단: 나만의 맞춤형 연애 전략 (상단 STEP 01 카드와 동일한 최대 너비 880px, 동일한 딥 버건디 스타일 적용) */}
           <Reveal delayMs={500} className="w-full">
             <div className="card--burgundy w-full max-w-[880px] mx-auto p-8 sm:p-10 md:p-12 rounded-2xl text-center">
-              <span className="text-[12px] font-elegant font-bold tracking-[0.2em] text-[var(--accent-gold)] uppercase block mb-2 opacity-85">
+              <span className="text-[12pt] font-elegant font-semibold tracking-[0.2em] text-[var(--accent-gold)] uppercase block mb-2 opacity-85">
                 PERSONALIZED LOVE STRATEGY
               </span>
               <h3 className="text-2xl sm:text-3xl md:text-[32px] font-elegant font-bold text-[#F5F5F5] mb-2">
@@ -186,7 +189,7 @@ export default function LoveSecretCodeSection() {
             <div className="mt-14 text-center">
               <p className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[var(--accent-gold)] leading-relaxed tracking-wide">
                 정해진 연애 공식이 아닌,<br className="sm:hidden" />{' '}
-                나에게 맞는 사랑의 방식.
+                나에게 맞는 사랑의 방식
               </p>
             </div>
           </Reveal>

@@ -12,7 +12,7 @@ export default function NameMeaningSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               THE MEANING OF BAEKDOHWA
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -79,7 +79,7 @@ export default function NameMeaningSection() {
                 <div className="pt-6 border-t border-[rgba(216,191,163,0.2)] mt-auto">
                   <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed">
                     누군가에게 선택받기 위한 아름다움이 아닌,<br />
-                    스스로 피어나는 존재의 아름다움.
+                    스스로 피어나는 존재의 아름다움
                   </p>
                 </div>
               </div>

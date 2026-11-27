@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import React from 'react'
 import Reveal from '@/components/Reveal'
@@ -217,10 +217,10 @@ export default function BeyondRulesSection() {
 
             {/* 통합 한지 카드 콘텐츠 (라벨 → 메인 헤드카피 → 본문 → 하단 핵심 선언 → 낙관 순서 통일) */}
             <div className="relative z-10">
-              {/* 1. 영문 소제목 라벨 (카드 내부 상단 중앙 이동) */}
+              {/* 1. 영문 소제목 라벨 (카드 내부 상단 중앙 이동, 비첩/리포트 기준 text-[12pt] font-semibold) */}
               <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
                 <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-                <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+                <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
                   BEYOND THE RULES · 선천코드의 원리
                 </span>
                 <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -253,7 +253,7 @@ export default function BeyondRulesSection() {
                   타인의 공식을 배우기 전에, 당신의 <span className="text-[var(--accent-gold)]">선천코드</span>를 먼저 읽으십시오.
                 </p>
                 <p className="text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-elegant font-bold text-[var(--accent-gold)] leading-[1.5] break-keep">
-                  정해진 답을 쫓는 삶에서, 나를 기준으로 선택하는 주권자의 삶으로.
+                  정해진 답을 쫓는 삶에서, 나를 기준으로 선택하는 주권자의 삶으로
                 </p>
               </div>
 

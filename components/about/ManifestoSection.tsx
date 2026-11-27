@@ -13,7 +13,7 @@ export default function ManifestoSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               BAEKDOHWA MANIFESTO
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -276,7 +276,7 @@ export default function ManifestoSection() {
               <p className="leading-[1.7]">
                 자신을 깊이 이해하고,<br />
                 익숙한 무의식의 패턴을 돌아보며,<br />
-                새로운 선택을 하는 순간.
+                새로운 선택을 하는 순간
               </p>
 
               <p className="text-[18px] leading-[1.7] text-[var(--accent-gold-light)] font-normal pt-2 break-keep">

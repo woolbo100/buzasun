@@ -66,7 +66,7 @@ export default function FourWayComparisonSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               A DIFFERENT PERSPECTIVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
@@ -80,7 +80,7 @@ export default function FourWayComparisonSection() {
               같은 사랑, 서로 다른 접근법
             </h2>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
-              사랑과 관계를 이해하는 다양한 방법.<br className="sm:hidden" />{' '}
+              사랑과 관계를 이해하는 다양한 방법<br className="sm:hidden" />{' '}
               백도화는 나의 선천코드에서 시작합니다.
             </p>
           </div>
@@ -378,7 +378,7 @@ export default function FourWayComparisonSection() {
             </h3>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep">
               누군가의 공식을 따라가는 사랑에서<br className="sm:hidden" />{' '}
-              나를 이해하고 선택하는 사랑으로.
+              나를 이해하고 선택하는 사랑으로
             </p>
           </div>
         </Reveal>

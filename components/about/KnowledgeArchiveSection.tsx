@@ -14,7 +14,7 @@ export default function KnowledgeArchiveSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+            <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
               THE ARCHIVE OF WISDOM
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
