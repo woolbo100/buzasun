@@ -24,7 +24,7 @@ export default function KnowledgeArchiveSection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               삶을 읽는 지혜를 한 권의 책과 리포트에 담다
             </h2>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
@@ -84,7 +84,7 @@ export default function KnowledgeArchiveSection() {
                         sizes="(max-width: 768px) 33vw, 200px"
                       />
                     </div>
-                    <p className="text-xs text-center text-[#EDE6DA] opacity-75 mt-2 group-hover:text-[var(--accent-gold)] transition-colors">
+                    <p className="text-[12px] text-center text-[#EDE6DA] opacity-75 mt-2 group-hover:text-[var(--accent-gold)] transition-colors">
                       연애비급
                     </p>
                   </Link>
@@ -99,7 +99,7 @@ export default function KnowledgeArchiveSection() {
                         sizes="(max-width: 768px) 33vw, 200px"
                       />
                     </div>
-                    <p className="text-xs text-center text-[#EDE6DA] opacity-75 mt-2 group-hover:text-[var(--accent-gold)] transition-colors">
+                    <p className="text-[12px] text-center text-[#EDE6DA] opacity-75 mt-2 group-hover:text-[var(--accent-gold)] transition-colors">
                       재회비방
                     </p>
                   </Link>
@@ -114,7 +114,7 @@ export default function KnowledgeArchiveSection() {
                         sizes="(max-width: 768px) 33vw, 200px"
                       />
                     </div>
-                    <p className="text-xs text-center text-[#EDE6DA] opacity-75 mt-2 group-hover:text-[var(--accent-gold)] transition-colors">
+                    <p className="text-[12px] text-center text-[#EDE6DA] opacity-75 mt-2 group-hover:text-[var(--accent-gold)] transition-colors">
                       풍요비책
                     </p>
                   </Link>
@@ -223,7 +223,7 @@ export default function KnowledgeArchiveSection() {
                           나의 고유한 도화 기질과 연애 패턴 심층 분석
                         </p>
                       </div>
-                      <div className="pt-4 text-xs text-[var(--accent-gold)] opacity-70 group-hover:opacity-100 flex items-center gap-1">
+                      <div className="pt-4 text-[12px] text-[var(--accent-gold)] opacity-70 group-hover:opacity-100 flex items-center gap-1">
                         <span>분석하기</span>
                         <ArrowRight size={12} />
                       </div>
@@ -243,7 +243,7 @@ export default function KnowledgeArchiveSection() {
                           두 사람의 기질 상호작용과 갈등의 구조적 해법
                         </p>
                       </div>
-                      <div className="pt-4 text-xs text-[var(--accent-gold)] opacity-70 group-hover:opacity-100 flex items-center gap-1">
+                      <div className="pt-4 text-[12px] text-[var(--accent-gold)] opacity-70 group-hover:opacity-100 flex items-center gap-1">
                         <span>분석하기</span>
                         <ArrowRight size={12} />
                       </div>
@@ -263,7 +263,7 @@ export default function KnowledgeArchiveSection() {
                           타고난 재능과 부의 그릇을 여는 행동 지침
                         </p>
                       </div>
-                      <div className="pt-4 text-xs text-[var(--accent-gold)] opacity-70 group-hover:opacity-100 flex items-center gap-1">
+                      <div className="pt-4 text-[12px] text-[var(--accent-gold)] opacity-70 group-hover:opacity-100 flex items-center gap-1">
                         <span>분석하기</span>
                         <ArrowRight size={12} />
                       </div>

@@ -78,10 +78,10 @@ export default function LoveSecretCodeSection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               백도화의 선천코드 연애 설계
             </h2>
-            <p className="text-base sm:text-xl font-elegant text-[var(--accent-gold)] font-medium">
+            <p className="text-[18px] leading-[1.7] font-elegant text-[var(--accent-gold)] font-medium leading-[1.5]">
               사랑의 시작은 나를 읽는 것.
             </p>
           </div>
@@ -127,11 +127,11 @@ export default function LoveSecretCodeSection() {
                       <div className="w-12 h-12 rounded-xl bg-[rgba(216,191,163,0.08)] border border-[rgba(216,191,163,0.18)] flex items-center justify-center group-hover:scale-105 transition-transform">
                         {item.icon}
                       </div>
-                      <span className="text-xs font-mono font-semibold tracking-wider text-[var(--accent-gold)] opacity-60">
+                      <span className="text-[12px] font-mono font-semibold tracking-wider text-[var(--accent-gold)] opacity-60">
                         {item.code}
                       </span>
                     </div>
-                    <h4 className="text-xl sm:text-2xl font-elegant font-bold text-[var(--accent-gold)] group-hover:text-[var(--accent-gold-light)] transition-colors mb-2 leading-snug">
+                    <h4 className="text-xl sm:text-2xl font-elegant font-bold text-[var(--accent-gold)] group-hover:text-[var(--accent-gold-light)] transition-colors mb-2 leading-[1.5]">
                       {item.title}
                     </h4>
                     <p className="text-[18px] text-[#EDE6DA] opacity-90 leading-[1.7] font-light break-keep">

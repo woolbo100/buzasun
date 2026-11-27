@@ -76,7 +76,7 @@ export default function FourWayComparisonSection() {
         {/* 헤드라인 및 서브카피 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               같은 사랑, 서로 다른 접근법
             </h2>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
@@ -373,7 +373,7 @@ export default function FourWayComparisonSection() {
             ========================================================================= */}
         <Reveal delayMs={500}>
           <div className="mt-20 md:mt-24 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-[var(--accent-gold)] mb-5 leading-tight tracking-tight">
+            <h3 className="text-2xl sm:text-3xl md:text-[38px] font-elegant font-bold text-[var(--accent-gold)] mb-5 leading-[1.5] tracking-tight">
               사랑에도 나만의 방식이 있습니다.
             </h3>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep">

@@ -35,7 +35,7 @@ export default function LoveStrategyComparisonSection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-[1.5]">
               같은 사랑을 이야기하지만,<br className="sm:hidden" />{' '}
               접근하는 방식은 다릅니다.
             </h2>
@@ -59,7 +59,7 @@ export default function LoveStrategyComparisonSection() {
                   {generalAdvice.map((item, idx) => (
                     <div key={idx} className="pb-5 border-b border-[rgba(216,191,163,0.1)] last:border-b-0">
                       <div className="flex items-center gap-3">
-                        <span className="text-xs font-mono text-[#A89BBF] opacity-60">
+                        <span className="text-[12px] font-mono text-[#A89BBF] opacity-60">
                           0{idx + 1}
                         </span>
                         <p className="text-[18px] leading-[1.7] text-[#CFC7DC] font-light break-keep">
@@ -88,7 +88,7 @@ export default function LoveStrategyComparisonSection() {
                   {baekdohwaStrategy.map((item, idx) => (
                     <div key={idx} className="pb-5 border-b border-[rgba(216,191,163,0.2)] last:border-b-0">
                       <div className="flex items-center gap-3">
-                        <span className="text-xs font-mono text-[var(--accent-gold)] font-bold">
+                        <span className="text-[12px] font-mono text-[var(--accent-gold)] font-bold">
                           0{idx + 1}
                         </span>
                         <p className="text-[18px] leading-[1.7] text-[var(--accent-gold-light)] font-medium break-keep">
@@ -106,7 +106,7 @@ export default function LoveStrategyComparisonSection() {
         {/* 비교 카드 하단 결론 문구 (신규 4자 비교 영역과의 문구 중복을 방지하고 2자 대비의 결론에 집중) */}
         <Reveal delayMs={450}>
           <div className="mt-16 text-center max-w-3xl mx-auto">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-3 leading-tight">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-elegant font-bold text-[var(--accent-gold)] mb-3 leading-[1.5]">
               보편적인 공식을 넘어, 나만의 맞춤 전략으로.
             </h3>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 font-light break-keep">

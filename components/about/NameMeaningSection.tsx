@@ -25,7 +25,7 @@ export default function NameMeaningSection() {
             <span className="text-lg sm:text-xl font-elegant tracking-widest text-[var(--accent-gold)] block mb-2 opacity-80">
               白桃花
             </span>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-[1.5]">
               자신만의 아름다움으로 피어나는 삶
             </h2>
           </div>

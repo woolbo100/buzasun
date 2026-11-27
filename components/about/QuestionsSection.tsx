@@ -20,7 +20,7 @@ export default function QuestionsSection() {
 
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-center mb-16 text-[#F5F5F5] leading-snug">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-center mb-16 text-[#F5F5F5] leading-[1.5]">
             왜 우리는 같은 사랑을 반복할까요?
           </h2>
         </Reveal>
@@ -48,7 +48,7 @@ export default function QuestionsSection() {
         {/* 하단 핵심 메시지 (1280px 기준선 정렬) */}
         <Reveal delayMs={600}>
           <div className="mt-16 w-full text-center gungjung-glass p-8 sm:p-12 border border-[rgba(216,191,163,0.2)]">
-            <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] mb-4 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] mb-4 leading-[1.5]">
               백도화는 그 질문의 시작을 타인이 아닌 나 자신에게서 찾습니다.
             </p>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 font-light break-keep">

@@ -22,7 +22,7 @@ const credentials = [
     icon: <Target size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
     title: '미래 설계',
     subtitle: 'FUTURE DESIGN',
-    items: ['자기암시와 마인드셋', '자존감과 자기주도성', '행동·습관 재설계', '현실 실행 루틴 설계']
+    items: ['뇌과학 기반 행동·습관 설계', '자기암시와 마인드셋', '자존감과 자기주도성 확립', '현실 실행 루틴 설계']
   }
 ]
 
@@ -46,7 +46,7 @@ export default function BaekJangmiStorySection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               백도화의 철학을 만들어 가는 사람, 백장미
             </h2>
           </div>
@@ -110,7 +110,7 @@ export default function BaekJangmiStorySection() {
                 outlineGold={true}
               />
               
-              <p className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] leading-tight tracking-wider">
+              <p className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] leading-[1.5] tracking-wider">
                 감이 아닌 이론<br />
                 직관이 아닌 구조<br />
                 위로가 아닌 설계

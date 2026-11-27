@@ -21,10 +21,10 @@ export default function ThreeLayersDiagram() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               인간을 바라보는 세 가지 층위
             </h2>
-            <p className="text-base sm:text-xl font-elegant text-[var(--accent-gold)] font-medium leading-relaxed">
+            <p className="text-[18px] leading-[1.7] font-elegant text-[var(--accent-gold)] font-medium leading-[1.5]">
               타고난 나를 이해하고, 형성된 나를 돌아보며, 새로운 나를 선택하다.
             </p>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-80 mt-6 font-light break-keep">

@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import GlobalBackground from '@/components/GlobalBackground'
+import Reveal from '@/components/Reveal'
 
 // 신규 및 확장 브랜드 소개 섹션 컴포넌트
 import PhilosophySection from '@/components/about/PhilosophySection'
@@ -30,9 +31,26 @@ export default function AboutPage() {
         <Navigation />
 
         {/* =========================================================================
+            [신규 페이지 상단 헤더] 선천코드 리포트 허브와 동일한 독립 헤더 영역
+            ========================================================================= */}
+        <div className="relative z-10 pt-44 pb-12 sm:pb-16 text-center">
+          <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <Reveal>
+              <h1 className="text-4xl md:text-6xl font-elegant font-bold text-white mb-8 tracking-widest">
+                백도화 <span className="text-[var(--accent-gold)]">소개</span>
+              </h1>
+              <p className="text-[#EDE6DA] opacity-90 text-[19px] sm:text-xl md:text-[22px] font-elegant leading-[1.8] max-w-3xl mx-auto break-keep">
+                사랑의 비밀, 인연의 결, 풍요의 방향까지<br />
+                <span className="text-[var(--accent-gold-light)]">타고난 나를 이해하고, 스스로 운명을 설계하는 백도화의 세계를 만나보세요.</span>
+              </p>
+            </Reveal>
+          </div>
+        </div>
+
+        {/* =========================================================================
             [메인 소개 영역] 백도화 소개 — 운명을 설계하는 은밀한 비기 (1280px 기준선 정렬)
             ========================================================================= */}
-        <section className="pt-40 md:pt-48 pb-16 px-4 sm:px-6 lg:px-8 relative w-full">
+        <section className="pb-16 px-4 sm:px-6 lg:px-8 relative w-full">
           <div className="max-w-[1280px] mx-auto w-full relative z-10">
             {/* Rule 5: 텍스트 및 UI 레이어 보호를 위한 궁중유리 카드 */}
             <div className="gungjung-glass w-full p-8 sm:p-12 md:p-16 text-left">
@@ -43,8 +61,8 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              {/* 2. 메인 타이틀 변경 (36px, 앤티크 샴페인 골드 그라데이션, 줄간격 1.4, 좌측 정렬) */}
-              <h1 className="text-[26px] sm:text-[32px] md:text-[36px] font-elegant font-bold leading-[1.4] mb-8 gradient-text text-left break-keep">
+              {/* 2. 메인 타이틀 변경 (36px, 앤티크 샴페인 골드 그라데이션, 줄간격 1.5, 좌측 정렬) */}
+              <h1 className="text-[26px] sm:text-[32px] md:text-[36px] font-elegant font-bold leading-[1.5] mb-8 gradient-text text-left break-keep">
                 백도화(白桃花),<br className="sm:hidden" /> 운명을 설계하는 은밀한 비기
               </h1>
 

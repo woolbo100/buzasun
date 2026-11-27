@@ -48,7 +48,7 @@ export default function PerspectiveComparisonSection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               같은 질문도, 다른 관점에서 바라봅니다.
             </h2>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">

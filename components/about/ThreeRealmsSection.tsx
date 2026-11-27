@@ -100,10 +100,10 @@ export default function ThreeRealmsSection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="text-lg sm:text-xl font-elegant tracking-widest text-[var(--accent-gold)] block mb-2">
+            <span className="text-lg sm:text-xl font-elegant tracking-widest text-[var(--accent-gold)] block mb-2 leading-[1.5]">
               사랑 · 인연 · 풍요
             </span>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-[1.5]">
               삶의 중요한 순간마다 자신을 이해하다
             </h2>
           </div>
@@ -132,12 +132,12 @@ export default function ThreeRealmsSection() {
                     {/* 카드 헤더 뱃지 */}
                     <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
                       <span
-                        className="px-2.5 py-1 rounded-full text-xs font-elegant font-bold"
+                        className="px-2.5 py-1 rounded-full text-[12px] font-elegant font-bold"
                         style={{ backgroundColor: realm.tagBg, color: realm.tagText }}
                       >
                         {realm.num} · {realm.hanja}
                       </span>
-                      <span className="text-[11px] text-[#EDE6DA] opacity-75 font-mono">
+                      <span className="text-[12px] text-[#EDE6DA] opacity-75 font-mono">
                         {realm.symbol}
                       </span>
                     </div>
@@ -186,7 +186,7 @@ export default function ThreeRealmsSection() {
                       <Link
                         key={pIdx}
                         href={prod.href}
-                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs text-[#EDE6DA] bg-[rgba(255,255,255,0.03)] border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)] hover:text-[var(--accent-gold)] transition-colors"
+                        className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-[12px] text-[#EDE6DA] bg-[rgba(255,255,255,0.03)] border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)] hover:text-[var(--accent-gold)] transition-colors"
                       >
                         <span>{prod.name}</span>
                         <ArrowUpRight size={12} className="opacity-70" />

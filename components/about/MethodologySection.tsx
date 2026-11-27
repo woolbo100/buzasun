@@ -54,7 +54,7 @@ export default function MethodologySection() {
         {/* 2 & 3. 메인 제목 및 설명 문구 (간격 약 32px) */}
         <Reveal delayMs={150}>
           <div className="text-center mb-8 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               선천코드 해독과 운명 재설계
             </h2>
             <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
@@ -92,7 +92,7 @@ export default function MethodologySection() {
                         <span className="text-[12px] font-elegant font-bold tracking-widest text-[var(--accent-gold)] uppercase">
                           {item.step}
                         </span>
-                        <span className="text-sm font-elegant text-[var(--accent-gold)] opacity-60">
+                        <span className="text-[12px] font-elegant text-[var(--accent-gold)] opacity-60">
                           {item.hanja}
                         </span>
                       </div>

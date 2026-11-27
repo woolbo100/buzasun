@@ -82,7 +82,7 @@ export default function IntegratedApproachSection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               동양의 지혜와 인간의 마음을 함께 바라보다
             </h2>
           </div>
@@ -139,7 +139,7 @@ export default function IntegratedApproachSection() {
 
           {/* 메인 제목 (36px, 앤티크 샴페인 골드 그라데이션) */}
           <Reveal delayMs={150}>
-            <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-center mb-4 gradient-text leading-tight">
+            <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-center mb-4 gradient-text leading-[1.5]">
               우리가 설계하는 세 가지 삶의 영역
             </h3>
           </Reveal>
@@ -176,7 +176,7 @@ export default function IntegratedApproachSection() {
                       </div>
 
                       {/* 카드 제목 (24px) */}
-                      <h4 className="text-[24px] font-elegant font-bold text-[#F5F5F5] mb-2 leading-snug break-keep">
+                      <h4 className="text-[24px] font-elegant font-bold text-[#F5F5F5] mb-2 leading-[1.5] break-keep">
                         {domain.title}
                       </h4>
 

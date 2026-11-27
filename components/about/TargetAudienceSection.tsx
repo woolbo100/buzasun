@@ -61,7 +61,7 @@ export default function TargetAudienceSection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-snug">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 leading-[1.5]">
               혹시, 당신도 이런 마음인가요?
             </h2>
           </div>
@@ -77,11 +77,11 @@ export default function TargetAudienceSection() {
                     <div className="w-10 h-10 rounded-xl bg-[rgba(216,191,163,0.1)] border border-[rgba(216,191,163,0.2)] flex items-center justify-center group-hover:scale-105 transition-transform">
                       {item.icon}
                     </div>
-                    <span className="text-xs font-mono font-bold text-[var(--accent-gold)] opacity-50">
+                    <span className="text-[12px] font-mono font-bold text-[var(--accent-gold)] opacity-50">
                       {item.num}
                     </span>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-elegant font-bold text-[#F5F5F5] group-hover:text-[var(--accent-gold-light)] transition-colors mb-3 leading-snug">
+                  <h3 className="text-lg sm:text-xl font-elegant font-bold text-[#F5F5F5] group-hover:text-[var(--accent-gold-light)] transition-colors mb-3 leading-[1.5]">
                     {item.title}
                   </h3>
                   <p className="text-[18px] text-[#EDE6DA] opacity-80 leading-[1.7] font-light break-keep">
@@ -96,7 +96,7 @@ export default function TargetAudienceSection() {
         {/* 하단 핵심 메시지 (1280px 기준선 정렬) */}
         <Reveal delayMs={500}>
           <div className="mt-16 text-center w-full gungjung-glass p-8 sm:p-12 border border-[rgba(216,191,163,0.25)]">
-            <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] mb-3 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl font-elegant font-semibold text-[var(--accent-gold)] mb-3 leading-[1.5]">
               당신에게 필요한 것은<br className="sm:hidden" />{' '}
               더 많은 미래에 대한 답이 아니라,<br />
               자신에 대한 더 깊은 이해일지도 모릅니다.

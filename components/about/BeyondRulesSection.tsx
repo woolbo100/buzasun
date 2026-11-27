@@ -12,8 +12,8 @@ export default function BeyondRulesSection() {
         <Reveal delayMs={100}>
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
-            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
-              BEYOND THE RULES OF LOVE
+            <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-85">
+              BEYOND THE RULES · 선천코드의 원리
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
           </div>
@@ -225,32 +225,41 @@ export default function BeyondRulesSection() {
               <BaekdohwaFlowerMark size={480} watermark={true} />
             </div>
 
-            {/* 메인 제목 (PC 기준 42~48px 품격 있는 명조 계열 - 핵심 차별화 메시지 유지) */}
+            {/* 통합 한지 카드 콘텐츠 (메인 헤드카피, 본문, 하단 핵심 선언, 낙관) */}
             <div className="relative z-10">
-              <h2 className="text-2xl sm:text-4xl md:text-[44px] lg:text-[48px] font-elegant font-bold leading-tight sm:leading-snug mb-8 text-[#F5F5F5]">
-                모두에게 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">같은 연애 공식</span>이<br className="hidden sm:inline" />{' '}
-                통할 수는 없습니다.
+              <h2 className="text-2xl sm:text-4xl md:text-[40px] lg:text-[42px] font-elegant font-bold leading-[1.5] mb-8 text-[#F5F5F5] break-keep text-center">
+                수많은 조언과 공식을 따라도,<br />
+                왜 당신의 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">사랑</span>과 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">삶</span>은 달라지지 않습니까?
               </h2>
 
               {/* 얇고 은은한 골드 구분선 */}
               <div className="gold-divider max-w-xs mx-auto my-8 opacity-40" />
 
-              {/* 백도화의 접근 방식 선언 (신규 도입부와의 중복 설명을 정돈하고 접근 방식 선언 역할로 전환) */}
-              <div className="max-w-2xl mx-auto space-y-4 text-[#EDE6DA] text-[18px] font-light leading-[1.7] opacity-85 mb-10 break-keep">
+              {/* 중간 본문 (18px, 줄간격 1.7, 최대 너비 920px, 중앙 정렬) */}
+              <div className="max-w-[920px] mx-auto space-y-4 text-[#EDE6DA] text-[18px] font-light leading-[1.7] opacity-90 mb-10 break-keep text-center">
                 <p>
-                  남들의 기준이나 획일화된 조언에 나를 맞추는 것이 아니라,<br className="hidden sm:inline" />{' '}
-                  나의 고유한 기질을 기준으로 관계의 주체성을 회복하는 길.
+                  사람마다 타고난 기질도, 매력이 발현되는 방식도, 결핍을 채우는 구조도 전혀 다르기 때문입니다.
                 </p>
-                <p className="text-[18px] leading-[1.7] text-[#A89BBF] opacity-80 break-keep">
-                  백도화가 제안하는 사랑과 관계의 새로운 접근법입니다.
+                <p>
+                  남들의 기준이나 획일화된 연애·성공 공식에 나를 억지로 끼워 맞출수록, 당신 고유의 힘은 흐려지고 같은 실패만 반복됩니다.
                 </p>
               </div>
 
-              {/* 백도화 선언 강조 문구 */}
-              <div className="pt-2">
-                <p className="text-xl sm:text-2xl md:text-[28px] font-elegant font-semibold text-[var(--accent-gold)] leading-relaxed tracking-wide">
-                  정해진 답을 따르는 연애에서, 나를 기준으로 선택하는 사랑으로.
+              {/* 하단 핵심 선언 (28~32px, 줄간격 1.5, 중앙 정렬) */}
+              <div className="pt-2 max-w-[960px] mx-auto space-y-2 sm:space-y-3 mb-8 text-center">
+                <p className="text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-elegant font-bold text-[#F5F5F5] leading-[1.5] break-keep">
+                  타인의 공식을 배우기 전에, 당신의 <span className="text-[var(--accent-gold)]">선천코드</span>를 먼저 읽으십시오.
                 </p>
+                <p className="text-xl sm:text-2xl md:text-[28px] lg:text-[30px] font-elegant font-bold text-[var(--accent-gold)] leading-[1.5] break-keep">
+                  정해진 답을 쫓는 삶에서, 나를 기준으로 선택하는 주권자의 삶으로.
+                </p>
+              </div>
+
+              {/* 하단 낙관 (15px, 중앙 정렬) */}
+              <div className="pt-4 text-center">
+                <span className="inline-block text-[15px] font-elegant tracking-[0.35em] text-[var(--accent-gold)] opacity-80 uppercase">
+                  白桃花 · 백도화
+                </span>
               </div>
             </div>
           </div>
