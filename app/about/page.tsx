@@ -127,6 +127,9 @@ export default function AboutPage() {
         {/* NEW 01. 핵심 차별화 메시지 (BEYOND THE RULES OF LOVE) */}
         <BeyondRulesSection />
 
+        {/* NEW 02. 브랜드 탄생 스토리 (THE ORIGIN OF BAEKDOHWA - 비교표 상단으로 이동) */}
+        <BrandOriginSection />
+
         {/* 01. 2단 비교 카드 (보편적인 연애 공식 vs 선천코드 맞춤 전략: SHIFT OF STANDARD) */}
         <LoveStrategyComparisonSection />
 
@@ -150,9 +153,6 @@ export default function AboutPage() {
 
         {/* 09. 백도화의 지식 자산 (비급 시리즈, 선천코드 비기, 프리미엄 리포트) */}
         <KnowledgeArchiveSection />
-
-        {/* 10. 브랜드 탄생 스토리 (THE ORIGIN OF BAEKDOHWA) */}
-        <BrandOriginSection />
 
         {/* 11. 백도화 선언 및 전문 자격 */}
         <BaekJangmiStorySection />

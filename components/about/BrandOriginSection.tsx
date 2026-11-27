@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import Reveal from '@/components/Reveal'
 import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
 
@@ -298,6 +299,21 @@ export default function BrandOriginSection() {
                 <p className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-[var(--accent-gold)] opacity-90 leading-[1.4] break-keep pt-1">
                   그것이 백도화가 존재하는 이유입니다.
                 </p>
+              </div>
+
+              {/* 6. 카드 하단 백도화 서명 및 낙관 (우측 하단 정렬, 하단 강조 문구와 24~32px 여백) */}
+              <div className="mt-6 sm:mt-8 flex items-center justify-end gap-2.5 sm:gap-3">
+                <span className="text-[18px] sm:text-[20px] font-elegant font-bold text-[var(--accent-gold)] tracking-wider select-none">
+                  백도화 올림
+                </span>
+                <Image
+                  src="/image/reunion-secret/baekdohwa-signature-seal.png"
+                  alt="백도화 낙관 인장"
+                  width={26}
+                  height={52}
+                  className="h-[44px] sm:h-[50px] w-auto object-contain select-none shrink-0"
+                  style={{ width: 'auto' }}
+                />
               </div>
             </div>
           </div>
