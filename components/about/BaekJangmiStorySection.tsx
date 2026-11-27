@@ -3,26 +3,26 @@
 import React, { useState } from 'react'
 import Reveal from '@/components/Reveal'
 import BaekdohwaFlowerMark from '@/components/BaekdohwaFlowerMark'
-import { Brain, Compass, Building2 } from 'lucide-react'
+import { Brain, Compass, Target } from 'lucide-react'
 
 const credentials = [
   {
-    icon: <Brain size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
-    title: '내면 설계',
-    subtitle: 'Inner Design',
-    items: ['심리상담', '연애관계심리', 'NLP기법', '최면심리']
-  },
-  {
     icon: <Compass size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
     title: '선천코드 분석',
-    subtitle: 'Code Analyzing',
-    items: ['명리심리', '타로심리', '풍수학, 성명학', '동양철학']
+    subtitle: 'INNATE CODE',
+    items: ['명리심리', '타로심리', '오행과 기질 분석', '동양철학']
   },
   {
-    icon: <Building2 size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
+    icon: <Brain size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
+    title: '내면 설계',
+    subtitle: 'INNER DESIGN',
+    items: ['심리상담', '연애·관계 심리', 'NLP 기법', '최면심리와 무의식 탐구']
+  },
+  {
+    icon: <Target size={40} style={{ color: 'var(--accent-gold)' }} className="mb-6" />,
     title: '미래 설계',
-    subtitle: 'Future Architect',
-    items: ['AI 콘텐츠 제작', '퍼스널 브래딩', '디지털 자아 설계', '뇌과학 기반 설계']
+    subtitle: 'FUTURE DESIGN',
+    items: ['자기암시와 마인드셋', '자존감과 자기주도성', '행동·습관 재설계', '현실 실행 루틴 설계']
   }
 ]
 
@@ -139,15 +139,15 @@ export default function BaekJangmiStorySection() {
                 >
                   <div className="flex flex-col items-center w-full">
                     {section.icon}
-                    <h4 className="text-xl sm:text-2xl font-elegant font-bold mb-2 text-[#F5F5F5]">
+                    <h4 className="text-[24px] font-elegant font-bold mb-2 text-[#F5F5F5]">
                       {section.title}
                     </h4>
-                    <p className="text-[12px] tracking-widest text-[var(--accent-gold)] mb-6 opacity-70 uppercase font-elegant">
+                    <p className="text-[12px] tracking-widest text-[var(--accent-gold)] mb-6 opacity-85 uppercase font-elegant">
                       {section.subtitle}
                     </p>
-                    <div className="space-y-2.5 text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light w-full break-keep">
+                    <div className="space-y-2 text-[18px] leading-[1.7] text-[#EDE6DA] font-light w-full break-keep">
                       {section.items.map((item, i) => (
-                        <p key={i} style={{ color: 'var(--accent-gold)', opacity: 0.9 }}>
+                        <p key={i} className="text-[#EDE6DA]">
                           {item}
                         </p>
                       ))}
