@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Reveal from '@/components/Reveal'
+import { Heart, HeartHandshake, Sparkles } from 'lucide-react'
 
 const perspectives = [
   {
@@ -30,36 +31,36 @@ const perspectives = [
   }
 ]
 
-const projects = [
+const domains = [
   {
-    icon: 'fas fa-sparkles',
-    title: '선천코드 분석',
-    description: '개인의 고유한 선천 코드를 분석해\n관계·매력·선택의 기준을 설계합니다.',
+    label: '01 · LOVE',
+    title: '매혹과 사랑의 재설계',
+    category: '연애 솔루션',
+    description: '반복되는 감정 소모와 을의 연애에서 벗어나, 나의 선천적 매력과 관계 패턴을 이해하고 주도적인 사랑을 선택합니다.',
+    icon: Heart,
+    accentColor: '#D9A8A7', // 로즈핑크플럼
+    borderColor: 'rgba(217, 168, 167, 0.3)',
+    tagColor: '#E6BFA9',
   },
   {
-    icon: 'fas fa-heart',
-    title: '연애 솔루션',
-    description: '반복되는 연애 패턴을\n감정이 아닌 구조로 해석하고 재설계합니다.',
+    label: '02 · RELATIONSHIP',
+    title: '인연과 관계의 재해석',
+    category: '궁합 솔루션',
+    description: '두 사람의 선천적 기질과 관계의 상호작용을 이해하여 서로의 다름을 존중하고, 더 깊고 건강한 관계의 방향을 설계합니다.',
+    icon: HeartHandshake,
+    accentColor: '#D8BB94', // 차분하고 깊은 버건디/브론즈골드
+    borderColor: 'rgba(216, 187, 148, 0.3)',
+    tagColor: '#F0D9C5',
   },
   {
-    icon: 'fas fa-star',
-    title: '풍요 솔루션',
-    description: '에너지 흐름과 선택 구조를 조정해\n삶의 방향성을 바로잡습니다.',
-  },
-  {
-    icon: 'fas fa-gem',
-    title: '매력 주파수 조정',
-    description: '개인의 매력 주파수를 분석해\n표현과 선택의 밀도를 높입니다.',
-  },
-  {
-    icon: 'fas fa-moon',
-    title: '에너지 패턴 워크샵',
-    description: '에너지 패턴을 이해하고\n현실에서 작동하는 방식으로 재정렬합니다.',
-  },
-  {
-    icon: 'fas fa-feather',
-    title: '한국적 미학 컨설팅',
-    description: '한국적 미학을 기반으로\n고유한 분위기와 인상을 설계합니다.',
+    label: '03 · ABUNDANCE',
+    title: '결핍에서 순환으로의 전환',
+    category: '풍요 솔루션',
+    description: '막연한 기복을 넘어 자신의 기질과 결핍의 패턴을 이해하고, 일과 재물에 대한 선택과 행동을 재설계합니다.',
+    icon: Sparkles,
+    accentColor: '#8FB4A4', // 은은한 옥색 에메랄드
+    borderColor: 'rgba(143, 180, 164, 0.3)',
+    tagColor: '#B7CDBB',
   },
 ]
 
@@ -123,31 +124,92 @@ export default function IntegratedApproachSection() {
           </div>
         </Reveal>
 
-        {/* [기존 보존] 우리가 설계하는 영역 (1280px 기준선 정렬) */}
+        {/* [신규 개편] 우리가 설계하는 세 가지 삶의 영역 (1280px 기준선 정렬) */}
         <div className="w-full">
+          {/* 영어 라벨 (12px, 앤티크 샴페인 골드) */}
           <Reveal delayMs={100}>
-            <h3 className="text-3xl md:text-5xl font-elegant font-bold text-center mb-16 gradient-text">
-              우리가 설계하는 영역
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+              <span className="text-[12px] font-elegant tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-80">
+                THREE DOMAINS OF LIFE
+              </span>
+              <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+            </div>
+          </Reveal>
+
+          {/* 메인 제목 (36px, 앤티크 샴페인 골드 그라데이션) */}
+          <Reveal delayMs={150}>
+            <h3 className="text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-center mb-4 gradient-text leading-tight">
+              우리가 설계하는 세 가지 삶의 영역
             </h3>
           </Reveal>
+
+          {/* 서브 설명 (18px, 줄간격 1.7) */}
+          <Reveal delayMs={200}>
+            <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light text-center max-w-2xl mx-auto mb-16 break-keep">
+              나를 이해하는 것에서 시작하여 사랑과 관계, 풍요의 방향을 다시 설계합니다.
+            </p>
+          </Reveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
-            {projects.map((project, index) => (
-              <Reveal key={index} delayMs={200 + index * 80}>
-                <div className="gungjung-glass p-8 h-full transition-all duration-500 group w-full border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)]">
-                  <div className="text-3xl mb-6 text-[var(--accent-gold)] opacity-80 group-hover:opacity-100 transition-opacity">
-                    <i className={project.icon}></i>
+          {/* 신규 카드 3종 구성 (PC 3열, 모바일 1열, 간격 24~32px, 패딩 32px) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 w-full mb-16 md:mb-20">
+            {domains.map((domain, index) => {
+              const Icon = domain.icon
+              return (
+                <Reveal key={index} delayMs={250 + index * 100}>
+                  <div className="gungjung-glass p-8 rounded-2xl h-full flex flex-col justify-between transition-all duration-300 w-full border border-[rgba(216,191,163,0.18)] hover:border-[var(--accent-gold)]">
+                    <div>
+                      {/* 상단: 영어 라벨 & 아이콘 */}
+                      <div className="flex items-center justify-between mb-6">
+                        <span 
+                          className="text-[12px] font-elegant tracking-[0.25em] uppercase font-semibold"
+                          style={{ color: domain.accentColor }}
+                        >
+                          {domain.label}
+                        </span>
+                        <div 
+                          className="w-10 h-10 rounded-full flex items-center justify-center bg-[rgba(255,255,255,0.03)] border"
+                          style={{ borderColor: domain.borderColor, color: domain.accentColor }}
+                        >
+                          <Icon size={20} />
+                        </div>
+                      </div>
+
+                      {/* 카드 제목 (24px) */}
+                      <h4 className="text-[24px] font-elegant font-bold text-[#F5F5F5] mb-2 leading-snug break-keep">
+                        {domain.title}
+                      </h4>
+
+                      {/* 솔루션 구분 문구 (18px) */}
+                      <p 
+                        className="text-[18px] font-medium mb-6 font-elegant tracking-wide"
+                        style={{ color: domain.tagColor }}
+                      >
+                        {domain.category}
+                      </p>
+
+                      {/* 본문 및 설명 문구 (18px, 줄간격 1.7) */}
+                      <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
+                        {domain.description}
+                      </p>
+                    </div>
                   </div>
-                  <h4 className="text-xl md:text-2xl font-elegant font-bold mb-4 text-bd-ivory group-hover:text-[var(--accent-gold)] transition-colors">
-                    {project.title}
-                  </h4>
-                  <p className="text-[18px] leading-[1.7] text-bd-gray group-hover:text-bd-ivory transition-colors whitespace-pre-line font-light break-keep">
-                    {project.description}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              )
+            })}
           </div>
+
+          {/* 4. 하단 통합 메시지 (24px 볼드 & 18px 설명, 중앙 정렬) */}
+          <Reveal delayMs={400}>
+            <div className="text-center space-y-3">
+              <p className="text-xl sm:text-2xl md:text-[24px] font-elegant font-bold text-[var(--accent-gold)] tracking-wide break-keep">
+                사랑의 주권, 관계의 지혜, 풍요의 실천.
+              </p>
+              <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep">
+                모든 변화는 나를 이해하는 것에서 시작됩니다.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
