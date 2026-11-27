@@ -251,7 +251,7 @@ export default function ManifestoSection() {
 
             {/* 선언문 헤드라인 */}
             <div className="mb-12 md:mb-14 relative z-10">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-elegant font-bold leading-[1.5] text-[#FDFBF7]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-elegant font-bold leading-[1.65] text-[#FDFBF7]">
                 <span className="text-[var(--accent-gold)]">숙명</span>은 주어지지만,<br />
                 <span className="text-[var(--accent-gold)]">운명</span>은 선택하는 것이다.
               </h2>
@@ -283,7 +283,7 @@ export default function ManifestoSection() {
 
             {/* 클라이맥스 핵심 문구 */}
             <div className="mt-16 pt-12 border-t border-[rgba(216,191,163,0.25)] relative z-10">
-              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-[var(--accent-gold)] leading-[1.5] tracking-wide">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-elegant font-bold text-[var(--accent-gold)] leading-[1.65] tracking-wide">
                 "당신은 운명의 관찰자가 아니라,<br />
                 자신의 삶을 선택하는 사람입니다."
               </p>

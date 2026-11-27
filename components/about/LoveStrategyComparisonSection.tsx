@@ -35,7 +35,7 @@ export default function LoveStrategyComparisonSection() {
         {/* 헤드라인 */}
         <Reveal delayMs={150}>
           <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-[1.5]">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] leading-[1.65]">
               같은 사랑을 이야기하지만,<br className="sm:hidden" />{' '}
               접근하는 방식은 다릅니다.
             </h2>

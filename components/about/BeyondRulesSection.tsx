@@ -227,7 +227,7 @@ export default function BeyondRulesSection() {
 
             {/* 통합 한지 카드 콘텐츠 (메인 헤드카피, 본문, 하단 핵심 선언, 낙관) */}
             <div className="relative z-10">
-              <h2 className="text-2xl sm:text-4xl md:text-[40px] lg:text-[42px] font-elegant font-bold leading-[1.5] mb-8 text-[#F5F5F5] break-keep text-center">
+              <h2 className="text-2xl sm:text-4xl md:text-[40px] lg:text-[42px] font-elegant font-bold leading-[1.65] mb-8 text-[#F5F5F5] break-keep text-center">
                 수많은 조언과 공식을 따라도,<br />
                 왜 당신의 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">사랑</span>과 <span className="text-[var(--accent-gold)] drop-shadow-[0_0_12px_rgba(212,178,167,0.3)]">삶</span>은 달라지지 않습니까?
               </h2>

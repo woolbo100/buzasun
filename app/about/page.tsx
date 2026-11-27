@@ -83,8 +83,8 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              {/* 2. 메인 타이틀 변경 (36px, 앤티크 샴페인 골드 그라데이션, 줄간격 1.5, 좌측 정렬) */}
-              <h1 className="text-[26px] sm:text-[32px] md:text-[36px] font-elegant font-bold leading-[1.5] mb-8 gradient-text text-left break-keep">
+              {/* 2. 메인 타이틀 변경 (36px, 앤티크 샴페인 골드 그라데이션, 줄간격 1.65, 좌측 정렬) */}
+              <h1 className="text-[26px] sm:text-[32px] md:text-[36px] font-elegant font-bold leading-[1.65] mb-8 gradient-text text-left break-keep">
                 백도화(白桃花),<br className="sm:hidden" /> 운명을 설계하는 은밀한 비기
               </h1>
 

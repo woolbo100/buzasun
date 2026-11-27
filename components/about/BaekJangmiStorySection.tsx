@@ -110,7 +110,7 @@ export default function BaekJangmiStorySection() {
                 outlineGold={true}
               />
               
-              <p className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] leading-[1.5] tracking-wider">
+              <p className="text-2xl sm:text-3xl md:text-4xl font-elegant font-bold text-[var(--accent-gold)] leading-[1.65] tracking-wider">
                 감이 아닌 이론<br />
                 직관이 아닌 구조<br />
                 위로가 아닌 설계
