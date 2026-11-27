@@ -29,49 +29,31 @@ export default function BrandOriginSection() {
           </div>
         </Reveal>
 
-        {/* 3. 브랜드 탄생 스토리 서책형 한지 카드 (최대 너비 1280px, origin-hanji.webp 단일 카드 룩) */}
+        {/* 3. 브랜드 탄생 스토리 서책형 한지 카드 (최대 너비 1280px, origin-hanji-v2.webp 단일 한지 배경, 경계선 없음) */}
         <Reveal delayMs={200}>
-          <div className="relative w-full rounded-[14px] md:rounded-[18px] overflow-hidden">
-            {/* 3-1. 기본 확장 배경 (전체 높이에 맞춰 한지 질감 및 슬림 비단 제본 유지) */}
+          <div 
+            className="relative w-full rounded-[14px] md:rounded-[18px] overflow-hidden"
+            style={{
+              backgroundColor: '#F5DBB9',
+            }}
+          >
+            {/* 3-1. 단일 16:9 한지 배경 이미지 (분할 없음, 경계선 없음, 노리개·꽃·구름 문양 원본 비율 보존) */}
             <div className="absolute inset-0 z-0 pointer-events-none">
               <Image
-                src="/image/origin-hanji.webp"
-                alt="왕실 서책 배경"
+                src="/image/origin-hanji-v2.webp"
+                alt="백도화 한지 서책 배경"
                 fill
                 priority
-                className="object-fill select-none pointer-events-none"
+                className="object-cover object-center select-none"
                 sizes="(max-width: 1280px) 100vw, 1280px"
               />
             </div>
 
-            {/* 3-2. 상단 장식 레이어 (상단 금박 테두리, 모서리 문양, 매듭 장식의 원본 비율 보존) */}
-            <div className="absolute top-0 left-0 right-0 h-[70px] sm:h-[90px] md:h-[110px] overflow-hidden pointer-events-none z-0">
-              <Image
-                src="/image/origin-hanji.webp"
-                alt=""
-                fill
-                priority
-                className="object-cover object-top select-none pointer-events-none"
-                sizes="(max-width: 1280px) 100vw, 1280px"
-              />
-            </div>
-
-            {/* 3-3. 하단 장식 레이어 (하단 금박 테두리, 모서리 문양, 우측 하단 복숭아꽃 원본 비율 보존) */}
-            <div className="absolute bottom-0 left-0 right-0 h-[100px] sm:h-[130px] md:h-[150px] overflow-hidden pointer-events-none z-0">
-              <Image
-                src="/image/origin-hanji.webp"
-                alt=""
-                fill
-                className="object-cover object-bottom select-none pointer-events-none"
-                sizes="(max-width: 1280px) 100vw, 1280px"
-              />
-            </div>
-
-            {/* 3-4. 카드 본문 콘텐츠 (z-10, 가로 공간 최적 활용 및 상하 여백 슬림화) */}
-            <div className="relative z-10 w-full pt-8 sm:pt-10 md:pt-12 lg:pt-14 pb-10 sm:pb-12 md:pb-16 lg:pb-20 pl-6 sm:pl-12 md:pl-20 lg:pl-24 pr-5 sm:pr-8 md:pr-12 lg:pr-16">
-              <div className="max-w-[1000px] mx-auto">
-                {/* 본문 에세이 (18px 유지, 줄간격 1.7 유지, 문단 간격 16~18px 압축, 좌측 정렬, 먹갈색 본문, 딥 버건디 강조) */}
-                <div className="space-y-4 sm:space-y-[18px] text-[17px] sm:text-[18px] leading-[1.7] text-[#493A35] font-normal break-keep text-left">
+            {/* 3-2. 카드 본문 콘텐츠 (z-10, 상하 패딩 40~48px, 노리개/꽃 안전 여백, 문단 간격 8~12px) */}
+            <div className="relative z-10 w-full py-10 sm:py-12 pl-6 sm:pl-16 md:pl-28 lg:pl-36 pr-6 sm:pr-12 md:pr-24 lg:pr-32">
+              <div className="max-w-[960px] mx-auto">
+                {/* 본문 에세이 (18px 유지, 줄간격 1.7 유지, 문단 간격 8~12px 축소, 주요 전환부 18~20px, 먹갈색 본문, 딥 버건디 강조) */}
+                <div className="space-y-2.5 sm:space-y-3 text-[17px] sm:text-[18px] leading-[1.7] text-[#493A35] font-normal break-keep text-left">
                   <p>
                     백도화(白桃花)의 시작에는 하나의 질문이 있었습니다.
                   </p>
@@ -86,7 +68,8 @@ export default function BrandOriginSection() {
                     어떤 사람에게 용기가 필요한 순간이, 다른 사람에게는 멈춤이 필요한 순간입니다. 누군가에게는 새로운 인연을 선택하는 것이 성장이고, 또 누군가에게는 익숙한 관계의 패턴을 알아차리는 것이 변화의 시작입니다. 같은 조언이 누군가에게는 약이 되고, 누군가에게는 같은 상처를 되풀이하게 만드는 이유입니다.
                   </p>
 
-                  <p>
+                  {/* 주요 문단 구분 여백 18~20px */}
+                  <p className="pt-2 sm:pt-2.5">
                     오랜 마음공부와 명상으로 자신을 관찰하며 발견한 것은, <strong className="font-semibold text-[#6B2E3A]">삶 속에서 반복되는 감정과 선택의 패턴</strong>이었습니다.
                   </p>
 
@@ -98,7 +81,8 @@ export default function BrandOriginSection() {
                     그 반복의 뿌리에는 미처 알아차리지 못한 신념과 경험, 무의식적인 반응이 있었습니다. 그 패턴을 읽지 못하면, 상대가 바뀌어도 같은 장면이 되풀이됩니다.
                   </p>
 
-                  <p>
+                  {/* 주요 문단 구분 여백 18~20px */}
+                  <p className="pt-2 sm:pt-2.5">
                     이러한 탐구는 동양의 명리학에서 심리학과 무의식, NLP, 뇌과학과 브레인트레이닝, 명상에 이르기까지 다양한 분야의 공부로 이어졌습니다.
                   </p>
 
@@ -115,17 +99,17 @@ export default function BrandOriginSection() {
                   </p>
                 </div>
 
-                {/* 4. 하단 가로 구분선 (은은한 딥 버건디 라인, 여백 최적화) */}
-                <div className="w-24 sm:w-32 h-[1px] bg-[#6B2E3A] opacity-25 my-5 sm:my-6 mx-auto" />
+                {/* 4. 하단 가로 구분선 (은은한 딥 버건디 라인, 콤팩트 여백) */}
+                <div className="w-24 sm:w-28 h-[1px] bg-[#6B2E3A] opacity-25 my-4 sm:my-5 mx-auto" />
 
-                {/* 5. 하단 브랜드 철학 강조 문구 (딥 버건디 #6B2E3A, 붓글씨, 중앙 정렬, 산수화 장식 위 최적 배치) */}
-                <div className="text-center space-y-2">
-                  <p className="text-xl sm:text-2xl md:text-[26px] font-elegant font-bold text-[#6B2E3A] leading-[1.45] break-keep">
+                {/* 5. 하단 브랜드 철학 강조 문구 (딥 버건디 #6B2E3A, 붓글씨, 중앙 정렬, 콤팩트 여백) */}
+                <div className="text-center space-y-1.5">
+                  <p className="text-xl sm:text-2xl md:text-[25px] font-elegant font-bold text-[#6B2E3A] leading-[1.4] break-keep">
                     태어난 나를 이해하고,<br />
                     형성된 나를 알아차리며,<br />
                     앞으로의 나를 스스로 만들어 가는 것.
                   </p>
-                  <p className="text-lg sm:text-xl md:text-[22px] font-elegant font-bold text-[#6B2E3A] opacity-95 leading-[1.45] break-keep pt-1">
+                  <p className="text-base sm:text-lg md:text-[21px] font-elegant font-bold text-[#6B2E3A] opacity-95 leading-[1.4] break-keep pt-1">
                     그것이 백도화가 존재하는 이유입니다.
                   </p>
                 </div>
