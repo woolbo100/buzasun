@@ -13,6 +13,7 @@ import { addToCart } from '@/hooks/useCart'
 import { ChevronRight } from 'lucide-react'
 import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEnding'
 import BaekdohwaDivider from '@/components/reports/baekdohwa-report/BaekdohwaDivider'
+import MobileStickyBuyBar from '@/components/MobileStickyBuyBar'
 
 // ══════════════════════════════════════════════════════════════════════
 // 풍요 리포트 마스터 템플릿 1:1 매핑 궁합 전용 컴포넌트 목록
@@ -995,6 +996,13 @@ export default function PremiumCompatibilityReportPage() {
           </div>
         </div>
         <Footer />
+
+        {/* 📱 모바일 화면 하단 고정 구매 바 (모바일 전용, PC에서는 숨김) */}
+        <MobileStickyBuyBar
+          price={59000}
+          onPurchase={handlePurchase}
+          buttonText="리포트 신청하기 →"
+        />
       </GlobalBackground>
     </main>
   )

@@ -11,6 +11,7 @@ import { addToCart } from '@/hooks/useCart'
 import { ChevronRight } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 import RecommendedForCards from '@/components/RecommendedForCards'
+import MobileStickyBuyBar from '@/components/MobileStickyBuyBar'
 import BrandSignatureEnding from '@/components/reports/common/BrandSignatureEnding'
 
 // 새로 추가된 풍요 리포트 전용 18개 설득 블록 독립 컴포넌트들
@@ -1030,6 +1031,13 @@ export default function AbundanceReportPage() {
           </div>
         </div>
         <Footer />
+
+        {/* 📱 모바일 화면 하단 고정 구매 바 (모바일 전용, PC에서는 숨김) */}
+        <MobileStickyBuyBar
+          price={39000}
+          onPurchase={handlePurchase}
+          buttonText="리포트 신청하기 →"
+        />
       </GlobalBackground>
     </main>
   )

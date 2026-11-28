@@ -13,6 +13,7 @@ import ReportCommonInfo from '@/components/ReportCommonInfo'
 import { useRouter } from 'next/navigation'
 import { addToCart } from '@/hooks/useCart'
 import RecommendedForCards from '@/components/RecommendedForCards'
+import MobileStickyBuyBar from '@/components/MobileStickyBuyBar'
 
 // 새로 추가된 18개 설득 블록 독립 컴포넌트들
 import LoveCoreDifferentiation from '@/components/reports/baekdohwa-report/LoveCoreDifferentiation'
@@ -958,6 +959,13 @@ export default function BaekdohwaReportPage() {
           </div>
         </div>
         <Footer />
+
+        {/* 📱 모바일 화면 하단 고정 구매 바 (모바일 전용, PC에서는 숨김) */}
+        <MobileStickyBuyBar
+          price={39000}
+          onPurchase={handlePurchase}
+          buttonText="리포트 신청하기 →"
+        />
       </GlobalBackground>
     </main>
   )
