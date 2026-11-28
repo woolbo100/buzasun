@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 
 import SocialAuthButtons from '@/components/auth/SocialAuthButtons';
+import Navigation from '@/components/Navigation';
 
 export default function SignupPage() {
   const router = useRouter();
@@ -49,6 +50,7 @@ export default function SignupPage() {
   if (success) {
     return (
       <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#2A103D,_#160B24,_#0B0612)] flex items-center justify-center p-4 pt-24">
+        <Navigation />
         <div className="w-full max-w-md text-center">
           <div className="bg-white/5 backdrop-blur-xl border border-accent-gold/20 rounded-3xl p-8 md:p-10 shadow-2xl">
             <div className="w-20 h-20 bg-accent-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -72,6 +74,7 @@ export default function SignupPage() {
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#2A103D,_#160B24,_#0B0612)] flex items-center justify-center p-4 pt-24">
+      <Navigation />
       <div className="w-full max-w-md">
         <div className="bg-white/5 backdrop-blur-xl border border-accent-gold/20 rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-accent-gold/5 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-accent-gold/10 transition-colors duration-700" />

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
+import Navigation from '@/components/Navigation';
 import { 
   Package, 
   FileText, 
@@ -152,6 +153,7 @@ export default function MyPage() {
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#2A103D,_#160B24,_#0B0612)] text-white pt-24 pb-20">
+      <Navigation />
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Sidebar */}

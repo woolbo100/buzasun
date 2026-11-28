@@ -9,7 +9,9 @@ import { usePathname } from 'next/navigation'
  * 
  * - 헤더 최상단(top-0)에 바짝 밀착되어 장바구니/로그인 아이콘 높이와 일치
  * - PC: 기존 메인페이지 원본 크기(180px) 및 위치(right-4 md:right-12) 유지
- * - 마우스 호버 시 자개 꽃잎 부근에 은은하고 몽환적인 펄 블러(blur) 발광 효과 적용
+ * - 모바일/태블릿: pointer-events-none을 적용하여 햄버거 메뉴 및 헤더 터치를 일체 방해하지 않음
+ * - z-index를 40으로 설정하여 헤더 메뉴(z-50) 및 모바일 드롭다운 아래에 올바르게 위치
+ * - PC 마우스 호버 시 자개 꽃잎 부근에 은은하고 몽환적인 펄 블러(blur) 발광 효과 적용
  * - 부드러운 스윙 애니메이션(swingGentle) 유지
  */
 export default function GlobalNorigae() {
@@ -22,7 +24,7 @@ export default function GlobalNorigae() {
 
   return (
     <div 
-      className="fixed top-0 right-4 md:right-12 z-[60] select-none pointer-events-none"
+      className="fixed top-0 right-4 md:right-12 z-40 select-none pointer-events-none"
       style={{ 
         animation: 'swingGentle 4s ease-in-out infinite',
         transformOrigin: 'top center',
@@ -30,8 +32,8 @@ export default function GlobalNorigae() {
       }}
       aria-hidden="true"
     >
-      <div className="relative group pointer-events-auto cursor-pointer w-[85px] sm:w-[130px] md:w-[180px]">
-        {/* 마우스 호버 시 꽃 주변에만 은은하게 맺히는 자연스러운 미세 발광 효과 */}
+      <div className="relative group pointer-events-none lg:pointer-events-auto cursor-default w-[85px] sm:w-[130px] md:w-[180px]">
+        {/* 마우스 호버 시 꽃 주변에만 은은하게 맺히는 자연스러운 미세 발광 효과 (PC 환경) */}
         <div 
           className="pointer-events-none absolute left-1/2 top-[35%] -translate-x-1/2 -translate-y-1/2 w-[42%] aspect-square rounded-full opacity-0 blur-md transition-opacity duration-700 ease-out group-hover:opacity-60"
           style={{

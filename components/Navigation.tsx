@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { ShoppingCart, User, Menu, X, ChevronDown } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { useCart } from '@/hooks/useCart'
@@ -16,6 +17,8 @@ export default function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<'reports' | 'ebooks' | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  const navRef = useRef<HTMLElement>(null)
+  const pathname = usePathname()
 
   const [user, setUser] = useState<any>(null)
   const { totalCount } = useCart()
@@ -76,6 +79,38 @@ export default function Navigation() {
     setMobileBicheopOpen(false)
   }
 
+  // 모바일 메뉴 열림 시 외부 터치/클릭 시 닫기
+  useEffect(() => {
+    if (!mobileMenuOpen) return
+    const handleOutside = (e: MouseEvent | TouchEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        closeMobileMenu()
+      }
+    }
+    document.addEventListener('mousedown', handleOutside)
+    document.addEventListener('touchstart', handleOutside, { passive: true })
+    return () => {
+      document.removeEventListener('mousedown', handleOutside)
+      document.removeEventListener('touchstart', handleOutside)
+    }
+  }, [mobileMenuOpen])
+
+  // 페이지 경로 변경 시 모바일 메뉴 자동 닫힘
+  useEffect(() => {
+    closeMobileMenu()
+  }, [pathname])
+
+  // 화면 너비가 PC 해상도로 커지면 모바일 메뉴 자동 닫힘
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        closeMobileMenu()
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const [mainReportSlug, setMainReportSlug] = useState('baekdohwa-report')
 
   useEffect(() => {
@@ -106,13 +141,14 @@ export default function Navigation() {
 
   return (
     <nav
+      ref={navRef}
       className={`fixed top-0 w-full z-50 backdrop-blur-md transition-[background-color,box-shadow] duration-500 ease-out ${
-        scrolled
-          ? 'bg-[rgba(18,0,20,0.85)]'
+        scrolled || mobileMenuOpen
+          ? 'bg-[rgba(18,0,20,0.96)]'
           : 'bg-[rgba(18,0,20,0.3)]'
       }`}
       style={{
-        boxShadow: scrolled
+        boxShadow: scrolled || mobileMenuOpen
           ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 60px rgba(216, 191, 163, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.05)'
           : 'none',
       }}
@@ -131,6 +167,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16 md:h-18">
           <Link
             href="/"
+            onClick={closeMobileMenu}
             className="flex items-center gap-2.5 group/logo transition-all duration-300"
             style={{
               filter: 'drop-shadow(0 0 8px rgba(216, 191, 163, 0.2))',
@@ -298,9 +335,11 @@ export default function Navigation() {
             </div>
 
             <button
+              type="button"
               onClick={toggleMobileMenu}
-              className="lg:hidden text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300"
-              aria-label="메뉴 열기"
+              className="lg:hidden p-2 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-bd-ivory/80 hover:text-[var(--accent-gold)] transition-all duration-300 rounded-lg active:scale-95"
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -309,8 +348,11 @@ export default function Navigation() {
 
         {mobileMenuOpen && (
           <div
-            className="lg:hidden border-t transition-all duration-300"
-            style={{ borderColor: scrolled ? 'rgba(216, 191, 163, 0.2)' : 'rgba(216, 191, 163, 0.1)' }}
+            className="lg:hidden border-t transition-all duration-300 max-h-[calc(100vh-4.5rem)] overflow-y-auto"
+            style={{
+              borderColor: 'rgba(216, 191, 163, 0.2)',
+              backgroundColor: 'rgba(18, 0, 20, 0.98)',
+            }}
           >
             <div className="py-4 space-y-1">
               {showAboutMenu && (

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 import { Suspense } from 'react';
 import SocialAuthButtons from '@/components/auth/SocialAuthButtons';
+import Navigation from '@/components/Navigation';
 
 function LoginContent() {
   const router = useRouter();
@@ -122,6 +123,7 @@ function LoginContent() {
 export default function LoginPage() {
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#2A103D,_#160B24,_#0B0612)] flex items-center justify-center p-4 pt-24">
+      <Navigation />
       <Suspense fallback={<div className="text-accent-gold animate-pulse">로딩 중...</div>}>
         <LoginContent />
       </Suspense>

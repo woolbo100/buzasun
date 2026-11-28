@@ -21,30 +21,40 @@ export default function MobileStickyBuyBar({
   const displayPrice = typeof price === 'number' ? `${price.toLocaleString()}원` : price
 
   return (
-    <div
-      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#241525] border-t border-[#D4B2A7]/30 shadow-[0_-8px_24px_rgba(0,0,0,0.5)] px-5 pt-3"
-      style={{
-        paddingBottom: 'calc(12px + env(safe-area-inset-bottom, 0px))',
-      }}
-    >
-      <div className="flex items-center justify-between gap-4 max-w-md mx-auto">
-        {/* 왼쪽: 가격 표시 */}
-        <div className="flex items-center">
-          <span className="text-xl font-bold font-elegant text-[#FAF6EE] tracking-tight">
-            {displayPrice}
-          </span>
-        </div>
+    <>
+      {/* 모바일 화면에서 마지막 콘텐츠가 스티키 바에 가려지지 않도록 공간 확보 */}
+      <div 
+        className="md:hidden w-full pointer-events-none" 
+        style={{ height: 'calc(76px + env(safe-area-inset-bottom, 0px))' }} 
+        aria-hidden="true" 
+      />
+      <div
+        id="mobile-sticky-buy-bar"
+        data-sticky-buy-bar="true"
+        className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#241525] border-t border-[#D4B2A7]/30 shadow-[0_-8px_24px_rgba(0,0,0,0.5)] px-5 pt-3"
+        style={{
+          paddingBottom: 'calc(12px + env(safe-area-inset-bottom, 0px))',
+        }}
+      >
+        <div className="flex items-center justify-between gap-4 max-w-md mx-auto">
+          {/* 왼쪽: 가격 표시 */}
+          <div className="flex items-center">
+            <span className="text-xl font-bold font-elegant text-[#FAF6EE] tracking-tight">
+              {displayPrice}
+            </span>
+          </div>
 
-        {/* 오른쪽: 구매 버튼 */}
-        <button
-          type="button"
-          onClick={onPurchase}
-          className="h-[46px] min-h-[44px] px-6 rounded-xl font-bold text-sm bg-[#C49A58] text-[#291B16] hover:bg-[#B38A49] active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 shadow-md cursor-pointer shrink-0"
-        >
-          <span>{buttonText}</span>
-        </button>
+          {/* 오른쪽: 구매 버튼 */}
+          <button
+            type="button"
+            onClick={onPurchase}
+            className="h-[46px] min-h-[44px] px-6 rounded-xl font-bold text-sm bg-[#C49A58] text-[#291B16] hover:bg-[#B38A49] active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 shadow-md cursor-pointer shrink-0"
+          >
+            <span>{buttonText}</span>
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
