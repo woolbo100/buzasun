@@ -18,7 +18,7 @@ export default function ClosingCtaSection() {
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
             <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
-              PRIVATE ARCHIVE · 주권자의 각성
+              PRIVATE ARCHIVE
             </span>
             <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
           </div>
@@ -27,15 +27,15 @@ export default function ClosingCtaSection() {
         {/* 2 & 3. 메인 제목 및 설명 문구 (이미지와 40px 여백) */}
         <Reveal delayMs={150}>
           <div className="text-center mb-10 max-w-4xl mx-auto">
-            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-4 text-center leading-[1.4] break-keep">
-              운명을 묻는 자에서, 운명을 읽는 주권자로
+            <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-6 text-center leading-[1.4] break-keep">
+              당신은 고쳐야 할 부족한 존재가 아닙니다.<br />
+              <span className="text-[var(--accent-gold)]">
+                다만, 아직 당신만의 사용설명서를 읽지 못했을 뿐입니다.
+              </span>
             </h2>
-            <div className="space-y-2 text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep text-center max-w-[1000px] mx-auto">
+            <div className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep text-center max-w-[1000px] mx-auto">
               <p>
-                억지로 바꾸려 애쓰지 않아도, 본연의 결을 제자리에 정렬하면 사랑과 풍요는 저절로 피어납니다.
-              </p>
-              <p>
-                스스로의 판을 설계하기로 결단한 소수에게, 흔들리지 않을 가장 날카로운 기준을 건네드립니다.
+                타고난 기질을 이해하고, 반복되는 무의식의 패턴을 발견하는 순간,<br className="hidden md:inline" /> 비로소 타인의 기준이 아닌 자신만의 기준으로 삶을 바라볼 수 있습니다.
               </p>
             </div>
           </div>
@@ -63,21 +63,29 @@ export default function ClosingCtaSection() {
         {/* 최종 클로징 및 3대 CTA 카드 (1280px 기준선 정렬) */}
         <Reveal delayMs={250}>
           <div className="gungjung-glass w-full p-10 sm:p-16 text-center border border-[rgba(216,191,163,0.25)]">
-            {/* 1. 메인 헤드카피 (36px, 앤티크 샴페인 골드, PC 2줄 구성, 공통 line-height: 1.4 적용) */}
+            {/* 영문 라벨 */}
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+              <span className="text-[12pt] font-elegant font-semibold tracking-[0.25em] text-[var(--accent-gold)] uppercase opacity-90">
+                YOUR DESTINY, YOUR CHOICE
+              </span>
+              <span className="h-[1px] w-8 bg-[var(--accent-gold)] opacity-40" />
+            </div>
+
+            {/* 1. 메인 헤드카피 (36px, PC 2줄 구성, 공통 line-height: 1.4 적용) */}
             <h2 
-              className="about-heading text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[var(--accent-gold)] mb-8 text-center"
+              className="about-heading text-2xl sm:text-3xl md:text-[36px] font-elegant font-bold text-[#F5F5F5] mb-6 text-center leading-[1.4] break-keep"
             >
-              당신은 고쳐야 할 부족한 존재가 아닙니다.<br className="hidden md:inline" />{' '}
-              다만, 아직 당신만의 사용설명서를 읽지 못했을 뿐입니다.
+              더 이상 운명에 답을 구하지 마십시오.<br />
+              <span className="text-[var(--accent-gold)]">
+                이제, 당신이 운명의 답이 될 차례입니다.
+              </span>
             </h2>
 
-            {/* 2. 서브 본문 (18px, 줄간격 1.7, 문장 간격 16px, 최대 너비 1000px, 헤드카피와의 간격 32px) */}
-            <div className="space-y-4 text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light max-w-[1000px] mx-auto break-keep text-center">
+            {/* 2. 서브 본문 (18px, 줄간격 1.7) */}
+            <div className="text-[18px] text-[#EDE6DA] opacity-85 leading-[1.7] font-light max-w-[1000px] mx-auto break-keep text-center">
               <p>
-                이제 타인의 시선과 정해진 운명론에서 벗어나, 가장 품격 있는 나로 정렬할 시간입니다.
-              </p>
-              <p>
-                반복되는 사랑과 결핍의 패턴을 끊고, 당신만의 기준으로 새로운 판을 여십시오.
+                해석은 백도화의 몫, 선택은 언제나 당신의 몫.
               </p>
             </div>
 

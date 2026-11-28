@@ -100,7 +100,7 @@ export default function AboutPage() {
                 </p>
 
                 <p className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-90 font-light break-keep text-center">
-                  왕실의 은밀한 비방(秘方)에서 비롯된 동양의 정통 통찰과 현대 심리 설계의 만남<br />
+                  왕실의 은밀한 비방(秘方)을 모티브로 한 동양의 정통 통찰과 현대 심리 설계의 만남<br />
                   아무에게나 허락되지 않는 정교한 분석과 프리미엄 솔루션으로,<br />
                   당신이 삶의 온전한 주권자로 서는 결정적 기준을 제시합니다.
                 </p>
