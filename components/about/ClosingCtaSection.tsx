@@ -30,7 +30,8 @@ export default function ClosingCtaSection() {
             <h2 className="about-heading text-2xl sm:text-4xl md:text-5xl font-elegant font-bold text-[#F5F5F5] mb-6 text-center leading-[1.4] break-keep">
               당신은 고쳐야 할 부족한 존재가 아닙니다.<br />
               <span className="text-[var(--accent-gold)]">
-                다만, 아직 당신만의 사용설명서를 읽지 못했을 뿐입니다.
+                다만, 아직 당신만의 사용설명서를<br />
+                읽지 못했을 뿐입니다.
               </span>
             </h2>
             <div className="text-[18px] leading-[1.7] text-[#EDE6DA] opacity-85 font-light break-keep text-center max-w-[1000px] mx-auto">

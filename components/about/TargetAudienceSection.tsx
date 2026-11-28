@@ -8,7 +8,7 @@ const targetList = [
   {
     num: '01',
     icon: <Heart size={24} className="text-[var(--accent-gold)]" />,
-    title: '사랑할 때마다 비슷한 상처를 반복하는 분',
+    title: '사랑할 때마다 매번 비슷한 상처를 반복하는 분',
     desc: '만나는 사람은 달라져도 관계 속에서 비슷한 감정과 어려움을 반복하는 이유를 이해하고 싶은 분'
   },
   {
@@ -26,7 +26,12 @@ const targetList = [
   {
     num: '04',
     icon: <Users size={24} className="text-[var(--accent-gold)]" />,
-    title: '사랑하는 사람과의 차이를 이해하고 싶은 분',
+    title: (
+      <>
+        사랑하는 사람과의 차이를 더 깊이<br />
+        이해하고 싶은 분
+      </>
+    ),
     desc: '서로 사랑하지만 반복되는 갈등과 다른 감정 표현 방식으로 어려움을 느끼는 분'
   },
   {
