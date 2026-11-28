@@ -8,7 +8,12 @@ const targetList = [
   {
     num: '01',
     icon: <Heart size={24} className="text-[var(--accent-gold)]" />,
-    title: '사랑할 때마다 매번 비슷한 상처를 반복하는 분',
+    title: (
+      <>
+        사랑할 때마다 매번 비슷한 상처를<br />
+        반복하는 분
+      </>
+    ),
     desc: '만나는 사람은 달라져도 관계 속에서 비슷한 감정과 어려움을 반복하는 이유를 이해하고 싶은 분'
   },
   {
@@ -20,7 +25,12 @@ const targetList = [
   {
     num: '03',
     icon: <Compass size={24} className="text-[var(--accent-gold)]" />,
-    title: '이별과 재회 사이에서 방향을 찾지 못하고 있는 분',
+    title: (
+      <>
+        이별과 재회 사이에서 방향을 찾지<br />
+        못하고 있는 분
+      </>
+    ),
     desc: '그 사람과 다시 만나는 것이 자신에게 어떤 의미인지, 앞으로 어떤 선택을 해야 할지 깊이 고민하고 있는 분'
   },
   {
